@@ -1,158 +1,157 @@
 Dependency,Type,Most Recent Version,Most Recent Version Date,Our Version,Our Version Date,Our Version Freshness in Days
-@bbc/web-vitals,commonjs,1.2.1,Thu Nov 03 2022 12:47:19 GMT+0000 (Greenwich Mean Time),1.2.0,Thu Sep 08 2022 09:43:08 GMT+0100 (British Summer Time),383
-@emotion/react,commonjs,11.11.1,Wed Jun 07 2023 12:01:08 GMT+0100 (British Summer Time),11.11.1,Wed Jun 07 2023 12:01:08 GMT+0100 (British Summer Time),111
-@emotion/cache,commonjs,11.11.0,Sat May 06 2023 09:49:12 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:11 GMT+0100 (British Summer Time),143
-@emotion/server,commonjs,11.11.0,Sat May 06 2023 09:49:15 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:15 GMT+0100 (British Summer Time),143
-compression,commonjs,1.7.4,Wed Jul 12 2023 20:06:30 GMT+0100 (British Summer Time),1.7.4,Mon Mar 18 2019 14:43:24 GMT+0000 (Greenwich Mean Time),1653
-@optimizely/react-sdk,commonjs,2.9.2,Wed Mar 15 2023 19:08:09 GMT+0000 (Greenwich Mean Time),2.9.2,Wed Mar 15 2023 19:08:09 GMT+0000 (Greenwich Mean Time),195
-@loadable/server,commonjs,5.16.1,Thu Jul 20 2023 08:51:59 GMT+0100 (British Summer Time),5.15.3,Sat Jan 28 2023 04:28:46 GMT+0000 (Greenwich Mean Time),241
-core-js,commonjs,3.32.2,Thu Sep 07 2023 13:48:31 GMT+0100 (British Summer Time),3.30.2,Sat May 06 2023 20:16:59 GMT+0100 (British Summer Time),143
-@emotion/styled,commonjs,11.11.0,Sat May 06 2023 09:49:16 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:15 GMT+0100 (British Summer Time),143
-aws-embedded-metrics,commonjs,4.1.0,Wed Jan 25 2023 21:51:58 GMT+0000 (Greenwich Mean Time),2.0.6,Tue Jul 26 2022 19:45:09 GMT+0100 (British Summer Time),427
-express-static-gzip,commonjs,2.1.7,Fri Jun 17 2022 23:40:56 GMT+0100 (British Summer Time),2.1.7,Tue May 17 2022 07:27:03 GMT+0100 (British Summer Time),497
-@loadable/component,commonjs,5.15.3,Sat Jan 28 2023 04:28:46 GMT+0000 (Greenwich Mean Time),5.15.3,Sat Jan 28 2023 04:28:46 GMT+0000 (Greenwich Mean Time),241
-intersection-observer,commonjs,0.12.2,Sun Aug 14 2022 17:53:56 GMT+0100 (British Summer Time),0.12.2,Tue Jun 14 2022 18:16:18 GMT+0100 (British Summer Time),469
-dotenv,commonjs,16.3.1,Sat Jun 17 2023 17:47:54 GMT+0100 (British Summer Time),16.0.3,Thu Sep 29 2022 18:28:10 GMT+0100 (British Summer Time),362
-isarray,commonjs,2.0.5,Wed Jul 12 2023 20:07:21 GMT+0100 (British Summer Time),2.0.5,Mon Jul 08 2019 14:21:22 GMT+0100 (British Summer Time),1541
-lru-cache,commonjs,10.0.1,Thu Aug 10 2023 22:32:00 GMT+0100 (British Summer Time),7.7.1,Fri Mar 18 2022 03:00:08 GMT+0000 (Greenwich Mean Time),557
-polyfill-crypto.getrandomvalues,commonjs,1.0.0,Fri Jun 24 2022 07:55:43 GMT+0100 (British Summer Time),1.0.0,Sat Mar 05 2016 00:40:06 GMT+0000 (Greenwich Mean Time),2762
-helmet-csp,module,3.4.0,Sat Jun 18 2022 21:06:39 GMT+0100 (British Summer Time),3.4.0,Sun May 02 2021 16:39:56 GMT+0100 (British Summer Time),877
-express,commonjs,5.0.0-beta.1,Sat Sep 23 2023 17:51:00 GMT+0100 (British Summer Time),4.18.2,Sat Oct 08 2022 21:14:32 GMT+0100 (British Summer Time),353
-js-cookie,commonjs,3.0.5,Sun Aug 20 2023 10:44:13 GMT+0100 (British Summer Time),3.0.5,Mon Apr 24 2023 10:23:51 GMT+0100 (British Summer Time),155
-react-dom,commonjs,18.3.0-next-fecc288b7-20221025,Mon Sep 25 2023 17:17:55 GMT+0100 (British Summer Time),18.2.0,Tue Jun 14 2022 20:46:48 GMT+0100 (British Summer Time),469
-ramda,commonjs,0.29.0,Fri Jun 02 2023 15:35:08 GMT+0100 (British Summer Time),Unkonwn,Invalid Date,NaN
-path-to-regexp,commonjs,6.2.1,Sun Aug 20 2023 10:45:39 GMT+0100 (British Summer Time),6.2.1,Fri May 06 2022 23:00:27 GMT+0100 (British Summer Time),508
-morgan,commonjs,1.10.0,Tue Feb 21 2023 02:19:48 GMT+0000 (Greenwich Mean Time),1.10.0,Fri Mar 20 2020 18:00:13 GMT+0000 (Greenwich Mean Time),1285
-jalaali-js,commonjs,1.2.6,Sun Jun 19 2022 04:39:17 GMT+0100 (British Summer Time),1.2.6,Wed May 18 2022 07:40:33 GMT+0100 (British Summer Time),496
-mkdirp,commonjs,3.0.1,Tue May 16 2023 19:48:04 GMT+0100 (British Summer Time),1.0.4,Fri Apr 03 2020 18:03:08 GMT+0100 (British Summer Time),1271
-isomorphic-fetch,commonjs,3.0.0,Sun Jun 19 2022 04:03:37 GMT+0100 (British Summer Time),3.0.0,Wed Sep 23 2020 08:27:09 GMT+0100 (British Summer Time),1098
-moment-timezone,commonjs,0.5.43,Thu May 11 2023 15:15:15 GMT+0100 (British Summer Time),0.5.43,Fri Mar 31 2023 11:12:53 GMT+0100 (British Summer Time),179
-helmet,module,7.0.0,Sat May 06 2023 23:37:55 GMT+0100 (British Summer Time),4.6.0,Sun May 02 2021 16:13:09 GMT+0100 (British Summer Time),877
-react,commonjs,18.3.0-next-fecc288b7-20221025,Mon Sep 25 2023 17:17:27 GMT+0100 (British Summer Time),18.2.0,Tue Jun 14 2022 20:46:38 GMT+0100 (British Summer Time),469
-url-parse,commonjs,1.5.10,Tue Jun 28 2022 07:17:22 GMT+0100 (British Summer Time),1.5.10,Tue Feb 22 2022 15:49:03 GMT+0000 (Greenwich Mean Time),581
-@babel/core,commonjs,8.0.0-alpha.2,Mon Sep 25 2023 09:11:54 GMT+0100 (British Summer Time),7.22.17,Fri Sep 08 2023 14:53:33 GMT+0100 (British Summer Time),18
-@babel/eslint-parser,commonjs,8.0.0-alpha.2,Mon Sep 04 2023 13:25:02 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:02 GMT+0100 (British Summer Time),22
-react-router-dom,commonjs,6.16.0,Wed Sep 13 2023 17:37:49 GMT+0100 (British Summer Time),5.3.4,Sun Oct 02 2022 18:10:36 GMT+0100 (British Summer Time),359
-xmldoc,commonjs,1.3.0,Mon Mar 20 2023 21:39:03 GMT+0000 (Greenwich Mean Time),1.3.0,Mon Mar 20 2023 21:39:03 GMT+0000 (Greenwich Mean Time),190
-@babel/plugin-transform-runtime,commonjs,8.0.0-alpha.2,Mon Sep 04 2023 13:25:20 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:20 GMT+0100 (British Summer Time),22
-react-router,commonjs,6.16.0,Wed Sep 13 2023 17:37:49 GMT+0100 (British Summer Time),5.3.4,Sun Oct 02 2022 18:10:33 GMT+0100 (British Summer Time),359
-moment,commonjs,2.29.4,Sun Aug 27 2023 12:38:44 GMT+0100 (British Summer Time),2.29.4,Wed Jul 06 2022 17:01:32 GMT+0100 (British Summer Time),447
-react-helmet,commonjs,6.1.0,Sun Sep 25 2022 23:10:24 GMT+0100 (British Summer Time),6.1.0,Mon Jun 08 2020 05:59:07 GMT+0100 (British Summer Time),1205
-@babel/preset-env,commonjs,8.0.0-alpha.2,Sat Sep 16 2023 17:28:44 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:28 GMT+0100 (British Summer Time),22
-uuid,commonjs,9.0.1,Tue Sep 12 2023 09:56:35 GMT+0100 (British Summer Time),8.3.2,Tue Dec 08 2020 20:38:36 GMT+0000 (Greenwich Mean Time),1022
-winston,commonjs,3.10.0,Sun Aug 27 2023 12:38:45 GMT+0100 (British Summer Time),Unkonwn,Invalid Date,NaN
-@babel/plugin-proposal-object-rest-spread,commonjs,7.21.4-esm.4,Fri Sep 01 2023 19:56:01 GMT+0100 (British Summer Time),7.20.7,Thu Dec 22 2022 09:45:28 GMT+0000 (Greenwich Mean Time),278
-react-router-config,commonjs,5.1.1,Sun Jun 26 2022 08:58:35 GMT+0100 (British Summer Time),5.1.1,Sat Sep 28 2019 00:06:35 GMT+0100 (British Summer Time),1460
-@emotion/babel-plugin,commonjs,11.11.0,Sat Jul 22 2023 20:33:06 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:11 GMT+0100 (British Summer Time),143
-@babel/plugin-syntax-dynamic-import,error,7.8.3,Sun Jun 12 2022 16:01:00 GMT+0100 (British Summer Time),7.8.3,Mon Jan 13 2020 21:12:33 GMT+0000 (Greenwich Mean Time),1352
-@babel/plugin-proposal-export-default-from,commonjs,8.0.0-alpha.2,Fri Sep 08 2023 14:53:29 GMT+0100 (British Summer Time),7.22.17,Fri Sep 08 2023 14:53:29 GMT+0100 (British Summer Time),18
-@babel/polyfill,commonjs,7.12.1,Sun Jun 12 2022 16:01:26 GMT+0100 (British Summer Time),7.12.1,Thu Oct 15 2020 23:40:35 GMT+0100 (British Summer Time),1076
-@babel/preset-react,commonjs,8.0.0-alpha.2,Mon Sep 04 2023 13:25:25 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:25 GMT+0100 (British Summer Time),22
-@babel/runtime,commonjs,8.0.0-alpha.2,Mon Sep 25 2023 09:30:41 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:07 GMT+0100 (British Summer Time),22
-react-lazyload,commonjs,3.2.0,Sun Jun 26 2022 01:57:43 GMT+0100 (British Summer Time),3.2.0,Thu Feb 11 2021 12:23:58 GMT+0000 (Greenwich Mean Time),957
-@babel/preset-typescript,commonjs,8.0.0-alpha.2,Mon Sep 25 2023 09:11:48 GMT+0100 (British Summer Time),7.22.15,Mon Sep 04 2023 13:25:28 GMT+0100 (British Summer Time),22
-@cypress/webpack-preprocessor,commonjs,6.0.0,Tue Aug 29 2023 16:11:34 GMT+0100 (British Summer Time),5.17.1,Mon May 01 2023 14:43:28 GMT+0100 (British Summer Time),148
-@loadable/babel-plugin,commonjs,5.16.1,Thu Jul 20 2023 08:51:59 GMT+0100 (British Summer Time),5.16.1,Thu Jul 20 2023 08:51:59 GMT+0100 (British Summer Time),68
-@storybook/addon-docs,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:37:12 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:33:39 GMT+0000 (Greenwich Mean Time),243
-@emotion/babel-preset-css-prop,commonjs,11.11.0,Sat May 06 2023 09:49:12 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:11 GMT+0100 (British Summer Time),143
-@storybook/addon-viewport,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:39:36 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:33:00 GMT+0000 (Greenwich Mean Time),243
-@storybook/builder-webpack5,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:40:19 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:33:46 GMT+0000 (Greenwich Mean Time),243
-@storybook/addon-controls,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:36:55 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:33:28 GMT+0000 (Greenwich Mean Time),243
-@babel/plugin-proposal-throw-expressions,commonjs,8.0.0-alpha.2,Wed Aug 09 2023 16:15:08 GMT+0100 (British Summer Time),7.22.5,Thu Jun 08 2023 19:21:30 GMT+0100 (British Summer Time),110
-@storybook/manager-webpack5,commonjs,7.0.0-alpha.10,Tue May 02 2023 17:20:29 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:33:58 GMT+0000 (Greenwich Mean Time),243
-@storybook/addon-a11y,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:36:15 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:32:26 GMT+0000 (Greenwich Mean Time),243
-@testing-library/dom,commonjs,10.0.0-alpha.1,Sun Sep 17 2023 19:11:37 GMT+0100 (British Summer Time),9.3.1,Wed Jun 14 2023 16:00:04 GMT+0100 (British Summer Time),104
-@testing-library/user-event,commonjs,14.5.1,Fri Sep 15 2023 19:08:32 GMT+0100 (British Summer Time),14.4.3,Tue Aug 09 2022 16:25:09 GMT+0100 (British Summer Time),413
-@storybook/addon-backgrounds,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:36:45 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:32:35 GMT+0000 (Greenwich Mean Time),243
-@storybook/theming,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:51:12 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:31:35 GMT+0000 (Greenwich Mean Time),243
-@types/jest,module,29.5.5,Fri Sep 15 2023 21:40:06 GMT+0100 (British Summer Time),29.5.4,Tue Aug 22 2023 19:16:41 GMT+0100 (British Summer Time),35
-@storybook/react,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:53:15 GMT+0100 (British Summer Time),6.5.16,Thu Jan 26 2023 11:34:35 GMT+0000 (Greenwich Mean Time),243
-@testing-library/jest-dom,commonjs,6.1.3,Wed Sep 06 2023 03:56:35 GMT+0100 (British Summer Time),6.1.3,Wed Sep 06 2023 03:56:35 GMT+0100 (British Summer Time),20
-@storybook/addon-toolbars,commonjs,7.5.0-alpha.3,Tue Sep 26 2023 13:39:29 GMT+0100 (British Summer Time),6.5.17-alpha.0,Thu Mar 23 2023 03:12:52 GMT+0000 (Greenwich Mean Time),187
-@types/jsdom,module,21.1.3,Fri Sep 15 2023 21:58:09 GMT+0100 (British Summer Time),20.0.1,Mon Nov 07 2022 20:36:17 GMT+0000 (Greenwich Mean Time),323
-@types/react-dom,module,18.2.7,Wed Aug 23 2023 19:03:10 GMT+0100 (British Summer Time),18.2.7,Wed Jul 12 2023 20:02:48 GMT+0100 (British Summer Time),76
-@emotion/jest,commonjs,11.11.0,Sat May 06 2023 09:49:12 GMT+0100 (British Summer Time),11.11.0,Sat May 06 2023 09:49:11 GMT+0100 (British Summer Time),143
-@testing-library/react,commonjs,14.0.0,Wed May 24 2023 18:14:40 GMT+0100 (British Summer Time),14.0.0,Thu Feb 16 2023 22:59:37 GMT+0000 (Greenwich Mean Time),222
-@loadable/webpack-plugin,commonjs,5.15.2,Wed Apr 06 2022 03:11:55 GMT+0100 (British Summer Time),5.15.2,Sun Dec 12 2021 07:34:04 GMT+0000 (Greenwich Mean Time),653
-@types/ramda,module,0.29.5,Tue Sep 26 2023 04:06:13 GMT+0100 (British Summer Time),0.28.15,Sat Jul 09 2022 09:02:32 GMT+0100 (British Summer Time),444
-@types/url-parse,module,1.4.9,Mon Sep 04 2023 11:10:02 GMT+0100 (British Summer Time),1.4.9,Wed Aug 30 2023 21:14:03 GMT+0100 (British Summer Time),27
-@types/js-cookie,module,3.0.4,Fri Sep 15 2023 21:55:17 GMT+0100 (British Summer Time),3.0.4,Fri Sep 15 2023 21:55:12 GMT+0100 (British Summer Time),11
-@types/react-router-dom,module,5.3.3,Mon Mar 06 2023 08:43:23 GMT+0000 (Greenwich Mean Time),5.3.3,Tue Jan 18 2022 22:04:15 GMT+0000 (Greenwich Mean Time),616
-amphtml-validator,commonjs,1.0.35,Mon Jun 13 2022 03:46:26 GMT+0100 (British Summer Time),1.0.35,Thu May 20 2021 20:54:22 GMT+0100 (British Summer Time),859
-@types/react-helmet,module,6.1.6,Wed Aug 23 2023 19:04:04 GMT+0100 (British Summer Time),6.1.6,Mon Nov 28 2022 20:03:34 GMT+0000 (Greenwich Mean Time),302
-@types/react-lazyload,module,3.2.0,Wed Aug 23 2023 19:05:30 GMT+0100 (British Summer Time),3.2.0,Fri Mar 18 2022 21:02:15 GMT+0000 (Greenwich Mean Time),557
-@types/react,module,18.2.22,Mon Sep 18 2023 18:08:07 GMT+0100 (British Summer Time),18.2.21,Tue Aug 22 2023 19:26:08 GMT+0100 (British Summer Time),35
-cli-table,commonjs,0.3.11,Wed Apr 12 2023 03:45:31 GMT+0100 (British Summer Time),0.3.11,Mon Dec 06 2021 15:41:35 GMT+0000 (Greenwich Mean Time),659
-babel-plugin-dynamic-import-node,commonjs,2.3.3,Fri Jul 21 2023 16:42:02 GMT+0100 (British Summer Time),2.3.3,Tue Apr 21 2020 20:01:34 GMT+0100 (British Summer Time),1253
-compression-webpack-plugin,commonjs,10.0.0,Tue Apr 11 2023 04:19:32 GMT+0100 (British Summer Time),9.2.0,Thu Dec 16 2021 11:47:41 GMT+0000 (Greenwich Mean Time),649
-@testing-library/react-hooks,commonjs,8.0.1,Tue Oct 18 2022 20:08:25 GMT+0100 (British Summer Time),8.0.1,Sat Jun 18 2022 14:20:19 GMT+0100 (British Summer Time),465
-babel-loader,commonjs,9.1.3,Fri Jul 07 2023 15:47:26 GMT+0100 (British Summer Time),9.1.3,Fri Jul 07 2023 15:47:26 GMT+0100 (British Summer Time),81
-copy-webpack-plugin,commonjs,11.0.0,Tue Apr 11 2023 04:19:16 GMT+0100 (British Summer Time),9.1.0,Thu Nov 11 2021 19:37:30 GMT+0000 (Greenwich Mean Time),684
-babel-jest,commonjs,29.7.0,Tue Sep 12 2023 07:43:51 GMT+0100 (British Summer Time),29.7.0,Tue Sep 12 2023 07:43:51 GMT+0100 (British Summer Time),14
-@typescript-eslint/eslint-plugin,commonjs,7.0.0-alpha.0,Mon Sep 25 2023 18:36:10 GMT+0100 (British Summer Time),5.59.6,Mon May 15 2023 18:15:57 GMT+0100 (British Summer Time),134
-eslint,commonjs,8.50.0,Fri Sep 22 2023 22:04:41 GMT+0100 (British Summer Time),7.32.0,Fri Jul 30 2021 23:46:46 GMT+0100 (British Summer Time),788
-cypress-axe,commonjs,1.5.0,Fri Sep 01 2023 13:29:07 GMT+0100 (British Summer Time),0.14.0,Tue Jan 04 2022 09:28:03 GMT+0000 (Greenwich Mean Time),630
-cypress-multi-reporters,commonjs,2.0.1,Mon Mar 13 2023 17:43:37 GMT+0000 (Greenwich Mean Time),1.6.3,Mon Mar 13 2023 17:43:37 GMT+0000 (Greenwich Mean Time),197
-@types/loadable__component,module,5.13.5,Mon Sep 04 2023 10:09:01 GMT+0100 (British Summer Time),5.13.5,Wed Aug 30 2023 20:52:35 GMT+0100 (British Summer Time),27
-chalk,module,5.3.0,Thu Jun 29 2023 11:58:11 GMT+0100 (British Summer Time),5.3.0,Thu Jun 29 2023 11:58:11 GMT+0100 (British Summer Time),89
-@storybook/addon-knobs,commonjs,7.0.2,Thu Apr 27 2023 10:40:33 GMT+0100 (British Summer Time),6.4.0,Sat Nov 27 2021 16:34:39 GMT+0000 (Greenwich Mean Time),668
-cypress,commonjs,13.2.0,Tue Sep 12 2023 18:15:15 GMT+0100 (British Summer Time),9.6.0,Mon Apr 25 2022 15:04:39 GMT+0100 (British Summer Time),519
-chromatic,commonjs,7.2.1-canary.0,Tue Sep 19 2023 02:29:57 GMT+0100 (British Summer Time),6.17.4,Wed May 03 2023 17:43:57 GMT+0100 (British Summer Time),146
-@typescript-eslint/parser,commonjs,7.0.0-alpha.0,Mon Sep 25 2023 18:35:41 GMT+0100 (British Summer Time),5.59.6,Mon May 15 2023 18:15:30 GMT+0100 (British Summer Time),134
-crypto,commonjs,1.0.1,Tue Jun 14 2022 05:01:22 GMT+0100 (British Summer Time),1.0.1,Thu Aug 10 2017 23:43:43 GMT+0100 (British Summer Time),2238
-@types/testing-library__react,commonjs,10.2.0,Thu Apr 07 2022 09:53:56 GMT+0100 (British Summer Time),10.2.0,Wed Jun 24 2020 12:52:59 GMT+0100 (British Summer Time),1189
-depcheck,commonjs,1.4.6,Mon Sep 11 2023 18:40:35 GMT+0100 (British Summer Time),1.4.5,Mon Aug 21 2023 16:29:04 GMT+0100 (British Summer Time),36
-eslint-import-resolver-alias,commonjs,1.1.2,Fri Jun 17 2022 21:24:49 GMT+0100 (British Summer Time),1.1.2,Sat Dec 08 2018 12:48:55 GMT+0000 (Greenwich Mean Time),1753
-eslint-config-prettier,commonjs,9.0.0,Sat Aug 05 2023 20:09:15 GMT+0100 (British Summer Time),8.8.0,Mon Mar 20 2023 18:13:45 GMT+0000 (Greenwich Mean Time),190
-babel-plugin-transform-react-remove-prop-types,commonjs,0.4.24,Mon Jun 13 2022 05:05:13 GMT+0100 (British Summer Time),0.4.24,Fri Feb 01 2019 21:38:39 GMT+0000 (Greenwich Mean Time),1698
-cypress-terminal-report,commonjs,5.3.6,Fri Sep 15 2023 18:48:21 GMT+0100 (British Summer Time),4.0.3,Tue Jul 05 2022 22:27:05 GMT+0100 (British Summer Time),448
-eslint-config-airbnb,commonjs,19.0.4,Sun Apr 02 2023 02:44:27 GMT+0100 (British Summer Time),18.2.1,Fri Nov 06 2020 22:38:12 GMT+0000 (Greenwich Mean Time),1054
-husky,commonjs,8.0.3,Fri Jun 09 2023 22:31:56 GMT+0100 (British Summer Time),8.0.3,Tue Jan 03 2023 08:01:18 GMT+0000 (Greenwich Mean Time),266
-eslint-plugin-jsx-a11y,commonjs,6.7.1,Thu Jan 12 2023 04:19:37 GMT+0000 (Greenwich Mean Time),6.7.1,Thu Jan 12 2023 04:19:36 GMT+0000 (Greenwich Mean Time),257
-glob,module,10.3.9,Tue Sep 26 2023 08:22:02 GMT+0100 (British Summer Time),8.0.3,Fri May 13 2022 18:08:32 GMT+0100 (British Summer Time),501
-eslint-plugin-prettier,commonjs,5.0.0,Tue Jul 11 2023 08:45:45 GMT+0100 (British Summer Time),4.2.1,Thu Jun 30 2022 04:33:54 GMT+0100 (British Summer Time),453
-eslint-plugin-cypress,commonjs,2.15.1,Mon Sep 18 2023 20:03:21 GMT+0100 (British Summer Time),2.13.3,Fri Apr 28 2023 16:18:56 GMT+0100 (British Summer Time),151
-eslint-plugin-react-hooks,commonjs,5.0.0-next-fecc288b7-20221025,Mon Sep 25 2023 17:17:14 GMT+0100 (British Summer Time),4.6.0,Tue Jun 14 2022 20:46:28 GMT+0100 (British Summer Time),469
-eslint-plugin-import,commonjs,2.28.1,Fri Aug 18 2023 21:41:10 GMT+0100 (British Summer Time),2.27.5,Mon Jan 16 2023 19:44:39 GMT+0000 (Greenwich Mean Time),253
-eslint-plugin-json,commonjs,3.1.0,Sun Jul 09 2023 23:08:36 GMT+0100 (British Summer Time),3.1.0,Fri Aug 06 2021 01:05:47 GMT+0100 (British Summer Time),782
-history,commonjs,5.3.0,Sat Jun 18 2022 21:50:43 GMT+0100 (British Summer Time),4.10.1,Fri Sep 13 2019 01:16:07 GMT+0100 (British Summer Time),1475
-eslint-plugin-react,commonjs,7.33.2,Sun Sep 24 2023 13:42:52 GMT+0100 (British Summer Time),7.32.2,Sun Jan 29 2023 06:47:00 GMT+0000 (Greenwich Mean Time),240
-jest-junit,commonjs,16.0.0,Sat Apr 15 2023 16:07:24 GMT+0100 (British Summer Time),13.2.0,Wed Apr 20 2022 23:13:43 GMT+0100 (British Summer Time),524
-inspectpack,commonjs,4.7.1,Tue Aug 01 2023 17:01:33 GMT+0100 (British Summer Time),4.7.1,Wed Mar 24 2021 19:40:29 GMT+0000 (Greenwich Mean Time),916
-fetch-mock,commonjs,9.11.0,Mon Jun 12 2023 22:51:46 GMT+0100 (British Summer Time),9.11.0,Sat Nov 21 2020 22:22:20 GMT+0000 (Greenwich Mean Time),1039
-jsdom,commonjs,22.1.0,Sat May 27 2023 11:19:19 GMT+0100 (British Summer Time),19.0.0,Thu Dec 02 2021 21:45:15 GMT+0000 (Greenwich Mean Time),663
-jest-fetch-mock,commonjs,3.0.3,Sun Jun 19 2022 05:11:37 GMT+0100 (British Summer Time),3.0.3,Tue Mar 10 2020 07:26:52 GMT+0000 (Greenwich Mean Time),1295
-jest-silent-reporter,commonjs,0.5.0,Fri May 06 2022 13:44:25 GMT+0100 (British Summer Time),0.5.0,Wed Mar 10 2021 07:04:12 GMT+0000 (Greenwich Mean Time),930
-jest,commonjs,29.7.0,Tue Sep 12 2023 07:44:08 GMT+0100 (British Summer Time),29.6.4,Thu Aug 24 2023 12:11:28 GMT+0100 (British Summer Time),33
-npm-run-all,commonjs,4.1.5,Fri Jul 21 2023 16:33:40 GMT+0100 (British Summer Time),4.1.5,Sat Nov 24 2018 13:52:41 GMT+0000 (Greenwich Mean Time),1767
-jest-environment-jsdom,commonjs,29.7.0,Tue Sep 12 2023 07:43:48 GMT+0100 (British Summer Time),29.6.4,Thu Aug 24 2023 12:10:45 GMT+0100 (British Summer Time),33
-jest-serializer-html,commonjs,7.1.0,Thu Jul 27 2023 09:58:21 GMT+0100 (British Summer Time),7.1.0,Tue Jul 13 2021 14:09:56 GMT+0100 (British Summer Time),805
-minimist,commonjs,1.2.8,Fri Jun 09 2023 22:33:07 GMT+0100 (British Summer Time),1.2.8,Thu Feb 09 2023 20:59:49 GMT+0000 (Greenwich Mean Time),229
-prettier,module,3.0.3,Tue Aug 29 2023 13:30:12 GMT+0100 (British Summer Time),2.8.8,Sun Apr 23 2023 08:26:12 GMT+0100 (British Summer Time),156
-strip-ansi,module,7.1.0,Sun May 28 2023 10:55:04 GMT+0100 (British Summer Time),6.0.1,Thu Sep 23 2021 17:34:41 GMT+0100 (British Summer Time),733
-mocha-junit-reporter,commonjs,2.2.1,Wed Jul 12 2023 19:14:12 GMT+0100 (British Summer Time),2.2.1,Wed Jul 12 2023 19:14:12 GMT+0100 (British Summer Time),76
-prop-types,commonjs,15.8.1,Thu Aug 24 2023 19:09:31 GMT+0100 (British Summer Time),15.8.1,Wed Jan 05 2022 00:08:33 GMT+0000 (Greenwich Mean Time),630
-node-fetch,module,4.0.0-beta.4,Wed Aug 23 2023 18:18:39 GMT+0100 (British Summer Time),2.6.12,Thu Jun 29 2023 20:16:33 GMT+0100 (British Summer Time),89
-react-test-renderer,commonjs,18.3.0-next-fecc288b7-20221025,Mon Sep 25 2023 17:18:43 GMT+0100 (British Summer Time),18.2.0,Tue Jun 14 2022 20:47:11 GMT+0100 (British Summer Time),469
-ora,module,7.0.1,Tue Aug 01 2023 16:51:15 GMT+0100 (British Summer Time),5.4.1,Tue Jun 08 2021 08:38:49 GMT+0100 (British Summer Time),840
-storybook-addon-designs,commonjs,7.0.0-beta.2,Sun Sep 10 2023 09:55:35 GMT+0100 (British Summer Time),6.3.1,Mon Jun 13 2022 16:11:58 GMT+0100 (British Summer Time),470
-start-server-nestjs-webpack-plugin,commonjs,2.2.5,Wed May 18 2022 16:43:10 GMT+0100 (British Summer Time),2.2.5,Wed Nov 11 2020 19:39:49 GMT+0000 (Greenwich Mean Time),1049
-stylelint-config-recommended,commonjs,13.0.0,Tue Jul 04 2023 21:21:38 GMT+0100 (British Summer Time),7.0.0,Tue Feb 08 2022 18:03:05 GMT+0000 (Greenwich Mean Time),595
-stream-browserify,commonjs,3.0.0,Tue Nov 08 2022 10:41:09 GMT+0000 (Greenwich Mean Time),3.0.0,Thu Apr 16 2020 13:50:54 GMT+0100 (British Summer Time),1258
-mocha,commonjs,10.2.0,Fri Sep 22 2023 20:31:17 GMT+0100 (British Summer Time),9.2.2,Fri Mar 11 2022 16:58:49 GMT+0000 (Greenwich Mean Time),564
-timemachine,index.d.ts,0.3.2,Mon Jun 27 2022 07:48:11 GMT+0100 (British Summer Time),0.3.2,Thu Oct 15 2020 05:46:14 GMT+0100 (British Summer Time),1076
-webpack,commonjs,5.88.2,Wed Sep 06 2023 19:55:24 GMT+0100 (British Summer Time),5.82.1,Wed May 10 2023 16:37:27 GMT+0100 (British Summer Time),139
-stylelint,commonjs,15.10.3,Fri Aug 18 2023 14:14:40 GMT+0100 (British Summer Time),13.13.1,Sat May 01 2021 12:05:57 GMT+0100 (British Summer Time),878
-terser-webpack-plugin,commonjs,5.3.9,Thu May 18 2023 00:20:28 GMT+0100 (British Summer Time),5.3.9,Thu May 18 2023 00:20:28 GMT+0100 (British Summer Time),132
-webpack-bundle-analyzer,commonjs,4.9.1,Wed Aug 30 2023 16:44:31 GMT+0100 (British Summer Time),4.8.0,Mon Feb 13 2023 08:38:45 GMT+0000 (Greenwich Mean Time),225
-ts-jest,commonjs,29.1.1,Fri Jun 30 2023 08:49:33 GMT+0100 (British Summer Time),29.1.1,Fri Jun 30 2023 08:49:33 GMT+0100 (British Summer Time),88
-ts-loader,commonjs,9.4.4,Wed Jun 28 2023 11:23:33 GMT+0100 (British Summer Time),9.4.4,Wed Jun 28 2023 11:23:33 GMT+0100 (British Summer Time),90
-supertest,commonjs,6.3.3,Wed Dec 07 2022 23:26:52 GMT+0000 (Greenwich Mean Time),6.3.3,Wed Dec 07 2022 23:26:52 GMT+0000 (Greenwich Mean Time),293
-retry,commonjs,0.13.1,Sun Jun 26 2022 13:20:05 GMT+0100 (British Summer Time),0.13.1,Mon Jun 21 2021 08:45:32 GMT+0100 (British Summer Time),827
-typescript,commonjs,5.3.0-dev.20230926,Tue Sep 26 2023 08:14:32 GMT+0100 (British Summer Time),4.9.5,Mon Jan 30 2023 21:05:37 GMT+0000 (Greenwich Mean Time),239
-webpack-cli,commonjs,5.1.4,Wed Jun 07 2023 19:23:17 GMT+0100 (British Summer Time),4.10.0,Mon Jun 13 2022 01:40:03 GMT+0100 (British Summer Time),471
-webpack-merge,commonjs,5.9.0,Mon May 22 2023 08:16:51 GMT+0100 (British Summer Time),5.8.0,Mon Jun 07 2021 09:34:45 GMT+0100 (British Summer Time),841
-webpack-dev-server,commonjs,4.15.1,Fri Jun 09 2023 15:38:59 GMT+0100 (British Summer Time),4.15.0,Sun May 07 2023 13:47:33 GMT+0100 (British Summer Time),142
-webpack-node-externals,commonjs,3.0.0,Wed Jun 29 2022 01:00:24 GMT+0100 (British Summer Time),3.0.0,Wed Apr 21 2021 11:08:25 GMT+0100 (British Summer Time),888
-wait-on,commonjs,7.0.1,Fri Dec 16 2022 19:59:41 GMT+0000 (Greenwich Mean Time),6.0.1,Fri Feb 11 2022 01:25:54 GMT+0000 (Greenwich Mean Time),592
-yaml-js,commonjs,0.3.1,Wed Jul 12 2023 20:13:22 GMT+0100 (British Summer Time),0.3.1,Sun Sep 19 2021 21:32:11 GMT+0100 (British Summer Time),737
+@emotion/react,commonjs,11.11.1,2023-06-07,11.11.1,2023-06-07,128
+@emotion/server,commonjs,11.11.0,2023-05-06,11.11.0,2023-05-06,160
+@emotion/styled,commonjs,11.11.0,2023-05-06,11.11.0,2023-05-06,160
+core-js,commonjs,3.33.0,2023-10-01,3.30.2,2023-05-06,160
+compression,commonjs,1.7.4,2023-07-12,1.7.4,2019-03-18,1670
+dotenv,commonjs,16.3.1,2023-06-17,16.0.3,2022-09-29,379
+express,commonjs,5.0.0-beta.1,2023-10-07,4.18.2,2022-10-08,370
+helmet,module,7.0.0,2023-05-06,4.6.0,2021-05-02,894
+@emotion/cache,commonjs,11.11.0,2023-05-06,11.11.0,2023-05-06,160
+express-static-gzip,commonjs,2.1.7,2022-06-17,2.1.7,2022-05-17,514
+isarray,commonjs,2.0.5,2023-07-12,2.0.5,2019-07-08,1558
+isomorphic-fetch,commonjs,3.0.0,2022-06-19,3.0.0,2020-09-23,1115
+aws-embedded-metrics,commonjs,4.1.0,2023-01-25,2.0.6,2022-07-26,444
+@loadable/component,commonjs,5.15.3,2023-01-28,5.15.3,2023-01-28,258
+lru-cache,commonjs,10.0.1,2023-08-10,7.7.1,2022-03-18,574
+jalaali-js,commonjs,1.2.6,2022-06-19,1.2.6,2022-05-18,513
+js-cookie,commonjs,3.0.5,2023-08-20,3.0.5,2023-04-24,172
+mkdirp,commonjs,3.0.1,2023-05-16,1.0.4,2020-04-03,1288
+polyfill-crypto.getrandomvalues,commonjs,1.0.0,2022-06-24,1.0.0,2016-03-05,2779
+@bbc/web-vitals,commonjs,1.2.1,2022-11-03,1.2.0,2022-09-08,400
+moment-timezone,commonjs,0.5.43,2023-05-11,0.5.43,2023-03-31,196
+morgan,commonjs,1.10.0,2023-02-21,1.10.0,2020-03-20,1302
+moment,commonjs,2.29.4,2023-08-27,2.29.4,2022-07-06,464
+intersection-observer,commonjs,0.12.2,2022-08-14,0.12.2,2022-06-14,486
+ramda,commonjs,0.29.1,2023-10-05,0.28.0,2022-01-16,635
+path-to-regexp,commonjs,6.2.1,2023-08-20,6.2.1,2022-05-06,525
+@loadable/server,commonjs,5.16.1,2023-07-20,5.15.3,2023-01-28,258
+helmet-csp,module,3.4.0,2022-06-18,3.4.0,2021-05-02,894
+@optimizely/react-sdk,commonjs,3.0.0-beta,2023-09-26,2.9.2,2023-03-15,212
+url-parse,commonjs,1.5.10,2022-06-28,1.5.10,2022-02-22,598
+react-router-dom,commonjs,6.17.0-pre.1,2023-10-12,5.3.4,2022-10-02,376
+uuid,commonjs,9.0.1,2023-09-12,8.3.2,2020-12-08,1039
+@babel/core,commonjs,8.0.0-alpha.4,2023-10-12,7.22.17,2023-09-08,35
+@babel/plugin-proposal-export-default-from,commonjs,8.0.0-alpha.4,2023-10-12,7.22.17,2023-09-08,35
+@babel/eslint-parser,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+react-helmet,commonjs,6.1.0,2022-09-25,6.1.0,2020-06-08,1222
+@babel/plugin-proposal-object-rest-spread,commonjs,7.21.4-esm.4,2023-09-01,7.20.7,2022-12-22,295
+react,commonjs,18.3.0-next-fecc288b7-20221025,2023-10-12,18.2.0,2022-06-14,486
+winston,commonjs,3.11.0,2023-10-07,3.8.2,2022-09-07,401
+react-dom,commonjs,18.3.0-next-fecc288b7-20221025,2023-10-12,18.2.0,2022-06-14,486
+react-lazyload,commonjs,3.2.0,2022-06-26,3.2.0,2021-02-11,974
+react-router-config,commonjs,5.1.1,2022-06-26,5.1.1,2019-09-28,1477
+xmldoc,commonjs,1.3.0,2023-03-20,1.3.0,2023-03-20,207
+@babel/plugin-syntax-dynamic-import,error,7.8.3,2022-06-12,7.8.3,2020-01-13,1369
+@babel/plugin-transform-runtime,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+@cypress/webpack-preprocessor,commonjs,6.0.0,2023-08-29,5.17.1,2023-05-01,165
+@babel/preset-env,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+@babel/preset-react,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+@loadable/babel-plugin,commonjs,5.16.1,2023-07-20,5.16.1,2023-07-20,85
+@babel/plugin-proposal-throw-expressions,commonjs,8.0.0-alpha.4,2023-10-12,7.22.5,2023-06-08,127
+@emotion/babel-plugin,commonjs,11.11.0,2023-07-22,11.11.0,2023-05-06,160
+@loadable/webpack-plugin,commonjs,5.15.2,2022-04-06,5.15.2,2021-12-12,670
+@babel/polyfill,commonjs,7.12.1,2022-06-12,7.12.1,2020-10-15,1093
+@storybook/addon-a11y,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@emotion/babel-preset-css-prop,commonjs,11.11.0,2023-05-06,11.11.0,2023-05-06,160
+@storybook/addon-controls,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@testing-library/react,commonjs,14.0.0,2023-05-24,14.0.0,2023-02-16,239
+@storybook/addon-toolbars,commonjs,7.5.0-alpha.7,2023-10-13,6.5.17-alpha.0,2023-03-23,204
+@storybook/addon-backgrounds,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@storybook/addon-knobs,commonjs,7.0.2,2023-04-27,6.4.0,2021-11-27,685
+@storybook/builder-webpack5,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@emotion/jest,commonjs,11.11.0,2023-05-06,11.11.0,2023-05-06,160
+@storybook/manager-webpack5,commonjs,7.0.0-alpha.10,2023-05-02,6.5.16,2023-01-26,260
+@storybook/addon-viewport,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@babel/runtime,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+@testing-library/jest-dom,commonjs,6.1.4,2023-10-12,6.1.3,2023-09-06,37
+@storybook/react,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@testing-library/react-hooks,commonjs,8.0.1,2022-10-18,8.0.1,2022-06-18,482
+@testing-library/user-event,commonjs,14.5.1,2023-09-15,14.4.3,2022-08-09,430
+@storybook/theming,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@types/jest,module,29.5.5,2023-09-15,29.5.4,2023-08-22,52
+@storybook/addon-docs,commonjs,7.5.0-alpha.7,2023-10-13,6.5.16,2023-01-26,260
+@types/loadable__component,module,5.13.5,2023-09-04,5.13.5,2023-08-30,44
+@types/ramda,module,0.29.6,2023-10-04,0.28.15,2022-07-09,461
+@types/react,module,18.2.28,2023-10-10,18.2.21,2023-08-22,52
+@types/react-helmet,module,6.1.7,2023-09-27,6.1.6,2022-11-28,319
+@types/js-cookie,module,3.0.4,2023-09-15,3.0.4,2023-09-15,28
+@types/react-router-dom,module,5.3.3,2023-03-06,5.3.3,2022-01-18,633
+@testing-library/dom,commonjs,10.0.0-alpha.2,2023-10-03,9.3.1,2023-06-14,121
+amphtml-validator,commonjs,1.0.35,2022-06-13,1.0.35,2021-05-20,876
+babel-jest,commonjs,29.7.0,2023-09-12,29.7.0,2023-09-12,31
+compression-webpack-plugin,commonjs,10.0.0,2023-04-11,9.2.0,2021-12-16,666
+babel-plugin-dynamic-import-node,commonjs,2.3.3,2023-10-07,2.3.3,2020-04-21,1270
+@types/react-lazyload,module,3.2.1,2023-09-27,3.2.1,2023-09-27,16
+babel-plugin-transform-react-remove-prop-types,commonjs,0.4.24,2022-06-13,0.4.24,2019-02-01,1715
+chalk,module,5.3.0,2023-06-29,5.3.0,2023-06-29,106
+babel-loader,commonjs,9.1.3,2023-07-07,9.1.3,2023-07-07,98
+@types/testing-library__react,commonjs,10.2.0,2022-04-07,10.2.0,2020-06-24,1206
+@types/jsdom,module,21.1.3,2023-09-15,20.0.1,2022-11-07,340
+@typescript-eslint/parser,commonjs,7.0.0-alpha.0,2023-10-11,5.59.6,2023-05-15,151
+cypress-multi-reporters,commonjs,2.0.1,2023-03-13,1.6.3,2023-03-13,214
+@types/react-dom,module,18.2.13,2023-10-10,18.2.7,2023-07-12,93
+cypress,commonjs,13.3.1,2023-10-12,9.6.0,2022-04-25,536
+eslint-import-resolver-alias,commonjs,1.1.2,2022-06-17,1.1.2,2018-12-08,1770
+cypress-axe,commonjs,1.5.0,2023-09-01,0.14.0,2022-01-04,647
+cli-table,commonjs,0.3.11,2023-04-12,0.3.11,2021-12-06,676
+@types/url-parse,module,1.4.9,2023-09-04,1.4.9,2023-08-30,44
+copy-webpack-plugin,commonjs,11.0.0,2023-04-11,9.1.0,2021-11-11,701
+chromatic,commonjs,7.4.1--canary.836.6509351700.0,2023-10-13,6.17.4,2023-05-03,163
+crypto,commonjs,1.0.1,2022-06-14,1.0.1,2017-08-10,2255
+@typescript-eslint/eslint-plugin,commonjs,7.0.0-alpha.0,2023-10-11,5.59.6,2023-05-15,151
+eslint-config-prettier,commonjs,9.0.0,2023-08-05,8.8.0,2023-03-20,207
+cypress-terminal-report,commonjs,5.3.7,2023-09-28,4.0.3,2022-07-05,465
+eslint,commonjs,8.51.0,2023-10-06,7.32.0,2021-07-30,805
+eslint-plugin-cypress,commonjs,2.15.1,2023-09-18,2.13.3,2023-04-28,168
+depcheck,commonjs,1.4.6,2023-09-11,1.4.5,2023-08-21,53
+@babel/preset-typescript,commonjs,8.0.0-alpha.4,2023-10-12,7.22.15,2023-09-04,39
+eslint-plugin-import,commonjs,2.28.1,2023-08-18,2.27.5,2023-01-16,270
+eslint-plugin-jsx-a11y,commonjs,6.7.1,2023-01-12,6.7.1,2023-01-12,274
+husky,commonjs,8.0.3,2023-06-09,8.0.3,2023-01-03,283
+eslint-config-airbnb,commonjs,19.0.4,2023-10-07,18.2.1,2020-11-06,1071
+eslint-plugin-prettier,commonjs,5.0.1,2023-10-11,4.2.1,2022-06-30,470
+eslint-plugin-json,commonjs,3.1.0,2023-07-09,3.1.0,2021-08-06,799
+eslint-plugin-react,commonjs,7.33.2,2023-09-24,7.32.2,2023-01-29,257
+fetch-mock,commonjs,9.11.0,2023-06-12,9.11.0,2020-11-21,1056
+glob,module,10.3.10,2023-09-27,8.0.3,2022-05-13,518
+history,commonjs,5.3.0,2022-06-18,4.10.1,2019-09-13,1492
+eslint-plugin-react-hooks,commonjs,5.0.0-next-fecc288b7-20221025,2023-10-12,4.6.0,2022-06-14,486
+jest,commonjs,29.7.0,2023-09-12,29.6.4,2023-08-24,50
+minimist,commonjs,1.2.8,2023-06-09,1.2.8,2023-02-09,246
+jest-fetch-mock,commonjs,3.0.3,2022-06-19,3.0.3,2020-03-10,1312
+jest-environment-jsdom,commonjs,29.7.0,2023-09-12,29.6.4,2023-08-24,50
+jest-junit,commonjs,16.0.0,2023-04-15,13.2.0,2022-04-20,541
+jsdom,commonjs,22.1.0,2023-05-27,19.0.0,2021-12-02,680
+inspectpack,commonjs,4.7.1,2023-09-28,4.7.1,2021-03-24,933
+mocha-junit-reporter,commonjs,2.2.1,2023-07-12,2.2.1,2023-07-12,93
+mocha,commonjs,10.2.0,2023-09-22,9.2.2,2022-03-11,581
+npm-run-all,commonjs,4.1.5,2023-07-21,4.1.5,2018-11-24,1784
+ora,module,7.0.1,2023-08-01,5.4.1,2021-06-08,857
+jest-silent-reporter,commonjs,0.5.0,2022-05-06,0.5.0,2021-03-10,947
+node-fetch,module,4.0.0-beta.4,2023-08-23,2.6.12,2023-06-29,106
+prettier,module,3.0.3,2023-08-29,2.8.8,2023-04-23,173
+stylelint,commonjs,15.10.3,2023-08-18,13.13.1,2021-05-01,895
+prop-types,commonjs,15.8.1,2023-08-24,15.8.1,2022-01-05,647
+retry,commonjs,0.13.1,2022-06-26,0.13.1,2021-06-21,844
+jest-serializer-html,commonjs,7.1.0,2023-07-27,7.1.0,2021-07-13,822
+stream-browserify,commonjs,3.0.0,2022-11-08,3.0.0,2020-04-16,1275
+strip-ansi,module,7.1.0,2023-05-28,6.0.1,2021-09-23,750
+react-test-renderer,commonjs,18.3.0-next-fecc288b7-20221025,2023-10-12,18.2.0,2022-06-14,486
+stylelint-config-recommended,commonjs,13.0.0,2023-07-04,7.0.0,2022-02-08,612
+start-server-nestjs-webpack-plugin,commonjs,2.2.5,2022-05-18,2.2.5,2020-11-11,1066
+terser-webpack-plugin,commonjs,5.3.9,2023-05-18,5.3.9,2023-05-18,149
+ts-jest,commonjs,29.1.1,2023-06-30,29.1.1,2023-06-30,105
+ts-loader,commonjs,9.5.0,2023-10-07,9.4.4,2023-06-28,107
+storybook-addon-designs,commonjs,7.0.0-beta.2,2023-09-10,6.3.1,2022-06-13,487
+timemachine,index.d.ts,0.3.2,2022-06-27,0.3.2,2020-10-15,1093
+webpack-bundle-analyzer,commonjs,4.9.1,2023-08-30,4.8.0,2023-02-13,242
+webpack-cli,commonjs,5.1.4,2023-06-07,4.10.0,2022-06-13,488
+webpack-node-externals,commonjs,3.0.0,2022-06-29,3.0.0,2021-04-21,905
+webpack,commonjs,5.88.2,2023-09-06,5.82.1,2023-05-10,156
+typescript,commonjs,5.3.0-dev.20231013,2023-10-13,4.9.5,2023-01-30,256
+yaml-js,commonjs,0.3.1,2023-07-12,0.3.1,2021-09-19,754
+webpack-dev-server,commonjs,4.15.1,2023-06-09,4.15.0,2023-05-07,159
+webpack-merge,commonjs,5.9.0,2023-05-22,5.8.0,2021-06-07,858
+supertest,commonjs,6.3.3,2022-12-07,6.3.3,2022-12-07,310
+wait-on,commonjs,7.0.1,2022-12-16,6.0.1,2022-02-11,610

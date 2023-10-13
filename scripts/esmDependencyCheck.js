@@ -101,6 +101,13 @@ const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
   return versionToReturn;
 };
 
+const simplifyDate = modifiedDate => {
+  const year = modifiedDate.getFullYear().toString();
+  const month = (modifiedDate.getMonth() + 1).toString().padStart(2, '0');
+  const day = modifiedDate.getDate().toString().padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 const getRepoFromNpmData = npmData => {
   if (
     npmData.hasOwnProperty('repository') &&
@@ -145,6 +152,7 @@ Object.keys(allDependencies).forEach((dep, i) => {
       if (stdout) {
         const depRepository = JSON.parse(stdout);
         const modifiedDate = new Date(depRepository.time.modified);
+        const simplifiedModifiedDate = simplifyDate(modifiedDate);
         if (dep === 'winston') {
           console.log('winston', dep, depRepository.time);
         }
@@ -161,6 +169,7 @@ Object.keys(allDependencies).forEach((dep, i) => {
         }
 
         const dateOfOurVersion = new Date(depRepository.time[ourVersion]);
+        const simplifiedDateOfOurVersion = simplifyDate(dateOfOurVersion);
 
         const ourFreshnessInDays = datediff(
           dateOfOurVersion.getTime(),
@@ -194,9 +203,9 @@ Object.keys(allDependencies).forEach((dep, i) => {
                     name: dep,
                     type: data.type,
                     mostRecentVersion: data.latestVersion,
-                    mostRecentVersionDate: data.modifiedDate,
-                    ourVersionDate: data.dateOfOurVersion,
+                    mostRecentVersionDate: simplifiedModifiedDate,
                     ourVersion: data.ourVersion,
+                    ourVersionDate: simplifiedDateOfOurVersion,
                     ourFreshnessInDays: data.ourFreshnessInDays,
                   });
                   console.log(
@@ -229,9 +238,9 @@ Object.keys(allDependencies).forEach((dep, i) => {
               name: dep,
               type: depType,
               mostRecentVersion: latestVersion,
-              mostRecentVersionDate: modifiedDate,
-              ourVersionDate: dateOfOurVersion,
+              mostRecentVersionDate: simplifiedModifiedDate,
               ourVersion,
+              ourVersionDate: simplifiedDateOfOurVersion,
               ourFreshnessInDays,
             });
           }
