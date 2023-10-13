@@ -58,7 +58,6 @@ const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
 
   const patchVersion = versionString.match(/patch/);
   if (patchVersion) {
-
     const possibleVersionStrings = versionString.match(
       /@npm:([\d.]+)|@([\d.]+)/,
     );
