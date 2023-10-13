@@ -34,30 +34,48 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
       if (res.status === 200) {
         return res.json().then(data => {
           if (!data.type) {
-            return {type: 'commonjs', ...args};
+            return { type: 'commonjs', ...args };
           } else if (data.type) {
-            return {type: data.type, ...args};
+            return { type: data.type, ...args };
           }
           return false;
         });
       } else {
-        return {type: 'error', ...args};
+        return { type: 'error', ...args };
       }
     })
     .catch(e => {
       countedRepos++;
       console.error(e);
-      return {type: 'error', ...args};
+      return { type: 'error', ...args };
     });
 };
 
-const dealWithCaretsAndTildes = (versionString, timeJson) => {
+const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
+  if (dep === 'winston' || dep === 'ramda') {
+    console.log('in dealwith timemachine', versionString, timeJson);
+  }
+
+  const patchVersion = versionString.match(/patch/);
+  if (patchVersion) {
+
+    const possibleVersionStrings = versionString.match(
+      /@npm:([\d.]+)|@([\d.]+)/,
+    );
+    return possibleVersionStrings
+      ? possibleVersionStrings[1] || possibleVersionStrings[2]
+      : `Version number not processed in current form ${versionString}`;
+  }
+
   const plainVersion = versionString.match(/^[\d\.]+$/g);
   if (plainVersion) {
     return versionString; // if it's just numbers and dots
   }
   const lowestVersionMatches = versionString.match(/[\d\.]+$/g);
   if (!lowestVersionMatches) {
+    if (dep === 'winston') {
+      console.log('before unknown', versionString, timeJson);
+    }
     return 'Unknown'; // if it contains a string that doesn't end in numbers and dots we give up
   }
   const splitOurVersionArray = lowestVersionMatches[0].split('.');
@@ -128,11 +146,20 @@ Object.keys(allDependencies).forEach((dep, i) => {
       if (stdout) {
         const depRepository = JSON.parse(stdout);
         const modifiedDate = new Date(depRepository.time.modified);
-
-        const ourVersion = dealWithCaretsAndTildes(
+        if (dep === 'winston') {
+          console.log('winston', dep, depRepository.time);
+        }
+        if (dep === 'timemachine') {
+          console.log('timemachine', dep, depRepository.time);
+        }
+        const ourVersion = dealWithNonNumericCharacters(
           allDependencies[dep],
           depRepository.time,
+          dep,
         );
+        if (dep === 'winston') {
+          console.log('winston', ourVersion);
+        }
 
         const dateOfOurVersion = new Date(depRepository.time[ourVersion]);
 
@@ -142,10 +169,9 @@ Object.keys(allDependencies).forEach((dep, i) => {
         );
         setTimeout(() => {
           let latestVersion = '';
-          if(Array.isArray(depRepository.versions)){
-latestVersion = depRepository.versions.at(-1);
-          }
-          else {
+          if (Array.isArray(depRepository.versions)) {
+            latestVersion = depRepository.versions.at(-1);
+          } else {
             latestVersion = depRepository.versions;
           }
           gitRepo = getRepoFromNpmData(depRepository);
@@ -155,11 +181,11 @@ latestVersion = depRepository.versions.at(-1);
               '',
             );
             const gitRepoArgs = {
-                latestVersion,
-                ourVersion,
-                ourFreshnessInDays,
-                dateOfOurVersion,
-                modifiedDate
+              latestVersion,
+              ourVersion,
+              ourFreshnessInDays,
+              dateOfOurVersion,
+              modifiedDate,
             };
             try {
               const remoteGitFile = getRemoteGitFile(gitRepo, gitRepoArgs)
@@ -206,8 +232,8 @@ latestVersion = depRepository.versions.at(-1);
               mostRecentVersion: latestVersion,
               mostRecentVersionDate: modifiedDate,
               ourVersionDate: dateOfOurVersion,
-                    ourVersion,
-                    ourFreshnessInDays,
+              ourVersion,
+              ourFreshnessInDays,
             });
           }
         }, i * 50);
