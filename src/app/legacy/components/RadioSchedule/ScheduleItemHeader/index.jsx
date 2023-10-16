@@ -62,7 +62,6 @@ const ScheduleItemHeader = ({
   const { script, locale, service, timezone, dir, translations } =
     useContext(ServiceContext);
 
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   const isLive = state === 'live';
@@ -118,7 +117,7 @@ const ScheduleItemHeader = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
-      {isLive && <LiveLabel liveText={liveLabel} ariaHidden />}
+      {isLive && <LiveLabel />}
       {isNext && (
         <NextLabel
           aria-hidden="true"
@@ -167,7 +166,7 @@ ScheduleItemHeader.propTypes = {
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
-  id: string,
+  id: oneOfType([number, string]),
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
