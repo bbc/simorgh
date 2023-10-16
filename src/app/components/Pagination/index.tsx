@@ -36,8 +36,8 @@ interface RenderBlockProps {
 }
 
 interface PaginationProps {
-  activePage: number;
-  pageCount: number;
+  activePage?: number;
+  pageCount?: number;
   pageXOfY: string;
   previousPage: string;
   nextPage: string;

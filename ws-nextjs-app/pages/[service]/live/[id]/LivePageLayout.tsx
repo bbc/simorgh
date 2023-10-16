@@ -13,7 +13,7 @@ import Header from './Header';
 import KeyPoints from './KeyPoints';
 
 import styles from './styles';
-import { StreamResponse, Page } from './Post/types';
+import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
 const logger = nodeLogger(__filename);
@@ -47,7 +47,7 @@ const LivePage = ({
   } = pageData;
 
   const { index: activePage, total: pageCount } =
-    (liveTextStream?.content?.data?.page as Page) || {};
+    liveTextStream?.content?.data?.page || {};
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -57,11 +57,12 @@ const LivePage = ({
     ...translations.pagination,
   };
 
-  const translatedPage = pageXOfY
-    .replace('{x}', activePage.toString())
-    .replace('{y}', pageCount.toString());
-
-  const pageTitle = `Test Live Page, ${translatedPage}`;
+  const paginatedPageTitle =
+    activePage && pageCount
+      ? `Test Live Page, ${pageXOfY
+          .replace('{x}', activePage.toString())
+          .replace('{y}', pageCount.toString())}`
+      : 'Test Live Page';
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
@@ -71,7 +72,7 @@ const LivePage = ({
   return (
     <>
       <MetadataContainer
-        title={activePage >= 2 ? pageTitle : title}
+        title={activePage && activePage >= 2 ? paginatedPageTitle : title}
         lang={lang}
         description="A test Live Page using Next.JS"
         openGraphType="website"
