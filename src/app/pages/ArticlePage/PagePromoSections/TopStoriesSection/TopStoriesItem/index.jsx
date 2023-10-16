@@ -6,6 +6,8 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
+import { buildUniquePromoId } from '../../../../../legacy/containers/StoryPromo/utilities';
+// import LiveLabel from '../../../../../components/LiveLabel';
 import {
   StyledTitle,
   StyledTimestamp,
@@ -15,7 +17,7 @@ import {
 
 const TopStoriesItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    const { script, translations } = useContext(ServiceContext);
+    const { script } = useContext(ServiceContext);
 
     if (!item || isEmpty(item)) return null;
 
@@ -52,17 +54,18 @@ const TopStoriesItem = forwardRef(
 
     const isLive = getIsLive(item);
 
-    const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-
-    // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-    // text to read 'Live' instead, which screenreaders pronounce correctly.
-    const liveLabelIsEnglish = liveLabel === 'LIVE';
-
     const titleTag = timestamp || isLive ? 'h3' : 'div';
 
     const titleHasContent = titleTag === 'h3';
 
     const Title = titleHasContent ? TitleWithContent : StyledTitle;
+
+    const linkId = buildUniquePromoId({
+      sectionType: 'top-stories-promo',
+      promoGroupId: 'live',
+      promoItem: item,
+      promoIndex: 1,
+    });
 
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
@@ -77,12 +80,7 @@ const TopStoriesItem = forwardRef(
               <Promo.Link>
                 {mediaType && <Promo.MediaIndicator />}
                 {isLive ? (
-                  <Promo.LiveLabel
-                    liveText={liveLabel}
-                    ariaHidden={liveLabelIsEnglish}
-                    offScreenText={liveLabelIsEnglish ? 'Live' : null}
-                    id={ariaLabelledBy}
-                  >
+                  <Promo.LiveLabel id={linkId}>
                     <Promo.Content
                       mediaDuration={mediaDuration}
                       headline={headline}
