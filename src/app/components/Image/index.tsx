@@ -31,6 +31,7 @@ type Props = {
   sizes?: string;
   src: string;
   width?: number;
+  fetchpriority?: 'high';
 };
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
@@ -59,6 +60,7 @@ const Image = ({
   src,
   width,
   children,
+  fetchpriority,
 }: PropsWithChildren<Props>) => {
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -164,6 +166,7 @@ const Image = ({
               width={width}
               height={height}
               css={styles.image}
+              fetchpriority={fetchpriority}
               style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>
