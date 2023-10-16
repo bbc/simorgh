@@ -46,6 +46,7 @@
     "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "dev": "yarn setupDevEnv && rm -rf build && NODE_OPTIONS=--no-experimental-fetch run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
+    "mostReadAndWatchedCollectionData": "node ./scripts/mostReadAndWatchedCollectionData",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
