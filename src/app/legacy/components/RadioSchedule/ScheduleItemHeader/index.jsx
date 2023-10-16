@@ -25,29 +25,24 @@ const TitleWrapper = styled.span`
   ${({ service }) => service && getSansRegular(service)}
   ${({ script }) => script && getPica(script)}
 `;
-
 const StyledLink = styled(Link)`
   &:hover ${TitleWrapper} {
     text-decoration: underline;
   }
-
   &:focus ${TitleWrapper} {
     text-decoration: underline;
   }
 `;
-
 const NextLabel = styled.span`
   ${({ service }) => service && getSansBold(service)}
   ${({ script }) => script && getPica(script)}
   color: ${props => props.theme.palette.KINGFISHER};
   display: inline-block;
-
   ${({ dir }) =>
     dir === 'rtl'
       ? `margin-left: ${GEL_SPACING};`
       : `margin-right: ${GEL_SPACING};`}
 `;
-
 const ScheduleItemHeader = ({
   state,
   link,
@@ -58,21 +53,15 @@ const ScheduleItemHeader = ({
   ...props
 }) => {
   const { linkComponent, linkComponentAttr, durationLabel } = props;
-
   const { script, locale, service, timezone, dir, translations } =
     useContext(ServiceContext);
-
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
-
   const isLive = state === 'live';
   const isNext = state === 'next';
-
   const eventTrackingData = {
     componentName: `radio-schedule-${state}`,
   };
-
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
   const listenLive = pathOr(
     'Listen Live',
     ['media', 'listenLive'],
@@ -84,13 +73,11 @@ const ScheduleItemHeader = ({
     ['media', 'listenNext'],
     translations,
   );
-
   const listenLabelTranslations = {
     live: listenLive,
     next: listenNext,
     onDemand: listen,
   };
-
   const formattedStartTime = formatUnixTimestamp({
     timestamp: startTime,
     format: 'HH:mm',
@@ -98,12 +85,10 @@ const ScheduleItemHeader = ({
     locale,
     isRelative: false,
   });
-
   const formattedDuration = detokenise(
     durationLabel,
     durationDictionary({ duration, locale }),
   );
-
   const episodeTitle = formatUnixTimestamp({
     timestamp: startTime,
     format: 'LL',
@@ -111,13 +96,12 @@ const ScheduleItemHeader = ({
     locale,
     isRelative: false,
   });
-
   const content = (
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
-      {isLive && <LiveLabel />}
+      {isLive && <LiveLabel id={`radio-schedule-${id}`} ariaHidden />}
       {isNext && (
         <NextLabel
           aria-hidden="true"
@@ -140,9 +124,7 @@ const ScheduleItemHeader = ({
       <VisuallyHiddenText>{`, ${formattedDuration} `}</VisuallyHiddenText>
     </span>
   );
-
   const linkProps = { [linkComponentAttr]: link };
-
   return state === 'next' ? (
     content
   ) : (
@@ -158,7 +140,6 @@ const ScheduleItemHeader = ({
     </StyledLink>
   );
 };
-
 ScheduleItemHeader.propTypes = {
   brandTitle: string.isRequired,
   link: string.isRequired,
@@ -166,15 +147,13 @@ ScheduleItemHeader.propTypes = {
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
-  id: oneOfType([number, string]),
+  id: string,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
-
 ScheduleItemHeader.defaultProps = {
   linkComponent: 'a',
   linkComponentAttr: 'href',
   id: '1',
 };
-
 export default ScheduleItemHeader;
