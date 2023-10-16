@@ -7,24 +7,24 @@ import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
-
+​
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];
 export const uniqueStates = ['live', 'onDemand', 'next'];
-
+​
 const listenLabelTranslations = {
   live: 'Listen Live',
   next: 'Listen Next',
   onDemand: 'Listen',
 };
-
+​
 const getSchedule = (service, withLongSummary) => {
   const { text, articlePath, longText, timezone } = TEXT_VARIANTS[service];
   const programDurationLabel =
     service === 'arabic' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
-
+​
   return stateTypes.map((state, index) => ({
-    id: index,
+    id: `p${index}`,
     state,
     startTime: 1566914061212,
     link: articlePath,
@@ -38,7 +38,7 @@ const getSchedule = (service, withLongSummary) => {
     timezone,
   }));
 };
-
+​
 export const renderProgramCard = ({
   state,
   service = 'news',
@@ -51,15 +51,15 @@ export const renderProgramCard = ({
   id,
 }) => {
   const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
-
+​
   const script = dir === 'rtl' ? arabic : latin;
-
+​
   const props = {
     durationLabel: dir === 'rtl' ? 'المدة الزمنية %duration%' : durationLabel,
     linkComponent,
     linkComponentAttr,
   };
-
+​
   const program = {
     state,
     link: articlePath,
@@ -69,7 +69,7 @@ export const renderProgramCard = ({
     duration,
     id,
   };
-
+​
   return (
     <ServiceContextProvider
       dir={dir}
@@ -82,7 +82,7 @@ export const renderProgramCard = ({
     </ServiceContextProvider>
   );
 };
-
+​
 export const renderRadioSchedule = ({
   service = 'news',
   locale = 'en-gb',
@@ -98,7 +98,7 @@ export const renderRadioSchedule = ({
   const liveLabel = dir === 'rtl' ? 'مباشر' : 'LIVE';
   const durationLabel =
     dir === 'rtl' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
-
+​
   return (
     <ServiceContextProvider service={service} dir={dir} pageLang="ar">
       <RadioSchedule
