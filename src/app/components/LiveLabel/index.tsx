@@ -30,6 +30,7 @@ const LiveLabel = ({
   let screenReaderText;
   let ariaHidden = false;
 
+  // If the translated phrase for "LIVE" is English, we don't want this to be read out by the screenreader, as it is often pronounced incorrectly (rhyming with "give" instead of "hive"), hence why we set ariaHidden to true
   if (liveLabelIsEnglish) {
     ariaHidden = true;
   }
