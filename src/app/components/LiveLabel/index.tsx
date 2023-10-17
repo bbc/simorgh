@@ -33,6 +33,7 @@ const LiveLabel = ({
   if (liveLabelIsEnglish) {
     ariaHidden = true;
   }
+  // If offscreenText has been provided as a prop to the LiveLabel component then we want to include a pause after the offscreen text (hence the addition of a comma and a space to the text)
   if (offScreenText) {
     screenReaderText = `${offScreenText}, `;
   } else if (liveLabelIsEnglish) {
