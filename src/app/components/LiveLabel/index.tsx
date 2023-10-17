@@ -16,9 +16,9 @@ interface LiveLabelProps {
 }
 
 const LiveLabel = ({
-  ariaHidden = false,
+  // ariaHidden = false,
   liveText,
-  offScreenText = '',
+  // offScreenText = '',
   lang = 'en-GB',
   id = '',
   children,
@@ -29,15 +29,16 @@ const LiveLabel = ({
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.
+
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  let screenReaderText;
-  if (offScreenText) {
-    screenReaderText = offScreenText;
-  } else if (liveLabelIsEnglish) {
-    screenReaderText = 'Live';
-  }
+  let screenReaderText = null;
+  let ariaHidden = false;
 
+  if (liveLabelIsEnglish) {
+    screenReaderText = 'Live';
+    ariaHidden = true;
+  }
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role

@@ -6,8 +6,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
-import { buildUniquePromoId } from '../../../../../legacy/containers/StoryPromo/utilities';
-// import LiveLabel from '../../../../../components/LiveLabel';
+
 import {
   StyledTitle,
   StyledTimestamp,
@@ -60,11 +59,7 @@ const TopStoriesItem = forwardRef(
 
     const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
-    const linkId = buildUniquePromoId({
-      sectionType: 'top-stories',
-      promoGroupId: 'live',
-      promoItem: item,
-    });
+   
 
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
@@ -79,7 +74,7 @@ const TopStoriesItem = forwardRef(
               <Promo.Link>
                 {mediaType && <Promo.MediaIndicator />}
                 {isLive ? (
-                  <Promo.LiveLabel id={linkId}>
+                  <Promo.LiveLabel id={ariaLabelledBy}>
                     <Promo.Content
                       mediaDuration={mediaDuration}
                       headline={headline}
