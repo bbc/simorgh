@@ -59,7 +59,7 @@ describe('Home Page - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=cm7682qz7v1t&service=kyrgyz&pageType=home',
+      path: 'https://mock-bff-path/?id=cm7682qz7v1t&service=kyrgyz&pageType=home&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -86,7 +86,7 @@ describe('Home Page - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=crg7kj2e52nt&service=kyrgyz&pageType=home',
+      path: 'https://mock-bff-path/?id=crg7kj2e52nt&service=kyrgyz&pageType=home&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
