@@ -40,12 +40,14 @@ describe('constructPageFetchUrl', () => {
       page: '2',
       pageType: 'topic',
       service: 'ukrainian',
+      serviceEnv: 'live',
       variant: 'ru-UA',
       isAmp: true,
     });
   });
 
   it('should remove .amp from ID', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
     const service = 'pidgin';
     const pathname = '/pidgin/articles/c0000000000o.amp';
     const pageType = ARTICLE_PAGE;
@@ -57,39 +59,39 @@ describe('constructPageFetchUrl', () => {
     });
 
     expect(fetchUrl.toString()).toBe(
-      'https://mock-bff-path/?id=c0000000000o&service=pidgin&pageType=article',
+      'https://mock-bff-path/?id=c0000000000o&service=pidgin&pageType=article&serviceEnv=live',
     );
   });
 
   it.each`
     pageType        | serviceOverride | variant    | environment | pathname                              | expected
     ${ARTICLE_PAGE} | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/articles/c0000000000o'} | ${'http://localhost/ukrainian/articles/c0000000000o'}
-    ${ARTICLE_PAGE} | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article'}
-    ${ARTICLE_PAGE} | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article'}
+    ${ARTICLE_PAGE} | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=test'}
+    ${ARTICLE_PAGE} | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&serviceEnv=live'}
     ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/articles/c0000000000o'} | ${'http://localhost/ukrainian/articles/c0000000000o/ru-UA'}
-    ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA'}
-    ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA'}
+    ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=test'}
+    ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/articles/c0000000000o'} | ${'https://mock-bff-path/?id=c0000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=live'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/23263889'}              | ${'http://localhost/ukrainian/23263889'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}              | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}              | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}              | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}              | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                       | ${'http://localhost/ukrainian'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                       | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                       | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                       | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                       | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'/serbian/cyr'}                     | ${'http://localhost/serbian/cyr'}
-    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'test'}   | ${'/serbian/cyr'}                     | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr'}
-    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'/serbian/cyr'}                     | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr'}
+    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'test'}   | ${'/serbian/cyr'}                     | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=test'}
+    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'/serbian/cyr'}                     | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=live'}
     ${HOME_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                     | ${'http://localhost/ukrainian/tipohome'}
-    ${HOME_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home'}
-    ${HOME_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home'}
-    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live'}
-    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live'}
-    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live'}
+    ${HOME_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home&serviceEnv=test'}
+    ${HOME_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home&serviceEnv=live'}
+    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=local'}
+    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=test'}
+    ${LIVE_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=live'}
     ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}   | ${'http://localhost/ukrainian/topics/c0000000000t'}
-    ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic'}
-    ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic'}
+    ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&serviceEnv=test'}
+    ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&serviceEnv=live'}
     ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}   | ${'http://localhost/ukrainian/ru-UA/topics/c0000000000t'}
-    ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA'}
-    ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA'}
+    ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=test'}
+    ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=live'}
   `(
     `should return $expected when pageType is $pageType and variant is $variant on $environment environment`,
     ({
