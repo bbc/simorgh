@@ -6,21 +6,21 @@
     "year": 2023
   },
   "uxAccessibilityDoc": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=365-2256&mode=design&t=YgJSJUbiATEtvcp3-0",
       "label": "Screen Reader UX"
     }
   },
   "acceptanceCriteria": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "",
       "label": "Accessibility Acceptance Criteria"
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "",
       "label": "Accessibility Swarm Notes"
