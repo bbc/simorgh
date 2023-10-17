@@ -20,15 +20,14 @@ const LiveLabel = ({
   liveText = 'LIVE',
   offScreenText = '',
   lang = 'en-GB',
-  id = '',
+  id,
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir } = useContext(ServiceContext);
 
   return (
-    // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <Text as="span" id={id} fontVariant="sansBold">
+    <Text as="span" id={id} fontVariant="sansBold" role="text">
       <span
         css={styles.liveLabel}
         dir={dir}
