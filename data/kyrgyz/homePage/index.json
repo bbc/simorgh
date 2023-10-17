@@ -1,318 +1,325 @@
 {
   "data": {
-    "title": "BBC News Кыргыз Кызматы",
-    "description": "",
+    "title": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
+    "description": "Hello I am a description! I was added in the \"Description\" field from the Details section in Tipo",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "Andrew promo, Low prominance for index-also spike",
-            "firstPublished": "2022-10-20T15:27:54.236Z",
-            "lastPublished": "2022-10-20T15:27:54.236Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0kn0v57e5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e73c/test/9c9c5240-508b-11ed-9488-854f10e82c4c.jpg",
-            "description": "",
-            "imageAlt": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
-            "id": "cd0kn0v57e5o",
-            "visualProminence": "NORMAL"
+            "type": "audio",
+            "title": "Headline  edited in promo itself test May 2023",
+            "firstPublished": "2023-03-06T13:10:39.425Z",
+            "link": "https://www.test.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1575/test/0167c910-f8a3-11ed-bbce-5b0f68ecdb7b.png",
+            "description": "Summary edited in promo itself  test May 2023",
+            "imageAlt": "Image edited in promo itself test May 2023",
+            "id": "c1ldk6kl66wo"
           },
           {
             "type": "article",
-            "title": "Тобокелчи тоо ашат, бирок экс-президенттерди  элдештирүүдөн эмне өзгөрөт?",
-            "firstPublished": "2022-10-27T11:19:43.946Z",
-            "lastPublished": "2022-10-27T11:19:43.946Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cn028lnjye5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
-            "description": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "imageAlt": "test",
-            "id": "c6vdqkm8yyvo",
-            "visualProminence": "LOW"
-          },
-          {
-            "type": "article",
-            "title": "3rd promo, Low prominance for index-also spike",
-            "firstPublished": "2022-10-20T15:50:59.010Z",
-            "lastPublished": "2022-10-20T15:50:59.010Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0gd0lxnlxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
+            "firstPublished": "2023-02-02T10:06:00.977Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "cd0gd0lxnlxo",
-            "visualProminence": "LOW"
+            "id": "cy0pvvd9jvpo"
           },
           {
             "type": "article",
-            "title": "4th promo, Low prominance for index-also spike",
-            "firstPublished": "2022-10-20T15:39:55.559Z",
-            "lastPublished": "2022-10-20T15:39:55.559Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cem3gm2ev3vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r",
+            "firstPublished": "2023-02-02T10:06:57.156Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "cem3gm2ev3vo",
-            "visualProminence": "LOW"
+            "id": "cemg3359nwro"
           },
           {
             "type": "article",
-            "title": "Youtube embeds",
-            "firstPublished": "2023-03-09T15:24:55.855Z",
-            "lastPublished": "2023-03-09T15:24:55.855Z",
-            "link": "https://www.test.bbc.com/pidgin/articles/ckk7xp9kx9lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e4f7/test/3f929a10-be8a-11ed-a8b5-93e1b2778943.png",
-            "description": "summary text",
-            "imageAlt": "alt text",
-            "id": "czmnmxr0jp4o"
-          },
-          {
-            "type": "article",
-            "title": "4 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "firstPublished": "2022-10-20T15:54:55.042Z",
-            "lastPublished": "2022-10-20T15:54:55.042Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmgwmq887eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 4\r",
+            "firstPublished": "2023-02-02T10:07:37.729Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cp56zz9mg01o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "czmgwmq887eo"
+            "id": "cp56zz9mg01o"
           },
           {
             "type": "article",
-            "title": "Test for by-line",
-            "firstPublished": "2022-10-14T20:01:58.544Z",
-            "lastPublished": "2022-10-14T20:01:58.544Z",
-            "link": "https://www.bbc.com/mundo/articles/cemq89x6xxlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3096/test/d5ed2c10-4df5-11ed-9488-854f10e82c4c.png",
-            "description": "",
-            "imageAlt": "John Smith",
-            "id": "cemq89x6xxlo"
-          },
-          {
-            "type": "article",
-            "title": "3 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "firstPublished": "2022-10-20T15:53:03.248Z",
-            "lastPublished": "2022-10-20T15:53:03.248Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c9xgjxm5ynpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 5\r",
+            "firstPublished": "2023-02-02T10:08:28.652Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cnk299l1mdgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "c9xgjxm5ynpo"
+            "id": "cnk299l1mdgo"
           },
           {
             "type": "article",
-            "title": "5 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "firstPublished": "2022-10-20T15:55:48.099Z",
-            "lastPublished": "2022-10-20T15:55:48.099Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cq9lq9q2vk5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 6\r",
+            "firstPublished": "2023-02-02T10:09:07.061Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c2qz889lr6do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "cq9lq9q2vk5o"
+            "id": "c2qz889lr6do"
           },
           {
             "type": "article",
-            "title": "6 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "firstPublished": "2022-10-20T15:56:38.968Z",
-            "lastPublished": "2022-10-20T15:56:38.968Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cn73v7vzv1eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 7\r",
+            "firstPublished": "2023-02-02T10:09:45.580Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cy0z22ny3jwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "cn73v7vzv1eo"
+            "id": "cy0z22ny3jwo"
           },
           {
             "type": "article",
-            "title": "7 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
-            "firstPublished": "2022-10-20T15:57:31.979Z",
-            "lastPublished": "2022-10-20T15:57:31.979Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c4r01r19dm5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 8\r",
+            "firstPublished": "2023-02-02T10:10:40.111Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c0n933z8qnyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
             "description": "",
             "imageAlt": "test",
-            "id": "c4r01r19dm5o"
+            "id": "c0n933z8qnyo"
+          },
+          {
+            "type": "article",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 9\r",
+            "firstPublished": "2023-02-02T10:11:19.977Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cndr228x0y4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cndr228x0y4o"
+          },
+          {
+            "type": "article",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 10\r",
+            "firstPublished": "2023-02-02T10:11:56.211Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cx9exxrn6wlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cx9exxrn6wlo"
+          },
+          {
+            "type": "article",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 11\r",
+            "firstPublished": "2023-02-02T10:13:18.938Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c12pxxzkzjdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
+            "imageAlt": "test",
+            "id": "c12pxxzkzjdo"
+          },
+          {
+            "type": "article",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 12\r",
+            "firstPublished": "2023-02-02T10:13:50.742Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c4xljjkewl1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
+            "imageAlt": "test",
+            "id": "c4xljjkewl1o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:e1f0e7e2-6251-4bfa-b33b-13006b825250",
+        "curationId": "urn:bbc:tipo:list:905b0f54-c03d-426f-9d3b-cb31f00c0d8f",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Test",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "headline",
-            "firstPublished": "2023-03-09T15:24:55.855Z",
-            "lastPublished": "2023-03-09T15:24:55.855Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmnmxr0jp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e4f7/test/3f929a10-be8a-11ed-a8b5-93e1b2778943.png",
-            "description": "summary text",
-            "imageAlt": "alt text",
-            "id": "czmnmxr0jp4o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:51.236Z",
-            "lastPublished": "2023-03-06T13:10:51.236Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c5w86v60m6yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c5w86v60m6yo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:39.425Z",
-            "lastPublished": "2023-03-06T13:10:39.425Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c1ldk6kl66wo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:21.229Z",
-            "lastPublished": "2023-03-06T13:10:21.229Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c4xl5251wv6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c4xl5251wv6o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:08.452Z",
-            "lastPublished": "2023-03-06T13:10:08.452Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cngejmjj5j4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cngejmjj5j4o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:57.116Z",
-            "lastPublished": "2023-03-06T13:09:57.116Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cjy5dmdmlrlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cjy5dmdmlrlo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:43.815Z",
-            "lastPublished": "2023-03-06T13:09:43.815Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cg1gnmn5wrjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cg1gnmn5wrjo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:26.606Z",
-            "lastPublished": "2023-03-06T13:09:26.606Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0k7p7jp0qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cy0k7p7jp0qo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:15.033Z",
-            "lastPublished": "2023-03-06T13:09:15.033Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/ck126m6xjq8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "ck126m6xjq8o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:02.156Z",
-            "lastPublished": "2023-03-06T13:09:02.156Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0vgjg9j5po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cy0vgjg9j5po"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:08:49.234Z",
-            "lastPublished": "2023-03-06T13:08:49.234Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0zlml4qv3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cd0zlml4qv3o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:08:32.114Z",
-            "lastPublished": "2023-03-06T13:08:32.114Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c6v4p5p0rz6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c6v4p5p0rz6o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:794f8046-302e-4d8d-8553-cc23320fd097",
-        "curationType": "vivo-stream",
-        "position": 1,
-        "title": "Vivo curation Feed VP High",
         "visualProminence": "HIGH",
-        "visualStyle": "FEED"
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 1,
+        "title": "Most Read feed",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "This is a Most Read curation to test our implementation 18 May 2023"
+        },
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/kyrgyz/popular/read",
+        "mostRead": {
+          "generated": "2023-06-05T09:42:58.094Z",
+          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+          "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
+          "items": [
+            {
+              "id": "cd68f2bc-efd5-a043-9500-a3891a13353b",
+              "rank": 1,
+              "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+              "href": "/kyrgyz/world-23090100",
+              "timestamp": 1478663803000
+            },
+            {
+              "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
+              "rank": 2,
+              "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+              "href": "/kyrgyz/world-23089413",
+              "timestamp": 1478506660000
+            },
+            {
+              "id": "5ac26713-7ec6-824f-a179-53f95a372408",
+              "rank": 3,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+              "href": "/kyrgyz/kyrgyzstan-23087515",
+              "timestamp": 1477898731000
+            },
+            {
+              "id": "429a5345-bc55-5947-b11b-19ae662817a5",
+              "rank": 4,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+              "href": "/kyrgyz/kyrgyzstan-23087513",
+              "timestamp": 1477898586000
+            },
+            {
+              "id": "a1445694-7c18-5547-928e-97f5f454bebe",
+              "rank": 5,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+              "href": "/kyrgyz/kyrgyzstan-23087514",
+              "timestamp": 1477898591000
+            },
+            {
+              "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
+              "rank": 6,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
+              "href": "/kyrgyz/sapar-tv-23087494",
+              "timestamp": 1477850970000
+            },
+            {
+              "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
+              "rank": 7,
+              "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
+              "href": "/kyrgyz/23103391",
+              "timestamp": 1487940772000
+            },
+            {
+              "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
+              "rank": 8,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
+              "href": "/kyrgyz/media-23087507",
+              "timestamp": 1477898550000
+            },
+            {
+              "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
+              "rank": 9,
+              "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
+              "href": "/kyrgyz/23103378",
+              "timestamp": 1569397958000
+            },
+            {
+              "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
+              "rank": 10,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
+              "href": "/kyrgyz/kyrgyzstan-23087520",
+              "timestamp": 1477898715000
+            },
+            {
+              "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
+              "rank": 11,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+              "href": "/kyrgyz/kyrgyzstan-23087511",
+              "timestamp": 1477899573000
+            },
+            {
+              "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
+              "rank": 12,
+              "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+              "href": "/kyrgyz/kyrgyzstan-23088783",
+              "timestamp": 1478184211000
+            },
+            {
+              "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
+              "rank": 13,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
+              "href": "/kyrgyz/blog-23087495",
+              "timestamp": 1477850987000
+            },
+            {
+              "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
+              "rank": 14,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
+              "href": "/kyrgyz/institutional-23087498",
+              "timestamp": 1477851087000
+            },
+            {
+              "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
+              "rank": 15,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
+              "href": "/kyrgyz/world-23087493",
+              "timestamp": 1477850702000
+            },
+            {
+              "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
+              "rank": 16,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
+              "href": "/kyrgyz/entertainment-23087489",
+              "timestamp": 1477850376000
+            },
+            {
+              "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
+              "rank": 17,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
+              "href": "/kyrgyz/kyrgyzstan-23087523",
+              "timestamp": 1477898702000
+            },
+            {
+              "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
+              "rank": 18,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
+              "href": "/kyrgyz/kyrgyzstan-23087528",
+              "timestamp": 1477898672000
+            },
+            {
+              "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
+              "rank": 19,
+              "title": "Түштүк Корея президенти кечирим сурады",
+              "href": "/kyrgyz/kyrgyzstan-23089035",
+              "timestamp": 1478260541000
+            },
+            {
+              "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
+              "rank": 20,
+              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+              "href": "/kyrgyz/kyrgyzstan-23087510",
+              "timestamp": 1477898574000
+            }
+          ]
+        }
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "headline",
-            "firstPublished": "2023-03-09T15:24:55.855Z",
-            "lastPublished": "2023-03-09T15:24:55.855Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmnmxr0jp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e4f7/test/3f929a10-be8a-11ed-a8b5-93e1b2778943.png",
-            "description": "summary text",
-            "imageAlt": "alt text",
-            "id": "czmnmxr0jp4o"
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r",
+            "firstPublished": "2023-02-02T10:06:57.156Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cemg3359nwro"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:51.236Z",
-            "lastPublished": "2023-03-06T13:10:51.236Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c5w86v60m6yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
+            "firstPublished": "2023-02-02T10:06:00.977Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "c5w86v60m6yo"
+            "id": "cy0pvvd9jvpo"
           },
           {
             "type": "article",
             "title": "Article tagged with Trump",
             "firstPublished": "2023-03-06T13:10:39.425Z",
-            "lastPublished": "2023-03-06T13:10:39.425Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
             "description": "summary of article",
@@ -321,170 +328,388 @@
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:21.229Z",
-            "lastPublished": "2023-03-06T13:10:21.229Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c4xl5251wv6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 4",
+            "firstPublished": "2023-02-02T11:41:09.361Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cmel5j6wwk2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "c4xl5251wv6o"
+            "id": "cmel5j6wwk2o"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:08.452Z",
-            "lastPublished": "2023-03-06T13:10:08.452Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cngejmjj5j4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 5",
+            "firstPublished": "2023-02-02T11:41:54.105Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cd0x1jwnw66o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "cngejmjj5j4o"
+            "id": "cd0x1jwnw66o"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:57.116Z",
-            "lastPublished": "2023-03-06T13:09:57.116Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cjy5dmdmlrlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 6",
+            "firstPublished": "2023-02-02T11:42:38.776Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c65eglnzz1vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "cjy5dmdmlrlo"
+            "id": "c65eglnzz1vo"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:43.815Z",
-            "lastPublished": "2023-03-06T13:09:43.815Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cg1gnmn5wrjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 7",
+            "firstPublished": "2023-02-02T11:43:14.865Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cj2r5lzp6k0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "cg1gnmn5wrjo"
+            "id": "cj2r5lzp6k0o"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:26.606Z",
-            "lastPublished": "2023-03-06T13:09:26.606Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0k7p7jp0qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 8",
+            "firstPublished": "2023-02-02T11:43:47.440Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c2qz8l2zn5eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "cy0k7p7jp0qo"
+            "id": "c2qz8l2zn5eo"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:15.033Z",
-            "lastPublished": "2023-03-06T13:09:15.033Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/ck126m6xjq8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 9",
+            "firstPublished": "2023-02-02T11:44:19.096Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "ck126m6xjq8o"
+            "id": "cm18pzwq691o"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:02.156Z",
-            "lastPublished": "2023-03-06T13:09:02.156Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0vgjg9j5po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 10",
+            "firstPublished": "2023-02-02T11:45:03.037Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cr89pqv3el2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "",
             "imageAlt": "test",
-            "id": "cy0vgjg9j5po"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:08:49.234Z",
-            "lastPublished": "2023-03-06T13:08:49.234Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0zlml4qv3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cd0zlml4qv3o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:08:32.114Z",
-            "lastPublished": "2023-03-06T13:08:32.114Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c6v4p5p0rz6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c6v4p5p0rz6o"
+            "id": "cr89pqv3el2o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:6ef1709b-00db-4374-a708-35701b96d83b",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202",
+        "curationType": "tipo-curation",
         "position": 2,
-        "title": "Vivo  collection VP High",
+        "title": "Редактордун тандоосу",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
-            "type": "audio",
-            "duration": "PT4M57S",
-            "title": "Кенебестиктин кесепети оор: капчыгайдагы кырсыктуу өлүмдөр",
-            "firstPublished": "",
-            "lastPublished": "2023-08-08T05:04:00.000Z",
-            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0g5fcc8",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
-            "description": "Кенебестиктин кесепети оор: капчыгайдагы кырсыктуу өлүмдөр",
-            "imageAlt": "",
-            "id": "p0g5fcc8"
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар",
+            "firstPublished": "2023-02-06T13:36:00.218Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cr9p5rw62j7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "cr9p5rw62j7o"
           },
           {
-            "type": "audio",
-            "duration": "PT3M45S",
-            "title": "Ажал айдаган шалаакылык, аны калкалаган мораторий",
-            "firstPublished": "",
-            "lastPublished": "2023-07-12T03:57:00.000Z",
-            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0g0c8l5",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0g0ftk3.jpg",
-            "description": "Ажал айдаган шалаакылык, аны калкалаган мораторий",
-            "imageAlt": "",
-            "id": "p0g0c8l5"
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 2",
+            "firstPublished": "2023-02-06T13:37:11.912Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cnk23wye4kyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "cnk23wye4kyo"
           },
           {
-            "type": "audio",
-            "duration": "PT4M52S",
-            "title": "Путин менен Пригожин козголоңдон кийин жолуккан",
-            "firstPublished": "",
-            "lastPublished": "2023-07-11T03:41:00.000Z",
-            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0g05mvl",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0g05mw5.jpg",
-            "description": "Путин менен Пригожин козголоңдон кийин жолуккан",
-            "imageAlt": "",
-            "id": "p0g05mvl"
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 3",
+            "firstPublished": "2023-02-06T13:37:48.118Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c0n89302mwdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "c0n89302mwdo"
           },
           {
-            "type": "audio",
-            "duration": "PT2M55S",
-            "title": "Өзбекстан: президенттик шайлоодо Мирзиёев жеңди",
-            "firstPublished": "",
-            "lastPublished": "2023-07-10T10:15:00.000Z",
-            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0g00mm6",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
-            "description": "Өзбекстан: президенттик шайлоодо Мирзиёев жеңди",
-            "imageAlt": "",
-            "id": "p0g00mm6"
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 4",
+            "firstPublished": "2023-02-06T13:38:21.709Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/clygdvn0vepo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "clygdvn0vepo"
+          },
+          {
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 5",
+            "firstPublished": "2023-02-06T13:38:53.193Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c0n2glkxx13o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "c0n2glkxx13o"
+          },
+          {
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 6",
+            "firstPublished": "2023-02-06T13:39:22.009Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmwkw5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "c85pqkmwkw5o"
+          },
+          {
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 7",
+            "firstPublished": "2023-02-06T13:39:55.607Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmz8e2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "c85pqkmz8e2o"
+          },
+          {
+            "type": "article",
+            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 8",
+            "firstPublished": "2023-02-06T13:40:23.909Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ck42g152vl6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+            "imageAlt": "test",
+            "id": "ck42g152vl6o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81",
+        "link": "https://www.bbc.com/kyrgyz/topics/cz74kjpyk07t",
+        "curationId": "urn:bbc:tipo:list:4991ab89-0967-4653-9760-f3e133896a46",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Кыргызстан",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү",
+            "firstPublished": "2023-02-06T13:45:17.207Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c6x9vjk8zy2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "c6x9vjk8zy2o"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 2",
+            "firstPublished": "2023-02-06T13:47:06.980Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cw1kzjme384o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "cw1kzjme384o"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 3",
+            "firstPublished": "2023-02-06T13:47:34.717Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c3d1vyrdx21o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "c3d1vyrdx21o"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 4",
+            "firstPublished": "2023-02-06T13:48:04.311Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c86jzl31jm5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "c86jzl31jm5o"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 5",
+            "firstPublished": "2023-02-06T13:48:35.778Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cp567nq7kx6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "cp567nq7kx6o"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 6",
+            "firstPublished": "2023-02-06T13:49:01.557Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cv748vmk2pno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "cv748vmk2pno"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 7",
+            "firstPublished": "2023-02-06T13:49:31.970Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ck9yxzvv7deo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "ck9yxzvv7deo"
+          },
+          {
+            "type": "article",
+            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 8",
+            "firstPublished": "2023-02-06T13:50:08.108Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c380rxlx2z9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+            "imageAlt": "test",
+            "id": "c380rxlx2z9o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
+        "curationId": "urn:bbc:tipo:list:d4ec3c0c-1aa7-445e-9ef2-59d341b41038",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Дүйнө",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "title": "Би-Би-Си ТВ жаңылыктары",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png",
+            "description": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
+            "imageAlt": "Microphone",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+        "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Би-Би-Си ТВ жаңылыктары",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
+            "firstPublished": "2023-02-07T14:51:20.980Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+            "imageAlt": "test",
+            "id": "cr91pzee4dro"
+          },
+          {
+            "type": "article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 2",
+            "firstPublished": "2023-02-07T14:52:16.175Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+            "imageAlt": "test",
+            "id": "cd0nevdy25vo"
+          },
+          {
+            "type": "article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
+            "firstPublished": "2023-02-07T14:52:44.188Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+            "imageAlt": "test",
+            "id": "czmnz5184jeo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
+        "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "Журнал",
+        "visualProminence": "HIGH"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "duration": "PT5M52S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fpqkrq",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+            "description": "Кадыр Кошалиев: Курманбек Бакиевди актоо максатым эмес...",
+            "imageAlt": "",
+            "id": "p0fpqkrq"
+          },
+          {
+            "type": "audio",
+            "duration": "PT1M39S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnzmkf",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+            "description": "Батыштагы жетекчилер украин армиясы контрчабуулга күчөтүлгөн даярдык жөнүндө билдирүүдө",
+            "imageAlt": "",
+            "id": "p0fnzmkf"
+          },
+          {
+            "type": "audio",
+            "duration": "PT3M12S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnb85d",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+            "description": "Британия Украинага 250 км алыс учкан Storm Shadow ракеталарын берет",
+            "imageAlt": "",
+            "id": "p0fnb85d"
+          },
+          {
+            "type": "audio",
+            "duration": "PT4M48S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fkxv40",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+            "description": "АКШ чалгын кызматы: Украинада 20 миң россиялык курман болду",
+            "imageAlt": "",
+            "id": "p0fkxv40"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0dwnqrb",
         "curationId": "urn:bbc:programmes:available-episodes:p0c80v81",
         "curationType": "available-episodes",
-        "position": 3,
+        "position": 7,
         "title": "Видео жана Подкасттар",
         "visualProminence": "NORMAL",
         "visualStyle": "FEED"
@@ -492,393 +717,120 @@
       {
         "summaries": [
           {
-            "type": "topic",
-            "title": "View news",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/topics/cvpv9djp9qqt",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3da7/test/3c254f80-ac51-11ed-b749-5d653c1bd28b.jpg",
+            "type": "video",
+            "duration": "PT30S",
+            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар",
+            "firstPublished": "2023-02-02T11:56:17.767Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c6rgpy2y00qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
             "description": "",
-            "imageAlt": "image",
-            "id": "cvpv9djp9qqt"
+            "imageAlt": "test",
+            "id": "c6rgpy2y00qo"
           },
           {
-            "type": "link",
-            "title": "View gossip",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/articles/cp6zz77xyp7o",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png",
-            "description": "Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.",
-            "imageAlt": "alt text",
-            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewskyrgyz%2F%3Fhl%3Den"
+            "type": "video",
+            "duration": "PT30S",
+            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 2",
+            "firstPublished": "2023-02-02T11:56:49.913Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cd0nz6e5lj0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cd0nz6e5lj0o"
+          },
+          {
+            "type": "video",
+            "duration": "PT30S",
+            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 3",
+            "firstPublished": "2023-02-02T11:57:11.013Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cle6ylr495ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cle6ylr495ko"
+          },
+          {
+            "type": "video",
+            "duration": "PT30S",
+            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 4",
+            "firstPublished": "2023-02-02T11:57:24.839Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cd0qkxer6rko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+            "description": "",
+            "imageAlt": "test",
+            "id": "cd0qkxer6rko"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:a9b1b33c-5de4-430e-a2f5-ce6882e62770",
-        "curationType": "tipo-curation",
-        "position": 4,
-        "title": "Get all the January transfer gossip",
-        "visualProminence": "HIGH",
-        "visualStyle": "BANNER"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "BBC News Russian",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "http://www.bbc.com/russian",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/160c/test/96297a80-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Russian",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Frussian"
-          },
-          {
-            "type": "link",
-            "title": "BBC Azeri",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "http://www.bbc.com/azeri",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9f48/test/b6866400-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Azeri",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fazeri"
-          },
-          {
-            "type": "link",
-            "title": "BBC Uzbek",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "http://www.bbc.com/uzbek",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6adf/test/eb7c2140-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Uzbek",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fuzbek"
-          },
-          {
-            "type": "link",
-            "title": "BBC Turkish",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "http://www.bbc.com/turkce",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/593b/test/010c4d50-a309-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Turkce",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fturkce"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
-        "curationType": "tipo-curation",
-        "position": 5,
-        "title": "Test links low visual prominence",
-        "visualProminence": "LOW",
-        "visualStyle": "LINKS"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Twitter",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.twitter.com/",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/efae/test/79e17d10-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "Twitter",
-            "id": "https%3A%2F%2Fwww.twitter.com"
-          },
-          {
-            "type": "link",
-            "title": "Facebook",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.facebook.com/",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3da9/test/86350190-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "Facebook",
-            "id": "https%3A%2F%2Fwww.facebook.com"
-          },
-          {
-            "type": "link",
-            "title": "Instagram",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.instagram.com/",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8aee/test/922de2f0-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "Instagram",
-            "id": "https%3A%2F%2Fwww.instagram.com"
-          },
-          {
-            "type": "link",
-            "title": "YouTube",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.youtube.com/",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ca26/test/a1a3dd20-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "YouTube",
-            "id": "https%3A%2F%2Fwww.youtube.com"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:2ab06dd1-ba2c-402f-9a40-4da98bb5f750",
-        "curationType": "tipo-curation",
-        "position": 6,
-        "title": "Test links normal",
-        "visualProminence": "NORMAL",
-        "visualStyle": "LINKS"
-      },
-      {
-        "summaries": [
-          {
-            "type": "topic",
-            "title": "View news",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/topics/cvpv9djp9qqt",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3da7/test/3c254f80-ac51-11ed-b749-5d653c1bd28b.jpg",
-            "description": "",
-            "imageAlt": "image",
-            "id": "cvpv9djp9qqt"
-          },
-          {
-            "type": "link",
-            "title": "View gossip",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/articles/cp6zz77xyp7o",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png",
-            "description": "Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.",
-            "imageAlt": "alt text",
-            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewskyrgyz%2F%3Fhl%3Den"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:a9b1b33c-5de4-430e-a2f5-ce6882e62770",
-        "curationType": "tipo-curation",
-        "position": 7,
-        "title": "Get all the Premier League January transfer news direct to your phone",
-        "visualProminence": "NORMAL",
-        "visualStyle": "BANNER"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
-            "firstPublished": "2016-11-09T03:55:21.000Z",
-            "lastPublished": "2016-11-09T03:56:43.000Z",
-            "link": "https://www.bbc.com/kyrgyz/world-23090100",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
-            "description": "Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
-            "imageAlt": "Trump",
-            "id": "cd68f2bc-efd5-a043-9500-a3891a13353b"
-          },
-          {
-            "type": "article",
-            "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
-            "firstPublished": "2017-02-24T12:04:09.000Z",
-            "lastPublished": "2019-09-25T07:52:38.000Z",
-            "link": "https://www.bbc.com/kyrgyz/23103378",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
-            "description": "Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
-            "imageAlt": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
-            "id": "91d192e9-38dd-4f44-882b-c724bb41331f"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "link": "http://google.com",
-        "curationId": "urn:bbc:tipo:list:74fcc4e3-cc39-4486-86b2-cbd13ab50802",
+        "curationId": "urn:bbc:tipo:list:c8c07db7-0a13-4e50-b41d-135d8f761949",
         "curationType": "tipo-curation",
         "position": 8,
-        "title": "This is a message banner with multiple promos, but you should only see the first one",
+        "title": "Би-Би-Си \"САПАР\"",
         "visualProminence": "NORMAL",
-        "visualStyle": "BANNER"
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "headline",
-            "firstPublished": "2023-03-09T15:24:55.855Z",
-            "lastPublished": "2023-03-09T15:24:55.855Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmnmxr0jp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/e4f7/test/3f929a10-be8a-11ed-a8b5-93e1b2778943.png",
-            "description": "summary text",
-            "imageAlt": "alt text",
-            "id": "czmnmxr0jp4o"
+            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+            "firstPublished": "2016-11-07T08:16:20.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-23089413",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
+            "description": "Soz erkindigin chektoo turaluu jiyin ottu",
+            "imageAlt": "ыаыаыаыаы",
+            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:51.236Z",
-            "lastPublished": "2023-03-06T13:10:51.236Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c5w86v60m6yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c5w86v60m6yo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:39.425Z",
-            "lastPublished": "2023-03-06T13:10:39.425Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c1ldk6kl66wo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:21.229Z",
-            "lastPublished": "2023-03-06T13:10:21.229Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c4xl5251wv6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c4xl5251wv6o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:08.452Z",
-            "lastPublished": "2023-03-06T13:10:08.452Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cngejmjj5j4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cngejmjj5j4o"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:57.116Z",
-            "lastPublished": "2023-03-06T13:09:57.116Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cjy5dmdmlrlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cjy5dmdmlrlo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:43.815Z",
-            "lastPublished": "2023-03-06T13:09:43.815Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cg1gnmn5wrjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cg1gnmn5wrjo"
-          },
-          {
-            "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:09:26.606Z",
-            "lastPublished": "2023-03-06T13:09:26.606Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0k7p7jp0qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "cy0k7p7jp0qo"
+            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "firstPublished": "2016-11-03T14:43:31.000Z",
+            "link": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/06A6/test/_63520710_23088783.jpg",
+            "description": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "imageAlt": "Family Violence",
+            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:34460453-f2cc-4443-9f0b-37448e13c70b",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:tipo:list:5d434896-f075-40ae-93f5-e35aa6f8b851",
+        "curationType": "tipo-curation",
         "position": 9,
-        "title": "Test feed bottom of page",
+        "title": "Test curation kyrgyz created 27/03/23",
         "visualProminence": "NORMAL",
-        "visualStyle": "FEED"
+        "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Optimo article with Index Alsos",
-            "firstPublished": "2021-05-24T15:30:34.474Z",
-            "lastPublished": "2021-05-24T15:30:34.474Z",
-            "link": "https://www.bbc.comundefined/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/bf91/test/be460390-bca4-11eb-a497-37401100fd9b.jpg",
-            "description": "Optimo article with Index Alsos. This is the summary.",
-            "imageAlt": "test",
-            "id": "cgvd84xmq35o"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:12184f3e-c255-4037-88ba-96ffe4cf3bd0",
-        "curationType": "vivo-stream",
-        "position": 10,
-        "title": "test for deletion",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Optimo article with Index Alsos",
-            "firstPublished": "2021-05-24T15:30:34.474Z",
-            "lastPublished": "2021-05-24T15:30:34.474Z",
-            "link": "https://www.bbc.comundefined/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/bf91/test/be460390-bca4-11eb-a497-37401100fd9b.jpg",
-            "description": "Optimo article with Index Alsos. This is the summary.",
-            "imageAlt": "test",
-            "id": "cgvd84xmq35o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:251449be-a6df-41bb-b281-8642eedd8df2",
+        "curationId": "urn:bbc:vivo:curation:72aebc73-4f20-4801-8301-f889faa9b240",
         "curationType": "vivo-stream",
         "position": 11,
-        "title": "Vivo Curation with Prominence = NORMAL and Style = FEED",
-        "visualProminence": "NORMAL",
+        "title": "Vivo feed limitation to 4 Feed/Low",
+        "visualProminence": "LOW",
         "visualStyle": "FEED"
       },
       {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Optimo article with Index Alsos",
-            "firstPublished": "2021-05-24T15:30:34.474Z",
-            "lastPublished": "2021-05-24T15:30:34.474Z",
-            "link": "https://www.bbc.comundefined/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/bf91/test/be460390-bca4-11eb-a497-37401100fd9b.jpg",
-            "description": "Optimo article with Index Alsos. This is the summary.",
-            "imageAlt": "test",
-            "id": "cgvd84xmq35o"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:fa99724e-1a46-4569-83a0-d3e3d208de8c",
+        "curationId": "urn:bbc:vivo:curation:00414d81-401f-4e61-bbe7-ccd9dc813877",
         "curationType": "vivo-stream",
         "position": 12,
-        "title": "Vivo Curation with Prominence = LOW and Style = FEED",
-        "visualProminence": "LOW",
+        "title": "Vivo feed limitation to 8 Feed/Normal",
+        "visualProminence": "NORMAL",
         "visualStyle": "FEED"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cvpv9djp9qqt",
+        "contentId": "urn:bbc:tipo:topic:cm7682qz7v1t",
         "contentType": "index-home",
         "pageIdentifier": "kyrgyz.page",
-        "pageTitle": "BBC News Кыргыз Кызматы"
+        "pageTitle": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section"
       }
     }
   },

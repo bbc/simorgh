@@ -4,14 +4,22 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
-import { Services, Variants, Environments } from '../../../models/types/global';
+import {
+  Services,
+  Variants,
+  Environments,
+  PageTypes,
+} from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
-import PAGE_TYPES from './page-types';
+import {
+  ARTICLE_PAGE,
+  CPS_ASSET,
+  HOME_PAGE,
+  LIVE_PAGE,
+  MOST_READ_PAGE,
+  TOPIC_PAGE,
+} from '../pageTypes';
 
-const { ARTICLE, CPS_ASSET, HOME, LIVE, MOST_READ, TOPIC } = PAGE_TYPES;
-
-type Keys = keyof typeof PAGE_TYPES;
-type PageTypes = (typeof PAGE_TYPES)[Keys];
 interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
@@ -47,7 +55,7 @@ interface GetIdProps {
 const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
-    case ARTICLE:
+    case ARTICLE_PAGE:
       getIdFunction = getArticleId;
       break;
     case CPS_ASSET:
@@ -61,18 +69,18 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
           : getCpsId(path);
       };
       break;
-    case HOME:
+    case HOME_PAGE:
       getIdFunction = () => {
         return env !== 'local'
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
       break;
-    case MOST_READ:
+    case MOST_READ_PAGE:
       getIdFunction = () => pageType;
       break;
-    case LIVE:
-    case TOPIC:
+    case LIVE_PAGE:
+    case TOPIC_PAGE:
       getIdFunction = getTipoId;
       break;
     default:
@@ -112,6 +120,7 @@ const constructPageFetchUrl = ({
     ...(isAmp && {
       isAmp,
     }),
+    ...(env && { serviceEnv: env }),
   };
 
   let fetchUrl = Url(process.env.BFF_PATH as string).set(
@@ -121,7 +130,7 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case ARTICLE:
+      case ARTICLE_PAGE:
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
@@ -129,13 +138,13 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
         fetchUrl = Url(id);
         break;
-      case HOME:
+      case HOME_PAGE:
         fetchUrl = Url(`/${service}/${id}`);
         break;
-      case MOST_READ:
+      case MOST_READ_PAGE:
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
-      case TOPIC: {
+      case TOPIC_PAGE: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;

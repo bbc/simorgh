@@ -232,8 +232,6 @@ const StoryPromoContainer = ({
           {isLive ? (
             <LiveLabel
               id={linkId}
-              service={service}
-              dir={dir}
               liveText={liveLabel}
               ariaHidden={liveLabelIsEnglish}
               offScreenText={liveLabelIsEnglish ? 'Live' : null}

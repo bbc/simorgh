@@ -161,12 +161,33 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -324,12 +345,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           href="https://www.bbc.co.uk/news"
         >
           <span
+            class="emotion-12"
             id="bulletin-TestRadioBulletinpromonews"
-            role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -546,12 +567,33 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -709,12 +751,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           href="https://www.bbc.co.uk/news"
         >
           <span
+            class="emotion-12"
             id="bulletin-TestTVBulletinpromonews"
-            role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="ltr"
             >
               NA EME UGBU A 

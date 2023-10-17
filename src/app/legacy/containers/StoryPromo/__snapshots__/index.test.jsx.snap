@@ -6844,12 +6844,33 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-15 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-16 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-17 {
@@ -6938,11 +6959,11 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-15"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-16"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7159,12 +7180,33 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-16 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-17 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-18 {
@@ -7253,11 +7295,11 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-16"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-17"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7406,12 +7448,33 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-8 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-9 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-10 {
@@ -7555,11 +7618,11 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-8"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-9"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7806,12 +7869,33 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-15 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-16 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-17 {
@@ -7893,11 +7977,11 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-15"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-16"
               dir="ltr"
             >
               NA EME UGBU A 

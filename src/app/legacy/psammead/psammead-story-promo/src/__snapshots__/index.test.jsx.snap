@@ -2172,12 +2172,33 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -2259,11 +2280,12 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
           href="https://www.bbc.co.uk/news"
         >
           <span
-            role="text"
+            class="emotion-12"
+            id=""
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="ltr"
             >
               LIVE 
@@ -2434,12 +2456,33 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-left: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -2521,11 +2564,12 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
           href="https://www.bbc.co.uk/news"
         >
           <span
-            role="text"
+            class="emotion-12"
+            id=""
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="rtl"
             >
               LIVE 

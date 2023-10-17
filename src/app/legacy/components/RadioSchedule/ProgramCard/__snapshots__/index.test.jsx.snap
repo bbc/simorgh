@@ -100,12 +100,33 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 .emotion-9 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-10 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-12 {
@@ -245,11 +266,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
               Listen Live, 
             </span>
             <span
-              role="text"
+              class="emotion-9"
+              id=""
             >
               <span
                 aria-hidden="true"
-                class="emotion-9 emotion-10"
+                class="emotion-10"
                 dir="ltr"
               >
                 LIVE 
@@ -1297,12 +1319,33 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 .emotion-9 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-10 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-12 {
@@ -1416,11 +1459,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
               Listen Live, 
             </span>
             <span
-              role="text"
+              class="emotion-9"
+              id=""
             >
               <span
                 aria-hidden="true"
-                class="emotion-9 emotion-10"
+                class="emotion-10"
                 dir="ltr"
               >
                 LIVE 

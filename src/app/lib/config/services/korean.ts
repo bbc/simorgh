@@ -126,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: '네',
           reject: '변경사항을 확인하세요',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -139,7 +139,7 @@ export const service: DefaultServiceConfig = {
                 linkText: '쿠키',
                 last: ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '나의 설정 바꾸기',
             },
@@ -155,7 +155,7 @@ export const service: DefaultServiceConfig = {
                   '홈페이지를 가동하기 위해 사용자의 동의 없이 기기의 정보를 제한적으로 저장합니다.',
                 para4: {
                   text: '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   '사용자의 정보 수집 동의 여부는 로컬 스토리지에 저장됩니다.',
@@ -188,13 +188,13 @@ export const service: DefaultServiceConfig = {
                 linkText: '쿠키',
                 last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '네, 동의합니다',
             reject: '아니요, 설정 화면으로 이동합니다',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

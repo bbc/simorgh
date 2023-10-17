@@ -126,7 +126,7 @@ export const buildATIPageTrackPath = ({
     {
       key: 'x3',
       description: 'app name',
-      value: appName,
+      value: platform === 'app' ? `${appName}-app` : appName,
       wrap: true,
     },
     { key: 'x4', description: 'language', value: language, wrap: true },

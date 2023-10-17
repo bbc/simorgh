@@ -1,5 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -8,6 +8,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
+import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
@@ -17,6 +18,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -99,7 +101,7 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContext.Provider value={serviceContextMock}>
+      <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
         <RequestContextProvider
           isAmp={false}
           pageType={ARTICLE_PAGE}
@@ -125,13 +127,17 @@ const ComponentWithServiceContext = ({
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
-  decorators: [withKnobs],
+  decorators: [withKnobs, withServicesKnob()],
   parameters: { layout: 'fullscreen' },
 };
 
 export const ArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
 );
+export const Burmese = props => (
+  <ComponentWithServiceContext {...props} data={articleDataBurmese} service="burmese"/>
+);
+
 
 export const ArticlePageWithRelatedContent = props => (
   <ComponentWithContext {...props} data={articleDataWithRelatedContent} />

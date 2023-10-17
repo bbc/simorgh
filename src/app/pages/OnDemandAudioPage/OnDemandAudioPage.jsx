@@ -8,8 +8,8 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
+import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import { RequestContext } from '#contexts/RequestContext';

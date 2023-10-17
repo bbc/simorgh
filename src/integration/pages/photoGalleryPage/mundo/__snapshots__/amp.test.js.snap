@@ -290,6 +290,7 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
 <amp-img
   alt="Tenista de 1904"
   attribution="Getty Images"
+  class="bbc-image"
   fallback=""
   height="549"
   layout="responsive"

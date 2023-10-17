@@ -428,12 +428,33 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-27 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-28 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-30 {
@@ -779,11 +800,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                   Listen Live, 
                 </span>
                 <span
-                  role="text"
+                  class="emotion-27"
+                  id=""
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-27 emotion-28"
+                    class="emotion-28"
                     dir="ltr"
                   >
                     LIVE 
@@ -1673,12 +1695,33 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-27 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-28 {
   color: #B80000;
   display: inline-block;
-  margin-left: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-30 {
@@ -2024,11 +2067,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                   استمع للبث المباشر, 
                 </span>
                 <span
-                  role="text"
+                  class="emotion-27"
+                  id=""
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-27 emotion-28"
+                    class="emotion-28"
                     dir="rtl"
                   >
                     مباشر 

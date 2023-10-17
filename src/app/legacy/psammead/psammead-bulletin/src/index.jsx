@@ -210,8 +210,6 @@ const Bulletin = ({
           >
             {isLive ? (
               <LiveLabel
-                service={service}
-                dir={dir}
                 liveText={liveText}
                 ariaHidden
                 offScreenText={offScreenText}
