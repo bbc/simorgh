@@ -8,6 +8,7 @@ import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
+import metadata from './metadata.json';
 
 interface Props extends StoryProps {
   ariaHidden?: boolean;
@@ -38,6 +39,7 @@ export default {
   title: 'New Components/Live Label',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
+    metadata,
     docs: {
       page: md,
     },
