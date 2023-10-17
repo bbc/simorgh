@@ -61,10 +61,9 @@ const TopStoriesItem = forwardRef(
     const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
     const linkId = buildUniquePromoId({
-      sectionType: 'top-stories-promo',
+      sectionType: 'top-stories',
       promoGroupId: 'live',
       promoItem: item,
-      promoIndex: 1,
     });
 
     return (
