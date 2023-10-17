@@ -59,8 +59,6 @@ const TopStoriesItem = forwardRef(
 
     const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
-   
-
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
         <Promo

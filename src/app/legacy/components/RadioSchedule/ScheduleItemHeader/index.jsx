@@ -101,7 +101,7 @@ const ScheduleItemHeader = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
-      {isLive && <LiveLabel id={`radio-schedule-${id}`} ariaHidden />}
+      {isLive && <LiveLabel id={`radio-schedule-${id}`} />}
       {isNext && (
         <NextLabel
           aria-hidden="true"

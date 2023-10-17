@@ -12,7 +12,6 @@ import ThemeProvider from '../ThemeProvider';
 interface Props extends StoryProps {
   ariaHidden?: boolean;
   offScreenText?: string;
-  liveText?: string;
   text?: string;
 }
 
@@ -21,19 +20,11 @@ const Component = ({
   variant,
   offScreenText,
   children,
-  ariaHidden = false,
-  liveText,
 }: PropsWithChildren<Props>) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <LiveLabel
-          ariaHidden={ariaHidden}
-          liveText={liveText}
-          offScreenText={offScreenText}
-        >
-          {children}
-        </LiveLabel>
+        <LiveLabel offScreenText={offScreenText}>{children}</LiveLabel>
       </ServiceContextProvider>
     </ThemeProvider>
   );
@@ -53,25 +44,12 @@ export default {
   },
 };
 
-export const WithLocalisedLiveText = ({ service, variant }: Props) => (
+export const Localised = ({ service, variant }: Props) => (
   <Component service={service} variant={variant} />
 );
 
-export const WithCustomLiveText = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    liveText="This is a Live Promo"
-  />
-);
-
 export const WithCustomOffscreenText = ({ service, variant }: Props) => (
-  <Component
-    ariaHidden
-    offScreenText="Watch Live"
-    service={service}
-    variant={variant}
-  />
+  <Component offScreenText="Watch Live" service={service} variant={variant} />
 );
 
 export const WithChildren = ({ text: headline, service, variant }: Props) => (

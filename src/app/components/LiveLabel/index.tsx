@@ -8,20 +8,16 @@ import styles from './index.styles';
 import Text from '../Text';
 
 interface LiveLabelProps {
-  ariaHidden?: boolean;
-  liveText?: string;
   offScreenText?: string;
   lang?: string;
   id?: string;
 }
 
 const LiveLabel = ({
-  // ariaHidden = false,
-  liveText,
-  // offScreenText = '',
   lang = 'en-GB',
   id = '',
   children,
+  offScreenText,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -32,13 +28,20 @@ const LiveLabel = ({
 
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  let screenReaderText = null;
+  let screenReaderText;
   let ariaHidden = false;
 
   if (liveLabelIsEnglish) {
-    screenReaderText = 'Live';
     ariaHidden = true;
   }
+  if (offScreenText) {
+    screenReaderText = `${offScreenText}, `;
+  } else if (liveLabelIsEnglish) {
+    screenReaderText = 'Live, ';
+  } else {
+    screenReaderText = ', ';
+  }
+
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -48,12 +51,12 @@ const LiveLabel = ({
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveText || liveLabel} `}
+        {`${liveLabel} `}
       </span>
 
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>
-          {`${screenReaderText}, `}
+          {`${screenReaderText}`}
         </VisuallyHiddenText>
       )}
       {children}
