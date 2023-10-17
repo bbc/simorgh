@@ -25,7 +25,6 @@ const LiveLabel = ({
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.
-
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   let screenReaderText;
