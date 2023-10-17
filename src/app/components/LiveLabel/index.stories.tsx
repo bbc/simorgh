@@ -43,6 +43,38 @@ export default {
     docs: {
       page: md,
     },
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14619&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 1',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14709&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 2',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14438&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 3',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14526&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 4',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14307&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 5',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14807&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+    ],
   },
 };
 
