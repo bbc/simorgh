@@ -39,6 +39,7 @@ const LiveLabel = ({
   } else if (liveLabelIsEnglish) {
     screenReaderText = 'Live, ';
   } else {
+  // Otherwise, the screenreader will pause after reading the word / translation of "Live"  
     screenReaderText = ', ';
   }
 
