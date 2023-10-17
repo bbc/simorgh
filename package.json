@@ -10,6 +10,7 @@
   ],
   "resolutions": {
     "@optimizely/js-sdk-utils": "0.4.0",
+    "@types/react": "18.2.25",
     "glob-parent": "5.1.2",
     "stylelint-config-recommended": "5.0.0",
     "uuid": "3.3.2",
