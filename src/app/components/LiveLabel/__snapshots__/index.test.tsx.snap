@@ -45,7 +45,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 <div>
   <span
     class="emotion-0"
-    id=""
+    role="text"
   >
     <span
       aria-hidden="true"
@@ -109,7 +109,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 <div>
   <span
     class="emotion-0"
-    id=""
+    role="text"
   >
     <span
       aria-hidden="true"
@@ -173,7 +173,7 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 <div>
   <span
     class="emotion-0"
-    id=""
+    role="text"
   >
     <span
       aria-hidden="true"
@@ -226,7 +226,7 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
 <div>
   <span
     class="emotion-0"
-    id=""
+    role="text"
   >
     <span
       class="emotion-1"

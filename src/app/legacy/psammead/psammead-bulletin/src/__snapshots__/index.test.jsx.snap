@@ -992,6 +992,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
           <span
             class="emotion-12"
             id="bulletin-httpsbbccouk"
+            role="text"
           >
             <span
               aria-hidden="true"
@@ -1368,6 +1369,7 @@ exports[`Bulletin should render live video correctly 1`] = `
           <span
             class="emotion-12"
             id="bulletin-httpsbbccouk"
+            role="text"
           >
             <span
               aria-hidden="true"

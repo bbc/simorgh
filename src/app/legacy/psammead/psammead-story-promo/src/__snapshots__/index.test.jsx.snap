@@ -2281,7 +2281,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
         >
           <span
             class="emotion-12"
-            id=""
+            role="text"
           >
             <span
               aria-hidden="true"
@@ -2565,7 +2565,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
         >
           <span
             class="emotion-12"
-            id=""
+            role="text"
           >
             <span
               aria-hidden="true"
