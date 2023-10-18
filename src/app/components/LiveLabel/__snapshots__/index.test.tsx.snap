@@ -64,6 +64,135 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 </div>
 `;
 
+exports[`LiveLabel should render correctly with English live text 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    role="text"
+  >
+    <span
+      aria-hidden="true"
+      class="emotion-1"
+      dir="ltr"
+    >
+      LIVE 
+    </span>
+    <span
+      class="emotion-2"
+      lang="en-GB"
+    >
+      Live, 
+    </span>
+  </span>
+</div>
+`;
+
+exports[`LiveLabel should render correctly with English live text and children 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    role="text"
+  >
+    <span
+      aria-hidden="true"
+      class="emotion-1"
+      dir="ltr"
+    >
+      LIVE 
+    </span>
+    <span
+      class="emotion-2"
+      lang="en-GB"
+    >
+      Live, 
+    </span>
+     this is a headline 
+  </span>
+</div>
+`;
+
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
   color: #141414;
