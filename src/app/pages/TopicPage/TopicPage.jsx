@@ -12,7 +12,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
-import Pagination from './Pagination';
+import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 
 const TopicPage = ({ pageData }) => {

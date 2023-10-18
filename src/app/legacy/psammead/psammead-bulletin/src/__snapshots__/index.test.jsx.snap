@@ -813,12 +813,33 @@ exports[`Bulletin should render live audio correctly 1`] = `
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -969,12 +990,13 @@ exports[`Bulletin should render live audio correctly 1`] = `
           href="https://bbc.co.uk"
         >
           <span
+            class="emotion-12"
             id="bulletin-httpsbbccouk"
             role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="ltr"
             >
               LIVE 
@@ -1168,12 +1190,33 @@ exports[`Bulletin should render live video correctly 1`] = `
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-14 {
@@ -1324,12 +1367,13 @@ exports[`Bulletin should render live video correctly 1`] = `
           href="https://bbc.co.uk"
         >
           <span
+            class="emotion-12"
             id="bulletin-httpsbbccouk"
             role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-13"
               dir="ltr"
             >
               LIVE 

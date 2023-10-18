@@ -49,7 +49,7 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
 
   useEffect(() => {
     // @ts-expect-error  dotcom is added to the window object by BBC Ads script
-    if (window.dotcom) {
+    if (window.dotcom && location.href != null) {
       // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       window.dotcom.cmd.push(() => {
         // @ts-expect-error  dotcom is added to the window object by BBC Ads script
