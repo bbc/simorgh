@@ -82,7 +82,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -109,7 +109,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
@@ -165,7 +165,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article&serviceEnv=test',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -192,7 +192,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article&serviceEnv=live',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
