@@ -28,7 +28,7 @@ const LiveLabel = ({
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <Text as="span" id={id} fontVariant="sansBold" role="text">
+    <span id={id} role="text">
       <span
         css={styles.liveLabel}
         dir={dir}
@@ -43,7 +43,7 @@ const LiveLabel = ({
       )}
 
       {children}
-    </Text>
+    </span>
   );
 };
 

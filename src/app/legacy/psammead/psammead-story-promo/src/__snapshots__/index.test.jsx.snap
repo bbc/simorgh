@@ -2172,36 +2172,16 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 .emotion-13 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-}
-
-.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2212,7 +2192,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2224,28 +2204,28 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-14 {
     display: none;
     visibility: hidden;
   }
@@ -2280,18 +2260,17 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
           href="https://www.bbc.co.uk/news"
         >
           <span
-            class="emotion-12"
             role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-12"
               dir="ltr"
             >
               LIVE 
             </span>
             <span
-              class="emotion-14"
+              class="emotion-13"
               lang="en-GB"
             >
               Live, 
@@ -2301,7 +2280,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
       >
         The summary of the promo
       </p>
@@ -2456,36 +2435,16 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
 .emotion-13 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-}
-
-.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2496,7 +2455,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2508,28 +2467,28 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-14 {
     display: none;
     visibility: hidden;
   }
@@ -2564,18 +2523,17 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
           href="https://www.bbc.co.uk/news"
         >
           <span
-            class="emotion-12"
             role="text"
           >
             <span
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-12"
               dir="rtl"
             >
               LIVE 
             </span>
             <span
-              class="emotion-14"
+              class="emotion-13"
               lang="en-GB"
             >
               Live, 
@@ -2585,7 +2543,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
       >
         The summary of the promo
       </p>
