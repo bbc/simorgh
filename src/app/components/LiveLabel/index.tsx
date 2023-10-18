@@ -59,7 +59,7 @@ const LiveLabel = ({
 
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>
-          {`${screenReaderText}`}
+          {screenReaderText}
         </VisuallyHiddenText>
       )}
       {children}
