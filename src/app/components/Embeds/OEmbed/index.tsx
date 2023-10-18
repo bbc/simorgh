@@ -6,19 +6,21 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 
+type OEmbedData = Partial<{
+  version: string;
+  provider_name: string;
+  provider_url: string;
+  html: string;
+  url: string;
+  source: string;
+  width: number;
+  height: number;
+  type: string;
+}>;
+
 export type OEmbedProps = {
   type: string;
-  oembed: {
-    version: string;
-    provider_name: string;
-    provider_url: string;
-    html: string;
-    url?: string;
-    source?: string;
-    width?: number;
-    height?: number;
-    type: string;
-  };
+  oembed: OEmbedData;
 };
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
@@ -48,6 +50,10 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
         }}
       />
     );
+  }
+
+  if (html == null) {
+    return null;
   }
 
   return <EmbedHtml embeddableContent={html} />;
