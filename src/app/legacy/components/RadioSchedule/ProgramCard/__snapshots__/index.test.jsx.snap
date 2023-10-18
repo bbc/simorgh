@@ -267,7 +267,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
             </span>
             <span
               class="emotion-9"
-              id=""
+              role="text"
             >
               <span
                 aria-hidden="true"
@@ -1460,7 +1460,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
             </span>
             <span
               class="emotion-9"
-              id=""
+              role="text"
             >
               <span
                 aria-hidden="true"

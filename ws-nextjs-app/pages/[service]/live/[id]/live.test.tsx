@@ -36,6 +36,20 @@ const mockPageDataWithPosts = {
   },
 };
 
+const mockPageDataWithoutKeyPoints = {
+  ...liveFixture.data,
+  someResponse: {
+    block: 'Its a block',
+  },
+  summaryPoints: {
+    id: null,
+    content: null,
+  },
+  liveTextStream: {
+    content: postFixture,
+  },
+};
+
 describe('Live Page', () => {
   it('should render the live page title', async () => {
     await act(async () => {
@@ -55,12 +69,20 @@ describe('Live Page', () => {
     ).toBeInTheDocument();
   });
 
-  it('should render the live page summary', async () => {
-    await act(async () => {
-      render(<Live pageData={mockPageData} />);
+  it('should render the key points section', async () => {
+    const { container } = await act(async () => {
+      return render(<Live pageData={mockPageData} />);
     });
 
-    expect(screen.getByText('I am the summary box')).toBeInTheDocument();
+    expect(container.querySelector('[data-e2e="key-points"]')).toBeTruthy();
+  });
+
+  it('should not render the key points section when no content is provided', async () => {
+    const { container } = await act(async () => {
+      return render(<Live pageData={mockPageDataWithoutKeyPoints} />);
+    });
+
+    expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
   });
 
   it('should render a live page with posts', async () => {

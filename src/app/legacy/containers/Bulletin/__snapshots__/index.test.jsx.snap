@@ -347,6 +347,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           <span
             class="emotion-12"
             id="bulletin-TestRadioBulletinpromonews"
+            role="text"
           >
             <span
               aria-hidden="true"
@@ -753,6 +754,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           <span
             class="emotion-12"
             id="bulletin-TestTVBulletinpromonews"
+            role="text"
           >
             <span
               aria-hidden="true"

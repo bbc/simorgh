@@ -801,7 +801,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 </span>
                 <span
                   class="emotion-27"
-                  id=""
+                  role="text"
                 >
                   <span
                     aria-hidden="true"
@@ -2068,7 +2068,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 </span>
                 <span
                   class="emotion-27"
-                  id=""
+                  role="text"
                 >
                   <span
                     aria-hidden="true"

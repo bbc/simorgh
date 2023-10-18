@@ -6961,6 +6961,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           <span
             class="emotion-15"
             id="promo-1"
+            role="text"
           >
             <span
               class="emotion-16"
@@ -7297,6 +7298,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           <span
             class="emotion-16"
             id="promo-1"
+            role="text"
           >
             <span
               class="emotion-17"
@@ -7620,6 +7622,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           <span
             class="emotion-8"
             id="promo-1"
+            role="text"
           >
             <span
               class="emotion-9"
@@ -7979,6 +7982,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           <span
             class="emotion-15"
             id="promo-1"
+            role="text"
           >
             <span
               class="emotion-16"
