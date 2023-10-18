@@ -58,9 +58,7 @@ const LiveLabel = ({
       </span>
 
       {screenReaderText && (
-        <VisuallyHiddenText lang={lang}>
-          {screenReaderText}
-        </VisuallyHiddenText>
+        <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
       )}
       {children}
     </Text>
