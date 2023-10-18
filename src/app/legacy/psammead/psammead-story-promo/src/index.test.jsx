@@ -1,18 +1,18 @@
 import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import LiveLabel from '#psammead/psammead-live-label/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import LiveLabel from '../../../../components/LiveLabel';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
-const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
+const Info = ({ promoType, isLive, alsoItems, promoHasImage }) => (
   <>
     <Headline
       script={latin}
@@ -22,7 +22,7 @@ const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
     >
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel service="news" dir={dir} ariaHidden offScreenText="Live">
+          <LiveLabel ariaHidden offScreenText="Live">
             The live promo headline
           </LiveLabel>
         ) : (
@@ -52,14 +52,12 @@ const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
 Info.propTypes = {
   promoType: string,
   isLive: bool.isRequired,
-  dir: oneOf(['rtl', 'ltr']),
   alsoItems: arrayOf(shape()).isRequired,
   promoHasImage: bool,
 };
 
 Info.defaultProps = {
   promoType: 'regular',
-  dir: 'ltr',
   promoHasImage: true,
 };
 
@@ -99,6 +97,7 @@ describe('StoryPromo', () => {
   it('should render a RTL Live promo correctly', () => {
     const { container } = render(
       <StoryPromo image={Image} info={Info({ isLive: true, dir: 'rtl' })} />,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

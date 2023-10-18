@@ -2,9 +2,33 @@
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-1 {
   color: #B80000;
   display: inline-block;
-  margin-left: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-2 {
@@ -20,11 +44,12 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 
 <div>
   <span
+    class="emotion-0"
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0 emotion-1"
+      class="emotion-1"
       dir="rtl"
     >
       LIVE 
@@ -41,12 +66,33 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-2 {
@@ -62,11 +108,12 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 
 <div>
   <span
+    class="emotion-0"
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0 emotion-1"
+      class="emotion-1"
       dir="ltr"
     >
       LIVE 
@@ -83,12 +130,33 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 
 exports[`LiveLabel should render correctly with english live text 1`] = `
 .emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-2 {
@@ -104,11 +172,12 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 
 <div>
   <span
+    class="emotion-0"
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0 emotion-1"
+      class="emotion-1"
       dir="ltr"
     >
       LIVE 
@@ -125,20 +194,42 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 
 exports[`LiveLabel should render correctly with localised live text 1`] = `
 .emotion-0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 <div>
   <span
+    class="emotion-0"
     role="text"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-1"
       dir="ltr"
     >
       AS E DE HAPPEN 
