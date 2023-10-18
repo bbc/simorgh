@@ -32,6 +32,14 @@ const Component = ({
 
 const Wrapper = styled.div`
   position: relative;
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  a:hover > span {
+    text-decoration: underline;
+  }
 `;
 
 export default {
