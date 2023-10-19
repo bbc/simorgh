@@ -73,6 +73,8 @@ const ScheduleItemHeader = ({
     ['media', 'listenNext'],
     translations,
   );
+
+  // If state is live, we want the screenreader text to be dealt with by the LiveLabel
   const listenLabelTranslations = {
     next: listenNext,
     onDemand: listen,
@@ -99,6 +101,8 @@ const ScheduleItemHeader = ({
   const listenLabel = listenLabelTranslations[state];
 
   const content = (
+    // VisuallyHiddenText outside of the Live Label is only present if the state is not live
+
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
