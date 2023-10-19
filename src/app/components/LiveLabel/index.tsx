@@ -5,7 +5,6 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
-import Text from '../Text';
 
 interface LiveLabelProps {
   ariaHidden?: boolean;
