@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:18-alpine
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
     && apk add chromium
