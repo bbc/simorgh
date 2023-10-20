@@ -20,7 +20,7 @@ export default ({ service, pageData, displayAds }) => {
         (summaries && summaries?.length > 0) || mostRead,
     );
 
-    const numberOfCurations = document.querySelectorAll('main h2').length;
+    const numberOfCurations = document.querySelectorAll('main section').length;
 
     expect(numberOfCurations).toEqual(curationsWithSummaries.length);
   });
