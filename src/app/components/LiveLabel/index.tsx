@@ -35,16 +35,20 @@ const LiveLabel = ({
   }
   // If offscreenText has been provided as a prop to the LiveLabel component then we want to include a pause after the offscreen text (hence the addition of a comma and a space to the text)
   if (offScreenText) {
-    screenReaderText = `${offScreenText}, `;
+    screenReaderText = `${offScreenText}`;
     ariaHidden = true;
+    // comma is added to offScreenText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
+    if (children) {
+      screenReaderText += ', ';
+    }
     // If the translated phrase for "LIVE" is English (and offscreen text has not already been provided), then the screenreader text should be the word "Live" followed by a comma and a space (to tell the screenreader to pause) - "Live" will be read out correctly (i.e. rhymes with "hive" and not "give")
   } else if (liveLabelIsEnglish) {
     screenReaderText = 'Live, ';
-  } else {
+  } else if (children) {
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
     screenReaderText = ', ';
   }
-
+console.log( 'offscreentext', offScreenText, 'childen', children);
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
