@@ -163,7 +163,7 @@ const Info = ({ isLive, alsoItems }) => (
     <Headline script={latin} service="news" promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel service="news" dir={dir} ariaHidden offScreenText="Live">
+          <LiveLabel>
             The headline of the live promo
           </LiveLabel>
         ) : (

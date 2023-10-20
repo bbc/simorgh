@@ -10,9 +10,9 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const RadioSchedule = () => (
+export const RadioSchedule =  props => (
   <ThemeProvider service="news">
-    <Component />
+    <Component {...props} />
   </ThemeProvider>
 );
 
