@@ -329,10 +329,6 @@ export const service: DefaultServiceConfig = {
         url: '/vietnamese/topics/cez1ey7nzj3t',
       },
       {
-        title: 'Nhịp sống mới',
-        url: '/vietnamese/magazine-54029179',
-      },
-      {
         title: 'Thể thao',
         url: '/vietnamese/topics/ckdxnx1k7zxt',
       },
