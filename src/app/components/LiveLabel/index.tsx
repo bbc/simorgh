@@ -26,7 +26,7 @@ const LiveLabel = ({
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  let screenReaderText;
+  let screenReaderText = '';
   let ariaHidden = false;
 
   // If the translated phrase for "LIVE" is English, we don't want this to be read out by the screenreader, as it is often pronounced incorrectly (rhyming with "give" instead of "hive"), hence why we set ariaHidden to true
@@ -37,18 +37,17 @@ const LiveLabel = ({
   if (offScreenText) {
     screenReaderText = `${offScreenText}`;
     ariaHidden = true;
-    // comma is added to offScreenText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
-    if (children) {
-      screenReaderText += ', ';
-    }
     // If the translated phrase for "LIVE" is English (and offscreen text has not already been provided), then the screenreader text should be the word "Live" followed by a comma and a space (to tell the screenreader to pause) - "Live" will be read out correctly (i.e. rhymes with "hive" and not "give")
   } else if (liveLabelIsEnglish) {
-    screenReaderText = 'Live, ';
-  } else if (children) {
-    // Otherwise, the screenreader will pause after reading the word / translation of "Live"
-    screenReaderText = ', ';
+    screenReaderText = 'Live';
   }
-console.log( 'offscreentext', offScreenText, 'childen', children);
+
+  // comma is added to screenReaderText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
+  if (children) {
+    // Otherwise, the screenreader will pause after reading the word / translation of "Live"
+    screenReaderText += ', ';
+  }
+
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role

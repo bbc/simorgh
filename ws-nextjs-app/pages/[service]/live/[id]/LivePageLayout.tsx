@@ -2,9 +2,7 @@
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
-import nodeLogger from '#lib/logger.node';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
@@ -16,10 +14,7 @@ import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
-const logger = nodeLogger(__filename);
-
 type ComponentProps = {
-  bbcOrigin?: string;
   pageData: {
     title: string;
     description?: string;
@@ -27,16 +22,9 @@ type ComponentProps = {
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: { content: StreamResponse | null };
   };
-  pathname?: string;
-  showAdsBasedOnLocation?: boolean;
 };
 
-const LivePage = ({
-  bbcOrigin,
-  pageData,
-  pathname,
-  showAdsBasedOnLocation,
-}: ComponentProps) => {
+const LivePage = ({ pageData }: ComponentProps) => {
   const { lang, translations } = useContext(ServiceContext);
   const {
     title,
@@ -64,11 +52,6 @@ const LivePage = ({
           .replace('{y}', pageCount.toString())}`
       : 'Test Live Page';
 
-  // TODO: Remove after testing
-  logger.info('nextjs_client_render', {
-    url: pathname,
-  });
-
   return (
     <>
       <MetadataContainer
@@ -93,19 +76,6 @@ const LivePage = ({
           </div>
           <div css={styles.secondSection}>
             <Stream streamContent={liveTextStream.content} />
-            <pre css={styles.code}>
-              <Heading level={4}>Headers</Heading>
-              {bbcOrigin && (
-                <p>
-                  bbc-origin: <span>{bbcOrigin}</span>
-                </p>
-              )}
-              <p>
-                bbc-adverts:{' '}
-                <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
-              </p>
-            </pre>
-            <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
           </div>
         </div>
         <Pagination
