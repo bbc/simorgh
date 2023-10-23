@@ -1,8 +1,7 @@
 // eslint-disable no-console
 const { exec } = require('child_process');
 const fs = require('fs');
-const fetch = require('node-fetch');
-const { dependencies, devDependencies } = require('../package.json');
+const { dependencies, devDependencies } = JSON.parse(fs.readFileSync('./package.json'));
 
 const allDependencies = { ...dependencies, ...devDependencies };
 const dependencyTable = [];
