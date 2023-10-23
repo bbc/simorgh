@@ -31,7 +31,7 @@ const serviceDataSets = {
       radioScheduleData: [
         {
           id: 'p0gf9fnr',
-          state: 'next',
+          state: 'live',
           startTime: 1698069570000,
           link: '/hausa/bbc_hausa_radio/w3ct52ql',
           brandTitle: 'Shirin Rana',
@@ -60,11 +60,11 @@ const serviceDataSets = {
           duration: 'PT30M',
         },
         {
-          id: 'p0gf5c8c',
-          state: 'onDemand',
-          startTime: 1698002970000,
-          link: '/hausa/bbc_hausa_radio/w3ct5367',
-          brandTitle: 'Shirin Yamma',
+          id: 'p0gf9fnr',
+          state: 'next',
+          startTime: 1698069570000,
+          link: '/hausa/bbc_hausa_radio/w3ct52ql',
+          brandTitle: 'Shirin Rana',
           summary:
             'Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.',
           duration: 'PT30M',
