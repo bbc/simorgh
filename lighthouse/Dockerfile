@@ -5,6 +5,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 
 RUN npm install -g @lhci/cli@0.6.x
 
-COPY . .
+FROM scratch
+COPY --from=0 . .
 
 CMD ["lhci", "autorun", "--config=./lighthouse/lighthouserc.js"]
