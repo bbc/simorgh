@@ -10,7 +10,7 @@ In order to use this script locally, you need to use a GIT_TOKEN. It is easier t
 
 Add GITHUB_TOKEN to your bash profile (in the same way we do the BFF_PATH), e.g add the line 'export GITHUB_TOKEN="ghp_blablablamadeuptokenblablablablabla"'. For information on how to get your personal access git token to use for this, see 'https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens'
 
-You could also just use GIT_TOKEN on the command line when you run the command e.g. GIT_TOKEN=XXX yarn run esmDependencyCheck.
+You could also just use GITHUB_TOKEN on the command line when you run the command e.g. GITHUB_TOKEN=XXX yarn run esmDependencyCheck.
 
 
 
