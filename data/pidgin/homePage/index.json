@@ -1,51 +1,62 @@
 {
   "data": {
-    "title": "Domot - BBC News Pidgin",
-    "description": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
+    "title": "BBC News Pidgin",
+    "description": "",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Inec announce date for Adamawa, Kebbi states elections ",
-            "firstPublished": "2023-03-27T15:32:27.000Z",
-            "lastPublished": "2023-03-27T16:05:20.062Z",
-            "link": "https://www.bbc.com/pidgin/articles/c721l339ed1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c365/live/4e0cb740-ccb0-11ed-be2e-754a65c11505.jpg",
-            "description": "According to Inec \"All outstanding Govnorship, National and State Assembly supplementary elections go take place on Saturday 15 April 2023. ",
-            "imageAlt": "Ballot boxes for 2023 elections on display",
-            "id": "c721l339ed1o"
+            "title": "ATMs across the country",
+            "firstPublished": "2019-09-10T09:58:47.000Z",
+            "lastPublished": "2019-09-10T10:01:20.000Z",
+            "link": "https://www.bbc.com/pidgin/23248287",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "description": "Here we have an article about a particular topic",
+            "imageAlt": "-",
+            "id": "cda3bf00-2939-1a46-b6c1-f4376b944663"
           },
           {
             "type": "article",
-            "title": "'Wen I see di boys dey go school, e dey pain'",
-            "firstPublished": "2023-03-28T04:45:42.503Z",
-            "lastPublished": "2023-03-28T04:45:42.503Z",
-            "link": "https://www.bbc.com/pidgin/articles/c51k7yry7ngo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/154e/live/8eeaca00-cc82-11ed-be2e-754a65c11505.png",
-            "description": "Girls bin no dey allowed to choose subjects such like economics, engineering and journalism for university.",
-            "imageAlt": "Tamana. 15",
-            "id": "c51k7yry7ngo"
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
           },
           {
             "type": "article",
-            "title": "Police kill woman wey open fire for school children for Nashville",
-            "firstPublished": "2023-03-27T19:56:49.959Z",
-            "lastPublished": "2023-03-27T19:56:49.959Z",
-            "link": "https://www.bbc.com/pidgin/articles/crgjze2yryvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5883/live/5d114ad0-ccd8-11ed-be2e-754a65c11505.jpg",
-            "description": "Na one 28-year-old woman bin open fire for di private school, wey kill six pipo including three pikins dem.",
-            "imageAlt": "foto of ambulance, police and small pikins dem",
-            "id": "crgjze2yryvo"
+            "title": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "firstPublished": "2020-02-17T11:57:10.000Z",
+            "lastPublished": "2020-02-17T11:57:10.000Z",
+            "link": "https://www.bbc.com/pidgin/23267825",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "description": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "imageAlt": "Joseph shabalala",
+            "id": "877b3c91-b210-a84c-bf03-ab64f54bff8a"
+          },
+          {
+            "type": "article",
+            "title": "Jacob Zuma: Staying!!!",
+            "firstPublished": "2017-08-08T18:17:04.000Z",
+            "lastPublished": "2017-08-08T18:52:19.000Z",
+            "link": "https://www.bbc.com/pidgin/tori-23146434",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BBC4/test/_63586084_zuma.jpg",
+            "description": "Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.",
+            "imageAlt": "Jacob Zuma na cat with nine lives",
+            "id": "11c2d7ba-333a-0c4b-9071-86df752ebc47"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:41c2dccc-4711-4e01-85d4-72d531765fa8",
+        "curationId": "urn:bbc:tipo:list:87d69ac2-34a2-4013-a7b0-99b013ff7810",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "BBC News Pidgin Top Stories",
+        "title": "Top Stories",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -53,275 +64,79 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Tins to do and avoid during Ramadan, all you need sab about di 'holy month'",
-            "firstPublished": "2023-03-22T19:56:50.119Z",
-            "lastPublished": "2023-03-22T19:56:50.119Z",
-            "link": "https://www.bbc.com/pidgin/articles/c25xz02l78wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2fd9/live/41216940-c8c3-11ed-a0e6-abbedc7ff465.jpg",
-            "description": "Muslims all over di world dey ready to start di2023 Ramadan fasting",
-            "imageAlt": "Di crescent and star to symbolise ramadan",
-            "id": "c25xz02l78wo"
+            "title": "How Lagos Dey Fight Lassa Fever",
+            "firstPublished": "2017-08-09T17:42:05.000Z",
+            "lastPublished": "2017-08-09T17:42:05.000Z",
+            "link": "https://www.bbc.com/pidgin/tori-23146625",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+            "description": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+            "imageAlt": "Nurses for LUTH isolation Center",
+            "id": "fd1307eb-2887-1b40-b64c-d95841bdfebd"
           },
           {
-            "type": "article",
-            "title": "Silence on London street as family bury woman wey die for Asake concert ",
-            "firstPublished": "2023-03-25T07:41:06.478Z",
-            "lastPublished": "2023-03-25T07:41:06.478Z",
-            "link": "https://www.bbc.com/pidgin/articles/c2lnqyqle7qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5873/live/0ba8abe0-cadd-11ed-be2e-754a65c11505.jpg",
-            "description": "Two pipo die for Asake concert for December 2022 as kasala burst wen pipo start to dey crowd enta di sold out show.",
-            "imageAlt": "Rebecca Ikumelo",
-            "id": "c2lnqyqle7qo"
+            "type": "video",
+            "title": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
+            "firstPublished": "2020-02-17T11:51:13.000Z",
+            "lastPublished": "2020-02-17T11:51:13.000Z",
+            "link": "https://www.bbc.com/pidgin/media-23267821",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+            "description": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+            "imageAlt": "Keyframe #2",
+            "id": "0f35c912-afc7-1a4b-9518-7853401c1149"
           },
           {
-            "type": "article",
-            "title": "Abacha ex-Chief of Staff, Oladipo Diya don die ",
-            "firstPublished": "2023-03-26T07:35:59.076Z",
-            "lastPublished": "2023-03-26T07:36:26.231Z",
-            "link": "https://www.bbc.com/pidgin/articles/cgeqxxy9122o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/de62/live/40c4f520-cba7-11ed-9cb5-0576ec41e159.jpg",
-            "description": "Late Dipo Diya, na de facto second-in-command to di late Military dictator Sani Abacha during im regime.",
-            "imageAlt": "Abacha ex-Chief of Staff, Oladipo Diya don die ",
-            "id": "cgeqxxy9122o"
+            "type": "audio",
+            "duration": "PT26M14S",
+            "title": "Kojey Radical: Why gigs feel like football matches",
+            "firstPublished": "2020-02-17T11:53:41.000Z",
+            "lastPublished": "2020-02-17T11:53:41.000Z",
+            "link": "https://www.bbc.com/pidgin/23267823",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "description": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+            "imageAlt": "-",
+            "id": "5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:81d92884-1db4-4dfa-b1ec-d52c0ce41a24",
+        "curationId": "urn:bbc:tipo:list:776c8719-77b4-4473-ba9e-0812888495f4",
         "curationType": "tipo-curation",
         "position": 1,
         "title": "Informate me",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
+        "visualProminence": "HIGH"
       },
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "LASU overall best graduating student drop tips on how you fit pass exam",
-            "firstPublished": "2023-07-19T15:57:54.500Z",
-            "lastPublished": "2023-07-19T15:57:54.500Z",
-            "link": "https://www.bbc.com/pidgin/articles/crgrx86em6yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a3e4/live/3e6a4e90-2644-11ee-99f1-d9b0b1ae918b.jpg",
-            "description": "23-year-old Aminat Yusuf wey graduate wit a perfect 5:00 CGPA say di first tip wey pesin wey wan ace im exam gatz know na to get interest for di course of study",
-            "imageAlt": "Aminat Yusuf",
-            "id": "crgrx86em6yo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M25S",
-            "title": "Video Explainer: Wetin be di danger of Nitrous oxide alias laughing gas?",
-            "firstPublished": "2023-07-14T11:53:42.324Z",
-            "lastPublished": "2023-07-14T11:53:42.324Z",
-            "link": "https://www.bbc.com/pidgin/articles/c98p7djleq3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7384/live/432ed970-223c-11ee-941e-23d1e9ab75fa.jpg",
-            "description": "No be only Nigerians dey abuse of nitrous oxide, many kontris don implement measures to restrict di supply of dis gas.",
-            "imageAlt": "Male presenter",
-            "id": "c98p7djleq3o"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M18S",
-            "title": "'Many family members no know say I dey live wit HIV'",
-            "firstPublished": "2023-07-14T06:47:38.491Z",
-            "lastPublished": "2023-07-14T06:47:38.491Z",
-            "link": "https://www.bbc.com/pidgin/articles/cw4gxp37xz9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c311/live/67867c90-2202-11ee-941e-23d1e9ab75fa.jpg",
-            "description": "Di woman wey don dey with di disease for 19 years tok say na only her mama and a few oda pipo know because she dey fear stigma.",
-            "imageAlt": "She say she go like marry before she die",
-            "id": "cw4gxp37xz9o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M28S",
-            "title": "Woman climb Mt Everest to campaign against tradition wey dey force girls to isolate demsefs during dia period",
-            "firstPublished": "2023-07-13T14:28:49.942Z",
-            "lastPublished": "2023-07-13T14:28:49.942Z",
-            "link": "https://www.bbc.com/pidgin/articles/cglyrr29x0yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/43df/live/d1a75f60-2188-11ee-941e-23d1e9ab75fa.jpg",
-            "description": "Sangeeta Rokaya na one of many pipo wey dey challenge Chhaupadi, one tradition wey dey force women to isolate demsefs inside huts outside dia homes during dia periods.",
-            "imageAlt": "Sangeeta Rokaya",
-            "id": "cglyrr29x0yo"
+            "type": "audio",
+            "title": "Pidgin Live Page (Media Type = Audio)",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "Pidgin test 2 - Description",
+            "imageAlt": "",
+            "id": "c7p765ynk9qt"
           }
         ],
         "activePage": 1,
-        "pageCount": 2,
-        "link": "https://www.bbc.com/pidgin/topics/c3l19z3k1ert",
-        "curationId": "urn:bbc:vivo:curation:a08ec947-e61c-4371-9923-8a027ab97fe7",
-        "curationType": "vivo-stream",
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bb18aa78-75e6-4ae8-b8c4-02c828bf1a5f",
+        "curationType": "tipo-curation",
         "position": 2,
-        "title": "Video",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Who be Cecilia Abena Dapaah wey dem allegedly tiff $1m from her house",
-            "firstPublished": "2023-07-23T16:55:24.737Z",
-            "lastPublished": "2023-07-23T16:55:24.737Z",
-            "link": "https://www.bbc.com/pidgin/articles/c8431jk1ykxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/359d/live/1758a0d0-2979-11ee-ba82-dfd2c0fb173a.jpg",
-            "description": "Questions also dey as to why she as public officer go keep dat kain money for house even as di kontri dey face economic kasala and foreign currency shortage.",
-            "imageAlt": "Cecilia Abena Dapaah",
-            "id": "c8431jk1ykxo"
-          },
-          {
-            "type": "article",
-            "title": "Di tough draws and how African teams go take qualify for di 2026 Fifa World Cup",
-            "firstPublished": "2023-07-14T10:28:42.206Z",
-            "lastPublished": "2023-07-14T10:28:42.206Z",
-            "link": "https://www.bbc.com/pidgin/articles/c809j9zdy8eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cbe9/live/36788b90-2228-11ee-941e-23d1e9ab75fa.jpg",
-            "description": "Di World Cup go happun for di United States, Mexico and Canada from 11 June, 2026 to 19 July 2026.",
-            "imageAlt": "Nigeria go face South Africa for di qualifiers",
-            "id": "c809j9zdy8eo"
-          },
-          {
-            "type": "article",
-            "title": "'Dem put gun for my grandma throat' - How dem carry children comot dia home sake of false trafficking claims",
-            "firstPublished": "2023-07-10T09:54:50.430Z",
-            "lastPublished": "2023-07-10T09:54:50.430Z",
-            "link": "https://www.bbc.com/pidgin/articles/c3g81we8717o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5582/live/027dbe40-1ef5-11ee-941e-23d1e9ab75fa.jpg",
-            "description": "Dem dey traffick Ghanaian children wey dem wrongly label from their homes, BBC Africa Eye find.",
-            "imageAlt": "Dem cari Fatima wey dey 11 years from her family house for middle of di night",
-            "id": "c3g81we8717o"
-          },
-          {
-            "type": "article",
-            "title": "Ghana batmen dey hunt for pandemic clues",
-            "firstPublished": "2023-07-09T12:47:15.753Z",
-            "lastPublished": "2023-07-09T12:47:15.753Z",
-            "link": "https://www.bbc.com/pidgin/articles/czdvw2d7ydqo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c1ee/live/06ff8800-1e54-11ee-941e-23d1e9ab75fa.png",
-            "description": "Bats dey essential to di world ecosystems or environment, but dem dey also carry several different kain virus dem.",
-            "imageAlt": "yello bat",
-            "id": "czdvw2d7ydqo"
-          },
-          {
-            "type": "article",
-            "title": "Di hip life and magic numbers of a Ghana legend Asamoah Gyan",
-            "firstPublished": "2023-06-23T15:11:52.113Z",
-            "lastPublished": "2023-06-23T15:11:52.113Z",
-            "link": "https://www.bbc.com/pidgin/articles/c14x8perz0qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a44b/live/ea3f7e80-11d5-11ee-ab18-0b6db83d1ffb.jpg",
-            "description": "Gyan play for 11 clubs in eight countries during im career, wit spells for Italy, France, Turkey, China and India.",
-            "imageAlt": "Asamoah Gyan miss penalty against Uruguay for final minute of extra-time for di 2010 World Cup",
-            "id": "c14x8perz0qo"
-          },
-          {
-            "type": "article",
-            "title": "Five tins Yvonne Nelson tok for her new book",
-            "firstPublished": "2023-06-21T06:59:53.763Z",
-            "lastPublished": "2023-06-21T06:59:53.763Z",
-            "link": "https://www.bbc.com/pidgin/articles/cy977w0489lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6f26/live/0a10e350-0f85-11ee-920d-a3745a40ca23.jpg",
-            "description": "For di book wey she write about her life and call, \"I am not Yvonne Nelson\", she tok many tins about her life, career and relationships wey shock pipo.",
-            "imageAlt": "Yvonne Nelson",
-            "id": "cy977w0489lo"
-          },
-          {
-            "type": "article",
-            "title": "Meet Princess Boateng, Ghana youngest Chartered Accountant",
-            "firstPublished": "2023-06-09T09:30:39.222Z",
-            "lastPublished": "2023-06-09T09:30:39.222Z",
-            "link": "https://www.bbc.com/pidgin/articles/c10rmnrmrqlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b55/live/8e777260-06a4-11ee-aa08-4727df20b680.jpg",
-            "description": "Princess Boateng give di breakdown on top how she carry collabo her professional certification with her academic certificate.",
-            "imageAlt": "Princess Korkor Boateng",
-            "id": "c10rmnrmrqlo"
-          },
-          {
-            "type": "article",
-            "title": "Wetin be Anthrax disease wey make Ghana goment ban eating and selling of meat",
-            "firstPublished": "2023-06-08T10:13:52.644Z",
-            "lastPublished": "2023-06-08T10:13:52.644Z",
-            "link": "https://www.bbc.com/pidgin/articles/cnd94kg3x16o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6840/live/7eff11d0-05e1-11ee-aa08-4727df20b680.jpg",
-            "description": "Ghana goment say dem don release money to take buy about 8,000 more vaccines to help tackle di spread of di disease. ",
-            "imageAlt": "Anthrax disease",
-            "id": "cnd94kg3x16o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 25,
-        "link": "https://www.bbc.com/pidgin/topics/cg72673yg2rt",
-        "curationId": "urn:bbc:vivo:curation:588d9c07-a818-4dd3-904a-bc425394a8ff",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Special Tory",
+        "title": "Curation with Live Promo",
         "visualProminence": "NORMAL",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Two die for deadly shooting inside Auckland before Women World Cup 2023",
-            "firstPublished": "2023-07-20T08:41:05.375Z",
-            "lastPublished": "2023-07-20T08:41:05.375Z",
-            "link": "https://www.bbc.com/pidgin/articles/c72vn90mggyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4e1/live/23241920-26d2-11ee-b1d7-8fdc93c2782e.jpg",
-            "description": "Pipo don travel from all over di world to watch di beginning of the World Cup, wey dem label di biggest women sports event to ever happun, live.",
-            "imageAlt": "One Fifa Women World Cup bus bin dey inside di police barrier for Auckland city centre",
-            "id": "c72vn90mggyo"
-          },
-          {
-            "type": "article",
-            "title": "Why world record holder Tobi Amusan chop suspension few weeks to World Championship",
-            "firstPublished": "2023-07-19T10:39:15.340Z",
-            "lastPublished": "2023-07-19T10:59:05.243Z",
-            "link": "https://www.bbc.com/pidgin/articles/crgnzk7jek8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fc2b/live/1240f210-261c-11ee-b1d7-8fdc93c2782e.jpg",
-            "description": "Di join bodi wey dey see to athletics integrity tok for statement say dem don charge and provisionally suspend di Nigerian for three whereabouts failures.",
-            "imageAlt": "Tobi Amusan",
-            "id": "crgnzk7jek8o"
-          },
-          {
-            "type": "article",
-            "title": "Fifa Women’s World Cup 2023 team list of all participating countries",
-            "firstPublished": "2023-07-18T11:12:59.366Z",
-            "lastPublished": "2023-07-19T05:43:52.491Z",
-            "link": "https://www.bbc.com/pidgin/articles/c2qd40gyqgpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f2c/live/c3d2aad0-25f6-11ee-958a-e73aa8cb7a89.jpg",
-            "description": "USA na di defending champions and dem dey plan to become di first team for di competition history to win di tournament three times in a row.",
-            "imageAlt": "(From left to right) Sam Kerr, Ada Hegerberg, Wendie Renard and Alexia Putellas dey hope to make ogbonge impact dis summer",
-            "id": "c2qd40gyqgpo"
-          },
-          {
-            "type": "article",
-            "title": "Di pay gap wey dey for Men and Women World Cup",
-            "firstPublished": "2023-07-18T18:52:17.648Z",
-            "lastPublished": "2023-07-18T18:52:17.648Z",
-            "link": "https://www.bbc.com/pidgin/articles/ckkxd45g9vro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f0b/live/f424b9c0-256b-11ee-8e6e-554abf7ed28c.jpg",
-            "description": "Di winner of dis World Cup go collect ten percent of wetin di Argentina gbab wen dem win di 2022 World Cup.",
-            "imageAlt": "Di trophies for di Men and Women World Cup",
-            "id": "ckkxd45g9vro"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 32,
-        "link": "https://www.bbc.com/pidgin/topics/cjgn7gv77vrt",
-        "curationId": "urn:bbc:vivo:curation:c61facc2-a4fa-4890-a0d9-a1718cccf88d",
-        "curationType": "vivo-stream",
-        "position": 4,
-        "title": "Sport",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
+        "visualStyle": "NONE"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:ck3yk9nz25qt",
+        "contentId": "urn:bbc:tipo:topic:c93v2kkz841t",
         "contentType": "index-home",
         "pageIdentifier": "pidgin.page",
-        "pageTitle": "Domot - BBC News Pidgin"
+        "pageTitle": "BBC News Pidgin"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }
