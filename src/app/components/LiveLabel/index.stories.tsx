@@ -8,6 +8,7 @@ import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
+import { METAL } from '../ThemeProvider/palette';
 
 interface Props extends StoryProps {
   ariaHidden?: boolean;
@@ -34,11 +35,16 @@ const Wrapper = styled.div`
   position: relative;
   a {
     text-decoration: none;
-    border-bottom: none;
+    border-bottom: 0.0625rem solid transparent;
   }
 
-  a:hover > span {
+  a:hover > span,
+  a:focus > span {
     text-decoration: underline;
+  }
+
+  a:visited > span {
+    color: ${METAL};
   }
 `;
 
