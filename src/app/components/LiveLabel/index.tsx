@@ -5,11 +5,13 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import { POSTBOX } from '../ThemeProvider/palette';
 
 interface LiveLabelProps {
   offScreenText?: string;
   lang?: string;
   id?: string;
+  colour?: string;
 }
 
 const LiveLabel = ({
@@ -17,6 +19,7 @@ const LiveLabel = ({
   id,
   children,
   offScreenText,
+  colour = POSTBOX,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -48,13 +51,13 @@ const LiveLabel = ({
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
     screenReaderText = ', ';
   }
-console.log( 'offscreentext', offScreenText, 'childen', children);
+  console.log('offscreentext', offScreenText, 'childen', children);
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
       <span
-        css={styles.liveLabel}
+        css={[styles.liveLabel, { color: colour }]}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >

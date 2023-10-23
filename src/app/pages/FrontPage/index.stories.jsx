@@ -2,29 +2,49 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { data as urduData } from '#data/urdu/frontpage';
+import { data as hausaData } from '#data/hausa/frontpage';
 import { data as newsData } from '#data/news/frontpage';
 import { data as serbianCyrData } from '#data/serbian/frontpage/cyr';
 import { data as serbianLatData } from '#data/serbian/frontpage/lat';
 import { service as urduConfig } from '../../lib/config/services/urdu';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
+import { service as hausaConfig } from '../../lib/config/services/hausa';
+
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
 const serviceDataSets = {
-  urdu: { default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead } },
-  news: { default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead } },
+  urdu: {
+    default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead },
+  },
+  news: {
+    default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead },
+  },
+  hausa: {
+    default: {
+      ...hausaData.article,
+      mostRead: hausaData.secondaryData.mostRead,
+    },
+  },
   serbian: {
-    cyr: { ...serbianCyrData.article, mostRead: serbianCyrData.secondaryData.mostRead },
-    lat: { ...serbianLatData.article, mostRead: serbianLatData.secondaryData.mostRead },
-  }
+    cyr: {
+      ...serbianCyrData.article,
+      mostRead: serbianCyrData.secondaryData.mostRead,
+    },
+    lat: {
+      ...serbianLatData.article,
+      mostRead: serbianLatData.secondaryData.mostRead,
+    },
+  },
 };
 
 const serviceConfigs = {
   urdu: urduConfig,
   news: newsConfig,
+  hausa: hausaConfig,
   serbian: serbianConfig,
 };
 
@@ -63,3 +83,4 @@ export const SerbianCyrillic = () => (
   <Component service="serbian" variant="cyr" />
 );
 export const SerbianLatin = () => <Component service="serbian" variant="lat" />;
+export const Hausa = () => <Component service="hausa" />;

@@ -26,6 +26,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PromoTimestamp from '#components/Promo/timestamp';
+import { LE_TEAL } from '#app/components/ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
@@ -224,7 +225,9 @@ const StoryPromoContainer = ({
           className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
-            <LiveLabel id={linkId}>{linkcontents}</LiveLabel>
+            <LiveLabel id={linkId} colour={LE_TEAL}>
+              {linkcontents}
+            </LiveLabel>
           ) : (
             linkcontents
           )}
