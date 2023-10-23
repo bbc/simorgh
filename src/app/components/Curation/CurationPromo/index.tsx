@@ -8,6 +8,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { Promo as CurationPromoProps } from '../types';
+import LiveLabel from '../../LiveLabel';
 
 const CurationPromo = ({
   id,
@@ -42,6 +43,8 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
+  const isLive = link?.includes('/live/');
+
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
@@ -68,7 +71,7 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} className="focusIndicatorDisplayBlock">
-            {title}
+            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
       </Promo.Heading>
