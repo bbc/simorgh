@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   position: relative;
   a {
     text-decoration: none;
-    border-bottom: none;
+    border-bottom: 0.0625rem solid transparent;
   }
 
   a:hover > span,
