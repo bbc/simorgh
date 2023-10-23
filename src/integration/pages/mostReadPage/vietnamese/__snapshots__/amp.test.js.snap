@@ -237,19 +237,12 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 4`]
 
 exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
 {
-  "text": "Nhịp sống mới",
-  "url": "/vietnamese/magazine-54029179",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
-{
   "text": "Thể thao",
   "url": "/vietnamese/topics/ckdxnx1k7zxt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Video",
   "url": "/vietnamese/topics/cl29j0ekkvdt",
