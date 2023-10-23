@@ -62,7 +62,7 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
       class="emotion-1"
       lang="en-GB"
     >
-      Live, 
+      Live
     </span>
   </span>
 </div>
