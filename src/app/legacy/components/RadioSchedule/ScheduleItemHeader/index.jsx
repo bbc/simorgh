@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import LiveLabel from '#psammead/psammead-live-label/src';
+import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   getSansBold,
@@ -118,14 +118,7 @@ const ScheduleItemHeader = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
-      {isLive && (
-        <LiveLabel
-          service={service}
-          dir={dir}
-          liveText={liveLabel}
-          ariaHidden
-        />
-      )}
+      {isLive && <LiveLabel liveText={liveLabel} ariaHidden />}
       {isNext && (
         <NextLabel
           aria-hidden="true"
