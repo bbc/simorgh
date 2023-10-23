@@ -25,7 +25,7 @@ export type OEmbedProps = {
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
-  const { html, oEmbedType, parameters, url } = oembed; // check
+  const { html, oEmbedType, parameters, url } = oembed;
   const isVDJEmbed = oEmbedType === 'vdj-embed';
 
   if (isAmp) {

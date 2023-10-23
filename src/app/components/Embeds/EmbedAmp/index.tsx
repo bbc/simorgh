@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';
@@ -6,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedError from '../EmbedError';
 import VjAmp from '../../../legacy/containers/Include/amp/VjAmp';
-import styles from '../EmbedHtml/index.styles'; // is this bad?
+import styles from '../EmbedHtml/index.styles';
 
 export type ampParams = {
   'amp-clickable': boolean;
@@ -31,8 +30,6 @@ const EmbedAmp = ({
   const { translations } = useContext(ServiceContext);
   if (isVDJEmbed) {
     if (!parameters) return null;
-
-    // check fallback, what if any of these are missing?
 
     const ampMetadata = {
       imageWidth: parameters['amp-image-width'],
