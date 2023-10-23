@@ -10,6 +10,7 @@ import { service as urduConfig } from '../../lib/config/services/urdu';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
 import { service as hausaConfig } from '../../lib/config/services/hausa';
+import hausaRadioSchedule from '#data/hausa/bbc_hausa_radio/schedule.json'
 
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
@@ -27,6 +28,49 @@ const serviceDataSets = {
     default: {
       ...hausaData.article,
       mostRead: hausaData.secondaryData.mostRead,
+      radioScheduleData: [
+        {
+          id: 'p0gf9fnr',
+          state: 'next',
+          startTime: 1698069570000,
+          link: '/hausa/bbc_hausa_radio/w3ct52ql',
+          brandTitle: 'Shirin Rana',
+          summary:
+            'Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.',
+          duration: 'PT30M',
+        },
+        {
+          id: 'p0gf6s69',
+          state: 'onDemand',
+          startTime: 1698042600000,
+          link: '/hausa/bbc_hausa_radio/w172z4k62ygtxfq',
+          brandTitle: 'Shirin Hantsi',
+          summary:
+            'Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.',
+          duration: 'PT29M30S',
+        },
+        {
+          id: 'p0gf6s67',
+          state: 'onDemand',
+          startTime: 1698038970000,
+          link: '/hausa/bbc_hausa_radio/w3ct52x7',
+          brandTitle: 'Shirin Safe',
+          summary:
+            'Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.',
+          duration: 'PT30M',
+        },
+        {
+          id: 'p0gf5c8c',
+          state: 'onDemand',
+          startTime: 1698002970000,
+          link: '/hausa/bbc_hausa_radio/w3ct5367',
+          brandTitle: 'Shirin Yamma',
+          summary:
+            'Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.',
+          duration: 'PT30M',
+        },
+      ],
+      radioSchedulePosition: 'Verticals',
     },
   },
   serbian: {
