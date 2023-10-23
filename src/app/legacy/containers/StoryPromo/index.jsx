@@ -142,9 +142,6 @@ const StoryPromoContainer = ({
     promoIndex: index,
   });
 
-  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-  // text to read 'Live' instead, which screenreaders pronounce correctly.
-
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&

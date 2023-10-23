@@ -9,6 +9,7 @@ import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
 import metadata from './metadata.json';
+import { METAL } from '../ThemeProvider/palette';
 
 interface Props extends StoryProps {
   ariaHidden?: boolean;
@@ -33,6 +34,19 @@ const Component = ({
 
 const Wrapper = styled.div`
   position: relative;
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  a:hover > span,
+  a:focus > span {
+    text-decoration: underline;
+  }
+
+  a:visited > span {
+    color: ${METAL};
+  }
 `;
 
 export default {

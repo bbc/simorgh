@@ -15,7 +15,10 @@ export default {
       padding: `${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
         ...fontSizes.doublePica,
-        padding: `${spacings.TRIPLE}rem 0 ${spacings.DOUBLE}rem`,
+        paddingTop: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
       },
     }),
   subHeading: ({ mq, spacings }: Theme) =>
