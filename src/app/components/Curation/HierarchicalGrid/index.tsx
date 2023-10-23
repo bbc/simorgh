@@ -114,12 +114,7 @@ const HiearchicalGrid = ({
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
                         </VisuallyHiddenText>
-
-                        {isLive ? (
-                          <LiveLabel>{promo.title}</LiveLabel>
-                        ) : (
-                          promo.title
-                        )}
+                        {promo.title}
                         {showDuration && (
                           <VisuallyHiddenText>
                             {durationString}
