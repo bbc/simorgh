@@ -63,7 +63,7 @@ const CurationPromo = ({
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
               </VisuallyHiddenText>
-              {title}
+              {isLive ? <LiveLabel>{title}</LiveLabel> : title}
               {showDuration && (
                 <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
               )}
