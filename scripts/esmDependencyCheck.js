@@ -117,21 +117,7 @@ const writeCsvFile = data => {
   let csvContents =
     'Dependency,Type,Most Recent Version,Most Recent Version Date,Our Version,Our Version Date,Our Version Freshness in Days';
 
-  data.sort((a, b) => {
-      if (a.type > b.type) {
-        return -1;
-      }
-      else if (a.type < b.type) {
-        return 1;
-      }
-      else if (a.name < b.name) {
-        return -1;
-      }
-      else if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    }).forEach(
+  data.forEach(
     ({
       name,
       type,
@@ -144,19 +130,14 @@ const writeCsvFile = data => {
       csvContents += `\n${name},${type},${mostRecentVersion},${mostRecentVersionDate},${ourVersion},${ourVersionDate},${ourFreshnessInDays}`;
     },
   );
-
   fs.writeFileSync('./esmDependencyTable.csv', csvContents);
 };
 
 const repoLength = Object.keys(allDependencies).length;
 
-if (gitHubToken) {
-  console.log('Please wait. Gathering npm data...');
-  Object.keys(allDependencies).forEach((dep, i) => {
+Object.keys(allDependencies).forEach((dep, i) => {
+  if (gitHubToken) {
     let gitRepo;
-    console.log(
-      `checking npm details for ${dep}`,
-    );
     const cmd = exec(`npm view ${dep} --json`, (err, stdout, stderr) => {
       if (err) {
         console.error(err);
@@ -253,10 +234,10 @@ if (gitHubToken) {
         console.log('no stdout', dep, stdout);
       }
     });
-  });
-}
-else {
-  console.error(
-    'No github token supplied. Please see ./scripts/README.md for details',
-  );
-}
+  } else {
+    console.error(
+      'No github token supplied. Please see ./scripts/README.md for details',
+    );
+    return false;
+  }
+});
