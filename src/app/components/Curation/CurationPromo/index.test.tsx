@@ -9,9 +9,15 @@ interface FixtureProps {
   lazy?: boolean;
   type?: string;
   duration?: number;
+  link?: string;
 }
 
-const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
+const Fixture = ({
+  lazy,
+  type = 'article',
+  duration,
+  link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
+}: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
@@ -19,7 +25,7 @@ const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
     lastPublished="2023-04-17T07:37:18.253Z"
     imageUrl="https://ichef.bbci.co.uk/news/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     imageAlt="Campesino indígena peruano."
-    link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
+    link={link}
     type={type}
     duration={duration}
   />
@@ -79,6 +85,16 @@ describe('Curation Promo', () => {
         container.queryByTestId('visually-hidden-text'),
       ).toBeInTheDocument();
       expect(container.getByText('Promo title')).toBeInTheDocument();
+    });
+  });
+
+  describe('Live Promo', () => {
+    it('should display LiveLabel on a Live Promo', () => {
+      const container = render(
+        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        { service: 'mundo' },
+      );
+      expect(container.getByText('EN VIVO')).toBeInTheDocument();
     });
   });
 });
