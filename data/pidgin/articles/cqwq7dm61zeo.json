@@ -78,23 +78,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e2aa8ab4",
+              "id": "313d100a",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ab623135",
+                    "id": "c4e8a981",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c6d1a73c",
+                          "id": "b4c743e1",
                           "type": "paragraph",
                           "model": {
                             "text": "Embed test- Flourish",
                             "blocks": [
                               {
-                                "id": "1d699f28",
+                                "id": "9d8c4282",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Embed test- Flourish",
@@ -115,7 +115,7 @@
               "position": [1]
             },
             {
-              "id": "aaa23061",
+              "id": "6a0f7fbe",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1689167983628,
@@ -124,23 +124,23 @@
               "position": [2]
             },
             {
-              "id": "8cf30fb7",
+              "id": "2e5f07dd",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "f0fe0acd",
+                    "id": "932db536",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "30bac070",
+                          "id": "3a03288c",
                           "type": "paragraph",
                           "model": {
                             "text": "Flourish",
                             "blocks": [
                               {
-                                "id": "482845ab",
+                                "id": "e548a8cf",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Flourish",
@@ -161,23 +161,20 @@
               "position": [3]
             },
             {
-              "id": "23d78afc",
+              "id": "6a40cf2b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5e5b4981",
+                    "id": "6e14329c",
                     "type": "paragraph",
                     "model": {
                       "text": "Top",
                       "blocks": [
                         {
-                          "id": "11150a4f",
+                          "id": "1975fc0f",
                           "type": "fragment",
-                          "model": {
-                            "text": "Top",
-                            "attributes": []
-                          },
+                          "model": { "text": "Top", "attributes": [] },
                           "position": [4, 1, 1]
                         }
                       ]
@@ -189,7 +186,7 @@
               "position": [4]
             },
             {
-              "id": "79d992bf",
+              "id": "2b35a1d8",
               "type": "oEmbed",
               "model": {
                 "oembed": {
@@ -201,29 +198,25 @@
                   "height": 575,
                   "type": "rich",
                   "source": "https://public.flourish.studio/visualisation/8809119",
-                  "aresType": "aresFlourish"
+                  "oEmbedType": "aresFlourish"
                 }
-              },
-              "position": [5]
+              }
             },
             {
-              "id": "70707f4f",
+              "id": "d4cf7245",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "45236f0d",
+                    "id": "3cee2ac4",
                     "type": "paragraph",
                     "model": {
                       "text": "Bottom",
                       "blocks": [
                         {
-                          "id": "6a4961c8",
+                          "id": "cd04b917",
                           "type": "fragment",
-                          "model": {
-                            "text": "Bottom",
-                            "attributes": []
-                          },
+                          "model": { "text": "Bottom", "attributes": [] },
                           "position": [6, 1, 1]
                         }
                       ]
@@ -234,18 +227,11 @@
               },
               "position": [6]
             },
+            { "id": "c4577f17", "type": "mpu", "model": {}, "position": [7] },
             {
-              "id": "dc48da0f",
-              "type": "mpu",
-              "model": {},
-              "position": [7]
-            },
-            {
-              "id": "44df649c",
+              "id": "4129d95d",
               "type": "wsoj",
-              "model": {
-                "type": "recommendations"
-              },
+              "model": { "type": "recommendations" },
               "position": [8]
             }
           ]
@@ -294,10 +280,7 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": {
-                            "text": "",
-                            "attributes": []
-                          }
+                          "model": { "text": "", "attributes": [] }
                         }
                       ]
                     }
@@ -312,9 +295,7 @@
     "secondaryData": {
       "topStories": [
         {
-          "headlines": {
-            "headline": "ATMs across the country"
-          },
+          "headlines": { "headline": "ATMs across the country" },
           "locators": {
             "assetUri": "/pidgin/23248287",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248287",
@@ -350,10 +331,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": true,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": true, "isFactCheck": false },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -365,9 +343,7 @@
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Jacob Zuma: Staying!!!"
-          },
+          "headlines": { "headline": "Jacob Zuma: Staying!!!" },
           "locators": {
             "assetUri": "/pidgin/tori-23146434",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146434",
@@ -391,10 +367,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:pidgin/tori-23146434",
           "type": "cps"
@@ -424,9 +397,7 @@
       ],
       "features": [
         {
-          "headlines": {
-            "headline": "How Lagos Dey Fight Lassa Fever"
-          },
+          "headlines": { "headline": "How Lagos Dey Fight Lassa Fever" },
           "locators": {
             "assetUri": "/pidgin/tori-23146625",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
@@ -450,10 +421,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
           "type": "cps"
         },
@@ -492,10 +460,7 @@
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
-                "availableTerritories": {
-                  "uk": true,
-                  "nonUk": true
-                },
+                "availableTerritories": { "uk": true, "nonUk": true },
                 "availableFrom": 1571751302000
               }
             ],
@@ -513,10 +478,7 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/media-23267821",
           "type": "cps"
         },
@@ -556,10 +518,7 @@
             "copyrightHolder": "-",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -606,17 +565,12 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23169387",
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Like Scaramucci, Like Others"
-          },
+          "headlines": { "headline": "Like Scaramucci, Like Others" },
           "locators": {
             "assetUri": "/news/world-africa-23143884",
             "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23143884",
@@ -639,10 +593,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Africa",
@@ -685,10 +636,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146975",
           "type": "cps"
         },
@@ -715,9 +663,7 @@
           "type": "link"
         },
         {
-          "headlines": {
-            "headline": "Anambra Church: Police Arrest 3"
-          },
+          "headlines": { "headline": "Anambra Church: Police Arrest 3" },
           "locators": {
             "assetUri": "/pidgin/tori-23145776",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145776",
@@ -741,17 +687,12 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Kenya Decides 2017 in Pictures"
-          },
+          "headlines": { "headline": "Kenya Decides 2017 in Pictures" },
           "locators": {
             "assetUri": "/pidgin/23146654",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23146654",
@@ -775,10 +716,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -790,7 +728,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-08-16T13:49:57.334Z",
+        "generated": "2023-10-23T08:34:57.648Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "items": [
@@ -939,134 +877,5 @@
       "latestMedia": null
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.4",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.4.1"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "service-env": "test",
-        "pers-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "0bd5e1036284bd1e4050497d11a98cc5f3a38ec2",
-            "last-modified": "Thu, 03 Aug 2023 10:27:51 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "ad2c53b7-306c-47e0-8bdd-efa62861b416",
-            "expires": "Wed, 16 Aug 2023 14:07:52 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 247
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cqwq7dm61zeo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Wed, 16 Aug 2023 14:08:52 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 54
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
-            "content-type": "application/json",
-            "content-length": "5292",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"2b070a0c8f57080c9b3b42b0c4ee13c9bda9885d\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Wed, 16 Aug 2023 14:08:25 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 116
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "tenantLogs": [
-      {
-        "timestamp": 1692195452487,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      },
-      {
-        "timestamp": 1692195452487,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      },
-      {
-        "timestamp": 1692195452487,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cqwq7dm61zeo",
-      "service": "pidgin",
-      "pageType": "article",
-      "isAmp": ""
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [{}]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

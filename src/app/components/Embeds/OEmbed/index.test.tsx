@@ -65,8 +65,6 @@ describe('OEmbed', () => {
       );
       expect(actual).toBeInTheDocument();
     });
-
-    // no VJ canonical test?
   });
 
   describe('AMP', () => {

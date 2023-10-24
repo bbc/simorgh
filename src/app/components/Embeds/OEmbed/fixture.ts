@@ -28,15 +28,6 @@ export const sampleFlourishProps = {
   },
 };
 
-export const sampleVJCanonicalProps = {
-  id: 'fc377e39',
-  type: 'oEmbed',
-  oembed: {
-    html: '<script src="test"></script>\n',
-    oEmbedType: 'vdj-embed',
-  },
-};
-
 export const sampleVJAmpProps = {
   id: 'f784999b',
   type: 'oEmbed',
