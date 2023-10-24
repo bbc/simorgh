@@ -2530,7 +2530,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
               class="emotion-12"
               dir="rtl"
             >
-              LIVE 
+              مباشر 
             </span>
             <span
               class="emotion-13"

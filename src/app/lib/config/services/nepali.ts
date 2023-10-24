@@ -317,7 +317,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/media-54029171',
+        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
       },
       {
         title: 'भिडिओ',

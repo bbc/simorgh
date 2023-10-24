@@ -8,6 +8,8 @@ import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
+import metadata from './metadata.json';
+import { METAL } from '../ThemeProvider/palette';
 
 interface Props extends StoryProps {
   ariaHidden?: boolean;
@@ -34,11 +36,16 @@ const Wrapper = styled.div`
   position: relative;
   a {
     text-decoration: none;
-    border-bottom: none;
+    border-bottom: 0.0625rem solid transparent;
   }
 
-  a:hover > span {
+  a:hover > span,
+  a:focus > span {
     text-decoration: underline;
+  }
+
+  a:visited > span {
+    color: ${METAL};
   }
 `;
 
@@ -46,9 +53,42 @@ export default {
   title: 'New Components/Live Label',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
+    metadata,
     docs: {
       page: md,
     },
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14619&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 1',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14709&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 2',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14438&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 3',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14526&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 4',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14307&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 5',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14807&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+    ],
   },
 };
 
