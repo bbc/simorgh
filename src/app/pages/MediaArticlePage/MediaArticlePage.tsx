@@ -40,7 +40,7 @@ import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import OEmbedLoader, { OEmbedProps } from '../../components/Embeds/OEmbed';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -70,6 +70,7 @@ import {
   MediaArticlePageProps,
   TimestampProps,
 } from './types';
+import { OEmbedProps } from '#app/components/Embeds/types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
