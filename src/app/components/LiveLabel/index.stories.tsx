@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
-import styled from '@emotion/styled';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import Promo from '#app/legacy/components/Promo';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import LiveLabel from './index';
 import md from './README.md';
@@ -30,18 +30,6 @@ const Component = ({
   );
 };
 
-const Wrapper = styled.div`
-  position: relative;
-  a {
-    text-decoration: none;
-    border-bottom: none;
-  }
-
-  a:hover > span {
-    text-decoration: underline;
-  }
-`;
-
 export default {
   title: 'New Components/Live Label',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
@@ -61,13 +49,11 @@ export const WithCustomOffscreenText = ({ service, variant }: Props) => (
 );
 
 export const WithChildren = ({ text: headline, service, variant }: Props) => (
-  <Wrapper>
-    <Heading level={3}>
-      <a href="https://www.bbc.co.uk/ws/languages">
-        <Component service={service} variant={variant}>
-          {headline}
-        </Component>
-      </a>
-    </Heading>
-  </Wrapper>
+  <Heading level={3}>
+    <Promo.A href="https://www.bbc.co.uk/ws/languages">
+      <Component service={service} variant={variant}>
+        {headline}
+      </Component>
+    </Promo.A>
+  </Heading>
 );
