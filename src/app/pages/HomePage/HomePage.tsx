@@ -82,16 +82,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
             {curations.map(
               (
                 {
-                visualProminence,
-                summaries,
-                curationId,
-                title: curationTitle,
-                link,
-                position,
-                visualStyle,
-                mostRead,
-              },
-              index,
+                  visualProminence,
+                  summaries,
+                  curationId,
+                  title: curationTitle,
+                  link,
+                  position,
+                  visualStyle,
+                  mostRead,
+                },
+                index,
               ) => {
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
@@ -107,11 +107,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
                     />
-                   {index === 0 && <MPU />}
+                    {index === 0 && <MPU />}
                   </React.Fragment>
                 );
               },
-              
             )}
           </div>
         </div>
