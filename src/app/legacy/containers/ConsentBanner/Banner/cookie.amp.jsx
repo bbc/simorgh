@@ -148,27 +148,30 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props =>
+  props.theme.palette.CONSENT_ACTION};
     color: ${props => props.theme.palette.CONSENT_ACTION};
   }
-`;
 
-const Hide = styled.div`
-  width: 2.75rem;
-  height: 2.75rem;
-  background-color: inherit;
-  align-self: flex-end;
-  & button {
-    width: 2.75rem;
-    height: 2.75rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    &:hover {
-      border: solid ${focusIndicatorThickness}
-        ${props => props.theme.palette.WHITE};
+  &.hide {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    & button {
+      width: 2.75rem;
+      height: 2.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:hover:not(.focusIndicatorInset:focus-visible) {
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.WHITE};
+      }
     }
-  }
 `;
 
 const ContentWrapper = styled.div`
@@ -176,7 +179,7 @@ const ContentWrapper = styled.div`
   max-height: ${BANNER_MAX_HEIGHT};
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
-  padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-left: ${GEL_MARGIN_ABOVE_400PX};
     padding-right: ${GEL_MARGIN_ABOVE_400PX};
@@ -253,9 +256,11 @@ const AmpCookieBanner = ({
                   {initial.manage}
                 </button>
               </OptionsItem>
+              <OptionsItem className="hide" script={script} service={service}>
+                <div>{hide}</div>
+              </OptionsItem>
             </OptionsList>
           </ContentWrapper>
-          <Hide>{hide}</Hide>
         </BannerPage>
         <BannerPage
           hidden
@@ -294,9 +299,11 @@ const AmpCookieBanner = ({
               <OptionsItem script={script} service={service}>
                 {reject}
               </OptionsItem>
+              <OptionsItem className="hide" script={script} service={service}>
+                <div>{hide}</div>
+              </OptionsItem>
             </OptionsList>
           </ContentWrapper>
-          <Hide>{hide}</Hide>
         </BannerPage>
       </Wrapper>
     </div>

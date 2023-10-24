@@ -67,12 +67,10 @@ const CenterWrapper = styled.div`
     border-bottom: solid 0.125rem transparent;
   }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING}
-      ${GEL_SPACING_DBL};
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
@@ -94,7 +92,7 @@ const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};
   color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 
   &:focus {
@@ -181,22 +179,25 @@ const ListItem = styled.li`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 17.3125rem;
   }
-`;
 
-const Hide = styled.div`
-  width: 2.75rem;
-  height: 2.75rem;
-  background-color: inherit;
-  align-self: flex-end;
-  & button {
+  &.hide {
     width: 2.75rem;
     height: 2.75rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    &:hover {
-      border: ${focusIndicatorThickness} solid
-        ${props => props.theme.palette.WHITE};
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    & button {
+      width: 2.75rem;
+      height: 2.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:hover:not(.focusIndicatorInset:focus-visible) {
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.WHITE};
+      }
     }
   }
 `;
@@ -227,9 +228,11 @@ export const ConsentBanner = ({
         <ListItem dir={dir} script={script}>
           <span>{reject}</span>
         </ListItem>
+        <ListItem className="hide" dir={dir} script={script}>
+          {hide && <div>{hide}</div>}
+        </ListItem>
       </Options>
     </CenterWrapper>
-    {hide && <Hide>{hide}</Hide>}
   </Wrapper>
 );
 
