@@ -43,8 +43,6 @@ const hoverFocusStyles = ({ theme }) => `
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
   ${({ service }) => getSansRegular(service)}
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;

@@ -53,7 +53,7 @@ const Wrapper = styled.div`
 
 const BannerPage = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 `;
 
 const Title = styled.h2`
