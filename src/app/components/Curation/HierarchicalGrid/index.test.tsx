@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../../react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import fixture from './fixtures';
 import mediaFixture from './mediaFixtures';
 import HierarchicalGrid from '.';
