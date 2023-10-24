@@ -172,6 +172,7 @@ const Hide = styled.div`
 `;
 
 const ContentWrapper = styled.div`
+  align-self: center;
   max-height: ${BANNER_MAX_HEIGHT};
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
