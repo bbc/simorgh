@@ -3,7 +3,7 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   liveLabel: ({ palette, spacings, fontVariants }: Theme) =>
     css({
-      color: palette.POSTBOX,
+      color: palette.LE_TEAL,
       display: 'inline-block',
       marginInlineEnd: `${spacings.FULL}rem`,
       ...fontVariants.sansBold,
