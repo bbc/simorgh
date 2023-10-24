@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 
-import OEmbedLoader, { OEmbedProps } from '.';
+import EmbedAmp, { OEmbedAmpProps } from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   RequestContext,
@@ -9,18 +9,13 @@ import {
 } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
-import {
-  sampleRiddleProps,
-  sampleFlourishProps,
-  sampleVJAmpProps,
-} from './fixture';
 
 const Component = ({
   props,
   isAmp,
   service = 'pidgin',
 }: {
-  props: OEmbedProps;
+  props: OEmbedAmpProps;
   isAmp: boolean;
   service?: Services;
 }) => (
@@ -39,37 +34,40 @@ const Component = ({
     }
   >
     <ServiceContextProvider service={service}>
-      <OEmbedLoader {...props} />
+      <EmbedAmp {...props} />
     </ServiceContextProvider>
   </RequestContext.Provider>
 );
 
-describe('OEmbed', () => {
-  describe('Canonical', () => {
-    it('Riddle Embed - Should show an iframe with the appropriate link', () => {
-      const { container } = render(
-        <Component props={sampleRiddleProps} isAmp={false} />,
-      );
-      const actual = container.querySelector(
-        'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
-      );
-      expect(actual).toBeInTheDocument();
-    });
+const sampleRiddleProps = {
+  isVDJEmbed: false,
+  canonicalLink: 'canonical_link',
+  parameters: undefined,
+  url: 'https://www.riddle.com/view/SAVstNdh',
+};
 
-    it('Flourish Embed - Should show an iframe with the appropriate link', () => {
-      const { container } = render(
-        <Component props={sampleFlourishProps} isAmp={false} />,
-      );
-      const actual = container.querySelector(
-        'iframe[src="https://flo.uri.sh/visualisation/8809119/embed"]',
-      );
-      expect(actual).toBeInTheDocument();
-    });
+const sampleFlourishProps = {
+  isVDJEmbed: false,
+  canonicalLink: 'canonical_link',
+  parameters: undefined,
+  url: undefined,
+};
 
-    // no VJ canonical test?
-  });
+const sampleVJProps = {
+  isVDJEmbed: true,
+  canonicalLink: 'canonical_link',
+  parameters: {
+    'amp-clickable': true,
+    'amp-image-height': 360,
+    'amp-image-width': 640,
+    'amp-image':
+      'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+  },
+  url: 'https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0',
+};
 
-  describe('AMP', () => {
+describe('EmbedAmp', () => {
+  describe('Error Message', () => {
     it('Riddle Embed - Should show a translated error message with a link to the canonical page', () => {
       const { container, getByText } = render(
         <Component props={sampleRiddleProps} service="afrique" isAmp />,
@@ -106,10 +104,8 @@ describe('OEmbed', () => {
       expect(errorMessage).toBeInTheDocument();
     });
 
-    it('VJ Embed - Should show an amp iframe', () => {
-      const { container } = render(
-        <Component props={sampleVJAmpProps} isAmp />,
-      );
+    it('VJ Embed - Should show amp iframe', () => {
+      const { container } = render(<Component props={sampleVJProps} isAmp />);
       const actual = container.querySelector(
         'amp-iframe[src="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"]',
       );

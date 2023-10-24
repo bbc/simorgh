@@ -28,14 +28,15 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { html, oEmbedType, parameters, url } = oembed;
   const isVDJEmbed = oEmbedType === 'vdj-embed';
 
-  if (isAmp) {
-    <EmbedAmp
-      isVDJEmbed={isVDJEmbed}
-      canonicalLink={canonicalLink}
-      parameters={parameters}
-      url={url}
-    />;
-  }
+  if (isAmp)
+    return (
+      <EmbedAmp
+        isVDJEmbed={isVDJEmbed}
+        canonicalLink={canonicalLink}
+        parameters={parameters}
+        url={url}
+      />
+    );
 
   if (html == null) {
     return null;

@@ -14,7 +14,7 @@ export type ampParams = {
   'amp-image': string;
 };
 
-type OEmbedAmpProps = {
+export type OEmbedAmpProps = {
   isVDJEmbed: boolean;
   canonicalLink: string;
   parameters?: ampParams;
@@ -28,12 +28,13 @@ const EmbedAmp = ({
   url,
 }: OEmbedAmpProps) => {
   const { translations } = useContext(ServiceContext);
+
   if (isVDJEmbed) {
     if (!parameters) return null;
 
     const ampMetadata = {
-      imageWidth: parameters['amp-image-width'],
-      imageHeight: parameters['amp-image-height'],
+      imageWidth: parameters['amp-image-width']?.toString(),
+      imageHeight: parameters['amp-image-height']?.toString(),
       image: parameters['amp-image'],
       src: url,
     };
