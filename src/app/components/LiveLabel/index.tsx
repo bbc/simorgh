@@ -48,7 +48,6 @@ const LiveLabel = ({
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
     screenReaderText = ', ';
   }
-console.log( 'offscreentext', offScreenText, 'childen', children);
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
