@@ -41,7 +41,6 @@ const LiveLabel = ({
   } else if (liveLabelIsEnglish) {
     screenReaderText = 'Live';
   }
-
   // comma is added to screenReaderText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
   if (children) {
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
