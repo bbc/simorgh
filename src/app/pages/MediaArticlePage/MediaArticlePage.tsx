@@ -6,6 +6,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
 
+import { OEmbedProps } from '#app/components/Embeds/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -70,7 +71,6 @@ import {
   MediaArticlePageProps,
   TimestampProps,
 } from './types';
-import { OEmbedProps } from '#app/components/Embeds/types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
