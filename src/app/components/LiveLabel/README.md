@@ -31,8 +31,6 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 </Headline>;
 ```
 
-
-
 ### When to use this component
 
 The `LiveLabel` component can be used to show a promo for a Live page.
