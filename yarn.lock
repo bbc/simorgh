@@ -3763,72 +3763,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/env@npm:13.5.5"
-  checksum: 4e3a92f2bd60189d81eb0437bf8141de26dec371edc125553c2d93b1de4c40ce99e8c81f60d8450961fab5c8880a6bcfccd23d9ef9c86aceab2f5380776def9f
+"@next/env@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/env@npm:13.5.6"
+  checksum: 5e8f3f6f987a15dad3cd7b2bcac64a6382c2ec372d95d0ce6ab295eb59c9731222017eebf71ff3005932de2571f7543bce7e5c6a8c90030207fb819404138dc2
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-darwin-arm64@npm:13.5.5"
+"@next/swc-darwin-arm64@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-darwin-arm64@npm:13.5.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-darwin-x64@npm:13.5.5"
+"@next/swc-darwin-x64@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-darwin-x64@npm:13.5.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.5.5"
+"@next/swc-linux-arm64-gnu@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.5.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-linux-arm64-musl@npm:13.5.5"
+"@next/swc-linux-arm64-musl@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-arm64-musl@npm:13.5.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-linux-x64-gnu@npm:13.5.5"
+"@next/swc-linux-x64-gnu@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-x64-gnu@npm:13.5.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-linux-x64-musl@npm:13.5.5"
+"@next/swc-linux-x64-musl@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-x64-musl@npm:13.5.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.5.5"
+"@next/swc-win32-arm64-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.5.5"
+"@next/swc-win32-ia32-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.5.5":
-  version: 13.5.5
-  resolution: "@next/swc-win32-x64-msvc@npm:13.5.5"
+"@next/swc-win32-x64-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-x64-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5714,20 +5714,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.5":
-  version: 29.5.5
-  resolution: "@types/jest@npm:29.5.5"
+"@types/jest@npm:29.5.6":
+  version: 29.5.6
+  resolution: "@types/jest@npm:29.5.6"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: 56e55cde9949bcc0ee2fa34ce5b7c32c2bfb20e53424aa4ff3a210859eeaaa3fdf6f42f81a3f655238039cdaaaf108b054b7a8602f394e6c52b903659338d8c6
+  checksum: fa13a27bd1c8efd0381a419478769d0d6d3a8e93e1952d7ac3a16274e8440af6f73ed6f96ac1ff00761198badf2ee226b5ab5583a5d87a78d609ea78da5c5a24
   languageName: node
   linkType: hard
 
 "@types/js-cookie@npm:^3.0.3":
-  version: 3.0.4
-  resolution: "@types/js-cookie@npm:3.0.4"
-  checksum: 46ac93974776a256f3cedadf60b45ded4d905a5e69986882d8c17baa351cb2e81a691864a1f19c3ca90eaa2cb3eeb7cb5426416b487a7d54cf5ff278d39d7870
+  version: 3.0.5
+  resolution: "@types/js-cookie@npm:3.0.5"
+  checksum: 4d91ae26445499fdde283928aac9ad149be3561ef9b4d959f77e44694608accd5939c8c68ba42c50c2cfc007ccd442cc566a41077d7f2766390088fa91b612ce
   languageName: node
   linkType: hard
 
@@ -5765,12 +5765,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/loadable__component@npm:5.13.5":
-  version: 5.13.5
-  resolution: "@types/loadable__component@npm:5.13.5"
+"@types/loadable__component@npm:5.13.6":
+  version: 5.13.6
+  resolution: "@types/loadable__component@npm:5.13.6"
   dependencies:
     "@types/react": "*"
-  checksum: 9ff5c96931bbc1eeb7ba776890ca576a3a96c8f236538ce29380d6d4b28643d14a50bac5524be0859ade3620e47ec41a68af1d9e17c2cec6d3271424b144ac21
+  checksum: 2167af14ac6f0d8be45baeb5a7a4754d2eb513ff65696865d719fb05701272f9d40d6db512c563ee91289189faa86c3b46a91d2f5ac65f007f3e1e59c1ff83da
   languageName: node
   linkType: hard
 
@@ -5935,12 +5935,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.13":
-  version: 18.2.13
-  resolution: "@types/react-dom@npm:18.2.13"
+"@types/react-dom@npm:18.2.14":
+  version: 18.2.14
+  resolution: "@types/react-dom@npm:18.2.14"
   dependencies:
     "@types/react": "*"
-  checksum: 22ba066b141dca5a5a9227fae0afc7c94b470fff8e8a38ade72649da57a8ea04d0cb2ba3e22005e7d8e772d49bddd28855b1dd98e6defd033bba6afb6edff883
+  checksum: 890289c70d1966c168037637c09cacefe6205bdd27a33252144a6b432595a2943775ac1a1accac0beddaeb67f8fdf721e076acb1adc990b08e51c3d9fd4e780c
   languageName: node
   linkType: hard
 
@@ -5953,21 +5953,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:6.1.7":
-  version: 6.1.7
-  resolution: "@types/react-helmet@npm:6.1.7"
+"@types/react-helmet@npm:6.1.8":
+  version: 6.1.8
+  resolution: "@types/react-helmet@npm:6.1.8"
   dependencies:
     "@types/react": "*"
-  checksum: d5ee8343f10f8746a022249c6401493baa73241a90b5002b59e8a6ce31650b9e1ab38d398eba5564af026f68eda107c8fcdca01fc046a163a96dc422710f6a77
+  checksum: 380d6aa2760a43dab59d46f291caf9498abfda813e343aeaea8b814fe21a69b27e9ad97962b5541ad75179eb9b7875027e4fcc7009187b2f68251ac9f0923a2c
   languageName: node
   linkType: hard
 
 "@types/react-lazyload@npm:^3.2.0":
-  version: 3.2.1
-  resolution: "@types/react-lazyload@npm:3.2.1"
+  version: 3.2.2
+  resolution: "@types/react-lazyload@npm:3.2.2"
   dependencies:
     "@types/react": "*"
-  checksum: 5070aa3f5438798f61ba9dd5cc4ac469f2a6746c0df2e91c59f90cc2501377b537b8aec717a8c0b1965c103a544234dae3ea69b60ba2c6a2bc8564dd5700f5e5
+  checksum: b365fd21b55947e6d482b907644cf08f03e5969d51a2b1f34b4aacc26df60bef1eedd43f1593cf8a3f4a8fbff22be1de19a6e6dd311057672f815a1170ea1a93
   languageName: node
   linkType: hard
 
@@ -5992,14 +5992,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.25":
-  version: 18.2.25
-  resolution: "@types/react@npm:18.2.25"
+"@types/react@npm:18.2.31":
+  version: 18.2.31
+  resolution: "@types/react@npm:18.2.31"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 177515cd44135d56191ec6c5c10edd490c96c175d37624d9c37bc2007c3abcf6cc2d2137d2a073d692cdc5129d5d5785bd60a6ddd315f695da5d8b989fa2afc5
+  checksum: b11be8e39174d3303e308461400889e353e422d22b01d09795b2c35b7b99d5351716503d9ec5c58e4c2c871249603fa52840d45a34fb5901dd7a26e06129c716
   languageName: node
   linkType: hard
 
@@ -6160,9 +6160,9 @@ __metadata:
   linkType: hard
 
 "@types/url-parse@npm:^1.4.8":
-  version: 1.4.9
-  resolution: "@types/url-parse@npm:1.4.9"
-  checksum: 4057c82f917f2ae8456cf7f7dd6a2908733a0c114c7d77e7e4642edbbde4b007ce445c492ae81daac77a9355d0dabb914f6ac396c16a91ca111d0b4029c33d17
+  version: 1.4.10
+  resolution: "@types/url-parse@npm:1.4.10"
+  checksum: f769115addc67f7be2ce1953a72fd6d2e37be3bd69a7bb8c526cc1dce838a4be78d470418ed8bbb0f53e5330d332595ea130b78eee8b173537eb16a428f5444d
   languageName: node
   linkType: hard
 
@@ -17322,20 +17322,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.5.5":
-  version: 13.5.5
-  resolution: "next@npm:13.5.5"
+"next@npm:13.5.6":
+  version: 13.5.6
+  resolution: "next@npm:13.5.6"
   dependencies:
-    "@next/env": 13.5.5
-    "@next/swc-darwin-arm64": 13.5.5
-    "@next/swc-darwin-x64": 13.5.5
-    "@next/swc-linux-arm64-gnu": 13.5.5
-    "@next/swc-linux-arm64-musl": 13.5.5
-    "@next/swc-linux-x64-gnu": 13.5.5
-    "@next/swc-linux-x64-musl": 13.5.5
-    "@next/swc-win32-arm64-msvc": 13.5.5
-    "@next/swc-win32-ia32-msvc": 13.5.5
-    "@next/swc-win32-x64-msvc": 13.5.5
+    "@next/env": 13.5.6
+    "@next/swc-darwin-arm64": 13.5.6
+    "@next/swc-darwin-x64": 13.5.6
+    "@next/swc-linux-arm64-gnu": 13.5.6
+    "@next/swc-linux-arm64-musl": 13.5.6
+    "@next/swc-linux-x64-gnu": 13.5.6
+    "@next/swc-linux-x64-musl": 13.5.6
+    "@next/swc-win32-arm64-msvc": 13.5.6
+    "@next/swc-win32-ia32-msvc": 13.5.6
+    "@next/swc-win32-x64-msvc": 13.5.6
     "@swc/helpers": 0.5.2
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
@@ -17373,7 +17373,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 034a52cf9a5df79912ad67467e00ab98e6505a7544514a12d6310d67fea760764f6b04ade344d457aadecb6170dd50eb0709346fd97a9e6659fcabd5e510fb97
+  checksum: c869b0014ae921ada3bf22301985027ec320aebcd6aa9c16e8afbded68bb8def5874cca034c680e8c351a79578f1e514971d02777f6f0a5a1d7290f25970ac0d
   languageName: node
   linkType: hard
 
@@ -20762,7 +20762,7 @@ __metadata:
     cypress: ^13.1.0
     jest: ^29.6.4
     jest-environment-jsdom: ^29.6.4
-    next: 13.5.5
+    next: 13.5.6
     npm-run-all: ^4.1.5
     ts-node: ^10.9.1
   languageName: unknown
@@ -20814,14 +20814,14 @@ __metadata:
     "@testing-library/react": 14.0.0
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.4.3
-    "@types/jest": 29.5.5
+    "@types/jest": 29.5.6
     "@types/js-cookie": ^3.0.3
     "@types/jsdom": ^20.0.0
-    "@types/loadable__component": 5.13.5
+    "@types/loadable__component": 5.13.6
     "@types/ramda": 0.28.15
-    "@types/react": 18.2.28
-    "@types/react-dom": 18.2.13
-    "@types/react-helmet": 6.1.7
+    "@types/react": 18.2.31
+    "@types/react-dom": 18.2.14
+    "@types/react-helmet": 6.1.8
     "@types/react-lazyload": ^3.2.0
     "@types/react-router-dom": 5.3.3
     "@types/testing-library__react": 10.2.0
