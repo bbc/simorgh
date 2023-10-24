@@ -21,7 +21,7 @@ describe(
 
     if (Cypress.env('APP_ENV') === 'test') {
       it('passes', () => {
-        cy.visit('/pidgin/new_live/c7p765ynk9qt');
+        cy.visit('/pidgin/live/c7p765ynk9qt');
       });
     }
   },

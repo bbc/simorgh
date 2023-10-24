@@ -139,4 +139,26 @@ describe('Curation', () => {
       ).not.toBeInTheDocument();
     });
   });
+
+  describe('Headings', () => {
+    it('should render correctly when there are multiple curations and the curation only has 1 summary', () => {
+      const [curationWithSummary] = kyrgyzHomePage.data.curations.filter(
+        ({ summaries }) => summaries && summaries.length > 0,
+      );
+
+      const promo = curationWithSummary.summaries?.pop();
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          // @ts-expect-error promo will not be undefined
+          promos={[promo]}
+          curationLength={2}
+        />,
+      );
+
+      expect(document.querySelectorAll('section h2').length).toBe(1);
+    });
+  });
 });

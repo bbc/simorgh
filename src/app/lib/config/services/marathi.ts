@@ -133,7 +133,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ओके',
           reject: 'पाहा नेमकं काय बदललंय',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -147,7 +147,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'कुकीज',
                 last: 'सारखं तंत्रज्ञान वापरून तुमचा ब्राऊझिंग डेटा गोळा करत असतो, जेणेकरून तुमचा ऑनलाईन अनुभव सर्वोत्तम व्हावा आणि तुम्हाला खास तुमच्यासाठीचा मजकूर आणि अ‍ॅड दाखवता याव्यात. तुमची याला सहमती असल्याचं आम्हाला कळवा.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'सेटिंग्ज पाहा',
             },
@@ -163,7 +163,7 @@ export const service: DefaultServiceConfig = {
                   'आमची वेबपेजेस सुलभपणे चालावीत यासाठी आम्ही मर्यादित प्रमाणात तुमच्या उपकरणाविषयीची काही माहिती विनाअनुमती साठवतो.',
                 para4: {
                   text: 'वेबपेजेस सुरळीतपणे चालावीत यासाठी तुमच्या उपकरणातील कोणती माहिती साठवली जाते याविषयी वाचा.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'तुमच्या परवानगीचे पर्याय साठवण्यासाठी आम्ही तुमच्या उपकरणातील लोकल स्टोरेजचा वापर करतो.',
@@ -196,13 +196,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'कुकीज',
                 last: ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'हो, माझी सहमती आहे',
             reject: 'नाही, मला सेटिंग्स दाखवा',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -263,7 +263,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'मोठ्या बातम्या',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'बीबीसी मराठी स्पेशल',
       latestMediaTitle: 'नवीनतम',
     },
     mostRead: {

@@ -24,7 +24,7 @@ const getSchedule = (service, withLongSummary) => {
     service === 'arabic' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
 
   return stateTypes.map((state, index) => ({
-    id: `${index}`,
+    id: `p${index}`,
     state,
     startTime: 1566914061212,
     link: articlePath,

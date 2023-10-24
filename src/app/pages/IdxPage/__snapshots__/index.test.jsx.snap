@@ -2865,115 +2865,119 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
+.emotion-852 {
+  padding-top: 0.5rem;
+}
+
 @media (max-width: 14.9375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-855 {
+    .emotion-858 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-883 {
+    .emotion-898 {
       min-width: 2rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-890 {
+    .emotion-908 {
       min-width: 2rem;
     }
   }
@@ -5569,6 +5573,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     خالق باربی: چرا بعضی مردها تصور عروسکی زنانه را نمی‌پسندیدند
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5581,7 +5595,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-855"
+                  class="emotion-858"
                   dir="rtl"
                 >
                   <span
@@ -5600,6 +5614,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     حمله افراد «مسلح» و با «لباس سپاه» به گردشگران در منطقه ییلاقی اوپرت: «سوم محرم، آمدید تفریح؟»
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5631,6 +5655,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     اصلاحات قضایی اسرائیل؛ نتانیاهو پیش از رای‌گیری کلیدی پارلمان بیمارستان را ترک کرد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5643,7 +5677,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-855"
+                  class="emotion-858"
                   dir="rtl"
                 >
                   <span
@@ -5662,6 +5696,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     از لوگوی جدید توییتر رونمایی شد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5693,6 +5737,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     روسیه، اوکراین را به «حمله پهپادی» به مسکو متهم کرد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5705,7 +5759,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5724,6 +5778,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     ۱۱ کشته در ریزش سقف سالن ورزشی در چین هنگام تمرین تیم والیبال دختران
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5736,7 +5800,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-890"
+                  class="emotion-908"
                   dir="rtl"
                 >
                   <span
@@ -5755,6 +5819,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     بلینکن: در شرایطی نیستیم که درباره بازگشت به برجام مذاکره کنیم
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5767,7 +5841,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5786,6 +5860,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     اوپنهایمر؛ روایتگر «ویرانگر دنیاها» و داستان ساخت اولین بمب اتمی  
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5798,7 +5882,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-890"
+                  class="emotion-908"
                   dir="rtl"
                 >
                   <span
@@ -5817,6 +5901,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     «ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5829,7 +5923,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5848,6 +5942,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     انتخابات اسپانیا؛ محافظه‌کاران پیشتاز ولی فاقد اکثریت پارلمانی
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>

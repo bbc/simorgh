@@ -1,12 +1,13 @@
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
-import { matchPath } from 'react-router';
+import { matchRoutes } from 'react-router-config';
 
 export default pathRegex =>
   ({ path: pathname }) => {
-    const { params } = matchPath(pathname, {
-      path: pathRegex,
-    });
-    const errorCode = Number(params.errorCode);
+    const matchingRoute = matchRoutes([{ path: pathRegex }], pathname);
+
+    const errorCode = Number(
+      matchingRoute?.[0]?.match?.params?.errorCode || 404,
+    );
 
     return Promise.resolve({
       status: 200,
