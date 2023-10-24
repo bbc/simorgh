@@ -15,7 +15,6 @@ const EmbedIFrame = (props: OEmbedData) => {
 
   return (
     <React.Fragment>
-      <h1>TEST</h1>
       <Helmet>
         <script>{sizeAdjustScript}</script>
       </Helmet>
