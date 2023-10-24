@@ -99,6 +99,7 @@ AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
   acceptAction: string.isRequired,
   rejectAction: string.isRequired,
+  hideAction: string.isRequired,
   promptId: string.isRequired,
   hidden: bool,
 };

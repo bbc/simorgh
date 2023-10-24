@@ -312,6 +312,7 @@ AmpCookieBanner.propTypes = {
   translations: arrayOf(shape({})).isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  hide: element.isRequired,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
