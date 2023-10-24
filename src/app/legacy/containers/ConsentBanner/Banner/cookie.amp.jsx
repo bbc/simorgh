@@ -18,13 +18,13 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING,
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
@@ -49,22 +49,11 @@ const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
-  max-height: ${BANNER_MAX_HEIGHT};
 `;
 
 const BannerPage = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-height: ${BANNER_MAX_HEIGHT};
-  max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
-  overflow-y: auto;
-  padding-right: ${GEL_MARGIN_BELOW_400PX};
-  padding-left: ${GEL_MARGIN_BELOW_400PX};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-left: ${GEL_MARGIN_ABOVE_400PX};
-    padding-right: ${GEL_MARGIN_ABOVE_400PX};
-  }
+  display: flex;
+  flex-direction: column-reverse;
 `;
 
 const Title = styled.h2`
@@ -164,6 +153,36 @@ const OptionsItem = styled.li`
   }
 `;
 
+const Hide = styled.div`
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: inherit;
+  align-self: flex-end;
+  & button {
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    &:hover {
+      border: solid ${focusIndicatorThickness}
+        ${props => props.theme.palette.WHITE};
+    }
+  }
+`;
+
+const ContentWrapper = styled.div`
+  max-height: ${BANNER_MAX_HEIGHT};
+  max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
+  overflow-y: auto;
+  padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-left: ${GEL_MARGIN_ABOVE_400PX};
+    padding-right: ${GEL_MARGIN_ABOVE_400PX};
+  }
+  max-height: ${BANNER_MAX_HEIGHT};
+`;
+
 /**
  * AmpCookieSettingsButton is a control that can be used externally to display
  * the Manage Cookie Settings banner.
@@ -187,6 +206,7 @@ const AmpCookieBanner = ({
   translations,
   accept,
   reject,
+  hide,
   hidden,
   script,
   service,
@@ -207,69 +227,75 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script} tabIndex="-1" id="dataCollectionHeading">
-            {initial.title}
-          </Title>
-          <Paragraph script={script}>
-            {initial.description.first}
-            <StyledLink
-              href={initial.description.linkUrl}
-              text={initial.description.linkText}
-            />
-            {initial.description.last}
-          </Paragraph>
-          <OptionsList script={script} role="list">
-            <OptionsItem script={script} service={service}>
-              {accept}
-            </OptionsItem>
-            <OptionsItem script={script} service={service}>
-              <button
-                type="button"
-                // eslint-disable-next-line react/no-unknown-property
-                on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
-              >
-                {initial.manage}
-              </button>
-            </OptionsItem>
-          </OptionsList>
+          <ContentWrapper>
+            <Title script={script} tabIndex="-1" id="dataCollectionHeading">
+              {initial.title}
+            </Title>
+            <Paragraph script={script}>
+              {initial.description.first}
+              <StyledLink
+                href={initial.description.linkUrl}
+                text={initial.description.linkText}
+              />
+              {initial.description.last}
+            </Paragraph>
+            <OptionsList script={script} role="list">
+              <OptionsItem script={script} service={service}>
+                {accept}
+              </OptionsItem>
+              <OptionsItem script={script} service={service}>
+                <button
+                  type="button"
+                  // eslint-disable-next-line react/no-unknown-property
+                  on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
+                >
+                  {initial.manage}
+                </button>
+              </OptionsItem>
+            </OptionsList>
+          </ContentWrapper>
+          <Hide>{hide}</Hide>
         </BannerPage>
         <BannerPage
           hidden
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >
-          <Title script={script} tabIndex="-1" id="manageCookiesHeading">
-            {manage.title}
-          </Title>
-          <Paragraph script={script}>{manage.description.para1}</Paragraph>
-          <Paragraph script={script}>{manage.description.para2}</Paragraph>
-          <Heading>{manage.description.heading2}</Heading>
-          <Paragraph script={script}>{manage.description.para3}</Paragraph>
-          <Paragraph script={script}>
-            <StyledLink
-              href={manage.description.para4.url}
-              text={manage.description.para4.text}
-            />
-          </Paragraph>
-          <Paragraph script={script}>{manage.description.para5}</Paragraph>
-          <Heading>{manage.description.heading3}</Heading>
-          <Paragraph script={script}>{manage.description.para6}</Paragraph>
-          <Paragraph script={script}>
-            <StyledLink
-              href={manage.description.para7.url}
-              text={manage.description.para7.text}
-            />
-          </Paragraph>
-          <Paragraph script={script}>{manage.description.para8}</Paragraph>
-          <Paragraph script={script}>{manage.description.para9}</Paragraph>
-          <OptionsList script={script} role="list">
-            <OptionsItem script={script} service={service}>
-              {accept}
-            </OptionsItem>
-            <OptionsItem script={script} service={service}>
-              {reject}
-            </OptionsItem>
-          </OptionsList>
+          <ContentWrapper>
+            <Title script={script} tabIndex="-1" id="manageCookiesHeading">
+              {manage.title}
+            </Title>
+            <Paragraph script={script}>{manage.description.para1}</Paragraph>
+            <Paragraph script={script}>{manage.description.para2}</Paragraph>
+            <Heading>{manage.description.heading2}</Heading>
+            <Paragraph script={script}>{manage.description.para3}</Paragraph>
+            <Paragraph script={script}>
+              <StyledLink
+                href={manage.description.para4.url}
+                text={manage.description.para4.text}
+              />
+            </Paragraph>
+            <Paragraph script={script}>{manage.description.para5}</Paragraph>
+            <Heading>{manage.description.heading3}</Heading>
+            <Paragraph script={script}>{manage.description.para6}</Paragraph>
+            <Paragraph script={script}>
+              <StyledLink
+                href={manage.description.para7.url}
+                text={manage.description.para7.text}
+              />
+            </Paragraph>
+            <Paragraph script={script}>{manage.description.para8}</Paragraph>
+            <Paragraph script={script}>{manage.description.para9}</Paragraph>
+            <OptionsList script={script} role="list">
+              <OptionsItem script={script} service={service}>
+                {accept}
+              </OptionsItem>
+              <OptionsItem script={script} service={service}>
+                {reject}
+              </OptionsItem>
+            </OptionsList>
+          </ContentWrapper>
+          <Hide>{hide}</Hide>
         </BannerPage>
       </Wrapper>
     </div>

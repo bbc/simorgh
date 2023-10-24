@@ -43,22 +43,11 @@ const hoverFocusStyles = ({ theme }) => `
 `;
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
   ${({ service }) => getSansRegular(service)}
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
-
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
-  }
 `;
 
 const CenterWrapper = styled.div`
@@ -76,6 +65,18 @@ const CenterWrapper = styled.div`
   a:hover,
   a:focus {
     border-bottom: solid 0.125rem transparent;
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING}
+      ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
+      ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
+      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
   }
 `;
 
@@ -182,12 +183,31 @@ const ListItem = styled.li`
   }
 `;
 
+const Hide = styled.div`
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: inherit;
+  align-self: flex-end;
+  & button {
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    &:hover {
+      border: ${focusIndicatorThickness} solid
+        ${props => props.theme.palette.WHITE};
+    }
+  }
+`;
+
 export const ConsentBanner = ({
   dir,
   title,
   text,
   accept,
   reject,
+  hide,
   id,
   hidden,
   script,
@@ -209,6 +229,7 @@ export const ConsentBanner = ({
         </ListItem>
       </Options>
     </CenterWrapper>
+    {hide && <Hide>{hide}</Hide>}
   </Wrapper>
 );
 
