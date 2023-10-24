@@ -11,8 +11,6 @@ import {
 } from '../../models/types/curationData';
 import { ATIData } from '../../components/ATIAnalytics/types';
 import Curation from '../../components/Curation';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
@@ -60,7 +58,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         lang={lang}
         description={description}
         openGraphType="website"
-        hasAmpPage
+        hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
@@ -68,7 +66,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
         headline={title}
         entities={[itemList]}
       />
-      <Ad slotType="leaderboard" />
       <main css={styles.main}>
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
@@ -80,19 +77,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
         <div css={styles.inner}>
           <div css={styles.margins}>
             {curations.map(
-              (
-                {
-                  visualProminence,
-                  summaries,
-                  curationId,
-                  title: curationTitle,
-                  link,
-                  position,
-                  visualStyle,
-                  mostRead,
-                },
-                index,
-              ) => {
+              ({
+                visualProminence,
+                summaries,
+                curationId,
+                title: curationTitle,
+                link,
+                position,
+                visualStyle,
+                mostRead,
+              }) => {
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <Curation
@@ -107,7 +101,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
                     />
-                    {index === 0 && <MPU />}
                   </React.Fragment>
                 );
               },
