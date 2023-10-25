@@ -148,8 +148,7 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${props =>
-  props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
     color: ${props => props.theme.palette.CONSENT_ACTION};
   }
 
@@ -172,6 +171,7 @@ const OptionsItem = styled.li`
           ${props => props.theme.palette.WHITE};
       }
     }
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -184,7 +184,6 @@ const ContentWrapper = styled.div`
     padding-left: ${GEL_MARGIN_ABOVE_400PX};
     padding-right: ${GEL_MARGIN_ABOVE_400PX};
   }
-  max-height: ${BANNER_MAX_HEIGHT};
 `;
 
 /**
