@@ -51,20 +51,20 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
 
   if (isAmp) {
     if (isVDJEmbed) {
-      if (!parameters) return null;
+      if (parameters) {
+        const ampMetadata = {
+          imageWidth: parameters['amp-image-width']?.toString(),
+          imageHeight: parameters['amp-image-height']?.toString(),
+          image: parameters['amp-image'],
+          src: url,
+        };
 
-      const ampMetadata = {
-        imageWidth: parameters['amp-image-width']?.toString(),
-        imageHeight: parameters['amp-image-height']?.toString(),
-        image: parameters['amp-image'],
-        src: url,
-      };
-
-      return (
-        <div css={styles.embedDiv}>
-          <VjAmp ampMetadata={ampMetadata} />
-        </div>
-      );
+        return (
+          <div css={styles.embedDiv}>
+            <VjAmp ampMetadata={ampMetadata} />
+          </div>
+        );
+      }
     }
 
     const errorMessage = pathOr(
