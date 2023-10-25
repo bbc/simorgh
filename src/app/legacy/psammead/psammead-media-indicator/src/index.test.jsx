@@ -1,10 +1,13 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from './index';
 
 describe('MediaIndicator', () => {
+  suppressPropWarnings(['script', 'MediaIndicator', 'undefined']);
+
   it('should render video by default', () => {
     const { container } = render(<MediaIndicator service="news" />);
     expect(container).toMatchSnapshot();

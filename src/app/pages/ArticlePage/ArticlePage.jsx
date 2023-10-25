@@ -153,7 +153,7 @@ const ArticlePage = ({ pageData }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
-    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
+    podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
   };
 
   const visuallyHiddenBlock = {

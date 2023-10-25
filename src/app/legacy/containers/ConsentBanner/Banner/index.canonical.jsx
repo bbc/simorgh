@@ -89,7 +89,7 @@ RejectButton.propTypes = {
   href: string.isRequired,
   onClick: func.isRequired,
   dataAttribute: shape({
-    'data-cookie-banner': string.isRequired,
+    'data-cookie-banner': string,
   }),
 };
 
