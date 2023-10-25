@@ -855,7 +855,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
             class="emotion-25 emotion-26"
             focusable="false"
             height="32"
-            id="brandSvg"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -2115,7 +2115,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             class="emotion-25 emotion-26"
             focusable="false"
             height="32"
-            id="brandSvg"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -3375,7 +3375,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             class="emotion-25 emotion-26"
             focusable="false"
             height="32"
-            id="brandSvg"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
