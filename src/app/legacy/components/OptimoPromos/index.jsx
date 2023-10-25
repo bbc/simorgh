@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
 
 import Timestamp from '#components/Promo/timestamp';
-import LiveLabel from '#psammead/psammead-live-label/src';
+import LiveLabel from '#app/components/LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Title from './Title';
