@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { OEmbedData } from '../types';
 
-const EmbedIFrame = (props: OEmbedData) => {
+const FlourishEmbed = (props: OEmbedData) => {
   const { width, height, iFrameSrc, iFrameTitle, iFrameId, sizeAdjustScript } =
     props;
 
@@ -32,4 +32,4 @@ const EmbedIFrame = (props: OEmbedData) => {
   );
 };
 
-export default EmbedIFrame;
+export default FlourishEmbed;

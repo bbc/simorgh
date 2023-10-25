@@ -1,12 +1,12 @@
 import React from 'react';
 import AsianGamesFootballProps from './fixtures';
-import EmbedIFrame from './EmbedIFrame';
+import FlourishEmbed from './FlourishEmbed';
 
 export default {
   title: 'Components/Embed Iframe',
-  component: EmbedIFrame,
+  component: FlourishEmbed,
 };
 
 export const AsianGamesFootball = () => (
-  <EmbedIFrame {...AsianGamesFootballProps} />
+  <FlourishEmbed {...AsianGamesFootballProps} />
 );

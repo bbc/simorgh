@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import EmbedIFrame from './EmbedIFrame';
+import FlourishEmbed from './FlourishEmbed';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
 
@@ -15,7 +15,7 @@ describe('EmbedIFrame', () => {
       sizeAdjustScript: 'script to adjust size',
     } as unknown as OEmbedProps;
 
-    const { container } = render(<EmbedIFrame {...props} />);
+    const { container } = render(<FlourishEmbed {...props} />);
     const actual = container.querySelector(
       'iframe[src="https://flo.uri.sh/visualisation/8809119/embed?auto=1"]',
     );
@@ -32,7 +32,7 @@ describe('EmbedIFrame', () => {
       sizeAdjustScript: 'script to adjust size',
     } as unknown as OEmbedProps;
 
-    render(<EmbedIFrame {...props} />);
+    render(<FlourishEmbed {...props} />);
 
     const helmet = Helmet.peek();
     expect(helmet.scriptTags[0]).toEqual({
@@ -43,7 +43,7 @@ describe('EmbedIFrame', () => {
   it('should not render when no iframe src is provided', async () => {
     const props = {} as unknown as OEmbedProps;
 
-    const { container } = render(<EmbedIFrame {...props} />);
+    const { container } = render(<FlourishEmbed {...props} />);
 
     expect(container).toBeEmptyDOMElement();
   });

@@ -6,7 +6,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 import { OEmbedProps } from '../types';
-import EmbedIFrame from '../EmbedIFrame/EmbedIFrame';
+import FlourishEmbed from '../EmbedIFrame/FlourishEmbed';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { translations } = useContext(ServiceContext);
@@ -42,7 +42,7 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   }
 
   if (provider_name === 'Flourish') {
-    return <EmbedIFrame {...oembed} />;
+    return <FlourishEmbed {...oembed} />;
   }
 
   return <EmbedHtml embeddableContent={html} />;
