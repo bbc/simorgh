@@ -52,19 +52,20 @@ const startApplicationInstance = () => {
 };
 
 const processOnline = worker =>
-  logger.info(CLUSTER_PROCESS_START, `Worker ${worker.id} started`);
+  logger.info(CLUSTER_PROCESS_START, {
+    message: `Worker ${worker.id} started`,
+  });
 
 const processExit = (worker, code, signal) => {
-  const exitReason = code ? ` with code ${code}` : ` due to signal ${signal}`;
+  const exitReason = code ? `with code ${code}` : `due to signal ${signal}`;
 
   if (code !== 0 && !worker.exitedAfterDisconnect) {
     cluster.fork();
   }
 
-  return logger.error(
-    CLUSTER_PROCESS_EXIT,
-    `Worker ${worker.id} terminated ${exitReason}`,
-  );
+  return logger.error(CLUSTER_PROCESS_EXIT, {
+    message: `Worker ${worker.id} terminated ${exitReason}`,
+  });
 };
 
 const startCluster = () => {
