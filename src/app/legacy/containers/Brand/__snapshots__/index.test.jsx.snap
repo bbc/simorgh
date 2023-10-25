@@ -147,6 +147,7 @@ exports[`BrandContainer should render correctly 1`] = `
         class="emotion-7 emotion-8"
         focusable="false"
         height="32"
+        id="brandSvg"
         viewBox="0 0 980 142"
         xmlns="http://www.w3.org/2000/svg"
       >

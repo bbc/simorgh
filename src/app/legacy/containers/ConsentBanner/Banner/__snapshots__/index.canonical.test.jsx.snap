@@ -17,24 +17,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -58,12 +40,30 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -234,6 +234,28 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   .emotion-12 {
     width: 17.3125rem;
   }
+}
+
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
 }
 
 <div>
@@ -297,6 +319,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
               </a>
             </span>
           </li>
+          <li
+            class="hide emotion-12 emotion-13"
+            dir="ltr"
+          />
         </ul>
       </div>
     </div>
@@ -319,24 +345,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
 }
 
 .emotion-4 {
@@ -362,12 +370,30 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -540,6 +566,28 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -601,6 +649,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
               </a>
             </span>
           </li>
+          <li
+            class="hide emotion-12 emotion-13"
+            dir="rtl"
+          />
         </ul>
       </div>
     </div>
@@ -623,24 +675,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
 }
 
 .emotion-4 {
@@ -666,12 +700,30 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -844,6 +896,28 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -898,6 +972,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
               </a>
             </span>
           </li>
+          <li
+            class="hide emotion-12 emotion-13"
+            dir="ltr"
+          />
         </ul>
       </div>
     </div>
@@ -920,24 +998,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
 }
 
 .emotion-4 {
@@ -963,12 +1023,30 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -1141,6 +1219,28 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -1195,6 +1295,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
               </a>
             </span>
           </li>
+          <li
+            class="hide emotion-12 emotion-13"
+            dir="rtl"
+          />
         </ul>
       </div>
     </div>

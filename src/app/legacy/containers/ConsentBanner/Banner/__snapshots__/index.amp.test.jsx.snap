@@ -7,27 +7,36 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   font-style: normal;
   background-color: #323232;
   border: 0.125rem solid transparent;
-  max-height: 75vh;
 }
 
 .emotion-2 {
-  margin-left: auto;
-  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 2.75rem 1rem 0.5rem 1rem;
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
@@ -36,30 +45,30 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     margin-top: 2rem;
   }
 }
 
-.emotion-4:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #BEBEBE;
@@ -68,41 +77,41 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8 span {
+.emotion-10 span {
   border-bottom: #AEAEB5 solid 0.0625rem;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   background-color: #F6A21D;
   color: #222222;
 }
 
-.emotion-8:hover span,
-.emotion-8:focus span {
+.emotion-10:hover span,
+.emotion-10:focus span {
   border-bottom: transparent solid 0.125rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   display: -webkit-box;
@@ -121,21 +130,21 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     max-width: 100%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -147,17 +156,17 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     width: calc(50% - 0.5rem);
   }
 }
 
-.emotion-12 button {
+.emotion-14 button {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -175,46 +184,79 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 button {
+  .emotion-14 button {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 button {
+  .emotion-14 button {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-12 button:hover,
-.emotion-12 button:focus {
+.emotion-14 button:hover,
+.emotion-14 button:focus {
   background-color: #F6A21D;
   color: #222222;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
+.emotion-14 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
   border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
 
-.emotion-24 {
+.emotion-14.hide {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-14.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-14.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-20 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-31 {
   color: #FFFFFF;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-31 {
     margin-top: 2rem;
   }
 }
 
-.emotion-24:focus {
+.emotion-31:focus {
   outline: none;
 }
 
@@ -231,53 +273,87 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
         data-amp-bind-hidden="isManagingSettings"
         data-testid="amp-cookie-banner"
       >
-        <h2
+        <div
           class="emotion-4 emotion-5"
-          id="dataCollectionHeading"
-          tabindex="-1"
         >
-          Let us know you agree to data collection on AMP
-        </h2>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          We and our partners use technologies, such as 
-          <a
+          <h2
+            class="emotion-6 emotion-7"
+            id="dataCollectionHeading"
+            tabindex="-1"
+          >
+            Let us know you agree to data collection on AMP
+          </h2>
+          <p
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
-            <span>
-              cookies
-            </span>
-          </a>
-          , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
-        </p>
-        <ul
-          class="emotion-10 emotion-11"
-          role="list"
-        >
-          <li
-            class="emotion-12 emotion-13"
-          >
-            <button
-              data-cookie-banner="accept"
-              on="tap:parentId.accept"
-              type="button"
+            We and our partners use technologies, such as 
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
             >
-              Accept data collection and continue
-            </button>
-          </li>
-          <li
+              <span>
+                cookies
+              </span>
+            </a>
+            , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
+          </p>
+          <ul
             class="emotion-12 emotion-13"
+            role="list"
           >
-            <button
-              on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
-              type="button"
+            <li
+              class="emotion-14 emotion-15"
             >
-              Manage my settings
-            </button>
-          </li>
-        </ul>
+              <button
+                data-cookie-banner="accept"
+                on="tap:parentId.accept"
+                type="button"
+              >
+                Accept data collection and continue
+              </button>
+            </li>
+            <li
+              class="emotion-14 emotion-15"
+            >
+              <button
+                on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
+                type="button"
+              >
+                Manage my settings
+              </button>
+            </li>
+            <li
+              class="hide emotion-14 emotion-15"
+            >
+              <div>
+                <button
+                  class="focusIndicatorInset"
+                  data-cookie-banner="hide"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    height="17"
+                    stroke="white"
+                    stroke-width="4"
+                    viewBox="0 0 32 32"
+                    width="17"
+                  >
+                    <path
+                      d="M3 3 L29 29 M3 29 L29 3"
+                    />
+                  </svg>
+                  <span
+                    class="emotion-20"
+                  >
+                    Close cookie banner
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <div
         class="emotion-2 emotion-3"
@@ -285,109 +361,143 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
         data-testid="amp-cookie-banner-manage-settings"
         hidden=""
       >
-        <h2
+        <div
           class="emotion-4 emotion-5"
-          id="manageCookiesHeading"
-          tabindex="-1"
         >
-          Manage consent settings on AMP pages
-        </h2>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          The lightweight mobile page you have visited has been built using Google AMP technology.
-        </p>
-        <h3
-          class="emotion-24 emotion-25"
-        >
-          Strictly necessary data collection
-        </h3>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          To make our web pages work, we store some limited information on your device without your consent.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          <a
+          <h2
+            class="emotion-6 emotion-7"
+            id="manageCookiesHeading"
+            tabindex="-1"
+          >
+            Manage consent settings on AMP pages
+          </h2>
+          <p
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/"
           >
-            <span>
-              Read more about the essential information we store on your device to make our web pages work.
-            </span>
-          </a>
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          We use local storage to store your consent preferences on your device.
-        </p>
-        <h3
-          class="emotion-24 emotion-25"
-        >
-          Optional data collection
-        </h3>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          <a
+            These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.
+          </p>
+          <p
             class="emotion-8 emotion-9"
-            href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
           >
-            <span>
-              Read more about how we personalise ads in the BBC and our advertising partners.
-            </span>
-          </a>
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.
-        </p>
-        <ul
-          class="emotion-10 emotion-11"
-          role="list"
-        >
-          <li
-            class="emotion-12 emotion-13"
+            The lightweight mobile page you have visited has been built using Google AMP technology.
+          </p>
+          <h3
+            class="emotion-31 emotion-32"
           >
-            <button
-              data-cookie-banner="accept"
-              on="tap:parentId.accept"
-              type="button"
+            Strictly necessary data collection
+          </h3>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            To make our web pages work, we store some limited information on your device without your consent.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/"
             >
-              Accept data collection and continue
-            </button>
-          </li>
-          <li
-            class="emotion-12 emotion-13"
+              <span>
+                Read more about the essential information we store on your device to make our web pages work.
+              </span>
+            </a>
+          </p>
+          <p
+            class="emotion-8 emotion-9"
           >
-            <button
-              data-cookie-banner="reject"
-              on="tap:parentId.reject"
-              type="button"
+            We use local storage to store your consent preferences on your device.
+          </p>
+          <h3
+            class="emotion-31 emotion-32"
+          >
+            Optional data collection
+          </h3>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
             >
-              Reject data collection and continue
-            </button>
-          </li>
-        </ul>
+              <span>
+                Read more about how we personalise ads in the BBC and our advertising partners.
+              </span>
+            </a>
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.
+          </p>
+          <ul
+            class="emotion-12 emotion-13"
+            role="list"
+          >
+            <li
+              class="emotion-14 emotion-15"
+            >
+              <button
+                data-cookie-banner="accept"
+                on="tap:parentId.accept"
+                type="button"
+              >
+                Accept data collection and continue
+              </button>
+            </li>
+            <li
+              class="emotion-14 emotion-15"
+            >
+              <button
+                data-cookie-banner="reject"
+                on="tap:parentId.reject"
+                type="button"
+              >
+                Reject data collection and continue
+              </button>
+            </li>
+            <li
+              class="hide emotion-14 emotion-15"
+            >
+              <div>
+                <button
+                  class="focusIndicatorInset"
+                  data-cookie-banner="hide"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    height="17"
+                    stroke="white"
+                    stroke-width="4"
+                    viewBox="0 0 32 32"
+                    width="17"
+                  >
+                    <path
+                      d="M3 3 L29 29 M3 29 L29 3"
+                    />
+                  </svg>
+                  <span
+                    class="emotion-20"
+                  >
+                    Close cookie banner
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -401,27 +511,36 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   font-style: normal;
   background-color: #323232;
   border: 0.125rem solid transparent;
-  max-height: 75vh;
 }
 
 .emotion-2 {
-  margin-left: auto;
-  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 2.75rem 1rem 0.5rem 1rem;
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
@@ -430,30 +549,30 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     margin-top: 2rem;
   }
 }
 
-.emotion-4:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #BEBEBE;
@@ -462,41 +581,41 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8 span {
+.emotion-10 span {
   border-bottom: #AEAEB5 solid 0.0625rem;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   background-color: #F6A21D;
   color: #222222;
 }
 
-.emotion-8:hover span,
-.emotion-8:focus span {
+.emotion-10:hover span,
+.emotion-10:focus span {
   border-bottom: transparent solid 0.125rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   display: -webkit-box;
@@ -515,21 +634,21 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     max-width: 100%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -541,17 +660,17 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     width: calc(50% - 0.5rem);
   }
 }
 
-.emotion-12 button {
+.emotion-14 button {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -569,46 +688,79 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 button {
+  .emotion-14 button {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 button {
+  .emotion-14 button {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-12 button:hover,
-.emotion-12 button:focus {
+.emotion-14 button:hover,
+.emotion-14 button:focus {
   background-color: #F6A21D;
   color: #222222;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
+.emotion-14 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
   border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
 
-.emotion-24 {
+.emotion-14.hide {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-14.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-14.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-20 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-31 {
   color: #FFFFFF;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-31 {
     margin-top: 2rem;
   }
 }
 
-.emotion-24:focus {
+.emotion-31:focus {
   outline: none;
 }
 
@@ -625,53 +777,87 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
         data-amp-bind-hidden="isManagingSettings"
         data-testid="amp-cookie-banner"
       >
-        <h2
+        <div
           class="emotion-4 emotion-5"
-          id="dataCollectionHeading"
-          tabindex="-1"
         >
-          أعلمونا بموافقتكم على جمع المعلومات من خلال AMP
-        </h2>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          نستخدم نحن وشركاؤنا تقنيات مثل 
-          <a
+          <h2
+            class="emotion-6 emotion-7"
+            id="dataCollectionHeading"
+            tabindex="-1"
+          >
+            أعلمونا بموافقتكم على جمع المعلومات من خلال AMP
+          </h2>
+          <p
             class="emotion-8 emotion-9"
-            href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
-            <span>
-              ملفات الارتباط
-            </span>
-          </a>
-          ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
-        </p>
-        <ul
-          class="emotion-10 emotion-11"
-          role="list"
-        >
-          <li
-            class="emotion-12 emotion-13"
-          >
-            <button
-              data-cookie-banner="accept"
-              on="tap:parentId.accept"
-              type="button"
+            نستخدم نحن وشركاؤنا تقنيات مثل 
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
             >
-              وافق على جمع المعلومات واستمر
-            </button>
-          </li>
-          <li
+              <span>
+                ملفات الارتباط
+              </span>
+            </a>
+            ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
+          </p>
+          <ul
             class="emotion-12 emotion-13"
+            role="list"
           >
-            <button
-              on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
-              type="button"
+            <li
+              class="emotion-14 emotion-15"
             >
-              ادارة خياراتي
-            </button>
-          </li>
-        </ul>
+              <button
+                data-cookie-banner="accept"
+                on="tap:parentId.accept"
+                type="button"
+              >
+                وافق على جمع المعلومات واستمر
+              </button>
+            </li>
+            <li
+              class="emotion-14 emotion-15"
+            >
+              <button
+                on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
+                type="button"
+              >
+                ادارة خياراتي
+              </button>
+            </li>
+            <li
+              class="hide emotion-14 emotion-15"
+            >
+              <div>
+                <button
+                  class="focusIndicatorInset"
+                  data-cookie-banner="hide"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    height="17"
+                    stroke="white"
+                    stroke-width="4"
+                    viewBox="0 0 32 32"
+                    width="17"
+                  >
+                    <path
+                      d="M3 3 L29 29 M3 29 L29 3"
+                    />
+                  </svg>
+                  <span
+                    class="emotion-20"
+                  >
+                    Close cookie banner
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <div
         class="emotion-2 emotion-3"
@@ -679,110 +865,144 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
         data-testid="amp-cookie-banner-manage-settings"
         hidden=""
       >
-        <h2
+        <div
           class="emotion-4 emotion-5"
-          id="manageCookiesHeading"
-          tabindex="-1"
         >
-          ادارة خيارات الموافقة في صفحات AMP
-        </h2>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          تسري هذه الاعدادات على صفحات AMP فقط. قد يطلب منكم اعادة تحديد الاعدادات عند زيارتكم صفحات بي بي سي غير الخاضعة لـ AMP.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.
-        </p>
-        <h3
-          class="emotion-24 emotion-25"
-        >
-          جمع المعلومات ضروري جدا ولابد منه
-        </h3>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          <a
-            class="emotion-8 emotion-9"
-            href="https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/"
+          <h2
+            class="emotion-6 emotion-7"
+            id="manageCookiesHeading"
+            tabindex="-1"
           >
-            <span>
-              إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.
-            </span>
-          </a>
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.
-        </p>
-        <h3
-          class="emotion-24 emotion-25"
-        >
-          شروط اختيارية لجمع المعلومات
-        </h3>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          <a
+            ادارة خيارات الموافقة في صفحات AMP
+          </h2>
+          <p
             class="emotion-8 emotion-9"
-            href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
           >
-            <span>
-              أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.
-            </span>
-          </a>
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.
+            تسري هذه الاعدادات على صفحات AMP فقط. قد يطلب منكم اعادة تحديد الاعدادات عند زيارتكم صفحات بي بي سي غير الخاضعة لـ AMP.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.
+          </p>
+          <h3
+            class="emotion-31 emotion-32"
+          >
+            جمع المعلومات ضروري جدا ولابد منه
+          </h3>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/"
+            >
+              <span>
+                إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.
+              </span>
+            </a>
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.
+          </p>
+          <h3
+            class="emotion-31 emotion-32"
+          >
+            شروط اختيارية لجمع المعلومات
+          </h3>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            <a
+              class="emotion-10 emotion-11"
+              href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
+            >
+              <span>
+                أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.
+              </span>
+            </a>
+          </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.
 يرجى ملاحظة أنكم ستستمرون في مشاهدة الإعلانات، ولكنها لن تكون اعلانات موجهة لكم بشكل مخصص.
-        </p>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          يمكنكم تغيير هذه الإعدادات في أي وقت عن طريق النقر على "خيارات الإعلانات/ لا تبيعوا معلوماتي" الموجود في أسفل الصفحة.
-        </p>
-        <ul
-          class="emotion-10 emotion-11"
-          role="list"
-        >
-          <li
-            class="emotion-12 emotion-13"
+          </p>
+          <p
+            class="emotion-8 emotion-9"
           >
-            <button
-              data-cookie-banner="accept"
-              on="tap:parentId.accept"
-              type="button"
-            >
-              وافق على جمع المعلومات واستمر
-            </button>
-          </li>
-          <li
+            يمكنكم تغيير هذه الإعدادات في أي وقت عن طريق النقر على "خيارات الإعلانات/ لا تبيعوا معلوماتي" الموجود في أسفل الصفحة.
+          </p>
+          <ul
             class="emotion-12 emotion-13"
+            role="list"
           >
-            <button
-              data-cookie-banner="reject"
-              on="tap:parentId.reject"
-              type="button"
+            <li
+              class="emotion-14 emotion-15"
             >
-              رفض جمع المعلومات واستمر
-            </button>
-          </li>
-        </ul>
+              <button
+                data-cookie-banner="accept"
+                on="tap:parentId.accept"
+                type="button"
+              >
+                وافق على جمع المعلومات واستمر
+              </button>
+            </li>
+            <li
+              class="emotion-14 emotion-15"
+            >
+              <button
+                data-cookie-banner="reject"
+                on="tap:parentId.reject"
+                type="button"
+              >
+                رفض جمع المعلومات واستمر
+              </button>
+            </li>
+            <li
+              class="hide emotion-14 emotion-15"
+            >
+              <div>
+                <button
+                  class="focusIndicatorInset"
+                  data-cookie-banner="hide"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    height="17"
+                    stroke="white"
+                    stroke-width="4"
+                    viewBox="0 0 32 32"
+                    width="17"
+                  >
+                    <path
+                      d="M3 3 L29 29 M3 29 L29 3"
+                    />
+                  </svg>
+                  <span
+                    class="emotion-20"
+                  >
+                    Close cookie banner
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -796,24 +1016,6 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-0 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
 }
 
 .emotion-2 {
@@ -839,12 +1041,30 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-4 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -1015,6 +1235,39 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   .emotion-10 {
     width: 17.3125rem;
   }
+}
+
+.emotion-10.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-10.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-10.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>
@@ -1072,6 +1325,37 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
             </a>
           </span>
         </li>
+        <li
+          class="hide emotion-10 emotion-11"
+          dir="ltr"
+        >
+          <div>
+            <button
+              class="focusIndicatorInset"
+              data-terms-banner="hide"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="17"
+                stroke="white"
+                stroke-width="4"
+                viewBox="0 0 32 32"
+                width="17"
+              >
+                <path
+                  d="M3 3 L29 29 M3 29 L29 3"
+                />
+              </svg>
+              <span
+                class="emotion-16"
+              >
+                Close privacy banner
+              </span>
+            </button>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -1085,24 +1369,6 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   font-style: normal;
   background-color: #323232;
   border-top: solid 0.0625rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-0 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
 }
 
 .emotion-2 {
@@ -1128,12 +1394,30 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-4 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -1306,6 +1590,39 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   }
 }
 
+.emotion-10.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-10.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-10.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -1360,6 +1677,37 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
               إطلع على التغييرات
             </a>
           </span>
+        </li>
+        <li
+          class="hide emotion-10 emotion-11"
+          dir="rtl"
+        >
+          <div>
+            <button
+              class="focusIndicatorInset"
+              data-terms-banner="hide"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="17"
+                stroke="white"
+                stroke-width="4"
+                viewBox="0 0 32 32"
+                width="17"
+              >
+                <path
+                  d="M3 3 L29 29 M3 29 L29 3"
+                />
+              </svg>
+              <span
+                class="emotion-16"
+              >
+                Close privacy banner
+              </span>
+            </button>
+          </div>
         </li>
       </ul>
     </div>
