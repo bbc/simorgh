@@ -794,7 +794,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
                 class="emotion-26 emotion-27"
                 focusable="false"
                 height="32"
-                id="brandSvg"
+                id="brandSvgHeader"
                 viewBox="0 0 980 142"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -857,7 +857,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
               class="emotion-26 emotion-27"
               focusable="false"
               height="32"
-              id="brandSvg"
+              id="brandSvgFooter"
               viewBox="0 0 980 142"
               xmlns="http://www.w3.org/2000/svg"
             >
