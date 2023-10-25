@@ -1,6 +1,6 @@
 import React from 'react';
 import AsianGamesFootballProps from './fixtures';
-import FlourishEmbed from './FlourishEmbed';
+import FlourishEmbed from '.';
 
 export default {
   title: 'Components/Embed Iframe',

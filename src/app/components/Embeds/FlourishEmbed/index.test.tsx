@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import FlourishEmbed from './FlourishEmbed';
+import FlourishEmbed from '.';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
 
