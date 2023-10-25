@@ -96,19 +96,12 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
 {
-  "text": "Nhịp sống mới",
-  "url": "/vietnamese/magazine-54029179",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
-{
   "text": "Thể thao",
   "url": "/vietnamese/topics/ckdxnx1k7zxt",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Video",
   "url": "/vietnamese/topics/cl29j0ekkvdt",
