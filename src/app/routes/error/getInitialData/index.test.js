@@ -17,7 +17,7 @@ it('should resolve with status 200 and errorCode with 404 if pathRegex is null',
     status: 200,
     errorCode: 404,
     pageData: { metadata: { type: 'error' } },
-  }
+  };
   const actual = await getInitialData(null)({ path: '/pidgin/400' });
 
   expect(expected).toEqual(actual);
@@ -28,7 +28,7 @@ it('should resolve with status 200 and errorCode with 404 if pathRegex and pathN
     status: 200,
     errorCode: 404,
     pageData: { metadata: { type: 'error' } },
-  }
+  };
   const actual = await getInitialData(null)({ path: null });
 
   expect(expected).toEqual(actual);
