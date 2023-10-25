@@ -4,8 +4,7 @@ const styles = {
   iframe: ({ spacings, mq }: Theme) =>
     css({
       maxWidth: '100%',
-      paddingLeft: `${spacings.FULL}rem`,
-      paddingRight: `${spacings.FULL}rem`,
+      padding: `0 ${spacings.FULL}rem`,
       paddingBottom: `${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
