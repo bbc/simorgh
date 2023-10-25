@@ -4,6 +4,7 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromoList from './index';
@@ -30,6 +31,8 @@ const Fixture = () => (
 beforeEach(jest.clearAllMocks);
 
 describe('RecommendationsPromoList', () => {
+  suppressPropWarnings(['optimizely', 'null']);
+
   it('it renders a list of Story Promos wrapped in Grid components', () => {
     const { container } = render(
       <RecommendationsPromoList promoItems={promoItems} dir="ltr" />,

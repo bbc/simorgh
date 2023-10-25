@@ -1,8 +1,5 @@
 {
   "low": true,
   "skip-dev": true,
-  "allowlist": [
-    "GHSA-hrpp-h998-j3pp",
-    "GHSA-f9xv-q969-pqx4"
-  ]
+  "allowlist": []
 }

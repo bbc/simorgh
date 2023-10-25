@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
@@ -21,6 +22,10 @@ const homePageData = {
 };
 
 describe('Home Page', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
@@ -138,6 +143,20 @@ describe('Home Page', () => {
           expect(image.getAttribute('loading')).toBeNull();
         } else if (!messageBannerImages.includes(src)) {
           expect(image.getAttribute('loading')).toBe('lazy');
+        }
+      });
+    });
+    it('Only the first image on a homepage has Fetch Priority set to high', () => {
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const imageList = document.querySelectorAll('img');
+      imageList.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('fetchpriority')).toBe('high');
+        } else {
+          expect(image.getAttribute('fetchpriority')).toBeNull();
         }
       });
     });

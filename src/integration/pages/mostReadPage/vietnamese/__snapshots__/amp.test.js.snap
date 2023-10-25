@@ -230,33 +230,19 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 3`]
 
 exports[`AMP Most Read Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "Diễn đàn",
-  "url": "/vietnamese/forum-54540875",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
-{
   "text": "Kinh tế",
   "url": "/vietnamese/topics/cez1ey7nzj3t",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Nhịp sống mới",
-  "url": "/vietnamese/magazine-54029179",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Thể thao",
   "url": "/vietnamese/topics/ckdxnx1k7zxt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Video",
   "url": "/vietnamese/topics/cl29j0ekkvdt",
