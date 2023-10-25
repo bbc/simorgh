@@ -1,5 +1,6 @@
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
+import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
 
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
@@ -36,7 +37,7 @@ const rssMarketingStringFunc = {
 };
 
 describe('getThingAttributes', () => {
-  const { location } = window;
+  const windowLocation = window.location;
 
   beforeEach(() => {
     analyticsUtilFunctions.push(marketingCampaignFunc);
@@ -49,7 +50,7 @@ describe('getThingAttributes', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
-    window.location = location;
+    resetWindowValue('location', windowLocation);
   });
 
   it('should not add empty or null values', () => {
