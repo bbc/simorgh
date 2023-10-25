@@ -1,7 +1,7 @@
 export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
-      const logo = document.querySelector('#brandLink svg');
+      const logo = document.getElementById('brandSvg');
 
       expect(logo).toBeInTheDocument();
       expect(logo.parentNode.textContent).toBeTruthy();
