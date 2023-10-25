@@ -64,6 +64,7 @@
     "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack** && stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"  || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
+    "test:unit:onetest": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathPattern=\"src/app/components/\" || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathPattern=\"src/app/components/\"",
     "test:unit:watch": "yarn test:unit -- --watch",
     "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --env=jsdom --coverage --silent=false --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "node src/integration/utils/runTests/index.js",
