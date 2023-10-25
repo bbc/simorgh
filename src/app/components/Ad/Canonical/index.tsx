@@ -3,9 +3,9 @@
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import React, { useEffect, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
+import useLocation from '#hooks/useLocation';
 import isLive from '../../../lib/utilities/isLive';
 import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -49,7 +49,7 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
 
   useEffect(() => {
     // @ts-expect-error  dotcom is added to the window object by BBC Ads script
-    if (window.dotcom) {
+    if (window.dotcom && location.href != null) {
       // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       window.dotcom.cmd.push(() => {
         // @ts-expect-error  dotcom is added to the window object by BBC Ads script

@@ -1,6 +1,5 @@
 import React from 'react';
-import { matchPath } from 'react-router';
-import { renderRoutes } from 'react-router-config';
+import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
@@ -66,13 +65,10 @@ afterEach(() => {
   window.dotcom = undefined;
 });
 
-const getMatchingRoute = pathname =>
-  routes.find(({ path }) =>
-    matchPath(pathname, {
-      path,
-      exact: true,
-    }),
-  );
+const getMatchingRoute = pathname => {
+  const matchingRoutes = matchRoutes(routes, pathname);
+  return matchingRoutes?.[0]?.route;
+};
 
 const renderRouter = props =>
   act(async () => {

@@ -6844,12 +6844,24 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-15 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-17 {
@@ -6942,10 +6954,16 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-15"
               dir="ltr"
             >
               NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-16"
+              lang="en-GB"
+            >
+              , 
             </span>
             <span>
               A live item
@@ -7159,12 +7177,24 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-16 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-17 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-18 {
@@ -7257,10 +7287,16 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             role="text"
           >
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-16"
               dir="ltr"
             >
               NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-17"
+              lang="en-GB"
+            >
+              , 
             </span>
             <span>
               A live item
@@ -7406,12 +7442,24 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-8 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-9 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-10 {
@@ -7559,10 +7607,16 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             role="text"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-9"
+              lang="en-GB"
+            >
+              , 
             </span>
             <span>
               A live item
@@ -7806,12 +7860,24 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-15 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #B80000;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-17 {
@@ -7897,10 +7963,16 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-15"
               dir="ltr"
             >
               NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-16"
+              lang="en-GB"
+            >
+              , 
             </span>
             <span>
               A live item
