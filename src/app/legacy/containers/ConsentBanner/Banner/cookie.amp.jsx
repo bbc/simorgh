@@ -158,8 +158,7 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${props =>
-  props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
     color: ${props => props.theme.palette.CONSENT_ACTION};
   }
 
@@ -197,7 +196,6 @@ const OptionsItem = styled.li`
       position: absolute;
       top: 0;
       right: 0;
-    }
     }
   }
 `;
