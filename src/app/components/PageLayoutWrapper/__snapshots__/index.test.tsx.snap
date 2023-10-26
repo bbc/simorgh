@@ -277,6 +277,14 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   right: 0;
   top: 0;
   bottom: 0;
+.emotion-13.hide button:focus::after,
+.emotion-13.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
 }
 
