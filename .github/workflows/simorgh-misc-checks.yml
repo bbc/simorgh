@@ -10,10 +10,7 @@ on:
     branches:
       - latest
 
-permissions:
-  id-token: write
-  contents: write
-  pull-requests: write
+permissions: write-all
 
 jobs:
   build:
