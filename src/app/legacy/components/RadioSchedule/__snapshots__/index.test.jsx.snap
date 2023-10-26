@@ -417,7 +417,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -1664,7 +1664,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;

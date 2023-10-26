@@ -813,7 +813,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -1169,7 +1169,7 @@ exports[`Bulletin should render live video correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;

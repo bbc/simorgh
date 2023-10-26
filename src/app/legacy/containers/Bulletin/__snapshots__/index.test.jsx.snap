@@ -161,7 +161,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-12 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -547,7 +547,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-12 {
-  color: #09838B;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
