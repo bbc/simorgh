@@ -93,9 +93,11 @@ const HiearchicalGrid = ({
                   fetchpriority={fetchpriority}
                   isAmp={isAmp}
                 >
-                  <Promo.MediaIcon type={promo.type}>
-                    {showDuration ? promo.duration : ''}
-                  </Promo.MediaIcon>
+                  {isMedia && (
+                    <Promo.MediaIcon type={promo.type}>
+                      {showDuration ? promo.duration : ''}
+                    </Promo.MediaIcon>
+                  )}
                 </Promo.Image>
                 <Promo.Heading
                   as={`h${headingLevel}`}
