@@ -3,6 +3,7 @@ import {
   render,
   screen,
 } from '../../../components/react-testing-library-with-providers';
+import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import BrandContainer from '.';
 
 const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
@@ -13,6 +14,9 @@ const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
 describe(`BrandContainer`, () => {
+  suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
+  suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
+
   it('should render correctly', () => {
     const { container } = render(BrandContainerWithContext());
 

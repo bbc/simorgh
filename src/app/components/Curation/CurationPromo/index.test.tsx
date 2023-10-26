@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';
@@ -32,6 +33,8 @@ const Fixture = ({
 );
 
 describe('Curation Promo', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+
   it('should use formatted duration when a valid duration is provided', () => {
     const container = render(
       <Fixture lazy={false} duration={123} type="video" />,
