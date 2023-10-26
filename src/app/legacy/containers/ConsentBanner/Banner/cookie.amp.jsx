@@ -193,7 +193,10 @@ const OptionsItem = styled.li`
     }
     & svg {
       color: white;
-      stroke: currentColor;
+      fill: currentColor;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
     }
   }
