@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Canonical from '.';
 
@@ -17,6 +20,20 @@ const Player = additionalProps => (
 );
 
 describe('Media Player: Canonical', () => {
+  suppressPropWarnings(['message', 'undefined']);
+  suppressPropWarnings(['service', 'Canonical', 'undefined']);
+  suppressPropWarnings(['service', 'Message', 'undefined']);
+  suppressPropWarnings(['noJsMessage', 'undefined']);
+  suppressPropWarnings(['showPlaceholder', 'undefined']);
+  suppressPropWarnings(['showLoadingImage', 'undefined']);
+  suppressPropWarnings(['darkPlaceholder', 'undefined']);
+  suppressPropWarnings(['onMediaInitialised', 'undefined']);
+  suppressPropWarnings(['onMediaPlaying', 'undefined']);
+  suppressPropWarnings(['onMediaEnded', 'undefined']);
+  suppressPropWarnings(['onMediaPlaylistEnded', 'undefined']);
+  suppressPropWarnings(['onMediaError', 'undefined']);
+  suppressPropWarnings(['onMediaPause', 'undefined']);
+
   shouldMatchSnapshot(
     'should render an iframe',
     <Canonical src="https://foo.bar/iframe" title="Media player" />,

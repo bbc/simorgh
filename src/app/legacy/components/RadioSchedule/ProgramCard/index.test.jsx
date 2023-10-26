@@ -4,6 +4,8 @@ import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
 describe('ProgramCard', () => {
   suppressPropWarnings(['program', 'ProgramCard']);
+  suppressPropWarnings(['id', 'ProgramCard', 'undefined']);
+
   uniqueStates.forEach(state => {
     it(`should render correctly for ${state}`, () => {
       const { container } = render(

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
-import styled from '@emotion/styled';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import Promo from '#app/legacy/components/Promo';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import LiveLabel from './index';
 import md from './README.md';
@@ -9,7 +9,6 @@ import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
 import metadata from './metadata.json';
-import { METAL } from '../ThemeProvider/palette';
 
 interface Props extends StoryProps {
   ariaHidden?: boolean;
@@ -31,23 +30,6 @@ const Component = ({
     </ThemeProvider>
   );
 };
-
-const Wrapper = styled.div`
-  position: relative;
-  a {
-    text-decoration: none;
-    border-bottom: 0.0625rem solid transparent;
-  }
-
-  a:hover > span,
-  a:focus > span {
-    text-decoration: underline;
-  }
-
-  a:visited > span {
-    color: ${METAL};
-  }
-`;
 
 export default {
   title: 'New Components/Live Label',
@@ -101,13 +83,11 @@ export const WithCustomOffscreenText = ({ service, variant }: Props) => (
 );
 
 export const WithChildren = ({ text: headline, service, variant }: Props) => (
-  <Wrapper>
-    <Heading level={3}>
-      <a href="https://www.bbc.co.uk/ws/languages">
-        <Component service={service} variant={variant}>
-          {headline}
-        </Component>
-      </a>
-    </Heading>
-  </Wrapper>
+  <Heading level={3}>
+    <Promo.A href="https://www.bbc.co.uk/ws/languages">
+      <Component service={service} variant={variant}>
+        {headline}
+      </Component>
+    </Promo.A>
+  </Heading>
 );
