@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
-
-import OEmbedLoader, { OEmbedProps } from '.';
+import { OEmbedProps } from '../types';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   RequestContext,
@@ -15,6 +14,7 @@ import {
   sampleVJAmpProps,
   sampleVJAmpPropsWithoutParams,
 } from './fixture';
+import OEmbedLoader from '.';
 
 const Component = ({
   props,

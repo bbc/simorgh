@@ -29,6 +29,9 @@ export type OEmbedProps = {
   type: string;
   oembed: OEmbedData;
 };
+// check duplicate
+import { OEmbedProps } from '../types';
+import FlourishEmbed from '../FlourishEmbed';
 
 export type ampParams = {
   'amp-clickable': boolean;
@@ -47,7 +50,7 @@ export type OEmbedAmpProps = {
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
-  const { html, oEmbedType, parameters, url } = oembed;
+  const { html, provider_name, oEmbedType, parameters, url } = oembed;
   const isVDJEmbed = oEmbedType === 'vdj-embed';
 
   if (isAmp) {
@@ -93,6 +96,10 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
 
   if (html == null) {
     return null;
+  }
+
+  if (provider_name === 'Flourish') {
+    return <FlourishEmbed {...oembed} />;
   }
 
   return <EmbedHtml embeddableContent={html} />;
