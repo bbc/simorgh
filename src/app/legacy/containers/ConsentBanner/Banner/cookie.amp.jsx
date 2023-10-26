@@ -177,13 +177,16 @@ const OptionsItem = styled.li`
       cursor: pointer;
       background: none;
       border: none;
-      &:hover,
+      &:hover {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid transparent;
+        box-shadow: 0 0 0 ${focusIndicatorThickness}
+          ${props => props.theme.palette.WHITE} inset;
+      }
       &:focus-visible::before {
         ${a11yOutlinePosition}
         border: ${focusIndicatorThickness} solid
           ${props => props.theme.palette.BLACK};
-      }
-      &:focus-visible::before {
         box-shadow: 0 0 0 ${focusIndicatorThickness}
           ${props => props.theme.palette.WHITE} inset;
       }
