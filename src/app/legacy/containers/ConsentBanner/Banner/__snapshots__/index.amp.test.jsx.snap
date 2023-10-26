@@ -253,10 +253,24 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 .emotion-14.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-20 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20 {
+    fill: linkText;
+  }
+}
+
+.emotion-22 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -267,19 +281,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   margin: 0;
 }
 
-.emotion-31 {
+.emotion-33 {
   color: #FFFFFF;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-33 {
     margin-top: 2rem;
   }
 }
 
-.emotion-31:focus {
+.emotion-33:focus {
   outline: none;
 }
 
@@ -356,19 +370,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
                 >
                   <svg
                     aria-hidden="true"
+                    class="emotion-20 emotion-21"
                     focusable="false"
-                    height="17"
-                    stroke="black"
-                    stroke-width="4"
-                    viewBox="0 0 32 32"
-                    width="17"
+                    height="2.75rem"
+                    viewBox="0 0 44 44"
+                    width="2.75rem"
                   >
                     <path
-                      d="M3 3 L29 29 M3 29 L29 3"
+                      d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   <span
-                    class="emotion-20"
+                    class="emotion-22"
                   >
                     Close cookie banner
                   </span>
@@ -405,7 +419,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             The lightweight mobile page you have visited has been built using Google AMP technology.
           </p>
           <h3
-            class="emotion-31 emotion-32"
+            class="emotion-33 emotion-34"
           >
             Strictly necessary data collection
           </h3>
@@ -432,7 +446,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             We use local storage to store your consent preferences on your device.
           </p>
           <h3
-            class="emotion-31 emotion-32"
+            class="emotion-33 emotion-34"
           >
             Optional data collection
           </h3>
@@ -500,19 +514,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
                 >
                   <svg
                     aria-hidden="true"
+                    class="emotion-20 emotion-21"
                     focusable="false"
-                    height="17"
-                    stroke="black"
-                    stroke-width="4"
-                    viewBox="0 0 32 32"
-                    width="17"
+                    height="2.75rem"
+                    viewBox="0 0 44 44"
+                    width="2.75rem"
                   >
                     <path
-                      d="M3 3 L29 29 M3 29 L29 3"
+                      d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   <span
-                    class="emotion-20"
+                    class="emotion-22"
                   >
                     Close cookie banner
                   </span>
@@ -780,10 +794,24 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 .emotion-14.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-20 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20 {
+    fill: linkText;
+  }
+}
+
+.emotion-22 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -794,19 +822,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   margin: 0;
 }
 
-.emotion-31 {
+.emotion-33 {
   color: #FFFFFF;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-33 {
     margin-top: 2rem;
   }
 }
 
-.emotion-31:focus {
+.emotion-33:focus {
   outline: none;
 }
 
@@ -883,19 +911,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
                 >
                   <svg
                     aria-hidden="true"
+                    class="emotion-20 emotion-21"
                     focusable="false"
-                    height="17"
-                    stroke="black"
-                    stroke-width="4"
-                    viewBox="0 0 32 32"
-                    width="17"
+                    height="2.75rem"
+                    viewBox="0 0 44 44"
+                    width="2.75rem"
                   >
                     <path
-                      d="M3 3 L29 29 M3 29 L29 3"
+                      d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   <span
-                    class="emotion-20"
+                    class="emotion-22"
                   >
                     Close cookie banner
                   </span>
@@ -932,7 +960,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.
           </p>
           <h3
-            class="emotion-31 emotion-32"
+            class="emotion-33 emotion-34"
           >
             جمع المعلومات ضروري جدا ولابد منه
           </h3>
@@ -959,7 +987,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.
           </p>
           <h3
-            class="emotion-31 emotion-32"
+            class="emotion-33 emotion-34"
           >
             شروط اختيارية لجمع المعلومات
           </h3>
@@ -1028,19 +1056,19 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
                 >
                   <svg
                     aria-hidden="true"
+                    class="emotion-20 emotion-21"
                     focusable="false"
-                    height="17"
-                    stroke="black"
-                    stroke-width="4"
-                    viewBox="0 0 32 32"
-                    width="17"
+                    height="2.75rem"
+                    viewBox="0 0 44 44"
+                    width="2.75rem"
                   >
                     <path
-                      d="M3 3 L29 29 M3 29 L29 3"
+                      d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   <span
-                    class="emotion-20"
+                    class="emotion-22"
                   >
                     Close cookie banner
                   </span>
@@ -1325,10 +1353,24 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 .emotion-10.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-16 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-16 {
+    fill: linkText;
+  }
+}
+
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1407,19 +1449,19 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
             >
               <svg
                 aria-hidden="true"
+                class="emotion-16 emotion-17"
                 focusable="false"
-                height="17"
-                stroke="black"
-                stroke-width="4"
-                viewBox="0 0 32 32"
-                width="17"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
               >
                 <path
-                  d="M3 3 L29 29 M3 29 L29 3"
+                  d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                  fill-rule="evenodd"
                 />
               </svg>
               <span
-                class="emotion-16"
+                class="emotion-18"
               >
                 Close privacy banner
               </span>
@@ -1702,10 +1744,24 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 
 .emotion-10.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-16 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-16 {
+    fill: linkText;
+  }
+}
+
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1784,19 +1840,19 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
             >
               <svg
                 aria-hidden="true"
+                class="emotion-16 emotion-17"
                 focusable="false"
-                height="17"
-                stroke="black"
-                stroke-width="4"
-                viewBox="0 0 32 32"
-                width="17"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
               >
                 <path
-                  d="M3 3 L29 29 M3 29 L29 3"
+                  d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                  fill-rule="evenodd"
                 />
               </svg>
               <span
-                class="emotion-16"
+                class="emotion-18"
               >
                 Close privacy banner
               </span>

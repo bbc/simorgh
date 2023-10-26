@@ -242,7 +242,10 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
 
 .emotion-8.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>
@@ -544,7 +547,10 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
 
 .emotion-8.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>
@@ -846,7 +852,10 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 
 .emotion-8.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>

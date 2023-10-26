@@ -278,7 +278,10 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
 
 .emotion-12.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {
@@ -1561,7 +1564,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-12.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {
@@ -2844,7 +2850,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-12.hide svg {
   color: white;
-  stroke: currentColor;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {
