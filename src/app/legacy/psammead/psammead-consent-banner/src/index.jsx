@@ -142,6 +142,16 @@ export const ConsentBannerText = styled.p`
   }
 `;
 
+/* Custom hover and focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
+const a11yOutlinePosition = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
+
 // Style `button` and `a` as children due to inability to set `on`
 // prop on styled component as required for the amp useage
 const ListItem = styled.li`
@@ -192,10 +202,20 @@ const ListItem = styled.li`
       cursor: pointer;
       background: none;
       border: none;
-      &:hover:not(.focusIndicatorInset:focus-visible) {
+      &:hover,
+      &:focus-visible::before {
+        ${a11yOutlinePosition}
         border: ${focusIndicatorThickness} solid
-          ${props => props.theme.palette.WHITE};
+          ${props => props.theme.palette.BLACK};
       }
+      &:focus-visible::before {
+        box-shadow: 0 0 0 ${focusIndicatorThickness}
+          ${props => props.theme.palette.WHITE} inset;
+      }
+    }
+    & svg {
+      color: white;
+      stroke: currentColor;
     }
   }
 `;

@@ -17,7 +17,7 @@ const Button = (message, onClick, dataAttribute) => (
 
 const HideButton = (onClick, dataAttribute, type) => (
   <button
-    className="focusIndicatorInset"
+    className="focusIndicatorRemove"
     type="button"
     // eslint-disable-next-line react/no-unknown-property
     on={onClick}

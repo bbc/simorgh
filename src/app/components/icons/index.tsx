@@ -44,7 +44,7 @@ export const CloseButton = () => (
     aria-hidden="true"
     width="17"
     height="17"
-    stroke="white"
+    stroke="black"
     strokeWidth="4"
   >
     <path d="M3 3 L29 29 M3 29 L29 3" />
