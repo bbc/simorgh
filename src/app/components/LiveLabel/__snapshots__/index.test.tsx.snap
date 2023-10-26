@@ -2,7 +2,7 @@
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #09838B;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -27,7 +27,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 
 exports[`LiveLabel should render correctly with English live text 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #09838B;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -70,7 +70,7 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 
 exports[`LiveLabel should render correctly with English live text and children 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #09838B;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -114,7 +114,7 @@ exports[`LiveLabel should render correctly with English live text and children 1
 
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #09838B;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -157,7 +157,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 
 exports[`LiveLabel should render correctly with localised live text 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #09838B;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
