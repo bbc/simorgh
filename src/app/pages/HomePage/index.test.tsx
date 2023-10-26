@@ -216,7 +216,9 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
 
-    const amphtml = Helmet.peek().linkTags.find((linkTag) => linkTag.rel === 'amphtml')
+    const amphtml = Helmet.peek().linkTags.find(
+      linkTag => linkTag.rel === 'amphtml',
+    );
     expect(amphtml).toBeUndefined();
   });
 });
