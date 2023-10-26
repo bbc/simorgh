@@ -168,7 +168,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -384,7 +384,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #006666;
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -464,7 +464,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #006666;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -489,7 +489,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
 }
 
 .emotion-17>svg {
-  color: #11708C;
+  color: #006666;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1341,7 +1341,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
