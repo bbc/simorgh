@@ -9,10 +9,12 @@ on:
   push:
     branches:
       - latest
+
+permissions:
+  contents: write
+
 jobs:
   build:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     strategy:
       matrix:
