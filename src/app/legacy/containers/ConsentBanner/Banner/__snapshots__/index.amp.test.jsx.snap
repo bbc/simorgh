@@ -229,8 +229,31 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   border: none;
 }
 
-.emotion-14.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-14.hide button:focus::after,
+.emotion-14.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-14.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-14.hide svg {
+  color: white;
+  stroke: currentColor;
 }
 
 .emotion-20 {
@@ -327,7 +350,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             >
               <div>
                 <button
-                  class="focusIndicatorInset"
+                  class="focusIndicatorRemove"
                   data-cookie-banner="hide"
                   type="button"
                 >
@@ -335,7 +358,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
                     aria-hidden="true"
                     focusable="false"
                     height="17"
-                    stroke="white"
+                    stroke="black"
                     stroke-width="4"
                     viewBox="0 0 32 32"
                     width="17"
@@ -471,7 +494,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             >
               <div>
                 <button
-                  class="focusIndicatorInset"
+                  class="focusIndicatorRemove"
                   data-cookie-banner="hide"
                   type="button"
                 >
@@ -479,7 +502,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
                     aria-hidden="true"
                     focusable="false"
                     height="17"
-                    stroke="white"
+                    stroke="black"
                     stroke-width="4"
                     viewBox="0 0 32 32"
                     width="17"
@@ -733,8 +756,31 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   border: none;
 }
 
-.emotion-14.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-14.hide button:focus::after,
+.emotion-14.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-14.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-14.hide svg {
+  color: white;
+  stroke: currentColor;
 }
 
 .emotion-20 {
@@ -831,7 +877,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             >
               <div>
                 <button
-                  class="focusIndicatorInset"
+                  class="focusIndicatorRemove"
                   data-cookie-banner="hide"
                   type="button"
                 >
@@ -839,7 +885,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
                     aria-hidden="true"
                     focusable="false"
                     height="17"
-                    stroke="white"
+                    stroke="black"
                     stroke-width="4"
                     viewBox="0 0 32 32"
                     width="17"
@@ -976,7 +1022,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             >
               <div>
                 <button
-                  class="focusIndicatorInset"
+                  class="focusIndicatorRemove"
                   data-cookie-banner="hide"
                   type="button"
                 >
@@ -984,7 +1030,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
                     aria-hidden="true"
                     focusable="false"
                     height="17"
-                    stroke="white"
+                    stroke="black"
                     stroke-width="4"
                     viewBox="0 0 32 32"
                     width="17"
@@ -1255,8 +1301,31 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   border: none;
 }
 
-.emotion-10.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-10.hide button:focus::after,
+.emotion-10.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-10.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-10.hide svg {
+  color: white;
+  stroke: currentColor;
 }
 
 .emotion-16 {
@@ -1331,7 +1400,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
         >
           <div>
             <button
-              class="focusIndicatorInset"
+              class="focusIndicatorRemove"
               data-terms-banner="hide"
               on="tap:privacy.hide"
               type="button"
@@ -1340,7 +1409,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
                 aria-hidden="true"
                 focusable="false"
                 height="17"
-                stroke="white"
+                stroke="black"
                 stroke-width="4"
                 viewBox="0 0 32 32"
                 width="17"
@@ -1609,8 +1678,31 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   border: none;
 }
 
-.emotion-10.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-10.hide button:focus::after,
+.emotion-10.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-10.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-10.hide svg {
+  color: white;
+  stroke: currentColor;
 }
 
 .emotion-16 {
@@ -1685,7 +1777,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
         >
           <div>
             <button
-              class="focusIndicatorInset"
+              class="focusIndicatorRemove"
               data-terms-banner="hide"
               on="tap:cookie.hide"
               type="button"
@@ -1694,7 +1786,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
                 aria-hidden="true"
                 focusable="false"
                 height="17"
-                stroke="white"
+                stroke="black"
                 stroke-width="4"
                 viewBox="0 0 32 32"
                 width="17"
