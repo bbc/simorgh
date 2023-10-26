@@ -7,7 +7,8 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
-import VjAmp from '../../../legacy/containers/Include/amp/VjAmp';
+// import VjAmp from '../../../legacy/containers/Include/amp/VjAmp';
+import VjAmp from '../../AmpIframe';
 import styles from '../EmbedHtml/index.styles';
 
 type OEmbedData = Partial<{
