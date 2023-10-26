@@ -254,8 +254,34 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   border: none;
 }
 
-.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {
@@ -1514,8 +1540,34 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: none;
 }
 
-.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {
@@ -2774,8 +2826,34 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: none;
 }
 
-.emotion-12.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-19 {

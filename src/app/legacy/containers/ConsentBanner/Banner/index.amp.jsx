@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
-import { CloseButton } from '#app/components/icons';
+import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import AmpCookieBanner from './cookie.amp';
@@ -17,13 +17,13 @@ const Button = (message, onClick, dataAttribute) => (
 
 const HideButton = (onClick, dataAttribute, type) => (
   <button
-    className="focusIndicatorInset"
+    className="focusIndicatorRemove"
     type="button"
     // eslint-disable-next-line react/no-unknown-property
     on={onClick}
     {...dataAttribute}
   >
-    <CloseButton />
+    {navigationIcons.cross}
     <VisuallyHiddenText>
       {type === 'cookie' ? 'Close cookie banner' : 'Close privacy banner'}
     </VisuallyHiddenText>

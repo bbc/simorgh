@@ -20,13 +20,6 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: 0;
   }
 
-  // Overrides focus indicator styling and insets the box shadow. Used when a button is in the top corner of a div e.g. Banner close button
-  button.focusIndicatorInset:focus-visible {
-    outline: none;
-    border: ${focusIndicatorThickness} solid ${palette.BLACK};
-    box-shadow: inset 0 0 0 ${focusIndicatorThickness} ${palette.WHITE};
-  }
-
   // Adds display: block to focus indicator styling
   a.focusIndicatorDisplayBlock:focus-visible {
     display: block;

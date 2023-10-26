@@ -218,8 +218,34 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   border: none;
 }
 
-.emotion-8.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-8.hide button:focus::after,
+.emotion-8.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-8.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-8.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>
@@ -497,8 +523,34 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   border: none;
 }
 
-.emotion-8.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-8.hide button:focus::after,
+.emotion-8.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-8.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-8.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>
@@ -776,8 +828,34 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   border: none;
 }
 
-.emotion-8.hide button:hover:not(.focusIndicatorInset:focus-visible) {
+.emotion-8.hide button:focus::after,
+.emotion-8.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-8.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-8.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>

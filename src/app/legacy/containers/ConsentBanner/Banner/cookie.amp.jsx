@@ -118,6 +118,16 @@ const OptionsList = styled.ul`
   }
 `;
 
+/* Custom hover and focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
+const a11yOutlinePosition = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
+
 const OptionsItem = styled.li`
   margin-bottom: ${GEL_SPACING};
 
@@ -149,6 +159,7 @@ const OptionsItem = styled.li`
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
     border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
     color: ${props => props.theme.palette.CONSENT_ACTION};
   }
 
@@ -166,10 +177,26 @@ const OptionsItem = styled.li`
       cursor: pointer;
       background: none;
       border: none;
-      &:hover:not(.focusIndicatorInset:focus-visible) {
+      &:focus::after,
+      &:hover::after {
+        ${a11yOutlinePosition}
         border: ${focusIndicatorThickness} solid
           ${props => props.theme.palette.WHITE};
       }
+      &:focus-visible::after {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.BLACK};
+        box-shadow: 0 0 0 ${focusIndicatorThickness}
+          ${props => props.theme.palette.WHITE} inset;
+      }
+    }
+    & svg {
+      color: white;
+      fill: currentColor;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 `;
