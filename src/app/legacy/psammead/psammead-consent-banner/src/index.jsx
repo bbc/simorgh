@@ -202,13 +202,13 @@ const ListItem = styled.li`
       cursor: pointer;
       background: none;
       border: none;
-      &:hover {
+      &:focus::after,
+      &:hover::after {
         ${a11yOutlinePosition}
-        border: ${focusIndicatorThickness} solid transparent;
-        box-shadow: 0 0 0 ${focusIndicatorThickness}
-          ${props => props.theme.palette.WHITE} inset;
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.WHITE};
       }
-      &:focus-visible::before {
+      &:focus-visible::after {
         ${a11yOutlinePosition}
         border: ${focusIndicatorThickness} solid
           ${props => props.theme.palette.BLACK};
