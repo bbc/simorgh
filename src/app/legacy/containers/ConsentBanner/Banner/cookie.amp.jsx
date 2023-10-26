@@ -177,6 +177,7 @@ const OptionsItem = styled.li`
       cursor: pointer;
       background: none;
       border: none;
+      &:focus::after,
       &:hover::after {
         ${a11yOutlinePosition}
         border: ${focusIndicatorThickness} solid
