@@ -99,4 +99,11 @@ describe('Hierarchical Grid Curation', () => {
     expect(container.queryAllByTestId('visually-hidden-text')).toHaveLength(2);
     expect(container.getByText('Test image gallery')).toBeInTheDocument();
   });
+
+  it('should display LiveLabel on a Live Promo', () => {
+    const container = render(<HierarchicalGrid promos={mediaFixture} />, {
+      service: 'mundo',
+    });
+    expect(container.getByText('EN VIVO')).toBeInTheDocument();
+  });
 });
