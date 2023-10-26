@@ -208,6 +208,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 .emotion-14 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
   border: 0.0625rem solid #F6A21D;
+  border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
 
@@ -748,6 +749,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 .emotion-14 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
+  border: 0.0625rem solid #F6A21D;
   border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
