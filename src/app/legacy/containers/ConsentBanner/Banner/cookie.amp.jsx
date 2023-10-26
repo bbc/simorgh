@@ -171,6 +171,10 @@ const OptionsItem = styled.li`
           ${props => props.theme.palette.WHITE};
       }
     }
+    & svg {
+      color: white;
+      stroke: currentColor;
+    }
   }
 `;
 
