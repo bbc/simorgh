@@ -11,6 +11,8 @@ on:
       - latest
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -40,7 +42,7 @@ jobs:
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
-       
+
       - name: Chromatic UI Tests
         uses: chromaui/action@v1
         if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
@@ -61,7 +63,7 @@ jobs:
           exitOnceUploaded: true
           onlyChanged: true
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
-          
+
       - name: Get Storybook Branch Permalink
         uses: actions/github-script@v6
         id: get-storybook-permalink

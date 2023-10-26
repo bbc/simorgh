@@ -5,13 +5,15 @@ on:
       - latest
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
     env:
       CI: true
-    
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -52,11 +54,11 @@ jobs:
           | tr '\n' ' ' \
           | tr '\r' ' ' \
           )
-          
+
           echo $NEW_RELEASE_MESSSAGE
           echo "NEW_RELEASE_MESSSAGE=$NEW_RELEASE_MESSSAGE" >> $GITHUB_OUTPUT
 
-      - name: Publish 
+      - name: Publish
         run: |
           curl \
           -X POST \
