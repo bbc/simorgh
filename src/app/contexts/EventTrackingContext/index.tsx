@@ -67,7 +67,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
 
   if (!campaignID) {
     // eslint-disable-next-line no-console
-    console.error(
+    console.warn(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );
   }

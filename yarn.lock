@@ -9341,7 +9341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors@npm:1.4.0":
+"colors@npm:1.4.0, colors@npm:^1.4.0":
   version: 1.4.0
   resolution: "colors@npm:1.4.0"
   checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
@@ -20837,6 +20837,7 @@ __metadata:
     chalk: 5.3.0
     chromatic: 6.17.4
     cli-table: 0.3.11
+    colors: ^1.4.0
     compression: 1.7.4
     compression-webpack-plugin: 9.2.0
     copy-webpack-plugin: 9.1.0
