@@ -216,4 +216,14 @@ describe('Home Page', () => {
       },
     );
   });
+  it('should not have amphtml in the metadata', () => {
+    render(<HomePage pageData={homePageData} />, {
+      service: 'kyrgyz',
+    });
+
+    const amphtml = Helmet.peek().linkTags.find(
+      linkTag => linkTag.rel === 'amphtml',
+    );
+    expect(amphtml).toBeUndefined();
+  });
 });
