@@ -128,7 +128,7 @@ const constructPageFetchUrl = ({
     queryParameters,
   );
 
-  if (isLocal && !process.env.BFF_PATH.includes('localhost')) {
+  if (isLocal && !process?.env?.BFF_PATH?.includes('localhost')) {
     switch (pageType) {
       case ARTICLE_PAGE:
         fetchUrl = Url(
