@@ -13,11 +13,13 @@ on:
 permissions:
   actions: write
   checks: write
+  contents: write
   deployments: write
   id-token: write
-  contents: write
+  metadata: write
   pull-requests: write
   security-events: write
+  statuses: write
 
 jobs:
   build:
