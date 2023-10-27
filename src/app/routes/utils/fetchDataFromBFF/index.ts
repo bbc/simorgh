@@ -9,8 +9,7 @@ import { FetchError } from '../../../models/types/fetch';
 import nodeLogger from '../../../lib/logger.node';
 
 const logger = nodeLogger(__filename);
-const BFF_IS_LOCAL =
-  process.env.BFF_PATH && process.env.BFF_PATH.includes('localhost:3210');
+const BFF_IS_LOCAL = process?.env?.BFF_PATH?.includes('localhost:3210');
 
 interface FetchDataFromBffParams {
   pathname: string;
@@ -50,12 +49,13 @@ export default async ({
           'ctx-service-env': getEnvironment(pathname),
         };
 
-  if (BFF_IS_LOCAL) {
+  if (BFF_IS_LOCAL && optHeaders) {
     optHeaders['ctx-service-env'] = process.env.BFF_ENV || 'live';
     optHeaders.Accept = 'text/html,application/xhtml+xml,application/xml';
   }
 
   try {
+    // @ts-expect-error - Ignore fetchPageData argument types
     const fetchOptions = {
       path: fetchUrl.toString(),
       agent,
@@ -65,7 +65,6 @@ export default async ({
     if (timeout) {
       fetchOptions.timeout = timeout;
     }
-    // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchOptions);
 
     return {
