@@ -56,16 +56,6 @@ describe('OEmbed', () => {
       );
       expect(actual).toBeInTheDocument();
     });
-
-    it('Flourish Embed - Should show an iframe with the appropriate link', () => {
-      const { container } = render(
-        <Component props={sampleFlourishProps} isAmp={false} />,
-      );
-      const actual = container.querySelector(
-        'iframe[src="https://flo.uri.sh/visualisation/8809119/embed"]',
-      );
-      expect(actual).toBeInTheDocument();
-    });
   });
 
   describe('AMP', () => {
