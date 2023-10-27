@@ -8426,7 +8426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserify-sign@npm:^4.0.0":
+"browserify-sign@npm:4.2.2":
   version: 4.2.2
   resolution: "browserify-sign@npm:4.2.2"
   dependencies:
