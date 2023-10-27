@@ -9,33 +9,8 @@ import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 import VjAmp from '../../AmpIframe';
 import styles from '../EmbedHtml/index.styles';
+import { OEmbedProps, ampParams } from '../types';
 import FlourishEmbed from '../FlourishEmbed';
-
-type OEmbedData = Partial<{
-  version: string;
-  provider_name: string;
-  provider_url: string;
-  html: string;
-  url: string;
-  source: string;
-  width: number;
-  height: number;
-  type: string;
-  parameters: ampParams;
-  oEmbedType: string;
-}>;
-
-export type OEmbedProps = {
-  type: string;
-  oembed: OEmbedData;
-};
-
-export type ampParams = {
-  'amp-clickable': boolean;
-  'amp-image-height': number;
-  'amp-image-width': number;
-  'amp-image': string;
-};
 
 export type OEmbedAmpProps = {
   isVDJEmbed: boolean;
