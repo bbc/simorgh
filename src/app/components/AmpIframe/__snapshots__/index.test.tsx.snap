@@ -101,13 +101,8 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   }
 }
 
-.emotion-2>[overflow] {
-  background: linear-gradient(
-        0deg,
-        #fff 0%,
-        rgba(255, 255, 255, 1) 75%,
-        rgba(255, 255, 255, 0) 100%
-      );
+.emotion-2 {
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,42 +113,49 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   justify-content: center;
 }
 
-.emotion-2>[overflow]::after {
-  background-color: #fff;
+.emotion-2::after {
+  background-color: #FFFFFF;
   border-top: 0.125rem solid #222222;
-  content: '';
+  content: "";
   display: block;
   height: 50%;
   left: 0;
   position: absolute;
-  top: 50%;
+  top: 0;
   width: 100%;
   z-index: -10;
 }
 
-.emotion-2>[overflow] button {
+.emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   background-color: #222222;
   border: 0.0625rem solid transparent;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   display: block;
   padding: 0.5rem 1rem;
 }
 
-@media (min-width: 20rem) {
-  .emotion-2>[overflow] button {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-2>[overflow] button:hover,
-.emotion-2>[overflow] button:focus {
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -164,7 +166,6 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
     dir="ltr"
   >
     <amp-iframe
-      class="emotion-2 emotion-3"
       height="360"
       layout="responsive"
       resizable=""
@@ -173,9 +174,11 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
       width="640"
     >
       <div
+        class="emotion-2"
         overflow=""
       >
         <button
+          class="emotion-3"
           type="button"
         >
           Show more

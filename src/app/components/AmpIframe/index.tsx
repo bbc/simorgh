@@ -7,11 +7,8 @@ import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
 import styles from './index.styles';
 
-// removed service
-
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children: any;
+  children: JSX.Element[];
   className?: string;
   width: string;
   height: string;
@@ -23,8 +20,7 @@ type ampMetadata = {
     imageWidth: string;
     imageHeight: string;
     image: string;
-    // not sure why optional
-    src?: string;
+    src: string;
   };
 };
 
@@ -61,18 +57,15 @@ const VjAmp = ({
     <>
       <AmpHead />
       <GridItemMedium gridColumnStart={undefined} gridSpan={undefined}>
-        <AmpIframe
-          width={imageWidth}
-          height={imageHeight}
-          src={src}
-          css={styles.ampIframe}
-        >
-          <div data-overflow="">
+        <AmpIframe width={imageWidth} height={imageHeight} src={src}>
+          {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
+          <div overflow="" css={styles.overflow}>
             <button type="button" css={styles.button}>
               Show more
             </button>
           </div>
-          <amp-img layout="fill" src={image} data-placeholder />
+          {/* @ts-expect-error Property 'placeholder' does not exist on type 'AmpImgProps & { css?: Interpolation<Theme>; }'.' */}
+          <amp-img layout="fill" src={image} placeholder />
         </AmpIframe>
       </GridItemMedium>
     </>

@@ -7,9 +7,9 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
-// import VjAmp from '../../../legacy/containers/Include/amp/VjAmp';
 import VjAmp from '../../AmpIframe';
 import styles from '../EmbedHtml/index.styles';
+import FlourishEmbed from '../FlourishEmbed';
 
 type OEmbedData = Partial<{
   version: string;
@@ -29,9 +29,6 @@ export type OEmbedProps = {
   type: string;
   oembed: OEmbedData;
 };
-// check duplicate
-import { OEmbedProps } from '../types';
-import FlourishEmbed from '../FlourishEmbed';
 
 export type ampParams = {
   'amp-clickable': boolean;
@@ -55,7 +52,7 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
 
   if (isAmp) {
     if (isVDJEmbed) {
-      if (parameters) {
+      if (parameters && url) {
         const ampMetadata = {
           imageWidth: parameters['amp-image-width']?.toString(),
           imageHeight: parameters['amp-image-height']?.toString(),
