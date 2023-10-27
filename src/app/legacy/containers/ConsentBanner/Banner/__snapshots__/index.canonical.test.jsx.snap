@@ -345,10 +345,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
               </a>
             </span>
           </li>
-          <li
-            class="hide emotion-12 emotion-13"
-            dir="ltr"
-          />
         </ul>
       </div>
     </div>
@@ -701,10 +697,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
               </a>
             </span>
           </li>
-          <li
-            class="hide emotion-12 emotion-13"
-            dir="rtl"
-          />
         </ul>
       </div>
     </div>
@@ -1050,10 +1042,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
               </a>
             </span>
           </li>
-          <li
-            class="hide emotion-12 emotion-13"
-            dir="ltr"
-          />
         </ul>
       </div>
     </div>
@@ -1399,10 +1387,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
               </a>
             </span>
           </li>
-          <li
-            class="hide emotion-12 emotion-13"
-            dir="rtl"
-          />
         </ul>
       </div>
     </div>

@@ -252,9 +252,11 @@ export const ConsentBanner = ({
         <ListItem dir={dir} script={script}>
           <span>{reject}</span>
         </ListItem>
-        <ListItem className="hide" dir={dir} script={script}>
-          {hide && <div>{hide}</div>}
-        </ListItem>
+        {hide && (
+          <ListItem className="hide" dir={dir} script={script}>
+            <div>{hide}</div>
+          </ListItem>
+        )}
       </Options>
     </CenterWrapper>
   </Wrapper>
@@ -266,7 +268,7 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
-  hide: element.isRequired,
+  hide: element,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
@@ -280,4 +282,5 @@ ConsentBanner.defaultProps = {
   id: null,
   hidden: null,
   headingRef: null,
+  hide: null,
 };

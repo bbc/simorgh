@@ -295,10 +295,6 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
             </a>
           </span>
         </li>
-        <li
-          class="hide emotion-8 emotion-9"
-          dir="ltr"
-        />
       </ul>
     </div>
   </div>
@@ -600,10 +596,6 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
             </a>
           </span>
         </li>
-        <li
-          class="hide emotion-8 emotion-9"
-          dir="rtl"
-        />
       </ul>
     </div>
   </div>
@@ -906,10 +898,6 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
             </a>
           </span>
         </li>
-        <li
-          class="hide emotion-8 emotion-9"
-          dir="ltr"
-        />
       </ul>
     </div>
   </div>
