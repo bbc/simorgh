@@ -20,6 +20,7 @@ describe('RadioSchedule', () => {
         locale: 'ar',
         selectedService: 'arabic',
       }),
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

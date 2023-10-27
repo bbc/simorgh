@@ -1,70 +1,93 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React, { PropsWithChildren } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import Promo from '#app/legacy/components/Promo';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import LiveLabel from '../../legacy/psammead/psammead-live-label/src/index';
-import md from '../../legacy/psammead/psammead-live-label/README.md';
+import LiveLabel from './index';
+import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
-import services from '../../../server/utilities/serviceConfigs';
 import Heading from '../Heading';
-import InlineLink from '../InlineLink';
+import ThemeProvider from '../ThemeProvider';
+import metadata from './metadata.json';
 
 interface Props extends StoryProps {
-  dir: string;
-  ariaHidden: boolean;
-  offScreenText: string;
-  liveText?: string;
-  text: string;
+  ariaHidden?: boolean;
+  offScreenText?: string;
+  text?: string;
 }
 
-const Wrapper = styled.div`
-  position: relative;
-`;
+const Component = ({
+  service,
+  variant,
+  offScreenText,
+  children,
+}: PropsWithChildren<Props>) => {
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <LiveLabel offScreenText={offScreenText}>{children}</LiveLabel>
+      </ServiceContextProvider>
+    </ThemeProvider>
+  );
+};
 
 export default {
   title: 'New Components/Live Label',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
+    metadata,
     docs: {
       page: md,
     },
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14619&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 1',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14709&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 2',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14438&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 3',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14526&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 4',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14307&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+      {
+        name: 'Group 5',
+        type: 'figma',
+        url: 'https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=317-14807&mode=design&t=J5TMYaWVgzqOjtwY-4',
+      },
+    ],
   },
 };
 
-export const WithLocalisedLiveText = ({ service, variant, dir }: Props) => (
-  <LiveLabel
-    service={service}
-    dir={dir}
-    liveText={services[service][variant].translations.media.liveLabel}
-  />
+export const Localised = ({ service, variant }: Props) => (
+  <Component service={service} variant={variant} />
 );
 
-export const WithCustomOffscreenText = ({ service, variant, dir }: Props) => (
-  <LiveLabel
-    service={service}
-    dir={dir}
-    ariaHidden
-    offScreenText="Watch Live"
-    liveText={services[service][variant].translations.media.liveLabel}
-  />
+export const WithCustomOffscreenText = ({ service, variant }: Props) => (
+  <Component offScreenText="Watch Live" service={service} variant={variant} />
 );
 
-export const WithChildren = ({
-  text: headline,
-  service,
-  variant,
-  dir,
-}: Props) => (
-  <Wrapper>
-    <Heading level={3}>
-      <LiveLabel
-        service={service}
-        dir={dir}
-        offScreenText="Live"
-        liveText={services[service][variant].translations.media.liveLabel}
-      >
-        <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
-      </LiveLabel>
-    </Heading>
-  </Wrapper>
+export const WithChildren = ({ text: headline, service, variant }: Props) => (
+  <Heading level={3}>
+    <Promo.A href="https://www.bbc.co.uk/ws/languages">
+      <Component service={service} variant={variant}>
+        {headline}
+      </Component>
+    </Promo.A>
+  </Heading>
 );

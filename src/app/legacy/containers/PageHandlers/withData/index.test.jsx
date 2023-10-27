@@ -4,11 +4,8 @@ import {
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
 import WithData from '.';
+import { render } from '../../../../components/react-testing-library-with-providers';
 
 // eslint-disable-next-line react/prop-types
 jest.mock('#pages/ErrorPage/ErrorPage', () => ({ errorCode }) => (
@@ -25,80 +22,80 @@ describe('withData HOC', () => {
 
   const noDataProps = {
     status: 500,
-    location: '',
+    location: {},
   };
 
   const noAssetData = {
     status: 200,
-    location: '',
+    location: {},
   };
 
   const non200StatusProps = {
     pageData: articleDataNews,
     status: 157,
-    location: '',
+    location: {},
   };
 
   const validNewsProps = {
     pageData: articleDataNews,
     status: 200,
     service: 'news',
-    location: '',
+    location: {},
   };
 
   const validPersianProps = {
     pageData: articleDataPersian,
     status: 200,
     service: 'news',
-    location: '',
+    location: {},
   };
 
   const validFrontPagesProps = {
     pageData: serbianFrontPageData,
     status: 200,
-    location: '',
+    location: {},
   };
 
   describe('with no data', () => {
-    shouldMatchSnapshot(
-      'should return the errorMain component and 500 status',
-      <WithDataHOC {...noDataProps} />,
-    );
+    it('should return the errorMain component and 500 status', () => {
+      const { container } = render(<WithDataHOC {...noDataProps} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('with missing pageData', () => {
-    suppressPropWarnings(['data.pageData', 'undefined']);
-    shouldMatchSnapshot(
-      'should return the errorMain component',
-      <WithDataHOC {...noAssetData} />,
-    );
+    it('should return the errorMain component', () => {
+      const { container } = render(<WithDataHOC {...noAssetData} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('with valid articles data', () => {
-    shouldMatchSnapshot(
-      'should return the passed in component',
-      <WithDataHOC {...validNewsProps} />,
-    );
+    it('should return the passed in component', () => {
+      const { container } = render(<WithDataHOC {...validNewsProps} />);
+      expect(container).toMatchSnapshot();
+    });
 
     describe('but different home service other than locale service', () => {
-      shouldMatchSnapshot(
-        'should return the errorMain component',
-        <WithDataHOC {...validPersianProps} />,
-      );
+      it('should return the errorMain component', () => {
+        const { container } = render(<WithDataHOC {...validPersianProps} />);
+        expect(container).toMatchSnapshot();
+      });
     });
   });
 
   describe('with valid front-pages data', () => {
-    shouldMatchSnapshot(
-      'should return the passed in component',
-      <WithDataHOC {...validFrontPagesProps} />,
-    );
+    it('should return the passed in component', () => {
+      const { container } = render(<WithDataHOC {...validFrontPagesProps} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('with non 200 status', () => {
-    shouldMatchSnapshot(
-      'should return the errorMain component',
-      <WithDataHOC {...non200StatusProps} />,
-    );
+    it('should return the errorMain component', () => {
+      const { container } = render(<WithDataHOC {...non200StatusProps} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 });

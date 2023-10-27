@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
@@ -21,6 +22,10 @@ const homePageData = {
 };
 
 describe('Home Page', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
@@ -210,5 +215,15 @@ describe('Home Page', () => {
         expect(getBootstrapScript()).toBeUndefined();
       },
     );
+  });
+  it('should not have amphtml in the metadata', () => {
+    render(<HomePage pageData={homePageData} />, {
+      service: 'kyrgyz',
+    });
+
+    const amphtml = Helmet.peek().linkTags.find(
+      linkTag => linkTag.rel === 'amphtml',
+    );
+    expect(amphtml).toBeUndefined();
   });
 });
