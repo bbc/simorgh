@@ -11,14 +11,7 @@ on:
       - latest
 
 permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  id-token: write
   metadata: write
-  pull-requests: write
-  security-events: write
 
 jobs:
   build:
