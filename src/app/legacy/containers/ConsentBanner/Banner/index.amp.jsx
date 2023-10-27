@@ -99,13 +99,14 @@ AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
   acceptAction: string.isRequired,
   rejectAction: string.isRequired,
-  hideAction: string.isRequired,
+  hideAction: string,
   promptId: string.isRequired,
   hidden: bool,
 };
 
 AmpConsentBannerContainer.defaultProps = {
   hidden: null,
+  hideAction: null,
 };
 
 export default AmpConsentBannerContainer;
