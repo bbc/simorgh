@@ -11,7 +11,7 @@ on:
       - latest
 
 permissions:
-  statuses: write
+  statuses: read
 
 jobs:
   build:
