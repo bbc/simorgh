@@ -1,5 +1,4 @@
 import React from 'react';
-// check post merge
 import OEmbedLoader from '.';
 import { sampleRiddleProps, sampleFlourishProps } from './fixture';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
