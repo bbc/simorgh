@@ -8,7 +8,7 @@
       "done": true,
       "reference": {
         "url": "https://app.zeplin.io/project/5d4d77b1fcbfc79bf47e0294/screen/63be9dcdf8b3970e5244ba61",
-        "label": "Documented screen reader UX"
+        "label": "Documented screen reader UX (Close button only)"
       }
     },
     "acceptanceCriteria": {
@@ -22,7 +22,7 @@
       "done": true,
       "reference": {
         "url": "https://docs.google.com/spreadsheets/d/136Guf1EF_R858-wlr1wYCihafvxbDgIMXdOrv7l-rmg/edit#gid=2020681037",
-        "label": "Accessibility swarm results"
+        "label": "Accessibility swarm results (Close button only)"
       }
     }
   }
