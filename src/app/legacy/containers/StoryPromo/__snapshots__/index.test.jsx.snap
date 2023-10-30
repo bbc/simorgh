@@ -6844,7 +6844,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-15 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7177,7 +7177,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-16 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7442,7 +7442,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-8 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7860,7 +7860,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-15 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
