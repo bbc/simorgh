@@ -7,17 +7,9 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
-import VjAmp from '../../AmpIframe';
-import styles from '../EmbedHtml/index.styles';
-import { OEmbedProps, ampParams } from '../types';
 import FlourishEmbed from '../FlourishEmbed';
-
-export type OEmbedAmpProps = {
-  isVDJEmbed: boolean;
-  canonicalLink: string;
-  parameters?: ampParams;
-  url?: string;
-};
+import AmpIframeEmbed from '../AmpIframeEmbed';
+import { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
@@ -26,23 +18,9 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const isVDJEmbed = oEmbedType === 'vdj-embed';
 
   if (isAmp) {
-    if (isVDJEmbed) {
-      if (parameters && url) {
-        const ampMetadata = {
-          imageWidth: parameters['amp-image-width'],
-          imageHeight: parameters['amp-image-height'],
-          image: parameters['amp-image'],
-          src: url,
-        };
-
-        return (
-          <div css={styles.embedDiv}>
-            <VjAmp ampMetadata={ampMetadata} />
-          </div>
-        );
-      }
+    if (isVDJEmbed && parameters && url) {
+      return <AmpIframeEmbed parameters={parameters} url={url} />;
     }
-
     const errorMessage = pathOr(
       'Sorry, we can’t display this part of the story on this lightweight mobile page.',
       ['include', 'errorMessage'],
