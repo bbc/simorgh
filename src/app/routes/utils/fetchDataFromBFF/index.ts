@@ -71,6 +71,7 @@ export default async ({
       pageType,
     };
     if (timeout) {
+      // @ts-expect-error - Ignore fetchPageData argument types
       fetchPageDataArgs.timeout = timeout;
     }
     // @ts-expect-error - Ignore fetchPageData argument types
