@@ -48,7 +48,7 @@ export interface PageData {
     language?: string;
     firstPublished?: number;
     lastPublished?: number;
-    typ?: PageTypes;
+    type?: PageTypes;
   };
   promo?:
     | { headlines?: { seoHeadline?: string } }
