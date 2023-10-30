@@ -197,6 +197,10 @@
                   "width": 700,
                   "height": 575,
                   "type": "rich",
+                  "iFrameSrc": "https://flo.uri.sh/visualisation/8809119/embed?auto=1",
+                  "iFrameId": "flourish-id-47f6f68f",
+                  "iFrameTitle": "Interactive or visual content",
+                  "sizeAdjustScript": "\n    window.addEventListener('message', function (event) {\n      var _message$src;\n      var message = typeof event.data === 'string' && JSON.parse(event.data);\n      if ((message === null || message === void 0 ? void 0 : message.sender) === 'Flourish' \n      && (message === null || message === void 0 ? void 0 : message.context) === 'iframe.resize' \n      && message !== null && message !== void 0 && (_message$src = message.src) !== null && _message$src !== void 0 && _message$src.includes('https://flo.uri.sh/visualisation/8809119/embed?auto=1')) {\n        document.getElementById('flourish-id-47f6f68f').style.height = message.height + 'px';\n      }\n    });",
                   "source": "https://public.flourish.studio/visualisation/8809119",
                   "oEmbedType": "aresFlourish"
                 }
