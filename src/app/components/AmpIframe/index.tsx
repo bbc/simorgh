@@ -34,7 +34,13 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpIframe = ({ children, className, width, height, src }: Props) => (
+const AmpIframeElement = ({
+  children,
+  className,
+  width,
+  height,
+  src,
+}: Props) => (
   <amp-iframe
     class={className}
     width={width}
@@ -48,14 +54,14 @@ const AmpIframe = ({ children, className, width, height, src }: Props) => (
   </amp-iframe>
 );
 
-const VjAmp = ({
+const AmpIframe = ({
   ampMetadata: { imageWidth, imageHeight, image, src },
 }: ampMetadata) => {
   return (
     <>
       <AmpHead />
       <GridItemMedium gridColumnStart={undefined} gridSpan={undefined}>
-        <AmpIframe width={imageWidth} height={imageHeight} src={src}>
+        <AmpIframeElement width={imageWidth} height={imageHeight} src={src}>
           {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
           <div overflow="" css={styles.overflow}>
             <button type="button" css={styles.button}>
@@ -63,10 +69,10 @@ const VjAmp = ({
             </button>
           </div>
           <amp-img layout="fill" src={image} placeholder />
-        </AmpIframe>
+        </AmpIframeElement>
       </GridItemMedium>
     </>
   );
 };
 
-export default VjAmp;
+export default AmpIframe;

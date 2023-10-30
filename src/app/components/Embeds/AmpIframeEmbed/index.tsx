@@ -1,7 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import VjAmp from '../../AmpIframe';
+import AmpIframe from '../../AmpIframe';
 import { ampParams } from '../types';
 import styles from './index.styles';
 
@@ -12,7 +12,7 @@ type Props = {
 const AmpIframeEmbed = ({ parameters, url }: Props) => {
   return (
     <div css={styles.embedDiv}>
-      <VjAmp
+      <AmpIframe
         ampMetadata={{
           imageWidth: parameters['amp-image-width'],
           imageHeight: parameters['amp-image-height'],
