@@ -5,6 +5,7 @@ import {
   WHITE,
   METAL,
   LIVE_DARK,
+  POSTBOX,
 } from '../../../../components/ThemeProvider/palette';
 
 export const programStateConfig = {
@@ -18,7 +19,7 @@ export const programStateConfig = {
     backgroundColor: WHITE,
     headerTextColor: METAL,
     titleColor: METAL,
-    durationColor: LIVE_DARK,
+    durationColor: POSTBOX,
   },
   onDemand: {
     backgroundColor: EBON,
