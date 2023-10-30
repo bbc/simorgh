@@ -35,7 +35,6 @@ const AmpHead = () => (
 );
 
 const AmpIframe = ({ children, className, width, height, src }: Props) => (
-  // @ts-expect-error Property 'amp-iframe' does not exist on type 'JSX.IntrinsicElements'
   <amp-iframe
     class={className}
     width={width}
@@ -46,7 +45,6 @@ const AmpIframe = ({ children, className, width, height, src }: Props) => (
     src={src}
   >
     {children}
-    {/* @ts-expect-error Property 'amp-iframe' does not exist on type 'JSX.IntrinsicElements' */}
   </amp-iframe>
 );
 
@@ -64,7 +62,6 @@ const VjAmp = ({
               Show more
             </button>
           </div>
-          {/* @ts-expect-error Property 'placeholder' does not exist on type 'AmpImgProps & { css?: Interpolation<Theme>; }'.' */}
           <amp-img layout="fill" src={image} placeholder />
         </AmpIframe>
       </GridItemMedium>
