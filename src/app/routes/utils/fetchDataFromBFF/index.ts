@@ -20,6 +20,13 @@ interface FetchDataFromBffParams {
   page?: string;
 }
 
+type OptHeaders =
+  | {
+      'ctx-service-env': string;
+      Accept?: string;
+    }
+  | undefined;
+
 export default async ({
   pathname,
   pageType,
@@ -42,7 +49,7 @@ export default async ({
 
   const agent = isLocal ? undefined : await getAgent();
   const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
-  const optHeaders =
+  const optHeaders: OptHeaders =
     isLocal && !BFF_IS_LOCAL
       ? undefined
       : {
