@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
@@ -43,6 +44,10 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,

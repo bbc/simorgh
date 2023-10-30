@@ -1,45 +1,48 @@
 {
   "data": {
-    "title": "Àbáwọlé - BBC News Yorùbá",
-    "description": "Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́",
+    "title": "Yoruba",
+    "description": "",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Ẹ̀yin ọmọ Naijiria ni Sudan, ẹ ṣì dúró sọ́hun o! Ìdí tá ò fi lè kóo yín wálé lásìkò yìí rèé – Ijoba",
-            "firstPublished": "2023-04-22T10:31:42.871Z",
-            "link": "https://www.bbc.com/yoruba/articles/cn3vyx0edp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8617/live/8fc46d20-e1f7-11ed-be57-55f4380f878a.jpg",
-            "description": "",
-            "imageAlt": "Aworan",
-            "id": "cn3vyx0edp4o"
+            "title": "Lassa: Ipinlẹ Ondo ati Kogi fara kaasa",
+            "firstPublished": "2018-01-23T06:14:25.000Z",
+            "lastPublished": "2018-01-23T06:14:25.000Z",
+            "link": "https://www.bbc.com/yoruba/23183190",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
+            "description": "Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si, nitori ọwọja arun naa ti ran de ipinlẹ Ondo ati Kogi, ti eniyan marun ti ku latipase iba naa nipinlẹ Ondo, ti Merindinlogoji min si ti wa labe ayewo nipinle Kogi.",
+            "imageAlt": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
+            "id": "aa128189-ef3f-b948-b6fc-fa5c4adcc1c3"
           },
           {
             "type": "article",
-            "title": "Ènìyàn kan kú, ọ̀pọ̀ farapa bí àwọn afurasí darandaran ṣe ṣèkọlù sáwọn àgbẹ̀ ní Ondo",
-            "firstPublished": "2023-04-25T09:12:50.668Z",
-            "link": "https://www.bbc.com/yoruba/articles/crgmny34n2vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/996e/live/c9796c60-e345-11ed-85f2-734a586eb5cd.jpg",
-            "description": "Nínú àtẹ̀jáde kan tí agbẹnusọ ọlọ́pàá ìpínlẹ̀ Ondo, Olufunmilayo Odunlami-Omisanya fi léde ní ọjọ́ Ajé ní wọ́n ṣá ọkùnrin náà ní àdá pa títí ẹ̀mí fi bọ́ lọ́rùn rẹ̀.",
-            "imageAlt": "Awọn agbẹ ati darandaran",
-            "id": "crgmny34n2vo"
+            "title": "CMA n iwadii Amazon ati Google lori ayederu iroyin",
+            "firstPublished": "2021-08-09T11:46:16.000Z",
+            "lastPublished": "2021-08-09T12:01:51.000Z",
+            "link": "https://www.bbc.com/yoruba/agbaye-23450016",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6FD2/test/_63762682_cfd3b3ec-15d7-448f-a5a2-a4ab4db0e494.jpg",
+            "description": "Ninu atejade ti won fi sita, CMA salaye pe yoo se iwadi finifini lati le ri wipe awon ileese mejeji yii o tapa sofin nipa gbigbe igbese ti ko to lati daabobo awọn ti won gbe ayederu iroyin jade.",
+            "imageAlt": "Lady receiving COVID-19 vaccination",
+            "id": "68eaad08-a5cc-429a-9d80-342c713bd483"
           },
           {
-            "type": "article",
-            "title": "Irọ̀ ní, a kò tíì kéde Aláàfin tuntun - Ìjọba Ìpínlẹ̀ Oyo ",
-            "firstPublished": "2023-04-25T09:08:49.839Z",
-            "link": "https://www.bbc.com/yoruba/articles/c51pmne248ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a50/live/3d5be850-e347-11ed-85f2-734a586eb5cd.jpg",
-            "description": "Kọmisọna fun iroyin ati asa, Wasiu Olatunbosun lo salaye ọrọ naa.\n",
-            "imageAlt": "Makinde ",
-            "id": "c51pmne248ko"
+            "type": "audio",
+            "title": "Iroyin Iseju kan lori BBC Yoruba",
+            "firstPublished": "2018-01-02T16:46:24.000Z",
+            "lastPublished": "2018-01-04T17:40:25.000Z",
+            "link": "https://www.bbc.com/yoruba/23175823",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/11F15/test/_63639437_bbc.jpg",
+            "description": "Iroyin Iseju kan lori BBC Yoruba",
+            "imageAlt": "Iroyin Iseju kan lori BBC Yoruba",
+            "id": "1654f1af-9a7f-4a4d-a0e9-174e393f4074"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:32ca98ab-c90b-4e7a-a353-b92163434e8d",
+        "curationId": "urn:bbc:tipo:list:2a36ecaa-c836-4180-a1fb-0b69d4548de6",
         "curationType": "tipo-curation",
         "position": 0,
         "title": "Top Stories",
@@ -49,317 +52,159 @@
       {
         "summaries": [
           {
-            "type": "video",
-            "duration": "PT4M5S",
-            "title": "Ẹ wo ẹwà èdè lẹ́nu Mr Latin bó ṣe ń dáhùn ìbéèrè lédè Yorùbá",
-            "firstPublished": "2023-04-01T06:45:57.000Z",
-            "link": "https://www.bbc.com/yoruba/afrika-65146720",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4406/production/_129241471_p0fd8fg8.jpg",
-            "description": "Mr Latin gbajúmọ̀ òṣèré tíátà kópa lórí ètò So Laya tí BBC Yorùbá ṣe fun un.",
-            "imageAlt": "So Laya - Mr Latin",
-            "id": "84749c7f-c377-4d83-af02-cf923bc34d77"
+            "type": "article",
+            "title": "Nitori ki nle ri omi pọn, mo ma npadanu asiko ile ẹkọ",
+            "firstPublished": "2018-01-15T14:10:32.000Z",
+            "lastPublished": "2018-01-15T16:07:13.000Z",
+            "link": "https://www.bbc.com/yoruba/23180895",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B792/test/_63649964_mariomacillau.jpg",
+            "description": "Omo ọdun metalelogun ni Mario Macilau lọdun 2007 nigbati o fi ẹrọ ibanisọro alagbeka iya rẹ se pasi parọ pelu ẹro iyaworan Nikon.",
+            "imageAlt": "Ọmọ igboro kan to bẹrẹ si nii lo ẹrọ ibanisọrọ iya rẹ ya awọn aworan to wu ni lori",
+            "id": "44f3842e-78ea-7649-9b8b-fbd904a10311"
           },
           {
             "type": "article",
-            "title": "\"Ìwádìí ikú ọmọ mi nínú ṣọ́ọ̀ṣi ní wọ́n fun lọ́rùn pa ni\"",
-            "firstPublished": "2023-03-26T08:16:56.531Z",
-            "link": "https://www.bbc.com/yoruba/articles/c2qzwwgpl1qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/347e/live/89806af0-ce55-11ed-9a0a-792269169ee7.jpg",
-            "description": "BBC Yorùbá lọ sí Idanre ní ìpínlẹ̀ Ondo láti bá Màmá obìnrin tó kú sínú ṣọ́ọ̀ṣì sọ̀rọ̀, tí à sì tún dé ilé ìjọ́sìn tí abilékọ náà kú sí.\n",
-            "imageAlt": "Mama oloogbe ati oloogbe Adejoke Oloje ",
-            "id": "c2qzwwgpl1qo"
+            "title": "Awọn janduku yabo awọn ile ijọsin kan ni Ilorin",
+            "firstPublished": "2018-01-01T13:57:50.000Z",
+            "lastPublished": "2018-01-01T13:58:10.000Z",
+            "link": "https://www.bbc.com/yoruba/23175631",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1047B/test/_63638666_26166780_823460314503533_6079397051365653655_n.jpg",
+            "description": "Okeretan ile ijosin meta ni awon janduku ti yabo mojumo ojo odun ni Ilu Ilorin",
+            "imageAlt": "iLORIN",
+            "id": "698442d7-bd16-5c40-9bc2-31c44831ed52"
           },
           {
-            "type": "video",
-            "duration": "PT5M37S",
-            "title": "Bí òbí mi kò bá kọ́ mi ní èdè Ekiti, n kò lè di gbajúmọ̀, ẹ kọ́ ọmọ ní èdè abínibí - Goroso Ekiti",
-            "firstPublished": "2023-03-29T06:26:09.000Z",
-            "link": "https://www.bbc.com/yoruba/65108642",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/BB24/production/_129180974_p0fcjykl.jpg",
-            "description": "BBC Yorùbá bá gbajúmọ̀ aláwàdà orí ayélujára, Goroso Ekiti sọ̀rọ̀, ẹni tó sọ nípa ìgbé ayé rẹ̀ àti bó ṣe di ìlúmọ̀ọ́ká tó ń bá ọba àti gómìnà bọwọ́.",
-            "imageAlt": "Goroso Ekiti",
-            "id": "982c03b9-e9b5-4df1-827f-f20d80c259c2"
+            "type": "article",
+            "title": "Boko Haram kolu ibudo soja n'ipinle Yobe",
+            "firstPublished": "2018-01-02T07:13:20.000Z",
+            "lastPublished": "2018-01-02T07:13:20.000Z",
+            "link": "https://www.bbc.com/yoruba/23175721",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7907/test/_63638903_awonomoogun.jpg",
+            "description": "Ikọ Boko Haram, ninu akọtun ikọlu min tun sekupa awọn ọmọ ogun ilẹ wa marun, nigbati ọgbọn ọmọ ogun min di awati nilu Kanama, nipinlẹ Yobe.",
+            "imageAlt": "Awọn ọmọ ogun ilẹ wa",
+            "id": "5235f1c4-8bb1-5441-8051-ac64d131f4fa"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:30bd010a-41af-499b-b6e8-9133f1d1d613",
+        "curationId": "urn:bbc:tipo:list:0692888a-44a3-4492-918d-5692fe830f6b",
         "curationType": "tipo-curation",
         "position": 1,
-        "title": "Ìwádìí kíkún lóríi kókó ìròyìn",
-        "visualProminence": "HIGH"
+        "title": "Editor's choice",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
-            "type": "video",
-            "duration": "PT3M5S",
-            "title": "Ọmọ atàpáta dìde ni mí, ẹ má fójú ajẹbọ́ wò mí - Helen Paul",
-            "firstPublished": "2019-04-19T05:08:02.000Z",
-            "link": "https://www.bbc.com/yoruba/afrika-47986617",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E345/production/_106518185_p076ygfz.jpg",
-            "description": "Helen Paul sọ irírí rẹ láti kékere, ojú tí àwọn ènìyàn fi ń wò ó àti ọ̀nà tó gbà bórí tó fi gba oyè gíga.",
-            "imageAlt": "Helen Paul",
-            "id": "013df672-219b-5249-a1be-4bd54650b01a"
-          },
-          {
-            "type": "article",
-            "title": "Àwọn òṣèré tíátà tó lọ́ ń fi arúgbó ara kàwé síì, ohun tí wọn yóò mú bá agbo sinimá nìyí – Tunde Kelani",
-            "firstPublished": "2023-05-11T09:42:24.623Z",
-            "link": "https://www.bbc.com/yoruba/articles/cxe7dg8jvyro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/65bb/live/c71be730-efe4-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Tunde Kelani",
-            "id": "cxe7dg8jvyro"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M7S",
-            "title": "Ikú bàbá mi lo sọ mí di fẹ́ndọ̀ láti ọdún 1974; mo ṣì ń ta \"paper\" d'òní àmọ́ ohun tójú mi ń rí ... - Nureni Adesegun",
-            "firstPublished": "2023-05-10T09:45:55.224Z",
-            "link": "https://www.bbc.com/yoruba/articles/cpr1124p1r5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b483/live/e6ae07b0-ef15-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Ọgbẹni Nureni",
-            "id": "cpr1124p1r5o"
-          },
-          {
-            "type": "video",
-            "duration": "PT6M35S",
-            "title": "Àwọn èèyàn má n pè mí ní Ẹbọra, Amotekun àti Ọ̀wàwà nítorí bí àwọ̀ ara mi ṣe rí - Oluwatosin Ojetola",
-            "firstPublished": "2023-05-09T10:01:53.637Z",
-            "link": "https://www.bbc.com/yoruba/articles/cg3dd72j73vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a5f/live/5c3026c0-ee4f-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Ara Oluwatosin",
-            "id": "cg3dd72j73vo"
-          },
-          {
-            "type": "article",
-            "title": "“O wù mí kí arọ dìde, kí afọ́jú ríran ní gbogbo ìgbà tí mo bá ń sọ̀rọ̀ bíi bàbá Adeboye –  Oreoluwa Simeon Oluwade",
-            "firstPublished": "2023-05-07T08:15:27.821Z",
-            "link": "https://www.bbc.com/yoruba/articles/c4npz18j5e1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e3ce/live/12d70620-ecb9-11ed-a142-ab0e42bfd9c3.png",
-            "description": "",
-            "imageAlt": "E. A. Adeboye",
-            "id": "c4npz18j5e1o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M33S",
-            "title": "‘Mo ti dáríjin ìbátan mi tó da ásíìdì sí mi lára’",
-            "firstPublished": "2023-05-06T08:01:29.373Z",
-            "link": "https://www.bbc.com/yoruba/articles/cw8nge2j50vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6f43/live/ce9dcd90-ea8d-11ed-a67b-d37a4106d927.jpg",
-            "description": "",
-            "imageAlt": "Arakunrin Abiọdun ati ẹbi rẹ",
-            "id": "cw8nge2j50vo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M48S",
-            "title": "Àràbarà ọkọ̀ ayọ́kẹ́lẹ́ rèé tí wọn yóò fí gbé Ọba Charles III lásìkò ìwúyè rẹ̀",
-            "firstPublished": "2023-05-05T06:25:13.028Z",
-            "link": "https://www.bbc.com/yoruba/articles/cz4pl8l9e0lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2c2d/live/14171ca0-eb0b-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Ọkọ ayọkẹlẹ tí Ọba Charles yóò gún níbi iwuye rẹ̀ jẹ aramọnda.Ka nipa rẹ nibi.",
-            "imageAlt": " ọkọ ayọkẹlẹ tí Ọba Charles yóò gún níbi iwuye rẹ̀",
-            "id": "cz4pl8l9e0lo"
-          },
-          {
-            "type": "video",
-            "duration": "PT7M45S",
-            "title": "Àjọ ORBDA ní kí ìpínlẹ̀ Ogun, Eko, Osun gbáradì fún omíyalé    ",
-            "firstPublished": "2023-05-05T05:47:03.757Z",
-            "link": "https://www.bbc.com/yoruba/articles/c5197xe8dzxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7c59/live/522df850-ea49-11ed-9c29-5719ed1ec0fa.jpg",
-            "description": "Lọdọọdun ni awọn ajọ ijọba maa n kilo faraalu lori ewu omiyale agbara ya ṣọọbu.",
-            "imageAlt": "Aworan afihan omi to n tu jade ",
-            "id": "c5197xe8dzxo"
-          },
-          {
-            "type": "video",
-            "duration": "PT8M54S",
-            "title": "Ìrírí ìrẹ̀wẹ̀sí ọkàn lẹ́yìn ìbímọ ló jẹ́ kí n pinnu láti ran àwọn obìnrin míì lọ́wọ́",
-            "firstPublished": "2023-05-03T07:00:20.000Z",
-            "link": "https://www.bbc.com/yoruba/65466540",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E161/production/_129579675_postpartumfrferesized.jpg",
-            "description": "Lọpọ igba lawọn alaboyun kii le ṣalaye nkan to maa n ṣe wọn ṣaaju ibimo, ati lasiko pẹlu lẹyin ibimọ.",
-            "imageAlt": "Iriri awọn alaboyun pẹlu irẹwẹsi ọkan ko kere",
-            "id": "aaf214e1-c96e-4573-a073-9fb144ea9ee4"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M43S",
-            "title": "Ṣé ẹ̀yin dá Oba Charles tí a fẹ́ ṣe ìwúyè fún mọ̀?",
-            "firstPublished": "2023-05-02T09:24:45.000Z",
-            "link": "https://www.bbc.com/yoruba/65454356",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2874/production/_129565301_p0fkwkv6.jpg",
-            "description": "BBC fi ọ̀rọ̀ wa àwon eeyan ilẹ̀ Adulawọ lẹnu wo lori iwuye Oba Charles keta ti yóò wáyé lọ́jọ́ abameta to m bọ.",
-            "imageAlt": "Keyframe #4",
-            "id": "7a72cddc-36f5-450b-a175-03c2d999e9f7"
-          },
-          {
-            "type": "video",
-            "duration": "PT6M35S",
-            "title": "Mi ò tó láti wọ Bàtà tí Aláàfin bọ́ sílẹ̀́- Arẹmọ Alaafin",
-            "firstPublished": "2023-05-02T07:50:37.616Z",
-            "link": "https://www.bbc.com/yoruba/articles/czrpnr93grxo",
+            "type": "commentary",
+            "title": "Live Promo with Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Akọbi ọkunrin ọmọ Alaafin Oyo ba BBC Yoruba sọrọ lẹyin ọdun kan ti Ọba Adeyemi waja.",
+            "description": "Pidgin test 2 - Description",
             "imageAlt": "",
-            "id": "czrpnr93grxo"
+            "id": "c7p765ynk9qt"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 1 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cgl2vz8d587t"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 2 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cy0mg3kvxnlt"
           },
           {
             "type": "video",
-            "duration": "PT7M10S",
-            "title": "Wọ́n dábẹ́ fún Fatmata tán ló kú lọ́jọ́ kejì- Olólùfẹ́ Fatmata",
-            "firstPublished": "2023-05-02T05:57:33.000Z",
-            "link": "https://www.bbc.com/yoruba/65454180",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15CA8/production/_129565298_p0fkt27j.jpg",
-            "description": "Fatmata Turay ni wọn sọ pe ijoba Sierra Leone foju oṣelu wo iwadii iku rẹ lẹyin ti ẹgbé Bondo dabẹ fun un.",
-            "imageAlt": "FGM",
-            "id": "50c1ded4-6c97-4754-a145-2ae64c7c2421"
+            "title": "Live Pidgin Disco 3 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cly58zvmwygt"
           }
         ],
         "activePage": 1,
-        "pageCount": 10,
-        "curationId": "urn:bbc:vivo:curation:995390ec-2e38-41a0-9b93-27683f009936",
-        "curationType": "vivo-stream",
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
+        "curationType": "tipo-curation",
         "position": 2,
-        "title": "Móríwú",
-        "visualProminence": "NORMAL"
+        "title": "Normal Curation with Live Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
       },
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "Agbábọ́ọ̀lù ọmọ Tunisia dáná sun ara rẹ̀ láti fẹ̀hónúhàn lòdì sí àwọn ọlọ́pàá",
-            "firstPublished": "2023-04-15T16:42:11.101Z",
-            "link": "https://www.bbc.com/yoruba/articles/cz7w4d6k9y7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da3c/live/94d47160-dba9-11ed-a870-2ddbb05f40a4.png",
-            "description": "Awọn mọlẹbi rẹ sọ pe bo ṣe farapa lẹyin to dana sun ara rẹ lo mu ẹmi rẹ lọ.",
-            "imageAlt": "Nizar Issaoui",
-            "id": "cz7w4d6k9y7o"
-          },
-          {
-            "type": "article",
-            "title": "Ọkùnrin tó wọ aṣọ ẹ̀há láti kópa nínú ìdíje àwọn obìnrin kó sí páńpẹ́ òfin",
-            "firstPublished": "2023-04-15T08:08:01.805Z",
-            "link": "https://www.bbc.com/yoruba/articles/c3grxnylekmo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1019/live/7fb8e340-db60-11ed-b295-99282120bbfa.png",
-            "description": "Ní orílẹ̀ èdè Kenya ni ìṣẹ̀lẹ̀ náà ti wáyé níbi ìdíje Chess tó wáyé níbẹ̀.\n",
-            "imageAlt": "Bernard Omondi",
-            "id": "c3grxnylekmo"
-          },
-          {
-            "type": "article",
-            "title": "Abẹ̀ṣẹ́kùbíòjò Israel Adesanya ti fàgbà han Alex Pereira látí gba àmì ẹ̀yẹ UFC middleweight padà",
-            "firstPublished": "2023-04-09T08:54:01.336Z",
-            "link": "https://www.bbc.com/yoruba/articles/cpd8pkgn381o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dcd5/live/27b2e940-d6b3-11ed-9ed6-83a21d6b88e9.jpg",
-            "description": "Igba akọkọ ni yii ti Adesanya yoo nas Pereira to naa ni Oṣu Kọkanla, ọdun 2022 to si gba ami ẹyẹ naa lọwọ rẹ.",
-            "imageAlt": "Aworan",
-            "id": "cpd8pkgn381o"
-          },
-          {
-            "type": "article",
-            "title": "Akọ́nimọ̀ọ́gbá wo ní yóò tán ìṣòrọ  Chelsea báyìí?",
-            "firstPublished": "2023-04-08T17:17:58.896Z",
-            "link": "https://www.bbc.com/yoruba/articles/czdj2ex4y3eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/58a2/live/04c13aa0-d630-11ed-aa8e-31a9f3ff4e07.jpg",
+            "type": "commentary",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
-            "imageAlt": "Aworan",
-            "id": "czdj2ex4y3eo"
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
           },
           {
             "type": "article",
-            "title": "Ẹwo àwọn akọ́nimọ̀ọ́gbá 13 tí wọ́n tí fí ọwọ́ òsì júwe ilé fún ní sáà Premier League yìí ",
-            "firstPublished": "2023-04-08T09:12:49.889Z",
-            "link": "https://www.bbc.com/yoruba/articles/cpevzxe8l8xo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bcdd/live/7711b7e0-d2ef-11ed-be2e-754a65c11505.jpg",
-            "description": "Olukọni mẹtala ni wọn ti juwe ile fun nitori aisedede ẹgbe agba bọọlu ti wọn n ko sọdi.",
-            "imageAlt": "Aworan Ẹgbẹ Agbabọọlu",
-            "id": "cpevzxe8l8xo"
-          },
-          {
-            "type": "article",
-            "title": "Wó àwọn àgbábọ́ọ̀lù Super Eagles tì yóò kojú Guinea Bissau ",
-            "firstPublished": "2023-03-23T14:42:10.867Z",
-            "link": "https://www.bbc.com/yoruba/articles/ce742wxje7ro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9da9/live/4e72b930-c988-11ed-be2e-754a65c11505.jpg",
-            "description": "Ẹgbẹ agbabọlu agba orilẹede yii yo koju ẹgbẹ agbabọlu lati orilẹede Guinea Bissau lati mo ẹniti yo bori lati kopa ninu idije ife ẹye adulawọ ni ilu Abuja lọjọ ẹti.",
-            "imageAlt": "Awọn agbabọọlu Naijiria",
-            "id": "ce742wxje7ro"
-          },
-          {
-            "type": "article",
-            "title": "Man city lulẹ̀, Pep Gardiola, Ten Hag jiyàn lórí ‘Offside’ Rashford tó mú góòlù tó sọ Man Utd jí jáde",
-            "firstPublished": "2023-01-14T15:41:09.162Z",
-            "link": "https://www.bbc.com/yoruba/articles/cgx7eygy0nlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/25a4/live/e9546540-9420-11ed-80d6-337feeda602f.jpg",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
-            "imageAlt": "ifẹsẹwọnsẹ Man united ati Man city",
-            "id": "cgx7eygy0nlo"
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
           },
           {
-            "type": "article",
-            "title": "Brazil ṣẹ̀yẹ ìkẹyìn fún akọni agbábọ́ọ̀lù, Pele bó ṣe wọ káà ilẹ̀ sùn ",
-            "firstPublished": "2023-01-03T12:01:25.335Z",
-            "link": "https://www.bbc.com/yoruba/articles/cjkrx8lpgj8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/453f/live/987799d0-8c0a-11ed-bebb-79118dc58c5d.jpg",
-            "description": "Ní ọjọ́ Kọkàndínlọ́gbọ̀n, oṣù Kejìlá ọdún 2022 ni Pele, ẹni tí ọ̀pọ̀ gbà pé ó jẹ́ ògbóǹtarigì nínú eré bọ́ọ̀lù àfẹsẹ̀gbá dágbére fáyé lẹ́ni ọdún méjìlélọ́gọ́rin.",
-            "imageAlt": "Bí wọ́ ṣe ń gbé òkú Pele lọ sí ibi tí wọ́n ti fẹ́ sin-ín",
-            "id": "cjkrx8lpgj8o"
-          },
-          {
-            "type": "article",
-            "title": "Wo ìgbésí ayé Pele láti ìbẹ̀rẹ̀ pẹ̀pẹ̀ pẹ̀lú àwòrán",
-            "firstPublished": "2022-12-30T16:54:55.251Z",
-            "link": "https://www.bbc.com/yoruba/articles/cqemgmvr6yjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/73ba/live/f8de79b0-8859-11ed-8300-6b361ae1cb21.jpg",
-            "description": "Àwọn àwòrán yìí ṣàfihàn ìgbé ayé Pele.",
-            "imageAlt": "Pele ",
-            "id": "cqemgmvr6yjo"
-          },
-          {
-            "type": "article",
-            "title": "Ọba eléré bọ́ọ̀lù àti èmi: Àwọn ohun mánigbàgbé nípa akọni agbábọ́ọ̀lù ",
-            "firstPublished": "2022-12-30T04:15:27.509Z",
-            "link": "https://www.bbc.com/yoruba/articles/c0j8087gvp1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c1b4/live/333ae3d0-87f8-11ed-86da-ff3be44366d5.jpg",
-            "description": "Òṣìṣẹ́ BBC, Fernando Duarte pàdé olóògbé Pele bíi ẹ̀ẹmẹ̀wá láàárín 1995 sí 2015, tó fi mọ́ pípàdé nílé oúnjẹ ní London. Àwọn ìrántí rẹ̀ nípa akọni ọmọ Brazil nìyí.",
-            "imageAlt": "Pele",
-            "id": "c0j8087gvp1o"
-          },
-          {
-            "type": "article",
-            "title": "Messi fi ìtàn lélẹ̀, Ife ẹ̀yẹ àgbáyé di ti Argentina lẹ́yìn ọdún 36",
-            "firstPublished": "2022-12-18T18:07:23.646Z",
-            "link": "https://www.bbc.com/yoruba/articles/c979zlp9l7go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5135/live/5b0a7b80-7efe-11ed-8775-c50700cb6e15.jpg",
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
-            "imageAlt": "Lionel Messi",
-            "id": "c979zlp9l7go"
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
           },
           {
-            "type": "article",
-            "title": "Àlá àti ìlépa mi láti gba ife ẹ̀yẹ ‘World Cup’ ti dópin – Cristiano Ronaldo",
-            "firstPublished": "2022-12-11T18:04:54.209Z",
-            "link": "https://www.bbc.com/yoruba/articles/c3g1218nypdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/99cf/live/e76cbf10-797d-11ed-90a7-556e529f9f89.jpg",
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
-            "imageAlt": "Cristiano ronaldo doju bolẹ",
-            "id": "c3g1218nypdo"
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
           }
         ],
         "activePage": 1,
-        "pageCount": 6,
-        "curationId": "urn:bbc:vivo:curation:3ee6d72c-26b5-4fce-984d-cd2b5f3c2fa3",
-        "curationType": "vivo-stream",
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
         "position": 3,
-        "title": "Eré Ìdárayá",
-        "visualProminence": "NORMAL"
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
+        "visualStyle": "NONE"
       }
     ],
     "metadata": {
@@ -367,10 +212,9 @@
         "contentId": "urn:bbc:tipo:topic:cw95pllwv8rt",
         "contentType": "index-home",
         "pageIdentifier": "yoruba.page",
-        "pageTitle": "Àbáwọlé - BBC News Yorùbá"
+        "pageTitle": "Yoruba"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }
