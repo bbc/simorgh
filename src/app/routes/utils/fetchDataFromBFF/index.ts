@@ -9,7 +9,9 @@ import { FetchError } from '../../../models/types/fetch';
 import nodeLogger from '../../../lib/logger.node';
 
 const logger = nodeLogger(__filename);
-const BFF_IS_LOCAL = process?.env?.BFF_PATH?.includes('localhost:3210');
+const BFF_IS_LOCAL =
+  process.env.JEST_WORKER_ID === undefined &&
+  process?.env?.BFF_PATH?.includes('localhost:3210');
 
 interface FetchDataFromBffParams {
   pathname: string;
@@ -62,14 +64,17 @@ export default async ({
   }
 
   try {
-    // @ts-expect-error - Ignore fetchPageData argument types
-    const { status, json } = await fetchPageData({
+    const fetchPageDataArgs = {
       path: fetchUrl.toString(),
       agent,
       optHeaders,
       pageType,
-      timeout,
-    });
+    };
+    if (timeout) {
+      fetchPageDataArgs.timeout = timeout;
+    }
+    // @ts-expect-error - Ignore fetchPageData argument types
+    const { status, json } = await fetchPageData(fetchPageDataArgs);
 
     return {
       status,
