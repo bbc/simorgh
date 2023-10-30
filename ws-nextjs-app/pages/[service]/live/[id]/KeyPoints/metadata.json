@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 10,
+    "month": "October",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/mxshZlXkCPPIh0oQJvRLpZ/Live-summary-box---handover?type=design&node-id=502-67539&mode=design&t=gSZo3mYpGwIJaUrz-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Live-page-Accessibility-Acceptance-Criteria--CAMMPe~y7Pbh31cFtPqHlIdhAg-KZQODmAf9tvodUlxsAVnA#:uid=759918899368087143410619&h2=Summary-(Key-points)",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": ""
+    }
+  }
+}

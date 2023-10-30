@@ -5,26 +5,13 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
-
-export type OEmbedProps = {
-  type: string;
-  oembed: {
-    version: string;
-    provider_name: string;
-    provider_url: string;
-    html: string;
-    url?: string;
-    source?: string;
-    width?: number;
-    height?: number;
-    type: string;
-  };
-};
+import { OEmbedProps } from '../types';
+import FlourishEmbed from '../FlourishEmbed';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { translations } = useContext(ServiceContext);
   const { isAmp, canonicalLink } = useContext(RequestContext);
-  const { html } = oembed;
+  const { html, provider_name } = oembed;
 
   if (isAmp) {
     const errorMessage = pathOr(
@@ -48,6 +35,14 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
         }}
       />
     );
+  }
+
+  if (html == null) {
+    return null;
+  }
+
+  if (provider_name === 'Flourish') {
+    return <FlourishEmbed {...oembed} />;
   }
 
   return <EmbedHtml embeddableContent={html} />;

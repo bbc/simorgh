@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
   render,
   screen,
@@ -376,6 +377,10 @@ describe('CanonicalSocialEmbed', () => {
 });
 
 describe('AmpSocialEmbed', () => {
+  suppressPropWarnings(['id', 'AmpSocialEmbed', 'undefined']);
+  suppressPropWarnings(['source', 'Facebook', 'null']);
+  suppressPropWarnings(['text', 'CaptionWrapper', 'undefined']);
+
   Object.values(fixtures).forEach(fixture => {
     const { source: provider, id, embed } = fixture;
     const caption =

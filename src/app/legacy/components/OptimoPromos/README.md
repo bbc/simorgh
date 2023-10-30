@@ -85,13 +85,9 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
   >
     <Promo.Title as="h3" script={script}>
     <Promo.Link>
-    <Promo.LiveLabel
-            liveText={liveLabel}
-            ariaHidden={liveLabelIsEnglish}
-            offScreenText={liveLabelIsEnglish ? 'Live' : null}
-            >
+    <Promo.LiveLabel>
         <Promo.Content headline={headline} />
-        <Promo.LiveLabel/>
+    </Promo.LiveLabel>
     </Promo.Link>
     </Promo.Title>
 
