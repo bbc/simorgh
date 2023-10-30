@@ -2,13 +2,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
 import styles from './index.styles';
 
 type Props = {
-  children: JSX.Element[];
   className?: string;
   width: number;
   height: number;
@@ -40,7 +39,7 @@ const AmpIframeElement = ({
   width,
   height,
   src,
-}: Props) => (
+}: PropsWithChildren<Props>) => (
   <amp-iframe
     class={className}
     width={width}

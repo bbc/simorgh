@@ -10,16 +10,15 @@ type Props = {
   url: string;
 };
 const AmpIframeEmbed = ({ parameters, url }: Props) => {
+  const {
+    'amp-image-width': imageWidth,
+    'amp-image-height': imageHeight,
+    'amp-image': image,
+  } = parameters;
+
   return (
     <div css={styles.embedDiv}>
-      <AmpIframe
-        ampMetadata={{
-          imageWidth: parameters['amp-image-width'],
-          imageHeight: parameters['amp-image-height'],
-          image: parameters['amp-image'],
-          src: url,
-        }}
-      />
+      <AmpIframe ampMetadata={{ imageWidth, imageHeight, image, src: url }} />
     </div>
   );
 };
