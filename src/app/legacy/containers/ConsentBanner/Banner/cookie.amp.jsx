@@ -147,7 +147,10 @@ const OptionsItem = styled.li`
     min-height: ${MIN_TAP_HEIGHT};
     padding: ${GEL_SPACING};
     width: 100%;
-
+    &:focus-visible {
+      outline: ${focusIndicatorThickness} solid
+        ${props => props.theme.palette.BLACK};
+    }
     &:hover,
     &:focus {
       background-color: ${props => props.theme.palette.CONSENT_ACTION};
@@ -164,8 +167,8 @@ const OptionsItem = styled.li`
   }
 
   &.hide {
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
     position: absolute;
     top: 0;
     right: 0;

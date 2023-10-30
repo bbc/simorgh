@@ -197,6 +197,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
+.emotion-14 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-14 button:hover,
 .emotion-14 button:focus {
   background-color: #F6A21D;
@@ -213,8 +217,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 .emotion-14.hide {
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -739,6 +743,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
+.emotion-14 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-14 button:hover,
 .emotion-14 button:focus {
   background-color: #F6A21D;
@@ -755,8 +763,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 .emotion-14.hide {
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   position: absolute;
   top: 0;
   right: 0;
