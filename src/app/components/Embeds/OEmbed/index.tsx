@@ -29,8 +29,8 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
     if (isVDJEmbed) {
       if (parameters && url) {
         const ampMetadata = {
-          imageWidth: parameters['amp-image-width']?.toString(),
-          imageHeight: parameters['amp-image-height']?.toString(),
+          imageWidth: parameters['amp-image-width'],
+          imageHeight: parameters['amp-image-height'],
           image: parameters['amp-image'],
           src: url,
         };

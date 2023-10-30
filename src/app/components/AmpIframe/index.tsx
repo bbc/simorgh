@@ -10,15 +10,15 @@ import styles from './index.styles';
 type Props = {
   children: JSX.Element[];
   className?: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   src: string;
 };
 
 type ampMetadata = {
   ampMetadata: {
-    imageWidth: string;
-    imageHeight: string;
+    imageWidth: number;
+    imageHeight: number;
     image: string;
     src: string;
   };
