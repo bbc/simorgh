@@ -9,7 +9,7 @@ describe('Amp Consent Banner Container', () => {
         type="privacy"
         acceptAction="tap:cookieId.show, privacyId.hide"
         rejectAction="tap:cookieId.show, privacyId.hide"
-        hideAction="tap:privacy.hide"
+        hideAction="tap:brandLink.focus, privacy.hide"
         promptId="promptId"
         hidden
       />,
@@ -24,7 +24,7 @@ describe('Amp Consent Banner Container', () => {
         type="privacy"
         acceptAction="tap:cookieId.show, privacyId.hide"
         rejectAction="tap:cookieId.show, privacyId.hide"
-        hideAction="tap:cookie.hide"
+        hideAction="tap:brandLink.focus, cookie.hide"
         promptId="promptId"
         hidden
       />,

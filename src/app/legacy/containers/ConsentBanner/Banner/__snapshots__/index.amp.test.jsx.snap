@@ -1454,7 +1454,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
             <button
               class="focusIndicatorRemove"
               data-terms-banner="hide"
-              on="tap:privacy.hide"
+              on="tap:brandLink.focus, privacy.hide"
               type="button"
             >
               <svg
@@ -1845,7 +1845,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
             <button
               class="focusIndicatorRemove"
               data-terms-banner="hide"
-              on="tap:cookie.hide"
+              on="tap:brandLink.focus, cookie.hide"
               type="button"
             >
               <svg
