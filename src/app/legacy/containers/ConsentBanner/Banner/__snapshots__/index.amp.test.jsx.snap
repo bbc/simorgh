@@ -1148,7 +1148,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -1539,7 +1539,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 

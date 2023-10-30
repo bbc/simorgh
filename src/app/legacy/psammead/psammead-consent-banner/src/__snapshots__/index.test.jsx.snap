@@ -55,7 +55,7 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -356,7 +356,7 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -657,7 +657,7 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 

@@ -78,7 +78,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 }
 

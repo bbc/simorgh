@@ -90,7 +90,7 @@ const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};
   color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 1rem;
   margin: 0;
 
   &:focus {
