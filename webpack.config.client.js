@@ -109,7 +109,6 @@ module.exports = ({
       splitChunks: {
         chunks: 'all',
         automaticNameDelimiter: '-',
-        maxSize: 245760, // 240kb
         cacheGroups: {
           default: false,
           defaultVendors: false,
@@ -182,8 +181,6 @@ module.exports = ({
         },
         // Keep maximum initial requests to 25
         maxInitialRequests: 25,
-        // A chunk should be at least 20kb before using splitChunks
-        minSize: 20000,
       },
     },
     node: {
