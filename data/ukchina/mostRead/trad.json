@@ -144,6 +144,14 @@
         "href": "/ukchina/trad/55798413",
         "timestamp": 1611673698000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "ukchina.popular.read.page",
+        "timePublished": "2023-06-19T14:46:00Z",
+        "timeUpdated": "2023-06-19T15:01:00Z"
+      }
+    }
   }
 }

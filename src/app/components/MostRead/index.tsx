@@ -34,9 +34,6 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  renderCanonicalOnAmp?: boolean;
-  overrideHeadingAs?: string;
-  headingAttributes?: { id: string; tabIndex: string };
 }
 
 const MostRead = ({
@@ -46,9 +43,6 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  renderCanonicalOnAmp = false,
-  overrideHeadingAs = '',
-  headingAttributes,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -75,14 +69,12 @@ const MostRead = ({
   });
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
-  let AmpMostRead = () =>
+  const AmpMostRead = () =>
     mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
-          headingAttributes={headingAttributes}
         />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
@@ -96,10 +88,8 @@ const MostRead = ({
     data ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
-          headingAttributes={headingAttributes}
         />
         <Canonical
           data={data}
@@ -109,15 +99,6 @@ const MostRead = ({
         />
       </MostReadSection>
     ) : null;
-
-  /**
-   * If renderCanonicalOnAmp is true, then use the canonical version of the component instead of the AMP version.
-   *
-   * This is to prevent double fetching of most read data.
-   */
-  if (isAmp && renderCanonicalOnAmp) {
-    AmpMostRead = CanonicalMostRead;
-  }
 
   return isAmp ? <AmpMostRead /> : <CanonicalMostRead />;
 };

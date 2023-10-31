@@ -144,6 +144,14 @@
         "href": "/marathi/india-60288627",
         "timestamp": 1644283968000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "marathi.popular.read.page",
+        "timePublished": "2023-06-19T12:52:00Z",
+        "timeUpdated": "2023-06-19T14:52:00Z"
+      }
+    }
   }
 }

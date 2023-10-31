@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/telugu/articles/c045pyynylgo",
         "timestamp": 1686884588321
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "telugu.popular.read.page",
+        "timePublished": "2023-06-19T13:07:00Z",
+        "timeUpdated": "2023-06-19T15:07:00Z"
+      }
+    }
   }
 }

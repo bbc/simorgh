@@ -3,21 +3,21 @@
 exports[`AMP Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
 exports[`AMP Articles AMP Consent config 1`] = `
-Object {
-  "consents": Object {
-    "user-consent": Object {
+{
+  "consents": {
+    "user-consent": {
       "promptIfUnknownForGeoGroup": "eea",
       "promptUI": "consent-prompt",
     },
   },
-  "policy": Object {
-    "default": Object {
-      "timeout": Object {
+  "policy": {
+    "default": {
+      "timeout": {
         "fallbackAction": "reject",
         "seconds": 0,
       },
-      "waitFor": Object {
-        "user-consent": Array [],
+      "waitFor": {
+        "user-consent": [],
       },
     },
   },
@@ -25,10 +25,10 @@ Object {
 `;
 
 exports[`AMP Articles AMP Geo config 1`] = `
-Object {
+{
   "AmpBind": true,
-  "ISOCountryGroups": Object {
-    "eea": Array [
+  "ISOCountryGroups": {
+    "eea": [
       "at",
       "ax",
       "be",
@@ -82,7 +82,7 @@ Object {
       "wf",
       "yt",
     ],
-    "gbOrUnknown": Array [
+    "gbOrUnknown": [
       "gb",
       "gg",
       "im",
@@ -95,70 +95,70 @@ Object {
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News",
   "url": "/news",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Why you can trust the BBC",
   "url": "https://www.bbc.com/news/help-41670342",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Terms of Use",
   "url": "https://www.bbc.com/terms",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "About the BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc/",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Privacy Policy",
   "url": "https://www.bbc.com/privacy/",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Accessibility Help",
   "url": "https://www.bbc.com/accessibility/",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Contact the BBC",
   "url": "https://www.bbc.com/contact/",
 }
 `;
 
 exports[`AMP Articles Footer Anchors should match text and url 9`] = `
-Object {
+{
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
-Object {
+{
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
@@ -171,88 +171,89 @@ exports[`AMP Articles Footer I can see the footer copyright and external linking
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News"`;
 
 exports[`AMP Articles Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Home",
   "url": "/news",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "UK",
   "url": "/news/uk",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "World",
   "url": "/news/world",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "Business",
   "url": "/news/business",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Politics",
   "url": "/news/politics",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Tech",
   "url": "/news/technology",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 7`] = `
-Object {
+{
   "text": "Science",
   "url": "/news/science_and_environment",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 8`] = `
-Object {
+{
   "text": "Health",
   "url": "/news/health",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 9`] = `
-Object {
+{
   "text": "Family & Education",
   "url": "/news/education",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 10`] = `
-Object {
+{
   "text": "Entertainment & Arts",
   "url": "/news/entertainment_and_arts",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 11`] = `
-Object {
+{
   "text": "Stories",
   "url": "/news/stories",
 }
 `;
 
-exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as \\"lovely\\""`;
+exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as "lovely""`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Pauline Clayton"
   attribution="St Joseph's Hospice"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="360"
@@ -266,70 +267,70 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 exports[`AMP Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/news/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
 }
@@ -346,35 +347,35 @@ exports[`AMP Articles SEO Heading level 1 1`] = `"Royal wedding flowers given to
 exports[`AMP Articles SEO Lang attribute 1`] = `"en-gb"`;
 
 exports[`AMP Articles SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "NewsArticle",
-      "about": Array [
-        Object {
+      "about": [
+        {
           "@type": "Thing",
           "name": "Wedding of Prince Harry and Meghan Markle",
         },
-        Object {
+        {
           "@type": "Person",
           "name": "Duchess of Sussex",
-          "sameAs": Array [
+          "sameAs": [
             "http://dbpedia.org/resource/Meghan_Markle",
           ],
         },
-        Object {
+        {
           "@type": "Place",
           "name": "Hackney",
         },
-        Object {
+        {
           "@type": "Place",
           "name": "Windsor",
         },
       ],
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
@@ -386,25 +387,25 @@ Object {
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
       "headline": "Royal wedding flowers given to Hackney hospice",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "en-GB",
         "name": "English",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/news/articles/c0g992jmmkko",
         "@type": "WebPage",
         "name": "Royal wedding flowers given to Hackney hospice",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 16,
           "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
@@ -455,7 +456,7 @@ exports[`AMP Articles SEO Twitter site 1`] = `"@BBCNews"`;
 exports[`AMP Articles SEO Twitter title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
 
 exports[`AMP Articles Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2019-05-28",
   "text": "28 May 2019",
 }

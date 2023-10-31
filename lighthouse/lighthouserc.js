@@ -45,11 +45,6 @@ const AUDIT_URLS = {
     test: ['https://www.test.bbc.com/vietnamese/popular/read'],
   },
 
-  MOST_WATCHED: {
-    live: ['https://www.bbc.com/afrique/media/video'],
-    test: ['https://www.test.bbc.com/afrique/media/video'],
-  },
-
   PGL: {
     live: ['https://www.bbc.com/arabic/art-and-culture-38260491'],
     test: ['https://www.test.bbc.com/afaanoromoo/oduu-23141286'],

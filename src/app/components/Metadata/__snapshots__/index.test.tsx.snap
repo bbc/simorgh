@@ -1,2501 +1,2501 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot should match for AMP News & UK origin 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "amp": "",
     "dir": "ltr",
     "lang": "en-gb",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o.amp",
       "hrefLang": "x-default",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o.amp",
       "hrefLang": "en",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.co.uk/news/articles/c0000000001o.amp",
       "hrefLang": "en-gb",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "http://localhost:7080/news/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "Article summary.",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "Article summary.",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "en_GB",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "Article Headline for SEO - BBC News",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "article",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/news/articles/c0000000001o",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBCNews",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "Article summary.",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBCNews",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "Article Headline for SEO - BBC News",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "Royal Wedding 2018",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Duchess of Sussex",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Queen Victoria",
       "name": "article:tag",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "Article Headline for SEO - BBC News",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Canonical News & international origin 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "ltr",
     "lang": "en-gb",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o",
       "hrefLang": "x-default",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o",
       "hrefLang": "en",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.co.uk/news/articles/c0000000001o",
       "hrefLang": "en-gb",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/news/articles/c0000000001o.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/news/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "Article summary.",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "Article summary.",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "en_GB",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "Article Headline for SEO - BBC News",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "article",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/news/articles/c0000000001o",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBCNews",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "Article summary.",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBCNews",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "Article Headline for SEO - BBC News",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/news/articles/c0000000001o",
       "http-equiv": "onion-location",
     },
-    Object {
+    {
       "content": "Royal Wedding 2018",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Duchess of Sussex",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Queen Victoria",
       "name": "article:tag",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "Article Headline for SEO - BBC News",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Persian News & UK origin 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "amp": "",
     "dir": "rtl",
     "lang": "fa",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/persian/articles/c4vlle3q337o",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.co.uk/persian/articles/c4vlle3q337o",
       "hrefLang": "fa",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "http://localhost:7080/persian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "fa",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "سرصفحه مقاله - BBC News فارسی",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "article",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/persian/articles/c4vlle3q337o",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@bbcpersian",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@bbcpersian",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "سرصفحه مقاله - BBC News فارسی",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "Royal Wedding 2018",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Duchess of Sussex",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Queen Victoria",
       "name": "article:tag",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "سرصفحه مقاله - BBC News فارسی",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Persian News & byline twitter handle 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "ltr",
     "lang": "pcm",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News Pidgin",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News Pidgin",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "Article summary in Pidgin",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "Article summary in Pidgin",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News Pidgin",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "pcm",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News Pidgin",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "Article Headline for SEO in Pidgin - BBC News Pidgin",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "article",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@mary_harper",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "Article summary in Pidgin",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News Pidgin",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBCNews",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "Article Headline for SEO in Pidgin - BBC News Pidgin",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/pidgin/articles/cwl08rd38l6o",
       "http-equiv": "onion-location",
     },
-    Object {
+    {
       "content": "Royal Wedding 2018",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Duchess of Sussex",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Queen Victoria",
       "name": "article:tag",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "Article Headline for SEO in Pidgin - BBC News Pidgin",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Persian News & international origin 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "rtl",
     "lang": "fa",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/persian/articles/c4vlle3q337o",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/persian/articles/c4vlle3q337o",
       "hrefLang": "fa",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/persian/articles/c4vlle3q337o.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/persian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "fa",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "سرصفحه مقاله - BBC News فارسی",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "article",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/persian/articles/c4vlle3q337o",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@bbcpersian",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "خلاصه مقاله",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News فارسی",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@bbcpersian",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "سرصفحه مقاله - BBC News فارسی",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/persian/articles/c4vlle3q337o",
       "http-equiv": "onion-location",
     },
-    Object {
+    {
       "content": "Royal Wedding 2018",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Duchess of Sussex",
       "name": "article:tag",
     },
-    Object {
+    {
       "content": "Queen Victoria",
       "name": "article:tag",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "سرصفحه مقاله - BBC News فارسی",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Ukrainian STY with Russian lang on Amp 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "amp": "",
     "dir": "ltr",
     "lang": "ru",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "hrefLang": "ru",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "ru_UA",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/ukrainian/news-53577781",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "name": "twitter:title",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "BBC Ukrainian - BBC News Україна",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Ukrainian STY with Russian lang on canonical 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "ltr",
     "lang": "ru",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "hrefLang": "ru",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "ru_UA",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/ukrainian/news-53577781",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/ukrainian/news-53577781",
       "http-equiv": "onion-location",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "BBC Ukrainian - BBC News Україна",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on Amp 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "amp": "",
     "dir": "ltr",
     "lang": "uk",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "hrefLang": "uk",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "uk_UA",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/ukrainian/news-53577781",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "name": "twitter:title",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "BBC Ukrainian - BBC News Україна",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on canonical 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "ltr",
     "lang": "uk",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781",
       "hrefLang": "uk",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/ukrainian/news-53577781.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "uk_UA",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/ukrainian/news-53577781",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "BBC Ukrainian",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News Україна",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@BBC_ua",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "BBC Ukrainian - BBC News Україна",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/ukrainian/news-53577781",
       "http-equiv": "onion-location",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "BBC Ukrainian - BBC News Україна",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for WS Frontpages 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "rtl",
     "lang": "ur",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/urdu",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/urdu",
       "hrefLang": "ur",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/urdu.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/urdu/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News اردو",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News اردو",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News اردو",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "ur",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News اردو",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/urdu",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@bbcurdu",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News اردو",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@bbcurdu",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/urdu",
       "http-equiv": "onion-location",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;
 
 exports[`Snapshot should match for WS Media liveradio 1`] = `
-Object {
-  "baseTag": Array [],
-  "bodyAttributes": Object {},
+{
+  "baseTag": [],
+  "bodyAttributes": {},
   "defer": true,
   "encode": true,
-  "htmlAttributes": Object {
+  "htmlAttributes": {
     "dir": "ltr",
     "lang": "ko",
   },
-  "linkTags": Array [
-    Object {
+  "linkTags": [
+    {
       "href": "https://www.bbc.com/korean/bbc_korean_radio/liveradio",
       "rel": "canonical",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/korean/bbc_korean_radio/liveradio",
       "hrefLang": "ko",
       "rel": "alternate",
     },
-    Object {
+    {
       "href": "https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp",
       "rel": "amphtml",
     },
-    Object {
+    {
       "href": "http://localhost:7080/korean/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
-    Object {
+    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
-    Object {
+    {
       "href": "/favicon.ico",
       "rel": "shortcut icon",
       "type": "image/x-icon",
     },
   ],
-  "metaTags": Array [
-    Object {
+  "metaTags": [
+    {
       "content": "IE=edge",
       "http-equiv": "X-UA-Compatible",
     },
-    Object {
+    {
       "charset": "utf-8",
     },
-    Object {
+    {
       "content": "noodp, noydir, max-image-preview:large",
       "name": "robots",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "theme-color",
     },
-    Object {
+    {
       "content": "width=device-width, initial-scale=1, minimum-scale=1",
       "name": "viewport",
     },
-    Object {
+    {
       "content": "BBC News 코리아",
       "name": "apple-mobile-web-app-title",
     },
-    Object {
+    {
       "content": "BBC News 코리아",
       "name": "application-name",
     },
-    Object {
+    {
       "content": "세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다",
       "name": "description",
     },
-    Object {
+    {
       "content": "1609039196070050",
       "property": "fb:app_id",
     },
-    Object {
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
-    Object {
+    {
       "content": "#B80000",
       "name": "msapplication-TileColor",
     },
-    Object {
+    {
       "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
-    Object {
+    {
       "content": "세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
       "property": "og:image",
     },
-    Object {
+    {
       "content": "BBC News 코리아",
       "property": "og:image:alt",
     },
-    Object {
+    {
       "content": "ko-KO",
       "property": "og:locale",
     },
-    Object {
+    {
       "content": "BBC News 코리아",
       "property": "og:site_name",
     },
-    Object {
+    {
       "content": "BBC 코리아 라디오 - BBC News 코리아",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "website",
       "property": "og:type",
     },
-    Object {
+    {
       "content": "https://www.bbc.com/korean/bbc_korean_radio/liveradio",
       "property": "og:url",
     },
-    Object {
+    {
       "content": "summary_large_image",
       "name": "twitter:card",
     },
-    Object {
+    {
       "content": "@bbcnews",
       "name": "twitter:creator",
     },
-    Object {
+    {
       "content": "세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다",
       "name": "twitter:description",
     },
-    Object {
+    {
       "content": "BBC News 코리아",
       "name": "twitter:image:alt",
     },
-    Object {
+    {
       "content": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
       "name": "twitter:image:src",
     },
-    Object {
+    {
       "content": "@bbcnews",
       "name": "twitter:site",
     },
-    Object {
+    {
       "content": "BBC 코리아 라디오 - BBC News 코리아",
       "name": "twitter:title",
     },
-    Object {
+    {
       "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/korean/bbc_korean_radio/liveradio",
       "http-equiv": "onion-location",
     },
   ],
-  "noscriptTags": Array [],
+  "noscriptTags": [],
   "onChangeClientState": [Function],
-  "scriptTags": Array [],
-  "styleTags": Array [],
+  "scriptTags": [],
+  "styleTags": [],
   "title": "BBC 코리아 라디오 - BBC News 코리아",
-  "titleAttributes": Object {},
+  "titleAttributes": {},
 }
 `;

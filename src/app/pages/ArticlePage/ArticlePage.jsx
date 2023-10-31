@@ -8,7 +8,6 @@ import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
 import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -17,15 +16,12 @@ import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-
+import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
   getHeadline,
@@ -42,12 +38,17 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import AdContainer from '../../components/Ad';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
 import {
   bylineExtractor,
   categoryName,
@@ -63,24 +64,18 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isApp } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const isAdsEnabled = [
-    path(['metadata', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
-
+  const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-
+  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -112,7 +107,10 @@ const ArticlePage = ({ pageData }) => {
   const embedProviderName = path(['model', 'provider'], embedBlock);
   const isUgcUploader = embedProviderName === 'ugc-uploader';
 
-  const { mostRead: mostReadInitialData } = pageData;
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -132,7 +130,7 @@ const ArticlePage = ({ pageData }) => {
         </Byline>
       ) : null,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -142,16 +140,20 @@ const ArticlePage = ({ pageData }) => {
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embedHtml: props => <EmbedHtml {...props} />,
+    oEmbed: props => <OEmbedLoader {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
-      isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
+    podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
   };
 
   const visuallyHiddenBlock = {
@@ -182,7 +184,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -215,10 +217,9 @@ const ArticlePage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">

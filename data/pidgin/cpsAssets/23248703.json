@@ -117,8 +117,32 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "PIDGIN",
-          "producerId": "70"
+          "campaigns": [
+            {
+              "campaignId": "5ad8625ac93a9f000eecb253",
+              "campaignName": "Inspire me"
+            },
+            {
+              "campaignId": "5ad86285c93a9f000eecb256",
+              "campaignName": "Give me perspective"
+            },
+            {
+              "campaignId": "5ad86291c93a9f000eecb257",
+              "campaignName": "Keep me on trend"
+            }
+          ],
+          "categoryName": "Opinion",
+          "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
+          "contentType": "article-media-asset",
+          "language": "pcm",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "pidgin.media_asset.23248703.page",
+          "pageTitle": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+          "producerId": null,
+          "timePublished": "2019-09-13T15:31:44.000Z",
+          "timeUpdated": "2020-06-10T14:24:07.000Z",
+          "producerName": "PIDGIN"
         },
         "readTime": 1,
         "siteUri": "/pidgin",

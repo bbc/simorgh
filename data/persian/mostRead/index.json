@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/persian/articles/c2v852z010jo",
         "timestamp": 1687123884935
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "persian.popular.read.page",
+        "timePublished": "2023-06-19T14:44:00Z",
+        "timeUpdated": "2023-06-19T14:59:00Z"
+      }
+    }
   }
 }

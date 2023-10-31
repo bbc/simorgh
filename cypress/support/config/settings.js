@@ -39,23 +39,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -121,23 +105,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afaanoromoo/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afaanoromoo/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -268,23 +236,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/afrique'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/afrique'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afrique'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -377,23 +329,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -524,23 +460,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -604,23 +524,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/amharic/media/video'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/amharic/media/video'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/amharic/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -861,23 +765,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/arabic/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/arabic/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1039,23 +927,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/azeri/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/azeri/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/azeri/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1186,23 +1058,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -1271,23 +1127,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/bengali/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/bengali/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/bengali/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1519,23 +1359,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/burmese/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/burmese/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/burmese/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1742,23 +1566,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -1835,23 +1643,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/gahuza/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gahuza/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gahuza/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1982,23 +1774,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: undefined,
@@ -2051,23 +1827,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/gujarati/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gujarati/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gujarati/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2198,23 +1958,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -2314,23 +2058,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/hausa/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hausa/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['hausa/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2461,23 +2189,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -2576,23 +2288,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/hindi/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hindi/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hindi/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2692,11 +2388,8 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: [
-              '/igbo/articles/ckjn8jnrn75o',
-              '/igbo/articles/c0jgdy9d841o',
-            ],
-            enabled: true,
+            paths: ['/igbo/articles/c0jgdy9d841o'],
+            enabled: false,
           },
           test: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
@@ -2726,23 +2419,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -2768,23 +2445,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/igbo/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/igbo/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/igbo/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2915,23 +2576,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -3010,23 +2655,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/indonesia/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/indonesia/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/indonesia/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3157,23 +2786,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -3199,23 +2812,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/japanese/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/japanese/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/japanese/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3346,23 +2943,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -3426,23 +3007,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/korean/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/korean/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/korean/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3686,23 +3251,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3833,23 +3382,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -3919,23 +3452,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/marathi/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/marathi/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/marathi/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4066,23 +3583,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -4113,23 +3614,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/mundo/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/mundo/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/mundo/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4150,7 +3635,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/mundo/noticias-54274735'],
+            paths: ['/mundo/noticias-54274735', '/mundo/noticias-66171332'],
             enabled: true,
           },
           test: {
@@ -4357,23 +3842,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4450,23 +3919,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/nepali/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/nepali/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/nepali/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4754,23 +4207,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4864,23 +4301,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/pashto/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pashto/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pashto/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5052,23 +4473,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -5185,23 +4590,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/persian/media/video'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/persian/media/video'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/persian/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5394,23 +4783,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -5448,23 +4821,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pidgin/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pidgin/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5595,23 +4952,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -5667,23 +5008,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/portuguese/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/portuguese/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/portuguese/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5813,23 +5138,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -5855,23 +5164,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6002,23 +5295,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/russian'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/russian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/russian'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -6318,23 +5595,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/cyr/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/serbian/cyr/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/serbian/cyr/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6521,23 +5782,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/lat/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/serbian/lat/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/serbian/lat/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6668,23 +5913,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -6714,23 +5943,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6860,23 +6073,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -6969,23 +6166,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/somali/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/somali/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/somali/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7094,11 +6275,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [
-              '/sport/rugby-union/56359986',
-              '/sport/golf/56318994',
-              '/sport/cricket/20256774',
-            ],
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
             enabled: true,
           },
           test: {
@@ -7106,11 +6283,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [
-              '/sport/rugby-union/56359986',
-              '/sport/golf/56318994',
-              '/sport/cricket/20256774',
-            ],
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
             enabled: true,
           },
         },
@@ -7183,23 +6356,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -7292,23 +6449,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/swahili/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/swahili/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/swahili/media/video'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7439,23 +6580,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -7548,23 +6673,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/tamil/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7695,23 +6804,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
@@ -7761,23 +6854,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/telugu/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/telugu/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/telugu/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7908,23 +6985,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -7950,23 +7011,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/thai/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/thai/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/thai/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8048,7 +7093,7 @@ module.exports = () => ({
               '/thai/international-51285795', // CPS MAP with video clip
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -8059,7 +7104,7 @@ module.exports = () => ({
               '/thai/international-23252840', // CPS PGL
               // '', // CPS STY
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -8069,7 +7114,7 @@ module.exports = () => ({
               '/thai/23122810', // CPS MAP
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -8116,23 +7161,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/tigrinya'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/tigrinya'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tigrinya'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -8196,23 +7225,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/tigrinya/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tigrinya/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tigrinya/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8343,23 +7356,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -8390,23 +7387,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/turkce/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/turkce/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/turkce/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8515,10 +7496,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/c0e8weny66ko/simp'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -8532,28 +7513,12 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/cabcdefghijo/simp'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/simp'],
             enabled: false,
           },
-          test: {
-            paths: ['/ukchina/simp'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/simp'],
-            enabled: true,
-          },
         },
-        smoke: true,
+        smoke: false,
       },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -8572,35 +7537,19 @@ module.exports = () => ({
               '/ukchina/simp/23279012', // CPS video
               '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/ukchina/simp/23279012', // CPS video
               '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/simp/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/simp/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/simp/media/video'],
             enabled: false,
           },
         },
         smoke: false,
       },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8622,15 +7571,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/simp/52836902'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/simp/23307454'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/simp/23307454'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8665,7 +7614,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8709,10 +7658,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/c0e8weny66ko/trad'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -8726,28 +7675,12 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/cabcdefghijo/trad'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/trad'],
             enabled: false,
           },
-          test: {
-            paths: ['/ukchina/trad'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/trad'],
-            enabled: true,
-          },
         },
-        smoke: true,
+        smoke: false,
       },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -8759,42 +7692,26 @@ module.exports = () => ({
               '/ukchina/trad/52970385', // CPS video
               '/ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/ukchina/trad/23279012', // CPS video
               '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/ukchina/trad/23279012', // CPS video
               '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/trad/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/trad/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/trad/media/video'],
             enabled: false,
           },
         },
         smoke: false,
       },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8807,7 +7724,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/trad/cool-britannia-38434549'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8816,18 +7733,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/trad/52836902'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/trad/23307454'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/trad/23307454'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostReadPage: {
         environments: {
@@ -8859,7 +7776,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/trad/in_depth/cluster_uk_election_2105'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8998,23 +7915,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
@@ -9072,23 +7973,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukrainian/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9222,23 +8107,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -9331,23 +8200,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/urdu/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/urdu/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/urdu/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9478,23 +8331,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -9591,23 +8428,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9738,23 +8559,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -9785,23 +8590,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/vietnamese/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/vietnamese/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/vietnamese/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9932,23 +8721,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -9974,23 +8747,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/yoruba/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/yoruba/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/yoruba/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -10198,23 +8955,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/simp/media/video'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -10422,23 +9163,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/trad/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/trad/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/trad/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {

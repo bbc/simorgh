@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/hausa/articles/cglv5108xedo",
         "timestamp": 1686629044609
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "hausa.popular.read.page",
+        "timePublished": "2023-06-19T14:37:00Z",
+        "timeUpdated": "2023-06-19T14:52:00Z"
+      }
+    }
   }
 }

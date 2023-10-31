@@ -34,6 +34,7 @@ interface Props extends AppProps {
     timeOnServer?: number;
     toggles: Toggles;
     variant?: Variants;
+    isUK?: boolean;
   };
 }
 
@@ -56,6 +57,7 @@ export default function App({ Component, pageProps }: Props) {
     timeOnServer,
     toggles,
     variant,
+    isUK,
   } = pageProps;
 
   return (
@@ -80,6 +82,7 @@ export default function App({ Component, pageProps }: Props) {
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
+          isUK={isUK ?? false}
         >
           <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>

@@ -144,6 +144,14 @@
         "href": "/burmese/world-58795219",
         "timestamp": 1633453692000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "burmese.popular.read.page",
+        "timePublished": "2023-06-19T14:19:00Z",
+        "timeUpdated": "2023-06-19T14:49:00Z"
+      }
+    }
   }
 }

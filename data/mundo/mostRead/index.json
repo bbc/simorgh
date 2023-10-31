@@ -144,6 +144,14 @@
         "href": "/mundo/noticias-internacional-65943527",
         "timestamp": 1687108772000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "mundo.popular.read.page",
+        "timePublished": "2023-06-19T14:41:00Z",
+        "timeUpdated": "2023-06-19T14:56:00Z"
+      }
+    }
   }
 }

@@ -7,28 +7,44 @@ export const buildPageATIParams = ({
   requestContext,
   serviceContext,
 }: ATIDataWithContexts) => {
-  const { platform, statsDestination } = requestContext;
-  const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
+  const { isUK, origin, platform, previousPath, statsDestination } =
+    requestContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, lang, service } =
     serviceContext;
   const {
+    campaigns,
+    categoryName,
     contentId,
     contentType,
+    language,
+    ldpThingIds,
+    ldpThingLabels,
+    nationsProducer,
     pageIdentifier,
     pageTitle,
+    producerId,
     timePublished,
     timeUpdated,
   } = atiData;
 
   return {
     appName: atiAnalyticsAppName,
+    campaigns,
+    categoryName,
     contentId,
     contentType,
-    language: lang,
+    isUK,
+    language: language || lang,
+    ldpThingIds,
+    ldpThingLabels,
     libraryVersion: LIBRARY_VERSION,
+    nationsProducer,
+    origin,
     pageIdentifier,
     pageTitle,
     platform,
-    producerId: atiAnalyticsProducerId,
+    previousPath,
+    producerId: producerId || atiAnalyticsProducerId,
     service,
     statsDestination,
     timePublished,

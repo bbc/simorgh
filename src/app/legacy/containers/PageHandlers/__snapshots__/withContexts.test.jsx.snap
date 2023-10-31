@@ -14,5 +14,8 @@ exports[`withContexts HOC should return all context providers 1`] = `
   <span>
     {"cookiePolicy":"000","sendCanonicalChartbeatBeacon":"*function - bound dispatchSetState*","updateCookiePolicy":"*function - updateCookiePolicy*","personalisationEnabled":false,"setPreferredVariantCookie":"*function - setPreferredVariantCookie*"}
   </span>
+  <span>
+    {}
+  </span>
 </div>
 `;

@@ -562,52 +562,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-37 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-37 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-41 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -615,13 +569,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-37 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-43 {
+  .emotion-37 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -629,7 +583,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-43 {
+  .emotion-37 {
     display: block;
     width: initial;
     padding: initial;
@@ -637,13 +591,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-43 {
+    .emotion-37 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-45 {
+.emotion-39 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -655,20 +609,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-47 {
+.emotion-41 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -678,7 +632,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-47:before {
+.emotion-41:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -690,17 +644,17 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   z-index: 1;
 }
 
-.emotion-47:hover,
-.emotion-47:focus {
+.emotion-41:hover,
+.emotion-41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-47:visited {
+.emotion-41:visited {
   color: #6E6E73;
 }
 
-.emotion-49 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -712,34 +666,34 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-43 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-43 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-43 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-49 {
+  .emotion-43 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-51 {
+.emotion-45 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -750,14 +704,14 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-51 {
+  .emotion-45 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-51 {
+  .emotion-45 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
@@ -869,97 +823,63 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.21%;"
           >
             <picture>
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 660w"
                 type="image/webp"
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 660w"
                 type="image/jpeg"
               />
               <img
-                alt="سیربین"
+                alt="حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا"
                 class="emotion-34"
-                height="360"
+                height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
-                width="640"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg"
+                width="660"
               />
             </picture>
           </div>
           <div
             class="emotion-35 emotion-36"
-          >
-            <div
-              aria-hidden="true"
-              class="emotion-37 emotion-38"
-              data-e2e="media-indicator"
-              dir="rtl"
-            >
-              <div
-                class="emotion-39 emotion-40"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-41 emotion-42"
-                  focusable="false"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <path
-                      d="M.5.6h12v12H.5z"
-                    />
-                    <path
-                      d="M2.144.96v11.28l8.712-5.64z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
+          />
         </div>
       </div>
       <div
-        class="emotion-43 emotion-44"
+        class="emotion-37 emotion-38"
         dir="rtl"
       >
         <h3
-          class="emotion-45 emotion-46"
+          class="emotion-39 emotion-40"
         >
           <a
-            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
-            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
-            href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
+            aria-labelledby="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-1"
+            class="focusIndicatorDisplayInlineBlock emotion-41 emotion-42"
+            href="/urdu/regional/2016/09/160919_us_condemns_uri_attack_mb"
           >
             <span
-              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
+              id="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-1"
             >
-              سیربین ٹی وی پروگرام آن ڈیمانڈ
+              ’انڈیا میں جوابی فوجی کارروائی کے لیے بڑھتا دباؤ‘ promo
             </span>
           </a>
         </h3>
         <p
-          class="emotion-49 emotion-50"
+          class="emotion-43 emotion-44"
         >
-          سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔
+          انڈیا کے وزیرِ مملکت برائے امورِ خارجہ وی کے سنگھ کا کہنا ہے کہ موجود حالات میں کوئی بھی جذباتی فیصلہ نہیں کیا جا سکتا لیکن وزیراعظم کے بقول اب کوئی نہ کوئی فیصلہ ضرور کیا جائے گا۔
         </p>
         <time
-          class="emotion-51 emotion-52"
-          datetime="2017-02-07"
+          class="emotion-45 emotion-46"
+          datetime="2016-09-19"
         >
-          7 فبراير/ شباط 2017
+          19 سبتمبر/ أيلول 2016
         </time>
       </div>
     </div>
@@ -1185,6 +1105,69 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-11 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-11 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-11 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-13 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-13 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-15 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1192,20 +1175,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-15 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-11 {
+  .emotion-15 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-11 {
+  .emotion-15 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -1213,25 +1196,203 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-11 {
+    .emotion-15 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-11 {
+    .emotion-15 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-13 {
+.emotion-17 {
   position: relative;
 }
 
-.emotion-15 {
+.emotion-19 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  background-color: #F2F2F2;
+}
+
+@media (min-width: 25rem) {
+  .emotion-19 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-20 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.emotion-21 {
+  position: absolute;
+  bottom: 0;
+}
+
+.emotion-21>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.emotion-24 {
+  padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-24 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+.emotion-24:last-child {
+  border: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-24 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-24:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-24:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-24:last-child {
+  padding-bottom: 0;
+}
+
+@supports (display: grid) {
+  .emotion-24 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-end: span 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-24 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-end: span 2;
+    }
+  }
+}
+
+.emotion-26 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-26 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-26 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-26 {
+      display: block;
+    }
+  }
+}
+
+.emotion-28 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+@media (min-width: 63rem) {
+  .emotion-28 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-28 {
+    width: initial;
+    grid-column: 1/span 2;
+  }
+}
+
+.emotion-32 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1246,184 +1407,39 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-32 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-32 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-17 {
-  position: absolute;
-  bottom: 0;
-}
-
-.emotion-17>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.emotion-20 {
-  padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-20 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-.emotion-20:last-child {
-  border: none;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-20 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-20 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-.emotion-20:first-child {
-  padding-top: 0;
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-20:first-child {
-    padding-top: 1rem;
-  }
-}
-
-.emotion-20:last-child {
-  padding-bottom: 0;
-}
-
-@supports (display: grid) {
-  .emotion-20 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-end: span 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-end: span 2;
-    }
-  }
-}
-
-.emotion-22 {
-  position: relative;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-22 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-22 {
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-22 {
-      display: block;
-    }
-  }
-}
-
-.emotion-24 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-24 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-24 {
-    width: initial;
-    grid-column: 1/span 2;
-  }
-}
-
 @media (min-width: 25rem) {
-  .emotion-30 {
+  .emotion-34 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-30>* {
+.emotion-34>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-30>* {
+  .emotion-34>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-32 {
+.emotion-36 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1431,13 +1447,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-36 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-32 {
+  .emotion-36 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1445,7 +1461,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-32 {
+  .emotion-36 {
     display: block;
     width: initial;
     padding: initial;
@@ -1453,13 +1469,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-32 {
+    .emotion-36 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-34 {
+.emotion-38 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1471,14 +1487,14 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-34 {
+  .emotion-38 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-38 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -1497,8 +1513,103 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <div
+        <h3
           class="emotion-7 emotion-8"
+        >
+          <a
+            aria-labelledby="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
+            href="/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
+          >
+            <span
+              id="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
+            >
+              Promo test for cookie setting
+            </span>
+          </a>
+        </h3>
+        <p
+          class="emotion-11 emotion-12"
+        >
+          Promo test for cookie setting
+        </p>
+        <time
+          class="emotion-13 emotion-14"
+          datetime="2022-09-01"
+        >
+          1 September 2022
+        </time>
+      </div>
+      <div
+        class="emotion-15 emotion-16"
+        dir="ltr"
+      >
+        <div
+          class="emotion-17 emotion-18"
+        >
+          <div
+            class="emotion-19"
+            style="padding-bottom: 56.25%;"
+          >
+            <picture>
+              <source
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
+                type="image/webp"
+              />
+              <source
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="test"
+                class="emotion-20"
+                height="1152"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                width="2048"
+              />
+            </picture>
+          </div>
+          <div
+            class="emotion-21 emotion-22"
+          />
+        </div>
+      </div>
+    </div>
+  </li>
+  <li
+    class="emotion-0 emotion-24 emotion-2"
+    dir="ltr"
+  >
+    <div
+      class="emotion-26 emotion-4"
+      data-e2e="story-promo"
+    >
+      <div
+        class="emotion-28 emotion-16"
+        dir="ltr"
+      >
+        <div
+          class="emotion-17 emotion-18"
+        >
+          <div
+            class="emotion-32 emotion-33"
+            data-e2e="image-placeholder"
+            style="padding-bottom: 56.25%;"
+          />
+          <div
+            class="emotion-34 emotion-22"
+          />
+        </div>
+      </div>
+      <div
+        class="emotion-36 emotion-6"
+        dir="ltr"
+      >
+        <div
+          class="emotion-38 emotion-8"
         >
           <a
             aria-labelledby="promo-serbianlatpopularread-guide-1"
@@ -1509,70 +1620,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
               id="promo-serbianlatpopularread-guide-1"
             >
               Kontaktirajte nas 1
-            </span>
-          </a>
-        </div>
-      </div>
-      <div
-        class="emotion-11 emotion-12"
-        dir="ltr"
-      >
-        <div
-          class="emotion-13 emotion-14"
-        >
-          <div
-            class="emotion-15 emotion-16"
-            data-e2e="image-placeholder"
-            style="padding-bottom: 56.25%;"
-          />
-          <div
-            class="emotion-17 emotion-18"
-          />
-        </div>
-      </div>
-    </div>
-  </li>
-  <li
-    class="emotion-0 emotion-20 emotion-2"
-    dir="ltr"
-  >
-    <div
-      class="emotion-22 emotion-4"
-      data-e2e="story-promo"
-    >
-      <div
-        class="emotion-24 emotion-12"
-        dir="ltr"
-      >
-        <div
-          class="emotion-13 emotion-14"
-        >
-          <div
-            class="emotion-15 emotion-16"
-            data-e2e="image-placeholder"
-            style="padding-bottom: 56.25%;"
-          />
-          <div
-            class="emotion-30 emotion-18"
-          />
-        </div>
-      </div>
-      <div
-        class="emotion-32 emotion-6"
-        dir="ltr"
-      >
-        <div
-          class="emotion-34 emotion-8"
-        >
-          <a
-            aria-labelledby="promo-serbianlatpopularread-guide-1"
-            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/popular/read"
-          >
-            <span
-              id="promo-serbianlatpopularread-guide-1"
-            >
-              Kontaktirajte nas 2
             </span>
           </a>
         </div>
@@ -2054,52 +2101,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-37 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-37 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-41 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2107,13 +2108,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-37 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-43 {
+  .emotion-37 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2121,7 +2122,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-43 {
+  .emotion-37 {
     display: block;
     width: initial;
     padding: initial;
@@ -2129,13 +2130,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   }
 
   @media (min-width: 63rem) {
-    .emotion-43 {
+    .emotion-37 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-45 {
+.emotion-39 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2147,20 +2148,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-47 {
+.emotion-41 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2170,7 +2171,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   overflow-wrap: anywhere;
 }
 
-.emotion-47:before {
+.emotion-41:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2182,17 +2183,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   z-index: 1;
 }
 
-.emotion-47:hover,
-.emotion-47:focus {
+.emotion-41:hover,
+.emotion-41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-47:visited {
+.emotion-41:visited {
   color: #6E6E73;
 }
 
-.emotion-49 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2204,34 +2205,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-43 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-43 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-43 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-49 {
+  .emotion-43 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-51 {
+.emotion-45 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -2242,14 +2243,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-51 {
+  .emotion-45 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-51 {
+  .emotion-45 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
@@ -2361,97 +2362,63 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.21%;"
           >
             <picture>
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 660w"
                 type="image/webp"
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 660w"
                 type="image/jpeg"
               />
               <img
-                alt="سیربین"
+                alt="حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا"
                 class="emotion-34"
-                height="360"
+                height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
-                width="640"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg"
+                width="660"
               />
             </picture>
           </div>
           <div
             class="emotion-35 emotion-36"
-          >
-            <div
-              aria-hidden="true"
-              class="emotion-37 emotion-38"
-              data-e2e="media-indicator"
-              dir="rtl"
-            >
-              <div
-                class="emotion-39 emotion-40"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-41 emotion-42"
-                  focusable="false"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <path
-                      d="M.5.6h12v12H.5z"
-                    />
-                    <path
-                      d="M2.144.96v11.28l8.712-5.64z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
+          />
         </div>
       </div>
       <div
-        class="emotion-43 emotion-44"
+        class="emotion-37 emotion-38"
         dir="rtl"
       >
         <h3
-          class="emotion-45 emotion-46"
+          class="emotion-39 emotion-40"
         >
           <a
-            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
-            href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
+            aria-labelledby="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-2"
+            class="focusIndicatorDisplayInlineBlock emotion-41 emotion-42"
+            href="/urdu/regional/2016/09/160919_us_condemns_uri_attack_mb"
           >
             <span
-              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
+              id="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-2"
             >
-              سیربین ٹی وی پروگرام آن ڈیمانڈ
+              ’انڈیا میں جوابی فوجی کارروائی کے لیے بڑھتا دباؤ‘ promo
             </span>
           </a>
         </h3>
         <p
-          class="emotion-49 emotion-50"
+          class="emotion-43 emotion-44"
         >
-          سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔
+          انڈیا کے وزیرِ مملکت برائے امورِ خارجہ وی کے سنگھ کا کہنا ہے کہ موجود حالات میں کوئی بھی جذباتی فیصلہ نہیں کیا جا سکتا لیکن وزیراعظم کے بقول اب کوئی نہ کوئی فیصلہ ضرور کیا جائے گا۔
         </p>
         <time
-          class="emotion-51 emotion-52"
-          datetime="2017-02-07"
+          class="emotion-45 emotion-46"
+          datetime="2016-09-19"
         >
-          7 فبراير/ شباط 2017
+          19 سبتمبر/ أيلول 2016
         </time>
       </div>
     </div>
@@ -2473,26 +2440,26 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.21%;"
           >
             <picture>
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 660w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 660w"
                 type="image/webp"
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg 660w"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 660w"
                 type="image/jpeg"
               />
               <img
-                alt="پکوان"
+                alt="trott and kenny"
                 class="emotion-34"
-                height="549"
+                height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg"
-                width="976"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg"
+                width="660"
               />
             </picture>
           </div>
@@ -2502,34 +2469,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         </div>
       </div>
       <div
-        class="emotion-43 emotion-44"
+        class="emotion-37 emotion-38"
         dir="rtl"
       >
         <h3
-          class="emotion-45 emotion-46"
+          class="emotion-39 emotion-40"
         >
           <a
-            aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
-            href="/urdu/pakistan-48346840"
+            aria-labelledby="promo-urduindepthrio_olympics_2016_urdu-text-3"
+            class="focusIndicatorDisplayInlineBlock emotion-41 emotion-42"
+            href="/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="promo-urdupakistan48346840-text-3"
+              id="promo-urduindepthrio_olympics_2016_urdu-text-3"
             >
-              رمضان، عید اور سپیشل پکوان
+              2 - ریو اولمپکس 2016
             </span>
           </a>
         </h3>
         <p
-          class="emotion-49 emotion-50"
+          class="emotion-43 emotion-44"
         >
-          کیا آپ نے کبھی غور کیا کہ بعض ریستوران اور ڈھابے کھانے کے لیے دوسروں سے زیادہ مشہور کیوں ہوتے ہیں؟ ٹیکنالوجی کے اس دور میں بھی کیا کھانا بنانے کی خفیہ تراکیب موجود ہیں۔ بی بی سی اردو کی اس نئی سیریز میں ہم آپ کو ایسی ہی کچھ دکانوں اور ڈھابوں پر لے چلیں گے تاکہ آپ جان سکیں کہ آخر ان کا کھانا اتنا مشہور کیوں ہے؟
+          مقابلہ جرمنی سے ہوگا۔
         </p>
         <time
-          class="emotion-51 emotion-52"
-          datetime="2019-05-21"
+          class="emotion-45 emotion-46"
+          datetime="2016-08-18"
         >
-          21 مايو/ أيار 2019
+          18 أغسطس/ آب 2016
         </time>
       </div>
     </div>
@@ -2550,64 +2517,44 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-31 emotion-32"
         >
           <div
-            class="emotion-33"
+            class="emotion-7 emotion-8"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="The World Cup trophy"
-                class="emotion-34"
-                height="1152"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg"
-                width="2048"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-35 emotion-36"
           />
         </div>
       </div>
       <div
-        class="emotion-43 emotion-44"
+        class="emotion-37 emotion-38"
         dir="rtl"
       >
         <h3
-          class="emotion-45 emotion-46"
+          class="emotion-39 emotion-40"
         >
           <a
-            aria-labelledby="promo-urdusport48361817-text-4"
-            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
-            href="/urdu/sport-48361817"
+            aria-labelledby="promo-urdumultimedia201304000000_sairbeen_ondemand-text-4"
+            class="focusIndicatorDisplayInlineBlock emotion-41 emotion-42"
+            href="/urdu/multimedia/2013/04/000000_sairbeen_ondemand"
           >
             <span
-              id="promo-urdusport48361817-text-4"
+              id="promo-urdumultimedia201304000000_sairbeen_ondemand-text-4"
             >
-              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+              - bulletin on demand = سیربین ٹی وی پروگرام آن ڈیمانڈ
             </span>
           </a>
         </h3>
         <p
-          class="emotion-49 emotion-50"
+          class="emotion-43 emotion-44"
         >
-          انگلینڈ اور ویلز میں جاری دنیائے کرکٹ کے سب سے بڑے مقابلوں پر بی بی سی اردو کی خصوصی کوریج دیکھنے کے لیے کلک کریں
+          سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بج کر تیس منٹ پر بی بی سی اردو ڈاٹ
         </p>
         <time
-          class="emotion-51 emotion-52"
-          datetime="2019-06-03"
+          class="emotion-45 emotion-46"
+          datetime="2016-08-18"
         >
-          3 يونيو/ حزيران 2019
+          18 أغسطس/ آب 2016
         </time>
       </div>
     </div>
@@ -2756,17 +2703,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -2781,6 +2727,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
+}
+
+.emotion-10 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 @media (min-width: 25rem) {
@@ -2895,6 +2847,97 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   color: #6E6E73;
 }
 
+.emotion-19 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-21 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-32 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-32 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-32 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
 <div>
   <li
     class="emotion-0 emotion-1 emotion-2"
@@ -2912,7 +2955,85 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-9"
+            style="padding-bottom: 56.25%;"
+          >
+            <picture>
+              <source
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
+                type="image/webp"
+              />
+              <source
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="test"
+                class="emotion-10"
+                height="1152"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                width="2048"
+              />
+            </picture>
+          </div>
+          <div
+            class="emotion-11 emotion-12"
+          />
+        </div>
+      </div>
+      <div
+        class="emotion-13 emotion-14"
+        dir="ltr"
+      >
+        <h3
+          class="emotion-15 emotion-16"
+        >
+          <a
+            aria-labelledby="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
+            href="/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
+          >
+            <span
+              id="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
+            >
+              Promo test for cookie setting
+            </span>
+          </a>
+        </h3>
+        <p
+          class="emotion-19 emotion-20"
+        >
+          Promo test for cookie setting
+        </p>
+        <time
+          class="emotion-21 emotion-22"
+          datetime="2022-09-01"
+        >
+          1 September 2022
+        </time>
+      </div>
+    </div>
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <div
+      class="emotion-3 emotion-4"
+      data-e2e="story-promo"
+    >
+      <div
+        class="emotion-5 emotion-6"
+        dir="ltr"
+      >
+        <div
+          class="emotion-7 emotion-8"
+        >
+          <div
+            class="emotion-32 emotion-33"
             data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
           />
@@ -2929,12 +3050,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatpopularread-guide-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-2"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatpopularread-guide-1"
+              id="promo-serbianlatpopularread-guide-2"
             >
               Kontaktirajte nas 1
             </span>
@@ -2959,7 +3080,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-32 emotion-33"
             data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
           />
@@ -2976,12 +3097,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatpopularread-guide-2"
+            aria-labelledby="promo-serbianlatpopularread-guide-3"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatpopularread-guide-2"
+              id="promo-serbianlatpopularread-guide-3"
             >
               Kontaktirajte nas 2
             </span>
@@ -3006,54 +3127,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
-            style="padding-bottom: 56.25%;"
-          />
-          <div
-            class="emotion-11 emotion-12"
-          />
-        </div>
-      </div>
-      <div
-        class="emotion-13 emotion-14"
-        dir="ltr"
-      >
-        <div
-          class="emotion-15 emotion-16"
-        >
-          <a
-            aria-labelledby="promo-serbianlatpopularread-guide-3"
-            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/popular/read"
-          >
-            <span
-              id="promo-serbianlatpopularread-guide-3"
-            >
-              Kontaktirajte nas 3
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2"
-    dir="ltr"
-  >
-    <div
-      class="emotion-3 emotion-4"
-      data-e2e="story-promo"
-    >
-      <div
-        class="emotion-5 emotion-6"
-        dir="ltr"
-      >
-        <div
-          class="emotion-7 emotion-8"
-        >
-          <div
-            class="emotion-9 emotion-10"
+            class="emotion-32 emotion-33"
             data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
           />
@@ -3077,7 +3151,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             <span
               id="promo-serbianlatpopularread-guide-4"
             >
-              Kontaktirajte nas 4
+              Kontaktirajte nas 3
             </span>
           </a>
         </div>
@@ -3534,54 +3608,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-31 {
   color: #222222;
-  background-color: #FFFFFF;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-31 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-35 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-37 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -3593,20 +3619,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-39 {
+.emotion-33 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3616,7 +3642,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   overflow-wrap: anywhere;
 }
 
-.emotion-39:before {
+.emotion-33:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3628,17 +3654,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   z-index: 1;
 }
 
-.emotion-39:hover,
-.emotion-39:focus {
+.emotion-33:hover,
+.emotion-33:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-39:visited {
+.emotion-33:visited {
   color: #6E6E73;
 }
 
-.emotion-41 {
+.emotion-35 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -3649,97 +3675,97 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-35 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-35 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-44 {
+.emotion-38 {
   padding: 0.5rem 0 1rem;
 }
 
-.emotion-44:last-child {
+.emotion-38:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-44 {
+  .emotion-38 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-44 {
+  .emotion-38 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-44:first-child {
+.emotion-38:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-44:first-child {
+  .emotion-38:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-44:last-child {
+.emotion-38:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-44 {
+  .emotion-38 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-44 {
+    .emotion-38 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -3847,65 +3873,32 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         class="emotion-29 emotion-30"
         dir="rtl"
       >
-        <div
-          aria-hidden="true"
-          class="emotion-31 emotion-32"
-          data-e2e="media-indicator"
-          dir="rtl"
-        >
-          <div
-            class="emotion-33 emotion-34"
-          >
-            <svg
-              aria-hidden="true"
-              class="emotion-35 emotion-36"
-              focusable="false"
-              height="12"
-              viewBox="0 0 12 12"
-              width="12"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-              >
-                <path
-                  d="M.5.6h12v12H.5z"
-                />
-                <path
-                  d="M2.144.96v11.28l8.712-5.64z"
-                  fill="currentColor"
-                />
-              </g>
-            </svg>
-          </div>
-        </div>
         <h3
-          class="emotion-37 emotion-38"
+          class="emotion-31 emotion-32"
         >
           <a
-            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
-            href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
+            aria-labelledby="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-2"
+            class="focusIndicatorDisplayInlineBlock emotion-33 emotion-34"
+            href="/urdu/regional/2016/09/160919_us_condemns_uri_attack_mb"
           >
             <span
-              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
+              id="promo-urduregional201609160919_us_condemns_uri_attack_mb-text-2"
             >
-              سیربین ٹی وی پروگرام آن ڈیمانڈ
+              ’انڈیا میں جوابی فوجی کارروائی کے لیے بڑھتا دباؤ‘ promo
             </span>
           </a>
         </h3>
         <time
-          class="emotion-41 emotion-42"
-          datetime="2017-02-07"
+          class="emotion-35 emotion-36"
+          datetime="2016-09-19"
         >
-          7 فبراير/ شباط 2017
+          19 سبتمبر/ أيلول 2016
         </time>
       </div>
     </div>
   </li>
   <li
-    class="emotion-0 emotion-44 emotion-2"
+    class="emotion-0 emotion-38 emotion-2"
     dir="rtl"
   >
     <div
@@ -3917,25 +3910,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         dir="rtl"
       >
         <h3
-          class="emotion-37 emotion-38"
+          class="emotion-31 emotion-32"
         >
           <a
-            aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
-            href="/urdu/pakistan-48346840"
+            aria-labelledby="promo-urduindepthrio_olympics_2016_urdu-text-3"
+            class="focusIndicatorDisplayInlineBlock emotion-33 emotion-34"
+            href="/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="promo-urdupakistan48346840-text-3"
+              id="promo-urduindepthrio_olympics_2016_urdu-text-3"
             >
-              رمضان، عید اور سپیشل پکوان
+              2 - ریو اولمپکس 2016
             </span>
           </a>
         </h3>
         <time
-          class="emotion-41 emotion-42"
-          datetime="2019-05-21"
+          class="emotion-35 emotion-36"
+          datetime="2016-08-18"
         >
-          21 مايو/ أيار 2019
+          18 أغسطس/ آب 2016
         </time>
       </div>
     </div>
@@ -3953,25 +3946,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         dir="rtl"
       >
         <h3
-          class="emotion-37 emotion-38"
+          class="emotion-31 emotion-32"
         >
           <a
-            aria-labelledby="promo-urdusport48361817-text-4"
-            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
-            href="/urdu/sport-48361817"
+            aria-labelledby="promo-urdumultimedia201304000000_sairbeen_ondemand-text-4"
+            class="focusIndicatorDisplayInlineBlock emotion-33 emotion-34"
+            href="/urdu/multimedia/2013/04/000000_sairbeen_ondemand"
           >
             <span
-              id="promo-urdusport48361817-text-4"
+              id="promo-urdumultimedia201304000000_sairbeen_ondemand-text-4"
             >
-              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+              - bulletin on demand = سیربین ٹی وی پروگرام آن ڈیمانڈ
             </span>
           </a>
         </h3>
         <time
-          class="emotion-41 emotion-42"
-          datetime="2019-06-03"
+          class="emotion-35 emotion-36"
+          datetime="2016-08-18"
         >
-          3 يونيو/ حزيران 2019
+          18 أغسطس/ آب 2016
         </time>
       </div>
     </div>
@@ -4203,84 +4196,108 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   color: #6E6E73;
 }
 
-.emotion-23 {
+.emotion-11 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-25 {
   padding: 0.5rem 0 1rem;
 }
 
-.emotion-23:last-child {
+.emotion-25:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-25 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-25 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-23:first-child {
+.emotion-25:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23:first-child {
+  .emotion-25:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-23:last-child {
+.emotion-25:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-25 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -4300,21 +4317,27 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <div
+        <h3
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlatpopularread-guide-1"
+            aria-labelledby="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/popular/read"
+            href="/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
           >
             <span
-              id="promo-serbianlatpopularread-guide-1"
+              id="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
             >
-              Kontaktirajte nas 1
+              Promo test for cookie setting
             </span>
           </a>
-        </div>
+        </h3>
+        <time
+          class="emotion-11 emotion-12"
+          datetime="2022-09-01"
+        >
+          1 September 2022
+        </time>
       </div>
     </div>
   </li>
@@ -4341,7 +4364,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             <span
               id="promo-serbianlatpopularread-guide-2"
             >
-              Kontaktirajte nas 2
+              Kontaktirajte nas 1
             </span>
           </a>
         </div>
@@ -4349,7 +4372,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
     </div>
   </li>
   <li
-    class="emotion-0 emotion-23 emotion-2"
+    class="emotion-0 emotion-25 emotion-2"
     dir="ltr"
   >
     <div
@@ -4371,7 +4394,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             <span
               id="promo-serbianlatpopularread-guide-3"
             >
-              Kontaktirajte nas 3
+              Kontaktirajte nas 2
             </span>
           </a>
         </div>
@@ -4401,7 +4424,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             <span
               id="promo-serbianlatpopularread-guide-4"
             >
-              Kontaktirajte nas 4
+              Kontaktirajte nas 3
             </span>
           </a>
         </div>
@@ -5027,17 +5050,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -5052,6 +5074,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
+}
+
+.emotion-10 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .emotion-11 {
@@ -5160,6 +5188,62 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   color: #6E6E73;
 }
 
+.emotion-19 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-21 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 <div>
   <li
     class="emotion-0 emotion-1 emotion-2"
@@ -5177,10 +5261,30 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
-          />
+          >
+            <picture>
+              <source
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
+                type="image/webp"
+              />
+              <source
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="test"
+                class="emotion-10"
+                height="1152"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                width="2048"
+              />
+            </picture>
+          </div>
           <div
             class="emotion-11 emotion-12"
           />
@@ -5190,21 +5294,32 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <div
+        <h3
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatpopularread-guide-1"
+            aria-labelledby="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/popular/read"
+            href="/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
           >
             <span
-              id="promo-serbianlatpopularread-guide-1"
+              id="promo-serbianresourcesidt8a2fc37412d448758aa6d3612d93af96-text-1"
             >
-              Kontaktirajte nas 1
+              Promo test for cookie setting
             </span>
           </a>
-        </div>
+        </h3>
+        <p
+          class="emotion-19 emotion-20"
+        >
+          Promo test for cookie setting
+        </p>
+        <time
+          class="emotion-21 emotion-22"
+          datetime="2022-09-01"
+        >
+          1 September 2022
+        </time>
       </div>
     </div>
   </li>

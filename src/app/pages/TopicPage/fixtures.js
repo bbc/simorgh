@@ -15,13 +15,26 @@ export const amharicSingleItem = {
         },
       ],
       activePage: 1,
+      position: 0,
       pageCount: 1,
       curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-832f-41759cdeb30c',
       curationType: 'vivo-stream',
       visualProminence: 'NORMAL',
     },
   ],
-  metadata: { type: 'Topic' },
+  metadata: {
+    type: 'Topic',
+    analytics: {
+      name: 'amharic.topics.12345abcde.page',
+      producer: 'AMHARIC',
+    },
+    atiAnalytics: {
+      contentId: 'urn:bbc:tipo:topic:12345abcde',
+      contentType: 'index-category',
+      pageIdentifier: 'amharic.topics.12345abcde.page',
+      pageTitle: 'pageTitleInAmharic',
+    },
+  },
 };
 
 export const pidginMultipleItems = {
@@ -81,7 +94,19 @@ export const pidginMultipleItems = {
       visualProminence: 'NORMAL',
     },
   ],
-  metadata: { type: 'Topic' },
+  metadata: {
+    type: 'Topic',
+    analytics: {
+      name: 'pidgin.topics.c95y35941vrt.page',
+      producer: 'PIDGIN',
+    },
+    atiAnalytics: {
+      contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+      contentType: 'index-category',
+      pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+      pageTitle: 'Donald Trump',
+    },
+  },
 };
 
 export const mundoMultipleCurations = {

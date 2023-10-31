@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/portuguese/articles/cge1q1jnjdyo",
         "timestamp": 1686952825164
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "portuguese.popular.read.page",
+        "timePublished": "2023-06-19T14:47:00Z",
+        "timeUpdated": "2023-06-19T15:02:00Z"
+      }
+    }
   }
 }

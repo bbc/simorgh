@@ -4,7 +4,11 @@ import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
 
-const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
+const CurationGrid = ({
+  promos,
+  headingLevel,
+  isFirstCuration,
+}: CurationGridProps) => {
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
 
@@ -17,21 +21,22 @@ const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
         <ul css={styles.list} role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
             const isFirstPromo = index === 0;
+            const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
             return (
               <li css={styles.item} key={promo.id}>
                 <CurationPromo
                   {...promo}
                   headingLevel={headingLevel}
-                  lazy={!isFirstPromo}
+                  lazy={lazyLoadImages}
                 />
               </li>
             );
           })}
         </ul>
       ) : (
-        <div css={styles.item} key={firstPromo.id}>
-          <CurationPromo {...firstPromo} />
+        <div css={styles.item}>
+          <CurationPromo {...firstPromo} headingLevel={headingLevel} />
         </div>
       )}
     </div>

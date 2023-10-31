@@ -525,6 +525,19 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c4vlle3q337o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c4vlle3q337o",
+          "contentType": "article",
+          "language": "fa",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "persian.articles.c4vlle3q337o.page",
+          "pageTitle": "پهپادی که برایتان قهوه می‌آورد",
+          "timePublished": "2019-05-28T13:42:44.996Z",
+          "timeUpdated": "2019-07-23T15:47:11.893Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o",
           "canonicalUrl": "https://www.bbc.com/persian/articles/c4vlle3q337o"

@@ -486,6 +486,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cej3lzd5e0go",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cej3lzd5e0go",
+          "language": "fa",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "persian.articles.cej3lzd5e0go.page",
+          "pageTitle": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+          "timePublished": "2019-10-04T10:36:45.464Z",
+          "timeUpdated": "2019-10-04T10:36:45.464Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:cej3lzd5e0go",
           "canonicalUrl": "https://www.bbc.com/persian/articles/cej3lzd5e0go"

@@ -894,6 +894,19 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c0g992jmmkko",
+        "atiAnalytics": {
+          "categoryName": "Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor",
+          "contentId": "urn:bbc:optimo:asset:c0g992jmmkko",
+          "contentType": "article",
+          "language": "en-gb",
+          "ldpThingIds": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956",
+          "ldpThingLabels": "Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor",
+          "nationsProducer": null,
+          "pageIdentifier": "news.articles.c0g992jmmkko.page",
+          "pageTitle": "Royal wedding flowers given to Hackney hospice",
+          "timePublished": "2019-05-28T13:38:19.412Z",
+          "timeUpdated": "2019-05-28T13:38:19.412Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:c0g992jmmkko",
           "canonicalUrl": "https://www.bbc.com/news/articles/c0g992jmmkko"
@@ -904,6 +917,7 @@
         "firstPublished": 1559050699412,
         "lastPublished": 1559050699412,
         "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c0g992jmmkko",
           "ldp_tags": "Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor",
           "ldp_ids": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956",
           "producer": "News",

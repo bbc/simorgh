@@ -2,12 +2,17 @@ import runCrossPlatformTests from './crossPlatformTests';
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
+  runMostReadTests,
 } from '../../common';
 
 export default service => {
   runCrossPlatformTests(service);
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
+
+  if (service !== 'ukrainian') {
+    runMostReadTests();
+  }
 
   describe('Radio Schedule', () => {
     const hasRadioSchedule = service === 'persian';

@@ -60,8 +60,25 @@ describe('implementation of buildTopicPageATIParams and buildTopicPageATIUrl', (
       requestContext,
       serviceContext,
     );
-    expect(result).toMatchInlineSnapshot(
-      `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.topics.validId.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3AvalidId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x8=[simorgh]&x9=[pageTitle]"`,
-    );
+
+    const params = Object.fromEntries(new URLSearchParams(result));
+
+    expect(params).toEqual({
+      s: '598285',
+      s2: 'atiAnalyticsProducerId',
+      p: 'pidgin.topics.validId.page',
+      r: '0x0x24x24',
+      re: '1024x768',
+      hl: '00-00-00',
+      lng: 'en-US',
+      x1: '[urn:bbc:tipo:topic:validId]',
+      x2: '[responsive]',
+      x3: '[atiAnalyticsAppName]',
+      x4: '[pcm]',
+      x5: '[http%3A%2F%2Flocalhost%2F]',
+      x7: '[index-category]',
+      x8: '[simorgh]',
+      x9: '[pageTitle]',
+    });
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -32,6 +32,7 @@ const ComponentWithContext = ({ data: { data } }) => {
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
           pathname="/news/articles/c000000000o"
+          isUK
         >
           <UserContextProvider>
             <MemoryRouter>
