@@ -6,7 +6,6 @@ const styles = {
       maxWidth: '100%',
       paddingLeft: `${spacings.FULL}rem`,
       paddingRight: `${spacings.FULL}rem`,
-      paddingBottom: `${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
