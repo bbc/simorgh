@@ -210,9 +210,20 @@ const ContentWrapper = styled.div`
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
   padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  outline: none;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-left: ${GEL_MARGIN_ABOVE_400PX};
     padding-right: ${GEL_MARGIN_ABOVE_400PX};
+  }
+  &:focus-visible::after {
+    ${a11yOutlinePosition}
+    margin: auto;
+    max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness}
+      ${props => props.theme.palette.WHITE} inset;
+    outline: none;
   }
 `;
 

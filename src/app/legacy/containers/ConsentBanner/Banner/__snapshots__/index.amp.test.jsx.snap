@@ -27,6 +27,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   max-width: 37.4375rem;
   overflow-y: auto;
   padding: 2.75rem 1rem 0.5rem 1rem;
+  outline: none;
 }
 
 @media (min-width: 25rem) {
@@ -34,6 +35,20 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.emotion-4:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 37.4375rem;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  outline: none;
 }
 
 .emotion-6 {
@@ -573,6 +588,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   max-width: 37.4375rem;
   overflow-y: auto;
   padding: 2.75rem 1rem 0.5rem 1rem;
+  outline: none;
 }
 
 @media (min-width: 25rem) {
@@ -580,6 +596,20 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.emotion-4:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 37.4375rem;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  outline: none;
 }
 
 .emotion-6 {
