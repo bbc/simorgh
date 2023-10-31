@@ -1,8 +1,15 @@
+##
+# Review permissions available to this workflow before modifying it: https://docs.github.com/en/rest/overview/permissions-required-for-github-apps?apiVersion=2022-11-28#repository-permissions-for-contents
+##
 name: Simorgh CI - Automatic Release
 on:
   push:
     branches:
       - latest
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,7 +18,7 @@ jobs:
         node-version: [18.x]
     env:
       CI: true
-    
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -52,11 +59,11 @@ jobs:
           | tr '\n' ' ' \
           | tr '\r' ' ' \
           )
-          
+
           echo $NEW_RELEASE_MESSSAGE
           echo "NEW_RELEASE_MESSSAGE=$NEW_RELEASE_MESSSAGE" >> $GITHUB_OUTPUT
 
-      - name: Publish 
+      - name: Publish
         run: |
           curl \
           -X POST \

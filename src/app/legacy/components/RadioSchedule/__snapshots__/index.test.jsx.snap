@@ -417,7 +417,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -496,7 +496,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -612,7 +612,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -666,7 +666,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -691,7 +691,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-150>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1664,7 +1664,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -1743,7 +1743,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -1859,7 +1859,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -1913,7 +1913,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1938,7 +1938,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-150>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;

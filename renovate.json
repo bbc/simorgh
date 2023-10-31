@@ -31,6 +31,11 @@
       "matchPackagePatterns": ["^@bbc/psammead"],
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["^@types/ramda"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
     }
   ]
 }
