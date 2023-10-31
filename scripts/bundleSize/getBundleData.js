@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
-import services from './serviceList.js'
+import services from './serviceList.js';
 import { pages } from './pages.js';
 
 const bundleType = process.env.bundleType || 'modern';
@@ -25,7 +25,7 @@ const getBundlesData = bundles =>
 
 export const getPageBundleData = () => {
   const main = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.main-`)),
+    jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.main`)),
   );
   const framework = getBundlesData(
     jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.framework`)),
@@ -54,7 +54,7 @@ export const getPageBundleData = () => {
         const bundleData = { name, size, sizeInBytes };
         const isShared = new RegExp(`^${bundleType}\\.shared-`).test(name);
         const isLib = new RegExp(`^${bundleType}\\..+?-lib`).test(name);
-        const isCommons = new RegExp(`^${bundleType}\\.commons-`).test(name);
+        const isCommons = new RegExp(`^${bundleType}\\.commons`).test(name);
 
         if (isLib) {
           lib.push(bundleData);
@@ -131,4 +131,3 @@ export const getServiceThemeBundleData = () =>
         0,
       ),
     }));
-
