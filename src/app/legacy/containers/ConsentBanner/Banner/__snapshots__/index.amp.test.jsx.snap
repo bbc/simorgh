@@ -330,7 +330,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
           >
             We and our partners use technologies, such as 
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
             >
               <span>
@@ -437,7 +437,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/"
             >
               <span>
@@ -464,7 +464,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
             >
               <span>
@@ -876,7 +876,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           >
             نستخدم نحن وشركاؤنا تقنيات مثل 
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
             >
               <span>
@@ -983,7 +983,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/"
             >
               <span>
@@ -1010,7 +1010,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="focusIndicatorReducedWidth emotion-10 emotion-11"
               href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
             >
               <span>

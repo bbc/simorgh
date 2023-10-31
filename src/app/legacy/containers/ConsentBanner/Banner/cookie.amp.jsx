@@ -267,6 +267,7 @@ const AmpCookieBanner = ({
             <Paragraph script={script}>
               {initial.description.first}
               <StyledLink
+                className="focusIndicatorReducedWidth"
                 href={initial.description.linkUrl}
                 text={initial.description.linkText}
               />
@@ -306,6 +307,7 @@ const AmpCookieBanner = ({
             <Paragraph script={script}>{manage.description.para3}</Paragraph>
             <Paragraph script={script}>
               <StyledLink
+                className="focusIndicatorReducedWidth"
                 href={manage.description.para4.url}
                 text={manage.description.para4.text}
               />
@@ -315,6 +317,7 @@ const AmpCookieBanner = ({
             <Paragraph script={script}>{manage.description.para6}</Paragraph>
             <Paragraph script={script}>
               <StyledLink
+                className="focusIndicatorReducedWidth"
                 href={manage.description.para7.url}
                 text={manage.description.para7.text}
               />
