@@ -361,6 +361,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             class="emotion-9 emotion-10"
             focusable="false"
             height="32"
+            id="brandSvgFooter"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
