@@ -1,4 +1,11 @@
 /* eslint-disable camelcase */
+export type ampParams = {
+  'amp-clickable': boolean;
+  'amp-image-height': number;
+  'amp-image-width': number;
+  'amp-image': string;
+};
+
 export type OEmbedData = Partial<{
   version: string;
   provider_name: string;
@@ -13,6 +20,8 @@ export type OEmbedData = Partial<{
   iFrameId: string;
   iFrameTitle: string;
   sizeAdjustScript: string;
+  parameters: ampParams;
+  oEmbedType: string;
 }>;
 
 export type OEmbedProps = {
