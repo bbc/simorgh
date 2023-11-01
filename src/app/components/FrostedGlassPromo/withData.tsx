@@ -18,8 +18,19 @@ import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
 import { OptimoBlock } from '../../models/types/optimo';
 
-const buildImageProperties = (image?: ImageProps) => {
-  if (!image) return null;
+const buildImageProperties = (imageProps?: ImageProps) => {
+  const image = imageProps?.path
+    ? imageProps
+    : {
+        height: null,
+        width: 400,
+        altText: '',
+        path: '/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
+        locator: null,
+        originCode: null,
+        copyright: null,
+      };
+
   const {
     width,
     height,
@@ -29,6 +40,7 @@ const buildImageProperties = (image?: ImageProps) => {
     originCode: optimoOriginCode,
     copyright,
   } = image;
+
   const originCode = optimoOriginCode || getOriginCode(url);
   const locator = optimoLocator || getLocator(url);
 
@@ -97,7 +109,7 @@ const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
   // @ts-expect-error - We don't have types for specific Optimo blocks yet
   const imageMetadata: ImageProps = defaultPromoImage.find(
     block => block.type === 'rawImage',
-  ).model;
+  )?.model;
 
   return {
     children: path<string>(
@@ -144,7 +156,8 @@ const linkPromoFormatter = (props: PromoProps): FormattedPromo => ({
 
 const normalise = (props: PromoProps): FormattedPromo => {
   if (props.item?.type === 'optimo') return optimoPromoFormatter(props);
-  if (props.item?.cpsType) return cpsPromoFormatter(props);
+  if (props.item?.cpsType || props.item?.type === 'cps')
+    return cpsPromoFormatter(props);
   if (props.item?.assetTypeCode === 'PRO') return linkPromoFormatter(props);
   return props as unknown as FormattedPromo;
 };

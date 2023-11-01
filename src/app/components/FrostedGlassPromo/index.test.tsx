@@ -15,6 +15,7 @@ import {
   optimoPromoFixture,
   cpsPromoFixture,
   linkPromoFixture,
+  optimoPromoFixtureNoImage,
 } from './fixtures';
 
 import Promo from '.';
@@ -74,6 +75,11 @@ describe('Frosted Glass Promo', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('when given props for an a Optimo promo with no image', () => {
+    const { container } = render(<Component {...optimoPromoFixtureNoImage} />);
+    expect(container).toMatchSnapshot();
+  });
+
   it('should render the appropriate elements - Optimo Promo', () => {
     const { container, getByText } = render(
       <Component {...optimoPromoFixture} />,
@@ -115,6 +121,32 @@ describe('Frosted Glass Promo', () => {
     expect(getByText(linkPromoFixture.item.summary));
     expect(
       container.querySelector('a[href="/pidgin/sport-51434980"]'),
+    ).toBeInTheDocument();
+  });
+
+  it('should render the appropriate elements - Optimo Promo No Image', () => {
+    const { container, getByText } = render(
+      <Component {...optimoPromoFixtureNoImage} />,
+    );
+
+    expect(getByText('2 febrero 2023'));
+    expect(
+      getByText(
+        optimoPromoFixture.item.headlines.promoHeadline.blocks[0].model
+          .blocks[0].model.text,
+      ),
+    );
+    expect(
+      container.querySelector(
+        `a[href="${makeRelativeUrlPath(
+          optimoPromoFixture.item.locators.canonicalUrl,
+        )}"]`,
+      ),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector(
+        `img[src="https://ichef.bbci.co.uk/news/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"]`,
+      ),
     ).toBeInTheDocument();
   });
 
