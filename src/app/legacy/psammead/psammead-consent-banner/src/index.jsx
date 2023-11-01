@@ -46,19 +46,6 @@ const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
-
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
-  }
 `;
 
 const CenterWrapper = styled.div`
@@ -77,6 +64,16 @@ const CenterWrapper = styled.div`
   a:focus {
     border-bottom: solid 0.125rem transparent;
   }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
+      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
+  }
 `;
 
 // eslint-disable-next-line react/prop-types
@@ -93,7 +90,7 @@ const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};
   color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 
   &:focus {
@@ -145,6 +142,16 @@ export const ConsentBannerText = styled.p`
   }
 `;
 
+/* Custom hover and focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
+const a11yOutlinePosition = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
+
 // Style `button` and `a` as children due to inability to set `on`
 // prop on styled component as required for the amp useage
 const ListItem = styled.li`
@@ -180,6 +187,43 @@ const ListItem = styled.li`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 17.3125rem;
   }
+
+  &.hide {
+    width: 2.75rem;
+    height: 2.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    & button {
+      width: 2.75rem;
+      height: 2.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:focus::after,
+      &:hover::after {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.WHITE};
+      }
+      &:focus-visible::after {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.BLACK};
+        box-shadow: 0 0 0 ${focusIndicatorThickness}
+          ${props => props.theme.palette.WHITE} inset;
+      }
+    }
+    & svg {
+      color: white;
+      fill: currentColor;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 `;
 
 export const ConsentBanner = ({
@@ -188,6 +232,7 @@ export const ConsentBanner = ({
   text,
   accept,
   reject,
+  hide,
   id,
   hidden,
   script,
@@ -207,6 +252,11 @@ export const ConsentBanner = ({
         <ListItem dir={dir} script={script}>
           <span>{reject}</span>
         </ListItem>
+        {hide && (
+          <ListItem className="hide" dir={dir} script={script}>
+            <div>{hide}</div>
+          </ListItem>
+        )}
       </Options>
     </CenterWrapper>
   </Wrapper>
@@ -218,6 +268,7 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  hide: element,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
@@ -231,4 +282,5 @@ ConsentBanner.defaultProps = {
   id: null,
   hidden: null,
   headingRef: null,
+  hide: null,
 };
