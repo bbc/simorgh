@@ -76,8 +76,6 @@ const HiearchicalGrid = ({
 
           const isLive = promo.link?.includes('/live/');
 
-          // test commit
-
           return (
             <li
               key={promo.id}

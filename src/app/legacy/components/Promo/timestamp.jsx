@@ -10,6 +10,9 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
+  console.log('HELLO', children);
+  console.log('HELLO', datetimeLocale);
+
   return (
     <Timestamp
       timestamp={children}
@@ -21,7 +24,7 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
       padding={false}
       service={service}
       timezone={timezone}
-      isRelative={isTenHoursAgo(children)}
+      isRelative={isTenHoursAgo(new Date(children).getTime())}
       className={className}
     />
   );
