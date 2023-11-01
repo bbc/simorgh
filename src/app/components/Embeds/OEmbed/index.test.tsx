@@ -8,7 +8,12 @@ import {
 } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
-import sampleRiddleProps, { sampleFlourishProps } from './fixture';
+import {
+  sampleRiddleProps,
+  sampleFlourishProps,
+  sampleVJAmpProps,
+  sampleVJAmpPropsWithoutParams,
+} from './fixture';
 import OEmbedLoader from '.';
 
 const Component = ({
@@ -87,6 +92,31 @@ describe('OEmbed', () => {
 
       expect(iFrameElement).toBe(null);
       expect(linkToFlourish).toBeInTheDocument();
+      expect(errorMessage).toBeInTheDocument();
+    });
+
+    it('VJ Embed - Should show an amp iframe with the appropriate link', () => {
+      const { container } = render(
+        <Component props={sampleVJAmpProps} isAmp />,
+      );
+      const actual = container.querySelector(
+        'amp-iframe[src="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"]',
+      );
+      expect(actual).toBeInTheDocument();
+    });
+
+    it('VJ Embed - Should show an error message if parameters are missing', () => {
+      const { container, getByText } = render(
+        <Component props={sampleVJAmpPropsWithoutParams} isAmp />,
+      );
+      const iFrameElement = container.querySelector(
+        'amp-iframe[src="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"]',
+      );
+      const errorMessage = getByText(
+        'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+      );
+
+      expect(iFrameElement).toBe(null);
       expect(errorMessage).toBeInTheDocument();
     });
   });
