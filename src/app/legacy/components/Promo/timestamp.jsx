@@ -10,9 +10,6 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  console.log('HELLO', children);
-  console.log('HELLO', datetimeLocale);
-
   return (
     <Timestamp
       timestamp={children}
