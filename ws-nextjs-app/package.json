@@ -4,7 +4,8 @@
   "description": "Simorgh - Next.JS",
   "scripts": {
     "setupDevEnv": "cp ../envConfig/local.env .env",
-    "build:local": "cp ../envConfig/local.env .env && NODE_ENV=production && next build",
+    "moveStaticAssets": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static",
+    "build:local": "cp ../envConfig/local.env .env && NODE_ENV=production && next build && yarn moveStaticAssets",
     "build:preview": "cp ../envConfig/preview.env .env && NODE_ENV=production && next build",
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
@@ -36,7 +37,7 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "next": "13.5.5",
-    "undici": "5.26.3"
+    "next": "13.5.6",
+    "undici": "5.26.5"
   }
 }

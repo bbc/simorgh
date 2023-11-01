@@ -417,6 +417,16 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-27 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -425,16 +435,6 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.emotion-27 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .emotion-29 {
@@ -496,7 +496,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -612,7 +612,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -666,7 +666,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -691,7 +691,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-150>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -766,33 +766,34 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-0"
+              aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-0"
+                id="scheduleItem-p0"
                 role="text"
               >
-                <span
-                  class="emotion-26"
-                >
-                  Listen Live, 
-                </span>
                 <span
                   role="text"
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-27"
+                    class="emotion-26"
                     dir="ltr"
                   >
                     LIVE 
                   </span>
+                  <span
+                    class="emotion-27"
+                    lang="en-GB"
+                  >
+                    Listen Live, 
+                  </span>
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 14:54, 
                 </span>
@@ -802,7 +803,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -907,22 +908,22 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-1"
+              aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-1"
+                id="scheduleItem-p1"
                 role="text"
               >
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   Listen, 
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 14:54, 
                 </span>
@@ -932,7 +933,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -1037,22 +1038,22 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-2"
+              aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-2"
+                id="scheduleItem-p2"
                 role="text"
               >
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   Listen, 
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 14:54, 
                 </span>
@@ -1062,7 +1063,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -1167,11 +1168,11 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-137 emotion-23"
           >
             <span
-              id="scheduleItem-3"
+              id="scheduleItem-p3"
               role="text"
             >
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 Listen Next, 
               </span>
@@ -1184,7 +1185,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
               </span>
               Could a computer ever create better art than a human?
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 , 14:54, 
               </span>
@@ -1194,7 +1195,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 27 August 2019
               </span>
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 , Duration 1,00,00 
               </span>
@@ -1663,6 +1664,16 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-26 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-27 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1671,16 +1682,6 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.emotion-27 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .emotion-29 {
@@ -1742,7 +1743,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -1858,7 +1859,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -1912,7 +1913,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1937,7 +1938,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-150>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -2012,33 +2013,34 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-0"
+              aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-0"
+                id="scheduleItem-p0"
                 role="text"
               >
-                <span
-                  class="emotion-26"
-                >
-                  استمع للبث المباشر, 
-                </span>
                 <span
                   role="text"
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-27"
+                    class="emotion-26"
                     dir="rtl"
                   >
                     مباشر 
                   </span>
+                  <span
+                    class="emotion-27"
+                    lang="en-GB"
+                  >
+                    استمع للبث المباشر, 
+                  </span>
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 13:54, 
                 </span>
@@ -2048,7 +2050,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2153,22 +2155,22 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-1"
+              aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-1"
+                id="scheduleItem-p1"
                 role="text"
               >
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   استمع, 
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 13:54, 
                 </span>
@@ -2178,7 +2180,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2283,22 +2285,22 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-2"
+              aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-2"
+                id="scheduleItem-p2"
                 role="text"
               >
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   استمع, 
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , 13:54, 
                 </span>
@@ -2308,7 +2310,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26"
+                  class="emotion-27"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2413,11 +2415,11 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-137 emotion-23"
           >
             <span
-              id="scheduleItem-3"
+              id="scheduleItem-p3"
               role="text"
             >
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 واصل الاستماع, 
               </span>
@@ -2430,7 +2432,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
               </span>
               لماذا يخجل البعض من اسم قريته في مصر؟
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 , 13:54, 
               </span>
@@ -2440,7 +2442,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 27 أغسطس/ آب 2019
               </span>
               <span
-                class="emotion-26"
+                class="emotion-27"
               >
                 , المدة الزمنية 1،00،00 
               </span>

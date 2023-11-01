@@ -2,7 +2,7 @@
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -11,6 +11,31 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
   font-weight: 700;
 }
 
+<div>
+  <span
+    role="text"
+  >
+    <span
+      class="emotion-0"
+      dir="rtl"
+    >
+      مباشر 
+    </span>
+  </span>
+</div>
+`;
+
+exports[`LiveLabel should render correctly with English live text 1`] = `
+.emotion-0 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -29,7 +54,50 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
     <span
       aria-hidden="true"
       class="emotion-0"
-      dir="rtl"
+      dir="ltr"
+    >
+      LIVE 
+    </span>
+    <span
+      class="emotion-1"
+      lang="en-GB"
+    >
+      Live
+    </span>
+  </span>
+</div>
+`;
+
+exports[`LiveLabel should render correctly with English live text and children 1`] = `
+.emotion-0 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <span
+    role="text"
+  >
+    <span
+      aria-hidden="true"
+      class="emotion-0"
+      dir="ltr"
     >
       LIVE 
     </span>
@@ -39,13 +107,14 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
     >
       Live, 
     </span>
+     this is a headline 
   </span>
 </div>
 `;
 
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -80,50 +149,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
       class="emotion-1"
       lang="en-GB"
     >
-      Watch Live, 
-    </span>
-  </span>
-</div>
-`;
-
-exports[`LiveLabel should render correctly with english live text 1`] = `
-.emotion-0 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.emotion-1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-<div>
-  <span
-    role="text"
-  >
-    <span
-      aria-hidden="true"
-      class="emotion-0"
-      dir="ltr"
-    >
-      LIVE 
-    </span>
-    <span
-      class="emotion-1"
-      lang="en-GB"
-    >
-      Live, 
+      Watch Live
     </span>
   </span>
 </div>
@@ -131,7 +157,7 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 
 exports[`LiveLabel should render correctly with localised live text 1`] = `
 .emotion-0 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -148,7 +174,7 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
       class="emotion-0"
       dir="ltr"
     >
-      AS E DE HAPPEN 
+      As E Dey Happen 
     </span>
   </span>
 </div>

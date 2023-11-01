@@ -2172,7 +2172,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -2435,7 +2435,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #B80000;
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -2530,7 +2530,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
               class="emotion-12"
               dir="rtl"
             >
-              LIVE 
+              مباشر 
             </span>
             <span
               class="emotion-13"

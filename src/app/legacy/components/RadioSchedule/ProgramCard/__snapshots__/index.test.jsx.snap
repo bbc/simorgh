@@ -89,6 +89,16 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 .emotion-8 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -97,16 +107,6 @@ exports[`ProgramCard should render correctly for live 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.emotion-9 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .emotion-11 {
@@ -168,7 +168,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -241,24 +241,25 @@ exports[`ProgramCard should render correctly for live 1`] = `
             role="text"
           >
             <span
-              class="emotion-8"
-            >
-              Listen Live, 
-            </span>
-            <span
               role="text"
             >
               <span
                 aria-hidden="true"
-                class="emotion-9"
+                class="emotion-8"
                 dir="ltr"
               >
                 LIVE 
               </span>
+              <span
+                class="emotion-9"
+                lang="en-GB"
+              >
+                Listen Live, 
+              </span>
             </span>
             Could a computer ever create better art than a human?
             <span
-              class="emotion-8"
+              class="emotion-9"
             >
               , 14:54, 
             </span>
@@ -268,7 +269,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
               27 August 2019
             </span>
             <span
-              class="emotion-8"
+              class="emotion-9"
             >
               , Duration 30,00 
             </span>
@@ -383,7 +384,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -463,7 +464,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -488,7 +489,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
 }
 
 .emotion-17>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1287,6 +1288,16 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 .emotion-8 {
+  color: #006666;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1295,16 +1306,6 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.emotion-9 {
-  color: #B80000;
-  display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .emotion-11 {
@@ -1340,7 +1341,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -1413,24 +1414,25 @@ exports[`ProgramCard should render correctly without summary 1`] = `
             role="text"
           >
             <span
-              class="emotion-8"
-            >
-              Listen Live, 
-            </span>
-            <span
               role="text"
             >
               <span
                 aria-hidden="true"
-                class="emotion-9"
+                class="emotion-8"
                 dir="ltr"
               >
                 LIVE 
               </span>
+              <span
+                class="emotion-9"
+                lang="en-GB"
+              >
+                Listen Live, 
+              </span>
             </span>
             Could a computer ever create better art than a human?
             <span
-              class="emotion-8"
+              class="emotion-9"
             >
               , 14:54, 
             </span>
@@ -1440,7 +1442,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
               27 August 2019
             </span>
             <span
-              class="emotion-8"
+              class="emotion-9"
             >
               , Duration 30,00 
             </span>

@@ -13,6 +13,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
 import OptimizelyRecommendations, { ArticlePageType } from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 // 005_brasil_recommendations_experiment
 const optimizely = {
@@ -98,6 +99,12 @@ describe('OptimizelyRecommendations', () => {
     });
 
     it('should render the default recommendation if no experiment is set', () => {
+      suppressPropWarnings([
+        'pageData.metadata.locators.optimoUrn',
+        'OptimizelyRecommendation',
+        'undefined',
+      ]);
+
       (OptimizelyExperiment as jest.Mock).mockImplementation(makeMockFn(null));
 
       const { getByText } = renderContainer(

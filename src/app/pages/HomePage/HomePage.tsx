@@ -60,7 +60,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         lang={lang}
         description={description}
         openGraphType="website"
-        hasAmpPage
+        hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"

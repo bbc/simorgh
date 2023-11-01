@@ -1,10 +1,11 @@
 import React from 'react';
-import OEmbedLoader, { OEmbedProps } from '.';
-import sampleRiddleProps, { sampleFlourishProps } from './fixture';
+import OEmbedLoader from '.';
+import { sampleRiddleProps, sampleFlourishProps } from './fixture';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
+import { OEmbedProps } from '../types';
 
 const Component = ({
   props,
