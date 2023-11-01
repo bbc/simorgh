@@ -4,31 +4,31 @@
       "metadata": {
         "atiAnalytics": {
           "categoryName": null,
-          "contentId": "urn:bbc:optimo:asset:cqwq7dm61zeo",
+          "contentId": "urn:bbc:optimo:asset:c578zj113e9o",
           "contentType": "article",
           "language": "pcm",
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
-          "pageIdentifier": "pidgin.articles.cqwq7dm61zeo.page",
-          "pageTitle": "Embed test- Flourish",
-          "timePublished": "2023-07-12T13:19:43.628Z",
-          "timeUpdated": "2023-08-03T10:27:50.674Z"
+          "pageIdentifier": "pidgin.articles.c578zj113e9o.page",
+          "pageTitle": "Embed test 2- More VJ",
+          "timePublished": "2023-10-24T16:23:39.192Z",
+          "timeUpdated": "2023-10-24T16:26:58.829Z"
         },
-        "id": "urn:bbc:ares::article:cqwq7dm61zeo",
+        "id": "urn:bbc:ares::article:c578zj113e9o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cqwq7dm61zeo",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cqwq7dm61zeo"
+          "optimoUrn": "urn:bbc:optimo:asset:c578zj113e9o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c578zj113e9o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
-        "firstPublished": 1689167983628,
-        "lastPublished": 1691058470674,
+        "firstPublished": 1698164619192,
+        "lastPublished": 1698164818829,
         "analyticsLabels": {
-          "contentId": "urn:bbc:optimo:asset:cqwq7dm61zeo",
+          "contentId": "urn:bbc:optimo:asset:c578zj113e9o",
           "producer": "Pidgin",
-          "page": "pidgin.articles.cqwq7dm61zeo.page"
+          "page": "pidgin.articles.c578zj113e9o.page"
         },
         "passport": {
           "language": "pcm",
@@ -65,39 +65,38 @@
           "fragment",
           "subheadline",
           "embed",
-          "aresFlourish",
-          "aresOembed"
+          "vdj-embed"
         ],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
-        "embedProviders": ["flourish-visualisation"]
+        "embedProviders": ["visual-journalism"]
       },
       "content": {
         "model": {
           "blocks": [
             {
-              "id": "313d100a",
+              "id": "bdddff6a",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c4e8a981",
+                    "id": "366ecfd5",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b4c743e1",
+                          "id": "d5d5ea8a",
                           "type": "paragraph",
                           "model": {
-                            "text": "Embed test- Flourish",
+                            "text": "Embed test- More VJ",
                             "blocks": [
                               {
-                                "id": "9d8c4282",
+                                "id": "754c08c9",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Embed test- Flourish",
+                                  "text": "Embed test- More VJ",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -115,35 +114,35 @@
               "position": [1]
             },
             {
-              "id": "6a0f7fbe",
+              "id": "3267acae",
               "type": "timestamp",
               "model": {
-                "firstPublished": 1689167983628,
-                "lastPublished": 1691058470674
+                "firstPublished": 1698164619192,
+                "lastPublished": 1698164818829
               },
               "position": [2]
             },
             {
-              "id": "2e5f07dd",
+              "id": "8da069bd",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "932db536",
+                    "id": "28a4c814",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3a03288c",
+                          "id": "69e0105b",
                           "type": "paragraph",
                           "model": {
-                            "text": "Flourish",
+                            "text": "More VJ",
                             "blocks": [
                               {
-                                "id": "e548a8cf",
+                                "id": "0c5d325a",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Flourish",
+                                  "text": "More VJ",
                                   "attributes": []
                                 },
                                 "position": [3, 1, 1, 1]
@@ -161,20 +160,23 @@
               "position": [3]
             },
             {
-              "id": "6a40cf2b",
+              "id": "426d0cde",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6e14329c",
+                    "id": "d0b5cf61",
                     "type": "paragraph",
                     "model": {
                       "text": "Top",
                       "blocks": [
                         {
-                          "id": "1975fc0f",
+                          "id": "87971a9d",
                           "type": "fragment",
-                          "model": { "text": "Top", "attributes": [] },
+                          "model": {
+                            "text": "Top",
+                            "attributes": []
+                          },
                           "position": [4, 1, 1]
                         }
                       ]
@@ -186,64 +188,97 @@
               "position": [4]
             },
             {
-              "id": "2b35a1d8",
-              "type": "oEmbed",
-              "model": {
-                "oembed": {
-                  "version": "1.0",
-                  "provider_name": "Flourish",
-                  "provider_url": "https://flourish.studio",
-                  "html": "<iframe src=\"https://flo.uri.sh/visualisation/8809119/embed\" frameborder=\"0\" scrolling=\"no\" height=\"575\" width=\"700\" style=\"width:100%;\" title=\"Interactive or visual content\"></iframe>",
-                  "width": 700,
-                  "height": 575,
-                  "type": "rich",
-                  "iFrameSrc": "https://flo.uri.sh/visualisation/8809119/embed?auto=1",
-                  "iFrameId": "flourish-id-47f6f68f",
-                  "iFrameTitle": "Interactive or visual content",
-                  "sizeAdjustScript": "\n    window.addEventListener('message', function (event) {\n      var _message$src;\n      var message = typeof event.data === 'string' && JSON.parse(event.data);\n      if ((message === null || message === void 0 ? void 0 : message.sender) === 'Flourish' \n      && (message === null || message === void 0 ? void 0 : message.context) === 'iframe.resize' \n      && message !== null && message !== void 0 && (_message$src = message.src) !== null && _message$src !== void 0 && _message$src.includes('https://flo.uri.sh/visualisation/8809119/embed?auto=1')) {\n        document.getElementById('flourish-id-47f6f68f').style.height = message.height + 'px';\n      }\n    });",
-                  "source": "https://public.flourish.studio/visualisation/8809119",
-                  "oEmbedType": "aresFlourish"
-                }
-              }
-            },
-            {
-              "id": "d4cf7245",
+              "id": "44352b2c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3cee2ac4",
+                    "id": "778d1e8f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Hello",
+                      "blocks": [
+                        {
+                          "id": "27b84bc6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Hello",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "230149bc",
+              "type": "oEmbed",
+              "model": {
+                "oembed": {
+                  "url": "https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/nhs-tracker/pidgin/app/amp?version=1.0.202310241621",
+                  "parameters": {
+                    "amp-clickable": true,
+                    "amp-image-height": 360,
+                    "amp-image-width": 640,
+                    "amp-image": "https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png"
+                  },
+                  "oEmbedType": "vdj-embed"
+                }
+              }
+            },
+            {
+              "id": "f7e69ca1",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "bb3765a6",
                     "type": "paragraph",
                     "model": {
                       "text": "Bottom",
                       "blocks": [
                         {
-                          "id": "cd04b917",
+                          "id": "a2077b45",
                           "type": "fragment",
-                          "model": { "text": "Bottom", "attributes": [] },
-                          "position": [6, 1, 1]
+                          "model": {
+                            "text": "Bottom",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [6]
+              "position": [7]
             },
-            { "id": "c4577f17", "type": "mpu", "model": {}, "position": [7] },
             {
-              "id": "4129d95d",
-              "type": "wsoj",
-              "model": { "type": "recommendations" },
+              "id": "3bd6fc39",
+              "type": "mpu",
+              "model": {},
               "position": [8]
+            },
+            {
+              "id": "340fb4e0",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [9]
             }
           ]
         }
       },
       "promo": {
         "headlines": {
-          "seoHeadline": "Embed test- Flourish",
+          "seoHeadline": "Embed test 2- More VJ",
           "promoHeadline": {
             "blocks": [
               {
@@ -253,12 +288,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Embed test- Flourish",
+                        "text": "Embed test- More VJ",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Embed test- Flourish",
+                              "text": "Embed test- More VJ",
                               "attributes": []
                             }
                           }
@@ -284,7 +319,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -299,7 +337,9 @@
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "ATMs across the country" },
+          "headlines": {
+            "headline": "ATMs across the country"
+          },
           "locators": {
             "assetUri": "/pidgin/23248287",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248287",
@@ -335,7 +375,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": true, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": true,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -347,7 +390,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Jacob Zuma: Staying!!!" },
+          "headlines": {
+            "headline": "Jacob Zuma: Staying!!!"
+          },
           "locators": {
             "assetUri": "/pidgin/tori-23146434",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146434",
@@ -371,7 +416,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:pidgin/tori-23146434",
           "type": "cps"
@@ -401,7 +449,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "How Lagos Dey Fight Lassa Fever" },
+          "headlines": {
+            "headline": "How Lagos Dey Fight Lassa Fever"
+          },
           "locators": {
             "assetUri": "/pidgin/tori-23146625",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
@@ -425,7 +475,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
           "type": "cps"
         },
@@ -464,7 +517,10 @@
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1571751302000
               }
             ],
@@ -482,7 +538,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:pidgin/media-23267821",
           "type": "cps"
         },
@@ -522,7 +581,10 @@
             "copyrightHolder": "-",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -569,12 +631,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:pidgin/tori-23169387",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Like Scaramucci, Like Others" },
+          "headlines": {
+            "headline": "Like Scaramucci, Like Others"
+          },
           "locators": {
             "assetUri": "/news/world-africa-23143884",
             "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23143884",
@@ -597,7 +664,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Africa",
@@ -640,7 +710,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146975",
           "type": "cps"
         },
@@ -667,7 +740,9 @@
           "type": "link"
         },
         {
-          "headlines": { "headline": "Anambra Church: Police Arrest 3" },
+          "headlines": {
+            "headline": "Anambra Church: Police Arrest 3"
+          },
           "locators": {
             "assetUri": "/pidgin/tori-23145776",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145776",
@@ -691,12 +766,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Kenya Decides 2017 in Pictures" },
+          "headlines": {
+            "headline": "Kenya Decides 2017 in Pictures"
+          },
           "locators": {
             "assetUri": "/pidgin/23146654",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23146654",
@@ -720,7 +800,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -732,7 +815,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-10-23T08:34:57.648Z",
+        "generated": "2023-10-25T12:49:58.236Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "items": [
@@ -881,5 +964,116 @@
       "latestMedia": null
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.5",
+        "nodeJSVersion": "v18.17.1",
+        "standardLibraryVersion": "4.6.1"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": true,
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 25 Oct 2023 13:17:19 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"e312d91f8f7c4f6dfec37665b5630f1306e2ec32\"",
+            "last-modified": "Tue, 24 Oct 2023 16:27:02 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "960de3c8-aa20-4fc1-b8d4-a282b104b221",
+            "expires": "Wed, 25 Oct 2023 13:16:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 110
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c578zj113e9o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 25 Oct 2023 13:17:19 GMT",
+            "content-type": "application/json",
+            "content-length": "3855",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Wed, 25 Oct 2023 13:15:14 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 41
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/pidgin/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 25 Oct 2023 13:17:19 GMT",
+            "content-type": "application/json",
+            "content-length": "5292",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"edeac04b3839e126cc479992ac90c9a9f9c482d3\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Wed, 25 Oct 2023 13:15:14 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 172
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/pidgin",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c578zj113e9o",
+      "service": "pidgin",
+      "pageType": "article",
+      "isAmp": "true"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [{}]
+  }
 }
