@@ -157,147 +157,7 @@ exports[`Canonical persian/afghanistan IDX page Header Navigation link should ma
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Main heading should match text 1`] = `"صفحه افغانستان"`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 1`] = `
-{
-  "text": "خالق باربی: چرا بعضی مردها تصور عروسکی زنانه را نمی‌پسندیدند",
-  "url": "https://www.bbc.com/persian/articles/ckdnj50k8pyo",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 2`] = `
-{
-  "text": "حمله افراد «مسلح» و با «لباس سپاه» به گردشگران در منطقه ییلاقی اوپرت: «سوم محرم، آمدید تفریح؟»",
-  "url": "https://www.bbc.com/persian/articles/c72rq9d44ggo",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 3`] = `
-{
-  "text": "اصلاحات قضایی اسرائیل؛ نتانیاهو پیش از رای‌گیری کلیدی پارلمان بیمارستان را ترک کرد",
-  "url": "https://www.bbc.com/persian/articles/c97pld3q4gro",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 4`] = `
-{
-  "text": "از لوگوی جدید توییتر رونمایی شد",
-  "url": "https://www.bbc.com/persian/articles/c4n5mzgk871o",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 5`] = `
-{
-  "text": "روسیه، اوکراین را به «حمله پهپادی» به مسکو متهم کرد",
-  "url": "https://www.bbc.com/persian/articles/c6pv6n8j2zjo",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 6`] = `
-{
-  "text": "۱۱ کشته در ریزش سقف سالن ورزشی در چین هنگام تمرین تیم والیبال دختران",
-  "url": "https://www.bbc.com/persian/articles/cl7njq8g5y0o",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 7`] = `
-{
-  "text": "بلینکن: در شرایطی نیستیم که درباره بازگشت به برجام مذاکره کنیم",
-  "url": "https://www.bbc.com/persian/articles/c89re8wz9y4o",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 8`] = `
-{
-  "text": "اوپنهایمر؛ روایتگر «ویرانگر دنیاها» و داستان ساخت اولین بمب اتمی  ",
-  "url": "https://www.bbc.com/persian/articles/c3gdngql0p3o",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 9`] = `
-{
-  "text": "«ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟",
-  "url": "/persian/world-features-66255722",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 10`] = `
-{
-  "text": "انتخابات اسپانیا؛ محافظه‌کاران پیشتاز ولی فاقد اکثریت پارلمانی",
-  "url": "https://www.bbc.com/persian/articles/cw915nrp4e9o",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 1`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 6`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 7`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 9`] = `
-{
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
-}
-`;
+exports[`Canonical persian/afghanistan IDX page Main heading should match text 1`] = `"خطا در سرور داخلی"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Canonical link 1`] = `"http://localhost:7080/persian/afghanistan"`;
 
@@ -305,49 +165,9 @@ exports[`Canonical persian/afghanistan IDX page SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Heading level 1 1`] = `"صفحه افغانستان"`;
+exports[`Canonical persian/afghanistan IDX page SEO Heading level 1 1`] = `"خطا در سرور داخلی"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Lang attribute 1`] = `"fa"`;
-
-exports[`Canonical persian/afghanistan IDX page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "fa",
-        "name": "Persian",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/afghanistan",
-        "@type": "WebPage",
-        "name": "صفحه افغانستان",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-          "width": 1024,
-        },
-        "name": "BBC News فارسی",
-        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-      "url": "http://localhost:7080/persian/afghanistan",
-    },
-  ],
-}
-`;
 
 exports[`Canonical persian/afghanistan IDX page SEO OG description 1`] = `"تازه ترین اخبار، گزارش ها و تحلیل ها درباره افغانستان؛ از سیاست، جامعه و مسائل امنیتی افغانستان گرفته تا گزارش های ویدیویی و برنامه های رادیو بی بی سی برای افغانستان."`;
 
@@ -365,15 +185,15 @@ exports[`Canonical persian/afghanistan IDX page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO OG url 1`] = `"http://localhost:7080/persian/afghanistan"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Page title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
+exports[`Canonical persian/afghanistan IDX page SEO Page title 1`] = `"خطا در سرور داخلی - BBC News فارسی"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter creator 1`] = `"@bbcpersian"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Twitter description 1`] = `"تازه ترین اخبار، گزارش ها و تحلیل ها درباره افغانستان؛ از سیاست، جامعه و مسائل امنیتی افغانستان گرفته تا گزارش های ویدیویی و برنامه های رادیو بی بی سی برای افغانستان."`;
+exports[`Canonical persian/afghanistan IDX page SEO Twitter description 1`] = `"خطا در سرور داخلی"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter image alt 1`] = `"BBC News فارسی"`;
 
@@ -381,31 +201,4 @@ exports[`Canonical persian/afghanistan IDX page SEO Twitter image src 1`] = `"ht
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter site 1`] = `"@bbcpersian"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Twitter title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 1`] = `"Top story - Afghanistan"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 2`] = `"تحلیل و گزارش"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"برنامه‌های رادیو"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 4`] = `"ویدیو"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 5`] = `"گوش کنید: تازه‌ترین برنامه‌های رادیوبیشتر"`;
-
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 6`] = `"پربیننده‌ترین‌ها"`;
-
-exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"بارندگی‌ و سیلاب ده‌ها کشته و تخریب صدها خانه‌ مسکونی در میدان‌وردک به‌جا گذاشته است"`;
-
-exports[`Canonical persian/afghanistan IDX page Story Promo Image should match image 1`] = `
-<img
-  alt="خانه‌های آسیب دیده از سیلاب در میدان وردک"
-  class="bbc-1uwua2r"
-  height="2304"
-  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg 660w"
-  style="aspect-ratio:4096 / 2304"
-  width="4096"
-/>
-`;
+exports[`Canonical persian/afghanistan IDX page SEO Twitter title 1`] = `"خطا در سرور داخلی - BBC News فارسی"`;

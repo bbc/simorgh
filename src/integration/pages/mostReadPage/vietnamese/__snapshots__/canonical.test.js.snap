@@ -108,169 +108,9 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
-exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
+exports[`Canonical Most Read Page I can see the headline 1`] = `"Lỗi mạng nội bộ"`;
 
-exports[`Canonical Most Read Page I can see the list items 1`] = `"1Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?Cập nhật gần nhất: 19 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 2`] = `"2Chủ tịch Tập Cận Bình tiếp đón Ngoại trưởng Hoa Kỳ Antony BlinkenCập nhật gần nhất: 19 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 3`] = `"3Bamboo Airways thua lỗ nhưng có đổi dàn lãnh đạo tại kỳ họp cổ đông tới?Cập nhật gần nhất: 19 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 4`] = `"4Trung Quốc có lập căn cứ do thám Mỹ ở Cuba hay không? Cập nhật gần nhất: 19 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 5`] = `"5Việt Nam: Công tác quản trị ngôn luận chưa khoa họcCập nhật gần nhất: 19 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 6`] = `"6Việt Nam: Thiếu điện bộc lộ hạn chế về cơ cấu và bộ máy quan liêu?Cập nhật gần nhất: 18 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 7`] = `"745 người bị bắt: Thêm tin và ý kiến về vụ hai đồn công an ở Đắk Lắk bị tấn côngCập nhật gần nhất: 14 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 8`] = `"8Trịnh Văn Quyết bị khởi tố thêm tội 'lừa đảo'Cập nhật gần nhất: 25 tháng 8 năm 2022"`;
-
-exports[`Canonical Most Read Page I can see the list items 9`] = `"9Người Việt kêu cứu từ 'bẫy lừa đảo' ở MyanmarCập nhật gần nhất: 18 tháng 6 năm 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 10`] = `"10Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'Cập nhật gần nhất: 19 tháng 5 năm 2020"`;
-
-exports[`Canonical Most Read Page Main heading should match text 1`] = `"Đọc nhiều nhất"`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 1`] = `
-{
-  "text": "Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?",
-  "url": "/vietnamese/vietnam-65886929",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 2`] = `
-{
-  "text": "Chủ tịch Tập Cận Bình tiếp đón Ngoại trưởng Hoa Kỳ Antony Blinken",
-  "url": "https://www.bbc.com/vietnamese/articles/cyxgg4vqkr6o",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 3`] = `
-{
-  "text": "Bamboo Airways thua lỗ nhưng có đổi dàn lãnh đạo tại kỳ họp cổ đông tới?",
-  "url": "https://www.bbc.com/vietnamese/articles/crgddly302lo",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 4`] = `
-{
-  "text": "Trung Quốc có lập căn cứ do thám Mỹ ở Cuba hay không? ",
-  "url": "https://www.bbc.com/vietnamese/articles/c72m8pvmz5qo",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 5`] = `
-{
-  "text": "Việt Nam: Công tác quản trị ngôn luận chưa khoa học",
-  "url": "/vietnamese/forum-65949668",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 6`] = `
-{
-  "text": "Việt Nam: Thiếu điện bộc lộ hạn chế về cơ cấu và bộ máy quan liêu?",
-  "url": "https://www.bbc.com/vietnamese/articles/cll095l9jn4o",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 7`] = `
-{
-  "text": "45 người bị bắt: Thêm tin và ý kiến về vụ hai đồn công an ở Đắk Lắk bị tấn công",
-  "url": "https://www.bbc.com/vietnamese/articles/c6p3nx6ylego",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 8`] = `
-{
-  "text": "Trịnh Văn Quyết bị khởi tố thêm tội 'lừa đảo'",
-  "url": "/vietnamese/business-62678279",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 9`] = `
-{
-  "text": "Người Việt kêu cứu từ 'bẫy lừa đảo' ở Myanmar",
-  "url": "https://www.bbc.com/vietnamese/articles/cjk8zx3yygmo",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 10`] = `
-{
-  "text": "Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'",
-  "url": "/vietnamese/world-52698761",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/vietnamese/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 6`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 7`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 9`] = `
-{
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-512x512.png",
-}
-`;
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Lỗi mạng nội bộ"`;
 
 exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
 
@@ -278,49 +118,9 @@ exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nhất"`;
+exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Lỗi mạng nội bộ"`;
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
-
-exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "vi",
-        "name": "Vietnamese",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/vietnamese/popular/read",
-        "@type": "WebPage",
-        "name": "Đọc nhiều nhất",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-          "width": 1024,
-        },
-        "name": "BBC News Tiếng Việt",
-        "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-      "url": "http://localhost:7080/vietnamese/popular/read",
-    },
-  ],
-}
-`;
 
 exports[`Canonical Most Read Page SEO OG description 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
 
@@ -338,15 +138,15 @@ exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
 
-exports[`Canonical Most Read Page SEO Page title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Page title 1`] = `"Lỗi mạng nội bộ - BBC News Tiếng Việt"`;
 
-exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@bbcvietnamese"`;
 
-exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Lỗi mạng nội bộ"`;
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
 
@@ -354,4 +154,4 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcvietnamese"`;
 
-exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Lỗi mạng nội bộ - BBC News Tiếng Việt"`;

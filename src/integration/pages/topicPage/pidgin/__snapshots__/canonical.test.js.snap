@@ -122,77 +122,7 @@ exports[`Canonical Topic Page Header Navigation link should match text and url 8
 }
 `;
 
-exports[`Canonical Topic Page Main heading should match text 1`] = `"Donald Trump"`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 1`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 6`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 7`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 9`] = `
-{
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
-}
-`;
+exports[`Canonical Topic Page Main heading should match text 1`] = `"Mistake"`;
 
 exports[`Canonical Topic Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/topics/c95y35941vrt"`;
 
@@ -200,201 +130,9 @@ exports[`Canonical Topic Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Topic Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Topic Page SEO Heading level 1 1`] = `"Donald Trump"`;
+exports[`Canonical Topic Page SEO Heading level 1 1`] = `"Mistake"`;
 
 exports[`Canonical Topic Page SEO Lang attribute 1`] = `"pcm"`;
-
-exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "headline": "Donald Trump",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "pcm",
-        "name": "Nigerian Pidgin",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/pidgin/topics/c95y35941vrt",
-        "@type": "WebPage",
-        "name": "Donald Trump",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-          "width": 1024,
-        },
-        "name": "BBC News Pidgin",
-        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "url": "http://localhost:7080/pidgin/topics/c95y35941vrt",
-    },
-    {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 1,
-          "url": "https://www.bbc.com/pidgin/articles/c97dqy49r6mo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 2,
-          "url": "https://www.bbc.com/pidgin/articles/cgr1873031po",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 3,
-          "url": "https://www.bbc.com/pidgin/articles/cl70nnzwygno",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 4,
-          "url": "https://www.bbc.com/pidgin/articles/c108qmg34lno",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 5,
-          "url": "https://www.bbc.com/pidgin/articles/c3grn1vp22no",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 6,
-          "url": "https://www.bbc.com/pidgin/articles/ce42l3rxzz5o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 7,
-          "url": "https://www.bbc.com/pidgin/articles/c84ejj0v3lwo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 8,
-          "url": "https://www.bbc.com/pidgin/articles/c991v2gxx7lo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 9,
-          "url": "https://www.bbc.com/pidgin/articles/c6p9rxv3wedo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 10,
-          "url": "https://www.bbc.com/pidgin/articles/c84pdy202y0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 11,
-          "url": "https://www.bbc.com/pidgin/articles/cz9y7g91kg9o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 12,
-          "url": "https://www.bbc.com/pidgin/articles/cg6vzwlz0wlo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 13,
-          "url": "https://www.bbc.com/pidgin/articles/cd15jkr6pzzo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 14,
-          "url": "https://www.bbc.com/pidgin/articles/cd1lk2nmpxro",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 15,
-          "url": "https://www.bbc.com/pidgin/articles/cz91pzy45qqo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 16,
-          "url": "https://www.bbc.com/pidgin/articles/c72qkxlzq1vo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 17,
-          "url": "https://www.bbc.com/pidgin/articles/cqvgq9wq991o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 18,
-          "url": "https://www.bbc.com/pidgin/world-62174669",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 19,
-          "url": "https://www.bbc.com/pidgin/world-62174668",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 20,
-          "url": "https://www.bbc.com/pidgin/articles/cj5r8vvzpljo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 21,
-          "url": "https://www.bbc.com/pidgin/world-60465144",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 22,
-          "url": "https://www.bbc.com/pidgin/tori-59901959",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 23,
-          "url": "https://www.bbc.com/pidgin/tori-57396574",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 24,
-          "url": "https://www.bbc.com/pidgin/tori-56991816",
-        },
-      ],
-      "name": "BBC News Pidgin",
-      "numberOfItems": 24,
-    },
-  ],
-}
-`;
 
 exports[`Canonical Topic Page SEO OG description 1`] = `"Description of Donald Trump topic page"`;
 
@@ -412,15 +150,15 @@ exports[`Canonical Topic Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Topic Page SEO OG url 1`] = `"http://localhost:7080/pidgin/topics/c95y35941vrt"`;
 
-exports[`Canonical Topic Page SEO Page title 1`] = `"Donald Trump - BBC News Pidgin"`;
+exports[`Canonical Topic Page SEO Page title 1`] = `"Mistake - BBC News Pidgin"`;
 
-exports[`Canonical Topic Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`Canonical Topic Page SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`Canonical Topic Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Topic Page SEO Twitter creator 1`] = `"@BBCNews"`;
 
-exports[`Canonical Topic Page SEO Twitter description 1`] = `"Description of Donald Trump topic page"`;
+exports[`Canonical Topic Page SEO Twitter description 1`] = `"Mistake"`;
 
 exports[`Canonical Topic Page SEO Twitter image alt 1`] = `"BBC News Pidgin"`;
 
@@ -428,4 +166,4 @@ exports[`Canonical Topic Page SEO Twitter image src 1`] = `"https://news.files.b
 
 exports[`Canonical Topic Page SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`Canonical Topic Page SEO Twitter title 1`] = `"Donald Trump - BBC News Pidgin"`;
+exports[`Canonical Topic Page SEO Twitter title 1`] = `"Mistake - BBC News Pidgin"`;

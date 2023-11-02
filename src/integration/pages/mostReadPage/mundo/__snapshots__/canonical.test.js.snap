@@ -143,169 +143,9 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
-exports[`Canonical Most Read Page I can see the headline 1`] = `"Más leídas"`;
+exports[`Canonical Most Read Page I can see the headline 1`] = `"Error interno del servidor"`;
 
-exports[`Canonical Most Read Page I can see the list items 1`] = `"1"Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidadesÚltima actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 2`] = `"2La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantesÚltima actualización: 18 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 3`] = `"3Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electoralesÚltima actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 4`] = `"4Diego García, la pequeña isla británica militarizada en el Índico que se convirtió en un "infierno" para decenas de migrantes varadosÚltima actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 5`] = `"5Las confesiones de un banquero que fue a prisión por la millonaria manipulación de tasas de interés de uno de los bancos más importantes del mundoÚltima actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 6`] = `"6"Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"Última actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 7`] = `"7Quién era Mesalina, la emperatriz con la reputación más escandalosa de la Antigua RomaÚltima actualización: 18 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 8`] = `"8La polémica historia del mexicano que asegura haber inventado los Flamin’ Hot Cheetos en EE.UU. (y cuya vida llevó al cine Eva Longoria)Última actualización: 16 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 9`] = `"9Entender si somos amigos por placer o por utilidad y otros consejos del filósofo griego Aristóteles para conservar la amistadÚltima actualización: 17 junio 2023"`;
-
-exports[`Canonical Most Read Page I can see the list items 10`] = `"10La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el "Oscar" de la gastronomíaÚltima actualización: 19 junio 2023"`;
-
-exports[`Canonical Most Read Page Main heading should match text 1`] = `"Más leídas"`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 1`] = `
-{
-  "text": ""Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
-  "url": "/mundo/noticias-65372150",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 2`] = `
-{
-  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
-  "url": "/mundo/noticias-65919722",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 3`] = `
-{
-  "text": "Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electorales",
-  "url": "https://www.bbc.com/mundo/articles/cw8ld1799d3o",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 4`] = `
-{
-  "text": "Diego García, la pequeña isla británica militarizada en el Índico que se convirtió en un "infierno" para decenas de migrantes varados",
-  "url": "/mundo/noticias-internacional-65874454",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 5`] = `
-{
-  "text": "Las confesiones de un banquero que fue a prisión por la millonaria manipulación de tasas de interés de uno de los bancos más importantes del mundo",
-  "url": "/mundo/noticias-65941469",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 6`] = `
-{
-  "text": ""Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"",
-  "url": "/mundo/noticias-65930070",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 7`] = `
-{
-  "text": "Quién era Mesalina, la emperatriz con la reputación más escandalosa de la Antigua Roma",
-  "url": "/mundo/noticias-65827480",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 8`] = `
-{
-  "text": "La polémica historia del mexicano que asegura haber inventado los Flamin’ Hot Cheetos en EE.UU. (y cuya vida llevó al cine Eva Longoria)",
-  "url": "/mundo/noticias-65936328",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 9`] = `
-{
-  "text": "Entender si somos amigos por placer o por utilidad y otros consejos del filósofo griego Aristóteles para conservar la amistad",
-  "url": "/mundo/noticias-65787837",
-}
-`;
-
-exports[`Canonical Most Read Page Most Read has item with rank 10`] = `
-{
-  "text": "La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el "Oscar" de la gastronomía",
-  "url": "https://www.bbc.com/mundo/articles/cn088dgrjyeo",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 6`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 7`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 9`] = `
-{
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
-}
-`;
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Error interno del servidor"`;
 
 exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/popular/read"`;
 
@@ -313,49 +153,9 @@ exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Más leídas"`;
+exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Error interno del servidor"`;
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"es"`;
-
-exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "es",
-        "name": "Spanish",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/mundo/popular/read",
-        "@type": "WebPage",
-        "name": "Más leídas",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-          "width": 1024,
-        },
-        "name": "BBC News Mundo",
-        "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-      "url": "http://localhost:7080/mundo/popular/read",
-    },
-  ],
-}
-`;
 
 exports[`Canonical Most Read Page SEO OG description 1`] = `"Más leídas - BBC News Mundo"`;
 
@@ -373,15 +173,15 @@ exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/mundo/popular/read"`;
 
-exports[`Canonical Most Read Page SEO Page title 1`] = `"Más leídas - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Page title 1`] = `"Error interno del servidor - BBC News Mundo"`;
 
-exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@bbcmundo"`;
 
-exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Más leídas - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Error interno del servidor"`;
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Mundo"`;
 
@@ -389,4 +189,4 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
-exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Más leídas - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Error interno del servidor - BBC News Mundo"`;
