@@ -15,6 +15,7 @@ declare namespace JSX {
     src?: string;
     srcSet?: string;
     width?: number;
+    placeholder?: boolean;
   }
   /*
    * Overrides type for link with missing imagesrcset and imagesizes attributes
