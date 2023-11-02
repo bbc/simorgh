@@ -69,11 +69,8 @@ export default async ({
       agent,
       optHeaders,
       pageType,
+      ...(timeout && { timeout }),
     };
-    if (timeout) {
-      // @ts-expect-error - Ignore fetchPageData argument types
-      fetchPageDataArgs.timeout = timeout;
-    }
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 
