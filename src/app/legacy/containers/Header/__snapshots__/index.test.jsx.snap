@@ -17,24 +17,6 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -58,12 +40,30 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -234,6 +234,54 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   .emotion-12 {
     width: 17.3125rem;
   }
+}
+
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-17 {
@@ -829,6 +877,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="32"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -1250,24 +1299,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -1291,12 +1322,30 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -1467,6 +1516,54 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   .emotion-12 {
     width: 17.3125rem;
   }
+}
+
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-17 {
@@ -2062,6 +2159,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="32"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -2483,24 +2581,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -2524,12 +2604,30 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -2700,6 +2798,54 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   .emotion-12 {
     width: 17.3125rem;
   }
+}
+
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .emotion-17 {
@@ -3295,6 +3441,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="32"
+            id="brandSvgHeader"
             viewBox="0 0 980 142"
             xmlns="http://www.w3.org/2000/svg"
           >

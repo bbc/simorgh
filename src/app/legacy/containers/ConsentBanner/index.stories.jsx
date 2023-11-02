@@ -5,7 +5,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../../../components/ThemeProvider';
-
+import metadata from './metadata.json';
 // eslint-disable-next-line react/prop-types
 const Component = ({ platform }) => (
   <ThemeProvider service="news">
@@ -33,6 +33,7 @@ export default {
   Component,
   title: 'Containers/Consent Banner',
   parameters: {
+    metadata,
     chromatic: { disable: true },
   },
 };
