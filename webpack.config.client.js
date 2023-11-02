@@ -70,6 +70,7 @@ module.exports = ({
         stream: require.resolve('stream-browserify'),
         https: false,
         http: false,
+        tls: false,
       },
     },
     experiments: {
@@ -165,13 +166,14 @@ module.exports = ({
               const cryptoName = crypto
                 .createHash('sha1')
                 .update(chunkName)
-                .digest('base64')
-                .replace(/\//g, '');
+                .digest('base64');
 
               return [
                 'shared',
                 chunkName === 'russian-ukrainian' ? chunkName : cryptoName,
-              ].join('-');
+              ]
+                .join('-')
+                .replace(/[=+/]/g, '');
             },
             priority: 10,
             minChunks: 2,
@@ -243,24 +245,11 @@ module.exports = ({
   };
 
   if (IS_PROD) {
-    const BrotliPlugin = require('brotli-webpack-plugin');
     const CompressionPlugin = require('compression-webpack-plugin');
 
     clientConfig.plugins.push(
       /**
-       * Compresses Webpack assets with Brotli compression algorithm.
-       * More advanced than gzip (compression-webpack-plugin).
-       * https://github.com/mynameiswhm/brotli-webpack-plugin
-       */
-      new BrotliPlugin({
-        asset: '[path].br[query]',
-        test: /\.js$/,
-        threshold: 10240,
-        minRatio: 0.8,
-      }),
-      /**
        * Compresses Webpack assets with gzip Content-Encoding.
-       * Prefer Brotli (using brotli-webpack-plugin) but we fall back to gzip.
        * https://github.com/webpack-contrib/compression-webpack-plugin
        */
       new CompressionPlugin({

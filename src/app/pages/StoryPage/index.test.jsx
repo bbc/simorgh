@@ -6,6 +6,7 @@ import deepClone from 'ramda/src/clone';
 // test helpers
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 
 // components to test
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
@@ -16,7 +17,11 @@ import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
-import { render } from '../../components/react-testing-library-with-providers';
+import { Helmet } from 'react-helmet';
+import {
+  render,
+  act,
+} from '../../components/react-testing-library-with-providers';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
@@ -33,20 +38,6 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 jest.mock('#containers/ComscoreAnalytics', () => {
   const ComscoreAnalytics = () => <div>comscore</div>;
   return ComscoreAnalytics;
-});
-
-jest.mock('#containers/Ad', () => {
-  const AdsContainer = () => <div data-testid="sty-ads">STY ADS</div>;
-  return AdsContainer;
-});
-
-jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
-  const CanonicalAdBootstrapJs = ({ adcampaign }) => (
-    <div data-testid="adBootstrap" data-adcampaign={adcampaign}>
-      bootstrap
-    </div>
-  );
-  return CanonicalAdBootstrapJs;
 });
 
 jest.mock('#server/utilities/getAgent/index');
@@ -77,16 +68,6 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   );
 
   return PageWrapperContainer;
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return LoadingContainer;
 });
 
 jest.mock('#containers/PageHandlers/withError', () => Component => {
@@ -121,6 +102,11 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 
 const pageType = 'cpsAsset';
 
+const getBootstrapScript = () =>
+  Helmet.peek().scriptTags.find(({ innerHTML }) =>
+    innerHTML?.includes('window.dotcom'),
+  );
+
 describe('Story Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
@@ -129,6 +115,7 @@ describe('Story Page', () => {
 
   afterEach(() => {
     fetchMock.restore();
+    jest.clearAllMocks();
 
     delete process.env.SIMORGH_ICHEF_BASE_URL;
     delete process.env.RECOMMENDATIONS_ENDPOINT;
@@ -144,9 +131,12 @@ describe('Story Page', () => {
         pageType,
       });
 
-      const { container } = render(<StoryPage pageData={pageData} />, {
-        service: 'pidgin',
-        toggles,
+      let container;
+      await act(async () => {
+        ({ container } = render(<StoryPage pageData={pageData} />, {
+          service: 'pidgin',
+          toggles,
+        }));
       });
 
       expect(container).toMatchSnapshot();
@@ -154,6 +144,8 @@ describe('Story Page', () => {
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
+
     fetch.mockResponse(
       JSON.stringify({
         ...igboPageData,
@@ -166,13 +158,19 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByText } = render(<StoryPage pageData={pageData} />, {
-      service: 'igbo',
+    let getByText;
+
+    await act(async () => {
+      ({ getByText } = render(<StoryPage pageData={pageData} />, {
+        service: 'igbo',
+      }));
     });
+
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
     fetch.mockResponse(
       JSON.stringify({
         ...igboPageData,
@@ -191,9 +189,11 @@ describe('Story Page', () => {
       pageData,
     );
 
-    render(<StoryPage pageData={pageDataWithHiddenTimestamp} />, {
-      service: 'pidgin',
-      toggles,
+    await act(async () => {
+      render(<StoryPage pageData={pageDataWithHiddenTimestamp} />, {
+        service: 'pidgin',
+        toggles,
+      });
     });
 
     expect(document.querySelector('main time')).toBeNull();
@@ -241,9 +241,11 @@ describe('Story Page', () => {
       pageType,
     });
 
-    render(<StoryPage pageData={pageData} />, {
-      service: 'ukrainian',
-      pageLang: 'ru',
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'ukrainian',
+        pageLang: 'ru',
+      });
     });
 
     const secondaryColumn = document.querySelector(
@@ -256,8 +258,6 @@ describe('Story Page', () => {
   it.each`
     showAdsBasedOnLocation | showAdsBasedOnLocationExpectation
     ${true}                | ${'permitted to be shown'}
-    ${true}                | ${'permitted to be shown'}
-    ${false}               | ${'not permitted to be shown'}
     ${false}               | ${'not permitted to be shown'}
   `(
     'should not render ads when the ads toggle is disabled and is in a location where ads are $showAdsBasedOnLocationExpectation',
@@ -274,16 +274,20 @@ describe('Story Page', () => {
         pageType,
       });
 
-      const { queryByTestId } = render(<StoryPage pageData={pageData} />, {
-        service: 'pidgin',
-        showAdsBasedOnLocation,
-        toggles: { ads: { enabled: false } },
+      let container;
+
+      await act(async () => {
+        ({ container } = render(<StoryPage pageData={pageData} />, {
+          service: 'pidgin',
+          showAdsBasedOnLocation,
+          toggles: { ads: { enabled: false } },
+        }));
       });
 
-      const storyPageAds = queryByTestId('sty-ads');
-      expect(storyPageAds).not.toBeInTheDocument();
-      const adBootstrap = queryByTestId('adBootstrap');
-      expect(adBootstrap).not.toBeInTheDocument();
+      const storyPageAds = container.querySelectorAll('[id^="dotcom-"]');
+      expect(storyPageAds).toHaveLength(0);
+
+      expect(getBootstrapScript()).toBeUndefined();
     },
   );
 
@@ -303,16 +307,20 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { queryByTestId } = render(<StoryPage pageData={pageData} />, {
-      service: 'pidgin',
-      toggles,
-      showAdsBasedOnLocation: true,
+    let container;
+
+    await act(async () => {
+      ({ container } = render(<StoryPage pageData={pageData} />, {
+        service: 'pidgin',
+        toggles,
+        showAdsBasedOnLocation: true,
+      }));
     });
 
-    const storyPageAds = queryByTestId('sty-ads');
-    expect(storyPageAds).not.toBeInTheDocument();
-    const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+    const storyPageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+    expect(storyPageAds).toHaveLength(0);
+
+    expect(getBootstrapScript()).toBeUndefined();
   });
 
   it('should not render ads when the ads toggle is enabled and is in a location where ads are not permitted to be shown', async () => {
@@ -328,16 +336,20 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { queryByTestId } = render(<StoryPage pageData={pageData} />, {
-      service: 'pidgin',
-      toggles,
-      showAdsBasedOnLocation: false,
+    let container;
+
+    await act(async () => {
+      ({ container } = render(<StoryPage pageData={pageData} />, {
+        service: 'pidgin',
+        toggles,
+        showAdsBasedOnLocation: false,
+      }));
     });
 
-    const storyPageAds = queryByTestId('sty-ads');
-    expect(storyPageAds).not.toBeInTheDocument();
-    const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+    const storyPageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+    expect(storyPageAds).toHaveLength(0);
+
+    expect(getBootstrapScript()).toBeUndefined();
   });
 
   it('should render ads when the ads toggle is enabled', async () => {
@@ -353,16 +365,20 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByTestId, getAllByTestId } = render(
-      <StoryPage pageData={pageData} />,
-      { service: 'pidgin', toggles, showAdsBasedOnLocation: true },
-    );
+    let container;
 
-    const storyPageAds = getAllByTestId('sty-ads');
-    // render ads container twice for leaderboard and mpu
+    await act(async () => {
+      ({ container } = render(<StoryPage pageData={pageData} />, {
+        service: 'pidgin',
+        toggles,
+        showAdsBasedOnLocation: true,
+      }));
+    });
+
+    const storyPageAds = container.querySelectorAll(`[id^="dotcom-"]`);
     expect(storyPageAds).toHaveLength(2);
-    const adBootstrap = getByTestId('adBootstrap');
-    expect(adBootstrap).toBeInTheDocument();
+
+    expect(getBootstrapScript()).toBeTruthy();
   });
 
   it(`should configure canonical ad bootstrap with campaign where 'adCampaignKeyword' is in metadata`, async () => {
@@ -382,15 +398,16 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByTestId } = render(<StoryPage pageData={pageData} />, {
-      service: 'gahuza',
-      toggles,
-      showAdsBasedOnLocation: true,
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'gahuza',
+        toggles,
+        showAdsBasedOnLocation: true,
+      });
     });
 
-    const adBootstrap = getByTestId('adBootstrap');
-    expect(adBootstrap).toBeInTheDocument();
-    expect(adBootstrap).toHaveAttribute('data-adcampaign', 'royalwedding');
+    const { innerHTML: adBootstrap } = getBootstrapScript();
+    expect(adBootstrap).toContain("adcampaign: 'royalwedding'");
   });
 
   it('should configure canonical ad bootstrap where campaign is not in metadata', async () => {
@@ -406,15 +423,16 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByTestId } = render(<StoryPage pageData={pageData} />, {
-      service: 'pidgin',
-      toggles,
-      showAdsBasedOnLocation: true,
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'pidgin',
+        toggles,
+        showAdsBasedOnLocation: true,
+      });
     });
 
-    const adBootstrap = getByTestId('adBootstrap');
-    expect(adBootstrap).toBeInTheDocument();
-    expect(adBootstrap).not.toHaveAttribute('data-adcampaign');
+    const { innerHTML: adBootstrap } = getBootstrapScript();
+    expect(adBootstrap).not.toContain('adcampaign');
   });
 
   it('should not render canonical ad bootstrap on amp', async () => {
@@ -430,18 +448,21 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { queryByTestId } = render(<StoryPage pageData={pageData} />, {
-      service: 'pidgin',
-      toggles,
-      showAdsBasedOnLocation: true,
-      isAmp: true,
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'pidgin',
+        toggles,
+        showAdsBasedOnLocation: true,
+        isAmp: true,
+      });
     });
 
-    const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+    const adBootstrap = getBootstrapScript();
+    expect(adBootstrap).toBeUndefined();
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
     fetch.mockResponse(
       JSON.stringify({
         ...russianPageDataWithInlinePromo,
@@ -454,10 +475,14 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getAllByRole } = render(<StoryPage pageData={pageData} />, {
-      service: 'russian',
-      toggles: { podcastPromo: { enabled: true } },
-      showAdsBasedOnLocation: true,
+    let getAllByRole;
+
+    await act(async () => {
+      ({ getAllByRole } = render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles: { podcastPromo: { enabled: true } },
+        showAdsBasedOnLocation: true,
+      }));
     });
 
     const regions = getAllByRole('region');
@@ -470,6 +495,7 @@ describe('Story Page', () => {
   });
 
   it('should not render the inline podcast promo component on russian pages with paragraphs of less than 940 characters', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
     fetch.mockResponse(
       JSON.stringify({
         ...russianPageDataWithoutInlinePromo,
@@ -482,10 +508,14 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getAllByRole } = render(<StoryPage pageData={pageData} />, {
-      service: 'russian',
-      toggles: { podcastPromo: { enabled: true } },
-      showAdsBasedOnLocation: true,
+    let getAllByRole;
+
+    await act(async () => {
+      ({ getAllByRole } = render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles: { podcastPromo: { enabled: true } },
+        showAdsBasedOnLocation: true,
+      }));
     });
 
     const regions = getAllByRole('region');

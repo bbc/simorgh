@@ -5,6 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -28,7 +29,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
-import bffFetch from '../../article/getInitialData';
+import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -98,7 +99,6 @@ const getDerivedServiceAndPath = (service, pathname) => {
 };
 
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
@@ -111,14 +111,17 @@ export default async ({
 
     const {
       status,
-      pageData: { secondaryColumn, recommendations, ...article },
-    } = await bffFetch({
-      getAgent,
+      pageData: { secondaryColumn, recommendations, ...article } = {},
+    } = await getArticleInitialData({
       path: derivedPath,
       service: derivedService,
       variant,
       pageType: 'cpsAsset',
     });
+
+    if (status !== 200) {
+      throw handleError('CPS asset data fetch error', status);
+    }
 
     const { mostWatched } = processMostWatched({
       data: article,

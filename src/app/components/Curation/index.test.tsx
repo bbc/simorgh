@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
@@ -20,8 +21,11 @@ const { NONE, BANNER, RANKED, COLLECTION } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
-  ({ visualStyle, visualProminence }) =>
-    visualStyle === BANNER && visualProminence === NORMAL,
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === BANNER &&
+    visualProminence === NORMAL &&
+    summaries &&
+    summaries.length > 0,
 );
 
 const components = {
@@ -55,6 +59,10 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
   it.each(Object.entries(components))(
     `should render a %s component`,
     (
@@ -119,4 +127,38 @@ describe('Curation', () => {
       expect(queryByText(title)).toBeNull();
     },
   );
+
+  describe('Message Banner', () => {
+    it('should not be displayed if there are no promos', () => {
+      render(
+        <Curation visualStyle={BANNER} visualProminence={NORMAL} promos={[]} />,
+      );
+
+      expect(
+        document.querySelector('[data-testid="message-banner-"]'),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Headings', () => {
+    it('should render correctly when there are multiple curations and the curation only has 1 summary', () => {
+      const [curationWithSummary] = kyrgyzHomePage.data.curations.filter(
+        ({ summaries }) => summaries && summaries.length > 0,
+      );
+
+      const promo = curationWithSummary.summaries?.pop();
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          // @ts-expect-error promo will not be undefined
+          promos={[promo]}
+          curationLength={2}
+        />,
+      );
+
+      expect(document.querySelectorAll('section h2').length).toBe(1);
+    });
+  });
 });

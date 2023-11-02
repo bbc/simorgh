@@ -10,15 +10,15 @@ const assetPrefix =
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
+const isLocal =
+  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
+
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
-  assetPrefix: clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
-    'localhost',
-  )
-    ? undefined
-    : assetPrefix,
+  assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
   experimental: {

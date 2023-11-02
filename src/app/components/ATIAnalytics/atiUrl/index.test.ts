@@ -1,3 +1,4 @@
+import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
 
@@ -36,7 +37,7 @@ const rssMarketingStringFunc = {
 };
 
 describe('getThingAttributes', () => {
-  const { location } = window;
+  const windowLocation = window.location;
 
   beforeEach(() => {
     analyticsUtilFunctions.push(marketingCampaignFunc);
@@ -49,7 +50,7 @@ describe('getThingAttributes', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
-    window.location = location;
+    resetWindowValue('location', windowLocation);
   });
 
   it('should not add empty or null values', () => {
@@ -133,30 +134,64 @@ describe('getThingAttributes', () => {
 
     const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
+      // @ts-expect-error - required for testing purposes
       platform: 'platform',
       statsDestination: 'statsDestination',
     });
 
     const queryParamsArray = splitUrl(queryParams);
 
-    expect(queryParamsArray).toMatchInlineSnapshot(`
-      [
-        "s=getDestination",
-        "idclient=getAtUserId",
-        "r=getScreenInfo",
-        "re=getBrowserViewPort",
-        "hl=getCurrentTime",
-        "lng=getDeviceLanguage",
-        "x2=[getAppType]",
-        "x5=[getHref]",
-        "x6=[getReferrer]",
-        "x9=[sanitise]",
-        "x18=[isLocServeCookieSet]",
-        "xto=-----%40",
-        "ref=getReferrer",
-      ]
-    `);
+    expect(queryParamsArray).toEqual([
+      's=getDestination',
+      'idclient=getAtUserId',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'x2=[getAppType]',
+      'x5=[getHref]',
+      'x6=[getReferrer]',
+      'x9=[sanitise]',
+      'x18=[isLocServeCookieSet]',
+      'xto=-----%40',
+      'ref=getReferrer',
+    ]);
   });
+
+  it('should build query params for .app routes', () => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+
+    mockAndSet(marketingCampaignFunc, 'email');
+
+    const queryParams = buildATIPageTrackPath({
+      pageTitle: 'pageTitle',
+      platform: 'app',
+      statsDestination: 'statsDestination',
+      appName: 'news',
+    });
+
+    const queryParamsArray = splitUrl(queryParams);
+
+    expect(queryParamsArray).toEqual([
+      's=getDestination',
+      'idclient=getAtUserId',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'x2=[getAppType]',
+      'x3=[news-app]',
+      'x5=[getHref]',
+      'x6=[getReferrer]',
+      'x9=[sanitise]',
+      'x18=[isLocServeCookieSet]',
+      'xto=-----%40',
+      'ref=getReferrer',
+    ]);
+  });
+
   it('if ref param is provided, it should be the very last param so that ATI can interpret it correctly as part of the referrer URL', () => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, func.name);
@@ -172,6 +207,7 @@ describe('getThingAttributes', () => {
         ldpThingLabels: 'ldpThingLabels',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
+        // @ts-expect-error - required for testing purposes
         platform: 'platform',
         producerId: 'producerId',
         timePublished: 'timePublished',
@@ -196,20 +232,30 @@ describe('buildATIEventTrackUrl', () => {
 
   it('should return the correct url', () => {
     process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
-    expect(
-      buildATIEventTrackUrl({
-        pageIdentifier: 'pageIdentifier',
-        service: 'news',
-        platform: 'canonical',
-        statsDestination: 'statsDestination',
-        componentName: 'component',
-        type: 'type',
-        campaignID: 'campaignID',
-        format: 'format',
-        url: 'url',
-      }),
-    ).toMatchInlineSnapshot(
-      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
-    );
+
+    const atiEventTrackUrl = buildATIEventTrackUrl({
+      pageIdentifier: 'pageIdentifier',
+      service: 'news',
+      platform: 'canonical',
+      statsDestination: 'statsDestination',
+      componentName: 'component',
+      type: 'type',
+      campaignID: 'campaignID',
+      format: 'format',
+      url: 'url',
+    });
+
+    expect(splitUrl(atiEventTrackUrl)).toEqual([
+      'http://foobar.com',
+      'idclient=getAtUserId',
+      's=getDestination',
+      'p=pageIdentifier',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]',
+      'type=AT',
+    ]);
   });
 });

@@ -15,19 +15,12 @@ import {
   MEDIA_PAGE,
   ERROR_PAGE,
   LIVE_PAGE,
+  CPS_ASSET,
 } from '../../../routes/utils/pageTypes';
-import {
-  buildArticleATIParams,
-  buildArticleATIUrl,
-} from './article/buildParams';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
-import {
-  buildCpsAssetPageATIParams,
-  buildCpsAssetPageATIUrl,
-} from './cpsAssetPage/buildParams';
 import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
   buildMostWatchedATIParams,
@@ -46,16 +39,18 @@ import {
 } from '../types';
 import { PageTypes } from '../../../models/types/global';
 
-const ARTICLE_MEDIA_ASSET = 'article-media-asset';
-const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
-const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
-const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
-
 const MIGRATED_PAGE_TYPES: PageTypes[] = [
   HOME_PAGE,
   ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
   TOPIC_PAGE,
   MOST_READ_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+  MEDIA_ASSET_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  FEATURE_INDEX_PAGE,
+  INDEX_PAGE,
 ];
 
 const noOp = () => {
@@ -63,126 +58,43 @@ const noOp = () => {
 };
 
 const pageTypeUrlBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIUrl,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_SHORT_FORM_VIDEO,
-    ),
-  [STORY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, ARTICLE_PAGE),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
+  [STORY_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
   [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
-  [INDEX_PAGE]: buildIndexPageATIUrl,
-  [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
+  [INDEX_PAGE]: noOp,
+  [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
-  [MEDIA_ASSET_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_MEDIA_ASSET,
-    ),
-  [PHOTO_GALLERY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_PHOTO_GALLERY,
-    ),
-  [CORRESPONDENT_STORY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_CORRESPONDENT_PIECE,
-    ),
+  [MEDIA_ASSET_PAGE]: noOp,
+  [PHOTO_GALLERY_PAGE]: noOp,
+  [CORRESPONDENT_STORY_PAGE]: noOp,
   [HOME_PAGE]: noOp,
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
+  [CPS_ASSET]: noOp,
 };
 
 const pageTypeParamBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIParams,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
   [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
-  [INDEX_PAGE]: buildIndexPageATIParams,
-  [FEATURE_INDEX_PAGE]: buildIndexPageATIParams,
+  [INDEX_PAGE]: noOp,
+  [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
-  [MEDIA_ASSET_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIParams(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_MEDIA_ASSET,
-    ),
-  [PHOTO_GALLERY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIParams(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_PHOTO_GALLERY,
-    ),
-  [CORRESPONDENT_STORY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIParams(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_CORRESPONDENT_PIECE,
-    ),
-  [STORY_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
+  [MEDIA_ASSET_PAGE]: noOp,
+  [PHOTO_GALLERY_PAGE]: noOp,
+  [CORRESPONDENT_STORY_PAGE]: noOp,
+  [STORY_PAGE]: noOp,
   [HOME_PAGE]: noOp,
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
+  [CPS_ASSET]: noOp,
 };
 
 type BuilderFunction = {
@@ -207,7 +119,7 @@ const createBuilderFactory = (
 ) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType];
+  return pageTypeHandlers[pageType] || noOp;
 };
 
 export const buildATIUrl = ({
