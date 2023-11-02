@@ -566,7 +566,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -646,7 +646,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -671,7 +671,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-50>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -2007,7 +2007,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -2087,7 +2087,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2112,7 +2112,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-50>svg {
-  color: #11708C;
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;

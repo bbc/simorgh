@@ -78,23 +78,23 @@
         "model": {
           "blocks": [
             {
-              "id": "6dabc164",
+              "id": "e52310db",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0956b64a",
+                    "id": "06c705d9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "85c2149a",
+                          "id": "ea331604",
                           "type": "paragraph",
                           "model": {
                             "text": "Embed test- Riddle",
                             "blocks": [
                               {
-                                "id": "8f11af65",
+                                "id": "23653f14",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Embed test- Riddle",
@@ -115,7 +115,7 @@
               "position": [1]
             },
             {
-              "id": "6ae05081",
+              "id": "8e11605f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1689164884158,
@@ -124,28 +124,25 @@
               "position": [2]
             },
             {
-              "id": "af9ed7ad",
+              "id": "548850e6",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9f2a362c",
+                    "id": "6335f54a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "662a1dc7",
+                          "id": "2372a7f0",
                           "type": "paragraph",
                           "model": {
                             "text": "Riddle",
                             "blocks": [
                               {
-                                "id": "21d383d4",
+                                "id": "4b662001",
                                 "type": "fragment",
-                                "model": {
-                                  "text": "Riddle",
-                                  "attributes": []
-                                },
+                                "model": { "text": "Riddle", "attributes": [] },
                                 "position": [3, 1, 1, 1]
                               }
                             ]
@@ -161,23 +158,20 @@
               "position": [3]
             },
             {
-              "id": "1ca84741",
+              "id": "e1080a31",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "fcf1fd5e",
+                    "id": "e1ffb7c6",
                     "type": "paragraph",
                     "model": {
                       "text": "Top",
                       "blocks": [
                         {
-                          "id": "4e874d1f",
+                          "id": "4bd303d9",
                           "type": "fragment",
-                          "model": {
-                            "text": "Top",
-                            "attributes": []
-                          },
+                          "model": { "text": "Top", "attributes": [] },
                           "position": [4, 1, 1]
                         }
                       ]
@@ -189,7 +183,7 @@
               "position": [4]
             },
             {
-              "id": "efb7efa2",
+              "id": "941073cb",
               "type": "oEmbed",
               "model": {
                 "oembed": {
@@ -199,29 +193,25 @@
                   "url": "https://www.riddle.com/view/SAVstNdh",
                   "html": "<div class=\"riddle2-wrapper\" data-rid-id=\"SAVstNdh\" data-auto-scroll=\"true\" data-is-fixed-height-enabled=\"false\" data-bg=\"#fff\" data-fg=\"#00205b\" style=\"margin:0 auto; max-width:100%; width:640px;\" ><script src=\"https://www.riddle.com/embed/build-embedjs/embedV2.js\"></script><iframe src=\"https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false\" allow=\"autoplay\" referrerpolicy=\"strict-origin\"><section data-block=\"SingleChoice\"><h2>How silly is Abby?</h2><p>&lt;p&gt;Babby&lt;/p&gt;</p><ul><li>Extremely silly</li><li>Not silly at all</li><li>Not very silly</li><li>Very silly</li></ul></section><section data-block=\"SingleChoice\"><h3>What is Abby&#039;s silliness level?</h3><ul><li>High</li><li>Low</li><li>Medium</li><li>None</li></ul></section><section data-block=\"SingleChoice\"><h3>How often is Abby silly?</h3><ul><li>Never</li><li>Rarely</li><li>Always</li><li>Sometimes</li></ul></section><section data-block=\"SingleChoice\"><h3>What is Abby&#039;s silliness like?</h3><ul><li>Outrageous</li><li>Non-existent</li><li>Mild</li><li>Moderate</li></ul></section><section data-block=\"SingleChoice\"><h3>How would you describe Abby&#039;s silliness?</h3><ul><li>Crazy</li><li>Calm</li><li>Boring</li><li>Sensible</li></ul></section></iframe></div>",
                   "type": "rich",
-                  "aresType": "aresRiddle"
+                  "oEmbedType": "aresRiddle"
                 }
-              },
-              "position": [5]
+              }
             },
             {
-              "id": "abc846f4",
+              "id": "292fb67a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "49f2a881",
+                    "id": "4246c540",
                     "type": "paragraph",
                     "model": {
                       "text": "Bottom",
                       "blocks": [
                         {
-                          "id": "c19f09c9",
+                          "id": "8ccfdf2f",
                           "type": "fragment",
-                          "model": {
-                            "text": "Bottom",
-                            "attributes": []
-                          },
+                          "model": { "text": "Bottom", "attributes": [] },
                           "position": [6, 1, 1]
                         }
                       ]
@@ -232,18 +222,11 @@
               },
               "position": [6]
             },
+            { "id": "26e81a8c", "type": "mpu", "model": {}, "position": [7] },
             {
-              "id": "c745b9b7",
-              "type": "mpu",
-              "model": {},
-              "position": [7]
-            },
-            {
-              "id": "86476461",
+              "id": "e6695c90",
               "type": "wsoj",
-              "model": {
-                "type": "recommendations"
-              },
+              "model": { "type": "recommendations" },
               "position": [8]
             }
           ]
@@ -292,10 +275,7 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": {
-                            "text": "",
-                            "attributes": []
-                          }
+                          "model": { "text": "", "attributes": [] }
                         }
                       ]
                     }
@@ -310,9 +290,7 @@
     "secondaryData": {
       "topStories": [
         {
-          "headlines": {
-            "headline": "ATMs across the country"
-          },
+          "headlines": { "headline": "ATMs across the country" },
           "locators": {
             "assetUri": "/pidgin/23248287",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248287",
@@ -348,10 +326,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": true,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": true, "isFactCheck": false },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -363,9 +338,7 @@
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Jacob Zuma: Staying!!!"
-          },
+          "headlines": { "headline": "Jacob Zuma: Staying!!!" },
           "locators": {
             "assetUri": "/pidgin/tori-23146434",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146434",
@@ -389,10 +362,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:pidgin/tori-23146434",
           "type": "cps"
@@ -422,9 +392,7 @@
       ],
       "features": [
         {
-          "headlines": {
-            "headline": "How Lagos Dey Fight Lassa Fever"
-          },
+          "headlines": { "headline": "How Lagos Dey Fight Lassa Fever" },
           "locators": {
             "assetUri": "/pidgin/tori-23146625",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
@@ -448,10 +416,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
           "type": "cps"
         },
@@ -490,10 +455,7 @@
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
-                "availableTerritories": {
-                  "uk": true,
-                  "nonUk": true
-                },
+                "availableTerritories": { "uk": true, "nonUk": true },
                 "availableFrom": 1571751302000
               }
             ],
@@ -511,10 +473,7 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/media-23267821",
           "type": "cps"
         },
@@ -554,10 +513,7 @@
             "copyrightHolder": "-",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -604,17 +560,12 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23169387",
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Like Scaramucci, Like Others"
-          },
+          "headlines": { "headline": "Like Scaramucci, Like Others" },
           "locators": {
             "assetUri": "/news/world-africa-23143884",
             "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23143884",
@@ -637,10 +588,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Africa",
@@ -683,10 +631,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23146975",
           "type": "cps"
         },
@@ -713,9 +658,7 @@
           "type": "link"
         },
         {
-          "headlines": {
-            "headline": "Anambra Church: Police Arrest 3"
-          },
+          "headlines": { "headline": "Anambra Church: Police Arrest 3" },
           "locators": {
             "assetUri": "/pidgin/tori-23145776",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145776",
@@ -739,17 +682,12 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Kenya Decides 2017 in Pictures"
-          },
+          "headlines": { "headline": "Kenya Decides 2017 in Pictures" },
           "locators": {
             "assetUri": "/pidgin/23146654",
             "cpsUrn": "urn:bbc:content:assetUri:pidgin/23146654",
@@ -773,10 +711,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Domot",
@@ -788,7 +723,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-08-16T13:49:57.334Z",
+        "generated": "2023-10-23T08:34:57.648Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "items": [
@@ -937,134 +872,5 @@
       "latestMedia": null
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.4",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.4.1"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "service-env": "test",
-        "pers-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "1622982479a21886bea136c117db905a801e6a41",
-            "last-modified": "Thu, 03 Aug 2023 10:19:03 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "892de5d1-b2be-4f10-9039-185345f16947",
-            "expires": "Wed, 16 Aug 2023 14:07:25 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 144
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c39rjygpmv1o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Wed, 16 Aug 2023 14:17:37 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 23
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
-            "content-type": "application/json",
-            "content-length": "5292",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"2b070a0c8f57080c9b3b42b0c4ee13c9bda9885d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Wed, 16 Aug 2023 14:17:37 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 83
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "tenantLogs": [
-      {
-        "timestamp": 1692195478886,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      },
-      {
-        "timestamp": 1692195478886,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      },
-      {
-        "timestamp": 1692195478886,
-        "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
-        "code": ""
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c39rjygpmv1o",
-      "service": "pidgin",
-      "pageType": "article",
-      "isAmp": ""
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [{}]
-  }
+  "contentType": "application/json; charset=utf-8"
 }
