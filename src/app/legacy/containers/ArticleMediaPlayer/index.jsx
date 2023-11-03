@@ -22,13 +22,13 @@ const getCpsAssetUri = assetUri => {
 };
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id, pathname, pageType } = useContext(RequestContext);
+  const { id, pathname, pageType, isCaf } = useContext(RequestContext);
 
   return (
     <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={id || getCpsAssetUri(pathname.substr(1))}
+        assetId={isCaf ? getCpsAssetUri(pathname.substring(1)) : id}
         assetType={pageTypeMap[pageType]}
         showPlaceholder
       />
