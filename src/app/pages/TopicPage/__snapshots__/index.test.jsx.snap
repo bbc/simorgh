@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Topic Page SEO should correctly render linked data 1`] = `
-Array [
-  Object {
+[
+  {
     "@context": "http://schema.org",
-    "@graph": Array [
-      Object {
+    "@graph": [
+      {
         "@type": "CollectionPage",
         "headline": "Donald Trump",
-        "image": Object {
+        "image": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
           "width": 1024,
         },
-        "inLanguage": Object {
+        "inLanguage": {
           "@type": "Language",
           "alternateName": "pcm",
           "name": "Nigerian Pidgin",
         },
-        "mainEntityOfPage": Object {
+        "mainEntityOfPage": {
           "@id": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
           "@type": "WebPage",
           "name": "Donald Trump",
         },
-        "publisher": Object {
+        "publisher": {
           "@type": "NewsMediaOrganization",
-          "logo": Object {
+          "logo": {
             "@type": "ImageObject",
             "height": 576,
             "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
@@ -38,28 +38,28 @@ Array [
         "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
         "url": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
       },
-      Object {
+      {
         "@type": "ItemList",
-        "itemListElement": Array [
-          Object {
+        "itemListElement": [
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 1,
             "url": "https://www.bbc.com/pidgin/world-60465144",
           },
-          Object {
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 2,
             "url": "https://www.bbc.com/pidgin/tori-59901959",
           },
-          Object {
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 3,
             "url": "https://www.bbc.com/pidgin/tori-57396574",
           },
-          Object {
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 4,

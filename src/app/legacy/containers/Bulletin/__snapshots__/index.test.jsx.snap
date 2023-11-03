@@ -161,15 +161,16 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
+  color: #006666;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -180,7 +181,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -192,26 +193,26 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding-left: 0;
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -236,21 +237,21 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -260,7 +261,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,7 +273,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   padding-right: 0.5rem;
 }
 
-.emotion-19>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -280,7 +281,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin: 0;
 }
 
-.emotion-21 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -329,13 +330,13 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-12"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-14"
+              class="emotion-13"
               lang="en-GB"
             >
               Gee ntị Live, 
@@ -345,23 +346,23 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         </a>
       </h3>
       <p
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test Radio summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         <span
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -546,15 +547,16 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
+  color: #006666;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -565,7 +567,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -577,27 +579,27 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -622,21 +624,21 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -645,7 +647,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -657,7 +659,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   padding-right: 0.5rem;
 }
 
-.emotion-19>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -665,7 +667,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin: 0;
 }
 
-.emotion-21 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -714,13 +716,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-12"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-14"
+              class="emotion-13"
               lang="en-GB"
             >
               Lee Live, 
@@ -730,23 +732,23 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         </a>
       </h3>
       <p
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test TV summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         <span
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"

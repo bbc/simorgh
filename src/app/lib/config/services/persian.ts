@@ -150,7 +150,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'تایید',
           reject: 'ببنید چه تغییراتی ایجاد شده است',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -165,7 +165,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکی ها',
                 last: ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'مدیریت تنظیمات',
             },
@@ -181,7 +181,7 @@ export const service: DefaultServiceConfig = {
                   'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
                 para4: {
                   text: 'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
@@ -214,13 +214,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکی',
                 last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'بله، موافقم',
             reject: 'خیر، بازگشت به صفحه تنظیمات',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -341,7 +341,7 @@ export const service: DefaultServiceConfig = {
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'کوکی ها',
         },
         {
@@ -362,6 +362,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'جنگ اسرائیل-غزه',
+        url: '/persian/topics/clm0z4jgj3xt',
       },
       {
         title: 'پخش زنده',

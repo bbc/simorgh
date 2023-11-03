@@ -4,7 +4,7 @@ const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
 const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
-const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
+const assetUriRegex = '[a-z0-9-_+]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
@@ -34,35 +34,24 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const frontPageServicesToMigrate = [
+const homePageServices = [
   'afaanoromoo',
-  'afrique',
   'amharic',
-  'arabic',
   'azeri',
   'bengali',
   'burmese',
   'gahuza',
   'gujarati',
-  'hausa',
-  'hindi',
   'igbo',
   'indonesia',
-  'japanese',
-  'korean',
   'kyrgyz',
   'marathi',
-  'mundo',
   'nepali',
-  'pashto',
-  'persian',
   'pidgin',
   'portuguese',
   'punjabi',
-  'russian',
   'sinhala',
   'somali',
-  'swahili',
   'tamil',
   'telugu',
   'thai',
@@ -70,20 +59,24 @@ const frontPageServicesToMigrate = [
   'turkce',
   'ukrainian',
   'urdu',
-  'uzbek',
   'vietnamese',
   'yoruba',
 ];
 
+const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+
 export const getFrontPageRegex = services => {
-  // if environment is not live then filter out and remove kyrgyz from list of services
-  let frontPageServices = services;
-  if (!isLive()) {
-    frontPageServices = services.filter(
-      service => !frontPageServicesToMigrate.includes(service),
+  let frontPages = services;
+  if (isLive()) {
+    frontPages = services.filter(
+      service => !homePageServices.includes(service),
+    );
+  } else {
+    frontPages = services.filter(service =>
+      servicesWithVariants.includes(service),
     );
   }
-  const serviceRegex = getServiceRegex(frontPageServices);
+  const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
@@ -92,12 +85,17 @@ export const getTipoHomeRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
 };
 
-// eslint-disable-next-line consistent-return
-export const getHomePageRegex = () => {
-  if (!isLive()) {
-    const homePageServiceRegex = getServiceRegex(frontPageServicesToMigrate);
-    return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const getHomePageRegex = services => {
+  let homePages = services;
+  if (isLive()) {
+    homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(
+      service => !servicesWithVariants.includes(service),
+    );
   }
+  const homePageServiceRegex = getServiceRegex(homePages);
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {

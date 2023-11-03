@@ -321,7 +321,7 @@ describe('SectionLabel', () => {
 
         expect(error).toMatch(
           `Warning: Failed %s type: %s%s,prop,Invalid prop \`overrideHeadingAs\` of value \`h1\` supplied to \`SectionLabel\`, expected one of [null,"strong"].,
-    at SectionLabel`,
+    at children`,
         );
       });
     });

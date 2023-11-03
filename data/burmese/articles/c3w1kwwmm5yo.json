@@ -27,33 +27,19 @@
                                   "text": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "e9d9730b",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562942742355,
                 "lastPublished": 1562942742355
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "ba66c66f",
@@ -84,18 +68,11 @@
                             "text": "ပုဂံကို မြန်မာ့ယဉ်ကျေးမှုရဲ့ ပုခက်လို့ သဘောထားကြပါတယ်။ အိန္ဒိယဆန်တဲ့ ဗိသုကာ စေတီပုထိုးတွေနဲ့ ထင်ရှားတဲ့ ပုဂံဟာ မြန်မာသမိုင်းမှာ ဂန္ထဝင်ခေတ်ကြီးတခေတ် ထွန်းကားခဲ့တဲ့ ကာလကို ပြန်ပြီး အမှတ်ရစေတဲ့ မြို့ဟောင်းကြီး ဖြစ်ပါတယ်။",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "2946f42a",
@@ -110,32 +87,21 @@
                             "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "ed5f1223",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "03f11d1f",
@@ -143,9 +109,7 @@
               "model": {
                 "type": "recommendations"
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -171,12 +135,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -461,7 +420,7 @@
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,
-        "records": [
+        "items": [
           {
             "id": "e8eb8ddf-31b6-524e-a8bc-df45d0bda401",
             "rank": 1,

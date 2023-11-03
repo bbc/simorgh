@@ -6,6 +6,7 @@ import {
   CONFIG_FETCH_ERROR,
   CONFIG_ERROR,
   TOGGLE_API_RESPONSE_TIME,
+  CONFIG_RESPONSE_EMPTY_ERROR,
 } from '#lib/logger.const';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
@@ -46,6 +47,14 @@ const getToggles = async (service, cache) => {
   const url = constructTogglesEndpoint(service, origin);
 
   const cachedResponse = cache && cache.get(url);
+
+  if (cachedResponse === '') {
+    logger.error(CONFIG_RESPONSE_EMPTY_ERROR, {
+      url,
+      service,
+    });
+  }
+
   if (cachedResponse) {
     return {
       ...localToggles,

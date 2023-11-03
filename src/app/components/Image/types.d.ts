@@ -15,6 +15,7 @@ declare namespace JSX {
     src?: string;
     srcSet?: string;
     width?: number;
+    placeholder?: boolean;
   }
   /*
    * Overrides type for link with missing imagesrcset and imagesizes attributes
@@ -23,8 +24,12 @@ declare namespace JSX {
     imagesrcset?: string;
     imagesizes?: string;
   }
+  interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+    fetchpriority?: string;
+  }
   interface IntrinsicElements {
     'amp-img': AmpImgProps;
     link: LinkProps;
+    img: ImageProps;
   }
 }

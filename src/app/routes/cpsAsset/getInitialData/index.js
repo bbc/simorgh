@@ -6,6 +6,7 @@ import {
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import isLive from '#lib/utilities/isLive';
+import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -29,7 +30,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
-import bffFetch from '../../article/getInitialData';
+import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -55,7 +56,7 @@ const processOptimoBlocks = toggles =>
     augmentWithTimestamp,
     only(
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
-      augmentWithDisclaimer(toggles),
+      augmentWithDisclaimer({ toggles, positionFromTimestamp: 1 }),
     ),
     addBylineBlock,
     addRecommendationsBlock,
@@ -86,8 +87,19 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
+const getDerivedServiceAndPath = (service, pathname) => {
+  switch (service) {
+    case 'cymrufyw':
+      return {
+        service: 'newyddion',
+        path: pathname.replace('cymrufyw', 'newyddion'),
+      };
+    default:
+      return { service, path: pathname };
+  }
+};
+
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
@@ -95,42 +107,52 @@ export default async ({
   toggles,
 }) => {
   try {
+    const { service: derivedService, path: derivedPath } =
+      getDerivedServiceAndPath(service, pathname);
+
     const isCaf = pathname.includes('renderer_env=caf') && !isLive();
 
     const {
       status,
-      pageData: { secondaryColumn, recommendations, ...article },
-    } = await bffFetch({
-      getAgent,
-      path: pathname,
-      service,
+      pageData: { secondaryColumn, recommendations, ...article } = {},
+    } = await getArticleInitialData({
+      path: derivedPath,
+      service: derivedService,
       variant,
       pageType: 'cpsAsset',
       isCaf,
     });
 
-    const processedAdditionalData = processMostWatched({
-      data: secondaryColumn,
+    if (status !== 200) {
+      throw handleError('CPS asset data fetch error', status);
+    }
+
+    const { mostWatched } = processMostWatched({
+      data: article,
       service,
       path: pathname,
       toggles,
       page: pageType,
     });
 
-    return {
-      isCaf,
+    const { topStories, features } = secondaryColumn;
+    const { mostRead } = article;
+
+    const response = {
       status,
       pageData: {
         ...(!isCaf ? await transformJson(article, pathname, toggles) : article),
         secondaryColumn: {
-          topStories: processedAdditionalData.topStories,
-          features: processedAdditionalData.features,
+          topStories,
+          features,
         },
-        mostRead: processedAdditionalData.mostRead,
-        mostWatched: processedAdditionalData.mostWatched,
+        mostRead,
+        mostWatched,
         recommendations,
       },
     };
+
+    return response;
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }

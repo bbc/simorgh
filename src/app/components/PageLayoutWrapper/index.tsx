@@ -5,10 +5,10 @@
 import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
+import { PageTypes } from '#app/models/types/global';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
@@ -22,7 +22,11 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 import styles from './index.styles';
 
 type Props = {
-  pageData: object;
+  pageData: {
+    metadata: {
+      type: PageTypes;
+    };
+  };
   status: number;
 };
 
@@ -36,11 +40,9 @@ const PageLayoutWrapper = ({
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
-  const isErrorPage = [404, 500].includes(status);
-  const pageType = isErrorPage
-    ? 'WS-ERROR-PAGE'
-    : path<string>(['metadata', 'type'], pageData);
 
+  const isErrorPage = ![200].includes(status) || !status;
+  const pageType = pageData?.metadata?.type;
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
@@ -114,7 +116,7 @@ const PageLayoutWrapper = ({
       <ThemeProvider service={service} variant={variant}>
         {!isNextJs && <ServiceWorkerContainer />}
         <ManifestContainer />
-        <WebVitals pageType={pageType} />
+        {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />
         <div id="main-wrapper" css={styles.wrapper}>
           <HeaderContainer

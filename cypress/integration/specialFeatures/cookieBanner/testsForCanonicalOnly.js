@@ -45,80 +45,80 @@ const ensureCookieExpiryDates = () => {
 };
 
 export default ({ service, variant, pageType, path }) => {
-  it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
-    cy.clearCookies();
-    visitPage(path, pageType);
+  describe('Canonical consent banner', () => {
+    it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
+      cy.clearCookies();
+      visitPage(path, pageType);
 
-    getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('be.visible');
+      getCookieBannerCanonical(service, variant).should('not.exist');
 
-    assertCookieHasValue('ckns_privacy', 'july2019');
-    assertCookieHasValue('ckns_policy', '000');
+      assertCookieHasValue('ckns_privacy', 'july2019');
+      assertCookieHasValue('ckns_policy', '000');
 
-    getPrivacyBannerAccept(service, variant).click();
+      getPrivacyBannerAccept(service, variant).click();
 
-    getCookieBannerCanonical(service, variant).should('be.visible');
-    getPrivacyBanner(service, variant).should('not.exist');
+      getCookieBannerCanonical(service, variant).should('be.visible');
+      getPrivacyBanner(service, variant).should('not.exist');
 
-    getCookieBannerAcceptCanonical(service, variant).click();
+      getCookieBannerAcceptCanonical(service, variant).click();
 
-    cy.wait(1000);
+      cy.wait(1000);
 
-    assertCookieHasOneOfValues(
-      'ckns_explicit',
-      ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
-    );
-    assertCookieHasValue('ckns_privacy', 'july2019');
-    assertCookieHasValue('ckns_policy', '111');
+      assertCookieHasOneOfValues(
+        'ckns_explicit',
+        ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
+      );
+      assertCookieHasValue('ckns_privacy', 'july2019');
+      assertCookieHasValue('ckns_policy', '111');
 
-    getCookieBannerCanonical(service, variant).should('not.exist');
-    getPrivacyBanner(service, variant).should('not.exist');
+      getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('not.exist');
 
-    ensureCookieExpiryDates();
-  });
+      ensureCookieExpiryDates();
+    });
 
-  it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
-    cy.clearCookies();
-    visitPage(path, pageType);
+    it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
+      cy.clearCookies();
+      visitPage(path, pageType);
 
-    getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('be.visible');
+      getCookieBannerCanonical(service, variant).should('not.exist');
 
-    assertCookieHasValue('ckns_privacy', 'july2019');
-    assertCookieHasValue('ckns_policy', '000');
+      assertCookieHasValue('ckns_privacy', 'july2019');
+      assertCookieHasValue('ckns_policy', '000');
 
-    getPrivacyBannerAccept(service, variant).click();
-    getCookieBannerRejectCanonical(service, variant).click();
+      getPrivacyBannerAccept(service, variant).click();
+      getCookieBannerRejectCanonical(service, variant).click();
 
-    visitPage(path, pageType);
+      visitPage(path, pageType);
 
-    assertCookieHasOneOfValues(
-      'ckns_explicit',
-      ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
-    );
-    assertCookieHasValue('ckns_privacy', 'july2019');
-    assertCookieHasValue('ckns_policy', '000');
+      assertCookieHasOneOfValues(
+        'ckns_explicit',
+        ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
+      );
+      assertCookieHasValue('ckns_privacy', 'july2019');
+      assertCookieHasValue('ckns_policy', '000');
+      getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('not.exist');
+      ensureCookieExpiryDates();
+    });
 
-    getCookieBannerCanonical(service, variant).should('not.exist');
-    getPrivacyBanner(service, variant).should('not.exist');
+    it("should show cookie banner (and NOT privacy banner) if user has visited the page before and didn't explicitly 'accept' cookies", () => {
+      cy.clearCookies();
+      cy.setCookie('ckns_privacy', 'july2019');
+      visitPage(path, pageType);
 
-    ensureCookieExpiryDates();
-  });
+      getPrivacyBanner(service, variant).should('not.exist');
+      getCookieBannerCanonical(service, variant).should('be.visible');
+    });
 
-  it("should show cookie banner (and NOT privacy banner) if user has visited the page before and didn't explicitly 'accept' cookies", () => {
-    cy.clearCookies();
-    cy.setCookie('ckns_privacy', 'july2019');
-    visitPage(path, pageType);
+    it("should not override the user's default cookie policy", () => {
+      cy.clearCookies();
+      cy.setCookie('ckns_policy', 'made_up_value');
+      visitPage(path, pageType);
 
-    getPrivacyBanner(service, variant).should('not.exist');
-    getCookieBannerCanonical(service, variant).should('be.visible');
-  });
-
-  it("should not override the user's default cookie policy", () => {
-    cy.clearCookies();
-    cy.setCookie('ckns_policy', 'made_up_value');
-    visitPage(path, pageType);
-
-    assertCookieHasValue('ckns_policy', 'made_up_value');
+      assertCookieHasValue('ckns_policy', 'made_up_value');
+    });
   });
 };

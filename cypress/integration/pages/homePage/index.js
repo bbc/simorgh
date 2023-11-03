@@ -2,15 +2,23 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import getUrls from './urls';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import visitPage from '../../../support/helpers/visitPage';
-import runTests from './tests';
+import crossPlatformTests from './tests';
+import ampTests from './testsForAMPOnly';
+import canonicalTests from './testsForCanonicalOnly';
 
 const pageType = HOME_PAGE;
 
-const urls = getUrls();
+const environment = getAppEnv();
+const canonicalUrls = getUrls();
+const ampUrls = canonicalUrls.map(url => {
+  return { ...url, [environment]: `${url[environment]}.amp` };
+});
+
+const urls = [...canonicalUrls, ...ampUrls];
 
 urls.forEach(url => {
   const { service, variant = 'default' } = url;
-  const currentPath = url[getAppEnv()];
+  const currentPath = url[environment];
 
   if (currentPath) {
     describe(`Tests for ${pageType} page - ${currentPath}`, () => {
@@ -19,11 +27,17 @@ urls.forEach(url => {
         visitPage(currentPath, pageType);
       });
 
-      runTests({
+      crossPlatformTests({
         service,
         pageType,
         variant,
       });
+
+      if (currentPath.includes('.amp')) {
+        ampTests({ service, pageType, variant });
+      } else {
+        canonicalTests({ service, pageType, variant });
+      }
     });
   }
 });

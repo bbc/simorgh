@@ -75,7 +75,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
-  const allyLink = ctaLink.split('/').pop();
+  const allyLink = ctaLink?.split('/').pop();
 
   if (!headline || !ctaLink) {
     return null;
@@ -93,7 +93,6 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const watchText = pathOr('Watch', ['media', 'watch'], translations);
   const listenText = pathOr('Listen', ['media', 'listen'], translations);
-  const liveText = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
   const ctaTextIsEnglish = ctaText === 'Watch' || ctaText === 'Listen';
 
@@ -114,7 +113,6 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       ctaLink={ctaLink}
       ctaText={ctaText}
       isLive={isLive}
-      liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
       ariaId={`${headline}${allyLink}`}

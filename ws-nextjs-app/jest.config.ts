@@ -1,4 +1,4 @@
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
 
@@ -33,8 +33,6 @@ const unitTests = {
   modulePaths: ['../'],
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths),
-    '^uuid$': require.resolve('uuid'),
-    '^react$': require.resolve('react'),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],

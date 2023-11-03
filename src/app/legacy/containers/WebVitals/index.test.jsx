@@ -60,7 +60,6 @@ describe('WebVitals', () => {
       ${'sample rate override'}                      | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY', sampleRate: 65 }} | ${{ enabled: true, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 65 }}
     `(`$testDescription`, ({ testConfig, webVitalsParams }) => {
       render(<WebVitalsWithContext {...testConfig} />);
-
       expect(useWebVitals).toBeCalledWith(webVitalsParams);
     });
 
@@ -70,9 +69,9 @@ describe('WebVitals', () => {
         personalisationEnabled: true,
       };
       /* eslint-disable no-console */
-      const { warn } = console.error;
+      const { error } = console.error;
 
-      console.warn = jest.fn();
+      console.error = jest.fn();
 
       render(<WebVitalsWithContext {...testConfig} />);
 
@@ -81,11 +80,11 @@ describe('WebVitals', () => {
         reportingEndpoint: 'endpoint',
         sampleRate: 20,
       });
-      expect(console.warn).toHaveBeenCalledWith(
-        'Web Vitals warning: No page type to report.',
+      expect(console.error).toHaveBeenCalledWith(
+        'Web Vitals: No page type to report',
       );
 
-      console.warn = warn;
+      console.error = error;
       /* eslint-enable no-console */
     });
   });

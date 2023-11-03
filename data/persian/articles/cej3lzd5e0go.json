@@ -27,33 +27,19 @@
                                   "text": "این عنوان این مقاله آزمایشی است",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "91c0462e",
@@ -83,37 +69,19 @@
                                         "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "c90634f7",
@@ -138,37 +106,19 @@
                                         "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\r",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            2,
-                            1
-                          ]
+                          "position": [2, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   },
                   {
                     "id": "0f415c7c",
@@ -180,16 +130,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [
-                      2,
-                      3
-                    ]
+                    "position": [2, 3]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "666f5abb",
@@ -198,9 +143,7 @@
                 "firstPublished": 1570185405464,
                 "lastPublished": 1570185405464
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "fc5b68bd",
@@ -220,11 +163,7 @@
                             "text": "این یک متن متنی است ، که حاوی لینک اینترنتی به",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "d00e900d",
@@ -239,35 +178,21 @@
                                   "text": " صفحه اصلی است.",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 1, 2, 1]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "eaef4075",
@@ -298,37 +223,19 @@
                                         "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "a62eb6d6",
@@ -354,9 +261,7 @@
                             "versions": [
                               {
                                 "versionId": "p01kf9q6",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 16,
                                 "durationISO8601": "PT16S",
                                 "warnings": {},
@@ -372,11 +277,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         },
                         {
                           "id": "fb12168c",
@@ -390,12 +291,7 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [5, 2, 2, 1]
                               },
                               {
                                 "id": "3ff50213",
@@ -421,65 +317,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    5, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              5,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [5, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        5,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [5, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [5, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            2,
-                            2
-                          ]
+                          "position": [5, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "19962759",
@@ -504,33 +367,19 @@
                                   "text": "این یک بلوک زیر خط است",
                                   "attributes": []
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "e3509c05",
@@ -560,37 +409,19 @@
                                         "text": "این یک بلوک زیر خط است\r",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "34958db5",
@@ -602,16 +433,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "525118e2",
@@ -631,32 +457,21 @@
                             "text": "این مقاله آزمایشی به گونه ای ایجاد شده است که می توانیم تست های پایان خودکار را در وب سایت خود اجرا کنیم.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "60669170",
               "type": "mpu",
               "model": {},
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "65ca4297",
@@ -664,15 +479,25 @@
               "model": {
                 "type": "recommendations"
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cej3lzd5e0go",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cej3lzd5e0go",
+          "language": "fa",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "persian.articles.cej3lzd5e0go.page",
+          "pageTitle": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+          "timePublished": "2019-10-04T10:36:45.464Z",
+          "timeUpdated": "2019-10-04T10:36:45.464Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:cej3lzd5e0go",
           "canonicalUrl": "https://www.bbc.com/persian/articles/cej3lzd5e0go"
@@ -1031,762 +856,149 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-02-18T03:01:58.13Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
-        "totalRecords": 20,
-        "records": [
+        "generated": "2023-06-19T15:02:25.166Z",
+        "lastRecordTimeStamp": "2023-06-19T14:59:00Z",
+        "firstRecordTimeStamp": "2023-06-19T14:44:00Z",
+        "items": [
           {
-            "id": "e7e3619d-eb25-bc4a-b92d-8bd5bf856eb1",
+            "id": "urn:bbc:optimo:asset:c4n9j7rx27lo",
             "rank": 1,
-            "count": 9478,
-            "urn": "urn:bbc:curie:asset:e7e3619d-eb25-bc4a-b92d-8bd5bf856eb1",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "رئیس جمهوری فیلیپین: با خوشحالی همه معتادان را می‌کشم",
-                "headline": "رئیس جمهوری فیلیپین: با خوشحالی همه معتادان را می‌کشم"
-              },
-              "locators": {
-                "assetUri": "/persian/world-23080010",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/world-23080010",
-                "curie": "http://www.bbc.co.uk/asset/e7e3619d-eb25-bc4a-b92d-8bd5bf856eb1",
-                "assetId": "23080010"
-              },
-              "summary": "رودریگو دوترته، رئیس جمهوری فیلیپین، گفته آماده است همه معتادان به مواد مخدر در این کشور را بکشد.",
-              "timestamp": 1475233846000,
-              "language": "fa",
-              "byline": {
-                "name": "حمید ر رضایی",
-                "title": "بی بی سی ",
-                "persons": [
-                  {
-                    "name": "حمید ر رضایی",
-                    "function": "بی بی سی",
-                    "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63408000/jpg/_63408556_vlad_georgescu.jpg"
-                  }
-                ]
-              },
-              "indexImage": {
-                "id": "63513568",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/15203/test/_63513568_mediaitem63513567.jpg",
-                "path": "/cpsdevpb/15203/test/_63513568_mediaitem63513567.jpg",
-                "height": 1152,
-                "width": 2048,
-                "altText": "یبیب",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/world-23080010",
-              "type": "cps"
-            }
+            "title": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
+            "href": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+            "timestamp": 1687166940497
           },
           {
-            "id": "e68afa00-59c7-d244-85a2-4b5df59d996f",
+            "id": "urn:bbc:optimo:asset:cm58lxneyrvo",
             "rank": 2,
-            "count": 9123,
-            "urn": "urn:bbc:curie:asset:e68afa00-59c7-d244-85a2-4b5df59d996f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 11",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 11"
-              },
-              "locators": {
-                "assetUri": "/persian/afghanistan-23069393",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-23069393",
-                "curie": "http://www.bbc.co.uk/asset/e68afa00-59c7-d244-85a2-4b5df59d996f",
-                "assetId": "23069393"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472114373000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/afghanistan-23069393",
-              "type": "cps"
-            }
+            "title": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
+            "href": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+            "timestamp": 1687186050229
           },
           {
-            "id": "901fe486-d0f7-be44-bd59-6995479709ff",
+            "id": "urn:bbc:optimo:asset:cx7e0eexdeeo",
             "rank": 3,
-            "count": 8909,
-            "urn": "urn:bbc:curie:asset:901fe486-d0f7-be44-bd59-6995479709ff",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "آثممخ فاهس آثشیمهدث BBC حلم حثقسهشد عدیثق هقشد سثزفهخد - صهفا ش سحثزهشم زاشقشزفثق",
-                "headline": "آثممخ فاهس آثشیمهدث BBC حلم حثقسهشد عدیثق هقشد سثزفهخد - صهفا ش سحثزهشم زاشقشزفثق"
-              },
-              "locators": {
-                "assetUri": "/persian/iran-23072988",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:901fe486-d0f7-be44-bd59-6995479709ff",
-                "assetId": "23072988",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23072988",
-                "curie": "http://www.bbc.co.uk/asset/901fe486-d0f7-be44-bd59-6995479709ff"
-              },
-              "summary": "آه فاهس سعئئشقغ اخص شذخعف بشقسه BBC Persian فاثقث هس دخ دثثی فخ زاشدلث بخزعس (TCF)",
-              "timestamp": 1473419864000,
-              "language": "fa",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63507670",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1DF6/test/_63507670_160705080410_juno_640x360_getty.jpg",
-                "path": "/cpsdevpb/1DF6/test/_63507670_160705080410_juno_640x360_getty.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "لونی علی، همسر محمد علی، در مراسم بزرگداشت او گفت: \"وقتی یک پلیس سر صحبت را با نوجوانی باز می‌کند، معجزه اتفاق می‌افتد\". اشاره‌ای به داستان آغاز آشنایی محمد علی English با دنیای بوکس و همچنین کنایه‌ای پندآمیز به \"خشونت‌های پلیس علیه سیاهپوستان در آمریکا\". جمعیت حاضر در مراسم بعد از این جمله خانم علی بر پا خاستند و لحظاتی برای او کف زدند. لونی علی همچنین با اشاره به مبارزات مدنی محمد علی، به چهره‌های برجسته همزمان او در جنبش سیاه پوستان آمریکا و جهان، همچون مارتین لوترکینگ، مالکوم ایکس و نلسون ماندلا هم اشاره کرد و تلاش کرد آنها را به وقایع و وضعیت امروز جامعه آمریکا مرتبط کند.",
-                "caption": "لونی علی، همسر محمد علی، در مراسم بزرگداشت او گفت: \"وقتی یک پلیس سر صحبت را با نوجوانی باز می‌کند، معجزه اتفاق می‌افتد\". اشاره‌ای به داستان آغاز آشنایی محمد علی با دنیای بوکس و همچنین کنایه‌ای پندآمیز به \"خشونت‌های پلیس علیه سیاهپوستان در آمریکا\". جمعیت حاضر در مراسم بعد از این جمله خانم علی بر پا خاستند و لحظاتی برای او کف زدند. لونی علی همچنین با اشاره به مبارزات مدنی english محمد علی، به چهره‌های برجسته همزمان او در جنبش سیاه پوستان آمریکا و جهان، همچون مارتین لوترکینگ، مالکوم ایکس و نلسون ماندلا هم اشاره کرد و تلاش کرد آنها را به وقایع و وضعیت امروز جامعه آمریکا مرتبط کند.",
-                "copyrightHolder": "Empics",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/iran-23072988",
-              "type": "cps"
-            }
+            "title": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
+            "href": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+            "timestamp": 1687153548786
           },
           {
-            "id": "8acf2e0a-5287-8744-8802-64994586b569",
+            "id": "urn:bbc:optimo:asset:cqe0045zrpdo",
             "rank": 4,
-            "count": 8900,
-            "urn": "urn:bbc:curie:asset:8acf2e0a-5287-8744-8802-64994586b569",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 46",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 46"
-              },
-              "locators": {
-                "assetUri": "/persian/media-23069776",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/media-23069776",
-                "curie": "http://www.bbc.co.uk/asset/8acf2e0a-5287-8744-8802-64994586b569",
-                "assetId": "23069776"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472184591000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/media-23069776",
-              "type": "cps"
-            }
+            "title": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
+            "href": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+            "timestamp": 1687176764164
           },
           {
-            "id": "f4b73de3-e2e9-864e-b261-4182824a9ff8",
+            "id": "urn:bbc:optimo:asset:cjmyylvr1nvo",
             "rank": 5,
-            "count": 8887,
-            "urn": "urn:bbc:curie:asset:f4b73de3-e2e9-864e-b261-4182824a9ff8",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 21",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 21"
-              },
-              "locators": {
-                "assetUri": "/persian/iran-23069600",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23069600",
-                "curie": "http://www.bbc.co.uk/asset/f4b73de3-e2e9-864e-b261-4182824a9ff8",
-                "assetId": "23069600"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472125735000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/iran-23069600",
-              "type": "cps"
-            }
+            "title": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
+            "href": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+            "timestamp": 1687177697668
           },
           {
-            "id": "9071d9c0-b16a-7241-af91-0cdbfe45bd46",
+            "id": "urn:bbc:optimo:asset:cyxgqq1796qo",
             "rank": 6,
-            "count": 8518,
-            "urn": "urn:bbc:curie:asset:9071d9c0-b16a-7241-af91-0cdbfe45bd46",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "کلینتون و ترامپ یکدیگر را مسئول حملات خشونت‌ آمیز اخیر دانستند",
-                "headline": "کلینتون و ترامپ یکدیگر را مسئول حملات خشونت‌ آمیز اخیر دانستند"
-              },
-              "locators": {
-                "assetUri": "/persian/interactivity-23075863",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/interactivity-23075863",
-                "curie": "http://www.bbc.co.uk/asset/9071d9c0-b16a-7241-af91-0cdbfe45bd46",
-                "assetId": "23075863"
-              },
-              "summary": "نامزدهای انتخابات ریاست جمهوری آمریکا نسبت به انفجار اخیر در نیویورک و بازداشت عامل این انفجار واکنش‌های متفاوتی نشان داده و در صدد بهره‌برداری تبلیغاتی از آن برآمده‌اند.",
-              "timestamp": 1474370188000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63509810",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/0762/test/_63509810_b6d92ed9-37dd-4889-a593-a7ed379af86a.jpg",
-                "path": "/cpsdevpb/0762/test/_63509810_b6d92ed9-37dd-4889-a593-a7ed379af86a.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "کلینتون و ترامپ",
-                "caption": "کلینتون و ترامپ هرکدام خود را فرد مناسب برای مقابله با تندروها و رقیب خود را عامل افزایش حمایت از آنان معرفی کرده‌اند",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/interactivity-23075863",
-              "type": "cps"
-            }
+            "title": "سگم سرطان پستان مرا تشخیص داد",
+            "href": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+            "timestamp": 1687116062499
           },
           {
-            "id": "515be30d-f1dd-b146-81ea-392f10b43206",
+            "id": "urn:bbc:optimo:asset:cydg800g89yo",
             "rank": 7,
-            "count": 8451,
-            "urn": "urn:bbc:curie:asset:515be30d-f1dd-b146-81ea-392f10b43206",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "گزارش تازه درباره قتل بیژن ابراهیمی: پلیس می‌توانست مانع قتل شود",
-                "headline": "قتل بیژن ابراهیمی: پلیس می‌توانست مانع قتل شود"
-              },
-              "locators": {
-                "assetUri": "/persian/23137875",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:515be30d-f1dd-b146-81ea-392f10b43206",
-                "assetId": "23137875",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/23137875",
-                "curie": "http://www.bbc.co.uk/asset/515be30d-f1dd-b146-81ea-392f10b43206"
-              },
-              "summary": "کمیسیون رسیدگی به شکایات از پلیس بریتانیا در گزارشی که درباره قتل بیژن ابراهیمی، پناهنده ایرانی ساکن شهر بریستول منتشر کرده، به این نتیجه رسیده است که پلیس می‌توانسته جلو کشته شدن او را بگیرد",
-              "timestamp": 1587630883000,
-              "language": "fa",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63575677",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/12F59/test/_63575677_39ad397d-0bdd-4886-aff9-1ec8678e2a82.jpg",
-                "path": "/cpsdevpb/12F59/test/_63575677_39ad397d-0bdd-4886-aff9-1ec8678e2a82.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "بیژن ابراهیمی چهار سال پیش به طرز فجیعی در بریتانیا به قتل رسید",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/23137875",
-              "type": "cps"
-            }
+            "title": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
+            "href": "https://www.bbc.com/persian/articles/cydg800g89yo",
+            "timestamp": 1687131319810
           },
           {
-            "id": "6efa50cf-23e4-ed43-b0d0-f16d69ec69f8",
+            "id": "urn:bbc:optimo:asset:cgr664ezld5o",
             "rank": 8,
-            "count": 8407,
-            "urn": "urn:bbc:curie:asset:6efa50cf-23e4-ed43-b0d0-f16d69ec69f8",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 36",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 36"
-              },
-              "locators": {
-                "assetUri": "/persian/afghan-press-review-23069767",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/afghan-press-review-23069767",
-                "curie": "http://www.bbc.co.uk/asset/6efa50cf-23e4-ed43-b0d0-f16d69ec69f8",
-                "assetId": "23069767"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472184066000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/afghan-press-review-23069767",
-              "type": "cps"
-            }
+            "title": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+            "href": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+            "timestamp": 1687181307203
           },
           {
-            "id": "4ea86f0c-d0f3-f641-8151-9358ab371f4f",
+            "id": "urn:bbc:optimo:asset:c9wj7ejl17po",
             "rank": 9,
-            "count": 8270,
-            "urn": "urn:bbc:curie:asset:4ea86f0c-d0f3-f641-8151-9358ab371f4f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "کسانی دولت را استیضاح می‌کنند که خود باید پاسخگوی اقداماتشان باشند/ اقتصاد امسال مقاومتی‌تر شد",
-                "headline": "کسانی دولت را استیضاح می‌کنند که خود باید پاسخگوی اقداماتشان باشند/ اقتصاد امسال مقاومتی‌تر شد"
-              },
-              "locators": {
-                "assetUri": "/persian/23104785",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:4ea86f0c-d0f3-f641-8151-9358ab371f4f",
-                "assetId": "23104785",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/23104785",
-                "curie": "http://www.bbc.co.uk/asset/4ea86f0c-d0f3-f641-8151-9358ab371f4f"
-              },
-              "summary": "معاون اول رییس جمهور در نامه ای خطاب به رییس مجلس خبرگان رهبری تصریح کرد: مخاطب سیاست‌های ابلاغی همه ارکان نظام بودند و در این میان دولت علیرغم سازماندهی ویژه و اهتمام گسترده به موضوع، همواره مورد استیضاح کسانی قرار می‌گیرد که خود نیز بایستی پاسخگوی اقدامات خود باشند و به رهبری بزرگوار و ملت شریف توضیح دهند که در تحقق این سیاست ها چه اقداماتی انجام داده‌اند.",
-              "timestamp": 1587636451000,
-              "language": "fa",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63733893",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/9B99/test/_63733893_80a356e3-d89f-4576-9742-c14541936dda.jpg",
-                "path": "/cpsdevpb/9B99/test/_63733893_80a356e3-d89f-4576-9742-c14541936dda.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": ".",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/23104785",
-              "type": "cps"
-            }
+            "title": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
+            "href": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+            "timestamp": 1687071702645
           },
           {
-            "id": "3897b5bf-3062-8345-b8cf-e73e77080a61",
+            "id": "urn:bbc:optimo:asset:c6plvgyz614o",
             "rank": 10,
-            "count": 8207,
-            "urn": "urn:bbc:curie:asset:3897b5bf-3062-8345-b8cf-e73e77080a61",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "ندهجئوس کلاوکسی مکنکگد",
-                "headline": "ندهجئوس کلاوکسی مکنکگد"
-              },
-              "locators": {
-                "assetUri": "/persian/iran-23147873",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23147873",
-                "curie": "http://www.bbc.co.uk/asset/3897b5bf-3062-8345-b8cf-e73e77080a61",
-                "assetId": "23147873"
-              },
-              "summary": "منگشیس نابگشتد کجایسیت منکبگدهتسدفر",
-              "timestamp": 1502461859000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63733895",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/E9B9/test/_63733895_00bfaf0b-928d-4d6c-a805-46dfe62f3643.jpg",
-                "path": "/cpsdevpb/E9B9/test/_63733895_00bfaf0b-928d-4d6c-a805-46dfe62f3643.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": ".",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/iran-23147873",
-              "type": "cps"
-            }
+            "title": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
+            "href": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+            "timestamp": 1687096028728
           },
           {
-            "id": "ada80cb3-0126-1d45-8166-6fdb118315f0",
+            "id": "urn:bbc:optimo:asset:c1698e29lgeo",
             "rank": 11,
-            "count": 8189,
-            "urn": "urn:bbc:curie:asset:ada80cb3-0126-1d45-8166-6fdb118315f0",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 32",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 32"
-              },
-              "locators": {
-                "assetUri": "/persian/sport-23069763",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/sport-23069763",
-                "curie": "http://www.bbc.co.uk/asset/ada80cb3-0126-1d45-8166-6fdb118315f0",
-                "assetId": "23069763"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472183901000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/sport-23069763",
-              "type": "cps"
-            }
+            "title": "جهان خودرو؛ فن‌آوری‌های آینده بنز برای ماشینی که از گذشته الهام گرفته است",
+            "href": "https://www.bbc.com/persian/articles/c1698e29lgeo",
+            "timestamp": 1687106809323
           },
           {
-            "id": "b5b01786-560f-0e46-b4da-8c1e399ba71f",
+            "id": "urn:bbc:optimo:asset:cn42evqgvmpo",
             "rank": 12,
-            "count": 8098,
-            "urn": "urn:bbc:curie:asset:b5b01786-560f-0e46-b4da-8c1e399ba71f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 23",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 23"
-              },
-              "locators": {
-                "assetUri": "/persian/arts-23069602",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:b5b01786-560f-0e46-b4da-8c1e399ba71f",
-                "assetId": "23069602",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/arts-23069602",
-                "curie": "http://www.bbc.co.uk/asset/b5b01786-560f-0e46-b4da-8c1e399ba71f"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472124774000,
-              "language": "fa",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/arts-23069602",
-              "type": "cps"
-            }
+            "title": "احتمال محکومیت الکسی ناوالنی، منتقد سرشناس پوتین به ده‌ها سال زندان با اتهامات جدید",
+            "href": "https://www.bbc.com/persian/articles/cn42evqgvmpo",
+            "timestamp": 1687161488039
           },
           {
-            "id": "37cc321a-8174-4d49-a31c-195c2f4564d1",
+            "id": "urn:bbc:optimo:asset:cnd9g0g6724o",
             "rank": 13,
-            "count": 7631,
-            "urn": "urn:bbc:curie:asset:37cc321a-8174-4d49-a31c-195c2f4564d1",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 19",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 19"
-              },
-              "locators": {
-                "assetUri": "/persian/iran-23069599",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:37cc321a-8174-4d49-a31c-195c2f4564d1",
-                "assetId": "23069599",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23069599",
-                "curie": "http://www.bbc.co.uk/asset/37cc321a-8174-4d49-a31c-195c2f4564d1"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472124584000,
-              "language": "fa",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/iran-23069599",
-              "type": "cps"
-            }
+            "title": "سه فلسطینی در حمله نیروهای اسرائیلی به اردوگاه جنین کشته شدند",
+            "href": "https://www.bbc.com/persian/articles/cnd9g0g6724o",
+            "timestamp": 1687172290396
           },
           {
-            "id": "21e8d41a-143f-bf4e-bb31-3093a96c5ab4",
+            "id": "urn:bbc:optimo:asset:cv2kdjwlgx1o",
             "rank": 14,
-            "count": 7469,
-            "urn": "urn:bbc:curie:asset:21e8d41a-143f-bf4e-bb31-3093a96c5ab4",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 25",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 25"
-              },
-              "locators": {
-                "assetUri": "/persian/science-23069604",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/science-23069604",
-                "curie": "http://www.bbc.co.uk/asset/21e8d41a-143f-bf4e-bb31-3093a96c5ab4",
-                "assetId": "23069604"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472124851000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/science-23069604",
-              "type": "cps"
-            }
+            "title": "استعفای مقام شهرداری بروکسل به خاطر میزبانی از علیرضا زاکانی در مجمع شهرداران",
+            "href": "https://www.bbc.com/persian/articles/cv2kdjwlgx1o",
+            "timestamp": 1687108657454
           },
           {
-            "id": "3df012df-c29b-0846-96c8-4db8f97ae586",
+            "id": "urn:bbc:optimo:asset:c721d9yyz4no",
             "rank": 15,
-            "count": 7263,
-            "urn": "urn:bbc:curie:asset:3df012df-c29b-0846-96c8-4db8f97ae586",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 16",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 16"
-              },
-              "locators": {
-                "assetUri": "/persian/afghanistan-23069395",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-23069395",
-                "curie": "http://www.bbc.co.uk/asset/3df012df-c29b-0846-96c8-4db8f97ae586",
-                "assetId": "23069395"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472125765000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/afghanistan-23069395",
-              "type": "cps"
-            }
+            "title": "آدم‌ربایی و شکنجه در مرز ایران و ترکیه؛ «نترس بهت تجاوز نمی‌کنیم، فقط فیلم می‌گیریم»",
+            "href": "https://www.bbc.com/persian/articles/c721d9yyz4no",
+            "timestamp": 1686747986799
           },
           {
-            "id": "6f89a9bf-5494-9e41-9592-6ffea94a793b",
+            "id": "urn:bbc:optimo:asset:cw8ln16w7z1o",
             "rank": 16,
-            "count": 6952,
-            "urn": "urn:bbc:curie:asset:6f89a9bf-5494-9e41-9592-6ffea94a793b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "کشته‌شدگان حمله پهپاد آمریکا در ولایت ننگرهار افغانستان غیر نظامی بودند",
-                "headline": "سازمان ملل: کشته‌شدگان حمله پهپاد آمریکا در ولایت ننگرهار افغانستان غیر نظامی بودند"
-              },
-              "locators": {
-                "assetUri": "/persian/live/afghanistan-23079936",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/live/afghanistan-23079936",
-                "curie": "http://www.bbc.co.uk/asset/6f89a9bf-5494-9e41-9592-6ffea94a793b",
-                "assetId": "23079936"
-              },
-              "summary": "هیات معاونت سازمان ملل متحد در افغانستان (یوناما) اعلام کرده که در حمله روز اول مهر پهپاد آمریکایی در ولایت ننگرهار در شرق افغانستان، ۱۵ غیرنظامی کشته شدند.",
-              "timestamp": 1475231431000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63513620",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/0A47/test/_63513620_1.jpg",
-                "path": "/cpsdevpb/0A47/test/_63513620_1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "خانه",
-                "caption": "خانه",
-                "copyrightHolder": "AP",
-                "type": "image"
-              },
-              "isLive": true,
-              "scheduledStartTime": 1475193600000,
-              "scheduledEndTime": 1475193600000,
-              "liveStatus": "LIVE",
-              "id": "urn:bbc:ares::asset:persian/live/afghanistan-23079936",
-              "type": "cps"
-            }
+            "title": "زنی که هفته پیش با ضربه زدن به تابوتش زنده ماند، این هفته درگذشت",
+            "href": "https://www.bbc.com/persian/articles/cw8ln16w7z1o",
+            "timestamp": 1687105907701
           },
           {
-            "id": "7a92afe1-4afc-9640-9f94-07122faa5e9d",
+            "id": "af1d94b4-e9cf-4cf1-96af-e5bff320c4db",
             "rank": 17,
-            "count": 6911,
-            "urn": "urn:bbc:curie:asset:7a92afe1-4afc-9640-9f94-07122faa5e9d",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 6",
-                "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 6"
-              },
-              "locators": {
-                "assetUri": "/persian/afghanistan-23069388",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-23069388",
-                "curie": "http://www.bbc.co.uk/asset/7a92afe1-4afc-9640-9f94-07122faa5e9d",
-                "assetId": "23069388"
-              },
-              "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
-              "timestamp": 1472114213000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63504578",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "planet",
-                "copyrightHolder": "ESA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/afghanistan-23069388",
-              "type": "cps"
-            }
+            "title": "«مردم دیگر علاقه‌ای به خواندن اخبار ناراحت‌کننده و منفی ندارند»",
+            "href": "/persian/world-features-65913302",
+            "timestamp": 1686821679000
           },
           {
-            "id": "7ddd361e-2eea-a748-a7d4-64231b5a716c",
+            "id": "urn:bbc:optimo:asset:cxw3jrxg1djo",
             "rank": 18,
-            "count": 6886,
-            "urn": "urn:bbc:curie:asset:7ddd361e-2eea-a748-a7d4-64231b5a716c",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "دونالد ترامپ بار دیگر مدعی تقلب انتخاباتی شد",
-                "headline": "دونالد ترامپ بار دیگر مدعی تقلب انتخاباتی به نفع هیلاری کلینتون شد"
-              },
-              "locators": {
-                "assetUri": "/persian/23089507",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/23089507",
-                "curie": "http://www.bbc.co.uk/asset/7ddd361e-2eea-a748-a7d4-64231b5a716c",
-                "assetId": "23089507"
-              },
-              "summary": "آقای ترامپ این ادعا را بار دیگر پس از آن مطرح کرد که پلیس فدرال آمریکا (اف بی آی) اعلام کرد که درجریان دور جدید تحقیقات از پرونده ایمیل های هیلاری کلینتون به موردی که مجرمانه تلقی شود، برخورد نکرده است.",
-              "timestamp": 1478518164000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63521264",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/B484/test/_63521264_koala.jpg",
-                "path": "/cpsdevpb/B484/test/_63521264_koala.jpg",
-                "height": 576,
-                "width": 1024,
-                "altText": "ترامپ",
-                "caption": "ترامپ",
-                "copyrightHolder": "Corbis",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/23089507",
-              "type": "cps"
-            }
+            "title": "همزمان با سقوط محبوبیت، نخست‌وزیر ارمنستان  برای صلح با ترکیه و جمهوری آذربایجان تابوشکنی می‌کند",
+            "href": "https://www.bbc.com/persian/articles/cxw3jrxg1djo",
+            "timestamp": 1686974382503
           },
           {
-            "id": "32e5b14a-69a3-2d47-8e81-1863e98f4734",
+            "id": "urn:bbc:optimo:asset:cn0k6xykjn1o",
             "rank": 19,
-            "count": 6878,
-            "urn": "urn:bbc:curie:asset:32e5b14a-69a3-2d47-8e81-1863e98f4734",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Japanese PM charmed by Trump",
-                "headline": "Japanese PM says he 'has faith' in US president elect"
-              },
-              "locators": {
-                "assetUri": "/bbc_three/23092325",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:32e5b14a-69a3-2d47-8e81-1863e98f4734",
-                "assetId": "23092325",
-                "cpsUrn": "urn:bbc:content:assetUri:bbc_three/23092325",
-                "curie": "http://www.bbc.co.uk/asset/32e5b14a-69a3-2d47-8e81-1863e98f4734"
-              },
-              "summary": "Japanese Premier Shinzo Abe praises US president elect Donald Trump after meeting in New York",
-              "timestamp": 1479468062000,
-              "language": "en-gb",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bbc_three",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63523191",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/4ABC/test/_63523191_036450937-1.jpg",
-                "path": "/cpsdevpb/4ABC/test/_63523191_036450937-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Lt General Michael Flynn",
-                "copyrightHolder": "Reuters",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:bbc_three/23092325",
-              "type": "cps"
-            }
+            "title": "ایران چطور از قدرت نرم در استان دیرالزور سوریه استفاده می‌کند؟",
+            "href": "https://www.bbc.com/persian/articles/cn0k6xykjn1o",
+            "timestamp": 1686974401039
           },
           {
-            "id": "31d0fd2c-342e-6543-aa7f-6b5f095bdd41",
+            "id": "urn:bbc:optimo:asset:c2v852z010jo",
             "rank": 20,
-            "count": 5879,
-            "urn": "urn:bbc:curie:asset:31d0fd2c-342e-6543-aa7f-6b5f095bdd41",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "دیدار ترامپ از چین: لحن صمیمانه رئیس جمهوری آمریکا در برابر رهبر چین",
-                "headline": "دیدار ترامپ از چین: لحن صمیمانه رئیس جمهوری آمریکا در برابر رهبر چین"
-              },
-              "locators": {
-                "assetUri": "/persian/23187443",
-                "cpsUrn": "urn:bbc:content:assetUri:persian/23187443",
-                "curie": "http://www.bbc.co.uk/asset/31d0fd2c-342e-6543-aa7f-6b5f095bdd41",
-                "assetId": "23187443"
-              },
-              "summary": "سفر ترامپ به چین",
-              "timestamp": 1518786578000,
-              "language": "fa",
-              "indexImage": {
-                "id": "63675639",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/16DD9/test/_63675639__95576697_mediaitem95576696.jpg",
-                "path": "/cpsdevpb/16DD9/test/_63675639__95576697_mediaitem95576696.jpg",
-                "height": 261,
-                "width": 464,
-                "altText": "عکس آرشیوی از آوریل ۲۰۱۷: بازدید مقام های نظامی سوریه از پایگاه شعیرات پس از حمله آمریکا",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:persian/23187443",
-              "type": "cps"
-            }
+            "title": "مخالفت نتانیاهو با تفاهم احتمالی میان ایران و آمریکا",
+            "href": "https://www.bbc.com/persian/articles/c2v852z010jo",
+            "timestamp": 1687123884935
           }
         ]
       }

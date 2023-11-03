@@ -10,46 +10,12 @@ import {
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
-import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
+import MostReadRank from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';
-import { Services } from '../../../models/types/global';
-import { Size, Direction } from '../types';
+import { Direction } from '../../../models/types/global';
+import { Size } from '../types';
 import styles from './index.styles';
-
-const rankTranslationScript = (endpoint: string, service: Services) => {
-  const translation = serviceNumerals(service);
-  return `
-  const translations = ${JSON.stringify(translation)}
-  const getRemoteData = async () => {
-    try{
-      const response = await fetch("${endpoint}");
-      const data = await response.json();
-
-      if(data.records.length === 0){
-        throw new Error("Empty records from mostread endpoint");
-      }
-
-      data.records.forEach((item, index) => {
-        item.rankTranslation = translations[index+1];
-
-        if (!item.promo.headlines.shortHeadline) {
-          item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
-        }
-
-        if(!item.promo.locators.assetUri) {
-          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
-        }
-
-      });
-
-      return data;
-    } catch(error){
-      console.warn(error);
-      return [];
-    }
-  }
-    exportFunction('getRemoteData', getRemoteData);`;
-};
+import getRemoteDataScript from './getRemoteDataScript';
 
 interface AmpMostReadProps {
   endpoint: string;
@@ -64,7 +30,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
     translations,
   } = useContext(ServiceContext);
 
-  const onlyinnerscript = rankTranslationScript(endpoint, service);
+  const onlyinnerscript = getRemoteDataScript({ endpoint, service });
 
   const fallbackText = pathOr(
     'Content is not available',
@@ -103,7 +69,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
       </Helmet>
       <amp-list
         src="amp-script:dataFunctions.getRemoteData"
-        items="records"
+        items="items"
         max-items={numberOfItems}
         layout="responsive"
         width="300"
@@ -127,8 +93,8 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
             <MostReadLink
               dir={direction}
               service={service}
-              title="{{promo.headlines.shortHeadline}}"
-              href="{{promo.locators.assetUri}}"
+              title="{{title}}"
+              href="{{href}}"
               size={size}
             />
           </MostReadItemWrapper>

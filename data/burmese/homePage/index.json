@@ -1,95 +1,103 @@
 {
-    "data": {
-      "title": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ",
-      "description": "နောက်ဆုံးရ သတင်း၊ အထူးသတင်း၊ ကမ္ဘာနဲ့ မြန်မာ့ရေးရာ သတင်းတွေ၊ ဗီဒီယိုနဲ့ ရုပ်သံ သတင်းတွေ၊ ဆောင်းပါးတွေကို ဘီဘီစီမြန်မာပိုင်း စာမျက်နှာမှာ အချိန်နဲ့ တပြေးညီ တင်ဆက်ပေးနေပါတယ်။ အနုပညာ၊ ဘောလုံး၊ အားကစား၊ သိပ္ပံ နည်းပညာနဲ့ စီးပွားရေး စတဲ့ အကြောင်းအရာမျိုးစုံကိုလည်း ဖတ်ရှု ကြည့်ရှုနိုင်ပါတယ်။",
-      "pageType": "home",
-      "curations": [
-        {
-          "summaries": [
-            {
-              "type": "article",
-              "title": "ဧပြီလ ၂၆ ရက်ထိပ်တန်းသတင်းများ- ကရင်အမျိုးသားအစည်းအရုံးရဲ့ ၁၇ ကြိမ်မြောက် ညီလာခံ ကျင်းပနေ",
-              "firstPublished": "2023-04-26T02:51:16.402Z",
-              "link": "https://www.bbc.com/burmese/articles/czkxrd2mvrzo",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1b12/live/65220c80-e445-11ed-8df1-d74cbf1089d7.jpg",
-              "description": "သင်္ကြန်ကာလမှာ ခရမ်းမြို့နယ်ရဲစခန်းတိုက်ခိုက်ခံခဲ့ရပြီးတဲ့နောက် စစ်ကောင်စီတပ်ဘက်က ခရမ်း PDF တပ်ဖွဲ့ဝင်တွေကို ဖမ်းဆီးခဲ့တာဖြစ်ပါတယ်။ ",
-              "imageAlt": "၂၀၁၇ ခုနှစ်တုန်းက ကျင်းပခဲ့တဲ့ ၁၆ ကြိမ်မြောက် KNU ညီလာခံ ",
-              "id": "czkxrd2mvrzo"
-            },
-            {
-              "type": "article",
-              "title": "အမေရိကန် သမ္မတ ဘိုင်ဒန် ရွေးကောက်ပွဲ ပြန်ဝင်မယ်-ဧပြီ ၂၅ ရက် ညနေခင်း နိုင်ငံတကာ သတင်းများ",
-              "firstPublished": "2023-04-25T11:51:10.532Z",
-              "link": "https://www.bbc.com/burmese/articles/cy0v709vgp3o",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6719/live/7365c0c0-e35f-11ed-9110-f53e4ac17370.jpg",
-              "description": "",
-              "imageAlt": "No Tag",
-              "id": "cy0v709vgp3o"
-            },
-            {
-              "type": "article",
-              "title": "ဧပြီ ၂၅ ရက်၊ ထိပ်တန်းသတင်းများ- ဖယ်ခုံ၊ ဆောင်းဖွေးဆေးပေးခန်း လေကြောင်းတိုက်ခိုက်ခံရ ",
-              "firstPublished": "2023-04-25T03:03:06.251Z",
-              "link": "https://www.bbc.com/burmese/articles/ceq694g2w0vo",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bbf6/live/f2657a30-e357-11ed-8df1-d74cbf1089d7.jpg",
-              "description": "ထောင်ချခံထားရတဲ့ နိုင်ငံရေးအကျဉ်းသားတွေကို မိသားစုက တွေ့ဆုံခွင့်မရကြတာကြောင့် ‌ထိန်းသိမ်းခံထားရသူတွေအနေနဲ့ အကျဉ်းထောင်ထဲမှာ ဘယ်လိုအခက်အခဲတွေနဲ့ ရင်ဆိုင်နေကြရတယ်ဆိုတာကို မသိရတဲ့အခြေအနေထိကို ဖြစ်လာနေတယ်လို့ ဆိုကြပါတယ်။",
-              "imageAlt": "ဖယ်ခုံ၊ ဆောင်းဖွေးဆေးပေးခန်း လေကြောင်းတိုက်ခိုက်ခံရ ",
-              "id": "ceq694g2w0vo"
-            }
-          ],
-          "activePage": 1,
-          "pageCount": 1,
-          "curationId": "urn:bbc:tipo:list:5e6b5e68-6ae7-4510-9737-8aa4ce31401d",
-          "curationType": "tipo-curation",
-          "position": 0,
-          "title": "Top Stories",
-          "visualProminence": "HIGH",
-          "visualStyle": "COLLECTION"
-        },
-        {
-          "summaries": [
-            {
-              "type": "article",
-              "title": "ဓာတ်ခွဲခန်းတွေက ဗိုင်းရပ်စ်တွေ ပျံ့နိုင်သလား",
-              "firstPublished": "2023-03-26T08:52:31.000Z",
-              "link": "https://www.bbc.com/burmese/world-64904261",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12AF/production/_128838740_61a94379-371d-4317-9afa-2deb3c9a198c.jpg",
-              "description": "အမေရိကန် FBI ကယူဆသလိုပဲ အရင် အမေရိကန် ရောဂါကာကွယ်ရေးနဲ့ ထိန်းချုပ်ရေး ဌာန အကြီးအကဲကလည်း ဒီ ကိုဗစ် ၁၉ ဟာ တရုတ်ပြည်က ဓာတ်ခွဲခန်းတခုဆီကနေ မတော်တဆ ယိုစိမ့် ထွက်လာခဲ့တာ ဖြစ်တယ်လို့ ကွန်ဂရက်လွှတ်တော်မှာ အစီရင်ခံခဲ့ပါတယ်။ ဗိုင်းရပ်စ်ပိုးတွေ ဓာတ်ခွဲခန်းက ယိုစိမ့်လာဖို့ လွယ်ကူသလား။ အရင်ရော ကြုံခဲ့ဖူးသလား",
-              "imageAlt": "Policemen stand in front of the Wuhan Institute of Virology",
-              "id": "68b8766b-bd7e-47e1-9af6-8ee21f8b91eb"
-            },
-            {
-              "type": "article",
-              "title": "ကမ္ဘာ့အကြာဆုံး ပြည်တွင်းစစ်နဲ့ မအောင်မြင်တဲ့ နိုင်ငံပြုဖြစ်စဉ်",
-              "firstPublished": "2023-03-25T11:54:01.141Z",
-              "link": "https://www.bbc.com/burmese/articles/ce92zwvnd97o",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/73e6/live/ca68ca90-c279-11ed-95f8-0154daa64c44.jpg",
-              "description": "လောလောဆယ် နှစ်ပိုင်းအတွင်းမှာလည်း နိုင်ငံအနှံ့ ပီဒီအက်ဖ် ပြောက်ကျားတပ်တွေ ပေါ်လာပြီး ပြည်တွင်းစစ်ကို အသက်ဆက်ခဲ့ပြန်ပါတယ်။ ",
-              "imageAlt": "burma",
-              "id": "ce92zwvnd97o"
-            },
-            {
-              "type": "article",
-              "title": "တရုတ်နည်းပညာကုမ္ပဏီတွေဟာ လုံခြုံရေးအရ အန္တရာယ်ရှိလား",
-              "firstPublished": "2023-03-25T16:28:18.000Z",
-              "link": "https://www.bbc.com/burmese/world-65063474",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10607/production/_129097076_chinatechindex1.png",
-              "description": "တစ်တော့နဲ့ တခြား တရုတ်နည်းပညာ ကုမ္ပဏီတွေကို ပိတ်ပင်လာတဲ့ နိုင်ငံတွေ တိုးပွားလာ",
-              "imageAlt": "Window of a tech store in Beijing",
-              "id": "d45d7a84-183e-41ad-96d5-54a1ca482e45"
-            }
-          ],
-          "activePage": 1,
-          "pageCount": 1,
-          "curationId": "urn:bbc:tipo:list:f2a68804-a696-4ecc-91bb-93ab6af0a2a6",
-          "curationType": "tipo-curation",
-          "position": 1,
-          "title": "ဆောင်းပါး",
-          "visualProminence": "HIGH",
-          "visualStyle": "COLLECTION"
-        }
-      ]
-    },
-    "contentType": "application/json; charset=utf-8",
-    "dataSource": "Data is from Live TIPO page"
-  }
+  "data": {
+    "title": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ",
+    "description": "နောက်ဆုံးရ သတင်း၊ အထူးသတင်း၊ ကမ္ဘာနဲ့ မြန်မာ့ရေးရာ သတင်းတွေ၊ ဗီဒီယိုနဲ့ ရုပ်သံ သတင်းတွေ၊ ဆောင်းပါးတွေကို ဘီဘီစီမြန်မာပိုင်း စာမျက်နှာမှာ အချိန်နဲ့ တပြေးညီ တင်ဆက်ပေးနေပါတယ်။ အနုပညာ၊ ဘောလုံး၊ အားကစား၊ သိပ္ပံ နည်းပညာနဲ့ စီးပွားရေး စတဲ့ အကြောင်းအရာမျိုးစုံကိုလည်း ဖတ်ရှု ကြည့်ရှုနိုင်ပါတယ်။",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ဧပြီလ ၂၆ ရက်ထိပ်တန်းသတင်းများ- ကရင်အမျိုးသားအစည်းအရုံးရဲ့ ၁၇ ကြိမ်မြောက် ညီလာခံ ကျင်းပနေ",
+            "firstPublished": "2023-04-26T02:51:16.402Z",
+            "link": "https://www.bbc.com/burmese/articles/czkxrd2mvrzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1b12/live/65220c80-e445-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "သင်္ကြန်ကာလမှာ ခရမ်းမြို့နယ်ရဲစခန်းတိုက်ခိုက်ခံခဲ့ရပြီးတဲ့နောက် စစ်ကောင်စီတပ်ဘက်က ခရမ်း PDF တပ်ဖွဲ့ဝင်တွေကို ဖမ်းဆီးခဲ့တာဖြစ်ပါတယ်။ ",
+            "imageAlt": "၂၀၁၇ ခုနှစ်တုန်းက ကျင်းပခဲ့တဲ့ ၁၆ ကြိမ်မြောက် KNU ညီလာခံ ",
+            "id": "czkxrd2mvrzo"
+          },
+          {
+            "type": "article",
+            "title": "အမေရိကန် သမ္မတ ဘိုင်ဒန် ရွေးကောက်ပွဲ ပြန်ဝင်မယ်-ဧပြီ ၂၅ ရက် ညနေခင်း နိုင်ငံတကာ သတင်းများ",
+            "firstPublished": "2023-04-25T11:51:10.532Z",
+            "link": "https://www.bbc.com/burmese/articles/cy0v709vgp3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6719/live/7365c0c0-e35f-11ed-9110-f53e4ac17370.jpg",
+            "description": "",
+            "imageAlt": "No Tag",
+            "id": "cy0v709vgp3o"
+          },
+          {
+            "type": "article",
+            "title": "ဧပြီ ၂၅ ရက်၊ ထိပ်တန်းသတင်းများ- ဖယ်ခုံ၊ ဆောင်းဖွေးဆေးပေးခန်း လေကြောင်းတိုက်ခိုက်ခံရ ",
+            "firstPublished": "2023-04-25T03:03:06.251Z",
+            "link": "https://www.bbc.com/burmese/articles/ceq694g2w0vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bbf6/live/f2657a30-e357-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "ထောင်ချခံထားရတဲ့ နိုင်ငံရေးအကျဉ်းသားတွေကို မိသားစုက တွေ့ဆုံခွင့်မရကြတာကြောင့် ‌ထိန်းသိမ်းခံထားရသူတွေအနေနဲ့ အကျဉ်းထောင်ထဲမှာ ဘယ်လိုအခက်အခဲတွေနဲ့ ရင်ဆိုင်နေကြရတယ်ဆိုတာကို မသိရတဲ့အခြေအနေထိကို ဖြစ်လာနေတယ်လို့ ဆိုကြပါတယ်။",
+            "imageAlt": "ဖယ်ခုံ၊ ဆောင်းဖွေးဆေးပေးခန်း လေကြောင်းတိုက်ခိုက်ခံရ ",
+            "id": "ceq694g2w0vo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:5e6b5e68-6ae7-4510-9737-8aa4ce31401d",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ဓာတ်ခွဲခန်းတွေက ဗိုင်းရပ်စ်တွေ ပျံ့နိုင်သလား",
+            "firstPublished": "2023-03-26T08:52:31.000Z",
+            "link": "https://www.bbc.com/burmese/world-64904261",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12AF/production/_128838740_61a94379-371d-4317-9afa-2deb3c9a198c.jpg",
+            "description": "အမေရိကန် FBI ကယူဆသလိုပဲ အရင် အမေရိကန် ရောဂါကာကွယ်ရေးနဲ့ ထိန်းချုပ်ရေး ဌာန အကြီးအကဲကလည်း ဒီ ကိုဗစ် ၁၉ ဟာ တရုတ်ပြည်က ဓာတ်ခွဲခန်းတခုဆီကနေ မတော်တဆ ယိုစိမ့် ထွက်လာခဲ့တာ ဖြစ်တယ်လို့ ကွန်ဂရက်လွှတ်တော်မှာ အစီရင်ခံခဲ့ပါတယ်။ ဗိုင်းရပ်စ်ပိုးတွေ ဓာတ်ခွဲခန်းက ယိုစိမ့်လာဖို့ လွယ်ကူသလား။ အရင်ရော ကြုံခဲ့ဖူးသလား",
+            "imageAlt": "Policemen stand in front of the Wuhan Institute of Virology",
+            "id": "68b8766b-bd7e-47e1-9af6-8ee21f8b91eb"
+          },
+          {
+            "type": "article",
+            "title": "ကမ္ဘာ့အကြာဆုံး ပြည်တွင်းစစ်နဲ့ မအောင်မြင်တဲ့ နိုင်ငံပြုဖြစ်စဉ်",
+            "firstPublished": "2023-03-25T11:54:01.141Z",
+            "link": "https://www.bbc.com/burmese/articles/ce92zwvnd97o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/73e6/live/ca68ca90-c279-11ed-95f8-0154daa64c44.jpg",
+            "description": "လောလောဆယ် နှစ်ပိုင်းအတွင်းမှာလည်း နိုင်ငံအနှံ့ ပီဒီအက်ဖ် ပြောက်ကျားတပ်တွေ ပေါ်လာပြီး ပြည်တွင်းစစ်ကို အသက်ဆက်ခဲ့ပြန်ပါတယ်။ ",
+            "imageAlt": "burma",
+            "id": "ce92zwvnd97o"
+          },
+          {
+            "type": "article",
+            "title": "တရုတ်နည်းပညာကုမ္ပဏီတွေဟာ လုံခြုံရေးအရ အန္တရာယ်ရှိလား",
+            "firstPublished": "2023-03-25T16:28:18.000Z",
+            "link": "https://www.bbc.com/burmese/world-65063474",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10607/production/_129097076_chinatechindex1.png",
+            "description": "တစ်တော့နဲ့ တခြား တရုတ်နည်းပညာ ကုမ္ပဏီတွေကို ပိတ်ပင်လာတဲ့ နိုင်ငံတွေ တိုးပွားလာ",
+            "imageAlt": "Window of a tech store in Beijing",
+            "id": "d45d7a84-183e-41ad-96d5-54a1ca482e45"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f2a68804-a696-4ecc-91bb-93ab6af0a2a6",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "ဆောင်းပါး",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c897lqqzk1zt",
+        "contentType": "index-home",
+        "pageIdentifier": "burmese.page",
+        "pageTitle": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from Live TIPO page"
+}

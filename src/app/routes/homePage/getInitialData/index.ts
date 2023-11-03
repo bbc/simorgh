@@ -1,60 +1,42 @@
-import { Agent } from 'https';
-import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import fetchPageData from '../../utils/fetchPageData';
-import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
-import { Services } from '../../../models/types/global';
-import HOME_PAGE_CONFIG from './page-config';
+import { PageTypes, Services, Variants } from '../../../models/types/global';
 import { FetchError } from '../../../models/types/fetch';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import { HOME_PAGE } from '../../utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
 type Props = {
-  getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: 'home';
+  pageType: PageTypes;
+  variant?: Variants;
 };
 
 export default async ({
-  getAgent,
   service,
   path: pathname,
   pageType,
+  variant,
 }: Props) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = isLocal ? null : await getAgent();
-
-    const fetchUrl = constructPageFetchUrl({
+    const { status, json } = await fetchDataFromBFF({
       pathname,
-      pageType,
+      pageType: HOME_PAGE,
       service,
-    });
-
-    const optHeaders = { 'ctx-service-env': env };
-
-    // @ts-expect-error - Ignore fetchPageData argument types
-    const { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
+      variant,
     });
 
     const {
-      data: { title, description, curations },
+      data: { title, description, curations, metadata },
     } = json;
-
-    const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
 
     return {
       status,
       pageData: {
-        id,
         title,
-        pageType,
+        metadata: { ...metadata, type: pageType },
         curations,
         description,
       },
@@ -68,6 +50,7 @@ export default async ({
       pathname,
       message,
     });
+
     return { error: message, status };
   }
 };

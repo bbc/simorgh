@@ -3,12 +3,16 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import {
+  CurationData,
   VisualProminence,
   VisualStyle,
-  CurationData,
 } from '../../models/types/curationData';
+import { ATIData } from '../../components/ATIAnalytics/types';
 import Curation from '../../components/Curation';
+import Ad from '../../components/Ad';
+import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
@@ -16,13 +20,16 @@ import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 
-interface HomePageProps {
+export interface HomePageProps {
   pageData: {
-    pageType: string;
     id?: string;
     title: string;
     curations: CurationData[];
     description: string;
+    metadata: {
+      atiAnalytics: ATIData;
+      type: string;
+    };
   };
 }
 
@@ -36,7 +43,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const { title, description, curations } = pageData;
+  const {
+    title,
+    description,
+    curations,
+    metadata: { atiAnalytics },
+  } = pageData;
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -48,7 +60,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         lang={lang}
         description={description}
         openGraphType="website"
-        hasAmpPage
+        hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
@@ -56,7 +68,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
         headline={title}
         entities={[itemList]}
       />
+      <Ad slotType="leaderboard" />
       <main css={styles.main}>
+        <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -64,35 +78,41 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          {curations.map(
-            ({
-              visualProminence,
-              summaries,
-              curationId,
-              title: curationTitle,
-              link,
-              position,
-              visualStyle,
-              mostRead,
-            }) => {
-              return (
-                <React.Fragment key={`${curationId}-${position}`}>
-                  <Curation
-                    headingLevel={curationTitle ? 3 : 2}
-                    visualStyle={visualStyle as VisualStyle}
-                    visualProminence={visualProminence as VisualProminence}
-                    promos={summaries || []}
-                    title={curationTitle}
-                    topStoriesTitle={topStoriesTitle}
-                    position={position}
-                    link={link}
-                    curationLength={curations && curations.length}
-                    mostRead={mostRead}
-                  />
-                </React.Fragment>
-              );
-            },
-          )}
+          <div css={styles.margins}>
+            {curations.map(
+              (
+                {
+                  visualProminence,
+                  summaries,
+                  curationId,
+                  title: curationTitle,
+                  link,
+                  position,
+                  visualStyle,
+                  mostRead,
+                },
+                index,
+              ) => {
+                return (
+                  <React.Fragment key={`${curationId}-${position}`}>
+                    <Curation
+                      headingLevel={curationTitle ? 3 : 2}
+                      visualStyle={visualStyle as VisualStyle}
+                      visualProminence={visualProminence as VisualProminence}
+                      promos={summaries || []}
+                      title={curationTitle}
+                      topStoriesTitle={topStoriesTitle}
+                      position={position}
+                      link={link}
+                      curationLength={curations && curations.length}
+                      mostRead={mostRead}
+                    />
+                    {index === 0 && <MPU />}
+                  </React.Fragment>
+                );
+              },
+            )}
+          </div>
         </div>
       </main>
     </>

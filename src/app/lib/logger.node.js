@@ -9,6 +9,7 @@ const {
   simple,
   timestamp,
   metadata,
+  label,
   json,
   colorize,
   prettyPrint,
@@ -18,6 +19,7 @@ const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
 const LOG_DIR = process.env.LOG_DIR || 'log';
 const LOG_TO_CONSOLE = process.env.LOG_TO_CONSOLE === 'true';
+const PLATFORM = process.env.NEXTJS ? 'NEXTJS' : 'EXPRESS';
 
 const createLogDirectory = (dirName = 'log') => {
   if (!fs.existsSync(dirName)) {
@@ -63,6 +65,10 @@ const fileLogger = createLogger({
   format: format.combine(
     simple(),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+
+    label({
+      label: PLATFORM,
+    }),
 
     // creates a metadata object, that uses our custom formatting
     metadata({

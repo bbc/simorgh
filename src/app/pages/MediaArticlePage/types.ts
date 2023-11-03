@@ -1,3 +1,4 @@
+import { ATIData } from '../../components/ATIAnalytics/types';
 import { MetadataTaggings } from '../../models/types/metadata';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -20,9 +21,7 @@ export type MediaArticlePageProps = {
       analyticsLabels?: {
         producer: string;
       };
-      atiAnalytics?: {
-        chapter: string;
-      };
+      atiAnalytics: ATIData;
     };
     promo: object;
   };
@@ -38,4 +37,8 @@ export type TimestampProps = {
   popOut: boolean;
   minutesTolerance?: number;
   className: string;
+};
+
+export type EmbedHtmlProps = {
+  embeddableContent: string;
 };

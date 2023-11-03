@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Numeral systems should return Bengali numerals 1`] = `
-Array [
+[
   "০",
   "১",
   "২",
@@ -17,7 +17,7 @@ Array [
 `;
 
 exports[`Numeral systems should return Burmese numerals 1`] = `
-Array [
+[
   "၀",
   "၁",
   "၂",
@@ -33,7 +33,7 @@ Array [
 `;
 
 exports[`Numeral systems should return EasternArabic numerals 1`] = `
-Array [
+[
   "۰",
   "۱",
   "۲",
@@ -49,7 +49,7 @@ Array [
 `;
 
 exports[`Numeral systems should return Nepali numerals 1`] = `
-Array [
+[
   "०",
   "१",
   "२",
@@ -65,7 +65,7 @@ Array [
 `;
 
 exports[`Numeral systems should return WesternArabic numerals 1`] = `
-Array [
+[
   "0",
   "1",
   "2",

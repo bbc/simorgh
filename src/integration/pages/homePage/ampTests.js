@@ -2,14 +2,19 @@ import {
   runCoreAmpTests,
   runAmpFooterTests,
   runAmpAnalyticsTests,
+  runAmpAdsTests,
 } from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
-export default ({ service, pageData }) => {
+export default ({ service, pageData, displayAds }) => {
   runCrossPlatformTests({ service, pageData });
   runAmpFooterTests();
   runCoreAmpTests();
   runAmpAnalyticsTests();
+
+  if (displayAds) {
+    runAmpAdsTests();
+  }
 
   it('should render the correct number of curations, excluding most read', () => {
     const curationsWithSummaries = pageData.curations.filter(

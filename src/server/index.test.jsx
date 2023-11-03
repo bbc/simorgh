@@ -60,6 +60,7 @@ jest.mock('@loadable/server', () => {
   }
   return {
     ChunkExtractor,
+    ChunkExtractorManager: jest.fn(),
   };
 });
 
@@ -103,7 +104,8 @@ jest.mock('./utilities/mvtHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
-const makeRequest = async requestPath => request(server).get(requestPath);
+const makeRequest = async (requestPath, headers = {}) =>
+  request(server).get(requestPath).set(headers);
 
 const QUERY_STRING = '?param=test&query=1';
 
@@ -895,14 +897,14 @@ describe('Server', () => {
   describe('Most Read json', () => {
     it('should serve a file for valid service paths with variants', async () => {
       const { body } = await makeRequest('/zhongwen/mostread/trad.json');
-      expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+      expect(body.data).toEqual(
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest('/news/mostread.json');
-      expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+      const { body } = await makeRequest('/pidgin/mostread.json');
+      expect(body.data).toEqual(
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
@@ -977,7 +979,7 @@ describe('Server', () => {
   describe('IDX json', () => {
     it('should serve a file for valid idx paths', async () => {
       const { body } = await makeRequest('/persian/afghanistan.json');
-      expect(body).toEqual(
+      expect(body.data.article).toEqual(
         expect.objectContaining({ content: expect.any(Object) }),
       );
     });
@@ -1020,7 +1022,7 @@ describe('Server', () => {
     describe('for front pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/serbian/cyr.json');
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
@@ -1116,7 +1118,7 @@ describe('Server', () => {
     describe('for cps asset pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/pidgin/tori-49450859.json');
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
@@ -1135,7 +1137,7 @@ describe('Server', () => {
         const { body } = await makeRequest(
           '/hausa/multimedia/2012/07/120712_click.json',
         );
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
@@ -1499,6 +1501,75 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
     expect(header.vary).toBe('Accept-Encoding');
+  });
+
+  it(`should set isUK value to true when 'x-bbc-edge-isuk' is set to 'yes'`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-bbc-edge-isuk': 'yes',
+    });
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: true }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'yes'`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-bbc-edge-isuk': 'no',
+    });
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: false }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to true when 'x-country' is set to 'gb' and 'x-bbc-edge-isuk' is not available`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-country': 'gb',
+    });
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: true }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to null when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {});
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: null }),
+      }),
+    );
   });
 });
 

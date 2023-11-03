@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';
@@ -9,22 +10,31 @@ interface FixtureProps {
   lazy?: boolean;
   type?: string;
   duration?: number;
+  link?: string;
 }
 
-const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
+const Fixture = ({
+  lazy,
+  type = 'article',
+  duration,
+  link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
+}: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
     firstPublished="2022-03-30T07:37:18.253Z"
+    lastPublished="2023-04-17T07:37:18.253Z"
     imageUrl="https://ichef.bbci.co.uk/news/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     imageAlt="Campesino indígena peruano."
-    link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
+    link={link}
     type={type}
     duration={duration}
   />
 );
 
 describe('Curation Promo', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+
   it('should use formatted duration when a valid duration is provided', () => {
     const container = render(
       <Fixture lazy={false} duration={123} type="video" />,
@@ -33,6 +43,11 @@ describe('Curation Promo', () => {
     const durationString = 'Duration, 2,03';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
+  });
+  it('should render the last published date', () => {
+    const { getByText } = render(<Fixture />, { service: 'mundo' });
+
+    expect(getByText('17 abril 2023')).toBeInTheDocument();
   });
   describe('Lazy loading', () => {
     it('should not lazy load when lazy is falsey', () => {
@@ -73,6 +88,16 @@ describe('Curation Promo', () => {
         container.queryByTestId('visually-hidden-text'),
       ).toBeInTheDocument();
       expect(container.getByText('Promo title')).toBeInTheDocument();
+    });
+  });
+
+  describe('Live Promo', () => {
+    it('should display LiveLabel on a Live Promo', () => {
+      const container = render(
+        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        { service: 'mundo' },
+      );
+      expect(container.getByText('EN VIVO')).toBeInTheDocument();
     });
   });
 });

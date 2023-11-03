@@ -179,6 +179,7 @@ export interface Translations {
   topStoriesTitle?: string;
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
+  infoBannerLabel?: string;
 }
 
 export interface TranslationsError {
