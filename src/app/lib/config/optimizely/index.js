@@ -1,4 +1,5 @@
 export default {
+  clientSide: false,
   experimentId: '005_brasil_hybrid_recommendations',
   featureId: '005_brasil_hybrid_recommendations',
   viewClickAttributeId: 'wsoj',
