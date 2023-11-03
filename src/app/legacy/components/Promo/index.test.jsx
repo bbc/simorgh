@@ -17,6 +17,7 @@ const Fixture = ({ useLargeImages = false }) => (
     <Promo.Heading>test heading</Promo.Heading>
     <Promo.A>test link tag</Promo.A>
     <Promo.Body>test body</Promo.Body>
+    <Promo.Timestamp>1699003658</Promo.Timestamp>
   </Promo>
 );
 
@@ -34,6 +35,9 @@ const FixtureProgrammes = ({ useLargeImages = false }) => (
     <Promo.Body>test body</Promo.Body>
   </Promo>
 );
+
+const stringTimestamp = '2023-11-03T05:17:09.393Z';
+const unixTimestamp = 1698995115000;
 
 describe('Promo component - Image', () => {
   it('should render image using correct resolution and no large image on desktop', () => {
@@ -75,5 +79,21 @@ describe('Promo component - Image', () => {
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
     });
+  });
+});
+
+describe('Promo component - Timestamp', () => {
+  it('should render timestamp in string format', () => {
+    const { container } = render(<Fixture timestamp={stringTimestamp} />, {
+      service: 'kyrgyz',
+    });
+    expect(container).toBeInTheDocument('5 саат мурда');
+  });
+  it('should render timestamp in epoch format', () => {
+    const { container } = render(<Fixture timestamp={unixTimestamp} />, {
+      service: 'serbian',
+      variant: 'cyr',
+    });
+    expect(container).toBeInTheDocument('Пре 4 сата');
   });
 });
