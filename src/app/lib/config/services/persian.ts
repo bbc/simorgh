@@ -364,6 +364,10 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
+        title: 'جنگ اسرائیل-غزه',
+        url: '/persian/topics/clm0z4jgj3xt',
+      },
+      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },
