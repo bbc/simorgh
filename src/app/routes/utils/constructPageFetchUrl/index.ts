@@ -123,9 +123,6 @@ const constructPageFetchUrl = ({
     ...(isAmp && {
       isAmp,
     }),
-    ...(isCaf && {
-      isCaf,
-    }),
     ...(env && { serviceEnv: env }),
   };
 

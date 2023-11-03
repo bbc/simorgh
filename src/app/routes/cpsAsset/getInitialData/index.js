@@ -124,7 +124,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...(!isCaf ? await transformJson(article, pathname, toggles) : article),
+        ...(isCaf ? article : await transformJson(article, pathname, toggles)),
         secondaryColumn: {
           topStories,
           features,
