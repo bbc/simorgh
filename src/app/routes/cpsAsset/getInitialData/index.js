@@ -5,7 +5,6 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import isLive from '#lib/utilities/isLive';
 import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
@@ -93,18 +92,17 @@ export default async ({
   variant,
   pageType,
   toggles,
+  isCaf,
 }) => {
   try {
-    const isCaf = pathname.includes('renderer_env=caf') && !isLive();
-
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article } = {},
     } = await getArticleInitialData({
-      path,
+      path: pathname,
       service,
       variant,
-      pageType: 'cpsAsset',
+      pageType: isCaf ? 'article' : 'cpsAsset',
       isCaf,
     });
 

@@ -201,34 +201,6 @@ describe('Articles - BFF Fetching', () => {
     });
   });
 
-  it('should request BFF data if "renderer_env=caf" is supplied in the path for CPS asset, ignoring the app env only if its set to "local"', async () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-
-    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    fetchDataSpy.mockImplementation(() =>
-      Promise.resolve({
-        status: 200,
-        json: JSON.stringify(bffArticleJson),
-      }),
-    );
-
-    await getInitialData({
-      path: '/mundo/noticias-internacional-64382459?renderer_env=caf',
-      service: 'mundo',
-      pageType: 'cpsAsset',
-      isCaf: true,
-    });
-
-    expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article&serviceEnv=live',
-      agent,
-      optHeaders: {
-        'ctx-service-env': 'live',
-      },
-      pageType: ARTICLE_PAGE,
-    });
-  });
-
   it('should log a 404 to node.logger when the article cannot be found', async () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 

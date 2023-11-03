@@ -66,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -240,7 +240,8 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
+          {!isCaf && <RelatedContentSection content={blocks} />}
         </div>
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>

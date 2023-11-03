@@ -51,13 +51,14 @@ interface GetIdProps {
   service: Services;
   variant?: Variants;
   env: Environments;
+  isCaf?: boolean;
 }
 
-const getId = ({ pageType, service, variant, env }: GetIdProps) => {
+const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
     case ARTICLE_PAGE:
-      getIdFunction = getArticleId;
+      getIdFunction = isCaf ? getCpsId : getArticleId;
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => {
@@ -103,7 +104,7 @@ const constructPageFetchUrl = ({
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId({ pageType, service, env, variant })(pathname);
+  const id = getId({ pageType, service, env, variant, isCaf })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
