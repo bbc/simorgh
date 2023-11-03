@@ -18,19 +18,19 @@ import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
 import { OptimoBlock } from '../../models/types/optimo';
 
+const defaultImageProps = {
+  height: null,
+  width: 400,
+  altText: '',
+  path: '/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
+  locator: null,
+  originCode: null,
+  copyright: null,
+};
+
 const buildImageProperties = (imageProps?: ImageProps) => {
   const image =
-    imageProps?.path || imageProps?.locator
-      ? imageProps
-      : {
-          height: null,
-          width: 400,
-          altText: '',
-          path: '/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
-          locator: null,
-          originCode: null,
-          copyright: null,
-        };
+    imageProps?.path || imageProps?.locator ? imageProps : defaultImageProps;
 
   const {
     width,

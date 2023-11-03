@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -12,10 +13,9 @@ import { Services, Variants } from '../../models/types/global';
 
 import {
   promoProps,
-  optimoPromoFixture,
   cpsPromoFixture,
   linkPromoFixture,
-  optimoPromoFixtureNoImage,
+  makeOptimoPromoFixture,
 } from './fixtures';
 
 import Promo from '.';
@@ -61,7 +61,18 @@ describe('Frosted Glass Promo', () => {
   });
 
   it('when given props for a Optimo promo', () => {
-    const { container } = render(<Component {...optimoPromoFixture} />);
+    const validOptimoPromoFixture = makeOptimoPromoFixture({
+      type: 'rawImage',
+      model: {
+        width: 800,
+        height: 450,
+        locator: '2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
+        originCode: 'cpsdevpb',
+        copyrightHolder: 'BBC',
+        suitableForSyndication: true,
+      },
+    });
+    const { container } = render(<Component {...validOptimoPromoFixture} />);
     expect(container).toMatchSnapshot();
   });
 
@@ -76,26 +87,36 @@ describe('Frosted Glass Promo', () => {
   });
 
   it('when given props for an a Optimo promo with no image', () => {
+    const optimoPromoFixtureNoImage = makeOptimoPromoFixture({});
     const { container } = render(<Component {...optimoPromoFixtureNoImage} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render the appropriate elements - Optimo Promo', () => {
+    const validOptimoPromoFixture = makeOptimoPromoFixture({
+      type: 'rawImage',
+      model: {
+        width: 800,
+        height: 450,
+        locator: '2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
+        originCode: 'cpsdevpb',
+        copyrightHolder: 'BBC',
+        suitableForSyndication: true,
+      },
+    });
     const { container, getByText } = render(
-      <Component {...optimoPromoFixture} />,
+      <Component {...validOptimoPromoFixture} />,
     );
 
+    const promoHeadline = validOptimoPromoFixture?.item?.headlines
+      ?.promoHeadline as any;
+
     expect(getByText('2 febrero 2023'));
-    expect(
-      getByText(
-        optimoPromoFixture.item.headlines.promoHeadline.blocks[0].model
-          .blocks[0].model.text,
-      ),
-    );
+    expect(getByText(promoHeadline.blocks[0].model.blocks[0].model.text));
     expect(
       container.querySelector(
         `a[href="${makeRelativeUrlPath(
-          optimoPromoFixture.item.locators.canonicalUrl,
+          validOptimoPromoFixture.item.locators?.canonicalUrl,
         )}"]`,
       ),
     ).toBeInTheDocument();
@@ -125,21 +146,20 @@ describe('Frosted Glass Promo', () => {
   });
 
   it('should render the appropriate elements - Optimo Promo No Image', () => {
+    const optimoPromoFixtureNoImage = makeOptimoPromoFixture({});
     const { container, getByText } = render(
       <Component {...optimoPromoFixtureNoImage} />,
     );
 
+    const promoHeadline = optimoPromoFixtureNoImage?.item?.headlines
+      ?.promoHeadline as any;
+
     expect(getByText('2 febrero 2023'));
-    expect(
-      getByText(
-        optimoPromoFixture.item.headlines.promoHeadline.blocks[0].model
-          .blocks[0].model.text,
-      ),
-    );
+    expect(getByText(promoHeadline.blocks[0].model.blocks[0].model.text));
     expect(
       container.querySelector(
         `a[href="${makeRelativeUrlPath(
-          optimoPromoFixture.item.locators.canonicalUrl,
+          optimoPromoFixtureNoImage.item.locators?.canonicalUrl,
         )}"]`,
       ),
     ).toBeInTheDocument();
@@ -148,6 +168,16 @@ describe('Frosted Glass Promo', () => {
         `img[src="https://ichef.bbci.co.uk/news/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"]`,
       ),
     ).toBeInTheDocument();
+  });
+
+  it('should render null - Invalid Optimo Promo', () => {
+    const optimoPromoFixture = makeOptimoPromoFixture({});
+    const invalidOptimoPromoFixture = {
+      item: { ...optimoPromoFixture.item, headlines: {} },
+    };
+
+    const { container } = render(<Component {...invalidOptimoPromoFixture} />);
+    expect(container).toBeEmptyDOMElement();
   });
 
   // Only expecting clicks to be emitted from here - view tracking is handled at
