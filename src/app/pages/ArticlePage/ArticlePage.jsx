@@ -21,7 +21,6 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import Include from '#containers/Include';
 
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
@@ -121,7 +120,6 @@ const ArticlePage = ({ pageData }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
-    include: Include,
     byline: props =>
       hasByline ? (
         <Byline {...props}>
