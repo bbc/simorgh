@@ -120,6 +120,7 @@ const constructPageFetchUrl = ({
     ...(isAmp && {
       isAmp,
     }),
+    ...(env && { serviceEnv: env }),
   };
 
   let fetchUrl = Url(process.env.BFF_PATH as string).set(
@@ -127,7 +128,7 @@ const constructPageFetchUrl = ({
     queryParameters,
   );
 
-  if (isLocal) {
+  if (isLocal && !process?.env?.BFF_PATH?.includes('localhost')) {
     switch (pageType) {
       case ARTICLE_PAGE:
         fetchUrl = Url(

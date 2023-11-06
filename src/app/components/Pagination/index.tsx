@@ -36,8 +36,8 @@ interface RenderBlockProps {
 }
 
 interface PaginationProps {
-  activePage: number;
-  pageCount: number;
+  activePage?: number;
+  pageCount?: number;
   pageXOfY: string;
   previousPage: string;
   nextPage: string;
@@ -71,7 +71,7 @@ const LinkComponent = ({
     css={isActive ? styles.activeA : styles.inactiveA}
     href={`?page=${pageNumber}`}
     className="focusIndicatorOutlineBlack"
-    {...(isActive && { isActive: true, 'aria-current': 'page' })}
+    {...(isActive && { 'aria-current': 'page' })}
     {...rest}
   >
     {children}

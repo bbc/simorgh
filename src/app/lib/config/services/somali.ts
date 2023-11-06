@@ -337,7 +337,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Barnaamijyada Idaacadda',
-        url: '/somali/media-54071665',
+        url: '/somali/topics/cn6rqlrkm0pt',
       },
     ],
   },

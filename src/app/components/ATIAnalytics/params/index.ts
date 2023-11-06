@@ -119,7 +119,7 @@ const createBuilderFactory = (
 ) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType];
+  return pageTypeHandlers[pageType] || noOp;
 };
 
 export const buildATIUrl = ({

@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '../../../components/react-testing-library-with-providers';
 
 let AmpContainer;
 let container;
@@ -20,12 +19,7 @@ describe('Amp Consent Banner Container', () => {
   beforeEach(() => {
     AmpContainer = require('./index.amp').default;
 
-    container = document.createElement('div');
-    document.body.appendChild(container);
-
-    act(() => {
-      ReactDOM.render(<AmpContainer />, container);
-    });
+    ({ container } = render(<AmpContainer />));
   });
 
   afterEach(() => {
@@ -39,6 +33,7 @@ describe('Amp Consent Banner Container', () => {
           'tap:cookie.show, privacy.hide, AMP.setState({ isManagingSettings: false }), dataCollectionHeading.focus',
         promptId: 'privacy',
         rejectAction: 'tap:cookie.show, privacy.hide',
+        hideAction: 'tap:brandLink.focus, privacy.hide',
         type: 'privacy',
       },
       {},
@@ -50,6 +45,7 @@ describe('Amp Consent Banner Container', () => {
         hidden: true,
         promptId: 'cookie',
         rejectAction: 'tap:brandLink.focus, consent.reject',
+        hideAction: 'tap:brandLink.focus, cookie.hide',
         type: 'cookie',
       },
       {},

@@ -23,14 +23,12 @@ const defaultATIData = {
   pageTitle: 'pageTitle',
 };
 
-const { error } = console;
-
 beforeEach(() => {
-  console.error = jest.fn();
+  console.warn = jest.fn();
 });
 
 afterEach(() => {
-  console.error = error;
+  jest.clearAllMocks();
 });
 
 const TestComponent = () => {
@@ -225,7 +223,7 @@ describe('Error handling', () => {
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
+    expect(console.warn).toHaveBeenCalledWith(
       expect.stringContaining(
         "ATI Event Tracking Error: Could not get the page type's campaign name",
       ),
