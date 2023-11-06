@@ -30,7 +30,9 @@ const Stream = ({
         Live Reporting
       </Heading>
       {contributors && (
-        <Paragraph css={styles.subHeading}>{contributors}</Paragraph>
+        <Paragraph role="paragraph" css={styles.subHeading}>
+          {contributors}
+        </Paragraph>
       )}
 
       {hasSinglePost ? (

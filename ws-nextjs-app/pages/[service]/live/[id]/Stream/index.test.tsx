@@ -25,7 +25,9 @@ const mockStreamContentMoreThanOne = {
 describe('Live Page Stream', () => {
   it('should return null with no stream content posts', async () => {
     await act(async () => {
-      render(<Stream streamContent={mockStreamContentEmpty} />);
+      render(
+        <Stream streamContent={mockStreamContentEmpty} contributors={null} />,
+      );
     });
 
     expect(screen.queryByRole('heading')).not.toBeInTheDocument();
@@ -33,7 +35,9 @@ describe('Live Page Stream', () => {
 
   it('should render a single stream content post with no ordered list', async () => {
     await act(async () => {
-      render(<Stream streamContent={mockStreamContentSingle} />);
+      render(
+        <Stream streamContent={mockStreamContentSingle} contributors={null} />,
+      );
     });
 
     expect(
@@ -46,7 +50,12 @@ describe('Live Page Stream', () => {
 
   it('should render a more than one stream content posts within a list', async () => {
     await act(async () => {
-      render(<Stream streamContent={mockStreamContentMoreThanOne} />);
+      render(
+        <Stream
+          streamContent={mockStreamContentMoreThanOne}
+          contributors={null}
+        />,
+      );
     });
 
     expect(
@@ -55,5 +64,27 @@ describe('Live Page Stream', () => {
       }),
     ).toHaveLength(2);
     expect(screen.queryByRole('list')).toBeInTheDocument();
+  });
+
+  it('should render contributors when supplied', async () => {
+    await act(async () => {
+      render(
+        <Stream
+          streamContent={mockStreamContentSingle}
+          contributors="Not a random dude"
+        />,
+      );
+    });
+    expect(screen.queryByRole('paragraph')).toBeInTheDocument();
+  });
+
+  it('should not render contributors when they are null', async () => {
+    await act(async () => {
+      render(
+        <Stream streamContent={mockStreamContentSingle} contributors={null} />,
+      );
+    });
+
+    expect(screen.queryByRole('paragraph')).not.toBeInTheDocument();
   });
 });
