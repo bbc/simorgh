@@ -21,6 +21,8 @@ import runSectionTests from './sections';
 import runMostReadTests from './mostReadTests';
 import runAmpAdsTests from './ads.amp';
 import runCanonicalAdsTests from './ads.canonical';
+import runCanonicalEmbedTests from './flourishEmbed.canonical';
+import runAmpEmbedTests from './flourishEmbed.amp';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -55,4 +57,6 @@ export {
   runSectionTests,
   runAmpAdsTests,
   runCanonicalAdsTests,
+  runCanonicalEmbedTests,
+  runAmpEmbedTests,
 };
