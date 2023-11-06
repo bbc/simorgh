@@ -24,7 +24,10 @@ const Stream = ({
   return (
     <div>
       <Heading
-        css={contributors ? styles.heading : styles.headingNoContributors}
+        css={[
+          styles.heading,
+          !contributors && styles.headingNoContributorsPadding,
+        ]}
         level={2}
       >
         Live Reporting

@@ -21,16 +21,10 @@ export default {
         paddingTop: `${spacings.DOUBLE}rem`,
       },
     }),
-  headingNoContributors: ({ mq, spacings, fontSizes }: Theme) =>
+  headingNoContributorsPadding: ({ mq, spacings }: Theme) =>
     css({
-      padding: `${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        ...fontSizes.doublePica,
-        paddingTop: `${spacings.TRIPLE}rem`,
         paddingBottom: `${spacings.TRIPLE}rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
       },
     }),
   subHeading: ({ mq, spacings }: Theme) =>
