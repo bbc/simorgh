@@ -49,4 +49,4 @@ export default LivePageLayout;
 
 In the code snippet above, NextJS will serve the component returned by `LivePageLayout`. Before doing so, it calls `getServerSideProps` (on the server) to retrieve the requisite props, which are then used to call `LivePageLayout`, which in turn returns a valid HTML element. 
 
-**It's incredibly important that request/response data is stored within `context.res`, as this is used by ELB to recognise 2XX/4XX and 5XX responses that are handled by our NextJS app.** 
+**It's incredibly important that request/response data is stored within `context.res` that requests can be handled appropriately.** 
