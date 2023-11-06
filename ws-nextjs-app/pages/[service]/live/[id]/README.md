@@ -26,13 +26,7 @@ Sample routes that match this construct are:
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Pidgin (no variant)        | `/pidgin/live/cdvxv61l6x8t`                                                                                                                                                                                                                      |
 | Serbian (with variant lat) | `/serbian/live/c003pmmldygt/lat`                                                                                                                                                                                                                 |
-| Serbian                    | `/serbian/live/c003pmmldygt`  This will ONLY work on your local host. This will NOT be served through the live NextJS app as Belfrage is programmed to recognise an absence of the variant and it will instead re-route this request to Mozart.  |
-
-
-### AWS Links
-| Service    | URL                                                                                                                                                                                                                                                                                                 |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ELB (test) | [ELB Link](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:eu-west-1:657504540040:targetgroup/test-s-NextJ-VDUOUKK7FNCG/64ca64e5ab5930ac) Contains general traffic monitors for the ELB that handles live page requests. |
+| Serbian                    | `/serbian/live/c003pmmldygt`  This will ONLY work on your local host. This will NOT be served through the live NextJS app as upstream services are programmed to recognise an absence of the variant and it will instead re-route this request to alternative servers.  |
 
 #### Server Side functions
 
