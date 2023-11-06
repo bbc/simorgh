@@ -75,7 +75,7 @@ describe('Live Page Stream', () => {
         />,
       );
     });
-    expect(screen.queryByRole('paragraph')).toBeInTheDocument();
+    expect(screen.queryByTestId('paragraph')).toBeInTheDocument();
   });
 
   it('should not render contributors when they are null', async () => {
@@ -85,6 +85,6 @@ describe('Live Page Stream', () => {
       );
     });
 
-    expect(screen.queryByRole('paragraph')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('paragraph')).not.toBeInTheDocument();
   });
 });

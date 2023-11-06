@@ -1243,7 +1243,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </h2>
           <p
             class="emotion-20"
-            role="paragraph"
+            data-testid="paragraph"
           >
             Not a random dude
           </p>

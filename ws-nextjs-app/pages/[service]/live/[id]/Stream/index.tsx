@@ -30,7 +30,7 @@ const Stream = ({
         Live Reporting
       </Heading>
       {contributors && (
-        <Paragraph role="paragraph" css={styles.subHeading}>
+        <Paragraph data-testid="paragraph" css={styles.subHeading}>
           {contributors}
         </Paragraph>
       )}
