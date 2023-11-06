@@ -5,7 +5,7 @@ import {
 } from '../../../components/react-testing-library-with-providers';
 import Promo from '.';
 // eslint-disable-next-line react/prop-types
-const Fixture = ({ useLargeImages = false, timestamp }) => (
+const Fixture = ({ useLargeImages = false, timestamp = new Date() }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
@@ -16,7 +16,7 @@ const Fixture = ({ useLargeImages = false, timestamp }) => (
     <Promo.Heading>test heading</Promo.Heading>
     <Promo.A>test link tag</Promo.A>
     <Promo.Body>test body</Promo.Body>
-    <Promo.Timestamp>{(timestamp, new Date())}</Promo.Timestamp>
+    <Promo.Timestamp>{timestamp}</Promo.Timestamp>
   </Promo>
 );
 
