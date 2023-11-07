@@ -184,6 +184,7 @@ describe('Logger node - for the server', () => {
             transports: [{}],
           });
         });
+        
         it('is configured correctly for NextJS', () => {
           process.env.NEXTJS = 'true';
           const loggerNode = require('./logger.node');
