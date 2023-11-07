@@ -15,8 +15,8 @@ export const FlourishResponsiveHeight = () => (
   <FlourishEmbed {...AsianGamesFootballProps} />
 );
 
-export const FlourishStory = () => <FlourishEmbed {...FlourishStory} />;
+export const FlourishStory = () => <FlourishEmbed {...FlourishStoryFixture} />;
 
 export const FlourishVisualisation = () => (
-  <FlourishEmbed {...FlourishVisualisation} />
+  <FlourishEmbed {...FlourishVisualisationFixture} />
 );

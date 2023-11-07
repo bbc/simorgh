@@ -15,7 +15,7 @@ export const AsianGamesFootballProps = {
   oEmbedType: 'aresFlourish',
 };
 
-export const FlourishStory = {
+export const FlourishStoryFixture = {
   version: '1.0',
   provider_name: 'Flourish',
   provider_url: 'https://flourish.studio',
@@ -32,7 +32,7 @@ export const FlourishStory = {
   oEmbedType: 'aresFlourish',
 };
 
-export const FlourishVisualisation = {
+export const FlourishVisualisationFixture = {
   version: '1.0',
   provider_name: 'Flourish',
   provider_url: 'https://flourish.studio',
