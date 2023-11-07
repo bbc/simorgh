@@ -35,6 +35,10 @@ const consoleLogFormat = printf(data => {
   return `${data.timestamp} ${data.level} ${JSON.stringify(logMessage)}`;
 });
 
+const expressFormatOptions = [prettyPrint(), colorize(), consoleLogFormat];
+
+const nextJSFormatOptions = [prettyPrint(), consoleLogFormat];
+
 const loggerOptions = {
   file: {
     filename: logLocation,
@@ -51,7 +55,10 @@ const loggerOptions = {
     humanReadableUnhandledException: true,
     level: LOG_LEVEL,
     timestamp: true,
-    format: combine(prettyPrint(), colorize(), consoleLogFormat),
+    format:
+      PLATFORM === 'NEXTJS'
+        ? combine(...nextJSFormatOptions)
+        : combine(...expressFormatOptions),
   },
 };
 
