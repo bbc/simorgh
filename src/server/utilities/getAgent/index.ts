@@ -1,16 +1,18 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { createSecureContext } from 'tls';
 import getCert from './certs';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let agentMemo: any;
+
 const getAgent = async () => {
+  if (agentMemo) {
+    return agentMemo;
+  }
+
   try {
     const undici = await import('undici');
     const { setGlobalDispatcher, Agent } = undici;
-
-    let agentMemo;
-
-    if (agentMemo) {
-      return agentMemo;
-    }
 
     const { certChain, key, ca } = await getCert();
 
