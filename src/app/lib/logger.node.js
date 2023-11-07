@@ -37,7 +37,7 @@ const consoleLogFormat = printf(data => {
 
 const expressFormatOptions = [prettyPrint(), colorize(), consoleLogFormat];
 
-const nextJSFormatOptions = [prettyPrint(), consoleLogFormat];
+const nextJSFormatOptions = [json()];
 
 const loggerOptions = {
   file: {

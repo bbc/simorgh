@@ -196,8 +196,7 @@ describe('Logger node - for the server', () => {
 
           expect(winston.format.combine).toHaveBeenNthCalledWith(
             2,
-            'PrettyPrint Mock',
-            'Printf Mock',
+            'Json Mock',
           );
 
           expect(winston.format.combine).toHaveBeenNthCalledWith(
