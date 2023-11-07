@@ -20,7 +20,10 @@ type ComponentProps = {
     description?: string;
     isLive: boolean;
     summaryPoints: { content: KeyPointsResponse | null };
-    liveTextStream: { content: StreamResponse | null };
+    liveTextStream: {
+      content: StreamResponse | null;
+      contributors: string | null;
+    };
   };
 };
 
@@ -75,7 +78,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            <Stream streamContent={liveTextStream.content} />
+            <Stream
+              streamContent={liveTextStream.content}
+              contributors={liveTextStream.contributors}
+            />
           </div>
         </div>
         <Pagination

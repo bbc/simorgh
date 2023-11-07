@@ -21,6 +21,12 @@ export default {
         paddingTop: `${spacings.DOUBLE}rem`,
       },
     }),
+  headingNoContributorsPadding: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+    }),
   subHeading: ({ mq, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,

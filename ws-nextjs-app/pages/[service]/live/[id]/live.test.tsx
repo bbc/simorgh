@@ -23,6 +23,7 @@ const mockPageData = {
         },
       },
     },
+    contributors: 'Not a random dude',
   },
 };
 
@@ -33,6 +34,7 @@ const mockPageDataWithPosts = {
   },
   liveTextStream: {
     content: postFixture,
+    contributors: 'Not a random dude',
   },
 };
 
@@ -47,6 +49,7 @@ const mockPageDataWithoutKeyPoints = {
   },
   liveTextStream: {
     content: postFixture,
+    contributors: 'Not a random dude',
   },
 };
 
