@@ -1,29 +1,35 @@
-import { setGlobalDispatcher, Agent } from 'undici';
 import { createSecureContext } from 'tls';
 import getCert from './certs';
 
-let agentMemo: Agent;
-
 const getAgent = async () => {
-  if (agentMemo) {
-    return agentMemo;
+  try {
+    const undici = await import('undici');
+    const { setGlobalDispatcher, Agent } = undici;
+
+    let agentMemo;
+
+    if (agentMemo) {
+      return agentMemo;
+    }
+
+    const { certChain, key, ca } = await getCert();
+
+    agentMemo = new Agent({
+      connect: {
+        keepAlive: true,
+        rejectUnauthorized: false,
+        secureContext: createSecureContext({
+          cert: certChain,
+          key,
+          ca,
+        }),
+      },
+    });
+
+    return setGlobalDispatcher(agentMemo);
+  } catch (error) {
+    throw new Error(`Failed to import undici: ${error}`);
   }
-
-  const { certChain, key, ca } = await getCert();
-
-  agentMemo = new Agent({
-    connect: {
-      keepAlive: true,
-      rejectUnauthorized: false,
-      secureContext: createSecureContext({
-        cert: certChain,
-        key,
-        ca,
-      }),
-    },
-  });
-
-  return setGlobalDispatcher(agentMemo);
 };
 
 export default getAgent;
