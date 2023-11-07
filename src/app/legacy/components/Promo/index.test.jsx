@@ -3,9 +3,13 @@ import {
   render,
   screen,
 } from '../../../components/react-testing-library-with-providers';
+import moment from 'moment';
+
 import Promo from '.';
+moment.locale('es');
+
 // eslint-disable-next-line react/prop-types
-const Fixture = ({ useLargeImages = false, timestamp }) => (
+const Fixture = ({ useLargeImages = false, timestamp = new Date() }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
@@ -16,7 +20,7 @@ const Fixture = ({ useLargeImages = false, timestamp }) => (
     <Promo.Heading>test heading</Promo.Heading>
     <Promo.A>test link tag</Promo.A>
     <Promo.Body>test body</Promo.Body>
-    <Promo.Timestamp>{(timestamp, new Date())}</Promo.Timestamp>
+    <Promo.Timestamp>{timestamp}</Promo.Timestamp>
   </Promo>
 );
 
@@ -171,6 +175,7 @@ describe('Promo component - Timestamp', () => {
       });
     });
     describe('Relative time more than 11 hours ago', () => {
+      const dateElevenHoursAgo = moment().subtract({ h: 11 }).format('LL');
       it('should render timestamp in ISO string format', () => {
         const overElevenHoursString = calcTimestampHoursAgo(11).toISOString();
         const { getByText } = render(
@@ -179,7 +184,7 @@ describe('Promo component - Timestamp', () => {
             service: 'mundo',
           },
         );
-        expect(getByText('6 noviembre 2023')).toBeInTheDocument();
+        expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
       });
       it('should render timestamp in ISO format', () => {
         const overElevenHoursEpoch = calcTimestampHoursAgo(11).getTime();
@@ -189,7 +194,7 @@ describe('Promo component - Timestamp', () => {
             service: 'mundo',
           },
         );
-        expect(getByText('6 noviembre 2023')).toBeInTheDocument();
+        expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
       });
     });
   });
