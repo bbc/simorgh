@@ -10,9 +10,11 @@ import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
 import {
   sampleRiddleProps,
-  sampleFlourishProps,
+  sampleFlourishStoryProps,
+  sampleFlourishVisualisationProps,
   sampleVJAmpProps,
   sampleVJAmpPropsWithoutParams,
+  sampleVJCanonicalProps,
 } from './fixture';
 import OEmbedLoader from '.';
 
@@ -51,10 +53,42 @@ describe('OEmbed', () => {
       const { container } = render(
         <Component props={sampleRiddleProps} isAmp={false} />,
       );
-      const actual = container.querySelector(
+      const iFrameElement = container.querySelector(
         'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
       );
-      expect(actual).toBeInTheDocument();
+      expect(iFrameElement).toBeInTheDocument();
+    });
+
+    it('Flourish Story Embed - Should show an iframe with the appropriate link', () => {
+      const { container } = render(
+        <Component props={sampleFlourishStoryProps} isAmp={false} />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://flo.uri.sh/story/2070814/embed?auto=1"]',
+      );
+      expect(iFrameElement).toBeInTheDocument();
+    });
+
+    it('Flourish Visualisation Embed - Should show an iframe with the appropriate link', () => {
+      const { container } = render(
+        <Component props={sampleFlourishVisualisationProps} isAmp={false} />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://flo.uri.sh/visualisation/15506675/embed?auto=1"]',
+      );
+      expect(iFrameElement).toBeInTheDocument();
+    });
+
+    // wopuld it be better to include a snapshot?
+    it('VJ Embed - Should render an embed', () => {
+      const { container, getByText } = render(
+        <Component props={sampleVJCanonicalProps} isAmp={false} />,
+      );
+      const embedContent = container.querySelector(
+        'div[id="responsive-embed-newsspec-36430-optimo-deployments-app"]',
+      );
+      expect(embedContent).toBeInTheDocument();
+      expect(getByText('This is an example of an embed')).toBeInTheDocument();
     });
   });
 
@@ -76,12 +110,35 @@ describe('OEmbed', () => {
       expect(errorMessage).toBeInTheDocument();
     });
 
-    it('Flourish Embed - Should show a translated error message with a link to the canonical page', () => {
+    it('Flourish Visualisation Embed - Should show a translated error message with a link to the canonical page', () => {
       const { container, getByText } = render(
-        <Component props={sampleFlourishProps} service="afrique" isAmp />,
+        <Component
+          props={sampleFlourishVisualisationProps}
+          service="afrique"
+          isAmp
+        />,
       );
       const iFrameElement = container.querySelector(
-        'iframe[src="https://flo.uri.sh/visualisation/8809119/embed"]',
+        'iframe[src="https://flo.uri.sh/visualisation/15506675/embed?auto=1"]',
+      );
+      const linkToFlourish = container.querySelector(
+        'a[href="canonical_link"]',
+      );
+      const errorMessage = getByText(
+        'Consultez la version complète de la page pour voir tout le contenu.',
+      );
+
+      expect(iFrameElement).toBe(null);
+      expect(linkToFlourish).toBeInTheDocument();
+      expect(errorMessage).toBeInTheDocument();
+    });
+
+    it('Flourish Story Embed - Should show a translated error message with a link to the canonical page', () => {
+      const { container, getByText } = render(
+        <Component props={sampleFlourishStoryProps} service="afrique" isAmp />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://flo.uri.sh/story/2070814/embed?auto=1"]',
       );
       const linkToFlourish = container.querySelector(
         'a[href="canonical_link"]',
