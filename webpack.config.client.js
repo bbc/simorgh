@@ -67,26 +67,11 @@ module.exports = ({
         // Override webpacks default handling for these as they arnt availible on the client.
         fs: false,
         crypto: false,
-        stream: false,
+        stream: require.resolve('stream-browserify'),
         https: false,
         http: false,
         tls: false,
-        //
-        http2: false,
-        net: false,
-        diagnostics_channel: false,
-        async_hooks: false,
-        worker_threads: false,
-        zlib: false,
-        perf_hooks: false,
-        console: false,
-        util: false,
       },
-    },
-    externals: {
-      'node:events': '{}',
-      'node:stream': '{}',
-      'node:util': '{}',
     },
     experiments: {
       outputModule: !IS_LEGACY_WEB,
