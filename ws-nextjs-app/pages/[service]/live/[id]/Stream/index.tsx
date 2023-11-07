@@ -8,8 +8,10 @@ import styles from './styles';
 
 const Stream = ({
   streamContent,
+  contributors,
 }: {
   streamContent: StreamResponse | null;
+  contributors: string | null;
 }) => {
   if (!streamContent) return null;
   const { results: streamResults } = streamContent?.data;
@@ -21,10 +23,21 @@ const Stream = ({
 
   return (
     <div>
-      <Heading css={styles.heading} level={2}>
+      <Heading
+        css={[
+          styles.heading,
+          !contributors && styles.headingNoContributorsPadding,
+        ]}
+        level={2}
+      >
         Live Reporting
       </Heading>
-      <Paragraph css={styles.subHeading}>By a random dude</Paragraph>
+      {contributors && (
+        <Paragraph data-testid="live-contributors" css={styles.subHeading}>
+          {contributors}
+        </Paragraph>
+      )}
+
       {hasSinglePost ? (
         <Post post={streamResults[0]} />
       ) : (
