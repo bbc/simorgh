@@ -15,6 +15,7 @@ import {
   sampleVJAmpProps,
   sampleVJAmpPropsWithoutParams,
   sampleVJCanonicalProps,
+  sampleNullProps,
 } from './fixture';
 import OEmbedLoader from '.';
 
@@ -89,6 +90,13 @@ describe('OEmbed', () => {
       );
       expect(embedContent).toBeInTheDocument();
       expect(getByText('This is an example of an embed')).toBeInTheDocument();
+    });
+
+    it('should return null if no HTML is provided', () => {
+      const { container } = render(
+        <Component props={sampleNullProps} isAmp={false} />,
+      );
+      expect(container).toBeEmptyDOMElement();
     });
   });
 

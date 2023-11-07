@@ -31,6 +31,13 @@ export const sampleFlourishStoryProps = {
   },
 };
 
+export const sampleNullProps = {
+  type: 'oEmbed',
+  oembed: {
+    oEmbedType: 'aresRiddle',
+  },
+};
+
 export const sampleFlourishVisualisationProps = {
   type: 'oEmbed',
   oembed: {

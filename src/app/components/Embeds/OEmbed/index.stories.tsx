@@ -1,6 +1,10 @@
 import React from 'react';
 import OEmbedLoader from '.';
-import { sampleRiddleProps, sampleFlourishProps } from './fixture';
+import {
+  sampleRiddleProps,
+  sampleFlourishStoryProps,
+  sampleFlourishVisualisationProps,
+} from './fixture';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
@@ -41,6 +45,10 @@ export const RiddleOEmbed = () => (
   <Component props={sampleRiddleProps} isAmp={false} />
 );
 
-export const FlourishOEmbed = () => (
-  <Component props={sampleFlourishProps} isAmp={false} />
+export const FlourishVisualisationOEmbed = () => (
+  <Component props={sampleFlourishVisualisationProps} isAmp={false} />
+);
+
+export const FlourishStoryOEmbed = () => (
+  <Component props={sampleFlourishStoryProps} isAmp={false} />
 );
