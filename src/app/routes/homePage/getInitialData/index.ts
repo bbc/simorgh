@@ -1,3 +1,4 @@
+import { Agent } from 'undici';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import { PageTypes, Services, Variants } from '../../../models/types/global';
@@ -12,6 +13,7 @@ type Props = {
   path: string;
   pageType: PageTypes;
   variant?: Variants;
+  getAgent: () => Promise<Agent>;
 };
 
 export default async ({
@@ -19,6 +21,7 @@ export default async ({
   path: pathname,
   pageType,
   variant,
+  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -26,6 +29,7 @@ export default async ({
       pageType: HOME_PAGE,
       service,
       variant,
+      getAgent,
     });
 
     const {

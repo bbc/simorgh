@@ -1,37 +1,29 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { setGlobalDispatcher, Agent } from 'undici';
 import { createSecureContext } from 'tls';
 import getCert from './certs';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let agentMemo: any;
+let agentMemo: Agent;
 
 const getAgent = async () => {
   if (agentMemo) {
     return agentMemo;
   }
 
-  try {
-    const undici = await import('undici');
-    const { setGlobalDispatcher, Agent } = undici;
+  const { certChain, key, ca } = await getCert();
 
-    const { certChain, key, ca } = await getCert();
+  agentMemo = new Agent({
+    connect: {
+      keepAlive: true,
+      rejectUnauthorized: false,
+      secureContext: createSecureContext({
+        cert: certChain,
+        key,
+        ca,
+      }),
+    },
+  });
 
-    agentMemo = new Agent({
-      connect: {
-        keepAlive: true,
-        rejectUnauthorized: false,
-        secureContext: createSecureContext({
-          cert: certChain,
-          key,
-          ca,
-        }),
-      },
-    });
-
-    return setGlobalDispatcher(agentMemo);
-  } catch (error) {
-    throw new Error(`Failed to import undici: ${error}`);
-  }
+  return setGlobalDispatcher(agentMemo);
 };
 
 export default getAgent;

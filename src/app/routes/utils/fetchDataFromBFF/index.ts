@@ -1,4 +1,4 @@
-import getAgent from '../../../../server/utilities/getAgent';
+import { Agent } from 'undici';
 import constructPageFetchUrl from '../constructPageFetchUrl';
 import getEnvironment from '../getEnvironment';
 import { Services, Variants, PageTypes } from '../../../models/types/global';
@@ -20,6 +20,7 @@ interface FetchDataFromBffParams {
   variant?: Variants;
   isAmp?: boolean;
   page?: string;
+  getAgent: () => Promise<Agent>;
 }
 
 type OptHeaders =
@@ -36,6 +37,7 @@ export default async ({
   variant,
   isAmp,
   page,
+  getAgent,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
   const isLocal = !environment || environment === 'local';

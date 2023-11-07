@@ -1,3 +1,4 @@
+import { Agent } from 'undici';
 import KyrgyzHomeFixture from '#data/kyrgyz/homePage/index.json';
 import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
@@ -6,6 +7,9 @@ import { HOME_PAGE } from '../../utils/pageTypes';
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+
+const mockGetAgent = jest.fn(() => Promise.resolve(agent as unknown as Agent));
+
 jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
@@ -33,6 +37,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -56,6 +61,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -83,6 +89,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({

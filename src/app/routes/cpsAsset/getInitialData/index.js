@@ -104,6 +104,7 @@ export default async ({
   variant,
   pageType,
   toggles,
+  getAgent,
 }) => {
   try {
     const { service: derivedService, path: derivedPath } =
@@ -117,6 +118,7 @@ export default async ({
       service: derivedService,
       variant,
       pageType: 'cpsAsset',
+      getAgent,
     });
 
     if (status !== 200) {

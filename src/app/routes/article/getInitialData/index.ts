@@ -1,3 +1,4 @@
+import { Agent } from 'undici';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
@@ -6,7 +7,6 @@ import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
 
@@ -19,6 +19,7 @@ type Props = {
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
+  getAgent: () => Promise<Agent>;
 };
 
 export default async ({
@@ -28,6 +29,7 @@ export default async ({
   variant,
   toggles,
   isAmp,
+  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -36,6 +38,7 @@ export default async ({
       service,
       variant,
       isAmp,
+      getAgent,
     });
 
     const agent = certsRequired(pathname) ? await getAgent() : null;
