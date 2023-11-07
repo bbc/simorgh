@@ -16,7 +16,7 @@ import {
   sampleVJAmpPropsWithoutParams,
   sampleVJCanonicalProps,
   sampleNullProps,
-} from './fixture';
+} from './fixtures';
 import OEmbedLoader from '.';
 
 const Component = ({

@@ -31,13 +31,6 @@ export const sampleFlourishStoryProps = {
   },
 };
 
-export const sampleNullProps = {
-  type: 'oEmbed',
-  oembed: {
-    oEmbedType: 'aresRiddle',
-  },
-};
-
 export const sampleFlourishVisualisationProps = {
   type: 'oEmbed',
   oembed: {
@@ -87,5 +80,12 @@ export const sampleVJAmpPropsWithoutParams = {
   oembed: {
     url: 'https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0',
     oEmbedType: 'vdj-embed',
+  },
+};
+
+export const sampleNullProps = {
+  type: 'oEmbed',
+  oembed: {
+    oEmbedType: 'aresRiddle',
   },
 };

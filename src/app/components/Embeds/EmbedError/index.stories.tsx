@@ -2,7 +2,7 @@ import React from 'react';
 import EmbedError from '.';
 
 export default {
-  title: 'Components/Embed Error',
+  title: 'Components/Embeds/Embed Error',
   component: EmbedError,
 };
 

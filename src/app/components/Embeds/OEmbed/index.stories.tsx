@@ -4,7 +4,8 @@ import {
   sampleRiddleProps,
   sampleFlourishStoryProps,
   sampleFlourishVisualisationProps,
-} from './fixture';
+  sampleVJCanonicalProps,
+} from './fixtures';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
@@ -37,18 +38,23 @@ const Component = ({
 );
 
 export default {
-  title: 'Components/Embed Optimo',
+  title: 'Components/Embeds/oEmbed',
   component: Component,
+  parameters: { chromatic: { disable: true } },
 };
 
-export const RiddleOEmbed = () => (
+export const OembedRiddle = () => (
   <Component props={sampleRiddleProps} isAmp={false} />
 );
 
-export const FlourishVisualisationOEmbed = () => (
+export const OembedFlourishVisualisation = () => (
   <Component props={sampleFlourishVisualisationProps} isAmp={false} />
 );
 
-export const FlourishStoryOEmbed = () => (
+export const OembedFlourishStoryEmbed = () => (
   <Component props={sampleFlourishStoryProps} isAmp={false} />
+);
+
+export const OembedVJCanonical = () => (
+  <Component props={sampleVJCanonicalProps} isAmp={false} />
 );
