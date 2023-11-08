@@ -34,6 +34,7 @@ describe('Agent', () => {
     expect(Agent).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledWith({
       connect: {
+        timeout: 4000,
         keepAlive: true,
         rejectUnauthorized: false,
         secureContext: {
