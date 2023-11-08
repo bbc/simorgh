@@ -1,10 +1,9 @@
-import { Agent } from 'undici';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError } from '../../../models/types/fetch';
+import { FetchError, GetAgent } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -19,7 +18,7 @@ type Props = {
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
-  getAgent: () => Promise<Agent>;
+  getAgent: GetAgent;
 };
 
 export default async ({

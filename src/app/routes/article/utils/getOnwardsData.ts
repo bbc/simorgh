@@ -81,7 +81,7 @@ const getOnwardsPageData = async ({
   variant?: string;
   isAdvertising: boolean;
   isArticleSfv?: boolean;
-  agent: void | Agent | null;
+  agent: Agent | null;
 }) => {
   const recommendationsAllowed = await hasArticleRecommendations(
     service,
