@@ -182,11 +182,6 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-      url,
-      headers: removeSensitiveHeaders(headers),
-    });
-
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
@@ -202,6 +197,12 @@ server.get(
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
+
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url,
+        headers: removeSensitiveHeaders(headers),
+        pageType: derivedPageType,
+      });
 
       const toggles = await getToggles(service);
 
@@ -265,6 +266,7 @@ server.get(
           message,
           url,
           headers: removeSensitiveHeaders(headers),
+          pageType: derivedPageType,
         });
 
         result = await renderDocument({
@@ -279,6 +281,7 @@ server.get(
         });
       }
 
+      // TODO: Increase the log level if non-200 response received
       logger.info(ROUTING_INFORMATION, {
         url,
         status,
