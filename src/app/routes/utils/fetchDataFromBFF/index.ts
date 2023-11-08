@@ -71,7 +71,7 @@ export default async ({
       optHeaders,
       pageType,
     };
-    console.log(isLocal, fetchPageDataArgs.agent);
+
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 
