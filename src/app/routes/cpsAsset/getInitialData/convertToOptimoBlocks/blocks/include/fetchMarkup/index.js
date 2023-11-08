@@ -13,7 +13,7 @@ const fetchMarkup = async (url, assetId) => {
       headers: {
         'User-Agent': 'Simorgh/ws-web-rendering',
       },
-      timeout: SECONDARY_DATA_TIMEOUT,
+      signal: AbortSignal.timeout(SECONDARY_DATA_TIMEOUT),
     });
     if (res.status !== 200) {
       logger.error(INCLUDE_FETCH_ERROR, {

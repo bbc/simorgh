@@ -11,6 +11,7 @@ import {
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from '#lib/statusCodes.const';
+import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import onClient from '#lib/utilities/onClient';
 import isLocal from '#app/lib/utilities/isLocal';
 import getErrorStatusCode from './utils/getErrorStatusCode';
@@ -62,11 +63,13 @@ const fetchPageData = async ({
     };
   }
 
+  const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
     headers: {
       'User-Agent': 'Simorgh/ws-web-rendering',
       ...(optHeaders && optHeaders),
     },
+    signal: AbortSignal.timeout(effectiveTimeout),
     ...(agent && { agent }),
   };
 

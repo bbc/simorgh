@@ -24,6 +24,9 @@ window.matchMedia = jest.fn().mockImplementation(query => {
 });
 
 global.fetch = fetch;
+global.AbortSignal = {
+  timeout: jest.fn(),
+};
 global.document.domain = 'www.bbc.com';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';

@@ -1,10 +1,10 @@
-import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import { Agent } from 'undici';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError, GetAgent } from '../../../models/types/fetch';
+import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -19,7 +19,7 @@ type Props = {
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
-  getAgent: GetAgent;
+  getAgent: () => Promise<Agent>;
 };
 
 export default async ({
@@ -41,6 +41,8 @@ export default async ({
       getAgent,
     });
 
+    const agent = certsRequired(pathname) ? await getAgent() : null;
+
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
     }
@@ -56,12 +58,7 @@ export default async ({
     const shouldGetOnwardsPageData = lastPublished
       ? new Date(lastPublished).getFullYear() > new Date().getFullYear() - 2
       : false;
-
     if (shouldGetOnwardsPageData) {
-      const onwardsPageDataAgent = certsRequired(pathname)
-        ? await getAgent({ timeout: SECONDARY_DATA_TIMEOUT })
-        : null;
-
       try {
         wsojData = await getOnwardsPageData({
           pathname,
@@ -69,7 +66,7 @@ export default async ({
           variant,
           isAdvertising,
           isArticleSfv,
-          agent: onwardsPageDataAgent,
+          agent,
         });
       } catch (error) {
         logger.error('Recommendations JSON malformed', error);
