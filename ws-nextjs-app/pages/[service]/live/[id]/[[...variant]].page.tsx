@@ -21,6 +21,7 @@ import getAgent from '../../../../utilities/undiciAgent';
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
+import { OK } from '#app/lib/statusCodes.const';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -134,7 +135,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
     rendererEnv: 'test', // TODO: remove hardcoding
   });
 
-  logger.info(ROUTING_INFORMATION, {
+  let routingInfoLogger = logger.debug;
+  if (data.status !== OK) {
+    routingInfoLogger = logger.error;
+  }
+
+  routingInfoLogger(ROUTING_INFORMATION, {
     url: context.resolvedUrl,
     status: data.status,
     pageType: LIVE_PAGE,
