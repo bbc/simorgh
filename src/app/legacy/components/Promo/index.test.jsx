@@ -1,15 +1,16 @@
 import React from 'react';
+import moment from 'moment';
 import {
   render,
   screen,
 } from '../../../components/react-testing-library-with-providers';
-import moment from 'moment';
 
 import Promo from '.';
+
 moment.locale('es');
 
 // eslint-disable-next-line react/prop-types
-const Fixture = ({ useLargeImages = false, timestamp = new Date() }) => (
+const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
