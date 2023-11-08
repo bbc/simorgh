@@ -4,7 +4,6 @@ import isEmpty from 'ramda/src/isEmpty';
 
 import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
-import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../lib/logger.node';
 import hasArticleRecommendations from './hasArticleRecommendations';
@@ -53,7 +52,6 @@ const fetchUrl =
       // @ts-ignore - Ignore fetchPageData argument types
       return fetchPageData({
         path: urlPath,
-        timeout: SECONDARY_DATA_TIMEOUT,
         agent,
         ...loggerArgs,
       }).then(response => validateResponse(response, name));
@@ -81,7 +79,7 @@ const getOnwardsPageData = async ({
   variant?: string;
   isAdvertising: boolean;
   isArticleSfv?: boolean;
-  agent: void | Agent | null;
+  agent: Agent | null;
 }) => {
   const recommendationsAllowed = await hasArticleRecommendations(
     service,

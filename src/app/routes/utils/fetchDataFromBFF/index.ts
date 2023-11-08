@@ -1,11 +1,10 @@
-import { Agent } from 'undici';
 import constructPageFetchUrl from '../constructPageFetchUrl';
 import getEnvironment from '../getEnvironment';
 import { Services, Variants, PageTypes } from '../../../models/types/global';
 import fetchPageData from '../fetchPageData';
 import getErrorStatusCode from '../fetchPageData/utils/getErrorStatusCode';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import { FetchError } from '../../../models/types/fetch';
+import { FetchError, GetAgent } from '../../../models/types/fetch';
 import nodeLogger from '../../../lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -20,7 +19,7 @@ interface FetchDataFromBffParams {
   variant?: Variants;
   isAmp?: boolean;
   page?: string;
-  getAgent: () => Promise<Agent>;
+  getAgent: GetAgent;
 }
 
 type OptHeaders =
@@ -51,8 +50,8 @@ export default async ({
     page,
   });
 
-  const agent = isLocal ? undefined : await getAgent();
   const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
+  const agent = isLocal ? undefined : await getAgent({ timeout });
   const optHeaders: OptHeaders =
     isLocal && !BFF_IS_LOCAL
       ? undefined
@@ -71,8 +70,8 @@ export default async ({
       agent,
       optHeaders,
       pageType,
-      ...(timeout && { timeout }),
     };
+    console.log(isLocal, fetchPageDataArgs.agent);
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 

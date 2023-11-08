@@ -84,7 +84,6 @@ describe('fetchPageData', () => {
       headers: {
         'User-Agent': 'Simorgh/ws-web-rendering',
       },
-      timeout: 4000,
     };
 
     it('should call fetch with the correct url when passed the pathname', async () => {
@@ -119,7 +118,6 @@ describe('fetchPageData', () => {
           'User-Agent': 'Simorgh/ws-web-rendering',
           'ctx-service-env': 'live',
         },
-        timeout: 4000,
       };
       await fetchPageData({ path: requestedPathname, pageType, optHeaders });
 
