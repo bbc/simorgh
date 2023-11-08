@@ -6,13 +6,13 @@ import { HOME_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
-const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+const agent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
 
-const mockGetAgent = jest.fn(() => Promise.resolve(agent as unknown as Agent));
+const mockGetAgent = jest.fn(() => Promise.resolve(agent));
 
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(agent)),
-);
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 describe('Home Page - BFF Fetching', () => {
   const originalEnvironment = process.env.SIMORGH_APP_ENV;

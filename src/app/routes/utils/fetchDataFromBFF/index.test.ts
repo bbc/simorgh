@@ -18,13 +18,13 @@ jest.mock('../fetchPageData', () =>
   }),
 );
 
-const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
+const mockAgent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
 
-const mockGetAgent = () => Promise.resolve(mockAgent as unknown as Agent);
+const mockGetAgent = () => Promise.resolve(mockAgent);
 
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
-);
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 describe('Fetch Data from BFF', () => {
   beforeEach(() => {

@@ -9,13 +9,13 @@ import { ARTICLE_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
-const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+const agent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
 
-const mockGetAgent = () => Promise.resolve(agent as unknown as Agent);
+const mockGetAgent = () => Promise.resolve(agent);
 
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(agent as unknown as Agent)),
-);
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 const bffArticleJson = {
   data: {

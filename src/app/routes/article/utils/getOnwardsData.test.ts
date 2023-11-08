@@ -6,7 +6,10 @@ import * as fetchPageData from '../../utils/fetchPageData';
 
 jest.mock('./hasArticleRecommendations', () => jest.fn());
 
-const agent = { cert: 'cert', ca: 'ca', key: 'key' } as unknown as Agent;
+const agent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
+
 const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 
 describe('WSOJ data', () => {
