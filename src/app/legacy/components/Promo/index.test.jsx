@@ -192,7 +192,7 @@ describe('Promo component - Timestamp', () => {
         );
         expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
       });
-      it('should render timestamp in ISO format', () => {
+      it('should render timestamp in epoch format', () => {
         const overElevenHoursEpoch = calcTimestampHoursAgo(11).getTime();
         const { getByText } = render(
           <Fixture timestamp={overElevenHoursEpoch} />,
