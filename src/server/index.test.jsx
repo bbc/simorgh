@@ -6,6 +6,7 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
 import {
+  ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
@@ -1569,6 +1570,55 @@ describe('Server HTTP Headers - Page Endpoints', () => {
         data: expect.objectContaining({ isUK: null }),
       }),
     );
+  });
+});
+
+describe('Routing Information Logging', () => {
+  const service = 'igbo';
+  const isAmp = false;
+  const url = `/${service}`;
+  const dataResponse = {
+    isAmp,
+    pageData: {
+      metadata: {
+        type: 'Page Type from Data',
+      },
+    },
+    service,
+    status: 200,
+  };
+
+  it(`on non-200 response should log matched page type from route`, async () => {
+    const pageType = 'Matching Page Type from Route';
+    const status = 404;
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse: { ...dataResponse, status },
+      pageType,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.error).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status,
+      pageType,
+    });
+  });
+
+  it(`on 200 response should log page type derived from response data`, async () => {
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.debug).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status: 200,
+      pageType: 'Page Type from Data',
+    });
   });
 });
 
