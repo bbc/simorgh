@@ -13,6 +13,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   SERVER_STATUS_ENDPOINT_ERROR,
+  ROUTING_INFORMATION,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
