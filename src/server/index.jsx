@@ -285,8 +285,12 @@ server.get(
         });
       }
 
-      // TODO: Increase the log level if non-200 response received
-      logger.info(ROUTING_INFORMATION, {
+      let routingInfoLogger = logger.debug;
+      if (status !== OK) {
+        routingInfoLogger = logger.error;
+      }
+
+      routingInfoLogger(ROUTING_INFORMATION, {
         url,
         status,
         pageType: derivedPageType,
