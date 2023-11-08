@@ -12,7 +12,6 @@ import {
   MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
-  ROUTING_INFORMATION,
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
