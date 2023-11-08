@@ -32,6 +32,7 @@ import local from './local';
 import getAgent from './utilities/getAgent';
 import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
+import extractHeaders from './utilities/extractHeaders';
 
 const morgan = require('morgan');
 
@@ -217,10 +218,13 @@ server.get(
         isAmp,
       });
 
+      const { isUK } = extractHeaders(headers);
+
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.isUK = isUK;
 
       let { status } = data;
       // Set derivedPageType based on returned page data

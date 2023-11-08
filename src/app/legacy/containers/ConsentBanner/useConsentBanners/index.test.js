@@ -246,6 +246,38 @@ describe('useConsentBanners', () => {
       );
       expect(fetch).toHaveBeenCalledTimes(2);
     });
+
+    it('should set EXPLICIT_COOKIE to 1 for requests made within the UK', () => {
+      cookieSetterSpy.mockClear();
+
+      const { result } = renderHook(() => useConsentBanners(true));
+
+      act(() => {
+        result.current.handleCookieBannerAccepted();
+      });
+
+      expect(cookieSetterSpy).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
+        domain: '.bbc.com',
+        expires: 365,
+        sameSite: undefined,
+      });
+    });
+
+    it('should set EXPLICIT_COOKIE to 2 for requests made outside the UK', () => {
+      cookieSetterSpy.mockClear();
+
+      const { result } = renderHook(() => useConsentBanners(false));
+
+      act(() => {
+        result.current.handleCookieBannerAccepted();
+      });
+
+      expect(cookieSetterSpy).toHaveBeenCalledWith(EXPLICIT_COOKIE, '2', {
+        domain: '.bbc.com',
+        expires: 365,
+        sameSite: undefined,
+      });
+    });
   });
 
   describe('handleCookieBannerRejected', () => {
@@ -267,6 +299,38 @@ describe('useConsentBanners', () => {
         expect.anything(),
       );
       expect(fetch).not.toHaveBeenCalled();
+    });
+
+    it('should set EXPLICIT_COOKIE to 1 for requests made within the UK', () => {
+      cookieSetterSpy.mockClear();
+
+      const { result } = renderHook(() => useConsentBanners(true));
+
+      act(() => {
+        result.current.handleCookieBannerRejected();
+      });
+
+      expect(cookieSetterSpy).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
+        domain: '.bbc.com',
+        expires: 365,
+        sameSite: undefined,
+      });
+    });
+
+    it('should set EXPLICIT_COOKIE to 2 for requests made outside the UK', () => {
+      cookieSetterSpy.mockClear();
+
+      const { result } = renderHook(() => useConsentBanners(false));
+
+      act(() => {
+        result.current.handleCookieBannerRejected();
+      });
+
+      expect(cookieSetterSpy).toHaveBeenCalledWith(EXPLICIT_COOKIE, '2', {
+        domain: '.bbc.com',
+        expires: 365,
+        sameSite: undefined,
+      });
     });
   });
 });

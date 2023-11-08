@@ -5,7 +5,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import IncludeContainer from '.';
 import * as idt2Amp from './amp/Idt2Amp';
-import * as vjAmp from './amp/VjAmp';
+import * as vjAmp from '../../../components/AmpIframe';
 import * as canonical from './canonical';
 
 const defaultToggleState = {
@@ -71,6 +71,7 @@ const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
     <IncludeContainer {...props} />
   </MockContext>
 );
+
 /* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {

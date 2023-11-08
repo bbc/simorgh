@@ -97,6 +97,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -263,6 +264,7 @@ exports[`Brand should render correctly with link provided 1`] = `
           class="emotion-6 emotion-7"
           focusable="false"
           height="32"
+          id="brandSvgHeader"
           viewBox="0 0 167.95 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -391,6 +393,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -512,6 +515,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >

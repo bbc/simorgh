@@ -1,8 +1,12 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 
 describe('Media Player: AMP Entry', () => {
+  suppressPropWarnings(['service', 'Message', 'undefined']);
+  suppressPropWarnings(['service', 'AmpMediaPlayer', 'undefined']);
+
   it('should render a landscape container with an amp-iframe and nested amp-img', () => {
     const { container } = render(
       <AmpMediaPlayer
