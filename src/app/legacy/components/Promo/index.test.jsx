@@ -7,8 +7,6 @@ import {
 
 import Promo from '.';
 
-moment.locale('es');
-
 // eslint-disable-next-line react/prop-types
 const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   <Promo>
@@ -157,6 +155,12 @@ describe('Promo component - Timestamp', () => {
       });
     });
     describe('Relative time 10 hours ago', () => {
+      // temporary notes to describe next actions:
+      // either we make this test expect '9 hours ago' and acknowlegde it is hard to make it exactly 10,
+      // or we need to work out how to use the buffer like in the isTenHoursAgo tests to make it exacly 10 hours ago
+      // It would be a boundary test, so good for that, but users will never see 10 hours ago unless they
+      // visit on one particular millisecond (unlikely!) so testing just before 10 and just after 10 might be ok
+
       it('should render 10 hours ago or less in string format', () => {
         const tenHoursAgoString = calcTimestampHoursAgo(10).toISOString();
         const { getByText } = render(
@@ -176,6 +180,7 @@ describe('Promo component - Timestamp', () => {
       });
     });
     describe('Relative time more than 11 hours ago', () => {
+      moment.locale('es');
       const dateElevenHoursAgo = moment().subtract({ h: 11 }).format('LL');
       it('should render timestamp in ISO string format', () => {
         const overElevenHoursString = calcTimestampHoursAgo(11).toISOString();
@@ -187,7 +192,7 @@ describe('Promo component - Timestamp', () => {
         );
         expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
       });
-      it('should render timestamp in ISO format', () => {
+      it('should render timestamp in epoch format', () => {
         const overElevenHoursEpoch = calcTimestampHoursAgo(11).getTime();
         const { getByText } = render(
           <Fixture timestamp={overElevenHoursEpoch} />,
