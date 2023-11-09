@@ -148,6 +148,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
     {svg && (
       <>
         <BrandSvg
+          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
           viewBox={[
             svg.viewbox.minX || 0,
             svg.viewbox.minY || 0,

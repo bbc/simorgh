@@ -8,6 +8,7 @@ const mockPageData = {
   ...liveFixture.data,
   liveTextStream: {
     content: postFixture,
+    contributors: 'Not a random dude',
   },
   someResponse: {
     block: 'Its a block',

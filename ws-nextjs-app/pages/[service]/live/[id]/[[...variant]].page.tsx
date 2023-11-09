@@ -127,7 +127,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
-      pageData: data?.pageData || null,
+      pageData: data?.pageData
+        ? {
+            ...data.pageData,
+            metadata: {
+              ...data.pageData.metadata,
+              type: LIVE_PAGE,
+            },
+          }
+        : null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,

@@ -9,6 +9,7 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   render,
+  act,
   waitFor,
 } from '../../../components/react-testing-library-with-providers';
 import features from './fixtures.json';
@@ -105,25 +106,33 @@ describe('CpsFeaturesAnalysis', () => {
     expect(features.length).toBeGreaterThan(1);
   });
 
-  it('should render Story Promo component without a list when given a single item in the collection', () => {
+  it('should render Story Promo component without a list when given a single item in the collection', async () => {
     const topFeaturesOneItem = [features[0]];
 
-    const { queryByRole } = renderFeaturesAnalysis({
-      content: topFeaturesOneItem,
+    let queryByRole;
+    await act(async () => {
+      ({ queryByRole } = renderFeaturesAnalysis({
+        content: topFeaturesOneItem,
+      }));
     });
-
     expect(queryByRole('list')).toBe(null);
   });
 
-  it('should render Story Promo component with a list when given multiple items in the collection', () => {
-    const { queryByRole } = renderFeaturesAnalysis();
+  it('should render Story Promo component with a list when given multiple items in the collection', async () => {
+    let queryByRole;
 
+    await act(async () => {
+      ({ queryByRole } = renderFeaturesAnalysis());
+    });
     expect(queryByRole('list')).toBeTruthy();
   });
 
-  it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {
-    const { queryByRole } = renderFeaturesAnalysis();
+  it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', async () => {
+    let queryByRole;
 
+    await act(async () => {
+      ({ queryByRole } = renderFeaturesAnalysis());
+    });
     const region = queryByRole('region');
 
     expect(region).toBeTruthy();
@@ -138,8 +147,12 @@ describe('CpsFeaturesAnalysis', () => {
     expect(queryAllByRole('listitem').length).toBe(0);
   });
 
-  it('should render a default title if translations are not available', () => {
-    const { queryByText } = renderFeaturesAnalysisNoTitle();
+  it('should render a default title if translations are not available', async () => {
+    let queryByText;
+    await act(async () => {
+      ({ queryByText } = renderFeaturesAnalysisNoTitle());
+    });
+
     expect(queryByText('Features & Analysis')).toBeTruthy();
   });
 });
@@ -171,13 +184,13 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
     });
   });
 
-  it('should implement 1 BLOCK level view tracker', () => {
+  it('should implement 1 BLOCK level view tracker', async () => {
     const expected = {
       componentName: 'features',
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    renderFeaturesAnalysis();
+    await act(async () => renderFeaturesAnalysis());
 
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
@@ -189,14 +202,20 @@ const countFrostedPromos = container =>
   container.querySelectorAll('[data-testid^=frosted-promo]').length;
 
 describe('CpsFeaturesAnalysis - Frosted Promos', () => {
-  it('should render with all high impact promos', () => {
-    const { container } = renderFeaturesAnalysis();
+  it('should render with all high impact promos', async () => {
+    let container;
+    await act(async () => {
+      ({ container } = renderFeaturesAnalysis());
+    });
 
     expect(countFrostedPromos(container)).toBe(4);
   });
 
-  it('should render with all high impact promos, when on amp', () => {
-    const { container } = renderFeaturesAnalysis({ isAmp: true });
+  it('should render with all high impact promos, when on amp', async () => {
+    let container;
+    await act(async () => {
+      ({ container } = renderFeaturesAnalysis({ isAmp: true }));
+    });
 
     expect(countFrostedPromos(container)).toBe(4);
   });

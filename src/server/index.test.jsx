@@ -60,6 +60,7 @@ jest.mock('@loadable/server', () => {
   }
   return {
     ChunkExtractor,
+    ChunkExtractorManager: jest.fn(),
   };
 });
 

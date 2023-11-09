@@ -1,10 +1,13 @@
 import React from 'react';
+import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
 import fixture from './fixtures';
 import mediaFixture from './mediaFixtures';
 import HierarchicalGrid from '.';
 
 describe('Hierarchical Grid Curation', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+
   const headingLevel = 2;
   it('renders twelve promos when twelve items are provided', async () => {
     render(<HierarchicalGrid headingLevel={headingLevel} promos={fixture} />);
@@ -95,5 +98,12 @@ describe('Hierarchical Grid Curation', () => {
 
     expect(container.queryAllByTestId('visually-hidden-text')).toHaveLength(2);
     expect(container.getByText('Test image gallery')).toBeInTheDocument();
+  });
+
+  it('should display LiveLabel on a Live Promo', () => {
+    const container = render(<HierarchicalGrid promos={mediaFixture} />, {
+      service: 'mundo',
+    });
+    expect(container.getByText('EN VIVO')).toBeInTheDocument();
   });
 });

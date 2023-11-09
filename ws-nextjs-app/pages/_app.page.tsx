@@ -23,7 +23,11 @@ interface Props extends AppProps {
     isApp?: boolean;
     isNextJs: boolean;
     mvtExperiments: MvtExperiment[] | null;
-    pageData: object;
+    pageData: {
+      metadata: {
+        type: PageTypes;
+      };
+    };
     pageLang?: string;
     pageType: PageTypes;
     pathname: string;
@@ -86,7 +90,6 @@ export default function App({ Component, pageProps }: Props) {
         >
           <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>
-              {/* @ts-expect-error pageData requires metadata.type to be set to page type i.e. LIVE, but pageData is currently declared as an object */}
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (
                   <Component {...pageProps} />

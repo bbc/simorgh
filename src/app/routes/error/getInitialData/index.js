@@ -1,3 +1,4 @@
+import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import { matchRoutes } from 'react-router-config';
 
 export default pathRegex =>
@@ -8,5 +9,9 @@ export default pathRegex =>
       matchingRoute?.[0]?.match?.params?.errorCode || 404,
     );
 
-    return Promise.resolve({ status: 200, errorCode });
+    return Promise.resolve({
+      status: 200,
+      errorCode,
+      pageData: { metadata: { type: ERROR_PAGE } },
+    });
   };
