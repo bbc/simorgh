@@ -140,13 +140,13 @@ const HiearchicalGrid = ({
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
-                {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp">
-                    {promo.lastPublished}
-                  </Promo.Timestamp>
-                ) : (
-                  <React.Fragment />
-                )}
+                <React.Fragment>
+                  {!isLive ? (
+                    <Promo.Timestamp className="promo-timestamp">
+                      {promo.lastPublished}
+                    </Promo.Timestamp>
+                  ) : null}
+                </React.Fragment>
               </Promo>
             </li>
           );
