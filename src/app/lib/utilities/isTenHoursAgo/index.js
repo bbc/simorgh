@@ -4,7 +4,7 @@
  * And when 1 millisecond passes after 10 hours it will return false.
  * The tests take this into account.
  * The users will be very unlikely to ever see '10 hours ago' written.
- * The argument milliseconds can either be a number which is the epoch, or a string which is the ISO string
+ * The argument milliseconds passed in should be millseconds
  */
 const isTenHoursAgo = milliseconds => {
   const now = Date.now();
