@@ -20765,7 +20765,6 @@ __metadata:
     next: 14.0.1
     npm-run-all: ^4.1.5
     ts-node: ^10.9.1
-    undici: 5.27.0
   languageName: unknown
   linkType: soft
 
@@ -22700,15 +22699,6 @@ __metadata:
     has-symbols: ^1.0.3
     which-boxed-primitive: ^1.0.2
   checksum: b7a1cf5862b5e4b5deb091672ffa579aa274f648410009c81cca63fed3b62b610c4f3b773f912ce545bb4e31edc3138975b5bc777fc6e4817dca51affb6380e9
-  languageName: node
-  linkType: hard
-
-"undici@npm:5.27.0":
-  version: 5.27.0
-  resolution: "undici@npm:5.27.0"
-  dependencies:
-    "@fastify/busboy": ^2.0.0
-  checksum: 3acad25bfe5957aa5edc24eb160b5da7a9c67a5061e2e001929bef4bafed07d93a2accb36d407179c35b3ae56adbe89b49e1dd80d8cea9fdc44dca2037174330
   languageName: node
   linkType: hard
 
