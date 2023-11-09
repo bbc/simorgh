@@ -12,7 +12,6 @@ const getAgent = async () => {
   const { certChain, key, ca } = await getCert();
 
   agentMemo = new Agent({
-    allowH2: true,
     connect: {
       keepAlive: true,
       rejectUnauthorized: false,

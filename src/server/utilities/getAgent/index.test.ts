@@ -33,7 +33,6 @@ describe('Agent', () => {
     expect(getCerts).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledWith({
-      allowH2: true,
       connect: {
         keepAlive: true,
         rejectUnauthorized: false,
