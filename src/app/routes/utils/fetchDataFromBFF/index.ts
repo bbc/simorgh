@@ -51,8 +51,8 @@ export default async ({
     page,
   });
 
-  const agent = certsRequired(pathname) ? await getAgent() : null;
-  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
+  const agent = certsRequired(pathname) ? await getAgent() : undefined;
+  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : undefined;
   const optHeaders: OptHeaders =
     isLocal && !BFF_IS_LOCAL ? undefined : { 'ctx-service-env': environment };
 
