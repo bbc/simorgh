@@ -6,6 +6,7 @@ import getErrorStatusCode from '../fetchPageData/utils/getErrorStatusCode';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import { FetchError, GetAgent } from '../../../models/types/fetch';
 import nodeLogger from '../../../lib/logger.node';
+import certsRequired from '../certsRequired';
 
 const logger = nodeLogger(__filename);
 const BFF_IS_LOCAL =
@@ -50,14 +51,10 @@ export default async ({
     page,
   });
 
-  const agent = isLocal ? undefined : await getAgent();
+  const agent = certsRequired(pathname) ? await getAgent() : null;
   const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
   const optHeaders: OptHeaders =
-    isLocal && !BFF_IS_LOCAL
-      ? undefined
-      : {
-          'ctx-service-env': getEnvironment(pathname),
-        };
+    isLocal && !BFF_IS_LOCAL ? undefined : { 'ctx-service-env': environment };
 
   if (BFF_IS_LOCAL && optHeaders) {
     optHeaders['ctx-service-env'] = process.env.BFF_ENV || 'live';

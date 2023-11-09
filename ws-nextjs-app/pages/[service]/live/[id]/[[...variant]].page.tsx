@@ -12,9 +12,8 @@ import {
 import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
-import getAgent from '#server/utilities/getAgent';
-
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import getAgent from '#server/utilities/getAgent';
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
@@ -38,25 +37,21 @@ const getPageData = async ({
   rendererEnv,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-
-  let pageStatus;
-  let pageJson;
-  let errorMessage;
+  let message;
+  let status;
+  let json;
 
   try {
-    const { status, json } = await fetchDataFromBFF({
+    ({ status, json } = await fetchDataFromBFF({
       pathname,
       pageType: LIVE_PAGE,
       service,
       variant,
       page,
       getAgent,
-    });
-
-    pageStatus = status;
-    pageJson = json;
+    }));
   } catch (error: unknown) {
-    const { message, status } = error as FetchError;
+    ({ message, status } = error as FetchError);
 
     logger.error(BFF_FETCH_ERROR, {
       service,
@@ -64,13 +59,11 @@ const getPageData = async ({
       pathname,
       message,
     });
-    pageStatus = status;
-    errorMessage = message;
   }
 
-  const data = pageJson
-    ? { pageData: pageJson.data, status: pageStatus }
-    : { error: errorMessage, status: pageStatus };
+  const data = json
+    ? { pageData: json.data, status }
+    : { error: message, status };
 
   const toggles = await getToggles(service);
 
