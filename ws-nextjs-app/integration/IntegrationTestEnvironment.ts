@@ -28,14 +28,13 @@ class CustomTestEnvirnoment extends TestEnvironment {
       runScripts = 'true',
       displayAds = 'false',
     } = context.docblockPragmas;
-
     const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
-    this.url = `http://localhost:7081${pathname}${
+    this.url = `http://127.0.0.1:7081${pathname}${
       platform === 'amp' ? '.amp' : ''
     }`;
   }
