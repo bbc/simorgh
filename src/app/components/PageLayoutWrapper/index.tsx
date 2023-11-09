@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
+import { PageTypes } from '#app/models/types/global';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
@@ -23,7 +24,7 @@ import styles from './index.styles';
 type Props = {
   pageData: {
     metadata: {
-      type: string;
+      type: PageTypes;
     };
   };
   status: number;
