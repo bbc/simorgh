@@ -152,6 +152,11 @@ const injectDefaultCacheHeader = (req, res, next) => {
   next();
 };
 
+const injectDefaultVaryHeader = (req, res, next) => {
+  res.set('Vary', 'saveData');
+  next();
+};
+
 const injectResourceHintsHeader = (req, res, next) => {
   const thisService = req.originalUrl.split('/')[1];
 
@@ -179,6 +184,7 @@ server.get(
   [
     injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
+    injectDefaultVaryHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
   ],
@@ -196,6 +202,7 @@ server.get(
         service,
         isAmp,
         isApp,
+        isLow,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -203,6 +210,15 @@ server.get(
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
+
+      if (service === 'pidgin' && derivedPageType === 'cpsAsset' && !isAmp) {
+        if (!isLow && headers.saveData === true) {
+          return res.redirect(302, `${urlPath}.low`);
+        }
+        if (isLow && !headers.saveData) {
+          return res.redirect(302, urlPath.replace('.low', ''));
+        }
+      }
 
       const toggles = await getToggles(service);
 
@@ -250,6 +266,7 @@ server.get(
           data,
           isAmp,
           isApp,
+          isLow,
           routes,
           service,
           url,
@@ -276,6 +293,7 @@ server.get(
           data: { error: true, status },
           isAmp,
           isApp,
+          isLow,
           routes,
           service,
           url,

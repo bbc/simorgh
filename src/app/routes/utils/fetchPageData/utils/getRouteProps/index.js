@@ -4,16 +4,19 @@ import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import isAppPath from '#app/routes/utils/isAppPath';
+import isLowPath from '#app/routes/utils/isLowPath';
 import routes from '#app/routes';
 import fallbackServiceParam from './fallbackServiceParam';
 
 const getNonCanonicalPlatformId = params => {
   const renderPlatform =
     path(['amp'], params) ||
+    path(['low'], params) ||
     path(['nonCanonicalArticleRenderPlatform'], params);
   const supportedPlatforms = {
     '.amp': { amp: true },
     '.app': { app: true },
+    '.low': { low: true },
   };
 
   return pathOr({}, [renderPlatform], supportedPlatforms);
@@ -26,7 +29,7 @@ const getRouteProps = url => {
   const match = path([0, 'match'], matchedRoutes);
   const params = pathOr({}, ['params'], match);
 
-  const { amp, app } = getNonCanonicalPlatformId(params);
+  const { amp, app, low } = getNonCanonicalPlatformId(params);
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);

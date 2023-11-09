@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { useTheme } from '@emotion/react';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
@@ -14,10 +15,20 @@ const StyledBrand = styled(Brand)`
       fill: linkText;
     }
   }
+
+  ${({ isLow }) =>
+    isLow &&
+    (
+      > div:first-of-type {
+        margin: unset;
+      }
+    )
+  }
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const { product, serviceLocalizedName, service } = useContext(ServiceContext);
+  const { isLow } = useContext(RequestContext);
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
@@ -37,6 +48,7 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       skipLink={skipLink}
       scriptLink={scriptLink}
       ref={brandRef}
+      isLow={isLow}
       {...props}
     />
   );

@@ -3,7 +3,8 @@ import isLive from '#app/lib/utilities/isLive';
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
-const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
+const lowRegex = '.low';
+const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}|${lowRegex}`;
 const assetUriRegex = '[a-z0-9-_+]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
@@ -77,7 +78,7 @@ export const getFrontPageRegex = services => {
     );
   }
   const serviceRegex = getServiceRegex(frontPages);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:low(${lowRegex})?`;
 };
 
 export const getTipoHomeRegex = services => {
@@ -110,7 +111,7 @@ export const getManifestRegex = services => {
 
 export const getCpsAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?:low(${lowRegex})?`;
 };
 
 export const getLegacyAssetRegex = services => {

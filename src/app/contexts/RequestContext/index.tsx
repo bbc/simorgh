@@ -24,6 +24,7 @@ export type RequestContextProps = {
   id: string | null;
   isAmp: boolean;
   isApp: boolean;
+  isLow: boolean;
   isNextJs: boolean;
   isUK: boolean;
   mvtExperiments?: MvtExperiment[] | null;
@@ -52,6 +53,7 @@ type RequestProviderProps = {
   id?: string | null;
   isAmp: boolean;
   isApp: boolean;
+  isLow?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
@@ -72,6 +74,7 @@ export const RequestContextProvider = ({
   id = null,
   isAmp,
   isApp,
+  isLow = false,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
@@ -94,6 +97,8 @@ export const RequestContextProvider = ({
         return 'app';
       case isAmp:
         return 'amp';
+      case isLow:
+        return 'low';
       default:
         return 'canonical';
     }
@@ -101,7 +106,7 @@ export const RequestContextProvider = ({
 
   const platform = getPlatform();
   const statsDestination = getStatsDestination({
-    isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
+    isUK: ['amp', 'low'].includes(platform) ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
   });
@@ -120,6 +125,7 @@ export const RequestContextProvider = ({
     derivedPageType,
     isAmp,
     isApp,
+    isLow,
     isNextJs,
     platform,
     statsDestination,
