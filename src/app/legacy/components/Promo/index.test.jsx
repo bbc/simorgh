@@ -12,7 +12,7 @@ const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
-      src="https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg"
+      src="https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3502/test/0c533a40-770b-10ed-bd83-8f15ba358e41.jpg"
       alt="Test image alt text"
       loading="lazy"
     />
@@ -182,28 +182,29 @@ describe('Promo component - Timestamp', () => {
         expect(getByText('9 horas')).toBeInTheDocument();
       });
     });
-    describe('Relative time more than 11 hours ago', () => {
+    describe('Relative time more than 10 hours ago', () => {
       moment.locale('es');
-      const dateElevenHoursAgo = moment().subtract({ h: 11 }).format('LL');
+      const dateTenHoursAgo = moment().subtract({ h: 10 }).format('LL');
+      // We are using 10 to test more than 10 hours, because by the time the test has reached the expect assertion, milliseconds have passed.
       it('should render timestamp in ISO string format', () => {
-        const overElevenHoursString = calcTimestampHoursAgo(11).toISOString();
+        const overTenHoursString = calcTimestampHoursAgo(10).toISOString();
         const { getByText } = render(
-          <Fixture timestamp={overElevenHoursString} />,
+          <Fixture timestamp={overTenHoursString} />,
           {
             service: 'mundo',
           },
         );
-        expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
+        expect(getByText(dateTenHoursAgo)).toBeInTheDocument();
       });
       it('should render timestamp in epoch format', () => {
-        const overElevenHoursEpoch = calcTimestampHoursAgo(11).getTime();
+        const overTenHoursEpoch = calcTimestampHoursAgo(10).getTime();
         const { getByText } = render(
-          <Fixture timestamp={overElevenHoursEpoch} />,
+          <Fixture timestamp={overTenHoursEpoch} />,
           {
             service: 'mundo',
           },
         );
-        expect(getByText(dateElevenHoursAgo)).toBeInTheDocument();
+        expect(getByText(dateTenHoursAgo)).toBeInTheDocument();
       });
     });
   });
