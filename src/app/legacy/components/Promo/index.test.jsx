@@ -108,7 +108,7 @@ describe('Promo component - Timestamp', () => {
     const calcTimestampHoursAgo = hours =>
       new Date(epochTimeNow - 60 * 60 * 1000 * hours);
     describe('Relative time 0 minute ago', () => {
-      it('should render 1 minute ago in string format if time since last published is less than 1 minute ago', () => {
+      it('should render 1 minute ago timestamp in string format if time since last published is less than 1 minute ago', () => {
         // We do not want the timestamp to say 0 minutes if time since last published is less than 1 minute ago.
         // Relative time stamp will say 1 minute ago for last published between 0 minutes and 1.59 minutes
         const zeroMinuteAgoString = calcTimestampMinutesAgo(0).toISOString();
@@ -120,7 +120,7 @@ describe('Promo component - Timestamp', () => {
         );
         expect(getByText('1 minuto')).toBeInTheDocument();
       });
-      it('should render 1 minute ago in epoch format if time since last published is less than 1 minute ago', () => {
+      it('should render 1 minute ago timestamp in epoch format if time since last published is less than 1 minute ago', () => {
         const zeroMinuteAgoEpoch = calcTimestampMinutesAgo(0).getTime();
         const { getByText } = render(
           <Fixture timestamp={zeroMinuteAgoEpoch} />,
@@ -132,7 +132,7 @@ describe('Promo component - Timestamp', () => {
       });
     });
     describe('Relative time 59 minutes ago', () => {
-      it('should render 59 minutes ago or less in string format', () => {
+      it('should render timestamp in string format', () => {
         const fiftyNineMinutesAgoString =
           calcTimestampMinutesAgo(59).toISOString();
         const { getByText } = render(
@@ -143,7 +143,7 @@ describe('Promo component - Timestamp', () => {
         );
         expect(getByText('59 minutos')).toBeInTheDocument();
       });
-      it('should render 59 minutes ago or less in epoch format', () => {
+      it('should render in timestamp epoch format', () => {
         const fiftyNineMinutesAgoEpoch = calcTimestampMinutesAgo(59).getTime();
         const { getByText } = render(
           <Fixture timestamp={fiftyNineMinutesAgoEpoch} />,
@@ -154,29 +154,32 @@ describe('Promo component - Timestamp', () => {
         expect(getByText('59 minutos')).toBeInTheDocument();
       });
     });
-    describe('Relative time 10 hours ago', () => {
+    describe('Relative time 9 hours ago', () => {
       // temporary notes to describe next actions:
-      // either we make this test expect '9 hours ago' and acknowlegde it is hard to make it exactly 10,
-      // or we need to work out how to use the buffer like in the isTenHoursAgo tests to make it exacly 10 hours ago
+      // either we make this test expect '9 hours ago' and acknowledge it is hard to make it exactly 10,
+      // or we need to work out how to use the buffer like in the isTenHoursAgo tests to make it exactly 10 hours ago
       // It would be a boundary test, so good for that, but users will never see 10 hours ago unless they
       // visit on one particular millisecond (unlikely!) so testing just before 10 and just after 10 might be ok
 
-      it('should render 10 hours ago or less in string format', () => {
-        const tenHoursAgoString = calcTimestampHoursAgo(10).toISOString();
+      it('should render timestamp in string format', () => {
+        const nineHoursAgoString = calcTimestampHoursAgo(9).toISOString();
         const { getByText } = render(
-          <Fixture timestamp={tenHoursAgoString} />,
+          <Fixture timestamp={nineHoursAgoString} />,
           {
             service: 'mundo',
           },
         );
-        expect(getByText('10 horas')).toBeInTheDocument();
+        expect(getByText('9 horas')).toBeInTheDocument();
       });
-      it('should render 10 hours ago or less in epoch format', () => {
-        const tenHoursAgoEpoch = calcTimestampHoursAgo(10).getTime();
-        const { getByText } = render(<Fixture timestamp={tenHoursAgoEpoch} />, {
-          service: 'mundo',
-        });
-        expect(getByText('10 horas')).toBeInTheDocument();
+      it('should render timestamp in epoch format', () => {
+        const nineHoursAgoEpoch = calcTimestampHoursAgo(9).getTime();
+        const { getByText } = render(
+          <Fixture timestamp={nineHoursAgoEpoch} />,
+          {
+            service: 'mundo',
+          },
+        );
+        expect(getByText('9 horas')).toBeInTheDocument();
       });
     });
     describe('Relative time more than 11 hours ago', () => {
