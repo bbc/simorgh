@@ -47,12 +47,11 @@ interface Props extends AppProps {
 const logger = nodeLogger(__filename);
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
-  if (metric.name === 'LCP') {
-    const nanoseconds = metric.startTime * 1000000;
-    logger.info(SERVER_RESPONSE_TIME, {
-      nanoseconds,
-    });
-  }
+  const nanoseconds = metric.startTime * 1000000;
+  logger.info(SERVER_RESPONSE_TIME, {
+    path: 'TEST_PATH',
+    nanoseconds,
+  });
 }
 
 export default function App({ Component, pageProps }: Props) {
