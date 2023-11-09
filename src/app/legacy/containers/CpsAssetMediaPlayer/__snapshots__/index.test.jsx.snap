@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer render amp legacy media player 1`] = `
+exports[`MediaPlayer should render the amp legacy media player 1`] = `
 .emotion-1 {
   margin-top: 0.5rem;
 }
@@ -197,178 +197,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 </div>
 `;
 
-exports[`MediaPlayer render canonical legacy media player 1`] = `
-.emotion-1 {
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-1 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-1 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-1 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-1 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-1 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-1 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-1 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-1 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-1 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-1 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-}
-
-.emotion-3 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.emotion-5 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-7 {
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1 emotion-2"
-    dir="ltr"
-  >
-    <div
-      class="emotion-3 emotion-4"
-    >
-      <div
-        class="emotion-5 emotion-6"
-        data-e2e="media-player"
-      >
-        <iframe
-          allow="autoplay"
-          allowfullscreen=""
-          class="emotion-7 emotion-8"
-          scrolling="no"
-          src="/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
-          title="Media player"
-        />
-        <noscript />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`MediaPlayer render the amp player 1`] = `
+exports[`MediaPlayer should render the amp player 1`] = `
 .emotion-1 {
   margin-top: 0.5rem;
 }
@@ -565,7 +394,7 @@ exports[`MediaPlayer render the amp player 1`] = `
 </div>
 `;
 
-exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
+exports[`MediaPlayer should render the canonical legacy media player 1`] = `
 .emotion-1 {
   margin-top: 0.5rem;
 }
@@ -725,9 +554,186 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
           allow="autoplay"
           allowfullscreen=""
           class="emotion-7 emotion-8"
+          height="362.953125"
+          loading="lazy"
+          scrolling="no"
+          src="/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
+          title="Media player"
+          width="645.25"
+        />
+        <noscript />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaPlayer should render the canonical player without a placeholder 1`] = `
+.emotion-1 {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-1 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-1 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+}
+
+.emotion-3 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.emotion-5 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-7 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-5 emotion-6"
+        data-e2e="media-player"
+      >
+        <iframe
+          allow="autoplay"
+          allowfullscreen=""
+          class="emotion-7 emotion-8"
+          height="362.953125"
+          loading="lazy"
           scrolling="no"
           src="/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
           title="Media player"
+          width="645.25"
         />
         <noscript />
       </div>

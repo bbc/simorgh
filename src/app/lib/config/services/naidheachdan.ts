@@ -1,10 +1,3 @@
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +31,6 @@ export const service: DefaultServiceConfig = {
     service: 'naidheachdan',
     serviceName: 'Naidheachdan',
     languageName: 'Scottish Gaelic',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnaidheachdan',
     twitterSite: '@bbcnaidheachdan',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
@@ -49,13 +41,6 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Dachaigh',
     showAdPlaceholder: false,
     showRelatedTopics: true,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
@@ -72,7 +57,7 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
-      gist: 'At a glance',
+      gist: 'Geàrr-shealladh',
       error: {
         404: {
           statusCode: '404',
@@ -103,6 +88,12 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/naidheachdan',
         },
+      },
+      byline: {
+        articleInformation: 'Fiosrachadh mun artaigil',
+        author: 'Ùghdar',
+        reportingFrom: 'Ag aithris às',
+        role: 'Dreuchd',
       },
       consentBanner: {
         privacy: {
@@ -215,11 +206,35 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
-      socialEmbed: {},
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Fo-thiotal, ',
+          text: 'Dh’fhaodadh sanasan a bhith an lùib stuth',
+          articleText:
+            'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
+          articleAdditionalText:
+            'Dh’fhaodadh sanasan a bhith an lùib stuth %provider_name%.',
+        },
+        fallback: {
+          text: 'Chan eil seo ri fhaighinn',
+          linkText: 'VFaic tuilleadh %provider_name%',
+          linkTextSuffixVisuallyHidden: ', taobh a-muigh',
+          warningText:
+            'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
+        },
+        skipLink: {
+          text: 'Leum thairis air %provider_name% teachdaireachd',
+          endTextVisuallyHidden: 'Deireadh %provider_name% teachdaireachd',
+        },
+        consentBanner: {
+          heading: `Cead do stuth [social_media_site]?`,
+          body: `Tha stuth [social_media_site] an cois an artaigil seo. Tha sinn a’ sireadh cead bhuat mus tèid sìon luchdachadh, oir dh’fhaodadh iad ‘briosgaidean’ agus teicneòlas eile a chur an sàs. ‘S dòcha gum biodh tu airson [link] poileasaidh nam briosgaidean aca [/link] a leughadh agus [link] am poileasaidh prìobhaideachd aca [/link]  mus tèid thu air adhart. Airson sùil a thoirt air an stuth seo, tagh 'Gabh ris agus lean ort'.`,
+          button: 'Gabh ris agus lean ort',
+        },
+      },
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
-    brandSVG,
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
@@ -269,8 +284,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

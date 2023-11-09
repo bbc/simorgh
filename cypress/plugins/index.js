@@ -20,6 +20,8 @@ module.exports = (on, config) => {
   console.log('SMOKE:', config.env.SMOKE);
   console.log('APP_ENV:', config.env.APP_ENV);
   console.log('UK:', config.env.UK);
+  console.log('ONLY_SERVICE:', config.env.ONLY_SERVICE || '');
+  console.log('SKIP_EU:', Boolean(config.env.SKIP_EU));
   console.log('\n\n\n\n\n');
   /* eslint-enable no-console */
 
@@ -84,13 +86,16 @@ module.exports = (on, config) => {
     log(message) {
       // eslint-disable-next-line no-console
       console.log(message);
-
       return null;
     },
     table(message) {
       // eslint-disable-next-line no-console
       console.table(message);
-
+      return null;
+    },
+    error(message) {
+      // eslint-disable-next-line no-console
+      console.error(message);
       return null;
     },
   });

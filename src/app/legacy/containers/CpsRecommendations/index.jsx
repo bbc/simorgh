@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { useTheme } from '@emotion/react';
+import { arrayOf, shape, oneOfType } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -8,7 +9,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -16,17 +16,22 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-
-import { storyItem } from '#models/propTypes/storyItem';
+import { storyItem, optimoStoryItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
+
+import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';
 
 const RecommendationsWrapper = styled.div`
-  background-color: ${C_GHOST};
+  background-color: ${props =>
+    props.isArticlePage
+      ? props.theme.palette.GREY_2
+      : props.theme.palette.GHOST};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -50,13 +55,18 @@ const LabelComponent = styled(SectionLabel)`
 const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
   const { enabled } = useToggle('cpsRecommendations');
+  const isArticlePage = pageType === ARTICLE_PAGE;
   const labelId = 'recommendations-heading';
   const a11yAttributes = {
     as: 'section',
     role: 'region',
     'aria-labelledby': labelId,
   };
+  const {
+    palette: { GREY_2, GHOST },
+  } = useTheme();
 
   const { hasStoryRecommendations } = recommendations;
 
@@ -86,7 +96,11 @@ const CpsRecommendations = ({ items }) => {
   return (
     <ErrorBoundary recommendations={items}>
       <GridItemMediumNoMargin>
-        <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
+        <RecommendationsWrapper
+          data-e2e={labelId}
+          {...a11yAttributes}
+          isArticlePage={isArticlePage}
+        >
           <SkipLinkWrapper service={service} {...skipLink}>
             {title ? (
               <LabelComponent
@@ -98,7 +112,7 @@ const CpsRecommendations = ({ items }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={C_GHOST}
+                backgroundColor={isArticlePage ? GREY_2 : GHOST}
               >
                 {title}
               </LabelComponent>
@@ -118,7 +132,7 @@ const CpsRecommendations = ({ items }) => {
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
-  items: arrayOf(shape(storyItem)),
+  items: arrayOf(oneOfType([shape(storyItem), shape(optimoStoryItem)])),
 };
 
 CpsRecommendations.defaultProps = {

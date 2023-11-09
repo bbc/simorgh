@@ -97,6 +97,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -109,7 +110,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
         role="text"
       >
@@ -199,6 +200,17 @@ exports[`Brand should render correctly with link provided 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-4:focus-visible::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.1875rem;
+  bottom: 0;
+  right: -0.1875rem;
+  border-top: 0.25rem solid #FFFFFF;
+  outline: 0.25rem solid #FFFFFF;
+}
+
 .emotion-6 {
   box-sizing: content-box;
   color: #FFFFFF;
@@ -244,7 +256,7 @@ exports[`Brand should render correctly with link provided 1`] = `
     >
       <a
         aria-labelledby="BrandLink-null"
-        class="emotion-4 emotion-5"
+        class="focusIndicatorRemove emotion-4 emotion-5"
         href="https://www.bbc.co.uk/news"
       >
         <svg
@@ -252,6 +264,7 @@ exports[`Brand should render correctly with link provided 1`] = `
           class="emotion-6 emotion-7"
           focusable="false"
           height="32"
+          id="brandSvgHeader"
           viewBox="0 0 167.95 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -264,7 +277,7 @@ exports[`Brand should render correctly with link provided 1`] = `
           </g>
         </svg>
         <span
-          class="emotion-8 emotion-9"
+          class="emotion-8"
           id="BrandLink-null"
           role="text"
         >
@@ -380,6 +393,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -392,7 +406,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
       >
         BBC News
@@ -501,6 +515,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
         class="emotion-4 emotion-5"
         focusable="false"
         height="32"
+        id="brandSvgHeader"
         viewBox="0 0 167.95 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -513,7 +528,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
       >
         BBC News

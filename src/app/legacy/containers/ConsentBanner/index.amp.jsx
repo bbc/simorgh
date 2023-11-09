@@ -34,7 +34,6 @@ const jsonInlinedScript = data => (
 // Style `amp-consent` as child due to inability to set
 // `layout` attribute on styled `amp-consent` component
 const AmpConsentWrapper = styled.div`
-  /* stylelint-disable-next-line selector-type-no-unknown */
   & amp-consent {
     position: static;
     display: block;
@@ -51,12 +50,14 @@ const Amp = () => (
           type="privacy"
           acceptAction="tap:cookie.show, privacy.hide, AMP.setState({ isManagingSettings: false }), dataCollectionHeading.focus"
           rejectAction="tap:cookie.show, privacy.hide"
+          hideAction="tap:brandLink.focus, privacy.hide"
           promptId="privacy"
         />
         <Banner
           type="cookie"
           acceptAction="tap:brandLink.focus, consent.accept"
           rejectAction="tap:brandLink.focus, consent.reject"
+          hideAction="tap:brandLink.focus, cookie.hide"
           promptId="cookie"
           hidden
         />

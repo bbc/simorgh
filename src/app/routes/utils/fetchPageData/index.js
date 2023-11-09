@@ -5,6 +5,7 @@ import {
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
   DATA_FETCH_ERROR,
+  DATA_RESPONSE_FROM_CACHE,
 } from '#lib/logger.const';
 import {
   OK,
@@ -13,6 +14,7 @@ import {
 } from '#lib/statusCodes.const';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import onClient from '#lib/utilities/onClient';
+import isLocal from '#app/lib/utilities/isLocal';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
 
@@ -36,9 +38,31 @@ const fetchPageData = async ({
   shouldLogFetchTime = !onClient(),
   agent,
   optHeaders,
+  cache,
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
+
+  logger.info(DATA_REQUEST_RECEIVED, {
+    data: url,
+    path,
+    ...loggerArgs,
+  });
+
+  const cachedResponse = !isLocal() && cache?.get(url);
+
+  if (cachedResponse) {
+    logger.info(DATA_RESPONSE_FROM_CACHE, {
+      data: url,
+      path,
+      ...loggerArgs,
+    });
+
+    return {
+      status: 200,
+      json: cachedResponse,
+    };
+  }
 
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
@@ -49,12 +73,6 @@ const fetchPageData = async ({
     timeout: effectiveTimeout,
     ...(agent && { agent }),
   };
-
-  logger.info(DATA_REQUEST_RECEIVED, {
-    data: url,
-    path,
-    ...loggerArgs,
-  });
 
   const canDetermineFetchTime = process && typeof process.hrtime === 'function';
 
@@ -73,9 +91,12 @@ const fetchPageData = async ({
         ...loggerArgs,
       });
     }
-
     if (status === OK) {
       const json = await response.json();
+
+      if (cache) {
+        cache.set(url, json);
+      }
 
       return {
         status,

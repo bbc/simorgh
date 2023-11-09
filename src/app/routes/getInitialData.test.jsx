@@ -2,6 +2,10 @@ import {
   ERROR_PAGE,
   TOPIC_PAGE,
   ARTICLE_PAGE,
+  HOME_PAGE,
+  FRONT_PAGE,
+  INDEX_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 import routes from './index';
 
@@ -11,7 +15,16 @@ const toggles = {
   liveRadioSchedule: { enabled: true },
 };
 
-const pageTypesToSkip = [ERROR_PAGE, TOPIC_PAGE, ARTICLE_PAGE];
+const pageTypesToSkip = [
+  ERROR_PAGE,
+  TOPIC_PAGE,
+  ARTICLE_PAGE,
+  HOME_PAGE,
+  'cpsAsset',
+  FRONT_PAGE,
+  INDEX_PAGE,
+  MOST_READ_PAGE,
+];
 
 routes
   .filter(route => !pageTypesToSkip.includes(route.pageType))

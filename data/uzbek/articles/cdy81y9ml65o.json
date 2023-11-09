@@ -5,132 +5,187 @@
         "model": {
           "blocks": [
             {
-              "id": "87b3fa18",
+              "id": "e454a28f",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b576bf7b",
+                    "id": "42f7dfc4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "93527394",
+                          "id": "23c0748a",
                           "type": "paragraph",
                           "model": {
                             "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
                             "blocks": [
                               {
-                                "id": "5ef420c6",
+                                "id": "86672ea9",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "dcc9b5aa",
+              "id": "38455507",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942148973,
                 "lastPublished": 1562942148973
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "7971200d",
+              "id": "727919c1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0cd45f46",
+                    "id": "342b0c35",
                     "type": "paragraph",
                     "model": {
                       "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
                       "blocks": [
                         {
-                          "id": "8bd17dfa",
+                          "id": "6efca40c",
                           "type": "fragment",
                           "model": {
                             "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
-                    "id": "f93f792b",
+                    "id": "bec1270c",
                     "type": "paragraph",
                     "model": {
                       "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
                       "blocks": [
                         {
-                          "id": "027dfbcf",
+                          "id": "2b13ab95",
                           "type": "fragment",
                           "model": {
                             "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
-                    "id": "a0309867",
+                    "id": "c74f69e7",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
                       "blocks": [
                         {
-                          "id": "d8b46b25",
+                          "id": "697aa080",
                           "type": "fragment",
                           "model": {
                             "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "5be22240", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "93040967",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "b4c96acf",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cdy81y9ml65o",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o"
+        },
         "type": "article",
         "createdBy": "Uzbek",
         "language": "uz-latn",
-        "lastUpdated": 1669740129852,
         "firstPublished": 1562942148973,
         "lastPublished": 1562942148973,
-        "timestamp": 1562942148973,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cdy81y9ml65o",
           "producer": "Uzbek"
@@ -140,46 +195,29 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.10",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o" },
-        "timestamp": 1562942148973,
-        "suitableForSyndication": false,
-        "language": "uz-latn",
         "headlines": {
           "seoHeadline": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda"
-        },
-        "images": {},
-        "passport": {
-          "language": "uz-latn",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cdy81y9ml65o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Uzbek",
-          "uri": "/uzbek",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Thousands of Turkish police suspended" },
+          "headlines": {
+            "headline": "Thousands of Turkish police suspended"
+          },
           "locators": {
             "assetUri": "/uzbek/23061067",
             "cpsUrn": "urn:bbc:content:assetUri:uzbek/23061067",
@@ -214,7 +252,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -253,7 +294,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053075",
           "type": "cps"
         },
@@ -283,7 +327,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053076",
           "type": "cps"
         },
@@ -313,7 +360,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/sport-23053300",
           "type": "cps"
         },
@@ -343,7 +393,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/world-23053082",
           "type": "cps"
         },
@@ -373,13 +426,16 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053074",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:57:56.964Z",
+        "generated": "2023-02-17T16:27:57.937Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

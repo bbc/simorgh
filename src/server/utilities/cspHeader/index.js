@@ -25,11 +25,14 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://*.gstatic.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   frameSrc: [
     'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
     'https://*.googlesyndication.com',
+    'https://cdn.privacy-mgmt.com',
+    'https://*.google.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
@@ -53,9 +56,11 @@ const advertisingDirectives = {
     'https://bbc.gscontxt.net',
     'https://sb.scorecardresearch.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
+    'https://*.permutive.com',
+    'https://*.webcontentassessor.com',
     ...advertisingServiceCountryDomains,
   ],
-  prefetchSrc: ['https://*.googlesyndication.com'],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -250,7 +255,7 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
+      'https://www.riddle.com',
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -278,7 +283,7 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
+      'https://www.riddle.com',
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -327,12 +332,6 @@ const directives = {
     canonicalLive: [...bbcDomains],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [...bbcDomains],
-  },
-  prefetchSrc: {
-    ampLive: [...advertisingDirectives.prefetchSrc],
-    canonicalLive: [...advertisingDirectives.prefetchSrc],
-    ampNonLive: [...advertisingDirectives.prefetchSrc],
-    canonicalNonLive: [...advertisingDirectives.prefetchSrc],
   },
 };
 
@@ -394,14 +393,7 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
-    : ["'self'", '*.bbc.co.uk', '*.bbc.com'];
-
-export const generatePrefetchSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.prefetchSrc.ampLive.sort();
-  return directives.prefetchSrc.canonicalLive.sort();
-};
+    : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
 
 const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {
@@ -415,7 +407,6 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
-    'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },

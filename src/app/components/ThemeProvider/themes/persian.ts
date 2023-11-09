@@ -3,6 +3,7 @@ import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../fontFaces';
 import reithQalamFontVariants from '../fontVariants/reithQalam';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/persian';
 
 const persianTheme = {
   palette: {
@@ -17,6 +18,7 @@ const persianTheme = {
     fontVariants: reithQalamFontVariants,
     fontFaces: [REITH_QALAM_REGULAR, REITH_QALAM_BOLD],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(persianTheme);

@@ -1,11 +1,12 @@
-import { GHOST, WHITE, BLUEJAY, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latin from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/pidgin';
 
 const pidginTheme = {
   palette: {
-    BRAND_BACKGROUND: BLUEJAY,
+    BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
@@ -16,6 +17,7 @@ const pidginTheme = {
     fontVariants: helmetFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(pidginTheme);

@@ -1,9 +1,4 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
-import {
-  C_ARCHIVE_BLUE,
-  C_WHITE,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -35,7 +30,6 @@ export const service: DefaultServiceConfig = {
     service: 'archive',
     serviceName: 'Archive',
     languageName: 'English',
-    themeColor: `${C_ARCHIVE_BLUE}`,
     twitterCreator: '@BBCArchive',
     twitterSite: '@BBCArchive',
     noBylinesPolicy: null,
@@ -45,13 +39,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_ARCHIVE_BLUE}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_WHITE}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_WHITE}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -120,7 +107,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: "Find out what's changed",
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -133,7 +120,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Manage my settings',
             },
@@ -149,7 +136,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information on your device without your consent.',
                 para4: {
                   text: 'Read more about the essential information we store on your device to make our web pages work.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences on your device.',
@@ -182,13 +169,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Yes, I agree',
             reject: 'No, take me to settings',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -206,11 +193,11 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
+      numberOfItems: 10,
     },
     mostWatched: {
       header: 'Most watched',
@@ -219,6 +206,9 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

@@ -1,0 +1,103 @@
+{
+  "data": {
+    "title": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা",
+    "description": "বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর, প্রতিবেদন, বিশ্লেষণ, সাক্ষাৎকার, ভিডিও, অডিও এবং ফিচারের জন্য বিবিসি বাংলার ওয়েবসাইটে আসুন। খেলাধুলা, বিনোদন, ব্যবসা-বাণিজ্য, বিজ্ঞান, প্রযুক্তি এবং স্বাস্থ্য সহ নানা বিষয়ে ফিচার ও বিশ্লেষণও থাকে আমাদের পাতায়।",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "কাবুল বিমানবন্দর হামলায় পরিকল্পনাকারী আইএস নেতাকে হত্যা করেছে তালেবান",
+            "firstPublished": "2023-04-26T03:17:28.528Z",
+            "link": "https://www.bbc.com/bengali/articles/cp4v27e84dko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dd96/live/076a06a0-e3dd-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "তালেবান আফগানিস্তানের নিয়ন্ত্রণে নেয়ার সময় যখন অসংখ্য মানুষ দেশ ছেড়ে পালিয়ে যাওয়ার চেষ্টা করছিলেন, ২০২১ সালের অগাস্টে কাবুল বিমানবন্দরে ওই বোমা হামলায় ১৭০ জন বেসামরিক মানুষ ও ১৩জন মার্কিন সেনা নিহত হন।",
+            "imageAlt": "আফগানিস্তান বিমানবন্দরে পলায়নরত মানুষের ভিড়",
+            "id": "cp4v27e84dko"
+          },
+          {
+            "type": "article",
+            "title": "ঈদ এবং অন্য উৎসবে বাংলাদেশের যেসব আঞ্চলিক খাবার জনপ্রিয় ",
+            "firstPublished": "2023-04-26T09:00:10.728Z",
+            "link": "https://www.bbc.com/bengali/articles/c6p94j936pvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d1b3/live/20711640-df85-11ed-ae89-7731c94fd3c1.jpg",
+            "description": "বাংলাদেশের একেক জেলায় একেক রকমের খাবারের প্রচলন আর জনপ্রিয়তা রয়েছে।  \nইতিহাসবিদেরা বলছেন, প্রত্যেক জেলাতেই রয়েছে তাদের নিজস্ব খাবার যা ভোজনরসিকদের মনে জায়গা করে নিয়েছে।",
+            "imageAlt": "টেবিলে নানা ধরনের খাবারের আয়োজন",
+            "id": "c6p94j936pvo"
+          },
+          {
+            "type": "article",
+            "title": "গ্যাসের গন্ধে আতঙ্ক, সরবরাহ লাইনের লিকেজ দুর্যোগ ডেকে আনতে পারে",
+            "firstPublished": "2023-04-25T18:07:57.831Z",
+            "link": "https://www.bbc.com/bengali/articles/cd1r5xprlp3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/27bb/live/4f3476e0-e384-11ed-91f0-71eb7dc39d29.jpg",
+            "description": "সোমবার ঢাকার বিভিন্ন এলাকায় গ্যাসের ঝাঁঝাল গন্ধ পেলে নগরবাসীর মধ্যে আতঙ্ক ছড়িয়ে পড়ে। আপাতত পরিস্থিতি নিয়ন্ত্রণে এলেও একসাথে এতোগুলো এলাকায় গ্যাস লিক হওয়ার ঘটনায় বড় ধরণের দুর্ঘটনার আশঙ্কা করছেন বিশেষজ্ঞরা। ",
+            "imageAlt": "২০১৯ সালের ২০শে ফেব্রুয়ারির ছবি",
+            "id": "cd1r5xprlp3o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:705fa609-e889-42f3-b3b5-c324305a4772",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "সাড়ে ছয় ঘণ্টা পর বঙ্গবাজারে আগুন নিয়ন্ত্রণে, ফায়ার সার্ভিস অফিসে হামলা",
+            "firstPublished": "2023-04-04T02:37:59.163Z",
+            "link": "https://www.bbc.com/bengali/articles/cx0nw4pq22eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2e33/live/14dd0f40-d2a2-11ed-9247-dd9d83ee1ef6.jpg",
+            "description": "মার্কেট ও আশেপাশের এলাকায় আগুন জ্বলছে। আগুন নিয়ন্ত্রণে আনতে হিমশিম খাচ্ছে ফায়ার সার্ভিস কর্মীরা।",
+            "imageAlt": "বঙ্গবাজারে আগুনে পুড়ে গেছে বহু দোকান",
+            "id": "cx0nw4pq22eo"
+          },
+          {
+            "type": "article",
+            "title": "আগামীতে বিশ্ববিদ্যালয় ভর্তি পরীক্ষা হবে একটি, এটি কিভাবে কাজ করবে",
+            "firstPublished": "2023-04-04T02:16:49.466Z",
+            "link": "https://www.bbc.com/bengali/articles/cg62e116z56o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5cfc/live/6f90b960-d247-11ed-be2e-754a65c11505.jpg",
+            "description": "নতুন এই পদ্ধতি চালু হলে শিক্ষার্থী ও অভিভাবকদের ভোগান্তি কমবে, অর্থ সাশ্রয় হবে বলে জানিয়েছে ইউজিসি। তারা বলছে, উন্নত বিশ্বের বিশ্ববিদ্যালয়ে ভর্তি এই নিয়মে চলে। শুধু বাংলাদেশে আলাদা পরীক্ষা হয়।",
+            "imageAlt": "ঢাকা বিশ্ববিদ্যালয় সমাবর্তন।",
+            "id": "cg62e116z56o"
+          },
+          {
+            "type": "article",
+            "title": "প্রাণহীন এফডিসিতে নায়ক-নায়িকা নেই, সিনেমার শুটিংও নেই ",
+            "firstPublished": "2023-04-04T01:52:01.342Z",
+            "link": "https://www.bbc.com/bengali/articles/cv2q59drvgro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/81bf/live/b1b77af0-d228-11ed-be2e-754a65c11505.jpg",
+            "description": "যে এফডিসি একসময় বাংলাদেশের চলচ্চিত্রের প্রধান কেন্দ্র ছিল, অভিনয়-শুটিং, এডিটিং মিলে সরগরম পরিবেশ ছিল, এখন কেন সেটা জৌলুসহীন?  কেন নির্মাতারা আর এফডিসিতে যাননা?  ",
+            "imageAlt": "এফডিসিতে আগের মতো সেই জৌলুসপূর্ণ পরিবেশ এখন আর দেখা যায় না",
+            "id": "cv2q59drvgro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a43a3556-dc42-4bcc-81d2-ff08bafcbe58",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Editor's choice",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c2eq2ggzz8kt",
+        "contentType": "index-home",
+        "pageIdentifier": "bengali.page",
+        "pageTitle": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO page"
+}

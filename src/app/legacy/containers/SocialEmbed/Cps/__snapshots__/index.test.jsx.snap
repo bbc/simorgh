@@ -164,6 +164,134 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-8 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-9 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-10 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-10 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-10 a:hover,
+.emotion-10 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-11 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-11:hover,
+.emotion-11:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-11:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -174,40 +302,85 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   margin: 0;
 }
 
-<div>
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
   <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-2 emotion-3"
+    data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
-      class="emotion-2 emotion-3"
-      data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
+      class="emotion-4 emotion-5"
     >
-      <div
-        class="emotion-4 emotion-5"
+      <a
+        class="focusIndicatorRemove emotion-6 emotion-7"
+        href="#end-of-twitter-content-2"
       >
-        <a
-          class="emotion-6 emotion-7"
-          href="#end-of-twitter-content-2"
+        <span>
+          Skip Twitter content, 2
+        </span>
+      </a>
+      <div
+        class="emotion-8"
+        data-testid="consentBanner"
+        id="consentBanner-1237210910835392512"
+      >
+        <strong
+          class="emotion-9"
+          data-testid="banner-heading"
         >
-          <span>
-            Skip Twitter content, 2
-          </span>
-        </a>
+          Allow Twitter content?
+        </strong>
+        <p
+          class="emotion-10"
+          data-testid="banner-body"
+        >
+          This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
+          <a
+            aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
+            href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
+          >
+            cookie policy
+          </a>
+           and 
+          <a
+            aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
+            href="https://twitter.com/en/privacy"
+          >
+            privacy policy
+          </a>
+           before accepting. To view this content choose 'accept and continue'.
+        </p>
+        <button
+          class="emotion-11"
+          data-testid="banner-button"
+          on="tap:consentBanner-1237210910835392512.hide,embed-1237210910835392512.show"
+          type="button"
+        >
+          Accept and continue
+        </button>
+      </div>
+      <div
+        hidden=""
+        id="embed-1237210910835392512"
+      >
         <amp-twitter
           data-tweetid="1237210910835392512"
           height="9"
           layout="responsive"
           width="16"
         />
-        <p
-          class="emotion-8 emotion-9"
-          id="end-of-twitter-content-2"
-          tabindex="-1"
-        >
-          End of Twitter content, 2
-        </p>
       </div>
+      <p
+        class="emotion-12 emotion-13"
+        id="end-of-twitter-content-2"
+        tabindex="-1"
+      >
+        End of Twitter content, 2
+      </p>
     </div>
   </div>
 </div>
@@ -419,7 +592,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-2"
       >
         <span>
@@ -687,49 +860,47 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   margin: 0;
 }
 
-<div>
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
   <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-2 emotion-3"
+    data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
-      class="emotion-2 emotion-3"
-      data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
+      class="emotion-4 emotion-5"
     >
-      <div
-        class="emotion-4 emotion-5"
+      <a
+        class="focusIndicatorRemove emotion-6 emotion-7"
+        href="#end-of-twitter-content-1"
       >
-        <a
-          class="emotion-6 emotion-7"
-          href="#end-of-twitter-content-1"
-        >
-          <span>
-            Skip Twitter content, 1
-          </span>
-        </a>
-        <div
-          class="emotion-8 emotion-9"
-        >
-          <p
-            data-testid="social-embed-fallback-title"
-          >
-            Content is not available
-          </p>
-          <a
-            aria-label="View content on Twitter, external"
-            href="https://twitter.com/MileyCyrus/status/1237210910835392512"
-          >
-            View content on Twitter
-          </a>
-        </div>
+        <span>
+          Skip Twitter content, 1
+        </span>
+      </a>
+      <div
+        class="emotion-8 emotion-9"
+      >
         <p
-          class="emotion-10 emotion-11"
-          id="end-of-twitter-content-1"
-          tabindex="-1"
+          data-testid="social-embed-fallback-title"
         >
-          End of Twitter content, 1
+          Content is not available
         </p>
+        <a
+          aria-label="View content on Twitter, external"
+          href="https://twitter.com/MileyCyrus/status/1237210910835392512"
+        >
+          View content on Twitter
+        </a>
       </div>
+      <p
+        class="emotion-10 emotion-11"
+        id="end-of-twitter-content-1"
+        tabindex="-1"
+      >
+        End of Twitter content, 1
+      </p>
     </div>
   </div>
 </div>

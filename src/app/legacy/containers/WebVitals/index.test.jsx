@@ -60,7 +60,6 @@ describe('WebVitals', () => {
       ${'sample rate override'}                      | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY', sampleRate: 65 }} | ${{ enabled: true, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 65 }}
     `(`$testDescription`, ({ testConfig, webVitalsParams }) => {
       render(<WebVitalsWithContext {...testConfig} />);
-
       expect(useWebVitals).toBeCalledWith(webVitalsParams);
     });
 
@@ -82,7 +81,7 @@ describe('WebVitals', () => {
         sampleRate: 20,
       });
       expect(console.error).toHaveBeenCalledWith(
-        'Web Vitals error: No page type to report.',
+        'Web Vitals: No page type to report',
       );
 
       console.error = error;

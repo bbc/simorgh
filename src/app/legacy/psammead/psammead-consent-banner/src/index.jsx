@@ -12,15 +12,6 @@ import {
 import styled from '@emotion/styled';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
-  C_CONSENT_BACKGROUND,
-  C_CONSENT_ACTION,
-  C_CONSENT_CONTENT,
-  C_WHITE,
-  C_PEBBLE,
-  C_EBON,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
-import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
@@ -38,35 +29,23 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';
 
-const hoverFocusStyles = `
+const hoverFocusStyles = ({ theme }) => `
   &:focus,
   &:hover {
-    color: ${C_EBON};
-    background-color: ${C_CONSENT_ACTION};
+    color: ${theme.palette.EBON};
+    background-color: ${theme.palette.CONSENT_ACTION};
   }
 `;
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${C_CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
-
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: calc(${GEL_SPACING_DBL} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
-      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
-  }
 `;
 
 const CenterWrapper = styled.div`
@@ -74,9 +53,9 @@ const CenterWrapper = styled.div`
   margin: 0 auto;
 
   a {
-    color: ${C_CONSENT_ACTION};
+    color: ${props => props.theme.palette.CONSENT_ACTION};
     text-decoration: none;
-    border-bottom: solid 0.0625rem ${C_PEBBLE};
+    border-bottom: solid 0.0625rem ${props => props.theme.palette.PEBBLE};
 
     ${hoverFocusStyles}
   }
@@ -84,6 +63,16 @@ const CenterWrapper = styled.div`
   a:hover,
   a:focus {
     border-bottom: solid 0.125rem transparent;
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding: 2.75rem ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: calc(${GEL_SPACING_QUAD} - ${transparentBorderHeight})
+      ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
   }
 `;
 
@@ -99,9 +88,9 @@ const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
 
 const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 
   &:focus {
@@ -117,7 +106,7 @@ const Options = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${C_CONSENT_ACTION};
+  color: ${props => props.theme.palette.CONSENT_ACTION};
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -146,11 +135,21 @@ export const ConsentBannerText = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
-  color: ${C_CONSENT_CONTENT};
+  color: ${props => props.theme.palette.CONSENT_CONTENT};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
   }
+`;
+
+/* Custom hover and focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
+const a11yOutlinePosition = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 `;
 
 // Style `button` and `a` as children due to inability to set `on`
@@ -163,9 +162,9 @@ const ListItem = styled.li`
     ${({ script }) => script && getLongPrimer(script)};
     width: 100%;
     min-height: 2.75rem;
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
     font-weight: bold;
-    background-color: ${C_GHOST};
+    background-color: ${props => props.theme.palette.GHOST};
     border: solid ${transparentBorderHeight} transparent;
     margin: 0;
     cursor: pointer;
@@ -175,11 +174,55 @@ const ListItem = styled.li`
       text-decoration: underline;
     }
 
+    /* Applies focus indicator black outline.
+       Overrides dotted Mozilla focus ring applied by Normalize global styles. */
+    &:focus-visible {
+      outline: ${focusIndicatorThickness} solid
+        ${props => props.theme.palette.BLACK};
+    }
+
     ${hoverFocusStyles}
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 17.3125rem;
+  }
+
+  &.hide {
+    width: 2.75rem;
+    height: 2.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    & button {
+      width: 2.75rem;
+      height: 2.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:focus::after,
+      &:hover::after {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.WHITE};
+      }
+      &:focus-visible::after {
+        ${a11yOutlinePosition}
+        border: ${focusIndicatorThickness} solid
+          ${props => props.theme.palette.BLACK};
+        box-shadow: 0 0 0 ${focusIndicatorThickness}
+          ${props => props.theme.palette.WHITE} inset;
+      }
+    }
+    & svg {
+      color: white;
+      fill: currentColor;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 `;
 
@@ -189,6 +232,7 @@ export const ConsentBanner = ({
   text,
   accept,
   reject,
+  hide,
   id,
   hidden,
   script,
@@ -208,6 +252,11 @@ export const ConsentBanner = ({
         <ListItem dir={dir} script={script}>
           <span>{reject}</span>
         </ListItem>
+        {hide && (
+          <ListItem className="hide" dir={dir} script={script}>
+            <div>{hide}</div>
+          </ListItem>
+        )}
       </Options>
     </CenterWrapper>
   </Wrapper>
@@ -219,6 +268,7 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  hide: element,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
@@ -232,4 +282,5 @@ ConsentBanner.defaultProps = {
   id: null,
   hidden: null,
   headingRef: null,
+  hide: null,
 };

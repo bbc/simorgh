@@ -1,3 +1,11 @@
+import * as PAGE_TYPES from '../../routes/utils/pageTypes';
+
+export type Environments = 'local' | 'test' | 'live';
+
+export type Platforms = 'amp' | 'canonical' | 'app';
+
+export type Direction = 'rtl' | 'ltr';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
@@ -5,20 +13,22 @@ export type SocialEmbedProviders =
   | 'youtube'
   | 'tiktok';
 
-export type PageTypes =
-  | 'article'
-  | 'frontPage'
-  | 'media'
-  | 'mostRead'
-  | 'mostWatched'
-  | 'error'
-  | 'IDX'
-  | 'FIX'
-  | 'MAP'
-  | 'STY'
-  | 'PGL'
-  | 'CSP'
-  | 'TOPIC';
+export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
+
+export type Toggles =
+  | {
+      [key: string]: {
+        enabled: boolean;
+        value?: string | number;
+      };
+    }
+  | { _environment: string };
+
+export type MvtExperiment = {
+  experimentName: string;
+  variation: string;
+  type: 'experiment' | 'feature';
+};
 
 export type SerbianService = {
   service: 'serbian';
@@ -39,6 +49,12 @@ export type UkrainianService = {
   service: 'ukrainian';
   variant: 'default' | 'ru-UA';
 };
+
+export type ServicesWithVariants =
+  | SerbianService
+  | ChineseService
+  | ZhongwenService
+  | UkrainianService;
 
 export type ServicesWithNoVariants = {
   service:
@@ -65,6 +81,7 @@ export type ServicesWithNoVariants = {
     | 'naidheachdan'
     | 'nepali'
     | 'news'
+    | 'newsround'
     | 'pashto'
     | 'persian'
     | 'pidgin'
@@ -90,14 +107,8 @@ export type ServicesWithNoVariants = {
 
 export type Services =
   | ServicesWithNoVariants['service']
-  | SerbianService['service']
-  | ChineseService['service']
-  | UkrainianService['service']
-  | ZhongwenService['service'];
+  | ServicesWithVariants['service'];
 
 export type Variants =
   | ServicesWithNoVariants['variant']
-  | SerbianService['variant']
-  | ChineseService['variant']
-  | UkrainianService['variant']
-  | ZhongwenService['variant'];
+  | ServicesWithVariants['variant'];

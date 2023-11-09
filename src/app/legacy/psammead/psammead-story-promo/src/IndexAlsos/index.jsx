@@ -7,14 +7,9 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  C_EBON,
-  C_METAL,
-  C_LUNAR,
-} from '#psammead/psammead-styles/src/colours';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 const StyledIndexAlsos = styled.div`
   position: relative;
@@ -23,7 +18,7 @@ const StyledIndexAlsos = styled.div`
 `;
 
 const StyledIndexAlso = styled.div`
-  border-top: 1px solid ${C_LUNAR};
+  border-top: 1px solid ${props => props.theme.palette.LUNAR};
   padding: ${GEL_SPACING} 0;
 `;
 
@@ -33,11 +28,13 @@ const StyledIndexAlsosUl = styled.ul`
   margin: 0;
 `;
 
+// `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledIndexAlsosLink = styled.a`
   ${({ script }) => script && getBrevier(script)};
   ${({ service }) => getSerifMedium(service)}
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
+  display: inline-block;
 
   &:hover,
   &:focus {
@@ -45,7 +42,7 @@ const StyledIndexAlsosLink = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 
   & svg {
@@ -68,6 +65,7 @@ const IndexAlsosLink = ({
       href={url}
       script={script}
       service={service}
+      className="focusIndicatorDisplayInlineBlock"
       // Line 63 and id={`IndexAlsosLink-${sanitisedUrl}`} in line 68 are temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       {...(mediaIndicator && {
         'aria-labelledby': `IndexAlsosLink-${sanitisedUrl}`,
@@ -95,11 +93,13 @@ IndexAlsosLink.propTypes = {
   url: string.isRequired,
   mediaIndicator: node,
   mediaType: string,
+  className: string,
 };
 
 IndexAlsosLink.defaultProps = {
   mediaIndicator: null,
   mediaType: null,
+  className: null,
 };
 
 export const IndexAlsos = props => {

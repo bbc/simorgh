@@ -1,5 +1,6 @@
 import reactRouterConfig from 'react-router-config';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import isAppPath from '#app/routes/utils/isAppPath';
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
@@ -14,30 +15,46 @@ jest.mock('#app/routes/utils/isAmpPath', () =>
   jest.fn().mockImplementation(() => true),
 );
 
+jest.mock('#app/routes/utils/isAppPath', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
 describe('getRouteProps', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   describe('valid route', () => {
-    it('should return service, isAmp, route and match', async () => {
+    it('should return service, isAmp, isApp, route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([
         {
           route: { route: 'data' },
-          match: { params: { service: 'news', amp: undefined } },
+          match: {
+            params: {
+              service: 'news',
+              amp: undefined,
+              nonCanonicalArticleRenderPlatform: undefined,
+            },
+          },
         },
       ]);
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).not.toHaveBeenCalled();
+      expect(isAmpPath).toHaveBeenCalled();
+      expect(isAppPath).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
-      expect(methodCall).toEqual({
-        isAmp: false,
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
+        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
+        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
         match: {
           params: {
             amp: undefined,
+            nonCanonicalArticleRenderPlatform: undefined,
             service: 'news',
           },
         },
@@ -45,29 +62,41 @@ describe('getRouteProps', () => {
           route: 'data',
         },
         service: 'news',
+        variant: undefined,
       });
     });
 
-    it('should return service, isAmp, route and match with variants', async () => {
+    it('should return service, isAmp, isApp, route and match with variants', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([
         {
           route: { route: 'data' },
           match: {
-            params: { service: 'news', amp: undefined, variant: '/simp' },
+            params: {
+              service: 'news',
+              amp: undefined,
+              nonCanonicalArticleRenderPlatform: undefined,
+              variant: '/simp',
+            },
           },
         },
       ]);
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).not.toHaveBeenCalled();
+      expect(isAmpPath).toHaveBeenCalled();
+      expect(isAppPath).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
-      expect(methodCall).toEqual({
-        isAmp: false,
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
+        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
+        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
         match: {
           params: {
             amp: undefined,
+            nonCanonicalArticleRenderPlatform: undefined,
             service: 'news',
             variant: '/simp',
           },
@@ -82,24 +111,36 @@ describe('getRouteProps', () => {
   });
 
   describe('valid amp route', () => {
-    it('should return service, isAmp, route and match', async () => {
+    it('should return service, isAmp, isApp, route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([
         {
           route: { route: 'data' },
-          match: { params: { service: 'news', amp: '.amp' } },
+          match: {
+            params: {
+              service: 'news',
+              amp: '.amp',
+              nonCanonicalArticleRenderPlatform: undefined,
+            },
+          },
         },
       ]);
 
       const methodCall = await getRouteProps('url');
 
       expect(isAmpPath).not.toHaveBeenCalled();
+      expect(isAppPath).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
-      expect(methodCall).toEqual({
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
         isAmp: true,
+        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
         match: {
           params: {
             amp: '.amp',
+            nonCanonicalArticleRenderPlatform: undefined,
             service: 'news',
           },
         },
@@ -107,6 +148,91 @@ describe('getRouteProps', () => {
           route: 'data',
         },
         service: 'news',
+        variant: undefined,
+      });
+    });
+
+    it('should return service, isAmp, isApp, route and match for an amp Optimo articles', async () => {
+      reactRouterConfig.matchRoutes.mockReturnValue([
+        {
+          route: { route: 'data' },
+          match: {
+            params: {
+              service: 'news',
+              amp: undefined,
+              nonCanonicalArticleRenderPlatform: '.amp',
+            },
+          },
+        },
+      ]);
+
+      const methodCall = await getRouteProps('url');
+
+      expect(isAmpPath).not.toHaveBeenCalled();
+      expect(isAppPath).toHaveBeenCalled();
+      expect(fallbackServiceParam).not.toHaveBeenCalled();
+
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
+        isAmp: true,
+        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        match: {
+          params: {
+            amp: undefined,
+            nonCanonicalArticleRenderPlatform: '.amp',
+            service: 'news',
+          },
+        },
+        route: {
+          route: 'data',
+        },
+        service: 'news',
+        variant: undefined,
+      });
+    });
+  });
+
+  describe('valid app route', () => {
+    it('should return service, isAmp, isApp, route and match', async () => {
+      reactRouterConfig.matchRoutes.mockReturnValue([
+        {
+          route: { route: 'data' },
+          match: {
+            params: {
+              service: 'news',
+              amp: undefined,
+              nonCanonicalArticleRenderPlatform: '.app',
+            },
+          },
+        },
+      ]);
+
+      const methodCall = await getRouteProps('url');
+
+      expect(isAmpPath).toHaveBeenCalled();
+      expect(isAppPath).not.toHaveBeenCalled();
+      expect(fallbackServiceParam).not.toHaveBeenCalled();
+
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
+        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
+        isApp: true,
+        match: {
+          params: {
+            amp: undefined,
+            nonCanonicalArticleRenderPlatform: '.app',
+            service: 'news',
+          },
+        },
+        route: {
+          route: 'data',
+        },
+        service: 'news',
+        variant: undefined,
       });
     });
   });
@@ -116,19 +242,25 @@ describe('getRouteProps', () => {
     // This is the match returned for a 'catch all' route.
     const match = { path: '/', url: '/', params: {}, isExact: false };
 
-    it('should return fallback service and isAmp. With catch-all route and match', async () => {
+    it('should return fallback service, isAmp and isApp. With catch-all route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
       const methodCall = await getRouteProps('unknownURL');
 
       expect(isAmpPath).toHaveBeenCalledWith('unknownURL');
+      expect(isAppPath).toHaveBeenCalledWith('unknownURL');
       expect(fallbackServiceParam).toHaveBeenCalledWith('unknownURL');
 
-      expect(methodCall).toEqual({
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
+        id: undefined,
         isAmp: true,
+        isApp: true,
         match,
         route,
         service: 'fallbackService',
+        variant: undefined,
       });
     });
   });
@@ -139,20 +271,25 @@ describe('getRouteProps', () => {
    * availible, it fails gracefully.
    */
   describe('no matched route', () => {
-    it('should return fallback service and amp with no route, match or Id', async () => {
+    it('should return fallback service, amp and app with no route, match or Id', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([]);
 
       const methodCall = await getRouteProps('fakepath');
 
-      expect(methodCall).toEqual({
+      expect(methodCall).toStrictEqual({
+        assetUri: undefined,
+        errorCode: undefined,
         id: undefined,
         isAmp: true,
+        isApp: true,
         match: undefined,
         route: undefined,
         service: 'fallbackService',
+        variant: undefined,
       });
 
       expect(isAmpPath).toHaveBeenCalled();
+      expect(isAppPath).toHaveBeenCalled();
       expect(fallbackServiceParam).toHaveBeenCalled();
     });
   });

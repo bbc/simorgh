@@ -1,11 +1,4 @@
-import brandSVG from '../../chameleonLogos/afrique';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'afrique',
     serviceName: 'Afrique',
     languageName: 'French',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',
     noBylinesPolicy:
@@ -51,13 +43,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -70,6 +55,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
@@ -138,7 +124,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Découvrez ce qui a changé',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -153,7 +139,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Gérer mes paramêtres',
             },
@@ -169,7 +155,7 @@ export const service: DefaultServiceConfig = {
                   'Pour que nos pages web fonctionnent, nous stockons certaines informations limitées sur votre appareil sans votre consentement.',
                 para4: {
                   text: 'En savoir plus sur les informations essentielles que nous stockons sur votre appareil pour faire fonctionner nos pages web.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Nous utilisons le stockage local pour enregistrer vos préférences de consentement sur votre appareil.',
@@ -202,13 +188,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: "Oui, j'accepte",
             reject: 'Non, dirigez-moi vers les réglages',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -271,7 +257,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
-    brandSVG,
     mostRead: {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour:',
@@ -289,7 +274,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -323,8 +312,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -371,7 +360,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Vidéos',
-        url: '/afrique/media/video',
+        url: '/afrique/topics/cz4vn9gyd6rt',
       },
       {
         title: 'Nos émissions',

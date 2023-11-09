@@ -70,8 +70,18 @@ export const getDestination = (platform, statsDestination) => {
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
-export const getAppType = platform =>
-  platform === 'amp' ? 'amp' : 'responsive';
+export const getAppType = platform => {
+  switch (platform) {
+    case 'amp':
+      return 'amp';
+    case 'app':
+      return 'mobile-app';
+    case 'canonical':
+      return 'responsive';
+    default:
+      return 'responsive';
+  }
+};
 
 export const isLocServeCookieSet = platform => {
   if (platform === 'amp') {
@@ -214,7 +224,7 @@ export const getAtUserId = () => {
 };
 
 export const sanitise = initialString =>
-  initialString ? initialString.trim().replace(/\s/g, '+') : null;
+  initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
@@ -277,7 +287,7 @@ export const getThingAttributes = (attribute, articleData) => {
 
     things.forEach(thing => {
       if (thing[attribute]) {
-        attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
+        attributes.push(thing[attribute].trim().replace(/\s/g, '%20'));
       }
     });
 

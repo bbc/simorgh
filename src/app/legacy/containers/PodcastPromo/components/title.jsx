@@ -5,13 +5,12 @@ import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
 
 const Heading = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   display: inline;
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
 
   > svg {
     margin-left: 0;

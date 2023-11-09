@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "408aa625",
+              "id": "b195ae43",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b3d03c69",
+                    "id": "c629676a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d7622b4f",
+                          "id": "2f33adbb",
                           "type": "paragraph",
                           "model": {
                             "text": "Бул сыноо макалада сөздүү кабарында",
                             "blocks": [
                               {
-                                "id": "e0f8bd71",
+                                "id": "3d85cf70",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Бул сыноо макалада сөздүү кабарында",
@@ -42,28 +42,28 @@
               "position": [1]
             },
             {
-              "id": "ecbbbc70",
+              "id": "199f8816",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "2dbf7633",
+                    "id": "24847f87",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2ef9be86",
+                          "id": "d42fb62f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f5b293aa",
+                                "id": "072ff5fb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                   "blocks": [
                                     {
-                                      "id": "9ac17d50",
+                                      "id": "7f3229f9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
@@ -84,23 +84,23 @@
                     "position": [2, 1]
                   },
                   {
-                    "id": "b7904db5",
+                    "id": "014fc52f",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e828a82e",
+                          "id": "7db29676",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "12482eb5",
+                                "id": "7d66dd82",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                   "blocks": [
                                     {
-                                      "id": "111f3a8a",
+                                      "id": "3026cfbe",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
@@ -121,7 +121,7 @@
                     "position": [2, 2]
                   },
                   {
-                    "id": "217e06d1",
+                    "id": "7d7ff9dc",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -137,7 +137,7 @@
               "position": [2]
             },
             {
-              "id": "3e4306ec",
+              "id": "794c82b0",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941862686,
@@ -146,30 +146,33 @@
               "position": [3]
             },
             {
-              "id": "3092cbae",
+              "id": "d14ea738",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "af87a7ac",
+                    "id": "1e3aeb3b",
                     "type": "paragraph",
                     "model": {
                       "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
                       "blocks": [
                         {
-                          "id": "82a870de",
+                          "id": "7c6d0452",
                           "type": "fragment",
-                          "model": { "text": "Бул ", "attributes": [] },
+                          "model": {
+                            "text": "Бул ",
+                            "attributes": []
+                          },
                           "position": [4, 1, 1]
                         },
                         {
-                          "id": "a21b5367",
+                          "id": "e548ea28",
                           "type": "urlLink",
                           "model": {
                             "text": "Би-Би-Си ырайы башкы",
                             "blocks": [
                               {
-                                "id": "b1c6eebf",
+                                "id": "0496f297",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Би-Би-Си ырайы башкы",
@@ -184,7 +187,7 @@
                           "position": [4, 1, 2]
                         },
                         {
-                          "id": "2bd6aad5",
+                          "id": "be9ccec6",
                           "type": "fragment",
                           "model": {
                             "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
@@ -201,29 +204,29 @@
               "position": [4]
             },
             {
-              "id": "7e7e2e87",
+              "id": "2c2bc192",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019dx64",
                 "blocks": [
                   {
-                    "id": "ae43e249",
+                    "id": "fa08d585",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5ca1c8bd",
+                          "id": "f5556449",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8e072215",
+                                "id": "23283944",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
                                   "blocks": [
                                     {
-                                      "id": "a7c21c5a",
+                                      "id": "e42ca63f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
@@ -244,12 +247,12 @@
                     "position": [5, 1]
                   },
                   {
-                    "id": "5833aab4",
+                    "id": "76d96011",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2b535f7d",
+                          "id": "36036a73",
                           "blockId": "urn:bbc:ares::clip:p019dx64",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -279,18 +282,20 @@
                                 "availableFrom": 1491823686000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
                           "position": [5, 2, 1]
                         },
                         {
-                          "id": "d848cd01",
+                          "id": "b1067066",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "15bb218d",
+                                "id": "2bfbc6c5",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
@@ -311,23 +316,23 @@
               "position": [5]
             },
             {
-              "id": "d194d95c",
+              "id": "10b0168f",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1847df2d",
+                    "id": "7af067b0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f4f6adae",
+                          "id": "442b2eb3",
                           "type": "paragraph",
                           "model": {
                             "text": "Бул subheadline болуп саналат",
                             "blocks": [
                               {
-                                "id": "eba81003",
+                                "id": "c5c2d4a4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Бул subheadline болуп саналат",
@@ -348,28 +353,28 @@
               "position": [6]
             },
             {
-              "id": "fa2ff534",
+              "id": "6d2ed6c0",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "88ccdc64",
+                    "id": "0007f6a2",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8c0cc143",
+                          "id": "adfcc2ea",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9cf492b5",
+                                "id": "81d71c53",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул subheadline болуп саналат",
                                   "blocks": [
                                     {
-                                      "id": "384c8f4a",
+                                      "id": "2bd8f909",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул subheadline болуп саналат",
@@ -390,7 +395,7 @@
                     "position": [7, 1]
                   },
                   {
-                    "id": "1b834441",
+                    "id": "cd0f45f5",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -406,18 +411,18 @@
               "position": [7]
             },
             {
-              "id": "0e01da71",
+              "id": "db389137",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ac7d10dc",
+                    "id": "efc77898",
                     "type": "paragraph",
                     "model": {
                       "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
                       "blocks": [
                         {
-                          "id": "172b83c5",
+                          "id": "ed5b2709",
                           "type": "fragment",
                           "model": {
                             "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
@@ -433,7 +438,20 @@
               },
               "position": [8]
             },
-            { "id": "db85d04f", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "89ffad44",
+              "type": "mpu",
+              "model": {},
+              "position": [9]
+            },
+            {
+              "id": "992b1976",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [10]
+            }
           ]
         }
       },
@@ -446,11 +464,8 @@
         "type": "article",
         "createdBy": "Kyrgyz",
         "language": "ky",
-        "lastUpdated": 1598599636934,
         "firstPublished": 1562941862686,
         "lastPublished": 1562941862686,
-        "timestamp": 1562941862686,
-        "options": {},
         "analyticsLabels": {
           "producer": "Kyrgyz",
           "page": "kyrgyz.articles.c3xd4xg3rm9o.page"
@@ -458,12 +473,8 @@
         "passport": {
           "language": "ky",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -478,152 +489,417 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
-        },
-        "timestamp": 1562941862686,
-        "suitableForSyndication": false,
-        "language": "ky",
         "headlines": {
           "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
-        },
-        "images": {},
-        "passport": {
-          "language": "ky",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Kyrgyz",
-          "uri": "/kyrgyz",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "name": "Optimo article with Index Alsos",
-          "summary": "Optimo article with Index Alsos. This is the summary.",
-          "indexImage": {
-            "id": "63753579",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/17CFF/test/_63753579_d75f82a3-14f3-4c03-b230-9fa5df2a0ed3.jpg",
-            "path": "/cpsdevpb/17CFF/test/_63753579_d75f82a3-14f3-4c03-b230-9fa5df2a0ed3.jpg",
-            "height": 1080,
-            "width": 1920,
-            "altText": "test",
-            "copyrightHolder": "BBC",
-            "type": "image"
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c6vdqkm8yyvo",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c6vdqkm8yyvo"
           },
-          "uri": "https://www.test.bbc.co.uk/kyrgyz/articles/cgvd84xmq35o",
-          "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/article/cgvd84xmq35o",
-          "contentType": "Text",
-          "assetTypeCode": "PRO",
-          "timestamp": 1621870242000,
-          "relatedItems": [
-            {
-              "headlines": {
-                "headline": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23088783",
-                "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/kyrgyzstan-23088783"
-              },
-              "summary": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-              "timestamp": 1478184211000,
-              "language": "ky",
-              "cpsType": "STY",
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23088783",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/world-23090100",
-                "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-23090100"
-              },
-              "summary": "Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
-              "timestamp": 1478663803000,
-              "language": "ky",
-              "cpsType": "STY",
-              "id": "urn:bbc:ares::asset:kyrgyz/world-23090100",
-              "type": "cps"
+          "timestamp": 1666869583946,
+          "suitableForSyndication": true,
+          "language": "ky",
+          "headlines": {
+            "seoHeadline": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
-          ],
-          "type": "link"
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:c6vdqkm8yyvo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c6vdqkm8yyvo",
+          "type": "optimo"
         },
         {
-          "headlines": {
-            "headline": "Мирзиёевнинг илк давлат сафари Қозоғистон"
-          },
           "locators": {
-            "assetUri": "/kyrgyz/23103378",
-            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23103378",
-            "curie": "http://www.bbc.co.uk/asset/91d192e9-38dd-4f44-882b-c724bb41331f",
-            "assetId": "23103378"
+            "optimoUrn": "urn:bbc:optimo:asset:cd0kn0v57e5o",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cd0kn0v57e5o"
           },
-          "summary": "Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
-          "timestamp": 1569397958000,
+          "timestamp": 1666279674236,
+          "suitableForSyndication": true,
           "language": "ky",
+          "headlines": {
+            "seoHeadline": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 624,
+                    "height": 351,
+                    "locator": "e73c/test/9c9c5240-508b-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "AFP",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
           "passport": {
-            "category": {
-              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-              "categoryName": "News"
-            },
-            "taggings": []
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:cd0kn0v57e5o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
           },
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63529676",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/1086C/test/_63529676_000141412-1.jpg",
-            "path": "/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
-            "caption": "Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
-            "copyrightHolder": "AP",
-            "originCode": "cpsdevpb",
-            "type": "image"
+          "id": "urn:bbc:ares::article:cd0kn0v57e5o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cd0gd0lxnlxo",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cd0gd0lxnlxo"
           },
-          "imageThumbnail": {
-            "id": "63529678",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/1568C/test/_63529678_000141412-1.jpg",
-            "path": "/cpsdevpb/1568C/test/_63529678_000141412-1.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
-            "caption": "Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
-            "copyrightHolder": "AP",
-            "type": "image"
+          "timestamp": 1666281059010,
+          "suitableForSyndication": true,
+          "language": "ky",
+          "headlines": {
+            "seoHeadline": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "2 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "2 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "prominence": "maximum",
-          "section": {
-            "subType": "IDX",
-            "name": "Башталгыч бет",
-            "uri": "/kyrgyz/front_page",
-            "type": "simple"
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
           },
-          "id": "urn:bbc:ares::asset:kyrgyz/23103378",
-          "type": "cps"
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:cd0gd0lxnlxo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:cd0gd0lxnlxo",
+          "type": "optimo"
         }
       ],
       "features": [
@@ -654,7 +930,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521",
           "type": "cps"
         },
@@ -685,7 +964,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
           "type": "cps"
         },
@@ -716,7 +998,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Атайын репортаж",
@@ -753,17 +1038,160 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-10-29T21:12:57.252Z",
+        "generated": "2023-06-19T14:27:56.971Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
-        "totalRecords": 0,
-        "records": []
+        "items": [
+          {
+            "id": "cd68f2bc-efd5-a043-9500-a3891a13353b",
+            "rank": 1,
+            "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+            "href": "/kyrgyz/world-23090100",
+            "timestamp": 1478663803000
+          },
+          {
+            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
+            "rank": 2,
+            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+            "href": "/kyrgyz/world-23089413",
+            "timestamp": 1478506660000
+          },
+          {
+            "id": "5ac26713-7ec6-824f-a179-53f95a372408",
+            "rank": 3,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+            "href": "/kyrgyz/kyrgyzstan-23087515",
+            "timestamp": 1477898731000
+          },
+          {
+            "id": "429a5345-bc55-5947-b11b-19ae662817a5",
+            "rank": 4,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+            "href": "/kyrgyz/kyrgyzstan-23087513",
+            "timestamp": 1477898586000
+          },
+          {
+            "id": "a1445694-7c18-5547-928e-97f5f454bebe",
+            "rank": 5,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+            "href": "/kyrgyz/kyrgyzstan-23087514",
+            "timestamp": 1477898591000
+          },
+          {
+            "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
+            "rank": 6,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
+            "href": "/kyrgyz/sapar-tv-23087494",
+            "timestamp": 1477850970000
+          },
+          {
+            "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
+            "rank": 7,
+            "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
+            "href": "/kyrgyz/23103391",
+            "timestamp": 1487940772000
+          },
+          {
+            "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
+            "rank": 8,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
+            "href": "/kyrgyz/media-23087507",
+            "timestamp": 1477898550000
+          },
+          {
+            "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
+            "rank": 9,
+            "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
+            "href": "/kyrgyz/23103378",
+            "timestamp": 1569397958000
+          },
+          {
+            "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
+            "rank": 10,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
+            "href": "/kyrgyz/kyrgyzstan-23087520",
+            "timestamp": 1477898715000
+          },
+          {
+            "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
+            "rank": 11,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087511",
+            "timestamp": 1477899573000
+          },
+          {
+            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
+            "rank": 12,
+            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "href": "/kyrgyz/kyrgyzstan-23088783",
+            "timestamp": 1478184211000
+          },
+          {
+            "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
+            "rank": 13,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
+            "href": "/kyrgyz/blog-23087495",
+            "timestamp": 1477850987000
+          },
+          {
+            "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
+            "rank": 14,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
+            "href": "/kyrgyz/institutional-23087498",
+            "timestamp": 1477851087000
+          },
+          {
+            "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
+            "rank": 15,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
+            "href": "/kyrgyz/world-23087493",
+            "timestamp": 1477850702000
+          },
+          {
+            "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
+            "rank": 16,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
+            "href": "/kyrgyz/entertainment-23087489",
+            "timestamp": 1477850376000
+          },
+          {
+            "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
+            "rank": 17,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
+            "href": "/kyrgyz/kyrgyzstan-23087523",
+            "timestamp": 1477898702000
+          },
+          {
+            "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
+            "rank": 18,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
+            "href": "/kyrgyz/kyrgyzstan-23087528",
+            "timestamp": 1477898672000
+          },
+          {
+            "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
+            "rank": 19,
+            "title": "Түштүк Корея президенти кечирим сурады",
+            "href": "/kyrgyz/kyrgyzstan-23089035",
+            "timestamp": 1478260541000
+          },
+          {
+            "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
+            "rank": 20,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087510",
+            "timestamp": 1477898574000
+          }
+        ]
       }
     }
   },

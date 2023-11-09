@@ -3,21 +3,21 @@
 exports[`AMP Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
 exports[`AMP Story Page AMP Consent config 1`] = `
-Object {
-  "consents": Object {
-    "user-consent": Object {
+{
+  "consents": {
+    "user-consent": {
       "promptIfUnknownForGeoGroup": "eea",
       "promptUI": "consent-prompt",
     },
   },
-  "policy": Object {
-    "default": Object {
-      "timeout": Object {
+  "policy": {
+    "default": {
+      "timeout": {
         "fallbackAction": "reject",
         "seconds": 0,
       },
-      "waitFor": Object {
-        "user-consent": Array [],
+      "waitFor": {
+        "user-consent": [],
       },
     },
   },
@@ -25,10 +25,10 @@ Object {
 `;
 
 exports[`AMP Story Page AMP Geo config 1`] = `
-Object {
+{
   "AmpBind": true,
-  "ISOCountryGroups": Object {
-    "eea": Array [
+  "ISOCountryGroups": {
+    "eea": [
       "at",
       "ax",
       "be",
@@ -82,7 +82,7 @@ Object {
       "wf",
       "yt",
     ],
-    "gbOrUnknown": Array [
+    "gbOrUnknown": [
       "gb",
       "gg",
       "im",
@@ -95,18 +95,18 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics ATI 1`] = `
-Object {
-  "requests": Object {
+{
+  "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=world%3A%3Amundo.world.story.51266689.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&x11=[2020-01-30T06%3A35%3A49.000Z]&x12=[2020-01-31T23%3A08%3A08.000Z]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=62&p=world%3A%3Amundo.world.story.51266689.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-01-30T06%3A35%3A49.000Z]&x12=[2020-01-30T06%3A35%3A49.000Z]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]&ref=\${documentReferrer}",
   },
-  "transport": Object {
+  "transport": {
     "beacon": false,
     "image": true,
     "xhrpost": false,
   },
-  "triggers": Object {
-    "trackPageview": Object {
+  "triggers": {
+    "trackPageview": {
       "on": "visible",
       "request": "pageview",
     },
@@ -115,8 +115,8 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics chartbeat 1`] = `
-Object {
-  "vars": Object {
+{
+  "vars": {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
     "sections": "Mundo, Mundo - Internacional, Mundo - STY, Mundo - Internacional - STY, Mundo - Explainer-category",
@@ -128,76 +128,76 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics comscore 1`] = `
-Object {
-  "extraUrlParams": Object {
+{
+  "extraUrlParams": {
     "comscorekw": "amp",
   },
-  "vars": Object {
+  "vars": {
     "c2": "17986528",
   },
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Mundo",
   "url": "/mundo",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Por qué puedes confiar en la BBC",
   "url": "https://www.bbc.com/mundo/institucional-51359666",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Términos de uso",
   "url": "https://www.bbc.com/mundo/institucional-36400005",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Sobre la BBC",
   "url": "https://www.bbc.com/mundo/institucional-36400007",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Política de privacidad",
   "url": "https://www.bbc.com/mundo/institucional-36400009",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Escribe a BBC Mundo",
   "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
-Object {
+{
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -208,84 +208,77 @@ exports[`AMP Story Page Footer I can see the footer copyright and external linki
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Noticias",
   "url": "/mundo",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "América Latina",
   "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Internacional",
   "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Qatar 2022",
-  "url": "/mundo/topics/c36v5eq58ngt",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
+{
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
+{
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+{
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
+{
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
+{
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
+{
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
-Object {
+exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
+{
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
 }
@@ -297,6 +290,7 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 <amp-img
   alt="A person holding a union jack umbrella in front of Big Ben"
   attribution="Getty Images"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="549"
@@ -310,70 +304,70 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
 }
@@ -383,8 +377,6 @@ exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/n
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Story Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
@@ -392,55 +384,14 @@ exports[`AMP Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"es"`;
 
 exports[`AMP Story Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "BackgroundNewsArticle",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": "Europe",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Europe",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "United Kingdom",
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Culture",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Culture",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "European Union",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/European_Union",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Economics",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Economy",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Brexit",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Brexit",
-          ],
-        },
-      ],
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -449,29 +400,29 @@ Object {
         "name": "BBC News Mundo",
         "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
       },
-      "dateModified": "2020-01-31T23:08:08.000Z",
+      "dateModified": "2020-01-30T06:35:49.000Z",
       "datePublished": "2020-01-30T06:35:49.000Z",
       "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
       "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "es",
         "name": "Spanish",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
         "@type": "WebPage",
         "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -522,7 +473,7 @@ exports[`AMP Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 exports[`AMP Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
 exports[`AMP Story Page Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2020-01-30",
   "text": "30 enero 2020",
 }

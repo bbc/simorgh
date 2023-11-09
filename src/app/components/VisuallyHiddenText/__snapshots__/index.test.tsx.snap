@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisuallyHiddenText should render off screen text for screen readers 1`] = `
+.emotion-0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<span
+  class="emotion-0"
+>
+  Some offscreen text
+</span>
+`;
+
+exports[`VisuallyHiddenText should render off screen text for screen readers as an h1 1`] = `
+.emotion-0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<h1
+  class="emotion-0"
+>
+  Some offscreen text
+</h1>
+`;
+
+exports[`VisuallyHiddenText should render off screen text for screen readers as an h1 with lang as en-GB 1`] = `
+.emotion-0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<h1
+  class="emotion-0"
+  lang="en-GB"
+>
+  Some offscreen text
+</h1>
+`;

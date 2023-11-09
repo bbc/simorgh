@@ -3,8 +3,17 @@ import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+
+const placeholderOutline = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
 
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
@@ -16,6 +25,15 @@ const StyledPlayButton = styled(PlayButton)`
         display: none;
       }
     `}
+
+  /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
+  &:focus-visible::before {
+    ${placeholderOutline}
+    box-shadow: 0 0 0 ${focusIndicatorThickness}  ${props =>
+      props.theme.palette.WHITE} inset;
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
+  }
 `;
 
 const StyledPlaceholder = styled.div`
@@ -28,7 +46,7 @@ const StyledPlaceholder = styled.div`
 
   &:hover, &:focus {
     ${StyledPlayButton} {
-      background-color: ${C_POSTBOX};
+      background-color: ${props => props.theme.palette.POSTBOX};
     }
   }
 `;
@@ -67,6 +85,7 @@ const Placeholder = ({
         type={type}
         guidanceMessage={guidanceMessage}
         noJsClassName={noJsClassName}
+        className="focusIndicatorRemove"
       />
 
       <Image alt="" src={src} srcset={srcset} />

@@ -383,6 +383,17 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   display: none;
 }
 
+.emotion-15:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-17 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -394,7 +405,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.emotion-19>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -402,7 +413,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -411,12 +422,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: block;
   width: 100%;
 }
@@ -452,33 +463,43 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
             />
           </div>
           <button
-            class="emotion-14 emotion-15 emotion-16"
+            class="focusIndicatorRemove emotion-14 emotion-15 emotion-16"
           >
             <span
-              class="emotion-17 emotion-18"
+              class="emotion-17"
             >
               Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
             </span>
             <div
               aria-hidden="true"
-              class="emotion-19 emotion-20"
+              class="emotion-18 emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-21 emotion-22"
+                class="emotion-20 emotion-21"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
             </div>
             <time
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-22 emotion-23"
               datetime="PT3M11S"
             >
               03:11
@@ -486,7 +507,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           </button>
           <img
             alt=""
-            class="emotion-25 emotion-26"
+            class="emotion-24 emotion-25"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
           />
         </div>

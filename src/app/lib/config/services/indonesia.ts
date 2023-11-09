@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'indonesia',
     serviceName: 'Indonesia',
     languageName: 'Indonesian',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
     noBylinesPolicy:
@@ -51,13 +43,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -162,7 +147,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OKE',
           reject: 'Coba lihat apa yang berubah',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -177,7 +162,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Atur pengaturan saya',
             },
@@ -193,7 +178,7 @@ export const service: DefaultServiceConfig = {
                   'Agar situs kami tetap berjalan, kami menyimpan sejumlah informasi terbatas dalam perangkat Anda tanpa persetujuan Anda.',
                 para4: {
                   text: 'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Kami menggunakan penyimpanan lokal untuk menyimpan preferensi yang Anda pilih dalam perangkat Anda.',
@@ -226,13 +211,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ya, saya setuju',
             reject: 'Tidak, tampilkan pengaturan',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -254,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
         podcastExternalLinks: 'Podcast ini juga tersedia di',
+        download: 'Unduh episode',
       },
       socialEmbed: {
         caption: {
@@ -287,12 +273,12 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
+      latestMediaTitle: 'Terbaru',
     },
-    brandSVG,
     mostRead: {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     mostWatched: {
@@ -335,7 +321,7 @@ export const service: DefaultServiceConfig = {
           text: 'Kebijakan tentang Privasi',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
@@ -344,8 +330,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -358,12 +344,16 @@ export const service: DefaultServiceConfig = {
         url: '/indonesia',
       },
       {
+        title: 'Pemilu 2024',
+        url: '/indonesia/topics/ck0mgrlgyplt',
+      },
+      {
         title: 'Indonesia',
         url: '/indonesia/topics/cjgn7k8yx4gt',
       },
       {
         title: 'Dunia',
-        url: '/indonesia/dunia',
+        url: '/indonesia/topics/cyz8evpl224t',
       },
       {
         title: 'Viral',

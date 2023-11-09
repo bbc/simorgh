@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -18,7 +17,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 const Paragraph = styled.p`
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => getGreatPrimer(script)}
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

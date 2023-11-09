@@ -2,6 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import koreanFontVariants from '../fontVariants/korean';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/korean';
 
 const koreanTheme = {
   palette: {
@@ -16,6 +17,7 @@ const koreanTheme = {
     fontVariants: koreanFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(koreanTheme);

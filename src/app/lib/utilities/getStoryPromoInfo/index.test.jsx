@@ -94,11 +94,6 @@ describe('getStoryPromoInfo', () => {
         "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
       );
     });
-
-    it('should return null if headline is missing asset type code', () => {
-      const noHeadline = { ...assetTypeCode, name: undefined };
-      expect(getHeadline(noHeadline)).toEqual(null);
-    });
   });
 
   describe('getUrl', () => {

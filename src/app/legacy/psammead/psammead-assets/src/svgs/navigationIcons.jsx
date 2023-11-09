@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_BLACK } from '#psammead/psammead-styles/src/colours';
 
 const svgSize = '2.75rem'; // 44px
 
 const MenuIcon = styled.svg`
-  color: ${C_BLACK};
+  color: ${props => props.theme.palette.BLACK};
   fill: currentColor;
   @media screen and (forced-colors: active) {
     fill: linkText;

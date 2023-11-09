@@ -159,7 +159,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 </div>
 `;
 
-exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
+exports[`FauxHeadline with headline data with plain text headline should render <strong> containing correct text 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;

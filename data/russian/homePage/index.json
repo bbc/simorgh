@@ -1,0 +1,61 @@
+{
+  "data": {
+    "title": "Главная - BBC News Русская служба",
+    "description": "Русская служба Би-би-си – это непредвзятое освещение событий в России и мире на русском языке.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Священный Карабах. Как сакрализация прошлого мешает мирному процессу между Азербайджаном и Арменией",
+            "firstPublished": "2023-04-02T04:38:24.000Z",
+            "link": "https://www.bbc.com/russian/features-65139784",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F521/production/_129235726_unnamed.jpg",
+            "description": "В марте начались прямые переговоры между Азербайджаном и карабахскими армянами - первый открытый диалог между сторонами конфликта. За три с небольшим десятилетия стараниями не только властей, но и поэтов, писателей и музыкантов между народами выросла такая пропасть, что многие по обе стороны не представляют жизни без нее.",
+            "imageAlt": "Акварельный рисунок - средневековый старец на фоне гор и беспилотника",
+            "id": "289d5c5c-5c3f-494b-a5ec-f1aba5ebecac"
+          },
+          {
+            "type": "video",
+            "duration": "PT11M53S",
+            "title": "\"Жизнь в трех томиках уголовного дела\". История студентки Олеси Кривцовой",
+            "firstPublished": "2023-03-30T12:14:54.000Z",
+            "link": "https://www.bbc.com/russian/media-65126980",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/147C8/production/_129221938_p0fcw054.jpg",
+            "description": "Олеся сбежала в Литву после того, как в России ее в России ее посадили под домашний арест по обвинению в дискредитации армии.",
+            "imageAlt": "Олеся Кривцова",
+            "id": "4a9f8f11-31c0-4ada-a7c0-531d9c9e53bf"
+          },
+          {
+            "type": "article",
+            "title": "У российских мигрантов в Аргентине проблемы с продлением \"безвиза\". Что происходит?",
+            "firstPublished": "2023-04-02T06:26:39.000Z",
+            "link": "https://www.bbc.com/russian/features-65147938",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/FD92/production/_129241946_02d7e4bb-798d-4318-b009-89157341362a.jpg",
+            "description": "Группы российских эмигрантов в Аргентине и дипломаты говорят, что российские граждане начали массово получать отказы на пребывание в республике без визы на срок больше, чем 90 дней в течение полугода. Почему так получилось и какие варианты у них есть остаться?",
+            "imageAlt": "Аргентина",
+            "id": "fa898089-98eb-4a8e-b197-53732775367b"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d2707d21-96bd-4b02-9f9c-3f86edd0aa62",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Не пропустите",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7pe2jj9q7zt",
+        "contentType": "index-home",
+        "pageIdentifier": "russian.page",
+        "pageTitle": "Главная - BBC News Русская служба"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

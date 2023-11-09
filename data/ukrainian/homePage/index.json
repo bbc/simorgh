@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "BBC News Україна",
+    "description": "Останні новини України та світу, новини дня на BBC Україна",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "\"Ми з Путіним ні перед чим не зупинимося\": Лукашенко про ядерну зброю та війну",
+            "firstPublished": "2023-03-31T16:22:43.000Z",
+            "link": "https://www.bbc.com/ukrainian/news-65142884",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/38D9/production/_129235541_923904a9-5688-4a0f-91d1-1ad3f4a68a25.jpg",
+            "description": "Олександр Лукашенко, який утримує пост президента Білорусі, виступив зі щорічним зверненням до народу та парламенту через кілька днів після заяви російського президента про плани розміщення в цій країні тактичної ядерної зброї.",
+            "imageAlt": "Лукашенко оглашает послание 31 марта 2023 года",
+            "id": "203256d0-5016-4731-9531-48ed9a37ae2f"
+          },
+          {
+            "type": "article",
+            "title": "Росія стає головою Ради безпеки ООН. Як це може нашкодити Україні і як можна виключити РФ звідти?",
+            "firstPublished": "2023-03-31T05:04:29.014Z",
+            "link": "https://www.bbc.com/ukrainian/articles/cv2440434zdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4d7a/live/5a802600-cf04-11ed-80a2-db8af845af66.jpg",
+            "description": "Росія 1 квітня стає головою Ради безпеки ООН. Чи може вона нашкодити Україні під час свого голосування в Радбезі ООН, чому Україна наполягає, що Росія є нелегальним членом ООН взагалі і які шанси її звідти виключити.",
+            "imageAlt": "Небензя",
+            "id": "cv2440434zdo"
+          },
+          {
+            "type": "article",
+            "title": "Росія почала масово використовувати крилаті авіабомби. Що це?",
+            "firstPublished": "2023-03-30T13:55:22.814Z",
+            "link": "https://www.bbc.com/ukrainian/articles/cg311eq33z1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/58d7/live/0abfc800-cefa-11ed-ac1d-cda45811f187.jpg",
+            "description": "Росія почала активно застосовувати в України нові авіабомби. Чим вони небезпечні?",
+            "imageAlt": "авдіівка",
+            "id": "cg311eq33z1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b47027e0-08a8-420e-b032-a5f755c4ff99",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Докладно",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cl13j7792ljt",
+        "contentType": "index-home",
+        "pageIdentifier": "ukrainian.page",
+        "pageTitle": "BBC News Україна"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

@@ -1,10 +1,10 @@
-import { getType } from '#containers/ChartbeatAnalytics/utils';
 import {
   mediaPlayerMetadata,
   getThumbnailUri,
   getMetadataBlock,
   getMetadata,
   getUploadDate,
+  getType,
 } from '.';
 import {
   validAresMediaVideoBlock,
@@ -111,8 +111,12 @@ describe('helper', () => {
   });
 
   describe('getType', () => {
-    it('should return a valid type', () => {
-      expect(getType(validAresMetadataBlock)).toEqual(null);
+    it('should return VideoObject when metadata format is audio_video', () => {
+      expect(getType(validAresMetadataBlock)).toEqual('VideoObject');
+    });
+
+    it('should return AudioObject when metadata format is audio', () => {
+      expect(getType(validAresMediaLiveAudioBlock)).toEqual('AudioObject');
     });
   });
 

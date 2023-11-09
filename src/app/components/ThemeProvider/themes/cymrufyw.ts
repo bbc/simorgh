@@ -7,6 +7,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/cymrufyw';
 
 const cymrufywTheme = {
   palette: {
@@ -21,6 +22,7 @@ const cymrufywTheme = {
     fontVariants: reithFontVariants,
     fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(cymrufywTheme);

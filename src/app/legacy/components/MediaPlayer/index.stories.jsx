@@ -4,6 +4,7 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import notes from './README.mdx';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const withDuration = {
   duration: '2:30',
@@ -24,118 +25,135 @@ export default {
 };
 
 export const ArticlesCanonical = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
-    title="Default Video player"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
+      title="Default Video player"
+    />
+  </ThemeProvider>
 );
 
 export const MAPCanonical = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
-    showPlaceholder={false}
-    service="pidgin"
-    mediaInfo={{
-      title: 'alt-text world service clip',
-      type: 'video',
-      ...withDuration,
-    }}
-    showLoadingImage={boolean('Show loading image', true)}
-    darkMode={boolean('Dark mode', false)}
-    title="Media player"
-    noJsMessage="Dem no support media player for your device"
-    noJsClassName="no-js"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+      showPlaceholder={false}
+      service="pidgin"
+      mediaInfo={{
+        title: 'alt-text world service clip',
+        type: 'video',
+        ...withDuration,
+      }}
+      showLoadingImage={boolean('Show loading image', true)}
+      darkPlaceholder={boolean('Dark placeholder', false)}
+      title="Media player"
+      noJsMessage="Dem no support media player for your device"
+      noJsClassName="no-js"
+    />
+  </ThemeProvider>
 );
 
 export const Guidance = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    title="Video player"
-    mediaInfo={{
-      title: 'Dog chases cat.',
-      type: 'video',
-      guidanceMessage: 'Guidance: May contain strong language that may offend',
-      ...withDuration,
-    }}
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      title="Video player"
+      mediaInfo={{
+        title: 'Dog chases cat.',
+        type: 'video',
+        guidanceMessage:
+          'Guidance: May contain strong language that may offend',
+        ...withDuration,
+      }}
+    />
+  </ThemeProvider>
 );
 
 export const Audio = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    mediaInfo={{
-      type: 'audio',
-      title: 'Dog barks at cat.',
-      ...withDuration,
-    }}
-    title="Video player"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{
+        type: 'audio',
+        title: 'Dog barks at cat.',
+        ...withDuration,
+      }}
+      title="Video player"
+    />
+  </ThemeProvider>
 );
 
 export const AudioSkin = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
-    showPlaceholder={false}
-    placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
-    skin="audio"
-    service="news"
-    mediaInfo={{ type: 'audio', title: 'Live show intro.' }}
-    title="Audio player"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+      showPlaceholder={false}
+      placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
+      skin="audio"
+      service="news"
+      mediaInfo={{ type: 'audio', title: 'Live show intro.' }}
+      title="Audio player"
+    />
+  </ThemeProvider>
 );
 
 export const WithCallbacks = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
-    showPlaceholder={false}
-    placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
-    skin="audio"
-    service="news"
-    mediaInfo={{ type: 'audio', title: 'Live show intro.' }}
-    title="Audio player"
-    onMediaInitialised={() => alert('Media Player Initialised')}
-    onMediaPlaying={() => alert('Media Player Playing')}
-    onMediaPause={() => alert('Media Player Paused')}
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+      showPlaceholder={false}
+      placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
+      skin="audio"
+      service="news"
+      mediaInfo={{ type: 'audio', title: 'Live show intro.' }}
+      title="Audio player"
+      onMediaInitialised={() => alert('Media Player Initialised')}
+      onMediaPlaying={() => alert('Media Player Playing')}
+      onMediaPause={() => alert('Media Player Paused')}
+    />
+  </ThemeProvider>
 );
 
 export const AMP = () => (
-  <AmpMediaPlayer
-    isAmp
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en/amp"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    mediaInfo={{
-      type: 'audio',
-      title: 'Dog barks at cat.',
-      ...withDuration,
-    }}
-    title="Video player"
-    noJsMessage="no js"
-  />
+  <ThemeProvider service="news">
+    <AmpMediaPlayer
+      isAmp
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en/amp"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{
+        type: 'audio',
+        title: 'Dog barks at cat.',
+        ...withDuration,
+      }}
+      title="Video player"
+      noJsMessage="no js"
+    />
+  </ThemeProvider>
 );
 
 AMP.parameters = { chromatic: { disable: true } };
 AMP.decorators = [ampDecorator];
 
 export const AMPAudioSkin = () => (
-  <AmpMediaPlayer
-    isAmp
-    src="https://www.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"
-    placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
-    skin="audio"
-    title="Audio player"
-    noJsMessage="no js"
-    service="news"
-  />
+  <ThemeProvider service="news">
+    <AmpMediaPlayer
+      isAmp
+      src="https://www.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"
+      placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
+      skin="audio"
+      title="Audio player"
+      noJsMessage="no js"
+      service="news"
+    />
+  </ThemeProvider>
 );
 
 AMPAudioSkin.decorators = [ampDecorator];

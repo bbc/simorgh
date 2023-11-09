@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Player: AMP Entry renders a landscape container with an amp-iframe and nested amp-img 1`] = `
+exports[`Media Player: AMP Entry should render a landscape container with an amp-iframe and nested amp-img 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -38,7 +38,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
 </div>
 `;
 
-exports[`Media Player: AMP Entry renders a portrait container with amp-iframe and nested amp-img 1`] = `
+exports[`Media Player: AMP Entry should render a portrait container with amp-iframe and nested amp-img 1`] = `
 .emotion-0 {
   padding-top: 177.78%;
   position: relative;
@@ -76,7 +76,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
 </div>
 `;
 
-exports[`Media Player: AMP Entry renders the audio skin 1`] = `
+exports[`Media Player: AMP Entry should render the audio skin 1`] = `
 .emotion-0 {
   height: 165px;
   position: relative;
@@ -120,7 +120,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a landscape container with a placeholder image 1`] = `
+exports[`Media Player: Canonical Entry should render a landscape container with a placeholder image 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -204,7 +204,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -212,7 +212,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -221,12 +221,12 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -252,30 +252,40 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
         class="emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
@@ -283,7 +293,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
       </button>
       <img
         alt=""
-        class="emotion-19 emotion-20"
+        class="emotion-18 emotion-19"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -291,7 +301,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a placeholder image with guidance 1`] = `
+exports[`Media Player: Canonical Entry should render a placeholder image with guidance 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -401,7 +411,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -409,7 +419,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -418,12 +428,12 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -455,30 +465,40 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
         class="emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
@@ -486,7 +506,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
       </button>
       <img
         alt=""
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -494,7 +514,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a portrait container with a placeholder image 1`] = `
+exports[`Media Player: Canonical Entry should render a portrait container with a placeholder image 1`] = `
 .emotion-0 {
   padding-top: 177.78%;
   position: relative;
@@ -578,7 +598,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -586,7 +606,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -595,12 +615,12 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -626,30 +646,40 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
         class="emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
@@ -657,7 +687,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
       </button>
       <img
         alt=""
-        class="emotion-19 emotion-20"
+        class="emotion-18 emotion-19"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -665,7 +695,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is false 1`] = `
+exports[`Media Player: Canonical Entry should render an iframe when showPlaceholder is false 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -691,16 +721,19 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <noscript />
   </div>
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
+exports[`Media Player: Canonical Entry should render the audio skin 1`] = `
 .emotion-0 {
   height: 165px;
   position: relative;
@@ -732,16 +765,19 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio"
       title="Audio player"
+      width="645.25"
     />
     <noscript />
   </div>
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassName prop is used 1`] = `
+exports[`Media Player: Canonical Entry should render with no-js styles when noJsClassName prop is used 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -868,7 +904,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -876,7 +912,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -885,12 +921,12 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -922,30 +958,40 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
         class="emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
@@ -953,7 +999,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
       </button>
       <img
         alt=""
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -961,7 +1007,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 </div>
 `;
 
-exports[`Media Player: Canonical Entry shows a loading image before the player is ready when showLoadingImage is true 1`] = `
+exports[`Media Player: Canonical Entry should show a loading image before the player is ready when showLoadingImage is true 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -1024,9 +1070,12 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <div
       class="emotion-4 emotion-5"

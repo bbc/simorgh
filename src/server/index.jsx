@@ -30,11 +30,16 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
+import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
+import extractHeaders from './utilities/extractHeaders';
 
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
+
+const NORMAL_CACHE_TTL = 30;
+const EXPERIMENTAL_CACHE_TTL = 45;
 
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
@@ -49,6 +54,12 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+
+const getDefaultMaxAge = req => {
+  return req.originalUrl.indexOf('arabic/') !== -1
+    ? EXPERIMENTAL_CACHE_TTL
+    : NORMAL_CACHE_TTL;
+};
 
 const server = express();
 
@@ -74,6 +85,7 @@ server
   .use(compression())
   .use(
     helmet({
+      expectCt: false,
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
     }),
@@ -126,15 +138,17 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 }
 
 const injectDefaultCacheHeader = (req, res, next) => {
+  const defaultMaxAge = getDefaultMaxAge(req);
+  const maxAge =
+    req.originalUrl.indexOf('/topics/') !== -1
+      ? defaultMaxAge * 2
+      : defaultMaxAge;
   res.set(
-    'cache-control',
-    `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+    'Cache-Control',
+    `public, stale-if-error=${
+      maxAge * 4
+    }, stale-while-revalidate=${maxAge}, max-age=${maxAge}`,
   );
-  next();
-};
-
-const injectDefaultVaryHeader = (req, res, next) => {
-  res.set('Vary', 'saveData');
   next();
 };
 
@@ -165,7 +179,6 @@ server.get(
   [
     injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
-    injectDefaultVaryHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
   ],
@@ -176,12 +189,13 @@ server.get(
     });
 
     let derivedPageType = 'Unknown';
+    let mvtExperiments = [];
 
     try {
       const {
         service,
         isAmp,
-        isLow,
+        isApp,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -189,15 +203,6 @@ server.get(
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
-
-      if (service === 'pidgin' && derivedPageType === 'cpsAsset' && !isAmp) {
-        if (!isLow && headers.saveData === true) {
-          return res.redirect(302, `${urlPath}.low`);
-        }
-        if (isLow && !headers.saveData) {
-          return res.redirect(302, urlPath.replace('.low', ''));
-        }
-      }
 
       const toggles = await getToggles(service);
 
@@ -209,17 +214,24 @@ server.get(
         pageType,
         toggles,
         getAgent,
+        isAmp,
       });
+
+      const { isUK } = extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.isUK = isUK;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+
+        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
+        data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -230,13 +242,14 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
+
       let result;
       try {
         result = await renderDocument({
           bbcOrigin,
           data,
           isAmp,
-          isLow,
+          isApp,
           routes,
           service,
           url,
@@ -262,7 +275,7 @@ server.get(
           bbcOrigin,
           data: { error: true, status },
           isAmp,
-          isLow,
+          isApp,
           routes,
           service,
           url,
@@ -277,16 +290,20 @@ server.get(
       });
 
       if (result.redirectUrl) {
-        return res.redirect(301, result.redirectUrl);
-      }
-      if (result.html) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
         res.set(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
-        return res.status(status).send(result.html);
+
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+
+        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+        res.status(status).send(result.html);
+      } else {
+        throw new Error('unknown result');
       }
-      throw new Error('unknown result');
     } catch ({ message, status = 500 }) {
       sendCustomMetric({
         metricName: NON_200_RESPONSE,
@@ -302,7 +319,7 @@ server.get(
         headers: removeSensitiveHeaders(headers),
       });
 
-      return res.status(500).send('Internal server error');
+      res.status(500).send('Internal server error');
     }
   },
 );

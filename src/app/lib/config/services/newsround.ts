@@ -1,9 +1,3 @@
-import {
-  C_NEWSROUND_PURPLE,
-  C_WHITE,
-  C_NEWSROUND_PURPLE_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -37,20 +31,12 @@ export const service: DefaultServiceConfig = {
     service: 'newsround' as Services,
     serviceName: 'Newsround',
     languageName: 'English',
-    themeColor: `${C_NEWSROUND_PURPLE}`,
     twitterCreator: '@BBCNewsround',
     twitterSite: '@BBCNewsround',
     isTrustProjectParticipant: false,
     script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_NEWSROUND_PURPLE}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_WHITE}`,
-      brandBorderColour: `${C_NEWSROUND_PURPLE_30}`,
-      brandHighlightColour: `${C_WHITE}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
@@ -208,7 +194,6 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
@@ -262,8 +247,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

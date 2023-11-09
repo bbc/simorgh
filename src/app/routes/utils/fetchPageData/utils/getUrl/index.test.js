@@ -25,6 +25,12 @@ describe('getUrl', () => {
     );
   });
 
+  it('should remove .app from url', () => {
+    expect(getUrl('/test/article.app')).toEqual(
+      'http://localhost/test/article.json',
+    );
+  });
+
   it('should return correct url when path ends in amp', () => {
     expect(getUrl('/test/article_ending_in_amp')).toEqual(
       'http://localhost/test/article_ending_in_amp.json',
@@ -34,6 +40,12 @@ describe('getUrl', () => {
   it('should return correct url when path ends in *amp.amp', () => {
     expect(getUrl('/test/article_ending_in_camp.amp')).toEqual(
       'http://localhost/test/article_ending_in_camp.json',
+    );
+  });
+
+  it('should return correct url when path ends in *app.app', () => {
+    expect(getUrl('/test/article_ending_in_app.app')).toEqual(
+      'http://localhost/test/article_ending_in_app.json',
     );
   });
 
@@ -57,6 +69,11 @@ describe('getUrl', () => {
 
       it('should remove .amp from url with params', () => {});
       expect(getUrl('/test/article.amp?param=test')).toEqual(
+        'http://localhost/test/article.json?param=test',
+      );
+
+      it('should remove .app from url with params', () => {});
+      expect(getUrl('/test/article.app?param=test')).toEqual(
         'http://localhost/test/article.json?param=test',
       );
     });
@@ -86,6 +103,18 @@ describe('getUrl', () => {
 
       it('should remove .amp and multiple query string parameters from url', () => {
         expect(getUrl('/test/article.amp?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .app and single query string parameter from url', () => {
+        expect(getUrl('/test/article.app?param=test')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .app and multiple query string parameters from url', () => {
+        expect(getUrl('/test/article.app?first=1&second=2')).toEqual(
           'http://localhost/test/article.json',
         );
       });

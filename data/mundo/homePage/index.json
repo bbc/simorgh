@@ -1,0 +1,103 @@
+{
+  "data": {
+    "title": "Noticias - BBC News Mundo",
+    "description": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Los narcosubmarinos caseros que transportan cocaína de Sudamérica a Europa",
+            "firstPublished": "2023-04-26T11:18:26.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-65349969",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8D92/production/_129424263_capture4.png",
+            "description": "La BBC tuvo acceso a la embaración secreta que llevó a tres hombres y US$150 millones en drogas desde la selva amazónica hasta España.",
+            "imageAlt": "El submarino casero ahora se encuentra en un estacionamiento en el centro de España.",
+            "id": "5e25e965-3681-46d6-ae11-098c8ebe15a8"
+          },
+          {
+            "type": "article",
+            "title": "\"Cayó un misil enorme a unos 5 minutos de mi casa. Fue lo más fuerte que he oído en mi vida\": el testimonio de una mexicana que fue evacuada de Sudán",
+            "firstPublished": "2023-04-26T11:49:53.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-65390907",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/B32F/production/_129517854_thumbnail_sudaplate.png",
+            "description": "La mexicana Elizabeth Campero vivió el estallido de la violencia en Sudán desde su hogar en Jartum. Aquí, le cuenta a BBC Mundo cómo fue esa aterradora experiencia y los detalles de la evacuación que la sacó a ella y su familia del país africano.",
+            "imageAlt": "Elizabeth Campero",
+            "id": "9a59e329-4f01-49ff-8296-51edc7d0e47a"
+          },
+          {
+            "type": "article",
+            "title": "El \"inexplicable\" calentamiento de los océanos que alarma a los científicos",
+            "firstPublished": "2023-04-25T16:17:27.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-65388079",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3A4C/production/_129442941_gettyimages-1236993544.jpg",
+            "description": "La superficie del mar alcanzó un nuevo récord de temperatura debido a un aumento que nunca se había producido de manera tan brusca.",
+            "imageAlt": "Sol sobre el océano",
+            "id": "631efe72-a2bc-4a61-98f5-97ca8d85ba89"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:295a530d-b4fc-4747-9ca8-e2896e125568",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "De Newton a Neil Armstrong: 7 frases famosas que realmente nunca se dijeron",
+            "firstPublished": "2023-04-02T19:22:17.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-65090662",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15B18/production/_129165888_gettyimages-1404442799.jpg",
+            "description": "Internet, pero también los libros, están plagados de citas atribuidas a personajes históricos que éstos jamás pronunciaron.",
+            "imageAlt": "El astronauta Neil Amstrong caminando por la Luna en 1969.",
+            "id": "d80aa5d0-e958-4df0-96f9-0b8b68b98436"
+          },
+          {
+            "type": "article",
+            "title": "Quién es Stormy Daniels, la estrella porno que detonó la imputación a Donald Trump",
+            "firstPublished": "2023-03-31T18:53:19.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-65143844",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7D8F/production/_100034123_mediaitem100034044.jpg",
+            "description": "El expresidente de Estados Unidos será detenido el martes luego de que un gran jurado en Nueva York lo imputara por supuestamente haberle pagado a la exactriz durante su campaña presidencial para silenciar una relación extramatrimonial.",
+            "imageAlt": "La actriz Stormy Daniels posando",
+            "id": "c99b52b7-78e8-4ac9-8792-ffef24d56400"
+          },
+          {
+            "type": "article",
+            "title": "\"Antes estábamos sitiados\": los barrios de El Salvador que se reencuentran tras la \"desaparición\" de las pandillas por la guerra de Bukele",
+            "firstPublished": "2023-03-27T12:54:51.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-65059584",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1BB7/production/_129159070_04ffa0db-984b-464c-9b6d-b277ce1ae0e3.jpg",
+            "description": "Entre denuncias por violación de derechos, el estado de excepción en El Salvador cumple un año con sus homicidios en mínimos históricos. ¿Qué tanto se notan los efectos de la \"guerra contra las pandillas\" en las calles?",
+            "imageAlt": "Cancha de deporte en La Campanera",
+            "id": "517b2f96-e804-4c6d-b68b-92c9b6ca0880"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b2bfa87b-189c-4c25-a254-3851cf49453f",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "No te lo pierdas",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kkze2rt",
+        "contentType": "index-home",
+        "pageIdentifier": "mundo.page",
+        "pageTitle": "Noticias - BBC News Mundo"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

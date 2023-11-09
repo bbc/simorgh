@@ -13,9 +13,9 @@ import {
   getSansRegularItalic,
   getSansBoldItalic,
 } from '#psammead/psammead-styles/src/font-styles';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import notes from '../README.md';
 import InlineLink from './index';
+import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};
@@ -41,7 +41,7 @@ const Caption = styled.figcaption`
 
 const textDecorationStyle = {
   borderBottom: 'none',
-  textDecoration: `underline ${C_POSTBOX}`,
+  textDecoration: `underline ${POSTBOX}`,
 };
 
 /* eslint-disable react/prop-types */

@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
+
+const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 
 const defaultAttrs = {
   focusable: 'false',
@@ -15,7 +18,7 @@ const defaultAttrs = {
 const MediaIcon = styled.svg`
   vertical-align: middle;
   margin: 0 ${GEL_SPACING_HLF};
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   fill: currentColor;
 `;
 
@@ -25,7 +28,7 @@ const VideoMediaIcon = styled(MediaIcon)`
 `;
 
 const AudioMediaIcon = styled(MediaIcon)`
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 `;
 
@@ -42,6 +45,15 @@ const GuidanceIcon = styled(MediaIcon)`
 const PodcastIcon = styled(MediaIcon)`
   width: ${GEL_SPACING_DBL};
   height: ${GEL_SPACING_DBL};
+  .podcastIconWrapper & {
+    width: ${GEL_SPACING_QUAD};
+    height: ${GEL_SPACING_QUAD};
+    margin: auto;
+    @media (max-width: ${GEL_GROUP_1_WIDTH_260PX}) {
+      width: ${GEL_SPACING_TRPL};
+      height: ${GEL_SPACING_TRPL};
+    }
+  }
 `;
 
 const SeriesStackIcon = styled(MediaIcon)`
@@ -52,12 +64,16 @@ const SeriesStackIcon = styled(MediaIcon)`
 const mediaIcons = {
   video: (
     <VideoMediaIcon
-      viewBox="0 0 32 32"
-      width="12px"
-      height="12px"
+      viewBox="0 0 12 12"
+      width="12"
+      height="12"
+      xmlns="http://www.w3.org/2000/svg"
       {...defaultAttrs}
     >
-      <polygon points="3,32 29,16 3,0" />
+      <g fill="none" fillRule="evenodd">
+        <path d="M.5.6h12v12H.5z" />
+        <path fill="currentColor" d="M2.144.96v11.28l8.712-5.64z" />
+      </g>
     </VideoMediaIcon>
   ),
   audio: (

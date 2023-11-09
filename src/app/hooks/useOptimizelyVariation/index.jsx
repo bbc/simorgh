@@ -1,24 +1,38 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
-const useOptimizelyVariation = (experimentId, overrideAttributes = {}) => {
-  const [decision, isClientReady, didTimeout] = useDecision(
-    experimentId,
-    {
-      autoUpdate: true,
-    },
-    { overrideAttributes },
-  );
+const isClientSide = true;
 
-  const [variation, setVariation] = useState(null);
+// ALTHOUGH THIS FUNCTION BREAKS REACT RULES BY USING CONDITIONAL HOOKS,
+// WE CAN SAFELY DO SO SINCE isClientSide IS A CONSTANT AND THEREFORE GUARANTEES THAT
+// EACH HOOK WILL BE CALLED IN THE EXACT SAME ORDER UPON INITAL RENDER.
+const useOptimizelyVariation = (
+  experimentId,
+  overrideAttributes = {},
+  useClientSide = isClientSide,
+) => {
+  if (useClientSide) {
+    const [decision, isClientReady, didTimeout] = useDecision(
+      experimentId,
+      {
+        autoUpdate: true,
+      },
+      { overrideAttributes },
+    );
 
-  useEffect(() => {
-    if (isClientReady && !didTimeout) {
-      setVariation(decision.variationKey);
-    }
-  }, [isClientReady, decision.variationKey, didTimeout]);
+    const [variation, setVariation] = useState(null);
 
-  return variation;
+    useEffect(() => {
+      if (isClientReady && !didTimeout) {
+        setVariation(decision.variationKey);
+      }
+    }, [isClientReady, decision.variationKey, didTimeout]);
+
+    return variation;
+  }
+
+  return true;
 };
 
 export default useOptimizelyVariation;

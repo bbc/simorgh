@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
-import brandSVG from '../../chameleonLogos/amharic';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'amharic',
     serviceName: 'Amharic',
     languageName: 'Amharic',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -137,7 +122,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'እሺ',
           reject: 'ምን እንደተቀየረ ይመልከቱ',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -150,7 +135,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ኩኪዎችን',
                 last: 'የመሳሰሉ ቴክኖሎጂዎችን የምንጠቀመውና መረጃዎችን የምንሰብስበው እርስዎ የሚፈልጉት መረጃና ማስታወቂያ ቅድሚያ እንዲደርስዎና የላቀ የድረገጽ አገልግሎት እንዲያገኙ ለማድረግ ነው። እባክዎ መስማማትዎን ያሳውቁን።',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'የአጠቃቀም ምርጫዎን ለማስተካከል',
             },
@@ -165,7 +150,7 @@ export const service: DefaultServiceConfig = {
                   'ድረ ገጻችን እንዲሰራ ለማድረግ የእርስዎ ፈቃድ ሳያስፈልግ የተወሰኑ መረጃዎችን በሚገለገሉበት መሳሪያ ላይ እናስቀምጣለን።',
                 para4: {
                   text: 'ድረ ገጻችን እንዲሰራ ለማድረግ በሚገለገሉበት መሳሪያ ላይ ያስቀመጥነውን ጠቃሚ መረጃን በተመለከተ ተጨማሪ ያንብቡ',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: 'በመገልገያ መሳሪያዎ ላይ የስምምነት ምርጫዎችዎን እናስቀምጣለን።',
                 heading3: 'የግድ ያልሆነ መረጃ',
@@ -197,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
                 last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'እሺ፣ እስማማለሁ',
             reject: 'ወደ ማውጫ መመለስ እፈልጋለሁ',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -255,8 +240,8 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
+      latestMediaTitle: 'የቅርብ ጊዜ',
     },
-    brandSVG,
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
@@ -308,8 +293,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -326,7 +311,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ቪዲዮ',
-        url: '/amharic/media/video',
+        url: '/amharic/topics/c917ezk2pmvt',
       },
       {
         title: 'በጣም የተወደዱ',

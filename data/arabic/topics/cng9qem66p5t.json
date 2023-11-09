@@ -1,0 +1,131 @@
+{
+  "data": {
+    "title": "السياحة",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "هذه هي صفحة اختبار",
+            "firstPublished": "2021-12-08T13:23:28.059Z",
+            "link": "https://www.bbc.com/arabic/articles/cjn2e0jek55o",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/c7b9/test/47dcfe10-b816-11ed-a129-59679bbc34c6.png",
+            "description": "كشفت وسائل إعلام إسرائيلية، الخميس، عن مقطع فيديو مسرب عن مكتب رئيس الوزراء بنيامين نتنياهو، ظهر فيه وزراء خارجية ثلاث دول عربية خليجية يدافعون عن إسرائيل ويهاجمون إيران.",
+            "imageAlt": "BBC microphone",
+            "id": "cjn2e0jek55o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic",
+        "curationId": "urn:bbc:tipo:list:8eaa2711-a444-435e-bbcd-35f839539932",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "العنوان والوصف والصورة والرابط",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "خمس طرق للحفاظ على الهدوء ولماذا يعدّ ذلك أمراً مهماً"
+        },
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/186a/test/8f9ecea0-9d99-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/186a/test/8f9ecea0-9d99-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 800,
+              "height": 450
+            },
+            "altText": "Hollow Knight",
+            "copyright": "Team Cherry",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "186a/test/8f9ecea0-9d99-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 450,
+            "width": 800,
+            "copyrightHolder": "Team Cherry",
+            "altText": "Hollow Knight"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "اختبار الخط الثانوي",
+            "firstPublished": "2022-09-09T10:09:29.267Z",
+            "link": "https://www.bbc.com/arabic/articles/cem82rw9gwno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/c418/test/6b0c63b0-9d97-11ed-8565-736fadc3edcb.jpg",
+            "description": "كشفت وسائل إعلام إسرائيلية، الخميس، عن مقطع فيديو مسرب عن مكتب رئيس الوزراء بنيامين نتنياهو، ظهر فيه وزراء خارجية ثلاث دول عربية خليجية يدافعون عن إسرائيل ويهاجمون إيران.",
+            "imageAlt": "Nintedo",
+            "id": "cem82rw9gwno"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:2a0d2c6c-d17e-4cdd-b910-d0cfad491f42",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "عنوان ، رابط ، صورة (بدون وصف)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/5bcd/test/0e742310-9d9a-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/5bcd/test/0e742310-9d9a-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 800,
+              "height": 450
+            },
+            "altText": "Disney",
+            "copyright": "Disney",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "5bcd/test/0e742310-9d9a-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 450,
+            "width": 800,
+            "copyrightHolder": "Disney",
+            "altText": "Disney"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "اختبارات\n",
+            "firstPublished": "2022-10-25T15:17:23.403Z",
+            "link": "https://www.bbc.com/arabic/articles/cxexdrj0w0do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/a9bd/test/4b59eb00-9d97-11ed-8565-736fadc3edcb.jpg",
+            "description": "",
+            "imageAlt": "nintendo",
+            "id": "cxexdrj0w0do"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic",
+        "curationId": "urn:bbc:tipo:list:7a3ac7b0-2b86-4568-8a57-68a7c6619558",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "العنوان والرابط فقط (بدون صورة وبدون وصف)",
+        "visualProminence": "NORMAL"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "variantTopicId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}

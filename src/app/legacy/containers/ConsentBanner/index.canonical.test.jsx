@@ -1,11 +1,17 @@
+/* eslint-disable react/forbid-foreign-prop-types */
 /* eslint-disable global-require */
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import {
+  render,
+  screen,
+  fireEvent,
+} from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
 

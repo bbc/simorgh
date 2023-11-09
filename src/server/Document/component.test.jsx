@@ -32,7 +32,7 @@ describe('Document Component', () => {
   );
 
   // eslint-disable-next-line react/prop-types
-  const TestDocumentComponent = ({ service, isAmp }) => (
+  const TestDocumentComponent = ({ service, isAmp, isApp }) => (
     <DocumentComponent
       app={{
         css: '.css-7prgni-StyledLink{display:inline-block;}',
@@ -61,13 +61,16 @@ describe('Document Component', () => {
       modernScripts={modernScripts}
       service={service}
       isAmp={isAmp}
+      isApp={isApp}
       links={links}
     />
   );
 
   it('should render correctly', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isAmp={false} />),
+      renderToString(
+        <TestDocumentComponent service="news" isAmp={false} isApp={false} />,
+      ),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
@@ -88,5 +91,22 @@ describe('Document Component', () => {
     const linksHtml = renderToStaticMarkup(links);
 
     expect(head).not.toContainHTML(linksHtml);
+  });
+
+  it('should render APP version correctly', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" isApp />),
+    );
+    expect(dom.window.document.documentElement).toMatchSnapshot();
+  });
+
+  it('should render "noindex" meta tag on APP version', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" isApp />),
+    );
+
+    const head = dom.window.document.querySelector('head');
+
+    expect(head).toContainHTML('<meta name="robots" content="noindex" />');
   });
 });

@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 1,
+    "month": "December",
+    "year": 2022
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://app.zeplin.io/project/5baa564c05c2eba0d2b89568/screen/628f8a52141204b0aa3e0e17",
+      "label": "Documented screen reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://jira.dev.bbc.co.uk/browse/WSTEAM1-47",
+      "label": "Accessibility acceptance criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1AHQwSy8N6A1415PYeBmQ39ajQy-gE0iUpdZWnRwXIMM/edit#gid=1748460042",
+      "label": "Accessibility swarm results"
+    }
+  }
+}

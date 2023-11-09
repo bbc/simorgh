@@ -24,7 +24,7 @@ const Canonical = ({
   noJsMessage,
   showPlaceholder,
   showLoadingImage,
-  darkMode,
+  darkPlaceholder,
   onMediaInitialised,
   onMediaPlaying,
   onMediaPause,
@@ -78,6 +78,7 @@ const Canonical = ({
 
     window.addEventListener('message', handler);
     return () => window.removeEventListener('message', handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -88,11 +89,14 @@ const Canonical = ({
         allow="autoplay"
         scrolling="no"
         gesture="media"
+        loading="lazy"
         allowFullScreen
+        width="645.25"
+        height="362.953125"
       />
       {showLoadingImage && (
         <LoadingImageWrapper>
-          <ImagePlaceholder ratio={56.25} darkMode={darkMode} />
+          <ImagePlaceholder ratio={56.25} darkPlaceholder={darkPlaceholder} />
         </LoadingImageWrapper>
       )}
       <noscript>
@@ -116,7 +120,7 @@ Canonical.propTypes = {
   noJsMessage: string.isRequired,
   showPlaceholder: bool.isRequired,
   showLoadingImage: bool.isRequired,
-  darkMode: bool.isRequired,
+  darkPlaceholder: bool.isRequired,
   onMediaInitialised: func.isRequired,
   onMediaPlaying: func.isRequired,
   onMediaPause: func.isRequired,

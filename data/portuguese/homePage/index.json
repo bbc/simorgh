@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "Notícias, vídeos, análise e contexto em português - BBC News Brasil",
+    "description": "Na BBC Brasil você fica por dentro do que acontece no Brasil e no mundo. Com redações em Londres e São Paulo e mais de 200 repórteres internacionais, nossa cobertura leva a você as principais notícias de política, economia, ciência, saúde e comportamento.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "John Wycliffe: a história do homem que foi 'torturado depois de morto' por ter traduzido a Bíblia",
+            "firstPublished": "2023-04-03T10:00:04.115Z",
+            "link": "https://www.bbc.com/portuguese/articles/c88455z0725o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1b86/live/ce109c10-d14f-11ed-a99e-b92595fd4ef3.jpg",
+            "description": "Ele foi condenado pela Igreja Católica por heresia 10 anos após sua morte, em 1384, e quase 30 anos depois, seus restos mortais foram retirados do túmulo e queimados.",
+            "imageAlt": "John Wycliffe",
+            "id": "c88455z0725o"
+          },
+          {
+            "type": "article",
+            "title": "Peixe é filmado a recorde de 8,3 mil metros de profundidade no Japão",
+            "firstPublished": "2023-04-01T19:26:34.122Z",
+            "link": "https://www.bbc.com/portuguese/articles/c98ne7gnn47o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b125/live/1e11e1a0-d0c0-11ed-b323-29280ab4cf4a.jpg",
+            "description": "\"Fico frustrado quando as pessoas dizem que não sabemos nada sobre o fundo do mar. Nós sabemos. As coisas estão mudando muito rápido\", diz o pesquisador Alan Jamieson",
+            "imageAlt": "Peixe gelatinoso ",
+            "id": "c98ne7gnn47o"
+          },
+          {
+            "type": "article",
+            "title": "A síndrome inventada por médicos italianos que salvou dezenas de judeus dos nazistas ",
+            "firstPublished": "2023-03-31T18:28:56.681Z",
+            "link": "https://www.bbc.com/portuguese/articles/cw9rr2jnq0do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fc25/live/16930ee0-cecc-11ed-be2e-754a65c11505.jpg",
+            "description": "Três médicos de um hospital romano, administrado pela Igreja Católica, levaram os alemães a acreditar que um grupo de judeus havia contraído uma doença mortal e contagiosa.",
+            "imageAlt": "Roma",
+            "id": "cw9rr2jnq0do"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a339175f-b6de-4d46-a00a-237baccd6646",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Leia mais",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7pe2jj9l7mt",
+        "contentType": "index-home",
+        "pageIdentifier": "portuguese.page",
+        "pageTitle": "Notícias, vídeos, análise e contexto em português - BBC News Brasil"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

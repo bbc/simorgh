@@ -1,10 +1,10 @@
 import React from 'react';
 import { textBlock } from '#models/blocks';
 import {
-  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
@@ -25,22 +25,23 @@ describe('FauxHeadline', () => {
   describe('with headline data', () => {
     const data = textBlock('This is a headline!', 'id');
 
-    shouldMatchSnapshot(
-      'should render correctly',
-      FauxHeadlineContainerWithContext(data),
-    );
-  });
+    it('should render correctly', () => {
+      const { container } = render(FauxHeadlineContainerWithContext(data));
+      expect(container).toMatchSnapshot();
+    });
 
-  describe('with plain text', () => {
-    describe('headline', () => {
-      const data = {
-        blocks: blocksSingleFragment('Plain headline', []),
-      };
+    describe('with plain text', () => {
+      describe('headline', () => {
+        // eslint-disable-next-line no-shadow
+        const data = {
+          blocks: blocksSingleFragment('Plain headline', []),
+        };
 
-      shouldMatchSnapshot(
-        'should render <strong> containing correct text',
-        FauxHeadlineContainerWithContext(data),
-      );
+        it('should render <strong> containing correct text', () => {
+          const { container } = render(FauxHeadlineContainerWithContext(data));
+          expect(container).toMatchSnapshot();
+        });
+      });
     });
   });
 });

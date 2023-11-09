@@ -1,5 +1,5 @@
 /* eslint-disable */
-const version = 'v0.0.3';
+const version = 'v0.0.6';
 const cacheName = 'simorghCache_v1';
 
 self.addEventListener('install', (event) => {
@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', function(event) {
-  if (/^https:\/\/ichef\.bbci\.co\.uk\/news\/.+(\.jpg|\.png)$/.test(event.request.url)) {
+  if (/^https:\/\/ichef\.bbci\.co\.uk\/(news|ace\/standard)\/.+(\.jpg|\.png)$/.test(event.request.url)) {
 
     const req = event.request.clone();
 
@@ -17,7 +17,7 @@ self.addEventListener('fetch', function(event) {
       supportsWebp = req.headers.get('accept').includes('webp');
     }
     // If we support WebP
-    if (supportsWebp) {
+    if (supportsWebp && !/\/amz\/worldservice\/.*/.test(event.request.url)) {
       event.respondWith(
         fetch(`${req.url}.webp`, {
           mode: 'no-cors'
@@ -26,7 +26,7 @@ self.addEventListener('fetch', function(event) {
     }
     
   }
-  else if (event.request.destination === 'font') {
+  else if (/((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo\.32caa641\.js$)|(\/moment\-lib\.dfdb34b8\.js$))/.test(event.request.url)) {
     event.respondWith(caches.open(cacheName).then(cache => {
       return cache.match(event.request).then(cachedResponse => {
         return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {

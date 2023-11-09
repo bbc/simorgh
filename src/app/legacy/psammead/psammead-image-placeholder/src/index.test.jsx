@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import ImagePlaceholder from '.';
 
 const landscapeImageRatio = 56.25;
@@ -7,20 +7,29 @@ const portraitImageRatio = 177.78;
 const squareImageRatio = 100;
 
 describe('ImagePlaceholder', () => {
-  shouldMatchSnapshot(
-    'should render landscape images correctly',
-    <ImagePlaceholder ratio={landscapeImageRatio} />,
-  );
-  shouldMatchSnapshot(
-    'should render portrait images correctly',
-    <ImagePlaceholder ratio={portraitImageRatio} />,
-  );
-  shouldMatchSnapshot(
-    'should render square images correctly',
-    <ImagePlaceholder ratio={squareImageRatio} />,
-  );
-  shouldMatchSnapshot(
-    'should render dark mode version correctly',
-    <ImagePlaceholder ratio={landscapeImageRatio} darkMode />,
-  );
+  it('should render landscape images correctly', () => {
+    const { container } = render(
+      <ImagePlaceholder ratio={landscapeImageRatio} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render portrait images correctly', () => {
+    const { container } = render(
+      <ImagePlaceholder ratio={portraitImageRatio} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render square images correctly', () => {
+    const { container } = render(<ImagePlaceholder ratio={squareImageRatio} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render dark mode version correctly', () => {
+    const { container } = render(
+      <ImagePlaceholder ratio={landscapeImageRatio} darkPlaceholder />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -12,7 +12,7 @@ const Link = ({ className, children }) => {
   return (
     <StyledLink
       data-testid="promo-link"
-      className={className}
+      className={`${className} focusIndicatorDisplayInlineBlock`}
       href={makeRelativeUrlPath(to)}
       aria-labelledby={ariaLabelledBy}
       onClick={eventTrackingData ? handleClickTracking : null}

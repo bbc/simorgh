@@ -78,7 +78,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   margin: 0;
 }
 
-.emotion-11>svg {
+.emotion-10>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -86,7 +86,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   width: 1.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -95,12 +95,12 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   height: 0.75rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   width: 100%;
 }
@@ -122,30 +122,40 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       class="emotion-6 emotion-7 emotion-8"
     >
       <span
-        class="emotion-9 emotion-10"
+        class="emotion-9"
       >
         Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-11 emotion-12"
+        class="emotion-10 emotion-11"
       >
         <svg
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
         datetime="PT2M30S"
       >
         2:30
@@ -153,7 +163,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
     </button>
     <img
       alt=""
-      class="emotion-17 emotion-18"
+      class="emotion-16 emotion-17"
       src="http://foo.bar/placeholder.png"
     />
   </div>
@@ -264,7 +274,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -272,7 +282,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -281,12 +291,12 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -314,30 +324,40 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       class="emotion-8 emotion-9 emotion-10"
     >
       <span
-        class="emotion-11 emotion-12"
+        class="emotion-11"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-13 emotion-14"
+        class="emotion-12 emotion-13"
       >
         <svg
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
         datetime="PT2M30S"
       >
         2:30
@@ -345,7 +365,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
     </button>
     <img
       alt=""
-      class="emotion-19 emotion-20"
+      class="emotion-18 emotion-19"
       src="http://foo.bar/placeholder.png"
     />
   </div>
@@ -430,14 +450,14 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   margin: 0;
 }
 
-.emotion-11>svg {
+.emotion-10>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -446,7 +466,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   height: 0.75rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   width: 100%;
 }
@@ -468,31 +488,41 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       class="emotion-6 emotion-7 emotion-8"
     >
       <span
-        class="emotion-9 emotion-10"
+        class="emotion-9"
       >
         Play video, "Dog chases cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-11 emotion-12"
+        class="emotion-10 emotion-11"
       >
         <svg
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
     </button>
     <img
       alt=""
-      class="emotion-15 emotion-16"
+      class="emotion-14 emotion-15"
       src="http://foo.bar/placeholder.png"
     />
   </div>
@@ -577,7 +607,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   margin: 0;
 }
 
-.emotion-11>svg {
+.emotion-10>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -585,21 +615,21 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   width: 1.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   width: 100%;
 }
@@ -621,17 +651,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       class="emotion-6 emotion-7 emotion-8"
     >
       <span
-        class="emotion-9 emotion-10"
+        class="emotion-9"
       >
         Play audio, "Dog barks at cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-11 emotion-12"
+        class="emotion-10 emotion-11"
       >
         <svg
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -647,7 +677,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="emotion-15 emotion-16"
+        class="emotion-14 emotion-15"
         datetime="PT2M30S"
       >
         2:30
@@ -655,7 +685,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
     </button>
     <img
       alt=""
-      class="emotion-17 emotion-18"
+      class="emotion-16 emotion-17"
       src="http://foo.bar/placeholder.png"
     />
   </div>
@@ -740,23 +770,23 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   margin: 0;
 }
 
-.emotion-11>svg {
+.emotion-10>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   width: 100%;
 }
@@ -778,17 +808,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       class="emotion-6 emotion-7 emotion-8"
     >
       <span
-        class="emotion-9 emotion-10"
+        class="emotion-9"
       >
         Play audio, "Dog barks at cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-11 emotion-12"
+        class="emotion-10 emotion-11"
       >
         <svg
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -805,7 +835,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
     </button>
     <img
       alt=""
-      class="emotion-15 emotion-16"
+      class="emotion-14 emotion-15"
       src="http://foo.bar/placeholder.png"
     />
   </div>
@@ -933,7 +963,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -941,7 +971,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -950,12 +980,12 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -983,30 +1013,40 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       class="emotion-8 emotion-9 emotion-10"
     >
       <span
-        class="emotion-11 emotion-12"
+        class="emotion-11"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-13 emotion-14"
+        class="emotion-12 emotion-13"
       >
         <svg
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
         datetime="PT2M30S"
       >
         2:30
@@ -1014,7 +1054,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
     </button>
     <img
       alt=""
-      class="emotion-19 emotion-20"
+      class="emotion-18 emotion-19"
       src="http://foo.bar/placeholder.png"
     />
   </div>

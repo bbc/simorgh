@@ -8,6 +8,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 
 const newsroundTheme = {
   palette: {
@@ -27,6 +28,7 @@ const newsroundTheme = {
       REITH_SERIF_LIGHT,
     ],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(newsroundTheme);

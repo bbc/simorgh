@@ -5,7 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import fetchPageData from '../../utils/fetchPageData';
+import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -25,10 +25,11 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
+
+import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -54,7 +55,7 @@ const processOptimoBlocks = toggles =>
     augmentWithTimestamp,
     only(
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
-      augmentWithDisclaimer(toggles),
+      augmentWithDisclaimer({ toggles, positionFromTimestamp: 1 }),
     ),
     addBylineBlock,
     addRecommendationsBlock,
@@ -85,6 +86,18 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
+const getDerivedServiceAndPath = (service, pathname) => {
+  switch (service) {
+    case 'cymrufyw':
+      return {
+        service: 'newyddion',
+        path: pathname.replace('cymrufyw', 'newyddion'),
+      };
+    default:
+      return { service, path: pathname };
+  }
+};
+
 export default async ({
   path: pathname,
   service,
@@ -93,38 +106,49 @@ export default async ({
   toggles,
 }) => {
   try {
-    const env = pathname.includes('renderer_env=live')
-      ? 'live'
-      : process.env.SIMORGH_APP_ENV;
-    const { json, status } = await fetchPageData({
-      path: pathname,
-      pageType,
-      api: 'asset',
-      apiContext: 'primary_data',
-    });
+    const { service: derivedService, path: derivedPath } =
+      getDerivedServiceAndPath(service, pathname);
 
-    const additionalPageData = await getAdditionalPageData({
-      pageData: json,
-      service,
+    const {
+      status,
+      pageData: { secondaryColumn, recommendations, ...article } = {},
+    } = await getArticleInitialData({
+      path: derivedPath,
+      service: derivedService,
       variant,
-      env,
+      pageType: 'cpsAsset',
     });
 
-    const processedAdditionalData = processMostWatched({
-      data: additionalPageData,
+    if (status !== 200) {
+      throw handleError('CPS asset data fetch error', status);
+    }
+
+    const { mostWatched } = processMostWatched({
+      data: article,
       service,
-      path: pathname,
+      path: derivedPath,
       toggles,
       page: pageType,
     });
 
-    return {
+    const { topStories, features } = secondaryColumn;
+    const { mostRead } = article;
+
+    const response = {
       status,
       pageData: {
-        ...(await transformJson(json, pathname, toggles)),
-        ...processedAdditionalData,
+        ...(await transformJson(article, pathname, toggles)),
+        secondaryColumn: {
+          topStories,
+          features,
+        },
+        mostRead,
+        mostWatched,
+        recommendations,
       },
     };
+
+    return response;
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }

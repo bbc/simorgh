@@ -1,54 +1,62 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import Banner from './index.amp';
 
 describe('Amp Consent Banner Container', () => {
-  const privacy = ({ description, service }) =>
-    shouldMatchSnapshot(
-      description,
-      <ServiceContextProvider service={service}>
-        <Banner
-          type="privacy"
-          acceptAction="tap:cookieId.show, privacyId.hide"
-          rejectAction="tap:cookieId.show, privacyId.hide"
-          promptId="promptId"
-          hidden
-        />
-      </ServiceContextProvider>,
+  it('should correctly render privacy banner - LTR layout', () => {
+    const { container } = render(
+      <Banner
+        type="privacy"
+        acceptAction="tap:cookieId.show, privacyId.hide"
+        rejectAction="tap:cookieId.show, privacyId.hide"
+        hideAction="tap:brandLink.focus, privacy.hide"
+        promptId="promptId"
+        hidden
+      />,
+      { service: 'news' },
     );
-
-  privacy({
-    description: 'should correctly render privacy banner - LTR layout',
-    service: 'news',
+    expect(container).toMatchSnapshot();
   });
 
-  privacy({
-    description: 'should correctly render privacy banner - RTL layout',
-    service: 'arabic',
-  });
-
-  const cookie = ({ description, service }) =>
-    shouldMatchSnapshot(
-      description,
-      <ServiceContextProvider service={service}>
-        <Banner
-          type="cookie"
-          acceptAction="tap:parentId.accept"
-          rejectAction="tap:parentId.reject"
-          promptId="promptId"
-          hidden
-        />
-      </ServiceContextProvider>,
+  it('should correctly render privacy banner - RTL layout', () => {
+    const { container } = render(
+      <Banner
+        type="privacy"
+        acceptAction="tap:cookieId.show, privacyId.hide"
+        rejectAction="tap:cookieId.show, privacyId.hide"
+        hideAction="tap:brandLink.focus, cookie.hide"
+        promptId="promptId"
+        hidden
+      />,
+      { service: 'arabic' },
     );
-
-  cookie({
-    description: 'should correctly render cookie banner - LTR layout',
-    service: 'news',
+    expect(container).toMatchSnapshot();
+  });
+  it('should correctly render cookie banner - LTR layout', () => {
+    const { container } = render(
+      <Banner
+        type="cookie"
+        acceptAction="tap:parentId.accept"
+        rejectAction="tap:parentId.reject"
+        promptId="promptId"
+        hidden
+      />,
+      { service: 'news' },
+    );
+    expect(container).toMatchSnapshot();
   });
 
-  cookie({
-    description: 'should correctly render cookie banner - RTL layout',
-    service: 'arabic',
+  it('should correctly render cookie banner - RTL layout', () => {
+    const { container } = render(
+      <Banner
+        type="cookie"
+        acceptAction="tap:parentId.accept"
+        rejectAction="tap:parentId.reject"
+        promptId="promptId"
+        hidden
+      />,
+      { service: 'arabic' },
+    );
+    expect(container).toMatchSnapshot();
   });
 });

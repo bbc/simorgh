@@ -5,137 +5,200 @@
         "model": {
           "blocks": [
             {
-              "id": "e561cb56",
+              "id": "1a0a76ef",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "66eae865",
+                    "id": "1f7f1c50",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ae92628f",
+                          "id": "28f04ddd",
                           "type": "paragraph",
                           "model": {
                             "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
                             "blocks": [
                               {
-                                "id": "58bb81d0",
+                                "id": "eb48e1c6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "eb63286c",
+              "id": "abbf3283",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943102250,
                 "lastPublished": 1562943102250
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "cf837095",
+              "id": "073a9098",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b0d90399",
+                    "id": "c4c0bbf8",
                     "type": "paragraph",
                     "model": {
                       "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
                       "blocks": [
                         {
-                          "id": "542a5270",
+                          "id": "8c204aa2",
                           "type": "fragment",
                           "model": {
                             "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
-                    "id": "6229514e",
+                    "id": "d4f2bdbf",
                     "type": "paragraph",
                     "model": {
                       "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
                       "blocks": [
                         {
-                          "id": "2c206a12",
+                          "id": "b27b57ca",
                           "type": "fragment",
                           "model": {
                             "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
-                    "id": "accd7f2e",
+                    "id": "09243b09",
                     "type": "paragraph",
                     "model": {
                       "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
                       "blocks": [
                         {
-                          "id": "483e1ffa",
+                          "id": "1d849a21",
                           "type": "fragment",
                           "model": {
                             "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
-                    "id": "4985247a",
+                    "id": "f899eac8",
                     "type": "paragraph",
                     "model": {
                       "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
                       "blocks": [
                         {
-                          "id": "0dcfc476",
+                          "id": "d4530a44",
                           "type": "fragment",
                           "model": {
                             "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "6c5cf349", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "82d576c6",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "0c92b625",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
+              ]
+            }
           ]
         }
       },
@@ -148,11 +211,8 @@
         "type": "article",
         "createdBy": "Korean",
         "language": "ko",
-        "lastUpdated": 1645628418497,
         "firstPublished": 1562943102250,
         "lastPublished": 1562943102250,
-        "timestamp": 1562943102250,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cpv9kv2yzk6o",
           "producer": "Korean",
@@ -163,46 +223,26 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cpv9kv2yzk6o",
-          "canonicalUrl": "https://www.bbc.com/korean/articles/cpv9kv2yzk6o"
-        },
-        "timestamp": 1562943102250,
-        "suitableForSyndication": false,
-        "language": "ko",
         "headlines": {
           "seoHeadline": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주"
-        },
-        "images": {},
-        "passport": {
-          "language": "ko",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cpv9kv2yzk6o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Korean",
-          "uri": "/korean",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Capturing East Harlem in the 80s" },
+          "headlines": {
+            "headline": "Capturing East Harlem in the 80s"
+          },
           "locators": {
             "assetUri": "/korean/23228543",
             "cpsUrn": "urn:bbc:content:assetUri:korean/23228543",
@@ -238,7 +278,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "홈페이지",
@@ -249,7 +292,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "hjdgjlsddfb" },
+          "headlines": {
+            "headline": "hjdgjlsddfb"
+          },
           "locators": {
             "assetUri": "/gahuza/amakuru-23193186",
             "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23193186",
@@ -278,7 +323,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "site": {
             "subType": "site",
             "name": "BBC Gahuza",
@@ -289,7 +337,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "one" },
+          "headlines": {
+            "headline": "one"
+          },
           "locators": {
             "assetUri": "/news/uk-23228568",
             "cpsUrn": "urn:bbc:content:assetUri:news/uk-23228568",
@@ -312,7 +362,10 @@
             "taggings": []
           },
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "UK",
@@ -387,7 +440,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "홈페이지",
@@ -443,7 +499,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "overtypedSummary": "기아자동차가 2년 연속 미국의 최고 권위 시장조사 업체 제이디 파워 (J.D. Power)가 선정한 2017 최고 품질 상인 ‘Initial Quality Study (IQS)’를 수상했다 2 overtype.",
           "id": "urn:bbc:ares::asset:korean/features-23136354",
           "type": "cps"
@@ -473,7 +532,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/features-23132180",
           "type": "cps"
         },
@@ -502,7 +564,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132179",
           "type": "cps"
         },
@@ -531,7 +596,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132176",
           "type": "cps"
         },
@@ -567,7 +635,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/media-23132235",
           "type": "cps"
         },
@@ -596,7 +667,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/features-23132184",
           "type": "cps"
         },
@@ -625,7 +699,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132255",
           "type": "cps"
         },
@@ -654,13 +731,16 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132245",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T18:07:57.06Z",
+        "generated": "2023-02-17T18:07:56.626Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -793,7 +873,10 @@
                 "name": "Jamila Ibrahimova",
                 "title": "BBC Azeri",
                 "persons": [
-                  { "name": "Jamila Ibrahimova", "function": "BBC Azeri" }
+                  {
+                    "name": "Jamila Ibrahimova",
+                    "function": "BBC Azeri"
+                  }
                 ]
               },
               "indexImage": {
@@ -1056,7 +1139,10 @@
                 "name": "Jong Un Kim",
                 "title": "Korea Correspondent",
                 "persons": [
-                  { "name": "Jong Un Kim", "function": "Korea Correspondent" }
+                  {
+                    "name": "Jong Un Kim",
+                    "function": "Korea Correspondent"
+                  }
                 ]
               },
               "indexImage": {

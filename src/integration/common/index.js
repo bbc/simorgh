@@ -18,6 +18,9 @@ import runImageTests from './image';
 import runAppleItunesAppBannerTests from './appleItunesAppBanner';
 import runStoryPromoTests from './storyPromo';
 import runSectionTests from './sections';
+import runMostReadTests from './mostReadTests';
+import runAmpAdsTests from './ads.amp';
+import runCanonicalAdsTests from './ads.canonical';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -40,6 +43,7 @@ export {
   runMainHeadingTests,
   runMediaPlaceholderTests,
   runMediaPlayerEmbedTests,
+  runMostReadTests,
   runRadioScheduleTests,
   runRecentEpisodesTests,
   runCrossPlatformSEOTests,
@@ -49,4 +53,6 @@ export {
   runAppleItunesAppBannerTests,
   runStoryPromoTests,
   runSectionTests,
+  runAmpAdsTests,
+  runCanonicalAdsTests,
 };

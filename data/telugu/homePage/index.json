@@ -1,0 +1,61 @@
+{
+  "data": {
+    "title": "BBC News తెలుగు",
+    "description": "ప్రపంచం నలుమూలలా విస్తరించిన బీబీసీ నెట్‌వర్క్ అందించే నిస్పాక్షికమైన వార్తలు, సామాజిక ఆర్థిక రాజకీయ రంగాలపై లోతైన విశ్లేషణలు, ఆరోగ్యం- శాస్ర్త సాంకేతిక అంశాలపై సునిశితమైన కథనాలు, గ్రౌండ్ రిపోర్ట్స్, వీడియోలు, ఫొటోగ్యాలరీలు, ఇంకా మీరు కోరుకునే మరెన్నో ఫీచర్ల కోసం బీబీసీ న్యూస్ తెలుగు చూడండి.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M27S",
+            "title": "అదృష్టం అంటే అతడిదే.. ఆ ఒక్క రాయి కోటీశ్వరుణ్ని చేసింది",
+            "firstPublished": "2023-04-03T15:55:25.555Z",
+            "link": "https://www.bbc.com/telugu/articles/c72qx7n732vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d6dc/live/39a30230-d234-11ed-be2e-754a65c11505.jpg",
+            "description": "ఆ రాయి నాలుగున్నర కిలోల బరువు ఉంది. దాన్ని కొంచెం పరీక్షించి చూడగా, అందులో బంగారం ఉందని ఆయనకు తెలిసింది. దాని విలువ 5 లక్షల రూపాయల వరకైనా ఉంటుందని తెగ సంతోషపడ్డాడు. దాన్ని బంగారం వ్యాపారి దగ్గరికి వెళ్లి చూపించగా తెలిసింది.. దాని విలువ లక్షలు కాదు.. కోట్లు అని. ",
+            "imageAlt": "బంగారం రాయి",
+            "id": "c72qx7n732vo"
+          },
+          {
+            "type": "article",
+            "title": "పుతిన్‌‌ను అరెస్టు చేయడం సాధ్యమేనా, అయితే ఎవరు చేస్తారు, ఎలా చేస్తారు?",
+            "firstPublished": "2023-04-02T14:35:03.951Z",
+            "link": "https://www.bbc.com/telugu/articles/czvwp1ed1ero",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a355/live/82365740-d158-11ed-be2e-754a65c11505.jpg",
+            "description": "‘‘సాక్ష్యాధారాల కొరత లేదు. ప్రజల్ని చంపడం, బాంబులు వేయడం, యుద్ధ ప్రాంతాల్లోకి ప్రజల్ని ఈడ్చుకెళ్లడం వంటి ఘటనలకు సంబంధించి మా వద్ద వీడియో ఫుటేజీ ఉంది’’",
+            "imageAlt": "వ్లాదిమిర్ పుతిన్ ",
+            "id": "czvwp1ed1ero"
+          },
+          {
+            "type": "article",
+            "title": "క్యాన్సర్: సర్జరీ తర్వాత కీమో థెరపీ అవసరమేనా? ఈ రక్త పరీక్ష చెప్పేస్తుంది",
+            "firstPublished": "2023-04-03T07:34:25.700Z",
+            "link": "https://www.bbc.com/telugu/articles/c4nj7er6plqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/044c/live/fa6e4890-cfc2-11ed-be2e-754a65c11505.jpg",
+            "description": "బ్రిటన్‌లో బోవెల్ క్యాన్సర్ బాధితులపై ఒక అధ్యయనం జరుగుతోంది. సర్జరీతో రోగుల్లోని అన్ని కణితులను తొలగించారో లేదో నిర్ధారించేందుకు ఈ పరీక్షను నిర్వహిస్తున్నారు.",
+            "imageAlt": "కీమోథెరపీ",
+            "id": "c4nj7er6plqo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:fbd507af-e3e2-4c50-a085-a73de25c38ce",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "ఫీచర్లు",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cp54eww9emgt",
+        "contentType": "index-home",
+        "pageIdentifier": "telugu.page",
+        "pageTitle": "BBC News తెలుగు"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

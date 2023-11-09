@@ -123,6 +123,17 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   display: none;
 }
 
+.emotion-13:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -134,7 +145,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.emotion-17>svg {
+.emotion-16>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -142,7 +153,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 1.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -151,12 +162,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 0.75rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: block;
   width: 100%;
 }
@@ -188,33 +199,43 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           />
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="focusIndicatorRemove emotion-12 emotion-13 emotion-14"
         >
           <span
-            class="emotion-15 emotion-16"
+            class="emotion-15"
           >
             Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
           </span>
           <div
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
           >
             <svg
               aria-hidden="true"
-              class="emotion-19 emotion-20"
+              class="emotion-18 emotion-19"
               focusable="false"
-              height="12px"
-              viewBox="0 0 32 32"
-              width="12px"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <polygon
-                points="3,32 29,16 3,0"
-              />
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M.5.6h12v12H.5z"
+                />
+                <path
+                  d="M2.144.96v11.28l8.712-5.64z"
+                  fill="currentColor"
+                />
+              </g>
             </svg>
           </div>
           <time
             aria-hidden="true"
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             datetime="PT3M11S"
           >
             03:11
@@ -222,7 +243,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         </button>
         <img
           alt=""
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
         />
       </div>
@@ -266,9 +287,12 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
         allow="autoplay"
         allowfullscreen=""
         class="emotion-4 emotion-5"
+        height="362.953125"
+        loading="lazy"
         scrolling="no"
         src="/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
+        width="645.25"
       />
       <noscript />
     </div>

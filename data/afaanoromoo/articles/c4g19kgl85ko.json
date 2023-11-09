@@ -5,139 +5,203 @@
         "model": {
           "blocks": [
             {
-              "id": "ee23ef6a",
+              "id": "c7bfe810",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "48713713",
+                    "id": "f192e841",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e866a6ec",
+                          "id": "0efa4d28",
                           "type": "paragraph",
                           "model": {
                             "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
                             "blocks": [
                               {
-                                "id": "4d580fac",
+                                "id": "a4aeb169",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "41b059e9",
+              "id": "1d6abb07",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "99ece444",
+                    "id": "1aa015ef",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8060a79a",
+                          "id": "b17ac28d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2b9e2855",
+                                "id": "3e97e175",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "",
                                   "blocks": [
                                     {
-                                      "id": "dd630b69",
+                                      "id": "1966d6fe",
                                       "type": "fragment",
-                                      "model": { "text": "", "attributes": [] },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
-                                "id": "fdc0def4",
+                                "id": "72f1741c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
                                   "blocks": [
                                     {
-                                      "id": "8c59a970",
+                                      "id": "df8ab09b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 2, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 2]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
-                    "id": "6bafcb04",
+                    "id": "404679d2",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e031134e",
+                          "id": "3d223ddd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d9989a23",
+                                "id": "5a928a23",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Yaada dhiheenya kana ka'aa jiruuf ",
                                   "blocks": [
                                     {
-                                      "id": "23046726",
+                                      "id": "5855f22a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Yaada dhiheenya kana ka'aa jiruuf ",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
-                    "id": "5fdb357d",
+                    "id": "d52e2675",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -146,147 +210,206 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "43c1a8a3",
+              "id": "4d61bf4a",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936153914,
                 "lastPublished": 1569857685157
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
-              "id": "a155adb2",
+              "id": "9d485ef1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "379360f5",
+                    "id": "5a7ea8e9",
                     "type": "paragraph",
                     "model": {
                       "text": "Inline link Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf yaada yeroo dhiyeessan.",
                       "blocks": [
                         {
-                          "id": "809a0e51",
+                          "id": "785acf74",
                           "type": "urlLink",
                           "model": {
                             "text": "Inline link",
                             "blocks": [
                               {
-                                "id": "6c6dad82",
+                                "id": "36e73e15",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Inline link",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/afrique/articles/cz216x22106o",
                             "isExternal": false
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
-                          "id": "ab940666",
+                          "id": "11ae4a56",
                           "type": "fragment",
                           "model": {
                             "text": " Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ",
                             "attributes": []
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
-                          "id": "eb3f5a4d",
+                          "id": "af81c456",
                           "type": "urlLink",
                           "model": {
                             "text": "yaada yeroo dhiyeessan",
                             "blocks": [
                               {
-                                "id": "85e6987a",
+                                "id": "dfee7069",
                                 "type": "fragment",
                                 "model": {
                                   "text": "yaada yeroo dhiyeessan",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 3, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  3,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 3]
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         },
                         {
-                          "id": "41798d79",
+                          "id": "975e4c93",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 4]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            4
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
-              "id": "c2708a38",
+              "id": "45b8091b",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "bf046cd0",
+                    "id": "b91617ca",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f39ee154",
+                          "id": "a1961aea",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "93c31ca0",
+                                "id": "36cb15a1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
                                   "blocks": [
                                     {
-                                      "id": "630b5cec",
+                                      "id": "e693430a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
-                    "id": "9aa378e5",
+                    "id": "cf1b52e7",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4df6d205",
+                          "id": "0753ab08",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -304,7 +427,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -318,18 +443,24 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
-                          "id": "49841c6f",
+                          "id": "d0261f73",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4c477e95",
+                                "id": "80cfd12a",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -338,140 +469,210 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
-                                "id": "c1a9fc69",
+                                "id": "2dfe625c",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c28f1adf",
+                                      "id": "0aa915fb",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "df239350",
+                                            "id": "aa3ef4f3",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "4df89d25",
+                                                  "id": "a0626dc3",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
-              "id": "1d429ed6",
+              "id": "9a7ffd19",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e367161c",
+                    "id": "1cc3be16",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0ba2d7c1",
+                          "id": "916fa289",
                           "type": "paragraph",
                           "model": {
                             "text": "Waliigalteen sun waltumsuuf\n\n",
                             "blocks": [
                               {
-                                "id": "3ed8edfd",
+                                "id": "7f73f111",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Waliigalteen sun waltumsuuf\n\n",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
-              "id": "56a97cf1",
+              "id": "bd3db46c",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "92b083f6",
+                    "id": "130bba14",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "686e68c4",
+                          "id": "5abdd636",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ab1d4204",
+                                "id": "b5c747de",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballers after a match",
                                   "blocks": [
                                     {
-                                      "id": "6483610d",
+                                      "id": "aeaa92cb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballers after a match",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
-                    "id": "3432cd7a",
+                    "id": "e4d3435e",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -480,41 +681,72 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
-              "id": "0d62191a",
+              "id": "729256eb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "66e254fd",
+                    "id": "e18dcf52",
                     "type": "paragraph",
                     "model": {
                       "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
                       "blocks": [
                         {
-                          "id": "62f6ace1",
+                          "id": "f8ddf2b9",
                           "type": "fragment",
                           "model": {
                             "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "bdf50e6a", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "2e9017b0",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "08cef0cb",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
           ]
         }
       },
@@ -527,11 +759,8 @@
         "type": "article",
         "createdBy": "Afaanoromoo",
         "language": "om",
-        "lastUpdated": 1619441332471,
         "firstPublished": 1562936153914,
         "lastPublished": 1569857685157,
-        "timestamp": 1569857685157,
-        "options": {},
         "analyticsLabels": {
           "producer": "Afaan Oromoo",
           "page": "afaanoromoo.articles.c4g19kgl85ko.page"
@@ -539,13 +768,8 @@
         "passport": {
           "language": "om",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
-          "locator": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -560,17 +784,9 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "canonicalUrl": "https://www.bbc.com/afaanoromoo/articles/c4g19kgl85ko"
-        },
-        "timestamp": 1569857685157,
-        "suitableForSyndication": false,
-        "language": "om",
         "headlines": {
           "seoHeadline": "Namoonni godaanan kunneen hedduun isaanii biyya isaaniirraa miidhaa fi hiyyummaa warra baqatanii karaa.",
           "promoHeadline": {
@@ -618,7 +834,10 @@
                               "blocks": [
                                 {
                                   "type": "fragment",
-                                  "model": { "text": "", "attributes": [] }
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
                                 }
                               ]
                             }
@@ -699,7 +918,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -708,32 +930,15 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "om",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
-          "locator": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:c4g19kgl85ko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Afaanoromoo",
-          "uri": "/afaanoromoo",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Masiriin Pireezidantii Filachuuf jirti" },
+          "headlines": {
+            "headline": "Masiriin Pireezidantii Filachuuf jirti"
+          },
           "locators": {
             "assetUri": "/afaanoromoo/23193700",
             "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23193700",
@@ -776,7 +981,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -833,7 +1041,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -881,7 +1092,10 @@
             "copyrightHolder": "Yadeta",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141504",
           "type": "cps"
@@ -927,7 +1141,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142445",
           "type": "cps"
         },
@@ -958,7 +1175,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141324",
           "type": "cps"
         },
@@ -1001,7 +1221,10 @@
             "copyrightHolder": "Reuters",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Oduu",
@@ -1012,7 +1235,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Guyyaa xumuraa dhiifama Saawudii" },
+          "headlines": {
+            "headline": "Guyyaa xumuraa dhiifama Saawudii"
+          },
           "locators": {
             "assetUri": "/afaanoromoo/oduu-23142374",
             "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142374",
@@ -1046,7 +1271,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142374",
           "type": "cps"
         },
@@ -1089,7 +1317,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23143414",
           "type": "cps"
         },
@@ -1107,7 +1338,10 @@
           "timestamp": 1500988312000,
           "language": "om",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142344",
           "type": "cps"
         },
@@ -1138,7 +1372,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141354",
           "type": "cps"
         },
@@ -1169,7 +1406,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "overtypedSummary": "Gareen barattootaa Awutobisii guddaa asiidii goondaan maddisiistu \"Formic Acid\" jedhamuun socho'u kalaqan.",
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141155",
           "type": "cps"
@@ -1211,13 +1451,16 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141334",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:06:59.878Z",
+        "generated": "2023-02-18T03:06:57.663Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

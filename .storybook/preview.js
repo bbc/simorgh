@@ -3,10 +3,16 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
+import DocsDecorator from './DocsDecorator';
+import ThemeProvider from '../src/app/components/ThemeProvider';
+import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
+import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
+import { UserContextProvider } from '../src/app/contexts/UserContext';
+import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
+import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -311,10 +317,245 @@ addDecorator(story => {
   );
 });
 
-const theme = create({
-  base: 'light',
-  brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
+export const globalTypes = {
+  service: {
+    name: 'service',
+    description: 'Global service',
+    defaultValue: { service: 'news', variant: 'default' },
+    toolbar: {
+      icon: 'globe',
+      items: [
+        {
+          value: { service: 'afaanoromoo', variant: 'default' },
+          title: 'afaanoromoo',
+        },
+        {
+          value: { service: 'afrique', variant: 'default' },
+          title: 'afrique',
+        },
+        {
+          value: { service: 'amharic', variant: 'default' },
+          title: 'amharic',
+        },
+        {
+          value: { service: 'arabic', variant: 'default' },
+          title: 'arabic',
+        },
+        {
+          value: { service: 'archive', variant: 'default' },
+          title: 'archive',
+        },
+        {
+          value: { service: 'azeri', variant: 'default' },
+          title: 'azeri',
+        },
+        {
+          value: { service: 'bengali', variant: 'default' },
+          title: 'bengali',
+        },
+        {
+          value: { service: 'burmese', variant: 'default' },
+          title: 'burmese',
+        },
+        {
+          value: { service: 'cymrufyw', variant: 'default' },
+          title: 'cymrufyw',
+        },
+        {
+          value: { service: 'gahuza', variant: 'default' },
+          title: 'gahuza',
+        },
+        {
+          value: { service: 'gujarati', variant: 'default' },
+          title: 'gujarati',
+        },
+        {
+          value: { service: 'hausa', variant: 'default' },
+          title: 'hausa',
+        },
+        {
+          value: { service: 'hindi', variant: 'default' },
+          title: 'hindi',
+        },
+        {
+          value: { service: 'igbo', variant: 'default' },
+          title: 'igbo',
+        },
+        {
+          value: { service: 'indonesia', variant: 'default' },
+          title: 'indonesia',
+        },
+        {
+          value: { service: 'japanese', variant: 'default' },
+          title: 'japanese',
+        },
+        {
+          value: { service: 'korean', variant: 'default' },
+          title: 'korean',
+        },
+        {
+          value: { service: 'kyrgyz', variant: 'default' },
+          title: 'kyrgyz',
+        },
+        {
+          value: { service: 'marathi', variant: 'default' },
+          title: 'marathi',
+        },
+        {
+          value: { service: 'mundo', variant: 'default' },
+          title: 'mundo',
+        },
+        {
+          value: { service: 'naidheachdan', variant: 'default' },
+          title: 'naidheachdan',
+        },
+        {
+          value: { service: 'nepali', variant: 'default' },
+          title: 'nepali',
+        },
+        {
+          value: { service: 'news', variant: 'default' },
+          title: 'news',
+        },
+        {
+          value: { service: 'newsround', variant: 'default' },
+          title: 'newsround',
+        },
+        {
+          value: { service: 'pashto', variant: 'default' },
+          title: 'pashto',
+        },
+        {
+          value: { service: 'persian', variant: 'default' },
+          title: 'persian',
+        },
+        {
+          value: { service: 'pidgin', variant: 'default' },
+          title: 'pidgin',
+        },
+        {
+          value: { service: 'portuguese', variant: 'default' },
+          title: 'portuguese',
+        },
+        {
+          value: { service: 'punjabi', variant: 'default' },
+          title: 'punjabi',
+        },
+        {
+          value: { service: 'russian', variant: 'default' },
+          title: 'russian',
+        },
+        {
+          value: { service: 'scotland', variant: 'default' },
+          title: 'scotland',
+        },
+        {
+          value: { service: 'sport', variant: 'default' },
+          title: 'sport',
+        },
+        {
+          value: { service: 'sinhala', variant: 'default' },
+          title: 'sinhala',
+        },
+        {
+          value: { service: 'somali', variant: 'default' },
+          title: 'somali',
+        },
+        {
+          value: { service: 'swahili', variant: 'default' },
+          title: 'swahili',
+        },
+        {
+          value: { service: 'tamil', variant: 'default' },
+          title: 'tamil',
+        },
+        {
+          value: { service: 'telugu', variant: 'default' },
+          title: 'telugu',
+        },
+        {
+          value: { service: 'thai', variant: 'default' },
+          title: 'thai',
+        },
+        {
+          value: { service: 'tigrinya', variant: 'default' },
+          title: 'tigrinya',
+        },
+        {
+          value: { service: 'turkce', variant: 'default' },
+          title: 'turkce',
+        },
+        {
+          value: { service: 'urdu', variant: 'default' },
+          title: 'urdu',
+        },
+        {
+          value: { service: 'uzbek', variant: 'default' },
+          title: 'uzbek',
+        },
+        {
+          value: { service: 'vietnamese', variant: 'default' },
+          title: 'vietnamese',
+        },
+        {
+          value: { service: 'yoruba', variant: 'default' },
+          title: 'yoruba',
+        },
+        {
+          value: { service: 'serbian', variant: 'cyr' },
+          title: 'serbian-cyr',
+        },
+        {
+          value: { service: 'serbian', variant: 'lat' },
+          title: 'serbian-lat',
+        },
+        {
+          value: { service: 'ukchina', variant: 'simp' },
+          title: 'ukchina-simp',
+        },
+        {
+          value: { service: 'ukchina', variant: 'trad' },
+          title: 'ukchina-trad',
+        },
+        {
+          value: { service: 'zhongwen', variant: 'simp' },
+          title: 'zhongwen-simp',
+        },
+        {
+          value: { service: 'zhongwen', variant: 'trad' },
+          title: 'zhongwen-trad',
+        },
+        {
+          value: { service: 'ukrainian', variant: 'default' },
+          title: 'ukrainian-default',
+        },
+        {
+          value: { service: 'ukrainian', variant: 'ru-UA' },
+          title: 'ukrainian-ru-UA',
+        },
+      ],
+      dynamicTitle: true,
+    },
+  },
+};
+
+addDecorator((Story, context) => {
+  return (
+    <ThemeProvider service={context.globals.service.service}>
+      <ToggleContextProvider toggles={{}}>
+        <ServiceContextProvider
+          service={context.globals.service.service}
+          variant={context.globals.service.variant}
+        >
+          <EventTrackingContextProvider pageData={pageDataFixture}>
+            <UserContextProvider>
+              <Story />
+            </UserContextProvider>
+          </EventTrackingContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
+  );
 });
 
 export const parameters = {
@@ -322,6 +563,21 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme,
+  },
+  docs: {
+    container: ({ context, children }) => DocsDecorator({ context, children }),
+  },
+  backgrounds: {
+    default: 'CPS',
+    values: [
+      {
+        name: 'Optimo',
+        value: '#F6F6F6',
+      },
+      {
+        name: 'CPS',
+        value: '#FFFFFF',
+      },
+    ],
   },
 };

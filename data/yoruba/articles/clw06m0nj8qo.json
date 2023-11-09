@@ -5,123 +5,173 @@
         "model": {
           "blocks": [
             {
-              "id": "0b81fa2d",
+              "id": "9fb22860",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a4f6676a",
+                    "id": "b3804dac",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c53d17ef",
+                          "id": "f514ee00",
                           "type": "paragraph",
                           "model": {
                             "text": "Eyi ni akọle ti nkan idanwo yii",
                             "blocks": [
                               {
-                                "id": "3cba2619",
+                                "id": "509747f5",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Eyi ni akọle ti nkan idanwo yii",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "db0b0f8b",
+              "id": "b031bffa",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "aeb9e02f",
+                    "id": "5f72c0fe",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c391f2a2",
+                          "id": "d0becfb5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e4231d4d",
+                                "id": "686e5c6f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori.",
                                   "blocks": [
                                     {
-                                      "id": "e2022b67",
+                                      "id": "9d93e232",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
-                    "id": "8efb04e2",
+                    "id": "ad6c8d86",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4a01bbd3",
+                          "id": "aa6fd456",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2c82a369",
+                                "id": "b63ccf4d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Maapu ti Ilu Faranse ṣafihan Paris ati Cognac",
                                   "blocks": [
                                     {
-                                      "id": "a3646bae",
+                                      "id": "8c595bb2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Maapu ti Ilu Faranse ṣafihan Paris ati Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
-                    "id": "da5274da",
+                    "id": "697ad13b",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -130,120 +180,163 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "113726b1",
+              "id": "bba6b0bd",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936993391,
                 "lastPublished": 1569601498248
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
-              "id": "ef0488c9",
+              "id": "1e1f4e70",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1c1aca8a",
+                    "id": "25cbc478",
                     "type": "paragraph",
                     "model": {
                       "text": "Eyi jẹ ohun idena ọrọ kan, eyiti o ni ọna asopọ url kan si oju-iwe Oju opo Oju opo BBC.",
                       "blocks": [
                         {
-                          "id": "0e48c867",
+                          "id": "39ba0488",
                           "type": "fragment",
                           "model": {
                             "text": "Eyi jẹ ohun idena ọrọ kan, eyiti o ni ọna asopọ url kan si oju-iwe ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
-                          "id": "051b5fb9",
+                          "id": "4c099a80",
                           "type": "urlLink",
                           "model": {
                             "text": "Oju opo Oju opo BBC.",
                             "blocks": [
                               {
-                                "id": "c98b0c55",
+                                "id": "41b35692",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Oju opo Oju opo BBC.",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.com/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
-              "id": "c80c6113",
+              "id": "9899edc1",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "b2bcee7c",
+                    "id": "b0fab16c",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "45e2f9d3",
+                          "id": "0b951050",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a5e0f751",
+                                "id": "97f2ed7a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Eyi jẹ ohun idena fidio ti o ni fidio kan nipa kokoro",
                                   "blocks": [
                                     {
-                                      "id": "b48e0e15",
+                                      "id": "30b69d45",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Eyi jẹ ohun idena fidio ti o ni fidio kan nipa kokoro",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
-                    "id": "c3e74aba",
+                    "id": "80257817",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c7fa8bd1",
+                          "id": "840b3855",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,18 +370,24 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
-                          "id": "c71c2b3c",
+                          "id": "fadb6ba3",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b86aa3f0",
+                                "id": "63bff788",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -295,140 +396,210 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
-                                "id": "8688d1a1",
+                                "id": "3e396d57",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "00fdce78",
+                                      "id": "057f2bbf",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "4d84b342",
+                                            "id": "7d828315",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "402ea15b",
+                                                  "id": "2ddd5c18",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
-              "id": "8275eb92",
+              "id": "ddd4dd5c",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a7dd73f3",
+                    "id": "71c2fec5",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f4972430",
+                          "id": "8b3ef305",
                           "type": "paragraph",
                           "model": {
                             "text": "Eyi jẹ ohun idena isalẹ-isalẹ",
                             "blocks": [
                               {
-                                "id": "a49f175f",
+                                "id": "dc8b490b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Eyi jẹ ohun idena isalẹ-isalẹ",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
-              "id": "0073eaec",
+              "id": "7aeb5dd3",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "01f3b868",
+                    "id": "a86c4b0d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "41804bb9",
+                          "id": "46f39329",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "17591359",
+                                "id": "8c846fab",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rAwọn ẹlẹsẹ lẹhin bọọlu kan",
                                   "blocks": [
                                     {
-                                      "id": "55d2a613",
+                                      "id": "f03872d2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rAwọn ẹlẹsẹ lẹhin bọọlu kan",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
-                    "id": "e267aa63",
+                    "id": "eea7520f",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -437,72 +608,115 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
-              "id": "e0fe2c80",
+              "id": "48266038",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "7013eba1",
+                    "id": "beb6d418",
                     "type": "paragraph",
                     "model": {
                       "text": "A ti ṣẹda nkan idanwo yii ki a le ṣiṣẹ awọn idanwo ipari-si-opin lori oju opo wẹẹbu wa.",
                       "blocks": [
                         {
-                          "id": "adce5e6f",
+                          "id": "84fb4604",
                           "type": "fragment",
                           "model": {
                             "text": "A ti ṣẹda nkan idanwo yii ki a le ṣiṣẹ awọn idanwo ipari-si-opin lori oju opo wẹẹbu wa.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
-                    "id": "6a8e7196",
+                    "id": "7b889a7a",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a link to the test article in Afaan Oromoo",
                       "blocks": [
                         {
-                          "id": "199b305b",
+                          "id": "839275df",
                           "type": "urlLink",
                           "model": {
                             "text": "This is a link to the test article in Afaan Oromoo",
                             "blocks": [
                               {
-                                "id": "da71ef9b",
+                                "id": "6983eaca",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a link to the test article in Afaan Oromoo",
                                   "attributes": []
                                 },
-                                "position": [8, 2, 1, 1]
+                                "position": [
+                                  8,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/afaanoromoo/articles/c4g19kgl85ko",
                             "isExternal": false
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "ccdf81df", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "813a49fb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "a5de70df",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
           ]
         }
       },
@@ -515,11 +729,8 @@
         "type": "article",
         "createdBy": "Yoruba",
         "language": "yo",
-        "lastUpdated": 1598599661328,
         "firstPublished": 1562936993391,
         "lastPublished": 1569601498248,
-        "timestamp": 1569601498248,
-        "options": {},
         "analyticsLabels": {
           "producer": "Yoruba",
           "page": "yoruba.articles.clw06m0nj8qo.page"
@@ -527,12 +738,8 @@
         "passport": {
           "language": "yo",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba",
-          "locator": "urn:bbc:optimo:asset:clw06m0nj8qo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -547,37 +754,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:clw06m0nj8qo",
-          "canonicalUrl": "https://www.bbc.com/yoruba/articles/clw06m0nj8qo"
-        },
-        "timestamp": 1569601498248,
-        "suitableForSyndication": false,
-        "language": "yo",
-        "headlines": { "seoHeadline": "Eyi ni akọle SEO ti nkan idanwo yii" },
-        "images": {},
-        "passport": {
-          "language": "yo",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba",
-          "locator": "urn:bbc:optimo:asset:clw06m0nj8qo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:clw06m0nj8qo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Yoruba",
-          "uri": "/yoruba",
-          "type": "simple"
-        },
-        "groups": []
+        "headlines": {
+          "seoHeadline": "Eyi ni akọle SEO ti nkan idanwo yii"
+        }
       }
     },
     "secondaryData": {
@@ -610,7 +792,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -647,7 +832,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:yoruba/agbaye-23450016",
           "type": "cps"
         },
@@ -688,7 +876,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:yoruba/live/afrika-23185903",
           "type": "cps"
         }
@@ -733,7 +924,10 @@
             "copyrightHolder": "Mario Macilau/Water Aid",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -804,7 +998,10 @@
             "copyrightHolder": "Ileese ologun ",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -815,7 +1012,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Iroyin Iseju kan lori BBC Yoruba" },
+          "headlines": {
+            "headline": "Iroyin Iseju kan lori BBC Yoruba"
+          },
           "locators": {
             "assetUri": "/yoruba/23175823",
             "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175823",
@@ -831,7 +1030,9 @@
             "subType": "clip",
             "format": "audio",
             "title": "Iroyin Iseju kan lori BBC Yoruba",
-            "synopses": { "short": "Iroyin Iseju kan lori BBC Yoruba" },
+            "synopses": {
+              "short": "Iroyin Iseju kan lori BBC Yoruba"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01fq9sm.png",
             "embedding": true,
             "advertising": true,
@@ -839,11 +1040,16 @@
             "versions": [
               {
                 "versionId": "p01fq9rq",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 55,
                 "durationISO8601": "PT55S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1514911247000
               }
             ],
@@ -874,7 +1080,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:yoruba/23175823",
           "type": "cps"
         },
@@ -918,7 +1127,10 @@
             "copyrightHolder": " Ibitoye Reuben Idowu/Facebook",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:yoruba/23175631",
           "type": "cps"
         },
@@ -961,7 +1173,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -998,7 +1213,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -1047,7 +1265,10 @@
             "copyrightHolder": "Christina Lee/ Facebook",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:yoruba/media-23175861",
           "type": "cps"
         },
@@ -1090,7 +1311,10 @@
             "copyrightHolder": "Iwe iroyin Guardian",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Àbáwọlé",
@@ -1102,7 +1326,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:13:58.99Z",
+        "generated": "2023-02-17T21:13:57.547Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

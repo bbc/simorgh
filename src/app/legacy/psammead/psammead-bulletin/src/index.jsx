@@ -8,13 +8,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  C_WHITE,
-  C_POSTBOX,
-  C_SHADOW,
-  C_EBON,
-  C_LUNAR,
-} from '#psammead/psammead-styles/src/colours';
 import { string, oneOf, node, bool, shape } from 'prop-types';
 import {
   getSansRegular,
@@ -27,23 +20,23 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
-const bulletinWrapperStyles = `
+const bulletinWrapperStyles = ({ theme }) => `
   position: relative;
-  background-color: ${C_LUNAR};
+  background-color: ${theme.palette.LUNAR};
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: ${GEL_SPACING_DBL};
+  grid-column-gap: ${`${theme.spacings.DOUBLE}rem`};
 `;
 
 const RadioBulletinWrapper = styled.div`
   ${bulletinWrapperStyles};
-  background-color: ${C_LUNAR};
+  background-color: ${props => props.theme.palette.LUNAR};
 `;
 
 const TVBulletinWrapper = styled.div`
@@ -53,8 +46,8 @@ const TVBulletinWrapper = styled.div`
   }
 `;
 
-const headingStyles = ({ service }) => `
-  color: ${C_EBON};
+const headingStyles = ({ service, theme }) => `
+  color: ${theme.palette.EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
   ${service && getSerifMedium(service)}
@@ -114,7 +107,7 @@ const bulletinSummaryStyles = {
 };
 
 const BulletinSummary = styled.p`
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
   ${({ script }) => script && getLongPrimer(script)}
@@ -126,7 +119,7 @@ const IconWrapper = styled.span`
   display: flex;
   align-items: center;
   > svg {
-    color: ${C_WHITE};
+    color: ${props => props.theme.palette.WHITE};
     fill: currentColor;
     width: 1.0625rem;
     height: ${GEL_SPACING_DBL};
@@ -159,9 +152,11 @@ const playCtaStyles = {
 };
 
 const PlayCTA = styled.div`
-  background-color: ${({ isLive }) => (isLive ? C_POSTBOX : C_EBON)};
+  background-color: ${({ isLive }) =>
+    props =>
+      isLive ? props.theme.palette.POSTBOX : props.theme.palette.EBON};
   border: 0.0625rem solid transparent;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   padding: 0.75rem;
   display: flex;
   align-items: center;
@@ -208,11 +203,13 @@ const Bulletin = ({
           bulletinType={bulletinType}
           dir={dir}
         >
-          <Link href={ctaLink} aria-labelledby={`bulletin-${sanitisedAriaId}`}>
+          <Link
+            className="focusIndicatorDisplayBlock"
+            href={ctaLink}
+            aria-labelledby={`bulletin-${sanitisedAriaId}`}
+          >
             {isLive ? (
               <LiveLabel
-                service={service}
-                dir={dir}
                 liveText={liveText}
                 ariaHidden
                 offScreenText={offScreenText}

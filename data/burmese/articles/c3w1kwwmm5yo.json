@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "8dc648b7",
+              "id": "77b74455",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "30b62e36",
+                    "id": "dc59fcb1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2c8f8df8",
+                          "id": "805d58f3",
                           "type": "paragraph",
                           "model": {
                             "text": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်",
                             "blocks": [
                               {
-                                "id": "d9f0350d",
+                                "id": "89094252",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်",
@@ -42,7 +42,7 @@
               "position": [1]
             },
             {
-              "id": "63dea81f",
+              "id": "e9d9730b",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942742355,
@@ -51,18 +51,18 @@
               "position": [2]
             },
             {
-              "id": "54d9050e",
+              "id": "ba66c66f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5861e100",
+                    "id": "0497ce08",
                     "type": "paragraph",
                     "model": {
                       "text": "ပုဂံကို မြန်မာ့ယဉ်ကျေးမှုရဲ့ ပုခက်လို့ သဘောထားကြပါတယ်။ အိန္ဒိယဆန်တဲ့ ဗိသုကာ စေတီပုထိုးတွေနဲ့ ထင်ရှားတဲ့ ပုဂံဟာ မြန်မာသမိုင်းမှာ ဂန္ထဝင်ခေတ်ကြီးတခေတ် ထွန်းကားခဲ့တဲ့ ကာလကို ပြန်ပြီး အမှတ်ရစေတဲ့ မြို့ဟောင်းကြီး ဖြစ်ပါတယ်။",
                       "blocks": [
                         {
-                          "id": "e6cff03b",
+                          "id": "0d6f4b4c",
                           "type": "fragment",
                           "model": {
                             "text": "ပုဂံကို မြန်မာ့ယဉ်ကျေးမှုရဲ့ ပုခက်လို့ သဘောထားကြပါတယ်။ အိန္ဒိယဆန်တဲ့ ဗိသုကာ စေတီပုထိုးတွေနဲ့ ထင်ရှားတဲ့ ပုဂံဟာ မြန်မာသမိုင်းမှာ ဂန္ထဝင်ခေတ်ကြီးတခေတ် ထွန်းကားခဲ့တဲ့ ကာလကို ပြန်ပြီး အမှတ်ရစေတဲ့ မြို့ဟောင်းကြီး ဖြစ်ပါတယ်။",
@@ -75,16 +75,16 @@
                     "position": [3, 1]
                   },
                   {
-                    "id": "6099d19f",
+                    "id": "2946f42a",
                     "type": "paragraph",
                     "model": {
-                      "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
+                      "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
                       "blocks": [
                         {
-                          "id": "a8386cf7",
+                          "id": "17d0489f",
                           "type": "fragment",
                           "model": {
-                            "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
+                            "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
                             "attributes": []
                           },
                           "position": [3, 2, 1]
@@ -97,7 +97,20 @@
               },
               "position": [3]
             },
-            { "id": "651ce919", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "ed5f1223",
+              "type": "mpu",
+              "model": {},
+              "position": [4]
+            },
+            {
+              "id": "03f11d1f",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [5]
+            }
           ]
         }
       },
@@ -110,11 +123,8 @@
         "type": "article",
         "createdBy": "Burmese",
         "language": "my",
-        "lastUpdated": 1645628419089,
         "firstPublished": 1562942742355,
         "lastPublished": 1562942742355,
-        "timestamp": 1562942742355,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3w1kwwmm5yo",
           "producer": "Burmese",
@@ -125,52 +135,27 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
         "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3w1kwwmm5yo",
-          "canonicalUrl": "https://www.bbc.com/burmese/articles/c3w1kwwmm5yo"
-        },
-        "timestamp": 1562942742355,
-        "suitableForSyndication": false,
-        "language": "my",
         "headlines": {
           "seoHeadline": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်"
-        },
-        "images": {},
-        "passport": {
-          "language": "my",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3w1kwwmm5yo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Burmese",
-          "uri": "/burmese",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်" },
+          "headlines": {
+            "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်"
+          },
           "locators": {
             "assetUri": "/burmese/live/burma-23285674",
             "cpsUrn": "urn:bbc:content:assetUri:burmese/live/burma-23285674",
             "assetId": "23285674"
           },
-          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
           "timestamp": 1586255436000,
           "language": "my",
           "cpsType": "LIV",
@@ -197,7 +182,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:burmese/live/burma-23285674",
           "type": "cps"
@@ -235,7 +223,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -247,8 +238,8 @@
           "type": "cps"
         },
         {
-          "name": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်",
-          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "name": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်",
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
           "indexImage": {
             "id": "63503483",
             "subType": "index",
@@ -308,7 +299,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
@@ -356,7 +350,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
@@ -404,7 +401,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
@@ -416,11 +416,11 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:51:57.475Z",
+        "generated": "2023-02-17T16:36:57.189Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,
-        "records": [
+        "items": [
           {
             "id": "e8eb8ddf-31b6-524e-a8bc-df45d0bda401",
             "rank": 1,
@@ -871,8 +871,8 @@
             "urn": "urn:bbc:curie:asset:43420884-6d71-744c-9b1a-da7398d0b7d1",
             "promo": {
               "headlines": {
-                "shortHeadline": "သမ္မတ ပုဂံသွားကြည့်",
-                "headline": "သမ္မတ ပုဂံသွားကြည့်"
+                "shortHeadline": "သမ္မတ ပုဂံသွားကြည့်",
+                "headline": "သမ္မတ ပုဂံသွားကြည့်"
               },
               "locators": {
                 "assetUri": "/burmese/burma-23070010",
@@ -881,7 +881,7 @@
                 "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23070010",
                 "curie": "http://www.bbc.co.uk/asset/43420884-6d71-744c-9b1a-da7398d0b7d1"
               },
-              "summary": "ငလျင် အပျက်အစီးတွေကို ကြည့်ရှု စစ်ဆေးဖို့ သမ္မတ ဦးထင်ကျော်နဲ့ အဖွဲ့ ပုဂံကို သွားရောက်ခဲ့ပါတယ်။",
+              "summary": "ငလျင် အပျက်အစီးတွေကို ကြည့်ရှု စစ်ဆေးဖို့ သမ္မတ ဦးထင်ကျော်နဲ့ အဖွဲ့ ပုဂံကို သွားရောက်ခဲ့ပါတယ်။",
               "timestamp": 1472208324000,
               "language": "my",
               "passport": {

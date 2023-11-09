@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  render,
+  waitFor,
+} from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique';
@@ -33,7 +36,7 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

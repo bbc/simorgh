@@ -1,6 +1,7 @@
 import article from './article';
 import cpsAsset from './cpsAsset';
-import home from './home';
+import frontPage from './frontPage';
+import homePage from './homePage';
 import liveRadio from './liveRadio';
 import mostRead from './mostRead';
 import mostWatched from './mostWatched';
@@ -14,7 +15,8 @@ import errorNoRouteMatch from './errorNoRouteMatch';
 
 export default [
   article,
-  home,
+  homePage,
+  frontPage,
   liveRadio,
   mostRead,
   mostWatched,

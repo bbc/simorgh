@@ -5,164 +5,236 @@
         "model": {
           "blocks": [
             {
-              "id": "3a43e42d",
+              "id": "f4bdc189",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "57e13ff8",
+                    "id": "e724ef7b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "07b24ba9",
+                          "id": "399b885f",
                           "type": "paragraph",
                           "model": {
                             "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
                             "blocks": [
                               {
-                                "id": "c55b707c",
+                                "id": "b337142b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "88e77b72",
+              "id": "fc0125cc",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942994618,
                 "lastPublished": 1562942994618
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "72c12e75",
+              "id": "8fb4b685",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2386bd3a",
+                    "id": "be9b9dea",
                     "type": "paragraph",
                     "model": {
                       "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
                       "blocks": [
                         {
-                          "id": "a264c235",
+                          "id": "8ce3bd24",
                           "type": "fragment",
                           "model": {
                             "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
-                    "id": "7575e74d",
+                    "id": "f293bb6d",
                     "type": "paragraph",
                     "model": {
                       "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
                       "blocks": [
                         {
-                          "id": "a8fc8385",
+                          "id": "672165a4",
                           "type": "fragment",
                           "model": {
                             "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
-                    "id": "b66abd23",
+                    "id": "d1507fc4",
                     "type": "paragraph",
                     "model": {
                       "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
                       "blocks": [
                         {
-                          "id": "f7dd3235",
+                          "id": "d902873e",
                           "type": "fragment",
                           "model": {
                             "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
-                    "id": "abda8a63",
+                    "id": "7a677c14",
                     "type": "paragraph",
                     "model": {
                       "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
                       "blocks": [
                         {
-                          "id": "02343ab9",
+                          "id": "d76b5b76",
                           "type": "fragment",
                           "model": {
                             "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "ecb63820", "type": "mpu", "model": {}, "position": [4] },
             {
-              "id": "19a1af9a",
+              "id": "e59af3b6",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "7b27ff6e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "32e2c05e",
+                    "id": "c9a7ed30",
                     "type": "paragraph",
                     "model": {
                       "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
                       "blocks": [
                         {
-                          "id": "4a321ec5",
+                          "id": "14c40c6e",
                           "type": "fragment",
                           "model": {
                             "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "373d5bbd",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -176,11 +248,8 @@
         "type": "article",
         "createdBy": "Tigrinya",
         "language": "ti",
-        "lastUpdated": 1645628418373,
         "firstPublished": 1562942994618,
         "lastPublished": 1562942994618,
-        "timestamp": 1562942994618,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c12g32eldk6o",
           "producer": "Tigrinya",
@@ -191,40 +260,18 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c12g32eldk6o",
-          "canonicalUrl": "https://www.bbc.com/tigrinya/articles/c12g32eldk6o"
-        },
-        "timestamp": 1562942994618,
-        "suitableForSyndication": false,
-        "language": "ti",
         "headlines": {
           "seoHeadline": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\""
-        },
-        "images": {},
-        "passport": {
-          "language": "ti",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c12g32eldk6o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Tigrinya",
-          "uri": "/tigrinya",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -267,7 +314,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -279,7 +329,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Hello" },
+          "headlines": {
+            "headline": "Hello"
+          },
           "locators": {
             "assetUri": "/tigrinya/23160271",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23160271",
@@ -292,7 +344,10 @@
             "name": "Tesfalem  Araia",
             "title": "BBC Tigrinya",
             "persons": [
-              { "name": "Tesfalem Araia", "function": "BBC Tigrinya" }
+              {
+                "name": "Tesfalem Araia",
+                "function": "BBC Tigrinya"
+              }
             ]
           },
           "cpsType": "STY",
@@ -309,7 +364,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -321,7 +379,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ኣል-ሸባብ መን እዩ?" },
+          "headlines": {
+            "headline": "ኣል-ሸባብ መን እዩ?"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23144324",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23144324",
@@ -356,7 +416,10 @@
             "copyrightHolder": "ኤፒ",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:tigrinya/news-23144324",
           "type": "cps"
@@ -364,7 +427,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "\"ዓለም እንተረሰዓትና ፈጣሪ ኣሎና\"" },
+          "headlines": {
+            "headline": "\"ዓለም እንተረሰዓትና ፈጣሪ ኣሎና\""
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23149942",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23149942",
@@ -387,12 +452,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23149942",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ጉዕዞ፡ ብሓይሊ ጻጸ፡ ብእትንቅሳቕስ ኣውቶቡስ" },
+          "headlines": {
+            "headline": "ጉዕዞ፡ ብሓይሊ ጻጸ፡ ብእትንቅሳቕስ ኣውቶቡስ"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23141494",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141494",
@@ -427,12 +497,17 @@
             "copyrightHolder": "ሓይሊ ጻጸ ክሪሰተ ክሊጅስተን (CHRIST CLIJSEN)",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23141494",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "መራሕቲ ሃገራት ዓለም ስደተኛታት ኮይኖም እንተዝርከቡኸ?" },
+          "headlines": {
+            "headline": "መራሕቲ ሃገራት ዓለም ስደተኛታት ኮይኖም እንተዝርከቡኸ?"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23143804",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23143804",
@@ -467,12 +542,17 @@
             "copyrightHolder": "ዓብደላ ኣል ኦማሪ ",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23143804",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ዕዙዝ ረብሓ እትህብ ደቃቐ ክኒን" },
+          "headlines": {
+            "headline": "ዕዙዝ ረብሓ እትህብ ደቃቐ ክኒን"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23126238",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23126238",
@@ -495,12 +575,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23126238",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ቆልሓታ ዝሰኣነ፡ታሪኽ ኣፍሪካ!" },
+          "headlines": {
+            "headline": "ቆልሓታ ዝሰኣነ፡ታሪኽ ኣፍሪካ!"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23140725",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140725",
@@ -523,12 +608,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23140725",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ጃኮብ ፉገር፡ ቀንዲል ሃፋትም ዓለም" },
+          "headlines": {
+            "headline": "ጃኮብ ፉገር፡ ቀንዲል ሃፋትም ዓለም"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23140669",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140669",
@@ -541,7 +631,10 @@
             "name": "ላየን ፅጋብ",
             "title": "Broadcast journalist",
             "persons": [
-              { "name": "Line Tsigab", "function": "Broadcast journalist" }
+              {
+                "name": "Line Tsigab",
+                "function": "Broadcast journalist"
+              }
             ]
           },
           "cpsType": "STY",
@@ -558,12 +651,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23140669",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ዛጊት ተጠቃምነቱ ዘይጥፈአ ጥንታዊ መሳርሒታት ሕክምና ግብጺ" },
+          "headlines": {
+            "headline": "ዛጊት ተጠቃምነቱ ዘይጥፈአ ጥንታዊ መሳርሒታት ሕክምና ግብጺ"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23141714",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141714",
@@ -598,12 +696,17 @@
             "copyrightHolder": "JON BODSWORTH",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23141714",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ኣብ ኣፍጋኒስታን ዓርሰ ቕትለታዊ መጥቃዕቲ 30 ሰባት ቀቲሉ" },
+          "headlines": {
+            "headline": "ኣብ ኣፍጋኒስታን ዓርሰ ቕትለታዊ መጥቃዕቲ 30 ሰባት ቀቲሉ"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23142045",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23142045",
@@ -625,12 +728,17 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23142045",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ጋዜጠኛታት ቱርኪ ብግብረ ሸበራ ክፍረዱ ጀሚሮም" },
+          "headlines": {
+            "headline": "ጋዜጠኛታት ቱርኪ ብግብረ ሸበራ ክፍረዱ ጀሚሮም"
+          },
           "locators": {
             "assetUri": "/tigrinya/news-23142054",
             "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23142054",
@@ -652,13 +760,16 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:tigrinya/news-23142054",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:05:56.95Z",
+        "generated": "2023-02-18T03:05:56.866Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -813,7 +924,10 @@
             "count": 8728,
             "urn": "urn:bbc:curie:asset:db99a172-2886-394c-bbb4-da2b8a2c6495",
             "promo": {
-              "headlines": { "shortHeadline": "Hello", "headline": "Tesfalem" },
+              "headlines": {
+                "shortHeadline": "Hello",
+                "headline": "Tesfalem"
+              },
               "locators": {
                 "assetUri": "/tigrinya/23160271",
                 "curieCpsUrn": "urn:bbc:cps:curie:asset:db99a172-2886-394c-bbb4-da2b8a2c6495",
@@ -828,7 +942,10 @@
                 "name": "Tesfalem  Araia",
                 "title": "BBC Tigrinya",
                 "persons": [
-                  { "name": "Tesfalem Araia", "function": "BBC Tigrinya" }
+                  {
+                    "name": "Tesfalem Araia",
+                    "function": "BBC Tigrinya"
+                  }
                 ]
               },
               "passport": {

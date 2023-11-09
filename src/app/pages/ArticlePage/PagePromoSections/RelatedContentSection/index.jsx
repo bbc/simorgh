@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
@@ -11,7 +12,6 @@ import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
@@ -20,7 +20,7 @@ import {
   StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
-import generatePromoId from '../generatePromoId';
+import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
@@ -69,6 +69,10 @@ const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
 
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
+
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
 
   const blocks = removeCustomBlocks(content);
   const eventTrackingData = {
@@ -136,7 +140,7 @@ const RelatedContentSection = ({ content }) => {
     >
       <SectionLabel
         labelId={LABEL_ID}
-        backgroundColor={C_GREY_2}
+        backgroundColor={GREY_2}
         script={script}
         service={service}
       >
@@ -163,16 +167,18 @@ const RelatedContentSection = ({ content }) => {
 };
 
 RelatedContentSection.propTypes = {
-  content: shape({
-    type: string,
-    model: shape({
-      blocks: arrayOf(
-        shape({
-          type: string,
-        }),
-      ),
+  content: arrayOf(
+    shape({
+      type: string,
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            type: string,
+          }),
+        ),
+      }),
     }),
-  }).isRequired,
+  ).isRequired,
 };
 
 export default RelatedContentSection;

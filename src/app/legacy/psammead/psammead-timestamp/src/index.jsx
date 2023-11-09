@@ -7,7 +7,6 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-import { C_LUNAR, C_GREY_6 } from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const PADDING = `
@@ -20,7 +19,8 @@ const PADDING = `
 const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
-  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_GREY_6)};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}
@@ -33,7 +33,6 @@ const Timestamp = ({
   script,
   padding,
   service,
-  darkMode,
   className,
 }) => (
   <StyledTimestamp
@@ -42,8 +41,8 @@ const Timestamp = ({
     script={script}
     padding={padding}
     service={service}
-    darkMode={darkMode}
     className={className}
+    suppressHydrationWarning
   >
     {children}
   </StyledTimestamp>
@@ -52,7 +51,6 @@ const Timestamp = ({
 Timestamp.defaultProps = {
   typographyFunc: getBrevier,
   padding: true,
-  darkMode: false,
   className: null,
 };
 
@@ -63,7 +61,6 @@ Timestamp.propTypes = {
   padding: bool,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  darkMode: bool,
   className: string,
 };
 

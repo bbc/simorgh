@@ -2,73 +2,66 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c0g992jmmkko.page&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Royal%2Bwedding%2Bflowers%2Bgiven%2Bto%2BHackney%2Bhospice]&amp;x11=[2019-05-28T13%3A38%3A19.412Z]&amp;x12=[2019-05-28T13%3A38%3A19.412Z]&amp;x13=[Wedding%2Bof%2BPrince%2BHarry%2Band%2BMeghan%2BMarkle~Duchess%2Bof%2BSussex~Hackney~Windsor]&amp;x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c0g992jmmkko.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac0g992jmmkko]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Royal%2520wedding%2520flowers%2520given%2520to%2520Hackney%2520hospice]&amp;x11=[2019-05-28T13%3A38%3A19.412Z]&amp;x12=[2019-05-28T13%3A38%3A19.412Z]&amp;x13=[Wedding%2Bof%2BPrince%2BHarry%2Band%2BMeghan%2BMarkle~Duchess%2Bof%2BSussex~Hackney~Windsor]&amp;x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956]&amp;x17=[Wedding%2Bof%2BPrince%2BHarry%2Band%2BMeghan%2BMarkle~Duchess%2Bof%2BSussex~Hackney~Windsor]"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News",
   "url": "/news",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Why you can trust the BBC",
   "url": "https://www.bbc.com/news/help-41670342",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Terms of Use",
   "url": "https://www.bbc.com/terms",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "About the BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Privacy Policy",
   "url": "https://www.bbc.com/privacy/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Accessibility Help",
   "url": "https://www.bbc.com/accessibility/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Contact the BBC",
   "url": "https://www.bbc.com/contact/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Articles Footer Anchors should match text and url 10`] = `
-Object {
+{
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -81,163 +74,234 @@ exports[`Canonical Articles Footer I can see the footer copyright and external l
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Home",
   "url": "/news",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "UK",
   "url": "/news/uk",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "World",
   "url": "/news/world",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "Business",
   "url": "/news/business",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Politics",
   "url": "/news/politics",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Tech",
   "url": "/news/technology",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-Object {
+{
   "text": "Science",
   "url": "/news/science_and_environment",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-Object {
+{
   "text": "Health",
   "url": "/news/health",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
-Object {
+{
   "text": "Family & Education",
   "url": "/news/education",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
-Object {
+{
   "text": "Entertainment & Arts",
   "url": "/news/entertainment_and_arts",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
-Object {
+{
   "text": "Stories",
   "url": "/news/stories",
 }
 `;
 
-exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as \\"lovely\\""`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as "lovely""`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  style="aspect-ratio:640 / 360"
   width="640"
 />
 `;
 
 exports[`Canonical Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "Why the oxygen timeline on sub may not be so fixed",
+  "url": "/news/world-us-canada-65981277",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "MasterChef contestant jailed for child abuse images",
+  "url": "/news/uk-wales-65986742",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "Musk and Zuckerberg agree to hold cage fight",
+  "url": "/news/business-65981876",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "Cindy Beale returns to EastEnders after 25 years",
+  "url": "/news/entertainment-arts-65986136",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "Mosquito-borne diseases risk increasing in Europe",
+  "url": "/news/health-65985838",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "Teenager guilty of murdering boy at train station",
+  "url": "/news/uk-scotland-65987986",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "At least 30 migrants feared dead off Canary Islands",
+  "url": "/news/world-65983001",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "Bank boss warns interest rate hike hard for many",
+  "url": "/news/business-65982981",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "Ukraine strikes bridge to Crimea, says Russia",
+  "url": "/news/world-europe-65982817",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "The woman who wants to end abortion in America",
+  "url": "/news/world-us-canada-65923956",
+}
+`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/news/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
 }
@@ -247,8 +311,6 @@ exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/new
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Articles SEO Heading level 1 1`] = `"Royal wedding flowers given to Hackney hospice"`;
@@ -256,35 +318,35 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"Royal wedding flowers gi
 exports[`Canonical Articles SEO Lang attribute 1`] = `"en-gb"`;
 
 exports[`Canonical Articles SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
-      "@type": "Article",
-      "about": Array [
-        Object {
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "about": [
+        {
           "@type": "Thing",
           "name": "Wedding of Prince Harry and Meghan Markle",
         },
-        Object {
+        {
           "@type": "Person",
           "name": "Duchess of Sussex",
-          "sameAs": Array [
+          "sameAs": [
             "http://dbpedia.org/resource/Meghan_Markle",
           ],
         },
-        Object {
+        {
           "@type": "Place",
           "name": "Hackney",
         },
-        Object {
+        {
           "@type": "Place",
           "name": "Windsor",
         },
       ],
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
@@ -296,25 +358,25 @@ Object {
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
       "headline": "Royal wedding flowers given to Hackney hospice",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "en-GB",
         "name": "English",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/news/articles/c0g992jmmkko",
         "@type": "WebPage",
         "name": "Royal wedding flowers given to Hackney hospice",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 16,
           "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
@@ -365,7 +427,7 @@ exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 exports[`Canonical Articles SEO Twitter title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
 
 exports[`Canonical Articles Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2019-05-28",
   "text": "28 May 2019",
 }

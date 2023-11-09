@@ -75,6 +75,13 @@ describe('Get initial data for on demand radio', () => {
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9qc.rss',
+        linkType: 'rss',
+      },
+      {
+        linkText: 'Download',
+        linkUrl:
+          'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p08wsxz2.mp3',
+        linkType: 'download',
       },
     ]);
   });

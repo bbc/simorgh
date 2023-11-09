@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "BBC News اردو",
+    "description": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "قسطنطنیہ کی فتح، جسے یورپ آج تک نہیں بھولا",
+            "firstPublished": "2018-05-29T00:51:51.000Z",
+            "link": "https://www.bbc.com/urdu/world-44281943",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/13FF/production/_101791150_be14e796-3901-491b-8032-77f75e575cd1.jpg",
+            "description": "29 مئی 1453 کو مسلمانوں نے سات سو برسوں کی کوششوں کے بعد بالآخر قسطنطنیہ (موجودہ استنبول) کو فتح کرنے میں کامیابی حاصل کی۔ بظاہر یہ واقعہ یورپ آج تک نہیں بھولا۔",
+            "imageAlt": "سلطان فاتح",
+            "id": "5c8166c4-9434-d349-a6f8-ef47d2bde6fd"
+          },
+          {
+            "type": "article",
+            "title": "کراٹے کامبیٹ لیگ کے بین الاقوامی مقابلے میں فتح حاصل کرنے والے ’پہلے پاکستانی‘ شاہ زیب رند کون ہیں؟",
+            "firstPublished": "2023-04-03T08:13:37.960Z",
+            "link": "https://www.bbc.com/urdu/articles/cv2rjyywwd3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e7c/live/56d94400-d1f7-11ed-b561-11aeba3662af.jpg",
+            "description": "شاہ زیب رند نے امریکہ میں کراٹے کامبیٹ لیگ میں لائٹ ویٹ کیٹیگری میں وینزویلا سے تعلق رکھنے والے کھلاڑی گابوڈیازکو شکست سے دوچار کیا۔",
+            "imageAlt": "شاہ زیب رند",
+            "id": "cv2rjyywwd3o"
+          },
+          {
+            "type": "article",
+            "title": "پاکستان کی ’خونی‘ ہائی وے: کراچی سے واپسی پر بیٹی کا رشتہ طے ہونا تھا لیکن اُس کی جلی ہوئی لاش واپس گھر پہنچی‘",
+            "firstPublished": "2023-04-03T03:58:27.148Z",
+            "link": "https://www.bbc.com/urdu/articles/c98nedld1p7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8ea9/live/c0ef4b00-d175-11ed-9526-036efd25851d.jpg",
+            "description": "گذشتہ ساڑھے تین سال کے دوران کوئٹہ، کراچی ہائی وے پر ہونے والے ٹریفک حادثات کے نتیجے میں 477 افراد ہلاک ہوئے ہیں جن میں سے بیشتر کی میتیں جلنے کے باعث ناقابل شناخت ہوئیں۔ مگر اس شاہراہ پر اتنے زیادہ اور بڑے حادثات ہونے کی وجوہات کیا ہیں؟",
+            "imageAlt": "پاکستان",
+            "id": "c98nedld1p7o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:047e70d2-d1f0-460c-9d00-4a3a3f9c1cdf",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "فیچر اور تجزیے",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c44evpp9wp1t",
+        "contentType": "index-home",
+        "pageIdentifier": "urdu.page",
+        "pageTitle": "BBC News اردو"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

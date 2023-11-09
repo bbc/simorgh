@@ -14,7 +14,7 @@ exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] =
 
 <div>
   <h1
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     id="content"
     tabindex="-1"
   >
@@ -37,7 +37,7 @@ exports[`VisuallyHiddenHeadline with plain text headline should render h1 contai
 
 <div>
   <h1
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     id="content"
     tabindex="-1"
   >

@@ -5,123 +5,173 @@
         "model": {
           "blocks": [
             {
-              "id": "07538e35",
+              "id": "adb62e51",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "810f41ec",
+                    "id": "156ada14",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "168eb3c1",
+                          "id": "adde728c",
                           "type": "paragraph",
                           "model": {
                             "text": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد",
                             "blocks": [
                               {
-                                "id": "e699064f",
+                                "id": "6aad5019",
                                 "type": "fragment",
                                 "model": {
                                   "text": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "eeab5460",
+              "id": "372578ac",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6bc92973",
+                    "id": "8522a94b",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "af998dbc",
+                          "id": "5d755e32",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4ace9db0",
+                                "id": "9dc7fe0b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے",
                                   "blocks": [
                                     {
-                                      "id": "d3f230d6",
+                                      "id": "6c577658",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
-                    "id": "9ac27e56",
+                    "id": "2dd95bbc",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6e947251",
+                          "id": "c3e0b74f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f63e1b1f",
+                                "id": "371c116a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "60328129",
+                                      "id": "60cfaafd",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
-                    "id": "b3398f05",
+                    "id": "b2ae280d",
                     "type": "rawImage",
                     "model": {
                       "width": 660,
@@ -130,245 +180,360 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "9adb36e2",
+              "id": "c007ad0b",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1564562399734,
                 "lastPublished": 1564562399734
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
-              "id": "39c95f97",
+              "id": "8b807f0f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1bc3af5b",
+                    "id": "664cab78",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانس میں سائنسدانوں کو کھدائی کے دوران ایک مقام سے بڑے سائز کی ڈائنوسار کی ران کی ہڈی ملی ہے۔",
                       "blocks": [
                         {
-                          "id": "e921b4fb",
+                          "id": "dfb0c1e3",
                           "type": "fragment",
                           "model": {
                             "text": "فرانس میں سائنسدانوں کو کھدائی کے دوران ایک مقام سے بڑے سائز کی ڈائنوسار کی ران کی ہڈی ملی ہے۔",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
-                    "id": "33cb4f8e",
+                    "id": "a02318c4",
                     "type": "paragraph",
                     "model": {
                       "text": "کھدائی کا یہ مقام جنوب مشرقی فرانس میں واقع ہے اور گذشتہ ایک دہائی سے یہاں سے جانوروں اور نباتات کی باقیات نکلنے کا سلسلہ جاری ہے۔",
                       "blocks": [
                         {
-                          "id": "25a726fc",
+                          "id": "0087ed33",
                           "type": "fragment",
                           "model": {
                             "text": "کھدائی کا یہ مقام جنوب مشرقی فرانس میں واقع ہے اور گذشتہ ایک دہائی سے یہاں سے جانوروں اور نباتات کی باقیات نکلنے کا سلسلہ جاری ہے۔",
                             "attributes": []
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   },
                   {
-                    "id": "2285aef6",
+                    "id": "b8534332",
                     "type": "paragraph",
                     "model": {
                       "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے۔ یہ خیال کیا جا رہا کہ یہ ہڈی اس نسل سے تعلق رکھنے والے ڈائنوسار کی ہے جو پودے کھاتے تھے۔ پودے کھانے والے ڈائنوسارز کی دم اور گردن دوسری نسل کے ڈائنوسارز سے لمبی ہوتی تھی۔",
                       "blocks": [
                         {
-                          "id": "846b0ac5",
+                          "id": "1b5216b2",
                           "type": "fragment",
                           "model": {
                             "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے۔ یہ خیال کیا جا رہا کہ یہ ہڈی اس نسل سے تعلق رکھنے والے ڈائنوسار کی ہے جو پودے کھاتے تھے۔ پودے کھانے والے ڈائنوسارز کی دم اور گردن دوسری نسل کے ڈائنوسارز سے لمبی ہوتی تھی۔",
                             "attributes": []
                           },
-                          "position": [4, 3, 1]
+                          "position": [
+                            4,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 3]
+                    "position": [
+                      4,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
-              "id": "6be9e03d",
+              "id": "643431a1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "acc2c5e8",
+                    "id": "7a0f62bc",
                     "type": "paragraph",
                     "model": {
                       "text": "ودے کھانے والے ڈائنوسارز کے بارے میں کہا جاتا ہے کہ وہ روئے زمین پر پائے جانے والے سب جانورں سے زیادہ عظیم الجثہ تھے۔",
                       "blocks": [
                         {
-                          "id": "9b1e4061",
+                          "id": "76aaf703",
                           "type": "fragment",
                           "model": {
                             "text": "ودے کھانے والے ڈائنوسارز کے بارے میں کہا جاتا ہے کہ وہ روئے زمین پر پائے جانے والے سب جانورں سے زیادہ عظیم الجثہ تھے۔",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
-            { "id": "ec855384", "type": "mpu", "model": {}, "position": [6] },
             {
-              "id": "5b93c32e",
+              "id": "3ca95bc8",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "547dd9ad",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2c2e82f3",
+                    "id": "bc932054",
                     "type": "paragraph",
                     "model": {
                       "text": "سائنسدانوں کا کہنا ہے کہ وہ اس ہڈی کے اتنی محفوظ حالت میں ہونے پر حیرت زدہ ہیں۔ پیرس میں واقع نیشنل ہسٹری میوزیم سے تعلق رکھنے والے رونان آلائن نے ایک مقامی اخبار کو بتایا کہ 'ہم  ہڈی کے جوڑوں، عضلات، رگوں اور زخموں کے نشانات تک کو دیکھ سکتے ہیں۔'",
                       "blocks": [
                         {
-                          "id": "2ae71853",
+                          "id": "4b4a396b",
                           "type": "fragment",
                           "model": {
                             "text": "سائنسدانوں کا کہنا ہے کہ وہ اس ہڈی کے اتنی محفوظ حالت میں ہونے پر حیرت زدہ ہیں۔ پیرس میں واقع نیشنل ہسٹری میوزیم سے تعلق رکھنے والے رونان آلائن نے ایک مقامی اخبار کو بتایا کہ 'ہم  ہڈی کے جوڑوں، عضلات، رگوں اور زخموں کے نشانات تک کو دیکھ سکتے ہیں۔'",
                             "attributes": []
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
-                  },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "3918596b",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "050401d7",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "e1d7a5dd",
+                    "id": "701e9303",
                     "type": "paragraph",
                     "model": {
                       "text": "'بڑی ہڈیوں کے ساتھ ایسا شاذ و نادر ہی ہوتا ہے۔ کیونکہ بڑی ہڈیوں میں خود سے ٹوٹ جانے کی صلاحیت زیادہ ہوتی ہے۔' ",
                       "blocks": [
                         {
-                          "id": "5ef16387",
+                          "id": "bd145d23",
                           "type": "fragment",
                           "model": {
                             "text": "'بڑی ہڈیوں کے ساتھ ایسا شاذ و نادر ہی ہوتا ہے۔ کیونکہ بڑی ہڈیوں میں خود سے ٹوٹ جانے کی صلاحیت زیادہ ہوتی ہے۔' ",
                             "attributes": []
                           },
-                          "position": [7, 2, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 2]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
-                    "id": "b23cf32f",
+                    "id": "ed6a12f4",
                     "type": "paragraph",
                     "model": {
                       "text": "ڈائنو سار کتنا بڑا تھا؟",
                       "blocks": [
                         {
-                          "id": "8462834c",
+                          "id": "8b06d6bd",
                           "type": "fragment",
                           "model": {
                             "text": "ڈائنو سار کتنا بڑا تھا؟",
                             "attributes": []
                           },
-                          "position": [7, 3, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 3]
+                    "position": [
+                      9,
+                      2
+                    ]
                   },
                   {
-                    "id": "8f2a9ff3",
+                    "id": "5ef07d2a",
                     "type": "paragraph",
                     "model": {
                       "text": "رونان آلائن نے روئٹرز نیوز ایجنسی کو بتایا کہ یہ ہڈی جس نسل کے ڈائنوسار کی خیال کی جا رہی ہے وہ 14 کروڑ سال پہلے روئے زمین پر گھومتے پھرتے تھے اور ان کا وزن لگ بھگ 40 سے 50 ٹن تک ہوتا تھا۔",
                       "blocks": [
                         {
-                          "id": "6fdb241c",
+                          "id": "f2fb10e1",
                           "type": "fragment",
                           "model": {
                             "text": "رونان آلائن نے روئٹرز نیوز ایجنسی کو بتایا کہ یہ ہڈی جس نسل کے ڈائنوسار کی خیال کی جا رہی ہے وہ 14 کروڑ سال پہلے روئے زمین پر گھومتے پھرتے تھے اور ان کا وزن لگ بھگ 40 سے 50 ٹن تک ہوتا تھا۔",
                             "attributes": []
                           },
-                          "position": [7, 4, 1]
+                          "position": [
+                            9,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 4]
+                    "position": [
+                      9,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                9
+              ]
             },
             {
-              "id": "d8b0963b",
+              "id": "3e78eaff",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "05316cb3",
+                    "id": "9c7700f7",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e12f4548",
+                          "id": "675304c7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6636df65",
+                                "id": "881885dc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "f5cc1f85",
+                                      "id": "56dcd667",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [8, 1, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
-                    "id": "37301b4e",
+                    "id": "97c6cd15",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -377,205 +542,285 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "AFP"
                     },
-                    "position": [8, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                10
+              ]
             },
             {
-              "id": "95e858b6",
+              "id": "e8fa9fa9",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b9734935",
+                    "id": "eb9b96cf",
                     "type": "paragraph",
                     "model": {
                       "text": "مقامی اخبار کے مطابق سنہ 2010 میں اسی نسل کے ڈائنوسار کی 2.2 میٹر لمبی ہڈی کھدائی کے اسی مقام سے دریافت ہوئی تھی۔ اس ہڈی کا وزن 500 کلو تھا۔",
                       "blocks": [
                         {
-                          "id": "c92725b8",
+                          "id": "9e878833",
                           "type": "fragment",
                           "model": {
                             "text": "مقامی اخبار کے مطابق سنہ 2010 میں اسی نسل کے ڈائنوسار کی 2.2 میٹر لمبی ہڈی کھدائی کے اسی مقام سے دریافت ہوئی تھی۔ اس ہڈی کا وزن 500 کلو تھا۔",
                             "attributes": []
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   },
                   {
-                    "id": "39f7d612",
+                    "id": "9310cc03",
                     "type": "paragraph",
                     "model": {
                       "text": " نئی ملنے والی ہڈی کے وزن کے بارے میں خیال ہے کہ یہ بھی تقریباً 500 کلو گرام تک ہو گا۔ ہڈی ابھی مکمل طور پر زمین سے نکالی نہیں جا سکی ہے اور اس کام میں ایک ہفتے کا وقت اور کرین کی مدد درکار ہو گی۔",
                       "blocks": [
                         {
-                          "id": "2f00559f",
+                          "id": "f0330330",
                           "type": "fragment",
                           "model": {
                             "text": " نئی ملنے والی ہڈی کے وزن کے بارے میں خیال ہے کہ یہ بھی تقریباً 500 کلو گرام تک ہو گا۔ ہڈی ابھی مکمل طور پر زمین سے نکالی نہیں جا سکی ہے اور اس کام میں ایک ہفتے کا وقت اور کرین کی مدد درکار ہو گی۔",
                             "attributes": []
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            11,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      11,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                11
+              ]
             },
             {
-              "id": "998abede",
+              "id": "3d518a46",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "94fb6d48",
+                    "id": "2143b1e2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4ebd861c",
+                          "id": "3aed4b9e",
                           "type": "paragraph",
                           "model": {
                             "text": "کھدائی کے مقام سے اور کیا ملا؟",
                             "blocks": [
                               {
-                                "id": "22678182",
+                                "id": "e642faed",
                                 "type": "fragment",
                                 "model": {
                                   "text": "کھدائی کے مقام سے اور کیا ملا؟",
                                   "attributes": []
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  12,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            12,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      12,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                12
+              ]
             },
             {
-              "id": "df198f3f",
+              "id": "14887617",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "065e389f",
+                    "id": "f63bb16b",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانس میں کوگنیک نامی قصبے کے قریب کھدائی کے مقام پر 70 سائنسدان اس موسم گرما میں کام کر رہے ہیں۔",
                       "blocks": [
                         {
-                          "id": "e9972135",
+                          "id": "5d05eda3",
                           "type": "fragment",
                           "model": {
                             "text": "فرانس میں کوگنیک نامی قصبے کے قریب کھدائی کے مقام پر 70 سائنسدان اس موسم گرما میں کام کر رہے ہیں۔",
                             "attributes": []
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            13,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      13,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                13
+              ]
             },
             {
-              "id": "7f24be18",
+              "id": "78c019f9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "cfe3aaa8",
+                    "id": "e2cfb6e6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4a674f62",
+                          "id": "a2cd7661",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "464e0cf4",
+                                "id": "156a28b1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں",
                                   "blocks": [
                                     {
-                                      "id": "ef70d1a2",
+                                      "id": "0d6f7061",
                                       "type": "fragment",
                                       "model": {
                                         "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں",
                                         "attributes": []
                                       },
-                                      "position": [12, 1, 1, 1, 1]
+                                      "position": [
+                                        14,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 1, 1, 1]
+                                "position": [
+                                  14,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 1, 1]
+                          "position": [
+                            14,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 1]
+                    "position": [
+                      14,
+                      1
+                    ]
                   },
                   {
-                    "id": "82e8ac94",
+                    "id": "a6b298a3",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1911a104",
+                          "id": "00437826",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1576188d",
+                                "id": "cb53c99b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "17b445d6",
+                                      "id": "971ae428",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [12, 2, 1, 1, 1]
+                                      "position": [
+                                        14,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 2, 1, 1]
+                                "position": [
+                                  14,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 2, 1]
+                          "position": [
+                            14,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 2]
+                    "position": [
+                      14,
+                      2
+                    ]
                   },
                   {
-                    "id": "0dbdbe72",
+                    "id": "aea6677e",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -584,58 +829,79 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [12, 3]
+                    "position": [
+                      14,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [12]
+              "position": [
+                14
+              ]
             },
             {
-              "id": "c20985f9",
+              "id": "c7debeeb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "84b92a98",
+                    "id": "1ca86f39",
                     "type": "paragraph",
                     "model": {
                       "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں۔ اور اسی وجہ سے کھدائی کا یہ مقام یورپ بھر میں اہمیت اختیار کر چکا ہے۔ ",
                       "blocks": [
                         {
-                          "id": "29269bbd",
+                          "id": "5bfdbac7",
                           "type": "fragment",
                           "model": {
                             "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں۔ اور اسی وجہ سے کھدائی کا یہ مقام یورپ بھر میں اہمیت اختیار کر چکا ہے۔ ",
                             "attributes": []
                           },
-                          "position": [13, 1, 1]
+                          "position": [
+                            15,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [13, 1]
+                    "position": [
+                      15,
+                      1
+                    ]
                   },
                   {
-                    "id": "660de60b",
+                    "id": "8b838c45",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانسیسی اخبار کے مطابق اس مقام سے ڈائنوسار کے دو مختلف نسلوں کی ہڈیاں برآمد ہو ئی ہیں۔",
                       "blocks": [
                         {
-                          "id": "a10b8c97",
+                          "id": "c2f965c2",
                           "type": "fragment",
                           "model": {
                             "text": "فرانسیسی اخبار کے مطابق اس مقام سے ڈائنوسار کے دو مختلف نسلوں کی ہڈیاں برآمد ہو ئی ہیں۔",
                             "attributes": []
                           },
-                          "position": [13, 2, 1]
+                          "position": [
+                            15,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [13, 2]
+                    "position": [
+                      15,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [13]
+              "position": [
+                15
+              ]
             }
           ]
         }
@@ -649,11 +915,8 @@
         "type": "article",
         "createdBy": "Urdu",
         "language": "ur",
-        "lastUpdated": 1669740031517,
         "firstPublished": 1564562399734,
         "lastPublished": 1564562399734,
-        "timestamp": 1564562399734,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c2n75x5wrlzo",
           "producer": "Urdu",
@@ -664,8 +927,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.10",
         "blockTypes": [
           "headline",
           "text",
@@ -677,40 +938,15 @@
           "rawImage",
           "subheadline"
         ],
-        "readTime": 2,
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c2n75x5wrlzo",
-          "canonicalUrl": "https://www.bbc.com/urdu/articles/c2n75x5wrlzo"
-        },
-        "timestamp": 1564562399734,
-        "suitableForSyndication": false,
-        "language": "ur",
         "headlines": {
           "seoHeadline": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد"
-        },
-        "images": {},
-        "passport": {
-          "language": "ur",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c2n75x5wrlzo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Urdu",
-          "uri": "/urdu",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -760,7 +996,10 @@
             "copyrightHolder": "RAMINDER PAL SINGH",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -791,7 +1030,10 @@
             "taggings": []
           },
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -846,7 +1088,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068137",
           "type": "cps"
         },
@@ -886,7 +1131,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068138",
           "type": "cps"
         },
@@ -926,7 +1174,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068139",
           "type": "cps"
         },
@@ -966,7 +1217,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068073",
           "type": "cps"
         },
@@ -1006,7 +1260,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068074",
           "type": "cps"
         },
@@ -1046,7 +1303,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068075",
           "type": "cps"
         },
@@ -1086,7 +1346,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068177",
           "type": "cps"
         },
@@ -1126,7 +1389,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068178",
           "type": "cps"
         },
@@ -1166,13 +1432,16 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/world-23068179",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:56:58.219Z",
+        "generated": "2023-02-17T16:26:56.694Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1200,7 +1469,10 @@
                 "name": "Sunjoy Majumber",
                 "title": "BBC News, Delhi ",
                 "persons": [
-                  { "name": "Sunjoy Majumber", "function": "BBC News, Delhi" }
+                  {
+                    "name": "Sunjoy Majumber",
+                    "function": "BBC News, Delhi"
+                  }
                 ]
               },
               "indexImage": {

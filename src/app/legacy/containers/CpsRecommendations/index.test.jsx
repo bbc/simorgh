@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-
 import ltrRecommendationsData from '#data/mundo/recommendations/index.json';
 import rtlRecommendationsData from '#data/arabic/recommendations/index.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import CpsRecommendations from '.';
@@ -46,6 +46,8 @@ const renderContainer = (items, service, toggleEnabled) => {
 };
 
 describe('CpsRecommendations', () => {
+  suppressPropWarnings(['optimizely', 'null']);
+
   it('should not render when cpsRecommendations toggle is disabled', () => {
     const toggleEnabled = false;
 

@@ -1,8 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  screen,
+} from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import TopStoriesSection from '.';
 import { topStoriesList, topStoriesSingleItem } from './fixture';
@@ -17,6 +21,8 @@ const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
 );
 
 describe('Optimo Top Stories Promo', () => {
+  suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
+
   it('should return null if no data is passed', () => {
     const { container } = render(<TopStoriesSectionFixture fixtureData={[]} />);
     expect(container).toBeEmptyDOMElement();

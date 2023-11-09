@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "7fd5ea44",
+              "id": "23cce29f",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "de89b76e",
+                    "id": "9876825f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d742539c",
+                          "id": "c8b1e236",
                           "type": "paragraph",
                           "model": {
                             "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
                             "blocks": [
                               {
-                                "id": "ccf1cf96",
+                                "id": "1ee719d8",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
@@ -42,7 +42,7 @@
               "position": [1]
             },
             {
-              "id": "de8a748a",
+              "id": "2e8e57a6",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943337219,
@@ -51,18 +51,18 @@
               "position": [2]
             },
             {
-              "id": "8fe73f23",
+              "id": "72582145",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "d25bb812",
+                    "id": "6d822481",
                     "type": "paragraph",
                     "model": {
                       "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
                       "blocks": [
                         {
-                          "id": "75faf31a",
+                          "id": "431bcc8d",
                           "type": "fragment",
                           "model": {
                             "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
@@ -75,13 +75,13 @@
                     "position": [3, 1]
                   },
                   {
-                    "id": "161f074e",
+                    "id": "85be3d0a",
                     "type": "paragraph",
                     "model": {
                       "text": "Iako ih prema aktuelnim dešavanjima u serijalu Ratovi zvezda gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
                       "blocks": [
                         {
-                          "id": "cd5fbb18",
+                          "id": "a38ddc0f",
                           "type": "fragment",
                           "model": {
                             "text": "Iako ih prema aktuelnim dešavanjima u serijalu ",
@@ -90,7 +90,7 @@
                           "position": [3, 2, 1]
                         },
                         {
-                          "id": "5c83190a",
+                          "id": "3c4112e0",
                           "type": "fragment",
                           "model": {
                             "text": "Ratovi zvezda",
@@ -99,7 +99,7 @@
                           "position": [3, 2, 2]
                         },
                         {
-                          "id": "f2216806",
+                          "id": "76f553bf",
                           "type": "fragment",
                           "model": {
                             "text": " gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
@@ -112,13 +112,13 @@
                     "position": [3, 2]
                   },
                   {
-                    "id": "f00fcd29",
+                    "id": "3d83c6e4",
                     "type": "paragraph",
                     "model": {
                       "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
                       "blocks": [
                         {
-                          "id": "520cfc48",
+                          "id": "5b29b5a4",
                           "type": "fragment",
                           "model": {
                             "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
@@ -131,13 +131,13 @@
                     "position": [3, 3]
                   },
                   {
-                    "id": "a441052c",
+                    "id": "c2984f70",
                     "type": "paragraph",
                     "model": {
                       "text": "Pored popkulturnih konvencija na kojima okupljaju fanove Ratova zvezda, niški džedaji organizuju i humanitarne akcije.",
                       "blocks": [
                         {
-                          "id": "28694b05",
+                          "id": "5d37cba5",
                           "type": "fragment",
                           "model": {
                             "text": "Pored popkulturnih konvencija na kojima okupljaju fanove ",
@@ -146,7 +146,7 @@
                           "position": [3, 4, 1]
                         },
                         {
-                          "id": "76b4ff66",
+                          "id": "e0f1fcd2",
                           "type": "fragment",
                           "model": {
                             "text": "Ratova zvezda",
@@ -155,7 +155,7 @@
                           "position": [3, 4, 2]
                         },
                         {
-                          "id": "b0507b53",
+                          "id": "618723e7",
                           "type": "fragment",
                           "model": {
                             "text": ", niški džedaji organizuju i humanitarne akcije.",
@@ -171,20 +171,25 @@
               },
               "position": [3]
             },
-            { "id": "fdcc71a1", "type": "mpu", "model": {}, "position": [4] },
             {
-              "id": "fe8c4b5c",
+              "id": "f76aaab3",
+              "type": "mpu",
+              "model": {},
+              "position": [4]
+            },
+            {
+              "id": "5b85454a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "74e67acc",
+                    "id": "532b0c25",
                     "type": "paragraph",
                     "model": {
                       "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
                       "blocks": [
                         {
-                          "id": "b309b63e",
+                          "id": "97f9d990",
                           "type": "fragment",
                           "model": {
                             "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
@@ -195,44 +200,72 @@
                       ]
                     },
                     "position": [5, 1]
-                  },
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "deb3ecaa",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [6]
+            },
+            {
+              "id": "2a848f8b",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "ebc5c2ba",
+                    "id": "7eed0cea",
                     "type": "paragraph",
                     "model": {
                       "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                       "blocks": [
                         {
-                          "id": "e3dd0b47",
+                          "id": "54070213",
                           "type": "fragment",
                           "model": {
                             "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                             "attributes": []
                           },
-                          "position": [5, 2, 1]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [5]
+              "position": [7]
             }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c805k05kr73o",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o" },
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
+          "language": "sr-latn",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
+          "timePublished": "2019-07-12T14:55:37.219Z",
+          "timeUpdated": "2019-07-12T14:55:37.219Z"
+        },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+        },
         "type": "article",
         "createdBy": "Serbian",
         "language": "sr-latn",
-        "lastUpdated": 1645628370352,
         "firstPublished": 1562943337219,
         "lastPublished": 1562943337219,
-        "timestamp": 1562943337219,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
           "producer": "Serbian"
@@ -242,37 +275,13 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.4",
         "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o" },
-        "timestamp": 1562943337219,
-        "suitableForSyndication": false,
-        "language": "sr-latn",
         "headlines": {
           "seoHeadline": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja"
-        },
-        "images": {},
-        "passport": {
-          "language": "sr-latn",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c805k05kr73o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Serbian",
-          "uri": "/serbian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -333,7 +342,10 @@
                 "duration": 15,
                 "durationISO8601": "PT15S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1582890367000
               }
             ],
@@ -352,7 +364,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -364,7 +379,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Serbia MAP test" },
+          "headlines": {
+            "headline": "Serbia MAP test"
+          },
           "locators": {
             "assetUri": "/serbian/lat/srbija-23278974",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e647",
@@ -381,7 +398,9 @@
             "subType": "episode",
             "format": "audio",
             "title": "Audio test for articles, UK only",
-            "synopses": { "short": "Audio test for articles, UK only" },
+            "synopses": {
+              "short": "Audio test for articles, UK only"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
             "embedding": false,
             "advertising": false,
@@ -396,7 +415,10 @@
                   "short": "Contains some strong language.",
                   "long": "Contains some strong language."
                 },
-                "availableTerritories": { "uk": true, "nonUk": false },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
                 "availableFrom": 1563782700000
               }
             ],
@@ -414,7 +436,10 @@
             "copyrightHolder": "Google",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:serbian/lat/srbija-23278974",
           "type": "cps"
@@ -461,7 +486,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169628",
           "type": "cps"
         },
@@ -505,7 +533,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169629",
           "type": "cps"
         },
@@ -549,7 +580,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169630",
           "type": "cps"
         },
@@ -593,7 +627,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169631",
           "type": "cps"
         },
@@ -637,7 +674,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169632",
           "type": "cps"
         },
@@ -681,860 +721,158 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/lat/media-23169633",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:07:00.389Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
-        "totalRecords": 20,
-        "records": [
+        "generated": "2023-06-19T15:07:37.525Z",
+        "lastRecordTimeStamp": "2023-06-19T15:05:00Z",
+        "firstRecordTimeStamp": "2023-06-19T13:05:00Z",
+        "items": [
           {
-            "id": "bed59bb0-13e8-d441-9ac2-70d58ab92379",
+            "id": "4e032289-c0cb-40ab-9b9b-5b4aaf0249c6",
             "rank": 1,
-            "count": 9747,
-            "urn": "urn:bbc:curie:asset:bed59bb0-13e8-d441-9ac2-70d58ab92379",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169623",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169623",
-                "curie": "http://www.bbc.co.uk/asset/bed59bb0-13e8-d441-9ac2-70d58ab92379",
-                "assetId": "23169623"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405053000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169623",
-              "type": "cps"
-            }
+            "title": "Umrla žena koju su tokom priprema za sahranu izvadili živu iz kovčega",
+            "href": "/serbian/lat/svet-65945964",
+            "timestamp": 1687177924000
           },
           {
-            "id": "c893a22a-b367-e743-90ec-737606624e7b",
+            "id": "e5b35762-08ef-4571-8742-9c4d1cfba69b",
             "rank": 2,
-            "count": 9674,
-            "urn": "urn:bbc:curie:asset:c893a22a-b367-e743-90ec-737606624e7b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "test, please ignore",
-                "headline": "test, please ignore"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/23200492",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23200492",
-                "curie": "http://www.bbc.co.uk/asset/c893a22a-b367-e743-90ec-737606624e7b",
-                "assetId": "23200492"
-              },
-              "summary": "test, please ignore",
-              "timestamp": 1526475595000,
-              "language": "sr-Latn",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                  "categoryName": "Feature"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5ad86270c93a9f000eecb255",
-                    "campaignName": "Amuse me"
-                  },
-                  {
-                    "campaignId": "5ad86285c93a9f000eecb256",
-                    "campaignName": "Give me perspective"
-                  }
-                ],
-                "taggings": [],
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id",
-                      "thingLabel": "Premijer liga",
-                      "thingUri": "http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id",
-                      "thingId": "5cd4682a-7643-f445-8b1f-bcbaf450bc89",
-                      "thingType": [
-                        "core:Thing",
-                        "sport:RecurringCompetition",
-                        "tagging:TagConcept",
-                        "sport:Competition"
-                      ],
-                      "thingSameAs": [],
-                      "thingEnglishLabel": "Premier League",
-                      "type": "about"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63678857",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1286F/test/_63678857_20160421-olimpia-grecia-alm_0525_edit_2.jpg",
-                "path": "/cpsdevpb/1286F/test/_63678857_20160421-olimpia-grecia-alm_0525_edit_2.jpg",
-                "height": 261,
-                "width": 464,
-                "altText": "test2",
-                "caption": "test2",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/23200492",
-              "type": "cps"
-            }
+            "title": "Ajkula napala i ubila muškarca u egipatskoj Hurgadi, vlasti privremeno zabranile sve aktivnosti u vodi",
+            "href": "/serbian/lat/svet-65858576",
+            "timestamp": 1686314734000
           },
           {
-            "id": "05a64eb2-12b3-1742-b149-6cd4b050b572",
+            "id": "6c598414-4f2c-0a4d-85fd-632a86a8433d",
             "rank": 3,
-            "count": 9137,
-            "urn": "urn:bbc:curie:asset:05a64eb2-12b3-1742-b149-6cd4b050b572",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169493",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169493",
-                "curie": "http://www.bbc.co.uk/asset/05a64eb2-12b3-1742-b149-6cd4b050b572",
-                "assetId": "23169493"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404639000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169493",
-              "type": "cps"
-            }
+            "title": "„Telo mi ne dozvoljava da imam seks“",
+            "href": "/serbian/lat/svet-49771909",
+            "timestamp": 1576950834000
           },
           {
-            "id": "1849c8f5-dac1-294b-a0b5-823b119b1e6e",
+            "id": "ba9b877d-c85c-401d-af69-32393569f6ba",
             "rank": 4,
-            "count": 8942,
-            "urn": "urn:bbc:curie:asset:1849c8f5-dac1-294b-a0b5-823b119b1e6e",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169626",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169626",
-                "curie": "http://www.bbc.co.uk/asset/1849c8f5-dac1-294b-a0b5-823b119b1e6e",
-                "assetId": "23169626"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405084000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169626",
-              "type": "cps"
-            }
+            "title": "Naučnici su uspeli da stvore ljudski embrion: Zašto je to važno",
+            "href": "/serbian/lat/svet-65944668",
+            "timestamp": 1687155335000
           },
           {
-            "id": "5bae7009-f4cc-884b-b23b-5e9f99c9990e",
+            "id": "f8fbe31c-5168-441f-b635-b815aff3580b",
             "rank": 5,
-            "count": 8788,
-            "urn": "urn:bbc:curie:asset:5bae7009-f4cc-884b-b23b-5e9f99c9990e",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Otvorene ZOI 2014",
-                "headline": "Otvorene ZOI 2014 u Sočiju"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/23181035",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23181035",
-                "curie": "http://www.bbc.co.uk/asset/5bae7009-f4cc-884b-b23b-5e9f99c9990e",
-                "assetId": "23181035"
-              },
-              "summary": "U Sočiju su danas svečano otvorene Zimske olimpijske igre",
-              "timestamp": 1516029545000,
-              "language": "sr-Latn",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": [],
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                      "thingLabel": "Donald Tramp",
-                      "thingUri": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                      "thingId": "c7c7fcfe-5246-434e-9422-cdc925fe3a79",
-                      "thingType": [
-                        "core:Person",
-                        "tagging:TagConcept",
-                        "core:Thing",
-                        "tagging:Agent",
-                        "tagging:AmbiguousTerm"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Donald_Trump"
-                      ],
-                      "thingEnglishLabel": "Donald Trump",
-                      "type": "about"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63647321",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/3056/test/_63647321_9d11631e-d9df-4566-8780-0d39cf4c4301.jpg",
-                "path": "/cpsdevpb/3056/test/_63647321_9d11631e-d9df-4566-8780-0d39cf4c4301.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "p",
-                "caption": "Olimpijske maskote",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/23181035",
-              "type": "cps"
-            }
+            "title": "Kakvi su rizici po bebu kad je otac stariji",
+            "href": "/serbian/lat/svet-65934829",
+            "timestamp": 1687098382000
           },
           {
-            "id": "9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
+            "id": "f06a6722-fe90-f246-bd60-234ffe6f65f3",
             "rank": 6,
-            "count": 8424,
-            "urn": "urn:bbc:curie:asset:9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169624",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169624",
-                "curie": "http://www.bbc.co.uk/asset/9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
-                "assetId": "23169624"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405063000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169624",
-              "type": "cps"
-            }
+            "title": "Žena se probudila iz kome nakon 27 godina",
+            "href": "/serbian/lat/svet-48025797",
+            "timestamp": 1556044171000
           },
           {
-            "id": "82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
+            "id": "f1613f9f-7a5e-4748-b371-beaa6e1081fd",
             "rank": 7,
-            "count": 8136,
-            "urn": "urn:bbc:curie:asset:82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169495",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169495",
-                "curie": "http://www.bbc.co.uk/asset/82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
-                "assetId": "23169495"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404728000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169495",
-              "type": "cps"
-            }
+            "title": "Mali vodič za roditelje u Srbiji: Kako do pomoći države kada dobijete dete",
+            "href": "/serbian/lat/srbija-62575817",
+            "timestamp": 1660823893000
           },
           {
-            "id": "42765cca-a2ef-0742-8f78-f24c59d78caf",
+            "id": "d834d396-d766-4d6d-ae8a-da63a632ab77",
             "rank": 8,
-            "count": 7204,
-            "urn": "urn:bbc:curie:asset:42765cca-a2ef-0742-8f78-f24c59d78caf",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169494",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169494",
-                "curie": "http://www.bbc.co.uk/asset/42765cca-a2ef-0742-8f78-f24c59d78caf",
-                "assetId": "23169494"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404649000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169494",
-              "type": "cps"
-            }
+            "title": "Borba sa poplavama u Srbiji: Vanredna situacija u 56 opština, Vučić traži odgovorniji pristup Vlade",
+            "href": "/serbian/lat/srbija-65925774",
+            "timestamp": 1687083196000
           },
           {
-            "id": "7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
+            "id": "729c59f2-177a-4479-bbc9-82804349bff5",
             "rank": 9,
-            "count": 7202,
-            "urn": "urn:bbc:curie:asset:7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169608",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169608",
-                "curie": "http://www.bbc.co.uk/asset/7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
-                "assetId": "23169608"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1520349658000,
-              "language": "sr-Latn",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-                  "categoryName": "Interactive"
-                },
-                "taggings": [],
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
-                      "thingLabel": "Health",
-                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
-                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-                      "thingType": [
-                        "core:Thing",
-                        "core:Theme",
-                        "tagging:AmbiguousTerm",
-                        "tagging:TagConcept",
-                        "tagging:Genre"
-                      ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
-                      "thingEnglishLabel": "Health",
-                      "type": "about"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169608",
-              "type": "cps"
-            }
+            "title": "General Valerij Zalužnji: Čovek iza dugoočekivane ukrajinske kontraofanzive",
+            "href": "/serbian/lat/svet-65935163",
+            "timestamp": 1687161193000
           },
           {
-            "id": "151206d3-aff2-e949-976c-e9acb326ab45",
+            "id": "14c2a5d0-c14b-41a2-8edf-7d23f42f064a",
             "rank": 10,
-            "count": 6665,
-            "urn": "urn:bbc:curie:asset:151206d3-aff2-e949-976c-e9acb326ab45",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Beba panda odmara nakon prvog javnog nastupa",
-                "headline": "Beba panda odmara nakon prvog javnog nastupa"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/23180965",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180965",
-                "curie": "http://www.bbc.co.uk/asset/151206d3-aff2-e949-976c-e9acb326ab45",
-                "assetId": "23180965"
-              },
-              "summary": "Juang Meng danas ima deset kilograma i jednu obavezu manje",
-              "timestamp": 1516029046000,
-              "language": "sr-Latn",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63647061",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
-                "path": "/cpsdevpb/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
-                "height": 1152,
-                "width": 2048,
-                "altText": "p",
-                "caption": "Juang Meng danas ima jednu obavezu menje",
-                "copyrightHolder": "Reuters",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/23180965",
-              "type": "cps"
-            }
+            "title": "„Šetaćemo dok se ne ispune svi zahtevi\": Poruka demonstranata sa protesta „Srbija protiv nasilja\"",
+            "href": "/serbian/lat/srbija-65940762",
+            "timestamp": 1687032686000
           },
           {
-            "id": "06d605b3-4b6d-7e41-b35c-91b6c934dca4",
+            "id": "d66ed9a3-ed3a-4561-8a52-46807f299810",
             "rank": 11,
-            "count": 6584,
-            "urn": "urn:bbc:curie:asset:06d605b3-4b6d-7e41-b35c-91b6c934dca4",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "CES 2018 nove tehnologije",
-                "headline": "CES 2018 nove tehnologije otkrivaju budućnost"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/23180985",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180985",
-                "curie": "http://www.bbc.co.uk/asset/06d605b3-4b6d-7e41-b35c-91b6c934dca4",
-                "assetId": "23180985"
-              },
-              "summary": "Da li ćemo živeti ovako već sledeće godine?",
-              "timestamp": 1516027253000,
-              "language": "sr-Latn",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": [],
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
-                      "thingLabel": "Serbia",
-                      "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
-                      "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
-                      "thingType": [
-                        "core:Thing",
-                        "core:Place",
-                        "tagging:TagConcept"
-                      ],
-                      "thingSameAs": ["http://sws.geonames.org/6290252/"],
-                      "thingEnglishLabel": "Serbia",
-                      "type": "about"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63647067",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1292A/test/_63647067_ce96872b-dbf0-46de-87b0-07df207bbea3.jpg",
-                "path": "/cpsdevpb/1292A/test/_63647067_ce96872b-dbf0-46de-87b0-07df207bbea3.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "CES 2018",
-                "caption": "The ElliQ social robot by Intuition Robotics is seen at the Venetian during CES 2018 in Las Vegas on January 10, 2018. The robot is a personal assistant aimed at the elderly.",
-                "copyrightHolder": "/Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/23180985",
-              "type": "cps"
-            }
+            "title": "Šta je snus i koliko su opasne ove vrećice duvana",
+            "href": "/serbian/lat/srbija-64834975",
+            "timestamp": 1679474205000
           },
           {
-            "id": "60b74371-1d58-1547-9137-28d0647fbde1",
+            "id": "fd55662c-e84b-4653-8148-8fcb69169e17",
             "rank": 12,
-            "count": 6483,
-            "urn": "urn:bbc:curie:asset:60b74371-1d58-1547-9137-28d0647fbde1",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 16",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 16"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169613",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169613",
-                "curie": "http://www.bbc.co.uk/asset/60b74371-1d58-1547-9137-28d0647fbde1",
-                "assetId": "23169613"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404932000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169613",
-              "type": "cps"
-            }
+            "title": "Putovanje spavaćim kolima na pruzi Beograd-Bar: Nas i Rusa pun vagon",
+            "href": "/serbian/lat/balkan-61145276",
+            "timestamp": 1651225634000
           },
           {
-            "id": "6f98837f-a378-a14b-b8b0-e098ddcaee98",
+            "id": "f83f373e-fcf9-435f-9307-b9723a96b8ef",
             "rank": 13,
-            "count": 6384,
-            "urn": "urn:bbc:curie:asset:6f98837f-a378-a14b-b8b0-e098ddcaee98",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 19",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 19"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169616",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169616",
-                "curie": "http://www.bbc.co.uk/asset/6f98837f-a378-a14b-b8b0-e098ddcaee98",
-                "assetId": "23169616"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404963000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169616",
-              "type": "cps"
-            }
+            "title": "Da li kupači u Jadranskom moru treba da strahuju od napada ajkula",
+            "href": "/serbian/lat/srbija-62039244",
+            "timestamp": 1656949366000
           },
           {
-            "id": "dc35d343-6b9d-0e41-888c-fa036f1d4a62",
+            "id": "f325d2fa-140d-4270-aa7c-1953f04ebaba",
             "rank": 14,
-            "count": 6322,
-            "urn": "urn:bbc:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a62",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 31",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 31"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169628",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169628",
-                "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a62",
-                "assetId": "23169628"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405111000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169628",
-              "type": "cps"
-            }
+            "title": "Ko može da dobije 20.000 evra za novi dom u Srbiji - pitanja i odgovori",
+            "href": "/serbian/lat/srbija-60467235",
+            "timestamp": 1645517191000
           },
           {
-            "id": "fae15535-6ec3-2e4c-ad18-808dc16f8bee",
+            "id": "b708d365-00b4-444d-9c2c-343b0de4e5e7",
             "rank": 15,
-            "count": 6277,
-            "urn": "urn:bbc:curie:asset:fae15535-6ec3-2e4c-ad18-808dc16f8bee",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 21",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 21"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169618",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169618",
-                "curie": "http://www.bbc.co.uk/asset/fae15535-6ec3-2e4c-ad18-808dc16f8bee",
-                "assetId": "23169618"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404993000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169618",
-              "type": "cps"
-            }
+            "title": "Neverovatan proces tajnog intervjuisanja ljudi u Severnoj Koreji",
+            "href": "/serbian/lat/svet-65939728",
+            "timestamp": 1687167312000
           },
           {
-            "id": "76ddfd93-f5bb-9f40-8181-85796582795a",
+            "id": "6a677914-1dc9-4013-9f49-702b0daaf226",
             "rank": 16,
-            "count": 6073,
-            "urn": "urn:bbc:curie:asset:76ddfd93-f5bb-9f40-8181-85796582795a",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 17",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 17"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169614",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169614",
-                "curie": "http://www.bbc.co.uk/asset/76ddfd93-f5bb-9f40-8181-85796582795a",
-                "assetId": "23169614"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404944000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169614",
-              "type": "cps"
-            }
+            "title": "Neuništivi Jokić odveo Denver do titule šampiona NBA lige: „Posao je gotov, idemo kući“",
+            "href": "/serbian/lat/svet-65887012",
+            "timestamp": 1686660204000
           },
           {
-            "id": "925b9e5c-3059-f240-87ff-e69f979774d7",
+            "id": "57538ac3-cfc5-4139-8667-26c6935dd715",
             "rank": 17,
-            "count": 5487,
-            "urn": "urn:bbc:curie:asset:925b9e5c-3059-f240-87ff-e69f979774d7",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 18",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 18"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169615",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169615",
-                "curie": "http://www.bbc.co.uk/asset/925b9e5c-3059-f240-87ff-e69f979774d7",
-                "assetId": "23169615"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404955000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169615",
-              "type": "cps"
-            }
+            "title": "Feđa Štukan za BBC: Prva uloga mi je bila da glumim ludilo da se izvučem iz rata",
+            "href": "/serbian/lat/balkan-61028260",
+            "timestamp": 1649402757000
           },
           {
-            "id": "f6c242ea-6464-ec40-9b65-d63720333564",
+            "id": "be0cbd4a-0112-464f-90c4-462269a649df",
             "rank": 18,
-            "count": 5093,
-            "urn": "urn:bbc:curie:asset:f6c242ea-6464-ec40-9b65-d63720333564",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 14",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 14"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169611",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169611",
-                "curie": "http://www.bbc.co.uk/asset/f6c242ea-6464-ec40-9b65-d63720333564",
-                "assetId": "23169611"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512404866000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169611",
-              "type": "cps"
-            }
+            "title": "Lekovi za smirenje na Balkanu idu kao alva, često i bez recepta - šta kažu stručnjaci",
+            "href": "/serbian/lat/balkan-62168104",
+            "timestamp": 1658909837000
           },
           {
-            "id": "1a8ff619-0767-5e4e-bff8-f665407588a2",
+            "id": "dc447f9c-7295-4237-b9ba-9cbb63f4514d",
             "rank": 19,
-            "count": 4557,
-            "urn": "urn:bbc:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a2",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 35",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 35"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169632",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169632",
-                "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a2",
-                "assetId": "23169632"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405155000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169632",
-              "type": "cps"
-            }
+            "title": "Slike olupine Titanika koje do sada niste videli",
+            "href": "/serbian/lat/svet-65619272",
+            "timestamp": 1684312661000
           },
           {
-            "id": "8ec20548-be66-3545-8d55-9d3378dd4875",
+            "id": "daac1232-44ee-492d-89ae-58e19185df55",
             "rank": 20,
-            "count": 4080,
-            "urn": "urn:bbc:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4875",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 36",
-                "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 36"
-              },
-              "locators": {
-                "assetUri": "/serbian/lat/media-23169633",
-                "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169633",
-                "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4875",
-                "assetId": "23169633"
-              },
-              "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
-              "timestamp": 1512405163000,
-              "language": "sr-Latn",
-              "indexImage": {
-                "id": "63603672",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Kruševca",
-                "caption": "Kruševca",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:serbian/lat/media-23169633",
-              "type": "cps"
-            }
+            "title": "Zabrana prilaska prilikom porodičnog nasilja: Sve što treba da znate",
+            "href": "/serbian/lat/srbija-65759052",
+            "timestamp": 1687155495000
           }
         ]
       }

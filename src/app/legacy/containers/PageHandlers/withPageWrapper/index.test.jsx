@@ -15,7 +15,7 @@ const dataProps = {
 };
 
 // eslint-disable-next-line react/prop-types
-jest.mock('../../../../Layouts/defaultPageWrapper', () => ({ children }) => (
+jest.mock('../../../../components/PageLayoutWrapper', () => ({ children }) => (
   <div id="defaultPageWrapper">{children}</div>
 ));
 

@@ -13,6 +13,7 @@ const logCodes = {
   DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
+  DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
 
   // Files
@@ -57,6 +58,7 @@ const logCodes = {
   CONFIG_REQUEST_RECEIVED: 'config_request_received',
   CONFIG_FETCH_ERROR: 'config_fetch_error',
   CONFIG_ERROR: 'config_error',
+  CONFIG_RESPONSE_EMPTY_ERROR: 'config_response_empty_error',
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
@@ -86,6 +88,9 @@ const logCodes = {
 
   // Recommendations
   RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
+
+  // Logging
+  ATI_LOGGING_ERROR: 'ati_logging_error',
 };
 
 module.exports = logCodes;

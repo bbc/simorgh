@@ -1,114 +1,89 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
 
 describe('Navigation Container', () => {
-  shouldMatchSnapshot(
-    'should correctly render amp navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/news"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render amp navigation', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render canonical navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/news"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render canonical navigation', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render amp navigation on non-home navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/uk"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render amp navigation on non-home navigation page', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/uk',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render canonical navigation on non-home navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/uk"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render canonical navigation on non-home navigation page', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/uk',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render amp navigation on non-navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/not-a-navigation-page"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render amp navigation on non-navigation page', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/not-a-navigation-page',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render canonical navigation on non-navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/not-a-navigation-page"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  it('should correctly render canonical navigation on non-navigation page', () => {
+    const { container } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/not-a-navigation-page',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render navigation links in the correct format', () => {
     const { navigation } = newsConfig.default;

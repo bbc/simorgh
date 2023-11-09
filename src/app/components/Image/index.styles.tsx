@@ -11,7 +11,6 @@ const styles = {
   placeholder: (theme: Theme) =>
     css({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-      backgroundColor: theme.palette.LUNAR,
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '60px 17px',

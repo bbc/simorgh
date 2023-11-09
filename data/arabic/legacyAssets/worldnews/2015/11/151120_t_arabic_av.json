@@ -1,168 +1,759 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
-        "id": "17694217",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-          "id": "17694217",
-          "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
+        "locators": {
+          "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "assetId": "17694217",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
+          "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
         },
-        "live": false,
-        "playlist": [
-          {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
-          },
-          {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
-          }
+        "type": "MAP",
+        "createdBy": "arabic_1024",
+        "language": "ar",
+        "lastUpdated": 1687177431318,
+        "firstPublished": 1448014173000,
+        "lastPublished": 1448014173000,
+        "timestamp": 1448014173000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17694217",
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "page": "arabic.worldnews.2015.11.151120_t_arabic_av.page"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.28",
+        "blockTypes": [
+          "legacyMedia",
+          "paragraph"
         ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        "includeComments": false,
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "contentType": "article-media-asset",
+          "language": "ar",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "worldnews::arabic.worldnews.2015.11.151120_t_arabic_av.page",
+          "pageTitle": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+          "producerId": null,
+          "timePublished": "2015-11-20T10:09:33.000Z",
+          "timeUpdated": "2015-11-20T10:09:33.000Z"
+        },
+        "readTime": 1,
+        "siteUri": "/arabic",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17694217",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17694217",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم &quot;الدولة الاسلامية&quot; (داعش) وغيره من التنظيمات الجهادية.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+          "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"
+        },
+        "locators": {
+          "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "assetId": "17694217",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
+          "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
+        },
+        "summary": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+        "timestamp": 1448014173000,
+        "language": "ar",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+          "taggings": []
+        },
+        "media": {
+          "id": "17694217",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17694217",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e228",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC World Service",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
+        "type": "cps"
       },
-      {
-        "markupType": "plain_text",
-        "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم &quot;الدولة الاسلامية&quot; (داعش) وغيره من التنظيمات الجهادية.",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "العالم",
+          "uri": "/arabic/worldnews",
+          "urlIdentifier": "/arabic/worldnews",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCArabic.com",
+          "uri": "/arabic",
+          "urlIdentifier": "/arabic",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17694217", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "arabic_1024",
-    "firstPublished": 1448014173000,
-    "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
-    "includeComments": false,
-    "language": "ar",
-    "lastPublished": 1448014173000,
-    "lastUpdated": 1585904875448,
-    "locators": {
-      "assetId": "17694217",
-      "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
-      "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
-      "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1448014173000,
-    "type": "MAP",
-    "version": "v1.1.10"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-      "shortHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"
-    },
-    "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC World Service",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
-      "id": "d5e228",
-      "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "ar",
-    "locators": {
-      "assetId": "17694217",
-      "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
-      "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
-      "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
-      "id": "17694217",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-        "id": "17694217",
-        "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-    "timestamp": 1448014173000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "العالم",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/arabic/worldnews"
-    },
-    "site": {
-      "name": "BBCArabic.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/arabic"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-06-20T15:03:59.29Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 10,
+        "records": [
+          {
+            "id": "bb996d99-f92b-8345-b19a-62aedbc60249",
+            "rank": 1,
+            "count": 9828,
+            "urn": "urn:bbc:curie:asset:bb996d99-f92b-8345-b19a-62aedbc60249",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية video 93",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23138145",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:bb996d99-f92b-8345-b19a-62aedbc60249",
+                "assetId": "23138145",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23138145",
+                "curie": "http://www.bbc.co.uk/asset/bb996d99-f92b-8345-b19a-62aedbc60249"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499338566000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23138145",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "195a61d2-887b-c74c-a56f-387322fcb134",
+            "rank": 2,
+            "count": 9480,
+            "urn": "urn:bbc:curie:asset:195a61d2-887b-c74c-a56f-387322fcb134",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "شقشلاهؤ ؤشسفشصشغ ؤمهح Title أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين 06",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/blog-tv-and-radio-23087757",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:195a61d2-887b-c74c-a56f-387322fcb134",
+                "assetId": "23087757",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/blog-tv-and-radio-23087757",
+                "curie": "http://www.bbc.co.uk/asset/195a61d2-887b-c74c-a56f-387322fcb134"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1477955659000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63520130",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0C1E/test/_63520130_p015xzbw.jpg",
+                "path": "/cpsdevpb/0C1E/test/_63520130_p015xzbw.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "شقشلاهؤ شمف فثءف",
+                "copyrightHolder": "لالاؤ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/blog-tv-and-radio-23087757",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ab07aee9-4815-7443-8521-2b484c38fb95",
+            "rank": 3,
+            "count": 8425,
+            "urn": "urn:bbc:curie:asset:ab07aee9-4815-7443-8521-2b484c38fb95",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية 91",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23137400",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ab07aee9-4815-7443-8521-2b484c38fb95",
+                "assetId": "23137400",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23137400",
+                "curie": "http://www.bbc.co.uk/asset/ab07aee9-4815-7443-8521-2b484c38fb95"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499093788000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23137400",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "16a0e46d-caf2-064a-ab2f-6f7fe46367ff",
+            "rank": 4,
+            "count": 6893,
+            "urn": "urn:bbc:curie:asset:16a0e46d-caf2-064a-ab2f-6f7fe46367ff",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "شقشلاهؤ ؤشسفشصشغ ؤمهح Title أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين 04",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/blog-tv-and-radio-23087755",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:16a0e46d-caf2-064a-ab2f-6f7fe46367ff",
+                "assetId": "23087755",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/blog-tv-and-radio-23087755",
+                "curie": "http://www.bbc.co.uk/asset/16a0e46d-caf2-064a-ab2f-6f7fe46367ff"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1477955636000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63520130",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0C1E/test/_63520130_p015xzbw.jpg",
+                "path": "/cpsdevpb/0C1E/test/_63520130_p015xzbw.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "شقشلاهؤ شمف فثءف",
+                "copyrightHolder": "لالاؤ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/blog-tv-and-radio-23087755",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "056de8e2-6479-fc43-8984-db199b3c70eb",
+            "rank": 5,
+            "count": 5736,
+            "urn": "urn:bbc:curie:asset:056de8e2-6479-fc43-8984-db199b3c70eb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية 92",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23137401",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:056de8e2-6479-fc43-8984-db199b3c70eb",
+                "assetId": "23137401",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23137401",
+                "curie": "http://www.bbc.co.uk/asset/056de8e2-6479-fc43-8984-db199b3c70eb"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499093799000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23137401",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3f5571c4-15e9-084d-9616-b3a805162513",
+            "rank": 6,
+            "count": 5541,
+            "urn": "urn:bbc:curie:asset:3f5571c4-15e9-084d-9616-b3a805162513",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الاماراتAV",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الاماراتAV"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078450",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3f5571c4-15e9-084d-9616-b3a805162513",
+                "assetId": "23078450",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078450",
+                "curie": "http://www.bbc.co.uk/asset/3f5571c4-15e9-084d-9616-b3a805162513"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899790000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "الامارات",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/11E69/test/_63512337_160926115449_drone__640x360_ap_nocredit.jpg",
+                  "path": "/cpsdevpb/11E69/test/_63512337_160926115449_drone__640x360_ap_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "الامارات",
+                  "copyrightHolder": "AP",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63512338",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14579/test/_63512338_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/14579/test/_63512338_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "الامارات",
+                "caption": "الامارات",
+                "copyrightHolder": "AP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078450",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "30c9cf84-a950-f54f-b5ba-49bce8c283e9",
+            "rank": 7,
+            "count": 4084,
+            "urn": "urn:bbc:curie:asset:30c9cf84-a950-f54f-b5ba-49bce8c283e9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "عنوان",
+                "headline": "ملخص"
+              },
+              "locators": {
+                "assetUri": "/arabic/23201401",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:30c9cf84-a950-f54f-b5ba-49bce8c283e9",
+                "assetId": "23201401",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23201401",
+                "curie": "http://www.bbc.co.uk/asset/30c9cf84-a950-f54f-b5ba-49bce8c283e9"
+              },
+              "summary": "ملخص",
+              "timestamp": 1526915914000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01hj5mz",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ø¹Ù†ÙˆØ§Ù†",
+                "synopses": {
+                  "short": "Ù…Ù„Ø®Øµ"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hshf5.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "شرح",
+                "versions": [
+                  {
+                    "versionId": "p01hj5n1",
+                    "types": [
+                      "Original"
+                    ],
+                    "duration": 11,
+                    "durationISO8601": "PT11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1525096797000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63679666",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10489/test/_63679666_p01hj5r3.jpg",
+                "path": "/cpsdevpb/10489/test/_63679666_p01hj5r3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "cyclists",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23201401",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f95c1e77-4cea-5248-bb7b-99dca8921f06",
+            "rank": 8,
+            "count": 3354,
+            "urn": "urn:bbc:curie:asset:f95c1e77-4cea-5248-bb7b-99dca8921f06",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية 90",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23137399",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f95c1e77-4cea-5248-bb7b-99dca8921f06",
+                "assetId": "23137399",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23137399",
+                "curie": "http://www.bbc.co.uk/asset/f95c1e77-4cea-5248-bb7b-99dca8921f06"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499093773000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23137399",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6b312a66-aab1-fc4c-9841-03e2d06949ff",
+            "rank": 9,
+            "count": 2914,
+            "urn": "urn:bbc:curie:asset:6b312a66-aab1-fc4c-9841-03e2d06949ff",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية 93",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23137402",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6b312a66-aab1-fc4c-9841-03e2d06949ff",
+                "assetId": "23137402",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23137402",
+                "curie": "http://www.bbc.co.uk/asset/6b312a66-aab1-fc4c-9841-03e2d06949ff"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499093824000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23137402",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3b379033-def7-e747-b71d-4568e918753d",
+            "rank": 10,
+            "count": 1185,
+            "urn": "urn:bbc:curie:asset:3b379033-def7-e747-b71d-4568e918753d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تحديات تواجه ذوي الإعاقات غير المرئية video 92",
+                "headline": "أكثر من 100 مدرسة في محافظة ذي قار العراقية بنيت من الطين short سغىخحسهس"
+              },
+              "locators": {
+                "assetUri": "/arabic/media-23138144",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3b379033-def7-e747-b71d-4568e918753d",
+                "assetId": "23138144",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/media-23138144",
+                "curie": "http://www.bbc.co.uk/asset/3b379033-def7-e747-b71d-4568e918753d"
+              },
+              "summary": "عاد ملايين التلاميذ في العراق إلى مدارسهم، لكن الهاجس الأمني ليس الوحيد الذي يعكر medium synopsis صفو الموسم الدراسي الجديد، فألوف من التلاميذ لا يجدون حتى مدارس لائقة.",
+              "timestamp": 1499338551000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "media": {
+                "id": "23081668",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xz8c",
+                "entityType": "Clip",
+                "caption": "شقشلاهؤ media caption لالاؤ ؤمهح",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "نوي صغيرة المساحة",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/media-23138144",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

@@ -1,6 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render, fireEvent } from '@testing-library/react';
+import {
+  render,
+  fireEvent,
+} from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import ScriptLink from './index';
 
@@ -11,10 +13,10 @@ describe('ScriptLink', () => {
     script: latin,
   };
 
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ScriptLink {...props}>Lat</ScriptLink>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(<ScriptLink {...props}>Lat</ScriptLink>);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render a link', () => {
     const { container } = render(

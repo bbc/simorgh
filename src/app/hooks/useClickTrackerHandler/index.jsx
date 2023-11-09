@@ -3,10 +3,10 @@ import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import useTrackingToggle from '#hooks/useTrackingToggle';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import useTrackingToggle from '../useTrackingToggle';
+import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
+import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 

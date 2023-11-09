@@ -8,6 +8,7 @@ import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendati
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import newsMultipleItems from './newsFixture';
 import CpsRecommendations from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ items, service, dir }) => {
@@ -52,20 +53,25 @@ const Component = ({ items, service, dir }) => {
   };
   return (
     <div dir={dir}>
-      <ServiceContext.Provider value={serviceContextStub}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={STORY_PAGE}
-          service={service}
-          pathname="/pathname"
-        >
-          <ToggleContext.Provider
-            value={{ toggleState, toggleDispatch: () => {} }}
+      <ThemeProvider service={service}>
+        <ServiceContext.Provider value={serviceContextStub}>
+          <RequestContextProvider
+            isAmp={false}
+            pageType={STORY_PAGE}
+            service={service}
+            pathname="/pathname"
           >
-            <CpsRecommendations items={items} parentColumns={parentGridCols} />
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContext.Provider>
+            <ToggleContext.Provider
+              value={{ toggleState, toggleDispatch: () => {} }}
+            >
+              <CpsRecommendations
+                items={items}
+                parentColumns={parentGridCols}
+              />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>
+      </ThemeProvider>
     </div>
   );
 };

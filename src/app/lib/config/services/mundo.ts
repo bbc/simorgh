@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/mundo';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'mundo',
     serviceName: 'News Mundo',
     languageName: 'Spanish',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
     noBylinesPolicy:
@@ -51,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
     iTunesAppId: 515255747,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -137,7 +122,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ok',
           reject: 'Descubre lo que ha cambiado',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -152,7 +137,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Administrar mi configuración',
             },
@@ -169,7 +154,7 @@ export const service: DefaultServiceConfig = {
                   'Para que nuestras páginas web funcionen, almacenamos cierta información limitada en tu dispositivo sin tu consentimiento.',
                 para4: {
                   text: 'Lee más más sobre la información esencial que almacenamos en tu dispositivo para que nuestras páginas web funcionen (en inglés).',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Usamos almacenamiento local para guardar tus preferencias de consentimiento en tu dispositivo.',
@@ -202,13 +187,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Sí, estoy de acuerdo',
             reject: 'No, llévame a la configuración',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -265,7 +250,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
-    brandSVG,
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',
@@ -319,8 +303,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -340,10 +324,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Internacional',
         url: '/mundo/topics/c2lej05epw5t',
-      },
-      {
-        title: 'Qatar 2022',
-        url: '/mundo/topics/c36v5eq58ngt',
       },
       {
         title: 'Hay Festival',

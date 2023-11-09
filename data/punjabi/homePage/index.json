@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "BBC News ਪੰਜਾਬੀ",
+    "description": "ਪੰਜਾਬ ਤੇ ਭਾਰਤ ਸਬੰਧੀ ਤੇ ਕੌਮਾਂਤਰੀ ਖ਼ਬਰਾਂ ਲਈ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ’ਤੇ ਆਓ। ਇੱਥੇ ਤੁਹਾਨੂੰ ਸਿਆਸਤ ਤੇ ਸਮਾਜ ਨਾਲ ਜੁੜੀਆਂ ਖ਼ਬਰਾਂ ਤੋਂ ਇਲਾਵਾ ਫੋਟੋ ਫੀਚਰ, ਵੀਡੀਓ ਤੇ ਮਨੋਰਥ ਭਰਪੂਰ ਲੇਖ ਵੀ ਮਿਲਣਗੇ। ਨੌਜਵਾਨਾਂ ਤੇ ਔਰਤਾਂ ਦਾ ਖ਼ਾਸ ਧਿਆਨ ਰੱਖਦੇ ਹੋਏ ਸੋਸ਼ਲ ਮੀਡੀਆ ਰੁਝਾਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਮਿਲੇਗੀ।",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ਪਾਕਿਸਤਾਨ ਦਾ ਸਿਆਸੀ ਸੰਕਟ ਮੁਲਕ ਨੂੰ ਇੰਝ ਕਰ ਸਕਦਾ ਹੈ ਪ੍ਰਭਾਵਿਤ",
+            "firstPublished": "2023-03-16T08:16:37.069Z",
+            "link": "https://www.bbc.com/punjabi/articles/cxepl74p0mvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4fb5/live/ebd20cf0-c3d7-11ed-95f8-0154daa64c44.jpg",
+            "description": "ਇਮਰਾਨ ਖ਼ਾਨ ਦੀ ਗ਼੍ਰਿਫ਼ਤਾਰੀ ਦਾ ਮੁਲਕ ਦੀ ਸਿਆਸਤ ’ਤੇ ਕੀ ਅਸਰ ਹੋਵੇਗਾ, ਇਹ ਉਨ੍ਹਾਂ ਦਾ ਸਿਆਸੀ ਕਰੀਅਰ ਚਮਕਾਏਗੀ ਜਾਂ ਖ਼ਤਮ ਕਰ ਦੇਵੇਗੀ",
+            "imageAlt": "ਇਮਰਾਨ ਖ਼ਾਨ",
+            "id": "cxepl74p0mvo"
+          },
+          {
+            "type": "article",
+            "title": "ਇਮਰਾਨ ਖ਼ਾਨ : ਤੋਸ਼ਾਖਾਨਾ ਮਾਮਲੇ 'ਚ 30 ਮਾਰਚ ਤੱਕ ਟਲੀ ਸੁਣਵਾਈ, ਇਮਰਾਨ ਦੀ ਗ੍ਰਿਫ਼ਤਾਰੀ ਦਾ ਵਾਰੰਟ ਵੀ ਰੱਦ",
+            "firstPublished": "2023-03-18T06:30:51.564Z",
+            "link": "https://www.bbc.com/punjabi/articles/cxr06lvvq71o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cb6d/live/cf736b80-c58a-11ed-95f8-0154daa64c44.jpg",
+            "description": "ਅਦਾਲਤ ਨੇ ਕਿਹਾ ਹੈ ਕਿ ਇਮਰਾਨ ਨੂੰ 30 ਮਾਰਚ ਨੂੰ ਪੇਸ਼ ਹੋਣਾ ਪਵੇਗਾ, ਹਾਲਾਂਕਿ ਇਹ ਇੱਕ ਵੱਖਰਾ ਮੁੱਦਾ ਹੈ ਕਿ ਉਸ ਵੇਲੇ ਕੀ ਸਥਿਤੀ ਹੋਵੇਗੀ",
+            "imageAlt": "ਇਮਰਾਨ ਖ਼ਾਨ ਮਾਮਲਾ",
+            "id": "cxr06lvvq71o"
+          },
+          {
+            "type": "article",
+            "title": "ਇਮਰਾਨ ਖਾਨ : ਤੋਸ਼ਾਖਾਨਾ ਮਾਮਲਾ ਕੀ ਹੈ, ਜਿਸ ਨੇ ਸਾਬਕਾ ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਲਈ ਸੰਕਟ ਖੜ੍ਹਾ ਕੀਤਾ",
+            "firstPublished": "2023-03-05T09:57:45.000Z",
+            "link": "https://www.bbc.com/punjabi/international-64853651",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6F8B/production/_128855582__127289459_gettyimages-994502034.jpg",
+            "description": "ਲਾਹੌਰ ਵਿੱਚ ਪੁਲਿਸ ਇਮਰਾਨ ਖਾਨ ਨੂੰ ਗ੍ਰਿਫਤਾਰ ਕਰਨ ਲਈ ਅਦਾਲਤ ਦਾ ਵਾਰੰਟ ਲੈ ਕੇ ਉਨ੍ਹਾਂ ਦੀ ਰਿਹਾਇਸ਼ ਉੱਤੇ ਪਹੁੰਚੀ ਹੋਈ ਹੈ",
+            "imageAlt": "ਇਮਰਾਨ ਖ਼ਾਨ",
+            "id": "b4326422-4758-4861-9bad-d9d032eebd18"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c9d5eeb8-2d23-4658-890b-bfff62dc3492",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "ਦ੍ਰਿਸ਼ਟੀਕੋਣ",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:ck2nell96g6t",
+        "contentType": "index-home",
+        "pageIdentifier": "punjabi.page",
+        "pageTitle": "BBC News ਪੰਜਾਬੀ"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

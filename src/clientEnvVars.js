@@ -1,6 +1,9 @@
 const SIMORGH = /^SIMORGH_/i;
 
-module.exports.getClientEnvVars = (envConfig = { parsed: {} }) => {
+module.exports.getClientEnvVars = (
+  envConfig = { parsed: {} },
+  options = { stringify: true },
+) => {
   const { parsed } = envConfig;
   const envVars = Object.keys(parsed);
   const clientEnvVars = {};
@@ -8,7 +11,9 @@ module.exports.getClientEnvVars = (envConfig = { parsed: {} }) => {
   const prefixedEnvVars = envVars.filter(key => SIMORGH.test(key));
 
   prefixedEnvVars.forEach(variable => {
-    clientEnvVars[variable] = JSON.stringify(parsed[variable]);
+    clientEnvVars[variable] = options.stringify
+      ? JSON.stringify(parsed[variable])
+      : parsed[variable];
   });
 
   return clientEnvVars;

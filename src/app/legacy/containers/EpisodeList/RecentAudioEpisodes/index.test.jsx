@@ -1,10 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import RecentAudioEpisodes from '.';
@@ -45,15 +44,17 @@ const RecentAudioEpisodesWithContext = ({
 );
 
 describe('RecentAudioEpisodes', () => {
-  shouldMatchSnapshot(
-    'should render audio episodes correctly',
-    <RecentAudioEpisodesWithContext
-      masterBrand="bbc_indonesian_radio"
-      episodes={indonesian}
-      service="indonesia"
-      pageType="On Demand Radio"
-    />,
-  );
+  it('should render audio episodes correctly', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
   it('should render the translated section label', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext

@@ -18,11 +18,17 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
-        describe('ATI', () => {
-          it('should have a noscript img tag with the ati url', () => {
-            cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
-          });
-        });
+        describe(
+          'ATI',
+          {
+            retries: 3,
+          },
+          () => {
+            it('should have a noscript img tag with the ati url', () => {
+              cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
+            });
+          },
+        );
       }
     });
   }

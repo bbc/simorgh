@@ -6,6 +6,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
+
 import {
   StyledTitle,
   StyledTimestamp,
@@ -15,7 +16,7 @@ import {
 
 const TopStoriesItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    const { script, translations } = useContext(ServiceContext);
+    const { script } = useContext(ServiceContext);
 
     if (!item || isEmpty(item)) return null;
 
@@ -23,6 +24,21 @@ const TopStoriesItem = forwardRef(
     const headline =
       overtypedHeadline ||
       pathOr('', ['headlines', 'headline'], item) ||
+      pathOr(
+        '',
+        [
+          'headlines',
+          'promoHeadline',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'text',
+        ],
+        item,
+      ) ||
       pathOr('', ['name'], item);
 
     const mediaType = pathOr(null, ['media', 'format'], item);
@@ -32,15 +48,10 @@ const TopStoriesItem = forwardRef(
     const timestamp = pathOr(null, ['timestamp'], item);
 
     const assetUri = pathOr('', ['locators', 'assetUri'], item);
+    const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
     const uri = pathOr('', ['uri'], item);
 
     const isLive = getIsLive(item);
-
-    const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-
-    // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-    // text to read 'Live' instead, which screenreaders pronounce correctly.
-    const liveLabelIsEnglish = liveLabel === 'LIVE';
 
     const titleTag = timestamp || isLive ? 'h3' : 'div';
 
@@ -51,22 +62,17 @@ const TopStoriesItem = forwardRef(
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
         <Promo
-          to={assetUri || uri}
+          to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={mediaType}
           eventTrackingData={eventTrackingData}
         >
           <Promo.ContentWrapper>
-            {mediaType && <Promo.MediaIndicator />}
             <Title as={titleTag} script={script}>
               <Promo.Link>
+                {mediaType && <Promo.MediaIndicator />}
                 {isLive ? (
-                  <Promo.LiveLabel
-                    liveText={liveLabel}
-                    ariaHidden={liveLabelIsEnglish}
-                    offScreenText={liveLabelIsEnglish ? 'Live' : null}
-                    id={ariaLabelledBy}
-                  >
+                  <Promo.LiveLabel id={ariaLabelledBy}>
                     <Promo.Content
                       mediaDuration={mediaDuration}
                       headline={headline}

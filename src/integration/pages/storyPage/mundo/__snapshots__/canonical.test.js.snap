@@ -2,73 +2,73 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-31T23%3A08%3A08.000Z]&amp;x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]\\"/>"`;
+exports[`Canonical Story Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-30T06%3A35%3A49.000Z]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]"/>"`;
 
 exports[`Canonical Story Page Apple iTunes App meta tag should match name and content 1`] = `
-Object {
+{
   "content": "app-id=515255747, app-argument=http://localhost:7080/mundo/noticias-internacional-51266689?utm_medium=banner&utm_content=apple-itunes-app",
   "name": "apple-itunes-app",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Mundo",
   "url": "/mundo",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Por qué puedes confiar en la BBC",
   "url": "https://www.bbc.com/mundo/institucional-51359666",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Términos de uso",
   "url": "https://www.bbc.com/mundo/institucional-36400005",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Sobre la BBC",
   "url": "https://www.bbc.com/mundo/institucional-36400007",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Política de privacidad",
   "url": "https://www.bbc.com/mundo/institucional-36400009",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Escribe a BBC Mundo",
   "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
+{
+  "text": "Do not share or sell my info",
+  "url": "#",
 }
 `;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
-Object {
+{
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -81,84 +81,77 @@ exports[`Canonical Story Page Footer I can see the footer copyright and external
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Noticias",
   "url": "/mundo",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "América Latina",
   "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Internacional",
   "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Qatar 2022",
-  "url": "/mundo/topics/c36v5eq58ngt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+{
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+{
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+{
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+{
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+{
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `
-Object {
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+{
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
 }
@@ -169,11 +162,12 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="549"
   sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;
@@ -182,71 +176,141 @@ exports[`Canonical Story Page Lead image I can see an image with a caption 1`] =
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+{
+  "text": "Qué se sabe de las 5 personas que viajan en el sumergible desaparecido que se dirigía al Titanic",
+  "url": "/mundo/noticias-internacional-65957893",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+{
+  "text": "Desaparece un sumergible que lleva a turistas y expertos a visitar los restos del Titanic",
+  "url": "/mundo/noticias-internacional-65936312",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+{
+  "text": ""Firmas un descargo de responsabilidad que enumera todas las formas en que podrías morir": cómo es viajar a bordo del sumergible Titán que se perdió camino al Titanic",
+  "url": "https://www.bbc.com/mundo/articles/cy0jjgx7579o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+{
+  "text": "La compleja operación para rescatar el sumergible desaparecido con 5 personas que iban a visitar los restos del Titanic",
+  "url": "/mundo/noticias-internacional-65957851",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+{
+  "text": "Cómo es Titán, el sumergible con 5 personas a bordo que se perdió cuando iba a observar los restos del Titanic",
+  "url": "https://www.bbc.com/mundo/articles/c4n998dnnw2o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 6`] = `
+{
+  "text": ""Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"",
+  "url": "/mundo/noticias-65930070",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 7`] = `
+{
+  "text": ""Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
+  "url": "/mundo/noticias-65372150",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 8`] = `
+{
+  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
+  "url": "/mundo/noticias-65919722",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 9`] = `
+{
+  "text": "Dónde se hundió exactamente el Titanic y cómo encontraron sus restos en 1985",
+  "url": "/mundo/noticias-internacional-65957299",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 10`] = `
+{
+  "text": "Cómo el nuevo gasoducto de 600 km de Vaca Muerta puede ayudar a Argentina a salir de la crisis económica",
+  "url": "/mundo/noticias-america-latina-65851160",
+}
+`;
+
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
 }
@@ -256,8 +320,6 @@ exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/m
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
@@ -265,55 +327,14 @@ exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"es"`;
 
 exports[`Canonical Story Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "BackgroundNewsArticle",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": "Europe",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Europe",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "United Kingdom",
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Culture",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Culture",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "European Union",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/European_Union",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Economics",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Economy",
-          ],
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Brexit",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Brexit",
-          ],
-        },
-      ],
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -322,29 +343,29 @@ Object {
         "name": "BBC News Mundo",
         "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
       },
-      "dateModified": "2020-01-31T23:08:08.000Z",
+      "dateModified": "2020-01-30T06:35:49.000Z",
       "datePublished": "2020-01-30T06:35:49.000Z",
       "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
       "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "es",
         "name": "Spanish",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
         "@type": "WebPage",
         "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -395,7 +416,7 @@ exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
 exports[`Canonical Story Page Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2020-01-30",
   "text": "30 enero 2020",
 }

@@ -1,9 +1,14 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
-import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
+import {
+  DATA_FETCH_ERROR,
+  DATA_REQUEST_RECEIVED,
+  DATA_RESPONSE_FROM_CACHE,
+} from '#lib/logger.const';
 import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
+import isLocal from '#app/lib/utilities/isLocal';
 import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
@@ -13,6 +18,8 @@ const fullLivePath = 'https://www.bbc.com/hausa/mostwatched.json';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
+
+jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -318,6 +325,48 @@ describe('fetchPageData', () => {
             status: 502,
             message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
           });
+        },
+      );
+    });
+  });
+
+  describe('with cache', () => {
+    const response = JSON.stringify({
+      metadata: {},
+      content: {},
+      promo: {},
+    });
+
+    const cache = new Map();
+    cache.set('http://localhost/path/to/asset.json', response);
+
+    beforeEach(() => {
+      fetch.mockResponse(response);
+    });
+
+    it('does not use a cached response on local environment', async () => {
+      isLocal.mockReturnValueOnce(true);
+
+      await fetchPageData({ path: requestedPathname, pageType, cache });
+
+      expect(loggerMock.info).not.toBeCalledWith(
+        DATA_RESPONSE_FROM_CACHE,
+        expect.any(Object),
+      );
+    });
+
+    it('uses a cached response when not on local environment', async () => {
+      isLocal.mockReturnValueOnce(false);
+
+      await fetchPageData({ path: requestedPathname, pageType, cache });
+
+      expect(loggerMock.info).toHaveBeenNthCalledWith(
+        2,
+        DATA_RESPONSE_FROM_CACHE,
+        {
+          data: expectedUrl,
+          path: requestedPathname,
+          pageType,
         },
       );
     });

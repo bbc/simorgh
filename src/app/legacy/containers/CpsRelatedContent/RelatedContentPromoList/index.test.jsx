@@ -1,53 +1,44 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import RelatedContentPromoList from './index';
-
-jest.mock('../../../../components/ThemeProvider');
 
 const promoItems = path(
   ['relatedContent', 'groups', 0, 'promos'],
-  pidginPageData,
+  pidginPageData.data.article,
 );
 
 describe('RelatedContentPromoList', () => {
-  shouldMatchSnapshot(
-    'it renders a list of Story Promos for STY pages',
-    <ThemeProvider service="pidgin" variant="default">
-      <ServiceContextProvider service="pidgin">
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
-          <RelatedContentPromoList promoItems={promoItems} dir="ltr" />
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>,
-  );
-});
+  it('it renders a list of Story Promos for STY pages', () => {
+    const { container } = render(
+      <RelatedContentPromoList promoItems={promoItems} dir="ltr" />,
+      {
+        service: 'pidgin',
+        variant: 'default',
+        toggles: {
+          eventTracking: { enabled: true },
+        },
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-describe('RelatedContentPromoList', () => {
-  shouldMatchSnapshot(
-    'it renders a list of Story Promos for MAP pages',
-    <ThemeProvider service="pidgin" variant="default">
-      <ServiceContextProvider service="pidgin">
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
-          <RelatedContentPromoList
-            promoItems={promoItems}
-            dir="ltr"
-            isMediaContent
-          />
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>,
-  );
+  it('it renders a list of Story Promos for MAP pages', () => {
+    const { container } = render(
+      <RelatedContentPromoList
+        promoItems={promoItems}
+        dir="ltr"
+        isMediaContent
+      />,
+      {
+        service: 'pidgin',
+        variant: 'default',
+        toggles: {
+          eventTracking: { enabled: true },
+        },
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

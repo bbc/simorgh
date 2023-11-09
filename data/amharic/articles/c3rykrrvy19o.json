@@ -5,164 +5,236 @@
         "model": {
           "blocks": [
             {
-              "id": "f410f84a",
+              "id": "1080fcca",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "98ab3f73",
+                    "id": "3a726f1d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "99045b80",
+                          "id": "64e5bdf8",
                           "type": "paragraph",
                           "model": {
                             "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
                             "blocks": [
                               {
-                                "id": "319b04d1",
+                                "id": "1bae994a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "f27d8b15",
+              "id": "05c4585e",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942682443,
                 "lastPublished": 1562942682443
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "c3fb1f86",
+              "id": "6cc4e0eb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ba1d21c8",
+                    "id": "11e1781d",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
                       "blocks": [
                         {
-                          "id": "721d67a1",
+                          "id": "90d75fad",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
-                    "id": "c527854e",
+                    "id": "d028b943",
                     "type": "paragraph",
                     "model": {
                       "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
                       "blocks": [
                         {
-                          "id": "68362049",
+                          "id": "75678af5",
                           "type": "fragment",
                           "model": {
                             "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
-                    "id": "2fe69409",
+                    "id": "ab7ce991",
                     "type": "paragraph",
                     "model": {
                       "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
                       "blocks": [
                         {
-                          "id": "ed53c676",
+                          "id": "035d19ee",
                           "type": "fragment",
                           "model": {
                             "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
-                    "id": "4cfadde2",
+                    "id": "9c15225b",
                     "type": "paragraph",
                     "model": {
                       "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
                       "blocks": [
                         {
-                          "id": "ab5f562c",
+                          "id": "c61f049d",
                           "type": "fragment",
                           "model": {
                             "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "7d2a53ac", "type": "mpu", "model": {}, "position": [4] },
             {
-              "id": "ff3a092c",
+              "id": "3292ff3a",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "1f6fbfe0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5cae092d",
+                    "id": "a6cd541a",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
                       "blocks": [
                         {
-                          "id": "4a517e26",
+                          "id": "b5c0afe7",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "289cc4b5",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -176,11 +248,8 @@
         "type": "article",
         "createdBy": "Amharic",
         "language": "am",
-        "lastUpdated": 1645628418168,
         "firstPublished": 1562942682443,
         "lastPublished": 1562942682443,
-        "timestamp": 1562942682443,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3rykrrvy19o",
           "producer": "Amharic",
@@ -191,44 +260,26 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o",
-          "canonicalUrl": "https://www.bbc.com/amharic/articles/c3rykrrvy19o"
-        },
-        "timestamp": 1562942682443,
-        "suitableForSyndication": false,
-        "language": "am",
-        "headlines": { "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ" },
-        "images": {},
-        "passport": {
-          "language": "am",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3rykrrvy19o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Amharic",
-          "uri": "/amharic",
-          "type": "simple"
-        },
-        "groups": []
+        "headlines": {
+          "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Rugby World Cup: New Zealand Wins" },
+          "headlines": {
+            "headline": "Rugby World Cup: New Zealand Wins"
+          },
           "locators": {
             "assetUri": "/amharic/23229261",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23229261",
@@ -251,7 +302,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -263,7 +317,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Royal Wedding Picture Collections" },
+          "headlines": {
+            "headline": "Royal Wedding Picture Collections"
+          },
           "locators": {
             "assetUri": "/amharic/23229137",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23229137",
@@ -299,7 +355,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -311,7 +370,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''" },
+          "headlines": {
+            "headline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''"
+          },
           "locators": {
             "assetUri": "/amharic/23118972",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23118972",
@@ -326,7 +387,9 @@
             "subType": "clip",
             "format": "video",
             "title": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት''",
-            "synopses": { "short": "ቪድዮ" },
+            "synopses": {
+              "short": "ቪድዮ"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cj70g.jpg",
             "embedding": false,
             "advertising": true,
@@ -334,11 +397,16 @@
             "versions": [
               {
                 "versionId": "p01cj5w6",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 59,
                 "durationISO8601": "PT59S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1501161311000
               }
             ],
@@ -367,7 +435,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -381,7 +452,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?" },
+          "headlines": {
+            "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?"
+          },
           "locators": {
             "assetUri": "/amharic/news-23148117",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148117",
@@ -391,12 +464,17 @@
           "timestamp": 1503497035000,
           "language": "am",
           "cpsType": "PGL",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23148117",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ" },
+          "headlines": {
+            "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ"
+          },
           "locators": {
             "assetUri": "/amharic/sport-23141115",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/sport-23141115",
@@ -406,12 +484,17 @@
           "timestamp": 1500628096000,
           "language": "am",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/sport-23141115",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ" },
+          "headlines": {
+            "headline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23141014",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23141014",
@@ -446,12 +529,17 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23141014",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ" },
+          "headlines": {
+            "headline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23140994",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140994",
@@ -486,12 +574,17 @@
             "copyrightHolder": "CHRIST CLIJSEN",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140994",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\"" },
+          "headlines": {
+            "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\""
+          },
           "locators": {
             "assetUri": "/amharic/news-23140715",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140715",
@@ -504,7 +597,10 @@
             "name": "Kalkidan Yibeltal",
             "title": "BBC Amharic",
             "persons": [
-              { "name": "Kalkidan Yibeltal", "function": "BBC Amharic" }
+              {
+                "name": "Kalkidan Yibeltal",
+                "function": "BBC Amharic"
+              }
             ]
           },
           "cpsType": "STY",
@@ -531,7 +627,10 @@
             "copyrightHolder": "ኩዝሚክስቱዲዮ/ጌቲ",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140715",
           "type": "cps"
         },
@@ -573,12 +672,17 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23148096",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!" },
+          "headlines": {
+            "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!"
+          },
           "locators": {
             "assetUri": "/amharic/23143895",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23143895",
@@ -613,7 +717,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ዜና",
@@ -624,7 +731,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው" },
+          "headlines": {
+            "headline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው"
+          },
           "locators": {
             "assetUri": "/amharic/news-23140375",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140375",
@@ -658,12 +767,17 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140375",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ" },
+          "headlines": {
+            "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23143386",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23143386",
@@ -685,13 +799,16 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23143386",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.076Z",
+        "generated": "2023-02-17T18:04:00.615Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 19,
@@ -1241,7 +1358,10 @@
                 "name": "Kalkidan Yibeltal",
                 "title": "BBC Amharic",
                 "persons": [
-                  { "name": "Kalkidan Yibeltal", "function": "BBC Amharic" }
+                  {
+                    "name": "Kalkidan Yibeltal",
+                    "function": "BBC Amharic"
+                  }
                 ]
               },
               "indexImage": {

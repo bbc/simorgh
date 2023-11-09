@@ -1,10 +1,3 @@
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/cymrufyw';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +31,6 @@ export const service: DefaultServiceConfig = {
     service: 'cymrufyw',
     serviceName: 'Cymru Fyw',
     languageName: 'Welsh',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCCymruFyw',
     twitterSite: '@BBCCymruFyw',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
@@ -47,13 +39,6 @@ export const service: DefaultServiceConfig = {
     script: latinWithDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Newyddion a mwy',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -73,7 +58,7 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
-      gist: 'At a glance',
+      gist: 'Cipolwg',
       error: {
         404: {
           statusCode: '404',
@@ -103,6 +88,12 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/cymrufyw',
         },
+      },
+      byline: {
+        articleInformation: 'Gwybodaeth am yr erthygl',
+        author: 'Awdur',
+        reportingFrom: 'Yn gohebu o',
+        role: 'Swydd',
       },
       consentBanner: {
         privacy: {
@@ -213,9 +204,35 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
-      socialEmbed: {},
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Disgrifiad, ',
+          text: 'Gallai hysbysebion ymddangos yng nghynnwys',
+          articleText:
+            "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
+          articleAdditionalText:
+            'Gallai hysbysebion ymddangos yng nghynnwys %provider_name%.',
+        },
+        fallback: {
+          text: 'Mae’n flin gennym ein bod yn cael trafferth dangos y post hwn.',
+          linkText: 'Gwylio’r post gwreiddiol ar %provider_name%',
+          linkTextSuffixVisuallyHidden: ', dolen allanol',
+          warningText:
+            "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
+        },
+        skipLink: {
+          text: 'I osgoi neges %provider_name%',
+          endTextVisuallyHidden: 'Diwedd neges %provider_name%',
+        },
+        consentBanner: {
+          heading: `Caniatáu cynnwys [social_media_site]?`,
+          body: `Mae’r erthygl hon yn cynnwys deunydd gan [social_media_site]. Gofynnwn am eich caniatâd cyn llwytho unrhyw beth, gan y gallai Twitter ddefnyddio cwcis neu dechnoleg arall. Mae’n bosib eich bod am ddarllen [link] polisi cwcis [/link] [social_media_site] a [link] pholisi preifatrwydd [/link] cyn derbyn. Er mwyn gweld y cynnwys dewiswch ‘derbyn a pharhau’.`,
+          button: 'Derbyn a pharhau',
+        },
+      },
+      topStoriesTitle: 'Prif Straeon',
+      featuresAnalysisTitle: 'Cylchgrawn',
     },
-    brandSVG,
     mostRead: {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf:',
@@ -261,8 +278,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

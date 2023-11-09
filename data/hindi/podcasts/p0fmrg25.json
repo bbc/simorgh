@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_radio/p0fmrg25",
+    "locators": {
+      "pid": "p0fr6g1f",
+      "brandPid": "p0fmrg25"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_hindi_radio",
+    "language": "hi",
+    "lastUpdated": 1686047596355,
+    "firstPublished": 1685438779000,
+    "lastPublished": 1685438779000,
+    "timestamp": 1685438779000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "छोटी उम्र बड़ी ज़िंदगी - BBC News हिंदी",
+      "pageIdentifier": "hindi.bbc_hindi_radio.podcasts.programmes.p0fmrg25.page",
+      "producerId": "52",
+      "contentType": "player-episode",
+      "producer": "HINDI"
+    },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.24",
+    "blockTypes": ["media"],
+    "title": "छोटी उम्र बड़ी ज़िंदगी",
+    "releaseDateTimeStamp": 1685491200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0fr6g1f",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "25 साल में दुनिया को अलविदा कहने वाले बिरसा मुंडा की आदिवासी राज्यों में पूजा होती है."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0fr6g3r.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0fr66zj",
+            "types": ["Podcast"],
+            "duration": 804,
+            "durationISO8601": "PT13M24S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1685505600000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "बिरसा मुंडा: तीसरा एपिसोड",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "छोटी उम्र बड़ी ज़िंदगी"
+    },
+    "locators": {
+      "pid": "p0fr6g1f",
+      "brandPid": "p0fmrg25"
+    },
+    "media": {
+      "id": "p0fr6g1f",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "25 साल में दुनिया को अलविदा कहने वाले बिरसा मुंडा की आदिवासी राज्यों में पूजा होती है."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0fr6g3r.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0fr66zj",
+          "types": ["Podcast"],
+          "duration": 804,
+          "durationISO8601": "PT13M24S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1685505600000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "बिरसा मुंडा: तीसरा एपिसोड",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0fr6g3r.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0fr6g3r.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1685491200000,
+    "brand": {
+      "pid": "p0fmrg25",
+      "title": "छोटी उम्र बड़ी ज़िंदगी"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0fr6g1f",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "locators": {
+              "pid": "p0fpw61b",
+              "brandPid": "p0fmrg25"
+            },
+            "media": {
+              "id": "p0fpw61b",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "भगत सिंह चाहते थे कि उन्हें फांसी ना देकर फायरिंग स्कवाड से मारा जाए. क्या थी उनकी कहानी?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0fpw63g.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0fpw481",
+                  "types": ["Podcast"],
+                  "duration": 882,
+                  "durationISO8601": "PT14M42S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1684900800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "भगत सिंह: दूसरा एपिसोड",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0fpw63g.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0fpw63g.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1684886400000,
+            "brand": {
+              "pid": "p0fmrg25",
+              "title": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0fpw61b",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "locators": {
+              "pid": "p0fnklp5",
+              "brandPid": "p0fmrg25"
+            },
+            "media": {
+              "id": "p0fnklp5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "39 साल की जीवनयात्रा में स्वामी विवेकानंद ने भारतीय दर्शन का दुनिया भर में प्रसार किया.",
+                "medium": "39 साल की जीवनयात्रा में स्वामी विवेकानंद ने भारतीय दर्शन का दुनिया भर में प्रसार किया."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0fnrj1f.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0fnkjnx",
+                  "types": ["Podcast"],
+                  "duration": 877,
+                  "durationISO8601": "PT14M37S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1684296000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "स्वामी विवेकानंद: पहला एपिसोड",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0fnrj1f.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0fnrj1f.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1684281600000,
+            "brand": {
+              "pid": "p0fmrg25",
+              "title": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0fnklp5",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "locators": {
+              "pid": "p0fmrk9m",
+              "brandPid": "p0fmrg25"
+            },
+            "media": {
+              "id": "p0fmrk9m",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "उन चमकते सितारों की कहानी जिन्हें दुनिया अभी और देखना और सुनना चाहती थी.",
+                "medium": "अपनी अपनी विधा के वो जीनियस जो अपने चाहने वालों को अपनी 40वीं सालगिरह मनाने का भी मौका दिए बग़ैर इस दुनिया से विदा हो गए."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0fmrcw1.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0fmq05k",
+                  "types": ["Podcast"],
+                  "duration": 62,
+                  "durationISO8601": "PT1M2S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1683813540000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "छोटी उम्र बड़ी ज़िंदगी",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0fmrcw1.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0fmrcw1.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1683763200000,
+            "brand": {
+              "pid": "p0fmrg25",
+              "title": "छोटी उम्र बड़ी ज़िंदगी"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0fmrk9m",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

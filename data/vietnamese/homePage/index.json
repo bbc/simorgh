@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "BBC News Tiếng Việt",
+    "description": "BBC Tiếng Việt đem lại tin tức trung thực, khách quan về thế giới và Việt Nam.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "OpenAI ra mắt GPT-4, 'cao thủ hơn' ChatGPT",
+            "firstPublished": "2023-03-15T11:39:42.549Z",
+            "link": "https://www.bbc.com/vietnamese/articles/c84dvwq4890o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/91f6/live/1a2fd480-c322-11ed-95f8-0154daa64c44.jpg",
+            "description": "Bản thứ tư của chatbot AI có thể xử lý cả hình ảnh và văn bản.",
+            "imageAlt": "GPT-4",
+            "id": "c84dvwq4890o"
+          },
+          {
+            "type": "article",
+            "title": "Cua sốt ớt: Người phụ nữ đằng sau món ăn đặc sản của Singapore",
+            "firstPublished": "2023-02-18T03:53:28.761Z",
+            "link": "https://www.bbc.com/vietnamese/articles/ckr4yzd3jjpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e838/live/ac111ff0-af3e-11ed-89f4-f3657d2bfa3b.png",
+            "description": "Bà Cher Yam Tian, người sáng tạo ra món cua sốt ớt nổi tiếng thế giới đã qua đời hôm 15/2 tại Singapore ở tuổi 90.",
+            "imageAlt": "Bà Cher Yam Tian và con trai Roland Lim, ảnh chụp năm 2009",
+            "id": "ckr4yzd3jjpo"
+          },
+          {
+            "type": "article",
+            "title": "Hiệp ước đại dương: Thỏa thuận lịch sử đạt được sau 10 năm đàm phán",
+            "firstPublished": "2023-03-05T15:28:21.000Z",
+            "link": "https://www.bbc.com/vietnamese/world-64856389",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3D1D/production/_128854651_gettyimages-452418175.jpg",
+            "description": "Hiệp ước Biển cả nhằm mục đích đặt 30% diện tích biển vào các khu vực được bảo vệ vào năm 2030 để bảo vệ và phục hồi thiên nhiên biển.",
+            "imageAlt": "Whale shark",
+            "id": "6bcd95bb-17a4-4ff8-a589-8b720a2d5eaa"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:86432177-ed72-4b00-b27c-f6529e1d8c4a",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Góc nhìn và chuyên mục",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kk9r7lt",
+        "contentType": "index-home",
+        "pageIdentifier": "vietnamese.page",
+        "pageTitle": "BBC News Tiếng Việt"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

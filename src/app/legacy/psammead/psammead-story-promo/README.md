@@ -125,7 +125,7 @@ import StoryPromo, {
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 
@@ -163,7 +163,7 @@ const Info = ({ isLive, alsoItems }) => (
     <Headline script={latin} service="news" promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel service="news" dir={dir} ariaHidden offScreenText="Live">
+          <LiveLabel>
             The headline of the live promo
           </LiveLabel>
         ) : (

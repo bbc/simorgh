@@ -1,0 +1,154 @@
+{
+  "data": {
+    "title": "Banner variations",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Cómo usar Google Maps sin conexión a internet",
+            "firstPublished": "2016-05-05T15:53:15.000Z",
+            "link": "https://www.bbc.com/mundo/blog-de-los-editores-23038590",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6A37/test/_63919172_black.jpg",
+            "description": "á ä à â ¿Por qué algunas personas conservan su aspecto juvenil más que otras? ñ ç €",
+            "imageAlt": "Black",
+            "id": "221c1b5a-311e-2e4a-935e-de643ead95f4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/mndo",
+        "curationId": "urn:bbc:tipo:list:d6dc366a-43f7-422b-b403-9d6290dd82e7",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Heading, description, image and link",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "Some additional text"
+        },
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/c916/test/4e3ed710-9737-11ed-8565-736fadc3edcb.png",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/c916/test/4e3ed710-9737-11ed-8565-736fadc3edcb.png",
+            "originalSize": {
+              "width": 976,
+              "height": 549
+            },
+            "altText": "BBC News",
+            "copyright": "BBC",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "c916/test/4e3ed710-9737-11ed-8565-736fadc3edcb.png",
+            "originCode": "cpsdevpb",
+            "height": 549,
+            "width": 976,
+            "copyrightHolder": "BBC",
+            "altText": "BBC News"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Headline",
+            "firstPublished": "2019-07-17T13:26:49.000Z",
+            "link": "https://www.bbc.com/mundo/23244196",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3F3F/test/_63919161__123721038_mediaitem123721037.jpg",
+            "description": "Summary",
+            "imageAlt": "Ukraine crisis",
+            "id": "7749dd1a-a80d-e646-8b1c-74611e425917"
+          },
+          {
+            "type": "article",
+            "title": "WS STY TEST - Headline",
+            "firstPublished": "2020-02-03T15:58:27.000Z",
+            "link": "https://www.bbc.com/mundo/23263889",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+            "description": "This is the summary",
+            "imageAlt": "Index image large",
+            "id": "f776ad93-e486-b14a-b5ea-55955dd0644f"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/portuguese",
+        "curationId": "urn:bbc:tipo:list:309b9e5d-dc6f-48dc-ae4a-a5dc4ae122b3",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Heading, link, image (no description)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1b2f/test/aef05730-9739-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1b2f/test/aef05730-9739-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 1024,
+              "height": 576
+            },
+            "altText": "Test",
+            "copyright": "BBC",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "1b2f/test/aef05730-9739-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 576,
+            "width": 1024,
+            "copyrightHolder": "BBC",
+            "altText": "Test"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Qué hace que los chilenos sean tan resistentes a los terremotos",
+            "firstPublished": "2017-02-03T11:38:04.000Z",
+            "link": "https://www.bbc.com/mundo/23100229",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3AEA/test/_63528051_000870367-1.jpg",
+            "description": "A medida que salía de la región del Maule, azotada esta semana por los insaciables incendios forestales de Chile, me fui involucrando en la historia que vine a contar.",
+            "imageAlt": "Santiago de Chile",
+            "id": "1ff8ff1a-9570-4b44-b90a-73cabca969bb"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:8893702b-01e7-40ad-9ffd-afc670906a07",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "La resiliencia de los chilenos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "mundo.topics.cw90edn9kw4t.page",
+        "producer": "MUNDO"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cw90edn9kw4t",
+        "contentType": "index-category",
+        "pageIdentifier": "mundo.topics.cw90edn9kw4t.page",
+        "pageTitle": "Economía"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

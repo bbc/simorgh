@@ -1,43 +1,56 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from './index';
 
 describe('MediaIndicator', () => {
-  shouldMatchSnapshot(
-    'should render video by default',
-    <MediaIndicator service="news" />,
-  );
+  suppressPropWarnings(['script', 'MediaIndicator', 'undefined']);
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly',
-    <MediaIndicator type="video" script={latin} service="news" />,
-  );
+  it('should render video by default', () => {
+    const { container } = render(<MediaIndicator service="news" />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly when inline',
-    <MediaIndicator type="video" script={latin} service="news" isInline />,
-  );
+  it('should render video indicator correctly', () => {
+    const { container } = render(
+      <MediaIndicator type="video" script={latin} service="news" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly when inline on RTL',
-    <MediaIndicator
-      type="video"
-      script={arabic}
-      service="persian"
-      dir="rtl"
-      isInline
-    />,
-  );
+  it('should render video indicator correctly when inline', () => {
+    const { container } = render(
+      <MediaIndicator type="video" script={latin} service="news" isInline />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render audio indicator correctly',
-    <MediaIndicator type="audio" script={latin} service="news" />,
-  );
+  it('should render video indicator correctly when inline on RTL', () => {
+    const { container } = render(
+      <MediaIndicator
+        type="video"
+        script={arabic}
+        service="persian"
+        dir="rtl"
+        isInline
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render photogallery correctly',
-    <MediaIndicator type="photogallery" script={latin} service="news" />,
-  );
+  it('should render audio indicator correctly', () => {
+    const { container } = render(
+      <MediaIndicator type="audio" script={latin} service="news" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render photogallery correctly', () => {
+    const { container } = render(
+      <MediaIndicator type="photogallery" script={latin} service="news" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

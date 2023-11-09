@@ -5,193 +5,298 @@
         "model": {
           "blocks": [
             {
-              "id": "da08d46c",
+              "id": "1d442a72",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "74e13eba",
+                    "id": "76cf6d72",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "26c8f9e4",
+                          "id": "c3c285a3",
                           "type": "paragraph",
                           "model": {
                             "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
                             "blocks": [
                               {
-                                "id": "c994dee3",
+                                "id": "31abeb4c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "13a60f6e",
+              "id": "67fe7d4e",
               "type": "group",
               "model": {
                 "intentType": "overview",
                 "relationshipType": "optional",
                 "blocks": [
                   {
-                    "id": "6c1e542b",
+                    "id": "0cebd22f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f8a13ad",
+                          "id": "64a7e5d2",
                           "type": "unorderedList",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b19c0e91",
+                                "id": "d83af31f",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "240c35b1",
+                                      "id": "8f3ac129",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.",
                                         "blocks": [
                                           {
-                                            "id": "fb586240",
+                                            "id": "e355d0b5",
                                             "type": "fragment",
                                             "model": {
                                               "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 1, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
-                                "id": "d324668d",
+                                "id": "8d2ea63d",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "ddb3bbe8",
+                                      "id": "93fd435e",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.",
                                         "blocks": [
                                           {
-                                            "id": "8b106f4e",
+                                            "id": "73c96015",
                                             "type": "fragment",
                                             "model": {
                                               "text": "وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 2, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 2, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 2]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               },
                               {
-                                "id": "ed286baa",
+                                "id": "f72cab73",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "ad0381a5",
+                                      "id": "2a58f55b",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.",
                                         "blocks": [
                                           {
-                                            "id": "62630d09",
+                                            "id": "f4799498",
                                             "type": "fragment",
                                             "model": {
                                               "text": "وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 3, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 3, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        3,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 3]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  3
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "b9a845a0",
+              "id": "dfb4ac4d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1628083342158,
                 "lastPublished": 1628083342158
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
-              "id": "820e96af",
+              "id": "3f42ddce",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5d098ebf",
+                    "id": "8f885824",
                     "type": "paragraph",
                     "model": {
                       "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.وكانت  المنطقة التي استهدفتها الحركة في العاصمة الأفغانية شديدة التحصين، علماً  أن كابول ظلت، خلال الأسابيع الماضية، بمنأى عن العنف الذي اشتدّ في أجزاء  أخرى من البلاد.",
                       "blocks": [
                         {
-                          "id": "97e058e5",
+                          "id": "c7e80f7e",
                           "type": "fragment",
                           "model": {
                             "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.وكانت  المنطقة التي استهدفتها الحركة في العاصمة الأفغانية شديدة التحصين، علماً  أن كابول ظلت، خلال الأسابيع الماضية، بمنأى عن العنف الذي اشتدّ في أجزاء  أخرى من البلاد.",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
-            { "id": "6b14cc8a", "type": "mpu", "model": {}, "position": [5] }
+            {
+              "id": "dc38c243",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "37cddee7",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            }
           ]
         }
       },
@@ -204,11 +309,8 @@
         "type": "article",
         "createdBy": "Arabic",
         "language": "ar",
-        "lastUpdated": 1645649397265,
         "firstPublished": 1628083342158,
         "lastPublished": 1628083342158,
-        "timestamp": 1628083342158,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cn0m90verwvo",
           "producer": "Arabic",
@@ -217,16 +319,12 @@
         "passport": {
           "language": "ar",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
-          "locator": "urn:bbc:optimo:asset:cn0m90verwvo",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
               "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
             }
           ],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "infoClass": [
               {
@@ -236,8 +334,6 @@
             ]
           }
         },
-        "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
@@ -247,18 +343,9 @@
           "unorderedList",
           "listItem"
         ],
-        "suitableForSyndication": true,
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cn0m90verwvo",
-          "canonicalUrl": "https://www.bbc.com/arabic/articles/cn0m90verwvo"
-        },
-        "timestamp": 1628083342158,
-        "suitableForSyndication": true,
-        "language": "ar",
         "headlines": {
           "seoHeadline": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
           "promoHeadline": {
@@ -288,7 +375,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -302,7 +388,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -311,46 +400,15 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "ar",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
-          "locator": "urn:bbc:optimo:asset:cn0m90verwvo",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            }
-          ],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:cn0m90verwvo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Arabic",
-          "uri": "/arabic",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "مرأة الخارقة \"" },
+          "headlines": {
+            "headline": "مرأة الخارقة \""
+          },
           "locators": {
             "assetUri": "/arabic/tv-and-radio-23233470",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:6bc4c1da-8b0d-544f-8e7f-a02d969e4236",
@@ -387,7 +445,10 @@
             "copyrightHolder": "Corbis",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:arabic/tv-and-radio-23233470",
           "type": "cps"
@@ -435,7 +496,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Swahili",
@@ -479,7 +543,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:arabic/trending-23083197",
           "type": "cps"
         },
@@ -510,7 +577,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:arabic/business-23083189",
           "type": "cps"
         },
@@ -541,7 +611,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:arabic/world-23083188",
           "type": "cps"
         },
@@ -572,7 +645,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:arabic/inthepress-23083196",
           "type": "cps"
         },
@@ -604,13 +680,16 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:arabic/vert-cap-23083193",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.266Z",
+        "generated": "2023-02-18T03:03:56.594Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

@@ -1,18 +1,37 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
+import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import AmpCookieBanner from './cookie.amp';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
 const Button = (message, onClick, dataAttribute) => (
+  // eslint-disable-next-line react/no-unknown-property
   <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
 
+const HideButton = (onClick, dataAttribute, type) => (
+  <button
+    className="focusIndicatorRemove"
+    type="button"
+    // eslint-disable-next-line react/no-unknown-property
+    on={onClick}
+    {...dataAttribute}
+  >
+    {navigationIcons.cross}
+    <VisuallyHiddenText>
+      {type === 'cookie' ? 'Close cookie banner' : 'Close privacy banner'}
+    </VisuallyHiddenText>
+  </button>
+);
+
 const Anchor = (message, href, onClick, dataAttribute) => (
+  // eslint-disable-next-line react/no-unknown-property
   <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>
@@ -22,13 +41,13 @@ const AmpConsentBannerContainer = ({
   type,
   acceptAction,
   rejectAction,
+  hideAction,
   promptId,
   hidden,
 }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
 
   const dataAttribute = getDataAttribute(type);
-
   return type === 'cookie' ? (
     <AmpCookieBanner
       id={promptId}
@@ -46,6 +65,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
         dataAttribute('reject'),
       )}
+      hide={HideButton(hideAction, dataAttribute('hide'), type)}
       hidden={hidden}
       script={script}
       service={service}
@@ -67,6 +87,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
         dataAttribute('reject'),
       )}
+      hide={HideButton(hideAction, dataAttribute('hide'), type)}
       hidden={hidden}
       script={script}
       service={service}
@@ -78,12 +99,14 @@ AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
   acceptAction: string.isRequired,
   rejectAction: string.isRequired,
+  hideAction: string,
   promptId: string.isRequired,
   hidden: bool,
 };
 
 AmpConsentBannerContainer.defaultProps = {
   hidden: null,
+  hideAction: null,
 };
 
 export default AmpConsentBannerContainer;

@@ -115,11 +115,11 @@ exports[`Timestamp should render Timestamp without padding 1`] = `
 </div>
 `;
 
-exports[`Timestamp should render dark mode Timestamp correctly 1`] = `
+exports[`Timestamp should render dark mode Timestamp correctly on page types that support a dark UI  1`] = `
 .emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #F2F2F2;
+  color: #E6E8EA;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;

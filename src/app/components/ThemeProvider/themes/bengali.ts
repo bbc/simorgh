@@ -6,6 +6,7 @@ import {
 } from '../fontFaces';
 import bengaliFontVariants from '../fontVariants/bengali';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/bangla';
 
 const bengaliTheme = {
   palette: {
@@ -20,6 +21,7 @@ const bengaliTheme = {
     fontVariants: bengaliFontVariants,
     fontFaces: [NOTO_SERIF_BENGALI_BOLD, NOTO_SERIF_BENGALI_REGULAR],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(bengaliTheme);

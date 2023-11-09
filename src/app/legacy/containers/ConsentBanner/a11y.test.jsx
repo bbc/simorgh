@@ -1,9 +1,12 @@
 import React, { createRef } from 'react';
-import { render } from '@testing-library/react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  render,
+  fireEvent,
+} from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
 import ConsentBanner from './index';
@@ -95,8 +98,8 @@ describe('canonical', () => {
       pidginServiceConfig.default.translations.consentBanner.cookie.canonical
         .accept;
 
-    getByText(pidginPrivacyAccept).click();
-    getByText(pidginCookieAccept).click();
+    fireEvent.click(getByText(pidginPrivacyAccept));
+    fireEvent.click(getByText(pidginCookieAccept));
 
     expect(document.activeElement).toBe(getByText('BBC Brand'));
   });

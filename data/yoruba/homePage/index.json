@@ -1,0 +1,220 @@
+{
+  "data": {
+    "title": "Yoruba",
+    "description": "",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Lassa: Ipinlẹ Ondo ati Kogi fara kaasa",
+            "firstPublished": "2018-01-23T06:14:25.000Z",
+            "lastPublished": "2018-01-23T06:14:25.000Z",
+            "link": "https://www.bbc.com/yoruba/23183190",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
+            "description": "Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si, nitori ọwọja arun naa ti ran de ipinlẹ Ondo ati Kogi, ti eniyan marun ti ku latipase iba naa nipinlẹ Ondo, ti Merindinlogoji min si ti wa labe ayewo nipinle Kogi.",
+            "imageAlt": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
+            "id": "aa128189-ef3f-b948-b6fc-fa5c4adcc1c3"
+          },
+          {
+            "type": "article",
+            "title": "CMA n iwadii Amazon ati Google lori ayederu iroyin",
+            "firstPublished": "2021-08-09T11:46:16.000Z",
+            "lastPublished": "2021-08-09T12:01:51.000Z",
+            "link": "https://www.bbc.com/yoruba/agbaye-23450016",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6FD2/test/_63762682_cfd3b3ec-15d7-448f-a5a2-a4ab4db0e494.jpg",
+            "description": "Ninu atejade ti won fi sita, CMA salaye pe yoo se iwadi finifini lati le ri wipe awon ileese mejeji yii o tapa sofin nipa gbigbe igbese ti ko to lati daabobo awọn ti won gbe ayederu iroyin jade.",
+            "imageAlt": "Lady receiving COVID-19 vaccination",
+            "id": "68eaad08-a5cc-429a-9d80-342c713bd483"
+          },
+          {
+            "type": "audio",
+            "title": "Iroyin Iseju kan lori BBC Yoruba",
+            "firstPublished": "2018-01-02T16:46:24.000Z",
+            "lastPublished": "2018-01-04T17:40:25.000Z",
+            "link": "https://www.bbc.com/yoruba/23175823",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/11F15/test/_63639437_bbc.jpg",
+            "description": "Iroyin Iseju kan lori BBC Yoruba",
+            "imageAlt": "Iroyin Iseju kan lori BBC Yoruba",
+            "id": "1654f1af-9a7f-4a4d-a0e9-174e393f4074"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:2a36ecaa-c836-4180-a1fb-0b69d4548de6",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Nitori ki nle ri omi pọn, mo ma npadanu asiko ile ẹkọ",
+            "firstPublished": "2018-01-15T14:10:32.000Z",
+            "lastPublished": "2018-01-15T16:07:13.000Z",
+            "link": "https://www.bbc.com/yoruba/23180895",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B792/test/_63649964_mariomacillau.jpg",
+            "description": "Omo ọdun metalelogun ni Mario Macilau lọdun 2007 nigbati o fi ẹrọ ibanisọro alagbeka iya rẹ se pasi parọ pelu ẹro iyaworan Nikon.",
+            "imageAlt": "Ọmọ igboro kan to bẹrẹ si nii lo ẹrọ ibanisọrọ iya rẹ ya awọn aworan to wu ni lori",
+            "id": "44f3842e-78ea-7649-9b8b-fbd904a10311"
+          },
+          {
+            "type": "article",
+            "title": "Awọn janduku yabo awọn ile ijọsin kan ni Ilorin",
+            "firstPublished": "2018-01-01T13:57:50.000Z",
+            "lastPublished": "2018-01-01T13:58:10.000Z",
+            "link": "https://www.bbc.com/yoruba/23175631",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1047B/test/_63638666_26166780_823460314503533_6079397051365653655_n.jpg",
+            "description": "Okeretan ile ijosin meta ni awon janduku ti yabo mojumo ojo odun ni Ilu Ilorin",
+            "imageAlt": "iLORIN",
+            "id": "698442d7-bd16-5c40-9bc2-31c44831ed52"
+          },
+          {
+            "type": "article",
+            "title": "Boko Haram kolu ibudo soja n'ipinle Yobe",
+            "firstPublished": "2018-01-02T07:13:20.000Z",
+            "lastPublished": "2018-01-02T07:13:20.000Z",
+            "link": "https://www.bbc.com/yoruba/23175721",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7907/test/_63638903_awonomoogun.jpg",
+            "description": "Ikọ Boko Haram, ninu akọtun ikọlu min tun sekupa awọn ọmọ ogun ilẹ wa marun, nigbati ọgbọn ọmọ ogun min di awati nilu Kanama, nipinlẹ Yobe.",
+            "imageAlt": "Awọn ọmọ ogun ilẹ wa",
+            "id": "5235f1c4-8bb1-5441-8051-ac64d131f4fa"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:0692888a-44a3-4492-918d-5692fe830f6b",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Editor's choice",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Promo with Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "Pidgin test 2 - Description",
+            "imageAlt": "",
+            "id": "c7p765ynk9qt"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 1 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cgl2vz8d587t"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 2 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cy0mg3kvxnlt"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 3 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cly58zvmwygt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Normal Curation with Live Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cw95pllwv8rt",
+        "contentType": "index-home",
+        "pageIdentifier": "yoruba.page",
+        "pageTitle": "Yoruba"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

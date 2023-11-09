@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -45,17 +45,21 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh
-        run: |
-          echo ${GITHUB_REF##*/}
-          yarn build
+      - name: Build Simorgh - Express App
+        run: yarn build
+
+      - name: Build Simorgh - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: yarn build
 
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
@@ -66,8 +70,12 @@ jobs:
           chmod +x ./cc-test-reporter
           ./cc-test-reporter before-build
 
-      - name: Unit Tests
+      - name: Unit Tests - Express App
         run: yarn test:unit
+
+      - name: Unit Tests - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: yarn test
 
       - name: Report Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo

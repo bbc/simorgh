@@ -5,6 +5,7 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
+  Direction,
 } from './global';
 import { Translations } from './translations';
 
@@ -41,7 +42,7 @@ export type ServiceConfig = {
   serviceLocalizedName?: string;
   defaultImage: string;
   defaultImageAltText: string;
-  dir: string;
+  dir: Direction;
   externalLinkText: string;
   imageCaptionOffscreenText: string;
   videoCaptionOffscreenText: string;
@@ -59,7 +60,6 @@ export type ServiceConfig = {
   altCalendar?: {
     formatDate: (gregorianMoment: unknown) => string | null;
   };
-  themeColor: string;
   twitterCreator: string;
   twitterSite: string;
   noBylinesPolicy?: string | null;
@@ -71,34 +71,18 @@ export type ServiceConfig = {
   frontPageTitle: string;
   passportHomes?: string[];
   iTunesAppId?: number;
-  theming: {
-    brandBackgroundColour: string;
-    brandLogoColour: string;
-    brandForegroundColour: string;
-    brandHighlightColour: string;
-    brandBorderColour: string;
-  };
   showAdPlaceholder: boolean;
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;
   disclaimer?: {
-    para1: string;
-    para2: {
+    para1: {
       text: string;
       url: string;
       isExternal: boolean;
     };
-    para3: string;
+    para2: string;
   };
   translations: Translations;
-  brandSVG: {
-    group: JSX.Element;
-    ratio: number;
-    viewbox: {
-      height: number;
-      width: number;
-    };
-  };
   mostRead: MostRead;
   mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
@@ -142,7 +126,7 @@ export type PodcastPromo = {
 export interface MostRead {
   header: string;
   lastUpdated: string;
-  numberOfItems?: number;
+  numberOfItems: number;
   hasMostRead: boolean;
   onIdxPage?: boolean;
 }

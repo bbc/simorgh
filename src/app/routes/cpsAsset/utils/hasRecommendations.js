@@ -9,12 +9,18 @@ const hasRecommendations = async (service, variant, pageData) => {
     config,
   );
 
-  const assetAllowsAdvertising = path(
+  const isAdvertisingCPS = path(
     ['metadata', 'options', 'allowAdvertising'],
     pageData,
   );
 
-  return serviceHasRecommendations && assetAllowsAdvertising;
+  const isAdvertisingOptimo = path(
+    ['data', 'article', 'metadata', 'allowAdvertising'],
+    pageData,
+  );
+
+  const advertisingAllowed = isAdvertisingCPS || isAdvertisingOptimo;
+  return serviceHasRecommendations && advertisingAllowed;
 };
 
 export default hasRecommendations;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import IndexHeading from '.';
 
@@ -11,14 +11,14 @@ const IndexHeadingWithContext = (service, pageType) => (
 
 describe('Index Heading', () => {
   describe('snapshot', () => {
-    shouldMatchSnapshot(
-      'should render correctly for IDX',
-      IndexHeadingWithContext('ukrainian'),
-    );
+    it('should render correctly for IDX', () => {
+      const { container } = render(IndexHeadingWithContext('ukrainian'));
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render rtl correctly for IDX',
-      IndexHeadingWithContext('arabic'),
-    );
+    it('should render rtl correctly for IDX', () => {
+      const { container } = render(IndexHeadingWithContext('arabic'));
+      expect(container).toMatchSnapshot();
+    });
   });
 });

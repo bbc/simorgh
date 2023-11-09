@@ -7,7 +7,6 @@ import {
 
 import { getDoublePica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -42,7 +41,7 @@ const LabelComponent = styled.strong`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)}
   margin-bottom: ${GEL_SPACING_DBL};
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
 
   ${({ dir }) =>
     `

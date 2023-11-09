@@ -1,5 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { Helmet } from 'react-helmet';
+import { render } from '../../../components/react-testing-library-with-providers';
 import Metadata from './Metadata';
 
 const validAresMediaBlocks = [
@@ -45,18 +46,26 @@ describe('Metadata', () => {
   const embedSource =
     'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB';
 
-  shouldMatchSnapshot(
-    'should render Metadata correctly when aresMedia has no metadata block ',
-    <Metadata
-      aresMediaBlock={aresMediaBlockWithNoMetadata}
-      embedSource={embedSource}
-    />,
-  );
-  shouldMatchSnapshot(
-    'should render Metadata correctly when aresMedia has a metadata block',
-    <Metadata
-      aresMediaBlock={aresMediaBlockWithMetadata}
-      embedSource={embedSource}
-    />,
-  );
+  it('should not render Metadata when aresMedia has no metadata block ', () => {
+    const { container } = render(
+      <Metadata
+        aresMediaBlock={aresMediaBlockWithNoMetadata}
+        embedSource={embedSource}
+      />,
+    );
+
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('should render Metadata correctly when aresMedia has a metadata block', () => {
+    render(
+      <Metadata
+        aresMediaBlock={aresMediaBlockWithMetadata}
+        embedSource={embedSource}
+      />,
+    );
+
+    const container = Helmet.peek();
+    expect(container).toMatchSnapshot();
+  });
 });

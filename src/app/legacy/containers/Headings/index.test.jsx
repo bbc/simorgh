@@ -1,11 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { textBlock } from '#models/blocks';
 import {
-  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
@@ -68,10 +67,12 @@ const template = (title, text, type) => {
       ...textBlock(text, 'mock-id'),
       type,
     };
-    shouldMatchSnapshot(
-      'should render correctly',
-      <HeadingsContainerWithContext data={data} />,
-    );
+    it('should render correctly', () => {
+      const { container } = render(
+        <HeadingsContainerWithContext data={data} />,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 };
 
@@ -92,10 +93,12 @@ describe('Headings', () => {
         type: 'headline',
       };
 
-      shouldMatchSnapshot(
-        'should render h1 containing correct text',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h1 containing correct text', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
       it('should have an id for the skiplink with value "content"', () => {
         const { getByText } = render(
@@ -112,10 +115,12 @@ describe('Headings', () => {
         type: 'subheadline',
       };
 
-      shouldMatchSnapshot(
-        'should render h2 containing correct text',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h2 containing correct text', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
       it('should have an id of sanitised text', () => {
         const { getByText } = render(
@@ -136,10 +141,12 @@ describe('Headings', () => {
         type: 'headline',
       };
 
-      shouldMatchSnapshot(
-        'should render h1 with <i> tag',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h1 with <i> tag', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('headline with bold text', () => {
@@ -148,10 +155,12 @@ describe('Headings', () => {
         type: 'headline',
       };
 
-      shouldMatchSnapshot(
-        'should render h1 with <b> tag',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h1 with <b> tag', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('should render headline with bold & italic text', () => {
@@ -163,10 +172,12 @@ describe('Headings', () => {
         type: 'headline',
       };
 
-      shouldMatchSnapshot(
-        'should render h1 with <i><b> tags',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h1 with <b><i> tags', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('should render headline with italic & bold text', () => {
@@ -178,10 +189,12 @@ describe('Headings', () => {
         type: 'headline',
       };
 
-      shouldMatchSnapshot(
-        'should render h1 with <b><i> tags',
-        <HeadingsContainerWithContext data={data} />,
-      );
+      it('should render h1 with <b><i> tags', () => {
+        const { container } = render(
+          <HeadingsContainerWithContext data={data} />,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('with different attributes', () => {
@@ -191,10 +204,12 @@ describe('Headings', () => {
           type: 'headline',
         };
 
-        shouldMatchSnapshot(
-          'should render correctly',
-          <HeadingsContainerWithContext data={data} />,
-        );
+        it('should render correctly', () => {
+          const { container } = render(
+            <HeadingsContainerWithContext data={data} />,
+          );
+          expect(container).toMatchSnapshot();
+        });
       });
     });
   });

@@ -125,6 +125,11 @@ describe('getAppType', () => {
       summary: 'should return amp for amp',
     },
     {
+      platform: 'app',
+      expected: 'mobile-app',
+      summary: 'should return mobile-app for app',
+    },
+    {
       platform: 'canonical',
       expected: 'responsive',
       summary: 'should return responsive for amp',
@@ -379,7 +384,7 @@ describe('getReferrer', () => {
 
 describe('sanitise', () => {
   it('should replace all spaces with a + character', () => {
-    expect(sanitise('hi hello there')).toEqual('hi+hello+there');
+    expect(sanitise('hi hello there')).toEqual('hi%20hello%20there');
   });
 });
 
@@ -531,7 +536,7 @@ describe('getThingAttributes', () => {
   it('should return thing names in good data', () => {
     const thingAttributes = getThingAttributes('thingId', data);
 
-    expect(thingAttributes).toEqual('foo+bar~baz');
+    expect(thingAttributes).toEqual('foo%20bar~baz');
   });
 
   it('should return null if type not found', () => {

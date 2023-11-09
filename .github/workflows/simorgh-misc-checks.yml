@@ -9,12 +9,16 @@ on:
   push:
     branches:
       - latest
+
+permissions:
+  statuses: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     env:
       CI: true
 
@@ -32,8 +36,10 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
@@ -47,6 +53,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+          onlyChanged: true
 
       - name: Chromatic UI Tests - Latest
         uses: chromaui/action@v1
@@ -56,7 +63,34 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+          onlyChanged: true
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
+
+      - name: Get Storybook Branch Permalink
+        uses: actions/github-script@v6
+        id: get-storybook-permalink
+        with:
+          script: |
+            const storybookBranch = '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37);
+            const storybookPermalink = `https://${storybookBranch}--5d28eb3fe163f6002046d6fa.chromatic.com`;
+            core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
+
+      - name: Publish Storybook Branch Permalink
+        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
+        run: |
+          curl \
+          -X POST \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.pull_request.head.sha }} \
+          -d '{
+            "state": "success", 
+            "context": "Storybook Permalink", 
+            "description": "View the latest changes on Storybook for this PR",
+            "target_url": "${{ steps.get-storybook-permalink.outputs.STORYBOOK_PERMALINK }}"
+          }' \
+          --fail
 
       - name: Duplicate Dependency Checker
         run: yarn test:dependencies

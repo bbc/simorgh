@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
@@ -14,22 +14,11 @@ const StyledBrand = styled(Brand)`
       fill: linkText;
     }
   }
-
-  ${({ isLow }) =>
-    isLow &&
-    `
-      > div:first-of-type {
-        margin: unset;
-      }
-    `}
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
-  const { isLow } = useContext(RequestContext);
-  const { product, serviceLocalizedName, brandSVG, service, theming } =
-    useContext(ServiceContext);
-
-  const { brandBackgroundColour, brandLogoColour } = theming;
+  const { product, serviceLocalizedName, service } = useContext(ServiceContext);
+  const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
@@ -38,8 +27,6 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
 
   return (
     <StyledBrand
-      backgroundColour={brandBackgroundColour}
-      logoColour={brandLogoColour}
       product={product}
       serviceLocalisedName={serviceLocalizedName}
       svgHeight={svgMaxHeight}
@@ -50,7 +37,6 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       skipLink={skipLink}
       scriptLink={scriptLink}
       ref={brandRef}
-      isLow={isLow}
       {...props}
     />
   );

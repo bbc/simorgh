@@ -19,7 +19,7 @@ npm install #legacy/psammead-styles/src --save
 
 <!-- prettier-ignore -->
 ```jsx
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
+import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 ```
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
@@ -41,7 +41,7 @@ const someGlobalCSS = css`
 `;
 
 const SomeStyledComponent = css`
-  background-color: ${C_POSTBOX};
+  background-color: ${POSTBOX};
   font-family: ${GEL_FF_REITH_SANS};
 `;
 ```

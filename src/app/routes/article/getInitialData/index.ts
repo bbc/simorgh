@@ -1,86 +1,44 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Agent } from 'https';
-import pipe from 'ramda/src/pipe';
-import Url from 'url-parse';
 import nodeLogger from '../../../lib/logger.node';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
+import { Services, Toggles, Variants } from '../../../models/types/global';
+import getOnwardsPageData from '../utils/getOnwardsData';
+import addDisclaimer from '../utils/addDisclaimer';
+import { advertisingAllowed, isSfv } from '../utils/paramChecks';
+import { FetchError } from '../../../models/types/fetch';
+import handleError from '../../utils/handleError';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import fetchPageData from '../../utils/fetchPageData';
-import { Services, Variants } from '../../../models/types/global';
+import certsRequired from '../../utils/certsRequired';
 
 const logger = nodeLogger(__filename);
 
-const removeAmp = (path: string) => path.split('.')[0];
-const popId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-
-const getId = pipe(getUrlPath, removeAmp, popId);
-
-const getEnvironment = (pathname: string) => {
-  if (pathname.includes('renderer_env=test')) {
-    return 'test';
-  }
-  if (pathname.includes('renderer_env=live')) {
-    return 'live';
-  }
-
-  return process.env.SIMORGH_APP_ENV;
-};
-
-interface BFFError extends Error {
-  status: number;
-}
-
-const handleError = (message: string, status: number) => {
-  const error = new Error(message) as BFFError;
-  error.status = status;
-
-  return error;
-};
-
 type Props = {
-  getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
+  pageType: 'article' | 'cpsAsset';
   variant?: Variants;
+  toggles?: Toggles;
+  isAmp?: boolean;
 };
 
 export default async ({
-  getAgent,
   service,
+  pageType,
   path: pathname,
   variant,
+  toggles,
+  isAmp,
 }: Props) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = env === 'local';
-
-    const agent = !isLocal ? await getAgent() : null;
-    const id = getId(pathname);
-
-    if (!id) throw handleError('Article ID is invalid', 500);
-
-    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id,
+    const { status, json } = await fetchDataFromBFF({
+      pathname,
+      pageType,
       service,
-      ...(variant && {
-        variant,
-      }),
-      pageType: 'article',
+      variant,
+      isAmp,
     });
 
-    const optHeaders = { 'ctx-service-env': env };
-
-    if (isLocal) {
-      fetchUrl = Url(
-        `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
-      );
-    }
-
-    // @ts-ignore - Ignore fetchPageData argument types
-    const { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
-    });
+    const agent = certsRequired(pathname) ? await getAgent() : null;
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
@@ -90,14 +48,50 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    return {
+    const isAdvertising = advertisingAllowed(pageType, article);
+    const isArticleSfv = isSfv(article);
+    let wsojData = [];
+    const lastPublished = article?.metadata?.lastPublished;
+    const shouldGetOnwardsPageData = lastPublished
+      ? new Date(lastPublished).getFullYear() > new Date().getFullYear() - 2
+      : false;
+    if (shouldGetOnwardsPageData) {
+      try {
+        wsojData = await getOnwardsPageData({
+          pathname,
+          service,
+          variant,
+          isAdvertising,
+          isArticleSfv,
+          agent,
+        });
+      } catch (error) {
+        logger.error('Recommendations JSON malformed', error);
+      }
+    }
+
+    const { topStories, features, latestMedia, mostRead, mostWatched } =
+      secondaryData;
+
+    const response = {
       status,
       pageData: {
-        ...article,
-        secondaryColumn: secondaryData,
+        ...(await addDisclaimer(article, toggles, isArticleSfv)),
+        secondaryColumn: {
+          topStories,
+          features,
+          latestMedia,
+        },
+        mostRead,
+        mostWatched,
+        ...(wsojData && wsojData),
       },
     };
-  } catch ({ message, status }) {
+
+    return response;
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,

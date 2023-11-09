@@ -1,7 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
 import PodcastPromo from '.';
@@ -20,79 +18,97 @@ const assertTypeOfElement = (Component, type) => {
 describe('Podcast Promo', () => {
   describe('Title', () => {
     assertTypeOfElement(PodcastPromo.Title, 'h2');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Title script={latin} service="russian" dir="ltr">
-        Content
-      </PodcastPromo.Title>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Title script={latin} service="russian" dir="ltr">
+          Content
+        </PodcastPromo.Title>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card', () => {
     assertTypeOfElement(PodcastPromo.Title, 'div');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card>Content</PodcastPromo.Card>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card>Content</PodcastPromo.Card>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Content', () => {
     assertTypeOfElement(PodcastPromo.Card.Content, 'div');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Title', () => {
     assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.Title script={latin} service="russian">
-        Content
-      </PodcastPromo.Card.Title>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.Title script={latin} service="russian">
+          Content
+        </PodcastPromo.Card.Title>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Description', () => {
     assertTypeOfElement(PodcastPromo.Card.Description, 'p');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.Description script={latin} service="russian">
-        Content
-      </PodcastPromo.Card.Description>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.Description script={latin} service="russian">
+          Content
+        </PodcastPromo.Card.Description>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Image', () => {
     assertTypeOfElement(PodcastPromo.Card.ImageWrapper, 'div');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.ImageWrapper>Content</PodcastPromo.Card.ImageWrapper>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.ImageWrapper>
+          Content
+        </PodcastPromo.Card.ImageWrapper>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Link', () => {
     assertTypeOfElement(PodcastPromo.Card.Link, 'a');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.Link href="https://www.bbc.com">
-        Content
-      </PodcastPromo.Card.Link>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.Link href="https://www.bbc.com">
+          Content
+        </PodcastPromo.Card.Link>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Card Episodes Text', () => {
     assertTypeOfElement(PodcastPromo.Card.EpisodesText, 'p');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.EpisodesText
-        script={latin}
-        service="russian"
-        dir="ltr"
-      >
-        Episodes
-      </PodcastPromo.Card.EpisodesText>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <PodcastPromo.Card.EpisodesText
+          script={latin}
+          service="russian"
+          dir="ltr"
+        >
+          Episodes
+        </PodcastPromo.Card.EpisodesText>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });

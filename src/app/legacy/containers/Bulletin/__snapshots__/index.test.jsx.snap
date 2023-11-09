@@ -135,6 +135,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -160,15 +161,16 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
+  color: #006666;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -179,7 +181,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -191,26 +193,26 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-14 {
     padding-left: 0;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -235,21 +237,21 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -259,7 +261,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   }
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,7 +273,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   padding-right: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -279,12 +281,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -319,7 +321,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
       >
         <a
           aria-labelledby="bulletin-TestRadioBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -328,13 +330,13 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-12"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-13"
               lang="en-GB"
             >
               Gee ntị Live, 
@@ -344,23 +346,23 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test Radio summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -519,6 +521,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -544,15 +547,16 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
+  color: #006666;
   display: inline-block;
-  margin-right: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -563,7 +567,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -575,27 +579,27 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-14 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -620,21 +624,21 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -643,7 +647,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   }
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -655,7 +659,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   padding-right: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -663,7 +667,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -703,7 +707,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -712,13 +716,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           >
             <span
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-12"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-13"
               lang="en-GB"
             >
               Lee Live, 
@@ -728,31 +732,41 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test TV summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-20 emotion-21"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Lee
@@ -897,6 +911,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -932,7 +947,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -944,26 +959,26 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-13 {
     padding-left: 0;
   }
 }
 
-.emotion-16 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -988,21 +1003,21 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1012,7 +1027,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1024,7 +1039,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   padding-right: 0.5rem;
 }
 
-.emotion-18>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1032,12 +1047,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1072,7 +1087,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
       >
         <a
           aria-labelledby="bulletin-TestRadioBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1080,7 +1095,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
             role="text"
           >
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-12"
             >
               Gee ntị, 
             </span>
@@ -1091,23 +1106,23 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         </a>
       </h3>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         Test Radio summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -1266,6 +1281,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1301,7 +1317,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1313,27 +1329,27 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-16 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1358,21 +1374,21 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1381,7 +1397,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1393,7 +1409,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   padding-right: 0.5rem;
 }
 
-.emotion-18>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1401,7 +1417,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1441,7 +1457,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1449,7 +1465,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             role="text"
           >
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-12"
             >
               Lee, 
             </span>
@@ -1460,31 +1476,41 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         </a>
       </h3>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         Test TV summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Lee
@@ -1632,6 +1658,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1667,7 +1694,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1679,27 +1706,27 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-16 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1724,21 +1751,21 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1747,7 +1774,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1759,7 +1786,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   padding-right: 0.5rem;
 }
 
-.emotion-18>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1767,7 +1794,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1807,7 +1834,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1815,7 +1842,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
             role="text"
           >
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-12"
               lang="en-GB"
             >
               Watch, 
@@ -1827,31 +1854,41 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         </a>
       </h3>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         Test TV summary
       </p>
       <div
         aria-hidden="true"
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Watch

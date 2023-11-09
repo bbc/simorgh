@@ -1,0 +1,231 @@
+{
+  "data": {
+    "title": "BBC News Pidgin",
+    "description": "",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ATMs across the country",
+            "firstPublished": "2019-09-10T09:58:47.000Z",
+            "lastPublished": "2019-09-10T10:01:20.000Z",
+            "link": "https://www.bbc.com/pidgin/23248287",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "description": "Here we have an article about a particular topic",
+            "imageAlt": "-",
+            "id": "cda3bf00-2939-1a46-b6c1-f4376b944663"
+          },
+          {
+            "type": "article",
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
+          },
+          {
+            "type": "article",
+            "title": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "firstPublished": "2020-02-17T11:57:10.000Z",
+            "lastPublished": "2020-02-17T11:57:10.000Z",
+            "link": "https://www.bbc.com/pidgin/23267825",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "description": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "imageAlt": "Joseph shabalala",
+            "id": "877b3c91-b210-a84c-bf03-ab64f54bff8a"
+          },
+          {
+            "type": "article",
+            "title": "Jacob Zuma: Staying!!!",
+            "firstPublished": "2017-08-08T18:17:04.000Z",
+            "lastPublished": "2017-08-08T18:52:19.000Z",
+            "link": "https://www.bbc.com/pidgin/tori-23146434",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BBC4/test/_63586084_zuma.jpg",
+            "description": "Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.",
+            "imageAlt": "Jacob Zuma na cat with nine lives",
+            "id": "11c2d7ba-333a-0c4b-9071-86df752ebc47"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:87d69ac2-34a2-4013-a7b0-99b013ff7810",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "How Lagos Dey Fight Lassa Fever",
+            "firstPublished": "2017-08-09T17:42:05.000Z",
+            "lastPublished": "2017-08-09T17:42:05.000Z",
+            "link": "https://www.bbc.com/pidgin/tori-23146625",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+            "description": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+            "imageAlt": "Nurses for LUTH isolation Center",
+            "id": "fd1307eb-2887-1b40-b64c-d95841bdfebd"
+          },
+          {
+            "type": "video",
+            "title": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
+            "firstPublished": "2020-02-17T11:51:13.000Z",
+            "lastPublished": "2020-02-17T11:51:13.000Z",
+            "link": "https://www.bbc.com/pidgin/media-23267821",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+            "description": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+            "imageAlt": "Keyframe #2",
+            "id": "0f35c912-afc7-1a4b-9518-7853401c1149"
+          },
+          {
+            "type": "audio",
+            "duration": "PT26M14S",
+            "title": "Kojey Radical: Why gigs feel like football matches",
+            "firstPublished": "2020-02-17T11:53:41.000Z",
+            "lastPublished": "2020-02-17T11:53:41.000Z",
+            "link": "https://www.bbc.com/pidgin/23267823",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "description": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+            "imageAlt": "-",
+            "id": "5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:776c8719-77b4-4473-ba9e-0812888495f4",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Informate me",
+        "visualProminence": "HIGH"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Promo with Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "Pidgin test 2 - Description",
+            "imageAlt": "",
+            "id": "c7p765ynk9qt"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 1 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cgl2vz8d587t"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 2 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cy0mg3kvxnlt"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 3 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cly58zvmwygt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Normal Curation with Live Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kkz841t",
+        "contentType": "index-home",
+        "pageIdentifier": "pidgin.page",
+        "pageTitle": "BBC News Pidgin"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

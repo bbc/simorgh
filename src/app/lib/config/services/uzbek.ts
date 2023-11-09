@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/uzbek';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'uzbek',
     serviceName: 'Uzbek',
     languageName: 'Uzbek',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -135,7 +120,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Маъқул',
           reject: 'Нималар ўзгарди?',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -148,7 +133,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'кукисга',
                 last: ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Танловларимни бошқаринг',
             },
@@ -164,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'Веб саҳифамиз ишлаши учун биз сиз ҳақингизда чекланган маълумотларни сизнинг розилигингиз сақлаб қоламиз.',
                 para4: {
                   text: 'Сизнинг қурилмангизда веб саҳифамиз яхши ишлаши учун қандай муҳим маълумотлар сақланиши ҳақида кўпроқ маълумот',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Биз сизнинг розилигингиз ва танловингиз маълумотларини ички хотирада сақлаймиз',
@@ -197,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'кукидан',
                 last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ҳа, мен розиман',
             reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -266,8 +251,8 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
+      latestMediaTitle: 'Сўнгги',
     },
-    brandSVG,
     mostRead: {
       header: 'Энг кўп ўқилган',
       lastUpdated: 'Сўнгги янгиланиш:',
@@ -313,8 +298,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -351,8 +336,8 @@ export const service: DefaultServiceConfig = {
         url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
-        title: 'Видео',
-        url: '/uzbek/media/video',
+        title: 'BBC News O‘zbek TV dasturi',
+        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
       },
     ],
   },

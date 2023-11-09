@@ -40,8 +40,8 @@ The `scriptLink` can be used to render [ScriptLink](https://github.com/bbc/psamm
 | minWidth | Number | yes | N/A | `240` |
 | maxWidth | Number | yes | N/A | `380` |
 | svg | Object | yes | N/A | { group: `(<g fillrule="evenodd"><path d="M84.32" /></g>)`, viewbox: { height: 24, width: 167.95 }, ratio: 6.9979 } |
-| backgroundColour | String | yes | N/A | `${C_POSTBOX}` or relevant string hex code |
-| logoColour | String | yes | N/A | `${C_WHITE}` or relevant string hex code |
+| backgroundColour | String | yes | N/A | `${POSTBOX}` or relevant string hex code |
+| logoColour | String | yes | N/A | `${WHITE}` or relevant string hex code |
 | url | String | no | N/A | `https://www.bbc.co.uk/news` |
 | serviceLocalisedName | String | no | N/A | `'Yoruba'` |
 | borderTop | Boolean | no | `false` | `true` |
@@ -63,7 +63,7 @@ import Brand from '#psammead/psammead-brand/src';
 import SkipLink from '#psammead/psammead-brand/src/skip-link';
 import { igbo } from '#psammead/psammead-assets/src/svgs';
 import ScriptLink from '#psammead/psammead-script-link/src';
-import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const scriptLink = (

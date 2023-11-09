@@ -12,6 +12,16 @@ const pageDataNoAdvertising = {
   metadata: { options: { allowAdvertising: false } },
 };
 
+const optimoPageDataAdvertising = {
+  data: {
+    article: {
+      metadata: {
+        allowAdvertising: true,
+      },
+    },
+  },
+};
+
 describe('hasRecommendations', () => {
   it('returns true if service has recommendations and asset allows advertising', async () => {
     getConfig.mockImplementationOnce(() => ({
@@ -22,6 +32,18 @@ describe('hasRecommendations', () => {
 
     expect(
       await hasRecommendations('mock-service', null, pageDataAdvertising),
+    ).toBeTruthy();
+  });
+
+  it('returns true if service has recommendations and optimo asset allows advertising', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      recommendations: {
+        hasStoryRecommendations: true,
+      },
+    }));
+
+    expect(
+      await hasRecommendations('mock-service', null, optimoPageDataAdvertising),
     ).toBeTruthy();
   });
 

@@ -1,4 +1,4 @@
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 
 /**
  * Returns a string of a known provider name.
@@ -39,7 +39,7 @@ export const dictionaryFactory = ({ provider }) => ({
 export const getCaptionText = ({ pageType, caption, provider }) => {
   if (!caption) return null;
 
-  if (pageType === ARTICLE_PAGE) {
+  if (pageType === ARTICLE_PAGE || pageType === LIVE_PAGE) {
     const dictionary = dictionaryFactory({ provider });
 
     const ADDITIONAL_TEXT_PROVIDERS = ['youtube', 'tiktok'];
@@ -58,17 +58,3 @@ export const getCaptionText = ({ pageType, caption, provider }) => {
     textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
   };
 };
-
-/**
- * These styles are lifted from #psammead/psammead-visually-hidden-text/src, which we
- * cannot use directly as we require control over _when_ they are applied.
- */
-export const visuallyHiddenStyle = `
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-`;

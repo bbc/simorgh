@@ -169,26 +169,134 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 }
 
 .emotion-10 {
+  background-color: #FFFFFF;
+  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-10 .twitter-tweet {
-  margin-top: 0!important;
-  margin-bottom: 10rem!important;
+.emotion-11 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-10 .twitter-tweet-rendered {
-  margin-bottom: 0!important;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-12 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-12 a:hover,
+.emotion-12 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13:hover,
+.emotion-13:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -199,18 +307,18 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-12>span {
+.emotion-14>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -221,7 +329,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -244,7 +352,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
         <span>
@@ -255,34 +363,48 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-10"
+          data-testid="consentBanner"
+          id="consentBanner"
         >
-          <blockquote
-            class="twitter-tweet"
+          <strong
+            class="emotion-11"
+            data-testid="banner-heading"
           >
-            <p
-              dir="ltr"
-              lang="en"
-            >
-              Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was "indescribable" 
-              <a
-                href="https://t.co/xz93WmAdfR"
-              >
-                https://t.co/xz93WmAdfR
-              </a>
-            </p>
-            — BBC News (UK) (@BBCNews) 
+            Allow Twitter content?
+          </strong>
+          <p
+            class="emotion-12"
+            data-testid="banner-body"
+          >
+            This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
             <a
-              href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
+              aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
+              href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
             >
-              April 19, 2021
+              cookie policy
             </a>
-          </blockquote>
-          
-
+             and 
+            <a
+              aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
+              href="https://twitter.com/en/privacy"
+            >
+              privacy policy
+            </a>
+             before accepting. To view this content choose 'accept and continue'.
+          </p>
+          <button
+            class="emotion-13"
+            data-testid="banner-button"
+            type="button"
+          >
+            Accept and continue
+          </button>
         </div>
         <figcaption
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         >
           <span>
             Video caption, 
@@ -291,7 +413,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         </figcaption>
       </figure>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
         id="end-of-twitter-content-1"
         tabindex="-1"
       >
@@ -556,7 +678,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
         <span>
@@ -883,7 +1005,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
         <span>
@@ -1151,7 +1273,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1176,7 +1298,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -1222,7 +1344,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1243,6 +1365,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-14 {
@@ -1301,7 +1427,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-tiktok-content"
       >
         <span>
@@ -1329,6 +1455,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
             This article contains content provided by TikTok.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read TikTok 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://www.tiktok.com/legal/cookie-policy"
             >
               cookie policy
@@ -1336,6 +1463,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://www.tiktok.com/legal/privacy-policy"
             >
               privacy policy
@@ -1615,7 +1743,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
         <span>
@@ -1871,7 +1999,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1896,7 +2024,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -1942,7 +2070,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1963,6 +2091,10 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-14 {
@@ -2021,7 +2153,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-youtube-content"
       >
         <span>
@@ -2049,6 +2181,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
             This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://policies.google.com/technologies/cookies"
             >
               cookie policy
@@ -2056,6 +2189,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://policies.google.com/privacy"
             >
               privacy policy
@@ -2332,7 +2466,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-instagram-content-1"
       >
         <span>

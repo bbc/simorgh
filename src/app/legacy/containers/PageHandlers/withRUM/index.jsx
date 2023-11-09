@@ -5,15 +5,8 @@ import useOperaMiniDetection from '../../../../hooks/useOperaMiniDetection';
 
 // Note - if changing one of these constants, the other will also need to change
 // See https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
-const SCRIPT_SRC = 'https://client.rum.us-east-1.amazonaws.com/1.2.1/cwr.js';
-const SCRIPT_INTEGRITY =
-  'sha384-eCJxxyQILPZN5He1/UBN7E0nPIPBXIMDEPYubMaxQsCcQ+Vh8W9n6zRgQdqNgL0D';
-
-// TODO: we cannot use subresource integrity as the AWS response doesn't have a CORS header
-const USE_SUBRESOURCE_INTEGRITY = false;
-const SRI_STRING = USE_SUBRESOURCE_INTEGRITY
-  ? `z.integrity = ${SCRIPT_INTEGRITY};`
-  : '';
+const SCRIPT_SRC =
+  'https://static.files.bbci.co.uk/ws/simorgh-assets/public/vendor/cwr.js';
 
 const buildScript = ({
   applicationId,
@@ -24,7 +17,7 @@ const buildScript = ({
   <Helmet>
     <script>
       {`
-        (function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;${SRI_STRING}document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})(
+        (function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})(
         'cwr',
         '${applicationId}',
         '1.0.0',

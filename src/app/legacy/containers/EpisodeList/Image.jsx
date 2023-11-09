@@ -4,7 +4,6 @@ import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_HLF,
@@ -36,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const PlayWrapper = withEpisodeContext(styled.div`
-  background-color: ${C_EBON};
+  background-color: ${props => props.theme.palette.EBON};
   padding: ${GEL_SPACING_HLF};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING};
@@ -46,7 +45,7 @@ const PlayWrapper = withEpisodeContext(styled.div`
     margin: 0 0 1px 0;
     height: 0.6rem;
     width: 0.7rem;
-    color: ${C_WHITE};
+    color: ${props => props.theme.palette.WHITE};
     @media screen and (forced-colors: active) {
       fill: linkText;
     }
@@ -61,7 +60,7 @@ const PlayWrapper = withEpisodeContext(styled.div`
 const DurationWrapper = withEpisodeContext(styled.span`
   ${({ script }) => getMinion(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'rtl'
       ? `padding: 0 ${GEL_SPACING_HLF} 0 0;`
@@ -83,7 +82,6 @@ const EpisodeImage = props => {
     'classname',
     'script',
     'service',
-    'darkMode',
   ]);
 
   return (
