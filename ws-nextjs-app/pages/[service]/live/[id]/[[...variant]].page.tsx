@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
-import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -13,11 +12,8 @@ import {
 import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import fetchPageData from '#app/routes/utils/fetchPageData';
-import certsRequired from '#app/routes/utils/certsRequired';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import getAgent from '#server/utilities/getAgent';
-
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
@@ -41,36 +37,21 @@ const getPageData = async ({
   rendererEnv,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const livePageUrl = constructPageFetchUrl({
-    page,
-    pageType: 'live',
-    pathname,
-    service,
-    variant,
-  });
-
-  const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': env };
-
-  const agent = certsRequired(pathname) ? await getAgent() : null;
-
-  let pageStatus;
-  let pageJson;
-  let errorMessage;
-
-  const path = livePageUrl.toString();
+  let message;
+  let status;
+  let json;
 
   try {
-    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
-    const { status, json } = await fetchPageData({
-      path,
-      agent,
-      optHeaders,
-    });
-    pageStatus = status;
-    pageJson = json;
+    ({ status, json } = await fetchDataFromBFF({
+      pathname,
+      pageType: LIVE_PAGE,
+      service,
+      variant,
+      page,
+      getAgent,
+    }));
   } catch (error: unknown) {
-    const { message, status } = error as FetchError;
+    ({ message, status } = error as FetchError);
 
     logger.error(BFF_FETCH_ERROR, {
       service,
@@ -78,13 +59,11 @@ const getPageData = async ({
       pathname,
       message,
     });
-    pageStatus = status;
-    errorMessage = message;
   }
 
-  const data = pageJson
-    ? { pageData: pageJson.data, status: pageStatus }
-    : { error: errorMessage, status: pageStatus };
+  const data = json
+    ? { pageData: json.data, status }
+    : { error: message, status };
 
   const toggles = await getToggles(service);
 
@@ -148,15 +127,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
-      pageData: data?.pageData
-        ? {
-            ...data.pageData,
-            metadata: {
-              ...data.pageData.metadata,
-              type: LIVE_PAGE,
-            },
-          }
-        : null,
+      pageData: data?.pageData || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
