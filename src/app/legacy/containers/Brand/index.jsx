@@ -18,12 +18,11 @@ const StyledBrand = styled(Brand)`
 
   ${({ isLow }) =>
     isLow &&
-    (
+    `
       > div:first-of-type {
         margin: unset;
       }
-    )
-  }
+    `}
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {

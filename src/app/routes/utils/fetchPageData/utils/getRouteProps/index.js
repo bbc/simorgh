@@ -40,6 +40,7 @@ const getRouteProps = url => {
   return {
     isAmp: amp || isAmpPath(url),
     isApp: app || isAppPath(url),
+    isLow: low || isLowPath(url),
     service: service || fallbackServiceParam(url),
     variant,
     id,

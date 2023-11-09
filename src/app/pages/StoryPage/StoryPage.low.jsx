@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { Helmet } from 'react-helmet';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -13,19 +13,16 @@ import {
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
-import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
-import ATIAnalytics from '#containers/ATIAnalytics';
+import CpsRelatedContent from '#containers/CpsRelatedContent';
+import TopStories from '#containers/CpsTopStories';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -33,6 +30,7 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   getFirstPublished,
@@ -40,20 +38,28 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import AdContainer from '#containers/Ad';
 import useToggle from '#hooks/useToggle';
+import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { RequestContext } from '../../contexts/RequestContext';
+import AdContainer from '../../components/Ad';
+import ATIAnalytics from '../../components/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import Disclaimer from '../../components/Disclaimer';
+import ImageWithCaption from '../../components/ImageWithCaption';
+
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const StoryPage = ({ pageData }) => {
-  const { lang } = useContext(ServiceContext);
+  const { brandName, serviceLang, lang, showRelatedTopics } =
+    useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -67,6 +73,11 @@ const StoryPage = ({ pageData }) => {
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const relatedContent = pathOr(
+    [],
+    ['relatedContent', 'groups', 0, 'promos'],
+    pageData,
+  );
   const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
   const indexImageLocator = indexImagePath
     ? getImageParts(indexImagePath)[1]
@@ -75,6 +86,13 @@ const StoryPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const topStoriesInitialData = path(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
+  const recommendationsData = pathOr([], ['recommendations'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -113,21 +131,28 @@ const StoryPage = ({ pageData }) => {
   };
 
   // ads
-  const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
-   * Should we display ads? We check:
-   * 1. The CPS `allowAdvertising` field value.
-   * 2. A value local to the STY page type.
-   * - iSite toggles are handled by the Ad container.
+   * Should we display ads?:
+   * If CPS `allowAdvertising` field is true
+   *
+   * Within the ads container:
+   *  - if the value of the 'ads' toggle is true
+   *  - if showAdsBasedOnLocation is true
    */
-  const isAdsEnabled = [
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const allowAdvertising = path(
+    ['metadata', 'options', 'allowAdvertising'],
+    pageData,
+  );
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -136,7 +161,7 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 645px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -153,7 +178,10 @@ const StoryPage = ({ pageData }) => {
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <MpuContainer {...props} slotType="mpu" /> : null,
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
@@ -199,17 +227,17 @@ const StoryPage = ({ pageData }) => {
     padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
-  const fontJs = `
-    window.setTimeout(() => {
-    const lazyLoadingImages = document.querySelectorAll('[data-e2e="image-placeholder"]');
-    lazyLoadingImages.forEach(lazyImage => {
-      lazyImage.addEventListener('click', (e) => {
-        const placeholder = lazyImage.querySelector('.lazyload-placeholder');
-        const noScriptContainer = lazyImage.querySelector('noscript');
-        placeholder.innerHTML = decodeURIComponent(noScriptContainer.innerHTML).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-      }, {once : true});
-    });
-    }, 1000);
+  /**
+   * this should be the defacto wrapper for OJs
+   * as it displays a conditional padding, which
+   * works well for mobile view.
+   */
+  const ResponsiveComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-bottom: ${GEL_SPACING};
+      padding: ${GEL_SPACING_DBL};
+    }
   `;
 
   return (
@@ -237,10 +265,19 @@ const StoryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      )}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
@@ -255,16 +292,19 @@ const StoryPage = ({ pageData }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+
+          {showRelatedTopics && topics && (
+            <GridItemLarge>
+              <RelatedTopics topics={topics} />
+            </GridItemLarge>
+          )}
+
+          <CpsRelatedContent
+            content={relatedContent}
+            parentColumns={gridColsMain}
+          />
         </GridPrimaryColumn>
       </StoryPageGrid>
-      <Helmet
-        script={[
-          {
-            type: 'text/javascript',
-            innerHTML: fontJs,
-          },
-        ]}
-      />
     </>
   );
 };

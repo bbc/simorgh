@@ -96,7 +96,7 @@ export const getHomePageRegex = services => {
     );
   }
   const homePageServiceRegex = getServiceRegex(homePages);
-  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:low(${lowRegex})?`;
 };
 
 export const getSwRegex = services => {
@@ -146,7 +146,7 @@ export const getOnDemandTvRegex = services => {
 
 export const getTopicPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/topics/:id(${topicIdRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/topics/:id(${topicIdRegex})?:low(${lowRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
