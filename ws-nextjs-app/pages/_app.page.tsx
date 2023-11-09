@@ -1,7 +1,5 @@
 import React from 'react';
-import type { AppProps, NextWebVitalsMetric } from 'next/app';
-import { SERVER_RESPONSE_TIME } from '#app/lib/logger.const';
-import nodeLogger from '#lib/logger.node';
+import type { AppProps } from 'next/app';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -42,16 +40,6 @@ interface Props extends AppProps {
     variant?: Variants;
     isUK?: boolean;
   };
-}
-
-const logger = nodeLogger(__filename);
-
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  const nanoseconds = metric.startTime * 1000000;
-  logger.info(SERVER_RESPONSE_TIME, {
-    path: 'TEST_PATH',
-    nanoseconds,
-  });
 }
 
 export default function App({ Component, pageProps }: Props) {
