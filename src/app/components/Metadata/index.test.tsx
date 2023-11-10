@@ -85,6 +85,7 @@ const MetadataWithContext = ({
       id={id}
       isAmp={platform === 'amp'}
       isApp={false}
+      isLow={false}
       pageType={pageType}
       pathname={pathname}
       service={service}

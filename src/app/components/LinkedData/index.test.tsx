@@ -28,6 +28,7 @@ const Context = ({ children, service }: LinkedDataWithContext) => (
       id="c0000000000o"
       isAmp={false}
       isApp={false}
+      isLow={false}
       pageType={ARTICLE_PAGE}
       pathname="/pathname"
       service="news"

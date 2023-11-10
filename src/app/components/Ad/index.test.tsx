@@ -68,6 +68,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
+              isLow={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}

@@ -26,6 +26,7 @@ const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
     bbcOrigin="https://www.test.bbc.com"
     isAmp
     isApp={false}
+    isLow={false}
     pageType={FRONT_PAGE}
     service="afrique"
     pathname="/"
