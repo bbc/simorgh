@@ -160,137 +160,67 @@ exports[`Canonical On Demand Audio Page Recent Episodes List items should match 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
+  "url": "http://localhost:7080/indonesia/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 2`] = `
 {
   "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 6`] = `
 {
   "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 7`] = `
 {
   "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 8`] = `
 {
   "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 9`] = `
 {
   "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 10`] = `
-{
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 11`] = `
-{
-  "sizes": null,
-  "url": "http://localhost:7080/indonesia/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 12`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 13`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 14`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 15`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 16`] = `
-{
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 17`] = `
-{
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 18`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 19`] = `
-{
-  "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 20`] = `
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 10`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-512x512.png",
@@ -308,61 +238,6 @@ exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"Dunia Pagi I
 exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"id"`;
 
 exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = `
-{
-  "@context": "http://schema.org",
-  "@graph": [
-    {
-      "@type": "BackgroundNewsArticle",
-      "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-          "width": 1024,
-        },
-        "name": "BBC News Mundo",
-        "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
-      },
-      "dateModified": "2020-01-30T06:35:49.000Z",
-      "datePublished": "2020-01-30T06:35:49.000Z",
-      "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
-      "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "es",
-        "name": "Spanish",
-      },
-      "mainEntityOfPage": {
-        "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
-        "@type": "WebPage",
-        "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-          "width": 1024,
-        },
-        "name": "BBC News Mundo",
-        "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
-      },
-      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
-      "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
-    },
-  ],
-}
-`;
-
-exports[`Canonical On Demand Audio Page SEO Linked data should match text 2`] = `
 {
   "@context": "http://schema.org",
   "@graph": [
