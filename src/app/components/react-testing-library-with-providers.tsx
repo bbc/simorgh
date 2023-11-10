@@ -16,6 +16,7 @@ interface Props {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
+  isLow?: boolean;
   pageData?: object;
   atiData?: {
     contentId?: string;
@@ -44,6 +45,7 @@ const AllTheProviders: FC<Props> = ({
   id = null,
   isAmp = false,
   isApp = false,
+  isLow = false,
   bbcOrigin = 'https://www.test.bbc.com',
   pageType = 'article',
   derivedPageType,
@@ -70,6 +72,7 @@ const AllTheProviders: FC<Props> = ({
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
+          isLow={isLow}
           isNextJs={isNextJs}
           service={service}
           pathname={pathname}
@@ -99,6 +102,7 @@ const customRender = (
     id,
     isAmp,
     isApp,
+    isLow,
     bbcOrigin,
     pageData,
     pageType,
@@ -121,6 +125,7 @@ const customRender = (
         id={id}
         isAmp={isAmp}
         isApp={isApp}
+        isLow={isLow}
         bbcOrigin={bbcOrigin}
         pageData={pageData}
         atiData={atiData}
