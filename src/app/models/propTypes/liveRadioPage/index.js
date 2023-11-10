@@ -14,7 +14,7 @@ export const liveRadioPageDataPropTypes = shape({
 
 const liveRadioPagePropTypes = {
   isAmp: bool,
-  isLow?: bool,
+  isLow: bool,
   data: liveRadioPageDataPropTypes,
   service: string,
   status: number,
