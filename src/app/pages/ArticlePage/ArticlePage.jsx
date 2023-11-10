@@ -239,9 +239,9 @@ const ArticlePage = ({ pageData }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        {(!isApp && !isLow) && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isLow && <SecondaryColumn pageData={pageData} />}
       </div>
-      {(!isApp && !isLow) && (
+      {!isApp && !isLow && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}

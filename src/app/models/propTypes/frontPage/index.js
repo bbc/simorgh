@@ -15,6 +15,7 @@ export const frontPageDataPropTypes = shape({
 
 const frontPagePropTypes = {
   isAmp: bool,
+  isLow?: bool,
   data: frontPageDataPropTypes,
   service: string,
   status: number,

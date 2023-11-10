@@ -12,6 +12,7 @@ export const onDemandAudioPageDataPropTypes = shape({
 
 const onDemandAudioPagePropTypes = {
   isAmp: bool,
+  isLow?: bool,
   data: onDemandAudioPageDataPropTypes,
   service: string,
   status: number,
