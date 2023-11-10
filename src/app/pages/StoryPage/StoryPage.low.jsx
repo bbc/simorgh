@@ -4,7 +4,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -22,7 +21,6 @@ import text from '#containers/Text';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import TopStories from '#containers/CpsTopStories';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -51,15 +49,12 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Disclaimer from '../../components/Disclaimer';
 import ImageWithCaption from '../../components/ImageWithCaption';
 
-import styles from './StoryPage.styles';
-
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const StoryPage = ({ pageData }) => {
-  const { brandName, serviceLang, lang, showRelatedTopics } =
-    useContext(ServiceContext);
+  const { brandName, lang, showRelatedTopics } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -86,11 +81,6 @@ const StoryPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const topStoriesInitialData = path(
-    ['secondaryColumn', 'topStories'],
-    pageData,
-  );
-  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
@@ -225,19 +215,6 @@ const StoryPage = ({ pageData }) => {
       width: 100%;
     }
     padding-bottom: ${GEL_SPACING_QUAD};
-  `;
-
-  /**
-   * this should be the defacto wrapper for OJs
-   * as it displays a conditional padding, which
-   * works well for mobile view.
-   */
-  const ResponsiveComponentWrapper = styled.div`
-    margin-bottom: ${GEL_SPACING_TRPL};
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin-bottom: ${GEL_SPACING};
-      padding: ${GEL_SPACING_DBL};
-    }
   `;
 
   return (

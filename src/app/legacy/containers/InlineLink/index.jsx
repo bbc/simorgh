@@ -17,7 +17,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (
     <InlineLink
-      href={makeRelativeUrlPath(locator, (isLow = false))}
+      href={makeRelativeUrlPath(locator, isLow)}
       className="focusIndicatorReducedWidth"
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
       onClick={event => {

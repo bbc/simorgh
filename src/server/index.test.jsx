@@ -74,6 +74,7 @@ const mockRouteProps = ({
   service,
   isAmp,
   isApp,
+  isLow,
   dataResponse,
   responseType,
   variant,
@@ -90,6 +91,7 @@ const mockRouteProps = ({
   getRouteProps.mockReturnValue({
     isAmp,
     isApp,
+    isLow,
     service,
     variant,
     route: { getInitialData, pageType },
@@ -110,7 +112,7 @@ const makeRequest = async (requestPath, headers = {}) =>
 const QUERY_STRING = '?param=test&query=1';
 
 const testRenderedData =
-  ({ url, service, isAmp, isApp, successDataResponse, variant }) =>
+  ({ url, service, isAmp, isApp, isLow, successDataResponse, variant }) =>
   async () => {
     const { text, status } = await makeRequest(url);
 
@@ -129,6 +131,7 @@ const testRenderedData =
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
         isApp={isApp}
+        isLow={isLow}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
@@ -140,6 +143,7 @@ const testRenderedData =
       data: successDataResponse,
       isAmp,
       isApp,
+      isLow,
       service,
       routes,
       url,
@@ -177,6 +181,7 @@ const assertNon200ResponseCustomMetrics = ({
 const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
+  const isLow = platform === 'low';
   const extension =
     {
       amp: '.amp',
@@ -210,6 +215,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: successDataResponse,
             variant,
           });
@@ -220,6 +226,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
+          isLow,
           successDataResponse,
           variant,
         };
@@ -234,6 +241,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -263,6 +271,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -287,6 +296,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
 const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
+  const isLow = platform === 'low';
   const extension =
     {
       amp: '.amp',
@@ -319,6 +329,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: successDataResponse,
             variant,
           });
@@ -329,6 +340,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
+          isLow,
           successDataResponse,
           variant,
         };
@@ -345,6 +357,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -375,6 +388,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -405,6 +419,7 @@ const testAssetPages = ({
 }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
+  const isLow = platform === 'low';
   const extension =
     {
       amp: '.amp',
@@ -436,6 +451,7 @@ const testAssetPages = ({
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: successDataResponse,
             variant,
           });
@@ -446,6 +462,7 @@ const testAssetPages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           successDataResponse,
           variant,
         };
@@ -462,6 +479,7 @@ const testAssetPages = ({
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -493,6 +511,7 @@ const testAssetPages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -626,6 +645,7 @@ const testTvPages = ({
   describe(`${platform} tv brand page`, () => {
     const isAmp = platform === 'amp';
     const isApp = platform === 'app';
+    const isLow = platform === 'low';
     const extension =
       {
         amp: '.amp',
@@ -655,6 +675,7 @@ const testTvPages = ({
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: successDataResponse,
           });
         });
@@ -664,6 +685,7 @@ const testTvPages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           successDataResponse,
         };
 
@@ -679,6 +701,7 @@ const testTvPages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: notFoundDataResponse,
           pageType,
         });
@@ -707,6 +730,7 @@ const testTvPages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           pageType,
@@ -738,6 +762,7 @@ const testOnDemandTvEpisodePages = ({
   describe(`${platform} tv episode page`, () => {
     const isAmp = platform === 'amp';
     const isApp = platform === 'app';
+    const isLow = platform === 'low';
     const extension =
       {
         amp: '.amp',
@@ -767,6 +792,7 @@ const testOnDemandTvEpisodePages = ({
             service,
             isAmp,
             isApp,
+            isLow,
             dataResponse: successDataResponse,
           });
         });
@@ -776,6 +802,7 @@ const testOnDemandTvEpisodePages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           successDataResponse,
         };
 
@@ -791,6 +818,7 @@ const testOnDemandTvEpisodePages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: notFoundDataResponse,
           pageType,
         });
@@ -819,6 +847,7 @@ const testOnDemandTvEpisodePages = ({
           service,
           isAmp,
           isApp,
+          isLow,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           pageType,
