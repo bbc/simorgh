@@ -1,5 +1,5 @@
 export default () => {
-  describe('embedHtml', () => {
+  describe('Embed HTML', () => {
     const embedErrorMessage = document.querySelector(
       `[data-e2e="embed-error"]`,
     );

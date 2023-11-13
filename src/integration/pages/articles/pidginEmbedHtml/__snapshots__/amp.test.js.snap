@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP Articles embedHtml should match snapshot 1`] = `
+exports[`AMP Articles Embed HTML should match snapshot 1`] = `
 <div
   class="bbc-z6vcvl"
   data-e2e="embed-error"

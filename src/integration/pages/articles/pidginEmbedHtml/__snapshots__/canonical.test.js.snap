@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Articles embedHtml should match snapshot 1`] = `
+exports[`Canonical Articles Embed HTML should match snapshot 1`] = `
 <iframe
   allow="autoplay"
   referrerpolicy="strict-origin"

@@ -1,5 +1,5 @@
 export default () => {
-  describe('embedHtml', () => {
+  describe('Embed HTML', () => {
     const embedHtml = document.querySelector(
       'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
     );

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP Articles embedImages should match snapshot 1`] = `
+exports[`AMP Articles Embed Images should match snapshot 1`] = `
 <div
   class="bbc-1oz17mt"
   data-e2e="embed-image"

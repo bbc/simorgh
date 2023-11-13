@@ -1,5 +1,5 @@
 export default () => {
-  describe('embedImages', () => {
+  describe('Embed Images', () => {
     const embedImage = document.querySelector("div[data-e2e='embed-image']");
 
     it('should be in the document', () => {
