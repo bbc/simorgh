@@ -3,10 +3,10 @@
  * @pathname /portuguese/articles/c72mg3j3x7eo
  */
 
-import { runCanonicalEmbedTests } from '../../../common';
+import { runFlourishCanonicalEmbedTests } from '../../../common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCanonicalEmbedTests();
+    runFlourishCanonicalEmbedTests();
   });
 });

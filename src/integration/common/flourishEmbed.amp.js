@@ -1,14 +1,16 @@
 export default () => {
   describe('Flourish Embed', () => {
     describe('Error messages', () => {
-      const errorEmbeds = document.querySelectorAll(`[data-e2e="embed-error"]`);
+      const embedErrorMessages = document.querySelectorAll(
+        `[data-e2e="embed-error"]`,
+      );
 
       it('should all be in the document', () => {
-        expect(errorEmbeds).toBeTruthy();
-        expect(errorEmbeds.length).toEqual(5);
+        expect(embedErrorMessages).toBeTruthy();
+        expect(embedErrorMessages.length).toEqual(5);
       });
 
-      errorEmbeds.forEach(errorEmbed => {
+      embedErrorMessages.forEach(errorEmbed => {
         describe('Link', () => {
           const linkEl = errorEmbed.querySelector('a');
           const text = linkEl.textContent;
