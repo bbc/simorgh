@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+import logResponseTime from '#server/utilities/logResponseTime';
 import { Services, Variants } from '../../../src/app/models/types/global';
 import extractHeaders from '../../../src/server/utilities/extractHeaders';
 
@@ -13,6 +14,8 @@ type PageDataParams = {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  logResponseTime(context.req, context.res, () => null);
+
   const { service, variant } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
