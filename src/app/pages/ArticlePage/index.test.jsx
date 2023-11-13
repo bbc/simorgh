@@ -562,5 +562,4 @@ it('should render embedImages component when passed', async () => {
   );
   const actual = container.querySelector(`div[data-e2e="embed-image"]`);
   expect(actual).toBeInTheDocument();
-  // expect(getByText('Blah')).toBeInTheDocument();
 });

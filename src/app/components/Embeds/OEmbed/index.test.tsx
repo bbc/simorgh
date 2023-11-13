@@ -80,7 +80,6 @@ describe('OEmbed', () => {
       expect(iFrameElement).toBeInTheDocument();
     });
 
-    // wopuld it be better to include a snapshot?
     it('VJ Embed - Should render an embed', () => {
       const { container, getByText } = render(
         <Component props={sampleVJCanonicalProps} isAmp={false} />,
