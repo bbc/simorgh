@@ -26,6 +26,7 @@ import runFlourishAmpEmbedTests from './flourishEmbed.amp';
 import runCanonicalEmbedHtmlTests from './embedHtml.canonical';
 import runAmpEmbedHtmlTests from './embedHtml.amp';
 import runEmbedImagesTests from './embedImages';
+import runAmpIframeTests from './ampIframe.amp';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -65,4 +66,5 @@ export {
   runCanonicalEmbedHtmlTests,
   runAmpEmbedHtmlTests,
   runEmbedImagesTests,
+  runAmpIframeTests,
 };
