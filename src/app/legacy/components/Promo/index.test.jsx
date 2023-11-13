@@ -155,12 +155,6 @@ describe('Promo component - Timestamp', () => {
       });
     });
     describe('Relative time 9 hours ago', () => {
-      // temporary notes to describe next actions:
-      // either we make this test expect '9 hours ago' and acknowledge it is hard to make it exactly 10,
-      // or we need to work out how to use the buffer like in the isTenHoursAgo tests to make it exactly 10 hours ago
-      // It would be a boundary test, so good for that, but users will never see 10 hours ago unless they
-      // visit on one particular millisecond (unlikely!) so testing just before 10 and just after 10 might be ok
-
       it('should render timestamp in string format', () => {
         const nineHoursAgoString = calcTimestampHoursAgo(9).toISOString();
         const { getByText } = render(
