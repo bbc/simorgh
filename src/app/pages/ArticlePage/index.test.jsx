@@ -522,44 +522,56 @@ describe('Article Page', () => {
 
     expect(getByText('Что это было?')).toBeInTheDocument();
   });
-});
+  it('should render oEmbed component when passed', async () => {
+    const pageDataWithRiddle = {
+      ...articleDataNewsWithEmbeds,
+    };
+    const { container } = render(
+      <Context service="russian">
+        <ArticlePage pageData={pageDataWithRiddle} />
+      </Context>,
+    );
+    const actual = container.querySelector(
+      'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+    );
+    expect(actual).toBeInTheDocument();
+  });
 
-it('should render oEmbed component when passed', async () => {
-  const pageDataWithRiddle = {
-    ...articleDataNewsWithEmbeds,
-  };
-  const { container } = render(
-    <Context service="russian">
-      <ArticlePage pageData={pageDataWithRiddle} />
-    </Context>,
-  );
-  const actual = container.querySelector(
-    'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
-  );
-  expect(actual).toBeInTheDocument();
-});
+  it('should render embedHtml component when passed', async () => {
+    const pageDataWithEmbedHtml = {
+      ...articleDataNewsWithEmbeds,
+    };
+    const { getByText } = render(
+      <Context service="russian">
+        <ArticlePage pageData={pageDataWithEmbedHtml} />
+      </Context>,
+    );
+    expect(getByText('Embed HTML Component')).toBeInTheDocument();
+  });
 
-it('should render embedHtml component when passed', async () => {
-  const pageDataWithEmbedHtml = {
-    ...articleDataNewsWithEmbeds,
-  };
-  const { getByText } = render(
-    <Context service="russian">
-      <ArticlePage pageData={pageDataWithEmbedHtml} />
-    </Context>,
-  );
-  expect(getByText('Embed HTML Component')).toBeInTheDocument();
-});
+  it('should render embedImages component when passed', async () => {
+    const pageDataWithEmbedImages = {
+      ...articleDataNewsWithEmbeds,
+    };
+    const { container } = render(
+      <Context service="russian">
+        <ArticlePage pageData={pageDataWithEmbedImages} />
+      </Context>,
+    );
+    const actual = container.querySelector(`div[data-e2e="embed-image"]`);
+    expect(actual).toBeInTheDocument();
+  });
 
-it('should render embedImages component when passed', async () => {
-  const pageDataWithEmbedImages = {
-    ...articleDataNewsWithEmbeds,
-  };
-  const { container } = render(
-    <Context service="russian">
-      <ArticlePage pageData={pageDataWithEmbedImages} />
-    </Context>,
-  );
-  const actual = container.querySelector(`div[data-e2e="embed-image"]`);
-  expect(actual).toBeInTheDocument();
+  it('should render Uploader Embed component when passed', async () => {
+    const pageDataWithUploaderEmbed = {
+      ...articleDataNewsWithEmbeds,
+    };
+    const { getByText } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithUploaderEmbed} />
+      </Context>,
+    );
+    expect(getByText('Get involved')).toBeInTheDocument();
+    expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
+  });
 });
