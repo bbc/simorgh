@@ -3,7 +3,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -98,11 +97,11 @@ export default ({
     path(['media', 'contentExpired'], translations) ||
     contentNotAvailableMessage;
 
-  const embedUrlParams = getEmbedUrl({
+  const embedUrlParams = {
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
     type: assetType,
     isAmp,
-  });
+  };
 
   const iframeTitle = pathOr(
     'Media player',
