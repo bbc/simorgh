@@ -5,6 +5,8 @@ import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
+import logResponseTime from '#server/utilities/logResponseTime';
+
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
@@ -92,6 +94,8 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  logResponseTime(context.req, context.res, () => null);
+
   const {
     id,
     service,
