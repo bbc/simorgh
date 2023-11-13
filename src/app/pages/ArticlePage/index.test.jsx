@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
+  articleDataNewsWithEmbeds,
   articleDataPersian,
   articleDataPidgin,
   articleDataPidginWithAds,
@@ -523,9 +524,9 @@ describe('Article Page', () => {
   });
 });
 
-it('should render Riddle component when passed', async () => {
+it('should render oEmbed component when passed', async () => {
   const pageDataWithRiddle = {
-    ...articleDataNews,
+    ...articleDataNewsWithEmbeds,
   };
   const { container } = render(
     <Context service="russian">
@@ -536,4 +537,30 @@ it('should render Riddle component when passed', async () => {
     'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
   );
   expect(actual).toBeInTheDocument();
+});
+
+it('should render embedHtml component when passed', async () => {
+  const pageDataWithEmbedHtml = {
+    ...articleDataNewsWithEmbeds,
+  };
+  const { getByText } = render(
+    <Context service="russian">
+      <ArticlePage pageData={pageDataWithEmbedHtml} />
+    </Context>,
+  );
+  expect(getByText('Embed HTML Component')).toBeInTheDocument();
+});
+
+it('should render embedImages component when passed', async () => {
+  const pageDataWithEmbedImages = {
+    ...articleDataNewsWithEmbeds,
+  };
+  const { container } = render(
+    <Context service="russian">
+      <ArticlePage pageData={pageDataWithEmbedImages} />
+    </Context>,
+  );
+  const actual = container.querySelector(`div[data-e2e="embed-image"]`);
+  expect(actual).toBeInTheDocument();
+  // expect(getByText('Blah')).toBeInTheDocument();
 });
