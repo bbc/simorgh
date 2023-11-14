@@ -93,12 +93,19 @@ describe('Curation Promo', () => {
   });
 
   describe('Live Promo', () => {
-    it('should display LiveLabel on a Live Promo without a timestamp present', () => {
+    it('should display LiveLabel on a Live Promo', () => {
       const container = render(
         <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
         { service: 'mundo' },
       );
       expect(container.queryByText('EN VIVO')).toBeInTheDocument();
+    });
+
+    it('should display a Live Promo without a timestamp present', () => {
+      const container = render(
+        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        { service: 'mundo' },
+      );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
     });
   });
