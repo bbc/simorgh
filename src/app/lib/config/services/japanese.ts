@@ -300,6 +300,10 @@ export const service: DefaultServiceConfig = {
         url: '/japanese',
       },
       {
+        title: 'イスラエル・ガザ戦争',
+        url: '/japanese/topics/cw5wn2e9rpnt',
+      },
+      {
         title: 'ウクライナ侵攻',
         url: '/japanese/60631515',
       },
