@@ -1588,7 +1588,7 @@ describe('Routing Information Logging', () => {
     status: 200,
   };
 
-  it(`on 404 response should log matched page type from route`, async () => {
+  it(`on 404 response should log a warning`, async () => {
     const pageType = 'Matching Page Type from Route';
     const status = 404;
     mockRouteProps({
@@ -1606,7 +1606,7 @@ describe('Routing Information Logging', () => {
     });
   });
 
-  it(`on 500 response should log matched page type from route`, async () => {
+  it(`on 500 response should log an error`, async () => {
     const pageType = 'Matching Page Type from Route';
     const status = 500;
     mockRouteProps({
@@ -1624,7 +1624,7 @@ describe('Routing Information Logging', () => {
     });
   });
 
-  it(`on 200 response should log page type derived from response data`, async () => {
+  it(`on 200 response should log page type derived from response data at debug level`, async () => {
     mockRouteProps({
       service,
       isAmp,
