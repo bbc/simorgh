@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
