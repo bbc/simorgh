@@ -9,6 +9,7 @@
     "./cypress/**/*.*"
   ],
   "resolutions": {
+    "browserify-sign": "4.2.2",
     "@babel/runtime": "7.23.2",
     "@optimizely/js-sdk-utils": "0.4.0",
     "@types/react": "18.2.31",
