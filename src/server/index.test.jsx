@@ -1588,9 +1588,27 @@ describe('Routing Information Logging', () => {
     status: 200,
   };
 
-  it(`on non-200 response should log matched page type from route`, async () => {
+  it(`on 404 response should log matched page type from route`, async () => {
     const pageType = 'Matching Page Type from Route';
     const status = 404;
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse: { ...dataResponse, status },
+      pageType,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.warn).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status,
+      pageType,
+    });
+  });
+
+  it(`on 500 response should log matched page type from route`, async () => {
+    const pageType = 'Matching Page Type from Route';
+    const status = 500;
     mockRouteProps({
       service,
       isAmp,
