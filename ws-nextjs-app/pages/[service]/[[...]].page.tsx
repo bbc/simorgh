@@ -14,7 +14,13 @@ type PageDataParams = {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  logResponseTime(context.req, context.res, () => null);
+  logResponseTime(
+    {
+      path: context.resolvedUrl,
+    },
+    context.res,
+    () => null,
+  );
 
   const { service, variant } = context.query as PageDataParams;
 
