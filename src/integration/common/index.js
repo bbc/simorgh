@@ -21,6 +21,12 @@ import runSectionTests from './sections';
 import runMostReadTests from './mostReadTests';
 import runAmpAdsTests from './ads.amp';
 import runCanonicalAdsTests from './ads.canonical';
+import runFlourishCanonicalEmbedTests from './flourishEmbed.canonical';
+import runFlourishAmpEmbedTests from './flourishEmbed.amp';
+import runCanonicalEmbedHtmlTests from './embedHtml.canonical';
+import runAmpEmbedHtmlTests from './embedHtml.amp';
+import runEmbedImagesTests from './embedImages';
+import runAmpIframeTests from './ampIframe.amp';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -55,4 +61,10 @@ export {
   runSectionTests,
   runAmpAdsTests,
   runCanonicalAdsTests,
+  runFlourishCanonicalEmbedTests,
+  runFlourishAmpEmbedTests,
+  runCanonicalEmbedHtmlTests,
+  runAmpEmbedHtmlTests,
+  runEmbedImagesTests,
+  runAmpIframeTests,
 };
