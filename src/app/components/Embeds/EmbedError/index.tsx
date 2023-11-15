@@ -14,7 +14,7 @@ type Props = {
 
 const EmbedError = ({ message, link }: Props) => {
   return (
-    <div css={styles.embedDiv}>
+    <div css={styles.embedDiv} data-e2e="embed-error">
       <Text as="strong" fontVariant="sansRegular" size="longPrimer">
         {message}
       </Text>
