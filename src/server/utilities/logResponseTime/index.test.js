@@ -16,11 +16,12 @@ describe('logResponseTime', () => {
     jest.clearAllMocks();
   });
 
+  beforeEach(() => {
+    process.hrtime = jest.fn().mockImplementationOnce(() => 'startTime');
+  });
+
   it('should log response time in nanoseconds with path', () => {
-    process.hrtime = jest
-      .fn()
-      .mockImplementationOnce(() => 'startTime')
-      .mockImplementationOnce(() => [1, 12345]);
+    process.hrtime.mockImplementationOnce(() => [1, 12345]);
 
     logResponseTime(req, res, next);
 
@@ -35,10 +36,7 @@ describe('logResponseTime', () => {
   });
 
   it('should log slow response time in nanoseconds with path', () => {
-    process.hrtime = jest
-      .fn()
-      .mockImplementationOnce(() => 'startTime')
-      .mockImplementationOnce(() => [3, 12345]);
+    process.hrtime.mockImplementationOnce(() => [3, 12345]);
 
     logResponseTime(req, res, next);
 
