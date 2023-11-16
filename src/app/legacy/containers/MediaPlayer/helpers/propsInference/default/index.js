@@ -110,16 +110,16 @@ export default ({
   );
 
   return {
-    aresMediaBlock,
     blockId,
     captionBlock,
+    clipId: versionId,
     embedUrlParams,
     iframeTitle,
+    mediaBlock: aresMediaBlock,
     mediaInfo,
     placeholderSrc,
     placeholderSrcset,
     translatedExpiredContentMessage,
     translatedNoJSMessage,
-    versionId,
   };
 };

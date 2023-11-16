@@ -86,15 +86,15 @@ export default ({ assetId, blocks, isAmp, lang, translations }) => {
   );
 
   return {
-    aresMediaBlock: clipMediaBlock,
     captionBlock,
+    clipId: pid,
     embedUrlParams,
     iframeTitle,
+    mediaBlock: clipMediaBlock,
     mediaInfo,
     placeholderSrc,
     placeholderSrcset,
     translatedExpiredContentMessage,
     translatedNoJSMessage,
-    versionId: pid,
   };
 };
