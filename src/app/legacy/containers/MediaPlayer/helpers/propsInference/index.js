@@ -1,9 +1,9 @@
 import getDefaultProps from './default';
-import livePageProps from './livePage';
+import getLivePageProps from './livePage';
 
 const getPlayerProps = ({ pageType, ...params }) => {
   const propsHandler = {
-    live: livePageProps,
+    live: getLivePageProps,
   }[pageType];
 
   return propsHandler ? propsHandler(params) : getDefaultProps(params);

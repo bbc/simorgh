@@ -46,17 +46,17 @@ const MediaPlayerContainer = ({
   }
 
   const {
-    aresMediaBlock,
     blockId,
     captionBlock,
+    clipId,
     embedUrlParams,
     iframeTitle,
+    mediaBlock,
     mediaInfo,
     placeholderSrc,
     placeholderSrcset,
     translatedExpiredContentMessage,
     translatedNoJSMessage,
-    versionId,
   } = getPlayerProps({
     assetId,
     assetType,
@@ -68,7 +68,7 @@ const MediaPlayerContainer = ({
     translations,
   });
 
-  if (!aresMediaBlock) {
+  if (!mediaBlock) {
     return null;
   }
 
@@ -89,7 +89,7 @@ const MediaPlayerContainer = ({
     width: 100%;
   `;
 
-  const mediaIsValid = available && (versionId || blockId);
+  const mediaIsValid = available && (clipId || blockId);
   if (!mediaIsValid) {
     if (isLegacyMedia && available) {
       logMissingMediaId({ url: assetId, assetType });
@@ -147,7 +147,7 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata
-        aresMediaBlock={aresMediaBlock}
+        aresMediaBlock={mediaBlock}
         embedSource={makeAbsolute(embedSource)}
       />
       {showCaption && caption ? (
