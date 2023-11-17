@@ -46,10 +46,9 @@ import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
-import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
+import EmbedLoader from '../../components/Embeds/EmbedLoader';
 import {
   bylineExtractor,
   categoryName,
@@ -104,10 +103,6 @@ const ArticlePage = ({ pageData }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
-  const embedBlock = blocks.find(block => block.type === 'embed');
-  const embedProviderName = path(['model', 'provider'], embedBlock);
-  const isUgcUploader = embedProviderName === 'ugc-uploader';
-
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
@@ -140,8 +135,7 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props =>
-      isUgcUploader ? <Uploader {...props} /> : <UnsupportedEmbed {...props} />,
+    embed: props => <EmbedLoader {...props} />,
     embedHtml: props => <EmbedHtml {...props} />,
     oEmbed: props => <OEmbedLoader {...props} />,
     embedImages: props => <EmbedImages {...props} />,

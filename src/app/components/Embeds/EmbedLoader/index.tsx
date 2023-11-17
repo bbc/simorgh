@@ -5,18 +5,22 @@ import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-// import Uploader from '../../Uploader';
+import Uploader from '../../Uploader';
 import EmbedError from '../EmbedError';
 
 interface EmbedProps {
+  provider: string;
   blocks?: object[];
 }
 
-const UnsupportedEmbed = ({ blocks }: EmbedProps) => {
-  console.log('blocks', blocks);
+const EmbedLoader = (props: EmbedProps) => {
+  const { blocks, provider } = props;
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
+  if (provider === 'ugc-uploader') {
+    return <Uploader blocks={blocks} />;
+  }
   if (isAmp) {
     const errorMessage = pathOr(
       'Sorry, we can’t display this part of the story on this lightweight mobile page.',
@@ -44,4 +48,4 @@ const UnsupportedEmbed = ({ blocks }: EmbedProps) => {
   return null;
 };
 
-export default UnsupportedEmbed;
+export default EmbedLoader;
