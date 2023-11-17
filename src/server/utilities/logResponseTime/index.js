@@ -24,7 +24,7 @@ const logResponseTime = (req, res, next) => {
     let LOG_EVENT = SERVER_RESPONSE_TIME;
 
     if (nanoseconds > THREE_SECONDS_IN_NANOSECONDS) {
-      responseTimeLogger = logger.info;
+      responseTimeLogger = logger.warn;
       LOG_EVENT = SLOW_SERVER_RESPONSE_TIME;
     }
 
