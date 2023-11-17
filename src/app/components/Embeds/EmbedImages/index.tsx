@@ -31,7 +31,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
   if (!locator || !alt || !width || !height) return null;
 
   return (
-    <div css={styles.embedDiv}>
+    <div css={styles.embedDiv} data-e2e="embed-image">
       <Image src={src} alt={alt} width={width} height={height} isAmp={isAmp} />
     </div>
   );
