@@ -86,6 +86,18 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
+const getDerivedServiceAndPath = (service, pathname) => {
+  switch (service) {
+    case 'cymrufyw':
+      return {
+        service: 'newyddion',
+        path: pathname.replace('cymrufyw', 'newyddion'),
+      };
+    default:
+      return { service, path: pathname };
+  }
+};
+
 export default async ({
   path: pathname,
   service,
@@ -95,12 +107,15 @@ export default async ({
   isCaf,
 }) => {
   try {
+    const { service: derivedService, path: derivedPath } =
+      getDerivedServiceAndPath(service, pathname);
+
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article } = {},
     } = await getArticleInitialData({
-      path: pathname,
-      service,
+      path: derivedPath,
+      service: derivedService,
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
       isCaf,
@@ -112,8 +127,8 @@ export default async ({
 
     const { mostWatched } = processMostWatched({
       data: article,
-      service,
-      path: pathname,
+      service: derivedService,
+      path: derivedPath,
       toggles,
       page: pageType,
     });
