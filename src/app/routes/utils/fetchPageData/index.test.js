@@ -40,7 +40,7 @@ describe('fetchPageData', () => {
 
     it('should always log data url and path', async () => {
       await fetchPageData({ path: requestedPathname });
-      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
       });
@@ -49,7 +49,7 @@ describe('fetchPageData', () => {
     it('should log additional arguments if passed', async () => {
       await fetchPageData({ path: requestedPathname, pageType, requestOrigin });
 
-      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
         pageType,
@@ -62,7 +62,7 @@ describe('fetchPageData', () => {
         path: requestedPathname,
         shouldLogFetchTime: true,
       });
-      const loggerCall = loggerMock.info.mock.calls[1];
+      const loggerCall = loggerMock.debug.mock.calls[1];
 
       expect(loggerCall[0]).toBe('data_fetch_response_time');
       expect(typeof loggerCall[1].nanoseconds).toBe('number');
@@ -360,7 +360,7 @@ describe('fetchPageData', () => {
 
       await fetchPageData({ path: requestedPathname, pageType, cache });
 
-      expect(loggerMock.info).toHaveBeenNthCalledWith(
+      expect(loggerMock.debug).toHaveBeenNthCalledWith(
         2,
         DATA_RESPONSE_FROM_CACHE,
         {
