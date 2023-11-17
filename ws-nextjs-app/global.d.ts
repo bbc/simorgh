@@ -31,10 +31,4 @@ declare namespace JSX {
     link: LinkProps;
     img: ImageProps;
   }
-
-  interface IntrinsicElements {
-    'amp-analytics': React.PropsWithChildren<
-      React.ScriptHTMLAttributes<HTMLScriptElement>
-    >;
-  }
 }
