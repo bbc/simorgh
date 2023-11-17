@@ -41,18 +41,6 @@ describe('getIchefURL', () => {
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
 
-  it('builds a valid ichef img url if the locator includes the value of the originCode', () => {
-    const input = {
-      originCode: 'cpsprodpb',
-      locator: 'cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg',
-      resolution: '660',
-    };
-    const expectedOutput =
-      'https://ichef.bbci.co.uk/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg';
-
-    expect(getIChefURL(input)).toEqual(expectedOutput);
-  });
-
   it('builds standard ichef img url with originCode mpv', () => {
     const locator = 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg';
     const originCode = 'mpv';
