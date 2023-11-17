@@ -48,7 +48,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
-import EmbedLoader from '../../components/Embeds/EmbedLoader';
+import EmbedLoader from '../../components/Embeds/Embed';
 import {
   bylineExtractor,
   categoryName,

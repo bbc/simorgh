@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import Uploader from '../../Uploader';
+import Uploader from '../Uploader';
 import EmbedError from '../EmbedError';
 
 interface EmbedProps {
