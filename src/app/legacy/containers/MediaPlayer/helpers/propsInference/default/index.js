@@ -21,7 +21,7 @@ export default ({
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
 
   if (!aresMediaBlock) {
-    return { aresMediaBlock: null };
+    return { mediaBlock: null };
   }
 
   const articleCaptionBlock = filterForBlockType(blocks, 'caption');

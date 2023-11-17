@@ -13,7 +13,7 @@ export default ({ assetId, blocks, isAmp, lang, translations }) => {
   const clipMediaBlock = filterForBlockType(blocks, 'clipMedia');
 
   if (!clipMediaBlock) {
-    return { aresMediaBlock: null };
+    return { mediaBlock: null };
   }
 
   const captionBlock = filterForBlockType(blocks, 'caption');
