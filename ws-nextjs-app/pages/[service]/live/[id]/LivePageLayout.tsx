@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
+import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -24,6 +25,11 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
+    atiAnalytics: {
+      contentId: string;
+      contentType: string;
+      pageIdentifier: string;
+    };
   };
 };
 
@@ -35,6 +41,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
+    atiAnalytics,
   } = pageData;
 
   const { index: activePage, total: pageCount } =
@@ -57,6 +64,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   return (
     <>
+      <ATIAnalytics atiData={atiAnalytics} />
       <MetadataContainer
         title={activePage && activePage >= 2 ? paginatedPageTitle : title}
         lang={lang}
