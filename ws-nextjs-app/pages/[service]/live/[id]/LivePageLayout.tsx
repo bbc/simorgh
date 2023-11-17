@@ -29,6 +29,7 @@ type ComponentProps = {
       contentId: string;
       contentType: string;
       pageIdentifier: string;
+      pageTitle: string;
     };
   };
 };
