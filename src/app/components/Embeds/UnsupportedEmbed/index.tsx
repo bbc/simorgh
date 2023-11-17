@@ -13,14 +13,16 @@ interface EmbedProps {
   blocks?: object[];
 }
 
-const EmbedLoader = (props: EmbedProps) => {
+const UnsupportedEmbed = (props: EmbedProps) => {
   const { blocks, provider } = props;
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
+  // delete this if statement once BFF PR (NO) is promoted to live
   if (provider === 'ugc-uploader') {
     return <Uploader blocks={blocks} />;
   }
+
   if (isAmp) {
     const errorMessage = pathOr(
       'Sorry, we can’t display this part of the story on this lightweight mobile page.',
@@ -48,4 +50,4 @@ const EmbedLoader = (props: EmbedProps) => {
   return null;
 };
 
-export default EmbedLoader;
+export default UnsupportedEmbed;

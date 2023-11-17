@@ -48,7 +48,8 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
-import EmbedLoader from '../../components/Embeds/Embed';
+import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
+import Uploader from '../../components/Embeds/Uploader';
 import {
   bylineExtractor,
   categoryName,
@@ -135,10 +136,11 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => <EmbedLoader {...props} />,
+    embed: props => <UnsupportedEmbed {...props} />,
     embedHtml: props => <EmbedHtml {...props} />,
     oEmbed: props => <OEmbedLoader {...props} />,
     embedImages: props => <EmbedImages {...props} />,
+    embedUploader: props => <Uploader {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
