@@ -49,6 +49,7 @@ import LinkedData from '../../components/LinkedData';
 import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
+import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import {
   bylineExtractor,
   categoryName,
@@ -139,7 +140,8 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embed: props =>
+      isUgcUploader ? <Uploader {...props} /> : <UnsupportedEmbed {...props} />,
     embedHtml: props => <EmbedHtml {...props} />,
     oEmbed: props => <OEmbedLoader {...props} />,
     embedImages: props => <EmbedImages {...props} />,
