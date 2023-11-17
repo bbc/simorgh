@@ -17,7 +17,7 @@ import {
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import { OK } from '#lib/statusCodes.const';
+import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -184,11 +184,6 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-      url,
-      headers: removeSensitiveHeaders(headers),
-    });
-
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
@@ -209,6 +204,12 @@ server.get(
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
+
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url,
+        headers: removeSensitiveHeaders(headers),
+        pageType: derivedPageType,
+      });
 
       const toggles = await getToggles(service);
 
@@ -277,6 +278,7 @@ server.get(
           message,
           url,
           headers: removeSensitiveHeaders(headers),
+          pageType: derivedPageType,
         });
 
         result = await renderDocument({
@@ -291,7 +293,19 @@ server.get(
         });
       }
 
-      logger.info(ROUTING_INFORMATION, {
+      let routingInfoLogger = logger.debug;
+
+      // If status is 400-499 then log a warning
+      if (status >= BAD_REQUEST && status < INTERNAL_SERVER_ERROR) {
+        routingInfoLogger = logger.warn;
+      }
+
+      // Otherwise if status is >= 500, log an error
+      if (status >= INTERNAL_SERVER_ERROR) {
+        routingInfoLogger = logger.error;
+      }
+
+      routingInfoLogger(ROUTING_INFORMATION, {
         url,
         status,
         pageType: derivedPageType,
