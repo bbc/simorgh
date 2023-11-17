@@ -32,7 +32,10 @@ const getBaseUrl = (queryString, isAmp) => {
   const relativeBaseUrl = '';
   switch (true) {
     // TODO: Remove after testing with CAF is complete
-    case queryString && queryString.includes('renderer_env=caf'):
+    case queryString && queryString.includes('renderer_env=caftest'):
+      return isAmp ? LIVE_AMP_URL : TEST_BASE_URL;
+    // TODO: Remove after testing with CAF is complete
+    case queryString && queryString.includes('renderer_env=caflive'):
       return isAmp ? LIVE_AMP_URL : LIVE_BASE_URL;
     case isLive():
       return isAmp ? LIVE_AMP_URL : relativeBaseUrl;

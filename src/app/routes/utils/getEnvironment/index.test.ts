@@ -8,19 +8,22 @@ describe('getEnvironment', () => {
   });
 
   it.each`
-    url                           | environment | expected
-    ${'/mundo'}                   | ${'local'}  | ${'local'}
-    ${'/mundo?renderer_env=test'} | ${'local'}  | ${'test'}
-    ${'/mundo?renderer_env=live'} | ${'local'}  | ${'live'}
-    ${'/mundo'}                   | ${'test'}   | ${'test'}
-    ${'/mundo?renderer_env=test'} | ${'test'}   | ${'test'}
-    ${'/mundo?renderer_env=live'} | ${'test'}   | ${'live'}
-    ${'/mundo'}                   | ${'live'}   | ${'live'}
-    ${'/mundo?renderer_env=test'} | ${'live'}   | ${'test'}
-    ${'/mundo?renderer_env=live'} | ${'live'}   | ${'live'}
-    ${'/mundo?renderer_env=caf'}  | ${'local'}  | ${'live'}
-    ${'/mundo?renderer_env=caf'}  | ${'test'}   | ${'live'}
-    ${'/mundo?renderer_env=caf'}  | ${'live'}   | ${'live'}
+    url                              | environment | expected
+    ${'/mundo'}                      | ${'local'}  | ${'local'}
+    ${'/mundo?renderer_env=test'}    | ${'local'}  | ${'test'}
+    ${'/mundo?renderer_env=live'}    | ${'local'}  | ${'live'}
+    ${'/mundo'}                      | ${'test'}   | ${'test'}
+    ${'/mundo?renderer_env=test'}    | ${'test'}   | ${'test'}
+    ${'/mundo?renderer_env=live'}    | ${'test'}   | ${'live'}
+    ${'/mundo'}                      | ${'live'}   | ${'live'}
+    ${'/mundo?renderer_env=test'}    | ${'live'}   | ${'test'}
+    ${'/mundo?renderer_env=live'}    | ${'live'}   | ${'live'}
+    ${'/mundo?renderer_env=caftest'} | ${'local'}  | ${'test'}
+    ${'/mundo?renderer_env=caftest'} | ${'test'}   | ${'test'}
+    ${'/mundo?renderer_env=caftest'} | ${'live'}   | ${'test'}
+    ${'/mundo?renderer_env=caflive'} | ${'local'}  | ${'live'}
+    ${'/mundo?renderer_env=caflive'} | ${'test'}   | ${'live'}
+    ${'/mundo?renderer_env=caflive'} | ${'live'}   | ${'live'}
   `(
     'returns $expected when environment is $environment and url is $url',
     ({ url, environment, expected }) => {
