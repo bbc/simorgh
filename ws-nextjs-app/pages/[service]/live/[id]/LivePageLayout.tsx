@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ATIAnalytics from '#app/components/ATIAnalytics';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -25,12 +26,7 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
-    atiAnalytics: {
-      contentId: string;
-      contentType: string;
-      pageIdentifier: string;
-      pageTitle: string;
-    };
+    atiAnalytics: ATIData;
   };
 };
 
