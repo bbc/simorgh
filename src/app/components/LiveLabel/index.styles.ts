@@ -32,7 +32,7 @@ const styles = {
       height: '16px',
       background:
         'radial-gradient(circle,transparent 53%,hsla(180, 100%, 20%,.5) 53.5%,#006666 54%)',
-      marginInlineEnd: `${spacings.FULL}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
       position: 'relative',
     }),
 
