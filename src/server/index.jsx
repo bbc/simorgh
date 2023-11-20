@@ -187,6 +187,10 @@ server.get(
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
+    logger.debug('does_this_work', {
+      url,
+    });
+
     try {
       const {
         service,
