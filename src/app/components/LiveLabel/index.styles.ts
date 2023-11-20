@@ -1,4 +1,19 @@
-import { css, Theme } from '@emotion/react';
+import { css, Theme, keyframes } from '@emotion/react';
+
+const pulseAnimation = keyframes({
+  '0%': {
+    transform: 'scale(1)',
+    opacity: 1,
+  },
+  '50%': {
+    transform: 'scale(1)',
+    opacity: 0,
+  },
+  '100%': {
+    transform: 'scale(1)',
+    opacity: 1,
+  },
+});
 
 const styles = {
   liveLabelText: ({ palette, spacings, fontVariants }: Theme) =>
@@ -19,6 +34,9 @@ const styles = {
         'radial-gradient(circle,transparent 53%,hsla(180, 100%, 20%,.5) 53.5%,#006666 54%)',
       marginInlineEnd: `${spacings.FULL}rem`,
       position: 'relative',
+      // transform: 'translateX(-50%) translateY(-50%)',
+      // left: '50%',
+      // right: '50%',
     }),
 
   livelabelPulse: () =>
@@ -31,6 +49,7 @@ const styles = {
         borderRadius: '50%',
         background:
           'radial-gradient(circle,#006666 37%,rgba(0,102,102,.5) 37.5%,transparent 38%)',
+        animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
       },
 
       '&:after': {
@@ -39,7 +58,6 @@ const styles = {
         width: '100%',
         height: '100%',
         borderRadius: '100%',
-        // boxShadow: '0 0 .5rem rgba(0,0,0,.3)',
       },
     }),
 };

@@ -1,8 +1,7 @@
 /** @jsx jsx */
 /** @jsxRuntime classic */
 import { PropsWithChildren, useContext } from 'react';
-import { jsx, keyframes } from '@emotion/react';
-import styled from '@emotion/styled';
+import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -12,26 +11,6 @@ interface LiveLabelProps {
   lang?: string;
   id?: string;
 }
-
-const pulseAnimation = keyframes`
-0% {
-  transform: scale(1);
-  opacity: 1;
-}
-50% {
-  transform: scale(1);
-  opacity: 0;
-}
-100% {
-  transform: scale(1);
-  opacity: 1;
-}
-`;
-
-const Pulse = styled.span`
-  animation: ${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s
-    3;
-`;
 
 const LiveLabel = ({
   lang = 'en-GB',
@@ -73,7 +52,7 @@ const LiveLabel = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
       <span css={styles.liveLabelCircle}>
-        <Pulse css={styles.livelabelPulse} />
+        <span css={styles.livelabelPulse} />
       </span>
       <span
         css={styles.liveLabelText}
