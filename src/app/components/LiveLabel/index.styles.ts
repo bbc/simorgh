@@ -31,6 +31,7 @@ const styles = {
       background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
       marginInlineEnd: `${spacings.HALF}rem`,
       position: 'relative',
+      transform: 'translate(0, 12%)',
     }),
 
   firstPromo: ({ mq }: Theme) =>
