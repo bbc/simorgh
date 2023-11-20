@@ -23,7 +23,7 @@ const styles = {
       marginInlineEnd: `${spacings.FULL}rem`,
       ...fontVariants.sansBold,
     }),
-  liveLabelCircle: ({ palette, spacings, mq }: Theme) =>
+  liveLabelCircle: ({ palette, spacings }: Theme) =>
     css({
       color: palette.LIVE_DARK,
       borderRadius: '50%',
