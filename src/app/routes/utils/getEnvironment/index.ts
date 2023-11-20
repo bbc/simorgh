@@ -1,20 +1,22 @@
 import { Environments } from '#app/models/types/global';
 
 export default (pathname: string) => {
-  if (pathname.includes('renderer_env=test')) {
-    return 'test';
-  }
-  if (pathname.includes('renderer_env=live')) {
-    return 'live';
-  }
+  const url = new URL(`https://www.bbc.com${pathname}`);
 
-  // TODO: Remove once CAF testing is complete
-  if (pathname.includes('renderer_env=caftest')) {
-    return 'test';
-  }
-  if (pathname.includes('renderer_env=caflive')) {
-    return 'live';
-  }
+  const pathParams = new URLSearchParams(url.search);
 
-  return process.env.SIMORGH_APP_ENV as Environments;
+  const rendererEnv = pathParams.get('renderer_env');
+
+  switch (rendererEnv) {
+    case 'test':
+      return 'test';
+    case 'live':
+      return 'live';
+    case 'caftest':
+      return 'test';
+    case 'caflive':
+      return 'live';
+    default:
+      return process.env.SIMORGH_APP_ENV as Environments;
+  }
 };
