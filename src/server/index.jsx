@@ -187,10 +187,6 @@ server.get(
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
-    logger.info('does_this_work', {
-      url,
-    });
-
     try {
       const {
         service,
@@ -205,13 +201,6 @@ server.get(
       const isCaf = !!(
         renderer_env === 'caftest' || renderer_env === 'caflive'
       );
-
-      logger.info('caf_server_test', {
-        url,
-        pageType: derivedPageType,
-        rendererEnv: renderer_env,
-        isCaf,
-      });
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
