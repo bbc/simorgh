@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
@@ -59,11 +60,14 @@ const LivePage = ({ pageData }: ComponentProps) => {
           .replace('{y}', pageCount.toString())}`
       : 'Test Live Page';
 
+  const pageTitle = activePage && activePage >= 2 ? paginatedPageTitle : title;
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics title={pageTitle} />
       <MetadataContainer
-        title={activePage && activePage >= 2 ? paginatedPageTitle : title}
+        title={pageTitle}
         lang={lang}
         description="A test Live Page using Next.JS"
         openGraphType="website"
