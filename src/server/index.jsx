@@ -256,7 +256,7 @@ server.get(
           url,
           variant,
         });
-      } catch ({ message }) {
+      } catch (error) {
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -267,7 +267,7 @@ server.get(
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
-          message,
+          error,
           url,
           headers: removeSensitiveHeaders(headers),
           pageType: derivedPageType,
@@ -318,7 +318,8 @@ server.get(
       } else {
         throw new Error('unknown result');
       }
-    } catch ({ message, status = 500 }) {
+    } catch (error) {
+      const { status = 500 } = error;
       sendCustomMetric({
         metricName: NON_200_RESPONSE,
         statusCode: status,
@@ -328,7 +329,7 @@ server.get(
 
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status,
-        message,
+        error,
         url,
         headers: removeSensitiveHeaders(headers),
       });

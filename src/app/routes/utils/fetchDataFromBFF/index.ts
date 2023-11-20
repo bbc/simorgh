@@ -79,13 +79,13 @@ export default async ({
       json,
     };
   } catch (error: unknown) {
-    const { message, status = getErrorStatusCode() } = error as FetchError;
+    const { status = getErrorStatusCode() } = error as FetchError;
 
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
       pathname,
-      message,
+      error,
     });
 
     throw error;

@@ -127,7 +127,7 @@ const fetchPageData = async ({
     logger.error(DATA_FETCH_ERROR, {
       data: url,
       status: simorghError.status,
-      error: message,
+      error: aresError,
       path,
       ...loggerArgs,
     });

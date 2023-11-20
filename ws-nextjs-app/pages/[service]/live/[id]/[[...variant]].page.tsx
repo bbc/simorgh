@@ -79,7 +79,7 @@ const getPageData = async ({
       service,
       status,
       pathname,
-      message,
+      error,
     });
     pageStatus = status;
     errorMessage = message;
