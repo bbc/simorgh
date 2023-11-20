@@ -49,16 +49,15 @@ const LiveLabel = ({
     screenReaderText += ', ';
   }
 
+  const circle = [
+    [styles.liveLabelCircle, className === 'first-promo' && styles.firstPromo],
+  ];
+
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
-      <span
-        css={[
-          styles.liveLabelCircle,
-          className === 'first-promo' && styles.firstPromo,
-        ]}
-      >
+      <span css={circle}>
         <span css={styles.livelabelPulse} />
       </span>
       <span

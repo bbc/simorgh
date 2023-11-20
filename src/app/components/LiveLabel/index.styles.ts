@@ -1,9 +1,4 @@
 import { css, Theme, keyframes } from '@emotion/react';
-import {
-  GROUP_1_ONLY,
-  GROUP_2_ONLY,
-  GROUP_3_MIN_WIDTH,
-} from '#app/components/ThemeProvider/mediaQueries';
 
 const pulseAnimation = keyframes({
   '0%': {
@@ -41,20 +36,21 @@ const styles = {
       position: 'relative',
     }),
 
-  firstPromo: css({
-    [GROUP_1_ONLY]: {
-      width: '18px',
-      height: '18px',
-    },
-    [GROUP_2_ONLY]: {
-      width: '24px',
-      height: '24px',
-    },
-    [GROUP_3_MIN_WIDTH]: {
-      width: '28px',
-      height: '28px',
-    },
-  }),
+  firstPromo: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_1_ONLY]: {
+        width: '18px',
+        height: '18px',
+      },
+      [mq.GROUP_2_ONLY]: {
+        width: '24px',
+        height: '24px',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '28px',
+        height: '28px',
+      },
+    }),
 
   livelabelPulse: () =>
     css({
