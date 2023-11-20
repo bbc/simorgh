@@ -26,7 +26,7 @@ const CpsAsset = props => {
 
   const PageType = {
     [STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
-    [CORRESPONDENT_STORY_PAGE]: StoryPage,
+    [CORRESPONDENT_STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
