@@ -119,6 +119,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Topics',
       },
       {
+        pageType: LIVE_PAGE,
+        expectedDefaultType: 'Live',
+        expectedShortType: 'Live',
+      },
+      {
         pageType: null,
         expectedDefaultType: null,
         expectedShortType: null,
