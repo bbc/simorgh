@@ -10,6 +10,7 @@ interface LiveLabelProps {
   offScreenText?: string;
   lang?: string;
   id?: string;
+  className?: string;
 }
 
 const LiveLabel = ({
@@ -17,6 +18,7 @@ const LiveLabel = ({
   id,
   children,
   offScreenText,
+  className,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -51,7 +53,12 @@ const LiveLabel = ({
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
-      <span css={styles.liveLabelCircle}>
+      <span
+        css={[
+          styles.liveLabelCircle,
+          className === 'first-promo' && styles.firstPromo,
+        ]}
+      >
         <span css={styles.livelabelPulse} />
       </span>
       <span

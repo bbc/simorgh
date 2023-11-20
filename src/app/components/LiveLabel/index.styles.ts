@@ -1,4 +1,9 @@
 import { css, Theme, keyframes } from '@emotion/react';
+import {
+  GROUP_1_ONLY,
+  GROUP_2_ONLY,
+  GROUP_3_MIN_WIDTH,
+} from '#app/components/ThemeProvider/mediaQueries';
 
 const pulseAnimation = keyframes({
   '0%': {
@@ -28,25 +33,28 @@ const styles = {
       color: palette.LIVE_DARK,
       borderRadius: '50%',
       display: 'inline-block',
-      width: '2rem',
-      height: '2rem',
+      width: '16px',
+      height: '16px',
       background:
         'radial-gradient(circle,transparent 53%,hsla(180, 100%, 20%,.5) 53.5%,#006666 54%)',
       marginInlineEnd: `${spacings.FULL}rem`,
       position: 'relative',
-      [mq.GROUP_1_ONLY]: {
-        width: '18px',
-        height: '18px',
-      },
-      [mq.GROUP_2_ONLY]: {
-        width: '24px',
-        height: '24px',
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: '28px',
-        height: '28px',
-      },
     }),
+
+  firstPromo: css({
+    [GROUP_1_ONLY]: {
+      width: '18px',
+      height: '18px',
+    },
+    [GROUP_2_ONLY]: {
+      width: '24px',
+      height: '24px',
+    },
+    [GROUP_3_MIN_WIDTH]: {
+      width: '28px',
+      height: '28px',
+    },
+  }),
 
   livelabelPulse: () =>
     css({
