@@ -57,7 +57,9 @@ const styles = {
         height: '100%',
         borderRadius: '50%',
         background: `radial-gradient(circle,${palette.LIVE_DARK} 37%,rgba(0,102,102,.5) 37.5%,transparent 38%)`,
-        animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
+        [`@media (prefers-reduced-motion: no-preference)`]: {
+          animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
+        },
       },
 
       '&:after': {
