@@ -23,20 +23,29 @@ const styles = {
       marginInlineEnd: `${spacings.FULL}rem`,
       ...fontVariants.sansBold,
     }),
-  liveLabelCircle: ({ palette, spacings }: Theme) =>
+  liveLabelCircle: ({ palette, spacings, mq }: Theme) =>
     css({
       color: palette.LIVE_DARK,
       borderRadius: '50%',
       display: 'inline-block',
-      width: '.9375rem',
-      height: '.9375rem',
+      width: '2rem',
+      height: '2rem',
       background:
         'radial-gradient(circle,transparent 53%,hsla(180, 100%, 20%,.5) 53.5%,#006666 54%)',
       marginInlineEnd: `${spacings.FULL}rem`,
       position: 'relative',
-      // transform: 'translateX(-50%) translateY(-50%)',
-      // left: '50%',
-      // right: '50%',
+      [mq.GROUP_1_ONLY]: {
+        width: '18px',
+        height: '18px',
+      },
+      [mq.GROUP_2_ONLY]: {
+        width: '24px',
+        height: '24px',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '28px',
+        height: '28px',
+      },
     }),
 
   livelabelPulse: () =>
