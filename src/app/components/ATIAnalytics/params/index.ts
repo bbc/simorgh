@@ -51,6 +51,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   CORRESPONDENT_STORY_PAGE,
   FEATURE_INDEX_PAGE,
   INDEX_PAGE,
+  LIVE_PAGE,
 ];
 
 const noOp = () => {
