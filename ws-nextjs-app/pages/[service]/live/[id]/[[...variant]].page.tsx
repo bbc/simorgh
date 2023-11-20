@@ -18,6 +18,7 @@ import { FetchError } from '#models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
+import { OK } from '#app/lib/statusCodes.const';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
@@ -127,12 +128,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
   }
 
-  logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+  logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
     url: context.resolvedUrl,
     headers: omit(
       (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
       reqHeaders,
     ),
+    pageType: LIVE_PAGE,
   });
 
   const { data, toggles } = await getPageData({
@@ -143,7 +145,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
     rendererEnv: 'test', // TODO: remove hardcoding
   });
 
-  logger.info(ROUTING_INFORMATION, {
+  let routingInfoLogger = logger.debug;
+  if (data.status !== OK) {
+    routingInfoLogger = logger.error;
+  }
+
+  routingInfoLogger(ROUTING_INFORMATION, {
     url: context.resolvedUrl,
     status: data.status,
     pageType: LIVE_PAGE,

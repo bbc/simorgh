@@ -1,25 +1,24 @@
 import React from 'react';
-import OEmbedLoader from '.';
-import { sampleRiddleProps, sampleFlourishProps } from './fixture';
+import AmpIframeEmbed from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
-import { OEmbedProps } from '../types';
+import { ampParams } from '../types';
 
 const Component = ({
-  props,
-  isAmp,
+  url,
+  parameters,
   service = 'pidgin',
 }: {
-  props: OEmbedProps;
-  isAmp: boolean;
+  url: string;
+  parameters: ampParams;
   service?: Services;
 }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isAmp={isAmp}
+    isAmp
     isApp={false}
     pageType={ARTICLE_PAGE}
     pathname="/pathname"
@@ -27,20 +26,26 @@ const Component = ({
     statusCode={200}
   >
     <ServiceContextProvider service={service}>
-      <OEmbedLoader {...props} />
+      <AmpIframeEmbed parameters={parameters} url={url} />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 export default {
-  title: 'Components/Embed Optimo',
-  component: Component,
+  title: 'Components/Embeds/Amp Iframe Embed',
+  component: AmpIframeEmbed,
+  parameters: { chromatic: { disable: true } },
 };
 
-export const RiddleOEmbed = () => (
-  <Component props={sampleRiddleProps} isAmp={false} />
-);
-
-export const FlourishOEmbed = () => (
-  <Component props={sampleFlourishProps} isAmp={false} />
+export const VJAmp = () => (
+  <Component
+    parameters={{
+      'amp-clickable': true,
+      'amp-image-height': 360,
+      'amp-image-width': 640,
+      'amp-image':
+        'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+    }}
+    url="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"
+  />
 );

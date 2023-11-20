@@ -3,12 +3,12 @@ import EmbedImages from '.';
 import { chartEmbedImages, mapEmbedImages, tableEmbedImages } from './fixtures';
 
 export default {
-  title: 'Components/Embed Images',
+  title: 'Components/Embeds/Embed Images',
   component: EmbedImages,
 };
 
-export const Chart = () => <EmbedImages blocks={chartEmbedImages.blocks} />;
+export const IDT2Chart = () => <EmbedImages blocks={chartEmbedImages.blocks} />;
 
-export const Map = () => <EmbedImages blocks={mapEmbedImages.blocks} />;
+export const IDT2Map = () => <EmbedImages blocks={mapEmbedImages.blocks} />;
 
-export const Table = () => <EmbedImages blocks={tableEmbedImages.blocks} />;
+export const IDT2Table = () => <EmbedImages blocks={tableEmbedImages.blocks} />;
