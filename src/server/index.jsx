@@ -187,7 +187,7 @@ server.get(
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
-    logger.debug('does_this_work', {
+    logger.info('does_this_work', {
       url,
     });
 
@@ -206,7 +206,7 @@ server.get(
         renderer_env === 'caftest' || renderer_env === 'caflive'
       );
 
-      logger.debug('caf_server_test', {
+      logger.info('caf_server_test', {
         url,
         pageType: derivedPageType,
         rendererEnv: renderer_env,
