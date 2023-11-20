@@ -7,18 +7,14 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Uploader from '../Uploader';
 import EmbedError from '../EmbedError';
+import { UnsupportedEmbedProps } from '../types';
 
-interface EmbedProps {
-  provider: string;
-  blocks?: object[];
-}
-
-const UnsupportedEmbed = (props: EmbedProps) => {
+const UnsupportedEmbed = (props: UnsupportedEmbedProps) => {
   const { blocks, provider } = props;
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
-  // delete this if statement once BFF PR (NO) is promoted to live
+  // delete this if() statement once BFF PR WSTEAM1-313-handle-unsupported-embeds is promoted to live
   if (provider === 'ugc-uploader') {
     return <Uploader blocks={blocks} />;
   }
