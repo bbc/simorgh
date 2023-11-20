@@ -198,9 +198,9 @@ server.get(
 
       const { page, renderer_env } = query;
 
-      const isCaf =
-        !!(renderer_env === 'caftest' || renderer_env === 'caflive') ||
-        !!(url.includes('caftest') || url.includes('caflive'));
+      const isCaf = !!(
+        renderer_env === 'caftest' || renderer_env === 'caflive'
+      );
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
