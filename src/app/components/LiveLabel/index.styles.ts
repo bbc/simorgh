@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme, keyframes } from '@emotion/react';
 
 const pulseAnimation = keyframes({
@@ -25,8 +26,8 @@ const styles = {
       color: palette.LIVE_DARK,
       borderRadius: '50%',
       display: 'inline-block',
-      width: '16px',
-      height: '16px',
+      width: `${pixelsToRem(16)}rem`,
+      height: `${pixelsToRem(16)}rem`,
       background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
       marginInlineEnd: `${spacings.HALF}rem`,
       position: 'relative',
@@ -35,16 +36,16 @@ const styles = {
   firstPromo: ({ mq }: Theme) =>
     css({
       [mq.GROUP_1_ONLY]: {
-        width: '18px',
-        height: '18px',
+        width: `${pixelsToRem(18)}rem`,
+        height: `${pixelsToRem(18)}rem`,
       },
       [mq.GROUP_2_ONLY]: {
-        width: '24px',
-        height: '24px',
+        width: `${pixelsToRem(24)}rem`,
+        height: `${pixelsToRem(24)}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        width: '28px',
-        height: '28px',
+        width: `${pixelsToRem(28)}rem`,
+        height: `${pixelsToRem(28)}rem`,
       },
     }),
 
