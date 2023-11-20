@@ -202,6 +202,13 @@ server.get(
         renderer_env === 'caftest' || renderer_env === 'caflive'
       );
 
+      logger.debug('caf_server_test', {
+        url,
+        pageType: derivedPageType,
+        rendererEnv: renderer_env,
+        isCaf,
+      });
+
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
 
