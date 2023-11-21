@@ -26,23 +26,23 @@ const styles = {
       color: palette.LIVE_DARK,
       borderRadius: '50%',
       display: 'inline-block',
-      width: `${pixelsToRem(16)}rem`,
-      height: `${pixelsToRem(16)}rem`,
+      width: `${spacings.DOUBLE}rem`,
+      height: `${spacings.DOUBLE}rem`,
       background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
       marginInlineEnd: `${spacings.HALF}rem`,
       position: 'relative',
       transform: 'translate(0, 12%)',
     }),
 
-  firstPromo: ({ mq }: Theme) =>
+  firstPromo: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_1_ONLY]: {
         width: `${pixelsToRem(18)}rem`,
         height: `${pixelsToRem(18)}rem`,
       },
       [mq.GROUP_2_ONLY]: {
-        width: `${pixelsToRem(24)}rem`,
-        height: `${pixelsToRem(24)}rem`,
+        width: `${spacings.TRIPLE}rem`,
+        height: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: `${pixelsToRem(28)}rem`,
