@@ -136,11 +136,11 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => <UnsupportedEmbed {...props} />,
-    embedHtml: props => <EmbedHtml {...props} />,
-    oEmbed: props => <OEmbedLoader {...props} />,
-    embedImages: props => <EmbedImages {...props} />,
-    embedUploader: props => <Uploader {...props} />,
+    embed: UnsupportedEmbed,
+    embedHtml: EmbedHtml,
+    oEmbed: OEmbedLoader,
+    embedImages: EmbedImages,
+    embedUploader: Uploader,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
