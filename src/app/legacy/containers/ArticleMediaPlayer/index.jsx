@@ -8,7 +8,7 @@ import {
 import MediaPlayerContainer from '../MediaPlayer';
 
 const formatAssetId = assetUri => {
-  if (assetUri.includes('newyddion')) {
+  if (assetUri && assetUri.includes('newyddion')) {
     return assetUri.replace('newyddion', 'cymrufyw');
   }
 
