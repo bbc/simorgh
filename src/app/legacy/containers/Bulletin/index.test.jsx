@@ -57,7 +57,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveTvBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[3];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
