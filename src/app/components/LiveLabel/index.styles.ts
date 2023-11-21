@@ -59,7 +59,7 @@ const styles = {
         height: '100%',
         borderRadius: '50%',
         background: `radial-gradient(circle, ${palette.LIVE_DARK} 37%, ${palette.LIVE_DARK} 37.5%,transparent 38%)`,
-        [`@media (prefers-reduced-motion: no-preference)`]: {
+        '@media (prefers-reduced-motion: no-preference)': {
           animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
         },
       },
