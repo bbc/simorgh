@@ -2,7 +2,11 @@ import { Services } from '../../../models/types/global';
 
 type Envs = 'test' | 'live';
 
-const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
+type PageConfigServices = Services | 'afghanistan';
+
+const HOME_PAGE_CONFIG: {
+  [service in PageConfigServices]: { [env in Envs]: string };
+} = {
   kyrgyz: {
     test: 'cm7682qz7v1t',
     live: 'crg7kj2e52nt',
@@ -10,6 +14,10 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
   afaanoromoo: {
     test: 'c93v2kkzl24t',
     live: 'c44dyn08mejt',
+  },
+  afghanistan: {
+    test: 'c15er11zq57t',
+    live: 'crezq2dg9zwt',
   },
   afrique: {
     test: 'cjln1ww62p1t',

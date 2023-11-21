@@ -49,6 +49,8 @@ export default async ({
     page,
   });
 
+  console.log({ fetchUrl });
+
   const agent = isLocal ? undefined : await getAgent();
   const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
   const optHeaders: OptHeaders =

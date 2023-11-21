@@ -13,7 +13,7 @@ const topicIdRegex = '[a-z0-9]+';
 const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
 const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
-const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
+const idxRegex = 'ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
 const sportDisciplineRegex = '/[a-z0-9-_]{1,}';
 
@@ -76,7 +76,7 @@ export const getFrontPageRegex = services => {
       servicesWithVariants.includes(service),
     );
   }
-  const serviceRegex = getServiceRegex(frontPages);
+  const serviceRegex = `${getServiceRegex(frontPages)}`;
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
@@ -95,7 +95,7 @@ export const getHomePageRegex = services => {
     );
   }
   const homePageServiceRegex = getServiceRegex(homePages);
-  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${homePageServiceRegex})(/afghanistan)?:variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {
