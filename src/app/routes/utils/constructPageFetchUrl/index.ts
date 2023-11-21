@@ -71,16 +71,14 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = (path: string) => {
-        let pageConfigLookup = service;
+        let serviceId: Services | 'afghanistan' = service;
 
         if (path === '/persian/afghanistan') {
-          pageConfigLookup = 'afghanistan';
+          serviceId = 'afghanistan';
         }
 
-        console.log({ path, service, pageConfigLookup });
-
         return env !== 'local'
-          ? HOME_PAGE_CONFIG?.[pageConfigLookup]?.[env]
+          ? HOME_PAGE_CONFIG?.[serviceId]?.[env]
           : 'tipohome';
       };
       break;
