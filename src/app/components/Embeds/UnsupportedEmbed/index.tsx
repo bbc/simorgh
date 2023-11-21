@@ -5,19 +5,11 @@ import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import Uploader from '../Uploader';
 import EmbedError from '../EmbedError';
-import { UnsupportedEmbedProps } from '../types';
 
-const UnsupportedEmbed = (props: UnsupportedEmbedProps) => {
-  const { blocks, provider } = props;
+const UnsupportedEmbed = () => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
-
-  // delete this if() statement once BFF PR WSTEAM1-313-handle-unsupported-embeds is promoted to live
-  if (provider === 'ugc-uploader') {
-    return <Uploader blocks={blocks} />;
-  }
 
   if (isAmp) {
     const errorMessage = pathOr(
