@@ -131,7 +131,9 @@ const HiearchicalGrid = ({
                     >
                       {isLive ? (
                         <LiveLabel
-                          className={isFirstPromo ? 'first-promo' : undefined}
+                          {...(isFirstPromo && {
+                            className: 'first-promo',
+                          })}
                         >
                           {promo.title}
                         </LiveLabel>
