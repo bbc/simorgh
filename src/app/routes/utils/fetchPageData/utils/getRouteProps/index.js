@@ -34,7 +34,10 @@ const getRouteProps = url => {
   const variant = variantSanitiser(variantPath);
   const errorCode = path(['errorCode'], params);
 
-  const cpsId = service && assetUri ? `${service}/${assetUri}` : undefined;
+  const cpsId =
+    service && assetUri
+      ? `${service}${variant ? `/${variant}` : ''}/${assetUri}`
+      : undefined;
 
   return {
     isAmp: amp || isAmpPath(url),

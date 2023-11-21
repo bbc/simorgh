@@ -7,6 +7,14 @@ import {
 } from '#models/propTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
+const formatAssetId = assetUri => {
+  if (assetUri.includes('newyddion')) {
+    return assetUri.replace('newyddion', 'cymrufyw');
+  }
+
+  return assetUri;
+};
+
 const pageTypeMap = {
   article: 'articles',
   mediaArticle: 'articles',
@@ -21,7 +29,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
     <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={id}
+        assetId={formatAssetId(id)}
         assetType={pageTypeMap[pageType]}
         showPlaceholder
       />
