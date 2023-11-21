@@ -28,3 +28,8 @@ export type OEmbedProps = {
   type: string;
   oembed: OEmbedData;
 };
+
+export type UnsupportedEmbedProps = {
+  provider: string;
+  blocks?: object[];
+};

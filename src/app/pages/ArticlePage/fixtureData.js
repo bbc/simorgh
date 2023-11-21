@@ -397,11 +397,27 @@ export const articleDataNewsWithEmbeds = articleDataBuilder(
       },
     },
     {
+      id: 'acfc77b6',
       type: 'embed',
+      model: {
+        locator: 'urn:bbc:telescope:vote:LDNXKfL',
+        provider: 'telescope-vote',
+        usageRights: { suitableForSyndication: true },
+        blocks: [
+          {
+            id: '73f52c1a',
+            type: 'aresTelescope',
+            model: { isSignInRequired: false, wid: '15268' },
+            position: [4, 1],
+          },
+        ],
+      },
+      position: [4],
+    },
+    {
+      type: 'embedUploader',
       id: '044a8585',
       model: {
-        locator: 'urn:bbc:ugc:campaign:u94753086',
-        provider: 'ugc-uploader',
         blocks: [
           {
             id: '2488a6c7',
