@@ -136,7 +136,7 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => <UnsupportedEmbed {...props} />,
+    embed: UnsupportedEmbed,
     embedHtml: props => <EmbedHtml {...props} />,
     oEmbed: props => <OEmbedLoader {...props} />,
     embedImages: props => <EmbedImages {...props} />,
