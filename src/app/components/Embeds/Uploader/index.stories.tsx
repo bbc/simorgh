@@ -1,10 +1,10 @@
 import React, { PropsWithChildren } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../ThemeProvider';
-import { Services } from '../../models/types/global';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
+import ThemeProvider from '../../ThemeProvider';
+import { Services } from '../../../models/types/global';
 
 import Uploader from '.';
 import { uploader, uploaderNonLatin, uploaderRTL } from './fixtures';
@@ -36,7 +36,7 @@ const Component = ({ service, blocks }: PropsWithChildren<ComponentProps>) => (
 );
 
 export default {
-  title: 'Components/Uploader',
+  title: 'Components/Embeds/Uploader',
   Component,
   parameters: {
     metadata,
