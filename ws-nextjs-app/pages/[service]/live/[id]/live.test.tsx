@@ -64,16 +64,17 @@ describe('Live Page', () => {
     expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
   });
 
-  it('should render the live page og:title ', async () => {
+  it('should use the title value from the data response as the page title', async () => {
     await act(async () => {
       render(<Live pageData={mockPageData} />, { service: 'pidgin' });
     });
+
     const { title: helmetTitle } = Helmet.peek();
 
     expect(helmetTitle).toEqual(`${mockPageData.title} - BBC News Pidgin`);
   });
 
-  it('should render the live page og:title with pagination', async () => {
+  it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
       ...mockPageData,
       liveTextStream: {
