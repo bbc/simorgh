@@ -76,7 +76,7 @@ export const getFrontPageRegex = services => {
       servicesWithVariants.includes(service),
     );
   }
-  const serviceRegex = `${getServiceRegex(frontPages)}`;
+  const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
