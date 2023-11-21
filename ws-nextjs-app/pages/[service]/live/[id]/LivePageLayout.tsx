@@ -53,14 +53,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
     ...translations.pagination,
   };
 
-  const paginatedPageTitle =
-    activePage && pageCount
-      ? `Test Live Page, ${pageXOfY
-          .replace('{x}', activePage.toString())
-          .replace('{y}', pageCount.toString())}`
-      : 'Test Live Page';
+  const showPaginatedTitle = pageCount && activePage && activePage >= 2;
 
-  const pageTitle = activePage && activePage >= 2 ? paginatedPageTitle : title;
+  const pageTitle = showPaginatedTitle
+    ? `${title}, ${pageXOfY
+        .replace('{x}', activePage.toString())
+        .replace('{y}', pageCount.toString())}`
+    : title;
 
   return (
     <>
