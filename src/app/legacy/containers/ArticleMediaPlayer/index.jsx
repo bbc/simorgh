@@ -11,24 +11,17 @@ const pageTypeMap = {
   article: 'articles',
   mediaArticle: 'articles',
   STY: 'cps',
-};
-
-const getCpsAssetUri = assetUri => {
-  if (assetUri.includes('newyddion')) {
-    return assetUri.replace('newyddion', 'cymrufyw');
-  }
-
-  return assetUri;
+  CSP: 'cps',
 };
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id, pathname, pageType, isCaf } = useContext(RequestContext);
+  const { id, pageType } = useContext(RequestContext);
 
   return (
     <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={isCaf ? getCpsAssetUri(pathname.substring(1)) : id}
+        assetId={id}
         assetType={pageTypeMap[pageType]}
         showPlaceholder
       />
