@@ -1,11 +1,11 @@
 import { Environments } from '#app/models/types/global';
 
+import Url from 'url-parse';
+
 export default (pathname: string) => {
-  const url = new URL(`https://www.bbc.com${pathname}`);
+  const url = new Url(`https://www.bbc.com${pathname}`, true);
 
-  const pathParams = new URLSearchParams(url.search);
-
-  const rendererEnv = pathParams.get('renderer_env');
+  const rendererEnv = url?.query?.renderer_env;
 
   switch (rendererEnv) {
     case 'test':
