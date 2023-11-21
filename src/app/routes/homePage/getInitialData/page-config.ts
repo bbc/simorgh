@@ -2,7 +2,7 @@ import { Services } from '../../../models/types/global';
 
 type Envs = 'test' | 'live';
 
-type PageConfigServices = Services | 'afghanistan';
+export type PageConfigServices = Services | 'afghanistan';
 
 const HOME_PAGE_CONFIG: {
   [service in PageConfigServices]: { [env in Envs]: string };

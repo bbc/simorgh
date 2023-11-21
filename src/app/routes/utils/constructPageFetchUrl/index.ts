@@ -10,7 +10,9 @@ import {
   Environments,
   PageTypes,
 } from '../../../models/types/global';
-import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
+import HOME_PAGE_CONFIG, {
+  PageConfigServices,
+} from '../../homePage/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,
@@ -71,7 +73,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = (path: string) => {
-        let serviceId: Services | 'afghanistan' = service;
+        let serviceId: PageConfigServices = service;
 
         if (path === '/persian/afghanistan') {
           serviceId = 'afghanistan';
