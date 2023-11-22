@@ -4,6 +4,9 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -20,7 +23,11 @@ type ComponentProps = {
     description?: string;
     isLive: boolean;
     summaryPoints: { content: KeyPointsResponse | null };
-    liveTextStream: { content: StreamResponse | null };
+    liveTextStream: {
+      content: StreamResponse | null;
+      contributors: string | null;
+    };
+    atiAnalytics: ATIData;
   };
 };
 
@@ -32,6 +39,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
+    atiAnalytics,
   } = pageData;
 
   const { index: activePage, total: pageCount } =
@@ -52,10 +60,14 @@ const LivePage = ({ pageData }: ComponentProps) => {
           .replace('{y}', pageCount.toString())}`
       : 'Test Live Page';
 
+  const pageTitle = activePage && activePage >= 2 ? paginatedPageTitle : title;
+
   return (
     <>
+      <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics title={pageTitle} />
       <MetadataContainer
-        title={activePage && activePage >= 2 ? paginatedPageTitle : title}
+        title={pageTitle}
         lang={lang}
         description="A test Live Page using Next.JS"
         openGraphType="website"
@@ -75,7 +87,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            <Stream streamContent={liveTextStream.content} />
+            <Stream
+              streamContent={liveTextStream.content}
+              contributors={liveTextStream.contributors}
+            />
           </div>
         </div>
         <Pagination
