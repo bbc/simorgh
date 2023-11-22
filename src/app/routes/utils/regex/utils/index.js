@@ -95,7 +95,7 @@ export const getHomePageRegex = services => {
     );
   }
   const homePageServiceRegex = getServiceRegex(homePages);
-  return `/:service(mundo|pidgin)(/afghanistan)?:variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${homePageServiceRegex})(/afghanistan)?:variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {
