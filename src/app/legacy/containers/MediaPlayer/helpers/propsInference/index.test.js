@@ -1,0 +1,3 @@
+describe('propsInference', () => {
+  it('', () => {});
+});

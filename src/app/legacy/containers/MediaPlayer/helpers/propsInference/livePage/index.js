@@ -9,7 +9,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 
 const DEFAULT_WIDTH = 512;
 
-export default ({ assetId, blocks, isAmp, lang, translations }) => {
+export default ({ assetId, assetType, blocks, isAmp, lang, translations }) => {
   const clipMediaBlock = filterForBlockType(blocks, 'clipMedia');
 
   if (!clipMediaBlock) {
@@ -75,7 +75,7 @@ export default ({ assetId, blocks, isAmp, lang, translations }) => {
 
   const embedUrlParams = {
     mediaId: `${assetId}/${pid}/${lang}`,
-    type: 'live',
+    type: assetType,
     isAmp,
   };
 
