@@ -92,7 +92,9 @@ export default {
     }),
   bodyMedia: ({ spacings, mq }: Theme) =>
     css({
-      [mq.GROUP_3_MAX_WIDTH]: {
+      paddingLeft: `${spacings.FULL}rem`,
+      paddingRight: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
         paddingRight: `${spacings.DOUBLE}rem`,
       },
