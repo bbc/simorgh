@@ -90,4 +90,11 @@ export default {
         marginBottom: `${pixelsToRem(8)}rem`,
       },
     }),
+  bodyMedia: ({ spacings, mq }: Theme) =>
+    css({
+      [mq.GROUP_3_MAX_WIDTH]: {
+        paddingLeft: `${spacings.DOUBLE}rem`,
+        paddingRight: `${spacings.DOUBLE}rem`,
+      },
+    }),
 };

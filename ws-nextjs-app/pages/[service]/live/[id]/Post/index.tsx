@@ -9,7 +9,7 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import ArticleMediaPlayer from '#app/legacy/containers/ArticleMediaPlayer';
+import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   Post as PostType,
@@ -130,12 +130,19 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     image: (props: { blocks: OptimoBlock[] }) => (
-      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      <ImageWithCaption
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        className="mediaStyles"
+        css={styles.bodyMedia}
+      />
     ),
     video: (props: ComponentToRenderProps) => (
-      <div>
-        <ArticleMediaPlayer blocks={props.blocks} />
-      </div>
+      <LivePageMediaPlayer
+        blocks={props.blocks}
+        className="mediaStyles"
+        css={styles.bodyMedia}
+      />
     ),
     social: SocialEmbedContainer,
   };
