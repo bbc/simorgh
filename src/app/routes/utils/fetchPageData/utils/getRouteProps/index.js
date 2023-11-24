@@ -30,6 +30,7 @@ const getRouteProps = url => {
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   console.log({
+    matchedRoutes,
     route,
     match,
     params,
