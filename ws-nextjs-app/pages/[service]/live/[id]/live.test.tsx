@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import {
   render,
   screen,
@@ -23,6 +25,7 @@ const mockPageData = {
         },
       },
     },
+    contributors: 'Not a random dude',
   },
 };
 
@@ -33,6 +36,7 @@ const mockPageDataWithPosts = {
   },
   liveTextStream: {
     content: postFixture,
+    contributors: 'Not a random dude',
   },
 };
 
@@ -47,6 +51,7 @@ const mockPageDataWithoutKeyPoints = {
   },
   liveTextStream: {
     content: postFixture,
+    contributors: 'Not a random dude',
   },
 };
 
@@ -57,6 +62,44 @@ describe('Live Page', () => {
     });
 
     expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
+  });
+
+  it('should use the title value from the data response as the page title', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />, { service: 'pidgin' });
+    });
+
+    const { title: helmetTitle } = Helmet.peek();
+
+    expect(helmetTitle).toEqual(`${mockPageData.title} - BBC News Pidgin`);
+  });
+
+  it('should use the title value combined with the pagination value as the page title', async () => {
+    const paginatedData = {
+      ...mockPageData,
+      liveTextStream: {
+        content: {
+          data: {
+            results: [],
+            page: {
+              index: 2,
+              total: 3,
+            },
+          },
+        },
+        contributors: 'Not a random dude',
+      },
+    };
+
+    await act(async () => {
+      render(<Live pageData={paginatedData} />, { service: 'pidgin' });
+    });
+
+    const { title: helmetTitle } = Helmet.peek();
+
+    expect(helmetTitle).toEqual(
+      `${mockPageData.title}, Page 2 of 3 - BBC News Pidgin`,
+    );
   });
 
   it('should render the live page description', async () => {

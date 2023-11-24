@@ -5,6 +5,8 @@ import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
+import logResponseTime from '#server/utilities/logResponseTime';
+
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
@@ -16,6 +18,7 @@ import { FetchError } from '#models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
+import { OK } from '#app/lib/statusCodes.const';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
@@ -92,6 +95,14 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  logResponseTime(
+    {
+      path: context.resolvedUrl,
+    },
+    context.res,
+    () => null,
+  );
+
   const {
     id,
     service,
@@ -117,12 +128,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
   }
 
-  logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+  logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
     url: context.resolvedUrl,
     headers: omit(
       (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
       reqHeaders,
     ),
+    pageType: LIVE_PAGE,
   });
 
   const { data, toggles } = await getPageData({
@@ -133,7 +145,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
     rendererEnv: 'test', // TODO: remove hardcoding
   });
 
-  logger.info(ROUTING_INFORMATION, {
+  let routingInfoLogger = logger.debug;
+  if (data.status !== OK) {
+    routingInfoLogger = logger.error;
+  }
+
+  routingInfoLogger(ROUTING_INFORMATION, {
     url: context.resolvedUrl,
     status: data.status,
     pageType: LIVE_PAGE,
@@ -148,7 +165,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
-      pageData: data?.pageData || null,
+      pageData: data?.pageData
+        ? {
+            ...data.pageData,
+            metadata: {
+              ...data.pageData.metadata,
+              type: LIVE_PAGE,
+            },
+          }
+        : null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,

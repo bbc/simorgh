@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, element } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -158,7 +158,6 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             <StyledListItem dir={dir} key={`${linkText}`}>
               {/* line 147 and id={`externalLinkId-${linkText}`} in line 152 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652 */}
               <PodcastExternalLink
-                linkText={linkText}
                 linkUrl={linkUrl}
                 aria={{
                   'aria-labelledby': `externalLinkId-${idSanitiser(linkText)}`,
@@ -207,10 +206,12 @@ PodcastExternalLinks.propTypes = {
 };
 
 PodcastExternalLink.propTypes = {
-  linkText: string.isRequired,
   linkUrl: string.isRequired,
-  children: string.isRequired,
-  aria: string.isRequired,
+  children: element.isRequired,
+  aria: shape({
+    'aria-label': string,
+    'aria-labelledby': string,
+  }).isRequired,
 };
 
 export default PodcastExternalLinks;

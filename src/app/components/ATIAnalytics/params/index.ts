@@ -51,6 +51,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   CORRESPONDENT_STORY_PAGE,
   FEATURE_INDEX_PAGE,
   INDEX_PAGE,
+  LIVE_PAGE,
 ];
 
 const noOp = () => {
@@ -119,7 +120,7 @@ const createBuilderFactory = (
 ) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType];
+  return pageTypeHandlers[pageType] || noOp;
 };
 
 export const buildATIUrl = ({

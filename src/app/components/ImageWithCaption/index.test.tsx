@@ -64,7 +64,9 @@ describe('Image', () => {
         'mock-id-2',
       ),
     ]);
-    const dataWithoutAltText = blockArrayModel([rawImageBlock, null]);
+
+    const dataWithoutAltText = blockArrayModel([rawImageBlock]);
+
     describe('with no rawImageBlock', () => {
       suppressPropWarnings(['Missing', 'rawImage']);
       isNull(
@@ -72,8 +74,9 @@ describe('Image', () => {
         <ImageContainer sizes="100vw" {...dataWithoutRawImageBlock} />,
       );
     });
+
     describe('with no altTextBlock', () => {
-      suppressPropWarnings(['type', 'null']);
+      suppressPropWarnings(['Missing', 'altText']);
       it('should not render the image', () => {
         render(<ImageContainer sizes="100vw" {...dataWithoutAltText} />);
         const imgEl = screen.queryByAltText(
