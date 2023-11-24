@@ -52,6 +52,9 @@ export default async ({
     page,
   });
 
+  console.log('fetchUrl', fetchUrl);
+  console.log('env', environment);
+
   const agent = isLocal ? undefined : await getAgent();
   const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
   const optHeaders: OptHeaders =
@@ -65,6 +68,7 @@ export default async ({
     optHeaders['ctx-service-env'] = process.env.BFF_ENV || 'live';
     optHeaders.Accept = 'text/html,application/xhtml+xml,application/xml';
   }
+  console.log('optHeaders', optHeaders);
 
   try {
     const fetchPageDataArgs = {
@@ -74,6 +78,7 @@ export default async ({
       pageType,
       ...(timeout && { timeout }),
     };
+    console.log('fetchPageDataArgs', fetchPageDataArgs);
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 
