@@ -175,6 +175,7 @@ describe('cspHeader', () => {
         'https://*.facebook.com',
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://publish.flourish.studio',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -377,6 +378,7 @@ describe('cspHeader', () => {
         'https://*.facebook.com',
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://publish.flourish.studio',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
