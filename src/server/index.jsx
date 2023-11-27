@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
@@ -194,7 +195,12 @@ server.get(
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
-      const { page } = query;
+
+      const { page, renderer_env } = query;
+
+      const isCaf = !!(
+        renderer_env === 'caftest' || renderer_env === 'caflive'
+      );
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
@@ -216,6 +222,7 @@ server.get(
         toggles,
         getAgent,
         isAmp,
+        isCaf,
       });
 
       const { isUK } = extractHeaders(headers);
@@ -225,6 +232,7 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.isUK = isUK;
+      data.isCaf = isCaf;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
