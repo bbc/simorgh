@@ -5,7 +5,7 @@ type Envs = 'test' | 'live';
 export type TopicPagePaths = '/persian/afghanistan';
 
 export const TOPIC_PAGE_CONFIG: {
-  [path in TopicPageKeys]: { [env in Envs]: string };
+  [path in TopicPagePaths]: { [env in Envs]: string };
 } = {
   '/persian/afghanistan': {
     test: 'c15er11zq57t',
