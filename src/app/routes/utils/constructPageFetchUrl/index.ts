@@ -12,6 +12,7 @@ import {
 } from '../../../models/types/global';
 import HOME_PAGE_CONFIG, {
   TOPIC_PAGE_CONFIG,
+  TopicPagePaths,
 } from '../../homePage/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
@@ -84,13 +85,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case LIVE_PAGE:
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        if (path === '/persian/afghanistan') {
-          if (env !== 'local') {
-            return TOPIC_PAGE_CONFIG?.[path]?.[env];
-          }
-        }
-
-        return getTipoId;
+        return TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId;
       };
       break;
     default:
