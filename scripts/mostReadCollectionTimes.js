@@ -1,6 +1,7 @@
 const fs = require('fs');
-const { Agent } = require('https');
-const fetch = require('node-fetch');
+const fsPromises = require('fs/promises');
+const { Agent } = require('undici');
+const { createSecureContext } = require('tls');
 const allServices = require('../cypress/support/config/settings')();
 
 const badServices = [
@@ -19,20 +20,38 @@ const services = Object.keys(allServices);
 
 console.log('services', services);
 
-const fetchWithCert = async (url, options) => {
-  const cert = fs.readFileSync(
-    process.env.CERT_CHAIN_PATH || '/etc/pki/tls/certs/client.crt',
-  );
-  const ca = fs.readFileSync(
-    process.env.CA_PATH || '/etc/pki/tls/certs/ca-bundle.crt',
-  );
-  const key = fs.readFileSync(
-    process.env.KEY_PATH || '/etc/pki/tls/private/client.key',
-  );
-  const agent = new Agent({ cert, ca, key });
-  return fetch(url, { agent, ...options });
-};
+const loadCerts = ({ caPath, certChainPath, keyPath }) =>
+  Promise.all([
+    fsPromises.readFile(caPath, 'UTF-8'),
+    fsPromises.readFile(certChainPath, 'UTF-8'),
+    fsPromises.readFile(keyPath, 'UTF-8'),
+  ]);
 
+const fetchWithCert = async (url, options) => {
+  const caPath = process.env.CA_PATH || '/etc/pki/tls/certs/ca-bundle.crt';
+  const certChainPath =
+    process.env.CERT_CHAIN_PATH || '/etc/pki/tls/certs/client.crt';
+  const keyPath = process.env.KEY_PATH || '/etc/pki/tls/private/client.key';
+
+  const [ca, certChain, key] = await loadCerts({
+    caPath,
+    certChainPath,
+    keyPath,
+  });
+
+  return fetch(url, {
+    dispatcher: new Agent({
+      connect: {
+        secureContext: createSecureContext({
+          cert: certChain,
+          key,
+          ca,
+        }),
+      },
+    }),
+    ...options,
+  });
+};
 const timeTable = [];
 
 let csvContents;
@@ -81,23 +100,25 @@ const collectResults = async (link, service, type) => {
           if (timeTable.length === (services.length - badServices.length) * 2) {
             csvContents =
               'service, type, link, generated, timeSinceGenerated, lastRecordTimeStamp, firstRecordTimeStamp, sequence, totalRecords, rank1, rank2, rank3, rank4, rank5, rank6, rank7, rank8, rank9, rank10';
-            timeTable.sort((a, b) => {
-              if (a.service > b.service) {
-                return 1;
-              }
-              else if (a.service < b.service) {
-                return -1;
-              }
-              else if (a.type < b.type) {
-                return -1;
-              }
-              else if (a.type > b.type) {
-                return 1;
-              }
-              return 0;
-            }).forEach(result => {
-              csvContents += `\n${result.service},${result.type},${result.link},${result.generated},${result.minutesSinceGenerated},${result.lastRecordTimestamp},${result.firstRecordTimestamp},${result.sequence},${result.totalRecords},${result.counts}`;
-            });
+            timeTable
+              .sort((a, b) => {
+                if (a.service > b.service) {
+                  return 1;
+                }
+                if (a.service < b.service) {
+                  return -1;
+                }
+                if (a.type < b.type) {
+                  return -1;
+                }
+                if (a.type > b.type) {
+                  return 1;
+                }
+                return 0;
+              })
+              .forEach(result => {
+                csvContents += `\n${result.service},${result.type},${result.link},${result.generated},${result.minutesSinceGenerated},${result.lastRecordTimestamp},${result.firstRecordTimestamp},${result.sequence},${result.totalRecords},${result.counts}`;
+              });
             fs.writeFileSync('./mostReadCollectionTimes.csv', csvContents);
           }
         }
