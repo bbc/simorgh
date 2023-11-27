@@ -85,7 +85,9 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case LIVE_PAGE:
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        return TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId;
+        return (
+          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
+        );
       };
       break;
     default:
