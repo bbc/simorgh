@@ -17,6 +17,7 @@ type Props = {
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
   toggles?: Toggles;
+  isCaf?: boolean;
   isAmp?: boolean;
   getAgent: GetAgent;
 };
@@ -27,6 +28,7 @@ export default async ({
   path: pathname,
   variant,
   toggles,
+  isCaf,
   isAmp,
   getAgent,
 }: Props) => {
@@ -36,6 +38,7 @@ export default async ({
       pageType,
       service,
       variant,
+      isCaf,
       isAmp,
       getAgent,
     });

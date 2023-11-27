@@ -105,6 +105,7 @@ export default async ({
   pageType,
   toggles,
   getAgent,
+  isCaf,
 }) => {
   try {
     const { service: derivedService, path: derivedPath } =
@@ -117,8 +118,9 @@ export default async ({
       path: derivedPath,
       service: derivedService,
       variant,
-      pageType: 'cpsAsset',
+      pageType: isCaf ? 'article' : 'cpsAsset',
       getAgent,
+      isCaf,
     });
 
     if (status !== 200) {
@@ -127,7 +129,7 @@ export default async ({
 
     const { mostWatched } = processMostWatched({
       data: article,
-      service,
+      service: derivedService,
       path: derivedPath,
       toggles,
       page: pageType,
@@ -139,7 +141,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...(await transformJson(article, pathname, toggles)),
+        ...(isCaf ? article : await transformJson(article, pathname, toggles)),
         secondaryColumn: {
           topStories,
           features,

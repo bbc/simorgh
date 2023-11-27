@@ -67,6 +67,7 @@ const ComponentWithContext = ({
         <RequestContextProvider
           isAmp={false}
           pageType={ARTICLE_PAGE}
+          pathname="/news/articles/c0000000001o"
           service={service}
         >
           <UserContextProvider>
@@ -135,9 +136,12 @@ export const ArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
 );
 export const Burmese = props => (
-  <ComponentWithServiceContext {...props} data={articleDataBurmese} service="burmese"/>
+  <ComponentWithServiceContext
+    {...props}
+    data={articleDataBurmese}
+    service="burmese"
+  />
 );
-
 
 export const ArticlePageWithRelatedContent = props => (
   <ComponentWithContext {...props} data={articleDataWithRelatedContent} />

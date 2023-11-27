@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -79,13 +78,9 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
         <ToggleContext.Provider
           value={{ toggleState, toggleDispatch: jest.fn() }}
         >
-          {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            <OptimizelyProvider optimizely={optimizely} isServerSide>
-              <OptimizelyRecommendations pageData={pageData} />
-            </OptimizelyProvider>
-          }
+          <OptimizelyProvider optimizely={optimizely} isServerSide>
+            <OptimizelyRecommendations pageData={pageData} />
+          </OptimizelyProvider>
         </ToggleContext.Provider>
       </RequestContextProvider>
     </ServiceContextProvider>,
