@@ -1133,6 +1133,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 <div>
+  <noscript />
   <main>
     <div
       class="emotion-0"
@@ -1243,8 +1244,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </h2>
           <p
             class="emotion-20"
+            data-testid="live-contributors"
           >
-            By a random dude
+            Not a random dude
           </p>
           <ol
             class="emotion-21"

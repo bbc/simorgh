@@ -3552,7 +3552,7 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/mundo/articles/cdwrpl7qwqqo'],
+            paths: ['/mundo/articles/ce7p1pw7165o'],
             enabled: true,
           },
           test: {
@@ -3693,7 +3693,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/mundo/articles/cdwrpl7qwqqo',
+              '/mundo/articles/ce7p1pw7165o',
               '/mundo',
               '/mundo/noticias-internacional-53826365',
               '/mundo/popular/read',

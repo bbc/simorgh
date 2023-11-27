@@ -41,7 +41,8 @@ export const optimoPromoPropTypes = {
     ]),
   }),
   locators: shape({
-    optimoUrn: string.isRequired,
+    optimoUrn: string,
+    cpsUrn: string,
   }),
   summary: oneOfType([shape(optimoPromoHeadlineOrSummaryPropTypes), string]),
   timestamp: number,
