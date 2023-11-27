@@ -6895,6 +6895,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  border: 0.125rem solid transparent;
 }
 
 .emotion-17 {
@@ -7289,6 +7290,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  border: 0.125rem solid transparent;
 }
 
 .emotion-18 {
@@ -7615,6 +7617,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  border: 0.125rem solid transparent;
 }
 
 .emotion-10 {
@@ -8094,6 +8097,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  border: 0.125rem solid transparent;
 }
 
 .emotion-17 {
