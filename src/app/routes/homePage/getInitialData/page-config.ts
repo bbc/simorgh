@@ -2,10 +2,19 @@ import { Services } from '../../../models/types/global';
 
 type Envs = 'test' | 'live';
 
-export type PageConfigServices = Services | 'afghanistan';
+export type TopicPagePaths = '/persian/afghanistan';
 
-const HOME_PAGE_CONFIG: {
-  [service in PageConfigServices]: { [env in Envs]: string };
+export const TOPIC_PAGE_CONFIG: {
+  [path in TopicPageKeys]: { [env in Envs]: string };
+} = {
+  '/persian/afghanistan': {
+    test: 'c15er11zq57t',
+    live: 'crezq2dg9zwt',
+  },
+};
+
+export const HOME_PAGE_CONFIG: {
+  [service in Services]: { [env in Envs]: string };
 } = {
   kyrgyz: {
     test: 'cm7682qz7v1t',
@@ -14,10 +23,6 @@ const HOME_PAGE_CONFIG: {
   afaanoromoo: {
     test: 'c93v2kkzl24t',
     live: 'c44dyn08mejt',
-  },
-  afghanistan: {
-    test: 'c15er11zq57t',
-    live: 'crezq2dg9zwt',
   },
   afrique: {
     test: 'cjln1ww62p1t',

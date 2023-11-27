@@ -11,7 +11,7 @@ import {
   PageTypes,
 } from '../../../models/types/global';
 import HOME_PAGE_CONFIG, {
-  PageConfigServices,
+  TOPIC_PAGE_CONFIG,
 } from '../../homePage/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
@@ -72,15 +72,9 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       };
       break;
     case HOME_PAGE:
-      getIdFunction = (path: string) => {
-        let serviceId: PageConfigServices = service;
-
-        if (path === '/persian/afghanistan') {
-          serviceId = 'afghanistan';
-        }
-
+      getIdFunction = () => {
         return env !== 'local'
-          ? HOME_PAGE_CONFIG?.[serviceId]?.[env]
+          ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
       break;
@@ -89,7 +83,15 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case LIVE_PAGE:
     case TOPIC_PAGE:
-      getIdFunction = getTipoId;
+      getIdFunction = (path: string) => {
+        if (path === '/persian/afghanistan') {
+          if (env !== 'local') {
+            return TOPIC_PAGE_CONFIG?.[path]?.[env];
+          }
+        }
+
+        return getTipoId;
+      };
       break;
     default:
       getIdFunction = () => null;
