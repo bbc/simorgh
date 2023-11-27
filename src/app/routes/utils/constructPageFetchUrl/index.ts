@@ -143,7 +143,6 @@ const constructPageFetchUrl = ({
         );
         break;
       case CPS_ASSET:
-        // @ts-expect-error suppress error as I don't know how to fix it!
         fetchUrl = Url(id);
         break;
       case HOME_PAGE:
