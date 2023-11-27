@@ -199,8 +199,6 @@ server.get(
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
 
-      console.log({ service, pageType, url, urlPath });
-
       logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
         url,
         headers: removeSensitiveHeaders(headers),

@@ -29,16 +29,6 @@ const getRouteProps = url => {
   const { amp, app } = getNonCanonicalPlatformId(params);
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
-  console.log({
-    matchedRoutes,
-    route,
-    match,
-    params,
-    url,
-    service,
-    variantPath,
-  });
-
   const id = path(['id'], params);
   const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
