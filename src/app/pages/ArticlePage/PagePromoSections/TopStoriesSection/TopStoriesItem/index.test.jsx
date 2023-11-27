@@ -1,5 +1,6 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
   render,
   screen,
@@ -27,6 +28,8 @@ const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
 );
 
 describe('Optimo Top Stories Promo Item', () => {
+  suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
+
   it('should render Related Content when given appropriate data', () => {
     render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
 
@@ -40,6 +43,12 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should render Top Stories item when data is from Tipo', () => {
+    suppressPropWarnings([
+      'item.headlines.headline',
+      'ForwardRef',
+      'undefined',
+    ]);
+
     render(
       <TopStoriesItemFixture
         service="kyrgyz"

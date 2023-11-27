@@ -5,6 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -103,6 +104,7 @@ export default async ({
   variant,
   pageType,
   toggles,
+  isCaf,
 }) => {
   try {
     const { service: derivedService, path: derivedPath } =
@@ -110,17 +112,22 @@ export default async ({
 
     const {
       status,
-      pageData: { secondaryColumn, recommendations, ...article },
+      pageData: { secondaryColumn, recommendations, ...article } = {},
     } = await getArticleInitialData({
       path: derivedPath,
       service: derivedService,
       variant,
-      pageType: 'cpsAsset',
+      pageType: isCaf ? 'article' : 'cpsAsset',
+      isCaf,
     });
+
+    if (status !== 200) {
+      throw handleError('CPS asset data fetch error', status);
+    }
 
     const { mostWatched } = processMostWatched({
       data: article,
-      service,
+      service: derivedService,
       path: derivedPath,
       toggles,
       page: pageType,
@@ -132,7 +139,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...(await transformJson(article, pathname, toggles)),
+        ...(isCaf ? article : await transformJson(article, pathname, toggles)),
         secondaryColumn: {
           topStories,
           features,

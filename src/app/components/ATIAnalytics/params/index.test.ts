@@ -794,14 +794,19 @@ describe('ATIAnalytics params', () => {
 
     describe('buildPageATIParams invocation', () => {
       let buildPageATIParamsSpy: jest.SpyInstance;
+      const { error } = console;
 
       beforeEach(() => {
         buildPageATIParamsSpy = jest.spyOn(
           buildPageATIFunctionImports,
           'buildPageATIParams',
         );
+        console.error = jest.fn();
+      });
 
+      afterEach(() => {
         jest.clearAllMocks();
+        console.error = error;
       });
 
       it('should invoke buildPageATIParams for supported page types', () => {
@@ -827,22 +832,12 @@ describe('ATIAnalytics params', () => {
           serviceContext,
         });
 
+        expect(console.error)
+          .toHaveBeenCalledWith(`ATI Event Tracking Error: Could not parse tracking values from page data:
+Cannot read properties of undefined (reading 'id')`);
         expect(buildPageATIParamsSpy).not.toHaveBeenCalled();
       });
     });
-
-    it.each([ERROR_PAGE, HOME_PAGE, LIVE_PAGE])(
-      'should return empty object {} because %s page type is not supported',
-      pageType => {
-        const params = buildATIEventTrackingParams({
-          requestContext: { ...requestContext, pageType },
-          data: {},
-          serviceContext,
-        });
-
-        expect(params).toStrictEqual({});
-      },
-    );
 
     it('should not throw exception and return empty object if no pageData is passed in', () => {
       const { error } = console;

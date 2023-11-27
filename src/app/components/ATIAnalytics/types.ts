@@ -1,4 +1,4 @@
-import { Platforms, Services } from '../../models/types/global';
+import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
 
@@ -48,6 +48,7 @@ export interface PageData {
     language?: string;
     firstPublished?: number;
     lastPublished?: number;
+    type?: PageTypes;
   };
   promo?:
     | { headlines?: { seoHeadline?: string } }

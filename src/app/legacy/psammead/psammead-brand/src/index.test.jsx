@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import ScriptLink from '#psammead/psammead-script-link/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
@@ -20,6 +21,9 @@ const svg = {
 };
 
 describe('Brand', () => {
+  suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
+  suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
+
   it('should render correctly with link provided', () => {
     const { container } = render(
       <Brand

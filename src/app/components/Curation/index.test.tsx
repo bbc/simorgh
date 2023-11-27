@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
@@ -58,6 +59,10 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
   it.each(Object.entries(components))(
     `should render a %s component`,
     (
@@ -132,6 +137,28 @@ describe('Curation', () => {
       expect(
         document.querySelector('[data-testid="message-banner-"]'),
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Headings', () => {
+    it('should render correctly when there are multiple curations and the curation only has 1 summary', () => {
+      const [curationWithSummary] = kyrgyzHomePage.data.curations.filter(
+        ({ summaries }) => summaries && summaries.length > 0,
+      );
+
+      const promo = curationWithSummary.summaries?.pop();
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          // @ts-expect-error promo will not be undefined
+          promos={[promo]}
+          curationLength={2}
+        />,
+      );
+
+      expect(document.querySelectorAll('section h2').length).toBe(1);
     });
   });
 });

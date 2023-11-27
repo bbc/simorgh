@@ -74,7 +74,7 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
     case TOPIC_PAGE:
       return 'Topics';
     case LIVE_PAGE:
-      return 'Live';
+      return shorthand ? 'LIV' : 'Live';
     default:
       return pageType;
   }

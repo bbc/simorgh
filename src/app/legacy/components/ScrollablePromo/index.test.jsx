@@ -24,7 +24,7 @@ const ScrollablePromoWithContext = ({ blocks, blockGroupIndex }) => (
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<ScrollablePromoWithContext blocks={{}} />);
+    const { container } = render(<ScrollablePromoWithContext blocks={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
