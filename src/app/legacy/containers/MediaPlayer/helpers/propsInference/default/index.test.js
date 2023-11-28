@@ -41,8 +41,10 @@ describe('getDefaultProps', () => {
         type: 'video',
         guidanceMessage: 'Contains strong language and adult humour.',
       },
-      placeholderSrc: 'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
-      placeholderSrcset: 'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
+      placeholderSrc:
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+      placeholderSrcset:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
