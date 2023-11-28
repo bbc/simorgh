@@ -148,7 +148,7 @@ describe('getDefaultProps', () => {
     });
   });
 
-  it('uses the defualt prompt messages when missing in translations', () => {
+  it('uses the default prompt messages when missing in translations', () => {
     const props = {
       assetId: 'c881llnevmeo',
       assetType: 'articles',
