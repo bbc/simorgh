@@ -135,6 +135,110 @@ export const validAresMediaAudioBlock = {
   type: 'aresMedia',
 };
 
+export const validTransformedCPSAudioBlock = {
+  id: '0bba6b33',
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      {
+        id: 'f81137f6',
+        type: 'aresMediaMetadata',
+        blockId: 'urn:bbc:ares::clip:p01mr6r7',
+        model: {
+          advertising: true,
+          caption: 'A caption for a test asset',
+          embedding: true,
+          format: 'audio',
+          id: 'p01mr6r7',
+          imageCopyright: 'Getty Images',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg',
+          subType: 'clip',
+          synopses: {
+            short:
+              'Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.',
+          },
+          title:
+            'Подкаст "Разговоры с арбитром": чемпионский парад "Ливерпуля"',
+          versions: [
+            {
+              versionId: 'p01mr6r9',
+              types: ['Original'],
+              duration: 1961,
+              durationISO8601: 'PT32M41S',
+              warnings: {},
+              availableTerritories: {
+                uk: true,
+                nonUk: true,
+              },
+              availableFrom: 1559819809000,
+            },
+          ],
+          available: true,
+        },
+        position: [19, 1, 1],
+      },
+      {
+        id: '7f90e6c5',
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              id: 'fa7c810d',
+              type: 'rawImage',
+              model: {
+                copyrightHolder: 'Getty Images',
+                locator:
+                  'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg',
+                originCode: 'pips',
+              },
+              position: [19, 1, 2, 1],
+            },
+          ],
+        },
+        position: [19, 1, 2],
+      },
+      {
+        id: '68183aff',
+        type: 'caption',
+        model: {
+          blocks: [
+            {
+              id: '1f41a3c0',
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    id: '764f4cd3',
+                    type: 'paragraph',
+                    model: {
+                      text: 'A caption for a test asset',
+                      blocks: [
+                        {
+                          id: 'cfa881a7',
+                          type: 'fragment',
+                          model: {
+                            text: 'A caption for a test asset',
+                            attributes: [],
+                          },
+                          position: [19, 1, 3, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [19, 1, 3, 1, 1],
+                  },
+                ],
+              },
+              position: [19, 1, 3, 1],
+            },
+          ],
+        },
+        position: [19, 1, 3],
+      },
+    ],
+  },
+  position: [19, 1],
+};
+
 export const missingAresMediaMetadataBlock = {
   model: {
     blocks: [imageBlock],
@@ -234,6 +338,15 @@ export const multipleAresMetadataBlock = {
 export const validVideoWithCaptionBlock = [
   captionBlock,
   validAresMediaVideoBlock,
+];
+
+export const validAudioWithCaptionBlock = [
+  captionBlock,
+  validAresMediaAudioBlock,
+];
+
+export const validTransformedCPSAudioWithCaptionBlock = [
+  validTransformedCPSAudioBlock,
 ];
 
 const missingVpidBlocks = [
