@@ -125,6 +125,27 @@ describe('Live Page', () => {
     },
   );
 
+  it.each`
+    title             | seoTitle             | info                      | expected
+    ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle'}
+    ${'I am a Title'} | ${undefined}         | ${'title if no seoTitle'} | ${'I am a Title'}
+  `(
+    'should use $info as the schema headline',
+    async ({ title, seoTitle, expected }) => {
+      await act(async () => {
+        render(
+          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
+        );
+      });
+
+      const schemaHeadline = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes(`"headline":"${expected}"`),
+      );
+
+      expect(schemaHeadline).toBeTruthy();
+    },
+  );
+
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
       ...mockPageData,
