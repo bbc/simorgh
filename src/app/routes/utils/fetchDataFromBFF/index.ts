@@ -19,6 +19,7 @@ interface FetchDataFromBffParams {
   service: Services;
   variant?: Variants;
   isAmp?: boolean;
+  isCaf?: boolean;
   page?: string;
 }
 
@@ -35,6 +36,7 @@ export default async ({
   service,
   variant,
   isAmp,
+  isCaf,
   page,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
@@ -46,6 +48,7 @@ export default async ({
     service,
     variant,
     isAmp,
+    isCaf,
     page,
   });
 
