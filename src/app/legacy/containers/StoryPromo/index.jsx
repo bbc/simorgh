@@ -196,6 +196,8 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
+  const isFirstPromo = index === 0;
+
   const headingTagOverride =
     item.headingTag ||
     getHeadingTagOverride({
@@ -224,7 +226,14 @@ const StoryPromoContainer = ({
           className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
-            <LiveLabel id={linkId}>{linkcontents}</LiveLabel>
+            <LiveLabel
+              id={linkId}
+              {...(isFirstPromo && {
+                className: 'first-promo',
+              })}
+            >
+              {linkcontents}
+            </LiveLabel>
           ) : (
             linkcontents
           )}
