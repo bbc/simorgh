@@ -1,12 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import {
   render,
   screen,
   act,
+  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
+import { LIVE_PAGE } from '../../../../../../src/app/routes/utils/pageTypes';
 import Post from '.';
-import { samplePost, twitterSamplePost } from './fixture';
+import { samplePost, twitterSamplePost, videoSamplePost } from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];
 
@@ -127,6 +130,24 @@ describe('Post', () => {
           '[data-e2e="twitter-embed-https://twitter.com/bbcnewspidgin/status/1700039661874282772"]',
         ),
       ).toBeTruthy();
+    });
+
+    it('should render the media player in a post containing video', async () => {
+      render(
+        <BrowserRouter>
+          <Post post={videoSamplePost} />
+        </BrowserRouter>,
+        {
+          id: 'c7p765ynk9qt',
+          service: 'pidgin',
+          pageType: LIVE_PAGE,
+          pathname: '/pidgin/live/c7p765ynk9qt',
+        },
+      );
+
+      await waitFor(() => {
+        expect(screen.getByTestId('media-player')).toBeInTheDocument();
+      });
     });
   });
 });
