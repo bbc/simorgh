@@ -2,10 +2,12 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  backgroundColor: ({ palette }: Theme) =>
+  backgroundColor: ({ palette, mq }: Theme) =>
     css({
       backgroundColor: palette.GREY_10,
-      borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+      [mq.HIGH_CONTRAST]: {
+        borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+      },
     }),
   outerGrid: ({ mq, gridWidths }: Theme) =>
     css({
