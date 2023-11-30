@@ -5,6 +5,7 @@ export default {
   backgroundColor: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_10,
+      borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
     }),
   outerGrid: ({ mq, gridWidths }: Theme) =>
     css({
