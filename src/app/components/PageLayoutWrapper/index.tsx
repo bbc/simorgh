@@ -43,6 +43,15 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
+  let wordCount = 0;
+  if (pageType === 'article') {
+      wordCount = pageData?.content?.model?.blocks?.filter(block => block.type === 'text')?.reduce((reducer, block) => {
+        const innerBlocks = block.model.blocks.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
+            return `${innerReducer} ${p.model.text}`;
+        }, '');
+        return reducer + innerBlocks.split(' ').length;
+      }, 0);
+  }
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
@@ -101,6 +110,43 @@ const PageLayoutWrapper = ({
                     }
                 });
                 }
+                let wrappedPageTimeStart = new Date();
+                let wrappedStorageKey = 'ws_bbc_wrapped';
+                const wrappedStructure = {
+                    'pageTypeCounts': {},
+                    'topicCounts': {},
+                    'serviceCounts': {},
+                    'duration': 0,
+                    'wordCount': 0,
+                };
+                let wrappedContents = wrappedStructure;
+                let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
+                if (wrappedLocalStorageContents) {
+                    wrappedContents = JSON.parse(wrappedLocalStorageContents);
+                }
+                const saveWrapped = () => {
+                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
+                }
+                const wrappedTopics = ${JSON.stringify(pageData?.metadata?.topics)};
+                if (wrappedTopics) {
+                    wrappedTopics.forEach(({ topicName }) => {
+                        wrappedContents['topicCounts'][topicName] = wrappedContents['topicCounts'][topicName] ? wrappedContents['topicCounts'][topicName] + 1 : 1;
+                    });
+                }
+                document.onvisibilitychange = () => {
+                  if (document.visibilityState === "hidden") {
+                    const wrappedTimeNow = new Date();
+                    const wrappedDifference = wrappedTimeNow - wrappedPageTimeStart;
+                    wrappedContents['duration'] = wrappedContents['duration'] ? wrappedContents['duration'] + wrappedDifference : wrappedDifference;
+                    saveWrapped();
+                  }
+                  else {
+                    wrappedPageTimeStart = new Date();
+                  }
+                };
+                wrappedContents['wordCount'] = wrappedContents['wordCount'] + ${wordCount};
+                wrappedContents['serviceCounts']['${service}'] = wrappedContents['serviceCounts']['${service}'] ? wrappedContents['serviceCounts']['${service}'] + 1 : 1;
+                wrappedContents['pageTypeCounts']['${pageType}'] = wrappedContents['pageTypeCounts']['${pageType}'] ? wrappedContents['pageTypeCounts']['${pageType}'] + 1 : 1;
     `;
 
   return (
