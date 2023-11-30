@@ -3,6 +3,7 @@
 exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-0 {
   background-color: #141414;
+  border-bottom: solid 0.1875rem transparent;
 }
 
 .emotion-1 {
