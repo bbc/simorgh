@@ -111,6 +111,7 @@ const PageLayoutWrapper = ({
                 });
                 }
                 let wrappedPageTimeStart = new Date();
+                const wrappedYear = wrappedPageTimeStart.getFullYear();
                 let wrappedStorageKey = 'ws_bbc_wrapped';
                 const wrappedStructure = {
                     'pageTypeCounts': {},
@@ -119,10 +120,12 @@ const PageLayoutWrapper = ({
                     'duration': 0,
                     'wordCount': 0,
                 };
-                let wrappedContents = wrappedStructure;
+                let wrappedContents = {};
+                wrappedContents[wrappedYear] = wrappedStructure;
                 let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
                 if (wrappedLocalStorageContents) {
-                    wrappedContents = JSON.parse(wrappedLocalStorageContents);
+                    const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
+                    wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedLocalStorageContentsParsed;
                 }
                 const saveWrapped = () => {
                     localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
