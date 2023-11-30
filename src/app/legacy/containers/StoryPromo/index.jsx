@@ -196,7 +196,7 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const isFirstPromo = index === 0;
+  const isFirstPromo = index === 0 && useLargeImages;
 
   const headingTagOverride =
     item.headingTag ||
