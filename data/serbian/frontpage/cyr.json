@@ -14,7 +14,7 @@
           "pageTitle": "Главная",
           "producerId": null,
           "timePublished": "2016-05-31T09:10:22.000Z",
-          "timeUpdated": "2023-11-28T12:12:07.000Z",
+          "timeUpdated": "2023-11-30T09:32:45.000Z",
           "producerName": "RUSSIAN"
         },
         "id": "urn:bbc:ares::index:russian/front_page/mobile/domestic",
@@ -28,10 +28,10 @@
         "type": "IDX",
         "createdBy": "russian-v6",
         "language": "ru",
-        "lastUpdated": 1701173534228,
+        "lastUpdated": 1701336775734,
         "firstPublished": 1464685822000,
-        "lastPublished": 1701173527000,
-        "timestamp": 1701170800000,
+        "lastPublished": 1701336765000,
+        "timestamp": 1701333357000,
         "options": { "allowAdvertising": true },
         "analyticsLabels": {
           "cps_asset_type": "idx",
@@ -43,10 +43,10 @@
         "version": "v1.4.36",
         "blockTypes": [
           "top-story",
-          "special-reports",
-          "feature-main",
           "section-digest",
+          "special-reports",
           "also-in-news",
+          "feature-main",
           "featured-site-top-stories",
           "useful-links"
         ],
@@ -62,8 +62,49 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Война Израиля с ХАМАС: освобождены еще 11 заложников и 33 палестинских заключенных, перемирие продлено на два дня",
-                  "overtyped": "Война Израиля с ХАМАС: освобождены еще 11 заложников и 33 заключенных, перемирие продлено на два дня"
+                  "headline": "Генри Киссинджер: от Брежнева до Путина"
+                },
+                "locators": {
+                  "assetUri": "/russian/live/features-36675660",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:ca58e9d3-00f7-ea44-9acb-15a549cb9151",
+                  "assetId": "36675660",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/features-36675660",
+                  "curie": "http://www.bbc.co.uk/asset/ca58e9d3-00f7-ea44-9acb-15a549cb9151"
+                },
+                "summary": "Генри Киссинджера ставят в один ряд с Талейраном и Меттернихом. Только легендарные дипломаты позапрошлого века не сходили с авансцены лет по тридцать, а Киссинджер всего за восемь успел стать отцом восстановления американо-китайских отношений, мира во Вьетнаме и «разрядки» с Москвой. Любого из этих свершений достаточно, чтобы войти в историю.",
+                "timestamp": 1701313028000,
+                "language": "ru",
+                "cpsType": "LIV",
+                "indexImage": {
+                  "id": "90169787",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/133CC/production/_90169787_7547ea85-989d-4b59-ab0c-35bac8b702fc.jpg",
+                  "path": "/cpsprodpb/133CC/production/_90169787_7547ea85-989d-4b59-ab0c-35bac8b702fc.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Генри Киссинджер на церемонии в его честь в Пентагоне 20 мая 2016 года",
+                  "copyrightHolder": "AFP",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "prominence": "standard",
+                "relatedItems": [
+                  {
+                    "name": "Генри Киссинджер умер на 101 году жизни",
+                    "uri": "https://www.bbc.com/russian/articles/cgrpd6pw0z1o",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgrpd6pw0z1o",
+                    "timestamp": 1701310553000,
+                    "type": "link"
+                  }
+                ],
+                "id": "urn:bbc:ares::asset:russian/features-36675660",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Война Израиля с ХАМАС: перемирие в последний момент продлено еще на один день"
                 },
                 "locators": {
                   "assetUri": "/russian/live/news-67457913",
@@ -90,13 +131,13 @@
                 },
                 "cpsType": "LIV",
                 "indexImage": {
-                  "id": "131834577",
+                  "id": "131845591",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/12EE7/production/_131834577_e4881ebee0b399b010efc3adce77bce534efdf62.jpg",
-                  "path": "/cpsprodpb/12EE7/production/_131834577_e4881ebee0b399b010efc3adce77bce534efdf62.jpg",
-                  "height": 900,
-                  "width": 1600,
-                  "altText": "мальчик-заложкник, Таль Гольдштейн-Альмог",
+                  "href": "http://c.files.bbci.co.uk/4C62/production/_131845591_f7ed1e9f01c9a28d6139af5bcc50924afd26c880.jpg",
+                  "path": "/cpsprodpb/4C62/production/_131845591_f7ed1e9f01c9a28d6139af5bcc50924afd26c880.jpg",
+                  "height": 928,
+                  "width": 1650,
+                  "altText": "палестинец курит кальян на развалинах в Газе",
                   "copyrightHolder": "Reuters",
                   "allowSyndication": true,
                   "type": "image"
@@ -136,7 +177,7 @@
               },
               {
                 "headlines": {
-                  "headline": "Война в Украине: СМИ сообщают о госпитализации жены начальника ГУР с подозрением на отравление"
+                  "headline": "Война в Украине: Лавров прилетел в Северную Македонию через Грецию"
                 },
                 "locators": {
                   "assetUri": "/russian/live/news-67458583",
@@ -150,15 +191,15 @@
                 "language": "ru",
                 "cpsType": "LIV",
                 "indexImage": {
-                  "id": "128147299",
+                  "id": "131884879",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/183CA/production/_128147299_budanov-index-reuters.jpg",
-                  "path": "/cpsprodpb/183CA/production/_128147299_budanov-index-reuters.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Ukrainian Military Intelligence Chief Kyrylo Budanov attends a news briefing about prisoners of war (POWs) swap, amid Russia's attack on Ukraine, in Kyiv, Ukraine September 22, 2022",
-                  "copyrightHolder": "Reuters",
-                  "allowSyndication": true,
+                  "href": "http://c.files.bbci.co.uk/17E38/production/_131884879_tass_65262404.jpg",
+                  "path": "/cpsprodpb/17E38/production/_131884879_tass_65262404.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "Лавров",
+                  "copyrightHolder": "Mikhail Tereshchenko/TASS",
+                  "allowSyndication": false,
                   "type": "image"
                 },
                 "commentary": {
@@ -188,71 +229,305 @@
                 "type": "cps"
               },
               {
-                "name": "Неизбежные микрокредиты. Почему россияне все активнее берут займы до зарплаты?",
-                "summary": "В России в этом году случился кредитный бум. По итогам третьего квартала объем выданных микрозаймов достиг исторического рекорда — почти 350 млрд рублей. Эксперты говорят о сильной закредитованности населения: новые микрозаймы часто берут, чтобы расплатиться по текущим кредитам. Русская служба Би-би-си объясняет, насколько это опасно.",
+                "name": "Ученые обнаружили «идеальную солнечную систему», которая поможет поискам внеземной жизни",
+                "summary": "Астрономы обнаружили на расстоянии 100 световых лет от Земли «идеальную солнечную систему», которая, в отличие от нашей Солнечной системы, образовалась без бурных столкновений между небесными телами.",
                 "indexImage": {
-                  "id": "131836403",
+                  "id": "131885365",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/1be1/live/6954cc60-8d4c-11ee-87b6-87df8d4ac851.jpg",
-                  "path": "/cpsprodpb/1be1/live/6954cc60-8d4c-11ee-87b6-87df8d4ac851.jpg",
-                  "height": 1782,
-                  "width": 3168,
-                  "altText": "Вывеска на одном из офисов, предоставляющих займы",
-                  "caption": "В третьем квартале года общий объем микрозаймов достиг почти 350 млрд рублей",
-                  "copyrightHolder": "Valeriy Matytsyn/TASS",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c4n54pp5291o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4n54pp5291o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701164749000,
-                "type": "link"
-              },
-              {
-                "name": "Спасатели в Индии почти добрались до оказавшихся под завалами тоннеля рабочих. Операция продолжалась 17 дней",
-                "indexImage": {
-                  "id": "131837505",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/0bd8/live/c54f8350-8ddf-11ee-9652-732c9000ef35.jpg",
-                  "path": "/cpsprodpb/0bd8/live/c54f8350-8ddf-11ee-9652-732c9000ef35.jpg",
-                  "height": 449,
-                  "width": 798,
-                  "altText": "Обрушение тоннеля в Индии",
-                  "copyrightHolder": "AFP",
+                  "href": "http://c.files.bbci.co.uk/14ad/live/3889b8d0-8ec7-11ee-9ae8-99e9eb922ae6.png",
+                  "path": "/cpsprodpb/14ad/live/3889b8d0-8ec7-11ee-9ae8-99e9eb922ae6.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Солнечная система",
+                  "caption": "Шесть планет новой системы идеально подходят для изучения процессов формирования планет и поиска потенциальной жизни",
+                  "copyrightHolder": "BBC",
                   "allowSyndication": true,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/ckdpznddzw7o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/ckdpznddzw7o",
+                "uri": "https://www.bbc.com/russian/articles/cglp32jr884o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cglp32jr884o",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1701170612000,
+                "timestamp": 1701332831000,
                 "type": "link"
               },
               {
-                "name": "В Париже начался суд над шестью подростками по делу об убийстве учителя, обезглавленного уроженцем Чечни",
-                "summary": "Самюель Пати был обезглавлен уроженцем Чечни Абдулаком Анзоровым после того, как во время занятий показал школьникам карикатуру на пророка Мухаммеда.",
+                "name": "Жажда биткоина. Каждая транзакция с этой криптовалютой «выпивает» бассейн воды, считают ученые",
+                "summary": "Производство каждого биткоина обходится в целый бассейн воды, вычислили голландские ученые",
                 "indexImage": {
-                  "id": "131837218",
+                  "id": "131885398",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/a2dd/live/925bffb0-8dd4-11ee-896c-99c0cde8abfb.jpg",
-                  "path": "/cpsprodpb/a2dd/live/925bffb0-8dd4-11ee-896c-99c0cde8abfb.jpg",
-                  "height": 570,
+                  "href": "http://c.files.bbci.co.uk/7594/live/0bc5fa00-8f00-11ee-952c-5f8de97ee99b.png",
+                  "path": "/cpsprodpb/7594/live/0bc5fa00-8f00-11ee-952c-5f8de97ee99b.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Биткоин",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cq5p8ezyrv8o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cq5p8ezyrv8o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701333148000,
+                "type": "link"
+              },
+              {
+                "name": "Генри Киссинджер умер на 101 году жизни",
+                "summary": "Бывший госсекретарь США при президентах Никсоне и Форде, архитектор \"разрядки\" в отношениях с СССР скончался в возрасте 100 лет.",
+                "indexImage": {
+                  "id": "131845588",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/159EA/production/_131845588_1ace41923e74abe61730596e44ef3c70af546208.jpg",
+                  "path": "/cpsprodpb/159EA/production/_131845588_1ace41923e74abe61730596e44ef3c70af546208.jpg",
+                  "height": 591,
+                  "width": 1050,
+                  "altText": "Генри Киссинджер",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cgrpd6pw0z1o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgrpd6pw0z1o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701310553000,
+                "type": "link"
+              },
+              {
+                "name": "Российские источники сообщают о смерти в Украине генерала армии — уже седьмого",
+                "summary": "Сразу несколько российских источников, поддерживающих военное вторжение в Украину, сообщили о гибели заместителя командующего 14-м армейским корпусом генерал-майора Владимира Завадского.",
+                "indexImage": {
+                  "id": "131850829",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/305c/live/eb889db0-8ec3-11ee-9ae8-99e9eb922ae6.jpg",
+                  "path": "/cpsprodpb/305c/live/eb889db0-8ec3-11ee-9ae8-99e9eb922ae6.jpg",
+                  "height": 231,
+                  "width": 411,
+                  "altText": "Владимир Завадский",
+                  "copyrightHolder": "mil.ru",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cg6p0k7rv7wo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cg6p0k7rv7wo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701268620000,
+                "type": "link"
+              },
+              {
+                "name": "Завещание под подушкой. Как дети Ареты Франклин поделили ее наследство",
+                "summary": "Арета Франклин оставила два завещания: ее дети спорили о том, какое из них следует считать подлинным",
+                "indexImage": {
+                  "id": "131864958",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3473/live/9bd627c0-8ecc-11ee-8176-b736c9fbb097.jpg",
+                  "path": "/cpsprodpb/3473/live/9bd627c0-8ecc-11ee-8176-b736c9fbb097.jpg",
+                  "height": 571,
                   "width": 1014,
-                  "altText": "Фотография с изображением Самюел Пати",
-                  "caption": "Самюель Пати был обезглавлен уроженцем Чечни Абдулаком Анзоровым",
-                  "copyrightHolder": " ALAIN JOCARD/AFP",
+                  "altText": "Арета Франклин",
+                  "copyrightHolder": " Soul Brother/WWD/Penske Media",
                   "allowSyndication": false,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/ce7pwe0jz16o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/ce7pwe0jz16o",
+                "uri": "https://www.bbc.com/russian/articles/cg3p0n30y1no",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cg3p0n30y1no",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1701169171000,
+                "timestamp": 1701278823000,
                 "type": "link"
+              },
+              {
+                "name": "Голод, грязь и страх: освобожденные израильские заложники рассказали, в каких условиях их держали в Газе",
+                "summary": "Истории, рассказанные заложниками, освобожденными из сектора Газа, описывают, как неделю за неделей они проводили в темноте, грязи и антисанитарии, и каждая прожитая минута была наполнена неизвестностью и страхом.",
+                "indexImage": {
+                  "id": "131865156",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/ab50/live/9dc23b20-8ede-11ee-b877-43f0f8421684.png",
+                  "path": "/cpsprodpb/ab50/live/9dc23b20-8ede-11ee-b877-43f0f8421684.png",
+                  "height": 567,
+                  "width": 1008,
+                  "altText": "Мальчик с матерью у автобуса",
+                  "caption": "Встреча 12-летнего Эйтана Яхоломи с матерью после освобождения",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c8435yv5e0wo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c8435yv5e0wo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701279983000,
+                "type": "link"
+              },
+              {
+                "name": "«Некоторые наши политики думают, что могут уничтожить Зеленского». Economist рассказывает о конфликте в руководстве Украины",
+                "summary": "Журнал Economist выпустил новую статью о внутреннем противостоянии между политическим и военным руководством Украины, которое, по его оценке, стало только нарастать на фоне зашедшего в тупик контрнаступления.",
+                "indexImage": {
+                  "id": "131846024",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/A450/production/_131846024_1fbf7778-61e9-424d-bb34-f243ec70cf2f.jpg",
+                  "path": "/cpsprodpb/A450/production/_131846024_1fbf7778-61e9-424d-bb34-f243ec70cf2f.jpg",
+                  "height": 574,
+                  "width": 1022,
+                  "altText": "Владимир Зеленский",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c84357gqle3o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c84357gqle3o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701257627000,
+                "type": "link"
+              },
+              {
+                "name": "В зоопарке Манилы умерла 40-летняя слониха Мали. Ее называли самым печальным слоном в мире",
+                "summary": "В зоопарке Манилы умерла слониха Мали, которую требовали отвезти в заповедник многие знаменитости и защитники прав животных. Но власти говорили, что в дикой природе она не выживет",
+                "indexImage": {
+                  "id": "131882764",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/f507/live/138398f0-8ecf-11ee-8176-b736c9fbb097.jpg",
+                  "path": "/cpsprodpb/f507/live/138398f0-8ecf-11ee-8176-b736c9fbb097.jpg",
+                  "height": 572,
+                  "width": 1017,
+                  "altText": "Голова слонихи Мали",
+                  "caption": "Во время пандемии Мали развлекала привезенных на вакцинацию детей",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cd1pjv7plg8o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cd1pjv7plg8o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701283061000,
+                "type": "link"
+              },
+              {
+                "name": "Против Криштиану Роналду подали иск на $1 млрд за рекламу криптобиржи Binance",
+                "summary": "Группа инвесторов подала иск против футболиста Криштиану Роналду с требованием выплатить более 1 млрд долларов в качестве компенсации за рекламу крупнейшей криптобиржи мира Binance.",
+                "indexImage": {
+                  "id": "131865198",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/da62/live/7bcb4d80-8eda-11ee-833d-0f8d294ddc97.png",
+                  "path": "/cpsprodpb/da62/live/7bcb4d80-8eda-11ee-833d-0f8d294ddc97.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Криштиану Роналду",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c727567erl5o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c727567erl5o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701280393000,
+                "type": "link"
+              },
+              {
+                "name": "В Кыргызстане депутаты предложили поменять форму лучей солнца. На флаге страны",
+                "summary": "Депутаты предлагают изменить форму лучей солнца на флаге Кыргызстана, чтобы его «не путали с подсолнухом».",
+                "indexImage": {
+                  "id": "131849458",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/e019/live/e4fd71a0-8eaf-11ee-961d-9bfb5f533399.jpg",
+                  "path": "/cpsprodpb/e019/live/e4fd71a0-8eaf-11ee-961d-9bfb5f533399.jpg",
+                  "height": 432,
+                  "width": 768,
+                  "altText": "Флаг Кыргызстана",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cndp8y8py1zo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cndp8y8py1zo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701261465000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Главное", "summary": "" },
+            "semanticGroupName": "Top story"
+          },
+          {
+            "type": "section-digest",
+            "title": "Ukraine war special",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "«Дети растут без отцов». Митинги в Киеве за финансирование ВСУ и демобилизацию"
+                },
+                "locators": {
+                  "assetUri": "/russian/media-67572258",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:87a12de0-9aec-417c-9b70-ed7755b5d437",
+                  "assetId": "67572258",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/media-67572258",
+                  "curie": "http://www.bbc.co.uk/asset/87a12de0-9aec-417c-9b70-ed7755b5d437"
+                },
+                "summary": "Последние недели в Киеве проходят митинги. Одни – за увеличение финансирования ВСУ, другие – за объявление сроков демобилизации.",
+                "timestamp": 1701278564000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p0gwppnc",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "«Дети растут без отцов». Митинги в Киеве",
+                  "synopses": {
+                    "short": "«Дети растут без отцов». Митинги в Киеве",
+                    "long": "Последние недели в Киеве проходят митинги. Одни – за увеличение финансирования ВСУ, другие – за объявление сроков демобилизации. Многие, ушедшие на войну добровольцами в первые дни войны, с тех пор почти не были дома.",
+                    "medium": "Последние недели в Киеве проходят митинги. Одни – за увеличение финансирования ВСУ, другие – за объявление сроков демобилизации."
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gwpv6n.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "«Дети растут без отцов». Митинги в Киеве",
+                  "versions": [
+                    {
+                      "versionId": "p0gwppnh",
+                      "types": ["Original"],
+                      "duration": 141,
+                      "durationISO8601": "PT2M21S",
+                      "warnings": {},
+                      "availableTerritories": { "uk": true, "nonUk": true },
+                      "availableFrom": 1701274718000
+                    }
+                  ],
+                  "imageCopyright": "Reuters",
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "131859218",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/13D8F/production/_131859218_p0gwpv6n.jpg",
+                  "path": "/cpsprodpb/13D8F/production/_131859218_p0gwpv6n.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Паспортная фотография украинского военного",
+                  "caption": "Многие украинцы, ушедшие на войну добровольцами в первые дни войны, с тех пор почти не были дома.",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:russian/media-67572258",
+                "type": "cps"
               },
               {
                 "name": "Безуглая против Залужного. Что означает атака депутата на главкома ВСУ",
@@ -277,6 +552,29 @@
                 "type": "link"
               },
               {
+                "name": "Украина заявила об отравлении жены начальника ГУР Марианны Будановой. Что известно",
+                "summary": "Главное управление разведки Министерства обороны Украины (ГУР) подтвердило сообщения украинских СМИ об отравлении жены руководителя этой спецслужбы Кирилла Буданова.",
+                "indexImage": {
+                  "id": "131840283",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/953C/production/_131840283_whatsubject.jpg",
+                  "path": "/cpsprodpb/953C/production/_131840283_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Марианна Буданова и Кирилл Буданов",
+                  "caption": "Марианна Буданова и Кирилл Буданов во время церемонии в Киеве (фото января 2023 года)",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cmlp8p9ggpko",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cmlp8p9ggpko",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701187895000,
+                "type": "link"
+              },
+              {
                 "name": "«Ракеты из стиральных машин и самокатов». Правда и мифы о новом русском оружии",
                 "summary": "Западные санкции должны были лишить российский военно-промышленный комплекс доступа к высоким технологиям. Но не вышло, как показывает анализ трофеев, взятых украинскими военными.",
                 "indexImage": {
@@ -297,220 +595,8 @@
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
                 "timestamp": 1701068788000,
-                "relatedItems": [
-                  {
-                    "name": "Война России с Украиной: в чем главные проблемы двух армий и чего ждать зимой",
-                    "uri": "https://www.bbc.com/russian/articles/c88d00q9zzdo",
-                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c88d00q9zzdo",
-                    "timestamp": 1700888474000,
-                    "type": "link"
-                  }
-                ],
                 "type": "link"
               },
-              {
-                "name": "Скифское золото из музеев Крыма вернулось в Украину",
-                "summary": "565 предметов, включая скифские и сарматские украшения и скульптуры, привезены в Киев из Нидерландов.",
-                "indexImage": {
-                  "id": "131833889",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/9b27/live/092189b0-8d5a-11ee-8a11-e7668bde3c5a.jpg",
-                  "path": "/cpsprodpb/9b27/live/092189b0-8d5a-11ee-8a11-e7668bde3c5a.jpg",
-                  "height": 546,
-                  "width": 971,
-                  "altText": "Шлем",
-                  "copyrightHolder": "ALLARD PIERSON MUSEUM, AMSTERDAM",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c8v854pmm9go",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c8v854pmm9go",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701113249000,
-                "type": "link"
-              },
-              {
-                "name": "В штате Вермонт ранены трое студентов-палестинцев, подозреваемый задержан",
-                "summary": "В городе Берлингтон, штата Вермонт задержан подозреваемый в нападении на трех молодых палестинцев. Полиция сообщила, что 48-летний Джейсон Итон был арестован в воскресенье недалеко от места преступления.",
-                "indexImage": {
-                  "id": "131833002",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/4E41/production/_131833002_whatsubject.jpg",
-                  "path": "/cpsprodpb/4E41/production/_131833002_whatsubject.jpg",
-                  "height": 548,
-                  "width": 974,
-                  "altText": "Трое палестинцев, раненых в штате Вермонт",
-                  "copyrightHolder": "HUSAM ZOMLOT/X",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/clmpvx57d90o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/clmpvx57d90o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701104136000,
-                "type": "link"
-              },
-              {
-                "name": "Шторм на юге России и в Украине. Фото",
-                "summary": "В выходные на южные регионы России и восток Украины обрушился шторм. Полмиллиона жителей аннексированного Россией Крыма остались без электричества.",
-                "indexImage": {
-                  "id": "131827351",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/8162/live/7e30eb50-8cf7-11ee-ac45-8f972b8fe297.jpg",
-                  "path": "/cpsprodpb/8162/live/7e30eb50-8cf7-11ee-ac45-8f972b8fe297.jpg",
-                  "height": 1125,
-                  "width": 2000,
-                  "altText": "Сочи",
-                  "caption": "Высота волн в Сочи достигает четырех метров, сообщают местные власти",
-                  "copyrightHolder": "Dmitry Feoktistov/TASS",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/crgpngjdyq2o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/crgpngjdyq2o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701076068000,
-                "type": "link"
-              },
-              {
-                "name": "Журналистку Александру Баязитову приговорили к пяти годам по делу о вымогательстве",
-                "summary": "Басманный суд Москвы приговорил администратора телеграм-канала «Адские бабки» Александру Баязитову к пяти годам колонии по делу о вымогательстве у вице-президента Промсвязьбанка Александра Ушакова.",
-                "indexImage": {
-                  "id": "131828013",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/8855/live/14bf3d70-8ac2-11ee-908f-6186ed54b310.jpg",
-                  "path": "/cpsprodpb/8855/live/14bf3d70-8ac2-11ee-908f-6186ed54b310.jpg",
-                  "height": 1125,
-                  "width": 2000,
-                  "altText": "Баязитова",
-                  "copyrightHolder": "Sergei Savostyanov/TASS",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cz72812r5d0o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cz72812r5d0o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701080845000,
-                "type": "link"
-              },
-              {
-                "name": "Букеровскую премию 2023 получил ирландский писатель Пол Линч за роман «Песнь пророка»",
-                "summary": "Букеровскую премию 2023 года получил ирландский писатель Пол Линч за роман-антиутопию «Песнь пророка»",
-                "indexImage": {
-                  "id": "131831896",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/110B5/production/_131831896_mediaitem131831895.jpg",
-                  "path": "/cpsprodpb/110B5/production/_131831896_mediaitem131831895.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Линч",
-                  "copyrightHolder": "Getty Images",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c6p6058p30no",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c6p6058p30no",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701092011000,
-                "type": "link"
-              },
-              {
-                "name": "11 невероятных фактов о времени, не укладывающихся в голове",
-                "summary": "Мы собрали 11 абсолютно научных (и совсем не фантастических), но оттого ничуть не менее - а пожалуй, даже более ошеломляющих фактов о времени.",
-                "indexImage": {
-                  "id": "131825865",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/DE14/production/_131825865_66f2e0f98f628764d9e6c7f6affdd9d12a0f17f5.jpg",
-                  "path": "/cpsprodpb/DE14/production/_131825865_66f2e0f98f628764d9e6c7f6affdd9d12a0f17f5.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "часы",
-                  "copyrightHolder": "CHRISTOPHER NEUNDORF/EPA-EFE/REX/Shutterstock",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c51elrn88mno",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c51elrn88mno",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701004304000,
-                "type": "link"
-              }
-            ],
-            "strapline": { "name": "Главное", "summary": "" },
-            "semanticGroupName": "Top story"
-          },
-          {
-            "type": "special-reports",
-            "title": "Подкасты",
-            "items": [
-              {
-                "name": "Когда Финляндия полностью закроет границу с Россией",
-                "summary": "Москва создает миграционный кризис для давления на ЕС?",
-                "indexImage": {
-                  "id": "131829505",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/C5A0/production/_131829505_p0gw3wjt.jpg",
-                  "path": "/cpsprodpb/C5A0/production/_131829505_p0gw3wjt.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Беженцы на границе России и Финляндии",
-                  "caption": "Беженцы на границе России и Финляндии",
-                  "copyrightHolder": "Getty Images",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/russian/bbc_russian_radio/programmes/p076qqzl",
-                "contentType": "Podcast",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701087565000,
-                "type": "link"
-              },
-              {
-                "name": "Как Израиль и ХАМАС достигли перемирия?",
-                "summary": "И есть ли шанс, что война не возобновится?",
-                "indexImage": {
-                  "id": "131813206",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/EB47/production/_131813206_p0gvqcx1.jpg",
-                  "path": "/cpsprodpb/EB47/production/_131813206_p0gvqcx1.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Мирное население Газы",
-                  "copyrightHolder": "Getty Images",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl/p0gvqcv3",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/podcasts/p076qqzl/p0gvqcv3",
-                "contentType": "Podcast",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700839611000,
-                "type": "link"
-              }
-            ],
-            "strapline": {
-              "name": "Подкасты",
-              "type": "LINK",
-              "links": {
-                "highweb": "https://www.bbc.com/russian/media-47937790",
-                "desktop": "https://www.bbc.com/russian/media-47937790",
-                "mobile": "https://www.bbc.com/russian/media-47937790",
-                "enhancedmobile": "https://www.bbc.com/russian/media-47937790"
-              }
-            },
-            "semanticGroupName": "Special reports 1"
-          },
-          {
-            "type": "feature-main",
-            "title": "Не пропустите",
-            "items": [
               {
                 "name": "Война России с Украиной: в чем главные проблемы двух армий и чего ждать зимой",
                 "summary": "Итоги летне-осенней кампании показывают, что ни Украина, ни Россия не могут накопить достаточно сил, чтобы создать на фронте ударный кулак, многократно превосходящий силы противника. В чем причины такого положения, при каких условиях одна из сторон сможет переломить ситуацию и ожидать ли этого уже зимой?",
@@ -531,29 +617,6 @@
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
                 "timestamp": 1700888474000,
-                "type": "link"
-              },
-              {
-                "name": "«Антифранцузское переписывание истории»: почему историки ругают фильм Ридли Скотта «Наполеон»",
-                "summary": "Фильм Ридли Скотта «Наполеон» вызвал огонь критики за передергивание исторических событий, игнорирование общественных заслуг императора Франции, а также за то, что режиссер в одном из интервью сравнил национального героя Франции со Сталиным и Гитлером.",
-                "indexImage": {
-                  "id": "131817381",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/735e/live/1b9b27e0-8931-11ee-833d-0f8d294ddc97.jpg",
-                  "path": "/cpsprodpb/735e/live/1b9b27e0-8931-11ee-833d-0f8d294ddc97.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Хоакин Феникс в роли Наполеона",
-                  "caption": "Хоакин Феникс в роли Наполеона. У Ридли Скотта он уже играл императора, правда римского: Коммода в фильме «Гладиатор»",
-                  "copyrightHolder": "SONY PICTURES/APPLE ORIGINAL FILMS",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cyj2p7ly928o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cyj2p7ly928o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700906137000,
                 "type": "link"
               },
               {
@@ -580,27 +643,6 @@
                 "type": "link"
               },
               {
-                "name": "Подпишитесь на нашу рассылку «Контекст»!",
-                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. \"Контекст\" поможет вам разобраться в происходящем.",
-                "indexImage": {
-                  "id": "125953051",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
-                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Логотип \"Контекст\"",
-                  "copyrightHolder": "BBC",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
-                "contentType": "Guide",
-                "assetTypeCode": "PRO",
-                "timestamp": 1658144127000,
-                "type": "link"
-              },
-              {
                 "name": "Пропасть между Тувой и Москвой: что известно о потерях разных российских регионов в Украине",
                 "summary": "Для жителей Тувы и Бурятии вероятность погибнуть на войне в Украине до сих пор в 30-40 раз выше, чем для москвичей. К такому выводу можно прийти, если соотнести последние данные о погибших россиянах, собранные Би-би-си, «Медиазоной» (признана властями РФ «иноагентом») и командой волонтеров, с плотностью мужского населения в регионах.",
                 "indexImage": {
@@ -621,309 +663,228 @@
                 "assetTypeCode": "PRO",
                 "timestamp": 1700809545000,
                 "type": "link"
-              },
-              {
-                "name": "Противник ислама, иммиграции и помощи Украине. Кто такой Герт Вилдерс?",
-                "summary": "",
-                "indexImage": {
-                  "id": "131806146",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/FAA0/production/_131806146_mediaitem131806145.jpg",
-                  "path": "/cpsprodpb/FAA0/production/_131806146_mediaitem131806145.jpg",
-                  "height": 432,
-                  "width": 768,
-                  "altText": "Вилдерс",
-                  "copyrightHolder": "EPA",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cnlp9nlxq79o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cnlp9nlxq79o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700765763000,
-                "type": "link"
-              },
-              {
-                "name": "Революция роз: как смотрят на нее в Грузии 20 лет спустя",
-                "summary": "Ровно 20 лет назад, 23 ноября 2003 года, после массовых протестов президент Грузии Эдуард Шеварднадзе ушел в отставку. Это означало окончательную победу оппозиции во главе с Михаилом Саакашвили. Сегодня отношение к Революции роз в Грузии не столь однозначное, но большинство людей в ней не разочаровалось.",
-                "indexImage": {
-                  "id": "131797414",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/A207/production/_131797414_d7ad07f9-7c50-4e5e-9504-aa715028fc68.jpg",
-                  "path": "/cpsprodpb/A207/production/_131797414_d7ad07f9-7c50-4e5e-9504-aa715028fc68.jpg",
-                  "height": 548,
-                  "width": 975,
-                  "altText": "Женщина с розой улыбается спецназовцу. 22 ноября, 2003 год. Тбилиси",
-                  "caption": "Первая на постсоветском пространстве мирная революция кардинально и в рекордные сроки изменила Грузию",
-                  "copyrightHolder": "SERGEY SUPINSKI / AFP",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c0329d1y4d1o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0329d1y4d1o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700712895000,
-                "type": "link"
               }
             ],
             "strapline": {
-              "name": "Не пропустите",
+              "name": "Война России против Украины",
               "type": "LINK",
               "links": {
-                "highweb": "https://www.bbc.com/russian/features-50983593",
-                "desktop": "https://www.bbc.com/russian/features-50983593",
-                "mobile": "https://www.bbc.com/russian/features-50983593",
-                "enhancedmobile": "https://www.bbc.com/russian/features-50983593"
-              }
-            },
-            "semanticGroupName": "Features"
-          },
-          {
-            "type": "section-digest",
-            "title": "Ukraine war special",
-            "items": [
-              {
-                "name": "Освобожденные боевиками ХАМАС заложники — кто они?",
-                "summary": "Первая часть израильских заложников из сектора Газа освобождена после наступления паузы в войне Израиля против ХАМАС. Все они 7 октября были увезены в плен из кибуца Нир-Оз. Что еще известно об освобожденных?",
-                "indexImage": {
-                  "id": "131818655",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/D981/production/_131818655_f2680a84-89c7-40d1-ab27-ec23493e9e02.jpg",
-                  "path": "/cpsprodpb/D981/production/_131818655_f2680a84-89c7-40d1-ab27-ec23493e9e02.jpg",
-                  "height": 532,
-                  "width": 946,
-                  "altText": "Даниэле Алони и ее шестилетняя дочь Эмилия были освобождены в рамках сделки",
-                  "caption": "Даниэль Алони и ее шестилетняя дочь Эмилия были освобождены в рамках сделки",
-                  "copyrightHolder": "FAMILY HANDOUT",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cx91prwy42ko",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cx91prwy42ko",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700885323000,
-                "type": "link"
-              },
-              {
-                "name": "Что известно о палестинских заключенных, освобожденных в обмен на израильских заложников",
-                "summary": "В пятницу вечером из израильских тюрем были освобождены 39 палестинских заключенных в обмен на 13 израильских заложников, которых боевики ХАМАС взяли в плен после нападения на Израиль 7 октября.",
-                "indexImage": {
-                  "id": "131817769",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/8f74/live/dcf97ef0-8b7f-11ee-835e-0ff56f3659b0.jpg",
-                  "path": "/cpsprodpb/8f74/live/dcf97ef0-8b7f-11ee-835e-0ff56f3659b0.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Автобус везет палестинских заключенных, выпущенных Израилем по обмену",
-                  "copyrightHolder": "Reuters",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c6pdlmndjq8o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c6pdlmndjq8o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700911374000,
-                "type": "link"
-              },
-              {
-                "name": "Работа разведки и звонки Байдена: как Израилю и ХАМАС удалось договориться об освобождении заложников",
-                "summary": "По словам высокопоставленного представителя администрации США, для этого потребовался «крайне сложный пятинедельный процесс», в котором принимали участие четыре страны и для которого потребовалась координация действий разведслужб и звонки лидеров государств.",
-                "indexImage": {
-                  "id": "131803667",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/43bb/live/d58eac20-8a09-11ee-833d-0f8d294ddc97.png",
-                  "path": "/cpsprodpb/43bb/live/d58eac20-8a09-11ee-833d-0f8d294ddc97.png",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Люди с портретами заложников",
-                  "caption": "Семьи некоторых заложников выступают против соглашения о частичном обмене и требуют возвращения всех захваченных сразу",
-                  "copyrightHolder": "Reuters",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c4n9wyq9xq2o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4n9wyq9xq2o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700753765000,
-                "type": "link"
-              },
-              {
-                "name": "Израиль и ХАМАС договорились об освобождении 50 заложников в обмен на перемирие в Газе. Как и когда это будет работать",
-                "summary": "Правительство Израиля одобрило соглашение с группировкой ХАМАС об освобождении 50 захваченных израильских заложников в обмен на четырехдневное прекращение огня в секторе Газа. В течение этого времени в анклав должна поступить гуманитарная помощь и топливо.",
-                "indexImage": {
-                  "id": "131784405",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/C510/production/_131784405_hostagedemo-index-epa.jpg",
-                  "path": "/cpsprodpb/C510/production/_131784405_hostagedemo-index-epa.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "People light candles at Tel Aviv museum",
-                  "copyrightHolder": "EPA",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/ck7pzlj1lkyo",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/ck7pzlj1lkyo",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700674633000,
-                "type": "link"
-              },
-              {
-                "name": "Недоношенные младенцы из больницы «Аш-Шифа» в Газе: воссоединение с родителями",
-                "summary": "Несколько младенцев из больницы «Аш-Шифа» в секторе Газа, фотографии которых, лежащих в ряд на зеленой больничной простыне, обошли весь мир, воссоединились со своими родителями.",
-                "indexImage": {
-                  "id": "131795654",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/e4ec/live/5671d860-894e-11ee-952c-5f8de97ee99b.jpg",
-                  "path": "/cpsprodpb/e4ec/live/5671d860-894e-11ee-952c-5f8de97ee99b.jpg",
-                  "height": 450,
-                  "width": 800,
-                  "altText": "Недоношенные младенцы в секторе Газа",
-                  "copyrightHolder": "AFP",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/c3g2pej33xko",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3g2pej33xko",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700676595000,
-                "type": "link"
-              },
-              {
-                "name": "«Линии разлома трещат по швам». Почему война Израиля с ХАМАС не похожа на прошлые войны",
-                "summary": "Международный редактор Би-би-си Джереми Боуэн размышляет о том, чем нынешняя война Израиля с ХАМАС в секторе Газа отличается от предыдущих конфликтов на Ближнем Востоке.",
-                "indexImage": {
-                  "id": "131775541",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/38DD/production/_131775541_whatsubject.jpg",
-                  "path": "/cpsprodpb/38DD/production/_131775541_whatsubject.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Палестинцы ищут пострадавших",
-                  "caption": "Палестинцы ищут пострадавших на месте израильского удара в южной части сектора Газа",
-                  "copyrightHolder": "Reuters",
-                  "allowSyndication": true,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cl4p1z7m3g2o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cl4p1z7m3g2o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1699973106000,
-                "type": "link"
-              }
-            ],
-            "strapline": {
-              "name": "Нападение ХАМАС на Израиль",
-              "type": "LINK",
-              "links": {
-                "highweb": "https://www.bbc.com/russian/topics/cxed0l87x74t",
-                "desktop": "https://www.bbc.com/russian/topics/cxed0l87x74t",
-                "mobile": "https://www.bbc.com/russian/topics/cxed0l87x74t",
-                "enhancedmobile": "https://www.bbc.com/russian/topics/cxed0l87x74t"
+                "highweb": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "desktop": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "mobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "enhancedmobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt"
               }
             },
             "semanticGroupName": "Verticals"
+          },
+          {
+            "type": "special-reports",
+            "title": "Подкасты",
+            "items": [
+              {
+                "name": "Как украинские беженки попадают в сексуальное рабство",
+                "summary": "И как не попасть в руки торговцев людьми",
+                "indexImage": {
+                  "id": "131851541",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/38B3/production/_131851541_p0gwp1jy.jpg",
+                  "path": "/cpsprodpb/38B3/production/_131851541_p0gwp1jy.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Как украинские беженки попадают в сексуальное рабство",
+                  "caption": "Как украинские беженки попадают в сексуальное рабство",
+                  "copyrightHolder": "Getty Images/bodnarchuk",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/russian/bbc_russian_radio/programmes/p076qqzl",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701272279000,
+                "type": "link"
+              },
+              {
+                "name": "Как Украина выиграла у России битву за «скифское золото»",
+                "summary": "Как спор о музейной коллекции из Крыма связан с вопросом национальной идентичности Украины",
+                "indexImage": {
+                  "id": "131840883",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/9794/production/_131840883_p0gwdypf.jpg",
+                  "path": "/cpsprodpb/9794/production/_131840883_p0gwdypf.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Gold",
+                  "caption": "Gold",
+                  "copyrightHolder": "TASS",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl/p0gwdymw",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/podcasts/p076qqzl/p0gwdymw",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701185392000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Подкасты",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/media-47937790",
+                "desktop": "https://www.bbc.com/russian/media-47937790",
+                "mobile": "https://www.bbc.com/russian/media-47937790",
+                "enhancedmobile": "https://www.bbc.com/russian/media-47937790"
+              }
+            },
+            "semanticGroupName": "Special reports 1"
           },
           {
             "type": "also-in-news",
             "title": "События",
             "items": [
               {
-                "name": "ВСУ заявили о рекордной атаке дронов на Украину. Большая часть из них пришлась на Киев и область",
-                "summary": "Как утверждают Воздушные силы ВСУ, в ночь на субботу 25 ноября российские военные для массированного налета на Украину использовали около 75 ударных беспилотника типа Shahed-131/136. Силы ПВО уничтожили 71 дрон. Российская сторона это заявление пока не комментировала.",
+                "name": "Власти США вслед за Канадой подозревают Индию в организации убийства сикхского сепаратиста",
+                "summary": "Американские власти предъявили обвинение гражданину Индии в покушении на убийство американца индийского происхождения, который выступал за создание независимого государства сикхов.",
                 "indexImage": {
-                  "id": "131810628",
+                  "id": "131865145",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/142A9/production/_131810628_whatsubject.jpg",
-                  "path": "/cpsprodpb/142A9/production/_131810628_whatsubject.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "последствия атаки дронов на Киев",
-                  "copyrightHolder": "Kostya Liberov/Libkos/Getty Images",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cgxpz5yvdlyo",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgxpz5yvdlyo",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1700905730000,
-                "type": "link"
-              },
-              {
-                "name": "Очередной пропалестинский марш в Лондоне, 15 человек задержаны. Фото",
-                "summary": "Пропалестинские организации провели в Лондоне очередное шествие – впервые после масштабной акции, устроенной в День перемирия 11 ноября. Активисты осуждали Израиль за войну против ХАМАС и требовали полного прекращения огня в секторе Газа.",
-                "indexImage": {
-                  "id": "131824138",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/144C6/production/_131824138_whatsubject.jpg",
-                  "path": "/cpsprodpb/144C6/production/_131824138_whatsubject.jpg",
-                  "height": 552,
-                  "width": 982,
-                  "altText": "Протестующие",
-                  "caption": "Активисты вышли на улицы с традиционным символом палестинцев - арбузом",
-                  "copyrightHolder": "photo by Kristian Buus/In Pictures",
-                  "allowSyndication": false,
-                  "type": "image"
-                },
-                "uri": "https://www.bbc.com/russian/articles/cv2zpvz3x84o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv2zpvz3x84o",
-                "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1701001120000,
-                "type": "link"
-              },
-              {
-                "name": "Новая Зеландия отменит пожизненный запрет на курение для молодых людей, чтобы пополнить бюджет",
-                "summary": "Правительство Новой Зеландии намерено отменить самую масштабную в мире кампанию по запрету курения, чтобы пополнить государственную казну.",
-                "indexImage": {
-                  "id": "131832031",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/32DF/production/_131832031_mediaitem131831709.jpg",
-                  "path": "/cpsprodpb/32DF/production/_131832031_mediaitem131831709.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Сигарета",
-                  "copyrightHolder": "PA Media",
+                  "href": "http://c.files.bbci.co.uk/f532/live/7b452300-8ed9-11ee-ab21-8fd8e42dfa28.jpg",
+                  "path": "/cpsprodpb/f532/live/7b452300-8ed9-11ee-ab21-8fd8e42dfa28.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Флаги США и Индии",
+                  "copyrightHolder": "AFP",
                   "allowSyndication": true,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/c4n4jl9ez9vo",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4n4jl9ez9vo",
+                "uri": "https://www.bbc.com/russian/articles/cn3p9z9x18zo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cn3p9z9x18zo",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1701093104000,
+                "timestamp": 1701279903000,
                 "type": "link"
               },
               {
-                "name": "В Лондоне прошла многотысячная демонстрация против антисемитизма",
-                "summary": "В Лондоне прошла демонстрация против антисемитизма. Собравшиеся требовали нулевой терпимости к его проявлениям",
+                "name": "Нигер отменил закон по борьбе с нелегальной миграцией. В Европе опасаются новой волны мигрантов",
+                "summary": "Военная хунта Нигера отменила закон по борьбе с нелегальной миграцией, предусматривавший уголовную ответственность за перевозку мигрантов через территорию страны. Закон был введен в 2015 году при поддержке ЕС, чтобы помочь сократить поток миграции из Африки в Европу.",
                 "indexImage": {
-                  "id": "131824702",
+                  "id": "131849228",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/23a7/live/51c4a3f0-8c83-11ee-8415-9d71df393dec.jpg",
-                  "path": "/cpsprodpb/23a7/live/51c4a3f0-8c83-11ee-8415-9d71df393dec.jpg",
-                  "height": 2978,
-                  "width": 5294,
-                  "altText": "Демонстранты с израильским флагом",
-                  "caption": "Собравшиеся несли флаги Израиля и Соединенного Королевства",
-                  "copyrightHolder": "Reuters",
+                  "href": "http://c.files.bbci.co.uk/a6ef/live/c816b130-8eb1-11ee-961d-9bfb5f533399.jpg",
+                  "path": "/cpsprodpb/a6ef/live/c816b130-8eb1-11ee-961d-9bfb5f533399.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Люди на грузовике",
+                  "caption": "До принятия закона десятки тысяч людей ежегодно путешествовали через Нигер в Ливию в надежде оттуда добраться до Европы (архивное фото 2004 года)",
+                  "copyrightHolder": "Getty Images",
                   "allowSyndication": true,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/cedpeeg3nylo",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cedpeeg3nylo",
+                "uri": "https://www.bbc.com/russian/articles/cyx218ylx70o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cyx218ylx70o",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1701021410000,
+                "timestamp": 1701260476000,
+                "type": "link"
+              },
+              {
+                "name": "Авиакомпания Virgin Atlantic выполнила первый дальний рейс на экотопливе, но экологи недовольны",
+                "summary": "Boeing 787 Dreamliner британской авиакомпании Virgin Atlantic во вторник совершил первый трансатлантический перелет из Лондона в Нью-Йорк на экологичном авиационном топливе (SAF).",
+                "indexImage": {
+                  "id": "131845582",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6F8A/production/_131845582_whatsubject.jpg",
+                  "path": "/cpsprodpb/6F8A/production/_131845582_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Virgin Atlantic",
+                  "copyrightHolder": "EPA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c1w295d39x2o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c1w295d39x2o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701230508000,
+                "type": "link"
+              },
+              {
+                "name": "В Гонконге завершается суд над демократическими активистами. 16-ти грозит пожизненный срок",
+                "summary": "Всего по делу проходят 47 оппозиционных активистов – среди них журналисты, академики и политики, большинство из которых находятся за решеткой с 2021 года.",
+                "indexImage": {
+                  "id": "131850187",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/fe38/live/674537e0-8ead-11ee-8a94-b765751d19fc.jpg",
+                  "path": "/cpsprodpb/fe38/live/674537e0-8ead-11ee-8a94-b765751d19fc.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Суд в Гонконке",
+                  "copyrightHolder": " Peter PARKS / AFP",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/ce7pj577878o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/ce7pj577878o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701264882000,
+                "type": "link"
+              },
+              {
+                "name": "Риши Сунак отказался встречаться премьером Греции, просящей вернуть скульптуры Парфенона",
+                "summary": "Британский премьер отменил встречу со своим греческим коллегой, потому что тот призвал к возвращению скульптур Парфенона в интервью Би-би-си",
+                "indexImage": {
+                  "id": "131841521",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/f035/live/80554680-8dea-11ee-835e-0ff56f3659b0.jpg",
+                  "path": "/cpsprodpb/f035/live/80554680-8dea-11ee-835e-0ff56f3659b0.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Туристы в Британском музее",
+                  "caption": "В Британском музее скульптуры Парфенона выставлены в специальном зале",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c3g23393k60o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3g23393k60o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701187520000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "События" },
+            "semanticGroupName": "Also in the news"
+          },
+          {
+            "type": "feature-main",
+            "title": "Не пропустите",
+            "items": [
+              {
+                "name": "Как ХАМАС готовился к нападению на Израиль 7 октября",
+                "summary": "Как показывает проведенный Би-би-си анализ, вместе с ХАМАС в нападении 7 октября участвовали еще пять палестинских группировок. С 2020 года они проводили совместные учения, в Израиле об этом, по-видимому, знали, однако нападение 7 октября стало для израильтян полной неожиданностью.",
+                "indexImage": {
+                  "id": "131843509",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/06d0/live/5aceb9f0-8e1c-11ee-bdfd-67ee151f61c2.png",
+                  "path": "/cpsprodpb/06d0/live/5aceb9f0-8e1c-11ee-bdfd-67ee151f61c2.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Боевики",
+                  "caption": "Палестинские группировки проводили совместные учения с 2020 года",
+                  "copyrightHolder": "TELEGRAM",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cjjpzzv7969o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cjjpzzv7969o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1701198970000,
                 "type": "link"
               },
               {
@@ -988,75 +949,106 @@
                 "type": "cps"
               },
               {
-                "name": "На финской границе — глухой занавес с маленьким окошком. Как это произошло и что будет дальше",
-                "summary": "За неделю Финляндия почти полностью перекрыла границу с Россией длиной без малого в полторы тысячи километров. Для сообщения оставлен самый северный пограничный пункт — в трех часах езды от Мурманска по безлюдной тундре. Причиной закрытия остальных семи погранпунктов в Хельсинки называют аномальный наплыв искателей убежища из стран Ближнего Востока и Африки. Финляндия утверждает, что российские власти контролируют поток беженцев и направляют их в сторону границы намеренно.",
+                "name": "Подпишитесь на нашу рассылку «Контекст»!",
+                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. \"Контекст\" поможет вам разобраться в происходящем.",
                 "indexImage": {
-                  "id": "131832029",
+                  "id": "125953051",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/16777/production/_131832029_whatsubject.jpg",
-                  "path": "/cpsprodpb/16777/production/_131832029_whatsubject.jpg",
+                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
+                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
                   "height": 549,
                   "width": 976,
-                  "altText": "Мигранты на погранпереходе Салла в Финляндии",
-                  "copyrightHolder": "Reuters",
+                  "altText": "Логотип \"Контекст\"",
+                  "copyrightHolder": "BBC",
                   "allowSyndication": true,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/cj5p12e4j89o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cj5p12e4j89o",
-                "contentType": "Text",
+                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
+                "contentType": "Guide",
                 "assetTypeCode": "PRO",
-                "timestamp": 1700817153000,
+                "timestamp": 1658144127000,
                 "type": "link"
               },
               {
-                "name": "Горящие автомобили и разграбленные магазины: что произошло в Дублине",
-                "summary": "",
+                "name": "Неизбежные микрокредиты. Почему россияне все активнее берут займы до зарплаты?",
+                "summary": "В России в этом году случился кредитный бум. По итогам третьего квартала объем выданных микрозаймов достиг исторического рекорда — почти 350 млрд рублей. Эксперты говорят о сильной закредитованности населения: новые микрозаймы часто берут, чтобы расплатиться по текущим кредитам. Русская служба Би-би-си объясняет, насколько это опасно.",
                 "indexImage": {
-                  "id": "131815876",
+                  "id": "131836403",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/9b61/live/a61516b0-8af3-11ee-835e-0ff56f3659b0.jpg",
-                  "path": "/cpsprodpb/9b61/live/a61516b0-8af3-11ee-835e-0ff56f3659b0.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "Беспорядки в Дублине",
-                  "caption": "Беспорядки в Дублине начались после нападения с ножом в центре города",
-                  "copyrightHolder": "PA Media",
-                  "allowSyndication": true,
+                  "href": "http://c.files.bbci.co.uk/1be1/live/6954cc60-8d4c-11ee-87b6-87df8d4ac851.jpg",
+                  "path": "/cpsprodpb/1be1/live/6954cc60-8d4c-11ee-87b6-87df8d4ac851.jpg",
+                  "height": 1782,
+                  "width": 3168,
+                  "altText": "Вывеска на одном из офисов, предоставляющих займы",
+                  "caption": "В третьем квартале года общий объем микрозаймов достиг почти 350 млрд рублей",
+                  "copyrightHolder": "Valeriy Matytsyn/TASS",
+                  "allowSyndication": false,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/c3g2jz005g4o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3g2jz005g4o",
+                "uri": "https://www.bbc.com/russian/articles/c4n54pp5291o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4n54pp5291o",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1700854748000,
+                "timestamp": 1701164749000,
                 "type": "link"
               },
               {
-                "name": "Драма в Кремниевой долине. Как развивался скандал с увольнением главы ChatGPT и при чем здесь сверхмощный ИИ",
-                "summary": "",
+                "name": "11 невероятных фактов о времени, не укладывающихся в голове",
+                "summary": "Мы собрали 11 абсолютно научных (и совсем не фантастических), но оттого ничуть не менее - а пожалуй, даже более ошеломляющих фактов о времени.",
                 "indexImage": {
-                  "id": "131813609",
+                  "id": "131825865",
                   "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/c131/live/75d81e00-8adc-11ee-98c3-3d1408bb3d37.jpg",
-                  "path": "/cpsprodpb/c131/live/75d81e00-8adc-11ee-98c3-3d1408bb3d37.jpg",
-                  "height": 550,
-                  "width": 978,
-                  "altText": "Сэм Альтман на экране во время Форума Азиатско-Тихоокеанского экономического сотрудничества",
-                  "copyrightHolder": "Reuters",
-                  "allowSyndication": true,
+                  "href": "http://c.files.bbci.co.uk/DE14/production/_131825865_66f2e0f98f628764d9e6c7f6affdd9d12a0f17f5.jpg",
+                  "path": "/cpsprodpb/DE14/production/_131825865_66f2e0f98f628764d9e6c7f6affdd9d12a0f17f5.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "часы",
+                  "copyrightHolder": "CHRISTOPHER NEUNDORF/EPA-EFE/REX/Shutterstock",
+                  "allowSyndication": false,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/russian/articles/c9xr95k5yn5o",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c9xr95k5yn5o",
+                "uri": "https://www.bbc.com/russian/articles/c51elrn88mno",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c51elrn88mno",
                 "contentType": "Text",
                 "assetTypeCode": "PRO",
-                "timestamp": 1700841043000,
+                "timestamp": 1701004304000,
+                "type": "link"
+              },
+              {
+                "name": "«Антифранцузское переписывание истории»: почему историки ругают фильм Ридли Скотта «Наполеон»",
+                "summary": "Фильм Ридли Скотта «Наполеон» вызвал огонь критики за передергивание исторических событий, игнорирование общественных заслуг императора Франции, а также за то, что режиссер в одном из интервью сравнил национального героя Франции со Сталиным и Гитлером.",
+                "indexImage": {
+                  "id": "131817381",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/735e/live/1b9b27e0-8931-11ee-833d-0f8d294ddc97.jpg",
+                  "path": "/cpsprodpb/735e/live/1b9b27e0-8931-11ee-833d-0f8d294ddc97.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Хоакин Феникс в роли Наполеона",
+                  "caption": "Хоакин Феникс в роли Наполеона. У Ридли Скотта он уже играл императора, правда римского: Коммода в фильме «Гладиатор»",
+                  "copyrightHolder": "SONY PICTURES/APPLE ORIGINAL FILMS",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cyj2p7ly928o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cyj2p7ly928o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1700906137000,
                 "type": "link"
               }
             ],
-            "strapline": { "name": "События" },
-            "semanticGroupName": "Also in the news"
+            "strapline": {
+              "name": "Не пропустите",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/features-50983593",
+                "desktop": "https://www.bbc.com/russian/features-50983593",
+                "mobile": "https://www.bbc.com/russian/features-50983593",
+                "enhancedmobile": "https://www.bbc.com/russian/features-50983593"
+              }
+            },
+            "semanticGroupName": "Features"
           },
           {
             "type": "featured-site-top-stories",
@@ -1473,149 +1465,149 @@
       "topStories": null,
       "features": null,
       "mostRead": {
-        "generated": "2023-11-28T12:17:32.51Z",
-        "lastRecordTimeStamp": "2023-11-28T12:15:00Z",
-        "firstRecordTimeStamp": "2023-11-28T12:00:00Z",
+        "generated": "2023-11-30T09:32:32.846Z",
+        "lastRecordTimeStamp": "2023-11-30T09:29:00Z",
+        "firstRecordTimeStamp": "2023-11-30T09:14:00Z",
         "items": [
           {
-            "id": "urn:bbc:optimo:asset:cpdpm8x19nlo",
+            "id": "urn:bbc:optimo:asset:c84357gqle3o",
             "rank": 1,
-            "title": "Безуглая против Залужного. Что означает атака депутата на главкома ВСУ",
-            "href": "https://www.bbc.com/russian/articles/cpdpm8x19nlo",
-            "timestamp": 1701160274595
+            "title": "«Некоторые наши политики думают, что могут уничтожить Зеленского». Economist рассказывает о конфликте в руководстве Украины",
+            "href": "https://www.bbc.com/russian/articles/c84357gqle3o",
+            "timestamp": 1701257625942
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cglp32jr884o",
+            "rank": 2,
+            "title": "Ученые обнаружили «идеальную солнечную систему», которая поможет поискам внеземной жизни",
+            "href": "https://www.bbc.com/russian/articles/cglp32jr884o",
+            "timestamp": 1701332829838
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cgrpd6pw0z1o",
+            "rank": 3,
+            "title": "Генри Киссинджер умер на 101 году жизни",
+            "href": "https://www.bbc.com/russian/articles/cgrpd6pw0z1o",
+            "timestamp": 1701310552527
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cq5p8ezyrv8o",
+            "rank": 4,
+            "title": "Жажда биткоина. Каждая транзакция с этой криптовалютой «выпивает» бассейн воды, считают ученые",
+            "href": "https://www.bbc.com/russian/articles/cq5p8ezyrv8o",
+            "timestamp": 1701333146740
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c51ejjy0vyvo",
+            "rank": 5,
+            "title": "Суд Европейского союза разрешил странам-членам запрещать религиозные символы для госслужащих",
+            "href": "https://www.bbc.com/russian/articles/c51ejjy0vyvo",
+            "timestamp": 1701191652982
+          },
+          {
+            "id": "ca58e9d3-00f7-ea44-9acb-15a549cb9151",
+            "rank": 6,
+            "title": "Генри Киссинджер: от Брежнева до Путина",
+            "href": "/russian/features-36675660",
+            "timestamp": 1701313028000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cg6p0k7rv7wo",
+            "rank": 7,
+            "title": "Российские источники сообщают о смерти в Украине генерала армии РФ — уже седьмого",
+            "href": "https://www.bbc.com/russian/articles/cg6p0k7rv7wo",
+            "timestamp": 1701268618891
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c8435yv5e0wo",
+            "rank": 8,
+            "title": "Голод, грязь и страх: освобожденные израильские заложники рассказали, в каких условиях их держали в Газе",
+            "href": "https://www.bbc.com/russian/articles/c8435yv5e0wo",
+            "timestamp": 1701279981854
           },
           {
             "id": "urn:bbc:optimo:asset:c51elrn88mno",
-            "rank": 2,
+            "rank": 9,
             "title": "11 невероятных фактов о времени, не укладывающихся в голове",
             "href": "https://www.bbc.com/russian/articles/c51elrn88mno",
             "timestamp": 1701004298871
           },
           {
-            "id": "urn:bbc:optimo:asset:ce7pwe0jz16o",
-            "rank": 3,
-            "title": "В Париже начался суд над шестью подростками по делу об убийстве учителя, обезглавленного уроженцем Чечни",
-            "href": "https://www.bbc.com/russian/articles/ce7pwe0jz16o",
-            "timestamp": 1701169170171
+            "id": "urn:bbc:optimo:asset:c727567erl5o",
+            "rank": 10,
+            "title": "Против Криштиану Роналду подали иск на $1 млрд за рекламу криптобиржи Binance",
+            "href": "https://www.bbc.com/russian/articles/c727567erl5o",
+            "timestamp": 1701280392202
           },
           {
-            "id": "urn:bbc:optimo:asset:c4n54pp5291o",
-            "rank": 4,
-            "title": "Неизбежные микрокредиты. Почему россияне все активнее берут займы до зарплаты?",
-            "href": "https://www.bbc.com/russian/articles/c4n54pp5291o",
-            "timestamp": 1701164748180
+            "id": "urn:bbc:optimo:asset:cndp8y8py1zo",
+            "rank": 11,
+            "title": "В Кыргызстане депутаты предложили поменять форму лучей солнца. На флаге страны",
+            "href": "https://www.bbc.com/russian/articles/cndp8y8py1zo",
+            "timestamp": 1701261463525
           },
           {
-            "id": "urn:bbc:optimo:asset:ckdpznddzw7o",
-            "rank": 5,
-            "title": "Спасатели в Индии почти добрались до оказавшихся под завалами тоннеля рабочих. Операция продолжалась 17 дней",
-            "href": "https://www.bbc.com/russian/articles/ckdpznddzw7o",
-            "timestamp": 1701173524182
-          },
-          {
-            "id": "urn:bbc:optimo:asset:c8v854pmm9go",
-            "rank": 6,
-            "title": "Скифское золото из музеев Крыма вернулось в Украину",
-            "href": "https://www.bbc.com/russian/articles/c8v854pmm9go",
-            "timestamp": 1701113246332
+            "id": "urn:bbc:optimo:asset:cg3p0n30y1no",
+            "rank": 12,
+            "title": "Завещание под подушкой. Как дети Ареты Франклин поделили ее наследство ",
+            "href": "https://www.bbc.com/russian/articles/cg3p0n30y1no",
+            "timestamp": 1701278822262
           },
           {
             "id": "urn:bbc:optimo:asset:cyj2p7ly928o",
-            "rank": 7,
+            "rank": 13,
             "title": "«Антифранцузское переписывание истории»: почему историки ругают фильм Ридли Скотта «Наполеон»",
             "href": "https://www.bbc.com/russian/articles/cyj2p7ly928o",
             "timestamp": 1700906136108
           },
           {
-            "id": "urn:bbc:optimo:asset:cgep194dkgyo",
-            "rank": 8,
-            "title": "«Ракеты из стиральных машин и самокатов». Правда и мифы о новом русском оружии",
-            "href": "https://www.bbc.com/russian/articles/cgep194dkgyo",
-            "timestamp": 1701068786720
-          },
-          {
-            "id": "urn:bbc:optimo:asset:clmpvx57d90o",
-            "rank": 9,
-            "title": "В штате Вермонт ранены трое студентов-палестинцев, подозреваемый задержан",
-            "href": "https://www.bbc.com/russian/articles/clmpvx57d90o",
-            "timestamp": 1701104134215
-          },
-          {
-            "id": "urn:bbc:optimo:asset:c88d00q9zzdo",
-            "rank": 10,
-            "title": "Война России с Украиной: в чем главные проблемы двух армий и чего ждать зимой",
-            "href": "https://www.bbc.com/russian/articles/c88d00q9zzdo",
-            "timestamp": 1700888473176
-          },
-          {
-            "id": "urn:bbc:optimo:asset:crgpngjdyq2o",
-            "rank": 11,
-            "title": "Шторм на юге России и в Украине. Фото",
-            "href": "https://www.bbc.com/russian/articles/crgpngjdyq2o",
-            "timestamp": 1701076066913
-          },
-          {
-            "id": "urn:bbc:optimo:asset:cz72812r5d0o",
-            "rank": 12,
-            "title": "Журналистку Александру Баязитову приговорили к пяти годам по делу о вымогательстве",
-            "href": "https://www.bbc.com/russian/articles/cz72812r5d0o",
-            "timestamp": 1701080844010
-          },
-          {
-            "id": "urn:bbc:optimo:asset:cedpeeg3nylo",
-            "rank": 13,
-            "title": "В Лондоне прошла многотысячная демонстрация против антисемитизма",
-            "href": "https://www.bbc.com/russian/articles/cedpeeg3nylo",
-            "timestamp": 1701021403790
-          },
-          {
-            "id": "urn:bbc:optimo:asset:cmmp04mz53po",
+            "id": "urn:bbc:optimo:asset:cd1pjv7plg8o",
             "rank": 14,
-            "title": "Пропасть между Тувой и Москвой: что известно о потерях разных российских регионов в Украине ",
-            "href": "https://www.bbc.com/russian/articles/cmmp04mz53po",
-            "timestamp": 1700809543928
+            "title": "В зоопарке Манилы умерла 40-летняя слониха Мали. Ее называли самым печальным слоном в мире",
+            "href": "https://www.bbc.com/russian/articles/cd1pjv7plg8o",
+            "timestamp": 1701283060215
           },
           {
-            "id": "urn:bbc:optimo:asset:cnlp9nlxq79o",
+            "id": "urn:bbc:optimo:asset:cx8r3dqw3j4o",
             "rank": 15,
-            "title": "Противник ислама, иммиграции и помощи Украине. Кто такой Герт Вилдерс?",
-            "href": "https://www.bbc.com/russian/articles/cnlp9nlxq79o",
-            "timestamp": 1700765762170
+            "title": "Палестинская группировка ХАМАС: происхождение, цели, союзники",
+            "href": "https://www.bbc.com/russian/articles/cx8r3dqw3j4o",
+            "timestamp": 1696936579836
           },
           {
-            "id": "urn:bbc:optimo:asset:cx91prwy42ko",
+            "id": "urn:bbc:optimo:asset:cmlp8p9ggpko",
             "rank": 16,
-            "title": "Освобожденные боевиками ХАМАС заложники — кто они?",
-            "href": "https://www.bbc.com/russian/articles/cx91prwy42ko",
-            "timestamp": 1700885321415
+            "title": "Украина заявила об отравлении жены начальника ГУР Марианны Будановой. Что известно",
+            "href": "https://www.bbc.com/russian/articles/cmlp8p9ggpko",
+            "timestamp": 1701187894196
           },
           {
-            "id": "urn:bbc:optimo:asset:c4n4jl9ez9vo",
+            "id": "urn:bbc:optimo:asset:cpdpm8x19nlo",
             "rank": 17,
-            "title": "Новая Зеландия отменит пожизненный запрет на курение для молодых людей, чтобы пополнить бюджет ",
-            "href": "https://www.bbc.com/russian/articles/c4n4jl9ez9vo",
-            "timestamp": 1701093103200
+            "title": "Безуглая против Залужного. Что означает атака депутата на главкома ВСУ",
+            "href": "https://www.bbc.com/russian/articles/cpdpm8x19nlo",
+            "timestamp": 1701160274595
           },
           {
-            "id": "urn:bbc:optimo:asset:c6p6058p30no",
+            "id": "urn:bbc:optimo:asset:cjjpzzv7969o",
             "rank": 18,
-            "title": "Букеровскую премию 2023 получил ирландский писатель Пол Линч за роман «Песнь пророка»",
-            "href": "https://www.bbc.com/russian/articles/c6p6058p30no",
-            "timestamp": 1701092010216
+            "title": "Как ХАМАС готовился к нападению на Израиль 7 октября",
+            "href": "https://www.bbc.com/russian/articles/cjjpzzv7969o",
+            "timestamp": 1701198968901
           },
           {
-            "id": "urn:bbc:optimo:asset:crgp59z3jkko",
+            "id": "urn:bbc:optimo:asset:cyx218ylx70o",
             "rank": 19,
-            "title": "Человек обесчеловеченный: чем чревато использование дегуманизирующей лексики в конфликтах",
-            "href": "https://www.bbc.com/russian/articles/crgp59z3jkko",
-            "timestamp": 1700978291695
+            "title": "Нигер отменил закон по борьбе с нелегальной миграцией. В Европе опасаются новой волны мигрантов",
+            "href": "https://www.bbc.com/russian/articles/cyx218ylx70o",
+            "timestamp": 1701260475524
           },
           {
-            "id": "urn:bbc:optimo:asset:cpr4nw25vp2o",
+            "id": "6ee8f7e7-41ea-4db0-9859-eaac32948748",
             "rank": 20,
-            "title": "Генерал Волан-де-Морт. Как Валерий Залужный стал самым популярным командующим украинской армии ",
-            "href": "https://www.bbc.com/russian/articles/cpr4nw25vp2o",
-            "timestamp": 1686719210372
+            "title": "Долгий путь к Палестине. Почему нового государства до сих пор нет на карте мира",
+            "href": "/russian/features-57303166",
+            "timestamp": 1622692090000
           }
         ]
       },
