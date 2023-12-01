@@ -178,10 +178,10 @@ export const service: ZhongwenConfig = {
         videoPlayer: '视频播放器',
       },
       liveExperiencePage: {
-        live_coverage: '',
-        breaking: '',
-        posted_at: '',
-        summary: '',
+        live_coverage: '现场直播',
+        breaking: '最新消息',
+        posted_at: '张贴于',
+        summary: '概要',
       },
       gist: '概要',
       error: {
@@ -477,10 +477,10 @@ export const service: ZhongwenConfig = {
         videoPlayer: '視頻播放器',
       },
       liveExperiencePage: {
-        live_coverage: '',
-        breaking: '',
-        posted_at: '',
-        summary: '',
+        live_coverage: '現場直播',
+        breaking: '最新消息',
+        posted_at: '張貼在',
+        summary: '概要',
       },
       gist: '概要',
       error: {

@@ -167,10 +167,10 @@ export const service: SerbianConfig = {
         videoPlayer: 'Video plejer',
       },
       liveExperiencePage: {
-        live_coverage: '',
-        breaking: '',
-        posted_at: '',
-        summary: '',
+        live_coverage: 'Pokrivenost uživo',
+        breaking: 'Vanredne',
+        posted_at: 'Objavljeno u',
+        summary: 'Sažetak',
       },
       gist: 'Sažetak',
       error: {
@@ -491,10 +491,10 @@ export const service: SerbianConfig = {
         videoPlayer: 'Видео плејер',
       },
       liveExperiencePage: {
-        live_coverage: '',
-        breaking: '',
-        posted_at: '',
-        summary: '',
+        live_coverage: 'Покривеност уживо',
+        breaking: 'Ванредне',
+        posted_at: 'Објављено у',
+        summary: 'Сажетак',
       },
       gist: 'Сажетак',
       error: {

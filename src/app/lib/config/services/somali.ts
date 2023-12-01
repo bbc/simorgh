@@ -69,7 +69,7 @@ export const service: DefaultServiceConfig = {
       liveExperiencePage: {
         live_coverage: 'Tebin toos ah',
         breaking: 'War deg deg ah',
-        posted_at: '',
+        posted_at: 'Posted at',
         summary: 'Kooban',
       },
       gist: 'Kooban',
