@@ -4,7 +4,6 @@ import {
   render,
   screen,
   act,
-  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '../../../../../../src/app/routes/utils/pageTypes';
