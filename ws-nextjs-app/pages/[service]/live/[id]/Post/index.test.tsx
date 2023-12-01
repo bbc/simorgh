@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import {
   render,
   screen,
@@ -133,17 +132,12 @@ describe('Post', () => {
 
     it('should render the media player in a post containing video', async () => {
       const { container } = await act(async () => {
-        return render(
-          <BrowserRouter>
-            <Post post={videoSamplePost} />
-          </BrowserRouter>,
-          {
-            id: 'c7p765ynk9qt',
-            service: 'pidgin',
-            pageType: LIVE_PAGE,
-            pathname: '/pidgin/live/c7p765ynk9qt',
-          },
-        );
+        return render(<Post post={videoSamplePost} />, {
+          id: 'c7p765ynk9qt',
+          service: 'pidgin',
+          pageType: LIVE_PAGE,
+          pathname: '/pidgin/live/c7p765ynk9qt',
+        });
       });
 
       expect(
