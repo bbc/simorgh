@@ -1133,6 +1133,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 <div>
+  <noscript />
   <main>
     <div
       class="emotion-0"

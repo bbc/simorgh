@@ -1,0 +1,818 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c77z1dexexzo",
+          "contentType": "article",
+          "language": "en-gb",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "news.articles.c77z1dexexzo.page",
+          "pageTitle": "Telescope Non-Sign In",
+          "timePublished": "2023-09-04T15:38:15.076Z",
+          "timeUpdated": "2023-09-04T15:38:15.076Z"
+        },
+        "id": "urn:bbc:ares::article:c77z1dexexzo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c77z1dexexzo",
+          "canonicalUrl": "https://www.bbc.com/news/articles/c77z1dexexzo"
+        },
+        "type": "article",
+        "createdBy": "News",
+        "language": "en-gb",
+        "firstPublished": 1693841895076,
+        "lastPublished": 1693841895076,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c77z1dexexzo",
+          "producer": "News",
+          "page": "news.articles.c77z1dexexzo.page"
+        },
+        "passport": {
+          "language": "en-gb",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "embed",
+          "aresTelescope"
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "embedProviders": ["telescope-vote"]
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "cd8a9b5d",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d297baf3",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0b772815",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Telescope Non-Sign In",
+                            "blocks": [
+                              {
+                                "id": "3f5f8afb",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Telescope Non-Sign In",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "54a2078b",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1693841895076,
+                "lastPublished": 1693841895076
+              },
+              "position": [2]
+            },
+            {
+              "id": "8cfaa3de",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "060d04fe",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec aliquet nunc. Ut gravida dui id tellus maximus, vitae aliquet diam tristique. Sed blandit commodo neque, quis tincidunt est ultrices ac. Mauris nec fermentum massa. Curabitur pulvinar odio interdum mauris faucibus tempus. Curabitur ut nulla in sem vulputate volutpat. Donec molestie ullamcorper suscipit. Phasellus consequat blandit tristique.",
+                      "blocks": [
+                        {
+                          "id": "98eed9ec",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec aliquet nunc. Ut gravida dui id tellus maximus, vitae aliquet diam tristique. Sed blandit commodo neque, quis tincidunt est ultrices ac. Mauris nec fermentum massa. Curabitur pulvinar odio interdum mauris faucibus tempus. Curabitur ut nulla in sem vulputate volutpat. Donec molestie ullamcorper suscipit. Phasellus consequat blandit tristique.",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "acfc77b6",
+              "type": "embed",
+              "model": {
+                "locator": "urn:bbc:telescope:vote:LDNXKfL",
+                "provider": "telescope-vote",
+                "usageRights": { "suitableForSyndication": true },
+                "blocks": [
+                  {
+                    "id": "73f52c1a",
+                    "type": "aresTelescope",
+                    "model": { "isSignInRequired": false, "wid": "15268" },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "5fcfb548",
+              "type": "embed",
+              "model": {
+                "locator": "urn:bbc:telescope:vote:evXQQNo",
+                "provider": "telescope-vote",
+                "usageRights": { "suitableForSyndication": false }
+              },
+              "position": [5]
+            },
+            {
+              "id": "d15bc558",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "bb606814",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Etiam vel erat tempor nunc sagittis sollicitudin. Donec eleifend posuere sapien sit amet fermentum. Mauris pulvinar tincidunt justo eget aliquam. Suspendisse sodales urna eget vestibulum accumsan. Vivamus at mi et nibh aliquet bibendum a non lectus. In auctor est et felis porttitor hendrerit. Curabitur iaculis, mi at tristique porttitor, ligula ligula maximus odio, id consectetur libero lacus eget sapien.",
+                      "blocks": [
+                        {
+                          "id": "7a9300d6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Etiam vel erat tempor nunc sagittis sollicitudin. Donec eleifend posuere sapien sit amet fermentum. Mauris pulvinar tincidunt justo eget aliquam. Suspendisse sodales urna eget vestibulum accumsan. Vivamus at mi et nibh aliquet bibendum a non lectus. In auctor est et felis porttitor hendrerit. Curabitur iaculis, mi at tristique porttitor, ligula ligula maximus odio, id consectetur libero lacus eget sapien.",
+                            "attributes": []
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "9467471e",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5ccf71a5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Morbi aliquet purus vestibulum ligula sodales, non scelerisque urna aliquam. Sed augue odio, efficitur id blandit ut, tincidunt sit amet magna. Cras porta, ante viverra feugiat ultricies, dui turpis aliquam odio, sed sagittis urna metus id arcu. Quisque libero nibh, dapibus in tortor eget, commodo aliquet quam. Sed et ex non felis condimentum tincidunt ac ac lorem. Duis accumsan, libero quis facilisis euismod, lacus nunc dapibus nibh, eget dapibus eros purus gravida metus. Nulla facilisi. Sed vulputate eleifend dui sit amet maximus. Nullam faucibus, lorem vel hendrerit mollis, ligula massa congue ipsum, sed mollis diam dui at dolor. Donec eu ligula vel nibh faucibus feugiat. In et nulla suscipit, volutpat eros ut, rhoncus nunc.",
+                      "blocks": [
+                        {
+                          "id": "4c242352",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Morbi aliquet purus vestibulum ligula sodales, non scelerisque urna aliquam. Sed augue odio, efficitur id blandit ut, tincidunt sit amet magna. Cras porta, ante viverra feugiat ultricies, dui turpis aliquam odio, sed sagittis urna metus id arcu. Quisque libero nibh, dapibus in tortor eget, commodo aliquet quam. Sed et ex non felis condimentum tincidunt ac ac lorem. Duis accumsan, libero quis facilisis euismod, lacus nunc dapibus nibh, eget dapibus eros purus gravida metus. Nulla facilisi. Sed vulputate eleifend dui sit amet maximus. Nullam faucibus, lorem vel hendrerit mollis, ligula massa congue ipsum, sed mollis diam dui at dolor. Donec eu ligula vel nibh faucibus feugiat. In et nulla suscipit, volutpat eros ut, rhoncus nunc.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            { "id": "f71f1b21", "type": "mpu", "model": {}, "position": [8] },
+            {
+              "id": "5283bb9d",
+              "type": "wsoj",
+              "model": { "type": "recommendations" },
+              "position": [9]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Telescope Non-Sign In",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Telescope Non-Sign In",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Telescope Non-Sign In",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "He had a call from Israeli intelligence. 'We have the order to bomb. You have two hours'"
+          },
+          "locators": {
+            "assetUri": "/news/uk-politics-23524699",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1ec6da9d-30f6-47ca-922a-159dc8420660",
+            "assetId": "23524699",
+            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-23524699",
+            "curie": "http://www.bbc.co.uk/asset/1ec6da9d-30f6-47ca-922a-159dc8420660"
+          },
+          "summary": "An extraordinary warning call to a Palestinian dentist starts the panicked evacuation of a Gazan neighbourhood.",
+          "timestamp": 1662557962000,
+          "language": "en-gb",
+          "byline": {
+            "name": "By Sarah Collerton",
+            "title": "BBC News",
+            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "64027669",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/179A0/test/_64027669_microsoftteams-image.png",
+            "path": "/cpsdevpb/179A0/test/_64027669_microsoftteams-image.png",
+            "height": 549,
+            "width": 976,
+            "altText": "Mahmoud",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "UK Politics",
+            "uri": "/news/politics",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/uk-politics-23524699",
+          "type": "cps"
+        },
+        {
+          "name": "TEST: Promo with platform URLs",
+          "uri": "https://news-app.api.bbc.co.uk/news/extra/ifgej14zt1/greece-wildfire",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1700040704000,
+          "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Climate change fuels southern Africa storms - study"
+          },
+          "locators": {
+            "assetUri": "/news/world-africa-23562362",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:a5bda706-45bf-477a-9aaf-0d3622f2b902",
+            "assetId": "23562362",
+            "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23562362",
+            "curie": "http://www.bbc.co.uk/asset/a5bda706-45bf-477a-9aaf-0d3622f2b902"
+          },
+          "summary": "The region was hit by three cyclones and two tropical storms in six weeks.",
+          "timestamp": 1678887399000,
+          "language": "en-gb",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63982866",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1050C/test/_63982866_eb8cd61fb995c6cf5a27713a42899923cd61ac940_425_4752_26741000x563.jpg",
+            "path": "/cpsdevpb/1050C/test/_63982866_eb8cd61fb995c6cf5a27713a42899923cd61ac940_425_4752_26741000x563.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Flooding in Mozambique",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Africa",
+            "uri": "/news/world/africa",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/world-africa-23562362",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "name": "Rare tick disease found in England",
+          "indexImage": {
+            "id": "63986214",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A134/test/_63986214_mediaitem63986213.jpg",
+            "path": "/cpsdevpb/A134/test/_63986214_mediaitem63986213.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Tick",
+            "copyrightHolder": "Getty Images",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/health-65177440",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/health-65177440",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680694938000,
+          "type": "link"
+        },
+        {
+          "name": "Amazon closing UK-based online shop Book Depository",
+          "indexImage": {
+            "id": "63986220",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/08DC/test/_63986220_2025421c-7951-4e08-84df-c97e237835dd.jpg",
+            "path": "/cpsdevpb/08DC/test/_63986220_2025421c-7951-4e08-84df-c97e237835dd.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Book Depository",
+            "copyrightHolder": "Book Depository graphic",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/business-65184776",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/business-65184776",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680695343000,
+          "type": "link"
+        },
+        {
+          "name": "Taxpayers unlikely to get £7.3m back for racetrack",
+          "indexImage": {
+            "id": "63986218",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13D74/test/_63986218_8de4c68c-7263-4586-97e1-29bc361d6dcd.jpg",
+            "path": "/cpsdevpb/13D74/test/_63986218_8de4c68c-7263-4586-97e1-29bc361d6dcd.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Circuit of Wales mock-up",
+            "copyrightHolder": "Circuit of Wales ",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/uk-wales-politics-65181038",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-wales-politics-65181038",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680695178000,
+          "type": "link"
+        },
+        {
+          "name": "Dog show pulled over ear crops moved to new venue",
+          "indexImage": {
+            "id": "63986224",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A51C/test/_63986224_e46a0cd9-a7ad-46f3-81b3-f0249d61e77c.jpg",
+            "path": "/cpsdevpb/A51C/test/_63986224_e46a0cd9-a7ad-46f3-81b3-f0249d61e77c.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Still from undercover filming at dog show",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/uk-england-manchester-65111668",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-manchester-65111668",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680695815000,
+          "type": "link"
+        },
+        {
+          "name": "Banksy seagull mural removed from wall of house",
+          "indexImage": {
+            "id": "63986216",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/EF54/test/_63986216_ea43a5a2-9fb9-45a6-8baf-330477dbfedf.jpg",
+            "path": "/cpsdevpb/EF54/test/_63986216_ea43a5a2-9fb9-45a6-8baf-330477dbfedf.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "House with Banksy mural",
+            "copyrightHolder": "Reuters",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/uk-england-suffolk-65186563",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-suffolk-65186563",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680695049000,
+          "type": "link"
+        },
+        {
+          "name": "Why some NI businesses are facing a perfect storm",
+          "indexImage": {
+            "id": "63986222",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/56FC/test/_63986222_8118c523-7ab8-4d01-99ae-16035298d827.jpg",
+            "path": "/cpsdevpb/56FC/test/_63986222_8118c523-7ab8-4d01-99ae-16035298d827.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Getty Images",
+            "copyrightHolder": "Cafe customer making contactless payment",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/news/uk-northern-ireland-65167982",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-northern-ireland-65167982",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1680695665000,
+          "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "How can one man read the BBC News website 24/7?",
+            "overtyped": "How can one man stay awake and read the BBC News website 24/7?"
+          },
+          "locators": {
+            "assetUri": "/news/entertainment-arts-23260288",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:8dddc4d2-ad50-a84b-8425-85e12f5b308e",
+            "assetId": "23260288",
+            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23260288",
+            "curie": "http://www.bbc.co.uk/asset/8dddc4d2-ad50-a84b-8425-85e12f5b308e"
+          },
+          "summary": "promo",
+          "timestamp": 1577978134000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63728487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13292/test/_63728487_nickdracula.jpg",
+            "path": "/cpsdevpb/13292/test/_63728487_nickdracula.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Nick",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Entertainment & Arts",
+            "uri": "/news/entertainment_and_arts",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/entertainment-arts-23260288",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Quotes are dead and headlines should frame stories"
+          },
+          "locators": {
+            "assetUri": "/news/uk-23415272",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c2680aa0-ddce-4286-a156-983aee720178",
+            "assetId": "23415272",
+            "cpsUrn": "urn:bbc:content:assetUri:news/uk-23415272",
+            "curie": "http://www.bbc.co.uk/asset/c2680aa0-ddce-4286-a156-983aee720178"
+          },
+          "summary": "Write a grammatical sentence that doesn't repeat the headline and teases out a compelling detail.",
+          "timestamp": 1621334184000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63753378",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/15527/test/_63753378_mediaitem118172970.jpg",
+            "path": "/cpsdevpb/15527/test/_63753378_mediaitem118172970.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Stock image of man using keyboard",
+            "caption": "Avoid using stock images just for the sake of more visuals and one picture at the top is fine for a story of this length",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "UK",
+            "uri": "/news/uk",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/uk-23415272",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "'Nick gave me a job after I told him I worked in my pants'",
+            "overtyped": "Nick gave Scouser job despite 'works-in-underpants' claim"
+          },
+          "locators": {
+            "assetUri": "/news/business-23260278",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:d79361a3-15e5-3a49-bc92-6fb6ba6725e0",
+            "assetId": "23260278",
+            "cpsUrn": "urn:bbc:content:assetUri:news/business-23260278",
+            "curie": "http://www.bbc.co.uk/asset/d79361a3-15e5-3a49-bc92-6fb6ba6725e0"
+          },
+          "summary": "Says Andy McFarlane",
+          "timestamp": 1577974619000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63728395",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/E7F6/test/_63728395_mediaitem63728394.jpg",
+            "path": "/cpsdevpb/E7F6/test/_63728395_mediaitem63728394.jpg",
+            "height": 366,
+            "width": 650,
+            "altText": "Freddie Starr in his underpants",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Business",
+            "uri": "/news/business",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/business-23260278",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-11-17T10:09:02.517Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "ff819582-928b-374d-9f99-f9a33e6fdded",
+            "rank": 1,
+            "title": "The rise of the priority queue",
+            "href": "/news/magazine-19712847",
+            "timestamp": 1349307898000
+          },
+          {
+            "id": "6255b856-d38e-c745-b121-d727dede72f0",
+            "rank": 2,
+            "title": "Laura Trott sees off challenge!",
+            "href": "/sport/cycling/23039307",
+            "timestamp": 1462870832000
+          },
+          {
+            "id": "b5c5324b-5e25-e059-e040-850a02846523",
+            "rank": 3,
+            "title": "Japan MP drinks Fukushima water",
+            "href": "/news/world-asia-pacific-15533018",
+            "timestamp": 1320140165000
+          },
+          {
+            "id": "032e4a9e-e4bb-a448-8d55-4c2d940f871b",
+            "rank": 4,
+            "title": "Inside the 21st floor of Grenfell Tower",
+            "href": "/news/uk-23154961",
+            "timestamp": 1525776595000
+          },
+          {
+            "id": "b5c5324b-5e23-e059-e040-850a02846523",
+            "rank": 5,
+            "title": "Ai Weiwei served with tax demand",
+            "href": "/news/world-asia-pacific-15533014",
+            "timestamp": 1320147927000
+          },
+          {
+            "id": "4ab0674b-4491-d14d-97bc-6e98cef6fd38",
+            "rank": 6,
+            "title": "Two die in Israel hotel shootings",
+            "href": "/news/world-middle-east-19841596",
+            "timestamp": 1350298040000
+          },
+          {
+            "id": "b5c5324b-60a9-e059-e040-850a02846523",
+            "rank": 7,
+            "title": "Soong enters Taiwan election race",
+            "href": "/news/world-asia-pacific-15538239",
+            "timestamp": 1320147661000
+          },
+          {
+            "id": "c77147d1-1ffb-0a45-9076-f224655f435d",
+            "rank": 8,
+            "title": "Welcome to the UKs peaceful place",
+            "href": "/news/business-20070473",
+            "timestamp": 1366808565000
+          },
+          {
+            "id": "52e6d851-5eec-7546-9193-5d6ba6ede668",
+            "rank": 9,
+            "title": "Budget 2018: Everything you need to know",
+            "href": "/news/uk-23220380",
+            "timestamp": 1540213875000
+          },
+          {
+            "id": "b5c5324b-5e54-e059-e040-850a02846523",
+            "rank": 10,
+            "title": "Anger grows over Bangkok floods new",
+            "href": "/news/world-asia-pacific-15533579",
+            "timestamp": 1320135436000
+          },
+          {
+            "id": "4f5ea6b4-3e4c-f241-9878-41d61e0588c5",
+            "rank": 11,
+            "title": "Live Page 1",
+            "href": "/sport/live/football/23188653",
+            "timestamp": 1519658016000
+          },
+          {
+            "id": "afbaa638-a7de-8044-9ce4-13ca8d1db19e",
+            "rank": 12,
+            "title": "Food and drink sales 'on target'",
+            "href": "/news/uk-scotland-scotland-business-19827756",
+            "timestamp": 1349364722000
+          },
+          {
+            "id": "056fbe35-c5ac-2046-8056-cafdfb5801ce",
+            "rank": 13,
+            "title": "Spain 'foils college bomb plot'",
+            "href": "/news/world-europe-19830770",
+            "timestamp": 1349354919000
+          },
+          {
+            "id": "f11cdf57-873f-6947-a99a-6c5764c96eb3",
+            "rank": 14,
+            "title": "Baby 'dropped to safety from tower fire'",
+            "href": "/news/uk-england-london-23136787",
+            "timestamp": 1498736974000
+          },
+          {
+            "id": "36c4a13b-d5e0-9647-8270-dcd749828912",
+            "rank": 15,
+            "title": "N Korea 'ready for another nuclear test'",
+            "href": "/news/world-asia-23073373",
+            "timestamp": 1473676252000
+          },
+          {
+            "id": "b5c5324a-d380-e059-e040-850a02846523",
+            "rank": 16,
+            "title": "Join Brian Taylor's Big Debate audience",
+            "href": "/news/uk-scotland-scotland-politics-15190428",
+            "timestamp": 1349187919000
+          },
+          {
+            "id": "76fc8eda-7c03-1446-901a-7b198f2cd48d",
+            "rank": 17,
+            "title": "Kepler telescope spies 'most Earth-like' worlds to date special",
+            "href": "/news/business-20067799",
+            "timestamp": 1366378778000
+          },
+          {
+            "id": "63f9a41c-d2d4-cf4e-bd2a-91bee6b135b4",
+            "rank": 18,
+            "title": "Five things you need to know about the US election",
+            "href": "/news/magazine-19729802",
+            "timestamp": 1349046607000
+          },
+          {
+            "id": "cc1b0314-f39e-b24e-b223-2d844559bd39",
+            "rank": 19,
+            "title": "Smith fury as top man Winter fails in wild goat chase",
+            "href": "/news/business-19784692",
+            "timestamp": 1602780622000
+          },
+          {
+            "id": "9c3952cf-843b-2641-845b-aa541756d927",
+            "rank": 20,
+            "title": "New test feature story",
+            "href": "/news/23212858",
+            "timestamp": 1535635021000
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
