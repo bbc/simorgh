@@ -43,7 +43,6 @@ const PostBreakingNewsLabel = ({
 
 const PostHeaderBanner = ({
   isBreakingNews,
-  breakingNewsLabelText,
   timestamp: curated,
 }: {
   isBreakingNews: boolean;
@@ -52,7 +51,7 @@ const PostHeaderBanner = ({
 }) => {
   const { timezone, locale, altCalendar, service, script } =
     useContext(ServiceContext);
-
+  const { translations } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
@@ -73,7 +72,7 @@ const PostHeaderBanner = ({
       />
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={breakingNewsLabelText}
+        breakingNewsLabelText={translations.liveExperiencePage.breaking}
       />
     </div>
   );

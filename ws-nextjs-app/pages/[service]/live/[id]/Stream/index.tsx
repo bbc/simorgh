@@ -1,7 +1,9 @@
 /** @jsx jsx */
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
@@ -13,7 +15,10 @@ const Stream = ({
   streamContent: StreamResponse | null;
   contributors: string | null;
 }) => {
+  const { translations } = useContext(ServiceContext);
+
   if (!streamContent) return null;
+
   const { results: streamResults } = streamContent?.data;
 
   const hasNoPost = streamResults.length === 0;
@@ -30,7 +35,7 @@ const Stream = ({
         ]}
         level={2}
       >
-        Live Reporting
+        {translations.liveExperiencePage.live_coverage}
       </Heading>
       {contributors && (
         <Paragraph data-testid="live-contributors" css={styles.subHeading}>
