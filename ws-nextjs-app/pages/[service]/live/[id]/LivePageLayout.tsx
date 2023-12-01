@@ -81,7 +81,11 @@ const LivePage = ({ pageData }: ComponentProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
+      <LinkedDataContainer
+        type="CollectionPage"
+        seoTitle={pageTitle}
+        headline={pageTitle}
+      />
       <main>
         <Header
           showLiveLabel={isLive}
