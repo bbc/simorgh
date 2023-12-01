@@ -78,12 +78,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Kina amajwi',
         videoPlayer: 'Kina amasanamu',
       },
-        liveExperiencePage: {
-          live_coverage: 'Amakuru y'ikibiriraho',
-          breaking: 'Ivy'akakanya',
-          posted_at: 'Vyashizwe isaha',
-          summary: 'Incamake'
-        },
+      liveExperiencePage: {
+        live_coverage: 'Amakuru y’ikibiriraho',
+        breaking: 'Ivy’akakanya',
+        posted_at: 'Vyashizwe isaha',
+        summary: 'Incamake',
+      },
       gist: 'Incamake',
       error: {
         404: {

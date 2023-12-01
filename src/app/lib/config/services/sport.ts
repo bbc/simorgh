@@ -53,10 +53,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: '',
-        breaking: '',
-        posted_at: '',
-        summary: '',
+        live_coverage: 'Live coverage',
+        breaking: 'Breaking',
+        posted_at: 'Posted at',
+        summary: 'Summary',
       },
       gist: 'At a glance',
       error: {
