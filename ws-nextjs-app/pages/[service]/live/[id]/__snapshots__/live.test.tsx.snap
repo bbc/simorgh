@@ -1160,13 +1160,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               aria-hidden="true"
               class="emotion-4"
             >
-              LIVE
+              Live coverage
             </span>
             <span
               class="emotion-5"
               lang="en-GB"
             >
-              Live, 
+              Live coverage
             </span>
             <span
               class="emotion-6"
@@ -1246,7 +1246,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           <h2
             class="emotion-19"
           >
-            Live Reporting
+            Live coverage
           </h2>
           <p
             class="emotion-20"

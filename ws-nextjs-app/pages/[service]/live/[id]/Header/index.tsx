@@ -33,7 +33,11 @@ const Header = ({
           <span role="text" css={styles.innerGrid}>
             {showLiveLabel ? (
               <>
-                <span css={styles.label} aria-hidden="true">
+                <span
+                  css={styles.label}
+                  aria-hidden="true"
+                  data-testid="live-label"
+                >
                   {translations.liveExperiencePage.live_coverage}
                 </span>
                 <VisuallyHiddenText lang="en-GB">
