@@ -1159,6 +1159,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             <span
               aria-hidden="true"
               class="emotion-4"
+              data-testid="live-label"
             >
               Live coverage
             </span>
