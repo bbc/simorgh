@@ -68,6 +68,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'اډیو پلیئر',
         videoPlayer: 'ویډیو پلیئر',
       },
+      liveExperiencePage: {
+        live_coverage: 'ژوندی پوښښ',
+        breaking: 'وروستی',
+        posted_at: 'د خپرېدو نیټه',
+        summary: 'لنډیز',
+      },
       gist: 'لنډیز',
       error: {
         404: {

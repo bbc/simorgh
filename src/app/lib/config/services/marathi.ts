@@ -80,6 +80,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'ऑडिओ प्लेयर',
         videoPlayer: 'व्हीडिओ प्लेयर',
       },
+      liveExperiencePage: {
+        live_coverage: 'लाईव्ह कव्हरेज',
+        breaking: 'ब्रेकिंग',
+        posted_at: 'वाजता पोस्ट केलं',
+        summary: 'थोडक्यात',
+      },
       gist: 'थोडक्यात',
       error: {
         404: {

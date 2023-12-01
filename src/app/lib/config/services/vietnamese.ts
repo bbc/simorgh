@@ -68,6 +68,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        live_coverage: 'Trực tiếp',
+        breaking: 'Tin mới nhất',
+        posted_at: 'Đăng ở',
+        summary: 'Tóm tắt',
+      },
       gist: 'Tóm tắt',
       error: {
         404: {

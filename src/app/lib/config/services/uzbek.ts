@@ -66,6 +66,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Аудио плейер',
         videoPlayer: 'Видео плейер',
       },
+      liveExperiencePage: {
+        live_coverage: 'Жонли ёритиш',
+        breaking: 'Шошилинч',
+        posted_at: '...да чоп этилган',
+        summary: 'Қисқача',
+      },
       gist: 'Хулоса',
       error: {
         404: {

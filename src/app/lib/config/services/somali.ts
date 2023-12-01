@@ -66,6 +66,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      liveExperiencePage: {
+        live_coverage: 'Tebin toos ah',
+        breaking: 'War deg deg ah',
+        posted_at: '',
+        summary: 'Kooban',
+      },
       gist: 'Kooban',
       error: {
         404: {

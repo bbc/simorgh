@@ -67,6 +67,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'ออดิโอ เพลเยอร์',
         videoPlayer: 'วิดีโอ เพลเยอร์',
       },
+      liveExperiencePage: {
+        live_coverage: 'รายงานสด',
+        breaking: 'ด่วน',
+        posted_at: 'โพสต์ทาง',
+        summary: 'สรุป',
+      },
       gist: 'สรุป',
       error: {
         404: {

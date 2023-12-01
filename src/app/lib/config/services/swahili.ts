@@ -66,6 +66,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Kicheza Sauti',
         videoPlayer: 'Kicheza Video',
       },
+      liveExperiencePage: {
+        live_coverage: 'Moja kwa moja',
+        breaking: 'Habari za hivi punde',
+        posted_at: 'Imepakiwa mnamo',
+        summary: 'Muhtasari',
+      },
       gist: 'Muhtasari',
       error: {
         404: {

@@ -66,6 +66,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        live_coverage: 'Түз алып баруу',
+        breaking: 'Чукул кабар',
+        posted_at: 'Чыгарылган убакыт',
+        summary: 'Корутунду',
+      },
       gist: 'Корутунду',
       error: {
         404: {

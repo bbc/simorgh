@@ -87,6 +87,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
       },
+      liveExperiencePage: {
+        live_coverage: 'تغطية مباشرة',
+        breaking: 'عاجل',
+        posted_at: 'توقيت النشر',
+        summary: 'ملخص',
+      },
       gist: 'ملخص',
       error: {
         404: {

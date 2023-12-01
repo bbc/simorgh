@@ -79,6 +79,12 @@ const baseServiceConfig = {
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    liveExperiencePage: {
+      live_coverage: 'Висвітлення наживо',
+      breaking: 'Терміново',
+      posted_at: 'Опубілковано о',
+      summary: 'Стисло',
+    },
     gist: 'Стисло',
     error: {
       404: {

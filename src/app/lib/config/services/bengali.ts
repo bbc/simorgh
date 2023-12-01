@@ -68,6 +68,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'অডিও প্লেয়ার',
         videoPlayer: 'ভিডিও প্লেয়ার',
       },
+      liveExperiencePage: {
+        live_coverage: 'সরাসির কভারেজ',
+        breaking: 'ব্রেকিং',
+        posted_at: 'পোস্ট করা হয়েছে',
+        summary: 'সার সংক্ষেপ',
+      },
       gist: 'সার সংক্ষেপ',
       error: {
         404: {

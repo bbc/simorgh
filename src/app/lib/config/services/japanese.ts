@@ -67,6 +67,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: '音声プレイヤー',
         videoPlayer: '動画プレイヤー',
       },
+      liveExperiencePage: {
+        live_coverage: '関連実況',
+        breaking: '速報',
+        posted_at: '投稿時間',
+        summary: '要点',
+      },
       gist: '要点',
       error: {
         404: {

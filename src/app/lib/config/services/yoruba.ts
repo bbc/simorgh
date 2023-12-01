@@ -65,6 +65,12 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        live_coverage: 'Ìgbóhùnsáfẹ́fẹ́ tí ń lọ lọ́wọ́',
+        breaking: 'Kókó',
+        posted_at: 'Tí a fiṣọwọ́ ní',
+        summary: 'Ìsọníṣókí',
+      },
       gist: 'Ìsọníṣókí',
       error: {
         404: {

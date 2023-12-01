@@ -166,6 +166,12 @@ export const service: SerbianConfig = {
         audioPlayer: 'Audio plejer',
         videoPlayer: 'Video plejer',
       },
+      liveExperiencePage: {
+        live_coverage: '',
+        breaking: '',
+        posted_at: '',
+        summary: '',
+      },
       gist: 'Sažetak',
       error: {
         404: {
@@ -483,6 +489,12 @@ export const service: SerbianConfig = {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
         videoPlayer: 'Видео плејер',
+      },
+      liveExperiencePage: {
+        live_coverage: '',
+        breaking: '',
+        posted_at: '',
+        summary: '',
       },
       gist: 'Сажетак',
       error: {

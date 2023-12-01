@@ -126,6 +126,12 @@ export const mainTranslations = {
     audioPlayer: 'Аудио плеер',
     videoPlayer: 'Видео плеер',
   },
+  liveExperiencePage: {
+    live_coverage: 'Онлайн-трансляция',
+    breaking: 'Срочно',
+    posted_at: 'Отправлено в ',
+    summary: 'Коротко',
+  },
   gist: 'Коротко',
   error: {
     404: {
