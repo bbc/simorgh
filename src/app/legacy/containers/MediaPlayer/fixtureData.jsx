@@ -3,7 +3,7 @@ import { string, shape, arrayOf, object, bool, oneOfType } from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MediaPlayerContainer from '.';
 
@@ -708,6 +708,7 @@ const GenerateFixtureData = ({
   assetType,
   assetId,
   available,
+  pageType,
   showPlaceholder,
   isLegacyMedia,
 }) => (
@@ -717,7 +718,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType={ARTICLE_PAGE}
+    pageType={pageType}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
@@ -750,11 +751,13 @@ GenerateFixtureData.propTypes = {
   available: bool,
   isLegacyMedia: bool,
   showPlaceholder: bool.isRequired,
+  pageType: string,
 };
 
 GenerateFixtureData.defaultProps = {
   available: true,
   isLegacyMedia: false,
+  pageType: ARTICLE_PAGE,
 };
 
 export const VideoCanonicalWithPlaceholder = (
@@ -774,6 +777,17 @@ export const VideoCanonicalNoPlaceholder = (
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder={false}
+  />
+);
+
+export const VideoLivePageCanonicalWithPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validLivePageVideoWithCaptionBlock}
+    assetType="live"
+    assetId="c7p765ynk9qt"
+    pageType={LIVE_PAGE}
+    showPlaceholder
   />
 );
 
