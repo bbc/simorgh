@@ -130,7 +130,13 @@ const HiearchicalGrid = ({
                       className="focusIndicatorDisplayBlock"
                     >
                       {isLive ? (
-                        <LiveLabel>{promo.title}</LiveLabel>
+                        <LiveLabel
+                          {...(isFirstPromo && {
+                            className: 'first-promo',
+                          })}
+                        >
+                          {promo.title}
+                        </LiveLabel>
                       ) : (
                         promo.title
                       )}
