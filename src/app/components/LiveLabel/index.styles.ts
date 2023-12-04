@@ -1,8 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme, keyframes } from '@emotion/react';
 
-// first commit
-
 const pulseAnimation = keyframes({
   '0%': {
     opacity: 1,
