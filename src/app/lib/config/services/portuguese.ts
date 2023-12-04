@@ -276,6 +276,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
+      latestMediaTitle: 'Mais recentes',
     },
     mostRead: {
       header: 'Mais lidas',
