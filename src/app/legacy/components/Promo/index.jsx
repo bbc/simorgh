@@ -31,7 +31,7 @@ const Promo = ({ children }) => {
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
     child => child.type === Promo.Image,
-    children,
+    children.filter(Boolean),
   );
   return (
     <Wrapper>

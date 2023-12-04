@@ -11,6 +11,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "../src/**/*.d.ts",
     "next.config.js",
     "integration/IntegrationTestEnvironment.ts"
   ],

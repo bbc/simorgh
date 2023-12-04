@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 18,
+    "month": "April",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://app.zeplin.io/project/5d4d77b1fcbfc79bf47e0294/screen/637e9cbe5b71957248763d14",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/World-Service-Uploader-Promo-Accessibility-acceptance-criteria--B2o0MDZW6rP1uGrIZExh9ELbAg-mpWjmk1wPDb6dYafZKYx9",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/17joYg5Q0C9MGeXGwE2YhtvPKw5SRWM_ehY1tZTIJkKQ/edit?usp=sharing",
+      "label": "A11y swarm notes"
+    }
+  }
+}

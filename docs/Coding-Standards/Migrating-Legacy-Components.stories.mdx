@@ -4,24 +4,6 @@ import { Meta } from '@storybook/addon-docs';
 
 # Coding standards: Migrating Legacy Components
 
-<br />
-
-## Import from relative locations instead of using the # alias
-
-The # alias makes it difficult for developers (and sometimes our IDE) to determine where a particular file lives.
-
-### Before
-
-```jsx
-import MyComponent from '#components/MyComponent';
-```
-
-### After
-
-```jsx
-import MyComponent from '../../components/MyComponent';
-```
-
 ## Props / Typing
 
 ### Convert `Component.propTypes` to types/interfaces

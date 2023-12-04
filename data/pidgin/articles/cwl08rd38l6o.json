@@ -643,10 +643,8 @@
             },
             {
               "id": "5539aea1",
-              "type": "embed",
+              "type": "embedUploader",
               "model": {
-                "locator": "urn:bbc:ugc:campaign:u94753086",
-                "provider": "ugc-uploader",
                 "blocks": [
                   {
                     "id": "2488a6c7",

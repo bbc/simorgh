@@ -1,5 +1,11 @@
 {
   "data": {
+    "atiAnalytics": {
+      "contentId": "urn:bbc:tipo:topic:cdvxv61l6x8t",
+      "contentType": "live-coverage",
+      "pageIdentifier": "live_coverage.cdvxv61l6x8t.page",
+      "pageTitle": "Pidgin test 2 - the description"
+    },
     "title": "Pidgin test 2",
     "description": "Pidgin test 2 - the description",
     "language": "pcm",
@@ -26,12 +32,6 @@
     },
     "endDateTime": "2023-04-06T10:21:00.000Z",
     "startDateTime": "2023-04-05T10:22:00.000Z",
-    "analytics": {
-      "page": {
-        "name": "live_coverage.c7p765ynk9qt.page",
-        "contentId": "urn:bbc:tipo:topic:c7p765ynk9qt"
-      }
-    },
     "isLive": true,
     "summaryPoints": {
       "id": "urn:bbc:optimo:asset:c5x3899j84ro",

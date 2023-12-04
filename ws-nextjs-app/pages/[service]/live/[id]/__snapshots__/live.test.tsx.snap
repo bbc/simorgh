@@ -5,6 +5,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   background-color: #141414;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    border-bottom: solid 0.1875rem transparent;
+  }
+}
+
 .emotion-1 {
   max-width: 80rem;
   margin: 0 auto;
@@ -1133,6 +1139,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 <div>
+  <noscript />
   <main>
     <div
       class="emotion-0"
