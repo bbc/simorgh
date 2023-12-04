@@ -7595,6 +7595,27 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   transform: translate(0, 12%);
 }
 
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-8 {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
 .emotion-9:before {
   content: '';
   position: absolute;
@@ -8073,6 +8094,27 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-15 {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .emotion-16:before {
