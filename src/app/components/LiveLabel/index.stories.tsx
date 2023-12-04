@@ -14,6 +14,7 @@ interface Props extends StoryProps {
   ariaHidden?: boolean;
   offScreenText?: string;
   text?: string;
+  className?: string;
 }
 
 const Component = ({
@@ -21,11 +22,14 @@ const Component = ({
   variant,
   offScreenText,
   children,
+  className,
 }: PropsWithChildren<Props>) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <LiveLabel offScreenText={offScreenText}>{children}</LiveLabel>
+        <LiveLabel offScreenText={offScreenText} className={className}>
+          {children}
+        </LiveLabel>
       </ServiceContextProvider>
     </ThemeProvider>
   );
@@ -85,7 +89,7 @@ export const WithCustomOffscreenText = ({ service, variant }: Props) => (
 export const WithChildren = ({ text: headline, service, variant }: Props) => (
   <Heading level={3}>
     <Promo.A href="https://www.bbc.co.uk/ws/languages">
-      <Component service={service} variant={variant}>
+      <Component service={service} variant={variant} className="first-promo">
         {headline}
       </Component>
     </Promo.A>
