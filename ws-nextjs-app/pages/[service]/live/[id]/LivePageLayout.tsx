@@ -27,6 +27,10 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
+    seo: {
+      seoTitle?: string;
+      seoDescription?: string;
+    };
     atiAnalytics: ATIData;
   };
 };
@@ -36,6 +40,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
   const {
     title,
     description,
+    seo: { seoTitle, seoDescription },
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
@@ -55,11 +60,15 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const showPaginatedTitle = pageCount && activePage && activePage >= 2;
 
+  const pageSeoTitle = seoTitle || title;
+
   const pageTitle = showPaginatedTitle
-    ? `${title}, ${pageXOfY
+    ? `${pageSeoTitle}, ${pageXOfY
         .replace('{x}', activePage.toString())
         .replace('{y}', pageCount.toString())}`
-    : title;
+    : pageSeoTitle;
+
+  const pageDescription = seoDescription || description || pageSeoTitle;
 
   return (
     <>
@@ -68,11 +77,15 @@ const LivePage = ({ pageData }: ComponentProps) => {
       <MetadataContainer
         title={pageTitle}
         lang={lang}
-        description="A test Live Page using Next.JS"
+        description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
+      <LinkedDataContainer
+        type="CollectionPage"
+        seoTitle={pageTitle}
+        headline={pageTitle}
+      />
       <main>
         <Header
           showLiveLabel={isLive}
