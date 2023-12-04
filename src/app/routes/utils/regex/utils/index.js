@@ -182,7 +182,7 @@ export const getIdxPageRegex = () => {
   let idxPageRegex = idxRegex;
 
   if (isLive()) {
-    idxPageRegex = `${idxRegex}|persian/afghanistan`;
+    idxPageRegex = `${idxRegex}`;
   }
 
   return `/:idx(${idxPageRegex}):amp(${ampRegex})?`;
