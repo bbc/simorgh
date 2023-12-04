@@ -46,10 +46,6 @@ const OptimizelyRecommendation = ({
   );
 };
 
-OptimizelyRecommendation.propTypes = {
-  pageData: articleDataPropTypes.isRequired,
-};
-
 export type ArticlePageType = InferProps<typeof articleDataPropTypes>;
 
 export default OptimizelyRecommendation;

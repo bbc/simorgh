@@ -52,10 +52,8 @@
             },
             {
               "id": "2f1d8d0b",
-              "type": "embed",
+              "type": "embedUploader",
               "model": {
-                "locator": "urn:bbc:ugc:campaign:u94753086",
-                "provider": "ugc-uploader",
                 "blocks": [
                   {
                     "id": "27eb6af6",

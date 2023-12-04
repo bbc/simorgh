@@ -1588,7 +1588,7 @@ describe('Routing Information Logging', () => {
     status: 200,
   };
 
-  it(`on non-200 response should log matched page type from route`, async () => {
+  it(`on 404 response should log a warning`, async () => {
     const pageType = 'Matching Page Type from Route';
     const status = 404;
     mockRouteProps({
@@ -1599,14 +1599,32 @@ describe('Routing Information Logging', () => {
     });
     await makeRequest(url);
 
-    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+    expect(loggerMock.warn).toHaveBeenCalledWith(ROUTING_INFORMATION, {
       url,
       status,
       pageType,
     });
   });
 
-  it(`on 200 response should log page type derived from response data`, async () => {
+  it(`on 500 response should log an error`, async () => {
+    const pageType = 'Matching Page Type from Route';
+    const status = 500;
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse: { ...dataResponse, status },
+      pageType,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.error).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status,
+      pageType,
+    });
+  });
+
+  it(`on 200 response should log page type derived from response data at debug level`, async () => {
     mockRouteProps({
       service,
       isAmp,
@@ -1614,7 +1632,7 @@ describe('Routing Information Logging', () => {
     });
     await makeRequest(url);
 
-    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+    expect(loggerMock.debug).toHaveBeenCalledWith(ROUTING_INFORMATION, {
       url,
       status: 200,
       pageType: 'Page Type from Data',
@@ -1668,12 +1686,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1683,12 +1701,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1702,12 +1720,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1729,12 +1747,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
