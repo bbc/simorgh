@@ -20,14 +20,16 @@ const KeyPoints = ({
     palette: { GREY_10 },
   } = useTheme();
 
-  const { translations } = useContext(ServiceContext);
+  const {
+    translations: {
+      liveExperiencePage: { summary = 'Summary' },
+    },
+  } = useContext(ServiceContext);
 
   const listItems = keyPointsContent?.[0]?.model?.blocks?.[0]?.model?.blocks;
   if (!listItems || listItems.length === 0) return null;
   const hasSingleKeyPoint = listItems.length === 1;
   const singleKeyPointComponentsToRender = { paragraph: LegacyParagraph };
-
-  const sectionTitle = translations.liveExperiencePage.summary;
 
   const componentsToRender = () => ({
     text: (props: ComponentToRenderProps) => (
@@ -48,9 +50,9 @@ const KeyPoints = ({
   });
 
   return (
-    <section role="region" aria-label={sectionTitle} data-e2e="key-points">
+    <section role="region" aria-label={summary} data-e2e="key-points">
       <Heading level={2} css={styles.headingStyles}>
-        {sectionTitle}
+        {summary}
       </Heading>
       <div css={styles.bodyStyles}>
         {hasSingleKeyPoint ? (

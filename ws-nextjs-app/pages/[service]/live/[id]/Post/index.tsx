@@ -24,7 +24,7 @@ import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
-  breakingNewsLabelText = 'Breaking',
+  breakingNewsLabelText,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
@@ -49,9 +49,16 @@ const PostHeaderBanner = ({
   breakingNewsLabelText?: string;
   timestamp: string;
 }) => {
-  const { timezone, locale, altCalendar, service, script } =
-    useContext(ServiceContext);
-  const { translations } = useContext(ServiceContext);
+  const {
+    timezone,
+    locale,
+    altCalendar,
+    service,
+    script,
+    translations: {
+      liveExperiencePage: { breaking = 'Breaking' },
+    },
+  } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
@@ -72,7 +79,7 @@ const PostHeaderBanner = ({
       />
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={translations.liveExperiencePage.breaking}
+        breakingNewsLabelText={breaking}
       />
     </div>
   );

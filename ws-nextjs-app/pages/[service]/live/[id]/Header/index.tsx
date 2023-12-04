@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /** @jsx jsx */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
@@ -16,7 +17,11 @@ const Header = ({
   title: string;
   description?: string;
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const {
+    translations: {
+      liveExperiencePage: { live_coverage = 'Live Coverage' },
+    },
+  } = useContext(ServiceContext);
 
   return (
     <div css={styles.backgroundColor}>
@@ -38,10 +43,10 @@ const Header = ({
                   aria-hidden="true"
                   data-testid="live-label"
                 >
-                  {translations.liveExperiencePage.live_coverage}
+                  {live_coverage}
                 </span>
                 <VisuallyHiddenText lang="en-GB">
-                  {translations.liveExperiencePage.live_coverage}
+                  {`${live_coverage} ,`}
                 </VisuallyHiddenText>
               </>
             ) : null}
