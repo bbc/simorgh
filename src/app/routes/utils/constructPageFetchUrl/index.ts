@@ -10,10 +10,11 @@ import {
   Environments,
   PageTypes,
 } from '../../../models/types/global';
-import HOME_PAGE_CONFIG, {
+import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
+import {
   TOPIC_PAGE_CONFIG,
   TopicPagePaths,
-} from '../../homePage/getInitialData/page-config';
+} from '../../topic/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,
