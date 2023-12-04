@@ -2,8 +2,7 @@
 #!/bin/bash
 
 # Loop through files in dir
-for f in $youruserpath/simorgh/src/app/lib/config/services/*; do 
-
+for f in ../src/app/lib/config/services/*; do 
 
   service=$(echo "$f" | awk -F '/' '{print $NF}' | awk -F '.' '{print $(NF-1)}')
     echo $service
@@ -14,7 +13,13 @@ for f in $youruserpath/simorgh/src/app/lib/config/services/*; do
     echo $url
 
     # Fetch data from api
-   xml_response=$(curl --cert-type P12 --cert {$pathToYourP12DevCert} $url)  
+    xml_response=$(curl --cert /etc/pki/tls/certs/client.crt --key /etc/pki/tls/private/client.key $url)  
+
+    # Check if curl was successful
+    if [ $? -ne 0 ]; then
+      echo "curl failed"
+      exit 1
+    fi
 
     # Extract values using awk
     live_coverage=$(echo "$xml_response" | awk -F'[<>]' '/<live_coverage>/{print $3}')
