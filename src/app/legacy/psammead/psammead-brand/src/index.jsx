@@ -11,10 +11,10 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
-const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
 const PADDING_AROUND_SVG_BELOW_400PX = 16;
 
@@ -27,7 +27,7 @@ const SvgWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
+  max-width: ${({ theme }) => `${pixelsToRem(theme.gridWidths[1280])}rem`};
   margin: 0 auto;
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {

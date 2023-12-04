@@ -8,14 +8,19 @@ export default {
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
-      maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
+      maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
+      padding: 0,
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
         columnGap: '1rem',
+      },
+
+      [mq.GROUP_5_MIN_WIDTH]: {
+        padding: 0,
       },
     }),
   primaryColumn: ({ mq }: Theme) =>

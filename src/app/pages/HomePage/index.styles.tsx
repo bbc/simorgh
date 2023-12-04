@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 const styles = {
   main: ({ spacings, mq }: Theme) =>
@@ -8,10 +9,11 @@ const styles = {
         margin: `0 ${spacings.DOUBLE}rem`,
       },
     }),
-  inner: css({
-    maxWidth: '63rem',
-    margin: '0 auto',
-  }),
+  inner: ({ gridWidths }: Theme) =>
+    css({
+      maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+      margin: '0 auto',
+    }),
   margins: ({ spacings, mq }: Theme) =>
     css({
       margin: `${spacings.TRIPLE}rem 0`,
