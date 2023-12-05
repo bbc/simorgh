@@ -589,8 +589,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-23 {
-  border: solid 0.1875rem transparent;
-  border-top: solid 0.0625rem transparent;
   margin: 0 0 1rem;
 }
 
@@ -603,6 +601,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 63rem) {
   .emotion-23 {
     margin: 0 0 1rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-23 {
+    border: solid 0.1875rem transparent;
+    border-top: solid 0.0625rem transparent;
   }
 }
 
@@ -648,7 +653,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
-  border-bottom: solid 0.1875rem transparent;
+  background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-26 {
+    border-bottom: solid 0.1875rem transparent;
+  }
 }
 
 .emotion-27 {
@@ -697,12 +708,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-27 {
-    width: 100%;
-  }
-}
-
 .emotion-29 {
   color: #141414;
   font-size: 0.875rem;
@@ -712,9 +717,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 700;
   color: #FFFFFF;
   background-color: #B80000;
-  -webkit-flex: 1 0 0;
-  -ms-flex: 1 0 0;
-  flex: 1 0 0;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   padding: 0.25rem 0.75rem;
 }
 
@@ -732,12 +737,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-29 {
-    padding-top: 0;
-  }
-}
-
 .emotion-31 {
   color: #141414;
   font-size: 1.125rem;
@@ -748,7 +747,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #000000;
   display: block;
   margin: 0;
-  padding: 1.3125rem 1rem 0;
+  padding: 1.5rem 1rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -767,13 +766,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-31 {
-    padding: 1.3125rem 1rem 0;
+    padding: 1.5rem 1rem 0;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-31 {
-    padding: 1.3125rem 1rem 0;
+    padding: 1.5rem 1rem 0;
   }
 }
 
@@ -943,6 +942,28 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-34 li:last-child {
   margin-bottom: 0;
+}
+
+.emotion-39 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border-top: solid 0.125rem #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-39 {
+    border-bottom: solid 0.1875rem transparent;
+  }
 }
 
 .emotion-55 {
@@ -1379,7 +1400,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       role="text"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-39"
                       >
                         <time
                           class="emotion-27"
@@ -1434,7 +1455,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       role="text"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-39"
                       >
                         <time
                           class="emotion-27"
@@ -1623,7 +1644,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       role="text"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-39"
                       >
                         <time
                           class="emotion-27"
