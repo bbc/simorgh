@@ -182,10 +182,8 @@ export const getIdxPageRegex = () => {
   let idxPageRegex = idxRegex;
 
   if (isLive()) {
-    idxPageRegex = `${idxRegex}`;
-  }
 
-  return `/:idx(${idxPageRegex}):amp(${ampRegex})?`;
+  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
 
 export const getRecommendationsDataRegex = services => {
