@@ -46,7 +46,7 @@ const Header = ({
                   {live_coverage}
                 </span>
                 <VisuallyHiddenText lang="en-GB">
-                  {`${live_coverage} ,`}
+                  {`${live_coverage}, `}
                 </VisuallyHiddenText>
               </>
             ) : null}
