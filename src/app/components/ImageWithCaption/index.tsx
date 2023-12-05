@@ -40,6 +40,7 @@ const renderCaption = (block: object, type: string, service: Services) =>
 
 type Props = {
   blocks: object[];
+  className?: string;
   position?: number[];
   sizes?: string;
   shouldPreload?: boolean;
@@ -47,6 +48,7 @@ type Props = {
 
 const ImageWithCaption = ({
   blocks,
+  className,
   position = [1],
   sizes,
   shouldPreload,
@@ -92,7 +94,7 @@ const ImageWithCaption = ({
   const lazyLoad = shouldLazyLoad(position);
 
   return (
-    <figure css={styles.figure}>
+    <figure className={className} css={styles.figure}>
       <Image
         alt={alt}
         attribution={copyright}
