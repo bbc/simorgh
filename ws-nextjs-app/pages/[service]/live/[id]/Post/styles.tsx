@@ -37,7 +37,7 @@ export default {
       display: `block`,
       margin: 0 /* Reset */,
     }),
-  postHeadline: ({ spacings, mq }: Theme) =>
+  postHeadline: ({ spacings }: Theme) =>
     css({
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
     }),
