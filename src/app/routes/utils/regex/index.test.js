@@ -569,6 +569,7 @@ describe('frontPage -> homePage migration', () => {
     'nepali',
     'pashto',
     'persian',
+    'persian/afghanistan',
     'pidgin',
     'portuguese',
     'punjabi',

@@ -52,6 +52,7 @@ const homePageServices = [
   'nepali',
   'pashto',
   'persian',
+  'persian/afghanistan',
   'pidgin',
   'portuguese',
   'punjabi',
