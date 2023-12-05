@@ -28,7 +28,7 @@ export default {
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 auto',
+      flex: '1 0 1',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
     }),
   postHeadings: ({ palette }: Theme) =>
