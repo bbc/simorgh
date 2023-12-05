@@ -10,6 +10,7 @@ interface LiveLabelProps {
   offScreenText?: string;
   lang?: string;
   id?: string;
+  className?: string;
 }
 
 const LiveLabel = ({
@@ -17,6 +18,7 @@ const LiveLabel = ({
   id,
   children,
   offScreenText,
+  className,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -41,19 +43,25 @@ const LiveLabel = ({
   } else if (liveLabelIsEnglish) {
     screenReaderText = 'Live';
   }
-
   // comma is added to screenReaderText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
   if (children) {
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
     screenReaderText += ', ';
   }
 
+  const circle = [
+    [styles.liveLabelCircle, className === 'first-promo' && styles.firstPromo],
+  ];
+
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
+      <span css={circle}>
+        <span css={styles.livelabelPulse} />
+      </span>
       <span
-        css={styles.liveLabel}
+        css={styles.liveLabelText}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >

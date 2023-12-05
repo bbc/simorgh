@@ -2030,6 +2030,20 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 `;
 
 exports[`StoryPromo should render Live promo correctly 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -2172,7 +2186,48 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #B80000;
+  color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+}
+
+.emotion-13:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-13:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-13:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-14 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -2181,7 +2236,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   font-weight: 700;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2192,7 +2247,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2204,28 +2259,28 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-16 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-16 {
     display: none;
     visibility: hidden;
   }
@@ -2263,14 +2318,21 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
             role="text"
           >
             <span
-              aria-hidden="true"
               class="emotion-12"
+            >
+              <span
+                class="emotion-13"
+              />
+            </span>
+            <span
+              aria-hidden="true"
+              class="emotion-14"
               dir="ltr"
             >
               LIVE 
             </span>
             <span
-              class="emotion-13"
+              class="emotion-15"
               lang="en-GB"
             >
               Live, 
@@ -2280,7 +2342,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
       >
         The summary of the promo
       </p>
@@ -2293,6 +2355,20 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 `;
 
 exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -2435,7 +2511,48 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #B80000;
+  color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+}
+
+.emotion-13:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-13:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-13:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-14 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -2444,7 +2561,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   font-weight: 700;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2455,7 +2572,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2467,28 +2584,28 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-16 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-16 {
     display: none;
     visibility: hidden;
   }
@@ -2526,14 +2643,21 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
             role="text"
           >
             <span
-              aria-hidden="true"
               class="emotion-12"
+            >
+              <span
+                class="emotion-13"
+              />
+            </span>
+            <span
+              aria-hidden="true"
+              class="emotion-14"
               dir="rtl"
             >
               مباشر 
             </span>
             <span
-              class="emotion-13"
+              class="emotion-15"
               lang="en-GB"
             >
               Live, 
@@ -2543,7 +2667,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
       >
         The summary of the promo
       </p>

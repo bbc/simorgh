@@ -12,6 +12,7 @@ import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
+import LiveLabel from '../../LiveLabel';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -73,6 +74,8 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
+          const isLive = promo.link?.includes('/live/');
+
           return (
             <li
               key={promo.id}
@@ -126,16 +129,28 @@ const HiearchicalGrid = ({
                       href={promo.link}
                       className="focusIndicatorDisplayBlock"
                     >
-                      {promo.title}
+                      {isLive ? (
+                        <LiveLabel
+                          {...(isFirstPromo && {
+                            className: 'first-promo',
+                          })}
+                        >
+                          {promo.title}
+                        </LiveLabel>
+                      ) : (
+                        promo.title
+                      )}
                     </Promo.A>
                   )}
                 </Promo.Heading>
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
-                <Promo.Timestamp className="promo-timestamp">
-                  {promo.lastPublished}
-                </Promo.Timestamp>
+                {!isLive ? (
+                  <Promo.Timestamp className="promo-timestamp">
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
+                ) : null}
               </Promo>
             </li>
           );

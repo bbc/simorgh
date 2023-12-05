@@ -192,6 +192,408 @@ export const articleDataNews = articleDataBuilder(
   },
 );
 
+export const articleDataNewsWithEmbeds = articleDataBuilder(
+  'c0000000001o',
+  'News',
+  'en-gb',
+  'http://www.bbc.co.uk/ontologies/passport/home/News',
+  [
+    'Article Headline',
+    'A paragraph.',
+    {
+      id: '044a8578',
+      type: 'oEmbed',
+      model: {
+        oembed: {
+          version: '1.0',
+          provider_name: 'riddle',
+          provider_url: 'https://www.riddle.com',
+          url: 'https://www.riddle.com/view/SAVstNdh',
+          html: '<div class="riddle2-wrapper" data-rid-id="SAVstNdh" data-auto-scroll="true" data-is-fixed-height-enabled="false" data-bg="#fff" data-fg="#00205b" style="margin:0 auto; max-width:100%; width:640px;" ><script src="https://www.riddle.com/embed/build-embedjs/embedV2.js"></script><iframe src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false" allow="autoplay" referrerpolicy="strict-origin"><section data-block="SingleChoice"><h2>How silly is Abby?</h2><p>&lt;p&gt;Babby&lt;/p&gt;</p><ul><li>Extremely silly</li><li>Not silly at all</li><li>Not very silly</li><li>Very silly</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness level?</h3><ul><li>High</li><li>Low</li><li>Medium</li><li>None</li></ul></section><section data-block="SingleChoice"><h3>How often is Abby silly?</h3><ul><li>Never</li><li>Rarely</li><li>Always</li><li>Sometimes</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness like?</h3><ul><li>Outrageous</li><li>Non-existent</li><li>Mild</li><li>Moderate</li></ul></section><section data-block="SingleChoice"><h3>How would you describe Abby&#039;s silliness?</h3><ul><li>Crazy</li><li>Calm</li><li>Boring</li><li>Sensible</li></ul></section></iframe></div>',
+          type: 'rich',
+          aresType: 'aresRiddle',
+        },
+      },
+      position: [5],
+    },
+    {
+      id: '044a8579',
+      type: 'embedHtml',
+      model: {
+        embeddableContent: '<html><h1>Embed HTML Component</h1></html>',
+      },
+    },
+    {
+      id: '19a21950',
+      type: 'embedImages',
+      model: {
+        blocks: [
+          {
+            id: '926faa7f',
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  id: '43aa3254',
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        id: '6ef09e8d',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '786213cc',
+                              type: 'paragraph',
+                              model: {
+                                text: 'CPS vs Optimo usage. .  .',
+                                blocks: [
+                                  {
+                                    id: '7c3a571b',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'CPS vs Optimo usage. .  .',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: 'c035496c',
+                  type: 'rawImage',
+                  model: {
+                    height: 852,
+                    width: 920,
+                    locator:
+                      '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/460',
+                    href: null,
+                    originCode: 'idt2',
+                    copyrightHolder: 'bbc',
+                    suitableForSyndication: true,
+                  },
+                },
+              ],
+            },
+          },
+          {
+            id: '378245e5',
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  id: '11e1fafa',
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        id: '1859ef48',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: 'dfcd0bd8',
+                              type: 'paragraph',
+                              model: {
+                                text: 'CPS vs Optimo usage. .  .',
+                                blocks: [
+                                  {
+                                    id: '373f5664',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'CPS vs Optimo usage. .  .',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: 'c95e2d51',
+                  type: 'rawImage',
+                  model: {
+                    height: 1054,
+                    width: 1280,
+                    locator:
+                      '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
+                    href: null,
+                    originCode: 'idt2',
+                    copyrightHolder: 'bbc',
+                    suitableForSyndication: true,
+                  },
+                },
+              ],
+            },
+          },
+          {
+            id: '0b9d2ccb',
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  id: '1be51985',
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        id: '4b3fa380',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '73f75999',
+                              type: 'paragraph',
+                              model: {
+                                text: 'CPS vs Optimo usage. .  .',
+                                blocks: [
+                                  {
+                                    id: '3726fb5f',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'CPS vs Optimo usage. .  .',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: '86cd5681',
+                  type: 'rawImage',
+                  model: {
+                    height: 1252,
+                    width: 1632,
+                    locator:
+                      '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/816',
+                    href: null,
+                    originCode: 'idt2',
+                    copyrightHolder: 'bbc',
+                    suitableForSyndication: true,
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
+      id: 'acfc77b6',
+      type: 'embed',
+      model: {
+        locator: 'urn:bbc:telescope:vote:LDNXKfL',
+        provider: 'telescope-vote',
+        usageRights: { suitableForSyndication: true },
+        blocks: [
+          {
+            id: '73f52c1a',
+            type: 'aresTelescope',
+            model: { isSignInRequired: false, wid: '15268' },
+            position: [4, 1],
+          },
+        ],
+      },
+      position: [4],
+    },
+    {
+      type: 'embedUploader',
+      id: '044a8585',
+      model: {
+        blocks: [
+          {
+            id: '2488a6c7',
+            type: 'aresUploader',
+            model: {
+              openingTime: '',
+              closingTime: '',
+              signinRequired: false,
+              campaignStatus: 'open',
+              blocks: [
+                {
+                  id: '7bc611ad',
+                  type: 'title',
+                  model: {
+                    blocks: [
+                      {
+                        id: 'ff83ac2d',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '5a40fc62',
+                              type: 'paragraph',
+                              model: {
+                                text: 'Get involved',
+                                blocks: [
+                                  {
+                                    id: 'e29b1166',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'Get involved',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: '84300d50',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        id: '32cae5cf',
+                        type: 'paragraph',
+                        model: {
+                          text: 'UGC Core Features 1 - Custom Form',
+                          blocks: [
+                            {
+                              id: '059ad032',
+                              type: 'fragment',
+                              model: {
+                                text: 'UGC Core Features 1 - Custom Form',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: 'd220c862',
+                  type: 'link',
+                  model: {
+                    locator:
+                      'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fsend%2Fu94753086',
+                    blocks: [
+                      {
+                        id: 'f2c76b0a',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '172eb0d5',
+                              type: 'paragraph',
+                              model: {
+                                text: 'Send form',
+                                blocks: [
+                                  {
+                                    id: '9e67d4d4',
+                                    type: 'urlLink',
+                                    model: {
+                                      text: 'Send form',
+                                      locator:
+                                        'https://www.bbc.com/send/u94753086',
+                                      blocks: [
+                                        {
+                                          id: 'b31d1113',
+                                          type: 'fragment',
+                                          model: {
+                                            text: 'Send form',
+                                            attributes: [],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  id: 'f21ce980',
+                  type: 'aresSendCTA',
+                  model: {
+                    blocks: [
+                      {
+                        id: '075d32c5',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: 'd6deb3ba',
+                              type: 'paragraph',
+                              model: {
+                                text: 'Send form',
+                                blocks: [
+                                  {
+                                    id: 'b1cdac2a',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'Send form',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+  'Article Headline for SEO',
+  'Article Headline for Promo',
+  'Article summary.',
+  presetThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: 'Royal+Wedding+2018~Duchess+of+Sussex',
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'en-gb',
+    ldpThingIds:
+      '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+    ldpThingLabels: 'Royal+Wedding+2018~Duchess+of+Sussex',
+    nationsProducer: null,
+    pageIdentifier: 'news.articles.c0000000001o.page',
+    pageTitle: 'Article Headline for SEO',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
+);
+
 export const articleDataPersian = articleDataBuilder(
   'c4vlle3q337o',
   'Persian',
