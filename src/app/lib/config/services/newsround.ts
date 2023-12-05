@@ -55,7 +55,7 @@ export const service: DefaultServiceConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'Live',
-        liveCoverage: 'Live coverage',
+        liveCoverage: 'Live Coverage',
         breaking: 'Breaking',
         postedAt: 'Posted at',
         summary: 'Summary',

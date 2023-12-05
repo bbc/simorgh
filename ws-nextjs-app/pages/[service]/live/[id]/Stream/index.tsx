@@ -17,7 +17,7 @@ const Stream = ({
 }) => {
   const {
     translations: {
-      liveExperiencePage: { liveCoverage = 'Live coverage' },
+      liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = useContext(ServiceContext);
 
