@@ -179,10 +179,6 @@ export const getSecondaryColumnDataRegex = services => {
 };
 
 export const getIdxPageRegex = () => {
-  let idxPageRegex = idxRegex;
-
-  if (isLive()) {
-
   return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
 
