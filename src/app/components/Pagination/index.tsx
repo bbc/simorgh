@@ -55,7 +55,7 @@ const visibilityToMediaQuery = (visibility: string) =>
     [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}) {
       display: inline-block;
     }`,
-    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}) {
+    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: 1008px) {
       display: inline-block;
     }`,
     [VISIBILITY.ALL]: `display: inline-block;`,
