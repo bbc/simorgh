@@ -90,4 +90,16 @@ export default {
         marginBottom: `${pixelsToRem(8)}rem`,
       },
     }),
+  bodyMedia: ({ spacings, mq }: Theme) =>
+    css({
+      paddingLeft: `${spacings.FULL}rem`,
+      paddingRight: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingLeft: `${spacings.DOUBLE}rem`,
+        paddingRight: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: 0,
+      },
+    }),
 };
