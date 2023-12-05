@@ -1,6 +1,7 @@
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
+  VideoLivePageCanonicalWithPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
   VideoAmpNoBlockId,
@@ -30,6 +31,11 @@ describe('MediaPlayer', () => {
     const { container } = render(VideoAmp);
     expect(container).toMatchSnapshot();
   });
+
+  it('Calls the canonical placeholder when platform is canonical and showPlaceholder is true for a Live Page video clip', () => {
+    const { container } = render(VideoLivePageCanonicalWithPlaceholder);
+    expect(container).toMatchSnapshot();
+  });
 });
 
 it('should display the AMP media caption', () => {
@@ -43,6 +49,16 @@ it('should display the Canonical media caption', () => {
   const { getByText } = render(VideoCanonicalWithCaption);
 
   const mediaCaptionCanonical = getByText('Media Player With Caption');
+  expect(mediaCaptionCanonical).toBeInTheDocument();
+});
+
+it('should display the Canonical media caption for a Live Page media', () => {
+  const { getByText } = render(VideoLivePageCanonicalWithPlaceholder);
+
+  const mediaCaptionCanonical = getByText(
+    'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+  );
+
   expect(mediaCaptionCanonical).toBeInTheDocument();
 });
 
