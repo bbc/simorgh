@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import isLocal from '#app/lib/utilities/isLocal';
 
 const AmpHead = () => (
   <Helmet>
@@ -27,7 +26,6 @@ const AmpServiceWorker = ({ canonicalLink, swSrc }) => (
 const ServiceWorkerContainer = () => {
   const { swPath, service } = useContext(ServiceContext);
   const { isAmp, canonicalLink } = useContext(RequestContext);
-  const envIsProduction = process.env.NODE_ENV === 'production';
   const swSrc = `${process.env.SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {
@@ -37,9 +35,9 @@ const ServiceWorkerContainer = () => {
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
-  }, [envIsProduction, swPath, service]);
+  }, [swPath, service]);
 
-  return isAmp && swPath && isLocal() ? (
+  return isAmp && swPath ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ServiceWorkerContainer from './index';
+import onClient from '../../../lib/utilities/onClient';
 
 const contextStub = {
   swPath: '/articles/sw.js',
@@ -12,80 +13,94 @@ const mockServiceWorker = {
   register: jest.fn(),
 };
 
+jest.mock('../../../lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
 describe('Service Worker', () => {
   let wrapper;
-
-  beforeEach(() => {
-    global.navigator.serviceWorker = mockServiceWorker;
-  });
+  const originalNavigator = global.navigator;
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.resetAllMocks();
     if (wrapper) {
       wrapper.unmount();
     }
-    delete process.env.SIMORGH_APP_ENV;
+    global.navigator = originalNavigator;
   });
 
-  describe('is enabled', () => {
-    it.each`
-      swPath               | serviceWorker        | environment | isAmp    | scenario
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'local'}  | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is local and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'test'}   | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is test and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'live'}   | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is live and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'test'}   | ${true}  | ${'because swPath has a value, serviceWorker is enabled, environment is test and isAmp is true'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'live'}   | ${true}  | ${'because swPath has a value, serviceWorker is enabled, environment is live and isAmp is true'}
-    `('$scenario', ({ swPath, serviceWorker, environment, isAmp }) => {
-      process.env.SIMORGH_APP_ENV = environment;
-      global.navigator.serviceWorker = serviceWorker;
+  describe('on canonical', () => {
+    it('is registered when swPath, serviceWorker have values and onClient is true', () => {
+      global.navigator.serviceWorker = mockServiceWorker;
+      onClient.mockImplementationOnce(() => true);
 
       wrapper = render(
-        <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+        <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
-        { isAmp },
       );
       expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
         `/news/articles/sw.js`,
       );
     });
+
+    describe('is not registered', () => {
+      it.each`
+        swPath                | serviceWorker        | isOnClient
+        ${undefined}          | ${undefined}         | ${true}
+        ${undefined}          | ${undefined}         | ${false}
+        ${undefined}          | ${mockServiceWorker} | ${true}
+        ${undefined}          | ${mockServiceWorker} | ${false}
+        ${contextStub.swPath} | ${mockServiceWorker} | ${false}
+      `(
+        'when swPath is $swPath, serviceWorker is $serviceWorker and isOnClient is $isOnClient',
+        ({ swPath, serviceWorker, isOnClient }) => {
+          if (serviceWorker) {
+            global.navigator.serviceWorker = serviceWorker;
+          } else {
+            global.navigator = originalNavigator;
+          }
+
+          onClient.mockImplementationOnce(() => isOnClient);
+
+          wrapper = render(
+            <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+              <ServiceWorkerContainer />
+            </ServiceContext.Provider>,
+          );
+          expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+        },
+      );
+    });
   });
 
-  describe('is disabled', () => {
-    it.each`
-      swPath               | serviceWorker        | environment | isAmp    | scenario
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'local'}  | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is local and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'test'}   | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is test and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'live'}   | ${false} | ${'because swPath has a value, serviceWorker is enabled, environment is live and isAmp is false'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'test'}   | ${true}  | ${'because swPath has a value, serviceWorker is enabled, environment is test and isAmp is true'}
-      ${'/articles/sw.js'} | ${mockServiceWorker} | ${'live'}   | ${true}  | ${'because swPath has a value, serviceWorker is enabled, environment is live and isAmp is true'}
-    `('$scenario', ({ swPath, serviceWorker, environment, isAmp }) => {
-      process.env.SIMORGH_APP_ENV = environment;
-      global.navigator.serviceWorker = serviceWorker;
+  describe('on amp', () => {
+    const isAmp = true;
 
+    it('is enabled when swPath has a value', () => {
       wrapper = render(
-        <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+        <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
         { isAmp },
       );
-      expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+
+      expect(
+        wrapper.container.querySelector('amp-install-serviceworker'),
+      ).toBeInTheDocument();
     });
-  });
 
-  describe('when swPath is not set (to disable the service worker)', () => {
-    it('should not be installed', async () => {
-      process.env.NODE_ENV = 'production';
-      const localContextStub = contextStub;
-
-      delete localContextStub.swPath;
-
-      render(
-        <ServiceContext.Provider value={localContextStub}>
+    it('is disabled when swPath does not have a value', () => {
+      wrapper = render(
+        <ServiceContext.Provider value={{ ...contextStub, swPath: '' }}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
+        { isAmp },
       );
-      expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+
+      expect(
+        wrapper.container.querySelector('amp-install-serviceworker'),
+      ).not.toBeInTheDocument();
     });
   });
 });
