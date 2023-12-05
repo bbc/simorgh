@@ -2,34 +2,34 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  timeStamp: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
+  timeStamp: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
     css({
       color: palette.WHITE,
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
-      [mq.GROUP_0_MAX_WIDTH]: {
-        width: '100%',
-      },
     }),
-  postHeaderBanner: ({ palette }: Theme) =>
+  postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
       alignItems: 'flex-start',
       display: 'flex',
       flexWrap: 'wrap',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
-      borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+      [mq.HIGH_CONTRAST]: {
+        borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+      },
     }),
-  breakingNewsLabel: ({ palette, mq, spacings }: Theme) =>
+  fullWidth: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.BRAND_BACKGROUND,
+    }),
+  breakingNewsLabel: ({ palette, spacings }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 0',
+      flex: '1 0 auto',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
-      [mq.GROUP_0_MAX_WIDTH]: {
-        paddingTop: '0',
-      },
     }),
   postHeadings: ({ palette }: Theme) =>
     css({
@@ -39,12 +39,12 @@ export default {
     }),
   postHeadline: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
+      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
   postSubHeadline: ({ mq, fontSizes, spacings }: Theme) =>
@@ -66,14 +66,16 @@ export default {
     }),
   postContainer: ({ spacings, mq }: Theme) =>
     css({
-      border: `solid ${pixelsToRem(3)}rem transparent`,
-      borderTop: `solid ${pixelsToRem(1)}rem transparent`,
       margin: `0 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.DOUBLE}rem`,
+      },
+      [mq.HIGH_CONTRAST]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+        borderTop: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
   postContent: ({ spacings, mq }: Theme) =>
