@@ -194,9 +194,9 @@ const StoryPromoContainer = ({
     return null;
   }
 
-  const useLargeImages = promoType === 'top' || promoType === 'leading';
+  const isTopOrLeadingPromo = promoType === 'top' || promoType === 'leading';
 
-  const isFirstPromo = index === 0 && useLargeImages;
+  const isFirstPromo = index === 0 && isTopOrLeadingPromo;
 
   const headingTagOverride =
     item.headingTag ||
@@ -287,7 +287,7 @@ const StoryPromoContainer = ({
       image={
         <StoryPromoImage
           isAmp={isAmp}
-          useLargeImages={useLargeImages}
+          useLargeImages={isTopOrLeadingPromo}
           lazyLoad={lazyLoadImage}
           imageValues={imageValues}
           pageType={pageType}
