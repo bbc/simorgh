@@ -6,7 +6,7 @@ export default {
     css({
       backgroundColor: palette.GREY_10,
       [mq.HIGH_CONTRAST]: {
-        borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
   outerGrid: ({ mq, gridWidths }: Theme) =>
