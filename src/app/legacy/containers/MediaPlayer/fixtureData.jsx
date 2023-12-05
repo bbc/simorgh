@@ -3,7 +3,7 @@ import { string, shape, arrayOf, object, bool, oneOfType } from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MediaPlayerContainer from '.';
 
@@ -12,6 +12,40 @@ const captionBlock = {
     blocks: [singleTextBlock('Media Player With Caption', 'mock-id-1')],
   },
   type: 'caption',
+};
+
+const captionBlockLivePage = {
+  id: '60db696a',
+  type: 'caption',
+  model: {
+    blocks: [
+      {
+        id: 'ea8e7d84',
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              id: 'c7ca4de7',
+              type: 'paragraph',
+              model: {
+                text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                blocks: [
+                  {
+                    id: 'b33e4302',
+                    type: 'fragment',
+                    model: {
+                      text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
 };
 
 const imageBlock = {
@@ -135,6 +169,211 @@ export const validAresMediaAudioBlock = {
   type: 'aresMedia',
 };
 
+export const validTransformedCPSAudioBlock = {
+  id: '0bba6b33',
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      {
+        id: 'f81137f6',
+        type: 'aresMediaMetadata',
+        blockId: 'urn:bbc:ares::clip:p01mr6r7',
+        model: {
+          advertising: true,
+          caption: 'A caption for a test asset',
+          embedding: true,
+          format: 'audio',
+          id: 'p01mr6r7',
+          imageCopyright: 'Getty Images',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg',
+          subType: 'clip',
+          synopses: {
+            short:
+              'Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.',
+          },
+          title:
+            'Подкаст "Разговоры с арбитром": чемпионский парад "Ливерпуля"',
+          versions: [
+            {
+              versionId: 'p01mr6r9',
+              types: ['Original'],
+              duration: 1961,
+              durationISO8601: 'PT32M41S',
+              warnings: {},
+              availableTerritories: {
+                uk: true,
+                nonUk: true,
+              },
+              availableFrom: 1559819809000,
+            },
+          ],
+          available: true,
+        },
+        position: [19, 1, 1],
+      },
+      {
+        id: '7f90e6c5',
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              id: 'fa7c810d',
+              type: 'rawImage',
+              model: {
+                copyrightHolder: 'Getty Images',
+                locator:
+                  'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg',
+                originCode: 'pips',
+              },
+              position: [19, 1, 2, 1],
+            },
+          ],
+        },
+        position: [19, 1, 2],
+      },
+      {
+        id: '68183aff',
+        type: 'caption',
+        model: {
+          blocks: [
+            {
+              id: '1f41a3c0',
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    id: '764f4cd3',
+                    type: 'paragraph',
+                    model: {
+                      text: 'A caption for a test asset',
+                      blocks: [
+                        {
+                          id: 'cfa881a7',
+                          type: 'fragment',
+                          model: {
+                            text: 'A caption for a test asset',
+                            attributes: [],
+                          },
+                          position: [19, 1, 3, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [19, 1, 3, 1, 1],
+                  },
+                ],
+              },
+              position: [19, 1, 3, 1],
+            },
+          ],
+        },
+        position: [19, 1, 3],
+      },
+    ],
+  },
+  position: [19, 1],
+};
+
+export const validClipMediaVideoBlock = {
+  id: '1ce4d114',
+  type: 'clipMedia',
+  model: {
+    id: 'urn:bbc:pips:pid:p01thw20',
+    urns: {
+      pipsPid: 'urn:bbc:pips:pid:p01thw20',
+    },
+    images: [
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'socialImage',
+        source: 'pipsImage',
+      },
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'promoImage',
+        source: 'pipsImage',
+      },
+    ],
+    assetPath: 'p01thw20',
+    type: 'video',
+    headlines: {
+      primaryHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      seoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      promoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      socialHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+    },
+    analytics: {
+      page: {
+        name: 'programmes.av.p01thw20.page',
+        contentId: 'urn:bbc:pips:pid:p01thw20',
+        producer: 'PROGRAMMES',
+      },
+    },
+    description:
+      'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+    summary: {
+      type: 'text',
+      model: {
+        blocks: [
+          {
+            type: 'paragraph',
+            model: {
+              text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    lastPublished: '2022-07-01T08:56:56Z',
+    firstPublished: null,
+    video: {
+      id: 'p01thw20',
+      title: "BBC launch trailer for We Know Our Place women's sport campaign",
+      holdingImage: {
+        id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+      },
+      version: {
+        id: 'p01thw22',
+        duration: 'PT54S',
+        kind: 'programme',
+        guidance: null,
+        territories: ['nonuk', 'uk'],
+      },
+      isAdvertisingAllowed: true,
+      isEmbeddingAllowed: true,
+      isUnavailable: false,
+    },
+    attributions: null,
+    link: {
+      path: '/programmes/p01thw20',
+    },
+    section: null,
+    isSharingAllowed: true,
+  },
+};
+
 export const missingAresMediaMetadataBlock = {
   model: {
     blocks: [imageBlock],
@@ -234,6 +473,20 @@ export const multipleAresMetadataBlock = {
 export const validVideoWithCaptionBlock = [
   captionBlock,
   validAresMediaVideoBlock,
+];
+
+export const validAudioWithCaptionBlock = [
+  captionBlock,
+  validAresMediaAudioBlock,
+];
+
+export const validTransformedCPSAudioWithCaptionBlock = [
+  validTransformedCPSAudioBlock,
+];
+
+export const validLivePageVideoWithCaptionBlock = [
+  captionBlockLivePage,
+  validClipMediaVideoBlock,
 ];
 
 const missingVpidBlocks = [
@@ -455,6 +708,7 @@ const GenerateFixtureData = ({
   assetType,
   assetId,
   available,
+  pageType,
   showPlaceholder,
   isLegacyMedia,
 }) => (
@@ -464,7 +718,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType={ARTICLE_PAGE}
+    pageType={pageType}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
@@ -497,11 +751,13 @@ GenerateFixtureData.propTypes = {
   available: bool,
   isLegacyMedia: bool,
   showPlaceholder: bool.isRequired,
+  pageType: string,
 };
 
 GenerateFixtureData.defaultProps = {
   available: true,
   isLegacyMedia: false,
+  pageType: ARTICLE_PAGE,
 };
 
 export const VideoCanonicalWithPlaceholder = (
@@ -521,6 +777,17 @@ export const VideoCanonicalNoPlaceholder = (
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder={false}
+  />
+);
+
+export const VideoLivePageCanonicalWithPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validLivePageVideoWithCaptionBlock}
+    assetType="live"
+    assetId="c7p765ynk9qt"
+    pageType={LIVE_PAGE}
+    showPlaceholder
   />
 );
 
