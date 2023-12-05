@@ -40,24 +40,12 @@ export default {
   postHeadline: ({ spacings, mq }: Theme) =>
     css({
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
-      },
     }),
   postSubHeadline: ({ mq, fontSizes, spacings }: Theme) =>
     css({
       padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
-      },
       [mq.GROUP_3_MIN_WIDTH]: {
         ...fontSizes.longPrimer,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
   postBackground: ({ palette }: Theme) =>
@@ -96,6 +84,7 @@ export default {
       paddingBottom: `${spacings.DOUBLE}rem`,
       '& ul': {
         paddingBottom: `${spacings.DOUBLE}rem`,
+        paddingInlineStart: `${spacings.TRIPLE}rem`,
         [mq.GROUP_4_MIN_WIDTH]: {
           paddingBottom: 0,
         },
