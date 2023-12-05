@@ -67,9 +67,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Видео плейер',
       },
       liveExperiencePage: {
-        live_coverage: 'Жонли ёритиш',
+        liveLabel: 'Жонли',
+        liveCoverage: 'Жонли ёритиш',
         breaking: 'Шошилинч',
-        posted_at: '...да чоп этилган',
+        postedAt: '...да чоп этилган',
         summary: 'Қисқача',
       },
       gist: 'Хулоса',

@@ -81,9 +81,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
       liveExperiencePage: {
-        live_coverage: 'တိုက်ရိုက် ထုတ်လွှင့်ချက်',
+        liveLabel: 'တိုက်ရိုက်',
+        liveCoverage: 'တိုက်ရိုက် ထုတ်လွှင့်ချက်',
         breaking: 'သတင်းထူး',
-        posted_at: 'ပို့စ် တင်တဲ့အချိန်',
+        postedAt: 'ပို့စ် တင်တဲ့အချိန်',
         summary: 'အနှစ်ချုပ်',
       },
       gist: 'အနှစ်ချုပ်',

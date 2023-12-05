@@ -127,9 +127,10 @@ export const mainTranslations = {
     videoPlayer: 'Видео плеер',
   },
   liveExperiencePage: {
-    live_coverage: 'Онлайн-трансляция',
+    liveLabel: 'Онлайн',
+    liveCoverage: 'Онлайн-трансляция',
     breaking: 'Срочно',
-    posted_at: 'Отправлено в ',
+    postedAt: 'Отправлено в',
     summary: 'Коротко',
   },
   gist: 'Коротко',

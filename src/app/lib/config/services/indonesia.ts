@@ -87,9 +87,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Pemutar Video',
       },
       liveExperiencePage: {
-        live_coverage: 'Liputan langsung',
+        liveLabel: 'Langsung',
+        liveCoverage: 'Liputan langsung',
         breaking: 'Terbaru',
-        posted_at: 'Diterbitkan di',
+        postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
       },
       gist: 'Rangkuman',

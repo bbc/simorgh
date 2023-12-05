@@ -89,9 +89,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'پخش ویدیو',
       },
       liveExperiencePage: {
-        live_coverage: 'پوشش زنده',
+        liveLabel: 'زنده',
+        liveCoverage: 'پوشش زنده',
         breaking: 'خبر فوری',
-        posted_at: 'به روزشده در',
+        postedAt: 'به روزشده در',
         summary: 'خلاصه',
       },
       gist: 'خلاصه',

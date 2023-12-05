@@ -67,9 +67,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Kicheza Video',
       },
       liveExperiencePage: {
-        live_coverage: 'Moja kwa moja',
+        liveLabel: 'Moja kwa moja',
+        liveCoverage: 'Moja kwa moja',
         breaking: 'Habari za hivi punde',
-        posted_at: 'Imepakiwa mnamo',
+        postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
       },
       gist: 'Muhtasari',

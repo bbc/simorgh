@@ -58,9 +58,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Aithris Beò',
+        liveLabel: 'Beò',
+        liveCoverage: 'Aithris Beò',
         breaking: 'Briseadh',
-        posted_at: 'Air a chur suas aig',
+        postedAt: 'Air a chur suas aig',
         summary: 'Geàrr-chunntas',
       },
       gist: 'Geàrr-shealladh',

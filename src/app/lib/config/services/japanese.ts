@@ -68,9 +68,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: '動画プレイヤー',
       },
       liveExperiencePage: {
-        live_coverage: '関連実況',
+        liveLabel: '実況中',
+        liveCoverage: '関連実況',
         breaking: '速報',
-        posted_at: '投稿時間',
+        postedAt: '投稿時間',
         summary: '要点',
       },
       gist: '要点',

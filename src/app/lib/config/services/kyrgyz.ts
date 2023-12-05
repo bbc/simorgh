@@ -67,9 +67,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Түз алып баруу',
+        liveLabel: 'Түз алып баруу',
+        liveCoverage: 'Түз алып баруу',
         breaking: 'Чукул кабар',
-        posted_at: 'Чыгарылган убакыт',
+        postedAt: 'Чыгарылган убакыт',
         summary: 'Корутунду',
       },
       gist: 'Корутунду',

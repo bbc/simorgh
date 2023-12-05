@@ -68,9 +68,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'วิดีโอ เพลเยอร์',
       },
       liveExperiencePage: {
-        live_coverage: 'รายงานสด',
+        liveLabel: 'สด',
+        liveCoverage: 'รายงานสด',
         breaking: 'ด่วน',
-        posted_at: 'โพสต์ทาง',
+        postedAt: 'โพสต์ทาง',
         summary: 'สรุป',
       },
       gist: 'สรุป',

@@ -67,9 +67,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'भिडिओ प्लेअर',
       },
       liveExperiencePage: {
-        live_coverage: 'लाइभ कभरेज',
+        liveLabel: 'लाइभ',
+        liveCoverage: 'लाइभ कभरेज',
         breaking: 'ब्रेकिंग',
-        posted_at: 'पोस्ट गरिएको',
+        postedAt: 'पोस्ट गरिएको',
         summary: 'सारांश',
       },
       gist: 'सारांश',

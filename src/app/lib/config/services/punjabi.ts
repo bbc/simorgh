@@ -66,10 +66,11 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'ਲਾਈਵ ਕਵਰੇਜ ',
-        breaking: 'ਤਾਜ਼ਾ ',
-        posted_at: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ ',
-        summary: 'ਸਾਰ ',
+        liveLabel: 'ਲਾਈਵ',
+        liveCoverage: 'ਲਾਈਵ ਕਵਰੇਜ',
+        breaking: 'ਤਾਜ਼ਾ',
+        postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
+        summary: 'ਸਾਰ',
       },
       gist: 'ਸਾਰ',
       error: {

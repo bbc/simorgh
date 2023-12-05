@@ -67,10 +67,11 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'የቀጥታ ሽፋን ',
+        liveLabel: 'ቀጥታ',
+        liveCoverage: 'የቀጥታ ሽፋን',
         breaking: 'ሰበር',
-        posted_at: 'የታተመዉ ',
-        summary: 'ጭምቅ ሃሳብ ',
+        postedAt: 'የታተመዉ',
+        summary: 'ጭምቅ ሃሳብ',
       },
       gist: 'ጭምቅ ሃሳብ',
       error: {

@@ -69,9 +69,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'ভিডিও প্লেয়ার',
       },
       liveExperiencePage: {
-        live_coverage: 'সরাসির কভারেজ',
+        liveLabel: 'লাইভ',
+        liveCoverage: 'সরাসির কভারেজ',
         breaking: 'ব্রেকিং',
-        posted_at: 'পোস্ট করা হয়েছে',
+        postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
       },
       gist: 'সার সংক্ষেপ',

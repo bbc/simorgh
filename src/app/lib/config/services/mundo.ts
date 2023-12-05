@@ -70,9 +70,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Reproductor de video',
       },
       liveExperiencePage: {
-        live_coverage: 'Cobertura en vivo',
+        liveLabel: 'En vivo',
+        liveCoverage: 'Cobertura en vivo',
         breaking: 'Último momento',
-        posted_at: ' Publicado ',
+        postedAt: 'Publicado',
         summary: 'Puntos clave',
       },
       gist: 'Sumario',

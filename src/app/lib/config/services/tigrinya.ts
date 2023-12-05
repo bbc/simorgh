@@ -66,9 +66,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'ቀጥታዊ ሸፈነ',
+        liveLabel: 'ቀጥታ',
+        liveCoverage: 'ቀጥታዊ ሸፈነ',
         breaking: 'ሓድሽ ዜና',
-        posted_at: 'ዝተለጠፈሉ',
+        postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
       },
       error: {

@@ -68,9 +68,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Haguuggii Tamsaasa Kallattii',
+        liveLabel: 'Tamsaasa Kallattii',
+        liveCoverage: 'Haguuggii Tamsaasa Kallattii',
         breaking: 'Amma nu gahe',
-        posted_at: '...tti maxxanfame',
+        postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
       },
       gist: 'Guduunfaa',

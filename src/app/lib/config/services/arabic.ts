@@ -88,9 +88,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'مشغل فيديو',
       },
       liveExperiencePage: {
-        live_coverage: 'تغطية مباشرة',
+        liveLabel: 'مباشر',
+        liveCoverage: 'تغطية مباشرة',
         breaking: 'عاجل',
-        posted_at: 'توقيت النشر',
+        postedAt: 'توقيت النشر',
         summary: 'ملخص',
       },
       gist: 'ملخص',

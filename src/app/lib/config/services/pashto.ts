@@ -69,9 +69,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'ویډیو پلیئر',
       },
       liveExperiencePage: {
-        live_coverage: 'ژوندی پوښښ',
+        liveLabel: 'ژوندی',
+        liveCoverage: 'ژوندی پوښښ',
         breaking: 'وروستی',
-        posted_at: 'د خپرېدو نیټه',
+        postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
       },
       gist: 'لنډیز',

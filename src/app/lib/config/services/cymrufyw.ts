@@ -59,9 +59,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Darlledu’n Fyw',
+        liveLabel: 'Yn Fyw',
+        liveCoverage: 'Darlledu’n Fyw',
         breaking: 'Newydd dorri',
-        posted_at: 'Cyhoeddwyd am',
+        postedAt: 'Cyhoeddwyd am',
         summary: 'Crynodeb',
       },
       gist: 'Cipolwg',

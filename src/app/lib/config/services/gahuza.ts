@@ -79,9 +79,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Kina amasanamu',
       },
       liveExperiencePage: {
-        live_coverage: 'Amakuru y’ikibiriraho',
-        breaking: 'Ivy’akakanya',
-        posted_at: 'Vyashizwe isaha',
+        liveLabel: 'Ikibiriraho',
+        liveCoverage: `Amakuru y'ikibiriraho`,
+        breaking: `Ivy'akakanya`,
+        postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
       },
       gist: 'Incamake',

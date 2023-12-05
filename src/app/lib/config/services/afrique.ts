@@ -69,9 +69,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Lecteur vidéo',
       },
       liveExperiencePage: {
-        live_coverage: 'En direct',
+        liveLabel: 'En direct',
+        liveCoverage: 'En direct',
         breaking: 'Urgent',
-        posted_at: 'Posté à',
+        postedAt: 'Posté à',
         summary: 'Points clés',
       },
       gist: 'Points clés',

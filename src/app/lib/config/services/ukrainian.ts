@@ -80,9 +80,10 @@ const baseServiceConfig = {
       videoPlayer: 'Відеоплеєр',
     },
     liveExperiencePage: {
-      live_coverage: 'Висвітлення наживо',
+      liveLabel: 'Наживо',
+      liveCoverage: 'Висвітлення наживо',
       breaking: 'Терміново',
-      posted_at: 'Опубілковано о',
+      postedAt: 'Опубілковано о',
       summary: 'Стисло',
     },
     gist: 'Стисло',

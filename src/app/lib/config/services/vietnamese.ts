@@ -69,9 +69,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Trực tiếp',
+        liveLabel: 'Trực tiếp',
+        liveCoverage: 'Trực tiếp',
         breaking: 'Tin mới nhất',
-        posted_at: 'Đăng ở',
+        postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
       },
       gist: 'Tóm tắt',

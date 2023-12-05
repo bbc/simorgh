@@ -67,10 +67,11 @@ export const service: DefaultServiceConfig = {
         videoPlayer: '비디오 플레이어',
       },
       liveExperiencePage: {
-        live_coverage: '생중계 ',
-        breaking: '속보 ',
-        posted_at: '작성 ',
-        summary: '요약 ',
+        liveLabel: 'Live',
+        liveCoverage: '생중계',
+        breaking: '속보',
+        postedAt: '작성',
+        summary: '요약',
       },
       gist: '요약',
       error: {

@@ -68,9 +68,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'காணொளி பிளேயர்',
       },
       liveExperiencePage: {
-        live_coverage: 'நேரடி செய்தி/ ஒலி/ஒளிபரப்பு',
+        liveLabel: 'நேரலை',
+        liveCoverage: 'நேரடி செய்தி/ ஒலி/ஒளிபரப்பு',
         breaking: 'வந்துகொண்டிருக்கும் செய்தி',
-        posted_at: 'பிரசுரிக்கப்பட்ட நேரம்',
+        postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
         summary: 'முக்கிய சாராம்சம்',
       },
       gist: 'முக்கிய சாராம்சம்',

@@ -89,9 +89,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: ' Cobertura ao Vivo',
-        breaking: ' Urgente',
-        posted_at: 'Publicado às',
+        liveLabel: 'Ao Vivo',
+        liveCoverage: 'Cobertura ao Vivo',
+        breaking: 'Urgente',
+        postedAt: 'Publicado às',
         summary: 'Pontos-chave',
       },
       gist: 'Pontos-chave',

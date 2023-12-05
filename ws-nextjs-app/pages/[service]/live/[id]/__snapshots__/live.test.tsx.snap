@@ -1162,13 +1162,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               class="emotion-4"
               data-testid="live-label"
             >
-              Live Coverage
+              Live
             </span>
             <span
               class="emotion-5"
               lang="en-GB"
             >
-              Live Coverage, 
+              Live, 
             </span>
             <span
               class="emotion-6"

@@ -25,9 +25,10 @@ export interface Translations {
     videoPlayer: string;
   };
   liveExperiencePage: {
-    live_coverage: string;
+    liveLabel: string;
+    liveCoverage: string;
     breaking: string;
-    posted_at: string;
+    postedAt: string;
     summary: string;
   };
   gist?: string;

@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
@@ -18,7 +17,7 @@ const Stream = ({
 }) => {
   const {
     translations: {
-      liveExperiencePage: { live_coverage = 'Live Reporting' },
+      liveExperiencePage: { liveCoverage = 'Live coverage' },
     },
   } = useContext(ServiceContext);
 
@@ -40,7 +39,7 @@ const Stream = ({
         ]}
         level={2}
       >
-        {live_coverage}
+        {liveCoverage}
       </Heading>
       {contributors && (
         <Paragraph data-testid="live-contributors" css={styles.subHeading}>

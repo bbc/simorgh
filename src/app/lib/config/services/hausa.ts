@@ -80,9 +80,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Rahoto kai-tsaye',
+        liveLabel: 'Kai-tsaye',
+        liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
-        posted_at: 'An wallafa a ',
+        postedAt: 'An wallafa a',
         summary: 'Takaitacce',
       },
       gist: 'Takaitacce',

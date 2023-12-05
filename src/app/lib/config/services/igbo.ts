@@ -66,9 +66,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Mkpuchi Na Eme Ozugbo',
+        liveLabel: 'Na Eme Ozugbo',
+        liveCoverage: 'Mkpuchi Na Eme Ozugbo',
         breaking: 'Na Akpọtụ Ugbu A',
-        posted_at: 'Ebisara na',
+        postedAt: 'Ebisara na',
         summary: 'Nchịkọta',
       },
       gist: 'Nchịkọta',

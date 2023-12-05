@@ -66,9 +66,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        live_coverage: 'Ìgbóhùnsáfẹ́fẹ́ tí ń lọ lọ́wọ́',
+        liveLabel: 'Lọ́wọ́lọ́wọ́',
+        liveCoverage: 'Ìgbóhùnsáfẹ́fẹ́ tí ń lọ lọ́wọ́',
         breaking: 'Kókó',
-        posted_at: 'Tí a fiṣọwọ́ ní',
+        postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
       },
       gist: 'Ìsọníṣókí',

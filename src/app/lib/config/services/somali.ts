@@ -67,9 +67,10 @@ export const service: DefaultServiceConfig = {
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
       liveExperiencePage: {
-        live_coverage: 'Tebin toos ah',
+        liveLabel: 'Toos',
+        liveCoverage: 'Tebin toos ah',
         breaking: 'War deg deg ah',
-        posted_at: 'Posted at',
+        postedAt: '',
         summary: 'Kooban',
       },
       gist: 'Kooban',
