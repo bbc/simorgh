@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { render } from '../react-testing-library-with-providers';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import ServiceWorkerContainer from './index';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '../../lib/utilities/onClient';
 
 const contextStub = {
   swPath: '/articles/sw.js',
@@ -13,29 +13,28 @@ const mockServiceWorker = {
   register: jest.fn(),
 };
 
-jest.mock('../../../lib/utilities/onClient', () =>
+jest.mock('../../lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),
 );
 
 describe('Service Worker', () => {
-  let wrapper;
   const originalNavigator = global.navigator;
 
   afterEach(() => {
     jest.resetAllMocks();
-    if (wrapper) {
-      wrapper.unmount();
-    }
+
     global.navigator = originalNavigator;
   });
 
   describe('on canonical', () => {
     it('is registered when swPath, serviceWorker have values and onClient is true', () => {
+      // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
       global.navigator.serviceWorker = mockServiceWorker;
-      onClient.mockImplementationOnce(() => true);
+      (onClient as jest.Mock).mockImplementationOnce(() => true);
 
-      wrapper = render(
-        <ServiceContext.Provider value={contextStub}>
+      render(
+        // @ts-expect-error only require a subset of properties on service context for testing purposes
+        <ServiceContext.Provider value={{ ...contextStub }}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
       );
@@ -56,14 +55,14 @@ describe('Service Worker', () => {
         'when swPath is $swPath, serviceWorker is $serviceWorker and isOnClient is $isOnClient',
         ({ swPath, serviceWorker, isOnClient }) => {
           if (serviceWorker) {
+            // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
             global.navigator.serviceWorker = serviceWorker;
-          } else {
-            global.navigator = originalNavigator;
           }
 
-          onClient.mockImplementationOnce(() => isOnClient);
+          (onClient as jest.Mock).mockImplementationOnce(() => isOnClient);
 
-          wrapper = render(
+          render(
+            // @ts-expect-error only require a subset of properties on service context for testing purposes
             <ServiceContext.Provider value={{ ...contextStub, swPath }}>
               <ServiceWorkerContainer />
             </ServiceContext.Provider>,
@@ -78,7 +77,8 @@ describe('Service Worker', () => {
     const isAmp = true;
 
     it('is enabled when swPath has a value', () => {
-      wrapper = render(
+      const { container } = render(
+        // @ts-expect-error only require a subset of properties on service context for testing purposes
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
@@ -86,12 +86,13 @@ describe('Service Worker', () => {
       );
 
       expect(
-        wrapper.container.querySelector('amp-install-serviceworker'),
+        container.querySelector('amp-install-serviceworker'),
       ).toBeInTheDocument();
     });
 
     it('is disabled when swPath does not have a value', () => {
-      wrapper = render(
+      const { container } = render(
+        // @ts-expect-error only require a subset of properties on service context for testing purposes
         <ServiceContext.Provider value={{ ...contextStub, swPath: '' }}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
@@ -99,7 +100,7 @@ describe('Service Worker', () => {
       );
 
       expect(
-        wrapper.container.querySelector('amp-install-serviceworker'),
+        container.querySelector('amp-install-serviceworker'),
       ).not.toBeInTheDocument();
     });
   });

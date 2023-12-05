@@ -1,9 +1,17 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import React, { useContext, useEffect } from 'react';
-import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { jsx } from '@emotion/react';
+import { ServiceContext } from '../../contexts/ServiceContext';
+
+interface AmpServiceWorkerProps {
+  canonicalLink: string;
+  swSrc: string;
+}
 
 const AmpHead = () => (
   <Helmet>
@@ -15,7 +23,7 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpServiceWorker = ({ canonicalLink, swSrc }) => (
+const AmpServiceWorker = ({ canonicalLink, swSrc }: AmpServiceWorkerProps) => (
   <amp-install-serviceworker
     src={swSrc}
     data-iframe-src={canonicalLink}
@@ -23,7 +31,7 @@ const AmpServiceWorker = ({ canonicalLink, swSrc }) => (
   />
 );
 
-const ServiceWorkerContainer = () => {
+export default () => {
   const { swPath, service } = useContext(ServiceContext);
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const swSrc = `${process.env.SIMORGH_BASE_URL}/${service}${swPath}`;
@@ -44,15 +52,3 @@ const ServiceWorkerContainer = () => {
     </>
   ) : null;
 };
-
-AmpServiceWorker.propTypes = {
-  canonicalLink: string,
-  swSrc: string,
-};
-
-AmpServiceWorker.defaultProps = {
-  canonicalLink: '',
-  swSrc: '',
-};
-
-export default ServiceWorkerContainer;

@@ -13,7 +13,7 @@ import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
 import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorkerContainer from '../../legacy/containers/ServiceWorker';
+import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import ThemeProvider from '../ThemeProvider';
@@ -114,7 +114,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && <ServiceWorkerContainer />}
+        {!isNextJs && <ServiceWorker />}
         <ManifestContainer />
         {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />
