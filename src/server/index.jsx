@@ -24,10 +24,8 @@ import renderDocument from './Document';
 import {
   articleManifestPath,
   articleSwPath,
-  articleSwUtilitiesPath,
   frontPageManifestPath,
   frontPageSwPath,
-  frontPageSwUtilitiesRegex,
 } from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
@@ -117,33 +115,6 @@ server
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
         res.status(500).send(`Unable to find service worker in ${swPath}`);
-      }
-    });
-  })
-  .get([articleSwUtilitiesPath, frontPageSwUtilitiesRegex], (req, res) => {
-    const handleSwError = ({ error, path }) => {
-      logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
-      res
-        .status(500)
-        .send(`Unable to find service worker utilities in ${path}`);
-    };
-
-    const requestOptions =
-      'Cache-Control, public, stale-if-error=6000, stale-while-revalidate=300, max-age=300';
-    const webpImagePath = `${__dirname}/public/service-worker/web-images/index.js`;
-    const cacheAssetsPath = `${__dirname}/public/service-worker/cache-assets/index.js`;
-
-    res.set(requestOptions);
-    res.sendFile(webpImagePath, {}, error => {
-      if (error) {
-        handleSwError({ error, path: webpImagePath });
-      }
-    });
-
-    res.set(requestOptions);
-    res.sendFile(cacheAssetsPath, {}, error => {
-      if (error) {
-        handleSwError({ error, path: cacheAssetsPath });
       }
     });
   })
