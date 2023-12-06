@@ -22,58 +22,95 @@ const styles = {
       ...fontVariants.sansBold,
     }),
 
-  // liveLabelCircle: ({ palette, spacings }: Theme) =>
+  // pulseContainer: ({ spacings }: Theme) => {
   //   css({
-  //     color: palette.LIVE_DARK,
-  //     borderRadius: '50%',
   //     display: 'inline-block',
-  //     width: `${spacings.DOUBLE}rem`,
-  //     height: `${spacings.DOUBLE}rem`,
-  //     background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
-  //     marginInlineEnd: `${spacings.HALF}rem`,
-  //     position: 'relative',
-  //     transform: 'translate(0, 12%)',
-  //   }),
+  //     marginRight: `${spacings.FULL}rem`,
+  //     width: '1em',
+  //     height: '1em',
+  //     verticalAlign: '-0.125em',
+  //   });
+  // },
 
-  // firstPromo: ({ mq, spacings }: Theme) =>
+  // pulsingCircle: ({ spacings }: Theme) => {
   //   css({
-  //     [mq.GROUP_1_ONLY]: {
-  //       width: `${pixelsToRem(18)}rem`,
-  //       height: `${pixelsToRem(18)}rem`,
-  //     },
-  //     [mq.GROUP_2_ONLY]: {
-  //       width: `${spacings.TRIPLE}rem`,
-  //       height: `${spacings.TRIPLE}rem`,
-  //     },
-  //     [mq.GROUP_3_MIN_WIDTH]: {
-  //       width: `${pixelsToRem(28)}rem`,
-  //       height: `${pixelsToRem(28)}rem`,
-  //     },
-  //   }),
+  //     display: 'inline-block',
+  //     marginInlineEnd: `${spacings.FULL}rem`,
+  //     // '@media (prefers-reduced-motion: no-preference)': {
+  //     //   animation: `${pulseAnimation} 1.7s cubic-bezier(0.25, 0.1, 0.25, 1)
+  //     //   3`,
+  //     // },
+  //   });
+  // },
 
-  // livelabelPulse: ({ palette }: Theme) =>
-  //   css({
-  //     '&:before': {
-  //       content: `''`,
-  //       position: 'absolute',
-  //       width: '100%',
-  //       height: '100%',
-  //       borderRadius: '50%',
-  //       background: `radial-gradient(circle, ${palette.LIVE_DARK} 37%, ${palette.LIVE_DARK} 37.5%,transparent 38%)`,
-  //       '@media (prefers-reduced-motion: no-preference)': {
-  //         animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
-  //       },
-  //     },
+  liveLabelCircle: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.LIVE_DARK,
+      borderRadius: '50%',
+      display: 'inline-block',
+      width: `${spacings.DOUBLE}rem`,
+      height: `${spacings.DOUBLE}rem`,
+      background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
+      marginInlineEnd: `${spacings.HALF}rem`,
+      position: 'relative',
+      transform: 'translate(0, 12%)',
+    }),
 
-  //     '&:after': {
-  //       content: `''`,
-  //       position: 'absolute',
-  //       width: '100%',
-  //       height: '100%',
-  //       borderRadius: '100%',
-  //       border: `${pixelsToRem(2)}rem solid transparent`,
-  //     },
-  //   }),
+  pulseContainer: () =>
+    css({
+      display: 'inline-block',
+      marginRight: '0.25em',
+      width: '1em',
+      height: '1em',
+      verticalAlign: '-0.125em',
+    }),
+
+  pulsingCircle: () =>
+    css({
+      '@media (prefers-reduced-motion: no-preference)': {
+        animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
+      },
+    }),
+
+  firstPromo: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_1_ONLY]: {
+        width: `${pixelsToRem(18)}rem`,
+        height: `${pixelsToRem(18)}rem`,
+      },
+      [mq.GROUP_2_ONLY]: {
+        width: `${spacings.TRIPLE}rem`,
+        height: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: `${pixelsToRem(28)}rem`,
+        height: `${pixelsToRem(28)}rem`,
+      },
+    }),
+
+  livelabelPulse: ({ palette }: Theme) =>
+    css({
+      '&:before': {
+        content: `''`,
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        borderRadius: '50%',
+        background: `radial-gradient(circle, ${palette.LIVE_DARK} 37%, ${palette.LIVE_DARK} 37.5%,transparent 38%)`,
+        '@media (prefers-reduced-motion: no-preference)': {
+          animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
+        },
+      },
+
+      '&:after': {
+        content: `''`,
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        borderRadius: '100%',
+        border: `${pixelsToRem(2)}rem solid transparent`,
+      },
+    }),
 };
 
 export default styles;

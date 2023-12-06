@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import { LIVE_DARK } from '../ThemeProvider/palette';
 
 interface LiveLabelProps {
   offScreenText?: string;
@@ -50,16 +51,24 @@ const LiveLabel = ({
   }
 
   // const circle = [
-  //   [styles.liveLabelCircle, className === 'first-promo' && styles.firstPromo],
+  //   [styles.pulseContainer, className === 'first-promo' && styles.firstPromo],
   // ];
 
   return (
     // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span id={id} role="text">
-      {/* <span css={circle}>
-        <span css={styles.livelabelPulse} />
-      </span> */}
+      <span css={styles.pulseContainer}>
+        <svg
+          fill={LIVE_DARK}
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 32 32"
+        >
+          <path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z" />
+          <circle css={styles.pulsingCircle} cx="16" cy="16" r="8.5" />
+        </svg>
+      </span>
       <span
         css={styles.liveLabelText}
         dir={dir}
