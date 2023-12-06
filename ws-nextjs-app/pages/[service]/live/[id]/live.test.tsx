@@ -9,6 +9,7 @@ import {
 import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
+import { Post } from './Post/types';
 
 const mockPageData = {
   ...liveFixture.data,
@@ -60,11 +61,15 @@ const mockPageDataWithMetadata = ({
   description,
   seoTitle,
   seoDescription,
+  startDateTime,
+  singlePost,
 }: {
   title: string;
   description?: string;
   seoTitle?: string;
   seoDescription?: string;
+  startDateTime?: string;
+  singlePost?: Post;
 }) => {
   return {
     ...mockPageData,
@@ -74,6 +79,13 @@ const mockPageDataWithMetadata = ({
       seoTitle,
       seoDescription,
     },
+    ...(startDateTime && { startDateTime }),
+    ...(singlePost && {
+      liveTextStream: {
+        contributors: '',
+        content: { data: { results: [singlePost] } },
+      },
+    }),
   };
 };
 
@@ -143,6 +155,45 @@ describe('Live Page', () => {
       );
 
       expect(schemaHeadline).toBeTruthy();
+    },
+  );
+
+  it.each`
+    startDateTime                       | lastPublished                       | expected
+    ${'2018-09-28T22:59:02.448804522Z'} | ${'2017-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'}
+    ${'2017-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'}
+    ${'2018-09-28T22:59:02.448804522Z'} | ${'Invalid date'}                   | ${'2018-09-28T22:59:02.448804522Z'}
+  `(
+    'should use the higher date out of $startDateTime and $lastPublished for dateModified',
+    async ({ startDateTime, lastPublished, expected }) => {
+      const singlePost = {
+        dates: {
+          lastPublished,
+        },
+      } as Post;
+
+      await act(async () => {
+        render(
+          <Live
+            pageData={mockPageDataWithMetadata({
+              title: 'Title',
+              startDateTime,
+              singlePost,
+            })}
+          />,
+        );
+      });
+
+      const datePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes(`"datePublished":"${startDateTime}"`),
+      );
+
+      const dateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes(`"dateModified":"${expected}"`),
+      );
+
+      expect(datePublished).toBeTruthy();
+      expect(dateModified).toBeTruthy();
     },
   );
 

@@ -32,6 +32,7 @@ type ComponentProps = {
       seoDescription?: string;
     };
     atiAnalytics: ATIData;
+    startDateTime: string;
   };
 };
 
@@ -45,6 +46,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
+    startDateTime,
   } = pageData;
 
   const { index: activePage, total: pageCount } =
@@ -57,6 +59,15 @@ const LivePage = ({ pageData }: ComponentProps) => {
     page: 'Page',
     ...translations.pagination,
   };
+
+  const firstPostLastPublished =
+    liveTextStream?.content?.data?.results?.[0]?.dates.lastPublished ??
+    startDateTime;
+
+  const dateModifiedSEO =
+    new Date(firstPostLastPublished) > new Date(startDateTime)
+      ? firstPostLastPublished
+      : startDateTime;
 
   const showPaginatedTitle = pageCount && activePage && activePage >= 2;
 
@@ -85,6 +96,8 @@ const LivePage = ({ pageData }: ComponentProps) => {
         type="CollectionPage"
         seoTitle={pageTitle}
         headline={pageTitle}
+        datePublished={startDateTime}
+        dateModified={dateModifiedSEO}
       />
       <main>
         <Header
