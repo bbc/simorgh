@@ -42,7 +42,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -79,6 +79,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #00CCC7;
   grid-column: 1/span 12;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 63rem) {
@@ -128,7 +129,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #F6F6F6;
@@ -210,7 +211,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -304,7 +305,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-11 a {
   color: #141414;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   border-bottom: 0.0625rem solid #141414;
@@ -421,7 +422,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 0;
@@ -499,7 +500,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -552,7 +553,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -614,13 +615,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   line-height: 1.125rem;
   color: #545658;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #FFFFFF;
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   padding: 0.25rem 0.75rem;
@@ -665,7 +666,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #FFFFFF;
@@ -719,7 +720,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -743,7 +744,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #000000;
@@ -885,7 +886,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-41 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #141414;
@@ -924,7 +925,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -981,7 +982,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-71 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
   font-family: inherit;
@@ -1102,7 +1103,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-76 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 0;
@@ -1159,8 +1160,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             <span
               aria-hidden="true"
               class="emotion-4"
+              data-testid="live-label"
             >
-              LIVE
+              Live
             </span>
             <span
               class="emotion-5"
@@ -1246,7 +1248,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           <h2
             class="emotion-26"
           >
-            Live Reporting
+            Live Coverage
           </h2>
           <p
             class="emotion-27"
