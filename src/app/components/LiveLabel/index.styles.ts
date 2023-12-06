@@ -22,12 +22,12 @@ const styles = {
       ...fontVariants.sansBold,
     }),
 
-  pulseContainer: () =>
+  pulseContainer: ({ spacings }: Theme) =>
     css({
       display: 'inline-block',
       marginRight: '0.25em',
-      width: '1em',
-      height: '1em',
+      width: `${spacings.DOUBLE}rem`,
+      height: `${spacings.DOUBLE}rem`,
       verticalAlign: '-0.125em',
     }),
 
