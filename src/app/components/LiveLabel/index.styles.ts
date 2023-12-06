@@ -25,10 +25,10 @@ const styles = {
   pulseContainer: ({ spacings }: Theme) =>
     css({
       display: 'inline-block',
-      marginRight: '0.25em',
+      marginRight: '0.25rem',
       width: `${spacings.DOUBLE}rem`,
       height: `${spacings.DOUBLE}rem`,
-      verticalAlign: '-0.125em',
+      verticalAlign: '-0.125rem',
     }),
 
   pulsingCircle: () =>
