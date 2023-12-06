@@ -1,4 +1,4 @@
-import idxPageJson from '#data/ukrainian/ukraine_in_russian/index.json';
+import idxPageJson from '#data/persian/afghanistan/index.json';
 import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData, { hasRadioSchedule } from '.';
 import getConfig from '../../utils/getConfig';
