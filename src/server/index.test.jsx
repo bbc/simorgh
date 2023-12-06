@@ -869,7 +869,7 @@ describe('Server', () => {
     it('should serve the sw.js with cache control information', async () => {
       const { header } = await makeRequest('/pidgin/sw.js');
       expect(header['cache-control']).toBe(
-        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+        'public, stale-if-error=6000, stale-while-revalidate=600, max-age=300',
       );
     });
   });
@@ -1461,7 +1461,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['cache-control']).toBe(
-      'public, stale-if-error=120, stale-while-revalidate=30, max-age=30',
+      'public, stale-if-error=300, stale-while-revalidate=30, max-age=30',
     );
   });
 
