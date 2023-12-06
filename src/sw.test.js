@@ -5,8 +5,7 @@ import { join, resolve } from 'path';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
-const serviceWorkerCode = `
-${serviceWorker.toString()}
+const serviceWorkerCode = `${serviceWorker.toString()}
 export { fetchEventHandler };
 `;
 
