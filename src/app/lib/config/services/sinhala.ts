@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'හඬ වාදකය',
         videoPlayer: 'වීඩියෝ ධාවකය',
       },
+      liveExperiencePage: {
+        liveLabel: 'සජීවී',
+        liveCoverage: 'සජීවී වාර්තාකරණය',
+        breaking: 'අලුත්ම පුවතක්',
+        postedAt: 'යාවත්කාලීන කළේ',
+        summary: 'සාරාංශය',
+      },
       gist: 'සාරාංශය',
       error: {
         404: {
