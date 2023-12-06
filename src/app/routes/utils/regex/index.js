@@ -25,6 +25,8 @@ import {
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
   getAfricaEyeTVPageRegex,
+  getArticleSwUtilitiesRegex,
+  getSwUtilitiesRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -33,12 +35,16 @@ export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
 
 export const articleSwPath = getArticleSwRegex(allServices);
+export const articleSwUtilitiesPath = getArticleSwUtilitiesRegex(allServices);
+
 export const articleManifestPath = getArticleManifestRegex(allServices);
 
 export const frontPagePath = getFrontPageRegex(allServices);
 export const frontPageDataPath = `${frontPagePath}.json`;
 
 export const frontPageSwPath = getSwRegex(allServices);
+export const frontPageSwUtilitiesRegex = getSwUtilitiesRegex(allServices);
+
 export const frontPageManifestPath = getManifestRegex(allServices);
 
 export const tipoHomePath = getTipoHomeRegex(allServices);
