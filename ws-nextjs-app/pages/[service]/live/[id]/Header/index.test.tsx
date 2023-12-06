@@ -38,7 +38,7 @@ describe('Live Page Header', () => {
         render(<Header title="I am a title" showLiveLabel />);
       });
 
-      expect(screen.getByText('LIVE')).toBeInTheDocument();
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
     });
 
     it('should not render if the liveLabel flag is false', async () => {

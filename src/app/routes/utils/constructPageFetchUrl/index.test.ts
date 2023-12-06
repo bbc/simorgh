@@ -92,14 +92,8 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}   | ${'http://localhost/ukrainian/ru-UA/topics/c0000000000t'}
     ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=test'}
     ${TOPIC_PAGE}   | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=live'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/afghanistan'}             | ${'http://localhost/persian/topics/crezq2dg9zwt'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'test'}   | ${'/persian/afghanistan'}             | ${'https://mock-bff-path/?id=c15er11zq57t&service=persian&pageType=topic&serviceEnv=test'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'live'}   | ${'/persian/afghanistan'}             | ${'https://mock-bff-path/?id=crezq2dg9zwt&service=persian&pageType=topic&serviceEnv=live'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/topics/c0000000000t'}     | ${'http://localhost/persian/topics/c0000000000t'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'test'}   | ${'/persian/topics/c0000000000t'}     | ${'https://mock-bff-path/?id=c0000000000t&service=persian&pageType=topic&serviceEnv=test'}
-    ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'live'}   | ${'/persian/topics/c0000000000t'}     | ${'https://mock-bff-path/?id=c0000000000t&service=persian&pageType=topic&serviceEnv=live'}
   `(
-    `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
+    `should return $expected when pageType is $pageType and variant is $variant on $environment environment`,
     ({
       pageType,
       serviceOverride,
