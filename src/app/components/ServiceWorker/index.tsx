@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { jsx } from '@emotion/react';
+import isLocal from '#app/lib/utilities/isLocal';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
@@ -45,7 +46,7 @@ export default () => {
     }
   }, [swPath, service]);
 
-  return isAmp && swPath ? (
+  return !isLocal() && isAmp && swPath ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />

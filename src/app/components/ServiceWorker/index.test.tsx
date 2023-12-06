@@ -1,8 +1,9 @@
 import React from 'react';
+import onClient from '#app/lib/utilities/onClient';
+import isLocal from '#app/lib/utilities/isLocal';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import ServiceWorkerContainer from './index';
-import onClient from '../../lib/utilities/onClient';
 
 const contextStub = {
   swPath: '/articles/sw.js',
@@ -13,7 +14,11 @@ const mockServiceWorker = {
   register: jest.fn(),
 };
 
-jest.mock('../../lib/utilities/onClient', () =>
+jest.mock('#app/lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
+jest.mock('#app/lib/utilities/isLocal', () =>
   jest.fn().mockImplementation(() => true),
 );
 
@@ -26,7 +31,7 @@ describe('Service Worker', () => {
     global.navigator = originalNavigator;
   });
 
-  describe('on canonical', () => {
+  describe('Canonical', () => {
     it('is registered when swPath, serviceWorker have values and onClient is true', () => {
       // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
       global.navigator.serviceWorker = mockServiceWorker;
@@ -73,16 +78,16 @@ describe('Service Worker', () => {
     });
   });
 
-  describe('on amp', () => {
-    const isAmp = true;
+  describe('Amp', () => {
+    it('is enabled when swPath has a value and not on local environment', () => {
+      (isLocal as jest.Mock).mockImplementationOnce(() => false);
 
-    it('is enabled when swPath has a value', () => {
       const { container } = render(
         // @ts-expect-error only require a subset of properties on service context for testing purposes
-        <ServiceContext.Provider value={contextStub}>
+        <ServiceContext.Provider value={{ ...contextStub }}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
-        { isAmp },
+        { isAmp: true },
       );
 
       expect(
@@ -90,18 +95,31 @@ describe('Service Worker', () => {
       ).toBeInTheDocument();
     });
 
-    it('is disabled when swPath does not have a value', () => {
-      const { container } = render(
-        // @ts-expect-error only require a subset of properties on service context for testing purposes
-        <ServiceContext.Provider value={{ ...contextStub, swPath: '' }}>
-          <ServiceWorkerContainer />
-        </ServiceContext.Provider>,
-        { isAmp },
-      );
+    describe('is disabled', () => {
+      it.each`
+        swPath       | isLocalEnv | reason
+        ${undefined} | ${false}   | ${'swPath is undefined'}
+        ${undefined} | ${false}   | ${'swPath is null'}
+        ${''}        | ${false}   | ${'swPath is empty'}
+        ${'swPath'}  | ${true}    | ${'service worker not supported on local environment on amp as it requires https'}
+      `(
+        'when swPath is $swPath and isLocalEnv is $isLocalEnv because $reason',
+        ({ swPath, isLocalEnv }) => {
+          (isLocal as jest.Mock).mockImplementationOnce(() => isLocalEnv);
 
-      expect(
-        container.querySelector('amp-install-serviceworker'),
-      ).not.toBeInTheDocument();
+          const { container } = render(
+            // @ts-expect-error only require a subset of properties on service context for testing purposes
+            <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+              <ServiceWorkerContainer />
+            </ServiceContext.Provider>,
+            { isAmp: true },
+          );
+
+          expect(
+            container.querySelector('amp-install-serviceworker'),
+          ).not.toBeInTheDocument();
+        },
+      );
     });
   });
 });
