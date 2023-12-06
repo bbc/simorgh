@@ -38,8 +38,6 @@ const fetchEventHandler = async event => {
     const cache = await caches.open(cacheName);
     let response = await cache.match(event.request);
 
-    console.log({ response });
-
     if (!response) {
       response = await fetch(event.request.url);
       cache.put(event.request, response.clone());

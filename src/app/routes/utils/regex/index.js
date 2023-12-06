@@ -33,14 +33,12 @@ export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
 
 export const articleSwPath = getArticleSwRegex(allServices);
-
 export const articleManifestPath = getArticleManifestRegex(allServices);
 
 export const frontPagePath = getFrontPageRegex(allServices);
 export const frontPageDataPath = `${frontPagePath}.json`;
 
 export const frontPageSwPath = getSwRegex(allServices);
-
 export const frontPageManifestPath = getManifestRegex(allServices);
 
 export const tipoHomePath = getTipoHomeRegex(allServices);
