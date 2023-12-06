@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'கேட்பொலி பிளேயர்',
         videoPlayer: 'காணொளி பிளேயர்',
       },
+      liveExperiencePage: {
+        liveLabel: 'நேரலை',
+        liveCoverage: 'நேரடி செய்தி/ ஒலி/ஒளிபரப்பு',
+        breaking: 'வந்துகொண்டிருக்கும் செய்தி',
+        postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
+        summary: 'முக்கிய சாராம்சம்',
+      },
       gist: 'முக்கிய சாராம்சம்',
       error: {
         404: {
