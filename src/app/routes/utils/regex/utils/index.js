@@ -1,5 +1,4 @@
 import isLive from '#app/lib/utilities/isLive';
-import isLocal from '#app/lib/utilities/isLocal';
 
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
@@ -73,7 +72,7 @@ const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 export const getFrontPageRegex = services => {
   let frontPages = services;
   // eslint-disable-next-line no-constant-condition
-  if ((isLocal() && process.env.JEST_WORKER_ID === undefined) || isLive()) {
+  if (isLive()) {
     frontPages = services.filter(
       service => !homePageServices.includes(service),
     );
@@ -93,7 +92,7 @@ export const getTipoHomeRegex = services => {
 
 export const getHomePageRegex = services => {
   let homePages = services;
-  if ((isLocal() && process.env.JEST_WORKER_ID === undefined) || isLive()) {
+  if (isLive()) {
     homePages = services.filter(service => homePageServices.includes(service));
   } else {
     homePages = services.filter(
