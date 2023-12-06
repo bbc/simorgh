@@ -46,16 +46,16 @@ interface PaginationProps {
 
 const visibilityToMediaQuery = (visibility: string) =>
   ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}) and (max-width: ${GROUP_2_MAX_WIDTH_BP}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}) {
+    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: 1008px) {
+    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}rem) {
       display: inline-block;
     }`,
     [VISIBILITY.ALL]: `display: inline-block;`,
@@ -136,7 +136,7 @@ const renderBlock = ({
       </li>
     );
   }
-
+  console.log('visibility', visibility, 'type', type);
   return (
     <li
       css={() => [styles.elipsisBlock, visibilityToMediaQuery(visibility)]}
@@ -161,6 +161,7 @@ const Pagination = ({
   const { dir } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const blocks = buildBlocks(activePage, pageCount);
+  console.log('blocks in pagination', blocks);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
 
