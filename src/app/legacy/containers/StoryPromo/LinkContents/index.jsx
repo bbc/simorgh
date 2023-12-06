@@ -30,9 +30,10 @@ const LinkContents = ({ item, isInline, id }) => {
       return 'photogallery';
     }
 
-    const mediaType =
-     (pathOr(null, ['media', 'format'], item) ||
-      pathOr(null, ['contentType'], item))?.toLowerCase();
+    const mediaType = (
+      pathOr(null, ['media', 'format'], item) ||
+      pathOr(null, ['contentType'], item)
+    )?.toLowerCase();
     return mediaType === 'audio' ? 'listen' : mediaType;
   };
 
