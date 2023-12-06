@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-return */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
@@ -46,8 +47,7 @@ const fetchEventHandler = async event => {
 
     event.respondWith(response);
   }
+  return;
 };
 
 onfetch = fetchEventHandler;
-
-export { fetchEventHandler };

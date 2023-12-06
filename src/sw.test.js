@@ -1,8 +1,24 @@
-import { fetchEventHandler } from '../public/sw';
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/first */
+import fs from 'fs';
+import { join, resolve } from 'path';
+
+const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
+
+const serviceWorkerCode = `
+${serviceWorker.toString()}
+export { fetchEventHandler };
+`;
+
+fs.writeFileSync(
+  resolve(__dirname, 'service-worker-test.js'),
+  serviceWorkerCode,
+);
 
 describe('Service Worker', () => {
   const originalFetch = global.fetch;
   const fetchSpy = jest.spyOn(global, 'fetch');
+  let fetchEventHandler;
 
   afterEach(() => {
     jest.resetAllMocks();
@@ -20,6 +36,8 @@ describe('Service Worker', () => {
         ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg`} | ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg.webp`}
         ${`${BASE_IMAGE_URL}/ace/standard/puppies.png`} | ${`${BASE_IMAGE_URL}/ace/standard/puppies.png.webp`}
       `(`for $image is $expectedUrl`, async ({ image, expectedUrl }) => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
+
         const event = {
           request: new Request(image, { headers: { accept: 'webp' } }),
         };
@@ -43,6 +61,8 @@ describe('Service Worker', () => {
         ${`${BASE_IMAGE_URL}/news/worldservice/puppies.jpeg`} | ${{ accept: 'webp' }} | ${'image url must not include worldservice'}
         ${`${BASE_IMAGE_URL}/news/puppies.jpg`}               | ${{}}                 | ${`webp not supported in request headers`}
       `(`for $image because $reason`, async ({ image, headers }) => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
+
         const event = {
           request: new Request(image, headers),
         };
@@ -89,6 +109,8 @@ describe('Service Worker', () => {
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
         async ({ assetUrl }) => {
+          ({ fetchEventHandler } = await import('./service-worker-test'));
+
           const event = {
             request: new Request(assetUrl),
             respondWith: jest.fn(),
@@ -112,6 +134,8 @@ describe('Service Worker', () => {
       `(
         `should return a cached response for $assetUrl`,
         async ({ assetUrl }) => {
+          ({ fetchEventHandler } = await import('./service-worker-test'));
+
           const event = {
             request: new Request(assetUrl),
             respondWith: jest.fn(),
@@ -146,6 +170,8 @@ describe('Service Worker', () => {
         ${'modern.frosted_promo.32caa641.js'}
         ${'/moment-lib.dfdb34b8.js'}
       `(`should fetch $assetUrl and cache it`, async ({ assetUrl }) => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
+
         const event = {
           request: new Request(assetUrl),
           respondWith: jest.fn(),
