@@ -16,6 +16,8 @@ const errorCodeRegex = '404|500';
 const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
 const sportDisciplineRegex = '/[a-z0-9-_]{1,}';
+const serviceWorkerUtilities =
+  '/service-worker/(webp-images|cache-assets)/index.js';
 
 const getServiceRegex = services => services.join('|');
 
@@ -27,6 +29,11 @@ export const getArticleRegex = services => {
 export const getArticleSwRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/sw.js`;
+};
+
+export const getArticleSwUtilitiesRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/${serviceWorkerUtilities}`;
 };
 
 export const getArticleManifestRegex = services => {
@@ -105,6 +112,11 @@ export const getHomePageRegex = services => {
 export const getSwRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sw.js`;
+};
+
+export const getSwUtilitiesRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/${serviceWorkerUtilities}`;
 };
 
 export const getManifestRegex = services => {
