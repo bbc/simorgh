@@ -5,10 +5,8 @@ const AUDIT_URLS = {
   },
 
   IDX: {
-    live: ['https://www.bbc.com/ukrainian/ukraine_in_russian'],
-    test: [
-      'https://www.test.bbc.com/ukrainian/ukraine_in_russian?renderer_env=live',
-    ],
+    live: ['https://www.bbc.com/persian/afghanistan'],
+    test: ['https://www.test.bbc.com/persian/afghanistan?renderer_env=live'],
   },
 
   FIX: {

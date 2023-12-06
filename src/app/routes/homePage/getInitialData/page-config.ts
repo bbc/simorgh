@@ -2,9 +2,7 @@ import { Services } from '../../../models/types/global';
 
 type Envs = 'test' | 'live';
 
-export const HOME_PAGE_CONFIG: {
-  [service in Services]: { [env in Envs]: string };
-} = {
+const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
   kyrgyz: {
     test: 'cm7682qz7v1t',
     live: 'crg7kj2e52nt',
