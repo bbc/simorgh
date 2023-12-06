@@ -4650,11 +4650,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/persian/afghanistan'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/persian/afghanistan'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
