@@ -46,6 +46,8 @@ export default {
       color: palette.LIVE_LIGHT,
       gridColumn: '1 / span 12',
       marginBottom: `${pixelsToRem(16)}rem`,
+      textTransform: 'uppercase',
+
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingInlineStart: `${pixelsToRem(16)}rem`,
         gridColumn: '1 / span 4',

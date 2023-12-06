@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 /** @jsx jsx */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
@@ -11,21 +10,21 @@ import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
 import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import ImageWithCaption from '#app/components/ImageWithCaption';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
-import ImageWithCaption from '#app/components/ImageWithCaption';
-import styles from './styles';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
-  breakingNewsLabelText = 'Breaking',
+  breakingNewsLabelText,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
@@ -47,16 +46,22 @@ const PostBreakingNewsLabel = ({
 
 const PostHeaderBanner = ({
   isBreakingNews,
-  breakingNewsLabelText,
   timestamp: curated,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
 }) => {
-  const { timezone, locale, altCalendar, service, script } =
-    useContext(ServiceContext);
-
+  const {
+    timezone,
+    locale,
+    altCalendar,
+    service,
+    script,
+    translations: {
+      liveExperiencePage: { breaking = 'Breaking' },
+    },
+  } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
@@ -78,7 +83,7 @@ const PostHeaderBanner = ({
       <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={breakingNewsLabelText}
+        breakingNewsLabelText={breaking}
       />
     </div>
   );

@@ -80,6 +80,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      liveExperiencePage: {
+        liveLabel: 'တိုက်ရိုက်',
+        liveCoverage: 'တိုက်ရိုက် ထုတ်လွှင့်ချက်',
+        breaking: 'သတင်းထူး',
+        postedAt: 'ပို့စ် တင်တဲ့အချိန်',
+        summary: 'အနှစ်ချုပ်',
+      },
       gist: 'အနှစ်ချုပ်',
       error: {
         404: {

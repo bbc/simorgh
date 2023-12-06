@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Tamsaasa Kallattii',
+        liveCoverage: 'Haguuggii Tamsaasa Kallattii',
+        breaking: 'Amma nu gahe',
+        postedAt: '...tti maxxanfame',
+        summary: 'Guduunfaa',
+      },
       gist: 'Guduunfaa',
       error: {
         404: {

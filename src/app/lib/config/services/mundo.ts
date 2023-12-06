@@ -69,6 +69,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Reproductor de audio',
         videoPlayer: 'Reproductor de video',
       },
+      liveExperiencePage: {
+        liveLabel: 'En vivo',
+        liveCoverage: 'Cobertura en vivo',
+        breaking: 'Último momento',
+        postedAt: 'Publicado',
+        summary: 'Puntos clave',
+      },
       gist: 'Sumario',
       error: {
         404: {
