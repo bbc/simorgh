@@ -890,7 +890,9 @@ describe('Server', () => {
 
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
-      expect(header['cache-control']).toBe('public, max-age=604800');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+      );
     });
   });
 

@@ -123,7 +123,10 @@ server
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-      res.set('Cache-Control', 'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800');
+      res.set(
+        'Cache-Control',
+        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+      );
       res.sendFile(manifestPath, {}, error => {
         if (error) {
           logger.error(MANIFEST_SENDFILE_ERROR, { error });
