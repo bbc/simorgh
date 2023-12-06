@@ -9,7 +9,7 @@ export const isMap = item => {
   const isCpsTypeMap = pathOr(null, ['cpsType'], item) === MEDIA_ASSET_PAGE;
   const hasMedia = pathOr(false, ['media'], item);
   const contentType = pathOr(null, ['contentType'], item);
-  const isOptimoMediaPromo =  ['Audio', 'Video'].includes(contentType);
+  const isOptimoMediaPromo = ['Audio', 'Video'].includes(contentType);
 
   return isCpsTypeMap || Boolean(hasMedia) || isOptimoMediaPromo;
 };
