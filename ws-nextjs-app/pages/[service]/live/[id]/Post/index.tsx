@@ -174,22 +174,20 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
-      <div css={styles.postBackground}>
-        <Heading level={3}>
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
-          <span role="text">
-            <PostHeaderBanner
-              isBreakingNews={isBreakingNews}
-              timestamp={timestamp}
-            />
-            {headerBlocks.map(headerBlock => (
-              <PostHeadings headerBlock={headerBlock} />
-            ))}
-          </span>
-        </Heading>
-        <div css={styles.postContent}>
-          <PostContent contentBlocks={contentBlocks} />
-        </div>
+      <Heading level={3}>
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          <PostHeaderBanner
+            isBreakingNews={isBreakingNews}
+            timestamp={timestamp}
+          />
+          {headerBlocks.map(headerBlock => (
+            <PostHeadings headerBlock={headerBlock} />
+          ))}
+        </span>
+      </Heading>
+      <div css={styles.postContent}>
+        <PostContent contentBlocks={contentBlocks} />
       </div>
     </article>
   );
