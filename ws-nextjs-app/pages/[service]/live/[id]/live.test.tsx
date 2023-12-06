@@ -9,7 +9,6 @@ import {
 import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
-import { Post } from './Post/types';
 
 const mockPageData = {
   ...liveFixture.data,
@@ -61,15 +60,15 @@ const mockPageDataWithMetadata = ({
   description,
   seoTitle,
   seoDescription,
-  startDateTime,
-  singlePost,
+  datePublished,
+  dateModified,
 }: {
   title: string;
   description?: string;
   seoTitle?: string;
   seoDescription?: string;
-  startDateTime?: string;
-  singlePost?: Post;
+  datePublished?: string;
+  dateModified?: string;
 }) => {
   return {
     ...mockPageData,
@@ -78,14 +77,9 @@ const mockPageDataWithMetadata = ({
     seo: {
       seoTitle,
       seoDescription,
+      datePublished,
+      dateModified,
     },
-    ...(startDateTime && { startDateTime }),
-    ...(singlePost && {
-      liveTextStream: {
-        contributors: '',
-        content: { data: { results: [singlePost] } },
-      },
-    }),
   };
 };
 
@@ -157,45 +151,56 @@ describe('Live Page', () => {
       expect(schemaHeadline).toBeTruthy();
     },
   );
+  it('SEO should use datePublished and dateModified when present', async () => {
+    const datePublished = '2018-09-28T22:59:02.448804522Z';
+    const dateModified = '2020-09-28T22:59:02.448804522Z';
 
-  it.each`
-    startDateTime                       | lastPublished                       | expected
-    ${'2018-09-28T22:59:02.448804522Z'} | ${'2017-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'}
-    ${'2017-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'} | ${'2018-09-28T22:59:02.448804522Z'}
-    ${'2018-09-28T22:59:02.448804522Z'} | ${'Invalid date'}                   | ${'2018-09-28T22:59:02.448804522Z'}
-  `(
-    'should use the higher date out of $startDateTime and $lastPublished for dateModified',
-    async ({ startDateTime, lastPublished, expected }) => {
-      const singlePost = {
-        dates: {
-          lastPublished,
-        },
-      } as Post;
-
-      await act(async () => {
-        render(
-          <Live
-            pageData={mockPageDataWithMetadata({
-              title: 'Title',
-              startDateTime,
-              singlePost,
-            })}
-          />,
-        );
-      });
-
-      const datePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
-        innerHTML?.includes(`"datePublished":"${startDateTime}"`),
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+            datePublished,
+            dateModified,
+          })}
+        />,
       );
+    });
 
-      const dateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
-        innerHTML?.includes(`"dateModified":"${expected}"`),
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished":"${datePublished}"`),
+    );
+
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified":"${dateModified}"`),
+    );
+
+    expect(SEODatePublished).toBeTruthy();
+    expect(SEODateModified).toBeTruthy();
+  });
+
+  it('SEO should NOT contain datePublished and dateModified when absent', async () => {
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+          })}
+        />,
       );
+    });
 
-      expect(datePublished).toBeTruthy();
-      expect(dateModified).toBeTruthy();
-    },
-  );
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished": null"`),
+    );
+
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified": null"`),
+    );
+
+    expect(SEODatePublished).toBeFalsy();
+    expect(SEODateModified).toBeFalsy();
+  });
 
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {

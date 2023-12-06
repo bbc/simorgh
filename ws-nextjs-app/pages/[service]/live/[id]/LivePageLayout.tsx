@@ -27,10 +27,12 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
-    seo: {
-      seoTitle?: string;
-      seoDescription?: string;
-    };
+    seo: Partial<{
+      seoTitle: string;
+      seoDescription: string;
+      datePublished: string;
+      dateModified: string;
+    }>;
     atiAnalytics: ATIData;
     startDateTime: string;
   };
@@ -41,12 +43,11 @@ const LivePage = ({ pageData }: ComponentProps) => {
   const {
     title,
     description,
-    seo: { seoTitle, seoDescription },
+    seo: { seoTitle, seoDescription, datePublished, dateModified },
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
-    startDateTime,
   } = pageData;
 
   const { index: activePage, total: pageCount } =
@@ -59,15 +60,6 @@ const LivePage = ({ pageData }: ComponentProps) => {
     page: 'Page',
     ...translations.pagination,
   };
-
-  const firstPostLastPublished =
-    liveTextStream?.content?.data?.results?.[0]?.dates.lastPublished ??
-    startDateTime;
-
-  const dateModifiedSEO =
-    new Date(firstPostLastPublished) > new Date(startDateTime)
-      ? firstPostLastPublished
-      : startDateTime;
 
   const showPaginatedTitle = pageCount && activePage && activePage >= 2;
 
@@ -96,8 +88,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
         type="CollectionPage"
         seoTitle={pageTitle}
         headline={pageTitle}
-        datePublished={startDateTime}
-        dateModified={dateModifiedSEO}
+        {...(datePublished && {
+          datePublished,
+          dateModified,
+        })}
       />
       <main>
         <Header
