@@ -1,7 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.0.6';
+const version = 'v0.1.0';
 const cacheName = 'simorghCache_v1';
 
 self.addEventListener('install', event => {
@@ -49,5 +50,4 @@ const fetchEventHandler = async event => {
 
 onfetch = fetchEventHandler;
 
-// eslint-disable-next-line import/prefer-default-export
 export { fetchEventHandler };
