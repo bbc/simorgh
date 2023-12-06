@@ -10,8 +10,8 @@ import isLocal from '#app/lib/utilities/isLocal';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
-  canonicalLink: string;
-  swSrc: string;
+  canonicalLink?: string;
+  swSrc?: string;
 }
 
 const AmpHead = () => (
@@ -24,7 +24,10 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpServiceWorker = ({ canonicalLink, swSrc }: AmpServiceWorkerProps) => (
+const AmpServiceWorker = ({
+  canonicalLink = '',
+  swSrc = '',
+}: AmpServiceWorkerProps) => (
   <amp-install-serviceworker
     src={swSrc}
     data-iframe-src={canonicalLink}
