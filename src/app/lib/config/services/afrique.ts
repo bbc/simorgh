@@ -350,8 +350,8 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/c0vmyy90q8zt',
       },
       {
-        title: 'Science',
-        url: '/afrique/topics/cdr561vr57gt',
+        title: 'Science et technologie',
+        url: '/afrique/topics/crezq2zk0q4t',
       },
       {
         title: 'Technologie',
