@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Canlı',
+        liveCoverage: 'Canlı yayın',
+        breaking: 'Son dakika',
+        postedAt: 'Basım saati',
+        summary: 'Özet',
+      },
       gist: 'Özet',
       error: {
         404: {

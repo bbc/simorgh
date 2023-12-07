@@ -88,6 +88,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Ao Vivo',
+        liveCoverage: 'Cobertura ao Vivo',
+        breaking: 'Urgente',
+        postedAt: 'Publicado às',
+        summary: 'Pontos-chave',
+      },
       gist: 'Pontos-chave',
       error: {
         404: {
