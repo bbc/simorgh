@@ -71,7 +71,6 @@ const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
   let frontPages = services;
-  // eslint-disable-next-line no-constant-condition
   if (isLive()) {
     frontPages = services.filter(
       service => !homePageServices.includes(service),
