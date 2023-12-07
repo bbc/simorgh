@@ -52,6 +52,28 @@ const invalidPortugueseData = {
   status: 404,
 };
 
+const articleDataWithCanonicalUrl = {
+  pageData: {
+    metadata: {
+      locators: {
+        canonicalUrl: 'https://www.bbc.com/pidgin/articles/cj80n66ddnko',
+      },
+    },
+  },
+  status: 200,
+};
+
+const articleDataWithoutCanonicalUrl = {
+  pageData: {
+    metadata: {
+      locators: {
+        foo: 'bar',
+      },
+    },
+  },
+  status: 200,
+};
+
 jest.mock('../../../../../contexts/ServiceContext', () => {
   const mockReact = jest.requireActual('react');
   return jest.fn().mockImplementation(
@@ -79,9 +101,8 @@ describe('passport home override', () => {
       ['brasil'],
     );
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: true,
+      hasRequestSucceeded: true,
       status: 200,
-      pageData: validPortugueseData.pageData,
     });
   });
 
@@ -95,9 +116,8 @@ describe('passport home override', () => {
       ['xyz'],
     );
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: false,
+      hasRequestSucceeded: false,
       status: 404,
-      pageData: validPortugueseData.pageData,
     });
   });
 
@@ -111,9 +131,8 @@ describe('passport home override', () => {
         pageType,
       );
       expect(result).toEqual({
-        hasData200StatusAndCorrectService: false,
+        hasRequestSucceeded: false,
         status: 404,
-        pageData: validPortugueseData.pageData,
       });
     });
   });
@@ -129,9 +148,8 @@ describe('passport home override', () => {
         null,
       );
       expect(result).toEqual({
-        hasData200StatusAndCorrectService: false,
+        hasRequestSucceeded: false,
         status: 404,
-        pageData: validPortugueseData.pageData,
       });
     });
   });
@@ -148,9 +166,8 @@ describe('passport home override', () => {
           null,
         );
         expect(result).toEqual({
-          hasData200StatusAndCorrectService: true,
+          hasRequestSucceeded: true,
           status: 200,
-          pageData: noPassport.pageData,
         });
       });
     });
@@ -166,9 +183,8 @@ describe('passport home override', () => {
           [],
         );
         expect(result).toEqual({
-          hasData200StatusAndCorrectService: true,
+          hasRequestSucceeded: true,
           status: 200,
-          pageData: noPassport.pageData,
         });
       });
     });
@@ -184,9 +200,8 @@ describe('passport home override', () => {
       ['brasil'],
     );
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: false,
+      hasRequestSucceeded: false,
       status: 404,
-      pageData: invalidPortugueseData.pageData,
     });
   });
 });
@@ -203,9 +218,8 @@ describe('sport home article', () => {
     const service = 'sport';
     const result = shouldRender(validSportData, service, pathname, pageType);
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: true,
+      hasRequestSucceeded: true,
       status: 200,
-      pageData: validSportData.pageData,
     });
   });
 
@@ -214,9 +228,8 @@ describe('sport home article', () => {
     const service = 'sport';
     const result = shouldRender(validSportData, service, pathname, pageType);
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: false,
+      hasRequestSucceeded: false,
       status: 404,
-      pageData: validSportData.pageData,
     });
   });
 });
@@ -238,9 +251,8 @@ describe('sport home story page', () => {
       pageType,
     );
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: true,
+      hasRequestSucceeded: true,
       status: 200,
-      pageData: validSportDataStoryPage.pageData,
     });
   });
 
@@ -254,9 +266,46 @@ describe('sport home story page', () => {
       pageType,
     );
     expect(result).toEqual({
-      hasData200StatusAndCorrectService: true,
+      hasRequestSucceeded: true,
       status: 200,
-      pageData: validSportDataStoryPage.pageData,
+    });
+  });
+});
+
+describe('article page', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const pageType = 'article';
+  const pathname = 'pidgin/articles/cj80n66ddnko';
+  const service = 'pidgin';
+
+  it('should render article page when canonical url is set', () => {
+    const result = shouldRender(
+      articleDataWithCanonicalUrl,
+      service,
+      pathname,
+      pageType,
+    );
+
+    expect(result).toEqual({
+      hasRequestSucceeded: true,
+      status: 200,
+    });
+  });
+
+  it('should render a 404 for an article page when canonical url is not set', () => {
+    const result = shouldRender(
+      articleDataWithoutCanonicalUrl,
+      service,
+      pathname,
+      pageType,
+    );
+
+    expect(result).toEqual({
+      hasRequestSucceeded: false,
+      status: 404,
     });
   });
 });
