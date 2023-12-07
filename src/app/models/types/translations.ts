@@ -24,6 +24,13 @@ export interface Translations {
     audioPlayer: string;
     videoPlayer: string;
   };
+  liveExperiencePage: {
+    liveLabel: string;
+    liveCoverage: string;
+    breaking: string;
+    postedAt: string;
+    summary: string;
+  };
   gist?: string;
   error: {
     home?: string;
