@@ -30,14 +30,17 @@ const PostBreakingNewsLabel = ({
   breakingNewsLabelText?: string;
 }) => {
   return isBreakingNews ? (
-    <Text
-      css={styles.breakingNewsLabel}
-      size="brevier"
-      fontVariant="sansBold"
-      data-testid="breaking-news-label"
-    >
-      {breakingNewsLabelText}
-    </Text>
+    <>
+      <Text
+        css={styles.breakingNewsLabel}
+        size="brevier"
+        fontVariant="sansBold"
+        data-testid="breaking-news-label"
+      >
+        {breakingNewsLabelText}
+      </Text>
+      <VisuallyHiddenText>, </VisuallyHiddenText>
+    </>
   ) : null;
 };
 
@@ -62,12 +65,12 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={styles.postHeaderBanner}>
+    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
-        format="DD MMMM YYYY"
+        format="D MMMM YYYY"
         locale={locale}
         timezone={timezone}
         service={service}
@@ -77,6 +80,7 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
+      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
@@ -153,9 +157,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   };
 
   return (
-    <div css={styles.postContent}>
-      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-    </div>
+    <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );
 };
 
@@ -176,20 +178,23 @@ const Post = ({ post }: { post: PostType }) => {
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <div css={styles.postContainer}>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} timestamp={timestamp} />
-      <div css={styles.postBody}>
-        <Heading level={3}>
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
-          <span role="text">
-            {headerBlocks.map(headerBlock => (
-              <PostHeadings headerBlock={headerBlock} />
-            ))}
-          </span>
-        </Heading>
+    <article css={styles.postContainer}>
+      <Heading level={3}>
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          <PostHeaderBanner
+            isBreakingNews={isBreakingNews}
+            timestamp={timestamp}
+          />
+          {headerBlocks.map(headerBlock => (
+            <PostHeadings headerBlock={headerBlock} />
+          ))}
+        </span>
+      </Heading>
+      <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-    </div>
+    </article>
   );
 };
 
