@@ -166,6 +166,13 @@ export const service: SerbianConfig = {
         audioPlayer: 'Audio plejer',
         videoPlayer: 'Video plejer',
       },
+      liveExperiencePage: {
+        liveLabel: 'Uživo',
+        liveCoverage: 'Pokrivenost uživo',
+        breaking: 'Vanredne',
+        postedAt: 'Objavljeno u',
+        summary: 'Sažetak',
+      },
       gist: 'Sažetak',
       error: {
         404: {
@@ -483,6 +490,13 @@ export const service: SerbianConfig = {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
         videoPlayer: 'Видео плејер',
+      },
+      liveExperiencePage: {
+        liveLabel: 'Уживо',
+        liveCoverage: 'Покривеност уживо',
+        breaking: 'Ванредне',
+        postedAt: 'Објављено у',
+        summary: 'Сажетак',
       },
       gist: 'Сажетак',
       error: {

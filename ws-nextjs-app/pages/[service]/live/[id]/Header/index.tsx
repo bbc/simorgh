@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
+import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
 
@@ -15,6 +16,12 @@ const Header = ({
   title: string;
   description?: string;
 }) => {
+  const {
+    translations: {
+      liveExperiencePage: { liveLabel = 'Live' },
+    },
+  } = useContext(ServiceContext);
+
   return (
     <div css={styles.backgroundColor}>
       <div css={styles.outerGrid}>
@@ -30,10 +37,16 @@ const Header = ({
           <span role="text" css={styles.innerGrid}>
             {showLiveLabel ? (
               <>
-                <span css={styles.label} aria-hidden="true">
-                  LIVE
+                <span
+                  css={styles.label}
+                  aria-hidden="true"
+                  data-testid="live-label"
+                >
+                  {liveLabel}
                 </span>
-                <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+                <VisuallyHiddenText lang="en-GB">
+                  {`${liveLabel}, `}
+                </VisuallyHiddenText>
               </>
             ) : null}
             <span
