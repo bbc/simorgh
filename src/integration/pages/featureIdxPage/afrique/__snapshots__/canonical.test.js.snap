@@ -103,8 +103,8 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 {
-  "text": "Science",
-  "url": "/afrique/topics/cdr561vr57gt",
+  "text": "Science et technologie",
+  "url": "/afrique/topics/crezq2zk0q4t",
 }
 `;
 

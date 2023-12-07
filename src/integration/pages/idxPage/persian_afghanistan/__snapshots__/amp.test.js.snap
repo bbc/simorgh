@@ -293,13 +293,6 @@ exports[`AMP persian/afghanistan IDX page Header Navigation link should match te
 
 exports[`AMP persian/afghanistan IDX page Header Navigation link should match text and url 13`] = `
 {
-  "text": "ناظران می‌گویند",
-  "url": "/persian/blogs-54099951",
-}
-`;
-
-exports[`AMP persian/afghanistan IDX page Header Navigation link should match text and url 14`] = `
-{
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
