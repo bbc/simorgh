@@ -14,31 +14,39 @@ const shouldRender = (
   pageType,
   passportHomesOverride = [],
 ) => {
-  let statusCode = status;
-  let isCorrectService;
-  let isCanonicalUrlMatch = true;
-  let isUrlValid = false;
+  let isValidRequest;
 
   const hasDataAnd200Status = pageData && status === 200;
+
   if (hasDataAnd200Status) {
     const passportHome = getPassportHome(pageData);
-    isCorrectService = isValidPassportHome(
+    const isValidService = isValidPassportHome(
       passportHome,
       service,
       passportHomesOverride,
     );
-    if (service === 'sport' && pageType === ARTICLE_PAGE) {
-      const canonicalUrl = getCanonicalUrl(pageData);
-      isCanonicalUrlMatch = matchesCanonicalUrl(canonicalUrl, pathName);
-    }
-    isUrlValid = isCorrectService && isCanonicalUrlMatch;
-    statusCode = !isUrlValid ? 404 : status;
+
+    const isValidArticle = () => {
+      if (pageType === ARTICLE_PAGE) {
+        const canonicalUrl = getCanonicalUrl(pageData);
+        if (service === 'sport') {
+          return matchesCanonicalUrl(canonicalUrl, pathName);
+        }
+        if (!canonicalUrl) return false;
+      }
+      return true;
+    };
+    isValidRequest = isValidService && isValidArticle();
+  } else {
+    isValidRequest = false;
   }
 
+  const hasRequestSucceeded = isValidRequest;
+  const statusCode = isValidRequest ? status : 404;
+
   return {
-    hasData200StatusAndCorrectService: hasDataAnd200Status && isUrlValid,
+    hasRequestSucceeded,
     status: statusCode,
-    pageData,
   };
 };
 
