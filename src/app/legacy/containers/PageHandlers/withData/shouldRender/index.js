@@ -14,7 +14,7 @@ const shouldRender = (
   pageType,
   passportHomesOverride = [],
 ) => {
-  let isValidRequest;
+  let statusCode = status;
 
   const hasDataAnd200Status = pageData && status === 200;
 
@@ -36,13 +36,11 @@ const shouldRender = (
       }
       return true;
     };
-    isValidRequest = isValidService && isValidArticle();
-  } else {
-    isValidRequest = false;
-  }
 
-  const hasRequestSucceeded = isValidRequest;
-  const statusCode = isValidRequest ? status : 404;
+    const isValidRequest = isValidService && isValidArticle();
+    statusCode = isValidRequest ? status : 404;
+  }
+  const hasRequestSucceeded = statusCode === 200;
 
   return {
     hasRequestSucceeded,
