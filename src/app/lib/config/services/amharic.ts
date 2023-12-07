@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'ቀጥታ',
+        liveCoverage: 'የቀጥታ ሽፋን',
+        breaking: 'ሰበር',
+        postedAt: 'የታተመዉ',
+        summary: 'ጭምቅ ሃሳብ',
+      },
       gist: 'ጭምቅ ሃሳብ',
       error: {
         404: {

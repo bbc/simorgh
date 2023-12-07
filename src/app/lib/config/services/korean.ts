@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: '오디오 플레이어',
         videoPlayer: '비디오 플레이어',
       },
+      liveExperiencePage: {
+        liveLabel: 'Live',
+        liveCoverage: '생중계',
+        breaking: '속보',
+        postedAt: '작성',
+        summary: '요약',
+      },
       gist: '요약',
       error: {
         404: {
