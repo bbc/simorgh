@@ -35,6 +35,8 @@ type Props = {
   status: number;
 };
 
+type wordCount = number | undefined;
+
 const PageLayoutWrapper = ({
   children,
   pageData,
