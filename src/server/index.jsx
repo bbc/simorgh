@@ -145,13 +145,13 @@ const injectDefaultCacheHeader = (req, res, next) => {
   const defaultMaxAge = getDefaultMaxAge(req);
   const maxAge =
     req.originalUrl.indexOf('/topics/') !== -1
-      ? defaultMaxAge * 4
+      ? defaultMaxAge * 8
       : defaultMaxAge;
   res.set(
     'Cache-Control',
-    `public, stale-if-error=${
-      maxAge * 10
-    }, stale-while-revalidate=${maxAge}, max-age=${maxAge}`,
+    `public, stale-if-error=${maxAge * 10}, stale-while-revalidate=${
+      maxAge * 4
+    }, max-age=${maxAge}`,
   );
   next();
 };
