@@ -88,6 +88,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'پخش صدا',
         videoPlayer: 'پخش ویدیو',
       },
+      liveExperiencePage: {
+        liveLabel: 'زنده',
+        liveCoverage: 'پوشش زنده',
+        breaking: 'خبر فوری',
+        postedAt: 'به روزشده در',
+        summary: 'خلاصه',
+      },
       gist: 'خلاصه',
       error: {
         404: {
