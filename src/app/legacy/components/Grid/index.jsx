@@ -74,7 +74,6 @@ export const GelPageGrid = styled(Grid)`
   width: 100%;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     margin: 0 auto;
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     margin: 0 auto;

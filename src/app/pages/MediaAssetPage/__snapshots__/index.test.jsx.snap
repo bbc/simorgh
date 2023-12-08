@@ -67,7 +67,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1433,7 +1432,6 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -2487,7 +2485,6 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-141 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

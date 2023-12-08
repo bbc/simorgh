@@ -9,6 +9,7 @@ import {
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -224,8 +225,10 @@ const StoryPage = ({ pageData }) => {
   const StoryPageGrid = styled(GelPageGrid)`
     width: 100%; /* Needed for IE11 */
     margin: 0 auto;
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+
+    @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+      padding-left: 0;
+      padding-right: 0;
     }
   `;
 

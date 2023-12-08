@@ -66,7 +66,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -995,7 +994,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

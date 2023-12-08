@@ -102,7 +102,6 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-3 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

@@ -66,7 +66,6 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -392,7 +391,6 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -718,7 +716,6 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1044,7 +1041,6 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1370,7 +1366,6 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

@@ -164,7 +164,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-7 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

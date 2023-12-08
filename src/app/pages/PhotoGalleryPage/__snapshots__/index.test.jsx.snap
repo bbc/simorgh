@@ -67,7 +67,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1230,7 +1229,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -2546,7 +2544,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -3164,7 +3161,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-106 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -4667,7 +4663,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -5788,7 +5783,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-2 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -6442,7 +6436,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-208 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 

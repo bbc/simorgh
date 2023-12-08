@@ -81,7 +81,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -92,9 +91,10 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 80rem) {
   .emotion-1 {
-    max-width: 63rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2862,7 +2862,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -2873,9 +2872,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 80rem) {
   .emotion-1 {
-    max-width: 63rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

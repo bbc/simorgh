@@ -66,7 +66,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -396,7 +395,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -727,7 +725,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1052,7 +1049,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
@@ -1378,7 +1374,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-1 {
     margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
