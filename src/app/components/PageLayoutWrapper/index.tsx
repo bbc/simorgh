@@ -26,6 +26,11 @@ type Props = {
     metadata: {
       type: PageTypes;
     };
+    content?: {
+        model?: {
+            blocks: []
+        }
+    };
   };
   status: number;
 };
