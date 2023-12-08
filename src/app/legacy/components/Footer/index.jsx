@@ -12,11 +12,8 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';
 import List from './List';
@@ -35,7 +32,7 @@ const SitewideLinksWrapper = styled.div`
 `;
 
 const ConstrainedWrapper = styled.div`
-  max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  max-width: ${({ theme }) => `${pixelsToRem(theme.gridWidths[1280])}rem`};
   margin: 0 auto;
   ${({ trustProjectLink }) =>
     trustProjectLink && `padding-top: ${GEL_SPACING};`}
