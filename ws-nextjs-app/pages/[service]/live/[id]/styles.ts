@@ -2,11 +2,6 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  wrapper: () =>
-    css({
-      maxWidth: `${pixelsToRem(1008)}rem`,
-      margin: `${pixelsToRem(20)}rem auto`,
-    }),
   outerGrid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
@@ -20,11 +15,16 @@ export default {
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${spacings.DOUBLE}rem`,
-        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+        paddingLeft: `${spacings.DOUBLE}rem`,
+        paddingRight: `${spacings.DOUBLE}rem`,
         paddingTop: `${spacings.FULL}rem`,
         paddingBottom: `${spacings.QUADRUPLE}rem`,
         columnGap: `${spacings.DOUBLE}rem`,
+      },
+
+      [mq.GROUP_5_MIN_WIDTH]: {
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     }),
   firstSection: ({ mq }: Theme) =>

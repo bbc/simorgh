@@ -27,14 +27,19 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-1 {
-    -webkit-padding-start: 1rem;
-    padding-inline-start: 1rem;
-    -webkit-padding-end: 1rem;
-    padding-inline-end: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     -webkit-column-gap: 1rem;
     column-gap: 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -180,14 +185,19 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-8 {
-    -webkit-padding-start: 1rem;
-    padding-inline-start: 1rem;
-    -webkit-padding-end: 1rem;
-    padding-inline-end: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 2rem;
     -webkit-column-gap: 1rem;
     column-gap: 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-8 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

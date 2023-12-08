@@ -334,7 +334,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 63rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -489,17 +489,17 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   left: 0;
 }
 
-.emotion-30 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-28 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-30 {
-    margin: 0 0.8rem;
-  }
+.emotion-30 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -1616,7 +1616,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 63rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -1771,17 +1771,17 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   left: 0;
 }
 
-.emotion-30 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-28 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-30 {
-    margin: 0 0.8rem;
-  }
+.emotion-30 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -2898,7 +2898,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 63rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -3053,17 +3053,17 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
 }
 
-.emotion-30 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-28 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-30 {
-    margin: 0 0.8rem;
-  }
+.emotion-30 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {

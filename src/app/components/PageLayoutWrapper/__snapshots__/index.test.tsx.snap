@@ -349,7 +349,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 63rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -591,7 +591,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-44 {
-  max-width: 63rem;
+  max-width: 80rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }

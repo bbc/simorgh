@@ -25,17 +25,17 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -864,17 +864,17 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -1602,17 +1602,17 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -2334,17 +2334,17 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -3147,17 +3147,17 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {
@@ -3859,17 +3859,17 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
+@media screen and (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 0.8rem;
+  }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    margin: 0 0.8rem;
-  }
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 66rem) {

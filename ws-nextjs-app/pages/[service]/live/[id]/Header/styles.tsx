@@ -22,11 +22,16 @@ export default {
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        paddingInlineEnd: `${pixelsToRem(16)}rem`,
+        paddingLeft: `${pixelsToRem(16)}rem`,
+        paddingRight: `${pixelsToRem(16)}rem`,
         paddingTop: `${pixelsToRem(24)}rem`,
         paddingBottom: `${pixelsToRem(32)}rem`,
         columnGap: '1rem',
+      },
+
+      [mq.GROUP_5_MIN_WIDTH]: {
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     }),
   innerGrid: ({ mq }: Theme) =>
