@@ -112,44 +112,51 @@ const PageLayoutWrapper = ({
                 }
                 let wrappedPageTimeStart = new Date();
                 const wrappedYear = wrappedPageTimeStart.getFullYear();
+                const wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
                 let wrappedStorageKey = 'ws_bbc_wrapped';
                 const wrappedStructure = {
+                    'byMonth': {},
                     'pageTypeCounts': {},
-                    'topicCounts': {},
                     'serviceCounts': {},
+                    'topicCounts': {},
                     'duration': 0,
                     'wordCount': 0,
                 };
                 let wrappedContents = {};
                 wrappedContents[wrappedYear] = wrappedStructure;
+                wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
+                const saveWrapped = () => {
+                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
+                }
                 let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
                 if (wrappedLocalStorageContents) {
                     const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
                     wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedLocalStorageContentsParsed;
+                    wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
                 }
-                const saveWrapped = () => {
-                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
-                }
+                const wrappedContentsShortcut = wrappedContents[wrappedYear];
                 const wrappedTopics = ${JSON.stringify(pageData?.metadata?.topics)};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName }) => {
-                        wrappedContents['topicCounts'][topicName] = wrappedContents['topicCounts'][topicName] ? wrappedContents['topicCounts'][topicName] + 1 : 1;
+                        wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
                     });
                 }
                 document.onvisibilitychange = () => {
                   if (document.visibilityState === "hidden") {
                     const wrappedTimeNow = new Date();
                     const wrappedDifference = wrappedTimeNow - wrappedPageTimeStart;
-                    wrappedContents['duration'] = wrappedContents['duration'] ? wrappedContents['duration'] + wrappedDifference : wrappedDifference;
+                    wrappedContentsShortcut.duration = wrappedContentsShortcut.duration ? wrappedContentsShortcut.duration + wrappedDifference : wrappedDifference;
                     saveWrapped();
                   }
                   else {
                     wrappedPageTimeStart = new Date();
                   }
                 };
-                wrappedContents['wordCount'] = wrappedContents['wordCount'] + ${wordCount};
-                wrappedContents['serviceCounts']['${service}'] = wrappedContents['serviceCounts']['${service}'] ? wrappedContents['serviceCounts']['${service}'] + 1 : 1;
-                wrappedContents['pageTypeCounts']['${pageType}'] = wrappedContents['pageTypeCounts']['${pageType}'] ? wrappedContents['pageTypeCounts']['${pageType}'] + 1 : 1;
+                wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
+                wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
+                wrappedContentsShortcut.pageTypeCounts.${pageType} = wrappedContentsShortcut.pageTypeCounts.${pageType} ? wrappedContentsShortcut.pageTypeCounts.${pageType} + 1 : 1;
+                wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
+                wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
 
   return (
