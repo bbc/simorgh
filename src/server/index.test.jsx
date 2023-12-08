@@ -980,7 +980,7 @@ describe('Server', () => {
 
   describe('IDX json', () => {
     it('should serve a file for valid idx paths', async () => {
-      const { body } = await makeRequest('/persian/afghanistan.json');
+      const { body } = await makeRequest('/ukrainian/ukraine_in_russian.json');
       expect(body.data.article).toEqual(
         expect.objectContaining({ content: expect.any(Object) }),
       );
