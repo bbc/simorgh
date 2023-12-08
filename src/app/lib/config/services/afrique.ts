@@ -354,10 +354,6 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/crezq2zk0q4t',
       },
       {
-        title: 'Technologie',
-        url: '/afrique/topics/cnq687nn703t',
-      },
-      {
         title: 'Economie',
         url: '/afrique/topics/cnq687nr9v1t',
       },
