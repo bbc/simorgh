@@ -53,7 +53,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
+  border-left: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
