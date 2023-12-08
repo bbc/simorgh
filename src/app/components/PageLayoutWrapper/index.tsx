@@ -50,7 +50,7 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
-  let wordCount<wordCountType> = 0;
+  let wordCount:wordCountType = 0;
   if (pageType === 'article') {
       wordCount = pageData?.content?.model?.blocks?.filter(block => block.type === 'text')?.reduce((reducer, block) => {
         const innerBlocks = block.model.blocks.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
