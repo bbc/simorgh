@@ -227,7 +227,9 @@ describe('Live Page', () => {
     await act(
       // eslint-disable-next-line no-return-assign
       async () =>
-        ({ container } = render(<Live pageData={mockPageDataWithPosts} />)),
+        ({ container } = render(<Live pageData={mockPageDataWithPosts} />, {
+          service: 'pidgin',
+        })),
     );
 
     expect(container).toMatchSnapshot();
