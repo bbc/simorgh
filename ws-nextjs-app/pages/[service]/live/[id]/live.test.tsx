@@ -55,24 +55,96 @@ const mockPageDataWithoutKeyPoints = {
   },
 };
 
+const mockPageDataWithMetadata = ({
+  title,
+  description,
+  seoTitle,
+  seoDescription,
+}: {
+  title: string;
+  description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+}) => {
+  return {
+    ...mockPageData,
+    title,
+    description,
+    seo: {
+      seoTitle,
+      seoDescription,
+    },
+  };
+};
+
 describe('Live Page', () => {
-  it('should render the live page title', async () => {
-    await act(async () => {
-      render(<Live pageData={mockPageData} />);
-    });
+  it.each`
+    title             | seoTitle             | info                      | expected
+    ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle - BBC News Pidgin'}
+    ${'I am a Title'} | ${undefined}         | ${'title if no seoTitle'} | ${'I am a Title - BBC News Pidgin'}
+  `(
+    'should use $info as the meta title',
+    async ({ title, seoTitle, expected }) => {
+      await act(async () => {
+        render(
+          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
+          { service: 'pidgin' },
+        );
+      });
 
-    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
-  });
+      const { title: helmetTitle } = Helmet.peek();
+      expect(helmetTitle).toEqual(expected);
+    },
+  );
 
-  it('should use the title value from the data response as the page title', async () => {
-    await act(async () => {
-      render(<Live pageData={mockPageData} />, { service: 'pidgin' });
-    });
+  it.each`
+    description             | seoDescription             | info                                  | expected
+    ${'I am a Description'} | ${'I am a seoDescription'} | ${'seoDescription'}                   | ${'I am a seoDescription'}
+    ${'I am a Description'} | ${undefined}               | ${'description if no seoDescription'} | ${'I am a Description'}
+    ${undefined}            | ${undefined}               | ${'title as a fallback'}              | ${'title'}
+  `(
+    'should use $info as the meta description',
+    async ({ description, seoDescription, expected }) => {
+      await act(async () => {
+        render(
+          <Live
+            pageData={mockPageDataWithMetadata({
+              title: 'title',
+              description,
+              seoDescription,
+            })}
+          />,
+        );
+      });
 
-    const { title: helmetTitle } = Helmet.peek();
+      const helmetContent = Helmet.peek();
+      const findDescription = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(findDescription?.content).toEqual(expected);
+    },
+  );
 
-    expect(helmetTitle).toEqual(`${mockPageData.title} - BBC News Pidgin`);
-  });
+  it.each`
+    title             | seoTitle             | info                      | expected
+    ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle'}
+    ${'I am a Title'} | ${undefined}         | ${'title if no seoTitle'} | ${'I am a Title'}
+  `(
+    'should use $info as the schema headline',
+    async ({ title, seoTitle, expected }) => {
+      await act(async () => {
+        render(
+          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
+        );
+      });
+
+      const schemaHeadline = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes(`"headline":"${expected}"`),
+      );
+
+      expect(schemaHeadline).toBeTruthy();
+    },
+  );
 
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
@@ -100,6 +172,14 @@ describe('Live Page', () => {
     expect(helmetTitle).toEqual(
       `${mockPageData.title}, Page 2 of 3 - BBC News Pidgin`,
     );
+  });
+
+  it('should render the live page title', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
   });
 
   it('should render the live page description', async () => {
@@ -147,7 +227,9 @@ describe('Live Page', () => {
     await act(
       // eslint-disable-next-line no-return-assign
       async () =>
-        ({ container } = render(<Live pageData={mockPageDataWithPosts} />)),
+        ({ container } = render(<Live pageData={mockPageDataWithPosts} />, {
+          service: 'pidgin',
+        })),
     );
 
     expect(container).toMatchSnapshot();

@@ -10,6 +10,7 @@ const getPageUrls = ({ pageType, environment, isSmoke }) =>
     .map(getPageTypes)
     .map(pageTypes => path([pageType], pageTypes))
     .filter(config => (isSmoke ? config.smoke : true))
+    .filter(config => config?.environments?.[environment]?.enabled === true)
     .map(config => path(['environments', environment, 'paths'], config))
     .filter(Boolean);
 
