@@ -34,7 +34,6 @@ type ComponentProps = {
       dateModified: string;
     }>;
     atiAnalytics: ATIData;
-    startDateTime: string;
   };
 };
 
