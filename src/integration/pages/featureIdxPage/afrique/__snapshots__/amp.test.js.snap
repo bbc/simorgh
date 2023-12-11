@@ -244,47 +244,40 @@ exports[`AMP Feature Index page Header Navigation link should match text and url
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 6`] = `
 {
-  "text": "Science",
-  "url": "/afrique/topics/cdr561vr57gt",
+  "text": "Science et technologie",
+  "url": "/afrique/topics/crezq2zk0q4t",
 }
 `;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Technologie",
-  "url": "/afrique/topics/cnq687nn703t",
-}
-`;
-
-exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "Economie",
   "url": "/afrique/topics/cnq687nr9v1t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 9`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "Culture",
   "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 10`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 9`] = `
 {
   "text": "Vidéos",
   "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 11`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 10`] = `
 {
   "text": "Nos émissions",
   "url": "/afrique/media-54074891",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 12`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 11`] = `
 {
   "text": "Ecoutez en direct",
   "url": "/afrique/bbc_afrique_radio/liveradio",
