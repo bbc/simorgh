@@ -15,6 +15,7 @@ import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.js
 import arabicTopicWithMessageBanners from '#data/arabic/topics/cng9qem66p5t.json';
 import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
+import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -95,6 +96,10 @@ export const PersianWithMessageBanners = props => (
     {...props}
     fixture={persianTopicWithMessageBanners}
   />
+);
+
+export const PersianAfghanistan = props => (
+  <Component service={'persian'} {...props} fixture={persianAfghanistan} />
 );
 
 export const ArabicWithMessageBanners = props => (

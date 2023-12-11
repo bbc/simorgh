@@ -85,7 +85,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
         hasAmpPage={false}
       />
       <LinkedDataContainer
-        type="CollectionPage"
+        type="NewsArticle"
         seoTitle={pageTitle}
         headline={pageTitle}
         {...(datePublished && {
@@ -94,6 +94,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
         {...(dateModified && {
           dateModified,
         })}
+        showAuthor
       />
       <main>
         <Header
