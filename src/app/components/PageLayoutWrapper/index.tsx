@@ -60,7 +60,7 @@ const PageLayoutWrapper = ({
   let wordCount:wordCountType = 0;
   if (pageType === 'article') {
       wordCount = pageData?.content?.model?.blocks?.filter(block => block.type === 'text')?.reduce((reducer, block) => {
-        const innerBlocks = block.model.blocks.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
+        const innerBlocks = block?.model?.blocks?.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
             return `${innerReducer} ${p.model.text}`;
         }, '');
         return reducer + innerBlocks.split(' ').length;
