@@ -30,7 +30,7 @@ type ModelType = {
         }
     ],
     text?: String,        
-}
+} | undefined;
 
 type Props = {
   pageData: {
