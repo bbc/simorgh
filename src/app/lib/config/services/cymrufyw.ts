@@ -58,6 +58,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Yn Fyw',
+        liveCoverage: 'Darlledu’n Fyw',
+        breaking: 'Newydd dorri',
+        postedAt: 'Cyhoeddwyd am',
+        summary: 'Crynodeb',
+      },
       gist: 'Cipolwg',
       error: {
         404: {
