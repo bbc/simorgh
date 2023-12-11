@@ -22,15 +22,15 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 import styles from './index.styles';
 
 type ModelType = {
-    blocks?: [
-        {
-            type: String,
-            text?: String,
-            model?: ModelType,
-        }
-    ],
-    text?: String,        
-}
+  blocks?: [
+    {
+      type: string;
+      text?: string;
+      model?: ModelType;
+    },
+  ];
+  text?: string;
+};
 
 type Props = {
   pageData: {
@@ -38,12 +38,12 @@ type Props = {
       type: PageTypes;
       topics?: [
         {
-            topicName: String,
-        }
-      ]
+          topicName: string;
+        },
+      ];
     };
     content?: {
-        model?: ModelType
+      model?: ModelType;
     };
   };
   status: number;
@@ -64,12 +64,16 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
-  let wordCount:wordCountType = 0;
+  let wordCount: wordCountType = 0;
   if (pageType === 'article') {
-      wordCount = pageData?.content?.model?.blocks?.filter(block => block.type === 'text')?.reduce((reducer, block) => {
-        const innerBlocks = block?.model?.blocks?.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
+    wordCount = pageData?.content?.model?.blocks
+      ?.filter(block => block.type === 'text')
+      ?.reduce((reducer, block) => {
+        const innerBlocks = block?.model?.blocks
+          ?.filter(innerBlock => innerBlock.type === 'paragraph')
+          .reduce((innerReducer, p) => {
             return `${innerReducer} ${p.model?.text}`;
-        }, '');
+          }, '');
 
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;
@@ -158,7 +162,9 @@ const PageLayoutWrapper = ({
                     wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
                 }
                 const wrappedContentsShortcut = wrappedContents[wrappedYear];
-                const wrappedTopics = ${JSON.stringify(pageData?.metadata?.topics)};
+                const wrappedTopics = ${JSON.stringify(
+                  pageData?.metadata?.topics,
+                )};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName }) => {
                         wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
