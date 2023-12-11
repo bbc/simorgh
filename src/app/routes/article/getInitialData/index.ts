@@ -9,6 +9,7 @@ import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
+import encodeText from '../utils/encodeText';
 
 const logger = nodeLogger(__filename);
 
@@ -75,6 +76,8 @@ export default async ({
 
     const { topStories, features, latestMedia, mostRead, mostWatched } =
       secondaryData;
+
+    // encodeText(article.content)
 
     const response = {
       status,
