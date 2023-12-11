@@ -64,6 +64,7 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
+  const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
@@ -182,7 +183,7 @@ const PageLayoutWrapper = ({
                 };
                 wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
                 wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
-                wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} = wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} ? wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} + 1 : 1;
+                wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
