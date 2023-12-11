@@ -65,7 +65,7 @@ const PageLayoutWrapper = ({
         const innerBlocks = block?.model?.blocks?.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
             return `${innerReducer} ${p.model?.text}`;
         }, '');
-        return reducer + innerBlocks.split(' ').length;
+        return reducer + innerBlocks?.split(' ').length;
       }, 0);
   }
   const serviceFonts = fontFacesLazy(service);
