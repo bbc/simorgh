@@ -52,22 +52,22 @@ const invalidPortugueseData = {
   status: 404,
 };
 
-const articleDataWithCanonicalUrl = {
-  pageData: {
-    metadata: {
-      locators: {
-        canonicalUrl: 'https://www.bbc.com/pidgin/articles/cj80n66ddnko',
-      },
-    },
-  },
+const articleDataWithoutKeySummaryPointsTagging = {
+  pageData: {},
   status: 200,
 };
 
-const articleDataWithoutCanonicalUrl = {
+const articleDataWithKeySummaryPointsTagging = {
   pageData: {
     metadata: {
-      locators: {
-        foo: 'bar',
+      passport: {
+        taggings: [
+          {
+            predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
+            value:
+              'http://www.bbc.co.uk/things/6b6d33cc-3e32-43e6-b06f-d43e71d44bad#id',
+          },
+        ],
       },
     },
   },
@@ -281,9 +281,9 @@ describe('article page', () => {
   const pathname = 'pidgin/articles/cj80n66ddnko';
   const service = 'pidgin';
 
-  it('should render article page when canonical url is set', () => {
+  it('should render article page when "Key/Summary Points" tagging is not set', () => {
     const result = shouldRender(
-      articleDataWithCanonicalUrl,
+      articleDataWithoutKeySummaryPointsTagging,
       service,
       pathname,
       pageType,
@@ -295,9 +295,9 @@ describe('article page', () => {
     });
   });
 
-  it('should render a 404 for an article page when canonical url is not set', () => {
+  it('should render a 404 for an article page when "Key/Summary Points" tagging is set', () => {
     const result = shouldRender(
-      articleDataWithoutCanonicalUrl,
+      articleDataWithKeySummaryPointsTagging,
       service,
       pathname,
       pageType,

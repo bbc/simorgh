@@ -28,15 +28,29 @@ const shouldRender = (
     );
 
     const isValidArticle = () => {
-      if (pageType === ARTICLE_PAGE) {
+      // Only check against Optimo Article pages
+      if (pageType !== ARTICLE_PAGE) return true;
+
+      if (service === 'sport') {
         const canonicalUrl = getCanonicalUrl(pageData);
-        if (service === 'sport') {
-          return matchesCanonicalUrl(canonicalUrl, pathName);
-        }
-        if (!canonicalUrl) return false;
+        return matchesCanonicalUrl(canonicalUrl, pathName);
       }
+
+      // Check tagging to see if article is a 'Key/Summary Points' article
+      const isKeyPointsArticle = pageData?.metadata?.passport?.taggings?.some(
+        tag =>
+          tag.predicate ===
+            'http://www.bbc.co.uk/ontologies/creativework/format' &&
+          tag.value ===
+            'http://www.bbc.co.uk/things/6b6d33cc-3e32-43e6-b06f-d43e71d44bad#id',
+      );
+
+      // If article is a 'Key/Summary Points' article then we don't want to show it
+      if (isKeyPointsArticle) return false;
+
       return true;
     };
+
     const isValidRequest = isValidService && isValidArticle();
     statusCode = isValidRequest ? status : NOT_FOUND;
   }
