@@ -415,10 +415,6 @@ export const service: DefaultServiceConfig = {
         url: '/persian/topics/ckdxnwr4r1yt',
       },
       {
-        title: 'ناظران می‌گویند',
-        url: '/persian/blogs-54099951',
-      },
-      {
         title: 'رادیو',
         url: '/persian/tv-and-radio-37434376',
       },

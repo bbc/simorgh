@@ -327,12 +327,16 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'বিশ্ব',
-        url: '/bengali/topics/c907347rezkt',
+        title: 'সংসদ নির্বাচন ২০২৪',
+        url: '/bengali/topics/c90xlq1n7llt',
       },
       {
-        title: 'রাজনীতি',
-        url: '/bengali/topics/cqywj91rkg6t',
+        title: 'সর্বাধিক পঠিত',
+        url: '/bengali/popular/read',
+      },
+      {
+        title: 'বিশ্ব',
+        url: '/bengali/topics/c907347rezkt',
       },
       {
         title: 'অর্থনীতি',
@@ -351,12 +355,12 @@ export const service: DefaultServiceConfig = {
         url: '/bengali/topics/c8y94k95v52t',
       },
       {
-        title: 'ভিডিও',
-        url: '/bengali/topics/cxy7jg418e7t',
+        title: 'রাজনীতি',
+        url: '/bengali/topics/cqywj91rkg6t',
       },
       {
-        title: 'সর্বাধিক পঠিত',
-        url: '/bengali/popular/read',
+        title: 'ভিডিও',
+        url: '/bengali/topics/cxy7jg418e7t',
       },
     ],
   },
