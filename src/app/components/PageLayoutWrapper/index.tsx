@@ -21,16 +21,16 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
 import styles from './index.styles';
 
-type ModelType = [
-    {
-        blocks?: [
+type ModelType = {
+    blocks?: [
+        {
             type: String,
             text?: String,
             model?: ModelType,
-        ],
-        text?: String,        
-    }
-]
+        }
+    ],
+    text?: String,        
+}
 
 type Props = {
   pageData: {
