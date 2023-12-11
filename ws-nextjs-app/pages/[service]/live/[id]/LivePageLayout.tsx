@@ -90,6 +90,8 @@ const LivePage = ({ pageData }: ComponentProps) => {
         headline={pageTitle}
         {...(datePublished && {
           datePublished,
+        })}
+        {...(dateModified && {
           dateModified,
         })}
       />
