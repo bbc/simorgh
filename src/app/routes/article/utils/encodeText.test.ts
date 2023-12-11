@@ -7,17 +7,17 @@ const sampleContent = {
       {
         type: 'paragraph',
         model: {
-          text: 'Inline link Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf yaada yeroo dhiyeessan.',
+          text: 'Hello world, how are you?',
           blocks: [
             {
               type: 'urlLink',
               model: {
-                text: 'Inline link',
+                text: 'Hello there, how are you?',
                 blocks: [
                   {
                     type: 'fragment',
                     model: {
-                      text: 'Inline link',
+                      text: 'Hello now, how are you?',
                     },
                   },
                 ],
@@ -26,18 +26,18 @@ const sampleContent = {
             {
               type: 'fragment',
               model: {
-                text: ' Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ',
+                text: 'Hello again, how are you?',
               },
             },
             {
               type: 'urlLink',
               model: {
-                text: 'yaada yeroo dhiyeessan',
+                text: 'Hello you, how are you?',
                 blocks: [
                   {
                     type: 'fragment',
                     model: {
-                      text: 'yaada yeroo dhiyeessan',
+                      text: 'Good bye!',
                     },
                   },
                 ],

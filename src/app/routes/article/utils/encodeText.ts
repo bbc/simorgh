@@ -11,7 +11,7 @@ const encodeText = (content: ContentType) => {
   const text = content.model?.text;
 
   if (text) {
-    console.log('WE FOUND A TEXT!');
+    console.log('WE FOUND A TEXT!', text);
   }
 
   if (blocks) {
