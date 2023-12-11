@@ -36,6 +36,11 @@ type Props = {
   pageData: {
     metadata: {
       type: PageTypes;
+      topics?: [
+        {
+            topicName: String,
+        }
+      ]
     };
     content?: {
         model?: ModelType
@@ -67,7 +72,7 @@ const PageLayoutWrapper = ({
         }, '');
 
         if (!innerBlocks) return reducer;
-        return reducer + innerBlocks?.split(' ').length;
+        return reducer + innerBlocks.split(' ').length;
       }, 0);
   }
   const serviceFonts = fontFacesLazy(service);
