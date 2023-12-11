@@ -21,6 +21,13 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
 import styles from './index.styles';
 
+type BlockType = [
+    {
+        type: String,
+        model?: {}
+    }
+]
+
 type Props = {
   pageData: {
     metadata: {
@@ -28,7 +35,7 @@ type Props = {
     };
     content?: {
         model?: {
-            blocks: []
+            blocks: BlockType
         }
     };
   };
