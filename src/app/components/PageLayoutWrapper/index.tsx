@@ -21,10 +21,14 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
 import styles from './index.styles';
 
-type BlockType = [
+type ModelType = [
     {
-        type: String,
-        model?: {}
+        blocks?: [
+            type: String,
+            text?: String,
+            model?: ModelType,
+        ],
+        text?: String,        
     }
 ]
 
@@ -34,9 +38,7 @@ type Props = {
       type: PageTypes;
     };
     content?: {
-        model?: {
-            blocks: BlockType
-        }
+        model?: ModelType
     };
   };
   status: number;
