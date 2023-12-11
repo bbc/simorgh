@@ -65,6 +65,8 @@ const PageLayoutWrapper = ({
         const innerBlocks = block?.model?.blocks?.filter(innerBlock => innerBlock.type === 'paragraph').reduce((innerReducer, p) => {
             return `${innerReducer} ${p.model?.text}`;
         }, '');
+
+        if (!innerBlocks) return reducer;
         return reducer + innerBlocks?.split(' ').length;
       }, 0);
   }
