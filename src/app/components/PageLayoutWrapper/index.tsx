@@ -182,7 +182,7 @@ const PageLayoutWrapper = ({
                 };
                 wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
                 wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
-                wrappedContentsShortcut.pageTypeCounts.${pageType.replace(' ', '')} = wrappedContentsShortcut.pageTypeCounts.${pageType.replace(' ', '')} ? wrappedContentsShortcut.pageTypeCounts.${pageType.replace(' ', '')} + 1 : 1;
+                wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} = wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} ? wrappedContentsShortcut.pageTypeCounts.${pageType?.replace(' ', '')} + 1 : 1;
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
