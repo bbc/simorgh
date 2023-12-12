@@ -6,9 +6,7 @@ type ContentType = {
   };
 };
 
-type Dictionary = {
-  [key: string]: number;
-};
+type Dictionary = Map<string, number>;
 
 const encoder = (str: string | number, dict: Dictionary) => {
   return 123;
