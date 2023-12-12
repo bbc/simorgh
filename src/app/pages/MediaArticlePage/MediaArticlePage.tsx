@@ -42,6 +42,7 @@ import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
+import Transcript from '../../components/Transcript';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -114,6 +115,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   );
 
   const componentsToRender = {
+    transcript: Transcript,
     fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,

@@ -146,6 +146,12 @@
               "position": [3]
             },
             {
+              "id": "6d3f4e5g",
+              "type": "transcript",
+              "model": {},
+              "position": [3]
+            },
+            {
               "id": "f3cfedee",
               "type": "text",
               "model": {

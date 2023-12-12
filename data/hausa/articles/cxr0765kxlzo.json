@@ -195,6 +195,7 @@
               },
               "position": [2]
             },
+
             {
               "id": "4700e9ae",
               "type": "fauxHeadline",
@@ -230,6 +231,12 @@
                   }
                 ]
               },
+              "position": [3]
+            },
+            {
+              "id": "6d3f4e5g",
+              "type": "transcript",
+              "model": {},
               "position": [3]
             },
             {

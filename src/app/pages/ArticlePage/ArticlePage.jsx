@@ -51,6 +51,7 @@ import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
+import Transcript from '../../components/Transcript';
 import {
   bylineExtractor,
   categoryName,
@@ -111,6 +112,7 @@ const ArticlePage = ({ pageData }) => {
   } = pageData;
 
   const componentsToRender = {
+    transcript: Transcript,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
