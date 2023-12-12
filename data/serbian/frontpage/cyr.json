@@ -78,7 +78,7 @@
                 "uri": "https://www.bbc.com/russian/live/articles/c7240288yd9o",
                 "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c7240288yd9o",
                 "contentType": "Text",
-                "cpsType": "LIVE",
+                "cpsType": "LIV",
                 "timestamp": 1702364582000,
                 "type": "link"
               },
