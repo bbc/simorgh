@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
@@ -9,7 +10,7 @@ import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
-import encodeText from '../utils/encodeText';
+import encodeText, { Counter } from '../utils/encodeText';
 
 const logger = nodeLogger(__filename);
 
@@ -77,12 +78,26 @@ export default async ({
     const { topStories, features, latestMedia, mostRead, mostWatched } =
       secondaryData;
 
-    // encodeText(article.content)
+    const dict = new Map();
+
+    const res = encodeText(article.content, dict, new Counter());
+
+    const encodedArticle = { ...article, content: res };
+
+    fs.writeFileSync(
+      '/Users/ahchos01/Desktop/WORLD NEWS/simorgh/src/app/routes/article/getInitialData/test.json',
+      JSON.stringify(article, null, 2),
+    );
+
+    fs.writeFileSync(
+      '/Users/ahchos01/Desktop/WORLD NEWS/simorgh/src/app/routes/article/getInitialData/test2.json',
+      JSON.stringify(encodedArticle, null, 2),
+    );
 
     const response = {
       status,
       pageData: {
-        ...(await addDisclaimer(article, toggles, isArticleSfv)),
+        ...(await addDisclaimer(encodedArticle, toggles, isArticleSfv)),
         secondaryColumn: {
           topStories,
           features,
