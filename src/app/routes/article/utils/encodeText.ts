@@ -6,19 +6,38 @@ type ContentType = {
   };
 };
 
-const encodeText = (content: ContentType) => {
+type Dictionary = {
+  [key: string]: number;
+};
+
+const encodeText = (content: ContentType, map: Dictionary) => {
   const blocks = content.model?.blocks;
   const text = content.model?.text;
 
+  let encodedBlocks = null;
+  let encodedText = null;
+
   if (text) {
-    console.log('WE FOUND A TEXT!', text);
+    encodedText = 'Changed Text';
   }
 
   if (blocks) {
+    encodedBlocks = [...blocks];
     for (let index = 0; index < blocks.length; index += 1) {
-      encodeText(blocks[index]);
+      encodedBlocks[index] = encodeText(blocks[index], map);
     }
   }
+
+  const encodedBlock = {
+    ...content,
+    model: {
+      ...content.model,
+      ...(encodedText && { text: encodedText }),
+      ...(encodedBlocks && { blocks: encodedBlocks }),
+    },
+  };
+
+  return encodedBlock;
 };
 
 export default encodeText;

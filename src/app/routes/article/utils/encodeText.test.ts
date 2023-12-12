@@ -54,7 +54,7 @@ describe('encodeText', () => {
   it('Encodes all nested text blocks', () => {
     const input = sampleContent;
 
-    const actual = encodeText(input);
+    const actual = encodeText(input, {});
 
     expect(true).toBe(actual);
   });
