@@ -136,7 +136,7 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   }
 }
 
-.emotion-3:last-child {
+.emotion-3:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -291,7 +291,7 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   }
 }
 
-.emotion-3:last-child {
+.emotion-3:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -454,7 +454,7 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   }
 }
 
-.emotion-3:last-child {
+.emotion-3:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -617,7 +617,7 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   }
 }
 
-.emotion-3:last-child {
+.emotion-3:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -780,7 +780,7 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   }
 }
 
-.emotion-3:last-child {
+.emotion-3:last-of-type {
   padding-bottom: 1rem;
 }
 

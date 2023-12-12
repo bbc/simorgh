@@ -13,7 +13,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
   }
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   border: none;
 }
 
@@ -222,7 +222,7 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   padding: 0;
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   border: none;
 }
 
@@ -441,7 +441,7 @@ exports[`StoryPromo list should render correctly 1`] = `
   }
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   border: none;
 }
 
@@ -457,17 +457,17 @@ exports[`StoryPromo list should render correctly 1`] = `
   }
 }
 
-.emotion-2:first-child {
+.emotion-2:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-2:first-child {
+  .emotion-2:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   padding-bottom: 0;
 }
 
@@ -679,7 +679,7 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   border: none;
 }
 
@@ -695,17 +695,17 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   }
 }
 
-.emotion-2:first-child {
+.emotion-2:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-2:first-child {
+  .emotion-2:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   padding-bottom: 0;
 }
 

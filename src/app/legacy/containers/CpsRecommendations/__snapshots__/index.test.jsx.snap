@@ -921,7 +921,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-23:last-child {
+.emotion-23:last-of-type {
   border: none;
 }
 
@@ -1768,7 +1768,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-23:last-child {
+.emotion-23:last-of-type {
   border: none;
 }
 

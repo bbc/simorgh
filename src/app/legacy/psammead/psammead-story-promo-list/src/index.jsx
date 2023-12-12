@@ -30,7 +30,7 @@ export const StoryPromoLiBase = styled.li`
     }
   `}
 
-  &:last-child {
+  &:last-of-type {
     border: none;
   }
 `;
@@ -52,7 +52,7 @@ export const StoryPromoLi = styled(StoryPromoLiBase)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: 0 0 ${GEL_SPACING_TRPL};
   }
-  &:first-child {
+  &:first-of-type {
     padding-top: 0;
 
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -60,7 +60,7 @@ export const StoryPromoLi = styled(StoryPromoLiBase)`
     }
   }
 
-  &:last-child {
+  &:last-of-type {
     padding-bottom: 0;
   }
 `;

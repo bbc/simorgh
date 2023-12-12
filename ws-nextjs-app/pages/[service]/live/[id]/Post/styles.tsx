@@ -88,7 +88,7 @@ export default {
       },
       '& li': {
         marginBottom: `${spacings.FULL}rem`,
-        '&:last-child': {
+        '&:last-of-type': {
           marginBottom: 0,
         },
       },

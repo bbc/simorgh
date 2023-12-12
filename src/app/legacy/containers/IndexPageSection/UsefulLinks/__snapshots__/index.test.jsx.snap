@@ -51,7 +51,7 @@ exports[`Useful links should render multiple correctly 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-4:first-child {
+  .emotion-4:first-of-type {
     padding-top: 0;
   }
 }

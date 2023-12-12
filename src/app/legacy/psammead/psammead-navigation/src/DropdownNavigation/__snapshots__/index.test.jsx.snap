@@ -676,7 +676,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -937,7 +937,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }

@@ -641,7 +641,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-43:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -760,7 +760,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-91:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -1923,7 +1923,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-43:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -2042,7 +2042,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-91:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -3205,7 +3205,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-43:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -3324,7 +3324,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-91:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }

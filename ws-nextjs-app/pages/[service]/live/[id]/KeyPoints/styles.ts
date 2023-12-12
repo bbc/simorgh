@@ -29,7 +29,7 @@ export default {
       },
       '& li': {
         paddingInlineStart: `${pixelsToRem(3)}rem`,
-        '&:last-child': {
+        '&:last-of-type': {
           marginBottom: 0,
         },
       },

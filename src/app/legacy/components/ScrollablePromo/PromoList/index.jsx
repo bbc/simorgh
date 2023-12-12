@@ -46,23 +46,23 @@ const StyledList = styled.li`
     `
       @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-        &:first-child {
+        &:first-of-type {
           margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
         }
-        &:last-child {
+        &:last-of-type {
           margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
         }
       }
       @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
         margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
 
-        &:first-child {
+        &:first-of-type {
           margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
         }
       }
       @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
           margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-          &:first-child {
+          &:first-of-type {
             margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
           }
       }

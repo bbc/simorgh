@@ -170,11 +170,11 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
     margin-left: 0.5rem;
   }
 
-  .emotion-6:first-child {
+  .emotion-6:first-of-type {
     margin-left: 0.5rem;
   }
 
-  .emotion-6:last-child {
+  .emotion-6:last-of-type {
     margin-right: 0.5rem;
   }
 }
@@ -184,7 +184,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
     margin-left: 1rem;
   }
 
-  .emotion-6:first-child {
+  .emotion-6:first-of-type {
     margin-left: 1rem;
   }
 }
@@ -194,7 +194,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
     margin-left: 1rem;
   }
 
-  .emotion-6:first-child {
+  .emotion-6:first-of-type {
     margin-left: 0;
   }
 }

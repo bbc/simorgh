@@ -105,7 +105,7 @@ const StyledListItem = styled.li`
   margin-inline-end: 0.75rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    &:last-child {
+    &:last-of-type {
       ${({ dir }) => `
         margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING_SEXT}; 
       `}

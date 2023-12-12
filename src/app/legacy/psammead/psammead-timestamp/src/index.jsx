@@ -11,7 +11,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const PADDING = `
   padding-bottom: ${GEL_SPACING_HLF};
-  &:last-child {
+  &:last-of-type {
     padding-bottom: ${GEL_SPACING_DBL};
   }
 `;

@@ -22,13 +22,13 @@ const StyledEpisodeList = styled.ul`
 const StyledEpisodeListItem = styled.li`
   padding: ${GEL_SPACING_DBL} 0;
   line-height: 0;
-  &:first-child {
+  &:first-of-type {
     padding-top: 0;
   }
-  &:last-child {
+  &:last-of-type {
     padding-bottom: 0;
   }
-  &:not(:last-child) {
+  &:not(:last-of-type) {
     border-bottom: 1px ${props => props.theme.palette.CLOUD_LIGHT} solid;
   }
 `;

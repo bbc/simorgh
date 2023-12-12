@@ -388,7 +388,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 }
 
-.emotion-21:last-child {
+.emotion-21:last-of-type {
   border: none;
 }
 
@@ -404,17 +404,17 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 }
 
-.emotion-21:first-child {
+.emotion-21:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-21:first-child {
+  .emotion-21:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-21:last-child {
+.emotion-21:last-of-type {
   padding-bottom: 0;
 }
 

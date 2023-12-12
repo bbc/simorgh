@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const PromoItem = styled.li`
   height: 100%;
   margin-bottom: ${GEL_SPACING_DBL};
-  &:last-child {
+  &:last-of-type {
     margin: 0;
   }
 `;

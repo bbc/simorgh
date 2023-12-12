@@ -32,7 +32,7 @@ export const optimoPromoHeadlineOrSummaryPropTypes = {
 };
 
 export const optimoPromoPropTypes = {
-  id: string.isRequired,
+  id: string,
   headlines: shape({
     seoHeadline: string.isRequired,
     promoHeadline: oneOfType([

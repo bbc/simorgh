@@ -94,7 +94,7 @@ const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 
-  &:last-child {
+  &:last-of-type {
     padding-bottom: ${GEL_SPACING_HLF};
     border: 0;
   }

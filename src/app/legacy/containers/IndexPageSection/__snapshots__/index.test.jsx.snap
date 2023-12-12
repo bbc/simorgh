@@ -214,7 +214,7 @@ HTMLCollection [
   }
 }
 
-.emotion-18:last-child {
+.emotion-18:last-of-type {
   border: none;
 }
 
@@ -230,17 +230,17 @@ HTMLCollection [
   }
 }
 
-.emotion-18:first-child {
+.emotion-18:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18:first-child {
+  .emotion-18:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-18:last-child {
+.emotion-18:last-of-type {
   padding-bottom: 0;
 }
 
@@ -615,7 +615,7 @@ HTMLCollection [
   }
 }
 
-.emotion-41:last-child {
+.emotion-41:last-of-type {
   border: none;
 }
 
@@ -631,17 +631,17 @@ HTMLCollection [
   }
 }
 
-.emotion-41:first-child {
+.emotion-41:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41:first-child {
+  .emotion-41:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-41:last-child {
+.emotion-41:last-of-type {
   padding-bottom: 0;
 }
 
@@ -1515,7 +1515,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-18:last-child {
+.emotion-18:last-of-type {
   border: none;
 }
 
@@ -1531,17 +1531,17 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-18:first-child {
+.emotion-18:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18:first-child {
+  .emotion-18:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-18:last-child {
+.emotion-18:last-of-type {
   padding-bottom: 0;
 }
 
@@ -1916,7 +1916,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-41:last-child {
+.emotion-41:last-of-type {
   border: none;
 }
 
@@ -1932,17 +1932,17 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-41:first-child {
+.emotion-41:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41:first-child {
+  .emotion-41:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-41:last-child {
+.emotion-41:last-of-type {
   padding-bottom: 0;
 }
 
@@ -2798,7 +2798,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 }
 
-.emotion-16:last-child {
+.emotion-16:last-of-type {
   border: none;
 }
 
@@ -2814,17 +2814,17 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 }
 
-.emotion-16:first-child {
+.emotion-16:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16:first-child {
+  .emotion-16:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-16:last-child {
+.emotion-16:last-of-type {
   padding-bottom: 0;
 }
 
@@ -3221,7 +3221,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 }
 
-.emotion-39:last-child {
+.emotion-39:last-of-type {
   border: none;
 }
 
@@ -3237,17 +3237,17 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 }
 
-.emotion-39:first-child {
+.emotion-39:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-39:first-child {
+  .emotion-39:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-39:last-child {
+.emotion-39:last-of-type {
   padding-bottom: 0;
 }
 
@@ -4347,7 +4347,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-.emotion-16:last-child {
+.emotion-16:last-of-type {
   border: none;
 }
 
@@ -4363,17 +4363,17 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-.emotion-16:first-child {
+.emotion-16:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16:first-child {
+  .emotion-16:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-16:last-child {
+.emotion-16:last-of-type {
   padding-bottom: 0;
 }
 
@@ -4748,7 +4748,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-.emotion-39:last-child {
+.emotion-39:last-of-type {
   border: none;
 }
 
@@ -4764,17 +4764,17 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-.emotion-39:first-child {
+.emotion-39:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-39:first-child {
+  .emotion-39:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-39:last-child {
+.emotion-39:last-of-type {
   padding-bottom: 0;
 }
 

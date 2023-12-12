@@ -72,7 +72,7 @@ export const UsefulLinksLi = styled.li`
   padding-top: ${GEL_SPACING};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    &:first-child {
+    &:first-of-type {
       padding-top: 0;
     }
   }

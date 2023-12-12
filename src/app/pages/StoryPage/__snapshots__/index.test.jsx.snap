@@ -656,7 +656,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-24:last-child {
+.emotion-24:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -788,7 +788,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   margin: 0;
 }
 
-.emotion-31>span>p:last-child {
+.emotion-31>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -3437,7 +3437,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-24:last-child {
+.emotion-24:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -3569,7 +3569,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.emotion-31>span>p:last-child {
+.emotion-31>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -4330,7 +4330,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-177:last-child {
+.emotion-177:last-of-type {
   border: none;
 }
 
@@ -4346,17 +4346,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-177:first-child {
+.emotion-177:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-177:first-child {
+  .emotion-177:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-177:last-child {
+.emotion-177:last-of-type {
   padding-bottom: 0;
 }
 
@@ -4539,7 +4539,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.emotion-230:last-child {
+.emotion-230:last-of-type {
   border: none;
 }
 
@@ -4555,29 +4555,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-230:first-child {
+.emotion-230:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-230:first-child {
+  .emotion-230:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-230:last-child {
+.emotion-230:last-of-type {
   padding-bottom: 0;
 }
 
-.emotion-230:first-child {
+.emotion-230:first-of-type {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-230:last-child {
+.emotion-230:last-of-type {
   padding: 0.5rem 0 0 0;
 }
 
-.emotion-230:not(:first-child):not(:last-child) {
+.emotion-230:not(:first-of-type):not(:last-of-type) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
@@ -4586,9 +4586,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     padding: 0;
   }
 
-  .emotion-230:first-child,
-  .emotion-230:last-child,
-  .emotion-230:not(:first-child):not(:last-child) {
+  .emotion-230:first-of-type,
+  .emotion-230:last-of-type,
+  .emotion-230:not(:first-of-type):not(:last-of-type) {
     padding: 0;
   }
 }

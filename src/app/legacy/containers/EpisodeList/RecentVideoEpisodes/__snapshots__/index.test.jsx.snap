@@ -134,15 +134,15 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   line-height: 0;
 }
 
-.emotion-13:first-child {
+.emotion-13:first-of-type {
   padding-top: 0;
 }
 
-.emotion-13:last-child {
+.emotion-13:last-of-type {
   padding-bottom: 0;
 }
 
-.emotion-13:not(:last-child) {
+.emotion-13:not(:last-of-type) {
   border-bottom: 1px #BABABA solid;
 }
 

@@ -318,7 +318,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   margin: 0;
 }
 
-.emotion-30>span>p:last-child {
+.emotion-30>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -607,7 +607,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-40:last-child {
+.emotion-40:last-of-type {
   padding-bottom: 1rem;
 }
 

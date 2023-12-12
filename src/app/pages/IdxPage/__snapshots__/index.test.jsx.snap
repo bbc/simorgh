@@ -292,7 +292,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-22:last-child {
+.emotion-22:last-of-type {
   border: none;
 }
 
@@ -308,17 +308,17 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-22:first-child {
+.emotion-22:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-22:first-child {
+  .emotion-22:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-22:last-child {
+.emotion-22:last-of-type {
   padding-bottom: 0;
 }
 
@@ -755,7 +755,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-52:last-child {
+.emotion-52:last-of-type {
   border: none;
 }
 
@@ -771,17 +771,17 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-52:first-child {
+.emotion-52:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-52:first-child {
+  .emotion-52:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-52:last-child {
+.emotion-52:last-of-type {
   padding-bottom: 0;
 }
 
@@ -1082,7 +1082,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-159:last-child {
+.emotion-159:last-of-type {
   border: none;
 }
 
@@ -1098,17 +1098,17 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-159:first-child {
+.emotion-159:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-159:first-child {
+  .emotion-159:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-159:last-child {
+.emotion-159:last-of-type {
   padding-bottom: 0;
 }
 

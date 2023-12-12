@@ -175,7 +175,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   margin: 0;
 }
 
-.emotion-8>span>p:last-child {
+.emotion-8>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -538,7 +538,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.emotion-24>span>p:last-child {
+.emotion-24>span>p:last-of-type {
   padding-bottom: 0;
 }
 

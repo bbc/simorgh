@@ -273,7 +273,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   }
 }
 
-.emotion-8 li:last-child {
+.emotion-8 li:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -282,7 +282,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
     padding-left: 1rem;
   }
 
-  .emotion-8 li:last-child {
+  .emotion-8 li:last-of-type {
     padding-bottom: 2rem;
   }
 }
@@ -730,7 +730,7 @@ exports[`Gist should render the gist with one list item 1`] = `
   }
 }
 
-.emotion-8 li:last-child {
+.emotion-8 li:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -739,7 +739,7 @@ exports[`Gist should render the gist with one list item 1`] = `
     padding-left: 1rem;
   }
 
-  .emotion-8 li:last-child {
+  .emotion-8 li:last-of-type {
     padding-bottom: 2rem;
   }
 }

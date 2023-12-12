@@ -360,7 +360,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   }
 }
 
-.emotion-17:last-child {
+.emotion-17:last-of-type {
   border: none;
 }
 
@@ -376,17 +376,17 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   }
 }
 
-.emotion-17:first-child {
+.emotion-17:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17:first-child {
+  .emotion-17:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-17:last-child {
+.emotion-17:last-of-type {
   padding-bottom: 0;
 }
 

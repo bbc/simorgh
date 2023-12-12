@@ -565,7 +565,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-26:last-child {
+.emotion-26:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -1931,7 +1931,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-26:last-child {
+.emotion-26:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -2403,7 +2403,7 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.emotion-108>span>p:last-child {
+.emotion-108>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -2809,7 +2809,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-161:last-child {
+.emotion-161:last-of-type {
   border: none;
 }
 
@@ -2825,17 +2825,17 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-161:first-child {
+.emotion-161:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-161:first-child {
+  .emotion-161:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-161:last-child {
+.emotion-161:last-of-type {
   padding-bottom: 0;
 }
 

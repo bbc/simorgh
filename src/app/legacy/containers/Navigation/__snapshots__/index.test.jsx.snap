@@ -136,7 +136,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-15:last-child {
+.emotion-15:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -259,7 +259,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-67:last-child {
+  .emotion-67:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -975,7 +975,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-15:last-child {
+.emotion-15:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -1093,7 +1093,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-64:last-child {
+  .emotion-64:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -1713,7 +1713,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-15:last-child {
+.emotion-15:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -1831,7 +1831,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-64:last-child {
+  .emotion-64:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -2497,7 +2497,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15:last-child {
+  .emotion-15:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -2692,7 +2692,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-66:last-child {
+.emotion-66:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -3310,7 +3310,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15:last-child {
+  .emotion-15:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -3429,7 +3429,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-63:last-child {
+.emotion-63:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }
@@ -4022,7 +4022,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15:last-child {
+  .emotion-15:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -4141,7 +4141,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-63:last-child {
+.emotion-63:last-of-type {
   padding-bottom: 0.25rem;
   border: 0;
 }

@@ -440,7 +440,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.emotion-22>span>p:last-child {
+.emotion-22>span>p:last-of-type {
   padding-bottom: 0;
 }
 

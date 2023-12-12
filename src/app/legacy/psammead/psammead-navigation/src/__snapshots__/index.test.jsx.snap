@@ -60,7 +60,7 @@ exports[`Navigation should render correctly 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-6:last-child {
+  .emotion-6:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -378,7 +378,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-6:last-child {
+  .emotion-6:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -690,7 +690,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-6:last-child {
+  .emotion-6:last-of-type {
     margin-right: 3rem;
   }
 }
@@ -1052,7 +1052,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-8:last-child {
+  .emotion-8:last-of-type {
     margin-right: 3rem;
   }
 }

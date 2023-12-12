@@ -71,7 +71,7 @@ const Caption = styled.figcaption`
     padding-bottom: ${GEL_SPACING_TRPL};
     margin: 0; /* reset */
   }
-  & > span > p:last-child {
+  & > span > p:last-of-type {
     padding-bottom: 0;
   }
   ${({ dir }) => (dir === 'rtl' ? rtlStyles : ltrStyles)}

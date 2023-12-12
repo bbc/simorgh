@@ -26,7 +26,7 @@ exports[`Timestamp should render Timestamp correctly 1`] = `
   }
 }
 
-.emotion-0:last-child {
+.emotion-0:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -66,7 +66,7 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
   }
 }
 
-.emotion-0:last-child {
+.emotion-0:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -141,7 +141,7 @@ exports[`Timestamp should render dark mode Timestamp correctly on page types tha
   }
 }
 
-.emotion-0:last-child {
+.emotion-0:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -181,7 +181,7 @@ exports[`Timestamp should render with the correct typography style applied 1`] =
   }
 }
 
-.emotion-0:last-child {
+.emotion-0:last-of-type {
   padding-bottom: 1rem;
 }
 

@@ -74,7 +74,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   }
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   border: none;
 }
 
@@ -90,17 +90,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   }
 }
 
-.emotion-4:first-child {
+.emotion-4:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4:first-child {
+  .emotion-4:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   padding-bottom: 0;
 }
 
@@ -668,7 +668,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   }
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   border: none;
 }
 
@@ -684,17 +684,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   }
 }
 
-.emotion-4:first-child {
+.emotion-4:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4:first-child {
+  .emotion-4:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-4:last-child {
+.emotion-4:last-of-type {
   padding-bottom: 0;
 }
 

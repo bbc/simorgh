@@ -30,7 +30,7 @@ const styles = {
         borderBottom: '0',
         width: '48.5%',
       },
-      '&:last-child': {
+      '&:last-of-type': {
         borderBottom: 'none',
       },
     }),

@@ -43,7 +43,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-0>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -138,7 +138,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-0>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -233,7 +233,7 @@ exports[`should render caption with multiple paragraphs 1`] = `
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-0>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -334,7 +334,7 @@ exports[`should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-0>span>p:last-of-type {
   padding-bottom: 0;
 }
 

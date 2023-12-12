@@ -137,15 +137,15 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   line-height: 0;
 }
 
-.emotion-15:first-child {
+.emotion-15:first-of-type {
   padding-top: 0;
 }
 
-.emotion-15:last-child {
+.emotion-15:last-of-type {
   padding-bottom: 0;
 }
 
-.emotion-15:not(:last-child) {
+.emotion-15:not(:last-of-type) {
   border-bottom: 1px #BABABA solid;
 }
 

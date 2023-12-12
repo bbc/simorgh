@@ -39,24 +39,24 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   line-height: 0;
   height: 100%;
 
-  &:first-child {
+  &:first-of-type {
     padding: 0 0 0.5rem 0;
   }
 
-  &:last-child {
+  &:last-of-type {
     padding: 0.5rem 0 0 0;
   }
 
-  &:not(:first-child):not(:last-child) {
+  &:not(:first-of-type):not(:last-of-type) {
     padding: 0.5rem 0 0.5rem 0;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0;
 
-    &:first-child,
-    &:last-child,
-    &:not(:first-child):not(:last-child) {
+    &:first-of-type,
+    &:last-of-type,
+    &:not(:first-of-type):not(:last-of-type) {
       padding: 0;
     }
   }

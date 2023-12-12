@@ -449,7 +449,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   margin: 0;
 }
 
-.emotion-17>span>p:last-child {
+.emotion-17>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -1521,7 +1521,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-.emotion-11:last-child {
+.emotion-11:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -1753,7 +1753,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   margin: 0;
 }
 
-.emotion-22>span>p:last-child {
+.emotion-22>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -2837,7 +2837,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-11:last-child {
+.emotion-11:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -3069,7 +3069,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   margin: 0;
 }
 
-.emotion-22>span>p:last-child {
+.emotion-22>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -3486,7 +3486,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-126:last-child {
+.emotion-126:last-of-type {
   border: none;
 }
 
@@ -3502,17 +3502,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-126:first-child {
+.emotion-126:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-126:first-child {
+  .emotion-126:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-126:last-child {
+.emotion-126:last-of-type {
   padding-bottom: 0;
 }
 
@@ -4958,7 +4958,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-.emotion-11:last-child {
+.emotion-11:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -5237,7 +5237,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   margin: 0;
 }
 
-.emotion-24>span>p:last-child {
+.emotion-24>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -6079,7 +6079,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-11:last-child {
+.emotion-11:last-of-type {
   padding-bottom: 1rem;
 }
 
@@ -6358,7 +6358,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   margin: 0;
 }
 
-.emotion-24>span>p:last-child {
+.emotion-24>span>p:last-of-type {
   padding-bottom: 0;
 }
 
@@ -6764,7 +6764,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-228:last-child {
+.emotion-228:last-of-type {
   border: none;
 }
 
@@ -6780,17 +6780,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-228:first-child {
+.emotion-228:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-228:first-child {
+  .emotion-228:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-228:last-child {
+.emotion-228:last-of-type {
   padding-bottom: 0;
 }
 

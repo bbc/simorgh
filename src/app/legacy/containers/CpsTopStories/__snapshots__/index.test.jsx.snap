@@ -331,7 +331,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
-.emotion-19:last-child {
+.emotion-19:last-of-type {
   border: none;
 }
 
@@ -347,17 +347,17 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
-.emotion-19:first-child {
+.emotion-19:first-of-type {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19:first-child {
+  .emotion-19:first-of-type {
     padding-top: 1rem;
   }
 }
 
-.emotion-19:last-child {
+.emotion-19:last-of-type {
   padding-bottom: 0;
 }
 
