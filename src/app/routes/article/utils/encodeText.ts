@@ -1,13 +1,21 @@
 type ContentType = {
   type: string;
   model: {
-    text?: string;
+    text?: string | number;
     blocks?: ContentType[];
   };
 };
 
 type Dictionary = {
   [key: string]: number;
+};
+
+const encoder = (str: string | number, dict: Dictionary) => {
+  return 123;
+};
+
+const decoder = (num: number) => {
+  return '';
 };
 
 const encodeText = (content: ContentType, map: Dictionary) => {
@@ -18,7 +26,7 @@ const encodeText = (content: ContentType, map: Dictionary) => {
   let encodedText = null;
 
   if (text) {
-    encodedText = 'Changed Text';
+    encodedText = encoder(text, map);
   }
 
   if (blocks) {

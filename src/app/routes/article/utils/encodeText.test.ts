@@ -50,12 +50,62 @@ const sampleContent = {
   },
 };
 
+const sampleExpected = {
+  type: 'text',
+  model: {
+    blocks: [
+      {
+        type: 'paragraph',
+        model: {
+          text: 123,
+          blocks: [
+            {
+              type: 'urlLink',
+              model: {
+                text: 123,
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 123,
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'fragment',
+              model: {
+                text: 123,
+              },
+            },
+            {
+              type: 'urlLink',
+              model: {
+                text: 123,
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 123,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 describe('encodeText', () => {
   it('Encodes all nested text blocks', () => {
     const input = sampleContent;
 
     const actual = encodeText(input, {});
 
-    expect(true).toBe(actual);
+    expect(sampleExpected).toStrictEqual(actual);
   });
 });
