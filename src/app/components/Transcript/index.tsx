@@ -26,7 +26,9 @@ const Transcript = ({ blocks }: any) => {
           </Text>
         </summary>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        <Text size="brevier">This transcript was auto generated.</Text>
+        <Text size="brevier" css={styles.disclaimer}>
+          This transcript was auto generated.
+        </Text>
       </details>
     </GridItemLarge>
   );

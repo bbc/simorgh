@@ -7,7 +7,7 @@ export default {
       display: 'block',
       marginBottom: `${spacings.TRIPLE}rem`,
       padding: `${spacings.DOUBLE}rem`,
-      color: `${palette.GREY_6}`,
+      color: palette.GREY_6,
       div: {
         ul: {
           paddingTop: `${spacings.DOUBLE}rem`,
@@ -37,5 +37,10 @@ export default {
     css({
       color: isDarkUi ? palette.WHITE : palette.GREY_10,
       paddingLeft: `${spacings.HALF}rem`,
+    }),
+
+  disclaimer: ({ palette, isDarkUi }: Theme) =>
+    css({
+      color: isDarkUi ? palette.WHITE : palette.GREY_10,
     }),
 };
