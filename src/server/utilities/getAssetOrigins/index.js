@@ -5,7 +5,6 @@ const getAssetOrigins = service => {
 
   const ANALYTICS_ORIGINS = [
     'https://ping.chartbeat.net',
-    'https://dataplane.rum.eu-west-1.amazonaws.com',
   ];
 
   const FONTS_ORIGINS = ['https://ws-downloads.files.bbci.co.uk'];
