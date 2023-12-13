@@ -166,10 +166,13 @@ const injectResourceHintsHeader = (req, res, next) => {
   res.set(
     'Link',
     assetOrigins
-      .map(
-        domainName =>
-          `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
-      )
+      .map(domainName => {
+        const crossOrigin =
+          domainName === 'https://static.files.bbci.co.uk'
+            ? `,<${domainName}>; rel="preconnect"; crossorigin`
+            : '';
+        return `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"${crossOrigin}`;
+      })
       .join(','),
   );
   next();
