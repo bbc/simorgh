@@ -152,13 +152,6 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 {
-  "text": "ناظران می‌گویند",
-  "url": "/persian/blogs-54099951",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
-{
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }

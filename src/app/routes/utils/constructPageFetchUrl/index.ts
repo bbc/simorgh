@@ -12,6 +12,10 @@ import {
 } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
+  TOPIC_PAGE_CONFIG,
+  TopicPagePaths,
+} from '../../topic/getInitialData/page-config';
+import {
   ARTICLE_PAGE,
   CPS_ASSET,
   HOME_PAGE,
@@ -83,7 +87,11 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       break;
     case LIVE_PAGE:
     case TOPIC_PAGE:
-      getIdFunction = getTipoId;
+      getIdFunction = (path: string) => {
+        return (
+          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
+        );
+      };
       break;
     default:
       getIdFunction = () => null;
