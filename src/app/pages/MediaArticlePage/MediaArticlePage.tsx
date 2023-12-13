@@ -18,6 +18,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getMetaDataId,
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
@@ -96,17 +97,19 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   );
 
   // temporary code to inject a transcript into a test article.
-  const metaDataId = pathOr('', ['metadata', 'id'], pageData);
-  console.log('hi', metaDataId);
+  const metaDataId = getMetaDataId(pageData);
   const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
-  console.log('hi', articleID);
-  if (articleID === 'cxr0765kxlzo') {
-    console.log("I'm the article");
+  // Finding if the transcript is already there
+  let alreadyContainsTranscript = false;
+  // eslint-disable-next-line array-callback-return
+  blocks.map(singleBlock => {
+    if (singleBlock.type === 'transcript') {
+      alreadyContainsTranscript = true;
+    }
+  });
+  if (articleID === 'cxr0765kxlzo' && !alreadyContainsTranscript) {
     blocks.splice(3, 0, fakeTranscript);
   }
-
-  console.log('blocks', blocks);
-
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
 

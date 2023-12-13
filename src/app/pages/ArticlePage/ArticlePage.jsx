@@ -115,18 +115,17 @@ const ArticlePage = ({ pageData }) => {
 
   // temporary code to inject a transcript into a test article.
   const metaDataId = getMetaDataId(pageData);
-  console.log('metaDataId', metaDataId);
   const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
-  console.log('articleID', articleID);
-  const alreadyContainsTranscript = blocks.includes(
-    block => block.type === 'transcript',
-  );
-
-  console.log('alreadyContainsTranscript', alreadyContainsTranscript);
-
+  // Finding if the transcript is already there
+  let alreadyContainsTranscript = false;
+  // eslint-disable-next-line array-callback-return
+  blocks.map(singleBlock => {
+    if (singleBlock.type === 'transcript') {
+      alreadyContainsTranscript = true;
+    }
+  });
   if (articleID === 'cz216x22106o' && !alreadyContainsTranscript) {
     blocks.splice(3, 0, fakeTranscript);
-    // console.log("I'm running");
   }
 
   const componentsToRender = {
