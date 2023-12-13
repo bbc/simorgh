@@ -6,7 +6,7 @@ export default {
     css({
       backgroundColor: palette.GREY_10,
       [mq.HIGH_CONTRAST]: {
-        borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
+        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
   outerGrid: ({ mq, gridWidths }: Theme) =>
@@ -46,6 +46,8 @@ export default {
       color: palette.LIVE_LIGHT,
       gridColumn: '1 / span 12',
       marginBottom: `${pixelsToRem(16)}rem`,
+      textTransform: 'uppercase',
+
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingInlineStart: `${pixelsToRem(16)}rem`,
         gridColumn: '1 / span 4',
