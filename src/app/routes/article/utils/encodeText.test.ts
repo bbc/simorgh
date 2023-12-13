@@ -1,4 +1,8 @@
-import encodeText, { Counter, decoder } from './encodeText';
+import encodeText, {
+  Counter,
+  createClientDictionary,
+  decoder,
+} from './encodeText';
 
 const sampleContent = {
   type: 'text',
@@ -119,13 +123,22 @@ describe('encodeText', () => {
     const input = sampleContent;
     const dict = new Map();
     const actual = encodeText(input, dict, new Counter());
-    console.log(dict);
     expect(sampleExpected).toStrictEqual(actual);
   });
 
   it('Decodes all nested text blocks', () => {
-    const actual = decoder('5,7,2,3,4', sampleClientDictionary);
-    console.log('CHECL', actual);
-    expect(actual).toStrictEqual('Hello now, how are you?');
+    const actual = decoder('0,1,2', ['World', 'Hello', 'now']);
+    expect(actual).toStrictEqual('World Hello now');
+  });
+
+  it('Converts dictionary to client dictionary', () => {
+    const dict = new Map([
+      ['Hello', 1],
+      ['now', 2],
+      ['World', 0],
+    ]);
+
+    const actual = createClientDictionary(dict);
+    expect(actual).toStrictEqual(['World', 'Hello', 'now']);
   });
 });

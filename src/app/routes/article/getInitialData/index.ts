@@ -10,7 +10,10 @@ import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
-import encodeText, { Counter } from '../utils/encodeText';
+import encodeText, {
+  Counter,
+  createClientDictionary,
+} from '../utils/encodeText';
 
 const logger = nodeLogger(__filename);
 
@@ -84,6 +87,8 @@ export default async ({
 
     const encodedArticle = { ...article, content: res };
 
+    const clientDict = createClientDictionary(dict);
+
     const response = {
       status,
       pageData: {
@@ -97,6 +102,7 @@ export default async ({
         mostWatched,
         ...(wsojData && wsojData),
       },
+      clientDict,
     };
 
     return response;

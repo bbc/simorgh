@@ -7,6 +7,12 @@ import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#containers/App';
+import {
+  encoderV2,
+  Counter,
+  createClientDictionary,
+  sendToClient,
+} from '#app/routes/article/utils/encodeText';
 import DocumentComponent from './component';
 import {
   getLinkAttributes,
@@ -105,7 +111,14 @@ const renderDocument = async ({
     />,
   );
 
-  return { html: `<!doctype html>${doc}`, redirectUrl: null };
+  const compiledDoc = `<!doctype html>${doc}`;
+  // const dict = new Map();
+  // const encodedDoc = encoderV2(compiledDoc, dict, new Counter());
+  // const clientDictionary = createClientDictionary(dict);
+
+  // const decodeScript = sendToClient(encodedDoc, clientDictionary);
+
+  return { html: compiledDoc, redirectUrl: null };
 };
 
 export default renderDocument;
