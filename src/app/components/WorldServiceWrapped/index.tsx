@@ -1,10 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, useContext, useEffect } from 'react';
-import { jsx } from '@emotion/react';
-import { Helmet } from 'react-helmet';
+import { PropsWithChildren, useContext, useEffect } from 'react';
 import { PageTypes } from '#app/models/types/global';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -40,11 +36,10 @@ type Props = {
 type wordCountType = number | undefined;
 
 const WorldServiceWrapped = ({
-  children,
   pageData,
 }: PropsWithChildren<Props>) => {
     const { service } = useContext(ServiceContext);
-    const { isAmp, isNextJs, variant } = useContext(RequestContext);
+    const { isAmp } = useContext(RequestContext);
     const pageType = pageData?.metadata?.type;
     const reportingPageType = pageType?.replace(/ /g, '');
     let wordCount: wordCountType = 0;
