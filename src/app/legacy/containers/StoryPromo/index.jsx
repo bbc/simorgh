@@ -194,7 +194,9 @@ const StoryPromoContainer = ({
     return null;
   }
 
-  const useLargeImages = promoType === 'top' || promoType === 'leading';
+  const isTopOrLeadingPromo = promoType === 'top' || promoType === 'leading';
+
+  const isFirstPromo = index === 0 && isTopOrLeadingPromo;
 
   const headingTagOverride =
     item.headingTag ||
@@ -224,7 +226,14 @@ const StoryPromoContainer = ({
           className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
-            <LiveLabel id={linkId}>{linkcontents}</LiveLabel>
+            <LiveLabel
+              id={linkId}
+              {...(isFirstPromo && {
+                className: 'first-promo',
+              })}
+            >
+              {linkcontents}
+            </LiveLabel>
           ) : (
             linkcontents
           )}
@@ -278,7 +287,7 @@ const StoryPromoContainer = ({
       image={
         <StoryPromoImage
           isAmp={isAmp}
-          useLargeImages={useLargeImages}
+          useLargeImages={isTopOrLeadingPromo}
           lazyLoad={lazyLoadImage}
           imageValues={imageValues}
           pageType={pageType}
