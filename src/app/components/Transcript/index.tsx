@@ -1,26 +1,31 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import Text from '../../legacy/containers/Text';
+import LegacyText from '../../legacy/containers/Text';
 import Blocks from '../../legacy/containers/Blocks';
 import styles from './index.styles';
-import useOperaMiniDetection from '../../hooks/useOperaMiniDetection';
-// import { GridItemLarge } from '../../legacy/components/Grid';
+import Text from '../Text';
+// import useOperaMiniDetection from '../../hooks/useOperaMiniDetection';
+import { GridItemLarge } from '../../legacy/components/Grid';
 
-const componentsToRender = { text: Text };
+const componentsToRender = { text: LegacyText };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Transcript = ({ blocks }: any) => {
-  const isOperaMini = useOperaMiniDetection();
-  if (isOperaMini) {
-    // TODO - update
-    return null;
-  }
+  // const isOperaMini = useOperaMiniDetection();
+  // if (isOperaMini) {
+  //   // TODO - update
+  //   return null;
+  // }
   return (
-    <details css={styles.transcript}>
-      <summary>Show Transcript</summary>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </details>
+    <GridItemLarge>
+      <details css={styles.transcript}>
+        <summary css={styles.summary}>
+          <Text css={styles.summaryTitle}>Show Transcript</Text>
+        </summary>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </details>
+    </GridItemLarge>
   );
 };
 
