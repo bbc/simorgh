@@ -21,9 +21,12 @@ const Transcript = ({ blocks }: any) => {
     <GridItemLarge>
       <details css={styles.transcript}>
         <summary css={styles.summary}>
-          <Text css={styles.summaryTitle}>Show Transcript</Text>
+          <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
+            Read transcript
+          </Text>
         </summary>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Text size="brevier">This transcript was auto generated.</Text>
       </details>
     </GridItemLarge>
   );

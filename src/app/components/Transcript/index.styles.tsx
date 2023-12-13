@@ -10,8 +10,10 @@ export default {
       color: `${palette.GREY_6}`,
       div: {
         ul: {
+          paddingTop: `${spacings.DOUBLE}rem`,
           paddingInlineStart: '0',
           li: {
+            paddingBottom: `${spacings.HALF}rem`,
             '::before': {
               listStyle: 'none',
               top: '0',
@@ -26,14 +28,14 @@ export default {
       },
     }),
 
-  summary: ({ palette, spacings, isDarkUi }: Theme) =>
+  summary: ({ palette, isDarkUi }: Theme) =>
     css({
       color: isDarkUi ? palette.WHITE : palette.GREY_10,
-      paddingBottom: `${spacings.DOUBLE}rem`,
     }),
 
-  summaryTitle: ({ palette, isDarkUi }: Theme) =>
+  summaryTitle: ({ palette, isDarkUi, spacings }: Theme) =>
     css({
       color: isDarkUi ? palette.WHITE : palette.GREY_10,
+      paddingLeft: `${spacings.HALF}rem`,
     }),
 };

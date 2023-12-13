@@ -5,6 +5,7 @@ import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import inline from '../InlineContainer';
+import TranscriptTimestamp from '../TranscriptTimestamp';
 
 const withClickHandler = (Component, clickHandler) => props =>
   <Component {...props} onClick={clickHandler} />;
@@ -19,6 +20,7 @@ const BulletedListItemContainer = ({ blocks, onClick }) => {
         componentsToRender={{
           fragment,
           inline,
+          timestamp: TranscriptTimestamp,
           urlLink: onClick ? withClickHandler(InlineLink, onClick) : InlineLink,
         }}
       />

@@ -26,7 +26,7 @@ const fakeTranscript1 = {
                             blocks: [
                               {
                                 id: '4264a85f',
-                                type: 'fragment',
+                                type: 'timestamp',
                                 model: {
                                   text: '00:00',
                                   attributes: [''],
@@ -62,7 +62,7 @@ const fakeTranscript1 = {
                             blocks: [
                               {
                                 id: '4264a85f',
-                                type: 'fragment',
+                                type: 'timestamp',
                                 model: {
                                   text: '00:01',
                                   attributes: [''],
