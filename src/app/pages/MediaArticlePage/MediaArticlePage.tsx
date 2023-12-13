@@ -43,6 +43,7 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import Transcript from '../../components/Transcript';
+import fakeTranscript from './fakeTranscript';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -93,6 +94,18 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     ['content', 'model', 'blocks'],
     pageData,
   );
+
+  // temporary code to inject a transcript into a test article.
+  const metaDataId = pathOr('', ['metadata', 'id'], pageData);
+  console.log('hi', metaDataId);
+  const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
+  console.log('hi', articleID);
+  if (articleID === 'cxr0765kxlzo') {
+    console.log("I'm the article");
+    blocks.splice(3, 0, fakeTranscript);
+  }
+
+  console.log('blocks', blocks);
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);

@@ -33,6 +33,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getMetaDataId,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
@@ -52,6 +53,7 @@ import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
 import Transcript from '../../components/Transcript';
+import fakeTranscript from './fakeTranscript';
 import {
   bylineExtractor,
   categoryName,
@@ -110,6 +112,22 @@ const ArticlePage = ({ pageData }) => {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
+
+  // temporary code to inject a transcript into a test article.
+  const metaDataId = getMetaDataId(pageData);
+  console.log('metaDataId', metaDataId);
+  const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
+  console.log('articleID', articleID);
+  const alreadyContainsTranscript = blocks.includes(
+    block => block.type === 'transcript',
+  );
+
+  console.log('alreadyContainsTranscript', alreadyContainsTranscript);
+
+  if (articleID === 'cz216x22106o' && !alreadyContainsTranscript) {
+    blocks.splice(3, 0, fakeTranscript);
+    // console.log("I'm running");
+  }
 
   const componentsToRender = {
     transcript: Transcript,

@@ -29,6 +29,8 @@ export const getLastPublished = articleData =>
 
 export const getAboutTags = path(['metadata', 'tags', 'about']);
 
+export const getMetaDataId = path(['metadata', 'id']);
+
 export const getArticleSection = path(['metadata', 'passport', 'genre']);
 
 export const getMentions = path(['metadata', 'tags', 'mentions']);
