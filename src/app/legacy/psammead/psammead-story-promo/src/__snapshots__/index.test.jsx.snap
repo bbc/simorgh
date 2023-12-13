@@ -2189,8 +2189,8 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -2199,6 +2199,13 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-13:before {
@@ -2514,8 +2521,8 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -2524,6 +2531,13 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-13:before {
