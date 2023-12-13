@@ -84,16 +84,6 @@ export default async ({
 
     const encodedArticle = { ...article, content: res };
 
-    fs.writeFileSync(
-      '/Users/ahchos01/Desktop/WORLD NEWS/simorgh/src/app/routes/article/getInitialData/test.json',
-      JSON.stringify(article, null, 2),
-    );
-
-    fs.writeFileSync(
-      '/Users/ahchos01/Desktop/WORLD NEWS/simorgh/src/app/routes/article/getInitialData/test2.json',
-      JSON.stringify(encodedArticle, null, 2),
-    );
-
     const response = {
       status,
       pageData: {
