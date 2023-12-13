@@ -60,8 +60,8 @@ const WorldServiceWrapped = ({
     useEffect(() => {
         if (!isAmp) {
             let wrappedPageTimeStart = new Date();
-            const wrappedYear = wrappedPageTimeStart.getFullYear().toString();
-            const wrappedMonth = (wrappedPageTimeStart.getMonth() + 1).toString();
+            const wrappedYear = wrappedPageTimeStart.getFullYear() as const;
+            const wrappedMonth = wrappedPageTimeStart.getMonth() + 1  as const;
             let wrappedStorageKey = 'ws_bbc_wrapped';
             let wrappedContents = {};
             wrappedContents[wrappedYear] = {
