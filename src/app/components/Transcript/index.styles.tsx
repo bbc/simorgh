@@ -6,7 +6,24 @@ export default {
       backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
       display: 'block',
       marginBottom: `${spacings.TRIPLE}rem`,
-      padding: `${spacings.DOUBLE}rem ${spacings.DOUBLE}rem 0`,
+      padding: `${spacings.DOUBLE}rem`,
+      color: `${palette.GREY_6}`,
+      div: {
+        ul: {
+          paddingInlineStart: '0',
+          li: {
+            '::before': {
+              listStyle: 'none',
+              top: '0',
+              position: 'absolute',
+              borderWidth: '0',
+              border: 'none',
+              borderRadius: '0',
+              left: '0',
+            },
+          },
+        },
+      },
     }),
 
   summary: ({ palette, spacings, isDarkUi }: Theme) =>

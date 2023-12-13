@@ -53,7 +53,7 @@ import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
 import Transcript from '../../components/Transcript';
-import fakeTranscript from './fakeTranscript';
+import fakeTranscript1 from './fakeTranscript1';
 import {
   bylineExtractor,
   categoryName,
@@ -125,7 +125,7 @@ const ArticlePage = ({ pageData }) => {
     }
   });
   if (articleID === 'cz216x22106o' && !alreadyContainsTranscript) {
-    blocks.splice(3, 0, fakeTranscript);
+    blocks.splice(3, 0, fakeTranscript1);
   }
 
   const componentsToRender = {
