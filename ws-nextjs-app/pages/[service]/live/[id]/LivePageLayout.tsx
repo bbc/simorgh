@@ -27,10 +27,12 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
-    seo: {
-      seoTitle?: string;
-      seoDescription?: string;
-    };
+    seo: Partial<{
+      seoTitle: string;
+      seoDescription: string;
+      datePublished: string;
+      dateModified: string;
+    }>;
     atiAnalytics: ATIData;
   };
 };
@@ -40,7 +42,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
   const {
     title,
     description,
-    seo: { seoTitle, seoDescription },
+    seo: { seoTitle, seoDescription, datePublished, dateModified },
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
@@ -82,9 +84,16 @@ const LivePage = ({ pageData }: ComponentProps) => {
         hasAmpPage={false}
       />
       <LinkedDataContainer
-        type="CollectionPage"
+        type="NewsArticle"
         seoTitle={pageTitle}
         headline={pageTitle}
+        {...(datePublished && {
+          datePublished,
+        })}
+        {...(dateModified && {
+          dateModified,
+        })}
+        showAuthor
       />
       <main>
         <Header

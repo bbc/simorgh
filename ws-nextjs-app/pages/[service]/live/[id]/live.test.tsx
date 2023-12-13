@@ -60,11 +60,15 @@ const mockPageDataWithMetadata = ({
   description,
   seoTitle,
   seoDescription,
+  datePublished,
+  dateModified,
 }: {
   title: string;
   description?: string;
   seoTitle?: string;
   seoDescription?: string;
+  datePublished?: string;
+  dateModified?: string;
 }) => {
   return {
     ...mockPageData,
@@ -73,6 +77,8 @@ const mockPageDataWithMetadata = ({
     seo: {
       seoTitle,
       seoDescription,
+      datePublished,
+      dateModified,
     },
   };
 };
@@ -145,6 +151,56 @@ describe('Live Page', () => {
       expect(schemaHeadline).toBeTruthy();
     },
   );
+  it('SEO should use datePublished and dateModified when present', async () => {
+    const datePublished = '2018-09-28T22:59:02.448804522Z';
+    const dateModified = '2020-09-28T22:59:02.448804522Z';
+
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+            datePublished,
+            dateModified,
+          })}
+        />,
+      );
+    });
+
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished":"${datePublished}"`),
+    );
+
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified":"${dateModified}"`),
+    );
+
+    expect(SEODatePublished).toBeTruthy();
+    expect(SEODateModified).toBeTruthy();
+  });
+
+  it('SEO should NOT contain datePublished and dateModified when absent', async () => {
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+          })}
+        />,
+      );
+    });
+
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished": null"`),
+    );
+
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified": null"`),
+    );
+
+    expect(SEODatePublished).toBeFalsy();
+    expect(SEODateModified).toBeFalsy();
+  });
 
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
