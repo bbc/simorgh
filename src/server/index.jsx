@@ -134,7 +134,10 @@ server
         }
       });
     },
-  );
+  )
+  .get('/persian/afghanistan.amp', (req, res) => {
+    res.redirect(301, '/persian/afghanistan');
+  });
 
 // Set Up Local Server
 if (process.env.SIMORGH_APP_ENV === 'local') {
