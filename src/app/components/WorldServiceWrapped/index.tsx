@@ -112,5 +112,6 @@ const WorldServiceWrapped = ({
             wrappedContents[wrappedYear] = wrappedContentsShortcut;
         }
     });
+    return null;
 };
 export default WorldServiceWrapped;
