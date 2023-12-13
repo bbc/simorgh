@@ -35,7 +35,6 @@ type Props = {
       model?: ModelType;
     };
   };
-  status: number;
 };
 
 type wordCountType = number | undefined;
@@ -43,7 +42,6 @@ type wordCountType = number | undefined;
 const WorldServiceWrapped = ({
   children,
   pageData,
-  status,
 }: PropsWithChildren<Props>) => {
     const { service } = useContext(ServiceContext);
     const { isAmp, isNextJs, variant } = useContext(RequestContext);
