@@ -14,26 +14,25 @@ const pulseAnimation = keyframes({
 });
 
 const styles = {
-  liveLabelText: ({ spacings, fontVariants }: Theme) =>
-    css({
-      display: 'inline-block',
-      marginInlineEnd: `${spacings.FULL}rem`,
-      ...fontVariants.sansBold,
-    }),
-
-  liveLabelContainer: ({ palette }: Theme) => {
+  liveLabelContainer: ({ palette, spacings }: Theme) =>
     css({
       color: palette.LIVE_DARK,
-    });
-  },
+      marginInlineEnd: `${spacings.FULL}rem`,
+    }),
+
+  liveLabelText: ({ fontVariants }: Theme) =>
+    css({
+      display: 'inline-block',
+      ...fontVariants.sansBold,
+    }),
 
   pulseOuterCircle: ({ spacings }: Theme) =>
     css({
       display: 'inline-block',
-      marginRight: '0.25rem',
       width: `${spacings.DOUBLE}rem`,
       height: `${spacings.DOUBLE}rem`,
       verticalAlign: '-0.125rem',
+      marginInlineEnd: `${spacings.HALF}rem`,
     }),
 
   pulseInnerCircle: () =>
