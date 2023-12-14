@@ -45,6 +45,7 @@ import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import Transcript from '../../components/Transcript';
 import fakeTranscript from './fakeTranscript';
+import transcriptMundo from './transcriptMundo';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -109,6 +110,9 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   });
   if (articleID === 'cxr0765kxlzo' && !alreadyContainsTranscript) {
     blocks.splice(3, 0, fakeTranscript);
+  }
+  if (articleID === 'c4ym969m7w1o' && !alreadyContainsTranscript) {
+    blocks.splice(2, 0, transcriptMundo);
   }
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);

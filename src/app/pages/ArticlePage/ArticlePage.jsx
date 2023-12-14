@@ -53,7 +53,8 @@ import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
 import Transcript from '../../components/Transcript';
-import fakeTranscript1 from './fakeTranscript1';
+import transcriptMundo from './transcriptMundo';
+import fakeTrancript from './fakeTranscript';
 import {
   bylineExtractor,
   categoryName,
@@ -125,7 +126,10 @@ const ArticlePage = ({ pageData }) => {
     }
   });
   if (articleID === 'cz216x22106o' && !alreadyContainsTranscript) {
-    blocks.splice(3, 0, fakeTranscript1);
+    blocks.splice(3, 0, fakeTrancript);
+  }
+  if (articleID === 'cle16n19nd9o' && !alreadyContainsTranscript) {
+    blocks.splice(4, 0, transcriptMundo);
   }
 
   const componentsToRender = {
