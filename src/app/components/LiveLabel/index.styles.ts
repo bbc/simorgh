@@ -27,15 +27,16 @@ const styles = {
     });
   },
 
-  pulseContainer: ({ spacings }: Theme) =>
+  pulseOuterCircle: ({ spacings }: Theme) =>
     css({
+      display: 'inline-block',
       marginRight: '0.25rem',
       width: `${spacings.DOUBLE}rem`,
       height: `${spacings.DOUBLE}rem`,
       verticalAlign: '-0.125rem',
     }),
 
-  pulsingCircle: () =>
+  pulseInnerCircle: () =>
     css({
       '@media (prefers-reduced-motion: no-preference)': {
         animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
