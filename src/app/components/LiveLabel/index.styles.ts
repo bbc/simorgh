@@ -21,8 +21,15 @@ const styles = {
       ...fontVariants.sansBold,
     }),
 
+  liveLabelContainer: ({ palette }: Theme) => {
+    css({
+      color: palette.LIVE_DARK,
+    });
+  },
+
   pulseContainer: ({ spacings }: Theme) =>
-  marginRight: '0.25rem',
+    css({
+      marginRight: '0.25rem',
       width: `${spacings.DOUBLE}rem`,
       height: `${spacings.DOUBLE}rem`,
       verticalAlign: '-0.125rem',
@@ -32,22 +39,23 @@ const styles = {
     css({
       '@media (prefers-reduced-motion: no-preference)': {
         animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
-      }),
-    
-  liveLabelCircle: ({ mq, palette, spacings }: Theme) =>
-    css({
-      display: 'inline-block',
-      width: `${pixelsToRem(15)}rem`,
-      height: `${pixelsToRem(15)}rem`,
-      background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
-      marginInlineEnd: `${spacings.HALF}rem`,
-      position: 'relative',
-      transform: 'translate(0, 12%)',
-      [mq.GROUP_2_MIN_WIDTH]: {
-        width: `${spacings.DOUBLE}rem`,
-        height: `${spacings.DOUBLE}rem`,
       },
     }),
+
+  // liveLabelCircle: ({ mq, palette, spacings }: Theme) =>
+  //   css({
+  //     display: 'inline-block',
+  //     width: `${pixelsToRem(15)}rem`,
+  //     height: `${pixelsToRem(15)}rem`,
+  //     background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
+  //     marginInlineEnd: `${spacings.HALF}rem`,
+  //     position: 'relative',
+  //     transform: 'translate(0, 12%)',
+  //     [mq.GROUP_2_MIN_WIDTH]: {
+  //       width: `${spacings.DOUBLE}rem`,
+  //       height: `${spacings.DOUBLE}rem`,
+  //     },
+  //   }),
 
   firstPromo: ({ mq }: Theme) =>
     css({
