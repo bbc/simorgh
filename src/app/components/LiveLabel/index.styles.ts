@@ -46,21 +46,6 @@ const styles = {
       },
     }),
 
-  // liveLabelCircle: ({ mq, palette, spacings }: Theme) =>
-  //   css({
-  //     display: 'inline-block',
-  //     width: `${pixelsToRem(15)}rem`,
-  //     height: `${pixelsToRem(15)}rem`,
-  //     background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
-  //     marginInlineEnd: `${spacings.HALF}rem`,
-  //     position: 'relative',
-  //     transform: 'translate(0, 12%)',
-  //     [mq.GROUP_2_MIN_WIDTH]: {
-  //       width: `${spacings.DOUBLE}rem`,
-  //       height: `${spacings.DOUBLE}rem`,
-  //     },
-  //   }),
-
   firstPromo: ({ mq }: Theme) =>
     css({
       width: `${pixelsToRem(20)}rem`,
