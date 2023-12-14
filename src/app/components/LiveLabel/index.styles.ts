@@ -26,13 +26,17 @@ const styles = {
       ...fontVariants.sansBold,
     }),
 
-  pulseOuterCircle: ({ spacings }: Theme) =>
+  pulseOuterCircle: ({ mq, spacings }: Theme) =>
     css({
       display: 'inline-block',
-      width: `${spacings.DOUBLE}rem`,
-      height: `${spacings.DOUBLE}rem`,
+      width: `${pixelsToRem(15)}rem`,
+      height: `${pixelsToRem(15)}rem`,
       verticalAlign: '-0.125rem',
       marginInlineEnd: `${spacings.HALF}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
+      },
     }),
 
   pulseInnerCircle: () =>
