@@ -153,6 +153,13 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         css={styles.bodyMedia}
       />
     ),
+    audio: (props: ComponentToRenderProps) => (
+      <LivePageMediaPlayer
+        blocks={props.blocks}
+        className="mediaStyles"
+        css={styles.bodyMedia}
+      />
+    ),
     social: SocialEmbedContainer,
   };
 
