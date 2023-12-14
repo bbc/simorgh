@@ -61,7 +61,7 @@ const LiveLabel = ({
     <span id={id} role="text">
       <span css={circle}>
         <svg
-          fill={LIVE_DARK}
+          fill="currentColor"
           focusable="false"
           aria-hidden="true"
           viewBox="0 0 32 32"
