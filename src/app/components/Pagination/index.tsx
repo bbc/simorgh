@@ -136,7 +136,7 @@ const renderBlock = ({
       </li>
     );
   }
-  console.log('visibility', visibility, 'type', type);
+
   return (
     <li
       css={() => [styles.elipsisBlock, visibilityToMediaQuery(visibility)]}
@@ -161,7 +161,6 @@ const Pagination = ({
   const { dir } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const blocks = buildBlocks(activePage, pageCount);
-  console.log('blocks in pagination', blocks);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
 
