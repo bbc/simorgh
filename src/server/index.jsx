@@ -109,7 +109,7 @@ server
     const swPath = `${__dirname}/public/sw.js`;
     res.set(
       `Cache-Control`,
-      `public, stale-if-error=6000, stale-while-revalidate=300, max-age=300`,
+      `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
     );
     res.sendFile(swPath, {}, error => {
       if (error) {
@@ -123,7 +123,10 @@ server
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-      res.set('Cache-Control', 'public, max-age=604800');
+      res.set(
+        'Cache-Control',
+        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+      );
       res.sendFile(manifestPath, {}, error => {
         if (error) {
           logger.error(MANIFEST_SENDFILE_ERROR, { error });
@@ -142,13 +145,13 @@ const injectDefaultCacheHeader = (req, res, next) => {
   const defaultMaxAge = getDefaultMaxAge(req);
   const maxAge =
     req.originalUrl.indexOf('/topics/') !== -1
-      ? defaultMaxAge * 2
+      ? defaultMaxAge * 8
       : defaultMaxAge;
   res.set(
     'Cache-Control',
-    `public, stale-if-error=${
+    `public, stale-if-error=${maxAge * 10}, stale-while-revalidate=${
       maxAge * 4
-    }, stale-while-revalidate=${maxAge}, max-age=${maxAge}`,
+    }, max-age=${maxAge}`,
   );
   next();
 };
@@ -160,10 +163,13 @@ const injectResourceHintsHeader = (req, res, next) => {
   res.set(
     'Link',
     assetOrigins
-      .map(
-        domainName =>
-          `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
-      )
+      .map(domainName => {
+        const crossOrigin =
+          domainName === 'https://static.files.bbci.co.uk'
+            ? `,<${domainName}>; rel="preconnect"; crossorigin`
+            : '';
+        return `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"${crossOrigin}`;
+      })
       .join(','),
   );
   next();

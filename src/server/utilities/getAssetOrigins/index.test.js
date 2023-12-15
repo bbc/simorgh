@@ -13,10 +13,7 @@ jest.mock('../serviceConfigs', () => ({
   },
 }));
 
-const analyticsOrigins = [
-  'https://ping.chartbeat.net',
-  'https://dataplane.rum.eu-west-1.amazonaws.com',
-];
+const analyticsOrigins = ['https://ping.chartbeat.net'];
 
 const fontOrigins = ['https://ws-downloads.files.bbci.co.uk'];
 
