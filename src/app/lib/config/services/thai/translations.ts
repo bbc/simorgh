@@ -1,0 +1,197 @@
+export default {
+  pagination: {
+    previousPage: 'ก่อนหน้านี้',
+    nextPage: 'ถัดไป',
+    pageXOfY: 'Page {x} ของ {y}',
+  },
+  ads: {
+    advertisementLabel: 'โฆษณา',
+  },
+  recommendationTitle: 'เรื่องแนะนำ',
+  splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
+  seeAll: 'ดูทั้งหมด',
+  home: 'หน้าแรก',
+  currentPage: 'หน้าปัจจุบัน',
+  skipLinkText: 'ข้ามไปยังเนื้อหา',
+  relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
+  relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+  navMenuText: 'หมวดข่าว',
+  mediaAssetPage: {
+    mediaPlayer: 'มีเดีย เพลเยอร์',
+    audioPlayer: 'ออดิโอ เพลเยอร์',
+    videoPlayer: 'วิดีโอ เพลเยอร์',
+  },
+  liveExperiencePage: {
+    liveLabel: 'สด',
+    liveCoverage: 'รายงานสด',
+    breaking: 'ด่วน',
+    postedAt: 'โพสต์ทาง',
+    summary: 'สรุป',
+  },
+  gist: 'สรุป',
+  error: {
+    404: {
+      statusCode: '404',
+      title: 'ไม่พบเนื้อหา',
+      message: 'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
+      solutions: [
+        'ตรวจสอบชื่อเว็บไซต์ ',
+        'กดปุ่มรีเฟรชในบราวเซอร์ของคุณ',
+        'ค้นหาหน้านี้โดยใช้แถบค้นหาของ บีบีซี',
+      ],
+      callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
+      callToActionLinkText: 'BBC News ไทย',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/thai',
+    },
+    500: {
+      statusCode: '500',
+      title: 'เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์ ',
+      message: 'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
+      solutions: ['กดปุ่มรีเฟรชในบราวเซอร์ของคุณ', 'กลับเข้ามาใหม่ในภายหลัง'],
+      callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
+      callToActionLinkText: 'บีบีซีไทย',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/thai',
+    },
+  },
+  consentBanner: {
+    privacy: {
+      title: 'เราได้ปรับปรุงนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์แล้ว',
+      description: {
+        uk: {
+          first:
+            'เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ',
+          linkText: null,
+          last: null,
+          linkUrl: null,
+        },
+        international: {
+          first:
+            'เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ',
+          linkText: null,
+          last: null,
+          linkUrl: null,
+        },
+      },
+      accept: 'ตกลง',
+      reject: 'ดูว่ามีอะไรเปลี่ยนแปลงไปบ้าง',
+      rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+    },
+    cookie: {
+      amp: {
+        accept: 'ยอมรับการเก็บข้อมูลและดูเว็บต่อ',
+        reject: 'ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ',
+        initial: {
+          title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับการเก็บข้อมูลบนหน้าเว็บ AMP',
+          description: {
+            first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
+            linkText: 'คุกกีส์',
+            last: ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
+            linkUrl:
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+          manage: 'จัดการการตั้งค่าของฉัน',
+        },
+        manage: {
+          title: 'จัดการการตั้งค่าความยินยอมบนหน้าเว็บ AMP',
+          description: {
+            para1:
+              'การตั้งค่าเหล่านี้ใช้กับหน้าเว็บ AMP เท่านั้น คุณอาจถูกขอให้ตั้งค่าตัวเลือกเหล่านี้ใหม่อีกครั้ง หากเข้าชมหน้าเว็บอื่นของบีบีซีที่ไม่ใช่แบบ AMP',
+            para2:
+              'หน้าเว็บน้ำหนักเบาสำหรับอุปกรณ์เคลื่อนที่ซึ่งคุณเพิ่งเข้าชมนั้น ถูกสร้างขึ้นโดยใช้เทคโนโลยี AMP ของกูเกิล',
+            heading2: 'จำเป็นต้องเก็บข้อมูลโดยเคร่งครัด',
+            para3:
+              'เพื่อให้หน้าเว็บของเราทำงานได้ดี เราจึงต้องเก็บสารสนเทศบางอย่างในวงจำกัดไว้บนอุปกรณ์ของคุณ โดยไม่ได้ขอความยินยอมเสียก่อน',
+            para4: {
+              text: 'อ่านเพิ่มเติมเกี่ยวกับสารสนเทศที่จำเป็นต่อการทำงานของหน้าเว็บ ซึ่งเราเก็บไว้บนอุปกรณ์ของคุณ',
+              url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+            },
+            para5:
+              'เราใช้ local storage เก็บรักษาข้อมูลตัวเลือกความยินยอมของคุณ บนอุปกรณ์ของคุณเอง',
+            heading3: 'ไม่บังคับเก็บข้อมูล',
+            para6:
+              'เมื่อคุณยินยอมให้เก็บข้อมูลบนหน้าเว็บ AMP นั่นเท่ากับยินยอมให้เราแสดงโฆษณาที่คัดเลือกแล้วว่าเหมาะสมเฉพาะบุคคลและเกี่ยวข้องกับคุณ แม้ในเวลาที่คุณอยู่นอกสหราชอาณาจักร',
+            para7: {
+              text: 'อ่านเพิ่มเติมว่าเราคัดเลือกโฆษณาที่เหมาะสมเฉพาะบุคคลอย่างไรในเว็บไซต์ของบีบีซี รวมทั้งพันธมิตรด้านการโฆษณาของเรา',
+              url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+            },
+            para8:
+              'คุณสามารถเลือกไม่รับข้อมูลโฆษณาเฉพาะบุคคลได้ โดยคลิกที่ “ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ” ตรงด้านล่าง โปรดทราบว่าคุณจะยังคงเห็นโฆษณาอยู่ แต่จะไม่ใช่โฆษณาที่ถูกคัดเลือกว่าเหมาะสมเฉพาะกับคุณเท่านั้น',
+            para9:
+              'คุณสามารถเปลี่ยนการตั้งค่าเหล่านี้ได้โดยคลิกที่ "ตัวเลือกโฆษณา / ห้ามขายข้อมูลของฉัน" ที่ด้านล่างได้ทุกเวลา',
+          },
+        },
+      },
+      canonical: {
+        title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์',
+        description: {
+          uk: {
+            first: 'เราใช้ ',
+            linkText: 'คุกกีส์',
+            last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+            linkUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+          international: {
+            first: 'เราใช้ ',
+            linkText: 'คุกกีส์',
+            last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+            linkUrl:
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+        },
+        accept: 'ยอมรับ',
+        reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
+        rejectUrl:
+          'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+      },
+    },
+  },
+  media: {
+    noJs: 'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
+    contentExpired: 'เนื้อหานี้ไม่เป็นที่ปรากฏแล้ว',
+    contentNotYetAvailable: 'เนื้อหานี้ยังไม่พร้อมแสดง',
+    audio: 'เสียง',
+    photogallery: 'แกลเลอรีภาพ',
+    video: 'วิดีโอ',
+    listen: 'ฟัง',
+    watch: 'ดูู',
+    listenLive: 'ฟัง สด',
+    liveLabel: 'สด',
+    nextLabel: 'ถัดไป',
+    previousRadioShow: 'รายการวิทยุก่อนหน้า',
+    nextRadioShow: 'รายการวิทยุถัดไป',
+    duration: 'ความยาว',
+  },
+  socialEmbed: {
+    caption: {
+      textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
+      text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+      articleText: 'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+      articleAdditionalText: 'เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
+    },
+    fallback: {
+      text: 'ไม่มีเนื้อหานี้',
+      linkText: 'ดูเพิ่มเติมที่ %provider_name%',
+      linkTextSuffixVisuallyHidden: ', ลิงก์จากภายนอก',
+      warningText:
+        'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
+    },
+    skipLink: {
+      text: 'ข้าม %provider_name% โพสต์ ',
+      endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
+    },
+    consentBanner: {
+      heading: `ยินยอมรับเนื้อหาจาก [social_media_site]`,
+      body: `บทความนี้ประกอบด้วยเนื้อหาจาก [social_media_site] เราขอความยินยอมจากคุณก่อนใช้คุกกี้ หรือเทคโนโลยีอื่น ๆ บันทึกอะไรลงไป คุณอาจต้องอ่านนโยบายคุกกี้ของ  [social_media_site] [link]  และนโยบายความเป็นส่วนตัวของ [/link]  [social_media_site] [link] ก่อนให้ความยินยอม [/link] หากต้องการอ่านเนื้อหานี้ โปรดเลือก "ยินยอมและไปต่อ"`,
+    },
+  },
+  include: {
+    errorMessage:
+      'ขออภัย เราไม่สามารถแสดงส่วนนี้ของเรื่องได้บนหน้าโทรศัพท์ที่ใช้แอปอย่างง่าย',
+    linkText: 'ดูแบบเต็มเพื่อดูเนื้อหาทั้งหมด',
+  },
+  topStoriesTitle: 'ข่าวเด่น',
+  featuresAnalysisTitle: 'เรื่องน่าสนใจ',
+};
