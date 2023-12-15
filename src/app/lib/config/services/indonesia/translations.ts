@@ -1,0 +1,218 @@
+export default {
+  pagination: {
+    previousPage: 'Sebelum',
+    nextPage: 'Berikut',
+    pageXOfY: 'Page {x} dari {y}',
+  },
+  ads: {
+    advertisementLabel: 'Iklan',
+  },
+  recommendationTitle: 'Artikel-artikel yang direkomendasikan',
+  splitRecommendationTitle: 'Artikel-artikel lainnya yang direkomendasikan',
+  seeAll: 'Lihat semua',
+  home: 'Berita',
+  currentPage: 'Halaman saat ini',
+  skipLinkText: 'Langsung ke konten',
+  relatedContent: 'Berita terkait',
+  relatedTopics: 'Topik terkait',
+  navMenuText: 'Kategori',
+  mediaAssetPage: {
+    mediaPlayer: 'Pemutar Media',
+    audioPlayer: 'Pemutar Audio',
+    videoPlayer: 'Pemutar Video',
+  },
+  liveExperiencePage: {
+    liveLabel: 'Langsung',
+    liveCoverage: 'Liputan langsung',
+    breaking: 'Terbaru',
+    postedAt: 'Diterbitkan di',
+    summary: 'Rangkuman',
+  },
+  gist: 'Rangkuman',
+  error: {
+    404: {
+      statusCode: '404',
+      title: 'Halaman tidak dapat ditemukan',
+      message:
+        'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
+      solutions: [
+        'Periksa kembali tautan',
+        'Klik tombol perbarui di peramban Anda',
+        'Cari halaman ini dengan menggunakan tombol pencari di BBC',
+      ],
+      callToActionFirst: 'Sebagai alternatif, coba klik ',
+      callToActionLinkText: 'BBC News Indonesia.',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/indonesia',
+    },
+    500: {
+      statusCode: '500',
+      title: 'Kesalahan internal jaringan komputer',
+      message:
+        'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
+      solutions: [
+        'Klik tombol perbarui di peramban Anda',
+        'Telusuri lagi nanti',
+      ],
+      callToActionFirst: 'Sebagai alternatif, coba klik ',
+      callToActionLinkText: 'BBC News Indonesia.',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/indonesia',
+    },
+  },
+  byline: {
+    articleInformation: 'Informasi artikel',
+    author: 'Penulis',
+    listItemImage: 'Daftar isi, gambar',
+    published: 'Telah diterbitkan',
+    reportingFrom: 'Melaporkan dari',
+    role: 'Peranan',
+  },
+  consentBanner: {
+    privacy: {
+      title: 'Kami telah memperbarui Kebijakan Privasi dan Cookies kami',
+      description: {
+        uk: {
+          first:
+            'Kami melakukan sejumlah perubahan penting terkait Kebijakan Privasi dan Cookies dan kami ingin memberitahu Anda, apa arti langkah ini bagi Anda dan data Anda.',
+          linkText: null,
+          last: null,
+          linkUrl: null,
+        },
+        international: {
+          first:
+            'Kami melakukan sejumlah perubahan penting terkait Kebijakan Privasi dan Cookies dan kami ingin memberitahu Anda, apa arti langkah ini bagi Anda dan data Anda.',
+          linkText: null,
+          last: null,
+          linkUrl: null,
+        },
+      },
+      accept: 'OKE',
+      reject: 'Coba lihat apa yang berubah',
+      rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+    },
+    cookie: {
+      amp: {
+        accept: 'Terima pengambilan data dan lanjutkan',
+        reject: 'Tolak pengambilan data dan lanjutkan',
+        initial: {
+          title:
+            'Beri tahu kami Anda jika setuju dengan pengambilan data melalui AMP.',
+          description: {
+            first: 'Kami dan para mitra kami menggunakan teknologi, seperti ',
+            linkText: 'cookies',
+            last: ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+            linkUrl:
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+          manage: 'Atur pengaturan saya',
+        },
+        manage: {
+          title: 'Atur persetujuan pengaturan di halaman AMP',
+          description: {
+            para1:
+              'Pengaturan itu berlaku pada halaman AMP saja. Anda mungkin akan ditanya lagi untuk mengatur preferensi ketika Anda mengunjungi halaman non-AMP BBC.',
+            para2:
+              'Halaman ponsel yang Anda kunjungi dibuat dengan menggunakan teknologi AMP Google',
+            heading2: 'Pengambilan data sangat diperlukan',
+            para3:
+              'Agar situs kami tetap berjalan, kami menyimpan sejumlah informasi terbatas dalam perangkat Anda tanpa persetujuan Anda.',
+            para4: {
+              text: 'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
+              url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+            },
+            para5:
+              'Kami menggunakan penyimpanan lokal untuk menyimpan preferensi yang Anda pilih dalam perangkat Anda.',
+            heading3: 'Pengambilan data opsional',
+            para6:
+              'Bila Anda menyetujui pengambilan data pada halaman AMP, Anda mengizinkan kami menampilkan preferensi iklan Anda, yang relevan bagi Anda bila Anda berada di luar Inggris.',
+            para7: {
+              text: 'Baca lebih lanjut bagaimana kami menyesuaikan iklan di BBC dan mitra-mira iklan kami.',
+              url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+            },
+            para8:
+              'Anda dapat memilih untuk tidak menerima iklan yang disesuaikan dengan pilihan Anda dengan mengeklik "Tolak pengambilan data dan lanjutkan" di bawah ini. Anda tetap dapat melihat iklan, namun tak sesuai dengan pilihan Anda.',
+            para9:
+              'Anda dapat mengubah pengaturan dengan mengeklik "Pilihan iklan/Jangan sebarkan informasi saya" di catatan kaki, kapan saja.',
+          },
+        },
+      },
+      canonical: {
+        title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
+        description: {
+          uk: {
+            first: 'Kami menggunakan ',
+            linkText: 'cookies',
+            last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+            linkUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+          international: {
+            first: 'Kami menggunakan ',
+            linkText: 'cookies',
+            last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+            linkUrl:
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+        },
+        accept: 'Ya, saya setuju',
+        reject: 'Tidak, tampilkan pengaturan',
+        rejectUrl:
+          'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+      },
+    },
+  },
+  media: {
+    noJs: 'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
+    contentExpired: 'Konten ini sudah tidak tersedia lagi.',
+    contentNotYetAvailable: 'Program ini belum tersedia.',
+    audio: 'Audio',
+    photogallery: 'Galeri Foto',
+    video: 'Video',
+    listen: 'Dengar',
+    watch: 'Tonton',
+    listenLive: 'Mendengarkan langsung',
+    listenNext: 'Dengar yang berikut',
+    liveLabel: 'LANGSUNG',
+    nextLabel: 'BERIKUTNYA',
+    previousRadioShow: 'Siaran radio sebelumnya',
+    nextRadioShow: 'Siaran radio berikutnya',
+    duration: 'Durasi',
+    recentEpisodes: 'Siaran sebelumnya',
+    podcastExternalLinks: 'Podcast ini juga tersedia di',
+    download: 'Unduh episode',
+  },
+  socialEmbed: {
+    caption: {
+      textPrefixVisuallyHidden: 'Keterangan video, ',
+      text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+      articleText:
+        'Peringatan: BBC tidak bertanggung jawab atas konten situs eksternal',
+      articleAdditionalText: 'Konten %provider_name% mungkin memuat iklan',
+    },
+    fallback: {
+      text: 'Konten tidak tersedia',
+      linkText: 'Lihat lebih banyak di %provider_name%',
+      linkTextSuffixVisuallyHidden: ', eksternal',
+      warningText:
+        'BBC tidak bertanggung jawab atas konten dari situs eksternal',
+    },
+    skipLink: {
+      text: 'Hentikan %provider_name% pesan',
+      endTextVisuallyHidden: 'Lompati %provider_name% pesan',
+    },
+    consentBanner: {
+      heading: `Izinkan konten [social_media_site]?`,
+      body: `Artikel ini memuat konten yang disediakan [social_media_site]. Kami meminta izin Anda sebelum ada yang dimunculkan mengingat situs itu mungkin menggunakan cookies dan teknologi lain. Anda dapat membaca [social_media_site] [link] kebijakan cookie [/link] dan [link] kebijakan privasi [/link] sebelum menerima. Untuk melihat konten ini, pilihlah 'terima dan lanjutkan'. `,
+      button: 'Terima dan lanjutkan',
+    },
+  },
+  include: {
+    errorMessage:
+      'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+    linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
+  },
+  topStoriesTitle: 'Berita Utama',
+  featuresAnalysisTitle: 'Majalah',
+  latestMediaTitle: 'Terbaru',
+};
