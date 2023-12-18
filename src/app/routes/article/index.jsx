@@ -31,6 +31,7 @@ const ArticleVariation = props => {
 };
 
 export default {
+  // Add 'cpsAssetPagePath' and 'legacyAssetPagePath' here to allow CPS assets to render in the ArticlePage component once `isCaf` flag is removed
   path: articlePath,
   exact: true,
   component: ArticleVariation,
