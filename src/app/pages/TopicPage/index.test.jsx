@@ -140,7 +140,7 @@ describe('Topic Page', () => {
     const topicBadgeSrc = topicBadge.getAttribute('src');
     expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
     expect(topicBadgeSrc).toBe(
-      'https://ichef.bbci.co.uk/news/png/128/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
     );
   });
 
