@@ -522,6 +522,30 @@
         "summaries": [
           {
             "type": "link",
+            "title": "Би-Би-Си ТВ жаңылыктары",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png",
+            "description": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
+            "imageAlt": "Microphone",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+        "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "Би-Би-Си ТВ жаңылыктары",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
             "title": "BBC News Russian",
             "firstPublished": "",
             "lastPublished": "",
@@ -569,7 +593,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
-        "position": 6,
+        "position": 7,
         "title": "Useful links",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -581,7 +605,7 @@
         "link": "https://www.bbc.com/punjabi/articles/cn37pkelzrpo",
         "curationId": "urn:bbc:tipo:list:95aa88fb-eb83-42bc-b3de-6c51e52b4d62",
         "curationType": "tipo-curation",
-        "position": 7,
+        "position": 8,
         "title": "Message banner 2 - hay festival_group 4.png",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -592,7 +616,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e547697b-26f9-45d4-9146-477dd8a6ee9e",
         "curationType": "tipo-curation",
-        "position": 8,
+        "position": 9,
         "title": "hay festival_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -603,7 +627,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b42365ef-1ee6-49ff-af7e-7eff7472e315",
         "curationType": "tipo-curation",
-        "position": 9,
+        "position": 10,
         "title": "radio_group 4",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -614,7 +638,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f8ab8a50-0c24-411b-ba91-ac31a60e583d",
         "curationType": "tipo-curation",
-        "position": 10,
+        "position": 11,
         "title": "radio_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -625,7 +649,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:0b2d4c54-954f-49cb-bde7-1cc364431287",
         "curationType": "tipo-curation",
-        "position": 11,
+        "position": 12,
         "title": "100 women_group 4",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -636,7 +660,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
         "curationType": "tipo-curation",
-        "position": 12,
+        "position": 13,
         "title": "100 women_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -644,7 +668,7 @@
       {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 13,
+        "position": 14,
         "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
