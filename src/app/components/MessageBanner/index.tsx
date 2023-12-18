@@ -28,7 +28,7 @@ interface MessageBannerProps {
 const Banner = forwardRef(
   (
     { heading, description, link, linkText, image }: MessageBannerProps,
-    ref,
+    viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
@@ -42,7 +42,7 @@ const Banner = forwardRef(
         aria-labelledby={id}
         data-testid={id}
       >
-        <div ref={ref} css={styles.card}>
+        <div ref={viewRef} css={styles.card}>
           <div css={styles.textWrap}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
               {heading}
