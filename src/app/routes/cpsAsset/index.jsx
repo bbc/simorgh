@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import path from 'ramda/src/path';
 import {
   ErrorPage,
   MediaAssetPage,
@@ -22,8 +22,9 @@ import {
 
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
-  const type = path(['pageData', 'metadata', 'type'], props);
-  const isCaf = path(['isCaf'], props);
+  const { pageData, isCaf } = props;
+
+  const type = pageData?.metadata?.type;
 
   const PageType = {
     [STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
