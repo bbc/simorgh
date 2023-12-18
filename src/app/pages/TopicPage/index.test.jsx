@@ -128,6 +128,22 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('p').length).toEqual(1);
   });
 
+  it('should resize the badge image from 480 to 128', () => {
+    const { queryByTestId } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+
+    const topicBadge = queryByTestId('topic-badge');
+
+    expect(topicBadge).toBeInTheDocument();
+    const topicBadgeSrc = topicBadge.getAttribute('src');
+    expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
+    expect(topicBadgeSrc).toBe(
+      'https://ichef.bbci.co.uk/news/png/128/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+    );
+  });
+
   it('should render description without badge', () => {
     const { container, queryByTestId } = render(
       <TopicPage pageData={pidginMultipleItems} service="pidgin" />,
