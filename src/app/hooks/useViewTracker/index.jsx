@@ -129,6 +129,7 @@ const useViewTracker = (props = {}) => {
     advertiserID,
     url,
     optimizely,
+    detailedPlacement,
   ]);
 
   return async element => {

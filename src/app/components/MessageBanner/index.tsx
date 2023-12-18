@@ -27,7 +27,14 @@ interface MessageBannerProps {
 
 const Banner = forwardRef(
   (
-    { heading, description, link, linkText, image }: MessageBannerProps,
+    {
+      heading,
+      description,
+      link,
+      linkText,
+      image,
+      eventTrackingData,
+    }: MessageBannerProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
@@ -56,6 +63,7 @@ const Banner = forwardRef(
               href={link}
               css={styles.callToActionLink}
               className="focusIndicatorInvert"
+              eventTrackingData={eventTrackingData}
             >
               {linkText}
               {isRtl ? (

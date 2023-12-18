@@ -1,1 +1,5 @@
-export type CallToActionLinkProps = { href?: string; className?: string };
+export type CallToActionLinkProps = {
+  href?: string;
+  className?: string;
+  eventTrackingData?: { componentName: string };
+};
