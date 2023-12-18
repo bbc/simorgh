@@ -47,6 +47,7 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
+  nthCurationByStyleAndProminence,
 }: CurationProps) => {
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
@@ -66,6 +67,8 @@ const Curation = ({
           link={promos[0].link}
           linkText={promos[0].title}
           image={promos[0].imageUrl}
+          position={position}
+          nthCurationByStyleAndProminence={nthCurationByStyleAndProminence}
         />
       ) : null;
     case MOST_READ:
