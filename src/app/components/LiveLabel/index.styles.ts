@@ -42,7 +42,7 @@ const styles = {
   pulseInnerCircle: () =>
     css({
       '@media (prefers-reduced-motion: no-preference)': {
-        animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3`,
+        animation: `${pulseAnimation} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.5s 3`,
       },
     }),
 
