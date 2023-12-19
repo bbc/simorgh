@@ -174,11 +174,13 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const postURN = pathOr<string>('', ['urn'], post);
+
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <article css={styles.postContainer}>
+    <article css={styles.postContainer} id={postURN}>
       <Heading level={3}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
