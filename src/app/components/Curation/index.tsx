@@ -14,6 +14,7 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
+import FlourishEmbed from '../Embeds/FlourishEmbed';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -21,6 +22,7 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
   MOST_READ,
+  FLOURISH_VIS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -35,7 +37,12 @@ const getGridComponent = (componentName: string | null) => {
       return CurationGrid;
   }
 };
-
+const isFlourishVis = (link: string | undefined) => {
+  if (link?.includes('flo.uri.sh')) {
+    return true;
+  }
+  return false;
+};
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -48,7 +55,12 @@ const Curation = ({
   curationLength = 0,
   mostRead,
 }: CurationProps) => {
-  const componentName = getComponentName(visualStyle, visualProminence);
+  const componentName = getComponentName(
+    visualStyle,
+    visualProminence,
+    link || promos[0]?.link,
+  );
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -58,6 +70,27 @@ const Curation = ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
+    case FLOURISH_VIS:
+      return (
+        <section aria-labelledby={id} role="region">
+          {isFirstCuration ? (
+            <VisuallyHiddenText id={id} as="h2">
+              {curationSubheading}
+            </VisuallyHiddenText>
+          ) : (
+            <Subheading id={id} link={link}>
+              {curationSubheading}
+            </Subheading>
+          )}
+          <FlourishEmbed
+            width={700}
+            height={575}
+            iFrameSrc={promos[0].link}
+            iFrameId={promos[0].id}
+            iFrameTitle={curationSubheading}
+          />
+        </section>
+      );
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
         <MessageBanner
