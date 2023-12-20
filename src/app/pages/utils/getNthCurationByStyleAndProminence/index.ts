@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import {
   CurationData,
   VisualProminence,
@@ -10,24 +9,14 @@ const getPositionsOfCurationsByStyleAndProminence = (
 ) => {
   const positionsOfCurationsByStyleAndProminence = new Map();
 
-  curations.forEach(
-    ({ visualStyle, visualProminence, position, summaries, mostRead }) => {
-      // If the curation has content i.e more than 1 summary, or a most read item
-      // Please note we might need to add a radio schedule when this data becomes available
-      if ((summaries?.length || 0) > 0 || mostRead) {
-        const key = `${visualStyle}_${visualProminence}`;
+  curations.forEach(({ visualStyle, visualProminence, position }) => {
+    const key = `${visualStyle}_${visualProminence}`;
 
-        const positions =
-          positionsOfCurationsByStyleAndProminence.get(key) || [];
+    const positions = positionsOfCurationsByStyleAndProminence.get(key) || [];
 
-        // Captures the positions of each curation by visual style and prominence
-        positionsOfCurationsByStyleAndProminence.set(key, [
-          ...positions,
-          position,
-        ]);
-      }
-    },
-  );
+    // Captures the positions of each curation by visual style and prominence
+    positionsOfCurationsByStyleAndProminence.set(key, [...positions, position]);
+  });
 
   return positionsOfCurationsByStyleAndProminence;
 };
