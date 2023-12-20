@@ -3,9 +3,8 @@ import scrollIntoView from '../helpers/scroll-into-view';
 
 // @ts-expect-error spike any types
 const useScrollToLinkable = ({ post, isReducedMotion }) => {
-  console.log("I'm calling the useScrollToLinkable hook");
-  console.log("I'm the post in the hook", post);
   const hasScrolled = useRef(null);
+  //   don't know what this does
   useEffect(() => {
     hasScrolled.current = null;
   }, [post]);
@@ -16,9 +15,8 @@ const useScrollToLinkable = ({ post, isReducedMotion }) => {
 
     if (post) {
       timer = setTimeout(() => {
-        const backToLatestComponent = document.getElementById('post');
-
-        scrollIntoView(backToLatestComponent, hasScrolled, isReducedMotion);
+        const componentToFocusOn = document.getElementById(post);
+        scrollIntoView(componentToFocusOn, hasScrolled, isReducedMotion);
       }, 800);
     }
     // @ts-expect-error spike any types

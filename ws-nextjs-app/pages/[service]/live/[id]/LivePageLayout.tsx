@@ -73,8 +73,6 @@ const LivePage = ({ pageData, post }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
-  console.log('Im the post in LivePageLayout', post);
-
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />

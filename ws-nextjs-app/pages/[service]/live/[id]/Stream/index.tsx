@@ -8,7 +8,6 @@ import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
 import useScrollToLinkable from './hooks/use-scroll-to-linkable';
-import MyHook from './hooks/myhook';
 
 const Stream = ({
   streamContent,
@@ -25,13 +24,9 @@ const Stream = ({
     },
   } = useContext(ServiceContext);
 
-  // const isReducedMotion = false;
+  const isReducedMotion = false;
 
-  console.log("I'm the stream post ID", post);
-
-  // useScrollToLinkable({ post, isReducedMotion });
-
-  MyHook(post);
+  useScrollToLinkable({ post, isReducedMotion });
 
   if (!streamContent) return null;
 
