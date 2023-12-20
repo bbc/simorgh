@@ -37,12 +37,7 @@ const getGridComponent = (componentName: string | null) => {
       return CurationGrid;
   }
 };
-const isFlourishVis = (link: string | undefined) => {
-  if (link?.includes('flo.uri.sh')) {
-    return true;
-  }
-  return false;
-};
+
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
