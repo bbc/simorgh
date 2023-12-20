@@ -19,6 +19,7 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 export interface HomePageProps {
   pageData: {
@@ -51,27 +52,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
 
   const itemList = getItemList({ curations, name: brandName });
-
-  const positionsOfCurationsByStyleAndProminence = new Map();
-
-  curations.forEach(
-    ({ visualStyle, visualProminence, position, summaries, mostRead }) => {
-      // If the curation has content i.e more than 1 summary, or a most read item
-      // Please note we might need to add a radio schedule when this data becomes available
-      if ((summaries?.length || 0) > 0 || mostRead) {
-        const key = `${visualStyle}_${visualProminence}`;
-
-        const positions =
-          positionsOfCurationsByStyleAndProminence.get(key) || [];
-
-        // Captures the positions of each curation by visual style and prominence
-        positionsOfCurationsByStyleAndProminence.set(key, [
-          ...positions,
-          position,
-        ]);
-      }
-    },
-  );
 
   return (
     <>
@@ -114,11 +94,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 },
                 index,
               ) => {
-                const positions = positionsOfCurationsByStyleAndProminence.get(
-                  `${visualStyle}_${visualProminence}`,
-                );
                 const nthCurationByStyleAndProminence =
-                  positions?.findIndex((x: number) => x === position) + 1;
+                  getNthCurationByStyleAndProminence({
+                    curations,
+                    position,
+                    visualStyle,
+                    visualProminence,
+                  });
 
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>

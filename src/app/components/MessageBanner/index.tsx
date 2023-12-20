@@ -2,6 +2,7 @@
 import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -17,12 +18,7 @@ interface MessageBannerProps {
   link?: string;
   linkText: string;
   image?: string;
-  position?: number;
-  nthCurationByStyleAndProminence?: number;
-  eventTrackingData?: {
-    componentName: string;
-    detailedPlacement: string;
-  };
+  eventTrackingData?: EventTrackingMetadata;
 }
 
 const Banner = forwardRef(
@@ -94,14 +90,8 @@ const MessageBanner = ({
   link,
   linkText,
   image,
-  position = 1,
-  nthCurationByStyleAndProminence = 1,
+  eventTrackingData,
 }: MessageBannerProps) => {
-  const eventTrackingData = {
-    componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-    detailedPlacement: `${position}`,
-  };
-
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
