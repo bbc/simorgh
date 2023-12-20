@@ -7,19 +7,31 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
+import useScrollToLinkable from './hooks/use-scroll-to-linkable';
+import MyHook from './hooks/myhook';
 
 const Stream = ({
   streamContent,
   contributors,
+  post,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
+  post: string | null;
 }) => {
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = useContext(ServiceContext);
+
+  // const isReducedMotion = false;
+
+  console.log("I'm the stream post ID", post);
+
+  // useScrollToLinkable({ post, isReducedMotion });
+
+  MyHook(post);
 
   if (!streamContent) return null;
 
@@ -51,9 +63,9 @@ const Stream = ({
         <Post post={streamResults[0]} />
       ) : (
         <ol role="list" css={styles.orderedList}>
-          {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
-              <Post post={post} />
+          {streamResults.map(postItem => (
+            <li key={postItem.urn} css={styles.listItem}>
+              <Post post={postItem} />
             </li>
           ))}
         </ol>

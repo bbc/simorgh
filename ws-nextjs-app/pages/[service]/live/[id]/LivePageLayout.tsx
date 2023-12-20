@@ -35,9 +35,10 @@ type ComponentProps = {
     }>;
     atiAnalytics: ATIData;
   };
+  post: string | null;
 };
 
-const LivePage = ({ pageData }: ComponentProps) => {
+const LivePage = ({ pageData, post }: ComponentProps) => {
   const { lang, translations } = useContext(ServiceContext);
   const {
     title,
@@ -71,6 +72,8 @@ const LivePage = ({ pageData }: ComponentProps) => {
     : pageSeoTitle;
 
   const pageDescription = seoDescription || description || pageSeoTitle;
+
+  console.log('Im the post in LivePageLayout', post);
 
   return (
     <>
@@ -108,9 +111,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
+            <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
+              Click this link
+            </a>
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}
+              post={post}
             />
           </div>
         </div>

@@ -151,6 +151,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     rendererEnv: 'test', // TODO: remove hardcoding
   });
 
+  console.log("I'm the post value in [..v].page", post);
+
   let routingInfoLogger = logger.debug;
   if (data.status !== OK) {
     routingInfoLogger = logger.error;
@@ -171,6 +173,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
+      post: post || null,
       pageData: data?.pageData
         ? {
             ...data.pageData,
