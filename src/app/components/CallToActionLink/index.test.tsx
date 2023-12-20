@@ -32,9 +32,7 @@ describe('Call To Action Link', () => {
 
   it('should register click tracker if event tracking data provided', () => {
     const eventTrackingData = { componentName: 'call-to-action-link' };
-    const clickTrackerSpy = jest
-      .spyOn(clickTracking, 'default')
-      .mockImplementation();
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
     render(
       <CallToActionLink
