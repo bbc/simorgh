@@ -8,16 +8,20 @@ import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
 import useScrollToLinkable from './hooks/use-scroll-to-linkable';
+import { StreamContext, StreamProvider } from './BackToLatest/stream-provider';
 
 const Stream = ({
   streamContent,
   contributors,
   post,
+  streamRef,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
   post: string | null;
+  streamRef: any;
 }) => {
+  const { state }: any = useContext(StreamContext);
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
@@ -53,6 +57,8 @@ const Stream = ({
           {contributors}
         </Paragraph>
       )}
+
+      <span id="hiddenHeadline">Hidden headline holder</span>
 
       {hasSinglePost ? (
         <Post post={streamResults[0]} />

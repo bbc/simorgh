@@ -1,15 +1,20 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import Link from 'next/link';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
+import {
+  StreamContext,
+  StreamProvider,
+} from './Stream/BackToLatest/stream-provider';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
 
@@ -39,6 +44,10 @@ type ComponentProps = {
 };
 
 const LivePage = ({ pageData, post }: ComponentProps) => {
+  const streamRef = useRef(null);
+
+  console.log("I'm the streamRef", streamRef);
+
   const { lang, translations } = useContext(ServiceContext);
   const {
     title,
@@ -109,14 +118,30 @@ const LivePage = ({ pageData, post }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
-              Click this link
-            </a>
-            <Stream
-              streamContent={liveTextStream.content}
-              contributors={liveTextStream.contributors}
+            <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
+              Link for post 39 (Page 1)
+            </Link>
+            <br />
+            <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
+              Link for post 32 (Page 2)
+            </Link>
+            <br />
+            <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
+              Link for post 12 (Page 3)
+            </Link>
+            <StreamProvider
+              streamRef={streamRef}
               post={post}
-            />
+              setPage={undefined}
+              setPost={undefined}
+            >
+              <Stream
+                streamContent={liveTextStream.content}
+                contributors={liveTextStream.contributors}
+                post={post}
+                streamRef={streamRef}
+              />
+            </StreamProvider>
           </div>
         </div>
         <Pagination

@@ -21,6 +21,7 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import BackToLatestPost from '../Stream/BackToLatest/back-to-latest-post';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -181,6 +182,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer} id={postURN}>
+      <BackToLatestPost urn={postURN} />
       <Heading level={3}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
