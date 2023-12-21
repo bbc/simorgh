@@ -11,7 +11,7 @@ export const COMPONENT_NAMES = {
   HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
-  FLOURISH_VIS: 'flourish-vis',
+  VISUAL_JOURNALISM: 'visual-journalism',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -22,16 +22,19 @@ const {
   HIERARCHICAL_CURATION_GRID,
   MOST_READ,
   NOT_SUPPORTED,
-  FLOURISH_VIS,
+  VISUAL_JOURNALISM,
 } = COMPONENT_NAMES;
+
+const isVisualJournalism = (link?: string) =>
+  link?.includes('flo.uri.sh') || link?.includes('/include/');
 
 export default (
   visualStyle: VisualStyle,
   visualProminence: VisualProminence,
   link?: string,
 ) => {
-  if (link?.includes('flo.uri.sh')) {
-    return FLOURISH_VIS;
+  if (isVisualJournalism(link)) {
+    return VISUAL_JOURNALISM;
   }
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,

@@ -14,7 +14,7 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
-import FlourishEmbed from '../Embeds/FlourishEmbed';
+import VisualJournalism from '../Embeds/FlourishEmbed';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -22,7 +22,7 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
   MOST_READ,
-  FLOURISH_VIS,
+  VISUAL_JOURNALISM,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -65,22 +65,16 @@ const Curation = ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case FLOURISH_VIS:
+    case VISUAL_JOURNALISM:
       return (
         <section aria-labelledby={id} role="region">
-          {isFirstCuration ? (
-            <VisuallyHiddenText id={id} as="h2">
-              {curationSubheading}
-            </VisuallyHiddenText>
-          ) : (
-            <Subheading id={id} link={link}>
-              {curationSubheading}
-            </Subheading>
-          )}
-          <FlourishEmbed
+          <VisualJournalism
             width={700}
             height={575}
-            iFrameSrc={promos[0].link}
+            iFrameSrc={promos[0].link?.replace(
+              'files.bbci.com',
+              'files.bbci.co.uk',
+            )}
             iFrameId={promos[0].id}
             iFrameTitle={curationSubheading}
           />
