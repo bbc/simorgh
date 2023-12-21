@@ -32,7 +32,6 @@ interface PageDataParams extends ParsedUrlQuery {
   variant?: Variants;
   // eslint-disable-next-line camelcase
   renderer_env?: string;
-  isArchive?: string;
 }
 
 const logger = nodeLogger(__filename);
