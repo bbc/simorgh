@@ -32,6 +32,7 @@ interface PageDataParams extends ParsedUrlQuery {
   variant?: Variants;
   // eslint-disable-next-line camelcase
   renderer_env?: string;
+  isArchive?: string;
 }
 
 const logger = nodeLogger(__filename);
@@ -42,14 +43,21 @@ const getPageData = async ({
   service,
   variant,
   rendererEnv,
+  isArchive,
 }: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  let pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  const isArchiveQuery = !!isArchive;
+  if (isArchiveQuery) {
+    pathname = `${service}/live/${id}?renderer_env=live`;
+  }
+
   const livePageUrl = constructPageFetchUrl({
     page,
     pageType: 'live',
     pathname,
     service,
     variant,
+    isArchive: isArchiveQuery,
   });
 
   const env = getEnvironment(pathname);
@@ -109,6 +117,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     // renderer_env: rendererEnv,
     page = '1',
+    isArchive,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
@@ -143,6 +152,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service,
     variant,
     rendererEnv: 'test', // TODO: remove hardcoding
+    isArchive,
   });
 
   let routingInfoLogger = logger.debug;
@@ -163,6 +173,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       error: data?.error || null,
       id,
       isAmp: false,
+      isArchive: !!isArchive,
       isNextJs: true,
       page: page || null,
       pageData: data?.pageData
