@@ -92,7 +92,9 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
           const cpsId = getCpsId(path);
           return `/${service}/live/${cpsId}`;
         }
-        return getTipoId(path);
+        return (
+          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
+        );
       };
       break;
     default:
