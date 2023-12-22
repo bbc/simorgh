@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { BumpType, PlayerConfig, PropTypes } from './types';
+import { BumpType, PlayerConfig, PropTypes } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -17,6 +18,10 @@ const useLoadBump = (playerConfig: PlayerConfig) => {
             playerConfig,
           );
           mediaPlayer.load();
+          // @ts-ignore
+          mediaPlayer.bind('error', function (e) {
+            console.log('ERROR', e);
+          });
         }
       });
     } catch (error) {
@@ -27,26 +32,59 @@ const useLoadBump = (playerConfig: PlayerConfig) => {
   return playerElementRef;
 };
 
-const Player = ({ holdingImageURL, title, pid }: PropTypes) => {
-  const playerConfig = {
-    product: 'news',
-    superResponsive: true,
-    counterName: 'smp.demopage.player.page',
-    playlistObject: {
-      title,
-      holdingImageURL,
-      items: [
-        {
-          versionID: 'p049sq7k',
-          kind: 'programme',
-          duration: 37,
-        },
-      ],
-    },
-    statsObject: { clipPID: pid },
+type Block = {
+  type: string;
+  model: {
+    locator?: string;
+    text?: string;
+    title?: string;
+    blocks?: Block[];
+    versions: unknown[];
+    smpKind?: string;
   };
+};
 
-  const playerElementRef = useLoadBump(playerConfig);
+const Player = ({ blocks }: { blocks: Block[] }) => {
+  const aresMedia = blocks.filter(
+    (block: Block) => block.type === 'aresMedia',
+  )[0];
+  const aresMediaMetaData = aresMedia.model.blocks?.filter(
+    (block: Block) => block.type === 'aresMediaMetadata',
+  )[0];
+  const imageData = aresMedia.model.blocks?.filter(
+    (block: Block) => block.type === 'image',
+  )[0];
+
+  const title = aresMediaMetaData?.model.title;
+  const {versionId,} = aresMediaMetaData?.model.versions[0];
+  const kind = aresMediaMetaData?.model.smpKind;
+
+  const holdingImageURL = imageData?.model.blocks?.filter(
+    (block: Block) => block.type === 'rawImage',
+  )[0]?.model.locator;
+  const holdingImageAltText = imageData?.model.blocks?.filter(
+    (block: Block) => block.type === 'altText',
+  )[0]?.model.blocks?.[0].model.blocks?.[0].model.text;
+
+  console.log('PROPS', title, versionData);
+  // const playerConfig = {
+  //   product: 'news',
+  //   superResponsive: true as const,
+  //   counterName: 'smp.demopage.player.page',
+  //   playlistObject: {
+  //     title,
+  //     holdingImageURL,
+  //     items: [
+  //       {
+  //         versionID,
+  //         kind: 'programme',
+  //         duration: 37,
+  //       },
+  //     ],
+  //   },
+  // };
+
+  //const playerElementRef = useLoadBump(playerConfig);
 
   return (
     <>

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
@@ -21,6 +22,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import MediaPlayer from '../../components/MediaPlayer';
 
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
@@ -66,11 +68,12 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf } = useContext(RequestContext);
+  const { isApp, isCaf, pathname } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
+  console.log('PATHNAME', pathname);
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
@@ -115,7 +118,7 @@ const ArticlePage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     audio: articleMediaPlayer,
-    video: articleMediaPlayer,
+    video: props => <MediaPlayer {...props} />,
     text,
     byline: props =>
       hasByline ? (

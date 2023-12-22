@@ -1,14 +1,21 @@
-export type PlayerConfig = Partial<{
+export type PlayerConfig = {
   product: string;
-  superResponsive: boolean;
+  superResponsive: true;
   counterName: string;
   playlistObject: {
     title: string;
     holdingImageURL: string;
-    items: unknown[];
+    items: Item[];
   };
-  statsObject: { clipPID: string };
-}>;
+  statsObject?: { clipPID?: string };
+};
+
+export type Item = {
+  versionID: string;
+  kind: string;
+  duration: number;
+  live?: boolean;
+};
 
 export type Player = {
   load: () => void;
@@ -18,7 +25,21 @@ export type BumpType = {
   player: (div: HTMLDivElement | null, config: PlayerConfig) => Player;
 };
 
-export type PropTypes = { holdingImageURL: string; title: string; pid: string };
+type MediaBlock = {
+  type: string;
+  model: Partial<{
+    locator: string;
+    text: string;
+    title: string;
+    blocks: MediaBlock[];
+    versions: {
+      versionId: string;
+      duration: number;
+      warnings?: { [key: string]: string };
+    }[];
+    smpKind: string;
+  }>;
+};
 
 declare global {
   interface Window {
