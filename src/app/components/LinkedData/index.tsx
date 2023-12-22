@@ -68,6 +68,7 @@ const LinkedData = ({
   const choosePublisherLogo = () => {
     switch (service) {
       case 'news':
+      case 'ws':
         return newsPublisherLogo;
       case 'sport':
         return sportPublisherLogo;

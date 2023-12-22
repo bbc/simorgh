@@ -8,7 +8,7 @@ import {
   GROUP_4_MIN_WIDTH_BP,
 } from '../../../ThemeProvider/mediaQueries';
 
-const publicServiceList = ['news', 'sport'];
+const publicServiceList = ['news', 'sport', 'ws'];
 
 const publicServiceDataSlot = () =>
   isLive()

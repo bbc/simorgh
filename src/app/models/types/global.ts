@@ -101,6 +101,7 @@ export type ServicesWithNoVariants = {
     | 'urdu'
     | 'uzbek'
     | 'vietnamese'
+    | 'ws'
     | 'yoruba';
   variant: 'default';
 };
