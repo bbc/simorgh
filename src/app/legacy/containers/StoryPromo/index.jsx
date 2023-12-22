@@ -8,7 +8,7 @@ import StoryPromo, {
 } from '#psammead/psammead-story-promo/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
-import LiveLabel from '#psammead/psammead-live-label/src';
+import LiveLabel from '#app/components/LiveLabel';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
@@ -131,7 +131,7 @@ const StoryPromoContainer = ({
   labelId,
   sectionType,
 }) => {
-  const { script, service, translations } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const { isAmp, pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
@@ -141,12 +141,6 @@ const StoryPromoContainer = ({
     promoItem: item,
     promoIndex: index,
   });
-
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-
-  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-  // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
@@ -200,7 +194,9 @@ const StoryPromoContainer = ({
     return null;
   }
 
-  const useLargeImages = promoType === 'top' || promoType === 'leading';
+  const isTopOrLeadingPromo = promoType === 'top' || promoType === 'leading';
+
+  const isFirstPromo = index === 0 && isTopOrLeadingPromo;
 
   const headingTagOverride =
     item.headingTag ||
@@ -232,11 +228,9 @@ const StoryPromoContainer = ({
           {isLive ? (
             <LiveLabel
               id={linkId}
-              service={service}
-              dir={dir}
-              liveText={liveLabel}
-              ariaHidden={liveLabelIsEnglish}
-              offScreenText={liveLabelIsEnglish ? 'Live' : null}
+              {...(isFirstPromo && {
+                className: 'first-promo',
+              })}
             >
               {linkcontents}
             </LiveLabel>
@@ -293,7 +287,7 @@ const StoryPromoContainer = ({
       image={
         <StoryPromoImage
           isAmp={isAmp}
-          useLargeImages={useLargeImages}
+          useLargeImages={isTopOrLeadingPromo}
           lazyLoad={lazyLoadImage}
           imageValues={imageValues}
           pageType={pageType}

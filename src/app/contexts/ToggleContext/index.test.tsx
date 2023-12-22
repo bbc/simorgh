@@ -1,6 +1,5 @@
 import React, { PropsWithChildren, useContext } from 'react';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { queryByText } from '@testing-library/dom';
 import { Toggles } from '../../models/types/global';
 import { ToggleContext, ToggleContextProvider } from '.';

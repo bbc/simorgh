@@ -5,6 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -28,7 +29,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
-import bffFetch from '../../article/getInitialData';
+import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -54,7 +55,7 @@ const processOptimoBlocks = toggles =>
     augmentWithTimestamp,
     only(
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
-      augmentWithDisclaimer(toggles),
+      augmentWithDisclaimer({ toggles, positionFromTimestamp: 1 }),
     ),
     addBylineBlock,
     addRecommendationsBlock,
@@ -98,12 +99,12 @@ const getDerivedServiceAndPath = (service, pathname) => {
 };
 
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
   pageType,
   toggles,
+  isCaf,
 }) => {
   try {
     const { service: derivedService, path: derivedPath } =
@@ -111,36 +112,45 @@ export default async ({
 
     const {
       status,
-      pageData: { secondaryColumn, recommendations, ...article },
-    } = await bffFetch({
-      getAgent,
+      pageData: { secondaryColumn, recommendations, ...article } = {},
+    } = await getArticleInitialData({
       path: derivedPath,
       service: derivedService,
       variant,
-      pageType: 'cpsAsset',
+      pageType: isCaf ? 'article' : 'cpsAsset',
+      isCaf,
     });
 
-    const processedAdditionalData = processMostWatched({
-      data: secondaryColumn,
-      service,
+    if (status !== 200) {
+      throw handleError('CPS asset data fetch error', status);
+    }
+
+    const { mostWatched } = processMostWatched({
+      data: article,
+      service: derivedService,
       path: derivedPath,
       toggles,
       page: pageType,
     });
 
-    return {
+    const { topStories, features } = secondaryColumn;
+    const { mostRead } = article;
+
+    const response = {
       status,
       pageData: {
-        ...(await transformJson(article, pathname, toggles)),
+        ...(isCaf ? article : await transformJson(article, pathname, toggles)),
         secondaryColumn: {
-          topStories: processedAdditionalData.topStories,
-          features: processedAdditionalData.features,
+          topStories,
+          features,
         },
-        mostRead: processedAdditionalData.mostRead,
-        mostWatched: processedAdditionalData.mostWatched,
+        mostRead,
+        mostWatched,
         recommendations,
       },
     };
+
+    return response;
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }

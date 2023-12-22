@@ -1,9 +1,7 @@
 import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   threeLinks,
   oneLinkOnly,
@@ -12,39 +10,29 @@ import {
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
-
-// eslint-disable-next-line react/prop-types
-const ScrollablePromoWithContext = ({ blocks, blockGroupIndex }) => (
-  <ToggleContextProvider>
-    <ServiceContext.Provider value={{ service: 'news' }}>
-      <ScrollablePromo blocks={blocks} blockGroupIndex={blockGroupIndex} />
-    </ServiceContext.Provider>
-  </ToggleContextProvider>
-);
+import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<ScrollablePromoWithContext blocks={{}} />);
+    const { container } = render(<ScrollablePromo blocks={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render max 3 promo items', () => {
     const { getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={moreThanThreeLinks} />,
+      <ScrollablePromo blocks={moreThanThreeLinks} />,
     );
     expect(getAllByRole('listitem').length).toEqual(3);
   });
 
   it('should render single promo item', () => {
-    const { container } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
-    );
+    const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
     expect(container.childElementCount).toEqual(1);
   });
 
   it('should render single promo item with a title', () => {
     const { container, getByTestId } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+      <ScrollablePromo blocks={oneLinkOnly} />,
     );
     expect(container.childElementCount).toEqual(1);
     expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
@@ -52,7 +40,7 @@ describe('ScrollablePromo', () => {
 
   it('should render single promo item without a title', () => {
     const { container, queryByTestId } = render(
-      <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
+      <ScrollablePromo blocks={oneLinkWithNoTitle} />,
     );
     expect(container.childElementCount).toEqual(1);
     expect(
@@ -61,9 +49,7 @@ describe('ScrollablePromo', () => {
   });
 
   it('should not render a list when there is only one promo', () => {
-    const { queryByRole } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
-    );
+    const { queryByRole } = render(<ScrollablePromo blocks={oneLinkOnly} />);
 
     expect(queryByRole('list')).not.toBeInTheDocument();
     expect(queryByRole('listitem')).not.toBeInTheDocument();
@@ -71,7 +57,7 @@ describe('ScrollablePromo', () => {
 
   it('should render unordered list if more than 1 item', () => {
     const { queryByRole, getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={threeLinks} />,
+      <ScrollablePromo blocks={threeLinks} />,
     );
     expect(queryByRole('list')).toBeInTheDocument();
     expect(getAllByRole('listitem').length).toEqual(3);
@@ -86,10 +72,7 @@ describe('ScrollablePromo', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-        />,
+        <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
@@ -101,16 +84,10 @@ describe('ScrollablePromo', () => {
     it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-        />,
+        <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
       );
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjB.model.blocks}
-          blockGroupIndex={2}
-        />,
+        <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
@@ -127,10 +104,7 @@ describe('ScrollablePromo', () => {
     it('should call the click tracking hook with one editorial onward journey', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-        />,
+        <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
@@ -142,16 +116,10 @@ describe('ScrollablePromo', () => {
     it('should call the click tracking hook with multiple editorial onward journeys', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-        />,
+        <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
       );
       render(
-        <ScrollablePromoWithContext
-          blocks={edOjB.model.blocks}
-          blockGroupIndex={2}
-        />,
+        <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledTimes(2);
@@ -167,21 +135,26 @@ describe('ScrollablePromo', () => {
   });
 
   it('it should match a11y snapshot for single card', () => {
-    const { container } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
-    );
+    const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
     expect(container).toMatchSnapshot();
   });
 
   it('it should match a11y snapshot for list', () => {
-    const { container } = render(
-      <ScrollablePromoWithContext blocks={threeLinks} />,
-    );
+    const { container } = render(<ScrollablePromo blocks={threeLinks} />);
     expect(container).toMatchSnapshot();
   });
   it('it should match a11y snapshot for list with no title', () => {
     const { container } = render(
-      <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
+      <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+  it('it should match snapshot when in dark ui mode', () => {
+    const { container } = render(
+      <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
     );
     expect(container).toMatchSnapshot();
   });

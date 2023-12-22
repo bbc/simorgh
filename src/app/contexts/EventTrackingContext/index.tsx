@@ -1,7 +1,7 @@
 import React, { createContext, PropsWithChildren, useContext } from 'react';
 
-import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
+import { RequestContext } from '../RequestContext';
+import useToggle from '../../hooks/useToggle';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -18,11 +18,16 @@ import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
+  CPS_ASSET,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import { ATIEventTrackingProps } from '../../components/ATIAnalytics/types';
+import {
+  ATIData,
+  ATIEventTrackingProps,
+  PageData,
+} from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -57,11 +62,12 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [TOPIC_PAGE]: 'topic-page',
     [LIVE_PAGE]: 'live-page',
     [HOME_PAGE]: 'index-home',
+    [CPS_ASSET]: '',
   }[pageType];
 
   if (!campaignID) {
     // eslint-disable-next-line no-console
-    console.error(
+    console.warn(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );
   }
@@ -72,23 +78,24 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
 const NO_TRACKING_PROPS = {};
 
 type EventTrackingProviderProps = {
-  pageData?: object | null;
+  data?: PageData;
+  atiData?: ATIData;
 };
 
 export const EventTrackingContextProvider = ({
   children,
-  pageData = null,
+  data,
+  atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = useContext(RequestContext);
-  const { isNextJs, pageType } = requestContext;
+  const { pageType } = requestContext;
 
   const serviceContext = useContext(ServiceContext);
   const { atiAnalyticsProducerId } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  // TODO: Enable event tracking for NextJS pages
-  if (!eventTrackingIsEnabled || !pageData || isNextJs) {
+  if (!eventTrackingIsEnabled || (!data && !atiData)) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
@@ -98,11 +105,12 @@ export const EventTrackingContextProvider = ({
 
   const campaignID = getCampaignID(pageType as CampaignPageTypes);
   const { pageIdentifier, platform, statsDestination } =
-    buildATIEventTrackingParams(
-      pageData,
+    buildATIEventTrackingParams({
       requestContext,
       serviceContext,
-    ) as ATIEventTrackingProps;
+      data,
+      atiData,
+    }) as ATIEventTrackingProps;
   const trackingProps = {
     campaignID,
     pageIdentifier,

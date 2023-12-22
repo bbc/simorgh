@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -7,7 +6,6 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
-import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -19,16 +17,13 @@ import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
-import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import MostReadContainer from '#containers/MostRead';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -44,33 +39,30 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import AdContainer from '../../components/Ad';
+import { GHOST } from '../../components/ThemeProvider/palette';
+import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import Disclaimer from '../../components/Disclaimer';
+import ImageWithCaption from '../../components/ImageWithCaption';
+
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    dir,
-    mostRead: { header },
-    script,
-    service,
-    serviceLang,
-    lang,
-    showRelatedTopics,
-  } = useContext(ServiceContext);
+const StoryPage = ({ pageData }) => {
+  const { brandName, serviceLang, lang, showRelatedTopics } =
+    useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -152,22 +144,28 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   // ads
-  const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
-   * Should we display ads? We check:
-   * 1. The CPS `allowAdvertising` field value.
-   * 2. A value local to the STY page type.
-   * - iSite toggles are handled by the Ad container.
+   * Should we display ads?:
+   * If CPS `allowAdvertising` field is true
+   *
+   * Within the ads container:
+   *  - if the value of the 'ads' toggle is true
+   *  - if showAdsBasedOnLocation is true
    */
-  const isAdsEnabled = [
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const allowAdvertising = path(
+    ['metadata', 'options', 'allowAdvertising'],
+    pageData,
+  );
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -176,7 +174,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 645px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -193,7 +191,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -266,28 +264,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const StyledSectionLabel = styled(SectionLabel)`
-    margin-top: 0;
-  `;
-
-  const MostReadWrapper = ({ children }) => (
-    <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
-      <StyledSectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </StyledSectionLabel>
-      {children}
-    </section>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <>
       <CpsMetadata
@@ -313,7 +289,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
@@ -323,11 +299,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
@@ -379,12 +353,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             </ResponsiveComponentWrapper>
           )}
           <ComponentWrapper>
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
+            <MostRead
+              css={styles.mostReadSection}
+              data={mostReadInitialData}
               columnLayout="oneColumn"
               size="small"
-              wrapper={MostReadWrapper}
-              initialData={mostReadInitialData}
+              headingBackgroundColour={GHOST}
+              mobileDivider={showRelatedTopics && topics}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>

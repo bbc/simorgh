@@ -1,11 +1,14 @@
-import serbianFixtureData from '#data/serbian/frontpage/lat.json';
-import urduFixtureData from '#data/urdu/frontpage/index.json';
+import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat.json';
+import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import filterUnknownContentTypes from '.';
+
+const { article: urduFixtureData } = urduFrontPageData;
+const { article: serbianFixtureData } = serbianFrontPageData;
 
 /*
  * CPS types

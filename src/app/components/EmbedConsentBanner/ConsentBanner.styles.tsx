@@ -16,6 +16,11 @@ export default {
       }`,
     }),
 
+  tranparentBorder: () =>
+    css({
+      border: `${pixelsToRem(1)}rem solid transparent`,
+    }),
+
   textBody: ({ spacings, palette }: Theme) =>
     css({
       margin: `${spacings.DOUBLE}rem 0`,

@@ -27,33 +27,19 @@
                                   "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "21b7aea4",
@@ -90,33 +76,15 @@
                                               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               },
                               {
                                 "id": "2d4b664c",
@@ -136,33 +104,15 @@
                                               "text": "Sed venenatis ultrices lacus convallis dictum.",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 1, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  2
-                                ]
+                                "position": [2, 1, 1, 2]
                               },
                               {
                                 "id": "35a908df",
@@ -182,32 +132,16 @@
                                               "text": "This text is ",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 1]
                                           },
                                           {
                                             "id": "3b983169",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold, ",
-                                              "attributes": [
-                                                "bold"
-                                              ]
+                                              "attributes": ["bold"]
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              2
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 2]
                                           },
                                           {
                                             "id": "eb25aa57",
@@ -216,32 +150,16 @@
                                               "text": "this is",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              3
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 3]
                                           },
                                           {
                                             "id": "9e473ac5",
                                             "type": "fragment",
                                             "model": {
                                               "text": " italic ",
-                                              "attributes": [
-                                                "italic"
-                                              ]
+                                              "attributes": ["italic"]
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              4
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 4]
                                           },
                                           {
                                             "id": "a5f77165",
@@ -250,52 +168,24 @@
                                               "text": "and this is ",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              5
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 5]
                                           },
                                           {
                                             "id": "de772ce9",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold italic.",
-                                              "attributes": [
-                                                "bold",
-                                                "italic"
-                                              ]
+                                              "attributes": ["bold", "italic"]
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              3,
-                                              1,
-                                              6
-                                            ]
+                                            "position": [2, 1, 1, 3, 1, 6]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        3,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 3, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  3
-                                ]
+                                "position": [2, 1, 1, 3]
                               },
                               {
                                 "id": "4ed0585a",
@@ -315,33 +205,16 @@
                                               "text": "We can have",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 1]
                                           },
                                           {
                                             "id": "a68b5e55",
                                             "type": "fragment",
                                             "model": {
                                               "text": " ",
-                                              "attributes": [
-                                                "bold",
-                                                "italic"
-                                              ]
+                                              "attributes": ["bold", "italic"]
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              2
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 2]
                                           },
                                           {
                                             "id": "2fa6675a",
@@ -357,27 +230,14 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    4,
-                                                    1,
-                                                    3,
-                                                    1
+                                                    2, 1, 1, 4, 1, 3, 1
                                                   ]
                                                 }
                                               ],
                                               "locator": "https://www.google.com",
                                               "isExternal": true
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              3
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 3]
                                           },
                                           {
                                             "id": "04537085",
@@ -386,14 +246,7 @@
                                               "text": " here which can also be ",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              4
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 4]
                                           },
                                           {
                                             "id": "7926d391",
@@ -412,27 +265,14 @@
                                                     ]
                                                   },
                                                   "position": [
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    4,
-                                                    1,
-                                                    5,
-                                                    1
+                                                    2, 1, 1, 4, 1, 5, 1
                                                   ]
                                                 }
                                               ],
                                               "locator": "https://www.google.com",
                                               "isExternal": true
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              5
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 5]
                                           },
                                           {
                                             "id": "adcb9979",
@@ -441,54 +281,27 @@
                                               "text": ".",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              4,
-                                              1,
-                                              6
-                                            ]
+                                            "position": [2, 1, 1, 4, 1, 6]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        4,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 4, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  4
-                                ]
+                                "position": [2, 1, 1, 4]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "56477cf4",
@@ -497,9 +310,7 @@
                 "firstPublished": 1627470119562,
                 "lastPublished": 1627470119562
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "6be099ba",
@@ -519,26 +330,16 @@
                             "text": "Lorem ipsum ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "5860f8e1",
                           "type": "fragment",
                           "model": {
                             "text": "dolor",
-                            "attributes": [
-                              "bold"
-                            ]
+                            "attributes": ["bold"]
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         },
                         {
                           "id": "c65d7ab5",
@@ -547,27 +348,16 @@
                             "text": " sit amet, ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            3
-                          ]
+                          "position": [4, 1, 3]
                         },
                         {
                           "id": "e209c88c",
                           "type": "fragment",
                           "model": {
                             "text": "consectetur",
-                            "attributes": [
-                              "bold",
-                              "italic"
-                            ]
+                            "attributes": ["bold", "italic"]
                           },
-                          "position": [
-                            4,
-                            1,
-                            4
-                          ]
+                          "position": [4, 1, 4]
                         },
                         {
                           "id": "b4434fdc",
@@ -576,26 +366,16 @@
                             "text": " adipiscing ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            5
-                          ]
+                          "position": [4, 1, 5]
                         },
                         {
                           "id": "8468fe0a",
                           "type": "fragment",
                           "model": {
                             "text": "elit",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            4,
-                            1,
-                            6
-                          ]
+                          "position": [4, 1, 6]
                         },
                         {
                           "id": "dd8f02da",
@@ -604,18 +384,11 @@
                             "text": ". Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            7
-                          ]
+                          "position": [4, 1, 7]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "081b6d99",
@@ -630,24 +403,15 @@
                             "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "2c4f7015",
@@ -677,37 +441,19 @@
                                         "text": "This is a caption ",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "1fc9cb0b",
@@ -732,37 +478,19 @@
                                         "text": "Picture of Guns",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   },
                   {
                     "id": "d7b11b79",
@@ -775,16 +503,11 @@
                       "copyrightHolder": "BBC",
                       "suitableForSyndication": true
                     },
-                    "position": [
-                      5,
-                      3
-                    ]
+                    "position": [5, 3]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "f34af4e9",
@@ -804,18 +527,11 @@
                             "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   },
                   {
                     "id": "13f3fa4f",
@@ -830,32 +546,21 @@
                             "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
+                          "position": [6, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      2
-                    ]
+                    "position": [6, 2]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "c9d0346c",
               "type": "mpu",
               "model": {},
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "913c1cda",
@@ -875,18 +580,11 @@
                             "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "8879457b",
@@ -901,24 +599,15 @@
                             "text": "Duis eget egestas augue, non vestibulum risus. ",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
+                          "position": [8, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "3090cb6f",
@@ -949,37 +638,19 @@
                                         "text": "Running Horses",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "e9290042",
@@ -1004,9 +675,7 @@
                             "versions": [
                               {
                                 "versionId": "p01t1jmp",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 30,
                                 "durationISO8601": "PT30S",
                                 "warnings": {},
@@ -1022,11 +691,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         },
                         {
                           "id": "c56b18bd",
@@ -1042,12 +707,7 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01t1jn0.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [9, 2, 2, 1]
                               },
                               {
                                 "id": "e2fb0610",
@@ -1073,65 +733,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    9, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              9,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [9, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [9, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            2,
-                            2
-                          ]
+                          "position": [9, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "4c7079fb",
@@ -1161,37 +788,19 @@
                                         "text": "This is my title",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        10,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   },
                   {
                     "id": "8b89f1c8",
@@ -1228,44 +837,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    10, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              10,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        10,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 2, 1, 1]
                               },
                               {
                                 "id": "28f6cb3c",
@@ -1278,20 +863,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "Getty Images"
                                 },
-                                "position": [
-                                  10,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [10, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            2,
-                            1
-                          ]
+                          "position": [10, 2, 1]
                         },
                         {
                           "id": "0754ebb6",
@@ -1318,49 +894,24 @@
                                               "text": "This is a Dog",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              10,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        10,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [10, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            2,
-                            2
-                          ]
+                          "position": [10, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      2
-                    ]
+                    "position": [10, 2]
                   },
                   {
                     "id": "45c2bb03",
@@ -1397,44 +948,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    10, 3, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              10,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 3, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        10,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 3, 1, 1]
                               },
                               {
                                 "id": "a811610c",
@@ -1447,20 +974,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "NASA"
                                 },
-                                "position": [
-                                  10,
-                                  3,
-                                  1,
-                                  2
-                                ]
+                                "position": [10, 3, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            3,
-                            1
-                          ]
+                          "position": [10, 3, 1]
                         },
                         {
                           "id": "76833d3d",
@@ -1487,49 +1005,24 @@
                                               "text": "This is not",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              10,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 3, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        10,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 3, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  3,
-                                  2,
-                                  1
-                                ]
+                                "position": [10, 3, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            3,
-                            2
-                          ]
+                          "position": [10, 3, 2]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      3
-                    ]
+                    "position": [10, 3]
                   },
                   {
                     "id": "8d5b75f9",
@@ -1566,44 +1059,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
-                                                    4,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    10, 4, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              10,
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 4, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        10,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 4, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  4,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 4, 1, 1]
                               },
                               {
                                 "id": "3298a59d",
@@ -1616,20 +1085,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "AFP"
                                 },
-                                "position": [
-                                  10,
-                                  4,
-                                  1,
-                                  2
-                                ]
+                                "position": [10, 4, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            4,
-                            1
-                          ]
+                          "position": [10, 4, 1]
                         },
                         {
                           "id": "946fda9f",
@@ -1656,42 +1116,20 @@
                                               "text": "Another Optimo Article",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              10,
-                                              4,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [10, 4, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        10,
-                                        4,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 4, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  4,
-                                  2,
-                                  1
-                                ]
+                                "position": [10, 4, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            4,
-                            2
-                          ]
+                          "position": [10, 4, 2]
                         },
                         {
                           "id": "09d22881",
@@ -1704,33 +1142,19 @@
                                 "model": {
                                   "timestamp": 1656938572862
                                 },
-                                "position": [
-                                  10,
-                                  4,
-                                  3,
-                                  1
-                                ]
+                                "position": [10, 4, 3, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            4,
-                            3
-                          ]
+                          "position": [10, 4, 3]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      4
-                    ]
+                    "position": [10, 4]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
@@ -1807,10 +1231,7 @@
                 "thingLabel": "Analysis",
                 "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                 "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                "thingType": [
-                  "tagging:TagConcept",
-                  "tagging:Format"
-                ],
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
                 "thingSameAs": [
                   "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                 ],
@@ -1824,10 +1245,7 @@
                 "thingLabel": "Interview",
                 "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
                 "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
-                "thingType": [
-                  "tagging:TagConcept",
-                  "tagging:Format"
-                ],
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
                 "thingSameAs": [
                   "http://www.wikidata.org/entity/Q178651",
                   "http://dbpedia.org/resource/Interview"
@@ -2487,759 +1905,149 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:47:57.652Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
-        "totalRecords": 20,
-        "records": [
+        "generated": "2023-06-19T14:48:19.798Z",
+        "lastRecordTimeStamp": "2023-06-19T14:45:00Z",
+        "firstRecordTimeStamp": "2023-06-19T13:45:00Z",
+        "items": [
           {
-            "id": "c140434e-ef3b-a347-b1fd-455fb263e139",
+            "id": "urn:bbc:optimo:asset:cqqk2lgrzelo",
             "rank": 1,
-            "count": 9988,
-            "urn": "urn:bbc:curie:asset:c140434e-ef3b-a347-b1fd-455fb263e139",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 36",
-                "headline": "Commémoration du massacre de Soweto 36"
-              },
-              "locators": {
-                "assetUri": "/afrique/23053028",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23053028",
-                "curie": "http://www.bbc.co.uk/asset/c140434e-ef3b-a347-b1fd-455fb263e139",
-                "assetId": "23053028"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466154800000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23053028",
-              "type": "cps"
-            }
+            "title": "Les bienfaits du néré pour la santé ",
+            "href": "https://www.bbc.com/afrique/articles/cqqk2lgrzelo",
+            "timestamp": 1686847379086
           },
           {
-            "id": "8dfb243a-ab8d-374a-9dab-f478d9ce0bb4",
+            "id": "df8eca14-b8c4-4fe6-8306-8a64ac2c81cd",
             "rank": 2,
-            "count": 9887,
-            "urn": "urn:bbc:curie:asset:8dfb243a-ab8d-374a-9dab-f478d9ce0bb4",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 20",
-                "headline": "Commémoration du massacre de Soweto 20"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052943",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052943",
-                "curie": "http://www.bbc.co.uk/asset/8dfb243a-ab8d-374a-9dab-f478d9ce0bb4",
-                "assetId": "23052943"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466092863000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052943",
-              "type": "cps"
-            }
+            "title": "À l'intérieur d'un village ukrainien qui vient d'être libéré des forces russes",
+            "href": "/afrique/monde-65904070",
+            "timestamp": 1687021916000
           },
           {
-            "id": "34ce798a-96c4-5444-b0c2-ba6487a88c92",
+            "id": "urn:bbc:optimo:asset:clkxv7x1g79o",
             "rank": 3,
-            "count": 9880,
-            "urn": "urn:bbc:curie:asset:34ce798a-96c4-5444-b0c2-ba6487a88c92",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 28",
-                "headline": "Commémoration du massacre de Soweto 28"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052999",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052999",
-                "curie": "http://www.bbc.co.uk/asset/34ce798a-96c4-5444-b0c2-ba6487a88c92",
-                "assetId": "23052999"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466154407000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052999",
-              "type": "cps"
-            }
+            "title": "Le Sénégalais qui s'est donné pour mission de planter cinq millions d'arbres",
+            "href": "https://www.bbc.com/afrique/articles/clkxv7x1g79o",
+            "timestamp": 1672309727969
           },
           {
-            "id": "44e8bed2-d2c8-9c41-acb5-071cad14cfb7",
+            "id": "urn:bbc:optimo:asset:cy977ggegvlo",
             "rank": 4,
-            "count": 9757,
-            "urn": "urn:bbc:curie:asset:44e8bed2-d2c8-9c41-acb5-071cad14cfb7",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 45",
-                "headline": "Commémoration du massacre de Soweto 45"
-              },
-              "locators": {
-                "assetUri": "/afrique/23053275",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23053275",
-                "curie": "http://www.bbc.co.uk/asset/44e8bed2-d2c8-9c41-acb5-071cad14cfb7",
-                "assetId": "23053275"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466160488000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23053275",
-              "type": "cps"
-            }
+            "title": "Pourquoi le Mali demande un retrait \"sans délai\" de la Minusma",
+            "href": "https://www.bbc.com/afrique/articles/cy977ggegvlo",
+            "timestamp": 1687182432268
           },
           {
-            "id": "0dafcaff-9b96-7c41-a572-e7ab306ee0cd",
+            "id": "1bcc5ec0-c4f7-4c89-97c6-4b89338aa35d",
             "rank": 5,
-            "count": 9716,
-            "urn": "urn:bbc:curie:asset:0dafcaff-9b96-7c41-a572-e7ab306ee0cd",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Un supercalculateur en Côte d'Ivoire",
-                "headline": "Un ordinateur supercalculateur en Côte d'Ivoire"
-              },
-              "locators": {
-                "assetUri": "/afrique/23207406",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23207406",
-                "curie": "http://www.bbc.co.uk/asset/0dafcaff-9b96-7c41-a572-e7ab306ee0cd",
-                "assetId": "23207406"
-              },
-              "summary": "Le campus de Bingerville à Abidjan, la capitale de la Côte d'Ivoire, possède désormais un ordinateur surpuissant capable d'effectuer des calculs complexes à très grande vitesse.",
-              "timestamp": 1531135141000,
-              "language": "fr",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63683371",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/43BA/test/_63683371_9abdd114-4925-4515-b159-a1f5511f1084.jpg",
-                "path": "/cpsdevpb/43BA/test/_63683371_9abdd114-4925-4515-b159-a1f5511f1084.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "Ordinateur supercalculateur",
-                "caption": "Un ordinateur supercalculateur",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23207406",
-              "type": "cps"
-            }
+            "title": "Pourquoi le Japon redéfinit-il le viol ?",
+            "href": "/afrique/monde-65867581",
+            "timestamp": 1687089693000
           },
           {
-            "id": "da6e6871-c335-294c-aed4-ec006199a746",
+            "id": "d524b6fd-0528-4aa6-a935-6510e8512f93",
             "rank": 6,
-            "count": 9494,
-            "urn": "urn:bbc:curie:asset:da6e6871-c335-294c-aed4-ec006199a746",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Af Sud : des candidats de l’ANC abattus",
-                "headline": "Af Sud : des candidats de l’ANC abattus"
-              },
-              "locators": {
-                "assetUri": "/afrique/monde-23061718",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-23061718",
-                "curie": "http://www.bbc.co.uk/asset/da6e6871-c335-294c-aed4-ec006199a746",
-                "assetId": "23061718"
-              },
-              "summary": "Ces assassinats sont liés à la lutte contre la corruption et à des affrontements entre factions au sein du parti au pouvoir.",
-              "timestamp": 1469011960000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63496957",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/128C1/test/_63496957_mediaitem63496956.jpg",
-                "path": "/cpsdevpb/128C1/test/_63496957_mediaitem63496956.jpg",
-                "height": 1152,
-                "width": 2048,
-                "altText": "alt tag",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/monde-23061718",
-              "type": "cps"
-            }
+            "title": "Comment apprendre aux pilotes ukrainiens à piloter des F-16",
+            "href": "/afrique/monde-65934685",
+            "timestamp": 1687169120000
           },
           {
-            "id": "1949bdae-38e4-0748-9969-ddec3444a52b",
+            "id": "e3dbd5c0-368a-364e-8151-f50d7bb4d56e",
             "rank": 7,
-            "count": 9449,
-            "urn": "urn:bbc:curie:asset:1949bdae-38e4-0748-9969-ddec3444a52b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 37",
-                "headline": "Commémoration du massacre de Soweto 37"
-              },
-              "locators": {
-                "assetUri": "/afrique/23053029",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23053029",
-                "curie": "http://www.bbc.co.uk/asset/1949bdae-38e4-0748-9969-ddec3444a52b",
-                "assetId": "23053029"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466154871000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23053029",
-              "type": "cps"
-            }
+            "title": "'J'ai été violée à 14 ans, et la vidéo a fini sur un site porno'",
+            "href": "/afrique/monde-51446420",
+            "timestamp": 1585152911000
           },
           {
-            "id": "8078e9b6-57bd-ee49-83c8-76ef49449be5",
+            "id": "urn:bbc:optimo:asset:c28pmeezrgko",
             "rank": 8,
-            "count": 9402,
-            "urn": "urn:bbc:curie:asset:8078e9b6-57bd-ee49-83c8-76ef49449be5",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 27",
-                "headline": "Commémoration du massacre de Soweto 27"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052997",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052997",
-                "curie": "http://www.bbc.co.uk/asset/8078e9b6-57bd-ee49-83c8-76ef49449be5",
-                "assetId": "23052997"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466154067000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052997",
-              "type": "cps"
-            }
+            "title": "Attaque d'une école en Ouganda : \"Des chants évangéliques puis des cris\"",
+            "href": "https://www.bbc.com/afrique/articles/c28pmeezrgko",
+            "timestamp": 1687176648459
           },
           {
-            "id": "1a078192-0370-de48-bd06-c336103aab12",
+            "id": "c0ddbb21-e2d1-408a-9e27-b574f48595ad",
             "rank": 9,
-            "count": 9356,
-            "urn": "urn:bbc:curie:asset:1a078192-0370-de48-bd06-c336103aab12",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Thai cave rescue continues",
-                "headline": "Thai cave rescue/Fith boy freed"
-              },
-              "locators": {
-                "assetUri": "/afrique/23207350",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23207350",
-                "curie": "http://www.bbc.co.uk/asset/1a078192-0370-de48-bd06-c336103aab12",
-                "assetId": "23207350"
-              },
-              "summary": "A fifth youngster has been freed from the flooded Thai cave - a day after four boys were pulled from the complex having spent more than a fortnight underground",
-              "timestamp": 1531136948000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63683295",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/E766/test/_63683295_870-2.jpg",
-                "path": "/cpsdevpb/E766/test/_63683295_870-2.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Thailand Cave Rescue For Trapped Soccer Team",
-                "caption": "seeking to immortalize the rescue",
-                "copyrightHolder": "Empics",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23207350",
-              "type": "cps"
-            }
+            "title": "Le franc succès entrepreneurial de la styliste et actrice Ndèye Bineta Lèye",
+            "href": "/afrique/region-63727642",
+            "timestamp": 1671381000000
           },
           {
-            "id": "439ba4f6-910e-8a4e-b2cb-11ec6aeea823",
+            "id": "urn:bbc:optimo:asset:c2l4nvkgwk9o",
             "rank": 10,
-            "count": 8969,
-            "urn": "urn:bbc:curie:asset:439ba4f6-910e-8a4e-b2cb-11ec6aeea823",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Euro 2016 : la France première du groupe africa",
-                "headline": "Euro 2016 : la France première du groupe africa"
-              },
-              "locators": {
-                "assetUri": "/afrique/region-23056013",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-23056013",
-                "curie": "http://www.bbc.co.uk/asset/439ba4f6-910e-8a4e-b2cb-11ec6aeea823",
-                "assetId": "23056013"
-              },
-              "summary": "Euro 2016 : la France première du groupe summary",
-              "timestamp": 1467034614000,
-              "language": "fr",
-              "byline": {
-                "name": "François Mané",
-                "title": "Afrique reporter",
-                "persons": [
-                  {
-                    "name": "François Mané",
-                    "function": "Afrique reporter",
-                    "thumbnail": "http://b.files.bbci.co.uk/7101/test/_63492982_160507010654_medvedev_kuriles_624x351_getty_nocredit.jpg",
-                    "twitterName": "François"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63492255",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/D7BD/test/_63492255_160525164503_trump_partidarios_624x351_reuters_nocredit.jpg",
-                "path": "/cpsdevpb/D7BD/test/_63492255_160525164503_trump_partidarios_624x351_reuters_nocredit.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Sécurité",
-                "caption": "Sécurité",
-                "copyrightHolder": "BBC Sport",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/region-23056013",
-              "type": "cps"
-            }
+            "title": "Quels sont les enjeux du référendum constitutionnel au Mali ?",
+            "href": "https://www.bbc.com/afrique/articles/c2l4nvkgwk9o",
+            "timestamp": 1686920230826
           },
           {
-            "id": "745df3ac-8e74-ff41-868f-556f8aea8ad6",
+            "id": "7685deca-9074-4c89-9ba2-507c560c60c6",
             "rank": 11,
-            "count": 8949,
-            "urn": "urn:bbc:curie:asset:745df3ac-8e74-ff41-868f-556f8aea8ad6",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Cameroun: pas d'intervention extérieure",
-                "headline": "Pas d'intervention extérieure nécessaire pour Bell"
-              },
-              "locators": {
-                "assetUri": "/afrique/23207415",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23207415",
-                "curie": "http://www.bbc.co.uk/asset/745df3ac-8e74-ff41-868f-556f8aea8ad6",
-                "assetId": "23207415"
-              },
-              "summary": "L'ancien gardien de buts des Lions indomptables, Joseph Antoine Bell, pense que la crise anglophone ne nécessite pas une intervention extérieure.",
-              "timestamp": 1531138875000,
-              "language": "fr",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63683286",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/10A8E/test/_63683286_040595322-1.jpg",
-                "path": "/cpsdevpb/10A8E/test/_63683286_040595322-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Le drapeau camerounais hissé par deux soldats",
-                "caption": "Getty Images",
-                "copyrightHolder": "PIUS UTOMI EKPEI",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23207415",
-              "type": "cps"
-            }
+            "title": "\"Je veux que mon histoire mette en lumière les cheveux afro-texturés\"",
+            "href": "/afrique/region-63528355",
+            "timestamp": 1668353343000
           },
           {
-            "id": "42576178-7f01-c14b-8ef5-32febb1dd6c4",
+            "id": "urn:bbc:optimo:asset:cydge2ev7dpo",
             "rank": 12,
-            "count": 8887,
-            "urn": "urn:bbc:curie:asset:42576178-7f01-c14b-8ef5-32febb1dd6c4",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Obama speechless at Ant's divorce",
-                "headline": "Ant McPartlin and Lisa Armstrong are granted a divorce"
-              },
-              "locators": {
-                "assetUri": "/afrique/23219709",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23219709",
-                "curie": "http://www.bbc.co.uk/asset/42576178-7f01-c14b-8ef5-32febb1dd6c4",
-                "assetId": "23219709"
-              },
-              "summary": "TV presenter Ant McPartlin and his estranged wife Lisa Armstrong have been granted a divorce.",
-              "timestamp": 1539689574000,
-              "language": "fr",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63692530",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/0DC9/test/_63692530_049987760-1.jpg",
-                "path": "/cpsdevpb/0DC9/test/_63692530_049987760-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Photo of Ant McPartlin and former wife smiling in front of a group of fans",
-                "caption": "Ant and Lisa in happier times",
-                "copyrightHolder": "Ian West/ PA Wire",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23219709",
-              "type": "cps"
-            }
+            "title": "Les mystérieuses chaînes de montagnes qui se trouvent dans les profondeurs de la Terre",
+            "href": "https://www.bbc.com/afrique/articles/cydge2ev7dpo",
+            "timestamp": 1686585588125
           },
           {
-            "id": "e668da0b-df4d-7048-a329-855a4cb143ff",
+            "id": "87048428-d3d9-42dc-b40f-364c98bd1534",
             "rank": 13,
-            "count": 8631,
-            "urn": "urn:bbc:curie:asset:e668da0b-df4d-7048-a329-855a4cb143ff",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 12",
-                "headline": "Commémoration du massacre de Soweto 12"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052922",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052922",
-                "curie": "http://www.bbc.co.uk/asset/e668da0b-df4d-7048-a329-855a4cb143ff",
-                "assetId": "23052922"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466091734000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052922",
-              "type": "cps"
-            }
+            "title": "Qui succèdera au milliardaire George Soros ?",
+            "href": "/afrique/monde-65904405",
+            "timestamp": 1687110518000
           },
           {
-            "id": "32e4242e-43e4-d349-a0ac-cbaf76be2aae",
+            "id": "86790234-83f2-4249-9ee9-a984984deb70",
             "rank": 14,
-            "count": 8270,
-            "urn": "urn:bbc:curie:asset:32e4242e-43e4-d349-a0ac-cbaf76be2aae",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto 19",
-                "headline": "Commémoration du massacre de Soweto 19"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052941",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052941",
-                "curie": "http://www.bbc.co.uk/asset/32e4242e-43e4-d349-a0ac-cbaf76be2aae",
-                "assetId": "23052941"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466092777000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052941",
-              "type": "cps"
-            }
+            "title": "Comment des enfants ont survécu 40 jours dans la jungle colombienne",
+            "href": "/afrique/region-65904411",
+            "timestamp": 1686935660000
           },
           {
-            "id": "e28f2887-33a3-6a48-8d32-96403ec9bf15",
+            "id": "urn:bbc:optimo:asset:c0wvznxyrd9o",
             "rank": 15,
-            "count": 8255,
-            "urn": "urn:bbc:curie:asset:e28f2887-33a3-6a48-8d32-96403ec9bf15",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Dubrovnik",
-                "headline": "Dubrovnik"
-              },
-              "locators": {
-                "assetUri": "/news/education-23190404",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:e28f2887-33a3-6a48-8d32-96403ec9bf15",
-                "assetId": "23190404",
-                "cpsUrn": "urn:bbc:content:assetUri:news/education-23190404",
-                "curie": "http://www.bbc.co.uk/asset/e28f2887-33a3-6a48-8d32-96403ec9bf15"
-              },
-              "summary": "go Dubrovnik",
-              "timestamp": 1520510237000,
-              "language": "en-gb",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-                "taggings": []
-              },
-              "id": "urn:bbc:ares::asset:news/education-23190404",
-              "type": "cps"
-            }
+            "title": "Le sexe est-il vraiment un sport national en Suède ? Vérification ",
+            "href": "https://www.bbc.com/afrique/articles/c0wvznxyrd9o",
+            "timestamp": 1686226332030
           },
           {
-            "id": "d85c0aea-88b8-0b47-9c74-1fb969eaed22",
+            "id": "fa57f4d1-0384-4f7f-a442-44d6ce4f118f",
             "rank": 16,
-            "count": 8047,
-            "urn": "urn:bbc:curie:asset:d85c0aea-88b8-0b47-9c74-1fb969eaed22",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Un Casque bleu a été tué à Kidal dans le Nord du Mali",
-                "headline": "Un Casque bleu a été tué à Kidal dans le Nord du Mali"
-              },
-              "locators": {
-                "assetUri": "/afrique/23066064",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23066064",
-                "curie": "http://www.bbc.co.uk/asset/d85c0aea-88b8-0b47-9c74-1fb969eaed22",
-                "assetId": "23066064"
-              },
-              "summary": "Selon les Nations Unies, l'incident a eu lieu \"vers 06h50\" (GMT). Les soldats en question faisaient \"partie d'une escorte d'un convoi logistique\" de la Minusma.",
-              "timestamp": 1470654016000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63502280",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/201C/test/_63502280_034083117-1.jpg",
-                "path": "/cpsdevpb/201C/test/_63502280_034083117-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Un casque bleu de l'ONU a été tué dans le Nord-Mali",
-                "caption": "Un casque bleu de l'ONU a été tué dans le Nord-Mali",
-                "copyrightHolder": "SOULEYMANE  AG ANARA",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23066064",
-              "type": "cps"
-            }
+            "title": "Le seul endroit au monde où l'on peut manger de la viande cultivée en laboratoire",
+            "href": "/afrique/monde-65905964",
+            "timestamp": 1687080445000
           },
           {
-            "id": "d8749100-675a-3e4b-956e-cb0546ce0bc5",
+            "id": "urn:bbc:optimo:asset:c2ene0g52rlo",
             "rank": 17,
-            "count": 7748,
-            "urn": "urn:bbc:curie:asset:d8749100-675a-3e4b-956e-cb0546ce0bc5",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Un fils de Zuma devant les juges",
-                "headline": "Un fils de Zuma devant les juges pour corruption."
-              },
-              "locators": {
-                "assetUri": "/afrique/23207326",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23207326",
-                "curie": "http://www.bbc.co.uk/asset/d8749100-675a-3e4b-956e-cb0546ce0bc5",
-                "assetId": "23207326"
-              },
-              "summary": "En Afrique du Sud, le fils de l'ancien président Jacob Zuma rentré vendredi au pays, est apparu dans un tribunal spécialisé dans les affaires de corruption lundi à Johannesburg.",
-              "timestamp": 1531134456000,
-              "language": "fr",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63683341",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/3802/test/_63683341_002496172-1.jpg",
-                "path": "/cpsdevpb/3802/test/_63683341_002496172-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Jacob Zuma in court",
-                "caption": "Jacob Zuma",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23207326",
-              "type": "cps"
-            }
+            "title": "Les 5 principaux avantages du moringa pour la santé ",
+            "href": "https://www.bbc.com/afrique/articles/c2ene0g52rlo",
+            "timestamp": 1658162354256
           },
           {
-            "id": "d58a18f6-b5d9-d344-bc5a-de06579083c6",
+            "id": "acefe87f-fcea-462d-a673-c56f927847ba",
             "rank": 18,
-            "count": 7548,
-            "urn": "urn:bbc:curie:asset:d58a18f6-b5d9-d344-bc5a-de06579083c6",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "PGL: En images Mohamed Ali, une légende de la boxe áäâç€",
-                "headline": "PGL: En images Mohamed Ali, une légende de la boxe áäâç€àè"
-              },
-              "locators": {
-                "assetUri": "/afrique/monde-23056115",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-23056115",
-                "curie": "http://www.bbc.co.uk/asset/d58a18f6-b5d9-d344-bc5a-de06579083c6",
-                "assetId": "23056115"
-              },
-              "summary": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis.",
-              "timestamp": 1467039961000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63493036",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/F63F/test/_63493036_160605070459_cn_muhammad_ali_the_greatest_976x549_getty_nocredit.jpg",
-                "path": "/cpsdevpb/F63F/test/_63493036_160605070459_cn_muhammad_ali_the_greatest_976x549_getty_nocredit.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
-                "caption": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
-                "copyrightHolder": "BBC Sport",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/monde-23056115",
-              "type": "cps"
-            }
+            "title": "Des satellites révèlent les défenses russes avant un assaut majeur",
+            "href": "/afrique/monde-65685618",
+            "timestamp": 1684917002000
           },
           {
-            "id": "f443131e-49cf-0044-96f1-6def6da3a1b6",
+            "id": "ffcb1671-1c52-2147-b0e9-7805d9c382eb",
             "rank": 19,
-            "count": 6988,
-            "urn": "urn:bbc:curie:asset:f443131e-49cf-0044-96f1-6def6da3a1b6",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Commémoration du massacre de Soweto",
-                "headline": "Commémoration du massacre de Soweto"
-              },
-              "locators": {
-                "assetUri": "/afrique/23052808",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23052808",
-                "curie": "http://www.bbc.co.uk/asset/f443131e-49cf-0044-96f1-6def6da3a1b6",
-                "assetId": "23052808"
-              },
-              "summary": "Commémoration du massacre de Soweto",
-              "timestamp": 1466088521000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63490121",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
-                "height": 261,
-                "width": 464,
-                "altText": "Soweto",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23052808",
-              "type": "cps"
-            }
+            "title": "Ces femmes dont la nuit de noces s'est transformée en cauchemar",
+            "href": "/afrique/monde-50220876",
+            "timestamp": 1572445388000
           },
           {
-            "id": "a875861f-5788-5448-8d99-ded9c38ef94b",
+            "id": "7ed1fafb-c65e-4ec3-bb2f-1288f4b93d53",
             "rank": 20,
-            "count": 6830,
-            "urn": "urn:bbc:curie:asset:a875861f-5788-5448-8d99-ded9c38ef94b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Debut de campagne electorale au Mali",
-                "headline": "Debut de campagne pour la presidentielleau Mali"
-              },
-              "locators": {
-                "assetUri": "/afrique/23207375",
-                "cpsUrn": "urn:bbc:content:assetUri:afrique/23207375",
-                "curie": "http://www.bbc.co.uk/asset/a875861f-5788-5448-8d99-ded9c38ef94b",
-                "assetId": "23207375"
-              },
-              "summary": "Au Mali, la campagne en vue de la présidentielle du 29 juillet prochain a été lancée samedi pour 21 jours. Dimanche deux rassemblements majeurs ont été tenus à Bamako.",
-              "timestamp": 1531138371000,
-              "language": "fr",
-              "indexImage": {
-                "id": "63683408",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13A36/test/_63683408_047188562-1.jpg",
-                "path": "/cpsdevpb/13A36/test/_63683408_047188562-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "une foule de militants en liesse",
-                "caption": "mali campagne electorale",
-                "copyrightHolder": "MICHELE CATTANI",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:afrique/23207375",
-              "type": "cps"
-            }
+            "title": "L'homme à l'origine de la contre-offensive ukrainienne tant attendue",
+            "href": "/afrique/monde-65905956",
+            "timestamp": 1686813753000
           }
         ]
       }

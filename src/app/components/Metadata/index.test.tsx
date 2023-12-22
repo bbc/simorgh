@@ -14,8 +14,8 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import urduFrontPageData from '#data/urdu/frontpage/index.json';
+import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat.json';
+import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
@@ -578,8 +578,8 @@ it('should render the default service twitter handle for a Front Page asset', as
       pageType={FRONT_PAGE}
       pathname="/serbian"
       title="Serbian"
-      lang={serbianFrontPageData.metadata.language}
-      description={serbianFrontPageData.metadata.summary}
+      lang={serbianFrontPageData.article.metadata.language}
+      description={serbianFrontPageData.article.metadata.summary}
       openGraphType="website"
     />,
   );
@@ -874,8 +874,8 @@ describe('Snapshot', () => {
         pageType={FRONT_PAGE}
         pathname="/urdu"
         title="خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news"
-        lang={urduFrontPageData.metadata.language}
-        description={urduFrontPageData.metadata.summary}
+        lang={urduFrontPageData.article.metadata.language}
+        description={urduFrontPageData.article.metadata.summary}
         openGraphType="website"
       />,
     );

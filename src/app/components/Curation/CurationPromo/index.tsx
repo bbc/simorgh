@@ -8,11 +8,12 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { Promo as CurationPromoProps } from '../types';
+import LiveLabel from '../../LiveLabel';
 
 const CurationPromo = ({
   id,
   title,
-  firstPublished,
+  lastPublished,
   imageUrl,
   imageAlt,
   lazy,
@@ -42,12 +43,16 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
+  const isLive = link?.includes('/live/');
+
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
-        <Promo.MediaIcon type={type}>
-          {showDuration ? mediaDuration : ''}
-        </Promo.MediaIcon>
+        {isMedia && (
+          <Promo.MediaIcon type={type}>
+            {showDuration ? mediaDuration : ''}
+          </Promo.MediaIcon>
+        )}
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
@@ -68,11 +73,15 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} className="focusIndicatorDisplayBlock">
-            {title}
+            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
       </Promo.Heading>
-      <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
+      {!isLive ? (
+        <Promo.Timestamp className="promo-timestamp">
+          {lastPublished}
+        </Promo.Timestamp>
+      ) : null}
     </Promo>
   );
 };

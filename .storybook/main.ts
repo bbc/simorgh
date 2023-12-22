@@ -15,6 +15,7 @@ const config: StorybookConfig = {
     '../src/app/pages/**/*.stories.@(t|j)sx',
     // '../ws-nextjs-app/**/*.stories.tsx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
+    './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
   addons: [

@@ -31,4 +31,32 @@ export default service => {
       });
     }
   });
+
+  describe('Latest Media', () => {
+    const latestMediaLinks = document.querySelectorAll(
+      '[data-testid="latest-media"] a',
+    );
+
+    if (latestMediaLinks) {
+      latestMediaLinks.forEach(latestMediaLink => {
+        const latestMediaText = latestMediaLink.textContent;
+        const latestMediaUrl = latestMediaLink.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(latestMediaLink).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(latestMediaText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect({
+            text: latestMediaText,
+            url: latestMediaUrl,
+          }).toMatchSnapshot();
+        });
+      });
+    }
+  });
 };

@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'ออดิโอ เพลเยอร์',
         videoPlayer: 'วิดีโอ เพลเยอร์',
       },
+      liveExperiencePage: {
+        liveLabel: 'สด',
+        liveCoverage: 'รายงานสด',
+        breaking: 'ด่วน',
+        postedAt: 'โพสต์ทาง',
+        summary: 'สรุป',
+      },
       gist: 'สรุป',
       error: {
         404: {
@@ -120,7 +127,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ตกลง',
           reject: 'ดูว่ามีอะไรเปลี่ยนแปลงไปบ้าง',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -134,7 +141,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'คุกกีส์',
                 last: ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'จัดการการตั้งค่าของฉัน',
             },
@@ -150,7 +157,7 @@ export const service: DefaultServiceConfig = {
                   'เพื่อให้หน้าเว็บของเราทำงานได้ดี เราจึงต้องเก็บสารสนเทศบางอย่างในวงจำกัดไว้บนอุปกรณ์ของคุณ โดยไม่ได้ขอความยินยอมเสียก่อน',
                 para4: {
                   text: 'อ่านเพิ่มเติมเกี่ยวกับสารสนเทศที่จำเป็นต่อการทำงานของหน้าเว็บ ซึ่งเราเก็บไว้บนอุปกรณ์ของคุณ',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'เราใช้ local storage เก็บรักษาข้อมูลตัวเลือกความยินยอมของคุณ บนอุปกรณ์ของคุณเอง',
@@ -183,13 +190,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'คุกกีส์',
                 last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'ยอมรับ',
             reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

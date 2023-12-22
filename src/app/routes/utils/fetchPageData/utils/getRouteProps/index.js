@@ -34,12 +34,17 @@ const getRouteProps = url => {
   const variant = variantSanitiser(variantPath);
   const errorCode = path(['errorCode'], params);
 
+  const cpsId =
+    service && assetUri
+      ? `${service}${variant ? `/${variant}` : ''}/${assetUri}`
+      : undefined;
+
   return {
     isAmp: amp || isAmpPath(url),
     isApp: app || isAppPath(url),
     service: service || fallbackServiceParam(url),
     variant,
-    id,
+    id: id || cpsId,
     assetUri,
     route,
     match,

@@ -17,24 +17,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -58,12 +40,30 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -234,6 +234,54 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   .emotion-12 {
     width: 17.3125rem;
   }
+}
+
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 <div>
@@ -321,24 +369,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -362,12 +392,30 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -540,6 +588,54 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -566,7 +662,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
           نستخدم 
           <a
             class="focusIndicatorReducedWidth"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             ملفات ارتباط
           </a>
@@ -595,7 +691,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
             <span>
               <a
                 data-cookie-banner="reject"
-                href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
               >
                 كلا، أعدني إلى الإعدادات
               </a>
@@ -625,24 +721,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -666,12 +744,30 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -844,6 +940,54 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -922,24 +1066,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-top: solid 0.0625rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
 .emotion-4 {
   max-width: 37.4375rem;
   margin: 0 auto;
@@ -963,12 +1089,30 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.125rem transparent;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 2.75rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
 .emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
@@ -1141,6 +1285,54 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
+.emotion-12.hide {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12.hide button {
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.emotion-12.hide button:focus::after,
+.emotion-12.hide button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.emotion-12.hide button:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+}
+
+.emotion-12.hide svg {
+  color: white;
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -1189,7 +1381,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
             <span>
               <a
                 data-terms-banner="reject"
-                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                href="https://www.bbc.com/usingthebbc/your-data-matters"
               >
                 إطلع على التغييرات
               </a>

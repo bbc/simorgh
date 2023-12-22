@@ -16,9 +16,22 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
+import { OptimoBlock } from '../../models/types/optimo';
 
-const buildImageProperties = (image?: ImageProps) => {
-  if (!image) return null;
+const defaultImageProps = {
+  height: null,
+  width: 400,
+  altText: '',
+  path: '/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
+  locator: null,
+  originCode: null,
+  copyright: null,
+};
+
+const buildImageProperties = (imageProps?: ImageProps) => {
+  const image =
+    imageProps?.path || imageProps?.locator ? imageProps : defaultImageProps;
+
   const {
     width,
     height,
@@ -28,6 +41,7 @@ const buildImageProperties = (image?: ImageProps) => {
     originCode: optimoOriginCode,
     copyright,
   } = image;
+
   const originCode = optimoOriginCode || getOriginCode(url);
   const locator = optimoLocator || getLocator(url);
 
@@ -82,30 +96,21 @@ const TimestampFooterWithAmp = (props: PromoProps) => {
 };
 
 const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
-  const altText = pathOr<string>(
-    '',
-    [
-      'item',
-      'images',
-      'defaultPromoImage',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'text',
-    ],
+  const defaultPromoImage = pathOr<OptimoBlock[]>(
+    [],
+    ['item', 'images', 'defaultPromoImage', 'blocks'],
     props,
   );
 
-  const imageProps = path<ImageProps>(
-    ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
-    props,
-  );
+  const altText: string = defaultPromoImage?.find(
+    block => block.type === 'altText',
+    // @ts-expect-error - Optimo nested block structure
+  )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  // @ts-expect-error - We don't have types for specific Optimo blocks yet
+  const imageMetadata: ImageProps = defaultPromoImage.find(
+    block => block.type === 'rawImage',
+  )?.model;
 
   return {
     children: path<string>(
@@ -126,10 +131,9 @@ const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
     footer: <TimestampFooterWithAmp {...props} />,
     url: props?.item?.locators?.canonicalUrl,
     image: buildImageProperties({
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      ...imageProps!,
+      ...imageMetadata,
       altText,
-      copyright: imageProps?.copyrightHolder,
+      copyright: imageMetadata?.copyrightHolder,
     }),
     eventTrackingData: props?.eventTrackingData?.block,
   };
@@ -153,7 +157,8 @@ const linkPromoFormatter = (props: PromoProps): FormattedPromo => ({
 
 const normalise = (props: PromoProps): FormattedPromo => {
   if (props.item?.type === 'optimo') return optimoPromoFormatter(props);
-  if (props.item?.cpsType) return cpsPromoFormatter(props);
+  if (props.item?.cpsType || props.item?.type === 'cps')
+    return cpsPromoFormatter(props);
   if (props.item?.assetTypeCode === 'PRO') return linkPromoFormatter(props);
   return props as unknown as FormattedPromo;
 };

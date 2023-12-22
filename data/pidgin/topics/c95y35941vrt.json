@@ -256,7 +256,19 @@
     ],
     "activePage": 1,
     "pageCount": 7,
-    "variantTopicId": null
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "pidgin.topics.c95y35941vrt.page",
+        "producer": "PIDGIN"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c95y35941vrt",
+        "contentType": "index-category",
+        "pageIdentifier": "pidgin.topics.c95y35941vrt.page",
+        "pageTitle": "Donald Trump"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

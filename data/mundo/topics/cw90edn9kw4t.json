@@ -136,7 +136,19 @@
     ],
     "activePage": 1,
     "pageCount": 1,
-    "variantTopicId": null
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "mundo.topics.cw90edn9kw4t.page",
+        "producer": "MUNDO"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cw90edn9kw4t",
+        "contentType": "index-category",
+        "pageIdentifier": "mundo.topics.cw90edn9kw4t.page",
+        "pageTitle": "Economía"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }
