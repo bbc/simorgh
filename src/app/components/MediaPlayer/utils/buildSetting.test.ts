@@ -1,10 +1,10 @@
 import { MediaBlock } from '../types.d';
-import liveSettings from './buildSettings';
+import liveConfig from './buildSettings';
 import sampleBlocks from './fixture';
 
 describe('buildSettings', () => {
   it('Should process an AresMedia block into a valid playlist item.', () => {
-    const result = liveSettings(sampleBlocks);
+    const result = liveConfig(sampleBlocks);
     expect(result).toStrictEqual({
       product: 'news',
       superResponsive: true,
@@ -22,19 +22,19 @@ describe('buildSettings', () => {
   it('Should include the mediator parameter if we are on a test url.', () => {
     process.env.NODE_ENV = 'development';
 
-    const result = liveSettings(sampleBlocks);
+    const result = liveConfig(sampleBlocks);
     expect(result).toHaveProperty('mediator', { host: 'open.test.bbc.co.uk' });
   });
 
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
     process.env.NODE_ENV = 'live';
 
-    const result = liveSettings(sampleBlocks);
+    const result = liveConfig(sampleBlocks);
     expect(result?.mediator).toBe(undefined);
   });
 
   it('Should return null if the AresMedia block contains invalid data.', () => {
-    const result = liveSettings([
+    const result = liveConfig([
       {
         model: { blocks: [{ model: { versions: [] } }] },
       } as unknown as MediaBlock,

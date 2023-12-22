@@ -4,7 +4,10 @@ const isTestURL = () => {
   return process.env.NODE_ENV === 'development';
 };
 
-const liveSettings = (blocks: MediaBlock[]) => {
+const PLACEHOLDER_IMG = '';
+const DEFAULT_KIND = 'programme';
+
+const liveConfig = (blocks: MediaBlock[]) => {
   const aresMedia = blocks.filter(
     (block: MediaBlock) => block.type === 'aresMedia',
   )[0];
@@ -15,19 +18,21 @@ const liveSettings = (blocks: MediaBlock[]) => {
     (block: MediaBlock) => block.type === 'image',
   )[0];
 
-  const holdingImageURL = imageData?.model.blocks?.filter(
-    (block: MediaBlock) => block.type === 'rawImage',
-  )[0]?.model.locator;
+  const holdingImageURL =
+    imageData?.model.blocks?.filter(
+      (block: MediaBlock) => block.type === 'rawImage',
+    )[0]?.model.locator ?? PLACEHOLDER_IMG;
 
   // const holdingImageAltText = imageData?.model.blocks?.filter(
   //   (block: MediaBlock) => block.type === 'altText',
   // )[0]?.model.blocks?.[0].model.blocks?.[0].model.text;
 
-  const title = aresMediaMetaData?.model.title;
-  const kind = aresMediaMetaData?.model.smpKind;
+  const title = aresMediaMetaData?.model.title ?? PLACEHOLDER_IMG;
+  const kind = aresMediaMetaData?.model.smpKind ?? DEFAULT_KIND;
   const versionData = aresMediaMetaData?.model.versions?.[0];
 
   const isTest = isTestURL();
+
   if (versionData == null) {
     return null;
   }
@@ -49,4 +54,4 @@ const liveSettings = (blocks: MediaBlock[]) => {
   };
 };
 
-export default liveSettings;
+export default liveConfig;
