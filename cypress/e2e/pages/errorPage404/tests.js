@@ -55,16 +55,11 @@ export const testsThatFollowSmokeTestConfig = ({
         });
 
         it('should have an inline link on the page that is linked to the home page', () => {
-          cy.get('p')
-            .find('a')
-            .should(
-              'have.attr',
-              'href',
-              `${
-                appConfig[config[service].name][variant].translations.error[404]
-                  .callToActionLinkUrl
-              }`,
-            );
+          const ctaUrl =
+            appConfig[config[service].name][variant].translations.error[404]
+              .callToActionLinkUrl;
+
+          cy.get(`a[href="${ctaUrl}"]`).should('exist');
         });
 
         it('should have correct title & description metadata', () => {
