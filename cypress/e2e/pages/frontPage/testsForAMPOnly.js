@@ -13,11 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
     it('should contain an amp-img', () => {
-      cy.get('li')
-        .should('be.visible')
-        .within(() => {
-          cy.get('amp-img').should('be.visible');
-        });
+      cy.get('li').should('be.visible').find('amp-img').should('be.visible');
     });
 
     if (Cypress.env('APP_ENV') === 'local') {

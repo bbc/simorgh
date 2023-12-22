@@ -55,8 +55,9 @@ export const testsThatFollowSmokeTestConfig = ({
         });
 
         it('should have an inline link on the page that is linked to the home page', () => {
-          cy.get('p').within(() => {
-            cy.get('a').should(
+          cy.get('p')
+            .find('a')
+            .should(
               'have.attr',
               'href',
               `${
@@ -64,7 +65,6 @@ export const testsThatFollowSmokeTestConfig = ({
                   .callToActionLinkUrl
               }`,
             );
-          });
         });
 
         it('should have correct title & description metadata', () => {
