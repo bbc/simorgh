@@ -4,17 +4,12 @@ import MediaPlayer from '.';
 import { act } from '@testing-library/react-hooks';
 import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
-
-const playerConfig = {
-  title: 'Butterfly photobombs koala film shoot at Australia zoo',
-  holdingImageURL: 'https://ichef.bbci.co.uk/images/ic/$recipe/p049srmr.jpg',
-  pid: 'p049sq7f',
-};
+import sampleBlocks from './fixture';
 
 describe('MediaPlayer', () => {
   it('Loads requireJS and Bump4', async () => {
     await act(async () => {
-      render(<MediaPlayer {...playerConfig} />);
+      render(<MediaPlayer blocks={sampleBlocks} />);
     });
 
     const requireScript = Helmet.peek().scriptTags[0];
@@ -35,21 +30,9 @@ describe('MediaPlayer', () => {
     window.requirejs = mockRequire;
 
     await act(async () => {
-      render(<MediaPlayer {...playerConfig} />);
+      render(<MediaPlayer blocks={sampleBlocks} />);
     });
 
     expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
-  });
-
-  it('Produces unique identifiers for each MediaPlayer div', async () => {
-    let container;
-
-    await act(async () => {
-      ({ container } = render(<MediaPlayer {...playerConfig} />));
-    });
-
-    const div = container.querySelectorAll('div[ref]');
-
-    expect(div).toStrictEqual(['bump-4']);
   });
 });

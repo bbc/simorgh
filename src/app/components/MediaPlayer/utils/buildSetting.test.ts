@@ -1,6 +1,6 @@
 import { MediaBlock } from '../types.d';
 import liveConfig from './buildSettings';
-import sampleBlocks from './fixture';
+import sampleBlocks from '../fixture';
 
 describe('buildSettings', () => {
   it('Should process an AresMedia block into a valid playlist item.', () => {
