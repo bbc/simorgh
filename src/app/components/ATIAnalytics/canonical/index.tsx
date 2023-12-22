@@ -22,16 +22,22 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => (
   </noscript>
 );
 
-const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({
+  pageviewParams,
+  useReverb,
+}: ATIAnalyticsProps) => {
   const [atiPageViewUrl] = useState(
-    process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
+    useReverb
+      ? pageviewParams
+      : `${process.env.SIMORGH_ATI_BASE_URL} + ${pageviewParams}`,
   );
 
   useEffect(() => {
-    sendBeacon(atiPageViewUrl);
+    sendBeacon(atiPageViewUrl, useReverb);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [atiPageViewUrl]);
 
-  return renderNoScriptTrackingPixel(atiPageViewUrl);
+  // return renderNoScriptTrackingPixel(atiPageViewUrl);
 };
 
 export default CanonicalATIAnalytics;

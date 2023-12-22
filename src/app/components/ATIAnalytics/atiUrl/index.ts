@@ -330,3 +330,19 @@ export const buildATIEventTrackUrl = ({
     eventTrackingBeaconValues,
   )}&type=AT`;
 };
+
+export const buildReverbAnalyticsModel = ({
+  statsDestination,
+}: ATIPageTrackingProps) => {
+  const reverbVariables = {
+    page: {
+      destination: statsDestination,
+    },
+    user: {
+      hashedId: getAtUserId(),
+      isSignedIn: false,
+    },
+  };
+
+  return reverbVariables;
+};

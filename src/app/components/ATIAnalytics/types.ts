@@ -93,10 +93,16 @@ export interface ATIConfigurationDetailsProviders {
   data?: PageData;
   atiData?: ATIData;
 }
+export interface ReverbDetailsProviders {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  atiData: ATIData;
+}
 
 export interface ATIAnalyticsProps {
   baseUrl?: string;
-  pageviewParams: string;
+  pageviewParams: string | object;
+  useReverb?: boolean;
 }
 
 export interface ATIEventTrackingProps {
@@ -138,4 +144,5 @@ export interface ATIPageTrackingProps {
 export interface ATIProps {
   data?: PageData;
   atiData?: ATIData;
+  useReverb?: boolean;
 }
