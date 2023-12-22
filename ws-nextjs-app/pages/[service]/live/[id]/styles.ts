@@ -46,7 +46,7 @@ export default {
         gridColumn: '5 / 13',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        gridColumn: '4 / 13',
+        gridColumn: '4 / 10',
       },
     }),
 };

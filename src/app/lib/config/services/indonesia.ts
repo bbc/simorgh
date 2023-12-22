@@ -86,6 +86,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      liveExperiencePage: {
+        liveLabel: 'Langsung',
+        liveCoverage: 'Liputan langsung',
+        breaking: 'Terbaru',
+        postedAt: 'Diterbitkan di',
+        summary: 'Rangkuman',
+      },
       gist: 'Rangkuman',
       error: {
         404: {

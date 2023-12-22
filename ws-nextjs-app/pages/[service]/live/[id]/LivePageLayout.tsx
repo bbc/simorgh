@@ -27,6 +27,12 @@ type ComponentProps = {
       content: StreamResponse | null;
       contributors: string | null;
     };
+    seo: Partial<{
+      seoTitle: string;
+      seoDescription: string;
+      datePublished: string;
+      dateModified: string;
+    }>;
     atiAnalytics: ATIData;
   };
 };
@@ -36,6 +42,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
   const {
     title,
     description,
+    seo: { seoTitle, seoDescription, datePublished, dateModified },
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
@@ -53,14 +60,17 @@ const LivePage = ({ pageData }: ComponentProps) => {
     ...translations.pagination,
   };
 
-  const paginatedPageTitle =
-    activePage && pageCount
-      ? `Test Live Page, ${pageXOfY
-          .replace('{x}', activePage.toString())
-          .replace('{y}', pageCount.toString())}`
-      : 'Test Live Page';
+  const showPaginatedTitle = pageCount && activePage && activePage >= 2;
 
-  const pageTitle = activePage && activePage >= 2 ? paginatedPageTitle : title;
+  const pageSeoTitle = seoTitle || title;
+
+  const pageTitle = showPaginatedTitle
+    ? `${pageSeoTitle}, ${pageXOfY
+        .replace('{x}', activePage.toString())
+        .replace('{y}', pageCount.toString())}`
+    : pageSeoTitle;
+
+  const pageDescription = seoDescription || description || pageSeoTitle;
 
   return (
     <>
@@ -69,11 +79,22 @@ const LivePage = ({ pageData }: ComponentProps) => {
       <MetadataContainer
         title={pageTitle}
         lang={lang}
-        description="A test Live Page using Next.JS"
+        description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
+      <LinkedDataContainer
+        type="NewsArticle"
+        seoTitle={pageTitle}
+        headline={pageTitle}
+        {...(datePublished && {
+          datePublished,
+        })}
+        {...(dateModified && {
+          dateModified,
+        })}
+        showAuthor
+      />
       <main>
         <Header
           showLiveLabel={isLive}

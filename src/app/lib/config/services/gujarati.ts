@@ -65,6 +65,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'ઓડિયો પ્લેયર',
         videoPlayer: 'વીડિયો પ્લેયર',
       },
+      liveExperiencePage: {
+        liveLabel: 'લાઇવ',
+        liveCoverage: 'લાઇવ કવરેજ',
+        breaking: 'બ્રેકિંગ',
+        postedAt: 'અહીં પોસ્ટ કર્યું',
+        summary: 'સારાંશ',
+      },
       gist: 'સારાંશ',
       error: {
         404: {

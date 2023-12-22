@@ -57,6 +57,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Beò',
+        liveCoverage: 'Aithris Beò',
+        breaking: 'Briseadh',
+        postedAt: 'Air a chur suas aig',
+        summary: 'Geàrr-chunntas',
+      },
       gist: 'Geàrr-shealladh',
       error: {
         404: {
