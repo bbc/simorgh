@@ -25,7 +25,6 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           },
           () => {
             it('should have a noscript img tag with the ati url', () => {
-              console.log(envConfig);
               cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
             });
           },
