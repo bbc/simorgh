@@ -126,6 +126,7 @@ export default defineConfig({
         baseUrl: 'http://localhost:7080',
       },
     },
+    testIsolation: false,
   },
   video: false,
   blockHosts: 'gn-web-assets.api.bbc.com',
