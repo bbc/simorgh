@@ -37,7 +37,6 @@ jobs:
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v3
         with:
-          config-file: cypress-simorgh.json
           build: yarn build
           start: yarn start
 
