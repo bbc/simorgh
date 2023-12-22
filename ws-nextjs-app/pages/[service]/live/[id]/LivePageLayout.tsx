@@ -1,13 +1,13 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import { useRouter } from 'next/router';
+import fetchPageData from '#app/routes/utils/fetchPageData';
 import usePolling from '../../../../hooks/usePolling';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
@@ -37,10 +37,14 @@ type ComponentProps = {
     }>;
     atiAnalytics: ATIData;
   };
+  id: string;
+  variant: string;
 };
 
 const LivePage = ({ pageData }: ComponentProps) => {
   const { lang, translations } = useContext(ServiceContext);
+  const [mutatablePageData, setMutatablePageData] = useState(pageData);
+
   const {
     title,
     description,
@@ -49,7 +53,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
-  } = pageData;
+  } = mutatablePageData;
 
   const { index: activePage, total: pageCount } =
     liveTextStream?.content?.data?.page || {};
@@ -74,14 +78,33 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
-  const router = useRouter();
-
   const { forceUpdate, updateFinished } = usePolling();
 
-  if (forceUpdate) {
-    router.replace(router.asPath, undefined, { scroll: false });
-    updateFinished();
-  }
+  useEffect(() => {
+    if (forceUpdate) {
+      // eslint-disable-next-line func-names
+      (async function () {
+        const path =
+          'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff?id=c7p765ynk9qt&service=pidgin&pageType=live&page=1&serviceEnv=test';
+        const optHeaders = { 'ctx-service-env': 'test' };
+        let pageJson;
+        try {
+          // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
+          const { json } = await fetchPageData({
+            path,
+            optHeaders,
+          });
+
+          pageJson = json;
+        } catch (error) {
+          console.log(error);
+        }
+
+        setMutatablePageData(pageJson.data);
+        updateFinished();
+      })();
+    }
+  }, [forceUpdate, updateFinished]);
 
   return (
     <>
