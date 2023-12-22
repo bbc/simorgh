@@ -12,7 +12,7 @@ describe('buildSettings', () => {
       playlistObject: {
         title: 'Five things ants can teach us about management',
         holdingImageURL:
-          'ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg',
+          'https://ichef.test.bbci.co.uk/images/ic/{recipe}/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
       },

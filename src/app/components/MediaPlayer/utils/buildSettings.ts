@@ -4,6 +4,9 @@ const isTestURL = () => {
   return process.env.NODE_ENV === 'development';
 };
 
+const formatHoldingImage = (imageURL: string) =>
+  `https://${imageURL.replace('$recipe', '{recipe}')}`;
+
 const PLACEHOLDER_IMG = '';
 const DEFAULT_KIND = 'programme';
 
@@ -14,22 +17,14 @@ const liveConfig = (blocks: MediaBlock[]) => {
   const aresMediaMetaData = aresMedia?.model.blocks?.filter(
     (block: MediaBlock) => block.type === 'aresMediaMetadata',
   )[0];
-  const imageData = aresMedia?.model.blocks?.filter(
-    (block: MediaBlock) => block.type === 'image',
-  )[0];
-
-  const holdingImageURL =
-    imageData?.model.blocks?.filter(
-      (block: MediaBlock) => block.type === 'rawImage',
-    )[0]?.model.locator ?? PLACEHOLDER_IMG;
-
-  // const holdingImageAltText = imageData?.model.blocks?.filter(
-  //   (block: MediaBlock) => block.type === 'altText',
-  // )[0]?.model.blocks?.[0].model.blocks?.[0].model.text;
 
   const title = aresMediaMetaData?.model.title ?? PLACEHOLDER_IMG;
   const kind = aresMediaMetaData?.model.smpKind ?? DEFAULT_KIND;
   const versionData = aresMediaMetaData?.model.versions?.[0];
+  const aresImageURL = aresMediaMetaData?.model.imageUrl;
+  const holdingImageURL = aresImageURL
+    ? formatHoldingImage(aresImageURL)
+    : PLACEHOLDER_IMG;
 
   const isTest = isTestURL();
 

@@ -32,6 +32,7 @@ type MediaBlock = {
     text: string;
     title: string;
     blocks: MediaBlock[];
+    imageUrl: string;
     versions: {
       versionId: string;
       duration: number;

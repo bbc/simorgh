@@ -68,12 +68,11 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf, pathname } = useContext(RequestContext);
+  const { isApp, isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
-  console.log('PATHNAME', pathname);
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
