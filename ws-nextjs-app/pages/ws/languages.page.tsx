@@ -89,6 +89,23 @@ const morphCSS2 = `body{color:#404040;font-family:ReithSans,Arial,Helvetica,sans
 
 
 const pageLayout = () => {
+    useEffect(() => {
+        function languageToggle(e) {
+          e.preventDefault();
+          var elements = document.querySelectorAll(".panel, .toggle");
+          for (var i=0; i < elements.length; ++i) {
+            var classNames = elements[i].className.split(' ');
+            var indexOfHide = classNames.indexOf('hide');
+            if (indexOfHide !== -1) {
+              classNames.splice(indexOfHide, 1);
+            } else {
+              classNames.push('hide');
+            }
+            elements[i].className = classNames.join(' ');
+          }
+        }
+        document.getElementById("switcher").addEventListener("click", languageToggle);
+    }, []);
     return (
       <>
         <style>{morphCSS1}</style>
