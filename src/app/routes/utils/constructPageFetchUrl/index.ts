@@ -88,7 +88,11 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
     case LIVE_PAGE:
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        if (!path.match(/(c[a-zA-Z0-9]{10}t)/)) {
+        if (
+          !path.match(/(c[a-zA-Z0-9]{10}t)/) &&
+          !path.match(/afghanistan/) &&
+          path.match(/([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})/)
+        ) {
           const cpsId = getCpsId(path);
           return `/${service}/live/${cpsId}`;
         }
