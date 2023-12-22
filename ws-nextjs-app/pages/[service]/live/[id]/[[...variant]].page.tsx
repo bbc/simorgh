@@ -42,21 +42,14 @@ const getPageData = async ({
   service,
   variant,
   rendererEnv,
-  isArchive,
 }: PageDataParams) => {
-  let pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const isArchiveQuery = !!isArchive;
-  if (isArchiveQuery) {
-    pathname = `${service}/live/${id}?renderer_env=live`;
-  }
-
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const livePageUrl = constructPageFetchUrl({
     page,
     pageType: 'live',
     pathname,
     service,
     variant,
-    isArchive: isArchiveQuery,
   });
 
   const env = getEnvironment(pathname);
@@ -114,9 +107,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant,
-    // renderer_env: rendererEnv,
+    rendererEnv,
     page = '1',
-    isArchive,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
@@ -150,8 +142,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
-    rendererEnv: 'test', // TODO: remove hardcoding
-    isArchive,
+    rendererEnv: rendererEnv || 'test', // TODO: remove hardcoding
   });
 
   let routingInfoLogger = logger.debug;
@@ -172,7 +163,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       error: data?.error || null,
       id,
       isAmp: false,
-      isArchive: !!isArchive,
       isNextJs: true,
       page: page || null,
       pageData: data?.pageData

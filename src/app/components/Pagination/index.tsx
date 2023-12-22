@@ -20,13 +20,11 @@ import styles from './index.styles';
 interface LinkComponentProps {
   pageNumber: number;
   isActive?: boolean;
-  isArchive: boolean;
 }
 
 interface ArrowProps {
   activePage: number;
   dir: Direction;
-  isArchive: boolean;
 }
 
 interface RenderBlockProps {
@@ -35,7 +33,6 @@ interface RenderBlockProps {
   key: number;
   visibility: string;
   activePage: number;
-  isArchive: boolean;
 }
 
 interface PaginationProps {
@@ -68,14 +65,11 @@ const LinkComponent = ({
   children,
   pageNumber,
   isActive,
-  isArchive,
   ...rest
 }: PropsWithChildren<LinkComponentProps>) => (
   <a
     css={isActive ? styles.activeA : styles.inactiveA}
-    href={
-      isArchive ? `?isArchive=true&page=${pageNumber}` : `?page=${pageNumber}`
-    }
+    href={`?page=${pageNumber}`}
     className="focusIndicatorOutlineBlack"
     {...(isActive && { 'aria-current': 'page' })}
     {...rest}
@@ -88,13 +82,11 @@ const PreviousArrow = ({
   activePage,
   children,
   dir,
-  isArchive,
 }: PropsWithChildren<ArrowProps>) => (
   <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
-      isArchive={isArchive}
     >
       <span id="pagination-previous-page">
         {dir === 'ltr' ? <LeftChevron /> : <RightChevron />}
@@ -108,13 +100,11 @@ const NextArrow = ({
   activePage,
   children,
   dir,
-  isArchive,
 }: PropsWithChildren<ArrowProps>) => (
   <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
-      isArchive={isArchive}
     >
       <span id="pagination-next-page">
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
@@ -130,7 +120,6 @@ const renderBlock = ({
   type,
   pageNumber,
   visibility,
-  isArchive,
 }: RenderBlockProps) => {
   if (type === 'NUMBER') {
     return (
@@ -141,7 +130,6 @@ const renderBlock = ({
         <LinkComponent
           isActive={pageNumber === activePage}
           pageNumber={pageNumber}
-          isArchive={isArchive}
         >
           {pageNumber}
         </LinkComponent>
@@ -171,10 +159,11 @@ const Pagination = ({
   page = 'Page',
 }: PaginationProps) => {
   const { dir } = useContext(ServiceContext);
-  const { pageType, isArchive } = useContext(RequestContext);
+  const { pageType } = useContext(RequestContext);
   const blocks = buildBlocks(activePage, pageCount);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
+
   const tokenMapper = (token: string, key: number) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,
@@ -194,7 +183,7 @@ const Pagination = ({
       data-testid="topic-pagination"
     >
       {showPreviousArrow && (
-        <PreviousArrow activePage={activePage} dir={dir} isArchive={isArchive}>
+        <PreviousArrow activePage={activePage} dir={dir}>
           {previousPage}
         </PreviousArrow>
       )}
@@ -207,10 +196,10 @@ const Pagination = ({
         {tokens}
       </div>
       <ul css={styles.unorderedList} role="list">
-        {blocks.map(block => renderBlock({ ...block, activePage, isArchive }))}
+        {blocks.map(block => renderBlock({ ...block, activePage }))}
       </ul>
       {showNextArrow && (
-        <NextArrow activePage={activePage} dir={dir} isArchive={isArchive}>
+        <NextArrow activePage={activePage} dir={dir}>
           {nextPage}
         </NextArrow>
       )}

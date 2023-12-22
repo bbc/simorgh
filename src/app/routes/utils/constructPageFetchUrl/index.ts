@@ -32,7 +32,6 @@ interface UrlConstructParams {
   page?: string;
   isAmp?: boolean;
   isCaf?: boolean;
-  isArchive?: boolean;
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
@@ -57,17 +56,9 @@ interface GetIdProps {
   variant?: Variants;
   env: Environments;
   isCaf?: boolean;
-  isArchive?: boolean;
 }
 
-const getId = ({
-  pageType,
-  service,
-  variant,
-  env,
-  isCaf,
-  isArchive,
-}: GetIdProps) => {
+const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
     case ARTICLE_PAGE:
@@ -97,12 +88,11 @@ const getId = ({
     case LIVE_PAGE:
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        if (isArchive) {
-          return getCpsId(path);
+        if (!path.match(/(c[a-zA-Z0-9]{10}t)/)) {
+          const cpsId = getCpsId(path);
+          return `/${service}/live/${cpsId}`;
         }
-        return (
-          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
-        );
+        return getTipoId(path);
       };
       break;
     default:
@@ -120,15 +110,11 @@ const constructPageFetchUrl = ({
   page,
   isAmp,
   isCaf,
-  isArchive,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId({ pageType, service, env, variant, isCaf, isArchive })(
-    pathname,
-  );
-
+  const id = getId({ pageType, service, env, variant, isCaf })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
