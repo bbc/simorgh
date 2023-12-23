@@ -14,6 +14,7 @@ import getAmpDestination from './getAmpDestination';
 
 export const getDestination = (platform, statsDestination) => {
   const destinationIDs = {
+    DEFAULT: 596068,
     NEWS_PS: 598285,
     NEWS_LANGUAGES_PS: 598291,
     NEWS_GNL: 598287,
