@@ -6,12 +6,12 @@ import 'isomorphic-fetch';
 
 const logger = nodeLogger(__filename);
 
-const sendBeacon = async (url, useReverb) => {
+const sendBeacon = async (url, reverbBeaconConfig) => {
   if (onClient()) {
     try {
-      if (useReverb) {
-        const pageVars = url.page;
-        const userVars = url.user;
+      if (reverbBeaconConfig) {
+        const pageVars = reverbBeaconConfig.page;
+        const userVars = reverbBeaconConfig.user;
 
         const Reverb = new ReverbClient({
           getPageVariables: () => Promise.resolve(pageVars),

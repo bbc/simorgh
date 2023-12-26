@@ -11,27 +11,32 @@ const ATIAnalytics = ({ data, atiData, useReverb }: ATIProps) => {
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
 
-  const pageviewParams = useReverb
+  const urlPageViewParams = buildATIUrl({
+    requestContext,
+    serviceContext,
+    data,
+    atiData,
+  }) as string;
+
+  const reverbParams = useReverb
     ? buildReverbParams({
         requestContext,
         serviceContext,
         atiData: atiData || {},
       })
-    : (buildATIUrl({
-        requestContext,
-        serviceContext,
-        data,
-        atiData,
-      }) as string);
+    : null;
 
-  if (!pageviewParams) {
+  if (!urlPageViewParams) {
     return null;
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={pageviewParams} />
+    <AmpATIAnalytics pageviewParams={urlPageViewParams} />
   ) : (
-    <CanonicalATIAnalytics pageviewParams={pageviewParams} useReverb />
+    <CanonicalATIAnalytics
+      pageviewParams={urlPageViewParams}
+      reverbParams={reverbParams}
+    />
   );
 };
 

@@ -101,8 +101,8 @@ export interface ReverbDetailsProviders {
 
 export interface ATIAnalyticsProps {
   baseUrl?: string;
-  pageviewParams: string | object;
-  useReverb?: boolean;
+  pageviewParams: string;
+  reverbParams?: object | null;
 }
 
 export interface ATIEventTrackingProps {
