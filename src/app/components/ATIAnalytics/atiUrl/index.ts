@@ -332,11 +332,39 @@ export const buildATIEventTrackUrl = ({
 };
 
 export const buildReverbAnalyticsModel = ({
+  appName,
+  contentId,
+  contentType,
+  language,
+  libraryVersion,
+  pageIdentifier,
+  pageTitle,
+  platform,
+  previousPath,
+  producerId,
+  origin,
   statsDestination,
 }: ATIPageTrackingProps) => {
+  const href = getHref(platform);
+  const referrer = getReferrer(platform, origin, previousPath);
+
   const reverbVariables = {
     page: {
       destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerId,
+      additionalProperties: {
+        custom_var_1: contentId,
+        custom_var_2: getAppType(platform),
+        custom_var_3: platform === 'app' ? `${appName}-app` : appName,
+        custom_var_4: language,
+        custom_var_5: href && encodeURIComponent(encodeURIComponent(href)),
+        custom_var_6:
+          referrer && encodeURIComponent(encodeURIComponent(referrer)),
+        custom_var_7: contentType,
+        custom_var_8: libraryVersion,
+        custom_var_9: sanitise(pageTitle),
+      },
     },
     user: {
       hashedId: getAtUserId(),
