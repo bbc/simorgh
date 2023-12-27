@@ -353,9 +353,8 @@ export const buildReverbAnalyticsModel = ({
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
-  const campaignType = getCampaignType();
 
-  const aggregatedCampaigns  = (Array.isArray(campaigns) ? campaigns : [])
+  const aggregatedCampaigns = (Array.isArray(campaigns) ? campaigns : [])
     .map(({ campaignName }) => campaignName)
     .join('~');
 
@@ -370,6 +369,7 @@ export const buildReverbAnalyticsModel = ({
         app_name: platform === 'app' ? `${appName}-app` : appName,
         app_type: getAppType(platform),
         content_language: language,
+        product_platform: onOnionTld() ? 'tor-bbc' : null,
         referrer_url:
           referrer && encodeURIComponent(encodeURIComponent(referrer)),
         x5: href && encodeURIComponent(encodeURIComponent(href)),
@@ -383,7 +383,6 @@ export const buildReverbAnalyticsModel = ({
         x16: aggregatedCampaigns,
         x17: categoryName,
         x18: isLocServeCookieSet(),
-        xto: campaignType,
       },
     },
     user: {
