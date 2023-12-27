@@ -333,37 +333,57 @@ export const buildATIEventTrackUrl = ({
 
 export const buildReverbAnalyticsModel = ({
   appName,
+  campaigns,
+  categoryName,
   contentId,
   contentType,
   language,
+  ldpThingIds,
+  ldpThingLabels,
   libraryVersion,
   pageIdentifier,
   pageTitle,
   platform,
   previousPath,
-  producerId,
   origin,
+  nationsProducer,
   statsDestination,
+  timePublished,
+  timeUpdated,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
+  const campaignType = getCampaignType();
+
+  const aggregatedCampaigns  = (Array.isArray(campaigns) ? campaigns : [])
+    .map(({ campaignName }) => campaignName)
+    .join('~');
 
   const reverbVariables = {
     page: {
+      contentId,
+      contentType,
       destination: statsDestination,
       name: pageIdentifier,
-      producer: producerId,
+      producer: 'PERSIAN',
       additionalProperties: {
-        custom_var_1: contentId,
-        custom_var_2: getAppType(platform),
-        custom_var_3: platform === 'app' ? `${appName}-app` : appName,
-        custom_var_4: language,
-        custom_var_5: href && encodeURIComponent(encodeURIComponent(href)),
-        custom_var_6:
+        app_name: platform === 'app' ? `${appName}-app` : appName,
+        app_type: getAppType(platform),
+        content_language: language,
+        referrer_url:
           referrer && encodeURIComponent(encodeURIComponent(referrer)),
-        custom_var_7: contentType,
-        custom_var_8: libraryVersion,
-        custom_var_9: sanitise(pageTitle),
+        x5: href && encodeURIComponent(encodeURIComponent(href)),
+        x8: libraryVersion,
+        x9: sanitise(pageTitle),
+        x10: nationsProducer && nationsProducer,
+        x11: timePublished,
+        x12: timeUpdated,
+        x13: ldpThingLabels,
+        x14: ldpThingIds,
+        x16: aggregatedCampaigns,
+        x17: categoryName,
+        x18: isLocServeCookieSet(),
+        xto: campaignType,
       },
     },
     user: {
