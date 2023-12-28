@@ -47,7 +47,7 @@ export type Props = {
   pageType: string;
   isAmp: boolean;
   blocks: MediaBlock[];
-  counterName: string;
+  counterName?: string;
 };
 
 declare global {
