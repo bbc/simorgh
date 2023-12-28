@@ -14,7 +14,7 @@ const LivePageMediaPlayer = ({ blocks, className }) => {
     <GridItemMediumNoMargin className={className}>
       <MediaPlayer
         blocks={blocks}
-        assetId={'p0gv2ph2'}
+        assetId={id}
         pageType={pageType}
         isAmp={isAmp}
       />
