@@ -345,6 +345,7 @@ export const buildReverbAnalyticsModel = ({
   pageTitle,
   platform,
   previousPath,
+  producerName,
   origin,
   nationsProducer,
   statsDestination,
@@ -364,7 +365,7 @@ export const buildReverbAnalyticsModel = ({
       contentType,
       destination: statsDestination,
       name: pageIdentifier,
-      producer: 'PERSIAN',
+      producer: producerName,
       additionalProperties: {
         app_name: platform === 'app' ? `${appName}-app` : appName,
         app_type: getAppType(platform),

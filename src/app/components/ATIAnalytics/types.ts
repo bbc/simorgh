@@ -129,6 +129,7 @@ export interface ATIPageTrackingProps {
   pageIdentifier?: string;
   pageTitle?: string | null;
   producerId?: string;
+  producerName?: string;
   libraryVersion?: string;
   platform?: Platforms;
   statsDestination?: string;

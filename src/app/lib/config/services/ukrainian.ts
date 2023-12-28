@@ -16,6 +16,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
+  atiAnalyticsProducerName: 'UKRAINIAN',
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',
