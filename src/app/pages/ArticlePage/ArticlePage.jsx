@@ -68,7 +68,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf } = useContext(RequestContext);
+  const { isApp, isCaf, id, isAmp, pageType } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -106,7 +106,7 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-
+  const counterName = path(['metadata', 'analyticsLabels', 'page'], pageData);
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
@@ -117,7 +117,15 @@ const ArticlePage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     audio: articleMediaPlayer,
-    video: props => <MediaPlayer {...props} />,
+    video: props => (
+      <MediaPlayer
+        id={id}
+        isAmp={isAmp}
+        pageType={pageType}
+        counterName={counterName}
+        {...props}
+      />
+    ),
     text,
     byline: props =>
       hasByline ? (

@@ -1,52 +1,53 @@
-import { MediaBlock } from '../types.d';
+import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
+import onClient from '#app/lib/utilities/onClient';
+import { Props } from '../types.d';
 
 const isTestURL = () => {
-  return process.env.NODE_ENV === 'development';
+  const isDevelopmentEnv = process.env.NODE_ENV === 'development';
+  let isTestRender = false;
+
+  if (onClient()) {
+    const search = new URLSearchParams(window.location.search);
+    isTestRender = search.get('renderer_env') === 'test';
+  }
+
+  return isDevelopmentEnv && isTestRender;
 };
 
-const formatHoldingImage = (imageURL: string) =>
-  `https://${imageURL.replace('$recipe', '{recipe}')}`;
+const buildConfig = ({ id, blocks, pageType, isAmp, counterName }: Props) => {
+  const playerProps = getPlayerProps({
+    assetId: id,
+    pageType,
+    isAmp,
+    blocks,
+  });
 
-const PLACEHOLDER_IMG = '';
-const DEFAULT_KIND = 'programme';
-
-const liveConfig = (blocks: MediaBlock[]) => {
-  const aresMedia = blocks.filter(
-    (block: MediaBlock) => block.type === 'aresMedia',
-  )[0];
-  const aresMediaMetaData = aresMedia?.model.blocks?.filter(
-    (block: MediaBlock) => block.type === 'aresMediaMetadata',
-  )[0];
-
-  const title = aresMediaMetaData?.model.title ?? PLACEHOLDER_IMG;
-  const kind = aresMediaMetaData?.model.smpKind ?? DEFAULT_KIND;
-  const versionData = aresMediaMetaData?.model.versions?.[0];
-  const aresImageURL = aresMediaMetaData?.model.imageUrl;
-  const holdingImageURL = aresImageURL
-    ? formatHoldingImage(aresImageURL)
-    : PLACEHOLDER_IMG;
-
-  const isTest = isTestURL();
-
-  if (versionData == null) {
+  if (playerProps.mediaBlock === null) {
     return null;
   }
 
-  const { versionId, duration, warnings } = versionData;
-  const playlistItem = { versionID: versionId, kind, duration };
+  const {
+    clipId,
+    mediaInfo: { title, rawDuration, guidanceMessage, kind },
+    placeholderSrc,
+  } = playerProps;
+
+  const isTest = isTestURL();
+
+  const playlistItem = { versionID: clipId, kind, duration: rawDuration };
 
   return {
     product: 'news',
     superResponsive: true as const,
-    counterName: 'smp.demopage.player.page',
+    ...(counterName && { counterName }),
     ...(isTest && { mediator: { host: 'open.test.bbc.co.uk' } }),
     playlistObject: {
       title,
-      holdingImageURL,
+      holdingImageURL: placeholderSrc,
       items: [playlistItem],
-      ...(warnings && { guidance: warnings?.short || warnings.long }),
+      ...(guidanceMessage && { guidance: guidanceMessage }),
     },
   };
 };
 
-export default liveConfig;
+export default buildConfig;

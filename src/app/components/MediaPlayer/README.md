@@ -13,18 +13,10 @@ To do, run the command:
 `sudo -- sh -c -e "echo '127.0.0.1       localhost.bbc.com' >> /etc/hosts";`
 
 Then, access local pages using: `localhost.bbc.com:7080/`, 
-eg. `http://localhost.bbc.com:7080/afaanoromoo/articles/c4g19kgl85ko`
+eg.
+Express pages:  `http://localhost.bbc.com:7080/afaanoromoo/articles/c4g19kgl85ko`
+
+Next pages: `http://localhost.bbc.com:7081/pidgin/live/c7p765ynk9qt?renderer_env=test`
+
 
 Currently, the EMP is set to only load Live video assets by default. To load test assets, append the query `?renderer_env=test` to the url. Eg.  `http://localhost.bbc.com:7080/afaanoromoo/articles/c4g19kgl85ko?renderer_env=test`
-
-
-## Settings
-
-BUMP requires a player config to deliver the correct EMP, the most relevant ones are: 
-
-| Setting    | Description                                                                                                                                            |
-|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| product    | The product to inherit the main settings from, such as iplayer, news, sport, background                                                                |
-| responsive | How the EMP should size itself. If we set it to false, we will have to do it manually using our own CSS. If set to true, the EMP will use its own CSS. |
-| clipPid    | The pid of the clip to load.
-

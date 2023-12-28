@@ -5,18 +5,18 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-import MediaPlayerContainer from '../MediaPlayer';
+import MediaPlayer from '../../../components/MediaPlayer';
 
 const LivePageMediaPlayer = ({ blocks, className }) => {
-  const { id } = useContext(RequestContext);
+  const { id, isAmp, pageType } = useContext(RequestContext);
 
   return (
     <GridItemMediumNoMargin className={className}>
-      <MediaPlayerContainer
+      <MediaPlayer
         blocks={blocks}
-        assetId={id}
-        assetType="live"
-        showPlaceholder
+        assetId={'p0gv2ph2'}
+        pageType={pageType}
+        isAmp={isAmp}
       />
     </GridItemMediumNoMargin>
   );

@@ -1,15 +1,22 @@
+/* eslint-disable import/order */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { BumpType, MediaBlock } from './types.d';
+import { BumpType, Props } from './types.d';
 import nodeLogger from '../../lib/logger.node';
-import liveConfig from './utils/buildSettings';
+import buildConfig from './utils/buildSettings';
 
 const logger = nodeLogger(__filename);
 
-const useLoadBump = (blocks: MediaBlock[]) => {
+const useLoadBump = ({ id, pageType, isAmp, blocks, counterName }: Props) => {
   const playerElementRef = useRef();
-  const playerConfig = liveConfig(blocks);
+  const playerConfig = buildConfig({
+    id,
+    pageType,
+    isAmp,
+    blocks,
+    counterName,
+  });
 
   useEffect(() => {
     try {
@@ -30,8 +37,14 @@ const useLoadBump = (blocks: MediaBlock[]) => {
   return playerElementRef;
 };
 
-const Player = ({ blocks }: { blocks: MediaBlock[] }) => {
-  const playerElementRef = useLoadBump(blocks);
+const Player = ({ id, pageType, isAmp, blocks, counterName }: Props) => {
+  const playerElementRef = useLoadBump({
+    id,
+    pageType,
+    isAmp,
+    blocks,
+    counterName,
+  });
 
   return (
     <>

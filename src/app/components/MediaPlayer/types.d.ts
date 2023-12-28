@@ -1,7 +1,7 @@
 export type PlayerConfig = {
   product: string;
   superResponsive: true;
-  counterName: string;
+  counterName?: string;
   playlistObject: {
     title: string;
     holdingImageURL: string;
@@ -25,7 +25,7 @@ export type BumpType = {
   player: (div: HTMLDivElement | null, config: PlayerConfig) => Player;
 };
 
-type MediaBlock = {
+export type MediaBlock = {
   type: string;
   model: Partial<{
     locator: string;
@@ -40,6 +40,14 @@ type MediaBlock = {
     }[];
     smpKind: string;
   }>;
+};
+
+export type Props = {
+  id: string;
+  pageType: string;
+  isAmp: boolean;
+  blocks: MediaBlock[];
+  counterName: string;
 };
 
 declare global {

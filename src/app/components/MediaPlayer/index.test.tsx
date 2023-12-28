@@ -9,7 +9,14 @@ import sampleBlocks from './fixture';
 describe('MediaPlayer', () => {
   it('Loads requireJS and Bump4', async () => {
     await act(async () => {
-      render(<MediaPlayer blocks={sampleBlocks} />);
+      render(
+        <MediaPlayer
+          blocks={sampleBlocks}
+          id="testID"
+          pageType="article"
+          isAmp={false}
+        />,
+      );
     });
 
     const requireScript = Helmet.peek().scriptTags[0];
@@ -30,7 +37,14 @@ describe('MediaPlayer', () => {
     window.requirejs = mockRequire;
 
     await act(async () => {
-      render(<MediaPlayer blocks={sampleBlocks} />);
+      render(
+        <MediaPlayer
+          blocks={sampleBlocks}
+          id="testID"
+          pageType="article"
+          isAmp={false}
+        />,
+      );
     });
 
     expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);

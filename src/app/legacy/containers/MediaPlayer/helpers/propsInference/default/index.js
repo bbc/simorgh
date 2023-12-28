@@ -64,11 +64,17 @@ export default ({
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
+    kind: pathOr(
+      'programme',
+      ['model', 'blocks', 0, 'model', 'smpKind'],
+      aresMediaBlock,
+    ),
     duration: formatDuration({ duration, padMinutes: true }),
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
       separator,
     })}`,
+    rawDuration,
     datetime: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
       aresMediaBlock,
