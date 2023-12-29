@@ -117,6 +117,7 @@ export interface ATIEventTrackingProps {
   type?: string;
   advertiserID?: string;
   url?: string;
+  useReverb?: boolean;
 }
 
 export interface ATIPageTrackingProps {

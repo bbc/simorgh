@@ -49,6 +49,7 @@ const TopStoriesSection = ({ content }) => {
     block: {
       componentName: 'top-stories',
     },
+    useReverb: true,
   };
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);

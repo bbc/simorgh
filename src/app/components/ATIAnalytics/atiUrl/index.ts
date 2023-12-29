@@ -360,37 +360,47 @@ export const buildReverbAnalyticsModel = ({
     .join('~');
 
   const reverbVariables = {
-    page: {
-      contentId,
-      contentType,
-      destination: statsDestination,
-      name: pageIdentifier,
-      producer: producerName,
-      additionalProperties: {
-        app_name: platform === 'app' ? `${appName}-app` : appName,
-        app_type: getAppType(platform),
-        content_language: language,
-        product_platform: onOnionTld() ? 'tor-bbc' : null,
-        referrer_url:
-          referrer && encodeURIComponent(encodeURIComponent(referrer)),
-        x5: href && encodeURIComponent(encodeURIComponent(href)),
-        x8: libraryVersion,
-        x9: sanitise(pageTitle),
-        x10: nationsProducer && nationsProducer,
-        x11: timePublished,
-        x12: timeUpdated,
-        x13: ldpThingLabels,
-        x14: ldpThingIds,
-        x16: aggregatedCampaigns,
-        x17: categoryName,
-        x18: isLocServeCookieSet(),
+    params: {
+      page: {
+        contentId,
+        contentType,
+        destination: statsDestination,
+        name: pageIdentifier,
+        producer: producerName,
+        additionalProperties: {
+          app_name: platform === 'app' ? `${appName}-app` : appName,
+          app_type: getAppType(platform),
+          content_language: language,
+          product_platform: onOnionTld() ? 'tor-bbc' : null,
+          referrer_url:
+            referrer && encodeURIComponent(encodeURIComponent(referrer)),
+          x5: href && encodeURIComponent(encodeURIComponent(href)),
+          x8: libraryVersion,
+          x9: sanitise(pageTitle),
+          x10: nationsProducer && nationsProducer,
+          x11: timePublished,
+          x12: timeUpdated,
+          x13: ldpThingLabels,
+          x14: ldpThingIds,
+          x16: aggregatedCampaigns,
+          x17: categoryName,
+          x18: isLocServeCookieSet(),
+        },
+      },
+      user: {
+        hashedId: getAtUserId(),
+        isSignedIn: false,
       },
     },
-    user: {
-      hashedId: getAtUserId(),
-      isSignedIn: false,
-    },
+    eventName: 'pageView',
   };
 
   return reverbVariables;
+};
+
+export const buildReverbClickEventModel = () => {
+  return {
+    params: {},
+    eventName: 'linkClick',
+  };
 };

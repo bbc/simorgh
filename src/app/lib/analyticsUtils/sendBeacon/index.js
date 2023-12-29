@@ -6,21 +6,43 @@ import 'isomorphic-fetch';
 
 const logger = nodeLogger(__filename);
 
+const reverbPageViews = config => {
+  const pageVars = config.page;
+  const userVars = config.user;
+
+  const Reverb = new ReverbClient({
+    getPageVariables: () => Promise.resolve(pageVars),
+    getUserVariables: () => Promise.resolve(userVars),
+  });
+
+  Reverb.initialise().then(async () => {
+    Reverb.viewEvent();
+  });
+};
+
+const reverbLinkClick = config => {
+  ReverbClient.userActionEvent(
+    'click',
+    'Top Stories Link',
+    config,
+    {},
+    {},
+    true,
+  );
+};
+
+const reverbHandlers = {
+  pageView: reverbPageViews,
+  linkClick: reverbLinkClick,
+};
+
 const sendBeacon = async (url, reverbBeaconConfig) => {
   if (onClient()) {
     try {
       if (reverbBeaconConfig) {
-        const pageVars = reverbBeaconConfig.page;
-        const userVars = reverbBeaconConfig.user;
+        const { params, eventName } = reverbBeaconConfig;
 
-        const Reverb = new ReverbClient({
-          getPageVariables: () => Promise.resolve(pageVars),
-          getUserVariables: () => Promise.resolve(userVars),
-        });
-
-        Reverb.initialise().then(async () => {
-          Reverb.viewEvent();
-        });
+        reverbHandlers[eventName](params);
       } else {
         await fetch(url, { credentials: 'include' }).then(res => res.text());
       }
