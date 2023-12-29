@@ -12,7 +12,6 @@ describe('buildSettings', () => {
     expect(result).toStrictEqual({
       product: 'news',
       superResponsive: true,
-      counterName: 'smp.demopage.player.page',
       playlistObject: {
         title: 'Five things ants can teach us about management',
         holdingImageURL:
