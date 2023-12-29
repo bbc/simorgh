@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
+import Link from 'next/link';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -15,6 +16,8 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import useLocation from '#hooks/useLocation';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import styles from './styles';
 import {
   Post as PostType,
@@ -22,6 +25,18 @@ import {
   ComponentToRenderProps,
 } from './types';
 import BackToLatestPost from '../Stream/BackToLatest/back-to-latest-post';
+
+const CopyToClipboard = (toCopy: string) => {
+  const el = document.createElement(`textarea`);
+  el.value = toCopy;
+  el.setAttribute(`readonly`, ``);
+  el.style.position = `absolute`;
+  el.style.left = `-9999px`;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand(`copy`);
+  document.body.removeChild(el);
+};
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -180,6 +195,19 @@ const Post = ({ post }: { post: PostType }) => {
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
+  // could this logic sit in the BFF and be passed through?
+  // is there a chance the POST asset ID will change? Ask the live team.
+  const getShareURL = ({ urn, scroll }: { urn: string; scroll: boolean }) => {
+    const myURL = `http://localhost:7081/pidgin/live/c07zr0zwjnnt`;
+    // replace this with URL builder like those in src/app/lib/utilities/getUrlHelpers
+    const cleanedURN = urn.split(':').pop();
+    const shareURL = scroll
+      ? `${myURL}?post=asset%3A${cleanedURN}`
+      : `${myURL}?post=asset%3A${cleanedURN}#post`;
+
+    return shareURL;
+  };
+
   return (
     <article css={styles.postContainer} id={postURN}>
       <BackToLatestPost urn={postURN} />
@@ -198,6 +226,22 @@ const Post = ({ post }: { post: PostType }) => {
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
+      <button
+        type="button"
+        onClick={() => {
+          CopyToClipboard(getShareURL({ urn: postURN, scroll: true }));
+        }}
+      >
+        Copy Share Link to Clipboard (Scroll)
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          CopyToClipboard(getShareURL({ urn: postURN, scroll: false }));
+        }}
+      >
+        Copy Share Link to Clipboard (No Scroll)
+      </button>
     </article>
   );
 };

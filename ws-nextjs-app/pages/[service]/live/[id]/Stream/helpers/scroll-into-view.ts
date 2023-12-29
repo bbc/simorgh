@@ -8,7 +8,8 @@ const scrollIntoView = (componentToScrollTo, hasScrolled, isReducedMotion) => {
     setTimeout(() => {
       // eslint-disable-next-line no-param-reassign
       componentToScrollTo.firstChild.tabIndex = '-1';
-      componentToScrollTo.firstChild.focus();
+      // componentToScrollTo.firstChild.focus();
+      componentToScrollTo.focus();
       // eslint-disable-next-line no-param-reassign
       hasScrolled.current = true;
     }, 1000);

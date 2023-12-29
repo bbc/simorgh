@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import scrollIntoView from '../helpers/scroll-into-view';
 
+// This isn't being used by this implementation since the #post overrides
+// #post is hardcoded in the link whereas the Sumary Points should have custom logic.
 // @ts-expect-error spike any types
 const useScrollToLinkable = ({ post, isReducedMotion }) => {
   const hasScrolled = useRef(null);
@@ -15,7 +17,7 @@ const useScrollToLinkable = ({ post, isReducedMotion }) => {
 
     if (post) {
       timer = setTimeout(() => {
-        const componentToFocusOn = document.getElementById(post);
+        const componentToFocusOn = document.getElementById('post');
         scrollIntoView(componentToFocusOn, hasScrolled, isReducedMotion);
       }, 800);
     }

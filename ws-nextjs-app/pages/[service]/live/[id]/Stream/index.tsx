@@ -15,13 +15,15 @@ const Stream = ({
   contributors,
   post,
   streamRef,
+  hiddenHeadlineRef,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
   post: string | null;
   streamRef: any;
+  hiddenHeadlineRef: any;
 }) => {
-  const { state }: any = useContext(StreamContext);
+  // const { state }: any = useContext(StreamContext);
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
@@ -29,7 +31,6 @@ const Stream = ({
   } = useContext(ServiceContext);
 
   const isReducedMotion = false;
-
   useScrollToLinkable({ post, isReducedMotion });
 
   if (!streamContent) return null;
@@ -58,7 +59,9 @@ const Stream = ({
         </Paragraph>
       )}
 
-      <span id="hiddenHeadline">Hidden headline holder</span>
+      <span id="hiddenHeadline" ref={hiddenHeadlineRef}>
+        Hidden headline holder
+      </span>
 
       {hasSinglePost ? (
         <Post post={streamResults[0]} />
