@@ -112,6 +112,7 @@ export interface ATIEventTrackingProps {
   pageIdentifier?: string;
   platform?: Platforms;
   producerId?: string;
+  producerName?: string;
   service?: Services;
   statsDestination?: string;
   type?: string;

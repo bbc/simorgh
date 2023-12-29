@@ -9,6 +9,7 @@ export const sendEventBeacon = async ({
   pageIdentifier,
   platform,
   producerId,
+  producerName,
   service,
   statsDestination,
   type,
@@ -30,7 +31,18 @@ export const sendEventBeacon = async ({
     url,
   });
 
-  const reverbParams = useReverb ? buildReverbClickEventModel() : null;
+  const reverbParams = useReverb
+    ? buildReverbClickEventModel({
+        pageIdentifier,
+        producerName,
+        statsDestination,
+        componentName,
+        campaignID,
+        format,
+        advertiserID,
+        url,
+      })
+    : null;
 
   await sendBeacon(atiClickTrackingUrl, reverbParams);
 };

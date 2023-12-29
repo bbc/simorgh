@@ -398,9 +398,39 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
-export const buildReverbClickEventModel = () => {
+export const buildReverbClickEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  componentName,
+  campaignID,
+  format,
+  advertiserID,
+  url,
+}: ATIEventTrackingProps) => {
   return {
-    params: {},
+    params: {
+      page: {
+        destination: statsDestination,
+        name: pageIdentifier,
+        producer: producerName,
+        additionalProperties: {
+          atc: getEventInfo({
+            campaignID,
+            componentName,
+            format,
+            pageIdentifier,
+            advertiserID,
+            url,
+          }),
+          type: 'AT',
+        },
+      },
+      user: {
+        hashedId: getAtUserId(),
+        isSignedIn: false,
+      },
+    },
     eventName: 'linkClick',
   };
 };

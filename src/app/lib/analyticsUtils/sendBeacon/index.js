@@ -21,14 +21,17 @@ const reverbPageViews = config => {
 };
 
 const reverbLinkClick = config => {
-  ReverbClient.userActionEvent(
-    'click',
-    'Top Stories Link',
-    config,
-    {},
-    {},
-    true,
-  );
+  const pageVars = config.page;
+  const userVars = config.user;
+
+  const Reverb = new ReverbClient({
+    getPageVariables: () => Promise.resolve(pageVars),
+    getUserVariables: () => Promise.resolve(userVars),
+  });
+
+  Reverb.initialise().then(async () => {
+    Reverb.viewEvent();
+  });
 };
 
 const reverbHandlers = {
