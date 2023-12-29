@@ -21,6 +21,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
@@ -46,9 +47,10 @@ import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
+import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
+import Uploader from '../../components/Embeds/Uploader';
 import {
   bylineExtractor,
   categoryName,
@@ -64,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -103,10 +105,6 @@ const ArticlePage = ({ pageData }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
-  const embedBlock = blocks.find(block => block.type === 'embed');
-  const embedProviderName = path(['model', 'provider'], embedBlock);
-  const isUgcUploader = embedProviderName === 'ugc-uploader';
-
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
@@ -139,10 +137,11 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
-    embedHtml: props => <EmbedHtml {...props} />,
-    oEmbed: props => <OEmbedLoader {...props} />,
-    embedImages: props => <EmbedImages {...props} />,
+    embed: UnsupportedEmbed,
+    embedHtml: EmbedHtml,
+    oEmbed: OEmbedLoader,
+    embedImages: EmbedImages,
+    embedUploader: Uploader,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -153,7 +152,7 @@ const ArticlePage = ({ pageData }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
-    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
+    podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
   };
 
   const visuallyHiddenBlock = {
@@ -237,7 +236,8 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
+          {!isCaf && <RelatedContentSection content={blocks} />}
         </div>
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>

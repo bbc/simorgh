@@ -48,9 +48,11 @@ const CurationPromo = ({
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
-        <Promo.MediaIcon type={type}>
-          {showDuration ? mediaDuration : ''}
-        </Promo.MediaIcon>
+        {isMedia && (
+          <Promo.MediaIcon type={type}>
+            {showDuration ? mediaDuration : ''}
+          </Promo.MediaIcon>
+        )}
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
@@ -75,7 +77,11 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-      <Promo.Timestamp>{lastPublished}</Promo.Timestamp>
+      {!isLive ? (
+        <Promo.Timestamp className="promo-timestamp">
+          {lastPublished}
+        </Promo.Timestamp>
+      ) : null}
     </Promo>
   );
 };

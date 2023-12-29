@@ -88,6 +88,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'پخش صدا',
         videoPlayer: 'پخش ویدیو',
       },
+      liveExperiencePage: {
+        liveLabel: 'زنده',
+        liveCoverage: 'پوشش زنده',
+        breaking: 'خبر فوری',
+        postedAt: 'به روزشده در',
+        summary: 'خلاصه',
+      },
       gist: 'خلاصه',
       error: {
         404: {
@@ -364,6 +371,10 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
+        title: 'جنگ اسرائیل-غزه',
+        url: '/persian/topics/clm0z4jgj3xt',
+      },
+      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },
@@ -402,10 +413,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'دانش',
         url: '/persian/topics/ckdxnwr4r1yt',
-      },
-      {
-        title: 'ناظران می‌گویند',
-        url: '/persian/blogs-54099951',
       },
       {
         title: 'رادیو',

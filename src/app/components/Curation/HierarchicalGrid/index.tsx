@@ -93,9 +93,11 @@ const HiearchicalGrid = ({
                   fetchpriority={fetchpriority}
                   isAmp={isAmp}
                 >
-                  <Promo.MediaIcon type={promo.type}>
-                    {showDuration ? promo.duration : ''}
-                  </Promo.MediaIcon>
+                  {isMedia && (
+                    <Promo.MediaIcon type={promo.type}>
+                      {showDuration ? promo.duration : ''}
+                    </Promo.MediaIcon>
+                  )}
                 </Promo.Image>
                 <Promo.Heading
                   as={`h${headingLevel}`}
@@ -128,7 +130,13 @@ const HiearchicalGrid = ({
                       className="focusIndicatorDisplayBlock"
                     >
                       {isLive ? (
-                        <LiveLabel>{promo.title}</LiveLabel>
+                        <LiveLabel
+                          {...(isFirstPromo && {
+                            className: 'first-promo',
+                          })}
+                        >
+                          {promo.title}
+                        </LiveLabel>
                       ) : (
                         promo.title
                       )}
@@ -138,9 +146,11 @@ const HiearchicalGrid = ({
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
-                <Promo.Timestamp className="promo-timestamp">
-                  {promo.lastPublished}
-                </Promo.Timestamp>
+                {!isLive ? (
+                  <Promo.Timestamp className="promo-timestamp">
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
+                ) : null}
               </Promo>
             </li>
           );

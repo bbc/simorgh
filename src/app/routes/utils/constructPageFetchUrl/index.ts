@@ -12,6 +12,10 @@ import {
 } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
+  TOPIC_PAGE_CONFIG,
+  TopicPagePaths,
+} from '../../topic/getInitialData/page-config';
+import {
   ARTICLE_PAGE,
   CPS_ASSET,
   HOME_PAGE,
@@ -27,6 +31,7 @@ interface UrlConstructParams {
   variant?: Variants;
   page?: string;
   isAmp?: boolean;
+  isCaf?: boolean;
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
@@ -50,13 +55,14 @@ interface GetIdProps {
   service: Services;
   variant?: Variants;
   env: Environments;
+  isCaf?: boolean;
 }
 
-const getId = ({ pageType, service, variant, env }: GetIdProps) => {
+const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
     case ARTICLE_PAGE:
-      getIdFunction = getArticleId;
+      getIdFunction = isCaf ? getCpsId : getArticleId;
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => {
@@ -81,7 +87,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case LIVE_PAGE:
     case TOPIC_PAGE:
-      getIdFunction = getTipoId;
+      getIdFunction = (path: string) => {
+        return (
+          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
+        );
+      };
       break;
     default:
       getIdFunction = () => null;
@@ -97,11 +107,12 @@ const constructPageFetchUrl = ({
   variant,
   page,
   isAmp,
+  isCaf,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId({ pageType, service, env, variant })(pathname);
+  const id = getId({ pageType, service, env, variant, isCaf })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -128,7 +139,7 @@ const constructPageFetchUrl = ({
     queryParameters,
   );
 
-  if (isLocal) {
+  if (isLocal && !process?.env?.BFF_PATH?.includes('localhost')) {
     switch (pageType) {
       case ARTICLE_PAGE:
         fetchUrl = Url(

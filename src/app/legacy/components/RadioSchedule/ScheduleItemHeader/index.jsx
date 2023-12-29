@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
 const NextLabel = styled.span`
   ${({ service }) => service && getSansBold(service)}
   ${({ script }) => script && getPica(script)}
-  color: ${props => props.theme.palette.KINGFISHER};
+  color: ${props => props.theme.palette.POSTBOX};
   display: inline-block;
   ${({ dir }) =>
     dir === 'rtl'

@@ -60,6 +60,7 @@ jest.mock('@loadable/server', () => {
   }
   return {
     ChunkExtractor,
+    ChunkExtractorManager: jest.fn(),
   };
 });
 
@@ -868,7 +869,7 @@ describe('Server', () => {
     it('should serve the sw.js with cache control information', async () => {
       const { header } = await makeRequest('/pidgin/sw.js');
       expect(header['cache-control']).toBe(
-        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+        'public, stale-if-error=6000, stale-while-revalidate=600, max-age=300',
       );
     });
   });
@@ -889,7 +890,9 @@ describe('Server', () => {
 
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
-      expect(header['cache-control']).toBe('public, max-age=604800');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+      );
     });
   });
 
@@ -977,7 +980,7 @@ describe('Server', () => {
 
   describe('IDX json', () => {
     it('should serve a file for valid idx paths', async () => {
-      const { body } = await makeRequest('/persian/afghanistan.json');
+      const { body } = await makeRequest('/ukrainian/ukraine_in_russian.json');
       expect(body.data.article).toEqual(
         expect.objectContaining({ content: expect.any(Object) }),
       );
@@ -1458,7 +1461,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['cache-control']).toBe(
-      'public, stale-if-error=120, stale-while-revalidate=30, max-age=30',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
     );
   });
 
@@ -1587,7 +1590,7 @@ describe('Routing Information Logging', () => {
     status: 200,
   };
 
-  it(`on non-200 response should log matched page type from route`, async () => {
+  it(`on 404 response should log a warning`, async () => {
     const pageType = 'Matching Page Type from Route';
     const status = 404;
     mockRouteProps({
@@ -1598,14 +1601,32 @@ describe('Routing Information Logging', () => {
     });
     await makeRequest(url);
 
-    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+    expect(loggerMock.warn).toHaveBeenCalledWith(ROUTING_INFORMATION, {
       url,
       status,
       pageType,
     });
   });
 
-  it(`on 200 response should log page type derived from response data`, async () => {
+  it(`on 500 response should log an error`, async () => {
+    const pageType = 'Matching Page Type from Route';
+    const status = 500;
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse: { ...dataResponse, status },
+      pageType,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.error).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status,
+      pageType,
+    });
+  });
+
+  it(`on 200 response should log page type derived from response data at debug level`, async () => {
     mockRouteProps({
       service,
       isAmp,
@@ -1613,7 +1634,7 @@ describe('Routing Information Logging', () => {
     });
     await makeRequest(url);
 
-    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+    expect(loggerMock.debug).toHaveBeenCalledWith(ROUTING_INFORMATION, {
       url,
       status: 200,
       pageType: 'Page Type from Data',
@@ -1667,12 +1688,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1682,12 +1703,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1701,12 +1722,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1728,12 +1749,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
