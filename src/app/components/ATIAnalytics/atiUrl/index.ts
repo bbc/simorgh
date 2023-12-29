@@ -398,16 +398,19 @@ export const buildReverbAnalyticsModel = ({
   return reverbVariables;
 };
 
-export const buildReverbClickEventModel = ({
+export const buildReverbPageSectionEventModel = ({
   pageIdentifier,
   producerName,
   statsDestination,
   componentName,
   campaignID,
   format,
+  type,
   advertiserID,
   url,
 }: ATIEventTrackingProps) => {
+  const eventPublisher = type === 'view' ? 'ati' : 'atc';
+
   return {
     params: {
       page: {
@@ -415,7 +418,7 @@ export const buildReverbClickEventModel = ({
         name: pageIdentifier,
         producer: producerName,
         additionalProperties: {
-          atc: getEventInfo({
+          [eventPublisher]: getEventInfo({
             campaignID,
             componentName,
             format,
@@ -431,6 +434,6 @@ export const buildReverbClickEventModel = ({
         isSignedIn: false,
       },
     },
-    eventName: 'linkClick',
+    eventName: 'pageSectionEvent',
   };
 };

@@ -20,7 +20,7 @@ const reverbPageViews = config => {
   });
 };
 
-const reverbLinkClick = config => {
+const reverbPageSectionEvent = config => {
   const pageVars = config.page;
   const userVars = config.user;
 
@@ -36,7 +36,7 @@ const reverbLinkClick = config => {
 
 const reverbHandlers = {
   pageView: reverbPageViews,
-  linkClick: reverbLinkClick,
+  pageSectionEvent: reverbPageSectionEvent,
 };
 
 const sendBeacon = async (url, reverbBeaconConfig) => {

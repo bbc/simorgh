@@ -51,7 +51,10 @@ const TopStoriesSection = ({ content }) => {
     },
     useReverb: true,
   };
-  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const eventTrackingDataSend = {
+    ...path(['block'], eventTrackingData),
+    useReverb: true,
+  };
   const viewRef = useViewTracker(eventTrackingDataSend);
 
   const {
