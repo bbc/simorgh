@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 import scrollIntoView from '../helpers/scroll-into-view';
 
-// This isn't being used by this implementation since the #post overrides
-// #post is hardcoded in the link whereas the Sumary Points should have custom logic.
+// This is used by the 'scroll' links. It requires the user to have JS enabled.
+// Links that end in '#post' do not scroll because the '#post' overrides this logic
+// PS Web have a 'linkOnClickOverride' in their Summary Points which permits links which end in '#post' to still scroll
+// We can remove this if we don't want our implementation to scroll.
+// Refer to the dropbox paper for a link to the PS Web implementation
 // @ts-expect-error spike any types
 const useScrollToLinkable = ({ post, isReducedMotion }) => {
   const hasScrolled = useRef(null);
-  //   don't know what this does
   useEffect(() => {
     hasScrolled.current = null;
   }, [post]);

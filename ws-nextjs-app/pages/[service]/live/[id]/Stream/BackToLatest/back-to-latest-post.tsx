@@ -1,56 +1,30 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import useLocation from '#hooks/useLocation';
 import Link from 'next/link';
-import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { StreamContext } from './stream-provider';
 
-// @ts-expect-error spike any types
-// this is running too often
-const BackToLatestPost = ({ urn }) => {
-  // not working
-  const { post, setPage, streamRef, setPost, hiddenHeadlineRef } =
-    useContext(StreamContext);
+const BackToLatestPost = ({ urn }: { urn: string }) => {
+  const { post, streamRef } = useContext(StreamContext);
   const isSelected = post === urn;
+  const partialURL = `/pidgin/live/c07zr0zwjnnt`;
 
-  console.log('urn', urn);
-  // null
-  console.log('post', post);
-  // false
-  console.log('isSelected', isSelected);
-
-  // to add functionality
-  const newURL = `http://localhost:7081/pidgin/live/c07zr0zwjnnt`;
-  const partialURL = `/pidgin/live/c07zr0zwjnnt#hiddenHeadline`;
-
-  const location = useLocation();
-  const queryString = location.search;
-  console.log('queryString', queryString);
-
-  const relativeUrl = makeRelativeUrlPath(partialURL);
-  console.log('relativeUrl', relativeUrl);
-
-  // const relativeUrlNew = makeRelativeUrlPath('c07zr0zwjnnt');
-  // console.log('relativeUrlNew', relativeUrlNew);
-
-  // @ts-expect-error working it out
-  const navigateToFirstPage = event => {
-    // this prevwents refresh
-    event.preventDefault();
-    // window.history.pushState(null, null, newURL);
-    console.log('event', event);
+  // @ts-expect-error spike any type
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleClick = event => {
+    // This doesn't do anything since the link redirects to the href
+    // We can use event.preventDefault() to prevent this
+    // Then we could use Next JS useRouter() and router.push(partialURL) to redirect;
+    // Something like the below could get this to scroll after page refresh (However I wasn't able to get this to work)
+    // This currently directs user to the top of the stream on the current page and then reloads the 1st page.
+    // refer to Dropbox Paper for PS Web solution - they utilise logic used by their pagination
+    // @ts-expect-error spike unknown type
+    streamRef.current.scrollIntoView(true);
   };
 
   return (
     isSelected && (
-      <Link
-        onClick={() => {
-          hiddenHeadlineRef.current.focus();
-        }}
-        id="post"
-        href={partialURL}
-      >
+      <Link onClick={handleClick} id="post" href={partialURL}>
         Return to the latest post
       </Link>
     )

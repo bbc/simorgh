@@ -4,7 +4,6 @@ const scrollIntoView = (componentToScrollTo, hasScrolled, isReducedMotion) => {
     componentToScrollTo.scrollIntoView({
       behavior: isReducedMotion ? 'auto' : 'smooth',
     });
-    // to investigate further.
     setTimeout(() => {
       // eslint-disable-next-line no-param-reassign
       componentToScrollTo.firstChild.tabIndex = '-1';
