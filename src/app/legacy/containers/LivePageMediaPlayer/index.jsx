@@ -8,11 +8,16 @@ import {
 import MediaPlayer from '../../../components/MediaPlayer';
 
 const LivePageMediaPlayer = ({ blocks, className }) => {
-  const { id, pageType } = useContext(RequestContext);
+  const { id, pageType, counterName } = useContext(RequestContext);
 
   return (
     <GridItemMediumNoMargin className={className}>
-      <MediaPlayer blocks={blocks} assetId={id} pageType={pageType} />
+      <MediaPlayer
+        blocks={blocks}
+        assetId={id}
+        pageType={pageType}
+        counterName={counterName}
+      />
     </GridItemMediumNoMargin>
   );
 };
