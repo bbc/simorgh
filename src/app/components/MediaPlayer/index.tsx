@@ -8,12 +8,11 @@ import buildConfig from './utils/buildSettings';
 
 const logger = nodeLogger(__filename);
 
-const useLoadBump = ({ id, pageType, isAmp, blocks, counterName }: Props) => {
+const useLoadBump = ({ id, pageType, blocks, counterName }: Props) => {
   const playerElementRef = useRef();
   const playerConfig = buildConfig({
     id,
     pageType,
-    isAmp,
     blocks,
     counterName,
   });
@@ -37,11 +36,10 @@ const useLoadBump = ({ id, pageType, isAmp, blocks, counterName }: Props) => {
   return playerElementRef;
 };
 
-const Player = ({ id, pageType, isAmp, blocks, counterName }: Props) => {
+const Player = ({ id, pageType, blocks, counterName }: Props) => {
   const playerElementRef = useLoadBump({
     id,
     pageType,
-    isAmp,
     blocks,
     counterName,
   });

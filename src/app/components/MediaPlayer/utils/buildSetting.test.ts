@@ -8,7 +8,6 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
-      isAmp: false,
     });
     expect(result).toStrictEqual({
       product: 'news',
@@ -39,7 +38,6 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
-      isAmp: false,
     });
     expect(result).toHaveProperty('mediator', { host: 'open.test.bbc.co.uk' });
   });
@@ -51,7 +49,6 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
-      isAmp: false,
     });
     expect(result?.mediator).toBe(undefined);
   });
@@ -66,7 +63,6 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks: sampleBlock,
       pageType: 'article',
-      isAmp: false,
     });
     expect(result).toBe(null);
   });

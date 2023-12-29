@@ -14,11 +14,10 @@ const isTestURL = () => {
   return isDevelopmentEnv && isTestRender;
 };
 
-const buildConfig = ({ id, blocks, pageType, isAmp, counterName }: Props) => {
+const buildConfig = ({ id, blocks, pageType, counterName }: Props) => {
   const playerProps = getPlayerProps({
     assetId: id,
     pageType,
-    isAmp,
     blocks,
   });
 

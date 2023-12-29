@@ -45,7 +45,6 @@ export type MediaBlock = {
 export type Props = {
   id: string;
   pageType: string;
-  isAmp: boolean;
   blocks: MediaBlock[];
   counterName?: string;
 };

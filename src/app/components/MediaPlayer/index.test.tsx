@@ -10,12 +10,7 @@ describe('MediaPlayer', () => {
   it('Loads requireJS and Bump4', async () => {
     await act(async () => {
       render(
-        <MediaPlayer
-          blocks={sampleBlocks}
-          id="testID"
-          pageType="article"
-          isAmp={false}
-        />,
+        <MediaPlayer blocks={sampleBlocks} id="testID" pageType="article" />,
       );
     });
 
@@ -38,12 +33,7 @@ describe('MediaPlayer', () => {
 
     await act(async () => {
       render(
-        <MediaPlayer
-          blocks={sampleBlocks}
-          id="testID"
-          pageType="article"
-          isAmp={false}
-        />,
+        <MediaPlayer blocks={sampleBlocks} id="testID" pageType="article" />,
       );
     });
 

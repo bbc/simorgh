@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
@@ -22,7 +21,6 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import MediaPlayer from '../../components/MediaPlayer';
 
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
@@ -68,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf, id, isAmp, pageType } = useContext(RequestContext);
+  const { isApp, isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -106,7 +104,7 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-  const counterName = path(['metadata', 'analyticsLabels', 'page'], pageData);
+
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
@@ -117,15 +115,7 @@ const ArticlePage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     audio: articleMediaPlayer,
-    video: props => (
-      <MediaPlayer
-        id={id}
-        isAmp={isAmp}
-        pageType={pageType}
-        counterName={counterName}
-        {...props}
-      />
-    ),
+    video: articleMediaPlayer,
     text,
     byline: props =>
       hasByline ? (
