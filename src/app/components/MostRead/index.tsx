@@ -19,6 +19,7 @@ import { PageTypes } from '../../models/types/global';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
+  useReverb: true,
 };
 
 const mostReadAmpPageTypes: PageTypes[] = [
