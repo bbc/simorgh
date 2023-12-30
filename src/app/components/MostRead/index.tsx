@@ -19,7 +19,6 @@ import { PageTypes } from '../../models/types/global';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
-  useReverb: true,
 };
 
 const mostReadAmpPageTypes: PageTypes[] = [
@@ -35,6 +34,7 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
+  useReverb?: boolean;
 }
 
 const MostRead = ({
@@ -44,6 +44,7 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
+  useReverb = false,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -68,6 +69,11 @@ const MostRead = ({
     variant,
     isBff,
   });
+
+  const eventTrackingData = {
+    ...blockLevelEventTrackingData,
+    ...(useReverb ? { useReverb: true } : {}),
+  };
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
@@ -96,7 +102,7 @@ const MostRead = ({
           data={data}
           columnLayout={columnLayout}
           size={size}
-          eventTrackingData={blockLevelEventTrackingData}
+          eventTrackingData={eventTrackingData}
         />
       </MostReadSection>
     ) : null;

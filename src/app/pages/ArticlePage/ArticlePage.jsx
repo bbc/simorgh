@@ -249,6 +249,7 @@ const ArticlePage = ({ pageData }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopics && topics}
+          useReverb
         />
       )}
     </div>
