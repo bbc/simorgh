@@ -24,6 +24,7 @@ const eventTrackingData = {
   block: {
     componentName: 'features',
   },
+  useReverb: true,
 };
 
 const StoryPromoUlFeatures = styled(StoryPromoUl)`
