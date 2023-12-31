@@ -6,46 +6,40 @@ import 'isomorphic-fetch';
 
 const logger = nodeLogger(__filename);
 
-const reverbPageViews = config => {
-  const pageVars = config.page;
-  const userVars = config.user;
+let Reverb;
 
-  const Reverb = new ReverbClient({
-    getPageVariables: () => Promise.resolve(pageVars),
-    getUserVariables: () => Promise.resolve(userVars),
-  });
-
-  Reverb.initialise().then(async () => {
-    Reverb.viewEvent();
-  });
+const initaliseReverb = async ({ pageVars, userVars }) => {
+  if (!Reverb) {
+    Reverb = new ReverbClient({
+      getPageVariables: () => Promise.resolve(pageVars),
+      getUserVariables: () => Promise.resolve(userVars),
+    });
+  }
 };
 
-const reverbPageSectionEvent = config => {
-  const pageVars = config.page;
-  const userVars = config.user;
-
-  const Reverb = new ReverbClient({
-    getPageVariables: () => Promise.resolve(pageVars),
-    getUserVariables: () => Promise.resolve(userVars),
-  });
-
-  Reverb.initialise().then(async () => {
-    Reverb.viewEvent();
-  });
-};
-
-const reverbHandlers = {
-  pageView: reverbPageViews,
-  pageSectionEvent: reverbPageSectionEvent,
+const firePageEvent = async () => {
+  Reverb.initialise()
+    .then(async () => {
+      Reverb.viewEvent();
+    })
+    .then(() => {
+      Reverb = null;
+    });
 };
 
 const sendBeacon = async (url, reverbBeaconConfig) => {
   if (onClient()) {
     try {
       if (reverbBeaconConfig) {
-        const { params, eventName } = reverbBeaconConfig;
+        const {
+          params: { page, user },
+        } = reverbBeaconConfig;
 
-        reverbHandlers[eventName](params);
+        await initaliseReverb({ pageVars: page, userVars: user }).then(
+          async () => {
+            await firePageEvent();
+          },
+        );
       } else {
         await fetch(url, { credentials: 'include' }).then(res => res.text());
       }

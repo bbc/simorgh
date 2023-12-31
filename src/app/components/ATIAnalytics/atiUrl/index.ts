@@ -392,7 +392,6 @@ export const buildReverbAnalyticsModel = ({
         isSignedIn: false,
       },
     },
-    eventName: 'pageView',
   };
 
   return reverbVariables;
@@ -434,6 +433,5 @@ export const buildReverbPageSectionEventModel = ({
         isSignedIn: false,
       },
     },
-    eventName: 'pageSectionEvent',
   };
 };

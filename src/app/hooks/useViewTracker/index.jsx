@@ -61,7 +61,7 @@ const useViewTracker = (props = {}) => {
 
   useEffect(() => {
     if (isInView && !timer.current) {
-      timer.current = setTimeout(() => {
+      timer.current = setTimeout(async () => {
         const hasRequiredProps = [
           campaignID,
           componentName,
@@ -93,7 +93,7 @@ const useViewTracker = (props = {}) => {
             );
           }
 
-          sendEventBeacon({
+          await sendEventBeacon({
             campaignID,
             componentName,
             format,
