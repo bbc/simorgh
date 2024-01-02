@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { renderHook } from '@testing-library/react-hooks';
 import { fireEvent } from '@testing-library/react';
 import { useState } from 'react';
@@ -11,8 +10,9 @@ jest.mock('react', () => ({
 
 describe('useLocation', () => {
   beforeEach(() => {
-    // @ts-ignore
-    useState.mockImplementation(jest.requireActual('react').useState);
+    (useState as jest.Mock).mockImplementation(
+      jest.requireActual('react').useState,
+    );
   });
   it('should set location to the current window location', () => {
     const { result } = renderHook(() => useLocation());
@@ -44,8 +44,8 @@ describe('useLocation', () => {
 
   it('should update itself on user popstate interaction', () => {
     const spy = jest.fn();
-    // @ts-ignore
-    useState.mockImplementation(() => ['location', spy]);
+
+    (useState as jest.Mock).mockImplementation(() => ['location', spy]);
 
     renderHook(() => useLocationObj.default());
 
