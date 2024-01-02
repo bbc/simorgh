@@ -58,7 +58,7 @@ const getPageData = async ({
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
-  // const agent = certsRequired(pathname) ? await getAgent() : null;
+  // amended to connect up to the BFF locally
   const agent = null;
 
   let pageStatus;

@@ -42,7 +42,7 @@ type ComponentProps = {
 
 const FakeKeyPointLinks = () => {
   // We need to use the 'no scroll' link which ends in #post for accessibility
-  // However if we add an onClickOverride to the Summary Points then we could mimic the behaviour of the 'Scroll' link
+  // I have added versions without the hash-param to demonstrate the scroll-into-view hook. JS needs to be enabled.
   // See the Dropbox Paper for PS Web implementation
 
   return (

@@ -2,8 +2,7 @@ import { useEffect, useRef } from 'react';
 import scrollIntoView from '../helpers/scroll-into-view';
 
 // This is used by the 'scroll' links. It requires the user to have JS enabled.
-// Links that end in '#post' do not scroll because the '#post' overrides this logic
-// PS Web have a 'linkOnClickOverride' in their Summary Points which permits links which end in '#post' to still scroll
+// Links that end in '#post' do not scroll because the '#post' overrides this logic. I have not worked out how to stop this.
 // We can remove this if we don't want our implementation to scroll.
 // Refer to the dropbox paper for a link to the PS Web implementation
 // @ts-expect-error spike any types
