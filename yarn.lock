@@ -10012,18 +10012,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-terminal-report@npm:4.0.3":
-  version: 4.0.3
-  resolution: "cypress-terminal-report@npm:4.0.3"
+"cypress-terminal-report@npm:4.1.3":
+  version: 4.1.3
+  resolution: "cypress-terminal-report@npm:4.1.3"
   dependencies:
-    chalk: ^3.0.0
-    fs-extra: ^9.0.1
-    methods: ^1.1.2
+    chalk: ^4.0.0
+    fs-extra: ^10.1.0
     semver: ^7.3.5
     tv4: ^1.3.0
   peerDependencies:
     cypress: ">=4.10.0"
-  checksum: a4273080bd5015bb0d2e3fbe56b653309298a392ea57a336909af23e2941355f7fa443cef482891898998e763785c1e643293bb05d2a4b5d4ccd25fcca804961
+  checksum: d9ed1c1152f9815b8956ab96cccb339c0215708f1a9eee71c5a29c108e3d37a4ef650d7aa1e19da5bd45c5964317366bac954ca044d13fb2b931e0ce66b1aee6
   languageName: node
   linkType: hard
 
@@ -20871,7 +20870,7 @@ __metadata:
     cypress: 9.6.0
     cypress-axe: 0.14.0
     cypress-multi-reporters: 1.6.3
-    cypress-terminal-report: 4.0.3
+    cypress-terminal-report: 4.1.3
     depcheck: 1.4.7
     dotenv: 16.0.3
     eslint: 7.32.0
