@@ -10,6 +10,7 @@ import { ATIData } from '#app/components/ATIAnalytics/types';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Pagination from '#app/components/Pagination';
+import Link from 'next/link';
 import KeyPoints from '../../../../../pages/[service]/live/[id]/KeyPoints';
 import MetadataContainer from '../../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../../src/app/components/LinkedData';
@@ -99,6 +100,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
         showAuthor
       />
       <main>
+        <Link href="/pidgin/new_live_appdir/c7p765ynk9qt">Test Next Link</Link>
+        <br />
+        <a href="/pidgin/new_live_appdir/c7p765ynk9qt">Test Anchor Link</a>
         <Header
           showLiveLabel={isLive}
           title={title}
