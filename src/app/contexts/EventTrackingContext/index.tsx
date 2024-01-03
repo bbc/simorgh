@@ -69,7 +69,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
 
   if (!campaignID) {
     // eslint-disable-next-line no-console
-    console.error(
+    console.warn(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );
   }
@@ -90,15 +90,14 @@ export const EventTrackingContextProvider = ({
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = useContext(RequestContext);
-  const { isNextJs, pageType } = requestContext;
+  const { pageType } = requestContext;
 
   const serviceContext = useContext(ServiceContext);
   const { atiAnalyticsProducerId } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  // TODO: Enable event tracking for NextJS pages
-  if (!eventTrackingIsEnabled || (!data && !atiData) || isNextJs) {
+  if (!eventTrackingIsEnabled || (!data && !atiData)) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}

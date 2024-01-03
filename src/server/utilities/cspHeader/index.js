@@ -140,6 +140,7 @@ const directives = {
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
+      'https://public.flourish.studio', // Flourish embeds
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -169,6 +170,7 @@ const directives = {
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
+      'https://public.flourish.studio', // Flourish embeds
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],

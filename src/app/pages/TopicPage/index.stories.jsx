@@ -1,7 +1,7 @@
 import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -15,6 +15,7 @@ import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.js
 import arabicTopicWithMessageBanners from '#data/arabic/topics/cng9qem66p5t.json';
 import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
+import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -22,7 +23,11 @@ import ThemeProvider from '../../components/ThemeProvider';
 const TopicPage = withPageWrapper(Page);
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant = 'default', fixture = defaultTopic }) => {
+const Component = ({
+  service,
+  variant = 'default',
+  fixture = defaultTopic,
+}) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider
@@ -70,21 +75,45 @@ export default {
 export const Example = Component;
 
 export const MundoWithBannerVariations = props => (
-  <Component service={'mundo'} {...props} fixture={mundoTopicWithMessageBannerVariations} />
+  <Component
+    service={'mundo'}
+    {...props}
+    fixture={mundoTopicWithMessageBannerVariations}
+  />
 );
 
 export const KyrgyzWithMessageBanners = props => (
-  <Component service={'kyrgyz'} {...props} fixture={kyrgyzTopicWithMessageBanners} />
+  <Component
+    service={'kyrgyz'}
+    {...props}
+    fixture={kyrgyzTopicWithMessageBanners}
+  />
 );
 
 export const PersianWithMessageBanners = props => (
-  <Component service={'persian'} {...props} fixture={persianTopicWithMessageBanners} />
+  <Component
+    service={'persian'}
+    {...props}
+    fixture={persianTopicWithMessageBanners}
+  />
+);
+
+export const PersianAfghanistan = props => (
+  <Component service={'persian'} {...props} fixture={persianAfghanistan} />
 );
 
 export const ArabicWithMessageBanners = props => (
-  <Component service={'arabic'} {...props} fixture={arabicTopicWithMessageBanners} />
+  <Component
+    service={'arabic'}
+    {...props}
+    fixture={arabicTopicWithMessageBanners}
+  />
 );
 
 export const TamilWithMessageBanners = props => (
-  <Component service={'tamil'} {...props} fixture={tamilTopicWithMessageBanners} />
+  <Component
+    service={'tamil'}
+    {...props}
+    fixture={tamilTopicWithMessageBanners}
+  />
 );

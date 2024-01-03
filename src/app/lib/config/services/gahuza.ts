@@ -78,6 +78,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Kina amajwi',
         videoPlayer: 'Kina amasanamu',
       },
+      liveExperiencePage: {
+        liveLabel: 'Ikibiriraho',
+        liveCoverage: `Amakuru y'ikibiriraho`,
+        breaking: `Ivy'akakanya`,
+        postedAt: 'Vyashizwe isaha',
+        summary: 'Incamake',
+      },
       gist: 'Incamake',
       error: {
         404: {
@@ -256,8 +263,8 @@ export const service: DefaultServiceConfig = {
         },
         consentBanner: {
           heading: 'Uremeye ibiri kuri [social_media_site]?',
-          body: `Iyi nkuru irimwo ivyatanzwe na [social_media_site].  Dukeneye uruhusha rwawe imbere yuko bigushikira, kuko birashobora kuba bikoresha cookies hamwe n'ubundi buhinga.  Wobanza ugasoma aha [social_media_site] [link] amategeko agenga cookie [/link] and [link] n'ayagenga ubuzima bwite [/link] imbere yuko wemera. Kugira ubibone hitamwo 'emera hanyuma ubandanye'.`,
-          button: 'Emera uce ubandanye',
+          body: `Iyi nkuru irimwo ivyatanzwe na [social_media_site].  Dukeneye uruhusha rwawe imbere yuko bigushikira, kuko birashobora kuba bikoresha cookies hamwe n'ubundi buhinga.  Wobanza ugasoma aha [social_media_site] [link] amategeko agenga cookie [/link] [link] n'ayagenga ubuzima bwite [/link] imbere yuko wemera. Kugira ubibone hitamwo 'emera hanyuma ubandanye'.`,
+          button: 'Emera ubandanye',
         },
       },
       include: {

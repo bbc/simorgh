@@ -3,10 +3,7 @@ import services from '../serviceConfigs';
 const getAssetOrigins = service => {
   const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 
-  const ANALYTICS_ORIGINS = [
-    'https://ping.chartbeat.net',
-    'https://dataplane.rum.eu-west-1.amazonaws.com',
-  ];
+  const ANALYTICS_ORIGINS = ['https://ping.chartbeat.net'];
 
   const FONTS_ORIGINS = ['https://ws-downloads.files.bbci.co.uk'];
 

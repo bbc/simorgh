@@ -17,7 +17,7 @@ const mundoPromos = [
     title: 'Test image gallery',
     firstPublished: '2022-11-22T17:23:05.000Z',
     lastPublished: '2023-12-13T18:59:20.000Z',
-    link: 'https://www.test.bbc.com/mundo/23539555',
+    link: 'https://www.test.bbc.com/mundo/live/23539555',
     imageUrl:
       'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg',
     description: 'Testing image gallery for Tipo',

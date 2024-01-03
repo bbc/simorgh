@@ -49,16 +49,15 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Brasil Partido',
-      brandDescription:
-        'João Fellet tenta entender como brasileiros chegaram ao grau atual de divisão.',
+      brandTitle: 'BBC Lê',
+      brandDescription: 'Podcast traz áudios com reportagens selecionadas.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0d67gkg.jpg',
-        alt: 'Logo: Brasil Partido',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
+        alt: 'Logo: BBC Lê',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
+        href: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -88,6 +87,13 @@ export const service: DefaultServiceConfig = {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
+      },
+      liveExperiencePage: {
+        liveLabel: 'Ao Vivo',
+        liveCoverage: 'Cobertura ao Vivo',
+        breaking: 'Urgente',
+        postedAt: 'Publicado às',
+        summary: 'Pontos-chave',
       },
       gist: 'Pontos-chave',
       error: {
@@ -271,6 +277,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
+      latestMediaTitle: 'Mais recentes',
     },
     mostRead: {
       header: 'Mais lidas',

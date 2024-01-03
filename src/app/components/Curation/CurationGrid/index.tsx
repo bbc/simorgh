@@ -36,7 +36,7 @@ const CurationGrid = ({
         </ul>
       ) : (
         <div css={styles.item}>
-          <CurationPromo {...firstPromo} />
+          <CurationPromo {...firstPromo} headingLevel={headingLevel} />
         </div>
       )}
     </div>

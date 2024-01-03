@@ -85,6 +85,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'لائیو',
+        liveCoverage: 'لائیو کوریج',
+        breaking: 'بریکنگ',
+        postedAt: 'پوسٹ کیا گیا',
+        summary: 'خلاصہ',
+      },
       gist: 'خلاصہ',
       error: {
         404: {
@@ -339,6 +346,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'پاکستان',
         url: '/urdu/topics/cjgn7n9zzq7t',
+      },
+      {
+        title: 'الیکشن 2024',
+        url: '/urdu/topics/cynd7qxprq0t',
       },
       {
         title: 'آس پاس',

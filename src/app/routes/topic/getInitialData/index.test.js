@@ -129,7 +129,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -146,7 +146,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=serbian&pageType=topic&variant=cyr',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=serbian&pageType=topic&variant=cyr&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -162,7 +162,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -178,7 +178,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -194,7 +194,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -227,7 +227,7 @@ describe('get initial data for topic', () => {
     const testHeader = { 'ctx-service-env': 'test' };
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=test',
       agent,
       optHeaders: testHeader,
       pageType: TOPIC_PAGE,
@@ -244,7 +244,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,
@@ -261,7 +261,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&page=20',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&page=20&serviceEnv=live',
       agent,
       optHeaders,
       pageType: TOPIC_PAGE,

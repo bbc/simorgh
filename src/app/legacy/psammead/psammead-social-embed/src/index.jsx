@@ -16,6 +16,7 @@ import {
   ARTICLE_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  LIVE_PAGE,
 } from '../../../../routes/utils/pageTypes';
 
 const checkIsSupportedProvider = (provider, pageType) => {
@@ -28,6 +29,10 @@ const checkIsSupportedProvider = (provider, pageType) => {
   // CPS Pages only support a select few
   if ([STORY_PAGE, CORRESPONDENT_STORY_PAGE].includes(pageType)) {
     return ['twitter', 'instagram', 'youtube'].includes(provider);
+  }
+
+  if ([LIVE_PAGE].includes(pageType)) {
+    return ['twitter'].includes(provider);
   }
 
   // Only Optimo and CPS articles support social embeds

@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'හඬ වාදකය',
         videoPlayer: 'වීඩියෝ ධාවකය',
       },
+      liveExperiencePage: {
+        liveLabel: 'සජීවී',
+        liveCoverage: 'සජීවී වාර්තාකරණය',
+        breaking: 'අලුත්ම පුවතක්',
+        postedAt: 'යාවත්කාලීන කළේ',
+        summary: 'සාරාංශය',
+      },
       gist: 'සාරාංශය',
       error: {
         404: {
@@ -245,7 +252,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
-      featuresAnalysisTitle: 'දැක්ම',
+      featuresAnalysisTitle: 'විශේෂාංග',
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {

@@ -68,6 +68,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Trực tiếp',
+        liveCoverage: 'Trực tiếp',
+        breaking: 'Tin mới nhất',
+        postedAt: 'Đăng ở',
+        summary: 'Tóm tắt',
+      },
       gist: 'Tóm tắt',
       error: {
         404: {
@@ -246,7 +253,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'Xin xem bản đầy đủ.',
       },
       topStoriesTitle: 'Tin chính',
-      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
+      featuresAnalysisTitle: 'BBC giới thiệu',
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
@@ -325,16 +332,8 @@ export const service: DefaultServiceConfig = {
         url: '/vietnamese/topics/cnlv9j1ekq0t',
       },
       {
-        title: 'Diễn đàn',
-        url: '/vietnamese/forum-54540875',
-      },
-      {
         title: 'Kinh tế',
         url: '/vietnamese/topics/cez1ey7nzj3t',
-      },
-      {
-        title: 'Nhịp sống mới',
-        url: '/vietnamese/magazine-54029179',
       },
       {
         title: 'Thể thao',

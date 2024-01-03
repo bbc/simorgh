@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      liveExperiencePage: {
+        liveLabel: 'Toos',
+        liveCoverage: 'Tebin toos ah',
+        breaking: 'War deg deg ah',
+        postedAt: '',
+        summary: 'Kooban',
+      },
       gist: 'Kooban',
       error: {
         404: {
@@ -337,7 +344,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Barnaamijyada Idaacadda',
-        url: '/somali/media-54071665',
+        url: '/somali/topics/cn6rqlrkm0pt',
       },
     ],
   },

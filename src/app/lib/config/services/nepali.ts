@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'अडिओ प्लेअर',
         videoPlayer: 'भिडिओ प्लेअर',
       },
+      liveExperiencePage: {
+        liveLabel: 'लाइभ',
+        liveCoverage: 'लाइभ कभरेज',
+        breaking: 'ब्रेकिंग',
+        postedAt: 'पोस्ट गरिएको',
+        summary: 'सारांश',
+      },
       gist: 'सारांश',
       error: {
         404: {
@@ -317,7 +324,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/media-54029171',
+        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
       },
       {
         title: 'भिडिओ',

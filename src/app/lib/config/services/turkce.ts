@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Canlı',
+        liveCoverage: 'Canlı yayın',
+        breaking: 'Son dakika',
+        postedAt: 'Basım saati',
+        summary: 'Özet',
+      },
       gist: 'Özet',
       error: {
         404: {
@@ -312,14 +319,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Haberler',
         url: '/turkce',
-      },
-      {
-        title: '14 Mayıs Seçimleri',
-        url: '/turkce/topics/cg5mgyyvjd0t',
-      },
-      {
-        title: '6 Şubat Depremi',
-        url: '/turkce/topics/c383emwewmqt',
       },
       {
         title: 'Türkiye',

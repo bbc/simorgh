@@ -3552,7 +3552,7 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/mundo/articles/cdwrpl7qwqqo'],
+            paths: ['/mundo/articles/ce7p1pw7165o'],
             enabled: true,
           },
           test: {
@@ -3693,7 +3693,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/mundo/articles/cdwrpl7qwqqo',
+              '/mundo/articles/ce7p1pw7165o',
               '/mundo',
               '/mundo/noticias-internacional-53826365',
               '/mundo/popular/read',
@@ -4642,23 +4642,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: {
-        environments: {
-          live: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
+      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -4683,7 +4667,6 @@ module.exports = () => ({
           live: {
             paths: [
               // '/persian/articles/c7eel0lmr4do', // Article
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/magazine-49281981', // CPS PGL
               // '/persian/world-51497110', // CPS MAP
@@ -4702,7 +4685,6 @@ module.exports = () => ({
             paths: [
               // '/persian/articles/cej3lzd5e0go', // Article
               // '/persian', // Front Page
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/iran-23231114', // CPS MAP
               // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
@@ -4720,7 +4702,6 @@ module.exports = () => ({
             paths: [
               // '/persian/articles/cej3lzd5e0go', // Article
               // '/persian', // Front Page
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/iran-23231114', // CPS MAP
               // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
