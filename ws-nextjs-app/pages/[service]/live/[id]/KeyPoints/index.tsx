@@ -1,5 +1,5 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-
 import { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import Heading from '#app/components/Heading';
