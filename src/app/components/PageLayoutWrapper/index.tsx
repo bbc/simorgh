@@ -139,54 +139,6 @@ const PageLayoutWrapper = ({
                         }
                     });
                 }
-                let wrappedPageTimeStart = new Date();
-                const wrappedYear = wrappedPageTimeStart.getFullYear();
-                const wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
-                let wrappedStorageKey = 'ws_bbc_wrapped';
-                let wrappedContents = {};
-                wrappedContents[wrappedYear] = {
-                    'byMonth': {},
-                    'pageTypeCounts': {},
-                    'serviceCounts': {},
-                    'topicCounts': {},
-                    'duration': 0,
-                    'wordCount': 0,
-                };
-                wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
-                const saveWrapped = () => {
-                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
-                }
-                let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
-                if (wrappedLocalStorageContents) {
-                    const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
-                    wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedLocalStorageContentsParsed;
-                    wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
-                }
-                const wrappedContentsShortcut = wrappedContents[wrappedYear];
-                const wrappedTopics = ${JSON.stringify(
-                  pageData?.metadata?.topics,
-                )};
-                if (wrappedTopics) {
-                    wrappedTopics.forEach(({ topicName }) => {
-                        wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
-                    });
-                }
-                document.onvisibilitychange = () => {
-                  if (document.visibilityState === "hidden") {
-                    const wrappedTimeNow = new Date();
-                    const wrappedDifference = wrappedTimeNow - wrappedPageTimeStart;
-                    wrappedContentsShortcut.duration = wrappedContentsShortcut.duration ? wrappedContentsShortcut.duration + wrappedDifference : wrappedDifference;
-                    saveWrapped();
-                  }
-                  else {
-                    wrappedPageTimeStart = new Date();
-                  }
-                };
-                wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
-                wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
-                wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
-                wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
-                wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
 
   return (

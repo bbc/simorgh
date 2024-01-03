@@ -63,7 +63,7 @@ const WorldServiceWrapped = ({
             const wrappedYear = wrappedPageTimeStart.getFullYear();
             const wrappedMonth = (wrappedPageTimeStart.getMonth() + 1);
             let wrappedStorageKey = 'ws_bbc_wrapped';
-            let wrappedContents = {[key: number]: {}};
+            let wrappedContents = {};
             wrappedContents[wrappedYear] = {
                 'byMonth': {},
                 'pageTypeCounts': {},
@@ -79,9 +79,10 @@ const WorldServiceWrapped = ({
             let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
             if (wrappedLocalStorageContents) {
                 const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
-                wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedLocalStorageContentsParsed;
-                wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
-            }
+                if (wrappedLocalStorageContentsParsed.hasOwnProperty(wrappedYear)) {
+                    wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedContents[wrappedYear];
+                    wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
+                }            }
             const wrappedContentsShortcut = wrappedContents[wrappedYear];
             const wrappedTopics = pageData?.metadata?.topics;
             if (wrappedTopics) {
