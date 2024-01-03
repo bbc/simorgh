@@ -42,7 +42,7 @@ const getPageData = async ({
   page,
   service,
   variant,
-  rendererEnv,
+  rendererEnv = 'test',
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const livePageUrl = constructPageFetchUrl({
@@ -141,7 +141,7 @@ const nameThisBetter = async ({
     page,
     service,
     variant,
-    rendererEnv: 'test', // TODO: remove hardcoding
+    rendererEnv,
   });
 
   let routingInfoLogger = logger.debug;
@@ -197,7 +197,7 @@ export default async (props: any) => {
   return (
     // @ts-expect-error - TODO: props not defined yet
     <Providers pageProps={data}>
-      <LivePageLayout {...data} />
+      <LivePageLayout pageData={data.pageData} />
     </Providers>
   );
 };
