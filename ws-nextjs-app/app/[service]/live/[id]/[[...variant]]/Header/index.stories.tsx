@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../../../../src/app/contexts/ServiceContext';
-import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import ThemeProvider from '#app/components/ThemeProvider';
+import { StoryProps } from '#models/types/storybook';
+import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 import Header from '.';
-import { StoryProps } from '../../../../../../src/app/models/types/storybook';
 import metadata from './metadata.json';
 
 interface ComponentProps extends StoryProps {

@@ -11,15 +11,15 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Pagination from '#app/components/Pagination';
 import Link from 'next/link';
-import KeyPoints from '../../../../../pages/[service]/live/[id]/KeyPoints';
 import MetadataContainer from '../../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../../src/app/components/LinkedData';
-import Stream from '../../../../../pages/[service]/live/[id]/Stream';
-import Header from '../../../../../pages/[service]/live/[id]/Header';
 
 import styles from './styles';
-import { StreamResponse } from '../../../../../pages/[service]/live/[id]/Post/types';
-import { KeyPointsResponse } from '../../../../../pages/[service]/live/[id]/KeyPoints/types';
+import { KeyPointsResponse } from './KeyPoints/types';
+import { StreamResponse } from './Post/types';
+import Header from './Header';
+import KeyPoints from './KeyPoints';
+import Stream from './Stream';
 
 type ComponentProps = {
   pageData: {
@@ -100,9 +100,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
         showAuthor
       />
       <main>
-        <Link href="/pidgin/new_live_appdir/c7p765ynk9qt">Test Next Link</Link>
+        <Link href="/pidgin/live/c7p765ynk9qt">Test Next Link</Link>
         <br />
-        <a href="/pidgin/new_live_appdir/c7p765ynk9qt">Test Anchor Link</a>
+        <a href="/pidgin/live/c7p765ynk9qt">Test Anchor Link</a>
         <Header
           showLiveLabel={isLive}
           title={title}

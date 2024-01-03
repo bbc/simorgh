@@ -1,12 +1,11 @@
-import { GetServerSideProps } from 'next';
+import React from 'react';
+import { headers } from 'next/headers';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
-
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
@@ -18,12 +17,14 @@ import { FetchError } from '#models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
+import logResponseTime from '#server/utilities/logResponseTime';
+import extractHeaders from '#server/utilities/extractHeaders';
+import { IncomingHttpHeaders } from 'http';
 import { OK } from '#app/lib/statusCodes.const';
-import getAgent from '../../../../utilities/undiciAgent';
-
+import getAgent from '../../../../../utilities/undiciAgent';
 import LivePageLayout from './LivePageLayout';
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
-import isValidPageNumber from '../../../../utilities/pageQueryValidator';
+import Providers from '../../../../Providers';
+import isValidPageNumber from '../../../../../utilities/pageQueryValidator';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -94,45 +95,43 @@ const getPageData = async ({
   return { data, toggles };
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
-  logResponseTime(
-    {
-      path: context.resolvedUrl,
-    },
-    context.res,
-    () => null,
-  );
+const nameThisBetter = async ({
+  id,
+  service,
+  page = '1',
+  rendererEnv,
+  variant,
+}: PageDataParams) => {
+  // logResponseTime(
+  //   {
+  //     path: context.resolvedUrl,
+  //   },
+  //   context.res,
+  //   () => null,
+  // );
 
-  const {
-    id,
-    service,
-    variant,
-    // renderer_env: rendererEnv,
-    page = '1',
-  } = context.query as PageDataParams;
-
-  const { headers: reqHeaders } = context.req;
+  const headersList = headers();
 
   if (!isValidPageNumber(page)) {
-    context.res.statusCode = 404;
+    // context.res.statusCode = 404;
     return {
       props: {
-        bbcOrigin: reqHeaders['bbc-origin'] || null,
+        bbcOrigin: headersList.get('bbc-origin') || null,
         isNextJs: true,
         service,
         status: 404,
         timeOnServer: Date.now(),
         variant: variant?.[0] || null,
-        ...extractHeaders(reqHeaders),
+        // ...extractHeaders(headersList),
       },
     };
   }
 
   logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-    url: context.resolvedUrl,
+    // url: context.resolvedUrl,
     headers: omit(
       (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
-      reqHeaders,
+      headersList,
     ),
     pageType: LIVE_PAGE,
   });
@@ -151,40 +150,54 @@ export const getServerSideProps: GetServerSideProps = async context => {
   }
 
   routingInfoLogger(ROUTING_INFORMATION, {
-    url: context.resolvedUrl,
+    // url: context.resolvedUrl,
     status: data.status,
     pageType: LIVE_PAGE,
   });
 
-  context.res.statusCode = data.status;
+  // context.res.statusCode = data.status;
   return {
-    props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
-      error: data?.error || null,
-      id,
-      isAmp: false,
-      isNextJs: true,
-      page: page || null,
-      pageData: data?.pageData
-        ? {
-            ...data.pageData,
-            metadata: {
-              ...data.pageData.metadata,
-              type: LIVE_PAGE,
-            },
-          }
-        : null,
-      pageType: LIVE_PAGE,
-      pathname: context.resolvedUrl,
-      service,
-      showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
-      status: data.status,
-      timeOnServer: Date.now(), // TODO: check if needed?
-      toggles,
-      variant: variant?.[0] || null,
-      ...extractHeaders(reqHeaders),
-    },
+    bbcOrigin: headersList.get('bbc-origin') || null,
+    error: data?.error || null,
+    id,
+    isAmp: false,
+    isNextJs: true,
+    page: page || null,
+    pageData: data?.pageData
+      ? {
+          ...data.pageData,
+          metadata: {
+            ...data.pageData.metadata,
+            type: LIVE_PAGE,
+          },
+        }
+      : null,
+    pageType: LIVE_PAGE,
+    // pathname: context.resolvedUrl,
+    service,
+    showAdsBasedOnLocation: headersList.get('bbc-adverts') === 'true' || false,
+    status: data.status,
+    timeOnServer: Date.now(), // TODO: check if needed?
+    toggles,
+    variant: variant?.[0] || null,
+    // ...extractHeaders(headersList),
   };
 };
 
-export default LivePageLayout;
+export default async (props: any) => {
+  const { id, service, variant } = props.params;
+
+  const data = await nameThisBetter({
+    id,
+    service,
+    rendererEnv: 'test',
+    variant,
+  });
+
+  return (
+    // @ts-expect-error - TODO: props not defined yet
+    <Providers pageProps={data}>
+      <LivePageLayout {...data} />
+    </Providers>
+  );
+};

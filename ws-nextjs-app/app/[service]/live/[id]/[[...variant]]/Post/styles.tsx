@@ -1,5 +1,5 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
   timeStamp: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
