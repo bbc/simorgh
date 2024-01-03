@@ -47,6 +47,7 @@ const FakeKeyPointLinks = () => {
 
   return (
     <>
+      <h3>React/ NextJS Link</h3>
       <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3">
         Link for post 39 (Page 1) - Scroll
       </Link>
@@ -66,6 +67,26 @@ const FakeKeyPointLinks = () => {
       <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
         Link for post 12 (Page 3)
       </Link>
+      <h3>Anchor Links</h3>
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3">
+        Link for post 39 (Page 1) - Scroll
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
+        Link for post 39 (Page 1) - No scroll
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a">
+        Link for post 32 (Page 2) - Scroll
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
+        Link for post 32 (Page 2) - No scroll
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
+        Link for post 12 (Page 3)
+      </a>
     </>
   );
 };
