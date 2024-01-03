@@ -37,11 +37,6 @@ type Props = {
   pageData: {
     metadata: {
       type: PageTypes;
-      topics?: [
-        {
-          topicName: string;
-        },
-      ];
     };
     content?: {
       model?: ModelType;
@@ -49,8 +44,6 @@ type Props = {
   };
   status: number;
 };
-
-type wordCountType = number | undefined;
 
 const PageLayoutWrapper = ({
   children,
@@ -65,22 +58,6 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
-  const reportingPageType = pageType?.replace(/ /g, '');
-  let wordCount: wordCountType = 0;
-  if (pageType === 'article') {
-    wordCount = pageData?.content?.model?.blocks
-      ?.filter(block => block.type === 'text')
-      ?.reduce((reducer, block) => {
-        const innerBlocks = block?.model?.blocks
-          ?.filter(innerBlock => innerBlock.type === 'paragraph')
-          .reduce((innerReducer, p) => {
-            return `${innerReducer} ${p.model?.text}`;
-          }, '');
-
-        if (!innerBlocks) return reducer;
-        return reducer + innerBlocks.split(' ').length;
-      }, 0);
-  }
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
