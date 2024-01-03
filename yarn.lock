@@ -10027,9 +10027,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:9.6.0":
-  version: 9.6.0
-  resolution: "cypress@npm:9.6.0"
+"cypress@npm:9.7.0":
+  version: 9.7.0
+  resolution: "cypress@npm:9.7.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -10075,7 +10075,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 1e5142885a3fb54db6ef7477e3b11b363f1f610ff008982af014e6df3261ac3899f4cad407c598fb690f93029634adb4ad4605929d10776f92175a3eebb471c4
+  checksum: 45df7c85bc7ec2e187153ff2b98bf5106d2313d70e2367a5742b5269a9e82d3fdd730d5bbc32ac8da72aeb120a52f9384c2ba4e2fc86b532f68440f22d700fc9
   languageName: node
   linkType: hard
 
@@ -20868,7 +20868,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     core-js: 3.30.2
     crypto: 1.0.1
-    cypress: 9.6.0
+    cypress: 9.7.0
     cypress-axe: 0.14.0
     cypress-multi-reporters: 1.6.3
     cypress-terminal-report: 4.0.3

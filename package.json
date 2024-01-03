@@ -194,7 +194,7 @@
     "compression-webpack-plugin": "9.2.0",
     "copy-webpack-plugin": "9.1.0",
     "crypto": "1.0.1",
-    "cypress": "9.6.0",
+    "cypress": "9.7.0",
     "cypress-axe": "0.14.0",
     "cypress-multi-reporters": "1.6.3",
     "cypress-terminal-report": "4.0.3",
