@@ -22,28 +22,30 @@ const styles = {
       ...fontVariants.sansBold,
     }),
 
-  liveLabelCircle: ({ palette, spacings }: Theme) =>
+  liveLabelCircle: ({ mq, palette, spacings }: Theme) =>
     css({
       color: palette.LIVE_DARK,
       borderRadius: '50%',
       display: 'inline-block',
-      width: `${spacings.DOUBLE}rem`,
-      height: `${spacings.DOUBLE}rem`,
+      width: `${pixelsToRem(15)}rem`,
+      height: `${pixelsToRem(15)}rem`,
       background: `radial-gradient(circle, transparent 53%, ${palette.LIVE_DARK} 53.5%, ${palette.LIVE_DARK} 54%)`,
       marginInlineEnd: `${spacings.HALF}rem`,
       position: 'relative',
       transform: 'translate(0, 12%)',
+      [mq.GROUP_2_MIN_WIDTH]: {
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
+      },
     }),
 
-  firstPromo: ({ mq, spacings }: Theme) =>
+  firstPromo: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_1_ONLY]: {
-        width: `${pixelsToRem(18)}rem`,
-        height: `${pixelsToRem(18)}rem`,
-      },
+      width: `${pixelsToRem(20)}rem`,
+      height: `${pixelsToRem(20)}rem`,
       [mq.GROUP_2_ONLY]: {
-        width: `${spacings.TRIPLE}rem`,
-        height: `${spacings.TRIPLE}rem`,
+        width: `${pixelsToRem(22)}rem`,
+        height: `${pixelsToRem(22)}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: `${pixelsToRem(28)}rem`,
