@@ -4,6 +4,9 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -20,7 +23,17 @@ type ComponentProps = {
     description?: string;
     isLive: boolean;
     summaryPoints: { content: KeyPointsResponse | null };
-    liveTextStream: { content: StreamResponse | null };
+    liveTextStream: {
+      content: StreamResponse | null;
+      contributors: string | null;
+    };
+    seo: Partial<{
+      seoTitle: string;
+      seoDescription: string;
+      datePublished: string;
+      dateModified: string;
+    }>;
+    atiAnalytics: ATIData;
   };
 };
 
@@ -29,9 +42,11 @@ const LivePage = ({ pageData }: ComponentProps) => {
   const {
     title,
     description,
+    seo: { seoTitle, seoDescription, datePublished, dateModified },
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
+    atiAnalytics,
   } = pageData;
 
   const { index: activePage, total: pageCount } =
@@ -45,23 +60,41 @@ const LivePage = ({ pageData }: ComponentProps) => {
     ...translations.pagination,
   };
 
-  const paginatedPageTitle =
-    activePage && pageCount
-      ? `Test Live Page, ${pageXOfY
-          .replace('{x}', activePage.toString())
-          .replace('{y}', pageCount.toString())}`
-      : 'Test Live Page';
+  const showPaginatedTitle = pageCount && activePage && activePage >= 2;
+
+  const pageSeoTitle = seoTitle || title;
+
+  const pageTitle = showPaginatedTitle
+    ? `${pageSeoTitle}, ${pageXOfY
+        .replace('{x}', activePage.toString())
+        .replace('{y}', pageCount.toString())}`
+    : pageSeoTitle;
+
+  const pageDescription = seoDescription || description || pageSeoTitle;
 
   return (
     <>
+      <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics title={pageTitle} />
       <MetadataContainer
-        title={activePage && activePage >= 2 ? paginatedPageTitle : title}
+        title={pageTitle}
         lang={lang}
-        description="A test Live Page using Next.JS"
+        description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
+      <LinkedDataContainer
+        type="NewsArticle"
+        seoTitle={pageTitle}
+        headline={pageTitle}
+        {...(datePublished && {
+          datePublished,
+        })}
+        {...(dateModified && {
+          dateModified,
+        })}
+        showAuthor
+      />
       <main>
         <Header
           showLiveLabel={isLive}
@@ -75,7 +108,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            <Stream streamContent={liveTextStream.content} />
+            <Stream
+              streamContent={liveTextStream.content}
+              contributors={liveTextStream.contributors}
+            />
           </div>
         </div>
         <Pagination

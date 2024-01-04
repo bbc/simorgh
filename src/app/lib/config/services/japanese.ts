@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: '音声プレイヤー',
         videoPlayer: '動画プレイヤー',
       },
+      liveExperiencePage: {
+        liveLabel: '実況中',
+        liveCoverage: '関連実況',
+        breaking: '速報',
+        postedAt: '投稿時間',
+        summary: '要点',
+      },
       gist: '要点',
       error: {
         404: {
@@ -298,6 +305,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ホーム',
         url: '/japanese',
+      },
+      {
+        title: 'イスラエル・ガザ戦争',
+        url: '/japanese/topics/cw5wn2e9rpnt',
       },
       {
         title: 'ウクライナ侵攻',

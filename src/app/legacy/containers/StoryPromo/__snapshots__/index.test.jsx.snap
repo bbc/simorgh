@@ -6655,6 +6655,20 @@ exports[`StoryPromo Container should render item without an image promoType top 
 `;
 
 exports[`StoryPromo Container should render live correctly for amp 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -6845,6 +6859,54 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 
 .emotion-15 {
   color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-15 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.emotion-16:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-16:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-16:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-17 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -6853,7 +6915,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   font-weight: 700;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -6864,7 +6926,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6876,28 +6938,28 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
@@ -6955,12 +7017,19 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           >
             <span
               class="emotion-15"
+            >
+              <span
+                class="emotion-16"
+              />
+            </span>
+            <span
+              class="emotion-17"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-16"
+              class="emotion-18"
               lang="en-GB"
             >
               , 
@@ -6972,7 +7041,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         Summary text
       </p>
@@ -6982,6 +7051,20 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render live correctly for canonical 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -7178,6 +7261,54 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 
 .emotion-16 {
   color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-16 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.emotion-17:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-17:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-17:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-18 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7186,7 +7317,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   font-weight: 700;
 }
 
-.emotion-17 {
+.emotion-19 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -7197,7 +7328,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7209,28 +7340,28 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
@@ -7288,12 +7419,19 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           >
             <span
               class="emotion-16"
+            >
+              <span
+                class="emotion-17"
+              />
+            </span>
+            <span
+              class="emotion-18"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-17"
+              class="emotion-19"
               lang="en-GB"
             >
               , 
@@ -7305,7 +7443,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-18 emotion-19"
+        class="emotion-20 emotion-21"
       >
         Summary text
       </p>
@@ -7315,6 +7453,20 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 `;
 
 exports[`StoryPromo Container should render live promoType leading on amp 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -7443,6 +7595,70 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 
 .emotion-8 {
   color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.emotion-9:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-9:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-9:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-10 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7451,7 +7667,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   font-weight: 700;
 }
 
-.emotion-9 {
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -7462,7 +7678,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7474,34 +7690,34 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-12 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-12 {
+.emotion-14 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -7509,20 +7725,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-14 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-14 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -7530,25 +7746,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-14 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-14 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-18 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -7562,25 +7778,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-18 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-18 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-17>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -7608,12 +7824,19 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           >
             <span
               class="emotion-8"
+            >
+              <span
+                class="emotion-9"
+              />
+            </span>
+            <span
+              class="emotion-10"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-9"
+              class="emotion-11"
               lang="en-GB"
             >
               , 
@@ -7625,20 +7848,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
       >
         Summary text
       </p>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-14 emotion-15"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-16"
+          class="emotion-18"
           style="padding-bottom: 56.25%;"
         >
           <amp-img
@@ -7655,7 +7878,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           />
         </div>
         <div
-          class="emotion-17 emotion-18"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -7664,6 +7887,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 `;
 
 exports[`StoryPromo Container should render live promoType top on amp 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   position: relative;
 }
@@ -7861,6 +8098,70 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 
 .emotion-15 {
   color: #006666;
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  position: relative;
+  -webkit-transform: translate(0, 12%);
+  -moz-transform: translate(0, 12%);
+  -ms-transform: translate(0, 12%);
+  transform: translate(0, 12%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-15 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.emotion-16:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-16:before {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  }
+}
+
+.emotion-16:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0.125rem solid transparent;
+}
+
+.emotion-17 {
+  color: #006666;
   display: inline-block;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
@@ -7869,7 +8170,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   font-weight: 700;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -7880,7 +8181,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7892,21 +8193,21 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
@@ -7964,12 +8265,19 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           >
             <span
               class="emotion-15"
+            >
+              <span
+                class="emotion-16"
+              />
+            </span>
+            <span
+              class="emotion-17"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-16"
+              class="emotion-18"
               lang="en-GB"
             >
               , 
@@ -7981,7 +8289,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         Summary text
       </p>

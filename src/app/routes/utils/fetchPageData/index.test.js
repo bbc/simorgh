@@ -21,7 +21,10 @@ const requestOrigin = 'Jest Test';
 
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
+const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
+
 afterEach(() => {
+  timeoutSpy.mockClear();
   jest.clearAllMocks();
   fetch.resetMocks();
 });
@@ -40,7 +43,7 @@ describe('fetchPageData', () => {
 
     it('should always log data url and path', async () => {
       await fetchPageData({ path: requestedPathname });
-      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
       });
@@ -49,7 +52,7 @@ describe('fetchPageData', () => {
     it('should log additional arguments if passed', async () => {
       await fetchPageData({ path: requestedPathname, pageType, requestOrigin });
 
-      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+      expect(loggerMock.debug).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
         pageType,
@@ -62,7 +65,7 @@ describe('fetchPageData', () => {
         path: requestedPathname,
         shouldLogFetchTime: true,
       });
-      const loggerCall = loggerMock.info.mock.calls[1];
+      const loggerCall = loggerMock.debug.mock.calls[1];
 
       expect(loggerCall[0]).toBe('data_fetch_response_time');
       expect(typeof loggerCall[1].nanoseconds).toBe('number');
@@ -84,30 +87,33 @@ describe('fetchPageData', () => {
       headers: {
         'User-Agent': 'Simorgh/ws-web-rendering',
       },
-      timeout: 4000,
     };
 
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
+      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
+      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(fullTestPath, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
+      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(fullLivePath, fetchOptions);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
+      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
@@ -119,10 +125,10 @@ describe('fetchPageData', () => {
           'User-Agent': 'Simorgh/ws-web-rendering',
           'ctx-service-env': 'live',
         },
-        timeout: 4000,
       };
       await fetchPageData({ path: requestedPathname, pageType, optHeaders });
 
+      expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchOptions);
     });
 
@@ -360,7 +366,7 @@ describe('fetchPageData', () => {
 
       await fetchPageData({ path: requestedPathname, pageType, cache });
 
-      expect(loggerMock.info).toHaveBeenNthCalledWith(
+      expect(loggerMock.debug).toHaveBeenNthCalledWith(
         2,
         DATA_RESPONSE_FROM_CACHE,
         {

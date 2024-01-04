@@ -1,4 +1,3 @@
-import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
   DATA_FETCH_RESPONSE_TIME,
@@ -21,7 +20,7 @@ import getUrl from './utils/getUrl';
 const logger = nodeLogger(__filename);
 
 /**
- * An isomorphic fetch wrapper for pages, with error and log handling.
+ * A fetch wrapper for pages, with error and log handling.
  * @param {string} path The URL of a resource to fetch.
  * @param {number} timeout Optional parameter to provide a custom timeout
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
@@ -43,7 +42,7 @@ const fetchPageData = async ({
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, {
+  logger.debug(DATA_REQUEST_RECEIVED, {
     data: url,
     path,
     ...loggerArgs,
@@ -52,7 +51,7 @@ const fetchPageData = async ({
   const cachedResponse = !isLocal() && cache?.get(url);
 
   if (cachedResponse) {
-    logger.info(DATA_RESPONSE_FROM_CACHE, {
+    logger.debug(DATA_RESPONSE_FROM_CACHE, {
       data: url,
       path,
       ...loggerArgs,
@@ -70,7 +69,7 @@ const fetchPageData = async ({
       'User-Agent': 'Simorgh/ws-web-rendering',
       ...(optHeaders && optHeaders),
     },
-    timeout: effectiveTimeout,
+    signal: AbortSignal.timeout(effectiveTimeout),
     ...(agent && { agent }),
   };
 
@@ -84,7 +83,7 @@ const fetchPageData = async ({
     if (shouldLogFetchTime && canDetermineFetchTime) {
       const NS_PER_SEC = 1e9;
       const elapsedHrTime = process.hrtime(startHrTime);
-      logger.info(DATA_FETCH_RESPONSE_TIME, {
+      logger.debug(DATA_FETCH_RESPONSE_TIME, {
         path,
         status,
         nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
