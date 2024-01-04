@@ -61,9 +61,9 @@ const collectResults = async (link, service, type) => {
   await fetchWithCert(link).then(response => {
     if (response.ok) {
       response.json().then(json => {
-        const jsondata = json.hasOwnProperty('data') ? json.data : json;
-        if (!(json.hasOwnProperty('status') && json.status === '404')) {
-          if (!jsondata || !jsondata.hasOwnProperty('generated')) {
+        const jsondata = 'data' in json ? json.data : json;
+        if (!('status' in json && json.status === '404')) {
+          if (!jsondata || !('generated' in jsondata)) {
             console.log('json where no data', jsondata);
           }
           const generatedDateTime = new Date(jsondata.generated);
@@ -72,9 +72,8 @@ const collectResults = async (link, service, type) => {
           const minutesSinceGenerated = Math.floor(
             timeDifference / (1000 * 60),
           );
-          const records = jsondata.hasOwnProperty('items')
-            ? jsondata.items
-            : jsondata.records;
+          const records =
+            'items' in jsondata ? jsondata.items : jsondata.records;
           const counts = records
             .map(record => record.count)
             .slice(0, 10)
@@ -117,7 +116,7 @@ const collectResults = async (link, service, type) => {
 
   services
     .filter(service => !badServices.includes(service))
-    .forEach((service, i) => {
+    .forEach(service => {
       let serviceToCall = service;
       if (servicesWithVariants.some(variant => service.includes(variant))) {
         serviceToCall = service.replace(/([A-Z])/, '_$1').toLowerCase();
