@@ -1,4 +1,3 @@
-import 'isomorphic-fetch';
 import path from 'ramda/src/path';
 
 import getCookieOvenEndpoints from './getCookieOvenEndpoints';

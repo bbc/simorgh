@@ -104,6 +104,7 @@ export default async ({
   variant,
   pageType,
   toggles,
+  getAgent,
   isCaf,
 }) => {
   try {
@@ -118,6 +119,7 @@ export default async ({
       service: derivedService,
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
+      getAgent,
       isCaf,
     });
 

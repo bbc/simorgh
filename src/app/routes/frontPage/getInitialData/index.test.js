@@ -11,6 +11,9 @@ jest.mock('../../utils/getConfig', () => jest.fn());
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+
+const mockGetAgent = () => Promise.resolve(agent);
+
 jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
@@ -59,6 +62,7 @@ describe('Front Page - Get Initial Data', () => {
       service: 'serbian',
       variant: 'lat',
       pageType,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -84,6 +88,7 @@ describe('Front Page - Get Initial Data', () => {
         service: 'serbian',
         variant: 'lat',
         pageType,
+        getAgent: mockGetAgent,
       });
 
       expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -114,6 +119,7 @@ describe('Front Page - Get Initial Data', () => {
         service: 'serbian',
         variant: 'lat',
         pageType,
+        getAgent: mockGetAgent,
       });
 
       expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -135,6 +141,7 @@ describe('Front Page - Get Initial Data', () => {
       service: 'serbian',
       variant: 'lat',
       pageType,
+      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -156,6 +163,7 @@ describe('Front Page - Get Initial Data', () => {
       service: 'serbian',
       variant: 'lat',
       pageType,
+      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -186,6 +194,7 @@ describe('Front Page - Get Initial Data', () => {
       service: 'serbian',
       variant: 'lat',
       pageType,
+      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -210,6 +219,7 @@ describe('Front Page - Get Initial Data', () => {
         service: 'serbian',
         variant: 'lat',
         pageType,
+        getAgent: mockGetAgent,
       });
 
       expect(pageData.metadata.language).toEqual('sr-Latn');
@@ -245,6 +255,7 @@ describe('Front Page - Get Initial Data', () => {
             value: 'Features',
           },
         },
+        getAgent: mockGetAgent,
       });
 
       expect(pageData.content.groups.length).toBeTruthy();
@@ -269,6 +280,7 @@ describe('Front Page - Get Initial Data', () => {
             enabled: false,
           },
         },
+        getAgent: mockGetAgent,
       });
 
       expect(pageData.content.groups.length).toBeTruthy();
@@ -294,6 +306,7 @@ describe('Front Page - Get Initial Data', () => {
             enabled: true,
           },
         },
+        getAgent: mockGetAgent,
       });
 
       expect(pageData.content.groups.length).toBeTruthy();

@@ -1,4 +1,4 @@
-import { Agent } from 'http';
+import { Agent } from 'undici';
 import fetchDataFromBFF from '.';
 import {
   ARTICLE_PAGE,
@@ -18,11 +18,13 @@ jest.mock('../fetchPageData', () =>
   }),
 );
 
-const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
+const mockAgent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
 
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
-);
+const mockGetAgent = () => Promise.resolve(mockAgent);
+
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 describe('Fetch Data from BFF', () => {
   beforeEach(() => {
@@ -55,6 +57,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: ARTICLE_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -88,6 +91,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: CPS_ASSET,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -122,6 +126,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: TOPIC_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -155,6 +160,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: MOST_READ_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -188,6 +194,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: HOME_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
