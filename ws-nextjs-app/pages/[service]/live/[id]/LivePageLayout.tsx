@@ -1,13 +1,12 @@
 /** @jsx jsx */
 
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import Link from 'next/link';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -41,54 +40,20 @@ type ComponentProps = {
 };
 
 const FakeKeyPointLinks = () => {
-  // We need to use the 'no scroll' link which ends in #post for accessibility
-  // I have added versions without the hash-param to demonstrate the scroll-into-view hook. JS needs to be enabled.
-  // See the Dropbox Paper for PS Web implementation
-
   return (
     <>
-      <h3>React/ NextJS Link (Client Side Rendering)</h3>
-      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3">
-        Link for post 39 (Page 1) - Scroll
-      </Link>
-      <br />
-      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
-        Link for post 39 (Page 1) - No scroll
-      </Link>
-      <br />
-      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a">
-        Link for post 32 (Page 2) - Scroll
-      </Link>
-      <br />
-      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
-        Link for post 32 (Page 2) - No scroll
-      </Link>
-      <br />
-      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
-        Link for post 12 (Page 3)
-      </Link>
-      <h3>Standard Link (Server Side Rendering)</h3>
-      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3">
-        Link for post 39 (Page 1) - Scroll
-      </a>
-      <br />
+      <h3>Links to Posts (Server Side Rendering)</h3>
       <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
-        Link for post 39 (Page 1) - No scroll
-      </a>
-      <br />
-      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a">
-        Link for post 32 (Page 2) - Scroll
+        Link for post 39 (Page 1)
       </a>
       <br />
       <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
-        Link for post 32 (Page 2) - No scroll
+        Link for post 32 (Page 2)
       </a>
       <br />
       <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
         Link for post 12 (Page 3)
       </a>
-      <h3>Links with onClick behaviour override</h3>
-      <p>TBC</p>
     </>
   );
 };
@@ -104,7 +69,6 @@ const LivePage = ({ pageData, post }: ComponentProps) => {
     liveTextStream,
     atiAnalytics,
   } = pageData;
-  const streamRef = useRef(null);
 
   const { index: activePage, total: pageCount } =
     liveTextStream?.content?.data?.page || {};
@@ -166,16 +130,10 @@ const LivePage = ({ pageData, post }: ComponentProps) => {
           </div>
           <div css={styles.secondSection}>
             <FakeKeyPointLinks />
-            <StreamProvider
-              streamRef={streamRef}
-              post={post}
-              activePage={activePage}
-            >
+            <StreamProvider post={post}>
               <Stream
                 streamContent={liveTextStream.content}
                 contributors={liveTextStream.contributors}
-                post={post}
-                streamRef={streamRef}
               />
             </StreamProvider>
           </div>

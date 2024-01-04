@@ -7,28 +7,19 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
-import useScrollToLinkable from './hooks/use-scroll-to-linkable';
 
 const Stream = ({
   streamContent,
   contributors,
-  post,
-  streamRef,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
-  post: string | null;
-  streamRef: unknown; // HTML element/ null?
 }) => {
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = useContext(ServiceContext);
-
-  // hook
-  const isReducedMotion = false;
-  useScrollToLinkable({ post, isReducedMotion });
 
   if (!streamContent) return null;
 
@@ -40,8 +31,7 @@ const Stream = ({
   if (hasNoPost) return null;
 
   return (
-    // streamRef
-    <div ref={streamRef}>
+    <div>
       <Heading
         css={[
           styles.heading,

@@ -22,8 +22,6 @@ import {
   ComponentToRenderProps,
 } from './types';
 import BackToLatestPost from '../Stream/BackToLatest/back-to-latest-post';
-import getShareURL from './helpers/getShareUrl';
-import CopyToClipboard from './helpers/copyToClipboard';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -200,22 +198,6 @@ const Post = ({ post }: { post: PostType }) => {
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-      <button
-        type="button"
-        onClick={() => {
-          CopyToClipboard(getShareURL({ urn: postURN, scroll: true }));
-        }}
-      >
-        Copy Share Link to Clipboard (Scroll)
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          CopyToClipboard(getShareURL({ urn: postURN, scroll: false }));
-        }}
-      >
-        Copy Share Link to Clipboard (No Scroll)
-      </button>
     </article>
   );
 };
