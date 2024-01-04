@@ -7,8 +7,7 @@ const logger = nodeLogger(__filename);
 const fetchMarkup = async (url, assetId) => {
   try {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
-      Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
-    */
+     */
     const res = await fetch(url, {
       headers: {
         'User-Agent': 'Simorgh/ws-web-rendering',

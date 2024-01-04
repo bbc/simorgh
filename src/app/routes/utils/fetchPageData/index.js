@@ -20,7 +20,7 @@ import getUrl from './utils/getUrl';
 const logger = nodeLogger(__filename);
 
 /**
- * An isomorphic fetch wrapper for pages, with error and log handling.
+ * An fetch wrapper for pages, with error and log handling.
  * @param {string} path The URL of a resource to fetch.
  * @param {number} timeout Optional parameter to provide a custom timeout
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
