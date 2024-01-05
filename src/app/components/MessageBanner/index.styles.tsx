@@ -10,12 +10,12 @@ const styles = {
     css({
       height: 'auto',
       background:
-        'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
+        'radial-gradient(circle at 20% 90%, #180109, #180109 60%, #180109 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
       [mq.GROUP_3_MIN_WIDTH]: {
         background:
-          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
+          'linear-gradient(-120deg, #180109 0%, #180109 54%, #180109 90%)',
       },
       [mq.HIGH_CONTRAST]: {
         border: '0.1875rem solid transparent',
