@@ -9,6 +9,10 @@ import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
 import idSanitiser from '../../lib/utilities/idSanitiser';
+import {
+  GROUP_2_MAX_WIDTH,
+  GROUP_3_MIN_WIDTH,
+} from '../ThemeProvider/mediaQueries';
 
 interface MessageBannerProps {
   heading: string;
@@ -40,7 +44,9 @@ const MessageBanner = ({
       <div
         css={[
           styles.card,
-          isRtl ? css({ paddingRight: '1rem' }) : css({ paddingLeft: '1rem' }),
+          isRtl
+            ? css({ [GROUP_3_MIN_WIDTH]: { paddingRight: '1rem' } })
+            : css({ [GROUP_3_MIN_WIDTH]: { paddingLeft: '1rem' } }),
         ]}
       >
         <div css={styles.textWrap}>
