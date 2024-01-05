@@ -19,7 +19,6 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import { vjHTML } from '#app/components/Embeds/EmbedHtml/fixtures';
 
 export interface HomePageProps {
   pageData: {
