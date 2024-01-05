@@ -199,7 +199,7 @@ describe('Topic Page', () => {
         getOptionParams({ service: 'mundo', lang: 'es' }),
       );
       expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
-        3,
+        4,
       );
       expect(document.querySelectorAll("[id='message-banner']")).toHaveLength(
         0,
