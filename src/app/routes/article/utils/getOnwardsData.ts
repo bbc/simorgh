@@ -1,4 +1,4 @@
-import { Agent } from 'undici';
+import { Agent } from 'https';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 
