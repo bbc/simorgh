@@ -9,10 +9,7 @@ import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
 import idSanitiser from '../../lib/utilities/idSanitiser';
-import {
-  GROUP_2_MAX_WIDTH,
-  GROUP_3_MIN_WIDTH,
-} from '../ThemeProvider/mediaQueries';
+import { GROUP_3_MIN_WIDTH } from '../ThemeProvider/mediaQueries';
 
 interface MessageBannerProps {
   heading: string;
