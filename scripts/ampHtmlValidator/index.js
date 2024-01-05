@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+const fetch = require('isomorphic-fetch');
 const amphtmlValidator = require('amphtml-validator');
 const { getPageUrls } = require('../../cypress/support/helpers/getPageUrls');
 

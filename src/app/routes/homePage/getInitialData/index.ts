@@ -1,7 +1,7 @@
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import { PageTypes, Services, Variants } from '../../../models/types/global';
-import { FetchError, GetAgent } from '../../../models/types/fetch';
+import { FetchError } from '../../../models/types/fetch';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import { HOME_PAGE } from '../../utils/pageTypes';
 
@@ -12,7 +12,6 @@ type Props = {
   path: string;
   pageType: PageTypes;
   variant?: Variants;
-  getAgent: GetAgent;
 };
 
 export default async ({
@@ -20,7 +19,6 @@ export default async ({
   path: pathname,
   pageType,
   variant,
-  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -28,7 +26,6 @@ export default async ({
       pageType: HOME_PAGE,
       service,
       variant,
-      getAgent,
     });
 
     const {

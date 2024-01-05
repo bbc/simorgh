@@ -7,20 +7,13 @@ import nodeLogger from '../../../lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-export default async ({
-  service,
-  variant,
-  pageType,
-  path: pathname,
-  getAgent,
-}) => {
+export default async ({ service, variant, pageType, path: pathname }) => {
   try {
     const { status, json } = await fetchDataFromBFF({
       pathname,
       service,
       variant,
       pageType: MOST_READ_PAGE,
-      getAgent,
     });
 
     if (!json?.data) {

@@ -23,7 +23,7 @@ const getAgent = async () => {
     },
   });
 
-  return setGlobalDispatcher(agentMemo) as unknown as Agent;
+  return setGlobalDispatcher(agentMemo);
 };
 
 export default getAgent;
