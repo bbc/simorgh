@@ -11,8 +11,6 @@ const styles = {
       height: 'auto',
       background:
         'radial-gradient(circle at 20% 90%, #180109, #180109 60%, #180109 90%)',
-      paddingLeft: '1rem',
-      paddingRight: '1rem',
       [mq.GROUP_3_MIN_WIDTH]: {
         background:
           'linear-gradient(-120deg, #180109 0%, #180109 54%, #180109 90%)',

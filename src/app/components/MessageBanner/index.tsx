@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { jsx, css } from '@emotion/react';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -37,7 +37,12 @@ const MessageBanner = ({
       aria-labelledby={id}
       data-testid={id}
     >
-      <div css={styles.card}>
+      <div
+        css={[
+          styles.card,
+          isRtl ? css({ paddingRight: '1rem' }) : css({ paddingLeft: '1rem' }),
+        ]}
+      >
         <div css={styles.textWrap}>
           <Heading level={2} size="paragon" css={styles.heading} id={id}>
             {heading}
