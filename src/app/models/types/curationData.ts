@@ -10,6 +10,7 @@ export interface Summary {
   type: string;
   firstPublished?: string | number;
   lastPublished?: string | number;
+  vjFetchResponse?: string;
 }
 
 export const VISUAL_STYLE = {
