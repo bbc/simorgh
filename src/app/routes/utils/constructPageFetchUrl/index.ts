@@ -77,9 +77,9 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local'
+        return env !== 'local' && process.env.JEST_WORKER_ID === undefined
           ? HOME_PAGE_CONFIG?.[service]?.[env]
-          : 'c7pe2jj9l7mt'; // needs this instead of 'tipohome' for me to visit the page with simorgh and the BFF, can change later
+          : 'tipohome'; // 1 isnt local use config 2 is local not test use config 3 is local is test use tipohome
       };
       break;
     case MOST_READ_PAGE:
@@ -109,7 +109,7 @@ const constructPageFetchUrl = ({
   isAmp,
   isCaf,
 }: UrlConstructParams) => {
-  const env = getEnvironment(pathname);
+  const env = process?.env?.BFF_ENV || getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
   const id = getId({ pageType, service, env, variant, isCaf })(pathname);
