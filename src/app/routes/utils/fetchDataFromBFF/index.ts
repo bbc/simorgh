@@ -53,7 +53,7 @@ export default async ({
   });
 
   const agent = isLocal ? undefined : await getAgent();
-  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
+  const timeout = isLocal && BFF_IS_LOCAL ? 600000 : null;
   const optHeaders: OptHeaders =
     isLocal && !BFF_IS_LOCAL
       ? undefined
