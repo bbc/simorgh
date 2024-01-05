@@ -12,6 +12,7 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
   FLOURISH_VIS: 'flourish-vis',
+  VJ_INCLUDE: 'vj-include',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -23,6 +24,7 @@ const {
   MOST_READ,
   NOT_SUPPORTED,
   FLOURISH_VIS,
+  VJ_INCLUDE,
 } = COMPONENT_NAMES;
 
 export default (
@@ -32,6 +34,9 @@ export default (
 ) => {
   if (link?.includes('flo.uri.sh')) {
     return FLOURISH_VIS;
+  }
+  if (link?.includes('files.bbci.co.uk/include/')) {
+    return VJ_INCLUDE;
   }
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,

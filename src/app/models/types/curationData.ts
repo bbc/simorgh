@@ -44,6 +44,7 @@ export interface CurationProps {
   topStoriesTitle?: string;
   curationLength?: number;
   mostRead?: MostReadData;
+  vjFetchResponse?: string;
 }
 
 export interface CurationData {
@@ -58,4 +59,5 @@ export interface CurationData {
   pageCount?: number;
   curationType?: string;
   mostRead?: MostReadData;
+  vjFetchResponse?: string;
 }

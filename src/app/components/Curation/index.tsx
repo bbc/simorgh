@@ -15,6 +15,7 @@ import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import FlourishEmbed from '../Embeds/FlourishEmbed';
+import EmbedHtml from '../Embeds/EmbedHtml';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -23,6 +24,7 @@ const {
   NOT_SUPPORTED,
   MOST_READ,
   FLOURISH_VIS,
+  VJ_INCLUDE,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -37,12 +39,7 @@ const getGridComponent = (componentName: string | null) => {
       return CurationGrid;
   }
 };
-const isFlourishVis = (link: string | undefined) => {
-  if (link?.includes('flo.uri.sh')) {
-    return true;
-  }
-  return false;
-};
+
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -66,7 +63,7 @@ const Curation = ({
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
-
+  const vjHTML = promos[0].vjFetchResponse;
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
@@ -91,6 +88,8 @@ const Curation = ({
           />
         </section>
       );
+    case VJ_INCLUDE:
+      return vjHTML ? <EmbedHtml embeddableContent={vjHTML} /> : null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
         <MessageBanner

@@ -79,7 +79,7 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       getIdFunction = () => {
         return env !== 'local'
           ? HOME_PAGE_CONFIG?.[service]?.[env]
-          : 'tipohome';
+          : 'c7pe2jj9l7mt'; // needs this instead of 'tipohome' for me to visit the page with simorgh and the BFF, can change later
       };
       break;
     case MOST_READ_PAGE:
