@@ -109,7 +109,7 @@ const constructPageFetchUrl = ({
   isAmp,
   isCaf,
 }: UrlConstructParams) => {
-  const env = process?.env?.BFF_ENV || getEnvironment(pathname);
+  const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
   const id = getId({ pageType, service, env, variant, isCaf })(pathname);
