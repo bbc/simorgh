@@ -26,18 +26,13 @@
         "position": 0,
         "title": "Heading, description, image and link",
         "visualProminence": "NORMAL",
-        "additionalText": {
-          "plainText": "Some additional text"
-        },
+        "additionalText": { "plainText": "Some additional text" },
         "visualStyle": "BANNER",
         "images": [
           {
             "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/c916/test/4e3ed710-9737-11ed-8565-736fadc3edcb.png",
             "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/c916/test/4e3ed710-9737-11ed-8565-736fadc3edcb.png",
-            "originalSize": {
-              "width": 976,
-              "height": 549
-            },
+            "originalSize": { "width": 976, "height": 549 },
             "altText": "BBC News",
             "copyright": "BBC",
             "type": "background"
@@ -93,10 +88,7 @@
           {
             "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1b2f/test/aef05730-9739-11ed-8565-736fadc3edcb.jpg",
             "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1b2f/test/aef05730-9739-11ed-8565-736fadc3edcb.jpg",
-            "originalSize": {
-              "width": 1024,
-              "height": 576
-            },
+            "originalSize": { "width": 1024, "height": 576 },
             "altText": "Test",
             "copyright": "BBC",
             "type": "background"
@@ -147,7 +139,7 @@
             "link": "https://www.bbc.com/programmes/w13xttpn",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/724c/test/75b2e540-abb6-11ee-9627-8141b3381959.jpg",
             "description": "",
-            "imageAlt": "TB Joshua",
+            "imageAlt": "Person",
             "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fprogrammes%2Fw13xttpn"
           }
         ],
@@ -156,7 +148,7 @@
         "curationId": "urn:bbc:tipo:list:09db5a73-06d6-4af4-af1c-8b9675950ae5",
         "curationType": "tipo-curation",
         "position": 4,
-        "title": "Disciples: The Cult of TB Joshua",
+        "title": "Testing: A Test Story Title",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       }
