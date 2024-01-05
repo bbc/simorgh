@@ -42,14 +42,13 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnIdx;
 };
 
-export default async ({ path: pathname, service, variant, getAgent }) => {
+export default async ({ path: pathname, service, variant }) => {
   try {
     const pageDataPromise = fetchDataFromBFF({
       pathname,
       service,
       variant,
       pageType: CPS_ASSET,
-      getAgent,
     });
 
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
