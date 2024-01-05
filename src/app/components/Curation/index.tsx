@@ -70,19 +70,13 @@ const Curation = ({
     case FLOURISH_VIS:
       return (
         <section aria-labelledby={id} role="region">
-          {isFirstCuration ? (
-            <VisuallyHiddenText id={id} as="h2">
-              {curationSubheading}
-            </VisuallyHiddenText>
-          ) : (
-            <Subheading id={id} link={link}>
-              {curationSubheading}
-            </Subheading>
-          )}
           <FlourishEmbed
             width={700}
             height={575}
-            iFrameSrc={promos[0].link}
+            iFrameSrc={promos[0].link?.replace(
+              'files.bbci.com',
+              'files.bbci.co.uk',
+            )}
             iFrameId={promos[0].id}
             iFrameTitle={curationSubheading}
           />
