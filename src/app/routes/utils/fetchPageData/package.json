@@ -1,4 +1,11 @@
 {
   "browser": "client.js",
-  "main": "index.js"
+  "main": "index.js",
+  "type": "module",
+  "eslintConfig": {
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
+    }
+  }
 }
