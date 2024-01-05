@@ -2,7 +2,6 @@
   "browser": "client.js",
   "main": "index.ts",
   "types": "index.d.ts",
-  "type": "module",
   "eslintConfig": {
     "parserOptions": {
       "parser": "@babel/eslint-parser",
