@@ -30,7 +30,9 @@ describe('getComponentName', () => {
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
-      expect(getComponentName(visualStyle, visualProminence)).toBe(expected);
+      expect(getComponentName({ visualStyle, visualProminence })).toBe(
+        expected,
+      );
     },
   );
 });
