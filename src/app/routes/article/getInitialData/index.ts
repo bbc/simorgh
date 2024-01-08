@@ -3,10 +3,9 @@ import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError } from '../../../models/types/fetch';
+import { FetchError, GetAgent } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
 
@@ -20,6 +19,7 @@ type Props = {
   toggles?: Toggles;
   isCaf?: boolean;
   isAmp?: boolean;
+  getAgent: GetAgent;
 };
 
 export default async ({
@@ -30,6 +30,7 @@ export default async ({
   toggles,
   isCaf,
   isAmp,
+  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -39,6 +40,7 @@ export default async ({
       variant,
       isCaf,
       isAmp,
+      getAgent,
     });
 
     const agent = certsRequired(pathname) ? await getAgent() : null;
