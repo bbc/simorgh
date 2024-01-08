@@ -58,7 +58,7 @@ const Player = ({ id, pageType, blocks, counterName }: Props) => {
               require({ paths: bbcRequireMap, waitSeconds: 30 });`}
         </script>
       </Helmet>
-      <div ref={playerElementRef} />
+      <div ref={playerElementRef} data-e2e="media-player" />
     </>
   );
 };
