@@ -1,8 +1,7 @@
 import {
-  VisualStyle,
-  VisualProminence,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  CurationData,
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
@@ -27,15 +26,16 @@ const {
   VJ_INCLUDE,
 } = COMPONENT_NAMES;
 
-export default (
-  visualStyle: VisualStyle,
-  visualProminence: VisualProminence,
-  link?: string,
-) => {
+export default ({
+  visualStyle,
+  visualProminence,
+  link,
+  vjFetchResponse,
+}: Partial<CurationData>) => {
   if (link?.includes('flo.uri.sh')) {
     return FLOURISH_VIS;
   }
-  if (link?.includes('files.bbci.co.uk/include/')) {
+  if (vjFetchResponse) {
     return VJ_INCLUDE;
   }
   const componentsByVisualStyleAndProminence = {

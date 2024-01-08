@@ -89,6 +89,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   position,
                   visualStyle,
                   mostRead,
+                  vjFetchResponse,
                 },
                 index,
               ) => {
@@ -105,6 +106,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
+                      vjFetchResponse={vjFetchResponse}
                     />
                     {index === 0 && <MPU />}
                   </React.Fragment>

@@ -51,19 +51,21 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
+  vjFetchResponse,
 }: CurationProps) => {
-  const componentName = getComponentName(
+  const componentName = getComponentName({
     visualStyle,
     visualProminence,
-    link || promos[0]?.link,
-  );
+    link: link || promos[0].link,
+    vjFetchResponse,
+  });
 
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
-  const vjHTML = promos[0].vjFetchResponse;
+  const vjHTML = vjFetchResponse;
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
