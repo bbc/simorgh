@@ -1,12 +1,21 @@
 /* eslint-disable import/order */
-import React from 'react';
+import React, { useState } from 'react';
 import MediaPlayer from '.';
 import { act } from '@testing-library/react-hooks';
 import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
 import sampleBlocks from './fixture';
 
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useState: jest.fn(),
+}));
+
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+  });
+
   it('Loads requireJS and Bump4', async () => {
     await act(async () => {
       render(

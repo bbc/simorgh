@@ -1,14 +1,35 @@
 /* eslint-disable import/order */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { BumpType, Props } from './types.d';
+import { BumpType, Props, VideoPlayerProps } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 
 const logger = nodeLogger(__filename);
 
-const useLoadBump = ({ id, pageType, blocks, counterName }: Props) => {
+const BumpLoader = () => (
+  <Helmet>
+    <script
+      type="text/javascript"
+      src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+    />
+    <script type="text/javascript">
+      {`bbcRequireMap = {
+            "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
+        }
+        require({ paths: bbcRequireMap, waitSeconds: 30 });`}
+    </script>
+  </Helmet>
+);
+
+const VideoPlayer = ({
+  id,
+  pageType,
+  blocks,
+  counterName,
+  isVisible,
+}: VideoPlayerProps) => {
   const playerElementRef = useRef();
   const playerConfig = buildConfig({
     id,
@@ -19,46 +40,50 @@ const useLoadBump = ({ id, pageType, blocks, counterName }: Props) => {
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef && playerElementRef.current && playerConfig) {
-          const mediaPlayer = Bump.player(
-            playerElementRef.current,
-            playerConfig,
-          );
-          mediaPlayer.load();
-        }
-      });
+      if (isVisible) {
+        window.requirejs(['bump-4'], (Bump: BumpType) => {
+          if (playerElementRef && playerElementRef.current && playerConfig) {
+            const mediaPlayer = Bump.player(
+              playerElementRef.current,
+              playerConfig,
+            );
+            mediaPlayer.load();
+          }
+        });
+      }
     } catch (error) {
-      logger.error('Failed to bind SMP');
+      logger.error('Failed to bind SMP', error);
     }
-  }, [playerConfig]);
+  }, [playerConfig, isVisible]);
 
-  return playerElementRef;
+  return <div ref={playerElementRef} data-e2e="media-player" />;
+};
+
+const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
+  return (
+    <button type="button" onClick={() => setter(false)}>
+      CLICK TO SEE VIDEO
+    </button>
+  );
 };
 
 const Player = ({ id, pageType, blocks, counterName }: Props) => {
-  const playerElementRef = useLoadBump({
-    id,
-    pageType,
-    blocks,
-    counterName,
-  });
+  const [isPlaceholder, setIsPlaceholder] = useState(true);
 
   return (
     <>
-      <Helmet>
-        <script
-          type="text/javascript"
-          src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+      <BumpLoader />
+      {isPlaceholder ? (
+        <Placeholder setter={setIsPlaceholder} />
+      ) : (
+        <VideoPlayer
+          id={id}
+          pageType={pageType}
+          blocks={blocks}
+          counterName={counterName}
+          isVisible={!isPlaceholder}
         />
-        <script type="text/javascript">
-          {`bbcRequireMap = {
-                  "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
-              }
-              require({ paths: bbcRequireMap, waitSeconds: 30 });`}
-        </script>
-      </Helmet>
-      <div ref={playerElementRef} data-e2e="media-player" />
+      )}
     </>
   );
 };
