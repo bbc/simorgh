@@ -128,6 +128,22 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('p').length).toEqual(1);
   });
 
+  it('should resize the badge image from 480 to 128', () => {
+    const { queryByTestId } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+
+    const topicBadge = queryByTestId('topic-badge');
+
+    expect(topicBadge).toBeInTheDocument();
+    const topicBadgeSrc = topicBadge.getAttribute('src');
+    expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
+    expect(topicBadgeSrc).toBe(
+      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+    );
+  });
+
   it('should render description without badge', () => {
     const { container, queryByTestId } = render(
       <TopicPage pageData={pidginMultipleItems} service="pidgin" />,

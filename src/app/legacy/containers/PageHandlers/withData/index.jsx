@@ -11,16 +11,15 @@ const WithData = Component => {
     const { service, location: { pathname } = {} } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const { pageType } = useContext(RequestContext);
-    const { hasData200StatusAndCorrectService, status: statusCode } =
-      shouldRender(
-        { pageData, status },
-        service,
-        pathname,
-        pageType,
-        passportHomes,
-      );
+    const { hasRequestSucceeded, status: statusCode } = shouldRender(
+      { pageData, status },
+      service,
+      pathname,
+      pageType,
+      passportHomes,
+    );
 
-    if (hasData200StatusAndCorrectService) {
+    if (hasRequestSucceeded) {
       return <Component pageData={pageData} {...props} />;
     }
 
