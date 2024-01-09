@@ -49,8 +49,6 @@ export type Props = {
   counterName?: string;
 };
 
-export type VideoPlayerProps = Props & { isVisible: boolean };
-
 declare global {
   interface Window {
     requirejs: (

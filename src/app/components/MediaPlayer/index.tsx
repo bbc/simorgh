@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { BumpType, Props, VideoPlayerProps } from './types.d';
+import { BumpType, Props } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 
@@ -23,13 +23,7 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const VideoPlayer = ({
-  id,
-  pageType,
-  blocks,
-  counterName,
-  isVisible,
-}: VideoPlayerProps) => {
+const VideoPlayer = ({ id, pageType, blocks, counterName }: Props) => {
   const playerElementRef = useRef();
   const playerConfig = buildConfig({
     id,
@@ -40,21 +34,19 @@ const VideoPlayer = ({
 
   useEffect(() => {
     try {
-      if (isVisible) {
-        window.requirejs(['bump-4'], (Bump: BumpType) => {
-          if (playerElementRef && playerElementRef.current && playerConfig) {
-            const mediaPlayer = Bump.player(
-              playerElementRef.current,
-              playerConfig,
-            );
-            mediaPlayer.load();
-          }
-        });
-      }
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
+        if (playerElementRef && playerElementRef.current && playerConfig) {
+          const mediaPlayer = Bump.player(
+            playerElementRef.current,
+            playerConfig,
+          );
+          mediaPlayer.load();
+        }
+      });
     } catch (error) {
       logger.error('Failed to bind SMP', error);
     }
-  }, [playerConfig, isVisible]);
+  }, [playerConfig]);
 
   return <div ref={playerElementRef} data-e2e="media-player" />;
 };
@@ -65,6 +57,10 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
       CLICK TO SEE VIDEO
     </button>
   );
+};
+
+const Captions = ({ text }: { text: string }) => {
+  return <div>{text}</div>;
 };
 
 const Player = ({ id, pageType, blocks, counterName }: Props) => {
@@ -81,9 +77,9 @@ const Player = ({ id, pageType, blocks, counterName }: Props) => {
           pageType={pageType}
           blocks={blocks}
           counterName={counterName}
-          isVisible={!isPlaceholder}
         />
       )}
+      <Captions text="HELLO" />
     </>
   );
 };

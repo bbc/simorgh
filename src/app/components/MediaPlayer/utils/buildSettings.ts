@@ -3,7 +3,6 @@ import onClient from '#app/lib/utilities/onClient';
 import { Props } from '../types.d';
 
 const isTestURL = () => {
-  const isDevelopmentEnv = process.env.NODE_ENV === 'development';
   let isTestRender = false;
 
   if (onClient()) {
@@ -11,7 +10,7 @@ const isTestURL = () => {
     isTestRender = search.get('renderer_env') === 'test';
   }
 
-  return isDevelopmentEnv && isTestRender;
+  return isTestRender;
 };
 
 const buildConfig = ({ id, blocks, pageType, counterName }: Props) => {
