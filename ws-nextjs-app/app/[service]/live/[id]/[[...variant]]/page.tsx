@@ -37,7 +37,7 @@ interface PageDataParams extends ParsedUrlQuery {
 
 const logger = nodeLogger(__filename);
 
-const getPageData = async ({
+const fetchData = async ({
   id,
   page,
   service,
@@ -95,7 +95,7 @@ const getPageData = async ({
   return { data, toggles };
 };
 
-const nameThisBetter = async ({
+const getPageData = async ({
   id,
   service,
   page = '1',
@@ -136,7 +136,7 @@ const nameThisBetter = async ({
     pageType: LIVE_PAGE,
   });
 
-  const { data, toggles } = await getPageData({
+  const { data, toggles } = await fetchData({
     id,
     page,
     service,
@@ -187,7 +187,7 @@ const nameThisBetter = async ({
 export default async (props: any) => {
   const { id, service, variant } = props.params;
 
-  const data = await nameThisBetter({
+  const data = await getPageData({
     id,
     service,
     rendererEnv: 'test',
