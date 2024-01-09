@@ -77,9 +77,12 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local' && process.env.JEST_WORKER_ID === undefined
-          ? HOME_PAGE_CONFIG?.[service]?.[env]
-          : 'tipohome'; // 1 isnt local use config 2 is local not test use config 3 is local is test use tipohome
+        if (env !== 'local') {
+          return HOME_PAGE_CONFIG?.[service]?.[env];
+        }
+        return env === 'local' && process.env.JEST_WORKER_ID !== undefined
+          ? 'tipohome'
+          : HOME_PAGE_CONFIG?.[service]?.[env === 'local' ? 'test' : env];
       };
       break;
     case MOST_READ_PAGE:
