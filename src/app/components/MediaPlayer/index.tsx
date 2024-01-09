@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import { BumpType, Props } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import Caption from '#app/legacy/containers/Caption';
+import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 
 const logger = nodeLogger(__filename);
 
@@ -54,17 +56,19 @@ const VideoPlayer = ({ id, pageType, blocks, counterName }: Props) => {
 const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   return (
     <button type="button" onClick={() => setter(false)}>
-      CLICK TO SEE VIDEO
+      TODO: CLICK TO SEE VIDEO
     </button>
   );
 };
 
-const Captions = ({ text }: { text: string }) => {
-  return <div>{text}</div>;
-};
-
 const Player = ({ id, pageType, blocks, counterName }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
+
+  const { mediaInfo, captionBlock } = getPlayerProps({
+    assetId: id,
+    pageType,
+    blocks,
+  });
 
   return (
     <>
@@ -79,7 +83,7 @@ const Player = ({ id, pageType, blocks, counterName }: Props) => {
           counterName={counterName}
         />
       )}
-      <Captions text="HELLO" />
+      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
     </>
   );
 };

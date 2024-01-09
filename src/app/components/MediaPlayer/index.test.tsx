@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import MediaPlayer from '.';
 import { act } from '@testing-library/react-hooks';
 import { Helmet } from 'react-helmet';
-import { render } from '@testing-library/react';
 import sampleBlocks from './fixture';
+import { render } from '../react-testing-library-with-providers';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -68,7 +68,19 @@ describe('MediaPlayer', () => {
       const button = (container as unknown as HTMLElement).querySelector(
         'button',
       );
-      expect(button?.textContent).toBe('CLICK TO SEE VIDEO');
+      expect(button?.textContent).toBe('TODO: CLICK TO SEE VIDEO');
+    });
+    it('Displays a caption when provided ', async () => {
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer blocks={sampleBlocks} id="testID" pageType="article" />,
+        ));
+      });
+
+      const caption = (container as unknown as HTMLElement).querySelector('p');
+      expect(caption?.textContent).toBe('This is a caption!');
     });
   });
 });

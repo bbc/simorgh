@@ -101,6 +101,39 @@ const sampleBlocks = [
       ],
     },
   },
+  {
+    id: '31318aec',
+    type: 'caption',
+    model: {
+      blocks: [
+        {
+          id: '8ac45ed2',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '935f130e',
+                type: 'paragraph',
+                model: {
+                  text: 'This is a caption!',
+                  blocks: [
+                    {
+                      id: 'deaf6139',
+                      type: 'fragment',
+                      model: {
+                        text: 'This is a caption!',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
 ];
 
 export default sampleBlocks;
