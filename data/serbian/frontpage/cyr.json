@@ -2,2008 +2,1357 @@
   "data": {
     "article": {
       "metadata": {
-        "id": "urn:bbc:ares::index:serbian/cyr/front_page/mobile/domestic",
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:33cf4114-07fe-c79b-e050-380a4e803fdd",
+          "contentType": "index-section",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "russian.page",
+          "pageTitle": "Главная",
+          "producerId": null,
+          "timePublished": "2016-05-31T09:10:22.000Z",
+          "timeUpdated": "2024-01-09T10:32:37.000Z",
+          "producerName": "RUSSIAN"
+        },
+        "id": "urn:bbc:ares::index:russian/front_page/mobile/domestic",
         "locators": {
-          "assetUri": "/serbian/cyr/front_page",
-          "curieCpsUrn": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a1/desktop/domestic",
-          "assetId": "23159045",
-          "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/front_page",
-          "curie": "http://www.bbc.co.uk/asset/5be5c72e-2538-caaf-e050-17ac2b8cd8a1/desktop/domestic"
+          "assetUri": "/russian/front_page",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:33cf4114-07fe-c79b-e050-380a4e803fdd/desktop/domestic",
+          "assetId": "36396530",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/front_page",
+          "curie": "http://www.bbc.co.uk/asset/33cf4114-07fe-c79b-e050-380a4e803fdd/desktop/domestic"
         },
         "type": "IDX",
-        "createdBy": "serbian-v6",
-        "language": "sr-Cyrl",
-        "lastUpdated": 1662049970942,
-        "firstPublished": 1508421988000,
-        "lastPublished": 1662049968000,
-        "timestamp": 1662049966000,
+        "createdBy": "russian-v6",
+        "language": "ru",
+        "lastUpdated": 1704796363000,
+        "firstPublished": 1464685822000,
+        "lastPublished": 1704796357000,
+        "timestamp": 1704796355000,
         "options": { "allowAdvertising": true },
         "analyticsLabels": {
           "cps_asset_type": "idx",
-          "counterName": "serbiancyr.page",
-          "cps_asset_id": "23159045",
-          "contentId": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a1"
+          "counterName": "russian.page",
+          "cps_asset_id": "36396530",
+          "contentId": "urn:bbc:cps:curie:asset:33cf4114-07fe-c79b-e050-380a4e803fdd"
         },
         "tags": {},
-        "version": "v1.4.7",
+        "version": "v1.4.38",
         "blockTypes": [
-          "responsive-top-stories",
+          "top-story",
           "responsive-cluster",
-          "responsive-inspire",
-          "responsive-in-depth",
+          "feature-main",
+          "also-in-news",
           "special-reports",
+          "section-digest",
           "featured-site-top-stories",
           "useful-links"
         ],
-        "title": "Почетна страна",
-        "summary": "ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама.",
-        "atiAnalytics": { "producerName": "SERBIAN", "producerId": "81" }
+        "title": "Главная",
+        "summary": "Русская служба Би-би-си – это непредвзятое освещение событий в России и мире на русском языке."
       },
       "content": {
         "groups": [
           {
-            "type": "responsive-top-stories",
-            "title": "Top Stories",
+            "type": "top-story",
+            "title": "Top story",
+            "maxRelatedLinks": 2,
             "items": [
               {
-                "name": "Promo test for cookie setting",
-                "summary": "Promo test for cookie setting",
+                "name": "Поиск агентов и диверсантов. Почему страны Балтии отгораживаются от России",
+                "summary": "За последний год в странах Балтии один за другим произошли несколько инцидентов, в которых общественность заподозрила российских диверсантов. Спецслужбы балтийских стран всерьез изучают предвоенный опыт Украины и деятельность там российских спецслужб. А как следствие — поездки в Россию и практически любые связи с ней могут вызвать подозрение и становятся все сложнее и проблематичнее.",
                 "indexImage": {
-                  "id": "63941551",
+                  "id": "132257112",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/3C9A/test/_63941551_p09lw3dk.jpg",
-                  "path": "/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg",
-                  "height": 1152,
-                  "width": 2048,
-                  "altText": "test",
-                  "copyrightHolder": "BBC",
+                  "href": "http://c.files.bbci.co.uk/52B7/production/_132257112_8e5fde42-d4a1-4880-bb22-30008922fe96.jpg",
+                  "path": "/cpsprodpb/52B7/production/_132257112_8e5fde42-d4a1-4880-bb22-30008922fe96.jpg",
+                  "height": 3614,
+                  "width": 6426,
+                  "altText": "пикет",
+                  "copyrightHolder": "LETA",
+                  "allowSyndication": false,
                   "type": "image"
                 },
-                "uri": "https://www.bbc.com/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
+                "uri": "https://www.bbc.com/russian/articles/c2ly38zw5x0o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c2ly38zw5x0o",
                 "contentType": "Text",
-                "assetTypeCode": "PRO",
-                "timestamp": 1662049948000,
+                "cpsType": "LIV",
+                "timestamp": 1704790062000,
+                "relatedItems": [
+                  {
+                    "headlines": {
+                      "headline": "В Риге демонтировали памятник Пушкину. При чем тут хоккей?"
+                    },
+                    "locators": {
+                      "assetUri": "/russian/features-65758434",
+                      "cpsUrn": "urn:bbc:content:assetUri:/russian/features-65758434"
+                    },
+                    "summary": "В Риге демонтирован памятник поэту Александру Пушкину. Это произошло сразу после того, как Латвия завоевала историческую бронзу на ЧМ по хоккею, а в столице состоялось масштабное празднование этого события. Пользователи соцсетей усмотрели связь, но Рижская дума утверждает, что ее нет.",
+                    "timestamp": 1685466099000,
+                    "language": "ru",
+                    "cpsType": "STY",
+                    "id": "urn:bbc:ares::asset:russian/features-65758434",
+                    "type": "cps"
+                  },
+                  {
+                    "name": "Граждан России не будут выдворять из Латвии за незнание латышского",
+                    "uri": "https://www.bbc.com/russian/articles/c6p6dmjp3d8o",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c6p6dmjp3d8o",
+                    "timestamp": 1694692890000,
+                    "type": "link"
+                  }
+                ],
                 "type": "link"
               },
               {
                 "headlines": {
-                  "headline": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1"
+                  "headline": "Война в Украине: вечерний обстрел Белгорода после новой ракетной атаки на Украину"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/23279016",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:281f815b-b6dc-e240-87ec-2fdcc6fe401f",
-                  "assetId": "23279016",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23279016",
-                  "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe401f"
+                  "assetUri": "/russian/live/news-67845109",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6be21033-2b3f-4a6d-ab7d-97fe830f8377",
+                  "assetId": "67845109",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/live/news-67845109",
+                  "curie": "http://www.bbc.co.uk/asset/6be21033-2b3f-4a6d-ab7d-97fe830f8377"
                 },
-                "summary": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1",
-                "timestamp": 1585040745000,
-                "language": "sr-Cyrl",
-                "cpsType": "MAP",
-                "media": {
-                  "id": "p01qjbpq",
-                  "subType": "clip",
-                  "format": "video",
-                  "title": "koala",
-                  "synopses": {
-                    "short": "koajaa",
-                    "long": "koala ijm aus",
-                    "medium": "australia"
-                  },
-                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
-                  "embedding": true,
-                  "advertising": false,
-                  "caption": "nnnnn",
-                  "versions": [
-                    {
-                      "versionId": "p01qjbvb",
-                      "types": ["Editorial"],
-                      "duration": 15,
-                      "durationISO8601": "PT15S",
-                      "warnings": {},
-                      "availableTerritories": { "uk": true, "nonUk": true },
-                      "availableFrom": 1582890367000
-                    }
-                  ],
-                  "smpKind": "programme",
-                  "type": "media"
-                },
+                "summary": "Последние новости, комментарии и видео о войне России против Украины.",
+                "timestamp": 1703881356000,
+                "language": "ru",
+                "cpsType": "LIV",
                 "indexImage": {
-                  "id": "63733071",
+                  "id": "132169280",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/4289/test/_63733071_coronavirus.jpg",
-                  "path": "/cpsdevpb/4289/test/_63733071_coronavirus.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "corona",
-                  "caption": "corna",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "prominence": "standard",
-                "section": {
-                  "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
-                  "type": "simple"
-                },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23279016",
-                "type": "cps"
-              },
-              {
-                "headlines": { "headline": "Serbia MAP test" },
-                "locators": {
-                  "assetUri": "/serbian/cyr/srbija-23278974",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e646",
-                  "assetId": "23278974",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-23278974",
-                  "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e646"
-                },
-                "summary": "test",
-                "timestamp": 1585040685000,
-                "language": "sr-Cyrl",
-                "cpsType": "MAP",
-                "media": {
-                  "id": "p01n6y6z",
-                  "subType": "episode",
-                  "format": "audio",
-                  "title": "Audio test for articles, UK only",
-                  "synopses": { "short": "Audio test for articles, UK only" },
-                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
-                  "embedding": false,
-                  "advertising": false,
-                  "caption": "Audio test for articles, UK only",
-                  "versions": [
-                    {
-                      "versionId": "p01n6yb1",
-                      "types": ["Original"],
-                      "duration": 343,
-                      "durationISO8601": "PT5M43S",
-                      "warnings": {
-                        "short": "Contains some strong language.",
-                        "long": "Contains some strong language."
-                      },
-                      "availableTerritories": { "uk": true, "nonUk": false },
-                      "availableFrom": 1563782700000
-                    }
-                  ],
-                  "smpKind": "radioProgramme",
-                  "type": "media"
-                },
-                "indexImage": {
-                  "id": "63733055",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/D6F9/test/_63733055_p01n6y7l.jpg",
-                  "path": "/cpsdevpb/D6F9/test/_63733055_p01n6y7l.jpg",
-                  "height": 576,
-                  "width": 1024,
-                  "altText": "alt tag church image",
-                  "copyrightHolder": "Google",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "prominence": "standard",
-                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Beba panda odmara nakon prvog javnog nastupa"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/23180965",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:151206d3-aff2-e949-976c-e9acb326ab44",
-                  "assetId": "23180965",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23180965",
-                  "curie": "http://www.bbc.co.uk/asset/151206d3-aff2-e949-976c-e9acb326ab44"
-                },
-                "summary": "Juang Meng danas ima deset kilograma i jednu obavezu manje",
-                "timestamp": 1516029046000,
-                "language": "sr-Cyrl",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                    "categoryName": "News"
-                  },
-                  "taggings": []
-                },
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63647061",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
-                  "path": "/cpsdevpb/3ECA/test/_63647061_3ab61d2e-e5f4-48d9-9e5c-0dceb5350fc6.jpg",
-                  "height": 1152,
-                  "width": 2048,
-                  "altText": "p",
-                  "caption": "Juang Meng danas ima jednu obavezu menje",
-                  "copyrightHolder": "Reuters",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "prominence": "standard",
-                "section": {
-                  "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
-                  "type": "simple"
-                },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23180965",
-                "type": "cps"
-              },
-              {
-                "headlines": { "headline": "Православни Божић у свету" },
-                "locators": {
-                  "assetUri": "/serbian/cyr/23181025",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:91d1ed9d-78a1-0d48-ac45-25218323f1f6",
-                  "assetId": "23181025",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23181025",
-                  "curie": "http://www.bbc.co.uk/asset/91d1ed9d-78a1-0d48-ac45-25218323f1f6"
-                },
-                "summary": "Стотине хиљада православних хришћана прославило верски празник",
-                "timestamp": 1516027760000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63647099",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/18302/test/_63647099_f93401e7-cca7-4660-8f41-df1e42e63060.jpg",
-                  "path": "/cpsdevpb/18302/test/_63647099_f93401e7-cca7-4660-8f41-df1e42e63060.jpg",
+                  "href": "http://c.files.bbci.co.uk/2068/production/_132169280_.jpg",
+                  "path": "/cpsprodpb/2068/production/_132169280_.jpg",
                   "height": 549,
                   "width": 976,
-                  "altText": "*",
-                  "caption": "Riga",
-                  "copyrightHolder": "EPA",
-                  "originCode": "cpsdevpb",
+                  "altText": "Белгород, 8 января 2024",
+                  "copyrightHolder": "Social networking service",
+                  "allowSyndication": false,
                   "type": "image"
                 },
+                "commentary": {
+                  "order": "descending",
+                  "assetUUID": "7B8BAB0CC8444584ACB67CEAE7BE540C",
+                  "channels": {
+                    "enhancedmobile": "bbc.cps.asset.67845110_EnhancedMobile",
+                    "desktop": "bbc.cps.asset.67845110_HighWeb",
+                    "highweb": "bbc.cps.asset.67845110_HighWeb",
+                    "mobile": "bbc.cps.asset.67845110_EnhancedMobile"
+                  }
+                },
+                "isLive": true,
                 "options": { "isBreakingNews": false, "isFactCheck": false },
                 "prominence": "standard",
-                "section": {
-                  "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
-                  "type": "simple"
-                },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23181025",
+                "relatedItems": [
+                  {
+                    "name": "Хроника вторжения России в Украину: месяц за месяцем, час за часом",
+                    "uri": "https://www.bbc.com/russian/articles/c51x9yq8yj9o",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c51x9yq8yj9o",
+                    "timestamp": 1689687019000,
+                    "type": "link"
+                  }
+                ],
+                "liveStatus": "LIVE",
+                "id": "urn:bbc:ares::asset:russian/live/news-67845109",
                 "type": "cps"
+              },
+              {
+                "name": "Как Израиль использует новые технологии в секторе Газа",
+                "summary": "Журналист Арабской службы Би-би-си Амира Мхадби предлагает рассмотреть несколько примеров новейшего высокотехнологичного оружия Израиля.",
+                "indexImage": {
+                  "id": "132257817",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/abae/live/1067ac60-ae5f-11ee-88b9-6be9994cfd99.jpg",
+                  "path": "/cpsprodpb/abae/live/1067ac60-ae5f-11ee-88b9-6be9994cfd99.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Солдат с компьютером",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cnlvw9v578yo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cnlvw9v578yo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704794288000,
+                "type": "link"
+              },
+              {
+                "name": "100 лет назад родился Сергей Параджанов — гений кино, прошедший через ад советской тюрьмы",
+                "summary": "Сто лет назад, 9 января 1924 года, в Тифлисе, в армянский семье родился мальчик Саркис (Сергей) Параджанов. Ему суждено было снять несколько фильмов, признанных шедеврами, попасть в советскую тюрьму, выжить там в тяжелейших условиях и стать одним из величайших кинорежиссеров ХХ века.",
+                "indexImage": {
+                  "id": "132256288",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/158C9/production/_132256288_whatsubject.jpg",
+                  "path": "/cpsprodpb/158C9/production/_132256288_whatsubject.jpg",
+                  "height": 562,
+                  "width": 1000,
+                  "altText": "Сергей Параджанов",
+                  "caption": "Приветствие через железные ворота соседнего двора. Один из самых известных снимков Сергея Параджанова. Октябрь 1984-го.",
+                  "copyrightHolder": "Yuri Mechitov",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c72ym04p53lo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c72ym04p53lo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704776622000,
+                "type": "link"
+              },
+              {
+                "name": "Новый год в Центральной России без тепла и электричества: лед, темнота и потоп",
+                "summary": "Сотни тысяч жителей Центральной России столкнулись с массовыми отключениями тепла и электричества из-за сильных холодов. Наиболее тяжелая ситуация — рядом с подмосковным городом Подольском. После нескольких дней молчания власти города и Московской области заверили, что на ликвидацию аварии и ее последствий брошены все силы. Но вернуть тепло в дома быстро не удастся.",
+                "indexImage": {
+                  "id": "132169282",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6E88/production/_132169282_c5ec5423-9a27-4f4a-9175-09238598286b.jpg",
+                  "path": "/cpsprodpb/6E88/production/_132169282_c5ec5423-9a27-4f4a-9175-09238598286b.jpg",
+                  "height": 540,
+                  "width": 960,
+                  "altText": "подольск",
+                  "copyrightHolder": "t.me/uk_podolsk_tu1",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c0dyjgm11d0o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0dyjgm11d0o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704732427000,
+                "relatedItems": [
+                  {
+                    "headlines": {
+                      "headline": "Режим ЧС в Подольске: без тепла и света остались тысячи людей"
+                    },
+                    "locators": {
+                      "assetUri": "/russian/media-67906846",
+                      "cpsUrn": "urn:bbc:content:assetUri:/russian/media-67906846"
+                    },
+                    "summary": "В регионе сильные морозы ниже минус 20 градусов.",
+                    "timestamp": 1704635193000,
+                    "language": "ru",
+                    "cpsType": "MAP",
+                    "mediaType": "Video",
+                    "id": "urn:bbc:ares::asset:russian/media-67906846",
+                    "type": "cps"
+                  }
+                ],
+                "type": "link"
+              },
+              {
+                "name": "Из тюрьмы в Эквадоре исчез видный мафиозо. В стране объявлено ЧП",
+                "indexImage": {
+                  "id": "132256014",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/5916/live/037c3ec0-ae8d-11ee-8f07-bbfdfa890097.jpg",
+                  "path": "/cpsprodpb/5916/live/037c3ec0-ae8d-11ee-8f07-bbfdfa890097.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Фито",
+                  "caption": "Адольфо Масияс Вильямар по кличке Фито возглавляет могущественную группировку \"Лос Чонерос\"",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c3gy3v8x4dvo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3gy3v8x4dvo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704763572000,
+                "type": "link"
+              },
+              {
+                "name": "Ким Чен Ын: чего мы не знаем о засекреченном верховном лидере Северной Кореи?",
+                "summary": "Ким Чен Ыну из Северной Кореи исполняется 40 лет. Но так ли это на самом деле? Точная дата его рождения остается загадкой. Вот пять вопросов о северокорейском лидере, ответов на которые мы не знаем.",
+                "indexImage": {
+                  "id": "132252814",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/fcb0/live/39e8a2a0-ae2e-11ee-b4f2-5db09c62f717.jpg",
+                  "path": "/cpsprodpb/fcb0/live/39e8a2a0-ae2e-11ee-b4f2-5db09c62f717.jpg",
+                  "height": 1521,
+                  "width": 2704,
+                  "altText": "Ким Чен Ын",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cpdlvj3g3v8o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cpdlvj3g3v8o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704727361000,
+                "type": "link"
+              },
+              {
+                "name": "Эммануэль Макрон меняет премьер-министра",
+                "indexImage": {
+                  "id": "132256224",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7549/live/6274ccd0-aea6-11ee-bc2f-cb5579b90709.jpg",
+                  "path": "/cpsprodpb/7549/live/6274ccd0-aea6-11ee-bc2f-cb5579b90709.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Элизабет Борн",
+                  "caption": "Элизабет Борн была второй в истории Франции женщиной на посту премьера",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cqv19vnl2g1o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cqv19vnl2g1o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704774291000,
+                "type": "link"
+              },
+              {
+                "name": "Лунная экспедиция под угрозой: у посадочного модуля Peregrine проблемы с двигателями",
+                "summary": "Компания Astrobotic, разработавшая запущенный на Луну посадочный модуль Peregrine, сообщила о проблемах с двигателем, которые ставят под угрозу миссию.",
+                "indexImage": {
+                  "id": "132255682",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/423b/live/ada28620-ae6a-11ee-8a94-c7b18ccaee30.png",
+                  "path": "/cpsprodpb/423b/live/ada28620-ae6a-11ee-8a94-c7b18ccaee30.png",
+                  "height": 666,
+                  "width": 1184,
+                  "altText": "Запуск ракеты",
+                  "copyrightHolder": "NASA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c1vy9yddlzdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c1vy9yddlzdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704751697000,
+                "type": "link"
+              },
+              {
+                "name": "Расследование Би-би-си: всемирно известный евангелический проповедник Ти Би Джошуа пытал и насиловал прихожан",
+                "summary": "Десятки бывших прихожан «Синагоги Церкви Всех Народов», в том числе пять британцев, утверждают, что проповедник из Нигерии, ныне покойный Ти Би Джошуа совершал жестокие преступления, включая изнасилования и принудительные аборты в секретном комплексе в Лагосе в течение почти 20 лет.",
+                "indexImage": {
+                  "id": "132243728",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/31c3/live/6b411d40-ae20-11ee-ae64-99e0b3319211.png",
+                  "path": "/cpsprodpb/31c3/live/6b411d40-ae20-11ee-ae64-99e0b3319211.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Ти Би Джошуа",
+                  "caption": "Ти Би Джошуа основал пользующуюся огромной популярностью «Синагогу Церковь Всех Народов»",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c992q79w450o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c992q79w450o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704721554000,
+                "type": "link"
+              },
+              {
+                "name": "Легенда немецкого футбола Франц Беккенбауэр скончался в возрасте 78 лет",
+                "summary": "Бывший капитан и тренер сборной Германии по футболу Франц Беккенбауэр скончался в возрасте 78 лет.",
+                "indexImage": {
+                  "id": "132255441",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3877/production/_132255441_cdac7c77-dc07-4fce-b9aa-14a617583871.jpg",
+                  "path": "/cpsprodpb/3877/production/_132255441_cdac7c77-dc07-4fce-b9aa-14a617583871.jpg",
+                  "height": 1728,
+                  "width": 3072,
+                  "altText": "Франц Бекенбауэр",
+                  "copyrightHolder": " Peer Grimm",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cw4kj2ed4z2o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cw4kj2ed4z2o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704739646000,
+                "type": "link"
+              },
+              {
+                "name": "Джоди Фостер подверглась критике за свои слова о поколении Z. Она назвала молодых коллег ленивыми и безграмотными",
+                "summary": "Американская актриса, обладательница премии «Оскар» Джоди Фостер подверглась критике за свои слова о представителях поколения Z.",
+                "indexImage": {
+                  "id": "132254416",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/a0fa/live/4d887190-ae48-11ee-91d4-194dad297919.jpg",
+                  "path": "/cpsprodpb/a0fa/live/4d887190-ae48-11ee-91d4-194dad297919.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Джоди Фостер",
+                  "copyrightHolder": "AFP",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cn0933z5q29o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cn0933z5q29o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704734272000,
+                "type": "link"
+              },
+              {
+                "name": "Миссия невыполнима? Госсекретарь США Энтони Блинкен ездит по Ближнему Востоку в попытке предотвратить большую войну",
+                "summary": "В понедельник в Израиль прибывает госсекретарь США Энтони Блинкен, находящийся с расширенным визитом на Ближнем Востоке. Вашингтон опасается, что война Израиля и ХАМАС может перекинуться на весь регион. Предотвращение эскалации и урегулирование в секторе Газа – главные вопросы, которые глава Госдепа обсуждает в ходе своей поездки.",
+                "indexImage": {
+                  "id": "132227815",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/CAA0/production/_132227815_whatsubject.jpg",
+                  "path": "/cpsprodpb/CAA0/production/_132227815_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Энтони Блинкен",
+                  "copyrightHolder": "AFP",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c8v2ly3876zo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c8v2ly3876zo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704718949000,
+                "type": "link"
               }
             ],
-            "strapline": { "name": "Top Stories" },
-            "semanticGroupName": "Top Stories"
+            "strapline": { "name": "Главное", "summary": "" },
+            "semanticGroupName": "Top story"
           },
           {
             "type": "responsive-cluster",
-            "title": "Cluster 1",
+            "title": "Editor Choice",
             "items": [
               {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 15"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169612",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:c6bb4a52-3ea8-9f4a-a849-974dd8795a46",
-                  "assetId": "23169612",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169612",
-                  "curie": "http://www.bbc.co.uk/asset/c6bb4a52-3ea8-9f4a-a849-974dd8795a46"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404913000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
+                "name": "«Мы пришли вас вызволять». Как украинцы пропадают в российских колониях",
+                "summary": "В колониях и следственных изоляторах России, а также на оккупированных ей территориях находятся тысячи украинских гражданских. Их задерживали при прохождении фильтрации или прямо на улицах с формулировкой «за противодействие СВО» и закрывали в СИЗО и колонии без обвинений, следственных действий, судов и срока освобождения. Поэтому найти их официальным путем невозможно, а для их вызволения, в отличие от военнопленных, не существует никаких механизмов.",
                 "indexImage": {
-                  "id": "63603672",
+                  "id": "132226957",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "href": "http://c.files.bbci.co.uk/4bcb/live/d9f11cb0-ac07-11ee-8f07-bbfdfa890097.jpg",
+                  "path": "/cpsprodpb/4bcb/live/d9f11cb0-ac07-11ee-8f07-bbfdfa890097.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "графика",
                   "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
+                  "allowSyndication": true,
                   "type": "image"
                 },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169612",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 16"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169613",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60b74371-1d58-1547-9137-28d0647fbde0",
-                  "assetId": "23169613",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169613",
-                  "curie": "http://www.bbc.co.uk/asset/60b74371-1d58-1547-9137-28d0647fbde0"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404932000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169613",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 17"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169614",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:76ddfd93-f5bb-9f40-8181-857965827959",
-                  "assetId": "23169614",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169614",
-                  "curie": "http://www.bbc.co.uk/asset/76ddfd93-f5bb-9f40-8181-857965827959"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404944000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169614",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 18"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169615",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:925b9e5c-3059-f240-87ff-e69f979774d6",
-                  "assetId": "23169615",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169615",
-                  "curie": "http://www.bbc.co.uk/asset/925b9e5c-3059-f240-87ff-e69f979774d6"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404955000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169615",
-                "type": "cps"
+                "uri": "https://www.bbc.com/russian/articles/cgekzjykvpko",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgekzjykvpko",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704692550000,
+                "type": "link"
               }
             ],
-            "strapline": { "name": "Danas" },
+            "strapline": {
+              "name": "Выбор редакции",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/features-50983593",
+                "desktop": "https://www.bbc.com/russian/features-50983593",
+                "mobile": "https://www.bbc.com/russian/features-50983593",
+                "enhancedmobile": "https://www.bbc.com/russian/features-50983593"
+              }
+            },
             "semanticGroupName": "Cluster 1"
           },
           {
-            "type": "responsive-inspire",
-            "title": "Section 2",
+            "type": "feature-main",
+            "title": "Не пропустите",
             "items": [
               {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 25"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169622",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:46e86861-26ec-1e49-afb1-00896f661441",
-                  "assetId": "23169622",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169622",
-                  "curie": "http://www.bbc.co.uk/asset/46e86861-26ec-1e49-afb1-00896f661441"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405043000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
+                "name": "Какие неприятные сюрпризы готовит 2024 год?",
+                "summary": "Угрозы миру, демократии, экономике и всему живому на планете. Вот что мы узнали, прочитав вал мрачных новогодних прогнозов от экспертов и СМИ.",
                 "indexImage": {
-                  "id": "63603672",
+                  "id": "132224028",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
+                  "href": "http://c.files.bbci.co.uk/1407A/production/_132224028_e6aadbfd-e0e8-495e-a047-ba8f01143674.jpg",
+                  "path": "/cpsprodpb/1407A/production/_132224028_e6aadbfd-e0e8-495e-a047-ba8f01143674.jpg",
+                  "height": 1406,
+                  "width": 2500,
+                  "altText": "Пляж в секторе Газа в последний день 2023 года",
+                  "caption": "Пляж в секторе Газа в последний день 2023 года",
+                  "copyrightHolder": "NurPhoto/Getty Images",
+                  "allowSyndication": true,
                   "type": "image"
                 },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169622",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 26"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169623",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bed59bb0-13e8-d441-9ac2-70d58ab92378",
-                  "assetId": "23169623",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169623",
-                  "curie": "http://www.bbc.co.uk/asset/bed59bb0-13e8-d441-9ac2-70d58ab92378"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405053000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169623",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 27"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169624",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9fdff7d7-a6c9-4840-b79f-d111bbb7a4e0",
-                  "assetId": "23169624",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169624",
-                  "curie": "http://www.bbc.co.uk/asset/9fdff7d7-a6c9-4840-b79f-d111bbb7a4e0"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405063000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169624",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 28"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169625",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:419ff24e-4687-3741-a1d4-7d8c6a023b57",
-                  "assetId": "23169625",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169625",
-                  "curie": "http://www.bbc.co.uk/asset/419ff24e-4687-3741-a1d4-7d8c6a023b57"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405074000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169625",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 29"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169626",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1849c8f5-dac1-294b-a0b5-823b119b1e6d",
-                  "assetId": "23169626",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169626",
-                  "curie": "http://www.bbc.co.uk/asset/1849c8f5-dac1-294b-a0b5-823b119b1e6d"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405084000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169626",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 30"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169627",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f21",
-                  "assetId": "23169627",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169627",
-                  "curie": "http://www.bbc.co.uk/asset/ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f21"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405102000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169627",
-                "type": "cps"
-              }
-            ],
-            "strapline": { "name": "Zanimljivo" },
-            "semanticGroupName": "Section 2"
-          },
-          {
-            "type": "responsive-in-depth",
-            "title": "Section 3",
-            "items": [
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 31"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169628",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a61",
-                  "assetId": "23169628",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169628",
-                  "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a61"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405111000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169628",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 32"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169629",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:aa00d55a-de84-c24f-82fa-8e203b76d0c4",
-                  "assetId": "23169629",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169629",
-                  "curie": "http://www.bbc.co.uk/asset/aa00d55a-de84-c24f-82fa-8e203b76d0c4"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405121000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169629",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 33"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169630",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8f52c324-d00c-f944-b299-f8f13c542b63",
-                  "assetId": "23169630",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169630",
-                  "curie": "http://www.bbc.co.uk/asset/8f52c324-d00c-f944-b299-f8f13c542b63"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405132000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169630",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 34"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169631",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60898e52-4a3e-aa44-88f5-861644dde52d",
-                  "assetId": "23169631",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169631",
-                  "curie": "http://www.bbc.co.uk/asset/60898e52-4a3e-aa44-88f5-861644dde52d"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405146000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169631",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 35"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169632",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a1",
-                  "assetId": "23169632",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169632",
-                  "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a1"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405155000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169632",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 36"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169633",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4874",
-                  "assetId": "23169633",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169633",
-                  "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4874"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405163000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169633",
-                "type": "cps"
-              }
-            ],
-            "strapline": { "name": "In case you missed it" },
-            "semanticGroupName": "Section 3"
-          },
-          {
-            "type": "special-reports",
-            "title": "Special reports 2",
-            "items": [
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 11"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169608",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7dcb9041-b854-1c49-beae-9cbfc39f7ad7",
-                  "assetId": "23169608",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169608",
-                  "curie": "http://www.bbc.co.uk/asset/7dcb9041-b854-1c49-beae-9cbfc39f7ad7"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1520349658000,
-                "language": "sr-Cyrl",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-                    "categoryName": "Interactive"
-                  },
-                  "taggings": []
-                },
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169608",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 12"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169609",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bb8e8b05-c110-c24f-ace7-8070aa8840ba",
-                  "assetId": "23169609",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169609",
-                  "curie": "http://www.bbc.co.uk/asset/bb8e8b05-c110-c24f-ace7-8070aa8840ba"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404843000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169609",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 13"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169610",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9dc640ae-90d1-c349-81a6-8e743c631c7e",
-                  "assetId": "23169610",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169610",
-                  "curie": "http://www.bbc.co.uk/asset/9dc640ae-90d1-c349-81a6-8e743c631c7e"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404855000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169610",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 14"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169611",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:f6c242ea-6464-ec40-9b65-d63720333563",
-                  "assetId": "23169611",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169611",
-                  "curie": "http://www.bbc.co.uk/asset/f6c242ea-6464-ec40-9b65-d63720333563"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404866000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169611",
-                "type": "cps"
-              }
-            ],
-            "semanticGroupName": "Special reports 2"
-          },
-          {
-            "type": "featured-site-top-stories",
-            "title": "Frequency info",
-            "items": [
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 19"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169616",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6f98837f-a378-a14b-b8b0-e098ddcaee97",
-                  "assetId": "23169616",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169616",
-                  "curie": "http://www.bbc.co.uk/asset/6f98837f-a378-a14b-b8b0-e098ddcaee97"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404963000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169616",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 20"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169617",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:0bf6ef6e-d769-3346-81dd-7026b7f56ac0",
-                  "assetId": "23169617",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169617",
-                  "curie": "http://www.bbc.co.uk/asset/0bf6ef6e-d769-3346-81dd-7026b7f56ac0"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404973000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169617",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 21"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169618",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:fae15535-6ec3-2e4c-ad18-808dc16f8bed",
-                  "assetId": "23169618",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169618",
-                  "curie": "http://www.bbc.co.uk/asset/fae15535-6ec3-2e4c-ad18-808dc16f8bed"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404993000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169618",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 22"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169619",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5f470c43-78fc-dc47-a396-b35b3f9bcfa5",
-                  "assetId": "23169619",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169619",
-                  "curie": "http://www.bbc.co.uk/asset/5f470c43-78fc-dc47-a396-b35b3f9bcfa5"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405001000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169619",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 23"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169620",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:581e9c63-b91d-8640-b366-be6f3587e45d",
-                  "assetId": "23169620",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169620",
-                  "curie": "http://www.bbc.co.uk/asset/581e9c63-b91d-8640-b366-be6f3587e45d"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405014000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169620",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 24"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169621",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e9a2d913-2aaf-d748-8f16-4fc62bc02a96",
-                  "assetId": "23169621",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169621",
-                  "curie": "http://www.bbc.co.uk/asset/e9a2d913-2aaf-d748-8f16-4fc62bc02a96"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512405031000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169621",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 2"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169489",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:eca68bfa-610a-c04b-b184-bf37a0b6d9d1",
-                  "assetId": "23169489",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169489",
-                  "curie": "http://www.bbc.co.uk/asset/eca68bfa-610a-c04b-b184-bf37a0b6d9d1"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404387000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169489",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 3"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169490",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1f097a89-47d5-424d-a097-622de49e2b94",
-                  "assetId": "23169490",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169490",
-                  "curie": "http://www.bbc.co.uk/asset/1f097a89-47d5-424d-a097-622de49e2b94"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404400000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169490",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 4"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169491",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8d82b668-7eed-2c4b-b088-3c9877aad22d",
-                  "assetId": "23169491",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169491",
-                  "curie": "http://www.bbc.co.uk/asset/8d82b668-7eed-2c4b-b088-3c9877aad22d"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404431000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169491",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 5"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169492",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5246c7d9-500c-df4a-8aac-bed3ab682b3b",
-                  "assetId": "23169492",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169492",
-                  "curie": "http://www.bbc.co.uk/asset/5246c7d9-500c-df4a-8aac-bed3ab682b3b"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404628000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169492",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 6"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169493",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:05a64eb2-12b3-1742-b149-6cd4b050b571",
-                  "assetId": "23169493",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169493",
-                  "curie": "http://www.bbc.co.uk/asset/05a64eb2-12b3-1742-b149-6cd4b050b571"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404639000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169493",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 7"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169494",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:42765cca-a2ef-0742-8f78-f24c59d78cae",
-                  "assetId": "23169494",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169494",
-                  "curie": "http://www.bbc.co.uk/asset/42765cca-a2ef-0742-8f78-f24c59d78cae"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404649000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169494",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 8"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169495",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:82cc4275-a7b5-6d4a-a6ff-59c592c2ba46",
-                  "assetId": "23169495",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169495",
-                  "curie": "http://www.bbc.co.uk/asset/82cc4275-a7b5-6d4a-a6ff-59c592c2ba46"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404728000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63603672",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169495",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "По старом или новом календару, она не касни"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/23180995",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7c1fcd16-be90-9c4f-a745-67fa76656c94",
-                  "assetId": "23180995",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23180995",
-                  "curie": "http://www.bbc.co.uk/asset/7c1fcd16-be90-9c4f-a745-67fa76656c94"
-                },
-                "summary": "Нова година по старом календару прослављена је уз ватромет, маскембал и плес",
-                "timestamp": 1516026891000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63647003",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/757A/test/_63647003_52d14451-5485-4ccc-beda-737915f4566a.jpg",
-                  "path": "/cpsdevpb/757A/test/_63647003_52d14451-5485-4ccc-beda-737915f4566a.jpg",
-                  "height": 549,
-                  "width": 976,
-                  "altText": "-",
-                  "caption": "Украјинци Нову годину по старом календару дочекују под маскама",
-                  "copyrightHolder": "EPA",
-                  "originCode": "cpsdevpb",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "section": {
-                  "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
-                  "type": "simple"
-                },
-                "overtypedSummary": "Нова година по старом календару прослављена је уз ватромет, маскембал и плес",
-                "id": "urn:bbc:ares::asset:serbian/cyr/23180995",
-                "type": "cps"
-              },
-              {
-                "name": "In pictures: Orthodox Christmas",
-                "summary": "Images from Russia, Egypt and other countries which celebrate Christmas on 7 January, in line with most Orthodox Christian Churches.",
-                "indexImage": {
-                  "id": "57747843",
-                  "subType": "index",
-                  "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/57747000/jpg/_57747843_013647070-2.jpg",
-                  "path": "/tmcs/media/images/57747000/jpg/_57747843_013647070-2.jpg",
-                  "height": 261,
-                  "width": 464,
-                  "altText": "Russian Prime Minister Vladimir Putin attends a Christmas service in the Spaso-Preobrazhensky Cathedral in St Petersburg, 6 January",
-                  "copyrightHolder": "Reuters",
-                  "type": "image"
-                },
-                "indexThumbnail": {
-                  "id": "57747845",
-                  "subType": "index-thumbnail",
-                  "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/57747000/jpg/_57747845_013647070-2.jpg",
-                  "path": "/tmcs/media/images/57747000/jpg/_57747845_013647070-2.jpg",
-                  "height": 81,
-                  "width": 144,
-                  "altText": "Russian Prime Minister Vladimir Putin attends a Christmas service in the Spaso-Preobrazhensky Cathedral in St Petersburg, 6 January",
-                  "copyrightHolder": "Reuters",
-                  "type": "image"
-                },
-                "uri": "http://www.bbc.co.uk/news/world-europe-16453975",
-                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/world-europe-16453975",
-                "contentType": "Gallery",
-                "assetTypeCode": "PGL",
-                "timestamp": 1325954324000,
+                "uri": "https://www.bbc.com/russian/articles/czv59lwnxgdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/czv59lwnxgdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704637389000,
                 "type": "link"
               },
               {
-                "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 9"
-                },
-                "locators": {
-                  "assetUri": "/serbian/cyr/media-23169496",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e4d48c23-b886-6741-92e7-f6b15dcc54d7",
-                  "assetId": "23169496",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169496",
-                  "curie": "http://www.bbc.co.uk/asset/e4d48c23-b886-6741-92e7-f6b15dcc54d7"
-                },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404810000,
-                "language": "sr-Cyrl",
-                "cpsType": "STY",
+                "name": "«Помогаем сами себе». Почему в Белгороде во время крупнейшего обстрела были закрыты подвалы и все еще нет бомбоубежищ?",
+                "summary": "В результате украинского ракетного обстрела приграничного Белгорода 30 декабря погибли 25 человек, в том числе пятеро детей, более 100 пострадали. Жители города жаловались на закрытые бомбоубежища: во время обстрела спрятаться в подвале невозможно. Почему люди лишены возможности укрыться в безопасном месте и что делают местные власти?",
                 "indexImage": {
-                  "id": "63603672",
+                  "id": "132203408",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
+                  "href": "http://c.files.bbci.co.uk/7f39/live/bf06d960-aa65-11ee-8091-692fdf9c6ade.jpg",
+                  "path": "/cpsprodpb/7f39/live/bf06d960-aa65-11ee-8091-692fdf9c6ade.jpg",
+                  "height": 1240,
+                  "width": 2204,
+                  "altText": "Стихийный мемориал из цветов и игрушек на улице Белгорода в память о жертвах обстрела 30 декабря",
+                  "caption": "Стихийный мемориал из цветов и игрушек на улице Белгорода в память о жертвах обстрела 30 декабря",
+                  "copyrightHolder": "Павел Колядин/ТАСС",
+                  "allowSyndication": true,
                   "type": "image"
                 },
-                "imageThumbnail": {
-                  "id": "63603674",
-                  "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 180,
-                  "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169496",
-                "type": "cps"
+                "uri": "https://www.bbc.com/russian/articles/cz798k5xwdxo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cz798k5xwdxo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704366873000,
+                "type": "link"
               },
               {
+                "name": "«Не все крымчане — зомби». Как движение «Атеш» следит за российскими военными в Крыму и помогает Украине",
+                "summary": "Би-би-си поговорила с несколькими членами партизанского движения «Атеш». Они рассказали о своей главной деятельности - шпионить за российскими военными в аннексированном Крыму и докладывать украинским военным.",
+                "indexImage": {
+                  "id": "132224181",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/dc62/live/3d94dee0-acc7-11ee-bc2f-cb5579b90709.png",
+                  "path": "/cpsprodpb/dc62/live/3d94dee0-acc7-11ee-bc2f-cb5579b90709.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "\"Атеш\" графика",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c0jy35kgqe5o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0jy35kgqe5o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704634678000,
+                "type": "link"
+              },
+              {
+                "name": "Как улучшить свою жизнь в 2024 году с точки зрения науки",
+                "summary": "Начало нового года — время перемен и решений о том, как улучшить свое самочувствие и благосостояние. Вот некоторые советы, которые предлагают ученые.",
+                "indexImage": {
+                  "id": "132219491",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2bbe/live/2919ff10-a8c4-11ee-bc2f-cb5579b90709.jpg",
+                  "path": "/cpsprodpb/2bbe/live/2919ff10-a8c4-11ee-bc2f-cb5579b90709.jpg",
+                  "height": 863,
+                  "width": 1600,
+                  "altText": "Прогулка зимой",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cw50r5le5ndo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cw50r5le5ndo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704525689000,
+                "type": "link"
+              },
+              {
+                "name": "Пожар на борту: как экипаж безупречно эвакуировал пассажиров из горящего самолета",
+                "summary": "Безупречная эвакуация самолета Japan Airlines приятно удивила мир. Эксперты в области авиации и члены экипажа рассказали Би-би-си, что успех эвакуации обеспечила отличная подготовка экипажа и примерное поведение пассажиров.",
+                "indexImage": {
+                  "id": "132196893",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/50d5/live/ed88c2f0-aa2c-11ee-bc2f-cb5579b90709.png",
+                  "path": "/cpsprodpb/50d5/live/ed88c2f0-aa2c-11ee-bc2f-cb5579b90709.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Горящий самолет",
+                  "copyrightHolder": "SCREENGRAB",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cl50zgj3kjzo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cl50zgj3kjzo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704289136000,
+                "type": "link"
+              },
+              {
+                "name": "«Год мясорубок»: что нам известно о потерях России в Украине за 2023 год",
+                "summary": "За 2023 год Россия потеряла в полтора раза больше военных, чем за первый год вторжения в Украину. К такому выводу пришла Би-би-си на основе анализа поименного списка погибших, который мы ведем совместно с «Медиазоной» (признана в России «иноагентом») и командой волонтеров на основе открытых источников.",
+                "indexImage": {
+                  "id": "132171971",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/45FD/production/_132171971_whatsubject.jpg",
+                  "path": "/cpsprodpb/45FD/production/_132171971_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Военный",
+                  "copyrightHolder": "Anadolu Agency via Getty Images",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c0kyzvlxz5no",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0kyzvlxz5no",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1703228713000,
+                "type": "link"
+              },
+              {
+                "name": "Подпишитесь на нашу рассылку «Контекст»!",
+                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. \"Контекст\" поможет вам разобраться в происходящем.",
+                "indexImage": {
+                  "id": "125953051",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
+                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Логотип \"Контекст\"",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1658144127000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Не пропустите",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/features-50983593",
+                "desktop": "https://www.bbc.com/russian/features-50983593",
+                "mobile": "https://www.bbc.com/russian/features-50983593",
+                "enhancedmobile": "https://www.bbc.com/russian/features-50983593"
+              }
+            },
+            "semanticGroupName": "Features"
+          },
+          {
+            "type": "also-in-news",
+            "title": "События",
+            "items": [
+              {
+                "name": "«Золотые глобусы» 2024: «Оппенгеймер» и «Наследство» собрали урожай наград. «Барби» досталось всего две",
+                "summary": "",
+                "indexImage": {
+                  "id": "132228951",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3d89/live/5c7e60c0-ae10-11ee-95c6-1b1244549cd1.jpg",
+                  "path": "/cpsprodpb/3d89/live/5c7e60c0-ae10-11ee-95c6-1b1244549cd1.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Киллиан Мерфи",
+                  "caption": "Киллиан Мерфи получил «Глобус» за роль Оппенгеймера в одноименном фильме",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cd17d40kxdpo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cd17d40kxdpo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704711387000,
+                "type": "link"
+              },
+              {
+                "name": "Умер создатель языка программирования Pascal Никлаус Вирт",
+                "indexImage": {
+                  "id": "132227813",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7C80/production/_132227813_whatsubject.jpg",
+                  "path": "/cpsprodpb/7C80/production/_132227813_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Никлаус Вирт",
+                  "caption": "Профессор Никлаус Вирт считается одним из отцов-основателей современной информатики",
+                  "copyrightHolder": "Niklaus Wirth",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c13y5pvp035o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c13y5pvp035o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704711743000,
+                "type": "link"
+              },
+              {
+                "name": "«Нам очень повезло». Почему при аварии Boeing 737 Max 9 удалось избежать жертв, но все могло бы закончиться намного хуже",
+                "summary": "В прошлую пятницу у авиалайнера Boeing 737 Max 9 компании Alaska Airlines при наборе высоты вырвало дверь запасного выхода. К счастью, рейс 1282 удалось благополучно посадить, и никто из пассажиров серьезно не пострадал. Но при несколько ином развитии событий все могло бы обернуться намного хуже.",
+                "indexImage": {
+                  "id": "132224128",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/140DE/production/_132224128_newplane.png",
+                  "path": "/cpsprodpb/140DE/production/_132224128_newplane.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Boeing 737 Max 9",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cv240wy4993o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv240wy4993o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704660862000,
+                "type": "link"
+              },
+              {
+                "name": "Ракета Vulcan отправилась на Луну. Истории ныне живущих участников программы «Аполлон» — и будущие лунные экспедиции",
+                "summary": "",
+                "indexImage": {
+                  "id": "132227965",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4555/live/49081900-add9-11ee-beb5-e1400df560f2.jpg",
+                  "path": "/cpsprodpb/4555/live/49081900-add9-11ee-beb5-e1400df560f2.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "след на Луне",
+                  "copyrightHolder": "NASA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cye61wpnj5no",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cye61wpnj5no",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704704568000,
+                "type": "link"
+              },
+              {
+                "name": "«Избежать Орбана». Глава Евросовета уходит в отставку: его место может занять премьер Венгрии, продолжающий общаться с Путиным",
+                "summary": "",
+                "indexImage": {
+                  "id": "132227811",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2E60/production/_132227811_whatsubject.jpg",
+                  "path": "/cpsprodpb/2E60/production/_132227811_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Виктор Орбан",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cq51lw7n175o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cq51lw7n175o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704657691000,
+                "type": "link"
+              },
+              {
+                "name": "Грызун-чистюля. Британский пенсионер снял на видео, как мышь наводит порядок в его сарае",
+                "summary": "Валлийский пенсионер и бывший почтальон Родни Холбрук уже давно фотографирует дикую природу, но эта картина стала для него большой неожиданностью. В его собственном сарае каждую ночь разворачивалась сцена, вполне достойная известного мультфильма «Рататуй», в котором крысенок становится поваром.",
+                "indexImage": {
+                  "id": "132225479",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3b86/live/c81686d0-ad81-11ee-bc2f-cb5579b90709.jpg",
+                  "path": "/cpsprodpb/3b86/live/c81686d0-ad81-11ee-bc2f-cb5579b90709.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мышь наводит порядок в сарае",
+                  "copyrightHolder": "Rodney Holbrook / Animal News Agency",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cy9e1gd2dvpo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cy9e1gd2dvpo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704649253000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "События" },
+            "semanticGroupName": "Also in the news"
+          },
+          {
+            "type": "special-reports",
+            "title": "Подкасты",
+            "items": [
+              {
+                "name": "Итоги 2023 года для Украины",
+                "summary": "Интервью с корреспондентом Би-би-си в Украине Святославом Хоменко",
+                "indexImage": {
+                  "id": "132171980",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/22D5/production/_132171980_p0h2377x.jpg",
+                  "path": "/cpsprodpb/22D5/production/_132171980_p0h2377x.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Украинские военные",
+                  "caption": "Украинские военные",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/russian/bbc_russian_radio/programmes/p076qqzl",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1703866223000,
+                "type": "link"
+              },
+              {
+                "name": "Итоги 2023 года. Сколько российских военных погибло в Украине?",
+                "summary": "И почему за этот год потерь стало в полтора раз больше?",
+                "indexImage": {
+                  "id": "132163563",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/8EB8/production/_132163563_p0h1y2jp.jpg",
+                  "path": "/cpsprodpb/8EB8/production/_132163563_p0h1y2jp.jpg",
+                  "height": 547,
+                  "width": 972,
+                  "altText": "Cemetery Russian troop",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl/p0h1y2hs",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/podcasts/p076qqzl/p0h1y2hs",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1703775274000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Подкасты",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/media-47937790",
+                "desktop": "https://www.bbc.com/russian/media-47937790",
+                "mobile": "https://www.bbc.com/russian/media-47937790",
+                "enhancedmobile": "https://www.bbc.com/russian/media-47937790"
+              }
+            },
+            "semanticGroupName": "Special reports 1"
+          },
+          {
+            "type": "section-digest",
+            "title": "Ukraine war special",
+            "items": [
+              {
+                "name": "Северокорейские ракеты: есть ли они у России и почему это беспокоит Киев и Вашингтон",
+                "summary": "Россия получила из КНДР баллистические ракеты и уже применяла их дважды против Украины, заявил на брифинге в Вашингтоне координатор по стратегическим коммуникациям в Совете нацбезопасности США Джон Кирби. По его словам, Пхеньян недавно передал Москве пусковые установки и несколько десятков ракет. Как появление у России подобных ракет может повлиять на ход войны в Украине?",
+                "indexImage": {
+                  "id": "132220077",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/12CCA/production/_132220077_whatsubject.jpg",
+                  "path": "/cpsprodpb/12CCA/production/_132220077_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "КНДР испытала ракету ближнего радиуса действия в 2023 году",
+                  "caption": "КНДР испытала ракету ближнего радиуса действия в 2023 году. На снимке - кадр из телерепортажа, показанного по южнокорейскому телевидению",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cj7gjvzxr5eo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cj7gjvzxr5eo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704465150000,
+                "type": "link"
+              },
+              {
+                "name": "«Плати или служи». Новая мобилизационная инициатива Киева способна расколоть украинское общество",
+                "summary": "Предложение украинских властей вывести из-под мобилизации мужчин, получающих большие \"белые\" зарплаты, может благотворно повлиять на экономику страны, но способно усугубить противоречия внутри украинского общества.",
+                "indexImage": {
+                  "id": "132205008",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6584/live/60deed40-ab06-11ee-b650-07867036bf8f.jpg",
+                  "path": "/cpsprodpb/6584/live/60deed40-ab06-11ee-b650-07867036bf8f.jpg",
+                  "height": 434,
+                  "width": 772,
+                  "altText": "ЗСУ",
+                  "copyrightHolder": "Ukraine's Armed Forces General Staff",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cqe1vyge666o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cqe1vyge666o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704375469000,
+                "type": "link"
+              },
+              {
+                "name": "«Мы живы. Малого успела спрятать». Истории людей, пострадавших от массированного удара по Киеву и Харькову",
+                "summary": "Для Украины это уже вторая после 29 декабря массированная атака. Десятки «шахедов», а затем 99 ракет ударили по Харькову, Киевской области, больше всего — по Киеву.",
+                "indexImage": {
+                  "id": "132190029",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/5630/live/9a593340-a97c-11ee-bc2f-cb5579b90709.jpg",
+                  "path": "/cpsprodpb/5630/live/9a593340-a97c-11ee-bc2f-cb5579b90709.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "Пожар",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cqq1krpxlg0o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cqq1krpxlg0o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704211779000,
+                "type": "link"
+              },
+              {
+                "name": "Украинский социолог Алексей Антипович: «Запрос украинцев — россияне должны быть наказаны»",
+                "summary": "",
+                "indexImage": {
+                  "id": "132197206",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/EB77/production/_132197206_whatsubject.jpg",
+                  "path": "/cpsprodpb/EB77/production/_132197206_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "кабинет",
+                  "caption": "Социолог Алексей Антипович: «Мир любой ценой» — это тезис, который абсолютно не поддерживается",
+                  "copyrightHolder": "Alexey Antipovich's family archive",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/crgvz513m8vo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/crgvz513m8vo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1703919377000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Война России против Украины",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "desktop": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "mobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "enhancedmobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt"
+              }
+            },
+            "semanticGroupName": "Verticals"
+          },
+          {
+            "type": "featured-site-top-stories",
+            "title": "BBC Documentaries",
+            "items": [
+              {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 10"
+                  "headline": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169607",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7e947ab1-4150-b34f-aa35-e902c58cf16e",
-                  "assetId": "23169607",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169607",
-                  "curie": "http://www.bbc.co.uk/asset/7e947ab1-4150-b34f-aa35-e902c58cf16e"
+                  "assetUri": "/russian/media-67320957",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d77b04c3-ec5f-4c22-bb35-6d6801f55e6a",
+                  "assetId": "67320957",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/media-67320957",
+                  "curie": "http://www.bbc.co.uk/asset/d77b04c3-ec5f-4c22-bb35-6d6801f55e6a"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
-                "timestamp": 1512404823000,
-                "language": "sr-Cyrl",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                    "categoryName": "News"
-                  },
-                  "taggings": []
-                },
+                "summary": "Как строились взаимоотношения между Россией и другими странами во время более 20 лет Путина у власти, как менялись его взгляды на внутреннее устройство страны, и как сама страна менялась под его управлением и как в итоге пришла к полномасштабной войне",
+                "timestamp": 1699101805000,
+                "language": "ru",
                 "cpsType": "STY",
                 "indexImage": {
-                  "id": "63603672",
+                  "id": "131617837",
                   "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "href": "http://c.files.bbci.co.uk/1208F/production/_131617837_85e1da2e-f33d-4213-b0f3-bc6cc1efd7fc.jpg",
+                  "path": "/cpsprodpb/1208F/production/_131617837_85e1da2e-f33d-4213-b0f3-bc6cc1efd7fc.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Путин, Россия и Запад | Большой документальный проект Би-би-си",
+                  "caption": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти",
                   "copyrightHolder": "BBC",
-                  "originCode": "cpsdevpb",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
                   "type": "image"
                 },
                 "imageThumbnail": {
-                  "id": "63603674",
+                  "id": "131617839",
                   "subType": "index-thumbnail",
-                  "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
-                  "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+                  "href": "http://c.files.bbci.co.uk/16EAF/production/_131617839_mediaitem131617838.jpg",
+                  "path": "/cpsprodpb/16EAF/production/_131617839_mediaitem131617838.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Путин, Россия и Запад | Большой документальный проект Би-би-си",
+                  "caption": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти",
                   "copyrightHolder": "BBC",
+                  "allowSyndication": true,
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169607",
+                "id": "urn:bbc:ares::asset:russian/media-67320957",
                 "type": "cps"
               }
             ],
-            "semanticGroupName": "Frequency info"
+            "strapline": {
+              "name": "Документальные фильмы Би-би-си",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/in-depth-48104242",
+                "desktop": "https://www.bbc.com/russian/in-depth-48104242",
+                "mobile": "https://www.bbc.com/russian/in-depth-48104242",
+                "enhancedmobile": "https://www.bbc.com/russian/in-depth-48104242"
+              }
+            },
+            "semanticGroupName": "College of journalism"
           },
           {
             "type": "useful-links",
             "title": "Useful links",
             "items": [
               {
-                "name": "Kontaktirajte nas 1",
-                "uri": "/serbian/lat/popular/read",
+                "name": "Подпишитесь на нашу рассылку «Контекст»!",
+                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. «Контекст» поможет вам разобраться в происходящем.",
+                "indexImage": {
+                  "id": "125953051",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
+                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Логотип \"Контекст\"",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
                 "contentType": "Guide",
                 "assetTypeCode": "PRO",
+                "timestamp": 1658749856000,
                 "type": "link"
               },
               {
-                "name": "Kontaktirajte nas 2",
-                "uri": "/serbian/lat/popular/read",
+                "name": "Что делать, если заблокирован доступ к новостям",
+                "summary": "Что делать, если вам нужен доступ к новостям",
+                "uri": "https://www.bbc.com/russian/access-to-news",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/access-to-news",
                 "contentType": "Guide",
                 "assetTypeCode": "PRO",
+                "timestamp": 1646418197000,
                 "type": "link"
               },
               {
-                "name": "Kontaktirajte nas 3",
-                "uri": "/serbian/lat/popular/read",
+                "name": "Как работает Би-би-си",
+                "summary": "Задача Би-би-си - каждый день создавать контент мирового класса; контент, который информирует, просвещает и развлекает миллионы людей в Великобритании и по всему миру.",
+                "indexImage": {
+                  "id": "116067430",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/0D94/production/_116067430_mediaitem116067429.jpg",
+                  "path": "/cpsprodpb/0D94/production/_116067430_mediaitem116067429.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Вход в здание Бродкастинг-Хаус",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/institutional-55301322",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/institutional-55301322",
                 "contentType": "Guide",
                 "assetTypeCode": "PRO",
+                "timestamp": 1608043839000,
                 "type": "link"
               },
               {
-                "name": "Kontaktirajte nas 4",
-                "uri": "/serbian/lat/popular/read",
+                "name": "The Best of BBC News Russian - in English",
+                "uri": "https://bbcrussian.substack.com/",
                 "contentType": "Guide",
                 "assetTypeCode": "PRO",
+                "timestamp": 1659094268000,
                 "type": "link"
               },
               {
-                "name": "Kontaktirajte nas 5",
-                "uri": "/serbian/lat/popular/read",
+                "name": "Партнерство с Русской службой Би-би-си",
+                "uri": "https://www.bbc.com/russian/institutional-43463215",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/institutional-43463215",
                 "contentType": "Guide",
                 "assetTypeCode": "PRO",
+                "timestamp": 1585639847000,
+                "type": "link"
+              },
+              {
+                "name": "RSS",
+                "summary": "RSS фиды главной страницы",
+                "uri": "http://feeds.bbci.co.uk/russian/rss.xml",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1623399577000,
                 "type": "link"
               }
             ],
-            "strapline": {
-              "name": "Korisni linkovi"
-            },
+            "strapline": { "name": "Полезные ссылки" },
             "semanticGroupName": "Useful links"
+          },
+          {
+            "type": "featured-site-top-stories",
+            "title": "Social media links",
+            "items": [
+              {
+                "name": "Telegram",
+                "summary": "Мы в Telegram",
+                "indexImage": {
+                  "id": "118546190",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/23CC/production/_118546190_tg-nc.png",
+                  "path": "/cpsprodpb/23CC/production/_118546190_tg-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в Telegram - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://t.me/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182163000,
+                "type": "link"
+              },
+              {
+                "name": "YouTube",
+                "summary": "Мы в YouTube",
+                "indexImage": {
+                  "id": "118546188",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15864/production/_118546188_yt-nc.png",
+                  "path": "/cpsprodpb/15864/production/_118546188_yt-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в YouTube - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.youtube.com/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181585000,
+                "type": "link"
+              },
+              {
+                "name": "Х",
+                "summary": "Мы в Х",
+                "indexImage": {
+                  "id": "130979666",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10489/production/_130979666_logo_x-nc.png",
+                  "path": "/cpsprodpb/10489/production/_130979666_logo_x-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Лого Х",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://twitter.com/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181490000,
+                "type": "link"
+              },
+              {
+                "name": "ВКонтакте",
+                "summary": "Мы в ВКонтакте",
+                "indexImage": {
+                  "id": "118546186",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10A44/production/_118546186_vk-nc.png",
+                  "path": "/cpsprodpb/10A44/production/_118546186_vk-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в ВКонтакте - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://vk.com/bbc",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182078000,
+                "type": "link"
+              },
+              {
+                "name": "Одноклассники",
+                "summary": "Мы в сети Одноклассники",
+                "indexImage": {
+                  "id": "118546184",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BC24/production/_118546184_ok-nc.png",
+                  "path": "/cpsprodpb/BC24/production/_118546184_ok-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Одноклассники - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://ok.ru/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182111000,
+                "type": "link"
+              },
+              {
+                "name": "TikTok",
+                "indexImage": {
+                  "id": "130989191",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4AFE/production/_130989191_logo_tiktok-nc.png",
+                  "path": "/cpsprodpb/4AFE/production/_130989191_logo_tiktok-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ТикТок лого",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.tiktok.com/@bbcnewsrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1646914483000,
+                "type": "link"
+              },
+              {
+                "name": "Instagram",
+                "summary": "Мы в Instagram",
+                "indexImage": {
+                  "id": "118546207",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11278/production/_118546207_insta-nc.png",
+                  "path": "/cpsprodpb/11278/production/_118546207_insta-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в Instagram - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.instagram.com/bbcrussian/",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181662000,
+                "type": "link"
+              },
+              {
+                "name": "Facebook",
+                "summary": "Наша страница в Facebook",
+                "indexImage": {
+                  "id": "118546209",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/16098/production/_118546209_fb-nc.png",
+                  "path": "/cpsprodpb/16098/production/_118546209_fb-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Наша страница в Facebook - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.facebook.com/bbcnewsrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1609767172000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Мы в соцсетях" },
+            "semanticGroupName": "Blogs"
+          },
+          {
+            "type": "section-digest",
+            "title": "Showcase 8",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Ученые: коронавирус может привести к диабету, и дети - в группе риска"
+                },
+                "locators": {
+                  "assetUri": "/russian/news-60145047",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7d9dabb1-d79b-4752-a031-da867dcb6c28",
+                  "assetId": "60145047",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/news-60145047",
+                  "curie": "http://www.bbc.co.uk/asset/7d9dabb1-d79b-4752-a031-da867dcb6c28"
+                },
+                "summary": "Многочисленные исследования со всего мира показывают, что заражение коронавирусом существенно повышает риск развития у пациента сахарного диабета, причем буквально в течение пары недель, а иногда и дней после появления первых симптомов Covid-19. Особенно высок этот риск у детей до 18 лет.",
+                "timestamp": 1643305713000,
+                "language": "ru",
+                "byline": {
+                  "name": "Николай Воронин",
+                  "title": "Корреспондент по вопросам науки",
+                  "persons": [
+                    {
+                      "name": "Николай Воронин",
+                      "function": "Корреспондент по вопросам науки"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122990298",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15C79/production/_122990298_mediaitem123014914.jpg",
+                  "path": "/cpsprodpb/15C79/production/_122990298_mediaitem123014914.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Девочка со шприцем-ручкой для подкожных инъекций инсулина",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "overtypedSummary": "  ",
+                "id": "urn:bbc:ares::asset:russian/news-60145047",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Showcase 8"
           }
         ]
       },
       "promo": {
         "subType": "IDX",
-        "name": "Почетна страна",
-        "uri": "/serbian/cyr/front_page",
-        "id": "urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
+        "name": "Главная",
+        "uri": "/russian/front_page",
+        "id": "urn:bbc:ares::index:russian/front_page/desktop/domestic",
         "type": "simple"
       },
       "relatedContent": {
         "section": {
           "subType": "index",
-          "name": "Почетна страна",
-          "uri": "/serbian/cyr/front_page",
-          "urlIdentifier": "/serbian/cyr/front_page",
+          "name": "Главная",
+          "uri": "/russian/front_page",
+          "urlIdentifier": "/russian/front_page",
           "type": "simple"
         },
         "site": {
           "subType": "site",
-          "name": "BBC News na srpskom",
-          "uri": "/serbian/cyr",
-          "urlIdentifier": "/serbian/cyr",
+          "name": "Новости на русском языке",
+          "uri": "/russian",
+          "urlIdentifier": "/russian",
           "type": "simple"
         },
         "groups": []
@@ -2013,149 +1362,149 @@
       "topStories": null,
       "features": null,
       "mostRead": {
-        "generated": "2023-07-12T11:06:56.626Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "generated": "2024-01-09T10:32:33.644Z",
+        "lastRecordTimeStamp": "2024-01-09T10:31:00Z",
+        "firstRecordTimeStamp": "2024-01-09T10:16:00Z",
         "items": [
           {
-            "id": "c893a22a-b367-e743-90ec-737606624e7a",
+            "id": "urn:bbc:optimo:asset:c2ly38zw5x0o",
             "rank": 1,
-            "title": "test, please ignore",
-            "href": "/serbian/cyr/23200492",
-            "timestamp": 1526475595000
+            "title": "Поиск агентов и диверсантов. Почему страны Балтии отгораживаются от России",
+            "href": "https://www.bbc.com/russian/articles/c2ly38zw5x0o",
+            "timestamp": 1704790061259
           },
           {
-            "id": "8ec20548-be66-3545-8d55-9d3378dd4874",
+            "id": "urn:bbc:optimo:asset:cq51lw7n175o",
             "rank": 2,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 36",
-            "href": "/serbian/cyr/media-23169633",
-            "timestamp": 1512405163000
+            "title": "«Избежать Орбана». Председатель Европейского совета Мишель уходит в отставку: его место может занять премьер Венгрии, продолжающий общаться с Путиным",
+            "href": "https://www.bbc.com/russian/articles/cq51lw7n175o",
+            "timestamp": 1704657689372
           },
           {
-            "id": "82cc4275-a7b5-6d4a-a6ff-59c592c2ba46",
+            "id": "urn:bbc:optimo:asset:cnlvw9v578yo",
             "rank": 3,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 8",
-            "href": "/serbian/cyr/media-23169495",
-            "timestamp": 1512404728000
+            "title": "Как Израиль использует новые технологии в секторе Газа",
+            "href": "https://www.bbc.com/news/articles/cnlvw9v578yo",
+            "timestamp": 1704794943937
           },
           {
-            "id": "60898e52-4a3e-aa44-88f5-861644dde52d",
+            "id": "urn:bbc:optimo:asset:cpdlvj3g3v8o",
             "rank": 4,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 34",
-            "href": "/serbian/cyr/media-23169631",
-            "timestamp": 1512405146000
+            "title": "Ким Чен Ын: чего мы не знаем о засекреченном верховном лидере Северной Кореи?",
+            "href": "https://www.bbc.com/russian/articles/cpdlvj3g3v8o",
+            "timestamp": 1704727359787
           },
           {
-            "id": "76ddfd93-f5bb-9f40-8181-857965827959",
+            "id": "urn:bbc:optimo:asset:cn0933z5q29o",
             "rank": 5,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 17",
-            "href": "/serbian/cyr/media-23169614",
-            "timestamp": 1512404944000
+            "title": "Джоди Фостер подверглась критике за свои слова о поколении Z. Она назвала молодых коллег ленивыми и безграмотными",
+            "href": "https://www.bbc.com/russian/articles/cn0933z5q29o",
+            "timestamp": 1704734270179
           },
           {
-            "id": "05a64eb2-12b3-1742-b149-6cd4b050b571",
+            "id": "urn:bbc:optimo:asset:c72ym04p53lo",
             "rank": 6,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 6",
-            "href": "/serbian/cyr/media-23169493",
-            "timestamp": 1512404639000
+            "title": "100 лет назад родился Сергей Параджанов — гений кино, прошедший через ад советской тюрьмы",
+            "href": "https://www.bbc.com/russian/articles/c72ym04p53lo",
+            "timestamp": 1704776620788
           },
           {
-            "id": "8f52c324-d00c-f944-b299-f8f13c542b63",
+            "id": "urn:bbc:optimo:asset:cqv19vnl2g1o",
             "rank": 7,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 33",
-            "href": "/serbian/cyr/media-23169630",
-            "timestamp": 1512405132000
+            "title": "Эммануэль Макрон меняет премьер-министра",
+            "href": "https://www.bbc.com/russian/articles/cqv19vnl2g1o",
+            "timestamp": 1704774289538
           },
           {
-            "id": "eca68bfa-610a-c04b-b184-bf37a0b6d9d1",
+            "id": "urn:bbc:optimo:asset:cgekzjykvpko",
             "rank": 8,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 2",
-            "href": "/serbian/cyr/media-23169489",
-            "timestamp": 1512404387000
+            "title": "«Мы пришли вас вызволять». Как украинцы пропадают в российских колониях",
+            "href": "https://www.bbc.com/russian/articles/cgekzjykvpko",
+            "timestamp": 1704692548676
           },
           {
-            "id": "151206d3-aff2-e949-976c-e9acb326ab44",
+            "id": "urn:bbc:optimo:asset:c3gy3v8x4dvo",
             "rank": 9,
-            "title": "Beba panda odmara nakon prvog javnog nastupa",
-            "href": "/serbian/cyr/23180965",
-            "timestamp": 1516029046000
+            "title": "Из тюрьмы в Эквадоре исчез видный мафиозо. В стране объявлено ЧП",
+            "href": "https://www.bbc.com/russian/articles/c3gy3v8x4dvo",
+            "timestamp": 1704763570073
           },
           {
-            "id": "dc35d343-6b9d-0e41-888c-fa036f1d4a61",
+            "id": "urn:bbc:optimo:asset:c0dyjgm11d0o",
             "rank": 10,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 31",
-            "href": "/serbian/cyr/media-23169628",
-            "timestamp": 1512405111000
+            "title": "Новый год в Центральной России без тепла и электричества: лед, темнота и потоп",
+            "href": "https://www.bbc.com/russian/articles/c0dyjgm11d0o",
+            "timestamp": 1704732425224
           },
           {
-            "id": "925b9e5c-3059-f240-87ff-e69f979774d6",
+            "id": "urn:bbc:optimo:asset:c1vy9yddlzdo",
             "rank": 11,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 18",
-            "href": "/serbian/cyr/media-23169615",
-            "timestamp": 1512404955000
+            "title": "Лунная экспедиция под угрозой: у посадочного модуля Peregrine проблемы с двигателями",
+            "href": "https://www.bbc.com/russian/articles/c1vy9yddlzdo",
+            "timestamp": 1704751690858
           },
           {
-            "id": "5246c7d9-500c-df4a-8aac-bed3ab682b3b",
+            "id": "urn:bbc:optimo:asset:c992q79w450o",
             "rank": 12,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 5",
-            "href": "/serbian/cyr/media-23169492",
-            "timestamp": 1512404628000
+            "title": "Расследование Би-би-си: всемирно известный евангелический проповедник Ти Би Джошуа пытал и насиловал прихожан",
+            "href": "https://www.bbc.com/russian/articles/c992q79w450o",
+            "timestamp": 1704721552694
           },
           {
-            "id": "46e86861-26ec-1e49-afb1-00896f661441",
+            "id": "urn:bbc:optimo:asset:czv59lwnxgdo",
             "rank": 13,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 25",
-            "href": "/serbian/cyr/media-23169622",
-            "timestamp": 1512405043000
+            "title": "Какие неприятные сюрпризы готовит 2024 год?",
+            "href": "https://www.bbc.com/russian/articles/czv59lwnxgdo",
+            "timestamp": 1704637386771
           },
           {
-            "id": "7dcb9041-b854-1c49-beae-9cbfc39f7ad7",
+            "id": "urn:bbc:optimo:asset:cw4kj2ed4z2o",
             "rank": 14,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 11",
-            "href": "/serbian/cyr/media-23169608",
-            "timestamp": 1520349658000
+            "title": "Легенда немецкого футбола Франц Беккенбауэр скончался в возрасте 78 лет",
+            "href": "https://www.bbc.com/russian/articles/cw4kj2ed4z2o",
+            "timestamp": 1704739643785
           },
           {
-            "id": "bb8e8b05-c110-c24f-ace7-8070aa8840ba",
+            "id": "urn:bbc:optimo:asset:cd17d40kxdpo",
             "rank": 15,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 12",
-            "href": "/serbian/cyr/media-23169609",
-            "timestamp": 1512404843000
+            "title": "«Золотые глобусы» 2024: «Оппенгеймер» и «Наследство» собрали урожай наград. «Барби» досталось всего две",
+            "href": "https://www.bbc.com/russian/articles/cd17d40kxdpo",
+            "timestamp": 1704711385486
           },
           {
-            "id": "9dc640ae-90d1-c349-81a6-8e743c631c7e",
+            "id": "7dc30b1e-b552-49b1-80b9-a08b48800c5f",
             "rank": 16,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 13",
-            "href": "/serbian/cyr/media-23169610",
-            "timestamp": 1512404855000
+            "title": "В Риге демонтировали памятник Пушкину. При чем тут хоккей?",
+            "href": "/russian/features-65758434",
+            "timestamp": 1685466099000
           },
           {
-            "id": "aa00d55a-de84-c24f-82fa-8e203b76d0c4",
+            "id": "urn:bbc:optimo:asset:cljx58x20ljo",
             "rank": 17,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 32",
-            "href": "/serbian/cyr/media-23169629",
-            "timestamp": 1512405121000
+            "title": "Билл Клинтон, Трамп, принц Эндрю: суд в США раскрыл первые документы о знакомствах Джеффри Эпштейна",
+            "href": "https://www.bbc.com/russian/articles/cljx58x20ljo",
+            "timestamp": 1704368147821
           },
           {
-            "id": "bed59bb0-13e8-d441-9ac2-70d58ab92378",
+            "id": "urn:bbc:optimo:asset:cye61wpnj5no",
             "rank": 18,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 26",
-            "href": "/serbian/cyr/media-23169623",
-            "timestamp": 1512405053000
+            "title": "Ракета Vulcan отправилась на Луну. Истории ныне живущих участников программы «Аполлон» — и будущие лунные экспедиции",
+            "href": "https://www.bbc.com/russian/articles/cye61wpnj5no",
+            "timestamp": 1704704567037
           },
           {
-            "id": "0bf6ef6e-d769-3346-81dd-7026b7f56ac0",
+            "id": "urn:bbc:optimo:asset:c6p6dmjp3d8o",
             "rank": 19,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 20",
-            "href": "/serbian/cyr/media-23169617",
-            "timestamp": 1512404973000
+            "title": "Граждан России не будут выдворять из Латвии за незнание латышского ",
+            "href": "https://www.bbc.com/russian/articles/c6p6dmjp3d8o",
+            "timestamp": 1694692888850
           },
           {
-            "id": "419ff24e-4687-3741-a1d4-7d8c6a023b57",
+            "id": "urn:bbc:optimo:asset:c0jy35kgqe5o",
             "rank": 20,
-            "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 28",
-            "href": "/serbian/cyr/media-23169625",
-            "timestamp": 1512405074000
+            "title": "«Не все крымчане — зомби». Как движение «Атеш» следит за российскими военными в Крыму и  помогает Украине",
+            "href": "https://www.bbc.com/russian/articles/c0jy35kgqe5o",
+            "timestamp": 1704634676389
           }
         ]
       },
