@@ -10,6 +10,7 @@ import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
+import { StreamProvider } from './Stream/BackToLatest/stream-provider';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
 
@@ -35,9 +36,29 @@ type ComponentProps = {
     }>;
     atiAnalytics: ATIData;
   };
+  post: string | null;
 };
 
-const LivePage = ({ pageData }: ComponentProps) => {
+const FakeKeyPointLinks = () => {
+  return (
+    <>
+      <h3>Links to Posts (Server Side Rendering)</h3>
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
+        Link for post 39 (Page 1)
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
+        Link for post 32 (Page 2)
+      </a>
+      <br />
+      <a href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
+        Link for post 12 (Page 3)
+      </a>
+    </>
+  );
+};
+
+const LivePage = ({ pageData, post }: ComponentProps) => {
   const { lang, translations } = useContext(ServiceContext);
   const {
     title,
@@ -108,10 +129,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            <Stream
-              streamContent={liveTextStream.content}
-              contributors={liveTextStream.contributors}
-            />
+            <FakeKeyPointLinks />
+            <StreamProvider post={post}>
+              <Stream
+                streamContent={liveTextStream.content}
+                contributors={liveTextStream.contributors}
+              />
+            </StreamProvider>
           </div>
         </div>
         <Pagination

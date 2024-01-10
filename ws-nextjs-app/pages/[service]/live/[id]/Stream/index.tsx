@@ -50,10 +50,10 @@ const Stream = ({
       {hasSinglePost ? (
         <Post post={streamResults[0]} />
       ) : (
-        <ol role="list" css={styles.orderedList}>
-          {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
-              <Post post={post} />
+        <ol role="list" css={styles.orderedList} id="top">
+          {streamResults.map(postItem => (
+            <li key={postItem.urn} css={styles.listItem}>
+              <Post post={postItem} />
             </li>
           ))}
         </ol>
