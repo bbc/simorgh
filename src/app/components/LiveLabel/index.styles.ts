@@ -14,20 +14,23 @@ const pulseAnimation = keyframes({
 });
 
 const styles = {
-  liveLabelContainer: ({ isDarkUi, palette, spacings }: Theme) =>
+  // liveLabelContainer: ({ isDarkUi, palette, spacings }: Theme) =>
+  //   css({
+  //     color: isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK,
+  //     marginInlineEnd: `${spacings.HALF}rem`,
+  //   }),
+
+  liveLabelText: ({ fontVariants, palette, spacings }: Theme) =>
     css({
-      color: isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK,
+      color: palette.LIVE_DARK,
+      display: 'inline-block',
+      ...fontVariants.sansBold,
       marginInlineEnd: `${spacings.FULL}rem`,
     }),
 
-  liveLabelText: ({ fontVariants }: Theme) =>
+  pulseOuterCircle: ({ isDarkUi, palette, mq, spacings }: Theme) =>
     css({
-      display: 'inline-block',
-      ...fontVariants.sansBold,
-    }),
-
-  pulseOuterCircle: ({ mq, spacings }: Theme) =>
-    css({
+      color: isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK,
       display: 'inline-block',
       width: `${pixelsToRem(15)}rem`,
       height: `${pixelsToRem(15)}rem`,
