@@ -30,6 +30,7 @@ interface PageDataParams extends ParsedUrlQuery {
   page?: string;
   service: Services;
   variant?: Variants;
+  post?: string;
   // eslint-disable-next-line camelcase
   renderer_env?: string;
 }
@@ -41,6 +42,7 @@ const getPageData = async ({
   page,
   service,
   variant,
+  post,
   rendererEnv,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
@@ -50,12 +52,14 @@ const getPageData = async ({
     pathname,
     service,
     variant,
+    post,
   });
 
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
-  const agent = certsRequired(pathname) ? await getAgent() : null;
+  // amended to connect up to the BFF locally
+  const agent = null;
 
   let pageStatus;
   let pageJson;
@@ -109,6 +113,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     // renderer_env: rendererEnv,
     page = '1',
+    post,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
@@ -140,6 +145,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { data, toggles } = await getPageData({
     id,
     page,
+    post,
     service,
     variant,
     rendererEnv: 'test', // TODO: remove hardcoding
@@ -165,6 +171,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
+      post: post || null,
       pageData: data?.pageData
         ? {
             ...data.pageData,

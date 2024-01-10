@@ -21,6 +21,9 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import BackToLatestPost from '../Stream/BackToLatest/back-to-latest-post';
+import getShareURL from './helpers/getShareUrl';
+import CopyToClipboard from './helpers/copyToClipboard';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -174,11 +177,14 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const postURN = pathOr<string>('', ['urn'], post);
+
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <article css={styles.postContainer}>
+    <article css={styles.postContainer} id={postURN}>
+      <BackToLatestPost urn={postURN} />
       <Heading level={3}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
@@ -194,6 +200,22 @@ const Post = ({ post }: { post: PostType }) => {
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
+      <button
+        type="button"
+        onClick={() => {
+          CopyToClipboard(getShareURL({ urn: postURN, scroll: true }));
+        }}
+      >
+        Copy Share Link to Clipboard (Scroll)
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          CopyToClipboard(getShareURL({ urn: postURN, scroll: false }));
+        }}
+      >
+        Copy Share Link to Clipboard (No Scroll)
+      </button>
     </article>
   );
 };
