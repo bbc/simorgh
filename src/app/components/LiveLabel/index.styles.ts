@@ -14,12 +14,6 @@ const pulseAnimation = keyframes({
 });
 
 const styles = {
-  // liveLabelContainer: ({ isDarkUi, palette, spacings }: Theme) =>
-  //   css({
-  //     color: isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK,
-  //     marginInlineEnd: `${spacings.HALF}rem`,
-  //   }),
-
   liveLabelText: ({ fontVariants, palette, spacings }: Theme) =>
     css({
       color: palette.LIVE_DARK,
