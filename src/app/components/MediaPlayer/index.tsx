@@ -1,12 +1,10 @@
-/* eslint-disable import/order */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import { BumpType, Props } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
-import Caption from '#app/legacy/containers/Caption';
-import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
+import Caption from './Caption';
 
 const logger = nodeLogger(__filename);
 
