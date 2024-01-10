@@ -1,5 +1,6 @@
 /** @jsx jsx */
 /** @jsxRuntime classic */
+/* @jsxFrag React.Fragment */
 import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -55,7 +56,7 @@ const LiveLabel = ({
   ];
 
   return (
-    <React.Fragment>
+    <>
       <span css={circle}>
         <svg
           fill="currentColor"
@@ -90,7 +91,7 @@ const LiveLabel = ({
         )}
         {children}
       </span>
-    </React.Fragment>
+    </>
   );
 };
 
