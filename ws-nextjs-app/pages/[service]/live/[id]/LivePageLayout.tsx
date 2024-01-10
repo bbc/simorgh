@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
@@ -37,7 +37,252 @@ type ComponentProps = {
   };
 };
 
+const fakePollingFetch = () => {
+  return [
+    {
+      typeCode: null,
+      header: {
+        model: {
+          blocks: [
+            {
+              type: 'headline',
+              model: {
+                blocks: [
+                  {
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'paragraph',
+                          model: {
+                            text: 'New post from Polling',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'New post from Polling',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'subheadline',
+              model: {
+                blocks: [
+                  {
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'paragraph',
+                          model: {
+                            text: 'Another post sub headline',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'Another post sub headline',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text: 'Another short form text',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: { text: 'Another ', attributes: ['bold'] },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'short form text',
+                      attributes: ['italic'],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'orderedList',
+              model: {
+                blocks: [
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'one',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'two',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'three',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            { type: 'paragraph', model: { text: '', blocks: [] } },
+            {
+              type: 'unorderedList',
+              model: {
+                blocks: [
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'Bullet 1',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'Bullet 2',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'listItem',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'Bullet 3',
+                            attributes: ['italic'],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            { type: 'paragraph', model: { text: '', blocks: [] } },
+            {
+              type: 'paragraph',
+              model: {
+                text: 'Here is a Link',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: { text: 'Here is a ', attributes: [] },
+                  },
+                  {
+                    type: 'urlLink',
+                    model: {
+                      text: 'Link',
+                      locator: 'https://www.bbc.co.uk/new/pidgin',
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: { text: 'Link', attributes: [] },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      link: null,
+      urn: 'asset:1009a4c7-ef57-4d77-a0f7-3ef886baee4c',
+      type: 'POST',
+      options: { isBreakingNews: false },
+      dates: {
+        firstPublished: '2023-03-21T13:22:05+00:00',
+        lastPublished: '2023-03-21T13:22:05+00:00',
+        time: null,
+        curated: '2023-03-21T13:22:08.502Z',
+      },
+      titles: [{ title: null, source: 'primary' }],
+      descriptions: [{ text: null, source: 'summary' }],
+      images: [
+        {
+          url: null,
+          originalUrl: null,
+          urlTemplate: null,
+          altText: null,
+          copyright: null,
+        },
+      ],
+    },
+  ];
+};
+
 const LivePage = ({ pageData }: ComponentProps) => {
+  const [streamData, setStreamData] = useState(pageData.liveTextStream.content);
+
   const { lang, translations } = useContext(ServiceContext);
   const {
     title,
@@ -71,6 +316,21 @@ const LivePage = ({ pageData }: ComponentProps) => {
     : pageSeoTitle;
 
   const pageDescription = seoDescription || description || pageSeoTitle;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // TODO: Replace with real polling fetch
+      const newPosts = fakePollingFetch();
+
+      setStreamData(prevState => ({
+        data: {
+          results: [...newPosts, ...(prevState?.data.results ?? [])],
+        },
+      }));
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -109,7 +369,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
           </div>
           <div css={styles.secondSection}>
             <Stream
-              streamContent={liveTextStream.content}
+              streamContent={streamData}
               contributors={liveTextStream.contributors}
             />
           </div>
