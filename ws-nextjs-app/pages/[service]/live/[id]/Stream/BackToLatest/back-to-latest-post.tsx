@@ -40,11 +40,11 @@ const BackToLatestPost = ({ urn }: { urn: string }) => {
   return (
     isSelected && (
       <>
-        <Link id="post" href={partialURL}>
-          Goes to top of the first page, focus on stream (NextJS Link)
+        <Link id="post" href={partialURLWithID}>
+          Goes to top of stream (Client-side render)
         </Link>
         <br />
-        <a onClick={handleClickRouter} href={partialURL}>
+        {/* <a onClick={handleClickRouter} href={partialURL}>
           Goes to top of first page, focus on stream (NEXT Router)
         </a>
         <br />
@@ -66,7 +66,7 @@ const BackToLatestPost = ({ urn }: { urn: string }) => {
         <a href={partialURLWithBrandID}>
           Goes to first page, focus on Brand with hash param. Refreshes page
           even if on page 1 (Standard Link)
-        </a>
+        </a> */}
       </>
     )
   );

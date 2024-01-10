@@ -47,7 +47,7 @@ const FakeKeyPointLinks = () => {
 
   return (
     <>
-      <h3>React/ NextJS Link (Client Side Rendering)</h3>
+      {/* <h3>React/ NextJS Link (Client Side Rendering)</h3>
       <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3">
         Link for post 39 (Page 1) - Scroll
       </Link>
@@ -89,6 +89,23 @@ const FakeKeyPointLinks = () => {
       </a>
       <h3>Links with onClick behaviour override</h3>
       <p>TBC</p>
+      <Link href="http://localhost:7081/pidgin/live/c7p765ynk9qt?post=asset%3Ab859b861-ff51-44be-9e66-5832697f5b7d#post">
+        My new post (Page 1) - No Scroll
+      </Link>
+      <br /> */}
+
+      <h3>Links to Posts - Client-side rendered</h3>
+      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3A3b133574-88dc-41e0-9d90-0d3e847adba3#post">
+        Link for post 39 (Page 1)
+      </Link>
+      <br />
+      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Aba735203-6eff-4768-83ce-74098a3ee92a#post">
+        Link for post 32 (Page 2)
+      </Link>
+      <br />
+      <Link href="http://localhost:7081/pidgin/live/c07zr0zwjnnt?post=asset%3Ab14bc99c-eb76-47ef-a716-f4ce97ff1349#post">
+        Link for post 12 (Page 3)
+      </Link>
     </>
   );
 };
