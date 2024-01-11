@@ -107,7 +107,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant,
-    // renderer_env: rendererEnv,
+    rendererEnv,
     page = '1',
   } = context.query as PageDataParams;
 
@@ -142,7 +142,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
-    rendererEnv: 'test', // TODO: remove hardcoding
+    rendererEnv: rendererEnv || 'test', // TODO: remove hardcoding
   });
 
   let routingInfoLogger = logger.debug;
