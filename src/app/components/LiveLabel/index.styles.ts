@@ -29,6 +29,7 @@ const styles = {
       width: `${pixelsToRem(15)}rem`,
       height: `${pixelsToRem(15)}rem`,
       verticalAlign: '-0.125rem',
+      position: 'relative',
       marginInlineEnd: `${spacings.HALF}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         width: `${spacings.DOUBLE}rem`,
