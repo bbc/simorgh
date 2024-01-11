@@ -21,6 +21,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
   width: 0.9375rem;
   height: 0.9375rem;
   vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
@@ -57,9 +58,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      height="1em"
       viewBox="0 0 32 32"
-      width="1em"
     >
       <path
         d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
@@ -106,6 +105,7 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
   width: 0.9375rem;
   height: 0.9375rem;
   vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
@@ -153,9 +153,7 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      height="1em"
       viewBox="0 0 32 32"
-      width="1em"
     >
       <path
         d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
@@ -209,6 +207,7 @@ exports[`LiveLabel should render correctly with English live text and children 1
   width: 0.9375rem;
   height: 0.9375rem;
   vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
@@ -256,9 +255,7 @@ exports[`LiveLabel should render correctly with English live text and children 1
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      height="1em"
       viewBox="0 0 32 32"
-      width="1em"
     >
       <path
         d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
@@ -313,6 +310,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
   width: 0.9375rem;
   height: 0.9375rem;
   vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
@@ -360,9 +358,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      height="1em"
       viewBox="0 0 32 32"
-      width="1em"
     >
       <path
         d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
@@ -416,6 +412,7 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
   width: 0.9375rem;
   height: 0.9375rem;
   vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
@@ -452,9 +449,7 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      height="1em"
       viewBox="0 0 32 32"
-      width="1em"
     >
       <path
         d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
