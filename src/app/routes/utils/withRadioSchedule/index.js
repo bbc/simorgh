@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { getQueryString } from '#lib/utilities/urlParser';

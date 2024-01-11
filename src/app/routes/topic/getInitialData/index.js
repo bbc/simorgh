@@ -20,7 +20,7 @@ const overrideRendererEnv = pathname => {
   return pathname;
 };
 
-export default async ({ service, path: pathname, variant, page, getAgent }) => {
+export default async ({ service, path: pathname, variant, page }) => {
   try {
     const { status, json } = await fetchDataFromBFF({
       pathname: overrideRendererEnv(pathname),
@@ -28,7 +28,6 @@ export default async ({ service, path: pathname, variant, page, getAgent }) => {
       variant,
       pageType: TOPIC_PAGE,
       page,
-      getAgent,
     });
 
     const { data } = json;

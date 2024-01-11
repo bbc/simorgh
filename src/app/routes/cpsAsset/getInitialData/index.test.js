@@ -6,8 +6,6 @@ import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData, { only } from '.';
 
-const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-
 describe('getInitialData', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -22,7 +20,6 @@ describe('getInitialData', () => {
       path: 'mock-map-path',
       service: 'pidgin',
       pageType: 'cpsAsset',
-      getAgent: () => Promise.resolve(agent),
     });
 
     expect(pageData.metadata.id).toEqual(

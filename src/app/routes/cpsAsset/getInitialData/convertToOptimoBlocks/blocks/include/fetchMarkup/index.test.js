@@ -5,11 +5,8 @@ import fetchMarkup from '.';
 
 const includeMarkup = `<div>Include Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
-const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
-
 describe('fetchMarkup', () => {
   afterEach(() => {
-    timeoutSpy.mockClear();
     fetch.resetMocks();
     loggerMock.error.mockClear();
     loggerMock.info.mockClear();
@@ -22,11 +19,11 @@ describe('fetchMarkup', () => {
     );
 
     expect(actual).toEqual(includeMarkup);
-    expect(timeoutSpy).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
+        timeout: 2000,
         headers: {
           'User-Agent': 'Simorgh/ws-web-rendering',
         },
@@ -42,11 +39,11 @@ describe('fetchMarkup', () => {
     );
 
     expect(actual).toEqual(null);
-    expect(timeoutSpy).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
+        timeout: 2000,
         headers: {
           'User-Agent': 'Simorgh/ws-web-rendering',
         },
@@ -68,11 +65,11 @@ describe('fetchMarkup', () => {
     );
 
     expect(actual).toEqual(null);
-    expect(timeoutSpy).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
+        timeout: 2000,
         headers: {
           'User-Agent': 'Simorgh/ws-web-rendering',
         },
