@@ -86,9 +86,12 @@ server
   .use(compression())
   .use(
     helmet({
-      expectCt: false,
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: true,
+      crossOriginOpenerPolicy: { policy: 'same-origin' },
+      crossOriginResourcePolicy: { policy: 'same-origin' },
+      originAgentCluster: true,
     }),
   )
   .use(logResponseTime)
