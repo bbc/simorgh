@@ -78,4 +78,21 @@ export default {
         gridColumn: '4 / span 9',
       },
     }),
+  headerImage: () => css({}), // spare
+  overlayText: () =>
+    css({
+      position: 'absolute',
+      bottom: 0,
+    }),
+  wrapper: () =>
+    css({
+      position: 'relative',
+    }),
+
+  imageWrapper: () =>
+    css({
+      maxHeight: '450px',
+      maxWidth: '800px',
+      overflow: 'hidden',
+    }),
 };
