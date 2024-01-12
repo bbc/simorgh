@@ -57,7 +57,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveTvBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[2];
+      const span = container.getElementsByTagName('span')[1];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
@@ -68,7 +68,7 @@ describe('Bulletin Container', () => {
         { service: 'igbo' },
       );
 
-      const span = container.getElementsByTagName('span')[2];
+      const span = container.getElementsByTagName('span')[1];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
@@ -78,7 +78,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveTvBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[2];
+      const span = container.getElementsByTagName('span')[1];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
