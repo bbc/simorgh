@@ -9,6 +9,60 @@ import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import styles from './styles';
 
+const HeaderContent = ({
+  showLiveLabel,
+  liveLabel,
+  title,
+  description,
+}: any) => {
+  return (
+    <div css={styles.outerGrid}>
+      <Heading
+        size="trafalgar"
+        level={1}
+        css={styles.heading}
+        id="content"
+        tabIndex={-1} // is this for accesibility?
+      >
+        {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
+        {/*  eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text" css={styles.innerGrid}>
+          {showLiveLabel ? (
+            <>
+              <span
+                css={styles.label}
+                aria-hidden="true"
+                data-testid="live-label"
+              >
+                {liveLabel}
+              </span>
+              <VisuallyHiddenText lang="en-GB">
+                {`${liveLabel}, `}
+              </VisuallyHiddenText>
+            </>
+          ) : null}
+          <span
+            css={[styles.title, showLiveLabel && styles.layoutWithLiveLabel]}
+          >
+            {title}
+          </span>
+        </span>
+      </Heading>
+      {description && (
+        <Text
+          as="p"
+          css={[
+            styles.description,
+            showLiveLabel && styles.layoutWithLiveLabel,
+          ]}
+        >
+          {description}
+        </Text>
+      )}
+    </div>
+  );
+};
+
 const Header = ({
   showLiveLabel,
   title,
@@ -43,77 +97,44 @@ const Header = ({
     <div css={styles.wrapper}>
       <div css={styles.backgroundColor}>
         {imageUrl ? (
-          <div css={styles.imageWrapper}>
-            <Image
-              alt=""
-              // attribution={copyright}
-              src={imageUrl}
-              // height={height}
-              // width={width}
-              // lazyLoad={lazyLoad}
-              // preload={shouldPreloadLeadImage}
-              srcSet={primarySrcset || undefined}
-              fallbackSrcSet={fallbackSrcset || undefined}
-              mediaType={primaryMimeType || undefined}
-              fallbackMediaType={fallbackMimeType || undefined}
-              sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
-              // isAmp={isAmp}
-              // placeholder
-              css={styles.headerImage}
-            />
-          </div>
-        ) : null}
-        <div css={styles.overlayText}>
-          <div css={styles.outerGrid}>
-            <div css={styles.heading}>
-              <Heading
-                size="trafalgar"
-                level={1}
-                // css={styles.heading}
-                id="content"
-                tabIndex={-1} // is this for accesibility?
-              >
-                {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
-                {/*  eslint-disable-next-line jsx-a11y/aria-role */}
-                <span role="text" css={styles.innerGrid}>
-                  {showLiveLabel ? (
-                    <>
-                      <span
-                        css={styles.label}
-                        aria-hidden="true"
-                        data-testid="live-label"
-                      >
-                        {liveLabel}
-                      </span>
-                      <VisuallyHiddenText lang="en-GB">
-                        {`${liveLabel}, `}
-                      </VisuallyHiddenText>
-                    </>
-                  ) : null}
-                  <span
-                    css={[
-                      styles.title,
-                      showLiveLabel && styles.layoutWithLiveLabel,
-                    ]}
-                  >
-                    {title}
-                  </span>
-                </span>
-              </Heading>
-              {description && (
-                <Text
-                  as="p"
-                  css={[
-                    styles.description,
-                    showLiveLabel && styles.layoutWithLiveLabel,
-                  ]}
-                >
-                  {description}
-                </Text>
-              )}
+          <>
+            <div css={styles.imageWrapper}>
+              <Image
+                alt=""
+                // attribution={copyright}
+                src={imageUrl}
+                // height={height}
+                // width={width}
+                // lazyLoad={lazyLoad}
+                // preload={shouldPreloadLeadImage}
+                srcSet={primarySrcset || undefined}
+                fallbackSrcSet={fallbackSrcset || undefined}
+                mediaType={primaryMimeType || undefined}
+                fallbackMediaType={fallbackMimeType || undefined}
+                sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
+                // isAmp={isAmp}
+                // placeholder
+                css={styles.headerImage}
+              />
             </div>
-          </div>
-        </div>
+            <div css={styles.overlayText}>
+              <HeaderContent
+                showLiveLabel={showLiveLabel}
+                liveLabel={liveLabel}
+                title={title}
+                description={description}
+              />
+            </div>
+          </>
+        ) : (
+          <HeaderContent
+            showLiveLabel={showLiveLabel}
+            liveLabel={liveLabel}
+            title={title}
+            description={description}
+          />
+        )}
+        ;
       </div>
     </div>
   );
