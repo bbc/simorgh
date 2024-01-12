@@ -51,26 +51,23 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 }
 
 <div>
-  <span
+  <svg
+    aria-hidden="true"
     class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 32 32"
   >
-    <svg
-      aria-hidden="true"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 32 32"
-    >
-      <path
-        d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-      />
-      <circle
-        class="emotion-1"
-        cx="16"
-        cy="16"
-        r="8.5"
-      />
-    </svg>
-  </span>
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
@@ -146,26 +143,23 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 }
 
 <div>
-  <span
+  <svg
+    aria-hidden="true"
     class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 32 32"
   >
-    <svg
-      aria-hidden="true"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 32 32"
-    >
-      <path
-        d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-      />
-      <circle
-        class="emotion-1"
-        cx="16"
-        cy="16"
-        r="8.5"
-      />
-    </svg>
-  </span>
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
@@ -248,26 +242,23 @@ exports[`LiveLabel should render correctly with English live text and children 1
 }
 
 <div>
-  <span
+  <svg
+    aria-hidden="true"
     class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 32 32"
   >
-    <svg
-      aria-hidden="true"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 32 32"
-    >
-      <path
-        d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-      />
-      <circle
-        class="emotion-1"
-        cx="16"
-        cy="16"
-        r="8.5"
-      />
-    </svg>
-  </span>
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
@@ -351,26 +342,23 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 }
 
 <div>
-  <span
+  <svg
+    aria-hidden="true"
     class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 32 32"
   >
-    <svg
-      aria-hidden="true"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 32 32"
-    >
-      <path
-        d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-      />
-      <circle
-        class="emotion-1"
-        cx="16"
-        cy="16"
-        r="8.5"
-      />
-    </svg>
-  </span>
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
@@ -442,26 +430,23 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
 }
 
 <div>
-  <span
+  <svg
+    aria-hidden="true"
     class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 32 32"
   >
-    <svg
-      aria-hidden="true"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 32 32"
-    >
-      <path
-        d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-      />
-      <circle
-        class="emotion-1"
-        cx="16"
-        cy="16"
-        r="8.5"
-      />
-    </svg>
-  </span>
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >

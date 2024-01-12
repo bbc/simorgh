@@ -6988,26 +6988,23 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
-          <span
+          <svg
+            aria-hidden="true"
             class="emotion-15"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 32 32"
           >
-            <svg
-              aria-hidden="true"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-              />
-              <circle
-                class="emotion-16"
-                cx="16"
-                cy="16"
-                r="8.5"
-              />
-            </svg>
-          </span>
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-16"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="promo-1"
             role="text"
@@ -7380,26 +7377,23 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
-          <span
+          <svg
+            aria-hidden="true"
             class="emotion-16"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 32 32"
           >
-            <svg
-              aria-hidden="true"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-              />
-              <circle
-                class="emotion-17"
-                cx="16"
-                cy="16"
-                r="8.5"
-              />
-            </svg>
-          </span>
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-17"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="promo-1"
             role="text"
@@ -7775,26 +7769,23 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
-          <span
+          <svg
+            aria-hidden="true"
             class="emotion-8"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 32 32"
           >
-            <svg
-              aria-hidden="true"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-              />
-              <circle
-                class="emotion-9"
-                cx="16"
-                cy="16"
-                r="8.5"
-              />
-            </svg>
-          </span>
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-9"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="promo-1"
             role="text"
@@ -8206,26 +8197,23 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
-          <span
+          <svg
+            aria-hidden="true"
             class="emotion-15"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 32 32"
           >
-            <svg
-              aria-hidden="true"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-              />
-              <circle
-                class="emotion-16"
-                cx="16"
-                cy="16"
-                r="8.5"
-              />
-            </svg>
-          </span>
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-16"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="promo-1"
             role="text"
