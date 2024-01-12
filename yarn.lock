@@ -13321,7 +13321,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet@npm:^7.1.0":
+"helmet@npm:7.1.0":
   version: 7.1.0
   resolution: "helmet@npm:7.1.0"
   checksum: 16aaa0df997eaa18821e71389bc9ceffeeaa935df98427ede2bb006065f7e02bb1941caabea16d5a93a791cb3fe7d8a760266bc57b3b9ca5dd7da17ea84244b8
@@ -20889,7 +20889,7 @@ __metadata:
     express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
     glob: 8.0.3
-    helmet: ^7.1.0
+    helmet: 7.1.0
     helmet-csp: 3.4.0
     history: 4.10.1
     husky: 8.0.3
