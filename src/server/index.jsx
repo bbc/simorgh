@@ -88,10 +88,10 @@ server
     helmet({
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
-      crossOriginEmbedderPolicy: true,
-      crossOriginOpenerPolicy: { policy: 'same-origin' },
-      crossOriginResourcePolicy: { policy: 'same-origin' },
-      originAgentCluster: true,
+      crossOriginEmbedderPolicy: false,
+      crossOriginOpenerPolicy: false,
+      crossOriginResourcePolicy: false,
+      originAgentCluster: false,
     }),
   )
   .use(logResponseTime)
