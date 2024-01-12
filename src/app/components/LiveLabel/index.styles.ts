@@ -22,7 +22,7 @@ const styles = {
       marginInlineEnd: `${spacings.FULL}rem`,
     }),
 
-  pulseOuterCircle: ({ isDarkUi, palette, mq, spacings }: Theme) =>
+  pulseContainer: ({ isDarkUi, palette, mq, spacings }: Theme) =>
     css({
       color: isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK,
       display: 'inline-block',

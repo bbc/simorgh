@@ -51,7 +51,7 @@ const LiveLabel = ({
   }
 
   const circle = [
-    styles.pulseOuterCircle,
+    styles.pulseContainer,
     className === 'first-promo' && styles.firstPromo,
   ];
 
