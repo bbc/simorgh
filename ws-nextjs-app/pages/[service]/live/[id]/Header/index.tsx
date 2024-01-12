@@ -134,7 +134,6 @@ const Header = ({
             description={description}
           />
         )}
-        ;
       </div>
     </div>
   );

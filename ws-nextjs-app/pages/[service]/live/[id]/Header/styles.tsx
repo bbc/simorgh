@@ -79,10 +79,13 @@ export default {
       },
     }),
   headerImage: () => css({}), // spare
-  overlayText: () =>
+  overlayText: ({ mq }: Theme) =>
     css({
-      position: 'absolute',
-      bottom: 0,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        position: 'absolute',
+        top: '50%',
+        transform: 'translate(0, -50%)',
+      },
     }),
   wrapper: () =>
     css({
@@ -91,8 +94,8 @@ export default {
 
   imageWrapper: () =>
     css({
-      maxHeight: '450px',
-      maxWidth: '800px',
+      maxHeight: '440px',
+      aspectRatio: '16 / 9',
       overflow: 'hidden',
     }),
 };
