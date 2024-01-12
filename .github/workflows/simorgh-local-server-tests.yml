@@ -54,7 +54,7 @@ jobs:
 
       - name: Start Simorgh Server - Next.JS App
         working-directory: ws-nextjs-app
-        run: nohup yarn start > /dev/null 2>&1 &
+        run: yarn start
 
       - name: Run AMP Validator
         run: yarn amp:validate
