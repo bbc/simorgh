@@ -12,6 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
+    atiAnalyticsProducerName: 'UZBEK',
     chartbeatDomain: 'uzbek.bbc.co.uk',
     brandName: "BBC News O'zbek",
     product: 'BBC News',

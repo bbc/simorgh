@@ -22,14 +22,18 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => (
   </noscript>
 );
 
-const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({
+  pageviewParams,
+  reverbParams,
+}: ATIAnalyticsProps) => {
   const [atiPageViewUrl] = useState(
     process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
   );
+  const [reverbBeaconConfig] = useState(reverbParams);
 
   useEffect(() => {
-    sendBeacon(atiPageViewUrl);
-  }, [atiPageViewUrl]);
+    sendBeacon(atiPageViewUrl, reverbBeaconConfig);
+  }, [atiPageViewUrl, reverbBeaconConfig]);
 
   return renderNoScriptTrackingPixel(atiPageViewUrl);
 };

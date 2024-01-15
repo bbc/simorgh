@@ -1,21 +1,25 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
   const linkData = path(['link'], eventTrackingData);
+  const useReverb = pathOr(false, ['useReverb'], eventTrackingData);
   const optimizely = path(['block', 'optimizely'], eventTrackingData);
   const handleBlockLevelClick = useClickTrackerHandler({
     ...(blockData && {
       ...blockData,
       preventNavigation: true,
+      useReverb,
     }),
   });
   const handleLinkLevelClick = useClickTrackerHandler({
     ...(linkData && {
       ...linkData,
       preventNavigation: true,
+      useReverb,
     }),
   });
 

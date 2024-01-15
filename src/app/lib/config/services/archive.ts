@@ -12,6 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'archive',
     atiAnalyticsProducerId: '127',
+    atiAnalyticsProducerName: 'BBC_ARCHIVE',
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Archive',
     product: 'BBC Archive',

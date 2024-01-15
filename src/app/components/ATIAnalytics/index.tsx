@@ -4,28 +4,39 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { ATIProps } from './types';
-import buildATIUrl from './params';
+import { buildATIUrl, buildReverbParams } from './params';
 
-const ATIAnalytics = ({ data, atiData }: ATIProps) => {
+const ATIAnalytics = ({ data, atiData, useReverb }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
 
-  const pageviewParams = buildATIUrl({
+  const urlPageViewParams = buildATIUrl({
     requestContext,
     serviceContext,
     data,
     atiData,
   }) as string;
 
-  if (!pageviewParams) {
+  const reverbParams = useReverb
+    ? buildReverbParams({
+        requestContext,
+        serviceContext,
+        atiData: atiData || {},
+      })
+    : null;
+
+  if (!urlPageViewParams) {
     return null;
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={pageviewParams} />
+    <AmpATIAnalytics pageviewParams={urlPageViewParams} />
   ) : (
-    <CanonicalATIAnalytics pageviewParams={pageviewParams} />
+    <CanonicalATIAnalytics
+      pageviewParams={urlPageViewParams}
+      reverbParams={reverbParams}
+    />
   );
 };
 

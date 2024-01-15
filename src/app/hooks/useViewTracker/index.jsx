@@ -20,14 +20,21 @@ const useViewTracker = (props = {}) => {
   const url = path(['url'], props);
   const optimizely = path(['optimizely'], props);
 
+  const useReverb = pathOr(false, ['useReverb'], props);
+
   const observer = useRef();
   const timer = useRef(null);
   const [isInView, setIsInView] = useState();
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const eventTrackingContext = useContext(EventTrackingContext);
-  const { pageIdentifier, platform, producerId, statsDestination } =
-    eventTrackingContext;
+  const {
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    statsDestination,
+  } = eventTrackingContext;
   const campaignID = pathOr(
     path(['campaignID'], eventTrackingContext),
     ['campaignID'],
@@ -54,13 +61,14 @@ const useViewTracker = (props = {}) => {
 
   useEffect(() => {
     if (isInView && !timer.current) {
-      timer.current = setTimeout(() => {
+      timer.current = setTimeout(async () => {
         const hasRequiredProps = [
           campaignID,
           componentName,
           pageIdentifier,
           platform,
           producerId,
+          producerName,
           service,
           statsDestination,
         ].every(Boolean);
@@ -85,18 +93,20 @@ const useViewTracker = (props = {}) => {
             );
           }
 
-          sendEventBeacon({
+          await sendEventBeacon({
             campaignID,
             componentName,
             format,
             pageIdentifier,
             platform,
             producerId,
+            producerName,
             service,
             statsDestination,
             type: EVENT_TYPE,
             advertiserID,
             url,
+            useReverb,
           });
           setEventSent(true);
           observer.current.disconnect();
@@ -120,6 +130,7 @@ const useViewTracker = (props = {}) => {
     pageIdentifier,
     platform,
     producerId,
+    producerName,
     service,
     statsDestination,
     trackingIsEnabled,
@@ -127,6 +138,7 @@ const useViewTracker = (props = {}) => {
     advertiserID,
     url,
     optimizely,
+    useReverb,
   ]);
 
   return async element => {
