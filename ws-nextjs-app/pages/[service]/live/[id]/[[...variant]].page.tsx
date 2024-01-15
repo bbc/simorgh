@@ -15,11 +15,11 @@ import {
 import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
-// import getEnvironment from '#app/routes/utils/getEnvironment';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
-// import certsRequired from '#app/routes/utils/certsRequired';
+import certsRequired from '#app/routes/utils/certsRequired';
 import { OK } from '#app/lib/statusCodes.const';
-// import getAgent from '../../../../utilities/undiciAgent';
+import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
@@ -52,10 +52,10 @@ const getPageData = async ({
     variant,
   });
 
-  // const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': 'test' };
+  const env = getEnvironment(pathname);
+  const optHeaders = { 'ctx-service-env': env };
 
-  const agent = null;
+  const agent = certsRequired(pathname) ? await getAgent() : null;
 
   let pageStatus;
   let pageJson;
