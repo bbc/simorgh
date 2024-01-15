@@ -50,11 +50,11 @@ jobs:
         run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Build Simorgh - Next.JS App
-        working-directory: ws-nextjs-app
+        working-directory: ./ws-nextjs-app
         run: yarn build:local
 
       - name: Start Simorgh Server - Next.JS App
-        working-directory: ws-nextjs-app
+        working-directory: ./ws-nextjs-app
         run: nohup PORT=7081 node build/standalone/ws-nextjs-app/server.js > /dev/null 2>&1 &
 
       - name: Run AMP Validator
