@@ -4,7 +4,6 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import '@testing-library/jest-dom/extend-expect';
 
 import AudioLoader from '.';
 

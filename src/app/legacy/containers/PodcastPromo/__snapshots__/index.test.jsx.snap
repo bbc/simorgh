@@ -3,34 +3,40 @@
 exports[`Inline Should render correctly 1`] = `
 .emotion-0 {
   float: right;
-  background: #F2F2F2;
-  margin: 1.5rem 0;
+  margin: 0 0.5rem 1.5rem;
   height: auto;
 }
 
 @media (min-width: 15rem) {
   .emotion-0 {
     width: 45%;
-    margin: 1.5rem 0.25rem;
+    margin: 0.5rem 0.5rem 1.5rem;
   }
 }
 
 @media (min-width: 16.25rem) {
   .emotion-0 {
-    margin: 1.5rem 0.5rem;
+    margin: 0.25rem 1rem 1.5rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 63rem) {
   .emotion-0 {
-    margin: 1.5rem 1rem;
+    margin-inline: 1rem 0;
+    direction: ltr;
   }
 }
 
 .emotion-3 {
   background-color: #F2F2F2;
   padding: 1rem;
-  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    border: 0.1875rem solid transparent;
+  }
 }
 
 .emotion-5 {
@@ -81,86 +87,33 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 .emotion-9 {
-  margin: 0 0 1rem;
-}
-
-.emotion-11 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  display: inline;
-  color: #222222;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-11>svg {
-  margin-left: 0;
-  width: 1.375rem;
-  height: 1.375rem;
-  fill: currentColor;
   position: relative;
-  bottom: 0.3125rem;
-  right: 0.1875rem;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-11>svg {
-    fill: canvasText;
-  }
-}
-
-.emotion-13 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-15 {
-  position: relative;
-  background-color: #FDFDFD;
+  background-color: #FFFFFF;
   display: block;
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-9 {
     display: block;
   }
 }
 
-.emotion-15:hover .podcast-promo--hover {
+.emotion-9:hover .podcast-promo--hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-17 {
+.emotion-11 {
   margin: 0.5rem 0 0.5rem 0.5rem;
   display: none;
-  display: inline-block;
+  display: block;
   width: 100%;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
 }
 
 @media (min-width: 20rem) {
-  .emotion-17 {
+  .emotion-11 {
     display: block;
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -176,7 +129,7 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-11 {
     -webkit-flex-basis: 6.8125rem;
     -ms-flex-preferred-size: 6.8125rem;
     flex-basis: 6.8125rem;
@@ -184,7 +137,7 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-11 {
     -webkit-flex-basis: 11.125rem;
     -ms-flex-preferred-size: 11.125rem;
     flex-basis: 11.125rem;
@@ -193,18 +146,18 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-11 {
     margin: 0;
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-17 {
+@media (max-width: 15rem) {
+  .emotion-11 {
     display: none;
   }
 }
 
-.emotion-19 {
+.emotion-13 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -219,20 +172,73 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-19 {
+  .emotion-13 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-13 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-15 {
+  position: absolute;
+  float: bottom;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+}
+
+@media (max-width: 15rem) {
+  .emotion-15 {
+    position: relative;
+    -webkit-transform: translateY(0.75rem);
+    -moz-transform: translateY(0.75rem);
+    -ms-transform: translateY(0.75rem);
+    transform: translateY(0.75rem);
+    margin: 0.75rem 0.5rem;
+    width: 2.5rem;
+  }
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.podcastIconWrapper .emotion-17 {
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-17 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -240,42 +246,50 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-21 {
+  .emotion-19 {
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-21 {
+  .emotion-19 {
     padding: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     padding: 0.5rem;
   }
 }
 
 @media (min-width: 15rem) {
-  .emotion-21 {
-    padding: 0 0.5rem 0.5rem 0.5rem;
+  .emotion-19 {
+    padding: 0 0.75rem 0.75rem;
   }
 }
 
-.emotion-23 {
+@media (min-width: 16.25rem) {
+  .emotion-19 {
+    padding: 0 1rem 1rem;
+  }
+}
+
+.emotion-21 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
   display: block;
+  margin-top: 0.75rem;
+  color: #141414;
 }
 
-.emotion-23:before {
+.emotion-21:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -286,51 +300,67 @@ exports[`Inline Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-23:visited .podcast-promo--visited {
+.emotion-21:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-23:focus .podcast-promo--focus {
+.emotion-21:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+  .emotion-21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+  .emotion-21 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-21:visited {
+  color: #545658;
+}
+
+@media (max-width: 15rem) {
+  .emotion-21 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-21 {
+    margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-21 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-21 {
       font-size: 1rem;
       line-height: 1.25rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-23 {
+    .emotion-21 {
       font-size: 1rem;
       line-height: 1.25rem;
     }
   }
 }
 
-.emotion-26 {
+.emotion-24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -339,25 +369,48 @@ exports[`Inline Should render correctly 1`] = `
   max-width: 30rem;
   color: #6E6E73;
   margin-top: 0.5rem;
-  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin: 0.75rem 0;
   overflow-wrap: break-word;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-29 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-24 {
+    margin: 1rem 0;
+  }
+}
+
+.emotion-27 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -367,23 +420,24 @@ exports[`Inline Should render correctly 1`] = `
   color: #6E6E73;
   font-size: 0.875rem;
   line-height: 1.125rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-29>svg {
+.emotion-27>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -394,78 +448,78 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-29>svg {
+  .emotion-27>svg {
     fill: canvasText;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 15rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin: 0;
   }
 }
 
 @media (min-width: 16.25rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin: 0;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin: 0 0.25rem;
   }
 }
 
 @media (min-width: 22.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
     margin: 0 0.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-29 {
+    .emotion-27 {
       font-size: 0.9375rem;
       line-height: 1.125rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-29 {
+    .emotion-27 {
       font-size: 0.875rem;
       line-height: 1.125rem;
     }
   }
 }
 
-.emotion-31 {
+.emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -474,7 +528,7 @@ exports[`Inline Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-33 {
+.emotion-31 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -502,39 +556,16 @@ exports[`Inline Should render correctly 1`] = `
           class="emotion-7 emotion-8"
           href="#end-of-podcasts"
         >
-          Пропустить Подкаст и продолжить чтение.
+          Пропустить Реклама подкастов и продолжить чтение.
         </a>
         <div
           class="emotion-9 emotion-10"
         >
-          <strong
-            class="emotion-11 emotion-12"
-            dir="ltr"
-            id="podcast-promo"
-          >
-            <svg
-              aria-hidden="true"
-              class="emotion-13 emotion-14"
-              focusable="false"
-              height="32"
-              viewBox="0 0 32 32"
-              width="32"
-            >
-              <path
-                d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
-              />
-            </svg>
-            Подкаст
-          </strong>
-        </div>
-        <div
-          class="emotion-15 emotion-16"
-        >
           <div
-            class="emotion-17 emotion-18"
+            class="emotion-11 emotion-12"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="emotion-13 emotion-14"
               data-e2e="image-placeholder"
               style="padding-bottom: 100%;"
             >
@@ -549,30 +580,49 @@ exports[`Inline Should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-21 emotion-22"
+            class="podcastIconWrapper emotion-15 emotion-16"
           >
-            <a
-              class="emotion-23 emotion-24"
-              href="/russian/media-47937790"
+            <svg
+              aria-hidden="true"
+              class="emotion-17 emotion-18"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
             >
-              <span
-                class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+              <path
+                d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+              />
+            </svg>
+          </div>
+          <div
+            class="emotion-19 emotion-20"
+          >
+            <strong>
+              <a
+                class="emotion-21 emotion-22"
+                href="/russian/media-47937790"
               >
-                Что это было?
-              </span>
-            </a>
+                <span
+                  class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+                  id="podcast-promo"
+                >
+                  Что это было?
+                </span>
+              </a>
+            </strong>
             <p
-              class="emotion-25 emotion-26 emotion-27"
+              class="emotion-23 emotion-24 emotion-25"
             >
               Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.
             </p>
             <p
-              class="emotion-28 emotion-29 emotion-30"
+              class="emotion-26 emotion-27 emotion-28"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 focusable="false"
                 height="32"
                 viewBox="0 0 32 32"
@@ -593,11 +643,11 @@ exports[`Inline Should render correctly 1`] = `
           </div>
         </div>
         <p
-          class="emotion-33 emotion-34"
+          class="emotion-31 emotion-32"
           id="end-of-podcasts"
           tabindex="-1"
         >
-          Конец истории Подкаст
+          Конец истории Реклама подкастов
         </p>
       </div>
     </section>
@@ -677,9 +727,22 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   height: 1rem;
 }
 
+.podcastIconWrapper .emotion-8 {
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-8 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .emotion-10 {
   position: relative;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

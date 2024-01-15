@@ -1,38 +1,51 @@
-import '@testing-library/jest-dom/extend-expect';
-import chalk from 'chalk';
+import colours from 'colors';
+import '@testing-library/jest-dom';
 
-const REACT_FAILED_PROP_TYPE = 'Failed prop';
-const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
-const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
-const REACT_PSUEDO_CLASS = 'The pseudo class ":first-child"';
-const REACT_UNMATCHED_GET = 'Unmatched GET to';
+// Errors
+const FAILED_PROP = 'Failed prop';
+
+// Warnings
+const PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
+const PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
+const UNMATCHED_GET = 'Unmatched GET to /undefined';
 const REACT_UNMOUNTED = 'React state update on an unmounted component';
-const REACT_ERRORS = [
-  REACT_FAILED_PROP_TYPE,
-  REACT_NO_KEYS,
-  REACT_DUPLICATE_KEYS,
-];
-const REACT_SUPPRESSED_WARNINGS = [
-  REACT_PSUEDO_CLASS,
-  REACT_UNMATCHED_GET,
-  REACT_UNMOUNTED,
-];
-const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
-const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
+const TAG_HUNDEFINED = 'The tag <hundefined';
 
-const { error, warn } = console;
+const SUPPRESSED_WARNINGS = [
+  PSEUDO_CLASS_FIRST_CHILD,
+  PSEUDO_CLASS_NTH_CHILD,
+  UNMATCHED_GET,
+  REACT_UNMOUNTED,
+  TAG_HUNDEFINED,
+];
+
+const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
+
+const { warn } = console;
+
+const getFormattedMessage = (message, rest) => {
+  let theMessage = message;
+
+  if (typeof message === 'object') {
+    theMessage = message.toString();
+  }
+
+  return theMessage.replace('%s', rest);
+};
 
 const didSuppressWarning = (message, ...rest) => {
   const { expectedWarnings } = window;
-  if (REACT_SUPPRESSED_REGEX.test(message)) {
+  if (SUPPRESSED_REGEX.test(message)) {
     return true;
   }
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {
       const warningsRegex = new RegExp(
-        [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('*.*'),
+        [FAILED_PROP, ...expectedWarnings[i]].join('*.*'),
       );
-      const consoleFormattedMessage = message.replace('%s', rest);
+
+      const consoleFormattedMessage = getFormattedMessage(message, rest);
+
       if (warningsRegex.test(consoleFormattedMessage)) {
         window.expectedWarnings.splice(i, 1);
         return true;
@@ -46,22 +59,27 @@ const didSuppressWarning = (message, ...rest) => {
 console.error = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
 
-  if (REACT_ERRORS_REGEX.test(message)) {
-    throw new Error(
-      [
-        chalk.red.bold(
-          'Test failed because a React warning was detected. Please fix the following:',
-        ),
-        chalk.red(message),
-      ].join('\n'),
-    );
-  }
+  const formattedMessage = getFormattedMessage(message, rest);
 
-  error(message, ...rest);
+  throw new Error(
+    [
+      colours.red.bold(
+        `
+${expect.getState().testPath}: ${expect.getState().currentTestName}
+          
+Please fix the following:
+`,
+      ),
+      colours.red(formattedMessage),
+    ].join('\n'),
+  );
 };
+
+global.setImmediate =
+  global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
 // eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {
-  if (didSuppressWarning(message)) return;
+  if (didSuppressWarning(message, ...rest)) return;
   warn(message, ...rest);
 };

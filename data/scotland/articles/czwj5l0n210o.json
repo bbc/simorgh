@@ -692,6 +692,19 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:czwj5l0n210o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:czwj5l0n210o",
+          "contentType": "article",
+          "language": "en-gb",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "scotland.articles.czwj5l0n210o.page",
+          "pageTitle": "This is the SEO headline of this test article",
+          "timePublished": "2019-09-13T12:36:29.124Z",
+          "timeUpdated": "2019-09-13T12:36:29.124Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:czwj5l0n210o",
           "canonicalUrl": "https://www.bbc.com/scotland/articles/czwj5l0n210o"

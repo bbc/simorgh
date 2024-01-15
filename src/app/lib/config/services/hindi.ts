@@ -47,16 +47,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'छोटी उम्र बड़ी ज़िंदगी',
+      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
       brandDescription:
-        'उन चमकते सितारों की कहानी जिन्हें दुनिया अभी और देखना और सुनना चाहती थी.',
+        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0fmrcw1.jpg',
-        alt: 'छोटी उम्र बड़ी ज़िंदगी',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
+        alt: 'दिनभर',
       },
       linkLabel: {
         text: 'दिनभर: पूरा दिन,पूरी ख़बर',
-        href: 'https://www.bbc.com/hindi/podcasts/p0fmrg25',
+        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -85,6 +85,13 @@ export const service: DefaultServiceConfig = {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
         videoPlayer: 'वीडियो प्लेयर',
+      },
+      liveExperiencePage: {
+        liveLabel: 'लाइव',
+        liveCoverage: 'लाइव कवरेज',
+        breaking: 'ब्रेकिंग न्यूज़',
+        postedAt: 'पोस्ट किया गया',
+        summary: 'सारांश',
       },
       gist: 'सारांश',
       error: {
@@ -146,7 +153,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ओके',
           reject: 'जानें कि क्या बदला है',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -161,7 +168,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'कुकीज़',
                 last: ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'सेटिंग्स मैनेज करें',
             },
@@ -177,7 +184,7 @@ export const service: DefaultServiceConfig = {
                   'अपनी वेबसाइट के ठीक से काम करने के लिए हमें सीमित स्तर पर कुछ जानकारियाँ सेव करनी पड़ती हैं जिसके लिए हम आपसे मंज़ूरी नहीं मांगते.',
                 para4: {
                   text: 'उन जरूरी जानकारी के बारे में और अधिक पढ़ें जो हमने आपके डिवाइस पर स्टोर किए हैं ताकि पेज ठीक से दिख सके.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'हमें आपकी मंज़ूरी और पसंद को आपकी डिवाइस के लोकल स्टोरेज में स्टोर करते हैं.',
@@ -210,13 +217,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'कुकीज़',
                 last: ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'हां, मैं राज़ी हूं',
             reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

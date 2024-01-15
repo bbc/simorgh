@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '.';
+import { GHOST, EBON } from '../../../components/ThemeProvider/palette';
 import '@testing-library/jest-dom';
 
 describe('CpsOnwardJourney', () => {
@@ -135,9 +136,9 @@ describe('CpsOnwardJourney', () => {
 
   it.each`
     expectation                             | sectionLabelOverrideAs | sectionLabelBar | sectionLabelBackground
-    ${'element as strong'}                  | ${'strong'}            | ${true}         | ${props => props.theme.palette.GHOST}
-    ${'without bar under section label'}    | ${null}                | ${false}        | ${props => props.theme.palette.GHOST}
-    ${'with alternative background colour'} | ${null}                | ${true}         | ${props => props.theme.palette.EBON}
+    ${'element as strong'}                  | ${'strong'}            | ${true}         | ${GHOST}
+    ${'without bar under section label'}    | ${null}                | ${false}        | ${GHOST}
+    ${'with alternative background colour'} | ${null}                | ${true}         | ${EBON}
   `(
     'renders section label with $expectation',
     ({ sectionLabelOverrideAs, sectionLabelBar, sectionLabelBackground }) => {

@@ -2,121 +2,121 @@
 
 exports[`Canonical Topic Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Topic Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.topics.c95y35941vrt.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac95y35941vrt]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-category]&amp;x8=[simorgh-nojs]&amp;x9=[Donald%2520Trump]\\"/>"`;
+exports[`Canonical Topic Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.topics.c95y35941vrt.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac95y35941vrt]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-category]&amp;x8=[simorgh-nojs]&amp;x9=[Donald%2520Trump]"/>"`;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Pidgin",
   "url": "/pidgin",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Why you fit trust BBC News",
   "url": "https://www.bbc.com/pidgin/institutional-48528766",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "How dem dey take use am",
-  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "As e concern BBC",
-  "url": "https://www.bbc.co.uk/aboutthebbc",
+  "url": "https://www.bbc.com/aboutthebbc",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Privacy Policy",
-  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Call BBC",
   "url": "https://www.bbc.co.uk/pidgin/send/u50853577",
 }
 `;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`Canonical Topic Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Topic Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Topic Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Topic Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Home",
   "url": "/pidgin",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "Nigeria",
   "url": "/pidgin/topics/c2dwqd1zr92t",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Africa",
   "url": "/pidgin/topics/c404v061z85t",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "World",
   "url": "/pidgin/topics/c0823e52dd0t",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Video",
   "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Sport",
   "url": "/pidgin/topics/cjgn7gv77vrt",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 7`] = `
-Object {
+{
   "text": "Entertainment",
   "url": "/pidgin/topics/cqywjyzk2vyt",
 }
 `;
 
 exports[`Canonical Topic Page Header Navigation link should match text and url 8`] = `
-Object {
+{
   "text": "Most popular",
   "url": "/pidgin/popular/read",
 }
@@ -125,70 +125,70 @@ Object {
 exports[`Canonical Topic Page Main heading should match text 1`] = `"Donald Trump"`;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
 }
@@ -205,31 +205,31 @@ exports[`Canonical Topic Page SEO Heading level 1 1`] = `"Donald Trump"`;
 exports[`Canonical Topic Page SEO Lang attribute 1`] = `"pcm"`;
 
 exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "CollectionPage",
       "headline": "Donald Trump",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "pcm",
         "name": "Nigerian Pidgin",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/pidgin/topics/c95y35941vrt",
         "@type": "WebPage",
         "name": "Donald Trump",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
@@ -241,173 +241,156 @@ Object {
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
       "url": "http://localhost:7080/pidgin/topics/c95y35941vrt",
     },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-04-05T07:46:57.258Z",
-      "headline": "Di 34 criminal charges against former US President Donald Trump and di likely punishment",
-      "name": "Di 34 criminal charges against former US President Donald Trump and di likely punishment",
-      "url": "https://www.bbc.com/pidgin/articles/c97dqy49r6mo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-04-04T18:07:11.414Z",
-      "headline": "Trump plead not guilty to 34 criminal charges dem sama am",
-      "name": "Trump plead not guilty to 34 criminal charges dem sama am",
-      "url": "https://www.bbc.com/pidgin/articles/cgr1873031po",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-04-04T08:39:03.724Z",
-      "headline": "Donald Trump fit plead not guilty for New York court",
-      "name": "Donald Trump fit plead not guilty for New York court",
-      "url": "https://www.bbc.com/pidgin/articles/cl70nnzwygno",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-03-31T14:53:24.211Z",
-      "headline": "Next tin wey fit happun to Donald Trump wen dem arrest am",
-      "name": "Next tin wey fit happun to Donald Trump wen dem arrest am",
-      "url": "https://www.bbc.com/pidgin/articles/c108qmg34lno",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-03-31T10:56:48.202Z",
-      "headline": "Wetin happun between Donald Trump and ex-porn star Stormy Daniels?",
-      "name": "Wetin happun between Donald Trump and ex-porn star Stormy Daniels?",
-      "url": "https://www.bbc.com/pidgin/articles/c3grn1vp22no",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-03-18T16:06:43.388Z",
-      "headline": "Trump raise alarm over planned arrest on Tuesday",
-      "name": "Trump raise alarm over planned arrest on Tuesday",
-      "url": "https://www.bbc.com/pidgin/articles/ce42l3rxzz5o",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-01-26T05:17:14.920Z",
-      "headline": "Why Meta want allow Donald Trump back on Facebook and Instagram",
-      "name": "Why Meta want allow Donald Trump back on Facebook and Instagram",
-      "url": "https://www.bbc.com/pidgin/articles/c84ejj0v3lwo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2023-01-12T09:35:30.155Z",
-      "headline": "Authorities find Second batch of classified Biden documents ",
-      "name": "Authorities find Second batch of classified Biden documents ",
-      "url": "https://www.bbc.com/pidgin/articles/c991v2gxx7lo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-12-07T07:16:06.355Z",
-      "headline": "'Trump Organization dey guilty of tax crimes'",
-      "name": "'Trump Organization dey guilty of tax crimes'",
-      "url": "https://www.bbc.com/pidgin/articles/c6p9rxv3wedo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-12-01T08:16:49.563Z",
-      "headline": "House Democrats don get access to Donald Trump tax returns",
-      "name": "House Democrats don get access to Donald Trump tax returns",
-      "url": "https://www.bbc.com/pidgin/articles/c84pdy202y0o",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-11-23T09:12:18.526Z",
-      "headline": "Supreme Court clear Congress to check Trump tax records",
-      "name": "Supreme Court clear Congress to check Trump tax records",
-      "url": "https://www.bbc.com/pidgin/articles/cz9y7g91kg9o",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-11-20T05:34:37.483Z",
-      "headline": "Trump go return to Twitter? Account of di former US president reappear afta Musk lift suspension",
-      "name": "Trump go return to Twitter? Account of di former US president reappear afta Musk lift suspension",
-      "url": "https://www.bbc.com/pidgin/articles/cg6vzwlz0wlo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-11-16T05:58:24.299Z",
-      "headline": "'﻿I go fight like no one don ever fight before' - Trump",
-      "name": "'﻿I go fight like no one don ever fight before' - Trump",
-      "url": "https://www.bbc.com/pidgin/articles/cd15jkr6pzzo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-11-04T05:31:12.731Z",
-      "headline": "Trump drop strong hint say e fit run for White House 2024  ",
-      "name": "Trump drop strong hint say e fit run for White House 2024  ",
-      "url": "https://www.bbc.com/pidgin/articles/cd1lk2nmpxro",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-10-22T05:26:30.293Z",
-      "headline": "Trump court order: Former president get court order to testify to January 6 committee",
-      "name": "Trump court order: Former president get court order to testify to January 6 committee",
-      "url": "https://www.bbc.com/pidgin/articles/cz91pzy45qqo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-08-12T05:09:26.951Z",
-      "headline": "US justice department wan unseal Trump warrant",
-      "name": "US justice department wan unseal Trump warrant",
-      "url": "https://www.bbc.com/pidgin/articles/c72qkxlzq1vo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-08-09T07:13:26.290Z",
-      "headline": "Trump say FBI agents 'raid' im house for Mar-a-Lago Florida ",
-      "name": "Trump say FBI agents 'raid' im house for Mar-a-Lago Florida ",
-      "url": "https://www.bbc.com/pidgin/articles/cqvgq9wq991o",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-07-15T07:11:06.000Z",
-      "headline": "Who be Ivana Trump, Donald Trump first wife wey die at di age of 73 ?",
-      "name": "Who be Ivana Trump, Donald Trump first wife wey die at di age of 73 ?",
-      "url": "https://www.bbc.com/pidgin/world-62174669",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-07-15T05:25:53.000Z",
-      "headline": "Profile of Ivana Trump, Donald Trump first wife wey die at di age of 73",
-      "name": "Profile of Ivana Trump, Donald Trump first wife wey die at di age of 73",
-      "url": "https://www.bbc.com/pidgin/world-62174668",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-06-10T08:23:38.382Z",
-      "headline": "Trump dey accused of 'attempted coup' sake of Capitol riot ",
-      "name": "Trump dey accused of 'attempted coup' sake of Capitol riot ",
-      "url": "https://www.bbc.com/pidgin/articles/cj5r8vvzpljo",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-02-21T15:32:39.000Z",
-      "headline": "Trump social-media platform don go live",
-      "name": "Trump social-media platform don go live",
-      "url": "https://www.bbc.com/pidgin/world-60465144",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2022-01-06T19:00:29.000Z",
-      "headline": "Wetin happun for January 6 one year ago?",
-      "name": "Wetin happun for January 6 one year ago?",
-      "url": "https://www.bbc.com/pidgin/tori-59901959",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2021-06-08T07:41:51.000Z",
-      "headline": "Why Donald Trump say Bitcoin na scam",
-      "name": "Why Donald Trump say Bitcoin na scam",
-      "url": "https://www.bbc.com/pidgin/tori-57396574",
-    },
-    Object {
-      "@type": "article",
-      "dateCreated": "2021-05-05T09:12:36.000Z",
-      "headline": "Wetin be dis new 'website' wey Donald Trump launch?",
-      "name": "Wetin be dis new 'website' wey Donald Trump launch?",
-      "url": "https://www.bbc.com/pidgin/tori-56991816",
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/pidgin/articles/c97dqy49r6mo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.bbc.com/pidgin/articles/cgr1873031po",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/pidgin/articles/cl70nnzwygno",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/pidgin/articles/c108qmg34lno",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/pidgin/articles/c3grn1vp22no",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/pidgin/articles/ce42l3rxzz5o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/pidgin/articles/c84ejj0v3lwo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/pidgin/articles/c991v2gxx7lo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.bbc.com/pidgin/articles/c6p9rxv3wedo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.bbc.com/pidgin/articles/c84pdy202y0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.bbc.com/pidgin/articles/cz9y7g91kg9o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.bbc.com/pidgin/articles/cg6vzwlz0wlo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.bbc.com/pidgin/articles/cd15jkr6pzzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://www.bbc.com/pidgin/articles/cd1lk2nmpxro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://www.bbc.com/pidgin/articles/cz91pzy45qqo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.bbc.com/pidgin/articles/c72qkxlzq1vo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://www.bbc.com/pidgin/articles/cqvgq9wq991o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://www.bbc.com/pidgin/world-62174669",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://www.bbc.com/pidgin/world-62174668",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://www.bbc.com/pidgin/articles/cj5r8vvzpljo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://www.bbc.com/pidgin/world-60465144",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://www.bbc.com/pidgin/tori-59901959",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://www.bbc.com/pidgin/tori-57396574",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://www.bbc.com/pidgin/tori-56991816",
+        },
+      ],
+      "name": "BBC News Pidgin",
+      "numberOfItems": 24,
     },
   ],
 }

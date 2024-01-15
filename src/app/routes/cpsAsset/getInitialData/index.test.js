@@ -14,7 +14,7 @@ describe('getInitialData', () => {
 
   it('should return essential data for a page to render', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
-    fetch.mockResponse(JSON.stringify(mapJson));
+    fetch.mockResponse(JSON.stringify({ ...mapJson }));
 
     const { pageData } = await getInitialData({
       path: 'mock-map-path',

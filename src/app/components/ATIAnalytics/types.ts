@@ -1,4 +1,6 @@
-import { Platforms, Services } from '../../models/types/global';
+import { PageTypes, Platforms, Services } from '../../models/types/global';
+import { RequestContextProps } from '../../contexts/RequestContext';
+import { ServiceConfig } from '../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {
   transport: {
@@ -46,10 +48,12 @@ export interface PageData {
     language?: string;
     firstPublished?: number;
     lastPublished?: number;
+    type?: PageTypes;
   };
   promo?:
     | { headlines?: { seoHeadline?: string } }
-    | { headlines?: { headline?: string } };
+    | { headlines?: { headline?: string } }
+    | { subType: string; name: string; uri: string; id: string; type: string };
   id?: string;
   language?: string;
   pageIdentifier?: string;
@@ -58,6 +62,36 @@ export interface PageData {
   lastRecordTimeStamp?: string;
   contentType?: string;
   title?: string;
+}
+
+export interface ATIData {
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
+  categoryName?: string | null;
+  contentId?: string | null;
+  contentType?: string;
+  language?: string | null;
+  ldpThingIds?: string | null;
+  ldpThingLabels?: string | null;
+  nationsProducer?: string | null;
+  pageIdentifier?: string;
+  pageTitle?: string | null;
+  producerId?: string | null;
+  producerName?: string | null;
+  timePublished?: string | null;
+  timeUpdated?: string | null;
+}
+
+export interface ATIDataWithContexts {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  atiData: ATIData;
+}
+
+export interface ATIConfigurationDetailsProviders {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  data?: PageData;
+  atiData?: ATIData;
 }
 
 export interface ATIAnalyticsProps {
@@ -90,17 +124,18 @@ export interface ATIPageTrackingProps {
   pageTitle?: string | null;
   producerId?: string;
   libraryVersion?: string;
-  platform?: string;
+  platform?: Platforms;
   statsDestination?: string;
   timePublished?: string | null;
   timeUpdated?: string | null;
   origin?: string;
   previousPath?: string | null;
   categoryName?: string | null;
-  campaigns?: { campaignId?: string; campaignName?: string }[];
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
 }
 
 export interface ATIProps {
-  data: PageData;
+  data?: PageData;
+  atiData?: ATIData;
 }

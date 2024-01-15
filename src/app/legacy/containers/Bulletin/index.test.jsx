@@ -1,50 +1,12 @@
 import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import BulletinContainer from '.';
-
-const tvBulletinItem = {
-  name: 'Test TV Bulletin promo',
-  summary: 'Test TV summary',
-  indexImage: {
-    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
-    height: 371,
-    width: 660,
-    altText: 'Clinton',
-    copyrightHolder: 'BBC',
-  },
-  uri: 'https://www.bbc.co.uk/news',
-  contentType: 'TVBulletin',
-  assetTypeCode: 'PRO',
-  timestamp: 1565085977000,
-  type: 'link',
-};
-
-const liveTvBulletinItem = {
-  ...tvBulletinItem,
-  isLive: true,
-};
-
-const radioBulletinItem = {
-  name: 'Test Radio Bulletin promo',
-  summary: 'Test Radio summary',
-  indexImage: {
-    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
-    height: 371,
-    width: 660,
-    altText: 'Clinton',
-    copyrightHolder: 'BBC',
-  },
-  uri: 'https://www.bbc.co.uk/news',
-  contentType: 'RadioBulletin',
-  assetTypeCode: 'PRO',
-  timestamp: 1571655919000,
-  type: 'link',
-};
-
-const liveRadioBulletinItem = {
-  ...radioBulletinItem,
-  isLive: true,
-};
+import {
+  tvBulletinItem,
+  liveTvBulletinItem,
+  radioBulletinItem,
+  liveRadioBulletinItem,
+} from './fixtureData';
 
 describe('Bulletin Container', () => {
   describe('snapshots', () => {
@@ -95,7 +57,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveTvBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[3];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
@@ -105,7 +67,8 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveRadioBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[1];
+
+      const span = container.getElementsByTagName('span')[3];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
@@ -115,7 +78,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveTvBulletinItem} />,
         { service: 'igbo' },
       );
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[3];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');

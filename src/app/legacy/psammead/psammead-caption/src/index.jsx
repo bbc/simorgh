@@ -17,7 +17,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const rtlStyles = ({ theme }) => `
   margin-right: ${GEL_MARGIN_BELOW_400PX};
-  border-right: 1px solid ${
+  border-right: 0.0625rem solid ${
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
   };
 
@@ -36,7 +36,7 @@ const rtlStyles = ({ theme }) => `
 
 const ltrStyles = ({ theme }) => `
   margin-left: ${GEL_MARGIN_BELOW_400PX};
-  border-left: 1px solid ${
+  border-left: 0.0625rem solid ${
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
   };
 
@@ -67,11 +67,11 @@ const Caption = styled.figcaption`
     width: 100%;
     margin: ${GEL_SPACING} 0 0;
   }
-  & > p {
+  & > span > p {
     padding-bottom: ${GEL_SPACING_TRPL};
     margin: 0; /* reset */
   }
-  & > p:last-child {
+  & > span > p:last-child {
     padding-bottom: 0;
   }
   ${({ dir }) => (dir === 'rtl' ? rtlStyles : ltrStyles)}

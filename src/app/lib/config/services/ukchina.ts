@@ -3,7 +3,7 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 import { ChineseConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -17,7 +17,7 @@ const baseServiceConfig = {
   serviceLocalizedName: '英伦网',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png',
   defaultImageAltText: 'BBC 英伦网',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   datetimeLocale: `zh-cn`,
   service: 'ukchina' as Services,
   serviceName: 'UK China',
@@ -134,6 +134,13 @@ export const service: ChineseConfig = {
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
+      liveExperiencePage: {
+        liveLabel: '直播',
+        liveCoverage: '现场直播',
+        breaking: '最新消息',
+        postedAt: '张贴于',
+        summary: '概要',
+      },
       gist: '概要',
       error: {
         404: {
@@ -182,7 +189,7 @@ export const service: ChineseConfig = {
           },
           accept: '可以',
           reject: '了解更新内容',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -195,7 +202,7 @@ export const service: ChineseConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '管理我的设置',
             },
@@ -211,7 +218,7 @@ export const service: ChineseConfig = {
                   '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
                 para4: {
                   text: '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
                 heading3: '可选项数据收集',
@@ -243,13 +250,13 @@ export const service: ChineseConfig = {
                 linkText: 'cookies',
                 last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '可以，我同意',
             reject: '不可，带我去设置页面',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -391,6 +398,13 @@ export const service: ChineseConfig = {
         audioPlayer: '音頻播放器',
         videoPlayer: '視頻播放器',
       },
+      liveExperiencePage: {
+        liveLabel: '直播',
+        liveCoverage: '現場直播',
+        breaking: '最新消息',
+        postedAt: '張貼在',
+        summary: '概要',
+      },
       gist: '概要',
       error: {
         404: {
@@ -439,7 +453,7 @@ export const service: ChineseConfig = {
           },
           accept: '可以',
           reject: '了解更新內容',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -452,7 +466,7 @@ export const service: ChineseConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '管理我的設置',
             },
@@ -468,7 +482,7 @@ export const service: ChineseConfig = {
                   '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
                 para4: {
                   text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
                 heading3: '可選項數據收集',
@@ -500,13 +514,13 @@ export const service: ChineseConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '可以，我同意',
             reject: '不可，帶我去設置頁面',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

@@ -14,44 +14,53 @@ import processRecentEpisodes from '../../../../src/app/routes/utils/processRecen
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe('Audio Player', () => {
-      it('should render an iframe with a valid URL', () => {
-        cy.request(
-          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
-        ).then(({ body: jsonData }) => {
-          if (!isAvailable(jsonData)) {
-            return cy.log(
-              `Episode is not available: ${Cypress.env('currentPath')}`,
-            );
-          }
-          const language = appConfig[service][variant].lang;
-          const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
-          const isBrandPage = isBrand(jsonData);
+    describe(
+      'Audio Player',
+      {
+        retries: 3,
+      },
+      () => {
+        it('should render an iframe with a valid URL', () => {
+          cy.request(
+            `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
+          ).then(({ body: jsonData }) => {
+            if (!isAvailable(jsonData)) {
+              return cy.log(
+                `Episode is not available: ${Cypress.env('currentPath')}`,
+              );
+            }
+            const language = appConfig[service][variant].lang;
+            const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
+            const isBrandPage = isBrand(jsonData);
 
-          cy.get('iframe').then(iframe => {
-            let iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
-            iframeURL = iframeURL.split('.com').pop();
-            cy.log(`cy.get('iframe') assertion has already happened`);
-            cy.log(
-              `used for Brand - iframe.prop('src') = ${iframe.prop('src')}`,
-            );
-            cy.log(`used for Episode - embedURL = ${embedUrl}`);
-            cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
-            const pathTested = embedUrl.replace(/^\//, `${envConfig.baseUrl}/`);
-            cy.log(`path that will have response tested is ${pathTested}`);
+            cy.get('iframe').then(iframe => {
+              let iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+              iframeURL = iframeURL.split('.com').pop();
+              cy.log(`cy.get('iframe') assertion has already happened`);
+              cy.log(
+                `used for Brand - iframe.prop('src') = ${iframe.prop('src')}`,
+              );
+              cy.log(`used for Episode - embedURL = ${embedUrl}`);
+              cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
+              const pathTested = embedUrl.replace(
+                /^\//,
+                `${envConfig.baseUrl}/`,
+              );
+              cy.log(`path that will have response tested is ${pathTested}`);
 
-            cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
-            cy.testResponseCodeAndTypeRetry({
-              // embedUrl may be relative - making it absolute to test the response
-              path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
-              responseCode: 200,
-              type: 'text/html',
-              allowFallback: true,
+              cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
+              cy.testResponseCodeAndTypeRetry({
+                // embedUrl may be relative - making it absolute to test the response
+                path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
             });
           });
         });
-      });
-    });
+      },
+    );
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
         cy.getToggles(service);

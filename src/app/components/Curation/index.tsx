@@ -13,6 +13,7 @@ import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
+import { GHOST } from '../ThemeProvider/palette';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -58,7 +59,7 @@ const Curation = ({
     case NOT_SUPPORTED:
       return null;
     case MESSAGE_BANNER:
-      return (
+      return promos.length > 0 ? (
         <MessageBanner
           heading={title}
           description={promos[0].description}
@@ -66,9 +67,15 @@ const Curation = ({
           linkText={promos[0].title}
           image={promos[0].imageUrl}
         />
-      );
+      ) : null;
     case MOST_READ:
-      return <MostRead data={mostRead} columnLayout="twoColumn" />;
+      return (
+        <MostRead
+          data={mostRead}
+          columnLayout="twoColumn"
+          headingBackgroundColour={GHOST}
+        />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
@@ -88,10 +95,15 @@ const Curation = ({
           <GridComponent
             promos={promos}
             headingLevel={isFirstCuration ? 3 : headingLevel}
+            isFirstCuration={isFirstCuration}
           />
         </section>
       ) : (
-        <GridComponent promos={promos} headingLevel={headingLevel} />
+        <GridComponent
+          promos={promos}
+          headingLevel={headingLevel}
+          isFirstCuration={isFirstCuration}
+        />
       );
   }
 };

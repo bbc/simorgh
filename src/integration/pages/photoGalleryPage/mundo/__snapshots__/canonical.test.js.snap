@@ -2,59 +2,59 @@
 
 exports[`Canonical Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[R%C3%ADo%25202016%2C%2520el%2520antes%2520y%2520el%2520ahora%3A%2520c%C3%B3mo%2520ha%2520cambiado%2520la%2520ropa%2520deportiva%2520en%2520m%C3%A1s%2520de%2520un%2520siglo%2520de%2520juegos%2520ol%C3%ADmpicos%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2016-08-07T09%3A21%3A02.000Z]&amp;x12=[2016-08-07T09%3A21%3A02.000Z]&amp;x13=[Olympics~Brazil~Rio%25202016~Sport]&amp;x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]\\"/>"`;
+exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[R%C3%ADo%25202016%2C%2520el%2520antes%2520y%2520el%2520ahora%3A%2520c%C3%B3mo%2520ha%2520cambiado%2520la%2520ropa%2520deportiva%2520en%2520m%C3%A1s%2520de%2520un%2520siglo%2520de%2520juegos%2520ol%C3%ADmpicos%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2016-08-07T09%3A21%3A02.000Z]&amp;x12=[2016-08-07T09%3A21%3A02.000Z]"/>"`;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Mundo",
   "url": "/mundo",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Por qué puedes confiar en la BBC",
   "url": "https://www.bbc.com/mundo/institucional-51359666",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Términos de uso",
   "url": "https://www.bbc.com/mundo/institucional-36400005",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Sobre la BBC",
   "url": "https://www.bbc.com/mundo/institucional-36400007",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Política de privacidad",
   "url": "https://www.bbc.com/mundo/institucional-36400009",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Escribe a BBC Mundo",
   "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -62,82 +62,82 @@ Object {
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Noticias",
   "url": "/mundo",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "América Latina",
   "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Internacional",
   "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
-Object {
+{
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
-Object {
+{
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
-Object {
+{
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
-Object {
+{
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
-Object {
+{
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
 }
@@ -148,11 +148,12 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="549"
   sizes="(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+  style="aspect-ratio:549 / 549"
   width="549"
 />
 `;
@@ -160,70 +161,70 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
 }
@@ -240,38 +241,14 @@ exports[`Canonical Photo Gallery Page SEO Heading level 1 1`] = `"Río 2016, el 
 exports[`Canonical Photo Gallery Page SEO Lang attribute 1`] = `"es"`;
 
 exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "Article",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": "Olimpiadas",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Summer_Olympic_Games",
-          ],
-        },
-        Object {
-          "@type": "Place",
-          "name": "Brasil",
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Río 2016",
-        },
-        Object {
-          "@type": "Thing",
-          "name": "Deportes",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Sport",
-          ],
-        },
-      ],
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -284,25 +261,25 @@ Object {
       "datePublished": "2016-08-07T09:21:02.000Z",
       "description": "La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo.",
       "headline": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "es",
         "name": "Spanish",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/mundo/deportes-36935058",
         "@type": "WebPage",
         "name": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
@@ -353,7 +330,7 @@ exports[`Canonical Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 exports[`Canonical Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
 exports[`Canonical Photo Gallery Page Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2016-08-07",
   "text": "7 agosto 2016",
 }

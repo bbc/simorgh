@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import {
@@ -27,6 +26,7 @@ import getEmbedUrl, {
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import useLocation from '#hooks/useLocation';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';

@@ -34,10 +34,13 @@ module.exports = {
         ignore: [
           'amp-boilerplate',
           'amp-custom',
+          'amp-access',
+          'amp-access-hide',
           'css',
           'custom-element',
           'custom-template',
           'fallback',
+          'fetchpriority',
           'imagesizes',
           'imagesrcset',
         ],

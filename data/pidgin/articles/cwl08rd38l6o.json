@@ -643,10 +643,8 @@
             },
             {
               "id": "5539aea1",
-              "type": "embed",
+              "type": "embedUploader",
               "model": {
-                "locator": "urn:bbc:ugc:campaign:u94753086",
-                "provider": "ugc-uploader",
                 "blocks": [
                   {
                     "id": "2488a6c7",
@@ -874,6 +872,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08rd38l6o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cwl08rd38l6o",
+          "language": "pcm",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "pidgin.articles.cwl08rd38l6o.page",
+          "pageTitle": "This is the SEO headline of this test article",
+          "timePublished": "2019-07-12T13:00:04.940Z",
+          "timeUpdated": "2022-10-13T15:10:19.230Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
           "canonicalUrl": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
@@ -1533,836 +1543,149 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-02-18T03:04:58.493Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
-        "totalRecords": 20,
-        "records": [
+        "generated": "2023-06-19T15:06:12.255Z",
+        "lastRecordTimeStamp": "2023-06-19T15:03:00Z",
+        "firstRecordTimeStamp": "2023-06-19T13:03:00Z",
+        "items": [
           {
-            "id": "8fd89a41-e39d-754b-aaa1-062f4d6595a0",
+            "id": "urn:bbc:optimo:asset:cz5kkgv41v0o",
             "rank": 1,
-            "count": 9654,
-            "urn": "urn:bbc:curie:asset:8fd89a41-e39d-754b-aaa1-062f4d6595a0",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 4",
-                "headline": "Fin - the secret Facebook group of Nigerian women 4"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23135359",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:8fd89a41-e39d-754b-aaa1-062f4d6595a0",
-                "assetId": "23135359",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23135359",
-                "curie": "http://www.bbc.co.uk/asset/8fd89a41-e39d-754b-aaa1-062f4d6595a0"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498052829000,
-              "language": "pcm",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23135359",
-              "type": "cps"
-            }
+            "title": "Teams wey qualify for Afcon 2023 and how things stand for each group",
+            "href": "https://www.bbc.com/pidgin/articles/cz5kkgv41v0o",
+            "timestamp": 1687171616901
           },
           {
-            "id": "bcd1e840-1734-8e4c-a191-94a759296fa2",
+            "id": "urn:bbc:optimo:asset:czd44wvly0qo",
             "rank": 2,
-            "count": 9589,
-            "urn": "urn:bbc:curie:asset:bcd1e840-1734-8e4c-a191-94a759296fa2",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Live Update: Voting Day for Kenya",
-                "headline": "Live Update: How Kenyans Dey Vote President, Others"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23146452",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146452",
-                "curie": "http://www.bbc.co.uk/asset/bcd1e840-1734-8e4c-a191-94a759296fa2",
-                "assetId": "23146452"
-              },
-              "summary": "19 million Kenyans dey vote for President and other positions today.",
-              "timestamp": 1502217156000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63585611",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2D8A/test/_63585611__97140717_gettyimages-163077224.jpg",
-                "path": "/cpsdevpb/2D8A/test/_63585611__97140717_gettyimages-163077224.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Kenya people enter polling booth to start to vote",
-                "caption": "People don already dey for polling station by 6am",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23146452",
-              "type": "cps"
-            }
+            "title": "'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack ",
+            "href": "https://www.bbc.com/pidgin/articles/czd44wvly0qo",
+            "timestamp": 1687178911688
           },
           {
-            "id": "b582d74a-439a-1741-befd-c7af2c57b9b2",
+            "id": "urn:bbc:optimo:asset:cgr6g81j2g8o",
             "rank": 3,
-            "count": 9509,
-            "urn": "urn:bbc:curie:asset:b582d74a-439a-1741-befd-c7af2c57b9b2",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "South Africa no Get Money for Army",
-                "headline": "South African Army Don Talk Say Money no dey to protect Border"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23139944",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:b582d74a-439a-1741-befd-c7af2c57b9b2",
-                "assetId": "23139944",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23139944",
-                "curie": "http://www.bbc.co.uk/asset/b582d74a-439a-1741-befd-c7af2c57b9b2"
-              },
-              "summary": "South Africa Minister for Defence, Nosiviwe Nquakula, talk say as things be now, South Africa no fit no send soldiers on peacekeeping",
-              "timestamp": 1502219853000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63577276",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/106CD/test/_63577276_tv000046325.jpg",
-                "path": "/cpsdevpb/106CD/test/_63577276_tv000046325.jpg",
-                "height": 432,
-                "width": 768,
-                "altText": "BBC",
-                "caption": "South Africa Army no go fit join fit protect the country",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23139944",
-              "type": "cps"
-            }
+            "title": "Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia",
+            "href": "https://www.bbc.com/pidgin/articles/cgr6g81j2g8o",
+            "timestamp": 1687115906821
           },
           {
-            "id": "a0d223d4-4142-a74e-941d-5821ca4a0330",
+            "id": "urn:bbc:optimo:asset:cx047w4gxqzo",
             "rank": 4,
-            "count": 9411,
-            "urn": "urn:bbc:curie:asset:a0d223d4-4142-a74e-941d-5821ca4a0330",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Kenya: Raila Odinga Don Reject Result",
-                "headline": "\"Dis Result na Fraud\"- Odinga"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23146754",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146754",
-                "curie": "http://www.bbc.co.uk/asset/a0d223d4-4142-a74e-941d-5821ca4a0330",
-                "assetId": "23146754"
-              },
-              "summary": "Raila Odinga say im get evidence to show say Kenya Electoral Commission no dey announce correct result.",
-              "timestamp": 1502280536000,
-              "language": "pcm",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63586197",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13540/test/_63586197_newodinga.jpg",
-                "path": "/cpsdevpb/13540/test/_63586197_newodinga.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "election, kenya, odinga, IEBC",
-                "caption": "Odinga say na only results wey follow di 34A channel im go accept",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23146754",
-              "type": "cps"
-            }
+            "title": "Forbes top ten list of highest paid athletes for 2023 and wetin dem earn",
+            "href": "https://www.bbc.com/pidgin/articles/cx047w4gxqzo",
+            "timestamp": 1683116567160
           },
           {
-            "id": "9f2e9c73-d22b-b14c-a557-bfdca715dd51",
+            "id": "f2b0bd4f-0499-4972-ae76-7b29b7ffd055",
             "rank": 5,
-            "count": 9284,
-            "urn": "urn:bbc:curie:asset:9f2e9c73-d22b-b14c-a557-bfdca715dd51",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Kaduna: Government Order More Police",
-                "headline": "Kaduna: Government Don Order More Police"
-              },
-              "locators": {
-                "assetUri": "/pidgin/23141241",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:9f2e9c73-d22b-b14c-a557-bfdca715dd51",
-                "assetId": "23141241",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/23141241",
-                "curie": "http://www.bbc.co.uk/asset/9f2e9c73-d22b-b14c-a557-bfdca715dd51"
-              },
-              "summary": "Acting Nigerian President, Yemi Osinbajo, don order more security officers for Kaduna State after the big trouble wey happen for villages in Northern parts of the state.",
-              "timestamp": 1502222909000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63579338",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/145C5/test/_63579338_police.jpg",
-                "path": "/cpsdevpb/145C5/test/_63579338_police.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "More Nigerian Police join for Kaduna",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/23141241",
-              "type": "cps"
-            }
+            "title": "Tins to sabi about 2023 Sierra Leone general election",
+            "href": "/pidgin/65817572",
+            "timestamp": 1687079020000
           },
           {
-            "id": "81faf17c-88dd-4047-801f-f218bc24d504",
+            "id": "urn:bbc:optimo:asset:cv21n0qzvv6o",
             "rank": 6,
-            "count": 9206,
-            "urn": "urn:bbc:curie:asset:81faf17c-88dd-4047-801f-f218bc24d504",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Holi festival photos",
-                "headline": "Holi festival: Photos everyone is talking about"
-              },
-              "locators": {
-                "assetUri": "/pidgin/23203390",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/23203390",
-                "curie": "http://www.bbc.co.uk/asset/81faf17c-88dd-4047-801f-f218bc24d504",
-                "assetId": "23203390"
-              },
-              "summary": "The Holi festival has been the biggest event this week with thousands of participants sharing photos on the Internet",
-              "timestamp": 1528378244000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63681004",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/9C52/test/_63681004_79fb2793-4686-4a9f-a81f-c062a848f329.jpg",
-                "path": "/cpsdevpb/9C52/test/_63681004_79fb2793-4686-4a9f-a81f-c062a848f329.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Holi children",
-                "caption": "Bangladeshi Hindu youths pose for photographs as they celebrate Holi (the festival of colours) in Mumbai",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/23203390",
-              "type": "cps"
-            }
+            "title": "CBN move to allow naira trade more freely against di dollar - Wetin e mean? ",
+            "href": "https://www.bbc.com/pidgin/articles/cv21n0qzvv6o",
+            "timestamp": 1686830757142
           },
           {
-            "id": "5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
+            "id": "urn:bbc:optimo:asset:cd1k74e9pl1o",
             "rank": 7,
-            "count": 9098,
-            "urn": "urn:bbc:curie:asset:5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 18",
-                "headline": "Fin - the secret Facebook group of Nigerian women 18"
-              },
-              "locators": {
-                "assetUri": "/pidgin/sport-23135581",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
-                "assetId": "23135581",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23135581",
-                "curie": "http://www.bbc.co.uk/asset/5dd7b90a-91aa-3149-81b0-fc33c5ece5fe"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498119652000,
-              "language": "pcm",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/sport-23135581",
-              "type": "cps"
-            }
+            "title": "'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration ",
+            "href": "https://www.bbc.com/pidgin/articles/cd1k74e9pl1o",
+            "timestamp": 1687093505779
           },
           {
-            "id": "4b211768-f9da-6b49-8677-5a5236153afe",
+            "id": "urn:bbc:optimo:asset:cnd9g0p5p2lo",
             "rank": 8,
-            "count": 8829,
-            "urn": "urn:bbc:curie:asset:4b211768-f9da-6b49-8677-5a5236153afe",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Water Solutions for traffic gridlock in Lagos",
-                "headline": "Lagos looks to the water to beat traffic gridlock"
-              },
-              "locators": {
-                "assetUri": "/igbo/23170719",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:4b211768-f9da-6b49-8677-5a5236153afe",
-                "assetId": "23170719",
-                "cpsUrn": "urn:bbc:content:assetUri:igbo/23170719",
-                "curie": "http://www.bbc.co.uk/asset/4b211768-f9da-6b49-8677-5a5236153afe"
-              },
-              "summary": "Public transportation remains a big problem for Lagos residents but the State Government says it is poised to provide a water-based solution",
-              "timestamp": 1512722361000,
-              "language": "en-gb",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63604748",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/14B04/test/_63604748_043410645-1.jpg",
-                "path": "/cpsdevpb/14B04/test/_63604748_043410645-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Commuters boarding speed boat in Lagos, Nigeria",
-                "caption": "Commuters prepare to board speed boat at Bayeku jetty, Ikorodu district of Lagos, Nigeria's commercial capital",
-                "copyrightHolder": "PIUS UTOMI EKPEI",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:igbo/23170719",
-              "type": "cps"
-            }
+            "title": "South Africa taps don dry finish on top electricity kasala",
+            "href": "https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo",
+            "timestamp": 1687166681938
           },
           {
-            "id": "fbef465c-35ef-1c42-9286-39c895315d74",
+            "id": "16051d2d-3b47-4c13-bc72-092f1ab727f0",
             "rank": 9,
-            "count": 8757,
-            "urn": "urn:bbc:curie:asset:fbef465c-35ef-1c42-9286-39c895315d74",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 17",
-                "headline": "Fin - the secret Facebook group of Nigerian women 17"
-              },
-              "locators": {
-                "assetUri": "/pidgin/sport-23135580",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23135580",
-                "curie": "http://www.bbc.co.uk/asset/fbef465c-35ef-1c42-9286-39c895315d74",
-                "assetId": "23135580"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498119646000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/sport-23135580",
-              "type": "cps"
-            }
+            "title": "Sharp-sharp facts about President Bola Tinubu special advisers",
+            "href": "/pidgin/tori-65926540",
+            "timestamp": 1686930049000
           },
           {
-            "id": "bb173109-f21a-ee4f-a783-64b04cca43f7",
+            "id": "urn:bbc:optimo:asset:c0d81l304xdo",
             "rank": 10,
-            "count": 8498,
-            "urn": "urn:bbc:curie:asset:bb173109-f21a-ee4f-a783-64b04cca43f7",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 3",
-                "headline": "Fin - the secret Facebook group of Nigerian women 3"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23135358",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23135358",
-                "curie": "http://www.bbc.co.uk/asset/bb173109-f21a-ee4f-a783-64b04cca43f7",
-                "assetId": "23135358"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498052823000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23135358",
-              "type": "cps"
-            }
+            "title": "Easter date, Workers day, Salah date plus oda public holidays for 2023",
+            "href": "https://www.bbc.com/pidgin/articles/c0d81l304xdo",
+            "timestamp": 1672498025177
           },
           {
-            "id": "a91dc258-9234-964f-b318-938ce1751596",
+            "id": "4b75d277-4a11-4293-b8e8-afa97d132454",
             "rank": 11,
-            "count": 8463,
-            "urn": "urn:bbc:curie:asset:a91dc258-9234-964f-b318-938ce1751596",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "\"I No Perform Well When e Matter\" -Bolt",
-                "headline": "\"I No Perform Well When e Matter\" - Bolt"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23145775",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145775",
-                "curie": "http://www.bbc.co.uk/asset/a91dc258-9234-964f-b318-938ce1751596",
-                "assetId": "23145775"
-              },
-              "summary": "Jamaican Usain Bolt don lose him final 100m race",
-              "timestamp": 1502223923000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63584414",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/A1E8/test/_63584414_277fa2dd-62cb-4e50-a9cc-cd4e807aa088.jpg",
-                "path": "/cpsdevpb/A1E8/test/_63584414_277fa2dd-62cb-4e50-a9cc-cd4e807aa088.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "JAMAICAN SPRINTER",
-                "caption": "Usain Bolt dey struggle with him start",
-                "copyrightHolder": "AFP/Getty",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23145775",
-              "type": "cps"
-            }
+            "title": "Wetin we know about di militant attack on di secondary school for Uganda wey kill 40 pipo",
+            "href": "/pidgin/tori-65931889",
+            "timestamp": 1687027364000
           },
           {
-            "id": "11c2d7ba-333a-0c4b-9071-86df752ebc47",
+            "id": "urn:bbc:optimo:asset:c51qvn71de9o",
             "rank": 12,
-            "count": 8384,
-            "urn": "urn:bbc:curie:asset:11c2d7ba-333a-0c4b-9071-86df752ebc47",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Jacob Zuma: Staying!!!",
-                "headline": "President Zuma don Survive No-Confidence Vote"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23146434",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:11c2d7ba-333a-0c4b-9071-86df752ebc47",
-                "assetId": "23146434",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146434",
-                "curie": "http://www.bbc.co.uk/asset/11c2d7ba-333a-0c4b-9071-86df752ebc47"
-              },
-              "summary": "Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.",
-              "timestamp": 1502218339000,
-              "language": "pcm",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63586084",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/BBC4/test/_63586084_zuma.jpg",
-                "path": "/cpsdevpb/BBC4/test/_63586084_zuma.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Jacob Zuma na cat with nine lives",
-                "caption": "Zuma dey laugh last",
-                "copyrightHolder": "Getty AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23146434",
-              "type": "cps"
-            }
+            "title": "Why goment wan demolish some buildings for Alaba International Market",
+            "href": "https://www.bbc.com/pidgin/articles/c51qvn71de9o",
+            "timestamp": 1687007610108
           },
           {
-            "id": "00b27495-880d-b843-9e5c-bed2925ec340",
+            "id": "urn:bbc:optimo:asset:c1vz0k0l2n2o",
             "rank": 13,
-            "count": 8084,
-            "urn": "urn:bbc:curie:asset:00b27495-880d-b843-9e5c-bed2925ec340",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 8",
-                "headline": "Fin - the secret Facebook group of Nigerian women 8"
-              },
-              "locators": {
-                "assetUri": "/pidgin/sport-23135364",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23135364",
-                "curie": "http://www.bbc.co.uk/asset/00b27495-880d-b843-9e5c-bed2925ec340",
-                "assetId": "23135364"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498120383000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/sport-23135364",
-              "type": "cps"
-            }
+            "title": "How Senator Bulkachuwa comments about im wife work set am up for dragging by Nigerians ",
+            "href": "https://www.bbc.com/pidgin/articles/c1vz0k0l2n2o",
+            "timestamp": 1687115341435
           },
           {
-            "id": "27d30071-58ab-d64f-94d6-dd9a3d0ea996",
+            "id": "363fd49a-415a-467e-896c-65e44fd5f08f",
             "rank": 14,
-            "count": 7516,
-            "urn": "urn:bbc:curie:asset:27d30071-58ab-d64f-94d6-dd9a3d0ea996",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "100 Ghanaian don return from Libya",
-                "headline": "Ghana charter plane komot y pipo from slavery in Libya"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23169025",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23169025",
-                "curie": "http://www.bbc.co.uk/asset/27d30071-58ab-d64f-94d6-dd9a3d0ea996",
-                "assetId": "23169025"
-              },
-              "summary": "Ghana charter plane weh y bring home 100 Ghanaian pipo weh Libya turnam to slave. Dem bin go Libya with the mind say dem go reach Europe for see how dia life fit change but dia dream end for detention camp.",
-              "timestamp": 1512472096000,
-              "language": "pcm",
-              "byline": {
-                "name": "Leocadia Bongben",
-                "title": "BBC Correspondent, Cameroon",
-                "persons": [
-                  {
-                    "name": "ABC ABC",
-                    "function": "correspondent"
-                  }
-                ]
-              },
-              "indexImage": {
-                "id": "63603127",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
-                "path": "/cpsdevpb/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "slavery",
-                "caption": "Ghanaians in chains in Libya",
-                "copyrightHolder": "Reuters",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23169025",
-              "type": "cps"
-            }
+            "title": "Viral video of four men wey rape Benue girl spark cry for justice",
+            "href": "/pidgin/tori-56014480",
+            "timestamp": 1612980047000
           },
           {
-            "id": "d3b5f1f7-5ef9-fe4b-b24c-9400b204467a",
+            "id": "b5db6ff7-151a-d84d-8bdb-16d984b3e803",
             "rank": 15,
-            "count": 7426,
-            "urn": "urn:bbc:curie:asset:d3b5f1f7-5ef9-fe4b-b24c-9400b204467a",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Makwala Don Come Back",
-                "headline": "Isaac Makwala Don Qualify for Semi Final"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23146974",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146974",
-                "curie": "http://www.bbc.co.uk/asset/d3b5f1f7-5ef9-fe4b-b24c-9400b204467a",
-                "assetId": "23146974"
-              },
-              "summary": "Isaac Makwala don qualify for semi-final after IAAF Allow Him Run",
-              "timestamp": 1502304514000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63586237",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/11E34/test/_63586237_makwala.jpg",
-                "path": "/cpsdevpb/11E34/test/_63586237_makwala.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Picture of Makwala",
-                "caption": "Makwala say e pain am well well as Im no run",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23146974",
-              "type": "cps"
-            }
+            "title": "'Man power' drink wey dey make pesin tin stand for six hours",
+            "href": "/pidgin/tori-46801472",
+            "timestamp": 1546977318000
           },
           {
-            "id": "167fd3ca-6e80-5c42-9819-7585b44db005",
+            "id": "urn:bbc:optimo:asset:crgd03ed04zo",
             "rank": 16,
-            "count": 6747,
-            "urn": "urn:bbc:curie:asset:167fd3ca-6e80-5c42-9819-7585b44db005",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Tanzania: 2 Die During Baptism",
-                "headline": "Two People Drown During Baptism for Tanzania"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23139988",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:167fd3ca-6e80-5c42-9819-7585b44db005",
-                "assetId": "23139988",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23139988",
-                "curie": "http://www.bbc.co.uk/asset/167fd3ca-6e80-5c42-9819-7585b44db005"
-              },
-              "summary": "Water Carry Church members as Dem do baptism Inside Water",
-              "timestamp": 1502219495000,
-              "language": "pcm",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63577742",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/60C9/test/_63577742_churchdoingbaptism.jpg",
-                "path": "/cpsdevpb/60C9/test/_63577742_churchdoingbaptism.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "AFP",
-                "caption": "Many charismatic churches in Africa dey do baptisms in rivers",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23139988",
-              "type": "cps"
-            }
+            "title": "Fuel price across Nigeria afta Tinubu speech on subsidy",
+            "href": "https://www.bbc.com/pidgin/articles/crgd03ed04zo",
+            "timestamp": 1685474953632
           },
           {
-            "id": "81333d3d-27c3-ed41-9d8c-1ef3f90cdc56",
+            "id": "urn:bbc:optimo:asset:c84wrpz17ggo",
             "rank": 17,
-            "count": 6676,
-            "urn": "urn:bbc:curie:asset:81333d3d-27c3-ed41-9d8c-1ef3f90cdc56",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Lagos looks to the water to beat traffic gridlock",
-                "headline": "Transportation on the water ways to beat traffic gridlock in Lagos"
-              },
-              "locators": {
-                "assetUri": "/news/world-africa-23169894",
-                "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23169894",
-                "curie": "http://www.bbc.co.uk/asset/81333d3d-27c3-ed41-9d8c-1ef3f90cdc56",
-                "assetId": "23169894"
-              },
-              "summary": "Lagos State Government has commissioned the project of maritime transportation in Lagos and environs as a means to tackle traffic gridlock",
-              "timestamp": 1512723149000,
-              "language": "en-gb",
-              "byline": {
-                "name": "By Ikechukwu  kalu",
-                "title": "BBC Igbo serrvice",
-                "persons": [
-                  {
-                    "name": "Ikechukwu kalu",
-                    "function": "BBC Igbo serrvice"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": [],
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-                      "thingLabel": "Nigeria",
-                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-                      "thingType": [
-                        "core:Place",
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
-                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
-                      "thingEnglishLabel": "Nigeria",
-                      "type": "about"
-                    },
-                    {
-                      "value": "http://www.bbc.co.uk/things/bc2f463b-e4e9-4d8e-8552-ff9975f95a2e#id",
-                      "thingLabel": "Transport Select Committee",
-                      "thingUri": "http://www.bbc.co.uk/things/bc2f463b-e4e9-4d8e-8552-ff9975f95a2e#id",
-                      "thingId": "bc2f463b-e4e9-4d8e-8552-ff9975f95a2e",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Agent",
-                        "core:Thing",
-                        "tagging:AmbiguousTerm",
-                        "core:Organisation"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport_Committee"
-                      ],
-                      "thingEnglishLabel": "Transport Select Committee",
-                      "type": "about"
-                    },
-                    {
-                      "value": "http://www.bbc.co.uk/things/d5d64ac6-fffe-4ae1-9491-38bcadac2563#id",
-                      "thingLabel": "Transport",
-                      "thingUri": "http://www.bbc.co.uk/things/d5d64ac6-fffe-4ae1-9491-38bcadac2563#id",
-                      "thingId": "d5d64ac6-fffe-4ae1-9491-38bcadac2563",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing",
-                        "core:Theme"
-                      ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
-                      "thingEnglishLabel": "Transport",
-                      "type": "about"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63604944",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/AF8C/test/_63604944_mediaitem63604942.jpg",
-                "path": "/cpsdevpb/AF8C/test/_63604944_mediaitem63604942.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Water ways transortation",
-                "caption": "A major means of transportation in Lagos that needs to be maximized",
-                "copyrightHolder": "AFP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:news/world-africa-23169894",
-              "type": "cps"
-            }
+            "title": "Protest plots, medical access - DSS drop latest informate ontop Emefiele mata",
+            "href": "https://www.bbc.com/pidgin/articles/c84wrpz17ggo",
+            "timestamp": 1687081778953
           },
           {
-            "id": "417b8ae1-03f2-564e-9bbe-2e8d60d61c16",
+            "id": "urn:bbc:optimo:asset:c3gpjxk0mx3o",
             "rank": 18,
-            "count": 6642,
-            "urn": "urn:bbc:curie:asset:417b8ae1-03f2-564e-9bbe-2e8d60d61c16",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Neymar Go Miss PSG League Match",
-                "headline": "Neymar Go Miss PSG League Match"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23145725",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145725",
-                "curie": "http://www.bbc.co.uk/asset/417b8ae1-03f2-564e-9bbe-2e8d60d61c16",
-                "assetId": "23145725"
-              },
-              "summary": "Neymar Go Dey for Stands when PSG play Amiens",
-              "timestamp": 1502224434000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63584352",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6304/test/_63584352_neymar.getty.jpg",
-                "path": "/cpsdevpb/6304/test/_63584352_neymar.getty.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Neymar PSG",
-                "caption": "Neymar na worldmost expensive player",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23145725",
-              "type": "cps"
-            }
+            "title": "Video show how shark attack and kill man wey bin dey swim for beach",
+            "href": "https://www.bbc.com/pidgin/articles/c3gpjxk0mx3o",
+            "timestamp": 1686325942556
           },
           {
-            "id": "a7888187-5865-ed40-864d-f1d2b6b017af",
+            "id": "3782ce8d-bd13-4bc3-b3f8-1c5bc5cdd0e9",
             "rank": 19,
-            "count": 6502,
-            "urn": "urn:bbc:curie:asset:a7888187-5865-ed40-864d-f1d2b6b017af",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ghana wan stop IMF deal",
-                "headline": "Ghana: No more borrow-borrow"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23140907",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:a7888187-5865-ed40-864d-f1d2b6b017af",
-                "assetId": "23140907",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23140907",
-                "curie": "http://www.bbc.co.uk/asset/a7888187-5865-ed40-864d-f1d2b6b017af"
-              },
-              "summary": "Ghana say dem no wan continue to collect IMF money after April 2018..",
-              "timestamp": 1502195397000,
-              "language": "pcm",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-                "taggings": []
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23140907",
-              "type": "cps"
-            }
+            "title": "Court sentence Hilton Hotel owner Adedoyin to death over Timothy Adegoke murder",
+            "href": "/pidgin/tori-65653762",
+            "timestamp": 1685452542000
           },
           {
-            "id": "840e375b-3854-104a-af30-de6a02d66a6c",
+            "id": "urn:bbc:optimo:asset:c72x94pnnn4o",
             "rank": 20,
-            "count": 6495,
-            "urn": "urn:bbc:curie:asset:840e375b-3854-104a-af30-de6a02d66a6c",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Fin - the secret Facebook group of Nigerian women 5",
-                "headline": "Fin - the secret Facebook group of Nigerian women 5"
-              },
-              "locators": {
-                "assetUri": "/pidgin/tori-23135360",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23135360",
-                "curie": "http://www.bbc.co.uk/asset/840e375b-3854-104a-af30-de6a02d66a6c",
-                "assetId": "23135360"
-              },
-              "summary": "It is one of Facebook's fastest growing communities and has become such a phenomenon that last week, Mark Zuckerberg asked to meet its founder. But what is Fin?",
-              "timestamp": 1498052838000,
-              "language": "pcm",
-              "indexImage": {
-                "id": "63501678",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-                "height": 371,
-                "width": 660,
-                "altText": "kəsib",
-                "caption": "kəsib",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/tori-23135360",
-              "type": "cps"
-            }
+            "title": "I go expose my pikin to homelessness - William",
+            "href": "https://www.bbc.com/pidgin/articles/c72x94pnnn4o",
+            "timestamp": 1687088487991
           }
         ]
       }

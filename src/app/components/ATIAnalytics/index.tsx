@@ -6,16 +6,17 @@ import AmpATIAnalytics from './amp';
 import { ATIProps } from './types';
 import buildATIUrl from './params';
 
-const ATIAnalytics = ({ data }: ATIProps) => {
+const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
 
-  const pageviewParams = buildATIUrl(
-    data,
+  const pageviewParams = buildATIUrl({
     requestContext,
     serviceContext,
-  ) as string;
+    data,
+    atiData,
+  }) as string;
 
   if (!pageviewParams) {
     return null;

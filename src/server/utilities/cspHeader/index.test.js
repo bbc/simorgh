@@ -9,7 +9,6 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-  generatePrefetchSrc,
 } from '.';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -85,6 +84,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         'https://www.facebook.com',
+        'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
@@ -120,7 +120,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -174,7 +173,9 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://public.flourish.studio',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -205,6 +206,7 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://*.effectivemeasure.net',
         'https://public.flourish.studio',
+        'https://www.riddle.com',
         'https://adservice.google.co.uk',
         'https://*.google.com',
         'https://*.googlesyndication.com',
@@ -218,6 +220,7 @@ describe('cspHeader', () => {
         'https://*.twimg.com',
         'https://*.twitter.com',
         'https://*.wearehearken.eu',
+        'https://*.webcontentassessor.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
         'https://*.facebook.com',
@@ -238,7 +241,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: true,
@@ -282,6 +284,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://www.facebook.com',
+        'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
@@ -319,7 +322,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -374,7 +376,9 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://public.flourish.studio',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -409,6 +413,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://*.twimg.com',
         'https://public.flourish.studio',
+        'https://www.riddle.com',
         'https://*.adsafeprotected.com',
         'https://cdn.ampproject.org',
         'https://*.g.doubleclick.net',
@@ -427,6 +432,7 @@ describe('cspHeader', () => {
         'https://*.facebook.com',
         'https://connect.facebook.net',
         'https://*.xx.fbcdn.net',
+        'https://*.webcontentassessor.com',
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
@@ -442,7 +448,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(
     ({
@@ -460,7 +465,6 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
-      prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
@@ -519,12 +523,6 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
-        it(`Then it has this prefetchSrc`, () => {
-          expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
-            prefetchSrcExpectation,
-          );
-        });
-
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
@@ -543,7 +541,6 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
-            `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 

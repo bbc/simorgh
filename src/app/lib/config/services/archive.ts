@@ -55,6 +55,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Live',
+        liveCoverage: 'Live Coverage',
+        breaking: 'Breaking',
+        postedAt: 'Posted at',
+        summary: 'Summary',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -107,7 +114,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: "Find out what's changed",
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -120,7 +127,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Manage my settings',
             },
@@ -136,7 +143,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information on your device without your consent.',
                 para4: {
                   text: 'Read more about the essential information we store on your device to make our web pages work.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences on your device.',
@@ -169,13 +176,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Yes, I agree',
             reject: 'No, take me to settings',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

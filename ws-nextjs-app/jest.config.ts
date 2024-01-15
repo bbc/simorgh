@@ -1,4 +1,4 @@
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
 
@@ -10,7 +10,13 @@ const canonicalIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: ['**/integration/!(utils)/**/*[^.amp].test.ts'],
 } satisfies Config.InitialProjectOptions;
@@ -23,7 +29,13 @@ const ampIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: ['**/integration/!(utils)/**/amp.test.ts'],
 } satisfies Config.InitialProjectOptions;
@@ -33,14 +45,18 @@ const unitTests = {
   modulePaths: ['../'],
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths),
-    '^uuid$': require.resolve('uuid'),
-    '^react$': require.resolve('react'),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: [
     '**/__tests__/**/*.{js,jsx,ts,tsx}',

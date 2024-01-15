@@ -1,6 +1,4 @@
-import { Services } from '../../models/types/global';
-
-export type Direction = 'rtl' | 'ltr';
+import { Services, Direction } from '../../models/types/global';
 
 export type Size = 'default' | 'small';
 
@@ -77,9 +75,14 @@ export interface OptimoMostReadRecord {
 }
 
 export interface MostReadData {
+  generated?: string;
   lastRecordTimeStamp: string;
   firstRecordTimeStamp?: string;
-  generated?: string;
-  totalRecords?: number;
-  records: (Partial<OptimoMostReadRecord> | Partial<CPSMostReadRecord>)[];
+  items: {
+    id: string;
+    rank: number;
+    href: string;
+    title: string;
+    timestamp: number;
+  }[];
 }

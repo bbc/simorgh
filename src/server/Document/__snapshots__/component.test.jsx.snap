@@ -10,11 +10,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
     <title
       data-react-helmet="true"
     >
@@ -77,6 +72,93 @@ exports[`Document Component should render AMP version correctly 1`] = `
 </html>
 `;
 
+exports[`Document Component should render APP version correctly 1`] = `
+<html
+  class="no-js"
+  lang="test"
+>
+  <head>
+    <meta
+      content="noindex"
+      name="robots"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
+    <style
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+    >
+      <h1>
+        App!
+      </h1>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"test":"data"}
+    </script>
+    <link
+      href="modern.main.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulePreload"
+    />
+    <div>
+      <!--[if !IE]&gt;&lt;!-->
+    </div>
+    <script
+      src="modern.main.js"
+    />
+    <script
+      src="modern.vendor.js"
+    />
+    <script
+      src="modern.igbo.js"
+    />
+    <script
+      src="legacy.main.js"
+    />
+    <script
+      src="legacy.vendor.js"
+    />
+    <script
+      src="legacy.igbo.js"
+    />
+    <div>
+      <!--&lt;![endif]-->
+    </div>
+    <script
+      type="text/javascript"
+    >
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;
+
 exports[`Document Component should render correctly 1`] = `
 <html
   class="no-js"
@@ -87,11 +169,6 @@ exports[`Document Component should render correctly 1`] = `
       content="width=device-width, initial-scale=1, minimum-scale=1"
       data-react-helmet="true"
       name="viewport"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
     />
     <title
       data-react-helmet="true"

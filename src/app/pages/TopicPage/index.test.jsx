@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
+import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -42,6 +44,10 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,
@@ -120,6 +126,22 @@ describe('Topic Page', () => {
 
     expect(queryByTestId('topic-badge')).toBeInTheDocument();
     expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should resize the badge image from 480 to 128', () => {
+    const { queryByTestId } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+
+    const topicBadge = queryByTestId('topic-badge');
+
+    expect(topicBadge).toBeInTheDocument();
+    const topicBadgeSrc = topicBadge.getAttribute('src');
+    expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
+    expect(topicBadgeSrc).toBe(
+      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+    );
   });
 
   it('should render description without badge', () => {
@@ -252,6 +274,20 @@ describe('Topic Page', () => {
       );
 
       expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });

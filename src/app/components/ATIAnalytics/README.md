@@ -1,6 +1,6 @@
 # ATI Analytics
 
-This directory contains code for logging events to ATI Analytics.
+This directory contains code for logging events to ATI (Piano) Analytics.
 
 ## Logging Click Events
 

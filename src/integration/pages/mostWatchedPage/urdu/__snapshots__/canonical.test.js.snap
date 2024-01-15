@@ -2,121 +2,128 @@
 
 exports[`Canonical Most Watched Page A11y I can see the skip to content link 1`] = `"مواد پر جائیں"`;
 
-exports[`Canonical Most Watched Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.media.video.page&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B3%D8%A8%2520%D8%B3%DB%92%2520%D8%B2%DB%8C%D8%A7%D8%AF%DB%81%2520%D8%AF%DB%8C%DA%A9%DA%BE%DB%8C%2520%DA%AF%D8%A6%DB%8C%2520-%2520BBC%2520News%2520%D8%A7%D8%B1%D8%AF%D9%88]\\"/>"`;
+exports[`Canonical Most Watched Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.media.video.page&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B3%D8%A8%2520%D8%B3%DB%92%2520%D8%B2%DB%8C%D8%A7%D8%AF%DB%81%2520%D8%AF%DB%8C%DA%A9%DA%BE%DB%8C%2520%DA%AF%D8%A6%DB%8C%2520-%2520BBC%2520News%2520%D8%A7%D8%B1%D8%AF%D9%88]"/>"`;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, اردو",
   "url": "/urdu",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں",
   "url": "https://www.bbc.com/urdu/institutional-49282935",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "استعمال کے ضوابط",
   "url": "https://www.bbc.com/urdu/institutional-37588278",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "بی بی سی کے بارے میں",
   "url": "https://www.bbc.com/urdu/institutional-37588280",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "پرائیویسی پالیسی",
   "url": "https://www.bbc.com/urdu/institutional-37588282",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "کوکیز",
-  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "بی بی سی سے رابطہ کریں",
   "url": "https://www.bbc.co.uk/urdu/send/u50853907",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`Canonical Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "صفحۂ اول",
   "url": "/urdu",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "پاکستان",
   "url": "/urdu/topics/cjgn7n9zzq7t",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 3`] = `
-Object {
+{
+  "text": "الیکشن 2024",
+  "url": "/urdu/topics/cynd7qxprq0t",
+}
+`;
+
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 4`] = `
+{
   "text": "آس پاس",
   "url": "/urdu/topics/cl8l9mveql2t",
 }
 `;
 
-exports[`Canonical Most Watched Page Header Navigation link should match text and url 4`] = `
-Object {
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 5`] = `
+{
   "text": "ورلڈ",
   "url": "/urdu/topics/cw57v2pmll9t",
 }
 `;
 
-exports[`Canonical Most Watched Page Header Navigation link should match text and url 5`] = `
-Object {
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 6`] = `
+{
   "text": "کھیل",
   "url": "/urdu/topics/c340q0p2585t",
 }
 `;
 
-exports[`Canonical Most Watched Page Header Navigation link should match text and url 6`] = `
-Object {
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 7`] = `
+{
   "text": "فن فنکار",
   "url": "/urdu/topics/ckdxnx900n5t",
 }
 `;
 
-exports[`Canonical Most Watched Page Header Navigation link should match text and url 7`] = `
-Object {
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 8`] = `
+{
   "text": "سائنس",
   "url": "/urdu/topics/c40379e2ymxt",
 }
 `;
 
-exports[`Canonical Most Watched Page Header Navigation link should match text and url 8`] = `
-Object {
+exports[`Canonical Most Watched Page Header Navigation link should match text and url 9`] = `
+{
   "text": "ویڈیو",
   "url": "/urdu/topics/c1e0mzr3r2yt",
 }
@@ -147,70 +154,70 @@ exports[`Canonical Most Watched Page Main heading should match text 1`] = `"سب
 exports[`Canonical Most Watched Page Main heading should match text 2`] = `"سب سے زیادہ دیکھی گئی"`;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/urdu/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
 }
@@ -227,30 +234,30 @@ exports[`Canonical Most Watched Page SEO Heading level 1 1`] = `"سب سے زی�
 exports[`Canonical Most Watched Page SEO Lang attribute 1`] = `"ur"`;
 
 exports[`Canonical Most Watched Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "WebPage",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "ur",
         "name": "Urdu",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/urdu/media/video",
         "@type": "WebPage",
         "name": "سب سے زیادہ دیکھی گئی",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",

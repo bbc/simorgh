@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, node, boolean } from 'prop-types';
+import { string, node, bool } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -98,7 +98,7 @@ const Image = props => {
 Image.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
-  useLargeImages: boolean,
+  useLargeImages: bool,
   children: node,
 };
 

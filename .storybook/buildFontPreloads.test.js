@@ -27,51 +27,51 @@ it('should build the font preloads', () => {
   expect(content).toMatchInlineSnapshot(`
     "
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/bold.eot\\"
-      as=\\"font\\"
-      type=\\"font/eot\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/bold.eot"
+      as="font"
+      type="font/eot"
+      crossorigin="anonymous"
     />
 
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/bold.ttf\\"
-      as=\\"font\\"
-      type=\\"font/ttf\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
     />
 
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/bold.woff\\"
-      as=\\"font\\"
-      type=\\"font/woff\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
     />
 
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/normal.eot\\"
-      as=\\"font\\"
-      type=\\"font/eot\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/normal.eot"
+      as="font"
+      type="font/eot"
+      crossorigin="anonymous"
     />
 
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/normal.ttf\\"
-      as=\\"font\\"
-      type=\\"font/ttf\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/normal.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
     />
 
     <link
-      rel=\\"preload\\"
-      href=\\"fonts/NotoSerifSinhala/normal.woff\\"
-      as=\\"font\\"
-      type=\\"font/woff\\"
-      crossorigin=\\"anonymous\\"
+      rel="preload"
+      href="fonts/NotoSerifSinhala/normal.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
     />
     "
   `);

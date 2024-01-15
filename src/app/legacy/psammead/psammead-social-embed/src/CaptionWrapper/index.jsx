@@ -5,24 +5,25 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 import { GREY_6, WHITE } from '../../../../../components/ThemeProvider/palette';
 
 const Figure = styled.figure`
   margin: 0;
-  background-color: ${({ isArticlePage }) =>
+  background-color: ${({ isTransparentPage }) =>
     props =>
-      isArticlePage ? 'transparent' : props.theme.palette.BLACK};
+      isTransparentPage ? 'transparent' : props.theme.palette.BLACK};
 `;
 
 const FigCaption = styled.figcaption`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   
-  ${({ isArticlePage }) => `
-    color: ${isArticlePage ? GREY_6 : WHITE};
-    padding: ${isArticlePage ? `${GEL_SPACING} 0` : GEL_SPACING};
+  ${({ isTransparentPage, isLive }) => `
+    color: ${isTransparentPage ? GREY_6 : WHITE};
+    padding: ${isTransparentPage ? `${GEL_SPACING} 0` : GEL_SPACING};
+    ${isLive ? 'padding-bottom: 0;' : ''}
   `}
 
   > span {
@@ -38,12 +39,17 @@ const CaptionWrapper = ({
   additionalText,
 }) => {
   const { pageType } = useContext(RequestContext);
-  const isArticlePage = pageType === ARTICLE_PAGE;
+  const isLive = pageType === LIVE_PAGE;
+  const isTransparentPage = pageType === ARTICLE_PAGE || isLive;
 
   return (
-    <Figure isArticlePage={isArticlePage}>
+    <Figure isTransparentPage={isTransparentPage}>
       {children}
-      <FigCaption isArticlePage={isArticlePage} service={service}>
+      <FigCaption
+        isTransparentPage={isTransparentPage}
+        isLive={isLive}
+        service={service}
+      >
         {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </FigCaption>

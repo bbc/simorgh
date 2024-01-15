@@ -11,6 +11,7 @@ jest.mock('@loadable/server', () => ({
     getScriptElements: () => '__mock_script_elements__',
     getLinkElements: () => '__mock_link_elements__',
   })),
+  ChunkExtractorManager: jest.fn(),
 }));
 
 jest.mock('./component', () => jest.fn());
@@ -71,6 +72,7 @@ describe('Render Document', () => {
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
+        isApp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',

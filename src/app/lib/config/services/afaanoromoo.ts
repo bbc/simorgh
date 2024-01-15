@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Tamsaasa Kallattii',
+        liveCoverage: 'Haguuggii Tamsaasa Kallattii',
+        breaking: 'Amma nu gahe',
+        postedAt: '...tti maxxanfame',
+        summary: 'Guduunfaa',
+      },
       gist: 'Guduunfaa',
       error: {
         404: {
@@ -128,7 +135,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'TOLE',
           reject: 'Maaltu akka jijjirame bari',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -142,7 +149,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kuus-yaadannoo',
                 last: ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: "Qindaa'inawwan filmaata fayyadamaa kiyyaa sirreessuuf",
             },
@@ -159,7 +166,7 @@ export const service: DefaultServiceConfig = {
                   "Marsariitiin keenya akka hojjatu taasisuuf, fedhii keessan malee odeeffannoo waa'ee meeshaa itti fayyadamtanii muraasa ni olkeenya.",
                 para4: {
                   text: 'Marsariitiin keenyaa akka hojjatuuf odeeffannoo murteessoo meeshaa itti fayyadamtanii nuti olkeenyuu irratti caalaa dubbisaa.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   "Filannoo fedhii keessaanii meeshaa keessan irratti olkaa'uuf kuusaa naannootti fayyadamna.",
@@ -192,13 +199,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kuus-yaadannoo fayyadamnu',
                 last: ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Eyyee, walii nan gala.',
             reject: 'Lakki, gara bakka itti argamuutti na geessi',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -279,12 +286,12 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',
         },
         {
@@ -292,7 +299,7 @@ export const service: DefaultServiceConfig = {
           text: "Waa'ee BBC",
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Imaammata mateenyaa',
         },
         {

@@ -6,9 +6,9 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import latin from '../../ThemeProvider/fontScripts/latin';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import { Services } from '../../../models/types/global';
+import { Services, Direction } from '../../../models/types/global';
 import { TypographyScript } from '../../../models/types/theming';
-import { Direction, MostReadBaseProps, MostReadData, Size } from '../types';
+import { MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = ({
   script,
@@ -114,8 +114,8 @@ export const setStalePromoTimestamp = (mostReadData: MostReadData) => {
   const updatedMostReadData = { ...mostReadData };
 
   // set first promo to have an old timestamp
-  if (updatedMostReadData.records[0].promo) {
-    updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
+  if (updatedMostReadData.items[0]) {
+    updatedMostReadData.items[0].timestamp = oldTimestamp;
   }
 
   return updatedMostReadData;
@@ -124,14 +124,11 @@ export const setStalePromoTimestamp = (mostReadData: MostReadData) => {
 export const setFreshPromoTimestamp = (mostReadData: MostReadData) => {
   const freshDate = new Date();
   const updatedMostReadData = { ...mostReadData };
-  const { records } = updatedMostReadData;
+  const { items } = updatedMostReadData;
 
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    const { promo } = records[i];
-    if (promo) {
-      promo.timestamp = freshDate.getTime();
-    }
+    items[i].timestamp = freshDate.getTime();
   }
 
   return updatedMostReadData;

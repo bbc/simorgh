@@ -3,7 +3,13 @@ const urls = [
     service: 'kyrgyz',
     local: '/kyrgyz',
     test: '/kyrgyz',
-    live: null,
+    live: '/kyrgyz',
+  },
+  {
+    service: 'arabic',
+    local: '/arabic',
+    test: '/arabic',
+    live: '/arabic',
   },
 ];
 

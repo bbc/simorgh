@@ -5,8 +5,10 @@ const AUDIT_URLS = {
   },
 
   IDX: {
-    live: ['https://www.bbc.com/persian/afghanistan'],
-    test: ['https://www.test.bbc.com/persian/afghanistan?renderer_env=live'],
+    live: ['https://www.bbc.com/ukrainian/ukraine_in_russian'],
+    test: [
+      'https://www.test.bbc.com/ukrainian/ukraine_in_russian?renderer_env=live',
+    ],
   },
 
   FIX: {
@@ -45,11 +47,6 @@ const AUDIT_URLS = {
     test: ['https://www.test.bbc.com/vietnamese/popular/read'],
   },
 
-  MOST_WATCHED: {
-    live: ['https://www.bbc.com/afrique/media/video'],
-    test: ['https://www.test.bbc.com/afrique/media/video'],
-  },
-
   PGL: {
     live: ['https://www.bbc.com/arabic/art-and-culture-38260491'],
     test: ['https://www.test.bbc.com/afaanoromoo/oduu-23141286'],
@@ -68,8 +65,8 @@ const AUDIT_URLS = {
   },
 
   TIPO_HOME_PAGE: {
-    live: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
-    test: ['https://www.test.bbc.com/kyrgyz'],
+    live: ['https://www.bbc.com/kyrgyz'],
+    test: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
   },
 
   MEDIA_ARTICLE_PAGE: {

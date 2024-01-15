@@ -3,10 +3,25 @@ import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
+import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
+import getAppEnv from '../../../support/helpers/getAppEnv';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
+};
+
+const twoYearsAgo = new Date().getFullYear() - 2;
+
+const isArticleLessThanTwoYearsOld = () => {
+  return cy
+    .get(`main time`)
+    .invoke('attr', 'datetime')
+    .then(fullDate => {
+      const isNewArticle = Number(fullDate.split('-')[0]) > Number(twoYearsAgo);
+      return isNewArticle && getAppEnv() === 'live';
+    });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -14,45 +29,46 @@ export const testsThatFollowSmokeTestConfig = ({
   service,
   pageType,
   isAmp,
+  variant,
 }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
-        const descriptionBlock = (
-          Cypress.env('APP_ENV') !== 'local'
-            ? body.data.article.content.blocks
-            : body.content.blocks
-        ).find(block => block.role === 'introduction');
-        // Condition added because introduction is non-mandatory
-        if (descriptionBlock) {
-          const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const description = elem.innerText;
-          cy.get('main p').should('contain', description);
-        }
-      });
+      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+        ({ body }) => {
+          const descriptionBlock = body.data.article.content.blocks.find(
+            block => block.role === 'introduction',
+          );
+          // Condition added because introduction is non-mandatory
+          if (descriptionBlock) {
+            const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
+            // strip html from the description, so we get description as plain text
+            const elem = document.createElement('div');
+            elem.innerHTML = descriptionHtml;
+            const description = elem.innerText;
+            cy.get('main p').should('contain', description);
+          }
+        },
+      );
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
-        const paragraphBlock = (
-          Cypress.env('APP_ENV') !== 'local'
-            ? body.data.article.content.blocks
-            : body.content.blocks
-        ).find(block => block.type === 'paragraph');
-        // Conditional because in test assets the data model structure is sometimes variable and unusual
-        // so cannot be accessed in the same way across assets
-        if (paragraphBlock) {
-          const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const paragraph = elem.innerText;
-          cy.get('main p').should('contain', paragraph);
-        }
-      });
+      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+        ({ body }) => {
+          const paragraphBlock = body.data.article.content.blocks.find(
+            block => block.type === 'paragraph',
+          );
+          // Conditional because in test assets the data model structure is sometimes variable and unusual
+          // so cannot be accessed in the same way across assets
+          if (paragraphBlock) {
+            const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
+            // strip html from the description, so we get description as plain text
+            const elem = document.createElement('div');
+            elem.innerHTML = descriptionHtml;
+            const paragraph = elem.innerText;
+            cy.get('main p').should('contain', paragraph);
+          }
+        },
+      );
     });
     it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
@@ -127,70 +143,85 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.log('Service is run in local.');
       }
     });
+
+    /**
+     * Most Read Component
+     */
+    mostReadAssertions({ service, variant });
   });
+
   describe(`Recommendations on ${service} ${pageType}`, () => {
     it('Recommendations have images', () => {
-      if (Cypress.env('APP_ENV') === 'live') {
-        cy.getToggles(service);
-        cy.fixture(`toggles/${service}.json`).then(toggles => {
-          const recommendationsEnabled = path(
-            ['cpsRecommendations', 'enabled'],
-            toggles,
-          );
-          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-          if (recommendationsEnabled) {
-            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-              (item, index) => {
-                cy.wrap(item).within(() => {
-                  cy.log(`List item number: ${index}`);
-                  cy.log(`isAmp= ${isAmp}`);
-                  if (isAmp) {
-                    cy.get(
-                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
-                    ).should('have.attr', 'width');
-                  } else {
-                    cy.get(
-                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > img`,
-                    ).should('have.attr', 'width');
-                  }
-                });
-              },
+      isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
+        if (runRecommendationTests) {
+          cy.getToggles(service);
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const recommendationsEnabled = path(
+              ['cpsRecommendations', 'enabled'],
+              toggles,
             );
-          }
-        });
-      } else {
-        cy.log('Only tests live due to not much test data');
-      }
+            cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+            if (recommendationsEnabled) {
+              cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+              cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+                (item, index) => {
+                  cy.wrap(item).within(() => {
+                    cy.log(`List item number: ${index}`);
+                    cy.log(`isAmp= ${isAmp}`);
+                    if (isAmp) {
+                      cy.get(
+                        `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
+                      ).should('have.attr', 'width');
+                    } else {
+                      cy.get(
+                        `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > img`,
+                      ).should('have.attr', 'width');
+                    }
+                  });
+                },
+              );
+            }
+          });
+        } else {
+          cy.log(
+            'Only tests on live and for articles less than 2 years old due to lack of test data',
+          );
+        }
+      });
     });
+
     it('Recommendations have titles', () => {
-      if (Cypress.env('APP_ENV') === 'live') {
-        cy.getToggles(service);
-        cy.fixture(`toggles/${service}.json`).then(toggles => {
-          const recommendationsEnabled = path(
-            ['cpsRecommendations', 'enabled'],
-            toggles,
-          );
-          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-          if (recommendationsEnabled) {
-            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-              (item, index) => {
-                cy.wrap(item).within(() => {
-                  cy.log(`List item number: ${index + 1}`);
-                  cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
-                    .invoke('text')
-                    .then(text => {
-                      expect(text.length).to.be.at.least(1);
-                    });
-                });
-              },
+      isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
+        if (runRecommendationTests) {
+          cy.getToggles(service);
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const recommendationsEnabled = path(
+              ['cpsRecommendations', 'enabled'],
+              toggles,
             );
-          }
-        });
-      } else {
-        cy.log('Only tests live due to not much test data');
-      }
+            cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+            if (recommendationsEnabled) {
+              cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+              cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+                (item, index) => {
+                  cy.wrap(item).within(() => {
+                    cy.log(`List item number: ${index + 1}`);
+                    cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
+                      .invoke('text')
+                      .then(text => {
+                        expect(text.length).to.be.at.least(1);
+                      });
+                  });
+                },
+              );
+            }
+          });
+        } else {
+          cy.log(
+            'Only tests on live and for articles less than 2 years old due to lack of test data',
+          );
+        }
+      });
     });
   });
 };

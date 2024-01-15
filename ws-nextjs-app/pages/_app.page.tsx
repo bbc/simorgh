@@ -23,7 +23,11 @@ interface Props extends AppProps {
     isApp?: boolean;
     isNextJs: boolean;
     mvtExperiments: MvtExperiment[] | null;
-    pageData: object;
+    pageData: {
+      metadata: {
+        type: PageTypes;
+      };
+    };
     pageLang?: string;
     pageType: PageTypes;
     pathname: string;
@@ -34,6 +38,7 @@ interface Props extends AppProps {
     timeOnServer?: number;
     toggles: Toggles;
     variant?: Variants;
+    isUK?: boolean;
   };
 }
 
@@ -56,6 +61,7 @@ export default function App({ Component, pageProps }: Props) {
     timeOnServer,
     toggles,
     variant,
+    isUK,
   } = pageProps;
 
   return (
@@ -80,8 +86,9 @@ export default function App({ Component, pageProps }: Props) {
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
+          isUK={isUK ?? false}
         >
-          <EventTrackingContextProvider pageData={pageData}>
+          <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (

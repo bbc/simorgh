@@ -15,35 +15,43 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) =>
   describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
-    describe('Audio Player', () => {
-      const { lang } = appConfig[service][variant];
-      let embedUrl;
+    describe(
+      'Audio Player',
+      {
+        retries: 3,
+      },
+      () => {
+        const { lang } = appConfig[service][variant];
+        let embedUrl;
 
-      beforeEach(() => {
-        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
-          embedUrl = getEmbedUrl(body, lang, true);
+        beforeEach(() => {
+          cy.request(getDataUrl(Cypress.env('currentPath'))).then(
+            ({ body }) => {
+              embedUrl = getEmbedUrl(body, lang, true);
+            },
+          );
         });
-      });
 
-      it('should be rendered', () => {
-        cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
-      });
-
-      it('should render an image placeholder', () => {
-        cy.get(`div[data-e2e="image-placeholder"][placeholder]`).should(
-          'exist',
-        );
-      });
-
-      it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndTypeRetry({
-          path: embedUrl,
-          responseCode: 200,
-          type: 'text/html',
-          allowFallback: true,
+        it('should be rendered', () => {
+          cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
         });
-      });
-    });
+
+        it('should render an image placeholder', () => {
+          cy.get(`div[data-e2e="image-placeholder"][placeholder]`).should(
+            'exist',
+          );
+        });
+
+        it('embed URL should be reachable', () => {
+          cy.testResponseCodeAndTypeRetry({
+            path: embedUrl,
+            responseCode: 200,
+            type: 'text/html',
+            allowFallback: true,
+          });
+        });
+      },
+    );
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
