@@ -55,7 +55,7 @@ jobs:
 
       - name: Start Simorgh Server - Next.JS App
         working-directory: ./ws-nextjs-app
-        run: PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
+        run: NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
 
       - name: Run AMP Validator
         run: yarn amp:validate
