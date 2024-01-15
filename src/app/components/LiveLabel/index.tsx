@@ -1,6 +1,7 @@
 /** @jsx jsx */
 /** @jsxRuntime classic */
-import { PropsWithChildren, useContext } from 'react';
+/* @jsxFrag React.Fragment */
+import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -50,28 +51,29 @@ const LiveLabel = ({
   }
 
   const circle = [
-    styles.pulseOuterCircle,
+    styles.pulseContainer,
     className === 'first-promo' && styles.firstPromo,
   ];
 
   return (
-    // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <span id={id} role="text">
-      <span css={styles.liveLabelContainer}>
-        <span css={circle}>
-          <svg
-            fill="currentColor"
-            focusable="false"
-            aria-hidden="true"
-            viewBox="0 0 32 32"
-            width="1em"
-            height="1em"
-          >
-            <path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z" />
-            <circle css={styles.pulseInnerCircle} cx="16" cy="16" r="8.5" />
-          </svg>
-        </span>
+    <>
+      <svg
+        css={circle}
+        fill="currentColor"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 32 32"
+      >
+        <path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z" />
+        <circle css={styles.pulseInnerCircle} cx="16" cy="16" r="8.5" />
+      </svg>
+
+      <span
+        // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+        id={id}
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
+      >
         <span
           css={styles.liveLabelText}
           dir={dir}
@@ -79,12 +81,14 @@ const LiveLabel = ({
         >
           {`${liveLabel} `}
         </span>
+        {screenReaderText && (
+          <VisuallyHiddenText lang={lang}>
+            {screenReaderText}
+          </VisuallyHiddenText>
+        )}
+        {children}
       </span>
-      {screenReaderText && (
-        <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
-      )}
-      {children}
-    </span>
+    </>
   );
 };
 
