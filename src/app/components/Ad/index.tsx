@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
@@ -7,8 +6,7 @@ import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { enabled: adsEnabled } = useToggle('ads');
+  const { isAmp } = useContext(RequestContext);
 
   // Ads component will only be displayed if ads toggle is true and if showAdsBasedOnLocation is true
   // if ([adsEnabled, showAdsBasedOnLocation].every(Boolean)) {
