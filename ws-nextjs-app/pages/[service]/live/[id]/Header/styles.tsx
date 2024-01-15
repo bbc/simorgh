@@ -49,7 +49,7 @@ export default {
         flexDirection: 'column',
         justifyContent: 'center',
         zIndex: '1', // not 4?
-        maxWidth: '45rem', // fix?
+        maxWidth: '50%', // fix?
       },
     }),
 
@@ -114,28 +114,14 @@ export default {
       },
     }),
 
-  imageWrapper: () =>
-    css({
-      // maxHeight: '440px',
-      aspectRatio: '16 / 9',
-      overflow: 'hidden',
-    }),
-
-  canvas: ({ mq }: Theme) =>
+  canvas: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
     }),
 
-  minHeight: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        minHeight: '25.3125rem', // fix?
-      },
-    }),
-
-  backgroundImage: ({ mq }: Theme) =>
+  backgroundImage: ({ mq, palette }: Theme) =>
     css({
       // minHeight: '27.5rem', // fix
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -143,9 +129,27 @@ export default {
         right: '0',
         top: '0',
         // minHeight: '25.3125rem', // fix
-        width: '60%',
-        maxWidth: '45rem',
+        // width: '60%',
+        // maxWidth: '45rem',
         height: '100%',
+        aspectRatio: '16 / 9', // check
+        overflow: 'hidden', // check
+      },
+      '& div': {
+        '&::after': {
+          [mq.GROUP_4_MIN_WIDTH]: {
+            background: `linear-gradient(to right, ${palette.GREY_10} 0%, rgba(255, 255, 255, 0) 100%, ${palette.GREY_10} 100%)`,
+            content: "''",
+            display: 'block',
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            width: '100%',
+          },
+          [mq.GROUP_5_MIN_WIDTH]: {
+            background: `linear-gradient(to right, ${palette.GREY_10} 0%, rgba(255, 255, 255, 0) 49%, ${palette.GREY_10} 100%)`,
+          },
+        },
       },
     }),
 };

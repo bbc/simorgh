@@ -92,14 +92,13 @@ const Header = ({
     });
 
   return (
-    <div css={[styles.canvas, imageUrl && styles.minHeight]}>
+    <div css={styles.canvas}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
       <div css={styles.contentWrapper}>
         {imageUrl ? (
           <>
-            {/* <div css={styles.imageWrapper}> */}
             <div css={styles.backgroundImage}>
               <Image
                 alt=""
