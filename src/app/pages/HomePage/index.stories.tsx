@@ -34,5 +34,5 @@ export default {
 };
 
 export const Pidgin = ({ variant }: StoryProps) => (
-  <Component service="kyrgyz" variant={variant} />
+  <Component service="pidgin" variant={variant} />
 );
