@@ -16,17 +16,16 @@ const HeaderContent = ({
   description,
 }: any) => {
   return (
-    <div css={styles.outerGrid}>
+    <div css={styles.outerWrapper}>
       <Heading
         size="trafalgar"
         level={1}
-        css={styles.heading}
         id="content"
         tabIndex={-1} // is this for accesibility?
       >
         {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
         {/*  eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text" css={styles.innerGrid}>
+        <span role="text" css={styles.flex}>
           {showLiveLabel ? (
             <>
               <span
@@ -41,11 +40,7 @@ const HeaderContent = ({
               </VisuallyHiddenText>
             </>
           ) : null}
-          <span
-            css={[styles.title, showLiveLabel && styles.layoutWithLiveLabel]}
-          >
-            {title}
-          </span>
+          <span css={styles.title}>{title}</span>
         </span>
       </Heading>
       {description && (
