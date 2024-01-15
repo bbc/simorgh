@@ -55,7 +55,7 @@ const getPageData = async ({
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
-  const agent = certsRequired(pathname) ? await getAgent() : null;
+  const agent = null;
 
   let pageStatus;
   let pageJson;
