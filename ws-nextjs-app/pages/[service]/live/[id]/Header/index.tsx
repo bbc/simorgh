@@ -89,11 +89,15 @@ const Header = ({
     });
 
   return (
-    <div css={styles.wrapper}>
-      <div css={styles.backgroundColor}>
+    <div css={styles.canvas}>
+      <div css={styles.backgroundContainer}>
+        <div css={styles.backgroundColor} />
+      </div>
+      <div css={styles.contentWrapper}>
         {imageUrl ? (
           <>
-            <div css={styles.imageWrapper}>
+            {/* <div css={styles.imageWrapper}> */}
+            <div css={styles.backgroundImage}>
               <Image
                 alt=""
                 // attribution={copyright}

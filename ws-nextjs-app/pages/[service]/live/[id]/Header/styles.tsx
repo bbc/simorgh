@@ -5,9 +5,22 @@ export default {
   backgroundColor: ({ palette, mq }: Theme) =>
     css({
       backgroundColor: palette.GREY_10,
+      width: '100%',
+      // height: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
+    }),
+  backgroundContainer: () =>
+    css({
+      position: 'absolute',
+      top: '0',
+      bottom: '0',
+      width: '100%',
+      overflow: 'hidden',
     }),
   outerWrapper: ({ mq, gridWidths }: Theme) =>
     css({
@@ -83,15 +96,33 @@ export default {
   headerImage: () => css({}), // spare
   overlayText: ({ mq }: Theme) =>
     css({
+      zIndex: 4,
+      position: 'absolute',
+      bottom: 0,
+      // width: '100%',
       [mq.GROUP_4_MIN_WIDTH]: {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translate(0, -50%)',
+        position: 'relative',
+        // position: 'absolute',
+        // top: '50%',
+        // transform: 'translate(0, -50%)',
       },
     }),
-  wrapper: () =>
+  // wrapper: ({ mq, gridWidths }: Theme) =>
+  //   css({
+  //     [mq.GROUP_4_MIN_WIDTH]: {
+  //       display: 'flex',
+  //       flexDirection: 'row-reverse',
+  //     },
+  //   }),
+
+  contentWrapper: ({ mq, gridWidths }: Theme) =>
     css({
-      position: 'relative',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        margin: '0 auto',
+        position: 'relative',
+        width: '100%',
+      },
     }),
 
   imageWrapper: () =>
@@ -99,5 +130,28 @@ export default {
       maxHeight: '440px',
       aspectRatio: '16 / 9',
       overflow: 'hidden',
+    }),
+
+  canvas: ({ mq }: Theme) =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
+      minHeight: '25.3125rem', // fix
+      [mq.GROUP_4_MIN_WIDTH]: {},
+    }),
+
+  backgroundImage: ({ mq }: Theme) =>
+    css({
+      position: 'absolute',
+      right: '0',
+      top: '0',
+      // width: '100%',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: '25.3125rem', // fix
+        width: '60%',
+        maxWidth: '45rem',
+        height: '100%',
+      },
     }),
 };
