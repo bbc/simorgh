@@ -14,46 +14,49 @@ const HeaderContent = ({
   liveLabel,
   title,
   description,
+  imageUrl,
 }: any) => {
   return (
     <div css={styles.outerWrapper}>
-      <Heading
-        size="trafalgar"
-        level={1}
-        id="content"
-        tabIndex={-1} // is this for accesibility?
-      >
-        {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
-        {/*  eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text" css={styles.flex}>
-          {showLiveLabel ? (
-            <>
-              <span
-                css={styles.label}
-                aria-hidden="true"
-                data-testid="live-label"
-              >
-                {liveLabel}
-              </span>
-              <VisuallyHiddenText lang="en-GB">
-                {`${liveLabel}, `}
-              </VisuallyHiddenText>
-            </>
-          ) : null}
-          <span css={styles.title}>{title}</span>
-        </span>
-      </Heading>
-      {description && (
-        <Text
-          as="p"
-          css={[
-            styles.description,
-            showLiveLabel && styles.layoutWithLiveLabel,
-          ]}
+      <div css={imageUrl && styles.innerWrapper}>
+        <Heading
+          size="trafalgar"
+          level={1}
+          id="content"
+          tabIndex={-1} // is this for accesibility?
         >
-          {description}
-        </Text>
-      )}
+          {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
+          {/*  eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text" css={!imageUrl && styles.flex}>
+            {showLiveLabel ? (
+              <>
+                <span
+                  css={styles.label}
+                  aria-hidden="true"
+                  data-testid="live-label"
+                >
+                  {liveLabel}
+                </span>
+                <VisuallyHiddenText lang="en-GB">
+                  {`${liveLabel}, `}
+                </VisuallyHiddenText>
+              </>
+            ) : null}
+            <span css={styles.title}>{title}</span>
+          </span>
+        </Heading>
+        {description && (
+          <Text
+            as="p"
+            css={[
+              styles.description,
+              showLiveLabel && !imageUrl && styles.layoutWithLiveLabelNoImage,
+            ]}
+          >
+            {description}
+          </Text>
+        )}
+      </div>
     </div>
   );
 };
@@ -89,7 +92,7 @@ const Header = ({
     });
 
   return (
-    <div css={styles.canvas}>
+    <div css={[styles.canvas, imageUrl && styles.minHeight]}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
@@ -113,17 +116,15 @@ const Header = ({
                 sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
                 // isAmp={isAmp}
                 // placeholder
-                css={styles.headerImage}
               />
             </div>
-            <div css={styles.overlayText}>
-              <HeaderContent
-                showLiveLabel={showLiveLabel}
-                liveLabel={liveLabel}
-                title={title}
-                description={description}
-              />
-            </div>
+            <HeaderContent
+              showLiveLabel={showLiveLabel}
+              liveLabel={liveLabel}
+              title={title}
+              description={description}
+              imageUrl={imageUrl}
+            />
           </>
         ) : (
           <HeaderContent
@@ -131,6 +132,7 @@ const Header = ({
             liveLabel={liveLabel}
             title={title}
             description={description}
+            imageUrl={imageUrl}
           />
         )}
       </div>

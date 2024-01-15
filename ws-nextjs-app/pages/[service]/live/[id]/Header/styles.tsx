@@ -6,7 +6,6 @@ export default {
     css({
       backgroundColor: palette.GREY_10,
       width: '100%',
-      // height: '100%',
       top: 0,
       bottom: 0,
       position: 'absolute',
@@ -27,6 +26,8 @@ export default {
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
       padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
+      // zIndex: 1, // needed for non-image
+      position: 'relative',
 
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${pixelsToRem(16)}rem`,
@@ -37,10 +38,21 @@ export default {
         paddingInlineEnd: `${pixelsToRem(16)}rem`,
         paddingTop: `${pixelsToRem(24)}rem`,
         paddingBottom: `${pixelsToRem(32)}rem`,
-        // display: 'flex', // not actually doing anything rn
-        // flexDirection: 'column',
       },
     }),
+  innerWrapper: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: '20.3125rem',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        zIndex: '1', // not 4?
+        maxWidth: '45rem', // fix?
+      },
+    }),
+
   flex: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -59,7 +71,6 @@ export default {
       display: 'block',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: 0,
         display: 'flex',
         flex: '1 auto',
         minWidth: 'calc(100% / 3)',
@@ -84,7 +95,7 @@ export default {
       margin: 0,
       marginTop: `${pixelsToRem(16)}rem`,
     }),
-  layoutWithLiveLabel: ({ mq }: Theme) =>
+  layoutWithLiveLabelNoImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         marginInlineStart: 'calc(100% / 3)', // this feels janky
@@ -93,28 +104,6 @@ export default {
         marginInlineStart: 'calc(100% / 4)', // this feels janky
       },
     }),
-  headerImage: () => css({}), // spare
-  overlayText: ({ mq }: Theme) =>
-    css({
-      zIndex: 4,
-      position: 'absolute',
-      bottom: 0,
-      // width: '100%',
-      [mq.GROUP_4_MIN_WIDTH]: {
-        position: 'relative',
-        // position: 'absolute',
-        // top: '50%',
-        // transform: 'translate(0, -50%)',
-      },
-    }),
-  // wrapper: ({ mq, gridWidths }: Theme) =>
-  //   css({
-  //     [mq.GROUP_4_MIN_WIDTH]: {
-  //       display: 'flex',
-  //       flexDirection: 'row-reverse',
-  //     },
-  //   }),
-
   contentWrapper: ({ mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -127,7 +116,7 @@ export default {
 
   imageWrapper: () =>
     css({
-      maxHeight: '440px',
+      // maxHeight: '440px',
       aspectRatio: '16 / 9',
       overflow: 'hidden',
     }),
@@ -137,18 +126,23 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
-      minHeight: '25.3125rem', // fix
-      [mq.GROUP_4_MIN_WIDTH]: {},
+    }),
+
+  minHeight: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: '25.3125rem', // fix?
+      },
     }),
 
   backgroundImage: ({ mq }: Theme) =>
     css({
-      position: 'absolute',
-      right: '0',
-      top: '0',
-      // width: '100%',
+      // minHeight: '27.5rem', // fix
       [mq.GROUP_4_MIN_WIDTH]: {
-        minHeight: '25.3125rem', // fix
+        position: 'absolute',
+        right: '0',
+        top: '0',
+        // minHeight: '25.3125rem', // fix
         width: '60%',
         maxWidth: '45rem',
         height: '100%',
