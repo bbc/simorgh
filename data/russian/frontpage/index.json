@@ -1,0 +1,1398 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:33cf4114-07fe-c79b-e050-380a4e803fdd",
+          "contentType": "index-section",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "russian.page",
+          "pageTitle": "Главная",
+          "producerId": null,
+          "timePublished": "2016-05-31T09:10:22.000Z",
+          "timeUpdated": "2024-01-15T11:26:35.000Z",
+          "producerName": "RUSSIAN"
+        },
+        "id": "urn:bbc:ares::index:russian/front_page/mobile/domestic",
+        "locators": {
+          "assetUri": "/russian/front_page",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:33cf4114-07fe-c79b-e050-380a4e803fdd/desktop/domestic",
+          "assetId": "36396530",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/front_page",
+          "curie": "http://www.bbc.co.uk/asset/33cf4114-07fe-c79b-e050-380a4e803fdd/desktop/domestic"
+        },
+        "type": "IDX",
+        "createdBy": "russian-v6",
+        "language": "ru",
+        "lastUpdated": 1705318004000,
+        "firstPublished": 1464685822000,
+        "lastPublished": 1705317995000,
+        "timestamp": 1705317993000,
+        "options": { "allowAdvertising": true },
+        "analyticsLabels": {
+          "cps_asset_type": "idx",
+          "counterName": "russian.page",
+          "cps_asset_id": "36396530",
+          "contentId": "urn:bbc:cps:curie:asset:33cf4114-07fe-c79b-e050-380a4e803fdd"
+        },
+        "tags": {},
+        "version": "v1.4.38",
+        "blockTypes": [
+          "top-story",
+          "special-reports",
+          "feature-main",
+          "section-digest",
+          "also-in-news",
+          "featured-site-top-stories",
+          "useful-links"
+        ],
+        "title": "Главная",
+        "summary": "Русская служба Би-би-си – это непредвзятое освещение событий в России и мире на русском языке."
+      },
+      "content": {
+        "groups": [
+          {
+            "type": "top-story",
+            "title": "Top story",
+            "maxRelatedLinks": 2,
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Война в Украине: ВСУ заявили об уничтожении российских самолетов А-50 и Ил-22"
+                },
+                "locators": {
+                  "assetUri": "/russian/live/news-67845109",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6be21033-2b3f-4a6d-ab7d-97fe830f8377",
+                  "assetId": "67845109",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/live/news-67845109",
+                  "curie": "http://www.bbc.co.uk/asset/6be21033-2b3f-4a6d-ab7d-97fe830f8377"
+                },
+                "summary": "Последние новости, комментарии и видео о войне России против Украины.",
+                "timestamp": 1703881356000,
+                "language": "ru",
+                "cpsType": "LIV",
+                "indexImage": {
+                  "id": "132274326",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/F38B/production/_132274326_gettyimages-1908156582.jpg",
+                  "path": "/cpsprodpb/F38B/production/_132274326_gettyimages-1908156582.jpg",
+                  "height": 945,
+                  "width": 1680,
+                  "altText": "Залужный",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "commentary": {
+                  "order": "descending",
+                  "assetUUID": "7B8BAB0CC8444584ACB67CEAE7BE540C",
+                  "channels": {
+                    "enhancedmobile": "bbc.cps.asset.67845110_EnhancedMobile",
+                    "desktop": "bbc.cps.asset.67845110_HighWeb",
+                    "highweb": "bbc.cps.asset.67845110_HighWeb",
+                    "mobile": "bbc.cps.asset.67845110_EnhancedMobile"
+                  }
+                },
+                "isLive": true,
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "prominence": "standard",
+                "relatedItems": [
+                  {
+                    "name": "ЧВК «Вагнер» сбила летающий командный пункт российских военных. Что это такое?",
+                    "uri": "https://www.bbc.com/russian/articles/cq5gp4v1ll7o",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cq5gp4v1ll7o",
+                    "timestamp": 1687801426000,
+                    "type": "link"
+                  }
+                ],
+                "liveStatus": "LIVE",
+                "id": "urn:bbc:ares::asset:russian/live/news-67845109",
+                "type": "cps"
+              },
+              {
+                "name": "Российский миллиардер в суде США. Как Дмитрий Рыболовлев судится с Sotheby’s из-за цен на искусство",
+                "indexImage": {
+                  "id": "132303505",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2ca5/live/297da0d0-b362-11ee-86f7-b35577e07b9a.jpg",
+                  "path": "/cpsprodpb/2ca5/live/297da0d0-b362-11ee-86f7-b35577e07b9a.jpg",
+                  "height": 566,
+                  "width": 1006,
+                  "altText": "Дмитрий Рыболовлев около здания суда в Нью-Йорке",
+                  "caption": "Дмитрий Рыболовлев около здания суда в Нью-Йорке",
+                  "copyrightHolder": "Bloomberg via Getty Images",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/crgxd0dxdpyo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/crgxd0dxdpyo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705296110000,
+                "type": "link"
+              },
+              {
+                "name": "«Украине не нужны замороженные конфликты». В Давосе обсудили украинскую «формулу мира» перед визитом Зеленского",
+                "summary": "Президент Украины Владимир Зеленский в понедельник примет участие во Всемирном экономическом форуме в Давосе, где в течение выходных состоялся очередной раунд международных переговоров о путях мирного урегулирования российско-украинской войны.",
+                "indexImage": {
+                  "id": "132303051",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/f699/live/9c868cd0-b33b-11ee-9a0a-79cfef580f43.jpg",
+                  "path": "/cpsprodpb/f699/live/9c868cd0-b33b-11ee-9a0a-79cfef580f43.jpg",
+                  "height": 2107,
+                  "width": 3746,
+                  "altText": "Логотип Всемирного экономического форума в Давосе",
+                  "caption": "Форум, посвященный украинской формуле мира, прошел на полях Всемирного экономического форума в Давосе",
+                  "copyrightHolder": "EFE/REX/Shutterstock",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c6p1e5lp4vxo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c6p1e5lp4vxo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705278583000,
+                "type": "link"
+              },
+              {
+                "name": "«Прежде всего Германия». Как немецкие крайне правые используют протесты фермеров в своих интересах",
+                "summary": "Участники немецких ультраправых объединений пытаются воспользоваться протестами фермеров, выражающих недовольство сокращением бюджетных субсидий. Экстремистские движения даже обсуждали возможность свержения правительства Германии.",
+                "indexImage": {
+                  "id": "132303319",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4494/live/42a4a8e0-b35a-11ee-bc2f-cb5579b90709.jpg",
+                  "path": "/cpsprodpb/4494/live/42a4a8e0-b35a-11ee-bc2f-cb5579b90709.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Акция протеста в Котбусе",
+                  "caption": "На этом плакате во время акции протеста в Котбусе написано: «Из наших карманов берут деньги для всего мира, но нашему народу остаются только руины и пепел»",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cxe4z78y4mpo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cxe4z78y4mpo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705291884000,
+                "type": "link"
+              },
+              {
+                "name": "Умер поэт Лев Рубинштейн",
+                "indexImage": {
+                  "id": "132299497",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/a711/live/b34a29e0-b2b9-11ee-8692-fb1534eaeecf.jpg",
+                  "path": "/cpsprodpb/a711/live/b34a29e0-b2b9-11ee-8692-fb1534eaeecf.jpg",
+                  "height": 720,
+                  "width": 1280,
+                  "altText": "Лев Рубинштейн",
+                  "copyrightHolder": "TASS",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c72ygvm8nzdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c72ygvm8nzdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705222589000,
+                "type": "link"
+              },
+              {
+                "name": "В лондонской подземке появились «следы призраков». Власти пытаются от них избавиться",
+                "summary": "Компания Transport for London (TfL), управляющая общественным транспортом британской столицы, пытается избавиться от призрачных следов, которые появились на платформах Елизаветинской линии (Elizabeth line) — новейшей в лондонской транспортной системе.",
+                "indexImage": {
+                  "id": "132303191",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1cf2/live/004679e0-b348-11ee-beb5-e1400df560f2.jpg",
+                  "path": "/cpsprodpb/1cf2/live/004679e0-b348-11ee-beb5-e1400df560f2.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Появление следов призраков имеет вполне прозаичное объяснение",
+                  "caption": "Появление «следов призраков» имеет вполне прозаичное объяснение",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cqe138rzp7jo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cqe138rzp7jo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705284049000,
+                "type": "link"
+              },
+              {
+                "name": "В Дании взошел на престол король Фредерик X. Поздравить его пришли 100 тысяч человек",
+                "summary": "Десятки тысяч датчан собрались в Копенгагене, чтобы отпраздновать начало правления короля Фредерика X. Перед этим королева Дании Маргрете II отреклась от престола в пользу старшего сына.",
+                "indexImage": {
+                  "id": "132302211",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2c73/live/dd54e2c0-b2fa-11ee-b46b-971a5cae4060.jpg",
+                  "path": "/cpsprodpb/2c73/live/dd54e2c0-b2fa-11ee-b46b-971a5cae4060.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Фредерик Х",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c3gy5nyvgzjo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3gy5nyvgzjo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705255031000,
+                "type": "link"
+              },
+              {
+                "name": "Айова первой выбирает кандидата в президенты США. У республиканцев лидирует Трамп",
+                "summary": "В гонке за номинацию лидирует бывший президент Дональд Трамп, однако за второе место развернулась серьезная борьба: согласно опросам, бывший посол в ООН Никки Хейли и губернатор Флориды Рон ДеСантис идут почти вровень.",
+                "indexImage": {
+                  "id": "132301756",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/100AE/production/_132301756_a5f24693-4d4d-475c-a4fe-6b403e305f3b.jpg",
+                  "path": "/cpsprodpb/100AE/production/_132301756_a5f24693-4d4d-475c-a4fe-6b403e305f3b.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Плакат",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c0dy30p4mmko",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0dy30p4mmko",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705238374000,
+                "type": "link"
+              },
+              {
+                "name": "Фото: в Исландии снова извергается вулкан, лава вытекла на поселок",
+                "summary": "На юго-западе Исландии произошло извержение вулкана, в результате которого лава потекла в сторону рыбацкой деревни, которую пришлось эвакуировать.",
+                "indexImage": {
+                  "id": "132301754",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/B28E/production/_132301754_gettyimages-1924571246.jpg",
+                  "path": "/cpsprodpb/B28E/production/_132301754_gettyimages-1924571246.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Лава",
+                  "copyrightHolder": "AFP",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c13ydljy3kzo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c13ydljy3kzo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705242677000,
+                "type": "link"
+              },
+              {
+                "name": "«Почтовый скандал» в Британии: как телесериал помог добиться справедливости жертвам вопиющих судебных ошибок",
+                "summary": "Беспрецедентный скандал вокруг британской национальной почтовой сети Post Office длился более 20 лет. Добиться справедливости его жертвам внезапно помог телесериал, который вышел на британском телевидении в прошедшее Рождество.",
+                "indexImage": {
+                  "id": "132299014",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/c134/live/dcc2c920-b17f-11ee-8397-bdfcfb907c30.jpg",
+                  "path": "/cpsprodpb/c134/live/dcc2c920-b17f-11ee-8397-bdfcfb907c30.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Кадр из телесериала \"Мистер Бэйтс против Почты\"",
+                  "caption": "Художественный телесериал, основанный на историях жертв «почтового скандала», глубоко потряс британцев",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c3gy20dexmdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3gy20dexmdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705208592000,
+                "type": "link"
+              },
+              {
+                "name": "Джон Керри подключится к предвыборной кампании Джо Байдена",
+                "indexImage": {
+                  "id": "132300048",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/e610/live/38e3b130-b2cd-11ee-8f07-bbfdfa890097.jpg",
+                  "path": "/cpsprodpb/e610/live/38e3b130-b2cd-11ee-8f07-bbfdfa890097.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Джон Керри",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cg3v4dwn0p1o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cg3v4dwn0p1o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705230773000,
+                "type": "link"
+              },
+              {
+                "name": "«Тайвань, вперед»: Уильям Лай, противник сближения с Китаем, побеждает на выборах президента. Его соперники признали поражение",
+                "summary": "Уильям Лай, он же Лай Циндэ, будет следующим президентом Тайваня. Его соперники поздравили его с победой. Лай представляет правящую партию, выступающую против воссоединения с материковым Китаем.",
+                "indexImage": {
+                  "id": "132296646",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/FC9D/production/_132296646_mediaitem132296645.jpg",
+                  "path": "/cpsprodpb/FC9D/production/_132296646_mediaitem132296645.jpg",
+                  "height": 432,
+                  "width": 768,
+                  "altText": "Лай",
+                  "copyrightHolder": "EPA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cv27w41d5j1o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv27w41d5j1o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705140611000,
+                "relatedItems": [
+                  {
+                    "name": "Тайваньский кризис. Начнет ли Китай войну после субботних выборов?",
+                    "uri": "https://www.bbc.com/russian/articles/cy9eevqk7vlo",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cy9eevqk7vlo",
+                    "timestamp": 1704974215000,
+                    "type": "link"
+                  }
+                ],
+                "type": "link"
+              },
+              {
+                "name": "В Эквадоре обнаружен древний город — ровесник Рима",
+                "summary": "В бассейне реки Амазонки обнаружен огромный древний город, тысячелетиями скрывавшийся за пышной растительностью. По мнению ученых, находка значительно изменит наши прежние представления о людях, населявших этот регион.",
+                "indexImage": {
+                  "id": "132299222",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/571B/production/_132299222_b50c1f11-f8db-4f94-861d-baaccb5448be.jpg",
+                  "path": "/cpsprodpb/571B/production/_132299222_b50c1f11-f8db-4f94-861d-baaccb5448be.jpg",
+                  "height": 456,
+                  "width": 812,
+                  "altText": "Древний город в Эквадоре",
+                  "caption": "Ученые полагают, что 6 тысяч подобных земляных насыпей – фундаменты домов древнего поселения",
+                  "copyrightHolder": "STEPHEN ROSTAIN",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cq511x85rqzo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cq511x85rqzo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705075249000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Главное", "summary": "" },
+            "semanticGroupName": "Top story"
+          },
+          {
+            "type": "special-reports",
+            "title": "Подкасты",
+            "items": [
+              {
+                "name": "Начнется ли большая война на Ближнем Востоке?",
+                "summary": "И зачем США и Великобритания ударили по хуситам?",
+                "indexImage": {
+                  "id": "132288762",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/68A4/production/_132288762_p0h4nl9s.jpg",
+                  "path": "/cpsprodpb/68A4/production/_132288762_p0h4nl9s.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "yemenies",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/russian/bbc_russian_radio/programmes/p076qqzl",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705067598000,
+                "type": "link"
+              },
+              {
+                "name": "Сможет ли Россия начать наступление на Харьков?",
+                "summary": "И чего добиваются стороны ракетными обстрелами городов?",
+                "indexImage": {
+                  "id": "132279973",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/946D/production/_132279973_p0h4f8jv.jpg",
+                  "path": "/cpsprodpb/946D/production/_132279973_p0h4f8jv.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Getty",
+                  "caption": "Getty",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/podcasts/p076qqzl/p0h4f882",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/podcasts/p076qqzl/p0h4f882",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704987153000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Подкасты",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/media-47937790",
+                "desktop": "https://www.bbc.com/russian/media-47937790",
+                "mobile": "https://www.bbc.com/russian/media-47937790",
+                "enhancedmobile": "https://www.bbc.com/russian/media-47937790"
+              }
+            },
+            "semanticGroupName": "Special reports 1"
+          },
+          {
+            "type": "feature-main",
+            "title": "Не пропустите",
+            "items": [
+              {
+                "name": "Битва за телевизор. Как в Польше сменили власть на «первой кнопке»",
+                "summary": "Польское общественное телевидение (TVP) долго называли рупором пропаганды прежней власти. Сейчас ситуация изменилась, но то, как произошли эти изменения и к чему они могут привести, ставит перед польским обществом и властями новые вопросы.",
+                "indexImage": {
+                  "id": "132296648",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14ABD/production/_132296648_whatsubject.jpg",
+                  "path": "/cpsprodpb/14ABD/production/_132296648_whatsubject.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Польша протест",
+                  "copyrightHolder": "Getty ",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/clkww81yv2eo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/clkww81yv2eo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705120628000,
+                "type": "link"
+              },
+              {
+                "name": "Передел собственности, ручное управление, дефицит кадров. Как война изменила экономику России",
+                "summary": "За два года войны российская экономика продемонстрировала удивительную устойчивость: кризиса не случилось, а в 2023 году она даже начала расти. Причина стабильности — в огромных бюджетных расходах: власти много тратят на войну, а эти деньги распределяются по всей экономике. Правда, долго так продолжаться не может. Что ждет экономику России в 2024 году?",
+                "indexImage": {
+                  "id": "132265045",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/D328/production/_132265045_e6acd17a-02fd-4186-819a-0036b6deb753.jpg",
+                  "path": "/cpsprodpb/D328/production/_132265045_e6acd17a-02fd-4186-819a-0036b6deb753.jpg",
+                  "height": 572,
+                  "width": 1017,
+                  "altText": "Посетитель на выставке вооружений в подмосковной Кубинке (август 2023 года)",
+                  "caption": "Ведя войну в Украине, Россия закачивает огромные бюджетные деньги в военную промышленность (на снимке — посетитель на выставке вооружений в подмосковной Кубинке, август 2023 г.)",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/ceq4pj017xwo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/ceq4pj017xwo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704952383000,
+                "type": "link"
+              },
+              {
+                "name": "Подпишитесь на нашу рассылку «Контекст»!",
+                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. \"Контекст\" поможет вам разобраться в происходящем.",
+                "indexImage": {
+                  "id": "125953051",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
+                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Логотип \"Контекст\"",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1658144127000,
+                "type": "link"
+              },
+              {
+                "name": "Тайваньский кризис. Начнет ли Китай войну после субботних выборов?",
+                "summary": "Выборы на Тайване — первые после вторжения России в Украину. Они рискуют стать искрой, из которого разгорится пламя регионального конфликта, способного перерасти в самый разрушительный кризис XXI века и глобальное противостояние двух крупнейших держав планеты — США и Китая.",
+                "indexImage": {
+                  "id": "132277293",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/996D/production/_132277293_bc7774cf-c280-4e3d-876b-67bb5a3f19e0.jpg",
+                  "path": "/cpsprodpb/996D/production/_132277293_bc7774cf-c280-4e3d-876b-67bb5a3f19e0.jpg",
+                  "height": 1407,
+                  "width": 2500,
+                  "altText": "Предвыборный митинг в Тайбэе 23 декабря",
+                  "copyrightHolder": "EPA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cy9eevqk7vlo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cy9eevqk7vlo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704974215000,
+                "type": "link"
+              },
+              {
+                "name": "Приют, где не убьют: зоозащитники в Бурятии вывозят собак в другие регионы, чтобы спасти",
+                "summary": "Волонтеры срочно вывозят приютских собак из Бурятии, где по указанию местных властей уже началась эвтаназия бездомных животных. К спасению собак подключились добровольцы со всей России. Как так получилось?",
+                "indexImage": {
+                  "id": "132278382",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/527a/live/be29aa30-b083-11ee-939d-1917fa480e5a.jpg",
+                  "path": "/cpsprodpb/527a/live/be29aa30-b083-11ee-939d-1917fa480e5a.jpg",
+                  "height": 540,
+                  "width": 960,
+                  "altText": "Волонтеры привезли собак на вокзал",
+                  "copyrightHolder": "Ananda shelter ",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cy9eekqjy33o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cy9eekqjy33o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704980381000,
+                "type": "link"
+              },
+              {
+                "name": "ЮАР возбудила против Израиля дело о геноциде в Международном суде. В чем его суть и что дальше?",
+                "summary": "ЮАР обратилась в Международный суд ООН с просьбой рассмотреть вопрос о том, совершает ли Израиль геноцид против палестинцев в секторе Газа. Что это за иск и каковы его шансы в суде?",
+                "indexImage": {
+                  "id": "132279678",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/a32e/live/6bde13d0-b081-11ee-8f07-bbfdfa890097.png",
+                  "path": "/cpsprodpb/a32e/live/6bde13d0-b081-11ee-8f07-bbfdfa890097.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Плачущая палестинская женщина",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c72yy7xjxljo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c72yy7xjxljo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704985426000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Не пропустите",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/features-50983593",
+                "desktop": "https://www.bbc.com/russian/features-50983593",
+                "mobile": "https://www.bbc.com/russian/features-50983593",
+                "enhancedmobile": "https://www.bbc.com/russian/features-50983593"
+              }
+            },
+            "semanticGroupName": "Features"
+          },
+          {
+            "type": "section-digest",
+            "title": "Ukraine war special",
+            "items": [
+              {
+                "name": "На войну после школы? Что известно о потерях России в Украине к январю",
+                "summary": "На основе открытых источников Би-би-си совместно с изданием «Медиазона» (признана в России «иноагентом») и командой волонтеров удалось установить имена 41 731 российских военных, погибших в ходе вторжения в Украину с февраля 2022 года. Более 1100 из них были моложе 20 лет.",
+                "indexImage": {
+                  "id": "132285198",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15C46/production/_132285198_whatsubject.jpg",
+                  "path": "/cpsprodpb/15C46/production/_132285198_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "солдаты выходят из окопов",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c6p11rp0rzyo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c6p11rp0rzyo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705058796000,
+                "type": "link"
+              },
+              {
+                "name": "Рада забраковала законопроект о мобилизации украинцев. Что он предусматривал и как его изменят",
+                "summary": "После консультаций с военным руководством в Раде решили не выносить на голосование правительственный законопроект о новых правилах мобилизации. Теперь правительство должно изменить наиболее скандальные нормы с учетом замечаний, а потом снова внести документ в парламент.",
+                "indexImage": {
+                  "id": "132281824",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/bec3/live/1ea109b0-b095-11ee-8f07-bbfdfa890097.jpg",
+                  "path": "/cpsprodpb/bec3/live/1ea109b0-b095-11ee-8f07-bbfdfa890097.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "Солдаты ВСУ",
+                  "copyrightHolder": "ОК «ЮГ»",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cl4ee84lm13o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cl4ee84lm13o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704993675000,
+                "type": "link"
+              },
+              {
+                "name": "Главы гражданской и военной обороны Швеции призвали население готовиться к войне. Кого они боятся?",
+                "summary": "Шведы обеспокоены словами сразу двух высокопоставленных лиц государства о том, что страна должна подготовится к войне. Министр гражданской обороны Швеции Карл-Оскар Болин и главнокомандующий вооруженными силами генерал Микаэль Бюден заявили, что не исключают такой возможности.",
+                "indexImage": {
+                  "id": "132278101",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/27CB/production/_132278101_fed68d40-b075-11ee-beb5-e1400df560f2.png",
+                  "path": "/cpsprodpb/27CB/production/_132278101_fed68d40-b075-11ee-beb5-e1400df560f2.png",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "Шведский солдат",
+                  "copyrightHolder": "AFP",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c3gyy833x80o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c3gyy833x80o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704977945000,
+                "type": "link"
+              },
+              {
+                "name": "«Не все крымчане — зомби». Как движение «Атеш» следит за российскими военными в Крыму и помогает Украине",
+                "summary": "Би-би-си поговорила с несколькими членами партизанского движения «Атеш». Они рассказали о своей главной деятельности - шпионить за российскими военными в аннексированном Крыму и докладывать украинским военным.",
+                "indexImage": {
+                  "id": "132224181",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/dc62/live/3d94dee0-acc7-11ee-bc2f-cb5579b90709.png",
+                  "path": "/cpsprodpb/dc62/live/3d94dee0-acc7-11ee-bc2f-cb5579b90709.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "\"Атеш\" графика",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c0jy35kgqe5o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0jy35kgqe5o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704634678000,
+                "type": "link"
+              },
+              {
+                "name": "Северокорейские ракеты: есть ли они у России и почему это беспокоит Киев и Вашингтон",
+                "summary": "Россия получила из КНДР баллистические ракеты и уже применяла их дважды против Украины, заявил на брифинге в Вашингтоне координатор по стратегическим коммуникациям в Совете нацбезопасности США Джон Кирби. По его словам, Пхеньян недавно передал Москве пусковые установки и несколько десятков ракет. Как появление у России подобных ракет может повлиять на ход войны в Украине?",
+                "indexImage": {
+                  "id": "132220077",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/12CCA/production/_132220077_whatsubject.jpg",
+                  "path": "/cpsprodpb/12CCA/production/_132220077_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "КНДР испытала ракету ближнего радиуса действия в 2023 году",
+                  "caption": "КНДР испытала ракету ближнего радиуса действия в 2023 году. На снимке - кадр из телерепортажа, показанного по южнокорейскому телевидению",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cj7gjvzxr5eo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cj7gjvzxr5eo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1704465150000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Война России против Украины",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "desktop": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "mobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt",
+                "enhancedmobile": "https://www.bbc.com/russian/topics/cez0n29ggrdt"
+              }
+            },
+            "semanticGroupName": "Verticals"
+          },
+          {
+            "type": "also-in-news",
+            "title": "События",
+            "items": [
+              {
+                "name": "США нанесли второй удар по хуситам в Йемене",
+                "summary": "Соединенные Штаты заявили, что в субботу нанесли новый удар по военным объектам боевиков-хуситов в Йемене.",
+                "indexImage": {
+                  "id": "132296974",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/46cc/live/2f036c50-b22d-11ee-8f07-bbfdfa890097.png",
+                  "path": "/cpsprodpb/46cc/live/2f036c50-b22d-11ee-8f07-bbfdfa890097.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Худайда",
+                  "caption": "Последствия пятничного удара коалиции по военным объектам хуситов в Худайде",
+                  "copyrightHolder": "MAXAR",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cnern0x23ezo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cnern0x23ezo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705162337000,
+                "type": "link"
+              },
+              {
+                "name": "В годы пандемии правительство Британии потратило более 30 тыс. евро на свой винный погреб. Оно считает, что это было оправданно",
+                "summary": "Правительство Великобритании объяснилось, почему оно истратило почти £27 тыс. (ок. 31 тыс. евро) на пополнение своих винных погребов во время эпидемии ковида, когда вся страна жила в условиях строгих ограничений.",
+                "indexImage": {
+                  "id": "132299220",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/08FB/production/_132299220_whatsubject.jpg",
+                  "path": "/cpsprodpb/08FB/production/_132299220_whatsubject.jpg",
+                  "height": 286,
+                  "width": 509,
+                  "altText": "Винный погреб",
+                  "caption": "Считается, что винный погреб правительства должен работать на самоокупаемости",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c51zzy20nlzo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c51zzy20nlzo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705147264000,
+                "type": "link"
+              },
+              {
+                "name": "В США ужесточат контроль за производством Boeing после инцидента с 737 Max 9",
+                "summary": "Власти США приняли решение ужесточить контроль за производством самолетов Boeing, после того как у лайнера 737 Max 9 авиакомпании Alaska Airlines во время полета вылетела целая секция фюзеляжа.",
+                "indexImage": {
+                  "id": "132294389",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/d20e/live/c350e550-b19b-11ee-a220-cb5aab5967cc.jpg",
+                  "path": "/cpsprodpb/d20e/live/c350e550-b19b-11ee-a220-cb5aab5967cc.jpg",
+                  "height": 1701,
+                  "width": 3024,
+                  "altText": "Самолет",
+                  "copyrightHolder": "Reuters",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/c892n8evx3eo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c892n8evx3eo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705113298000,
+                "type": "link"
+              },
+              {
+                "name": "В Польше задержали белоруску по подозрению в шпионаже; Минобороны строит полигон рядом с украинской границей. Главное в Беларуси за неделю",
+                "summary": "Русская служба Би-би-си рассказывает о главном в Беларуси за неделю.",
+                "indexImage": {
+                  "id": "132283668",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1526E/production/_132283668_whatsubject.jpg",
+                  "path": "/cpsprodpb/1526E/production/_132283668_whatsubject.jpg",
+                  "height": 804,
+                  "width": 1430,
+                  "altText": "По данным белорусских СМИ, польские спецслужбы задержали гражданку Беларуси Дарью Остапенко",
+                  "copyrightHolder": "Personal archive/Intex-Press",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/articles/cl50pkn1ld7o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cl50pkn1ld7o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1705035498000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "События" },
+            "semanticGroupName": "Also in the news"
+          },
+          {
+            "type": "featured-site-top-stories",
+            "title": "BBC Documentaries",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти"
+                },
+                "locators": {
+                  "assetUri": "/russian/media-67320957",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d77b04c3-ec5f-4c22-bb35-6d6801f55e6a",
+                  "assetId": "67320957",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/media-67320957",
+                  "curie": "http://www.bbc.co.uk/asset/d77b04c3-ec5f-4c22-bb35-6d6801f55e6a"
+                },
+                "summary": "Как строились взаимоотношения между Россией и другими странами во время более 20 лет Путина у власти, как менялись его взгляды на внутреннее устройство страны, и как сама страна менялась под его управлением и как в итоге пришла к полномасштабной войне",
+                "timestamp": 1699101805000,
+                "language": "ru",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "131617837",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1208F/production/_131617837_85e1da2e-f33d-4213-b0f3-bc6cc1efd7fc.jpg",
+                  "path": "/cpsprodpb/1208F/production/_131617837_85e1da2e-f33d-4213-b0f3-bc6cc1efd7fc.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Путин, Россия и Запад | Большой документальный проект Би-би-си",
+                  "caption": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "131617839",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/16EAF/production/_131617839_mediaitem131617838.jpg",
+                  "path": "/cpsprodpb/16EAF/production/_131617839_mediaitem131617838.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "Путин, Россия и Запад | Большой документальный проект Би-би-си",
+                  "caption": "Путин, Россия и Запад: взгляд назад на 20 с лишним лет Путина у власти",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:russian/media-67320957",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "Документальные фильмы Би-би-си",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/russian/in-depth-48104242",
+                "desktop": "https://www.bbc.com/russian/in-depth-48104242",
+                "mobile": "https://www.bbc.com/russian/in-depth-48104242",
+                "enhancedmobile": "https://www.bbc.com/russian/in-depth-48104242"
+              }
+            },
+            "semanticGroupName": "College of journalism"
+          },
+          {
+            "type": "useful-links",
+            "title": "Useful links",
+            "items": [
+              {
+                "name": "Подпишитесь на нашу рассылку «Контекст»!",
+                "summary": "Мы запустили почтовую рассылку. Теперь вы сможете читать нас не только в соцсетях и на сайте (заблокированном в России и доступном только через VPN), но и в своей электронной почте. «Контекст» поможет вам разобраться в происходящем.",
+                "indexImage": {
+                  "id": "125953051",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3ABB/production/_125953051_cps.jpg",
+                  "path": "/cpsprodpb/3ABB/production/_125953051_cps.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Логотип \"Контекст\"",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1658749856000,
+                "type": "link"
+              },
+              {
+                "name": "Что делать, если заблокирован доступ к новостям",
+                "summary": "Что делать, если вам нужен доступ к новостям",
+                "uri": "https://www.bbc.com/russian/access-to-news",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/access-to-news",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1646418197000,
+                "type": "link"
+              },
+              {
+                "name": "Как работает Би-би-си",
+                "summary": "Задача Би-би-си - каждый день создавать контент мирового класса; контент, который информирует, просвещает и развлекает миллионы людей в Великобритании и по всему миру.",
+                "indexImage": {
+                  "id": "116067430",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/0D94/production/_116067430_mediaitem116067429.jpg",
+                  "path": "/cpsprodpb/0D94/production/_116067430_mediaitem116067429.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Вход в здание Бродкастинг-Хаус",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/russian/institutional-55301322",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/institutional-55301322",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1608043839000,
+                "type": "link"
+              },
+              {
+                "name": "The Best of BBC News Russian - in English",
+                "uri": "https://bbcrussian.substack.com/",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1659094268000,
+                "type": "link"
+              },
+              {
+                "name": "Партнерство с Русской службой Би-би-си",
+                "uri": "https://www.bbc.com/russian/institutional-43463215",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/institutional-43463215",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1585639847000,
+                "type": "link"
+              },
+              {
+                "name": "RSS",
+                "summary": "RSS фиды главной страницы",
+                "uri": "http://feeds.bbci.co.uk/russian/rss.xml",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1623399577000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Полезные ссылки" },
+            "semanticGroupName": "Useful links"
+          },
+          {
+            "type": "featured-site-top-stories",
+            "title": "Social media links",
+            "items": [
+              {
+                "name": "Telegram",
+                "summary": "Мы в Telegram",
+                "indexImage": {
+                  "id": "118546190",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/23CC/production/_118546190_tg-nc.png",
+                  "path": "/cpsprodpb/23CC/production/_118546190_tg-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в Telegram - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://t.me/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182163000,
+                "type": "link"
+              },
+              {
+                "name": "YouTube",
+                "summary": "Мы в YouTube",
+                "indexImage": {
+                  "id": "118546188",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15864/production/_118546188_yt-nc.png",
+                  "path": "/cpsprodpb/15864/production/_118546188_yt-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в YouTube - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.youtube.com/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181585000,
+                "type": "link"
+              },
+              {
+                "name": "Х",
+                "summary": "Мы в Х",
+                "indexImage": {
+                  "id": "130979666",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10489/production/_130979666_logo_x-nc.png",
+                  "path": "/cpsprodpb/10489/production/_130979666_logo_x-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Лого Х",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://twitter.com/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181490000,
+                "type": "link"
+              },
+              {
+                "name": "ВКонтакте",
+                "summary": "Мы в ВКонтакте",
+                "indexImage": {
+                  "id": "118546186",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10A44/production/_118546186_vk-nc.png",
+                  "path": "/cpsprodpb/10A44/production/_118546186_vk-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в ВКонтакте - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://vk.com/bbc",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182078000,
+                "type": "link"
+              },
+              {
+                "name": "Одноклассники",
+                "summary": "Мы в сети Одноклассники",
+                "indexImage": {
+                  "id": "118546184",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BC24/production/_118546184_ok-nc.png",
+                  "path": "/cpsprodpb/BC24/production/_118546184_ok-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Одноклассники - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://ok.ru/bbcrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614182111000,
+                "type": "link"
+              },
+              {
+                "name": "TikTok",
+                "indexImage": {
+                  "id": "130989191",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4AFE/production/_130989191_logo_tiktok-nc.png",
+                  "path": "/cpsprodpb/4AFE/production/_130989191_logo_tiktok-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ТикТок лого",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.tiktok.com/@bbcnewsrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1646914483000,
+                "type": "link"
+              },
+              {
+                "name": "Instagram",
+                "summary": "Мы в Instagram",
+                "indexImage": {
+                  "id": "118546207",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11278/production/_118546207_insta-nc.png",
+                  "path": "/cpsprodpb/11278/production/_118546207_insta-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Мы в Instagram - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.instagram.com/bbcrussian/",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1614181662000,
+                "type": "link"
+              },
+              {
+                "name": "Facebook",
+                "summary": "Наша страница в Facebook",
+                "indexImage": {
+                  "id": "118546209",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/16098/production/_118546209_fb-nc.png",
+                  "path": "/cpsprodpb/16098/production/_118546209_fb-nc.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Наша страница в Facebook - образ",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.facebook.com/bbcnewsrussian",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1609767172000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Мы в соцсетях" },
+            "semanticGroupName": "Blogs"
+          },
+          {
+            "type": "section-digest",
+            "title": "Showcase 8",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Ученые: коронавирус может привести к диабету, и дети - в группе риска"
+                },
+                "locators": {
+                  "assetUri": "/russian/news-60145047",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7d9dabb1-d79b-4752-a031-da867dcb6c28",
+                  "assetId": "60145047",
+                  "cpsUrn": "urn:bbc:content:assetUri:russian/news-60145047",
+                  "curie": "http://www.bbc.co.uk/asset/7d9dabb1-d79b-4752-a031-da867dcb6c28"
+                },
+                "summary": "Многочисленные исследования со всего мира показывают, что заражение коронавирусом существенно повышает риск развития у пациента сахарного диабета, причем буквально в течение пары недель, а иногда и дней после появления первых симптомов Covid-19. Особенно высок этот риск у детей до 18 лет.",
+                "timestamp": 1643305713000,
+                "language": "ru",
+                "byline": {
+                  "name": "Николай Воронин",
+                  "title": "Корреспондент по вопросам науки",
+                  "persons": [
+                    {
+                      "name": "Николай Воронин",
+                      "function": "Корреспондент по вопросам науки"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122990298",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15C79/production/_122990298_mediaitem123014914.jpg",
+                  "path": "/cpsprodpb/15C79/production/_122990298_mediaitem123014914.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Девочка со шприцем-ручкой для подкожных инъекций инсулина",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "overtypedSummary": "  ",
+                "id": "urn:bbc:ares::asset:russian/news-60145047",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Showcase 8"
+          }
+        ]
+      },
+      "promo": {
+        "subType": "IDX",
+        "name": "Главная",
+        "uri": "/russian/front_page",
+        "id": "urn:bbc:ares::index:russian/front_page/desktop/domestic",
+        "type": "simple"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Главная",
+          "uri": "/russian/front_page",
+          "urlIdentifier": "/russian/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Новости на русском языке",
+          "uri": "/russian",
+          "urlIdentifier": "/russian",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": {
+        "generated": "2024-01-15T11:47:54.424Z",
+        "lastRecordTimeStamp": "2024-01-15T11:45:00Z",
+        "firstRecordTimeStamp": "2024-01-15T11:30:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:c6p1e5lp4vxo",
+            "rank": 1,
+            "title": "«Украине не нужны замороженные конфликты». В Давосе обсудили украинскую «формулу мира» перед визитом Зеленского",
+            "href": "https://www.bbc.com/russian/articles/c6p1e5lp4vxo",
+            "timestamp": 1705278576406
+          },
+          {
+            "id": "urn:bbc:optimo:asset:crgxd0dxdpyo",
+            "rank": 2,
+            "title": "Российский миллиардер в суде США. Как Дмитрий Рыболовлев судится с Sotheby’s из-за цен на искусство",
+            "href": "https://www.bbc.com/russian/articles/crgxd0dxdpyo",
+            "timestamp": 1705296107139
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cxe4z78y4mpo",
+            "rank": 3,
+            "title": "«Прежде всего Германия». Как немецкие крайне правые используют протесты фермеров в своих интересах",
+            "href": "https://www.bbc.com/russian/articles/cxe4z78y4mpo",
+            "timestamp": 1705291882556
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cqe138rzp7jo",
+            "rank": 4,
+            "title": "В лондонской подземке появились «следы призраков». Власти пытаются от них избавиться",
+            "href": "https://www.bbc.com/russian/articles/cqe138rzp7jo",
+            "timestamp": 1705284045970
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c3gy5nyvgzjo",
+            "rank": 5,
+            "title": "В Дании взошел на престол король Фредерик X. Поздравить его пришли 100 тысяч человек",
+            "href": "https://www.bbc.com/russian/articles/c3gy5nyvgzjo",
+            "timestamp": 1705255026988
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cq5gp4v1ll7o",
+            "rank": 6,
+            "title": "ЧВК «Вагнер» сбила летающий командный пункт Ил-22. Чем уникален этот самолет?",
+            "href": "https://www.bbc.com/russian/articles/cq5gp4v1ll7o",
+            "timestamp": 1687801415980
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0dy30p4mmko",
+            "rank": 7,
+            "title": "Айова первой среди американских штатов выбирает кандидата в президенты. У республиканцев лидирует Дональд Трамп",
+            "href": "https://www.bbc.com/russian/articles/c0dy30p4mmko",
+            "timestamp": 1705238372530
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cg3v4dwn0p1o",
+            "rank": 8,
+            "title": "Джон Керри подключится к предвыборной кампании Джо Байдена",
+            "href": "https://www.bbc.com/russian/articles/cg3v4dwn0p1o",
+            "timestamp": 1705230770698
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c72ygvm8nzdo",
+            "rank": 9,
+            "title": "Скончался поэт Лев Рубинштейн",
+            "href": "https://www.bbc.com/russian/articles/c72ygvm8nzdo",
+            "timestamp": 1705222587787
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cnern0x23ezo",
+            "rank": 10,
+            "title": "США нанесли второй удар по хуситам в Йемене",
+            "href": "https://www.bbc.com/russian/articles/cnern0x23ezo",
+            "timestamp": 1705178974144
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c13ydljy3kzo",
+            "rank": 11,
+            "title": "Фото: в Исландии снова извергается вулкан, лава вытекла на поселок",
+            "href": "https://www.bbc.com/russian/articles/c13ydljy3kzo",
+            "timestamp": 1705252286081
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cxe66z6ygydo",
+            "rank": 12,
+            "title": "Британские ученые обнаружили в космосе гигантскую кольцеобразную структуру",
+            "href": "https://www.bbc.com/russian/articles/cxe66z6ygydo",
+            "timestamp": 1705095065896
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c3gy20dexmdo",
+            "rank": 13,
+            "title": "«Почтовый скандал» в Британии: как телесериал помог добиться справедливости жертвам вопиющих судебных ошибок",
+            "href": "https://www.bbc.com/russian/articles/c3gy20dexmdo",
+            "timestamp": 1705208590648
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cq511x85rqzo",
+            "rank": 14,
+            "title": "В Эквадоре обнаружен древний город – ровесник Рима",
+            "href": "https://www.bbc.com/russian/articles/cq511x85rqzo",
+            "timestamp": 1705231703476
+          },
+          {
+            "id": "urn:bbc:optimo:asset:clkww81yv2eo",
+            "rank": 15,
+            "title": "Битва за телевизор. Как в Польше сменили власть на «первой кнопке»",
+            "href": "https://www.bbc.com/russian/articles/clkww81yv2eo",
+            "timestamp": 1705120626943
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c6p11rp0rzyo",
+            "rank": 16,
+            "title": "На войну после школы? Что известно о потерях России в Украине к январю",
+            "href": "https://www.bbc.com/russian/articles/c6p11rp0rzyo",
+            "timestamp": 1705058791310
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cy9eekqjy33o",
+            "rank": 17,
+            "title": "Приют, где не убьют: зоозащитники в Бурятии вывозят собак в другие регионы, чтобы спасти",
+            "href": "https://www.bbc.com/russian/articles/cy9eekqjy33o",
+            "timestamp": 1704980378375
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cv27w41d5j1o",
+            "rank": 18,
+            "title": "«Тайвань, вперед»: Уильям Лай, противник сближения с Китаем, побеждает на выборах президента. Его соперники признали поражение",
+            "href": "https://www.bbc.com/russian/articles/cv27w41d5j1o",
+            "timestamp": 1705156256335
+          },
+          {
+            "id": "urn:bbc:optimo:asset:ceq4pj017xwo",
+            "rank": 19,
+            "title": "Передел собственности, ручное управление, дефицит кадров. Как война изменила экономику России",
+            "href": "https://www.bbc.com/russian/articles/ceq4pj017xwo",
+            "timestamp": 1704952377074
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c72yy7xjxljo",
+            "rank": 20,
+            "title": "ЮАР возбудила против Израиля дело о геноциде в Международном суде. В чем его суть и что дальше?",
+            "href": "https://www.bbc.com/russian/articles/c72yy7xjxljo",
+            "timestamp": 1704985423822
+          }
+        ]
+      },
+      "mostWatched": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
