@@ -9,12 +9,10 @@ export default {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  outerGrid: ({ mq, gridWidths }: Theme) =>
+  outerWrapper: ({ mq, gridWidths }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(12, 1fr)',
       padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
@@ -26,56 +24,57 @@ export default {
         paddingInlineEnd: `${pixelsToRem(16)}rem`,
         paddingTop: `${pixelsToRem(24)}rem`,
         paddingBottom: `${pixelsToRem(32)}rem`,
-        columnGap: '1rem',
+        // display: 'flex', // not actually doing anything rn
+        // flexDirection: 'column',
       },
     }),
-  innerGrid: ({ mq }: Theme) =>
+  flex: ({ mq }: Theme) =>
     css({
-      display: 'grid',
-      gridTemplateColumns: 'repeat(12, 1fr)',
       [mq.GROUP_4_MIN_WIDTH]: {
-        columnGap: '1rem',
+        display: 'flex',
+        flexDirection: 'row',
+        alignSelf: 'flex-end',
+        justifyContent: 'flex-start',
+        width: '100%',
       },
-    }),
-  heading: () =>
-    css({
-      gridColumn: '1 / span 12',
     }),
   label: ({ palette, mq }: Theme) =>
     css({
       color: palette.LIVE_LIGHT,
-      gridColumn: '1 / span 12',
       marginBottom: `${pixelsToRem(16)}rem`,
       textTransform: 'uppercase',
+      display: 'block',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        gridColumn: '1 / span 4',
         marginBottom: 0,
+        display: 'flex',
+        flex: '1 auto',
+        minWidth: 'calc(100% / 3)',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        gridColumn: '1 / span 3',
+        minWidth: 'calc(100% / 4)',
       },
     }),
-  title: ({ palette }: Theme) =>
+  title: ({ mq, palette }: Theme) =>
     css({
       color: palette.GREY_1,
-      gridColumn: '1 / span 12',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        flex: '1 auto',
+      },
     }),
   description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
-      gridColumn: '1 / span 12',
       margin: 0,
       marginTop: `${pixelsToRem(16)}rem`,
     }),
   layoutWithLiveLabel: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '5 / span 8',
+        marginInlineStart: 'calc(100% / 3)', // this feels janky
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        gridColumn: '4 / span 9',
+        marginInlineStart: 'calc(100% / 4)', // this feels janky
       },
     }),
 };
