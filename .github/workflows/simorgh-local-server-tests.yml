@@ -57,6 +57,10 @@ jobs:
         working-directory: ./ws-nextjs-app
         run: NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
 
+      - name: Is Next.JS running
+        working-directory: ./ws-nextjs-app
+        run: curl -is http://localhost:7081/pidgin/live/c7p765ynk9qt | head -n 1                        
+
       - name: Run AMP Validator
         run: yarn amp:validate
 
