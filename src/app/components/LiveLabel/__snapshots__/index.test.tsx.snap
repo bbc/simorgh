@@ -19,8 +19,8 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -29,6 +29,13 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-1:before {
@@ -106,8 +113,8 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -116,6 +123,13 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-1:before {
@@ -211,8 +225,8 @@ exports[`LiveLabel should render correctly with English live text and children 1
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -221,6 +235,13 @@ exports[`LiveLabel should render correctly with English live text and children 1
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-1:before {
@@ -317,8 +338,8 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -327,6 +348,13 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-1:before {
@@ -422,8 +450,8 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -432,6 +460,13 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-1:before {

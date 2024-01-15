@@ -177,6 +177,13 @@ export const service: ZhongwenConfig = {
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
+      liveExperiencePage: {
+        liveLabel: '直播',
+        liveCoverage: '现场直播',
+        breaking: '最新消息',
+        postedAt: '张贴于',
+        summary: '概要',
+      },
       gist: '概要',
       error: {
         404: {
@@ -469,6 +476,13 @@ export const service: ZhongwenConfig = {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',
         videoPlayer: '視頻播放器',
+      },
+      liveExperiencePage: {
+        liveLabel: '直播',
+        liveCoverage: '現場直播',
+        breaking: '最新消息',
+        postedAt: '張貼在',
+        summary: '概要',
       },
       gist: '概要',
       error: {

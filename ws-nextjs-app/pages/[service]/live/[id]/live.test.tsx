@@ -55,23 +55,151 @@ const mockPageDataWithoutKeyPoints = {
   },
 };
 
+const mockPageDataWithMetadata = ({
+  title,
+  description,
+  seoTitle,
+  seoDescription,
+  datePublished,
+  dateModified,
+}: {
+  title: string;
+  description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  datePublished?: string;
+  dateModified?: string;
+}) => {
+  return {
+    ...mockPageData,
+    title,
+    description,
+    seo: {
+      seoTitle,
+      seoDescription,
+      datePublished,
+      dateModified,
+    },
+  };
+};
+
 describe('Live Page', () => {
-  it('should render the live page title', async () => {
+  it.each`
+    title             | seoTitle             | info                      | expected
+    ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle - BBC News Pidgin'}
+    ${'I am a Title'} | ${undefined}         | ${'title if no seoTitle'} | ${'I am a Title - BBC News Pidgin'}
+  `(
+    'should use $info as the meta title',
+    async ({ title, seoTitle, expected }) => {
+      await act(async () => {
+        render(
+          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
+          { service: 'pidgin' },
+        );
+      });
+
+      const { title: helmetTitle } = Helmet.peek();
+      expect(helmetTitle).toEqual(expected);
+    },
+  );
+
+  it.each`
+    description             | seoDescription             | info                                  | expected
+    ${'I am a Description'} | ${'I am a seoDescription'} | ${'seoDescription'}                   | ${'I am a seoDescription'}
+    ${'I am a Description'} | ${undefined}               | ${'description if no seoDescription'} | ${'I am a Description'}
+    ${undefined}            | ${undefined}               | ${'title as a fallback'}              | ${'title'}
+  `(
+    'should use $info as the meta description',
+    async ({ description, seoDescription, expected }) => {
+      await act(async () => {
+        render(
+          <Live
+            pageData={mockPageDataWithMetadata({
+              title: 'title',
+              description,
+              seoDescription,
+            })}
+          />,
+        );
+      });
+
+      const helmetContent = Helmet.peek();
+      const findDescription = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(findDescription?.content).toEqual(expected);
+    },
+  );
+
+  it.each`
+    title             | seoTitle             | info                      | expected
+    ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle'}
+    ${'I am a Title'} | ${undefined}         | ${'title if no seoTitle'} | ${'I am a Title'}
+  `(
+    'should use $info as the schema headline',
+    async ({ title, seoTitle, expected }) => {
+      await act(async () => {
+        render(
+          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
+        );
+      });
+
+      const schemaHeadline = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes(`"headline":"${expected}"`),
+      );
+
+      expect(schemaHeadline).toBeTruthy();
+    },
+  );
+  it('SEO should use datePublished and dateModified when present', async () => {
+    const datePublished = '2018-09-28T22:59:02.448804522Z';
+    const dateModified = '2020-09-28T22:59:02.448804522Z';
+
     await act(async () => {
-      render(<Live pageData={mockPageData} />);
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+            datePublished,
+            dateModified,
+          })}
+        />,
+      );
     });
 
-    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished":"${datePublished}"`),
+    );
+
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified":"${dateModified}"`),
+    );
+
+    expect(SEODatePublished).toBeTruthy();
+    expect(SEODateModified).toBeTruthy();
   });
 
-  it('should use the title value from the data response as the page title', async () => {
+  it('SEO should NOT contain datePublished and dateModified when absent', async () => {
     await act(async () => {
-      render(<Live pageData={mockPageData} />, { service: 'pidgin' });
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+          })}
+        />,
+      );
     });
 
-    const { title: helmetTitle } = Helmet.peek();
+    const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"datePublished": null"`),
+    );
 
-    expect(helmetTitle).toEqual(`${mockPageData.title} - BBC News Pidgin`);
+    const SEODateModified = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"dateModified": null"`),
+    );
+
+    expect(SEODatePublished).toBeFalsy();
+    expect(SEODateModified).toBeFalsy();
   });
 
   it('should use the title value combined with the pagination value as the page title', async () => {
@@ -100,6 +228,14 @@ describe('Live Page', () => {
     expect(helmetTitle).toEqual(
       `${mockPageData.title}, Page 2 of 3 - BBC News Pidgin`,
     );
+  });
+
+  it('should render the live page title', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
   });
 
   it('should render the live page description', async () => {
@@ -147,7 +283,9 @@ describe('Live Page', () => {
     await act(
       // eslint-disable-next-line no-return-assign
       async () =>
-        ({ container } = render(<Live pageData={mockPageDataWithPosts} />)),
+        ({ container } = render(<Live pageData={mockPageDataWithPosts} />, {
+          service: 'pidgin',
+        })),
     );
 
     expect(container).toMatchSnapshot();

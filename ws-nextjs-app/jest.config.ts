@@ -10,7 +10,13 @@ const canonicalIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: ['**/integration/!(utils)/**/*[^.amp].test.ts'],
 } satisfies Config.InitialProjectOptions;
@@ -23,7 +29,13 @@ const ampIntegrationTests = {
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: ['**/integration/!(utils)/**/amp.test.ts'],
 } satisfies Config.InitialProjectOptions;
@@ -38,7 +50,13 @@ const unitTests = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   testMatch: [
     '**/__tests__/**/*.{js,jsx,ts,tsx}',

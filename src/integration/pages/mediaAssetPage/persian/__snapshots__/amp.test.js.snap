@@ -203,7 +203,7 @@ exports[`AMP Media Asset Page Footer Cookie Settings Button should match text an
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -292,13 +292,6 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 1
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 13`] = `
-{
-  "text": "ناظران می‌گویند",
-  "url": "/persian/blogs-54099951",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 14`] = `
 {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",

@@ -6861,8 +6861,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -6871,6 +6871,13 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-15 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-16:before {
@@ -7256,8 +7263,8 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -7266,6 +7273,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+}
+
+@media (min-width: 25rem) {
+  .emotion-16 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-17:before {
@@ -7583,8 +7597,8 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -7593,6 +7607,29 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .emotion-9:before {
@@ -8063,8 +8100,8 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   color: #006666;
   border-radius: 50%;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
@@ -8073,6 +8110,29 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   -moz-transform: translate(0, 12%);
   -ms-transform: translate(0, 12%);
   transform: translate(0, 12%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-15 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .emotion-16:before {
