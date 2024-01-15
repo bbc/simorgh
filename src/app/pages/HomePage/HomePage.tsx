@@ -108,7 +108,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       mostRead={mostRead}
                       vjFetchResponse={vjFetchResponse}
                     />
-                    {index === 0 && <MPU />}
+                    {index === 1 && <MPU />}
                   </React.Fragment>
                 );
               },
