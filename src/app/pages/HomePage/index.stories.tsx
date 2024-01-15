@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { data as pidginHomePageData } from '#data/pidgin/homePage/index.json';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -19,8 +19,8 @@ const Component = ({ service, variant }: StoryProps) => {
           pageType={HOME_PAGE}
           status={200}
           isAmp={false}
-          pathname="/kyrgyz"
-          pageData={kyrgyzHomePageData}
+          pathname="/pidgin"
+          pageData={pidginHomePageData}
         />
       </ServiceContextProvider>
     </ThemeProvider>
@@ -33,6 +33,6 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Kyrgyz = ({ variant }: StoryProps) => (
+export const Pidgin = ({ variant }: StoryProps) => (
   <Component service="kyrgyz" variant={variant} />
 );
