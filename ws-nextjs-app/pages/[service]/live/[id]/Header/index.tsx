@@ -1,10 +1,8 @@
 /** @jsx jsx */
-import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
-import { ServiceContext } from '#contexts/ServiceContext';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import LiveLabel from '#app/components/LiveLabel';
 import styles from './styles';
 
 const Header = ({
@@ -16,12 +14,6 @@ const Header = ({
   title: string;
   description?: string;
 }) => {
-  const {
-    translations: {
-      liveExperiencePage: { liveLabel = 'Live' },
-    },
-  } = useContext(ServiceContext);
-
   return (
     <div css={styles.backgroundColor}>
       <div css={styles.outerGrid}>
@@ -36,24 +28,17 @@ const Header = ({
           {/*  eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text" css={styles.innerGrid}>
             {showLiveLabel ? (
-              <>
-                <span
-                  css={styles.label}
-                  aria-hidden="true"
-                  data-testid="live-label"
-                >
-                  {liveLabel}
-                </span>
-                <VisuallyHiddenText lang="en-GB">
-                  {`${liveLabel}, `}
-                </VisuallyHiddenText>
-              </>
-            ) : null}
-            <span
-              css={[styles.title, showLiveLabel && styles.layoutWithLiveLabel]}
-            >
-              {title}
-            </span>
+              <LiveLabel>{title}</LiveLabel>
+            ) : (
+              <span
+                css={[
+                  styles.title,
+                  showLiveLabel && styles.layoutWithLiveLabel,
+                ]}
+              >
+                {title}
+              </span>
+            )}
           </span>
         </Heading>
         {description && (
