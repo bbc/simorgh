@@ -8,7 +8,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { Promo as CurationPromoProps } from '../types';
-import LiveLabel from '../../LiveLabel';
+import LiveLabelPromo from '../../LiveLabelPromo';
 
 const CurationPromo = ({
   id,
@@ -73,7 +73,7 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} className="focusIndicatorDisplayBlock">
-            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
+            {isLive ? <LiveLabelPromo>{title}</LiveLabelPromo> : title}
           </Promo.A>
         )}
       </Promo.Heading>

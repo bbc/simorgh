@@ -20,7 +20,7 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import LiveLabel from '#app/components/LiveLabel';
+import LiveLabelPromo from '#app/components/LiveLabelPromo';
 import { Link } from '#psammead/psammead-story-promo/src';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';
@@ -87,17 +87,16 @@ const radioSummary = ({ dir }) => `
 
 const tvSummary = ({ dir, bulletinType }) => `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${
-      dir === 'ltr'
-        ? `
+    ${dir === 'ltr'
+    ? `
             padding-left: 0;
             ${bulletinType === 'tv' && 'padding-right: 0;'}
           `
-        : `
+    : `
             padding-right: 0;
             ${bulletinType === 'tv' && 'padding-left: 0;'}
           `
-    }
+  }
   }
 `;
 
@@ -209,14 +208,14 @@ const Bulletin = ({
             aria-labelledby={`bulletin-${sanitisedAriaId}`}
           >
             {isLive ? (
-              <LiveLabel
+              <LiveLabelPromo
                 liveText={liveText}
                 ariaHidden
                 offScreenText={offScreenText}
                 id={`bulletin-${sanitisedAriaId}`}
               >
                 {headlineText}
-              </LiveLabel>
+              </LiveLabelPromo>
             ) : (
               // eslint-disable-next-line jsx-a11y/aria-role
               <span role="text" id={`bulletin-${sanitisedAriaId}`}>
