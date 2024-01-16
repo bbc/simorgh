@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Promo from '#app/legacy/components/Promo';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import LiveLabel from './index';
+import LiveLabelPromo from './index';
 import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
@@ -27,16 +27,16 @@ const Component = ({
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <LiveLabel offScreenText={offScreenText} className={className}>
+        <LiveLabelPromo offScreenText={offScreenText} className={className}>
           {children}
-        </LiveLabel>
+        </LiveLabelPromo>
       </ServiceContextProvider>
     </ThemeProvider>
   );
 };
 
 export default {
-  title: 'New Components/Live Label',
+  title: 'New Components/Live Label Promo',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     metadata,
