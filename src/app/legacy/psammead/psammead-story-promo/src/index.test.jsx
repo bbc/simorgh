@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import LiveLabel from '../../../../components/LiveLabel';
+import LiveLabelPromo from '../../../../components/LiveLabelPromo';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
@@ -22,9 +22,9 @@ const Info = ({ promoType, isLive, alsoItems, promoHasImage }) => (
     >
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel ariaHidden offScreenText="Live">
+          <LiveLabelPromo ariaHidden offScreenText="Live">
             The live promo headline
-          </LiveLabel>
+          </LiveLabelPromo>
         ) : (
           'The headline of the promo'
         )}
