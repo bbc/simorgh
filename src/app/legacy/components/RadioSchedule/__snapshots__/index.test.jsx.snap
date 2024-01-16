@@ -433,12 +433,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 .emotion-26 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -1736,12 +1736,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 .emotion-26 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
