@@ -141,6 +141,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+@media (min-width: 63rem) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);

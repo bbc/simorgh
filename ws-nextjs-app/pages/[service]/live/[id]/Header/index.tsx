@@ -32,6 +32,8 @@ const Header = ({
     },
   } = useContext(ServiceContext);
 
+  const isHeaderImage = !!imageUrl;
+
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
       originCode: 'cpsdevpb', // hard code,
@@ -40,18 +42,19 @@ const Header = ({
     });
 
   return (
-    <div css={styles.canvas}>
+    <div css={styles.headerContainer}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
       <div css={styles.contentWrapper}>
-        {imageUrl ? (
+        {isHeaderImage ? (
           <>
-            <div css={styles.backgroundImage}>
+            <div css={styles.headerImage}>
               <Image
                 alt=""
                 // attribution={copyright}
                 src={imageUrl}
+                aspectRatio={[16, 9]}
                 // height={height}
                 // width={width}
                 // lazyLoad={lazyLoad}
@@ -60,23 +63,26 @@ const Header = ({
                 fallbackSrcSet={fallbackSrcset || undefined}
                 mediaType={primaryMimeType || undefined}
                 fallbackMediaType={fallbackMimeType || undefined}
-                sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
+                // sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
                 // isAmp={isAmp}
                 // placeholder
               />
             </div>
           </>
         ) : null}
-        <div css={styles.outerWrapper}>
-          <div css={imageUrl && styles.innerWrapper}>
+        <div css={styles.textContainer}>
+          <div css={isHeaderImage && styles.textStylesWithImage}>
             <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
               {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
               {/*  eslint-disable-next-line jsx-a11y/aria-role */}
-              <span role="text" css={!imageUrl && styles.flex}>
+              <span role="text" css={!isHeaderImage && styles.rowAlign}>
                 {showLiveLabel ? (
                   <>
                     <span
-                      css={styles.label}
+                      css={[
+                        styles.label,
+                        !isHeaderImage && styles.removeLabelMargin,
+                      ]}
                       aria-hidden="true"
                       data-testid="live-label"
                     >
@@ -96,7 +102,7 @@ const Header = ({
                 css={[
                   styles.description,
                   showLiveLabel &&
-                    !imageUrl &&
+                    !isHeaderImage &&
                     styles.layoutWithLiveLabelNoImage,
                 ]}
               >
