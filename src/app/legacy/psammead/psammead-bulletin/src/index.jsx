@@ -87,16 +87,17 @@ const radioSummary = ({ dir }) => `
 
 const tvSummary = ({ dir, bulletinType }) => `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${dir === 'ltr'
-    ? `
+    ${
+      dir === 'ltr'
+        ? `
             padding-left: 0;
             ${bulletinType === 'tv' && 'padding-right: 0;'}
           `
-    : `
+        : `
             padding-right: 0;
             ${bulletinType === 'tv' && 'padding-left: 0;'}
           `
-  }
+    }
   }
 `;
 
