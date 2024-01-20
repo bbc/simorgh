@@ -7,6 +7,8 @@ import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import { useRouter } from 'next/router';
+import usePolling from '../../../../hooks/usePolling';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
@@ -72,6 +74,15 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const router = useRouter();
+
+  const { forceUpdate, updateFinished } = usePolling();
+
+  if (forceUpdate) {
+    router.replace(router.asPath, undefined, { scroll: false });
+    updateFinished();
+  }
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -101,6 +112,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
           title={title}
           description={description}
         />
+        {/* <button type="button" onClick={() => refreshData()}>
+          Refresh
+        </button> */}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (
