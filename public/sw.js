@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.1.1';
+const version = 'v0.1.0';
 const cacheName = 'simorghCache_v1';
 
 self.addEventListener('install', event => {
