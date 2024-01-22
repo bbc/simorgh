@@ -53,13 +53,14 @@ const LivePage = ({ pageData }: ComponentProps) => {
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
+    headerImage,
   } = pageData;
 
-  // refactor as desctructure?
-  const imageUrl = pageData.headerImage?.url;
-  const imageUrlTemplate = pageData.headerImage?.urlTemplate;
-  const imageHeight = pageData.headerImage?.height;
-  const imageWidth = pageData.headerImage?.width;
+  const {
+    url: imageUrl,
+    urlTemplate: imageUrlTemplate,
+    width: imageWidth,
+  } = headerImage || {};
 
   const { index: activePage, total: pageCount } =
     liveTextStream?.content?.data?.page || {};
@@ -115,7 +116,6 @@ const LivePage = ({ pageData }: ComponentProps) => {
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
           imageWidth={imageWidth}
-          imageHeight={imageHeight}
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>

@@ -62,13 +62,6 @@ const Image = ({
   children,
   fetchpriority,
 }: PropsWithChildren<Props>) => {
-  // console.log('src', src);
-  // console.log('srcSet', srcSet);
-  // console.log('fallbackSrcSet', fallbackSrcSet);
-  // console.log('sizes', sizes);
-  // console.log('alt', alt);
-  // console.log('width', width);
-  // console.log('height', height);
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;

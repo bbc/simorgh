@@ -7,24 +7,61 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
+
+const HeaderImage = ({
+  imageUrl,
+  imageUrlTemplate,
+  imageWidth = 480, // is this a good fallback?
+}: {
+  imageUrl: string;
+  imageUrlTemplate: string;
+  imageWidth?: number;
+}) => {
+  const url = imageUrlTemplate.split('{width}')[1];
+
+  const originCode = getOriginCode(url);
+  const locator = getLocator(url);
+
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: imageWidth,
+    });
+
+  return (
+    <div css={styles.headerImage}>
+      <Image
+        alt=""
+        src={imageUrl}
+        aspectRatio={[16, 9]}
+        srcSet={primarySrcset || undefined}
+        fallbackSrcSet={fallbackSrcset || undefined}
+        mediaType={primaryMimeType || undefined}
+        fallbackMediaType={fallbackMimeType || undefined}
+        sizes="(max-width: 1008px) 645px, 100vw" // To update
+      />
+    </div>
+  );
+};
 
 const Header = ({
   showLiveLabel,
   title,
   description,
   imageUrl,
-  // imageUrlTemplate,
+  imageUrlTemplate,
   imageWidth,
-}: // imageHeight,
-{
+}: {
   showLiveLabel: boolean;
   title: string;
   description?: string;
   imageUrl?: string;
   imageUrlTemplate?: string;
   imageWidth?: number;
-  imageHeight?: number;
 }) => {
   const {
     translations: {
@@ -32,14 +69,7 @@ const Header = ({
     },
   } = useContext(ServiceContext);
 
-  const isHeaderImage = !!imageUrl;
-
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode: 'cpsdevpb', // hard code,
-      locator: '1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg', // hard code- check Image readme,
-      originalImageWidth: imageWidth,
-    });
+  const isHeaderImage = !!imageUrl && !!imageUrlTemplate;
 
   return (
     <div css={styles.headerContainer}>
@@ -48,27 +78,11 @@ const Header = ({
       </div>
       <div css={styles.contentWrapper}>
         {isHeaderImage ? (
-          <>
-            <div css={styles.headerImage}>
-              <Image
-                alt=""
-                // attribution={copyright}
-                src={imageUrl}
-                aspectRatio={[16, 9]}
-                // height={height}
-                // width={width}
-                // lazyLoad={lazyLoad}
-                // preload={shouldPreloadLeadImage}
-                srcSet={primarySrcset || undefined}
-                fallbackSrcSet={fallbackSrcset || undefined}
-                mediaType={primaryMimeType || undefined}
-                fallbackMediaType={fallbackMimeType || undefined}
-                // sizes="(max-width: 1008px) 645px, 100vw" // I don't get what this is supposed to do?
-                // isAmp={isAmp}
-                // placeholder
-              />
-            </div>
-          </>
+          <HeaderImage
+            imageUrl={imageUrl}
+            imageUrlTemplate={imageUrlTemplate}
+            imageWidth={imageWidth}
+          />
         ) : null}
         <div css={styles.textContainer}>
           <div css={isHeaderImage && styles.textStylesWithImage}>

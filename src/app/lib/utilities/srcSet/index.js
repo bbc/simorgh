@@ -30,9 +30,6 @@ export const createSrcsets = ({
   originalImageWidth,
   imageResolutions = DEFAULT_RESOLUTIONS,
 }) => {
-  // console.log('originCode', originCode);
-  // console.log('locator', locator);
-  // console.log('originalImageWidth', originalImageWidth);
   if (originCode === 'pips') {
     return { primarySrcset: null, fallbackSrcset: null };
   }
