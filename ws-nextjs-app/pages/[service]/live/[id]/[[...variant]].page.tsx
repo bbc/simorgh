@@ -5,6 +5,7 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
+import isAppPath from '#app/routes/utils/isAppPath';
 
 import {
   ROUTING_INFORMATION,
@@ -38,7 +39,7 @@ const getPageData = async ({
   page,
   service,
   variant,
-  rendererEnv,
+  rendererEnv = 'test',
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   let message;
@@ -87,17 +88,20 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant,
-    // renderer_env: rendererEnv,
+    renderer_env: rendererEnv,
     page = '1',
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
+
+  const isApp = isAppPath(context.resolvedUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
     return {
       props: {
         bbcOrigin: reqHeaders['bbc-origin'] || null,
+        isApp,
         isNextJs: true,
         service,
         status: 404,
@@ -122,7 +126,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
-    rendererEnv: 'test', // TODO: remove hardcoding
+    rendererEnv,
   });
 
   let routingInfoLogger = logger.debug;
@@ -142,6 +146,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: data?.error || null,
       id,
+      isApp,
       isAmp: false,
       isNextJs: true,
       page: page || null,

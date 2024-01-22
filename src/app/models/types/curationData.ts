@@ -44,6 +44,7 @@ export interface CurationProps {
   topStoriesTitle?: string;
   curationLength?: number;
   mostRead?: MostReadData;
+  nthCurationByStyleAndProminence?: number;
 }
 
 export interface CurationData {
