@@ -5,48 +5,8 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import Image from '#app/components/Image';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import MaskedImage from './MaskedImage';
 import styles from './styles';
-
-const HeaderImage = ({
-  imageUrl,
-  imageUrlTemplate,
-  imageWidth = 480, // is this a good fallback?
-}: {
-  imageUrl: string;
-  imageUrlTemplate: string;
-  imageWidth?: number;
-}) => {
-  const url = imageUrlTemplate.split('{width}')[1];
-
-  const originCode = getOriginCode(url);
-  const locator = getLocator(url);
-
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: imageWidth,
-    });
-
-  return (
-    <div css={styles.headerImage}>
-      <Image
-        alt=""
-        src={imageUrl}
-        aspectRatio={[16, 9]}
-        srcSet={primarySrcset || undefined}
-        fallbackSrcSet={fallbackSrcset || undefined}
-        mediaType={primaryMimeType || undefined}
-        fallbackMediaType={fallbackMimeType || undefined}
-        sizes="(max-width: 1008px) 645px, 100vw" // To update
-      />
-    </div>
-  );
-};
 
 const Header = ({
   showLiveLabel,
@@ -76,9 +36,9 @@ const Header = ({
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
-      <div css={styles.contentWrapper}>
+      <div css={styles.contentContainer}>
         {isHeaderImage ? (
-          <HeaderImage
+          <MaskedImage
             imageUrl={imageUrl}
             imageUrlTemplate={imageUrlTemplate}
             imageWidth={imageWidth}
