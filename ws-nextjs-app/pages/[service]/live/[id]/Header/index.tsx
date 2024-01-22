@@ -44,46 +44,50 @@ const Header = ({
             imageWidth={imageWidth}
           />
         ) : null}
-        <div css={styles.textContainer}>
-          <div css={isHeaderImage && styles.textStylesWithImage}>
-            <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
-              {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
-              {/*  eslint-disable-next-line jsx-a11y/aria-role */}
-              <span role="text" css={!isHeaderImage && styles.rowAlign}>
-                {showLiveLabel ? (
-                  <>
-                    <span
-                      css={[
-                        styles.label,
-                        !isHeaderImage && styles.removeLabelMargin,
-                      ]}
-                      aria-hidden="true"
-                      data-testid="live-label"
-                    >
-                      {liveLabel}
-                    </span>
-                    <VisuallyHiddenText lang="en-GB">
-                      {`${liveLabel}, `}
-                    </VisuallyHiddenText>
-                  </>
-                ) : null}
-                <span css={styles.title}>{title}</span>
-              </span>
-            </Heading>
-            {description && (
-              <Text
-                as="p"
-                css={[
-                  styles.description,
-                  showLiveLabel &&
-                    !isHeaderImage &&
-                    styles.layoutWithLiveLabelNoImage,
-                ]}
-              >
-                {description}
-              </Text>
-            )}
-          </div>
+        <div
+          css={
+            isHeaderImage
+              ? styles.textContainerWithImage
+              : styles.textContainerWithoutImage
+          }
+        >
+          <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
+            {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
+            {/*  eslint-disable-next-line jsx-a11y/aria-role */}
+            <span role="text" css={!isHeaderImage && styles.rowAlign}>
+              {showLiveLabel ? (
+                <>
+                  <span
+                    css={[
+                      styles.label,
+                      !isHeaderImage && styles.removeLabelMargin,
+                    ]}
+                    aria-hidden="true"
+                    data-testid="live-label"
+                  >
+                    {liveLabel}
+                  </span>
+                  <VisuallyHiddenText lang="en-GB">
+                    {`${liveLabel}, `}
+                  </VisuallyHiddenText>
+                </>
+              ) : null}
+              <span css={styles.title}>{title}</span>
+            </span>
+          </Heading>
+          {description && (
+            <Text
+              as="p"
+              css={[
+                styles.description,
+                showLiveLabel &&
+                  !isHeaderImage &&
+                  styles.layoutWithLiveLabelNoImage,
+              ]}
+            >
+              {description}
+            </Text>
+          )}
         </div>
       </div>
     </div>

@@ -36,34 +36,35 @@ export default {
         width: '100%',
       },
     }),
-  textContainer: ({ mq, gridWidths, spacings }: Theme) =>
+  textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
     css({
+      position: 'relative',
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
-      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-      position: 'relative',
-
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${spacings.DOUBLE}rem`,
-        paddingInlineEnd: `${spacings.DOUBLE}rem`,
         paddingTop: `${spacings.TRIPLE}rem`,
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  textStylesWithImage: ({ mq }: Theme) =>
+  textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
+      position: 'relative',
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
-        minHeight: `${pixelsToRem(384)}rem`, // 440 total minus 32 minus 24 due to the padding on the outer container
+        minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        zIndex: '1',
-        maxWidth: '50%', // to determine this matches UX designs.
+        maxWidth: '50%', // determines width of text overlay.
       },
     }),
   rowAlign: ({ mq }: Theme) =>
