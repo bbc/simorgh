@@ -86,7 +86,7 @@ export default async ({
           latestMedia,
         },
         mostRead,
-        mostWatched,
+        ...(mostWatched && mostWatched),
         ...(wsojData && wsojData),
       },
     };
