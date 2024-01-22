@@ -100,11 +100,10 @@ describe('Service Worker', () => {
 
     describe('when url is not cacheable', () => {
       it.each`
-        assetUrl                     | reason
-        ${'cwr.js'}                  | ${'url is missing leading /'}
-        ${'woff2'}                   | ${'url is missing leading .'}
-        ${'modern.frosted_promo.js'} | ${'url is missing unique hashcode e.g. modern.frosted_promo.32caa641.js'}
-        ${'not-cached'}              | ${'url is not in the allow list of cacheable urls'}
+        assetUrl        | reason
+        ${'cwr.js'}     | ${'url is missing leading /'}
+        ${'woff2'}      | ${'url is missing leading .'}
+        ${'not-cached'} | ${'url is not in the allow list of cacheable urls'}
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
         async ({ assetUrl }) => {
@@ -129,7 +128,13 @@ describe('Service Worker', () => {
         ${'/cwr.js'}
         ${'reith.woff2'}
         ${'modern.frosted_promo.32caa641.js'}
+        ${'modern.frosted_promo.js'}
+        ${'http://localhost:7080/modern.frosted_promo.js'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
         ${'/moment-lib.dfdb34b8.js'}
+        ${'/moment-lib.js'}
+        ${'http://localhost:7080/moment-lib.js'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.dfdb34b8.js'}
       `(
         `should return a cached response for $assetUrl`,
         async ({ assetUrl }) => {
