@@ -5,8 +5,35 @@ const maskColours = {
   white: '255,255,255',
 };
 
-const unwrappedGroup4Mask = `linear-gradient(
-  270deg,
+const mobileImageMask = `
+  rgba(${maskColours.black}) 0%,
+  rgba(${maskColours.white}, 0.99) 7%,
+  rgba(${maskColours.white}, 0.98) 13%,
+  rgba(${maskColours.white}, 0.97) 19%,
+  rgba(${maskColours.white}, 0.96) 24%,
+  rgba(${maskColours.white}, 0.95) 29%,
+  rgba(${maskColours.white}, 0.93) 34%,
+  rgba(${maskColours.white}, 0.91) 39%,
+  rgba(${maskColours.white}, 0.89) 43%,
+  rgba(${maskColours.white}, 0.87) 47%,
+  rgba(${maskColours.white}, 0.84) 51%,
+  rgba(${maskColours.white}, 0.82) 55%,
+  rgba(${maskColours.white}, 0.78) 59%,
+  rgba(${maskColours.white}, 0.75) 62%,
+  rgba(${maskColours.white}, 0.7) 65%,
+  rgba(${maskColours.white}, 0.65) 69%,
+  rgba(${maskColours.white}, 0.61) 72%,
+  rgba(${maskColours.white}, 0.55) 75%,
+  rgba(${maskColours.white}, 0.49) 79%,
+  rgba(${maskColours.white}, 0.42) 82%,
+  rgba(${maskColours.white}, 0.35) 85%,
+  rgba(${maskColours.white}, 0.27) 89%,
+  rgba(${maskColours.white}, 0.19) 92%,
+  rgba(${maskColours.white}, 0.1) 96%,
+  rgba(${maskColours.white}, 0) 100%
+`;
+
+const group4Mask = `
   rgba(${maskColours.black}) 0%,
   rgba(${maskColours.black}) 50%,
   rgba(${maskColours.black}) 54%,
@@ -32,11 +59,9 @@ const unwrappedGroup4Mask = `linear-gradient(
   rgba(${maskColours.white}, 0.04) 94%,
   rgba(${maskColours.white}, 0.02) 96%,
   rgba(${maskColours.white}, 0) 98%,
-  rgba(${maskColours.white}, 0) 100%
-)`;
+  rgba(${maskColours.white}, 0) 100%`;
 
-const ExtraWideMask = `linear-gradient(
-  270deg,
+const extraWideMask = `
   rgba(${maskColours.white}, 0) 0%,
   rgba(${maskColours.white}, 0.01) 2%,
   rgba(${maskColours.white}, 0.02) 3%,
@@ -86,58 +111,48 @@ const ExtraWideMask = `linear-gradient(
   rgba(${maskColours.white}, 0.04) 94%,
   rgba(${maskColours.white}, 0.02) 96%,
   rgba(${maskColours.white}, 0) 98%,
-  rgba(${maskColours.white}, 0) 100%
-)`;
-
-const mobileImageMask = `linear-gradient(
-  180deg,
-  rgba(${maskColours.black}) 0%,
-  rgba(${maskColours.white}, 0.99) 7%,
-  rgba(${maskColours.white}, 0.98) 13%,
-  rgba(${maskColours.white}, 0.97) 19%,
-  rgba(${maskColours.white}, 0.96) 24%,
-  rgba(${maskColours.white}, 0.95) 29%,
-  rgba(${maskColours.white}, 0.93) 34%,
-  rgba(${maskColours.white}, 0.91) 39%,
-  rgba(${maskColours.white}, 0.89) 43%,
-  rgba(${maskColours.white}, 0.87) 47%,
-  rgba(${maskColours.white}, 0.84) 51%,
-  rgba(${maskColours.white}, 0.82) 55%,
-  rgba(${maskColours.white}, 0.78) 59%,
-  rgba(${maskColours.white}, 0.75) 62%,
-  rgba(${maskColours.white}, 0.7) 65%,
-  rgba(${maskColours.white}, 0.65) 69%,
-  rgba(${maskColours.white}, 0.61) 72%,
-  rgba(${maskColours.white}, 0.55) 75%,
-  rgba(${maskColours.white}, 0.49) 79%,
-  rgba(${maskColours.white}, 0.42) 82%,
-  rgba(${maskColours.white}, 0.35) 85%,
-  rgba(${maskColours.white}, 0.27) 89%,
-  rgba(${maskColours.white}, 0.19) 92%,
-  rgba(${maskColours.white}, 0.1) 96%,
-  rgba(${maskColours.white}, 0) 100%
-)`;
+  rgba(${maskColours.white}, 0) 100%`;
 
 export default {
-  maskedImage: ({ mq }: Theme) =>
+  maskedImageLtr: ({ mq }: Theme) =>
     css({
       maskSize: '100% 100%',
-      maskImage: `${mobileImageMask}`,
-      // minHeight: '27.5rem', // fix
+      maskImage: `linear-gradient(
+        180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
         position: 'absolute',
-        right: '0',
+        right: '0', // right for LTR
         top: '0',
-        // minHeight: '25.3125rem', // fix
-        // width: '60%',
-        // maxWidth: '45rem',
         height: '100%',
-        aspectRatio: '16 / 9', // check
-        overflow: 'hidden', // check
-        maskImage: `${unwrappedGroup4Mask}`,
+        aspectRatio: '16 / 9',
+        overflow: 'hidden',
+        maskImage: `linear-gradient(
+          270deg, ${group4Mask})`, // 270deg for LTR
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        maskImage: `${ExtraWideMask}`,
+        maskImage: `linear-gradient(
+          270deg, ${extraWideMask})`, // 270deg for LTR
+      },
+    }),
+
+  maskedImageRtl: ({ mq }: Theme) =>
+    css({
+      maskSize: '100% 100%',
+      maskImage: `linear-gradient(
+        180deg, ${mobileImageMask})`,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        position: 'absolute',
+        left: '0', // left for RTL
+        top: '0',
+        height: '100%',
+        aspectRatio: '16 / 9',
+        overflow: 'hidden',
+        maskImage: `linear-gradient(
+          90deg, ${group4Mask})`, // 90deg for RTL
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        maskImage: `linear-gradient(
+          90deg, ${extraWideMask})`, // 90deg for RTL
       },
     }),
 };

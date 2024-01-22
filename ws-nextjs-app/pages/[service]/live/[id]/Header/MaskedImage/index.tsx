@@ -1,5 +1,7 @@
 /** @jsx jsx */
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
@@ -15,6 +17,9 @@ const MaskedImage = ({
   imageUrlTemplate: string;
   imageWidth?: number;
 }) => {
+  const { dir } = useContext(ServiceContext);
+  const isRtl = dir === 'rtl';
+
   const url = imageUrlTemplate.split('{width}')[1];
 
   const originCode = getOriginCode(url);
@@ -28,7 +33,7 @@ const MaskedImage = ({
     });
 
   return (
-    <div css={styles.maskedImage}>
+    <div css={isRtl ? styles.maskedImageRtl : styles.maskedImageLtr}>
       <Image
         alt=""
         src={imageUrl}
