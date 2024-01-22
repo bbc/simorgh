@@ -36,34 +36,34 @@ export default {
         width: '100%',
       },
     }),
-  textContainer: ({ mq, gridWidths }: Theme) =>
+  textContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
-      padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       position: 'relative',
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${pixelsToRem(16)}rem`,
+        padding: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        paddingInlineEnd: `${pixelsToRem(16)}rem`,
-        paddingTop: `${pixelsToRem(24)}rem`,
-        paddingBottom: `${pixelsToRem(32)}rem`,
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+        paddingTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
   textStylesWithImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        minHeight: '20.3125rem',
+        minHeight: `${pixelsToRem(384)}rem`, // 440 total minus 32 minus 24 due to the padding on the outer container
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        zIndex: '1', // not 4?
-        maxWidth: '50%', // fix?
+        zIndex: '1',
+        maxWidth: '50%', // to determine this matches UX designs.
       },
     }),
   rowAlign: ({ mq }: Theme) =>
@@ -76,10 +76,10 @@ export default {
         width: '100%',
       },
     }),
-  label: ({ palette, mq }: Theme) =>
+  label: ({ palette, mq, spacings }: Theme) =>
     css({
       color: palette.LIVE_LIGHT,
-      marginBottom: `${pixelsToRem(16)}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
       textTransform: 'uppercase',
       display: 'block',
 
@@ -88,7 +88,7 @@ export default {
         flex: '1 auto',
         minWidth: 'calc(100% / 3)',
         maxWidth: 'calc(100% / 3)',
-        paddingInlineEnd: '16px', // fix
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         minWidth: 'calc(100% / 4)',
@@ -108,11 +108,11 @@ export default {
         flex: '1 auto',
       },
     }),
-  description: ({ palette }: Theme) =>
+  description: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_2,
       margin: 0,
-      marginTop: `${pixelsToRem(16)}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
     }),
   layoutWithLiveLabelNoImage: ({ mq }: Theme) =>
     css({
