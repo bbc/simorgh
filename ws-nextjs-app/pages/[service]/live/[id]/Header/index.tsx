@@ -29,7 +29,7 @@ const Header = ({
     },
   } = useContext(ServiceContext);
 
-  const isHeaderImage = !!imageUrl && !!imageUrlTemplate;
+  const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
 
   return (
     <div css={styles.headerContainer}>

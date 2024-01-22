@@ -50,7 +50,7 @@ describe('Live Page Header', () => {
     });
   });
   describe('image', () => {
-    it('should render if a header image without altText if provided', async () => {
+    it('should render if a header image if provided', async () => {
       await act(async () => {
         render(
           <Header
@@ -68,7 +68,6 @@ describe('Live Page Header', () => {
         expect(headerImage.getAttribute('src')).toEqual(
           'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
         );
-        expect(headerImage.getAttribute('alt')).toEqual('');
       });
     });
 

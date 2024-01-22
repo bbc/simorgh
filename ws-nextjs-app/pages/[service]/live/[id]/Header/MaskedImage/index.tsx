@@ -11,11 +11,11 @@ import styles from './styles';
 const MaskedImage = ({
   imageUrl,
   imageUrlTemplate,
-  imageWidth = 480, // is this a good fallback?
+  imageWidth,
 }: {
   imageUrl: string;
   imageUrlTemplate: string;
-  imageWidth?: number;
+  imageWidth: number;
 }) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -42,7 +42,7 @@ const MaskedImage = ({
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
-        sizes="(max-width: 1008px) 645px, 100vw" // To update
+        sizes="(min-width: 1008px) 660px, 100vw"
       />
     </div>
   );
