@@ -49,6 +49,48 @@ describe('Live Page Header', () => {
       });
     });
   });
+  describe('image', () => {
+    it('should render if a header image without altText if provided', async () => {
+      await act(async () => {
+        render(
+          <Header
+            title="I am a title"
+            showLiveLabel
+            imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+            imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+            imageWidth={660}
+          />,
+        );
+      });
+
+      await waitFor(() => {
+        const headerImage = screen.getByRole('img');
+        expect(headerImage.getAttribute('src')).toEqual(
+          'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+        );
+        expect(headerImage.getAttribute('alt')).toEqual('');
+      });
+    });
+
+    it('should not render if a header image if not provided', async () => {
+      await act(async () => {
+        render(
+          <Header
+            title="I am a title"
+            showLiveLabel
+            imageUrl={undefined}
+            imageUrlTemplate={undefined}
+            imageWidth={undefined}
+          />,
+        );
+      });
+
+      await waitFor(() => {
+        const headerImage = screen.queryByRole('img');
+        expect(headerImage).toBeNull();
+      });
+    });
+  });
   describe('a11y', () => {
     it('should have id of content', async () => {
       await act(async () => {
