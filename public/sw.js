@@ -33,7 +33,7 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    /((\/cwr\.js$)|(woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
+    /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
       event.request.url,
     )
   ) {
