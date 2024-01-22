@@ -54,11 +54,12 @@ export default {
   textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
-      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
+        padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem`,
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
