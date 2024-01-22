@@ -68,6 +68,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Lecteur audio',
         videoPlayer: 'Lecteur vidéo',
       },
+      liveExperiencePage: {
+        liveLabel: 'En direct',
+        liveCoverage: 'En direct',
+        breaking: 'Urgent',
+        postedAt: 'Posté à',
+        summary: 'Points clés',
+      },
       gist: 'Points clés',
       error: {
         404: {
@@ -343,12 +350,8 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/c0vmyy90q8zt',
       },
       {
-        title: 'Science',
-        url: '/afrique/topics/cdr561vr57gt',
-      },
-      {
-        title: 'Technologie',
-        url: '/afrique/topics/cnq687nn703t',
+        title: 'Science et technologie',
+        url: '/afrique/topics/crezq2zk0q4t',
       },
       {
         title: 'Economie',
