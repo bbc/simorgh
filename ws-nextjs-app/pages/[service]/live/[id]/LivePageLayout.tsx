@@ -24,8 +24,7 @@ type ComponentProps = {
     isLive: boolean;
     headerImage?: {
       url: string;
-      urlTemplate: string; // to check if needed
-      height: number;
+      urlTemplate: string;
       width: number;
     } | null;
     summaryPoints: { content: KeyPointsResponse | null };
