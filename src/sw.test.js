@@ -24,6 +24,10 @@ describe('Service Worker', () => {
     global.fetch = originalFetch;
   });
 
+  afterAll(() => {
+    fs.unlinkSync(resolve(__dirname, 'service-worker-test.js'));
+  });
+
   describe('webp', () => {
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
 
