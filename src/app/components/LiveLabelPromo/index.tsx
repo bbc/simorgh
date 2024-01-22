@@ -21,7 +21,12 @@ const LiveLabelPromo = ({
 
   return (
     <>
-      <LiveLabel.Pulse className={className} css={pulse} />
+      <LiveLabel.Pulse
+        className={className}
+        width="16"
+        height="16"
+        css={pulse}
+      />
       <LiveLabel.Text lang={lang} id={id} offScreenText={offScreenText}>
         {children}
       </LiveLabel.Text>

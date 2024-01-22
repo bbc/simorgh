@@ -13,4 +13,6 @@ export interface TextProps {
 
 export interface PulseProps {
   className?: string;
+  width: string;
+  height: string;
 }
