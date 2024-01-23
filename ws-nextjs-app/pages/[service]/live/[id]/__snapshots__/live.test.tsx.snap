@@ -123,10 +123,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
     -webkit-flex: 1 auto;
     -ms-flex: 1 auto;
     flex: 1 auto;
-    min-width: calc(100% / 3);
-    max-width: calc(100% / 3);
     -webkit-padding-end: 1rem;
     padding-inline-end: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-7 {
+    margin-bottom: 0;
+    min-width: calc(100% / 3);
+    max-width: calc(100% / 3);
   }
 }
 
@@ -134,12 +140,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-7 {
     min-width: calc(100% / 4);
     max-width: calc(100% / 4);
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-7 {
-    margin-bottom: 0;
   }
 }
 
