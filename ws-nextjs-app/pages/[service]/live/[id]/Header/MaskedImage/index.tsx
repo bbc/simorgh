@@ -33,7 +33,12 @@ const MaskedImage = ({
     });
 
   return (
-    <div css={isRtl ? styles.maskedImageRtl : styles.maskedImageLtr}>
+    <div
+      css={[
+        styles.maskedImage,
+        isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
+      ]}
+    >
       <Image
         alt=""
         src={imageUrl}

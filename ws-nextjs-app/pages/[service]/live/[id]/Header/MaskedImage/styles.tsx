@@ -114,18 +114,23 @@ const extraWideMask = `
   rgba(${maskColours.white}, 0) 100%`;
 
 export default {
-  maskedImageLtr: ({ mq }: Theme) =>
+  maskedImage: ({ mq }: Theme) =>
     css({
       maskSize: '100% 100%',
       maskImage: `linear-gradient(
-        180deg, ${mobileImageMask})`,
+      180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
         position: 'absolute',
-        right: '0', // right for LTR
+        insetInlineEnd: 0,
         top: '0',
         height: '100%',
         aspectRatio: '16 / 9',
         overflow: 'hidden',
+      },
+    }),
+  linearGradientLtr: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
         maskImage: `linear-gradient(
           270deg, ${group4Mask})`, // 270deg for LTR
       },
@@ -135,18 +140,9 @@ export default {
       },
     }),
 
-  maskedImageRtl: ({ mq }: Theme) =>
+  linearGradientRtl: ({ mq }: Theme) =>
     css({
-      maskSize: '100% 100%',
-      maskImage: `linear-gradient(
-        180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        position: 'absolute',
-        left: '0', // left for RTL
-        top: '0',
-        height: '100%',
-        aspectRatio: '16 / 9',
-        overflow: 'hidden',
         maskImage: `linear-gradient(
           90deg, ${group4Mask})`, // 90deg for RTL
       },
