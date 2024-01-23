@@ -36,7 +36,7 @@ const Component = ({
 };
 
 export default {
-  title: 'New Components/Live Label Promo',
+  title: 'New Components/Live Label',
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     metadata,
