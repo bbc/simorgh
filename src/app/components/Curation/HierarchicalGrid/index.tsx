@@ -12,7 +12,7 @@ import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
-import LiveLabelPromo from '../../LiveLabelPromo';
+import LiveLabel from '../../LiveLabel';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -130,13 +130,13 @@ const HiearchicalGrid = ({
                       className="focusIndicatorDisplayBlock"
                     >
                       {isLive ? (
-                        <LiveLabelPromo
+                        <LiveLabel
                           {...(isFirstPromo && {
                             className: 'first-promo',
                           })}
                         >
                           {promo.title}
-                        </LiveLabelPromo>
+                        </LiveLabel>
                       ) : (
                         promo.title
                       )}

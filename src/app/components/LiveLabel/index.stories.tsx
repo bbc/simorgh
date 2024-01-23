@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Promo from '#app/legacy/components/Promo';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import LiveLabelPromo from './index';
+import LiveLabel from './index';
 import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import Heading from '../Heading';
@@ -27,9 +27,9 @@ const Component = ({
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <LiveLabelPromo offScreenText={offScreenText} className={className}>
+        <LiveLabel offScreenText={offScreenText} className={className}>
           {children}
-        </LiveLabelPromo>
+        </LiveLabel>
       </ServiceContextProvider>
     </ThemeProvider>
   );

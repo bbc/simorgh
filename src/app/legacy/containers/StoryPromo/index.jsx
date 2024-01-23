@@ -8,7 +8,7 @@ import StoryPromo, {
 } from '#psammead/psammead-story-promo/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
-import LiveLabelPromo from '#app/components/LiveLabelPromo';
+import LiveLabel from '#app/components/LiveLabel';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
@@ -226,14 +226,14 @@ const StoryPromoContainer = ({
           className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
-            <LiveLabelPromo
+            <LiveLabel
               id={linkId}
               {...(isFirstPromo && {
                 className: 'first-promo',
               })}
             >
               {linkcontents}
-            </LiveLabelPromo>
+            </LiveLabel>
           ) : (
             linkcontents
           )}

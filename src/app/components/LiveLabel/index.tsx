@@ -1,8 +1,12 @@
+/** @jsx jsx */
+/** @jsxRuntime classic */
+/* @jsxFrag React.Fragment */
 import React, { PropsWithChildren } from 'react';
-import LiveLabelContext from './LiveLabelContext';
+import { jsx } from '@emotion/react';
+import { LiveLabelProps } from './types';
+import styles from './index.styles';
 import Text from './Text';
 import Pulse from './Pulse';
-import { LiveLabelProps } from './types';
 
 const LiveLabel = ({
   lang = 'en-GB',
@@ -11,10 +15,18 @@ const LiveLabel = ({
   offScreenText,
   className,
 }: PropsWithChildren<LiveLabelProps>) => {
+  const pulse = [
+    styles.liveLabelPulse,
+    className === 'first-promo' && styles.firstPromo,
+  ];
+
   return (
-    <LiveLabelContext.Provider value={{ lang, id, offScreenText, className }}>
-      {children}
-    </LiveLabelContext.Provider>
+    <>
+      <Pulse className={className} width="16" height="16" css={pulse} />
+      <Text lang={lang} id={id} offScreenText={offScreenText}>
+        {children}
+      </Text>
+    </>
   );
 };
 

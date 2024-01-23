@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import LiveLabelPromo from '#app/components/LiveLabelPromo';
+import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   getSansBold,
@@ -108,7 +108,7 @@ const ScheduleItemHeader = ({
       {listenLabel && (
         <VisuallyHiddenText>{`${listenLabel}, `}</VisuallyHiddenText>
       )}
-      {isLive && <LiveLabelPromo offScreenText={`${listenLive}, `} />}
+      {isLive && <LiveLabel offScreenText={`${listenLive}, `} />}
       {isNext && (
         <NextLabel
           aria-hidden="true"

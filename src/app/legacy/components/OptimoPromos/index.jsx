@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
 
 import Timestamp from '#components/Promo/timestamp';
-import LiveLabelPromo from '#app/components/LiveLabelPromo';
+import LiveLabel from '#app/components/LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Title from './Title';
@@ -42,7 +42,7 @@ Promo.Content = Content;
 
 // Outside OptimoPromos
 Promo.Timestamp = Timestamp;
-Promo.LiveLabel = LiveLabelPromo;
+Promo.LiveLabel = LiveLabel;
 Promo.Image = Image;
 
 Promo.propTypes = {
