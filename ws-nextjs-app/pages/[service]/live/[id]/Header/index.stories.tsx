@@ -49,9 +49,14 @@ export default {
     metadata,
     design: [
       {
-        name: 'Group 0',
+        name: 'Text Only Header',
         type: 'figma',
         url: 'https://www.figma.com/file/ozHsWG5R9tETw6lBOU740V/Live-mvp-header---handover?type=design&node-id=95-266',
+      },
+      {
+        name: 'Header with Image',
+        type: 'figma',
+        url: 'https://www.figma.com/file/D9w5JGLOhznDlz5tHu3rH0/Live-mvp---Live-Topic-Header---handoff?type=design&node-id=104-7&mode=design&t=X5HOIIPSyAJjnBe7-0',
       },
     ],
   },
@@ -79,15 +84,6 @@ export const TitleAndDescriptionWithLiveLabel = ({
     variant={variant}
   />
 );
-export const RightToLeftWithLiveLabel = ({ service, variant }: StoryProps) => (
-  <Component
-    title="نااہلی کی مدت میں ترمیم: ’نواز شریف کی قیادت میں اسی سال ترقی کا سفر دوبارہ شروع ہوگا‘"
-    description="سینیٹ نے الیکشن ایکٹ میں ترمیم کا بل کثرت رائے سے منظور کیا ہے جس کے مطابق جہاں آئین میں نااہلی کی مدت کا تعین نہیں وہاں نااہلی پانچ سال سے زیادہ نہیں ہو گی۔ وزیر داخلہ رانا ثنا اللہ کا کہنا ہے کہ نواز شریف کی قیادت میں 'اسی سال ترقی کا سفر دوبارہ شروع ہوگا۔' جبکہ سینیٹ میں اپوزیشن لیڈر شہزاد وسیم نے اسے 'ایک فرد سے متعلق قانون سازی' قرار دیا ہے۔"
-    showLiveLabel
-    service={service}
-    variant={variant}
-  />
-);
 
 export const TitleOnlyWithoutLiveLabel = ({ service, variant }: StoryProps) => (
   <Component
@@ -110,18 +106,7 @@ export const TitleAndDescriptionWithoutLiveLabel = ({
     variant={variant}
   />
 );
-export const RightToLeftWithoutLiveLabel = ({
-  service,
-  variant,
-}: StoryProps) => (
-  <Component
-    title="نااہلی کی مدت میں ترمیم: ’نواز شریف کی قیادت میں اسی سال ترقی کا سفر دوبارہ شروع ہوگا‘"
-    description="سینیٹ نے الیکشن ایکٹ میں ترمیم کا بل کثرت رائے سے منظور کیا ہے جس کے مطابق جہاں آئین میں نااہلی کی مدت کا تعین نہیں وہاں نااہلی پانچ سال سے زیادہ نہیں ہو گی۔ وزیر داخلہ رانا ثنا اللہ کا کہنا ہے کہ نواز شریف کی قیادت میں 'اسی سال ترقی کا سفر دوبارہ شروع ہوگا۔' جبکہ سینیٹ میں اپوزیشن لیڈر شہزاد وسیم نے اسے 'ایک فرد سے متعلق قانون سازی' قرار دیا ہے۔"
-    showLiveLabel={false}
-    service={service}
-    variant={variant}
-  />
-);
+
 export const TitleAndDescriptionWithLiveLabelAndImage = ({
   service,
   variant,
@@ -138,13 +123,40 @@ export const TitleAndDescriptionWithLiveLabelAndImage = ({
   />
 );
 
-export const RightToLeftWithLiveLabelandImage = ({
+export const TitleAndDescriptionWithoutLiveLabelWithImage = ({
   service,
   variant,
 }: StoryProps) => (
   <Component
-    title="نااہلی کی مدت میں ترمیم: ’نواز شریف کی قیادت میں اسی سال ترقی کا سفر دوبارہ شروع ہوگا‘"
-    description="سینیٹ نے الیکشن ایکٹ میں ترمیم کا بل کثرت رائے سے منظور کیا ہے جس کے مطابق جہاں آئین میں نااہلی کی مدت کا تعین نہیں وہاں نااہلی پانچ سال سے زیادہ نہیں ہو گی۔ وزیر داخلہ رانا ثنا اللہ کا کہنا ہے کہ نواز شریف کی قیادت میں 'اسی سال ترقی کا سفر دوبارہ شروع ہوگا۔' جبکہ سینیٹ میں اپوزیشن لیڈر شہزاد وسیم نے اسے 'ایک فرد سے متعلق قانون سازی' قرار دیا ہے۔"
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
+    description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban"
+    showLiveLabel={false}
+    service={service}
+    variant={variant}
+    imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageWidth={660}
+  />
+);
+
+export const TitleWithImage = ({ service, variant }: StoryProps) => (
+  <Component
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
+    showLiveLabel={false}
+    service={service}
+    variant={variant}
+    imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageWidth={660}
+  />
+);
+
+export const TitleWithLiveLabelAndImage = ({
+  service,
+  variant,
+}: StoryProps) => (
+  <Component
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
     showLiveLabel
     service={service}
     variant={variant}
