@@ -1,7 +1,4 @@
-export interface LiveLabelProps {
-  offScreenText?: string;
-  lang?: string;
-  id?: string;
+export interface LiveLabelProps extends TextProps {
   className?: string;
 }
 
