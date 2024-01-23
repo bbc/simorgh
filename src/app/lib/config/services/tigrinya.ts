@@ -65,6 +65,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'ቀጥታ',
+        liveCoverage: 'ቀጥታዊ ሸፈነ',
+        breaking: 'ሓድሽ ዜና',
+        postedAt: 'ዝተለጠፈሉ',
+        summary: 'ጽማቝ ሓበሬታ',
+      },
       error: {
         404: {
           statusCode: '404',

@@ -23,8 +23,6 @@ const homePageData = {
 
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
-  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
-  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
 
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={homePageData} />, {

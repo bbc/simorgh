@@ -39,10 +39,12 @@ const ImageWrapper = styled.div`
 `;
 
 const TopicImage = ({ image }) => {
+  const imageUrl = image.replace('/480/', '/128/');
+
   return (
     <BadgeWrapper>
       <ImageWrapper>
-        <Image src={image} alt="" data-testid="topic-badge" />
+        <Image src={imageUrl} alt="" data-testid="topic-badge" />
       </ImageWrapper>
     </BadgeWrapper>
   );

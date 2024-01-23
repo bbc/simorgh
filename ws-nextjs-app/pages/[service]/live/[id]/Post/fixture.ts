@@ -327,3 +327,261 @@ export const twitterSamplePost = {
     },
   ],
 };
+
+export const videoSamplePost = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          id: 'c35b217c',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: 'a043a38d',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '4c1e704b',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Video',
+                        blocks: [
+                          {
+                            id: '2f297902',
+                            type: 'fragment',
+                            model: {
+                              text: 'Video',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: '291c6593',
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                id: 'bc7e7be2',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'ccb1221b',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Video player',
+                        blocks: [
+                          {
+                            id: '7dd4859b',
+                            type: 'fragment',
+                            model: {
+                              text: 'Video player',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          id: 'a1dd09b3',
+          type: 'paragraph',
+          model: {
+            text: 'Video',
+            blocks: [
+              {
+                id: '823772a4',
+                type: 'fragment',
+                model: { text: 'Video', attributes: ['bold'] },
+              },
+            ],
+          },
+        },
+        {
+          id: '8b8965cd',
+          type: 'video',
+          model: {
+            locator: 'urn:bbc:pips:pid:p01thw20',
+            blocks: [
+              {
+                id: '83f02f5a',
+                type: 'clipMedia',
+                model: {
+                  id: 'urn:bbc:pips:pid:p01thw20',
+                  urns: {
+                    pipsPid: 'urn:bbc:pips:pid:p01thw20',
+                  },
+                  images: [
+                    {
+                      url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+                      urlTemplate:
+                        'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+                      altText:
+                        'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                      type: 'socialImage',
+                      source: 'pipsImage',
+                    },
+                    {
+                      url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+                      urlTemplate:
+                        'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+                      altText:
+                        'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                      type: 'promoImage',
+                      source: 'pipsImage',
+                    },
+                  ],
+                  assetPath: 'p01thw20',
+                  type: 'video',
+                  headlines: {
+                    primaryHeadline:
+                      "BBC launch trailer for We Know Our Place women's sport campaign",
+                    seoHeadline:
+                      "BBC launch trailer for We Know Our Place women's sport campaign",
+                    promoHeadline:
+                      "BBC launch trailer for We Know Our Place women's sport campaign",
+                    socialHeadline:
+                      "BBC launch trailer for We Know Our Place women's sport campaign",
+                  },
+                  analytics: {
+                    page: {
+                      name: 'programmes.av.p01thw20.page',
+                      contentId: 'urn:bbc:pips:pid:p01thw20',
+                      producer: 'PROGRAMMES',
+                    },
+                  },
+                  description:
+                    'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                  summary: {
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'paragraph',
+                          model: {
+                            text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  lastPublished: '2022-07-01T08:56:56Z',
+                  firstPublished: null,
+                  video: {
+                    id: 'p01thw20',
+                    title:
+                      "BBC launch trailer for We Know Our Place women's sport campaign",
+                    holdingImage: {
+                      id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01thw3g.jpg',
+                      altText:
+                        'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                    },
+                    version: {
+                      id: 'p01thw22',
+                      duration: 'PT54S',
+                      kind: 'programme',
+                      guidance: null,
+                      territories: ['nonuk', 'uk'],
+                    },
+                    isAdvertisingAllowed: true,
+                    isEmbeddingAllowed: true,
+                    isUnavailable: false,
+                  },
+                  attributions: null,
+                  link: { path: '/programmes/p01thw20' },
+                  section: null,
+                  isSharingAllowed: true,
+                },
+              },
+              {
+                id: '7aff54bf',
+                type: 'caption',
+                model: {
+                  blocks: [
+                    {
+                      id: '69b391e8',
+                      type: 'text',
+                      model: {
+                        blocks: [
+                          {
+                            id: '4f06c3eb',
+                            type: 'paragraph',
+                            model: {
+                              text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                              blocks: [
+                                {
+                                  id: 'ae848e19',
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:d25690d5-6df5-4a79-9fee-5549ac8a141b',
+  type: 'POST',
+  options: { isBreakingNews: false },
+  dates: {
+    firstPublished: '2023-09-08T09:58:44+00:00',
+    lastPublished: '2023-09-08T10:09:41+00:00',
+    time: null,
+    curated: '2023-09-08T09:58:44.896Z',
+  },
+  titles: [{ title: null, source: 'primary' }],
+  descriptions: [{ text: null, source: 'summary' }],
+  images: [
+    {
+      url: null,
+      originalUrl: null,
+      urlTemplate: null,
+      altText: null,
+      copyright: null,
+    },
+  ],
+};

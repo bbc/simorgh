@@ -79,6 +79,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Kai-tsaye',
+        liveCoverage: 'Rahoto kai-tsaye',
+        breaking: 'Labarai da dumi-dumi',
+        postedAt: 'An wallafa a',
+        summary: 'Takaitacce',
+      },
       gist: 'Takaitacce',
       error: {
         404: {

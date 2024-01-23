@@ -7,18 +7,20 @@ import Document, {
 } from 'next/document';
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
+import isAppPath from '#app/routes/utils/isAppPath';
 
-type DocProps = { helmet: HelmetData };
+type DocProps = { helmet: HelmetData; isApp: boolean };
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
+    const isApp = isAppPath(ctx.asPath || '');
 
-    return { ...initialProps, helmet: Helmet.renderStatic() };
+    return { ...initialProps, helmet: Helmet.renderStatic(), isApp };
   }
 
   render() {
-    const { helmet } = this.props;
+    const { helmet, isApp } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const meta = helmet.meta.toComponent();
@@ -29,6 +31,7 @@ export default class AppDocument extends Document<DocProps> {
     return (
       <Html {...htmlAttrs}>
         <Head>
+          {isApp && <meta name="robots" content="noindex" />}
           {meta}
           {title}
           {helmetLinkTags}

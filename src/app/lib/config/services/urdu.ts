@@ -85,6 +85,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'لائیو',
+        liveCoverage: 'لائیو کوریج',
+        breaking: 'بریکنگ',
+        postedAt: 'پوسٹ کیا گیا',
+        summary: 'خلاصہ',
+      },
       gist: 'خلاصہ',
       error: {
         404: {

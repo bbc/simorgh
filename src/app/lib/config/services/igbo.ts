@@ -65,6 +65,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Na Eme Ozugbo',
+        liveCoverage: 'Mkpuchi Na Eme Ozugbo',
+        breaking: 'Na Akpọtụ Ugbu A',
+        postedAt: 'Ebisara na',
+        summary: 'Nchịkọta',
+      },
       gist: 'Nchịkọta',
       error: {
         home: 'Akụkọ',
