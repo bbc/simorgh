@@ -88,19 +88,19 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flex: '1 auto',
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+      },
+    }),
+  labelWithoutImage: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: 0,
         minWidth: 'calc(100% / 3)',
         maxWidth: 'calc(100% / 3)',
-        paddingInlineEnd: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         minWidth: 'calc(100% / 4)',
         maxWidth: 'calc(100% / 4)',
-      },
-    }),
-  removeLabelMargin: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: 0,
       },
     }),
   title: ({ mq, palette }: Theme) =>

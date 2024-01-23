@@ -60,7 +60,7 @@ const Header = ({
                   <span
                     css={[
                       styles.label,
-                      !isHeaderImage && styles.removeLabelMargin,
+                      !isHeaderImage && styles.labelWithoutImage,
                     ]}
                     aria-hidden="true"
                     data-testid="live-label"
