@@ -1,7 +1,10 @@
 import onEnvironment from '../onEnvironment';
 
 // custom CW metrics
-const { metricScope, Unit } = require('aws-embedded-metrics');
+const { metricScope, Unit, Configuration } = require('aws-embedded-metrics');
+
+Configuration.serviceName = 'Simorgh';
+Configuration.logGroupName = 'SimorghServer';
 
 const sendMetric = metricScope(
   metrics =>
