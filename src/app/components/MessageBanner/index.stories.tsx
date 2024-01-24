@@ -19,11 +19,9 @@ const Component = ({ service, variant, text = '', longText = '' }: Props) => {
         <MessageBanner
           heading={text}
           description={longText}
-          link={'https://www.bbc.co.uk/ws/languages'}
+          link="https://www.bbc.co.uk/ws/languages"
           linkText={text}
-          image={
-            'https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/e329/live/0a700dd0-7cb3-11ee-a503-4588075e3427.png'
-          }
+          image="https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/e329/live/0a700dd0-7cb3-11ee-a503-4588075e3427.png"
         />
       </ServiceContextProvider>
     </ThemeProvider>
