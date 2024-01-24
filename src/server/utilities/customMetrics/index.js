@@ -1,17 +1,12 @@
 import onEnvironment from '../onEnvironment';
 
 // custom CW metrics
-const { metricScope, Unit, Configuration } = require('aws-embedded-metrics');
-
-Configuration.serviceName = 'Simorgh';
-Configuration.logGroupName = 'SimorghServer';
+const { metricScope, Unit } = require('aws-embedded-metrics');
 
 const sendMetric = metricScope(
   metrics =>
     async ({ metricName, statusCode = 'Unknown', pageType, requestUrl }) => {
       metrics.setNamespace('Simorgh/Server');
-
-      console.log('Sending custom metric');
 
       // Specifies the metric dimensions, each dimension will counted and billed as a custom unique metric
       metrics.putDimensions({
