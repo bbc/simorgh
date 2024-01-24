@@ -8,6 +8,8 @@ const sendMetric = metricScope(
     async ({ metricName, statusCode = 'Unknown', pageType, requestUrl }) => {
       metrics.setNamespace('Simorgh/Server');
 
+      console.log('Sending custom metric');
+
       // Specifies the metric dimensions, each dimension will counted and billed as a custom unique metric
       metrics.putDimensions({
         PageType: pageType,
