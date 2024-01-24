@@ -54,7 +54,10 @@ const Header = ({
         >
           <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
             {showLiveLabel ? (
-              <LiveLabelHeader isHeaderImage={isHeaderImage}>
+              <LiveLabelHeader
+                isHeaderImage={isHeaderImage}
+                data-testid="live-label"
+              >
                 {LiveLabelTitle}
               </LiveLabelHeader>
             ) : (
