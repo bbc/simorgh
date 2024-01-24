@@ -127,13 +127,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const isApp = isAppPath(context.resolvedUrl);
 
-  sendCustomMetric({
-    metricName: NON_200_RESPONSE,
-    statusCode: 404,
-    pageType: LIVE_PAGE,
-    requestUrl: context.resolvedUrl,
-  });
-
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
 
