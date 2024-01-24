@@ -1,6 +1,2 @@
-const metrics = {
-  // Non 200 Response received
-  NON_200_RESPONSE: 'non_200_response',
-};
-
-module.exports = metrics;
+/* eslint-disable import/prefer-default-export */
+export const NON_200_RESPONSE = 'non_200_response';
