@@ -1,0 +1,46 @@
+/** @jsx jsx */
+/** @jsxRuntime classic */
+/* @jsxFrag React.Fragment */
+import React, { PropsWithChildren } from 'react';
+import { jsx } from '@emotion/react';
+import { LiveLabelProps } from '#app/components/LiveLabel/types';
+import LiveLabel from '#app/components/LiveLabel';
+import styles from './index.styles';
+
+interface LiveLabelPromoProps extends LiveLabelProps {
+  isHeaderImage: boolean;
+}
+
+const LiveLabelHeader = ({
+  lang = 'en-GB',
+  id,
+  children,
+  offScreenText,
+  className,
+  isHeaderImage,
+}: PropsWithChildren<LiveLabelPromoProps>) => {
+  return (
+    <>
+      <LiveLabel.Pulse
+        className={className}
+        width="24"
+        height="24"
+        css={styles.liveLabelPulse}
+      />
+      <LiveLabel.Text
+        lang={lang}
+        id={id}
+        offScreenText={offScreenText}
+        css={
+          isHeaderImage
+            ? styles.liveLabelTextWithImage
+            : styles.liveLabelTextWithoutImage
+        }
+      >
+        {children}
+      </LiveLabel.Text>
+    </>
+  );
+};
+
+export default LiveLabelHeader;
