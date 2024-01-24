@@ -20,7 +20,7 @@ const LiveLabelHeader = ({
   isHeaderImage,
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   return (
-    <>
+    <div data-testid="live-label">
       <LiveLabel.Pulse
         className={className}
         width="24"
@@ -39,7 +39,7 @@ const LiveLabelHeader = ({
       >
         {children}
       </LiveLabel.Text>
-    </>
+    </div>
   );
 };
 
