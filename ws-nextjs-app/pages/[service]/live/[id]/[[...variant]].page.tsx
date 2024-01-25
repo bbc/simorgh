@@ -18,6 +18,9 @@ import { FetchError } from '#models/types/fetch';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import getAgent from '#server/utilities/getAgent';
 import { OK } from '#app/lib/statusCodes.const';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
@@ -30,6 +33,7 @@ interface PageDataParams extends ParsedUrlQuery {
   variant?: Variants;
   // eslint-disable-next-line camelcase
   renderer_env?: string;
+  resolvedUrl: string;
 }
 
 const logger = nodeLogger(__filename);
@@ -40,6 +44,7 @@ const getPageData = async ({
   service,
   variant,
   rendererEnv = 'test',
+  resolvedUrl,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   let message;
@@ -57,6 +62,13 @@ const getPageData = async ({
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);
+
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: status,
+      pageType: LIVE_PAGE,
+      requestUrl: resolvedUrl,
+    });
 
     logger.error(BFF_FETCH_ERROR, {
       service,
@@ -98,6 +110,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
+
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: context.res.statusCode,
+      pageType: LIVE_PAGE,
+      requestUrl: context.resolvedUrl,
+    });
+
     return {
       props: {
         bbcOrigin: reqHeaders['bbc-origin'] || null,
@@ -127,6 +147,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service,
     variant,
     rendererEnv,
+    resolvedUrl: context.resolvedUrl,
   });
 
   let routingInfoLogger = logger.debug;
