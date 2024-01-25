@@ -2692,9 +2692,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/webpack-preprocessor@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@cypress/webpack-preprocessor@npm:6.0.0"
+"@cypress/webpack-preprocessor@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@cypress/webpack-preprocessor@npm:6.0.1"
   dependencies:
     bluebird: 3.7.1
     debug: ^4.3.4
@@ -2704,7 +2704,7 @@ __metadata:
     "@babel/preset-env": ^7.0.0
     babel-loader: ^8.3 || ^9
     webpack: ^4 || ^5
-  checksum: 257c470e5a3bf9795fd7d388bdc0e91b3da87dbb94ec4aa70966e63b8d0640efedf3ad9258b84e83b99a112fa5dbdbbc83b4aaeeeb5511a91e2ee2c8a659df43
+  checksum: 7e7195603423c6147220642829b02a5953c624bfcb618942ac5def545d289c72fb183f2d7b7810e3db39ae9441927fe3bcadcb51bf693e2a4b48251c08a78666
   languageName: node
   linkType: hard
 
@@ -5827,15 +5827,6 @@ __metadata:
   version: 16.18.34
   resolution: "@types/node@npm:16.18.34"
   checksum: 35c0ffe09687578d002ceb7e706d0ba450546aeb3d2716f28691f2af0063bd274dbde0f741d087ea217f2a8db413eb700d22dfb4f08a67986ff801423bd7be8d
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^18.17.5":
-  version: 18.19.3
-  resolution: "@types/node@npm:18.19.3"
-  dependencies:
-    undici-types: ~5.26.4
-  checksum: 58c4fa45a78fcec75c78182a4b266395905957633654eb0311c5f9c30ac15c179ea2287ab1af034e46c2db7bb0589ef0000ee64c1de8f568a0aad29eaadb100c
   languageName: node
   linkType: hard
 
@@ -9962,9 +9953,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-terminal-report@npm:5.3.10":
-  version: 5.3.10
-  resolution: "cypress-terminal-report@npm:5.3.10"
+"cypress-terminal-report@npm:5.3.12":
+  version: 5.3.12
+  resolution: "cypress-terminal-report@npm:5.3.12"
   dependencies:
     chalk: ^4.0.0
     fs-extra: ^10.1.0
@@ -9973,17 +9964,16 @@ __metadata:
     tv4: ^1.3.0
   peerDependencies:
     cypress: ">=10.0.0"
-  checksum: 17f6e08b08354253dd18a8f5e8b27ce261aef7179f88e12429df2d0ff34c1de9c44c5a19c9102b3c7056740c7b5345e12b44f0e77ec451eed37119e1e300d3e6
+  checksum: e90443438e0dabb49007cc0009b74b79da97728c6b74cbba2f4791d59b2effd35398675b4cc0770d7ca0b7524af329bcfa37fc2662ccbf45e8292966fdc8970d
   languageName: node
   linkType: hard
 
-"cypress@npm:13.6.1":
-  version: 13.6.1
-  resolution: "cypress@npm:13.6.1"
+"cypress@npm:13.6.3":
+  version: 13.6.3
+  resolution: "cypress@npm:13.6.3"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
-    "@types/node": ^18.17.5
     "@types/sinonjs__fake-timers": 8.1.1
     "@types/sizzle": ^2.3.2
     arch: ^2.2.0
@@ -10026,7 +10016,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: b701d61f7aadb478fcbe12f114dcbf19657b762592d0feb94d65702862c5156b30686b01104bb6b82b3f48aa7635a5db8fa5b4ca4706515d38ffe655baf0939c
+  checksum: 1c8a23f56cf26b3273379046240f3c0739fb6ca5f297c84ffa13c3911475ff77d107a3bca3790b854dc2d2b24a892fd522c5724cbf0d9eded9f3de45f5b9846b
   languageName: node
   linkType: hard
 
@@ -20683,8 +20673,8 @@ __metadata:
     "@testing-library/jest-dom": 6.1.4
     "@testing-library/react": 14.0.0
     babel-plugin-transform-rename-import: 2.3.0
-    cypress: 13.6.1
-    cypress-terminal-report: 5.3.10
+    cypress: 13.6.3
+    cypress-terminal-report: 5.3.12
     jest: ^29.6.4
     jest-environment-jsdom: ^29.6.4
     next: 14.0.1
@@ -20711,7 +20701,7 @@ __metadata:
     "@babel/preset-typescript": 7.23.2
     "@babel/runtime": 7.23.2
     "@bbc/web-vitals": 1.2.0
-    "@cypress/webpack-preprocessor": ^6.0.0
+    "@cypress/webpack-preprocessor": 6.0.1
     "@emotion/babel-plugin": 11.11.0
     "@emotion/babel-preset-css-prop": 11.11.0
     "@emotion/cache": 11.11.0
@@ -20769,9 +20759,9 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     core-js: 3.30.2
     crypto: 1.0.1
-    cypress: 13.6.1
+    cypress: 13.6.3
     cypress-axe: 1.5.0
-    cypress-terminal-report: 5.3.10
+    cypress-terminal-report: 5.3.12
     depcheck: 1.4.7
     dotenv: 16.0.3
     eslint: 7.32.0
@@ -22615,13 +22605,6 @@ __metadata:
     has-symbols: ^1.0.3
     which-boxed-primitive: ^1.0.2
   checksum: b7a1cf5862b5e4b5deb091672ffa579aa274f648410009c81cca63fed3b62b610c4f3b773f912ce545bb4e31edc3138975b5bc777fc6e4817dca51affb6380e9
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~5.26.4":
-  version: 5.26.5
-  resolution: "undici-types@npm:5.26.5"
-  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
   languageName: node
   linkType: hard
 
