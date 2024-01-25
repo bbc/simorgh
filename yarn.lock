@@ -9962,18 +9962,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-multi-reporters@npm:1.6.4":
-  version: 1.6.4
-  resolution: "cypress-multi-reporters@npm:1.6.4"
-  dependencies:
-    debug: ^4.3.4
-    lodash: ^4.17.21
-  peerDependencies:
-    mocha: ">=3.1.2"
-  checksum: d13b1eef8ab6295cebdb311313b4eb84dec986e51d92a61e76167c84c750d5200d2c711b1d3c022e4686cf512a2936112a9436de37dbe881547ab5fb83822c4e
-  languageName: node
-  linkType: hard
-
 "cypress-terminal-report@npm:5.3.10":
   version: 5.3.10
   resolution: "cypress-terminal-report@npm:5.3.10"
@@ -20783,7 +20771,6 @@ __metadata:
     crypto: 1.0.1
     cypress: 13.6.1
     cypress-axe: 1.5.0
-    cypress-multi-reporters: 1.6.4
     cypress-terminal-report: 5.3.10
     depcheck: 1.4.7
     dotenv: 16.0.3
