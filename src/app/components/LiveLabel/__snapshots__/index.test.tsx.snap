@@ -18,12 +18,12 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -101,12 +101,12 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -202,12 +202,12 @@ exports[`LiveLabel should render correctly with English live text and children 1
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -304,12 +304,12 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -405,12 +405,12 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {

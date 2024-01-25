@@ -105,12 +105,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
 .emotion-8 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -1362,12 +1362,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 .emotion-8 {
   color: #006666;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
   vertical-align: -0.125rem;
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
