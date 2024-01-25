@@ -1,11 +1,22 @@
+import { metricScope, Unit } from 'aws-embedded-metrics';
+import { PageTypes } from '#app/models/types/global';
 import onEnvironment from '../onEnvironment';
 
-// custom CW metrics
-const { metricScope, Unit } = require('aws-embedded-metrics');
+export type Params = {
+  metricName: string;
+  statusCode?: number | string;
+  pageType: PageTypes;
+  requestUrl: string;
+};
 
 const sendMetric = metricScope(
   metrics =>
-    async ({ metricName, statusCode = 'Unknown', pageType, requestUrl }) => {
+    async ({
+      metricName,
+      statusCode = 'Unknown',
+      pageType,
+      requestUrl,
+    }: Params) => {
       metrics.setNamespace('Simorgh/Server');
 
       // Specifies the metric dimensions, each dimension will counted and billed as a custom unique metric
@@ -22,7 +33,7 @@ const sendMetric = metricScope(
     },
 );
 
-const sendCustomMetric = params =>
+const sendCustomMetric = (params: Params) =>
   onEnvironment(['test', 'live'], params)(sendMetric);
 
 export default sendCustomMetric;
