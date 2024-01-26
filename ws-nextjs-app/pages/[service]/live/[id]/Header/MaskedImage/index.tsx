@@ -33,22 +33,24 @@ const MaskedImage = ({
     });
 
   return (
-    <div
-      css={[
-        styles.maskedImage,
-        isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
-      ]}
-    >
-      <Image
-        alt=""
-        src={imageUrl}
-        aspectRatio={[16, 9]}
-        srcSet={primarySrcset || undefined}
-        fallbackSrcSet={fallbackSrcset || undefined}
-        mediaType={primaryMimeType || undefined}
-        fallbackMediaType={fallbackMimeType || undefined}
-        sizes="(min-width: 1008px) 660px, 100vw"
-      />
+    <div css={styles.wrapper}>
+      <div
+        css={[
+          styles.maskedImage,
+          isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
+        ]}
+      >
+        <Image
+          alt=""
+          src={imageUrl}
+          // aspectRatio={[16, 9]}
+          srcSet={primarySrcset || undefined}
+          fallbackSrcSet={fallbackSrcset || undefined}
+          mediaType={primaryMimeType || undefined}
+          fallbackMediaType={fallbackMimeType || undefined}
+          sizes="(min-width: 1008px) 660px, 100vw"
+        />
+      </div>
     </div>
   );
 };
