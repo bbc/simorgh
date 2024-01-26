@@ -1,100 +1,109 @@
 {
   "data": {
-    "title": "BBC News Afrique",
-    "description": "",
+    "title": "Accueil - BBC News Afrique",
+    "description": "BBC Afrique, le service en langue française de la BBC, vous offre toute l'actualité en Afrique et dans le monde. Politique, sport, culture, articles, photos, vidéo et radio. Une offre multimédia complète : une fenêtre sur l'Afrique et sur le monde.",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Les scientifiques proposent un moyen \"plus efficace\" de découvrir et de prévenir les pandémies",
-            "firstPublished": "2023-04-04T15:11:17.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65065029",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5BDF/production/_129091532_gettyimages-1210464361.jpg",
-            "description": "Les gouvernements et les institutions dépensent des millions pour étudier les virus animaux afin de prévoir la prochaine pandémie, mais certains scientifiques estiment que cette stratégie est trop coûteuse et inefficace.",
-            "imageAlt": "Contrôle à l'aéroports",
-            "id": "ed4a7e22-d678-410e-ac95-6b69384296dd"
+            "title": "Pourquoi l'Alabama a-t-il exécuté un homme en utilisant de l'azote ?",
+            "firstPublished": "2024-01-26T09:37:50.153Z",
+            "lastPublished": "2024-01-26T09:37:50.153Z",
+            "link": "https://www.bbc.com/afrique/articles/cg3kvm34lmgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8473/live/fba85d60-bc1e-11ee-8685-316409d66f25.jpg",
+            "description": "Alors que les États américains cherchent une nouvelle méthode pour mettre à mort les criminels, le gaz d'azote été utilisé pour la première fois.",
+            "imageAlt": "Kenneth Eugene Smith pose pour une photo d'identité judiciaire ",
+            "id": "cg3kvm34lmgo"
           },
           {
             "type": "article",
-            "title": "Qui est Stormy Daniels, la star du porno derrière l'inculpation de Donald Trump",
-            "firstPublished": "2023-04-04T12:33:33.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65167838",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/CBAF/production/_100034125_mediaitem100034044.jpg",
-            "description": "L'ancien président des États-Unis a été inculpé par un grand jury de New York pour avoir prétendument payé l'actrice pendant sa campagne présidentielle afin d'étouffer une liaison extraconjugale.",
-            "imageAlt": "La actriz Stormy Daniels posando",
-            "id": "430ed5e1-fd4d-4d55-8111-6cb23e5d78d2"
+            "title": "Un temple surgit des ruines de l'une des périodes les plus sombres de l'Inde",
+            "firstPublished": "2024-01-26T08:16:51.465Z",
+            "lastPublished": "2024-01-26T08:16:51.465Z",
+            "link": "https://www.bbc.com/afrique/articles/c4n6r81yjedo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/05c2/live/53e69540-ba04-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Le nouveau temple d'Ayodhya a ravivé les souvenirs de la communauté victime des violences de 1992.",
+            "imageAlt": "Le chantier",
+            "id": "c4n6r81yjedo"
           },
           {
             "type": "article",
-            "title": "Un tournant tragique pour les orphelins des massacres de masse de 1977 en Angola ",
-            "firstPublished": "2023-04-04T10:12:14.702Z",
-            "link": "https://www.bbc.com/afrique/articles/c4nvknj20mwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b43/live/56f9d890-d07c-11ed-be2e-754a65c11505.jpg",
-            "description": "Des décennies de silence et de peur ont suivi le massacre, en 1977, de quelque 90 000 personnes en Angola, mais lorsque les familles des disparus ont commencé à s'exprimer, exigeant des réponses, le gouvernement a pris des mesures pour tenter de promouvoir la réconciliation. Cependant, dans certains cas, ses tentatives semblent avoir cruellement échoué.",
-            "imageAlt": "Sita Valles, une des victimes du massacre de 1977.",
-            "id": "c4nvknj20mwo"
+            "title": "CAN 2023 : Ces grands chocs aux huitièmes de finale à voir absolument",
+            "firstPublished": "2024-01-25T17:05:06.379Z",
+            "lastPublished": "2024-01-25T17:05:06.379Z",
+            "link": "https://www.bbc.com/afrique/articles/c514rj7xx0lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a79c/live/1a8052d0-bb96-11ee-8685-316409d66f25.jpg",
+            "description": "La Coupe d’Afrique des Nations (CAN 2023) qui a débuté en Côte d’Ivoire le 13 janvier dernier et qui prend fin le 11 février prochain, a clôturé son premier chapitre ce mercredi 24 janvier 2024, avec la révélation des équipes qui doivent continuer l’aventure.",
+            "imageAlt": "L'un des stades qui accueillent la 34e édition de la Coupe d'Afrique des Nations, CAN 2023 en Côte d'Ivoire",
+            "id": "c514rj7xx0lo"
           },
           {
             "type": "article",
-            "title": "L'attaque de Poutine contre le réseau électrique ukrainien a-t-elle échoué ? ",
-            "firstPublished": "2023-04-04T07:36:44.846Z",
-            "link": "https://www.bbc.com/afrique/articles/c4nz4le8djno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1a0d/live/c6394560-d095-11ed-be2e-754a65c11505.jpg",
-            "description": "Les Ukrainiens profitent de l'arrivée du printemps. Les nuits sont encore froides, mais ils sortent d'un hiver marqué par les frappes de missiles russes qui ont coupé l'électricité, le chauffage et l'eau.",
-            "imageAlt": "Une femme montrant sa fenêtre éclatée.",
-            "id": "c4nz4le8djno"
+            "title": "L'effondrement d'une mine d'or au Mali fait des dizaines de morts",
+            "firstPublished": "2024-01-25T07:47:56.712Z",
+            "lastPublished": "2024-01-25T07:47:56.712Z",
+            "link": "https://www.bbc.com/afrique/articles/czvqreppldwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4474/live/ade9f7b0-bb55-11ee-896d-39d9bd3cadbb.png",
+            "description": "Des responsables affirment que plus de 70 personnes sont mortes.",
+            "imageAlt": "Un mineur",
+            "id": "czvqreppldwo"
           },
           {
             "type": "article",
-            "title": "Pourquoi les autorités burkinabè sévissent contre les médias français ?",
-            "firstPublished": "2023-04-03T14:36:31.997Z",
-            "link": "https://www.bbc.com/afrique/articles/cnkw2vgqk1ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/541c/live/701f30d0-d212-11ed-be2e-754a65c11505.jpg",
-            "description": "Le Burkina Faso a expulsé les correspondants de deux médias français peu après avoir interdit à France 24 d'émettre dans le pays.",
-            "imageAlt": "Ibrahim Traoré",
-            "id": "cnkw2vgqk1ko"
+            "title": "Maladie X : de quoi s'agit-il et dans quelle mesure sommes-nous préparés à la prochaine pandémie ?",
+            "firstPublished": "2024-01-25T15:47:56.980Z",
+            "lastPublished": "2024-01-25T15:47:56.980Z",
+            "link": "https://www.bbc.com/afrique/articles/c990k1r84dro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7da1/live/e276b2e0-b9f5-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Les dirigeants du secteur de la santé réunis au Forum économique mondial de Davos ont discuté de l'importance de se préparer à l'apparition d'une nouvelle pandémie mondiale, la \"maladie X\".",
+            "imageAlt": "Chercheuse masquée regardant un écran d'ordinateur dans un laboratoire.",
+            "id": "c990k1r84dro"
           },
           {
             "type": "article",
-            "title": "Le mystère des 2 000 crânes de bélier momifiés découverts dans la tombe du pharaon Ramsès 2",
-            "firstPublished": "2023-04-03T16:39:44.000Z",
-            "link": "https://www.bbc.com/afrique/region-65155330",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0069/production/_129250100_d749271a-e9c7-4d1b-a787-1c2a5ef8a263.jpg",
-            "description": "Plus de 2 000 têtes de bélier momifiées faisaient partie d'une mystérieuse offrande au pharaon Ramsès 2, découverte par des archéologues en Égypte.",
-            "imageAlt": "Outre les restes d'animaux momifiés, les archéologues ont découvert les vestiges d'un palais aux murs de 5 mètres d'épaisseur.",
-            "id": "ff54ef18-7f2a-404d-9537-19ee6abcdbb0"
+            "title": "Le système de défense électronique ukrainien a contribué à repousser une attaque de missile russe. Comment est-ce possible ?",
+            "firstPublished": "2024-01-25T13:22:31.695Z",
+            "lastPublished": "2024-01-25T13:22:31.695Z",
+            "link": "https://www.bbc.com/afrique/articles/cw0revrwl21o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9291/live/8d77ab60-b9ea-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Au début de l'année, les autorités ukrainiennes ont affirmé pour la première fois qu'elles avaient pu repousser une attaque de missiles russes en utilisant la guerre électronique. Il s'agit vraisemblablement d'un système secret Pokrova.",
+            "imageAlt": "зсу",
+            "id": "cw0revrwl21o"
           },
           {
             "type": "article",
-            "title": "Pourquoi le virus H5N1 inquiète les scientifiques et pourrait être à l'origine de la prochaine pandémie de grippe ",
-            "firstPublished": "2023-04-03T12:39:41.223Z",
-            "link": "https://www.bbc.com/afrique/articles/c901d3xg3k4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/253c/live/81e598e0-d08c-11ed-be2e-754a65c11505.jpg",
-            "description": "Ces dernières semaines, le virus H5N1, responsable de la grippe aviaire, a de nouveau fait la une des journaux du monde entier.",
-            "imageAlt": "Un homme tenant un oiseau affecté par la grippe aviaire.",
-            "id": "c901d3xg3k4o"
+            "title": "Le magnat nigérian conserve sa couronne d'homme le plus riche d'Afrique selon Forbes",
+            "firstPublished": "2024-01-25T10:15:26.544Z",
+            "lastPublished": "2024-01-25T10:15:26.544Z",
+            "link": "https://www.bbc.com/afrique/articles/c0kd8eygpwlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dae1/live/5bf352a0-baa4-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Aliko Dangote est l'homme le plus riche d'Afrique pour la 13e année consécutive, selon Forbes.",
+            "imageAlt": "Aliko Dangote",
+            "id": "c0kd8eygpwlo"
           },
           {
             "type": "article",
-            "title": "Qui est le procureur dans l'affaire des pots-de-vin de Trump ?",
-            "firstPublished": "2023-04-03T09:43:09.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65155328",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8420/production/_129042833_gettyimages-1447235029.jpg",
-            "description": "Alvin Bragg est entré dans l'histoire lorsqu'il a pris ses fonctions l'année dernière.",
-            "imageAlt": "Alvin Bragg, procureur de Manhattan, à la Cour suprême de New York en décembre 2022",
-            "id": "e5bec656-6b75-4c1e-bcc0-a1fa4040b10c"
+            "title": "La Côte d'Ivoire limoge son entraîneur Jean-Louis Gasset",
+            "firstPublished": "2024-01-24T14:55:26.779Z",
+            "lastPublished": "2024-01-24T14:55:26.779Z",
+            "link": "https://www.bbc.com/afrique/articles/c72gd86928qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2146/live/e4889a80-bac7-11ee-896d-39d9bd3cadbb.png",
+            "description": "Jean-Louis Gasset a été limogé de son poste d'entraîneur de la Côte d'Ivoire, hôte de la Coupe d'Afrique des Nations 2023, deux jours après sa défaite 4-0 contre la Guinée équatoriale.",
+            "imageAlt": "Emilio Nsue, le buteur de la Guinée équatoriale, face au gardien de but ivoirien",
+            "id": "c72gd86928qo"
           },
           {
             "type": "article",
-            "title": "Les espions russes sont plus efficaces que l'armée, selon des experts",
-            "firstPublished": "2023-04-03T07:40:44.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65155331",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6D2C/production/_129184972_d723a19421f6a318e385b0282e302686f98ff965.jpg",
-            "description": "Les services de renseignement russes ont remporté plus de succès en Ukraine que l'armée, affirme un groupe de réflexion de premier plan.",
-            "imageAlt": "Russian President Vladimir Putin delivers his speech during a meeting of the Federal Security Service (FSB) Board which sums up the 2022 performance of the FSB bodies and outlines the priority tasks for 2023",
-            "id": "7fa2c862-98f0-45e4-8468-870a376cc2a6"
+            "title": "Vérifiez ces choses avant d’arrêter de consommer du sucre",
+            "firstPublished": "2024-01-24T16:58:17.747Z",
+            "lastPublished": "2024-01-24T16:58:17.747Z",
+            "link": "https://www.bbc.com/afrique/articles/cqe1empee81o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a6f0/live/d85028d0-4cce-11ee-b5fc-8f212b46bd1e.jpg",
+            "description": "Les personnes qui consomment de grandes quantités de sucre courent un risque de maladies telles que le diabète, les maladies cardiaques et le cancer... mais cela n'est peut-être pas causé uniquement par le sucre.",
+            "imageAlt": "Sucre",
+            "id": "cqe1empee81o"
           }
         ],
         "activePage": 1,
@@ -102,141 +111,222 @@
         "curationId": "urn:bbc:tipo:list:496b4373-f126-45b5-8267-dcff60a4958f",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top stories",
-        "visualProminence": "HIGH"
+        "title": "À la une",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Yolande et Nathanaël, plus forts que la Trisomie 21",
-            "firstPublished": "2023-04-02T15:07:46.375Z",
-            "link": "https://www.bbc.com/afrique/articles/cmlzvjl4p2go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a4e7/live/25b12160-cd95-11ed-be2e-754a65c11505.png",
-            "description": "Yolande Épée a souhaité lutter contre les idées reçues à travers le quotidien de son fils de 3 ans, dont elle s'occupe seule. En 2021, elle crée l'association Triso&Vie, la première au Cameroun dédiée aux droits des personnes trisomiques.",
-            "imageAlt": "Nathanaël atteint de Trisomie 21 et sa maman Yolande Epée",
-            "id": "cmlzvjl4p2go"
+            "title": "CAN 2023 : Calendrier et résultats des matchs",
+            "firstPublished": "2024-01-14T12:47:49.291Z",
+            "lastPublished": "2024-01-14T12:47:49.291Z",
+            "link": "https://www.bbc.com/afrique/articles/c72y0dxgw3go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a886/live/92323120-b2e2-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Voici le calendrier des matchs et résultats de la Coupe d'Afrique des nations.",
+            "imageAlt": "Akwaba, la mascotte de la CAN 2023.",
+            "id": "c72y0dxgw3go"
           },
           {
             "type": "article",
-            "title": "Pourquoi le sang des menstruations est considéré comme \"impur\" et celui d'un martyr comme \"héroïque\"",
-            "firstPublished": "2023-04-02T12:57:22.000Z",
-            "link": "https://www.bbc.com/afrique/monde-64864991",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12289/production/_128277347_joven.jpg",
-            "description": "Il s'agit de l'un des processus biologiques les plus fascinants du corps humain, mais qui, dans de nombreuses sociétés, a été marqué par le tabou et la stigmatisation.",
-            "imageAlt": "Une jeune femme",
-            "id": "25b186cf-01bb-4a86-bd0f-96bb84025473"
+            "title": "Les footballeurs africains qui mettent leur cœur en danger",
+            "firstPublished": "2024-01-24T10:14:57.457Z",
+            "lastPublished": "2024-01-24T10:14:57.457Z",
+            "link": "https://www.bbc.com/afrique/articles/cn0nyz1ddkdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/62b8/live/5c084700-b9f0-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Une star zambienne est absente de la Coupe d'Afrique des Nations en raison d'un problème cardiaque, mais d'autres Africains ont joué malgré les risques cardiaques.",
+            "imageAlt": "Un graphique audacieux et coloré représentant l'ancien attaquant de la Côte d'Ivoire Didier Drogba au milieu d'un cœur brisé et d'un pouls.",
+            "id": "cn0nyz1ddkdo"
           },
           {
             "type": "article",
-            "title": "Comprendre le débat autour du « 3e mandat » au Sénégal ?",
-            "firstPublished": "2023-03-31T12:25:13.856Z",
-            "link": "https://www.bbc.com/afrique/articles/cg311qnz39go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f3be/live/8be525f0-cf05-11ed-be2e-754a65c11505.jpg",
-            "description": "À mesure que la date de la prochaine élection présidentielle du 25 février 2024 approche, le débat sur la possibilité du président Macky Sall de briguer un troisième mandat déchaîne les passions au Sénégal. Si le camp présidentiel a déjà désigné l’actuel chef de l'Etat comme son candidat à la prochaine joute électorale, le concerné n’a officiellement ni accepté ni refusé cette perche. ",
-            "imageAlt": "Macky Sall",
-            "id": "cg311qnz39go"
+            "title": "Comment le Sénégal est parvenu à dominer le football africain",
+            "firstPublished": "2024-01-15T12:06:23.000Z",
+            "lastPublished": "2024-01-15T12:06:23.000Z",
+            "link": "https://www.bbc.com/afrique/region-67981202",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E480/production/_132269485_bbc-senegal-3-compositioncopy.jpg",
+            "description": "Le Sénégal détient trois autres titres continentaux en plus du trophée de la Coupe d'Afrique des Nations - mais quel est le secret de son succès ?",
+            "imageAlt": "Un graphique coloré présentant une photo de l'attaquant sénégalais Sadio Mane avec une médaille de vainqueur de la Coupe d'Afrique des Nations 2021.",
+            "id": "30f3b93e-adf3-489a-9c76-4137d8ef7a06"
           },
           {
             "type": "article",
-            "title": "À la recherche de mes racines dans un cimetière algérien",
-            "firstPublished": "2023-04-01T15:06:03.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65113786",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/830C/production/_129184533_800b7020-423b-4a80-8e10-9e67ffcef634.jpg",
-            "description": "Le journaliste algérien Maher Mezahi visite le cimetière de sa famille et réfléchit à son impact sur son identité.",
-            "imageAlt": "Un cimétière en Algérie",
-            "id": "35bdf6ec-3891-42af-8a63-a215d9338f3f"
+            "title": "Côte d’Ivoire/Cameroun : cette rivalité qu’on retrouvera lors de la CAN 2023",
+            "firstPublished": "2024-01-15T10:03:31.626Z",
+            "lastPublished": "2024-01-15T10:03:31.626Z",
+            "link": "https://www.bbc.com/afrique/articles/c51zz1yn8jgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8a9b/live/840bc180-b15a-11ee-beb5-e1400df560f2.jpg",
+            "description": "Du point de vue économique, le Cameroun est la locomotive de la CEMAC, tout comme en Afrique de l’ouest, la Côte d’Ivoire fait figure de pionnier dans l’UEMOA. Est-ce de là que par leur rivalité ? Voici l’histoire du clash entre les deux pays.",
+            "imageAlt": "Sadio Mané et Didier Drogba",
+            "id": "c51zz1yn8jgo"
           },
           {
             "type": "article",
-            "title": "\"Nous voulons retrouver nos enfants même s'ils sont morts\"",
-            "firstPublished": "2023-03-31T08:23:46.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65088786",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17FE7/production/_129097289_kapak_5.jpg",
-            "description": "Des centaines de familles ont refusé d'abandonner la recherche de leurs proches, qu'ils soient morts ou vivants.",
-            "imageAlt": "Orhan Kosker regardant les décombres des bâtiments",
-            "id": "f8930f19-640c-469b-91e0-00752624d7eb"
+            "title": "De la guerre civile en Côte d'Ivoire au milliard de dollars dépensé pour la CAN",
+            "firstPublished": "2024-01-13T11:59:02.273Z",
+            "lastPublished": "2024-01-13T11:59:02.273Z",
+            "link": "https://www.bbc.com/afrique/articles/c8v22z3p3e2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4e4c/live/edf383d0-b09c-11ee-8f07-bbfdfa890097.png",
+            "description": "Après la fin de la guerre civile en 2011, la Côte d'Ivoire a dépensé au moins un milliard de dollars pour accueillir la Coupe d'Afrique des Nations 2023.",
+            "imageAlt": "Graphique coloré d'un soldat muni d'un lance-roquettes et entouré de ballons de football dorés.",
+            "id": "c8v22z3p3e2o"
           },
           {
             "type": "article",
-            "title": "D'où viennent les théories selon lesquelles Jésus et Marie-Madeleine avaient une relation amoureuse ?",
-            "firstPublished": "2023-03-30T16:46:57.949Z",
-            "link": "https://www.bbc.com/afrique/articles/c51eex8egdxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d6cb/live/54fb6750-ce49-11ed-be2e-754a65c11505.jpg",
-            "description": "Si dans l'imaginaire populaire et dans la culture populaire cette façon de représenter les deux personnages bibliques comme un couple romantique est récurrente, d'où vient cette histoire ?",
-            "imageAlt": "1877 gravure d'après un dessin de l'Allemand Julius Schnorr von Carolsfeld représentant Marie-Madeleine témoin de la résurrection de Jésus-Christ",
-            "id": "c51eex8egdxo"
+            "title": "Qui remportera la CAN 2023 ? La prédiction d'Opta...",
+            "firstPublished": "2024-01-12T16:29:29.000Z",
+            "lastPublished": "2024-01-12T16:29:29.000Z",
+            "link": "https://www.bbc.com/afrique/region-67957302",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5C4A/production/_132262632_afcon_whowillwin.png",
+            "description": "La Coupe d'Afrique des Nations 2023 débute samedi et BBC Sport a collaboré avec Opta pour déterminer qui pourrait être couronné champion.",
+            "imageAlt": "Un graphique audacieux de la Côte d'Ivoire soulevant le trophée de la Coupe d'Afrique des Nations en 2015 et du capitaine algérien Riyad Mahrez tenant le trophée en 2019.",
+            "id": "d34db45f-d76f-4e73-9b98-49192e33a3e8"
+          },
+          {
+            "type": "article",
+            "title": "CAN 2023 : voici les listes des équipes qualifiées pour le tournoi ",
+            "firstPublished": "2024-01-09T07:43:20.675Z",
+            "lastPublished": "2024-01-09T07:43:20.675Z",
+            "link": "https://www.bbc.com/afrique/articles/c972p77334eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a7d2/live/b44e4670-abf5-11ee-beb5-e1400df560f2.jpg",
+            "description": "Découvrez la liste des 27 joueurs sélectionnés dans chaque équipe pour disputer la Coupe d'Afrique des Nations du 13 janvier au 11 février 2024 en Cote d’Ivoire. ",
+            "imageAlt": "Les joueurs du Sénégal brandissent le trophée après avoir remporté la Coupe d'Afrique des Nations (CAN) 2021.",
+            "id": "c972p77334eo"
+          },
+          {
+            "type": "article",
+            "title": "Un voyage en images dans l’histoire la Coupe d'Afrique des nations",
+            "firstPublished": "2024-01-10T07:48:18.276Z",
+            "lastPublished": "2024-01-10T07:48:18.276Z",
+            "link": "https://www.bbc.com/afrique/articles/c0dyg87928do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8cef/live/1378c410-ac8a-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Alors qu'il s'apprête à se rendre en Afrique de l'Ouest pour sa 15e Can, le photographe sud-africain Gavin Barker partage quelques-unes de ses images préférées tirées de ses archives des trente dernières années.",
+            "imageAlt": "Depuis sa création en 1957, la Coupe d'Afrique des nations a donné lieu à des feux d'artifice sur le terrain et en dehors.",
+            "id": "c0dyg87928do"
+          },
+          {
+            "type": "article",
+            "title": "Coupe d'Afrique des Nations: Tout ce que vous devez savoir sur la CAN 2023",
+            "firstPublished": "2024-01-08T07:40:36.597Z",
+            "lastPublished": "2024-01-08T07:40:36.597Z",
+            "link": "https://www.bbc.com/afrique/articles/c25ygj88wdwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/923b/live/407f2d50-aaf5-11ee-bc2f-cb5579b90709.jpg",
+            "description": "La Coupe d'Afrique des Nations (CAN) 2023 se rapproche de plus en plus, la Côte d'Ivoire organisant la phase finale pour la deuxième fois.",
+            "imageAlt": "La côte d'Ivoire s'apprête à accueillir 24 équipes qui vont disputer la Coupe d'Afrique des Nations",
+            "id": "c25ygj88wdwo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:63e52617-d0cc-4fc6-a93e-a4f49f808936",
+        "link": "https://www.bbc.com/afrique/topics/cnlvpm4xqn9t",
+        "curationId": "urn:bbc:tipo:list:d6a33e51-8d58-47a6-99f7-5e4bd69f89b5",
         "curationType": "tipo-curation",
         "position": 1,
-        "title": "À ne pas manquer",
-        "visualProminence": "HIGH"
+        "title": "Coupe d'Afrique des nations 2023",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Les espions russes sont plus efficaces que l'armée, selon des experts",
-            "firstPublished": "2023-04-03T07:40:44.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65155331",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6D2C/production/_129184972_d723a19421f6a318e385b0282e302686f98ff965.jpg",
-            "description": "Les services de renseignement russes ont remporté plus de succès en Ukraine que l'armée, affirme un groupe de réflexion de premier plan.",
-            "imageAlt": "Russian President Vladimir Putin delivers his speech during a meeting of the Federal Security Service (FSB) Board which sums up the 2022 performance of the FSB bodies and outlines the priority tasks for 2023",
-            "id": "7fa2c862-98f0-45e4-8468-870a376cc2a6"
+            "title": "Guerre au Yémen : Assassinats politiques financés par les Émirats arabes unis",
+            "firstPublished": "2024-01-24T07:42:10.310Z",
+            "lastPublished": "2024-01-24T07:42:10.310Z",
+            "link": "https://www.bbc.com/afrique/articles/c72g178vxp1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f516/live/c7046b40-b94d-11ee-ace0-c35c1b4f6d82.png",
+            "description": "Les Émirats arabes unis (EAU) ont financé des assassinats à motivation politique au Yémen, selon une enquête de la BBC, exacerbant ainsi un conflit entre le gouvernement yéménite et les factions belligérantes qui est récemment revenu sous les feux de la rampe internationale dans la région de la mer Rouge.",
+            "imageAlt": "Huda al-Sarari",
+            "id": "c72g178vxp1o"
           },
           {
             "type": "article",
-            "title": "Vladimir Poutine peut-il être arrêté pour crimes de guerre ?",
-            "firstPublished": "2023-04-02T10:51:19.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65118552",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F2FA/production/_129220226_2fd5a375-87b9-4971-a162-6c4a21253b01.jpg",
-            "description": "La Cour pénale internationale a demandé à des pays d'arrêter Vladimir Poutine pour crimes de guerre.",
-            "imageAlt": "Poutine",
-            "id": "05d7f02b-d07e-446a-97f5-d3b3d02b6f7e"
+            "title": "Le Cameroun lance la première campagne mondiale de vaccination de masse contre le paludisme",
+            "firstPublished": "2024-01-23T07:33:04.867Z",
+            "lastPublished": "2024-01-23T07:33:04.867Z",
+            "link": "https://www.bbc.com/afrique/articles/cz9edk32q22o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2ad0/live/c2c0f8f0-b9c0-11ee-896d-39d9bd3cadbb.png",
+            "description": "Le premier programme mondial de vaccination systématique contre le paludisme a débuté au Cameroun, dans le but de sauver la vie de milliers d'enfants à travers l'Afrique.",
+            "imageAlt": "Daniella, huit mois, à droite, est la première enfant camerounaise à recevoir le vaccin.",
+            "id": "cz9edk32q22o"
           },
           {
             "type": "article",
-            "title": "La relation longue et troublée entre la Chine et la Russie",
-            "firstPublished": "2023-04-01T09:27:04.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65099695",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1D41/production/_129098470_gettyimages-548811539.jpg",
-            "description": "Deux pôles au sein du communisme, Pékin et Moscou se sont affrontés pendant des années sur des différends idéologiques et frontaliers, ainsi que sur leur influence dans la sphère internationale.",
-            "imageAlt": "Josef Stalin et Mao Zedong.",
-            "id": "675eb1a1-baf7-4a63-a82b-1861547227b4"
+            "title": "Trois clés pour comprendre l'héritage de Lénine, le révolutionnaire qui a fondé l'Union soviétique",
+            "firstPublished": "2024-01-23T16:04:03.877Z",
+            "lastPublished": "2024-01-23T16:04:03.877Z",
+            "link": "https://www.bbc.com/afrique/articles/cd176zlg55zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7bf8/live/91661a30-b856-11ee-beb5-e1400df560f2.jpg",
+            "description": "Lénine, l'une des grandes figures de l'Europe du XXe siècle, changea à jamais l'histoire de la Russie, étant à la fois admiré et craint.",
+            "imageAlt": "Lénine a dirigé la révolution bolchevique de 1917 et a créé l'Union soviétique.",
+            "id": "cd176zlg55zo"
           },
           {
             "type": "article",
-            "title": "Trump risque d'être arrêté dans les prochains jours",
-            "firstPublished": "2023-03-31T10:13:02.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65136933",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10C69/production/_129231786_gettyimages-1460359013.jpg",
-            "description": "M. Trump, qui est le premier président ou ancien président des États-Unis à faire l'objet d'une procédure pénale, nie avoir commis des actes répréhensibles.",
-            "imageAlt": "Donald Trump se lève avant de prendre la parole en Caroline du Sud, 28 janv. 23",
-            "id": "8182b1ab-fa72-4767-9c7e-8c0d896546e4"
+            "title": "Dans la guerre fluviale en Ukraine, les drones signifient qu'aucun endroit n'est sûr",
+            "firstPublished": "2024-01-23T10:31:15.293Z",
+            "lastPublished": "2024-01-23T10:31:15.293Z",
+            "link": "https://www.bbc.com/afrique/articles/ck79mn9z7plo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a11/live/b6cfcbd0-b9d8-11ee-896d-39d9bd3cadbb.png",
+            "description": "Il existe peu d’endroits en Ukraine d’où l’on peut voir à l’œil nu le territoire occupé par la Russie.",
+            "imageAlt": "Kherson",
+            "id": "ck79mn9z7plo"
           },
           {
             "type": "article",
-            "title": "Pourquoi l'aviation ne joue-t-elle pas un rôle important dans la guerre en Ukraine et peut-elle inverser la tendance ?",
-            "firstPublished": "2023-03-30T07:57:26.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65064520",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ABAB/production/_129174934_gettyimages-625325400.jpg",
-            "description": "L'aviation est devenue l'un des principaux sujets abordés lors des discussions sur les options possibles pour l'évolution de la guerre en Ukraine. Kiev attend que l'Occident commence à fournir aux forces armées ukrainiennes des chasseurs modernes qui, selon les dirigeants ukrainiens, font cruellement défaut pour une confrontation réussie avec la Russie. Mais que se passera-t-il si l'Ukraine les obtient ?",
-            "imageAlt": "MiG-29 de l'UFA",
-            "id": "f4a241c2-0219-4e04-aeea-d56baa6ff46a"
+            "title": "Le Baloutchistan, cette région reculée et \"anarchique\", devenue le centre des tensions entre le Pakistan et l'Iran",
+            "firstPublished": "2024-01-22T10:14:04.281Z",
+            "lastPublished": "2024-01-22T10:14:04.281Z",
+            "link": "https://www.bbc.com/afrique/articles/c06m4546nzdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff98/live/6b9397b0-b860-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Le Baloutchistan est une région partagée entre le Pakistan, l'Iran et l'Afghanistan, dont l'histoire est marquée par les conflits.",
+            "imageAlt": "Un combattant de la tribu des Marri du peuple baluchi parle à un poste d'observation rebelle, tout en surveillant les mouvements des troupes pakistanaises dans la province du Baloutchistan.",
+            "id": "c06m4546nzdo"
           },
           {
             "type": "article",
-            "title": "L'opération de charme américaine peut-elle éloigner la Chine du continent ?",
-            "firstPublished": "2023-03-28T17:09:59.071Z",
-            "link": "https://www.bbc.com/afrique/articles/c3g7z8g0wexo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6ffe/live/573e45d0-ccb1-11ed-be2e-754a65c11505.jpg",
-            "description": "C'est d'abord le secrétaire d'État américain qui s'est rendu en Afrique, puis le vice-président et, plus tard dans l'année, le président lui-même devrait s'y rendre.",
-            "imageAlt": "Kamala Harris accueillie par de jeunes Ghanaéens",
-            "id": "c3g7z8g0wexo"
+            "title": "\"Nous sommes venus pour vous libérer.\" Comment la Russie enlève les Ukrainiens des territoires occupés et où disparaissent-ils ?",
+            "firstPublished": "2024-01-18T07:47:09.005Z",
+            "lastPublished": "2024-01-18T07:47:09.005Z",
+            "link": "https://www.bbc.com/afrique/articles/cpw37l7777zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8d83/live/a15a96f0-b176-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Des milliers de civils ukrainiens remplissent les colonies et les centres de détention de Russie, ainsi que les territoires qu'elle occupe. Ils ont été arrêtés lors du filtrage ou directement dans la rue avec la mention « pour opposition au SVO » et ont été enfermés dans des centres de détention provisoire et des colonies sans inculpation, sans enquête, sans procès et sans délai de libération.",
+            "imageAlt": "Fresque murale",
+            "id": "cpw37l7777zo"
+          },
+          {
+            "type": "article",
+            "title": "Un guide pour comprendre les élections américaines",
+            "firstPublished": "2024-01-17T12:02:19.322Z",
+            "lastPublished": "2024-01-17T12:02:19.322Z",
+            "link": "https://www.bbc.com/afrique/articles/cjjge299w55o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/863c/live/7b27a130-b37e-11ee-811f-4112157e9e9b.jpg",
+            "description": "Le choix du président américain est un processus long et complexe. La saison des primaires commence lundi (15 janvier), lorsque les électeurs républicains de l'État de l'Iowa choisiront leur candidat à la Maison Blanche lors du scrutin de novembre. ",
+            "imageAlt": "Jambes du peuple devant des urnes avec des drapeaux américains ",
+            "id": "cjjge299w55o"
+          },
+          {
+            "type": "article",
+            "title": "Quelle est l'importance stratégique du détroit de Mandeb, où les Houthis attaquent les navires en mer Rouge ?",
+            "firstPublished": "2024-01-17T07:51:12.263Z",
+            "lastPublished": "2024-01-17T07:51:12.263Z",
+            "link": "https://www.bbc.com/afrique/articles/c2xyvy212l6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/874d/live/11a1b950-b19c-11ee-ae59-fd0e7c385a03.jpg",
+            "description": "Le détroit est sous les feux de l'actualité en raison des attaques armées menées par les rebelles houthis du Yémen contre des navires de plusieurs pays empruntant l'une des voies commerciales internationales les plus fréquentées.",
+            "imageAlt": "Soldat et bateau au Yémen",
+            "id": "c2xyvy212l6o"
+          },
+          {
+            "type": "article",
+            "title": "Est-il vrai que le groupe militant palestinien Hamas est une création du gouvernement israélien ?",
+            "firstPublished": "2024-01-19T07:50:32.318Z",
+            "lastPublished": "2024-01-19T07:50:32.318Z",
+            "link": "https://www.bbc.com/afrique/articles/c0xy0l391g0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ab13/live/079b0190-b4ea-11ee-b9e4-53602bf9d6d3.jpg",
+            "description": "Depuis des décennies, on spécule sur le rôle qu'Israël aurait pu jouer dans la création du Hamas. Le service arabe de la BBC s'est entretenu avec des experts pour connaître la vérité.",
+            "imageAlt": "Membres du groupe islamique Hamas",
+            "id": "c0xy0l391g0o"
           }
         ],
         "activePage": 1,
@@ -245,269 +335,1122 @@
         "curationType": "tipo-curation",
         "position": 2,
         "title": "Comprendre l'actualité mondiale",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "D'où viennent les théories selon lesquelles Jésus et Marie-Madeleine avaient une relation amoureuse ?",
-            "firstPublished": "2023-03-30T16:46:57.949Z",
-            "link": "https://www.bbc.com/afrique/articles/c51eex8egdxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d6cb/live/54fb6750-ce49-11ed-be2e-754a65c11505.jpg",
-            "description": "Si dans l'imaginaire populaire et dans la culture populaire cette façon de représenter les deux personnages bibliques comme un couple romantique est récurrente, d'où vient cette histoire ?",
-            "imageAlt": "1877 gravure d'après un dessin de l'Allemand Julius Schnorr von Carolsfeld représentant Marie-Madeleine témoin de la résurrection de Jésus-Christ",
-            "id": "c51eex8egdxo"
-          },
-          {
-            "type": "article",
-            "title": "Pourquoi les autorités burkinabè sévissent contre les médias français ?",
-            "firstPublished": "2023-04-03T14:36:31.997Z",
-            "link": "https://www.bbc.com/afrique/articles/cnkw2vgqk1ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/541c/live/701f30d0-d212-11ed-be2e-754a65c11505.jpg",
-            "description": "Le Burkina Faso a expulsé les correspondants de deux médias français peu après avoir interdit à France 24 d'émettre dans le pays.",
-            "imageAlt": "Ibrahim Traoré",
-            "id": "cnkw2vgqk1ko"
-          },
-          {
-            "type": "article",
-            "title": "À la recherche de mes racines dans un cimetière algérien",
-            "firstPublished": "2023-04-01T15:06:03.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65113786",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/830C/production/_129184533_800b7020-423b-4a80-8e10-9e67ffcef634.jpg",
-            "description": "Le journaliste algérien Maher Mezahi visite le cimetière de sa famille et réfléchit à son impact sur son identité.",
-            "imageAlt": "Un cimétière en Algérie",
-            "id": "35bdf6ec-3891-42af-8a63-a215d9338f3f"
-          },
-          {
-            "type": "article",
-            "title": "Pourquoi des activistes sont-ils enrôlés de force comme auxiliaires de l'armée au Burkina Faso ?",
-            "firstPublished": "2023-03-30T10:10:42.768Z",
-            "link": "https://www.bbc.com/afrique/articles/cx73387p510o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cda4/live/02c1be30-ce3a-11ed-be2e-754a65c11505.jpg",
-            "description": "Le Burkina Faso a récemment enrôlé trois membres de la société civile dans le corps des volontaires pour la défense de la patrie, une décision qui soulève l’inquiétude chez les défenseurs des droits humains.",
-            "imageAlt": "Le Capitaine Ibrahim Traoré",
-            "id": "cx73387p510o"
-          },
-          {
-            "type": "article",
-            "title": "L'histoire tragique de Katia et Maurice Krafft, deux scientifiques amoureux des volcans qui ont fini engloutis par la lave",
-            "firstPublished": "2023-03-27T18:19:47.810Z",
-            "link": "https://www.bbc.com/afrique/articles/cz905lx3g45o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6ecb/live/56a06640-c5ad-11ed-95f8-0154daa64c44.jpg",
-            "description": "En 1985, un épisode a marqué la vie des volcanologues Katia et Maurice Krafft.",
-            "imageAlt": "La dernière photo de Katia et Maurice Krafft.",
-            "id": "cz905lx3g45o"
-          },
-          {
-            "type": "article",
-            "title": "Pourquoi France 24 est-elle suspendue au Burkina et comment la chaîne a-t-elle réagi ?",
-            "firstPublished": "2023-03-27T09:46:26.000Z",
-            "link": "https://www.bbc.com/afrique/region-65087582",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/DB34/production/_129161165_5e8fc12e-c8b6-4152-bd6a-7df0fd03e023.jpg",
-            "description": "Les autorités burkinabè ont ordonné l'arrêt des émissions de France 24 à la suite de la diffusion d'un entretien avec le chef de la branche nord-africaine du groupe militant d'Al-Qaïda, Aqmi.",
-            "imageAlt": "Ibrahim Traoré",
-            "id": "ef704887-932f-40bd-9724-4324184caf48"
-          },
-          {
-            "type": "article",
-            "title": "Pourquoi le Cameroun peine-t-il à livrer ses chantiers d’infrastructures ?",
-            "firstPublished": "2023-03-29T08:20:37.116Z",
-            "link": "https://www.bbc.com/afrique/articles/cg3z2ekv13mo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2eb0/live/7130e190-cd75-11ed-be2e-754a65c11505.jpg",
-            "description": "Des infrastructures sportives aux infrastructures routières, presqu’aucun chantier n’est livré dans les délais au Cameroun. Certains vont au rythme d’un kilomètre par an. BBC Afrique tente une explication.",
-            "imageAlt": "Chantier de l'entrée Est de Douala",
-            "id": "cg3z2ekv13mo"
-          },
-          {
-            "type": "article",
-            "title": "Comment bien s’alimenter pendant le jeûne du mois de Ramadan ?",
-            "firstPublished": "2023-03-28T10:12:12.738Z",
-            "link": "https://www.bbc.com/afrique/articles/cv2vnm1453zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/96a9/live/7dc7b940-ccc8-11ed-be2e-754a65c11505.jpg",
-            "description": "Le jeûne du mois de ramadan est le quatrième pilier de l’Islam. Il est observé par des millions de musulmans chaque année. Cependant, le jeûne peut être difficile pour beaucoup, surtout lorsqu'il s'agit de maintenir son énergie tout au long de la journée. ",
-            "imageAlt": "Des jeûneurs en attente du repas de rupture dans une mosquée",
-            "id": "cv2vnm1453zo"
-          },
-          {
-            "type": "article",
-            "title": "Du stylisme aussi dans l’assiette ",
-            "firstPublished": "2023-03-26T17:11:53.078Z",
-            "link": "https://www.bbc.com/afrique/articles/c514j8xe1j3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e946/live/82452b90-c1c6-11ed-95f8-0154daa64c44.jpg",
-            "description": "Lorsqu’on parle de stylisme, nos pensées se dirigent automatiquement vers la mode vestimentaire. Mais l’esthétique et le design n’ont pas de sens que dans l’habillement. Ils se sont aussi fait une place dans l’industrie alimentaire. Pour en savoir plus sur ce métier, nous avons rencontré Ndagou Ndiaye. Elle est photographe et styliste culinaire.",
-            "imageAlt": "Hamburger",
-            "id": "c514j8xe1j3o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:2196aff9-2af1-41e9-ad5b-53e61a1eda47",
-        "curationType": "tipo-curation",
-        "position": 3,
-        "title": "Choix de la rédaction",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT4M41S",
-            "title": "Lampedusa - Traces laissées derrière soi : le parcours d'un migrant",
-            "firstPublished": "2023-04-28T17:24:36.000Z",
-            "link": "https://www.bbc.com/afrique/65431492",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/040A/production/_129543010_p0fkf4q9.jpg",
-            "description": "Thomas Naadi de la BBC s'est rendu à Lampedusa pour \"écouter\" les objets perdus par les émigrants et retrouvés sur leur itinéraire.",
-            "imageAlt": "Lampedusa - Traces laissées derrière soi : le parcours d'un migrant",
-            "id": "7c41b7f3-761e-487f-9c89-24cd2d122129"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M47S",
-            "title": "Hakim224, l’ambassadeur qui explose les réseaux sociaux",
-            "firstPublished": "2023-04-28T16:45:50.000Z",
-            "link": "https://www.bbc.com/afrique/65431490",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/FC0C/production/_129542546_p0fkdznb.jpg",
-            "description": "Hakim224, un jeune coiffeur guinéen vivant au Sénégal, crève l'écran par son humour. Il est suivi par plus de 5 millions d'abonnés sur TikTok.",
-            "imageAlt": "Hakim224, l’ambassadeur qui explose les réseaux sociaux",
-            "id": "7b295a3f-99e3-4e92-9a14-07c8891ab2aa"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M4S",
-            "title": "Pourquoi le lac rose n'est plus rose",
-            "firstPublished": "2023-04-28T16:20:01.000Z",
-            "link": "https://www.bbc.com/afrique/65428968",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/16D54/production/_129542539_p0fkdttn.jpg",
-            "description": "Inscrit au patrimoine mondial de l'Unesco, le lac rose, l'un des sites touristiques les plus visités du Sénégal, a perdu de sa couleur.",
-            "imageAlt": "Pourquoi le lac rose n'est plus rose",
-            "id": "45b8c6f0-8ec1-472e-a574-f20b1939007c"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M14S",
-            "title": "Pourquoi l'homme est-il obsédé par l'or ?",
-            "firstPublished": "2023-04-28T15:32:10.000Z",
-            "link": "https://www.bbc.com/afrique/65428966",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1275E/production/_129541657_p0fkdhv9.jpg",
-            "description": "Pourquoi l'or nous fascine-t-il autant ? BBC Ideas a examiné comment notre obsession pour ce métal brillant a façonné certains des chapitres les plus sombres de l'histoire.",
-            "imageAlt": "Pourquoi l'homme est-il obsédé par l'or ?",
-            "id": "9b046b90-4c7e-4474-954e-3d652fa1ff67"
-          },
-          {
-            "type": "video",
-            "duration": "PT9M23S",
-            "title": "Comment une mère a réussi à soutenir son fils trisomique",
-            "firstPublished": "2023-04-28T15:07:07.000Z",
-            "link": "https://www.bbc.com/afrique/65428962",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6850/production/_129540762_p0fkd1zk.jpg",
-            "description": "Le défi de Yolande Epée pour lutter contre les idées reçues à travers le quotidien de son fils atteint de Trisomie 21.",
-            "imageAlt": "Comment une mère a réussi à soutenir son fils trisomique",
-            "id": "f0d910b5-8f70-435b-aa8c-9c6085d6e74a"
-          },
-          {
-            "type": "article",
-            "title": "Qui était Jeffrey Dahmer, l'homme décrit comme le \"monstre de Milwaukee\" dans la série controversée de Netflix",
-            "firstPublished": "2022-10-05T14:20:36.000Z",
-            "link": "https://www.bbc.com/afrique/monde-63133434",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9F12/production/_126922704_gettyimages-534246030.jpg",
-            "description": "C'est l'un des tueurs en série qui a le plus attiré l'attention du public américain depuis les découvertes macabres révélées après son arrestation en juillet 1991.",
-            "imageAlt": "Jeffrey Dahmer",
-            "id": "c39f9d2b-851e-4416-a4c1-0af566038ada"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M56S",
-            "title": "\"Ils ont dit que si tu es noir, tu dois marcher.\"",
-            "firstPublished": "2022-03-01T18:42:01.000Z",
-            "link": "https://www.bbc.com/afrique/monde-60580550",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1C31/production/_123471270_p0brwgxb.jpg",
-            "description": "Jessica est l'un des nombreux Africains qui ont décrit le racisme auquel ils ont été confrontés aux frontières de l'Ukraine.",
-            "imageAlt": "Jessica Orakpo",
-            "id": "0800fbfd-d4d5-4f9b-ba3b-08e02a972af9"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M7S",
-            "title": "Conflit en Ukraine : les sanctions, qu’est-ce que c’est ?",
-            "firstPublished": "2022-02-28T16:08:46.000Z",
-            "link": "https://www.bbc.com/afrique/monde-60557957",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3723/production/_123451141_p0brn904.jpg",
-            "description": "Qu'est-ce que c'est que les sanctions prises par les dirigeants occidentaux contre la Russie ?",
-            "imageAlt": "tank",
-            "id": "154c71d2-bc1d-4bc4-8c17-2238fe4ca153"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M7S",
-            "title": "Qu'est-ce qui se cache derrière le conflit Russie/Ukraine ?",
-            "firstPublished": "2022-02-24T15:58:07.000Z",
-            "link": "https://www.bbc.com/afrique/media-60512361",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E1E6/production/_123403875_p0br0ydn.jpg",
-            "description": "Pourquoi l'hostilité et le conflit entre l'Ukraine et la Russie sont-ils permanents ? Explication dans cette vidéo.",
-            "imageAlt": "Qu'est-ce qui se cache derrière le conflit Russie/Ukraine ?",
-            "id": "b60821fe-dec4-47ba-8472-d556b8be436c"
-          },
-          {
-            "type": "video",
-            "duration": "PT6M6S",
-            "title": "BBC Africa Eye : la Somalie, le sexisme et moi",
-            "firstPublished": "2022-02-24T14:47:47.000Z",
-            "link": "https://www.bbc.com/afrique/media-60512359",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17A3E/production/_123403869_p0bqzzyf.jpg",
-            "description": "Qu'est-ce que c'est qu'être une femme active en Somalie en 2022 - essayer de faire un travail dans une culture où les femmes passent traditionnellement après les hommes dans de nombreux aspects de la vie ?",
-            "imageAlt": "Qu'est-ce que c'est qu'être une femme active en Somalie en 2022",
-            "id": "9ab820a5-7b39-4077-ae85-c6f0ea517b7e"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M24S",
-            "title": "Mariés depuis 91 ans, ils souhaitent mourir ensemble",
-            "firstPublished": "2022-02-16T18:18:15.000Z",
-            "link": "https://www.bbc.com/afrique/monde-60392038",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9A98/production/_123267593_p0bp90lq.jpg",
-            "description": "\" Nous espérons mourir ensemble \". Ils sont mariés depuis 91 ans et sont toujours amoureux.",
-            "imageAlt": "Ils sont mariés depuis 91 ans et sont toujours amoureux.",
-            "id": "3e35e02a-3995-430f-847f-770434940c94"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M16S",
-            "title": "Mort en prison après y avoir passé trois ans sans procès, et sans avoir pu rencontrer son fils",
-            "firstPublished": "2022-02-15T18:17:53.000Z",
-            "link": "https://www.bbc.com/afrique/monde-60377222",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17647/production/_123251859_p0bp3578.jpg",
-            "description": "Au Nigeria, environ 75 % de la population carcérale est toujours en attente de jugement.",
-            "imageAlt": "Mort en prison après y passé trois ans sans procès, et sans avoir pu rencontrer son fils",
-            "id": "77014483-dcc6-4776-ab90-67d9016f6430"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 5,
-        "link": "https://www.bbc.com/afrique/topics/cz4vn9gyd6rt",
-        "curationId": "urn:bbc:vivo:curation:61ece56b-747d-4a95-8d71-4344718731d7",
-        "curationType": "vivo-stream",
-        "position": 4,
-        "title": "Vidéo",
-        "visualProminence": "NORMAL"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "link",
-            "title": "\"Ma musique ne peut qu'être engagée\" – Tiken Jah Fakoly",
+            "title": "BBC Afrique Radio EN DIRECT",
             "firstPublished": "",
-            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/w172z5fr7pj9nk9",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8edb/live/6d3b8390-d45c-11ed-aa8e-31a9f3ff4e07.jpg",
-            "description": "Cette semaine, Valérie Bony reçoit Tiken Jah Fakoly pour son nouvel album, \"Braquage de pouvoir\".",
-            "imageAlt": "Tiken Jah Fakoly",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fw172z5fr7pj9nk9"
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/liveradio",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f33a/live/de92ead0-7cb1-11ee-b315-7d1db3f558c6.png",
+            "description": "Infos, musique et sports",
+            "imageAlt": "BBC Afrique Radio EN DIRECT",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fliveradio"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b3bffeee-9db7-4d50-9e99-9aae2351497c",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Ecoutez en direct",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Le secret qui rend les tardigrades, l’un des animaux les plus résistants de la planète, « indestructibles »",
+            "firstPublished": "2024-01-24T12:59:39.600Z",
+            "lastPublished": "2024-01-24T12:59:39.600Z",
+            "link": "https://www.bbc.com/afrique/articles/c03qg43pgvmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8200/live/19b0f090-bab4-11ee-8685-316409d66f25.jpg",
+            "description": "D’apparence trapue – et surréaliste – les tardigrades intriguent les chercheurs depuis des années.\n",
+            "imageAlt": "Tardigrade ",
+            "id": "c03qg43pgvmo"
+          },
+          {
+            "type": "article",
+            "title": "Nutrition : voici ce qu’il faut savoir des poulets de chair",
+            "firstPublished": "2024-01-23T13:00:10.509Z",
+            "lastPublished": "2024-01-23T13:00:10.509Z",
+            "link": "https://www.bbc.com/afrique/articles/c0jveyqkz7qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/894c/live/ec6aeab0-b931-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "En Afrique, nombreux sont ces éleveurs qui se penchent plus pour les poulets de chair. Les poulets de chair sont encore appelés « poulets à frire ou à griller » désignent des poulets spécialement élevés pour leur viande et leur croissance rapide.",
+            "imageAlt": "Nombreux sont ces éleveurs qui préfèrent plus pour les poulets de chair",
+            "id": "c0jveyqkz7qo"
+          },
+          {
+            "type": "article",
+            "title": "La tendance croissante de l'eau de luxe chez les riches",
+            "firstPublished": "2024-01-22T12:43:20.240Z",
+            "lastPublished": "2024-01-22T12:43:20.240Z",
+            "link": "https://www.bbc.com/afrique/articles/ckk5ke44g40o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/508c/live/a0bb8470-a0e6-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "Alors que des millions de personnes n'ont pas accès à l'eau potable, certaines sont prêtes à payer des centaines de dollars pour une simple bouteille. L'eau de qualité, provenant des glaciers ou des volcans, est de plus en plus demandée par les riches.",
+            "imageAlt": "Une bouteille d'eau de luxe peut coûter plusieurs centaines d'euros.",
+            "id": "ckk5ke44g40o"
+          },
+          {
+            "type": "article",
+            "title": "Que sont les ETF bitcoin spot et pourquoi ils représentent une nouvelle ère pour la plus grande crypto-monnaie au monde",
+            "firstPublished": "2024-01-21T13:18:38.914Z",
+            "lastPublished": "2024-01-21T13:18:38.914Z",
+            "link": "https://www.bbc.com/afrique/articles/ckr885z7je9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a414/live/a7e78cd0-b13f-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Les partisans du Bitcoin affirmaient que l’un des avantages d’investir dans la crypto-monnaie était d’être « en dehors du système ».",
+            "imageAlt": "Illustration de Bitcoin",
+            "id": "ckr885z7je9o"
+          },
+          {
+            "type": "article",
+            "title": "Pourquoi l’église africaine défie le Vatican sur la question de l’homosexualité ?",
+            "firstPublished": "2024-01-11T10:19:02.524Z",
+            "lastPublished": "2024-01-11T10:19:02.524Z",
+            "link": "https://www.bbc.com/afrique/articles/c1ry21v13eqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f91e/live/e625d9d0-afd1-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Au lieu d’apporter des précisions sur la pratique de la bénédiction dans l’Eglise catholique, \"Fiducia supplicans\" a plutôt provoqué une vive contestation de nombreux évêques particulièrement en Afrique.",
+            "imageAlt": "L’Évêque Patrick Daniel Koroma de la région de Kenema, en Sierra Leone",
+            "id": "c1ry21v13eqo"
+          },
+          {
+            "type": "article",
+            "title": "Le vélo au service de l'autonomie ",
+            "firstPublished": "2024-01-19T09:55:13.483Z",
+            "lastPublished": "2024-01-19T09:55:13.483Z",
+            "link": "https://www.bbc.com/afrique/articles/cx0jvp88dl5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e424/live/b8c3f330-b19f-11ee-beb5-e1400df560f2.png",
+            "description": "Au moment où les fans de football prennent la destination de la Côte d'Ivoire où a démarré samedi la Coupe d'Afrique des nations (CAN), deux jeunes femmes, Diawara Affoué Yasmine et Julia Venn, ont pédalé dans le sens inverse. De la Côte d'Ivoire, en passant par la Guinée Conakry, elles ont rejoint le Sénégal pour promouvoir leur projet : \"le vélo au service de l'autonomie\". ",
+            "imageAlt": "Yasmine et Julia en République de Guinée.",
+            "id": "cx0jvp88dl5o"
+          },
+          {
+            "type": "article",
+            "title": "Pourquoi l'Afrique du sud porte plainte contre Israël devant la Cour internationale de justice",
+            "firstPublished": "2024-01-10T10:10:02.360Z",
+            "lastPublished": "2024-01-10T10:10:02.360Z",
+            "link": "https://www.bbc.com/afrique/articles/c3gy238kyj2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3749/live/42dc77c0-aee6-11ee-beb5-e1400df560f2.jpg",
+            "description": "Ce jeudi 11 et vendredi 12 janvier, les avocats représentant l'Afrique du Sud et Israël présenteront leurs arguments sous les yeux du monde.",
+            "imageAlt": "Une famille dans une rue de Gaza",
+            "id": "c3gy238kyj2o"
+          },
+          {
+            "type": "article",
+            "title": "TB Joshua, comment le pasteur en disgrâce a simulé ses miracles",
+            "firstPublished": "2024-01-16T09:52:26.000Z",
+            "lastPublished": "2024-01-16T09:52:26.000Z",
+            "link": "https://www.bbc.com/afrique/region-67981211",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/112E1/production/_132296307_tjb_journeyman-pictures_top976.jpg",
+            "description": "Six façons dont le défunt pasteur d'une méga-église a escroqué des millions de personnes en leur faisant croire à ses prétendues guérisons.",
+            "imageAlt": "TB Joshua holding a blue microphone",
+            "id": "944e4fa5-0f80-4d80-8576-f17b9e0131e8"
+          },
+          {
+            "type": "article",
+            "title": "La déception des deux adolescents qui ont découvert l'un des plus gros diamants du monde",
+            "firstPublished": "2024-01-16T11:55:27.943Z",
+            "lastPublished": "2024-01-16T11:55:27.943Z",
+            "link": "https://www.bbc.com/afrique/articles/c2vy9d0y04jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/81a4/live/11d3f1b0-b3b1-11ee-8f07-bbfdfa890097.jpg",
+            "description": "C'était la bonne nouvelle de l'année 2017. Les gros titres du monde entier annonçaient la découverte du \"diamant de la paix\" de la Sierra Leone. Dans un pays africain où les diamants sont synonymes d’effusion de sang et de misère, la richesse de cette pierre serait utilisée pour enrichir la vie de la population locale. ",
+            "imageAlt": "Diamant",
+            "id": "c2vy9d0y04jo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:63e52617-d0cc-4fc6-a93e-a4f49f808936",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Choix de la rédaction",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-22T06:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9v5y9h5lcf",
+            "broadcastPid": "p0h06c79",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T06:20:00.000Z",
+            "publishedTimeEnd": "2024-01-22T06:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9kzj0g9lb7",
+            "broadcastPid": "p0h06c7f",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T06:50:00.000Z",
+            "publishedTimeEnd": "2024-01-22T07:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9g90qr6s8h",
+            "broadcastPid": "p0h06c7p",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-22T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9ts6y5v1wx",
+            "broadcastPid": "p0h06kr5",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T08:02:00.000Z",
+            "publishedTimeEnd": "2024-01-22T08:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9fw9cfw8k6",
+            "broadcastPid": "p0h076xv",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-22T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9fw9cfwd9b",
+            "broadcastPid": "p0h07trn",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T12:10:00.000Z",
+            "publishedTimeEnd": "2024-01-22T12:20:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9ld7crnyd9",
+            "broadcastPid": "p0h095jk",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T12:20:00.000Z",
+            "publishedTimeEnd": "2024-01-22T12:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9fw9cfwsnk",
+            "broadcastPid": "p0h095jm",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-22T18:10:00.000Z",
+            "publishedTimeEnd": "2024-01-22T18:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172z9h3ggbyg4x",
+            "broadcastPid": "p0h0cb4q",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-23T05:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9v5y9h8cjd",
+            "broadcastPid": "p0h0f97s",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T05:20:00.000Z",
+            "publishedTimeEnd": "2024-01-23T05:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9kzj0gdch6",
+            "broadcastPid": "p0h0f97x",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T05:50:00.000Z",
+            "publishedTimeEnd": "2024-01-23T06:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9gpr31n6n3",
+            "broadcastPid": "p0h0f985",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-23T06:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9v5y9h8h8j",
+            "broadcastPid": "p0h0f987",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T06:20:00.000Z",
+            "publishedTimeEnd": "2024-01-23T06:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9kzj0gdh7b",
+            "broadcastPid": "p0h0f98c",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T06:50:00.000Z",
+            "publishedTimeEnd": "2024-01-23T07:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9g90qr9p5l",
+            "broadcastPid": "p0h0f98m",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-23T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9ts6y5xyt0",
+            "broadcastPid": "p0h0fjdj",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T07:15:00.000Z",
+            "publishedTimeEnd": "2024-01-23T07:35:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9hj5tnbpcx",
+            "broadcastPid": "p0h0fjds",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T08:02:00.000Z",
+            "publishedTimeEnd": "2024-01-23T08:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9fw9cfz5g9",
+            "broadcastPid": "p0h0g3j4",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-23T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9fw9cfz96f",
+            "broadcastPid": "p0h0ghkk",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T12:10:00.000Z",
+            "publishedTimeEnd": "2024-01-23T12:20:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9ld7crrv9d",
+            "broadcastPid": "p0h0j1dq",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T12:20:00.000Z",
+            "publishedTimeEnd": "2024-01-23T12:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9fw9cfzpkn",
+            "broadcastPid": "p0h0j1ds",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-23T18:10:00.000Z",
+            "publishedTimeEnd": "2024-01-23T18:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172z9h3ggc1c20",
+            "broadcastPid": "p0h0m7rl",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-24T05:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9v5y9hc8fh",
+            "broadcastPid": "p0h0p5gt",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T05:20:00.000Z",
+            "publishedTimeEnd": "2024-01-24T05:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9kzj0gh8d9",
+            "broadcastPid": "p0h0p5h0",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T05:50:00.000Z",
+            "publishedTimeEnd": "2024-01-24T06:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9gpr31r3k6",
+            "broadcastPid": "p0h0p5hd",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-24T06:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9v5y9hcd5m",
+            "broadcastPid": "p0h0p5hg",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T06:20:00.000Z",
+            "publishedTimeEnd": "2024-01-24T06:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9kzj0ghd4f",
+            "broadcastPid": "p0h0p5hn",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T06:50:00.000Z",
+            "publishedTimeEnd": "2024-01-24T07:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9g90qrdl2p",
+            "broadcastPid": "p0h0p5hz",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-24T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9ts6y60vq3",
+            "broadcastPid": "p0h0pbf3",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T07:15:00.000Z",
+            "publishedTimeEnd": "2024-01-24T07:35:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9hj5tnfl90",
+            "broadcastPid": "p0h0pbf7",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T08:02:00.000Z",
+            "publishedTimeEnd": "2024-01-24T08:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9fw9cg22cd",
+            "broadcastPid": "p0h0pmnr",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-24T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9fw9cg263j",
+            "broadcastPid": "p0h0q2mx",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T10:02:00.000Z",
+            "publishedTimeEnd": "2024-01-24T10:30:00.000Z",
+            "publishedTimeDuration": "PT28M",
+            "title": "Afrique Avenir",
+            "brandPid": "p04d5kyy",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9k528vtjkt",
+            "broadcastPid": "p0h0qkn0",
+            "summary": "Tout savoir sur les jeunes entrepreneurs africains."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T12:10:00.000Z",
+            "publishedTimeEnd": "2024-01-24T12:20:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9ld7crvr6h",
+            "broadcastPid": "p0h0rbq2",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T12:20:00.000Z",
+            "publishedTimeEnd": "2024-01-24T12:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9fw9cg2lgr",
+            "broadcastPid": "p0h0rbq4",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T16:10:00.000Z",
+            "publishedTimeEnd": "2024-01-24T16:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "Afrique Avenir",
+            "brandPid": "p04d5kyy",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9jbmk84z3s",
+            "broadcastPid": "p0h0t35l",
+            "summary": "Tout savoir sur les jeunes entrepreneurs africains."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-24T18:10:00.000Z",
+            "publishedTimeEnd": "2024-01-24T18:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172z9h3ggc47z3",
+            "broadcastPid": "p0h0tpkn",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-25T05:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9v5y9hg5bl",
+            "broadcastPid": "p0h0wl2x",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T05:20:00.000Z",
+            "publishedTimeEnd": "2024-01-25T05:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9kzj0gl59d",
+            "broadcastPid": "p0h0wl31",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T05:50:00.000Z",
+            "publishedTimeEnd": "2024-01-25T06:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9gpr31v0g9",
+            "broadcastPid": "p0h0wl39",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-25T06:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9v5y9hg92q",
+            "broadcastPid": "p0h0wl3c",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T06:20:00.000Z",
+            "publishedTimeEnd": "2024-01-25T06:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9kzj0gl91j",
+            "broadcastPid": "p0h0wl3h",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T06:50:00.000Z",
+            "publishedTimeEnd": "2024-01-25T07:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9g90qrhgzs",
+            "broadcastPid": "p0h0wl3r",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-25T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9ts6y63rm6",
+            "broadcastPid": "p0h0wt7q",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T07:15:00.000Z",
+            "publishedTimeEnd": "2024-01-25T07:35:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9hj5tnjh63",
+            "broadcastPid": "p0h0wt7x",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T08:02:00.000Z",
+            "publishedTimeEnd": "2024-01-25T08:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9fw9cg4z8h",
+            "broadcastPid": "p0h0xb3g",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-25T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9fw9cg530m",
+            "broadcastPid": "p0h0xmwf",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T12:10:00.000Z",
+            "publishedTimeEnd": "2024-01-25T12:20:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9ld7cryn3l",
+            "broadcastPid": "p0h0yyvm",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T12:20:00.000Z",
+            "publishedTimeEnd": "2024-01-25T12:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9fw9cg5hcv",
+            "broadcastPid": "p0h0yyvp",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T18:10:00.000Z",
+            "publishedTimeEnd": "2024-01-25T18:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9h3ggc74w6",
+            "broadcastPid": "p0h1162y",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-25T18:30:00.000Z",
+            "publishedTimeEnd": "2024-01-25T18:59:00.000Z",
+            "publishedTimeDuration": "PT29M",
+            "title": "Afrique Avenir",
+            "brandPid": "p04d5kyy",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172z9kksn593ds",
+            "broadcastPid": "p0h11630",
+            "summary": "Tout savoir sur les jeunes entrepreneurs africains."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-26T05:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9v5y9hk27p",
+            "broadcastPid": "p0h1323q",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T05:20:00.000Z",
+            "publishedTimeEnd": "2024-01-26T05:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9kzj0gp26h",
+            "broadcastPid": "p0h1323v",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T05:50:00.000Z",
+            "publishedTimeEnd": "2024-01-26T06:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9gpr31xxcd",
+            "broadcastPid": "p0h13247",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-26T06:15:00.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9v5y9hk5zt",
+            "broadcastPid": "p0h13249",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T06:20:00.000Z",
+            "publishedTimeEnd": "2024-01-26T06:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9kzj0gp5ym",
+            "broadcastPid": "p0h1324f",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T06:50:00.000Z",
+            "publishedTimeEnd": "2024-01-26T07:00:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9g90qrlcww",
+            "broadcastPid": "p0h1324p",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-26T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9ts6y66nj9",
+            "broadcastPid": "p0h136s7",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T07:15:00.000Z",
+            "publishedTimeEnd": "2024-01-26T07:35:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9hj5tnmd36",
+            "broadcastPid": "p0h136sc",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T08:02:00.000Z",
+            "publishedTimeEnd": "2024-01-26T08:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9fw9cg7w5l",
+            "broadcastPid": "p0h13mhr",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-26T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9fw9cg7zxq",
+            "broadcastPid": "p0h145cq",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T12:10:00.000Z",
+            "publishedTimeEnd": "2024-01-26T12:20:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9ld7cs1k0p",
+            "broadcastPid": "p0h15h2s",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-26T12:20:00.000Z",
+            "publishedTimeEnd": "2024-01-26T12:30:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "26/01/2024 GMT",
+            "episodePid": "w172z9fw9cg8d8y",
+            "broadcastPid": "p0h15h2v",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-27T05:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9ts6y699y4",
+            "broadcastPid": "p0h19t5c",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T06:00:00.000Z",
+            "publishedTimeEnd": "2024-01-27T06:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9ts6y69fp8",
+            "broadcastPid": "p0h19t5m",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T06:10:00.000Z",
+            "publishedTimeEnd": "2024-01-27T06:30:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "Afrique Avenir",
+            "brandPid": "p04d5kyy",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9hxx5z1t54",
+            "broadcastPid": "p0h19t5p",
+            "summary": "Tout savoir sur les jeunes entrepreneurs africains."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T07:00:00.000Z",
+            "publishedTimeEnd": "2024-01-27T07:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9ts6y69kfd",
+            "broadcastPid": "p0h19x7b",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T07:30:00.000Z",
+            "publishedTimeEnd": "2024-01-27T08:00:00.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9mmdgp4v2s",
+            "broadcastPid": "p0h19x7j",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T09:02:00.000Z",
+            "publishedTimeEnd": "2024-01-27T09:12:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9ld7cs425x",
+            "broadcastPid": "p0h1b9j1",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T11:30:00.000Z",
+            "publishedTimeEnd": "2024-01-27T12:00:00.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9m6p3ctnvn",
+            "broadcastPid": "p0h1bnbz",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T12:05:00.000Z",
+            "publishedTimeEnd": "2024-01-27T12:15:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Au Coeur De L'actu",
+            "brandPid": "w13xtvfw",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9ld7cs4fm3",
+            "broadcastPid": "p0h1bv97",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-27T17:00:00.000Z",
+            "publishedTimeEnd": "2024-01-27T17:20:00.000Z",
+            "publishedTimeDuration": "PT20M",
+            "title": "Afrique Avenir",
+            "brandPid": "p04d5kyy",
+            "episodeTitle": "27/01/2024 GMT",
+            "episodePid": "w172z9jrbxksf5h",
+            "broadcastPid": "p0h1cvj3",
+            "summary": "Tout savoir sur les jeunes entrepreneurs africains."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-28T05:00:00.000Z",
+            "publishedTimeEnd": "2024-01-28T05:10:00.000Z",
+            "publishedTimeDuration": "PT10M",
+            "title": "Le Journal",
+            "brandPid": "p03p35rt",
+            "episodeTitle": "28/01/2024 GMT",
+            "episodePid": "w172z9ts6y6d6v7",
+            "broadcastPid": "p0h1fcgq",
+            "summary": "Le premier rendez-vous d'information de la matinée."
+          },
+          {
+            "serviceId": "bbc_afrique_radio",
+            "publishedTimeStart": "2024-01-28T05:35:00.000Z",
+            "publishedTimeEnd": "2024-01-28T06:00:00.000Z",
+            "publishedTimeDuration": "PT25M",
+            "title": "A Vous L'antenne",
+            "brandPid": "p030s6g6",
+            "episodeTitle": "28/01/2024 GMT",
+            "episodePid": "w172z9lsyr2k6d0",
+            "broadcastPid": "p0h1fcgx",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT4M16S",
+            "title": "Ousmane Dramé, le maestro autodidacte de la guitare",
+            "firstPublished": "2024-01-12T09:23:32.656Z",
+            "lastPublished": "2024-01-12T09:23:32.656Z",
+            "link": "https://www.bbc.com/afrique/articles/cyx447x8vv5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fb49/live/257b77b0-b12c-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Dans la région de Saint-Louis, Ousmane Dramé est un jeune autodidacte pétri de talent et amoureux de la musique. Il fabrique ses propres guitares dans son atelier à Diamaguène et s’essaie à plusieurs mélodies. ",
+            "imageAlt": "Ousmane Dramé, le maestro autodidacte de la guitare.",
+            "id": "cyx447x8vv5o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M43S",
+            "title": "Election présidentielle en RDC : Felix Tshisekedi savoure sa victoire avec ses militants",
+            "firstPublished": "2024-01-03T15:10:50.235Z",
+            "lastPublished": "2024-01-03T15:10:50.235Z",
+            "link": "https://www.bbc.com/afrique/articles/czv5p2e8xn2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4594/live/15967db0-aa4a-11ee-bc2f-cb5579b90709.png",
+            "description": "Réaction du président Félix Tshisekedi, déclaré vainqueur selon les résultats provisoires de la présidentielle en RDC publiés le 31 décembre 2023 par la Commission Electorale Nationale Indépendante (CENI), avec 73,34% des voix, suivi de Moïse Katumbi (18,08%) et de Martin Fayulu (5,33 %). Quelques-uns de ses militants se félicitent de cette victoire.",
+            "imageAlt": "Le président Felix Tshisekedi célèbre sa victoire avec ses partisans.",
+            "id": "czv5p2e8xn2o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M44S",
+            "title": "Entreprenariat féminin : \"Faire de petits boulots n’a jamais été une honte pour nous\"",
+            "firstPublished": "2024-01-03T12:46:06.257Z",
+            "lastPublished": "2024-01-03T12:46:06.257Z",
+            "link": "https://www.bbc.com/afrique/articles/cd15zvdy5v2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/852d/live/9aaae130-aa36-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Désormais, les restes de pain ne finiront plus à la poubelle. Seynabou, titulaire d’une licence 2 en droit, a créé avec ses soeurs une petite unité de fabrication de \"Mburaaké\" (un goûter traditionnel préparé avec un mélange de chapelure de pain, de pate d’arachide et de sucre). ",
+            "imageAlt": "Seynabou.",
+            "id": "cd15zvdy5v2o"
+          },
+          {
+            "type": "video",
+            "duration": "PT4M27S",
+            "title": "L'incroyable parcours d'un garçon de ballet viral au Nigéria",
+            "firstPublished": "2023-12-29T19:24:25.358Z",
+            "lastPublished": "2023-12-29T19:24:25.358Z",
+            "link": "https://www.bbc.com/afrique/articles/c3gyzlwdvzzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d14c/live/105673f0-a680-11ee-8f07-bbfdfa890097.png",
+            "description": "Surnommé le danseur de ballet viral du Nigeria, la vie d'Anthony Madu, 13 ans, a changé de façon méconnaissable au cours des trois dernières années après que ses mouvements de danse et sa renommée sur Internet l'ont catapulté de sa modeste maison de Lagos à l'une des écoles de ballet les plus prestigieuses du Royaume-Uni.",
+            "imageAlt": "Anthony Madu.",
+            "id": "c3gyzlwdvzzo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 6,
+        "link": "https://www.bbc.com/afrique/topics/cz4vn9gyd6rt",
+        "curationId": "urn:bbc:vivo:curation:61ece56b-747d-4a95-8d71-4344718731d7",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "Vidéo",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED",
+        "intent": "PRIORITY_CONTENT"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "duration": "PT29M30S",
+            "title": "\"Petite trentaine, grande curiosité\" - Stephanie Swi",
+            "firstPublished": "",
+            "lastPublished": "2024-01-13T10:00:00.000Z",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/w172z9ygbylml3p",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e5d8/live/bec51f70-b62c-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Cette semaine, Valérie Bony reçoit Stephanie Swi qui organise le festival réminiscence, naissance de l'identité culturelle ivoirienne. (Crédit photo Stéphanie Swi)",
+            "imageAlt": "Stéphanie Swi",
+            "id": "w172z9yfzp8vfhv"
           },
           {
             "type": "audio",
             "duration": "PT29M30S",
             "title": "Afrique Avenir : Entre conception de jeux de société et livres pour enfants, l'univers de Cissé Diambissy",
             "firstPublished": "2023-01-13T12:54:39.000Z",
+            "lastPublished": "2023-01-13T12:54:39.000Z",
             "link": "https://www.bbc.com/afrique/region-64265313",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/13358/production/_128308687_p0dwltnq.jpg",
             "description": "Afrique Avenir reçoit Reçoit Cissé Diambissy conceptrice de jeux de société sur l’histoire et les cultures en Afrique et auteure de livres de jeunesse.",
@@ -515,20 +1458,23 @@
             "id": "58405f31-aa89-4e11-b224-947282ee708f"
           },
           {
-            "type": "article",
-            "title": "Mama Cax, le mannequin handicapé qui s'est battu pour l'inclusion dans la mode",
-            "firstPublished": "2023-02-15T16:53:34.000Z",
-            "link": "https://www.bbc.com/afrique/region-64600758",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1429A/production/_128568528_328c58a7-5c1a-4cf7-9870-b8ecc4aab86f.jpg",
-            "description": "Google a rendu hommage au mannequin à l'occasion du quatrième anniversaire de ses débuts sur le podium à New York et de sa mort.",
-            "imageAlt": "Mama Cax",
-            "id": "14da751d-8296-44a3-a64e-33c4a64c7b2b"
+            "type": "audio",
+            "duration": "PT52M20S",
+            "title": "Le Débat BBC Afrique avec Gérard Adja",
+            "firstPublished": "2023-12-01T19:14:01.000Z",
+            "lastPublished": "2023-12-01T19:14:01.000Z",
+            "link": "https://www.bbc.com/afrique/67596886",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10AEA/production/_131903386_p0gx52kx.jpg",
+            "description": "Le Débat BBC Afrique avec Gérard Adja",
+            "imageAlt": "Le Débat BBC Afrique avec Gérard Adja",
+            "id": "53637ed6-ab08-4f15-bc8f-23a57c35241d"
           },
           {
             "type": "audio",
             "duration": "PT29M30S",
             "title": "Afrique Avenir : Lengo, la plateforme qui connecte grandes marques et boutiquiers",
             "firstPublished": "2022-11-18T15:22:27.000Z",
+            "lastPublished": "2022-11-18T15:22:27.000Z",
             "link": "https://www.bbc.com/afrique/region-63680329",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C813/production/_127691215_p0dh4rx6.jpg",
             "description": "Afrique Avenir reçoit Max Smith et Yaye Biaye de Lengo, une plateforme d'intelligence artificielle pour les produits de grande consommation en Afrique.",
@@ -540,377 +1486,20 @@
             "duration": "PT29M30S",
             "title": "C’est le moment : \"la jeunesse africaine en a marre de ne pas être respectée par la France\"",
             "firstPublished": "2022-03-04T16:38:09.000Z",
+            "lastPublished": "2022-04-08T13:48:17.000Z",
             "link": "https://www.bbc.com/afrique/60623790",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3DBA/production/_123520851_p0bskwvq.jpg",
             "description": "Le rappeur camerounais Valsero est l’invité d’Ata Ahli AHEBLA pour présenter son EP qui a pour titre \"Mon idée de la France\".",
             "imageAlt": "Valsero",
             "id": "45171fb0-22ce-4eac-b9a6-c757292b155b"
-          },
-          {
-            "type": "audio",
-            "duration": "PT54M",
-            "title": "Le Débat BBC Afrique - Africa Radio avec Amadou MAÏGA",
-            "firstPublished": "2023-03-17T20:23:49.000Z",
-            "link": "https://www.bbc.com/afrique/region-64996973",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/18210/production/_129023889_p0f9gpyg.jpg",
-            "description": "Le Débat BBC Afrique - Africa Radio avec Amadou MAÏGA",
-            "imageAlt": "Le Débat BBC Afrique - Africa Radio avec Amadou MAÏGA",
-            "id": "e06ecd7e-3722-4c66-bfaf-b7f59c8e2d8b"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:3a561915-0992-4d57-b35f-790c32ef41ac",
         "curationType": "tipo-curation",
-        "position": 5,
+        "position": 7,
         "title": "Nos émissions",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Les femmes aveugles qui aident à détecter le cancer du sein en Inde ",
-            "firstPublished": "2023-05-09T15:45:44.133Z",
-            "link": "https://www.bbc.com/afrique/articles/c4nwqwwndvzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ccb2/live/fa1f8800-ec2c-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Dans une pièce vide d'un centre de santé gouvernemental isolé de la ville de Vapi, dans l'État du Gujarat (sud-ouest de l'Inde), Meenakshi Gupta tient un diagramme du sein d'une femme sur lequel sont collées cinq bandes d'orientation avec écriture en braille.",
-            "imageAlt": "Meenakshi Gupta montre le diagramme mammaire avec les bandes de guidage dans sa salle d'examen.",
-            "id": "c4nwqwwndvzo"
-          },
-          {
-            "type": "article",
-            "title": "Qu’est-ce que la colite microscopique, une maladie intestinale difficile à détecter qui affecte le plus souvent les femmes",
-            "firstPublished": "2023-05-09T12:59:48.276Z",
-            "link": "https://www.bbc.com/afrique/articles/cl4z83p63jdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d3eb/live/59d63ac0-ee5b-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Il s'agit d'une maladie qui peut avoir un fort impact sur la qualité de vie, en particulier celle des femmes, et bien qu'il existe de bons traitements pour soulager les symptômes, elle est souvent difficile à diagnostiquer.",
-            "imageAlt": "Femme qui tient son ventre",
-            "id": "cl4z83p63jdo"
-          },
-          {
-            "type": "article",
-            "title": "La gastrulation, cette étape mystérieuse de la gestation",
-            "firstPublished": "2023-05-07T14:50:58.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65470489",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7670/production/_129502303_1.jpg",
-            "description": "Des expériences utilisant des pseudo-embryons créés à partir de cellules souches permettent de comprendre ce qui se passe entre le 14e et le 28e jour de la gestation, une étape clé du développement humain qui reste jusqu'à présent une énigme pour la science.",
-            "imageAlt": "Image informatique d'un embryon humain",
-            "id": "8a65851e-d544-49c5-bfd1-7a0905372999"
-          },
-          {
-            "type": "article",
-            "title": "Qu'est-ce que la mystérieuse \"paralysie du sommeil\" ?",
-            "firstPublished": "2023-05-04T17:09:42.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65399768",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1279/production/_129592740_gettyimages-1257589968.jpg",
-            "description": "La paralysie du sommeil est un état plus courant qu'on ne le pense et se produit lorsqu'une partie du cerveau s'éveille alors que le corps reste temporairement paralysé.",
-            "imageAlt": "Femme qui dort",
-            "id": "68172d1f-dc21-47e5-980a-ce0a736c631c"
-          },
-          {
-            "type": "article",
-            "title": "Des scientifiques choqués par leur propre découverte",
-            "firstPublished": "2023-05-02T15:03:03.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65449473",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/FE52/production/_129560156_gettyimages-1149193163-1.jpg",
-            "description": "Une invitation à une conférence scientifique internationale quelque peu inhabituelle en Suisse a poussé Sean Ekins et Fabio Urbina à découvrir ce qui se passerait si ce qu'ils avaient créé tombait entre de mauvaises mains.",
-            "imageAlt": "Spiez, en Suisse",
-            "id": "e7eac2b7-7ba6-4763-8064-250a4b952b55"
-          },
-          {
-            "type": "article",
-            "title": "Les techniques par lesquelles jurent les stars africaines",
-            "firstPublished": "2023-05-01T11:23:55.000Z",
-            "link": "https://www.bbc.com/afrique/region-65220618",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12AC8/production/_129188467_gettyimages-1141886013.jpg",
-            "description": "Le flexi ? La BBC enquête sur les techniques inhabituelles utilisées par certaines stars du sport africain.",
-            "imageAlt": "Mae-Berenice Meite a une approche flexible de son régime alimentaire. Elle mange principalement des aliments d'origine végétale, mais aussi de la viande et du poisson.",
-            "id": "04a510cc-011c-4b63-901b-29f59336681d"
-          },
-          {
-            "type": "article",
-            "title": "Les 11 huiles de cuisson les plus saines",
-            "firstPublished": "2023-04-29T13:22:14.253Z",
-            "link": "https://www.bbc.com/afrique/articles/c51p7d4nxvgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0302/live/50338860-e429-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Les huiles jouent un rôle important, à la fois dans notre cuisine quotidienne et dans le cadre d'une alimentation saine et équilibrée, mais lorsqu'il s'agit de chauffer, toutes les huiles ne se valent pas.",
-            "imageAlt": "Une femme fait ses courses dans un supermarché à Abidjan, Côte d'Ivoire, le 24 février 2023. ",
-            "id": "c51p7d4nxvgo"
-          },
-          {
-            "type": "video",
-            "duration": "PT9M23S",
-            "title": "Comment une mère a réussi à soutenir son fils trisomique",
-            "firstPublished": "2023-04-28T15:07:07.000Z",
-            "link": "https://www.bbc.com/afrique/65428962",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6850/production/_129540762_p0fkd1zk.jpg",
-            "description": "Le défi de Yolande Epée pour lutter contre les idées reçues à travers le quotidien de son fils atteint de Trisomie 21.",
-            "imageAlt": "Comment une mère a réussi à soutenir son fils trisomique",
-            "id": "f0d910b5-8f70-435b-aa8c-9c6085d6e74a"
-          },
-          {
-            "type": "article",
-            "title": "Les 20 fruits les plus sains",
-            "firstPublished": "2023-04-28T12:14:22.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65399772",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17A4B/production/_129534869_gettyimages-200464156-001.jpg",
-            "description": "De la pomme à l'avocat en passant par la tomate et la pastèque, la nutritionniste Kerry Torrens présente les fruits les plus sains à consommer. De plus, vous trouverez des recettes fruitées pour les déguster.",
-            "imageAlt": "Homme qui pèse des fruits",
-            "id": "c8fc45e7-6604-4654-be11-f2a88f1f2ceb"
-          },
-          {
-            "type": "article",
-            "title": "Combien de pas faut-il faire par jour pour perdre du poids ?",
-            "firstPublished": "2023-04-25T08:40:28.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65366595",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1729/production/_129492950_gettyimages-1341854214-170667a.jpg",
-            "description": "L'exercice physique n'est pas seulement important pour la perte de poids, mais aussi pour le maintien de votre bonne santé.",
-            "imageAlt": "Toute marche, quel que soit son rythme, consomme de l'énergie et peut donc contribuer à la perte de poids.",
-            "id": "651ccf6d-8ebe-4ccf-95f1-e991eaba60b0"
-          },
-          {
-            "type": "article",
-            "title": "Les 11 céréales les plus saines",
-            "firstPublished": "2023-04-24T12:34:34.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65366594",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10A3E/production/_129485186_gettyimages-681552417.jpg",
-            "description": "Une céréale est une herbe cultivée pour son \"fruit\" comestible, mieux connu sous le nom de grain. Les céréales sont cultivées en grandes quantités et fournissent plus d'énergie alimentaire que toute autre culture, à la fois directement pour l'alimentation humaine et indirectement pour l'alimentation du bétail.",
-            "imageAlt": "riz",
-            "id": "8cf0354d-ba87-4bdb-be8f-107a054234fd"
-          },
-          {
-            "type": "article",
-            "title": "Comment l'intelligence artificielle permet d'adapter les médicaments aux patients",
-            "firstPublished": "2023-04-23T16:02:48.535Z",
-            "link": "https://www.bbc.com/afrique/articles/cn0304z01dlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/eedb/live/4ec94a60-dd20-11ed-8df1-d74cbf1089d7.png",
-            "description": "L’IA séduit la médecine ! L'entreprise Genetika+ affirme que sa technologie permet d'adapter au mieux les antidépresseurs aux patients, afin d'éviter les effets secondaires indésirables et de s'assurer que le médicament prescrit fonctionne aussi bien que possible.\nPour ce faire, Genetika+ associe les technologies les plus récentes en matière de cellules souches - la culture de cellules humaines spécifiques - à un logiciel d'intelligence artificielle. ",
-            "imageAlt": "Deux femmes regardent l'écran d'un ordinateur ",
-            "id": "cn0304z01dlo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 12,
-        "curationId": "urn:bbc:vivo:curation:d24abeb6-c061-45e3-8223-7970019ddd85",
-        "curationType": "vivo-stream",
-        "position": 6,
-        "title": "Santé et Bien-être",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Les professionnels qui craignent de perdre leur emploi au profit de l'intelligence artificielle ",
-            "firstPublished": "2023-05-10T16:18:31.860Z",
-            "link": "https://www.bbc.com/afrique/articles/cy0v5ryn1dlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fa41/live/bcdecf90-ef34-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Certains professionnels commencent à s'inquiéter de leur avenir et à se demander si leurs compétences seront utiles sur le marché du travail dans les années à venir.",
-            "imageAlt": "Femme devant un ordinateur",
-            "id": "cy0v5ryn1dlo"
-          },
-          {
-            "type": "article",
-            "title": "Les lisseurs de cheveux qui ont conduit les consommateurs à poursuivre les entreprises aux États-Unis",
-            "firstPublished": "2023-05-09T17:47:15.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65436198",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/B3AA/production/_129549954_f218723d-07ba-4cde-b6d7-010f5d61f056.jpg",
-            "description": "Le défrisage des cheveux existe depuis plus de cent ans. En quelques minutes, des produits chimiques permettent de lisser les cheveux frisés ou bouclés.",
-            "imageAlt": "Les usagers s'inquiètent des ingrédients contenus dans les défrisants pour cheveux, mais la science n'est pas concluante à ce sujet.",
-            "id": "b6a1ac8a-e647-4786-ac89-446f2a6ebf28"
-          },
-          {
-            "type": "article",
-            "title": "Six inventions amérindiennes qui font partie de notre vie quotidienne",
-            "firstPublished": "2023-05-03T14:46:18.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65436195",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/D638/production/_129404845_inuit_snow_goggles.jpg",
-            "description": "Pendant des siècles, les peuples indigènes ont développé des outils de survie qui sont encore utilisés aujourd'hui, même s'ils ont été créés il y a des milliers d'années.",
-            "imageAlt": "Les lunettes de soleil avaient pour prédécesseur les lunettes de neige utilisées par les Innuits dans l'Arctique.",
-            "id": "17e8170c-ed90-472b-b6df-15695972b67a"
-          },
-          {
-            "type": "article",
-            "title": "L'énigme mathématique résolue par Marilyn vos Savant, la femme au QI le plus élevé du monde",
-            "firstPublished": "2023-05-02T17:03:00.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65436193",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4BA8/production/_129486391_gettyimages-870306710-1.jpg",
-            "description": "Autrefois considérée comme \"la personne la plus intelligente du monde\", Marilyn vos Savant a proposé une solution au \"problème de Monty Hall\", qui a suscité les critiques de nombreux mathématiciens et scientifiques.",
-            "imageAlt": "Marilyn vos Savant",
-            "id": "36e8e4c5-afce-4175-bf2f-28d1f232063d"
-          },
-          {
-            "type": "article",
-            "title": "Des scientifiques choqués par leur propre découverte",
-            "firstPublished": "2023-05-02T15:03:03.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65449473",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/FE52/production/_129560156_gettyimages-1149193163-1.jpg",
-            "description": "Une invitation à une conférence scientifique internationale quelque peu inhabituelle en Suisse a poussé Sean Ekins et Fabio Urbina à découvrir ce qui se passerait si ce qu'ils avaient créé tombait entre de mauvaises mains.",
-            "imageAlt": "Spiez, en Suisse",
-            "id": "e7eac2b7-7ba6-4763-8064-250a4b952b55"
-          },
-          {
-            "type": "article",
-            "title": "Comment, avec ChatGPT, l'intelligence artificielle modifie déjà le recrutement et la recherche d'emploi",
-            "firstPublished": "2023-05-02T11:17:14.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65436197",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/118E3/production/_129570917_gettyimages-1128201585.jpg",
-            "description": "Depuis novembre 2022, le générateur de texte par intelligence artificielle ChatGPT permet à toute personne ayant accès à Internet de générer presque n'importe quel type de texte.",
-            "imageAlt": "Femmes au bureau",
-            "id": "d5e0dd8d-b1e5-4eb7-8305-b60963dc3030"
-          },
-          {
-            "type": "article",
-            "title": "L'étonnante reconstitution du visage d'un jeune homme ayant vécu il y a 35 000 ans",
-            "firstPublished": "2023-05-01T15:49:56.000Z",
-            "link": "https://www.bbc.com/afrique/region-65325613",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10A87/production/_129413286_480602d4-eaa2-49f1-bf25-fe857d68da1e.jpg",
-            "description": "Une équipe d'experts brésiliens a réalisé une approximation détaillée du visage d'un homme de 20 ans dont les restes ont été conservés pendant des milliers d'années dans la vallée du Nil.",
-            "imageAlt": "Illustration du visage de Nazlet Khater 2.",
-            "id": "4a583d7a-e316-4d51-bbac-858085aec4bc"
-          },
-          {
-            "type": "article",
-            "title": "Comment LinkedIn change et pourquoi certains ne sont pas contents",
-            "firstPublished": "2023-04-27T12:45:27.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65325104",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7AF9/production/_129518413_gettyimages-1260517866-170667a.jpg",
-            "description": "La réputation d'aridité et d'esprit d'entreprise de LinkedIn est en train de changer, mais tous les utilisateurs n'apprécient pas le ton plus personnel.",
-            "imageAlt": "Homme devant son ordinateur",
-            "id": "59cf5cb2-4794-47ea-826f-2bc3695ed0d9"
-          },
-          {
-            "type": "article",
-            "title": "Le mystère du \"génome obscur\" qui constitue 98 % de notre ADN",
-            "firstPublished": "2023-04-26T17:43:01.062Z",
-            "link": "https://www.bbc.com/afrique/articles/c2lnll329wko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/69e3/live/85a13740-ddf3-11ed-8df1-d74cbf1089d7.png",
-            "description": "Plus de doute, le génome obscur est une clé pour notre compréhension de l’humanité. Il aide en effet à contrôler le comportement de nos gènes en réponse aux pressions environnementales auxquelles notre corps est confronté tout au long de la vie, qu'il s'agisse de l'alimentation, du stress, de la pollution, de l'exercice physique ou du nombre d'heures de sommeil. Ce domaine est connu sous le nom d'épigénétique.",
-            "imageAlt": "Gros plan sur la mine d'un crayon à papier qui pointe sur ce qui semble être une feuille.",
-            "id": "c2lnll329wko"
-          },
-          {
-            "type": "article",
-            "title": "Pourquoi le Danemark stocke près de 10 000 cerveaux",
-            "firstPublished": "2023-04-24T16:52:41.658Z",
-            "link": "https://www.bbc.com/afrique/articles/c2xexzyy3y8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5fd8/live/ad85cb90-dd12-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Tout en se posant la question du consentement, que faut-il faire avec une si grande quantité d'organes humains ?\n",
-            "imageAlt": "Martin Wirenfeldt Nielsen est responsable de la collection de cerveaux à l'Université du Danemark du Sud à Odense",
-            "id": "c2xexzyy3y8o"
-          },
-          {
-            "type": "article",
-            "title": "\"L'ampleur de l'espionnage et de la manipulation auxquels se livre TikTok est égale à celle de Facebook\"",
-            "firstPublished": "2023-04-24T10:32:41.000Z",
-            "link": "https://www.bbc.com/afrique/monde-65330407",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C098/production/_129340394_gettyimages-1249142413-1.jpg",
-            "description": "Dans une interview accordée à BBC Mundo, Bruce Schneier, technologue à l'université de Harvard, s'interroge sur la surveillance politique dont TikTok fait l'objet en Occident.",
-            "imageAlt": "Montage avec le logo TikTok sur un téléphone, le drapeau chinois et le visage de Shou Zi Chew, PDG de TikTok.",
-            "id": "60d838bc-727f-4b28-9698-bbf03b50f066"
-          },
-          {
-            "type": "article",
-            "title": "Rêve lucide : quelles sont les meilleures techniques pour contrôler ses rêves, selon la science ?",
-            "firstPublished": "2023-04-23T10:51:15.987Z",
-            "link": "https://www.bbc.com/afrique/articles/cd1y17jnj4yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0916/live/e49cce40-dd2a-11ed-8df1-d74cbf1089d7.png",
-            "description": "À date, la science ne dispose pas d'une technique unique permettant de créer concrètement des rêves lucides cependant, il existe plusieurs moyens simples de les faciliter.Les personnes qui se souviennent bien de leurs rêves, par exemple, sont plus susceptibles de se souvenir d'un rêve lucide.",
-            "imageAlt": "Une femme couverte par un drap blanc allant jusqu'aux épaules, est assise près des nuages. Quatres oiseaux volent à proximité.",
-            "id": "cd1y17jnj4yo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 9,
-        "link": "https://www.bbc.com/afrique/topics/cnq687nn703t",
-        "curationId": "urn:bbc:vivo:curation:591c2e94-c90e-4a80-a450-5ce687caef92",
-        "curationType": "vivo-stream",
-        "position": 8,
-        "title": "Science et technologie",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Ce que révèle une vue à vol d'oiseau de l'Afrique",
-            "firstPublished": "2023-03-09T10:02:05.000Z",
-            "link": "https://www.bbc.com/afrique/region-64889454",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/14224/production/_128886428_senegalsaltsmall.jpg",
-            "description": "Des images prises du ciel montrent comment le paysage du continent est transformé par l'activité humaine.",
-            "imageAlt": "Des Étangs salés vus du ciel",
-            "id": "58c62b48-1c56-430d-bf7a-9fd9b7b25332"
-          },
-          {
-            "type": "article",
-            "title": "L'artiste nigérian qui réinvente une vieillesse élégante par l'IA ",
-            "firstPublished": "2023-01-22T12:03:44.593Z",
-            "link": "https://www.bbc.com/afrique/articles/cle8zgyjq6wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f84/live/8a4a36c0-9582-11ed-80d6-337feeda602f.jpg",
-            "description": "Les œuvres d'art générées par l'intelligence artificielle (IA) sont devenues une source de controverse, mais le cinéaste et artiste nigérian Malik Afegbua défend l'idée qu'elle peut nous inciter à créer un monde réel meilleur - et un monde plus élégant pour les personnes âgées.",
-            "imageAlt": "Image d'un vieil habillé en costume.",
-            "id": "cle8zgyjq6wo"
-          },
-          {
-            "type": "article",
-            "title": "Nager avec des prédateurs marins - le photographe qui a réalisé son \"rêve fou\"",
-            "firstPublished": "2022-06-08T15:24:16.000Z",
-            "link": "https://www.bbc.com/afrique/monde-61731427",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/10F4A/production/_117305496_amos12.jpg",
-            "description": "Amos Nachoum a établi de nouvelles normes en matière de photographie sous-marine en prenant des risques énormes. Il a plongé sans cage de sécurité et a capturé des images primées de prédateurs marins. Il raconte ici à la BBC d'où vient sa passion et comment sa relation avec son père l'a façonné en tant qu'homme.",
-            "imageAlt": "Amos Nachoum photographiant un grand requin blanc sous l'eau",
-            "id": "1e44c1bf-d50b-4b30-a72f-eab7c927df6f"
-          },
-          {
-            "type": "article",
-            "title": "Des photos inédites des habitants de Madagascar",
-            "firstPublished": "2022-06-04T14:43:50.000Z",
-            "link": "https://www.bbc.com/afrique/region-61660783",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4BD2/production/_125001491_eed1cdd8-c0a2-43aa-bdd4-322fb626b4c2.jpg",
-            "description": "Emile Rakotondrazaka, dit Ramily et considéré comme le grand-père de la photographie malgache, est décédé en 2017. Une exposition à l'espace d'art contemporain Hakanto à Antananarivo, présente son travail dans des portraits inédits de gens ordinaires et de la vie quotidienne.",
-            "imageAlt": "Portrait d'un pêcheur à Fenoarivo Atsinanana",
-            "id": "4b72d315-6304-4584-8a0f-edf7d2b1d369"
-          },
-          {
-            "type": "article",
-            "title": "Des nageurs rouges aux théières flottantes, Dakar accueille l’art moderne",
-            "firstPublished": "2022-05-27T10:05:47.000Z",
-            "link": "https://www.bbc.com/afrique/region-61580142",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1080C/production/_124869576_mediaitem124869575.jpg",
-            "description": "L'un des plus grands événements d'art moderne d'Afrique revient au Sénégal après une interruption de quatre ans.",
-            "imageAlt": "La sculpture d'un nageur rouge de Diadji Diop.",
-            "id": "50b3edab-8a9b-4253-9d9d-3330341c1910"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:5b1a27ed-5088-4b5f-a16c-bbb51473da37",
-        "curationType": "tipo-curation",
-        "position": 9,
-        "title": "En images",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Comment la saga Trump-Stormy Daniels s'est déroulée",
-            "firstPublished": "",
-            "link": "https://www.youtube.com/watch?v=qQAkyu8Vl8A&t=1s",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6083/live/a1764190-d3d5-11ed-aa8e-31a9f3ff4e07.jpg",
-            "description": "",
-            "imageAlt": "Comment la saga Trump-Stormy Daniels s'est déroulée",
-            "id": "https%3A%2F%2Fwww.youtube.com%2F%40bbcnewsafrique%2Fvideos"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "link": "https://www.youtube.com/@bbcnewsafrique/videos",
-        "curationId": "urn:bbc:tipo:list:0358e445-e894-4bab-a6cd-cf005937825a",
-        "curationType": "tipo-curation",
-        "position": 10,
-        "title": "Suivez BBC Afrique sur YouTube",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -918,23 +1507,270 @@
         "summaries": [
           {
             "type": "link",
-            "title": "BBC Afrique en direct",
+            "title": "Bulletin D'informations",
             "firstPublished": "",
-            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/liveradio",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b0fc/live/d7a0ff30-d38f-11ed-be2e-754a65c11505.png",
-            "description": "",
-            "imageAlt": "BBC microphone",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fliveradio"
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p030s6dq",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/daea/live/e0d5c1c0-824a-11ee-a296-2b647c02f497.png",
+            "description": "Le tour du monde de l'actualité en 2 minutes",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp030s6dq"
+          },
+          {
+            "type": "link",
+            "title": "Le Journal",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p03p35rt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5cef/live/f1ee4860-824a-11ee-b7d2-dd851f00eaeb.png",
+            "description": "Le premier rendez-vous d'information de la matinée.",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp03p35rt"
+          },
+          {
+            "type": "link",
+            "title": "Au Coeur De L'actu",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/w13xtvfw",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/092b/live/00469d90-824b-11ee-b7d2-dd851f00eaeb.png",
+            "description": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fw13xtvfw"
+          },
+          {
+            "type": "link",
+            "title": "A Vous L'antenne",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p030s6g6",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da5a/live/0a8069d0-824b-11ee-8b17-2bd77203408f.png",
+            "description": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp030s6g6"
+          },
+          {
+            "type": "link",
+            "title": "L'interview",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p030s6dj",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/668d/live/17c07130-824b-11ee-8b17-2bd77203408f.png",
+            "description": "Entretien en tête-a-tete et à cœur ouvert avec une personnalité qui fait l'actualité",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp030s6dj"
+          },
+          {
+            "type": "link",
+            "title": "Le Debat",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p030s6d6",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ce26/live/248b96b0-824b-11ee-8b17-2bd77203408f.png",
+            "description": "Chaque semaine BBC Afrique et Africa No 1 Paris vous proposent un débat pour comprendre l’Afrique et ses mutations",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp030s6d6"
+          },
+          {
+            "type": "link",
+            "title": "Afrique Avenir",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p04d5kyy",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d274/live/302b0d70-824b-11ee-a296-2b647c02f497.png",
+            "description": "Tout savoir sur les jeunes entrepreneurs africains.",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp04d5kyy"
+          },
+          {
+            "type": "link",
+            "title": "Magazine De La Culture",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/afrique/bbc_afrique_radio/programmes/p030s6d5",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5f3d/live/3aa5da50-824b-11ee-8b17-2bd77203408f.png",
+            "description": "Les échos de la vitalité de la culture africaine et de sa diaspora avec Valérie Bony.",
+            "imageAlt": "BBC Afrique",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fprogrammes%2Fp030s6d5"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:e9d6c7b9-dd5f-4d5b-99cf-f459d010200e",
+        "curationId": "urn:bbc:tipo:list:ca8836d2-2fd2-495e-a15e-c1adb8aecc93",
         "curationType": "tipo-curation",
-        "position": 11,
-        "title": "Ecoutez BBC Afrique",
+        "position": 8,
+        "title": "Nos émissions",
         "visualProminence": "NORMAL",
-        "visualStyle": "BANNER"
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Épuisement extrême et burn-out : comment cela se produit et que faire pour y remédier",
+            "firstPublished": "2024-01-21T18:02:41.303Z",
+            "lastPublished": "2024-01-21T18:02:41.303Z",
+            "link": "https://www.bbc.com/afrique/articles/c51z10plg1lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0f47/live/be8056a0-b61e-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Les sentiments de fatigue sont très courants et, dans certains cas, l’épuisement professionnel peut être extrêmement débilitant. Alors, que pourrions-nous faire pour traiter ce mal-être ?",
+            "imageAlt": "Un homme endormi sur sa table de travail",
+            "id": "c51z10plg1lo"
+          },
+          {
+            "type": "article",
+            "title": "Tout ce qu’il faut savoir sur la maladie de l'ulcère gastrique",
+            "firstPublished": "2024-01-20T16:03:02.780Z",
+            "lastPublished": "2024-01-20T16:03:02.780Z",
+            "link": "https://www.bbc.com/afrique/articles/cx8vq0z4189o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/586e/live/1c5cbdc0-b621-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Les ulcères sont des lésions de la muqueuse qui se produisent lorsque les tissus de l'estomac ou de l'intestin sont endommagés. Dr Roland Kogoe gastroentérologue et pathologue au centre hospitalier universitaire Campus à Lomé au Togo, nous aide à mieux comprendre cette pathologie. ",
+            "imageAlt": "Un homme se tient l'estomac",
+            "id": "cx8vq0z4189o"
+          },
+          {
+            "type": "article",
+            "title": "Capacitisme : 10 attitudes et expressions offensantes pour les personnes handicapées",
+            "firstPublished": "2024-01-19T17:21:50.779Z",
+            "lastPublished": "2024-01-19T17:21:50.779Z",
+            "link": "https://www.bbc.com/afrique/articles/cek57npdgvvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/24e9/live/39665aa0-b09c-11ee-b98c-a15f44e54519.jpg",
+            "description": "Les commentaires sur l'athlète paralympique Vinicius Rodrigues lors de l'émission de téléréalité Big Brother Brasil ont provoqué une discussion sur le sujet.",
+            "imageAlt": "Un homme en fauteuil roulant à côté d'une marque sur le sol d'une place de parking pour handicapés.",
+            "id": "cek57npdgvvo"
+          },
+          {
+            "type": "article",
+            "title": "Nutrition : Ce qu’il faut retenir des valeurs nutritionnelles de la papaye",
+            "firstPublished": "2024-01-18T09:49:42.564Z",
+            "lastPublished": "2024-01-18T09:49:42.564Z",
+            "link": "https://www.bbc.com/afrique/articles/cl4e0kj2p8vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3fa6/live/b2df51c0-b538-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Fruit exotique appartenant à la famille des Caricacées, la papaye, originaire d’Amérique tropicale, a une peau verte orangée avec une chair orange qui contient en son sein les pépins noirs. Ce fruit a été ramené en Afrique et en Inde par des colons.",
+            "imageAlt": "Fruit exotique appartenant à la famille des Caricacées, la papaye, originaire d’Amérique tropicale",
+            "id": "cl4e0kj2p8vo"
+          },
+          {
+            "type": "article",
+            "title": "De nouveaux traitements contre les démangeaisons chroniques, qui touchent 1 personne sur 5",
+            "firstPublished": "2024-01-17T14:22:32.857Z",
+            "lastPublished": "2024-01-17T14:22:32.857Z",
+            "link": "https://www.bbc.com/afrique/articles/cd15457yjq9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ba86/live/c08ba2c0-b528-11ee-beb5-e1400df560f2.jpg",
+            "description": "Les démangeaisons chroniques qui touchent 1 personne sur 5 à un moment donné de la vie, sont associées à des troubles dermatologiques mais également à d'autres problèmes médicaux. Dans certains cas, les démangeaisons chroniques peuvent durer des années et la sensation peut être exaspérante.",
+            "imageAlt": "Femme qui se gratte",
+            "id": "cd15457yjq9o"
+          },
+          {
+            "type": "article",
+            "title": "Comment les symptômes du Covid-19 ont changé à chaque nouvelle variante",
+            "firstPublished": "2024-01-15T14:02:29.984Z",
+            "lastPublished": "2024-01-15T14:02:29.984Z",
+            "link": "https://www.bbc.com/afrique/articles/cj7gg7z0zeno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/006a/live/ade213d0-b162-11ee-beb5-e1400df560f2.png",
+            "description": "Avec une nouvelle variante du virus Sars-CoV-2 provoquant une augmentation des cas, cela démontre à quel point la maladie a changé depuis le début de la pandémie – et ce qui est arrivé à « l’orteil Covid ».",
+            "imageAlt": "Propagées par les jeunes adultes sur le lieu de travail et les enfants à l'école, les nouveaux cas de maladies respiratoires pourraient atteindre un pic dans les prochaines semaines, a déclaré Li Tongzeng, médecin en chef du département des maladies infectieuses de l'hôpital You'an de Pékin.",
+            "id": "cj7gg7z0zeno"
+          },
+          {
+            "type": "article",
+            "title": "Voici les bienfaits du gombo pour la santé",
+            "firstPublished": "2024-01-14T15:18:24.553Z",
+            "lastPublished": "2024-01-14T15:18:24.553Z",
+            "link": "https://www.bbc.com/afrique/articles/cgekkx02qk5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e192/live/dbfd3770-b088-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Le gombo est une plante très prisée dans la partie occidentale du continent. il est utilisé pour la cuisson, mais également pour ses propriétés médicinales. Dans cet article, nous revenons sur les bienfaits pour la santé est un légume très prisé en Afrique.",
+            "imageAlt": "Gombo",
+            "id": "cgekkx02qk5o"
+          },
+          {
+            "type": "article",
+            "title": "11 choses à considérer avant de commencer un régime",
+            "firstPublished": "2024-01-13T15:03:37.327Z",
+            "lastPublished": "2024-01-13T15:03:37.327Z",
+            "link": "https://www.bbc.com/afrique/articles/c9w2j2zglp0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1569/live/c977cd20-aa63-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Voici 11 questions clés pour vous aider à déterminer si un plan de perte de poids vous convient, s'il peut être efficace et, plus important encore, s'il est sécuritaire pour vous de le suivre.",
+            "imageAlt": "Salade française nicoise composée de thon en conserve, d'olives et d'œufs, servie avec une vinaigrette à l'huile d'olive et du sel de mer sur une assiette en céramique sur fond de bois.",
+            "id": "c9w2j2zglp0o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 20,
+        "link": "https://www.bbc.com/afrique/topics/c06gq9jxz3rt",
+        "curationId": "urn:bbc:vivo:curation:d24abeb6-c061-45e3-8223-7970019ddd85",
+        "curationType": "vivo-stream",
+        "position": 9,
+        "title": "Santé et Bien-être",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "5 des questions les plus passionnantes auxquelles la science n'a pas encore pu répondre",
+            "firstPublished": "2024-01-22T17:51:06.784Z",
+            "lastPublished": "2024-01-22T17:51:06.784Z",
+            "link": "https://www.bbc.com/afrique/articles/cevq975979go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9f49/live/be46c8b0-b3b0-11ee-beb5-e1400df560f2.png",
+            "description": "Il y a peu de choses plus excitantes que de percer les mystères du monde naturel.\n\n",
+            "imageAlt": "Des questions",
+            "id": "cevq975979go"
+          },
+          {
+            "type": "article",
+            "title": "Gigantopithecus : pourquoi le plus grand singe de tous les temps a-t-il disparu ?",
+            "firstPublished": "2024-01-21T15:37:45.211Z",
+            "lastPublished": "2024-01-21T15:37:45.211Z",
+            "link": "https://www.bbc.com/afrique/articles/c4ny1n8qg08o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/462b/live/f6ac1b60-b0a9-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Il mesurait environ trois mètres de long et pesait quelque 250 kilos. Comment un primate aussi puissant a-t-il pu disparaître ? Une nouvelle étude élucide le mystère.",
+            "imageAlt": "Illustration artistique d'un groupe de primates de l'espèce G. blacki dans une forêt de l'île de Sicile.",
+            "id": "c4ny1n8qg08o"
+          },
+          {
+            "type": "article",
+            "title": "Pourquoi les trolls ougandais ont-ils volé son visage ?",
+            "firstPublished": "2024-01-20T18:47:10.861Z",
+            "lastPublished": "2024-01-20T18:47:10.861Z",
+            "link": "https://www.bbc.com/afrique/articles/czkjkv03ed3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8aa2/live/ced25290-b616-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Une enquête de la BBC révèle l'existence d'un réseau tentaculaire de faux comptes de médias sociaux opérant en Ouganda.",
+            "imageAlt": "Portrait du Dr Jamechia Hoyle, dont le visage a été volé par des trolls ougandais sur Internet.",
+            "id": "czkjkv03ed3o"
+          },
+          {
+            "type": "article",
+            "title": "Un immense anneau de galaxies remet en question les idées sur le cosmos",
+            "firstPublished": "2024-01-17T16:46:22.475Z",
+            "lastPublished": "2024-01-17T16:46:22.475Z",
+            "link": "https://www.bbc.com/afrique/articles/c4nydeklv1go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/49f6/live/69d95100-b16f-11ee-bc2f-cb5579b90709.png",
+            "description": "Des scientifiques ont découvert une structure ultra-large dans l'univers lointain qui remet en question notre compréhension du cosmos. Cette nouvelle découverte d'une structure ultra-large appelée \"Big Ring\" s'ajoute aux \"preuves de plus en plus nombreuses\" qui remettent en question ce que nous savons de l'univers.",
+            "imageAlt": "Impression d'artiste mettant en évidence les positions du Grand Anneau (en bleu) et de l'Arc géant (en rouge) dans le ciel.",
+            "id": "c4nydeklv1go"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 16,
+        "link": "https://www.bbc.com/afrique/topics/cnq687nn703t",
+        "curationId": "urn:bbc:vivo:curation:591c2e94-c90e-4a80-a450-5ce687caef92",
+        "curationType": "vivo-stream",
+        "position": 10,
+        "title": "Science et technologie",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:c1f24aef-29ee-42fd-8aee-e96ee33a1b57",
+        "curationType": "vivo-stream",
+        "position": 11,
+        "title": "En images",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
       },
       {
         "summaries": [
@@ -942,8 +1778,9 @@
             "type": "link",
             "title": "Facebook",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.facebook.com/bbcnewsafrique",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aafa/live/5d290e40-d38b-11ed-be2e-754a65c11505.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d3ce/live/baa6e4f0-929b-11ee-91bf-230bfab3fcba.png",
             "description": "",
             "imageAlt": "Facebook logo",
             "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsafrique"
@@ -952,8 +1789,9 @@
             "type": "link",
             "title": "YouTube",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.youtube.com/channel/UCBte7YLdJx-O_YljuvN6whg",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/04c5/live/6d3db970-d38b-11ed-be2e-754a65c11505.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/caba/live/d47493a0-929b-11ee-b9a7-c91b9dfa91e5.png",
             "description": "",
             "imageAlt": "YouTube logo",
             "id": "https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCBte7YLdJx-O_YljuvN6whg"
@@ -962,20 +1800,22 @@
             "type": "link",
             "title": "Instagram",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.instagram.com/bbcafrique/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cd0c/live/7bb46c10-d38b-11ed-be2e-754a65c11505.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/14e1/live/e52afd10-929b-11ee-8df3-1d2983d8814f.png",
             "description": "",
             "imageAlt": "Instagram logo",
             "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcafrique%2F"
           },
           {
             "type": "link",
-            "title": "Twitter",
+            "title": "X",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://twitter.com/bbcafrique",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/70ab/live/dd72da40-d38b-11ed-be2e-754a65c11505.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c238/live/f608c4a0-929b-11ee-91bf-230bfab3fcba.png",
             "description": "",
-            "imageAlt": "Twitter logo",
+            "imageAlt": "X logo",
             "id": "https%3A%2F%2Ftwitter.com%2Fbbcafrique"
           }
         ],
@@ -989,11 +1829,168 @@
         "visualStyle": "LINKS"
       },
       {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 13,
+        "title": "Les plus lus",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/afrique/popular/read",
+        "mostRead": {
+          "generated": "2024-01-26T10:03:22.907Z",
+          "lastRecordTimeStamp": "2024-01-26T10:01:00Z",
+          "firstRecordTimeStamp": "2024-01-26T09:01:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:c514rj7xx0lo",
+              "rank": 1,
+              "title": "CAN 2023 : Ces grands chocs aux huitièmes de finale à voir absolument",
+              "href": "https://www.bbc.com/afrique/articles/c514rj7xx0lo",
+              "timestamp": 1706202306379
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0jveyqkz7qo",
+              "rank": 2,
+              "title": "Nutrition : voici ce qu’il faut savoir des poulets de chair",
+              "href": "https://www.bbc.com/afrique/articles/c0jveyqkz7qo",
+              "timestamp": 1706014810509
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0kd8eygpwlo",
+              "rank": 3,
+              "title": "Le magnat nigérian conserve sa couronne d'homme le plus riche d'Afrique selon Forbes",
+              "href": "https://www.bbc.com/afrique/articles/c0kd8eygpwlo",
+              "timestamp": 1706177726544
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cl4e0kj2p8vo",
+              "rank": 4,
+              "title": "Nutrition : Ce qu’il faut retenir des valeurs nutritionnelles de la papaye",
+              "href": "https://www.bbc.com/afrique/articles/cl4e0kj2p8vo",
+              "timestamp": 1705571382564
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c72y0dxgw3go",
+              "rank": 5,
+              "title": "CAN 2023 : Calendrier et résultats des matchs",
+              "href": "https://www.bbc.com/afrique/articles/c72y0dxgw3go",
+              "timestamp": 1705236469291
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cj7gg7z0zeno",
+              "rank": 6,
+              "title": "Comment les symptômes du Covid-19 ont changé à chaque nouvelle variante",
+              "href": "https://www.bbc.com/afrique/articles/cj7gg7z0zeno",
+              "timestamp": 1705327349984
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cw0revrwl21o",
+              "rank": 7,
+              "title": "Le système de défense électronique ukrainien a contribué à repousser une attaque de missile russe. Comment est-ce possible ?",
+              "href": "https://www.bbc.com/afrique/articles/cw0revrwl21o",
+              "timestamp": 1706188951695
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjmgzv09np8o",
+              "rank": 8,
+              "title": "Le miel est-il meilleur pour la santé que le sucre ?",
+              "href": "https://www.bbc.com/afrique/articles/cjmgzv09np8o",
+              "timestamp": 1704190514872
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c990k1r84dro",
+              "rank": 9,
+              "title": "Maladie X : de quoi s'agit-il et dans quelle mesure sommes-nous préparés à la prochaine pandémie ?",
+              "href": "https://www.bbc.com/afrique/articles/c990k1r84dro",
+              "timestamp": 1706197676980
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cg3kvm34lmgo",
+              "rank": 10,
+              "title": "Pourquoi l'Alabama a-t-il exécuté un homme en utilisant de l'azote ?",
+              "href": "https://www.bbc.com/afrique/articles/cg3kvm34lmgo",
+              "timestamp": 1706261870153
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czr2zx97rxzo",
+              "rank": 11,
+              "title": "Les 10 bienfaits de la noix de cajou pour la santé",
+              "href": "https://www.bbc.com/afrique/articles/czr2zx97rxzo",
+              "timestamp": 1701958331916
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1wlqd3wz5zo",
+              "rank": 12,
+              "title": "Comment reconnaître les symptômes du cancer du côlon à un stade précoce (et pourquoi vous devez vérifier vos selles) ",
+              "href": "https://www.bbc.com/afrique/articles/c1wlqd3wz5zo",
+              "timestamp": 1657385485931
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cxe54ln3j35o",
+              "rank": 13,
+              "title": "Les 10 principaux bienfaits du curcuma pour la santé",
+              "href": "https://www.bbc.com/afrique/articles/cxe54ln3j35o",
+              "timestamp": 1688145378897
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4n6r81yjedo",
+              "rank": 14,
+              "title": "Un temple surgit des ruines de l'une des périodes les plus sombres de l'Inde",
+              "href": "https://www.bbc.com/afrique/articles/c4n6r81yjedo",
+              "timestamp": 1706257011465
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3g9qx5eqgqo",
+              "rank": 15,
+              "title": "Les 5 principaux avantages des bananes pour la santé",
+              "href": "https://www.bbc.com/afrique/articles/c3g9qx5eqgqo",
+              "timestamp": 1668095878096
+            },
+            {
+              "id": "e3dbd5c0-368a-364e-8151-f50d7bb4d56e",
+              "rank": 16,
+              "title": "'J'ai été violée à 14 ans, et la vidéo a fini sur un site porno'",
+              "href": "/afrique/monde-51446420",
+              "timestamp": 1585152911000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c03qg43pgvmo",
+              "rank": 17,
+              "title": "Le secret qui rend les tardigrades, l’un des animaux les plus résistants de la planète, « indestructibles »",
+              "href": "https://www.bbc.com/afrique/articles/c03qg43pgvmo",
+              "timestamp": 1706101179600
+            },
+            {
+              "id": "f8b116f9-f486-4491-b469-8f7691ce536d",
+              "rank": 18,
+              "title": "Les cinq principaux bienfaits du gingembre pour la santé",
+              "href": "/afrique/monde-63700115",
+              "timestamp": 1669206472000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd12xg65mrpo",
+              "rank": 19,
+              "title": "Top 5 des bienfaits du vinaigre de cidre de pomme pour la santé",
+              "href": "https://www.bbc.com/afrique/articles/cd12xg65mrpo",
+              "timestamp": 1693226002295
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd1pvr5z3zdo",
+              "rank": 20,
+              "title": "Quelles sont les principales guerres en cours dans le monde – et pourquoi certaines attirent-elles moins l’attention ?",
+              "href": "https://www.bbc.com/afrique/articles/cd1pvr5z3zdo",
+              "timestamp": 1700391481876
+            }
+          ]
+        }
+      },
+      {
         "summaries": [
           {
             "type": "article",
             "title": "Où écouter ou regarder BBC Afrique",
             "firstPublished": "2019-09-10T15:28:04.000Z",
+            "lastPublished": "2022-01-17T13:32:52.000Z",
             "link": "https://www.bbc.com/afrique/institutionelles-49580308",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "Nos partenaires et relais FM",
@@ -1005,20 +2002,20 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:39e28273-c7e6-4b87-b72b-ac80862f9e88",
         "curationType": "tipo-curation",
-        "position": 13,
+        "position": 14,
         "title": "Nos partenaires",
-        "visualProminence": "NORMAL"
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cjln1ww62p1t",
+        "contentId": "urn:bbc:tipo:topic:cg58k91z9e3t",
         "contentType": "index-home",
         "pageIdentifier": "afrique.page",
-        "pageTitle": "BBC News Afrique"
+        "pageTitle": "Accueil - BBC News Afrique"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "data is from TIPO live home page"
+  "contentType": "application/json; charset=utf-8"
 }
