@@ -51,7 +51,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/ p0h6dt4s.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
         alt: 'يستحق الانتباه',
       },
       linkLabel: {
