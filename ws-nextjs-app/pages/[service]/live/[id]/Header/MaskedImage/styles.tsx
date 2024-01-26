@@ -33,33 +33,12 @@ const mobileImageMask = `
   rgba(${maskColours.white}, 0) 100%
 `;
 
-const group4Mask = `
-  rgba(${maskColours.black}) 0%,
-  rgba(${maskColours.black}) 50%,
-  rgba(${maskColours.black}) 54%,
-  rgba(${maskColours.white}, 0.98) 56%,
-  rgba(${maskColours.white}, 0.96) 58%,
-  rgba(${maskColours.white}, 0.93) 60%,
-  rgba(${maskColours.white}, 0.89) 62%,
-  rgba(${maskColours.white}, 0.84) 64%,
-  rgba(${maskColours.white}, 0.8) 66%,
-  rgba(${maskColours.white}, 0.74) 68%,
-  rgba(${maskColours.white}, 0.68) 70%,
-  rgba(${maskColours.white}, 0.62) 72%,
-  rgba(${maskColours.white}, 0.56) 74%,
-  rgba(${maskColours.white}, 0.5) 76%,
-  rgba(${maskColours.white}, 0.44) 78%,
-  rgba(${maskColours.white}, 0.38) 80%,
-  rgba(${maskColours.white}, 0.32) 82%,
-  rgba(${maskColours.white}, 0.26) 84%,
-  rgba(${maskColours.white}, 0.2) 86%,
-  rgba(${maskColours.white}, 0.16) 88%,
-  rgba(${maskColours.white}, 0.11) 90%,
-  rgba(${maskColours.white}, 0.07) 92%,
-  rgba(${maskColours.white}, 0.04) 94%,
-  rgba(${maskColours.white}, 0.02) 96%,
-  rgba(${maskColours.white}, 0) 98%,
-  rgba(${maskColours.white}, 0) 100%`;
+const group4MaskReduced = `
+rgba(${maskColours.black}) 0%,
+rgba(${maskColours.black}) 45%,
+rgba(${maskColours.black}) 50%,
+  rgba(${maskColours.white}, 0) 78%,
+  rgba(${maskColours.white}, 0) 80%`;
 
 const extraWideMask = `
   rgba(${maskColours.white}, 0) 0%,
@@ -131,11 +110,11 @@ export default {
   linearGradientLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
-          270deg, ${group4Mask})`, // 270deg for LTR
+        background: `linear-gradient(
+          270deg, ${group4MaskReduced})`, // 270deg for LTR
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
+        background: `linear-gradient(
           270deg, ${extraWideMask})`, // 270deg for LTR
       },
     }),
@@ -143,11 +122,11 @@ export default {
   linearGradientRtl: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
-          90deg, ${group4Mask})`, // 90deg for RTL
+        background: `linear-gradient(
+          90deg, ${group4MaskReduced})`, // 90deg for RTL
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
+        background: `linear-gradient(
           90deg, ${extraWideMask})`, // 90deg for RTL
       },
     }),
