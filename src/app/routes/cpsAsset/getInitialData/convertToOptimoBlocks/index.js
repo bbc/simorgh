@@ -20,7 +20,7 @@ const nodeLogger = require('#lib/logger.node');
 const logger = nodeLogger(__filename);
 
 const handleMissingType = (block, json, assetType) =>
-  logger.info(UNSUPPORTED_BLOCK_TYPE, {
+  logger.debug(UNSUPPORTED_BLOCK_TYPE, {
     url: json.metadata.locators.assetUri,
     type: block.type,
     assetType,
