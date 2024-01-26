@@ -110,11 +110,11 @@ export default {
   linearGradientLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        background: `linear-gradient(
+        maskImage: `linear-gradient(
           270deg, ${group4MaskReduced})`, // 270deg for LTR
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        background: `linear-gradient(
+        maskImage: `linear-gradient(
           270deg, ${extraWideMask})`, // 270deg for LTR
       },
     }),
@@ -122,11 +122,11 @@ export default {
   linearGradientRtl: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        background: `linear-gradient(
+        maskImage: `linear-gradient(
           90deg, ${group4MaskReduced})`, // 90deg for RTL
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        background: `linear-gradient(
+        maskImage: `linear-gradient(
           90deg, ${extraWideMask})`, // 90deg for RTL
       },
     }),
