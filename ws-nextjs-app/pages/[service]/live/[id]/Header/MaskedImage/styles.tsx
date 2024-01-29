@@ -105,8 +105,7 @@ export default {
     css({
       [mq.GROUP_4_ONLY]: {
         '::after': {
-          backgroundImage:
-            'linear-gradient(to right, rgba(0,0,0,0), rgba(20,20,20, 1) 20%)', // this works ok, need to edit colours
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // this works ok, need to edit colours
         },
       },
     }),
@@ -114,8 +113,7 @@ export default {
     css({
       [mq.GROUP_4_ONLY]: {
         '::after': {
-          backgroundImage:
-            'linear-gradient(to left, rgba(0,0,0,0), rgba(20,20,20, 1) 20%)', // this works ok, need to edit colours
+          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // this works ok, need to edit colours
         },
       },
     }),
