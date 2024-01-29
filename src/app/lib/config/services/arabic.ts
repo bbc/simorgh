@@ -46,17 +46,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'البودكاست',
-      brandTitle: 'بي بي سي إكسترا',
+      title: 'يستحق الانتباه',
+      brandTitle: 'يستحق الانتباه',
       brandDescription:
-        'بودكاست أسبوعي يقدم  قصصا إنسانية عن العالم العربي وشبابه.',
+        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg',
-        alt: 'بي بي سي إكسترا',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
