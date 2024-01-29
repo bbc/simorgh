@@ -87,9 +87,9 @@ const extraWideMask = `
   rgba(${maskColours.white}, 0) 100%`;
 
 export default {
-  wrapper: ({ mq }: Theme) =>
+  textBackground: ({ mq }: Theme) =>
     css({
-      // decided only over min for visual?
+      // decided to use GROUP_4_ONLY to avoid overlapping styles
       [mq.GROUP_4_ONLY]: {
         '::after': {
           content: '""',
@@ -97,23 +97,23 @@ export default {
           insetInlineStart: 0,
           top: 0,
           bottom: 0,
-          width: '60%', // this needs to apply to this wrapper and not thw image
+          width: '60%', // this needs to apply to this wrapper and not the image
         },
       },
     }),
-  wrapperRtl: ({ mq }: Theme) =>
+  textBackgroundRtl: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_ONLY]: {
         '::after': {
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // this works ok, need to edit colours
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // could pass colour in as a prop
         },
       },
     }),
-  wrapperLtr: ({ mq }: Theme) =>
+  textBackgroundLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_ONLY]: {
         '::after': {
-          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // this works ok, need to edit colours
+          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // could pass colour in as a prop
         },
       },
     }),
@@ -133,7 +133,7 @@ export default {
       },
     }),
 
-  linearGradientLtr: ({ mq }: Theme) =>
+  maskedImageLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_5_MIN_WIDTH]: {
         maskImage: `linear-gradient(
@@ -141,7 +141,7 @@ export default {
       },
     }),
 
-  linearGradientRtl: ({ mq }: Theme) =>
+  maskedImageRtl: ({ mq }: Theme) =>
     css({
       [mq.GROUP_5_MIN_WIDTH]: {
         maskImage: `linear-gradient(
