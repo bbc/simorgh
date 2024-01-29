@@ -522,30 +522,6 @@
             "episodePid": "w3ct61fn",
             "broadcastPid": "p0h0zfkt",
             "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
-          },
-          {
-            "serviceId": "bbc_burmese_radio",
-            "publishedTimeStart": "2024-01-26T13:29:30.000Z",
-            "publishedTimeEnd": "2024-01-26T13:44:30.000Z",
-            "publishedTimeDuration": "PT15M",
-            "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
-            "brandPid": "p0340rnm",
-            "episodeTitle": "26/01/2024 GMT",
-            "episodePid": "w3ct6194",
-            "broadcastPid": "p0h15tx4",
-            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
-          },
-          {
-            "serviceId": "bbc_burmese_radio",
-            "publishedTimeStart": "2024-01-27T13:29:30.000Z",
-            "publishedTimeEnd": "2024-01-27T13:44:30.000Z",
-            "publishedTimeDuration": "PT15M",
-            "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
-            "brandPid": "p0340rnm",
-            "episodeTitle": "27/01/2024 GMT",
-            "episodePid": "w3ct61cd",
-            "broadcastPid": "p0h1c2gc",
-            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
           }
         ]
       },
