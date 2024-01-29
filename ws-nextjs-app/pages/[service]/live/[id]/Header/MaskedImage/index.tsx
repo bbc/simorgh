@@ -48,7 +48,7 @@ const MaskedImage = ({
         <Image
           alt=""
           src={imageUrl}
-          // aspectRatio={[16, 9]}
+          aspectRatio={[16, 9]}
           srcSet={primarySrcset || undefined}
           fallbackSrcSet={fallbackSrcset || undefined}
           mediaType={primaryMimeType || undefined}
