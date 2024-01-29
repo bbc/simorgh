@@ -434,30 +434,6 @@
             "episodePid": "w172zkg6l88pqyw",
             "broadcastPid": "p0h10m1n",
             "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
-          },
-          {
-            "serviceId": "bbc_gahuza_radio",
-            "publishedTimeStart": "2024-01-26T16:29:30.000Z",
-            "publishedTimeEnd": "2024-01-26T16:59:30.000Z",
-            "publishedTimeDuration": "PT30M",
-            "title": "Amakuru ya Gahuzamiryango",
-            "brandPid": "p0340x2n",
-            "episodeTitle": "26/01/2024 GMT",
-            "episodePid": "w172zkg6l88smvz",
-            "broadcastPid": "p0h16xl6",
-            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
-          },
-          {
-            "serviceId": "bbc_gahuza_radio",
-            "publishedTimeStart": "2024-01-27T05:00:00.000Z",
-            "publishedTimeEnd": "2024-01-27T05:59:00.000Z",
-            "publishedTimeDuration": "PT59M",
-            "title": "Imvo n'Imvano",
-            "brandPid": "p030s1fb",
-            "episodeTitle": "27/01/2024 GMT",
-            "episodePid": "w3ct674w",
-            "broadcastPid": "p0h19swz",
-            "summary": "Ikiganiro gicukumbuye ku bibazo bitandukanye."
           }
         ]
       },
