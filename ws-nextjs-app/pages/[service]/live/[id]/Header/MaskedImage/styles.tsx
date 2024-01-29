@@ -121,7 +121,7 @@ export default {
       180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
         height: '100%',
-        maxWidth: '50%', // can change this
+        maxWidth: '60%', // can change this
         objectFit: 'cover',
         position: 'absolute',
         right: '0',
