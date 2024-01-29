@@ -61,36 +61,12 @@ const extraWideMask = `
   rgba(${maskColours.black}) 24%,
   rgba(${maskColours.black}) 25%,
   rgba(${maskColours.black}) 50%,
-  rgba(${maskColours.black}) 54%,
-  rgba(${maskColours.white}, 0.98) 56%,
-  rgba(${maskColours.white}, 0.96) 58%,
-  rgba(${maskColours.white}, 0.93) 60%,
-  rgba(${maskColours.white}, 0.89) 62%,
-  rgba(${maskColours.white}, 0.84) 64%,
-  rgba(${maskColours.white}, 0.8) 66%,
-  rgba(${maskColours.white}, 0.74) 68%,
-  rgba(${maskColours.white}, 0.68) 70%,
-  rgba(${maskColours.white}, 0.62) 72%,
-  rgba(${maskColours.white}, 0.56) 74%,
-  rgba(${maskColours.white}, 0.5) 76%,
-  rgba(${maskColours.white}, 0.44) 78%,
-  rgba(${maskColours.white}, 0.38) 80%,
-  rgba(${maskColours.white}, 0.32) 82%,
-  rgba(${maskColours.white}, 0.26) 84%,
-  rgba(${maskColours.white}, 0.2) 86%,
-  rgba(${maskColours.white}, 0.16) 88%,
-  rgba(${maskColours.white}, 0.11) 90%,
-  rgba(${maskColours.white}, 0.07) 92%,
-  rgba(${maskColours.white}, 0.04) 94%,
-  rgba(${maskColours.white}, 0.02) 96%,
-  rgba(${maskColours.white}, 0) 98%,
-  rgba(${maskColours.white}, 0) 100%`;
+  rgba(${maskColours.black}) 54%`;
 
 export default {
   textBackground: ({ mq }: Theme) =>
     css({
-      // decided to use GROUP_4_ONLY to avoid overlapping styles
-      [mq.GROUP_4_ONLY]: {
+      [mq.GROUP_4_MIN_WIDTH]: {
         '::after': {
           content: '""',
           position: 'absolute',
@@ -103,7 +79,7 @@ export default {
     }),
   textBackgroundRtl: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_4_ONLY]: {
+      [mq.GROUP_4_MIN_WIDTH]: {
         '::after': {
           backgroundImage: `linear-gradient(to right, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // could pass colour in as a prop
         },
@@ -111,7 +87,7 @@ export default {
     }),
   textBackgroundLtr: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_4_ONLY]: {
+      [mq.GROUP_4_MIN_WIDTH]: {
         '::after': {
           backgroundImage: `linear-gradient(to left, rgba(0,0,0,0), rgba(${maskColours.grey_10}, 1) 20%)`, // could pass colour in as a prop
         },
