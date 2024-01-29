@@ -114,20 +114,32 @@ const extraWideMask = `
   rgba(${maskColours.white}, 0) 100%`;
 
 export default {
+  imagePosition: ({ mq }: Theme) =>
+    css({
+      // [mq.GROUP_4_MIN_WIDTH]: {
+      //   position: 'absolute',
+      //   insetInlineEnd: 0,
+      //   top: '0',
+      //   height: '100%',
+      //   // aspectRatio: '16 / 9',
+      //   overflow: 'hidden',
+      //   // maxWidth: '80%', // can change this
+      // },
+    }),
   maskedImage: ({ mq }: Theme) =>
     css({
       maskSize: '100% 100%',
       maskImage: `linear-gradient(
       180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        position: 'absolute',
-        insetInlineEnd: 0,
-        top: '0',
         height: '100%',
-        aspectRatio: '16 / 9',
-        overflow: 'hidden',
+        maxWidth: '50%', // can change this
+        objectFit: 'cover',
+        position: 'absolute',
+        right: '0',
       },
     }),
+
   linearGradientLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
