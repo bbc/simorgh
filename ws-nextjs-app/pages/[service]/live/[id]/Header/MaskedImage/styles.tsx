@@ -2,6 +2,7 @@ import { css, Theme } from '@emotion/react';
 
 const maskColours = {
   black: '0,0,0',
+  grey_10: '20,20,20',
   white: '255,255,255',
 };
 
@@ -32,13 +33,6 @@ const mobileImageMask = `
   rgba(${maskColours.white}, 0.1) 96%,
   rgba(${maskColours.white}, 0) 100%
 `;
-
-const group4MaskReduced = `
-rgba(${maskColours.black}) 0%,
-rgba(${maskColours.black}) 45%,
-rgba(${maskColours.black}) 50%,
-  rgba(${maskColours.white}, 0) 78%,
-  rgba(${maskColours.white}, 0) 80%`;
 
 const extraWideMask = `
   rgba(${maskColours.white}, 0) 0%,
@@ -95,15 +89,35 @@ const extraWideMask = `
 export default {
   wrapper: ({ mq }: Theme) =>
     css({
-      //   [mq.GROUP_4_MIN_WIDTH]: {
-      //     position: 'absolute',
-      //     insetInlineEnd: 0,
-      //     top: '0',
-      //     height: '100%',
-      //     aspectRatio: '16 / 9',
-      //     overflow: 'hidden',
-      //     maxWidth: '80%', // can change this
-      // },
+      // decided only over min for visual?
+      [mq.GROUP_4_ONLY]: {
+        '::after': {
+          content: '""',
+          position: 'absolute',
+          insetInlineStart: 0,
+          top: 0,
+          bottom: 0,
+          width: '60%', // this needs to apply to this wrapper and not thw image
+        },
+      },
+    }),
+  wrapperRtl: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_ONLY]: {
+        '::after': {
+          backgroundImage:
+            'linear-gradient(to right, rgba(0,0,0,0), rgba(20,20,20, 1) 20%)', // this works ok, need to edit colours
+        },
+      },
+    }),
+  wrapperLtr: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_ONLY]: {
+        '::after': {
+          backgroundImage:
+            'linear-gradient(to left, rgba(0,0,0,0), rgba(20,20,20, 1) 20%)', // this works ok, need to edit colours
+        },
+      },
     }),
   maskedImage: ({ mq }: Theme) =>
     css({
@@ -111,21 +125,18 @@ export default {
       maskImage: `linear-gradient(
       180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
+        maskImage: 'none', // undoes mobile
         position: 'absolute',
         insetInlineEnd: 0,
         top: '0',
         height: '100%',
         aspectRatio: '16 / 9',
         overflow: 'hidden',
-        maxWidth: '80%', // can change this
       },
     }),
+
   linearGradientLtr: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
-          270deg, ${group4MaskReduced})`, // 270deg for LTR
-      },
       [mq.GROUP_5_MIN_WIDTH]: {
         maskImage: `linear-gradient(
           270deg, ${extraWideMask})`, // 270deg for LTR
@@ -134,10 +145,6 @@ export default {
 
   linearGradientRtl: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        maskImage: `linear-gradient(
-          90deg, ${group4MaskReduced})`, // 90deg for RTL
-      },
       [mq.GROUP_5_MIN_WIDTH]: {
         maskImage: `linear-gradient(
           90deg, ${extraWideMask})`, // 90deg for RTL

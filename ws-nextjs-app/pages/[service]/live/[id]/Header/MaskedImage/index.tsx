@@ -33,7 +33,7 @@ const MaskedImage = ({
     });
 
   return (
-    <div css={styles.wrapper}>
+    <div css={[styles.wrapper, isRtl ? styles.wrapperRtl : styles.wrapperLtr]}>
       <div
         css={[
           styles.maskedImage,
