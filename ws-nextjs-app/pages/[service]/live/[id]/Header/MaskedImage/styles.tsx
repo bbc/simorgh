@@ -114,18 +114,6 @@ const extraWideMask = `
   rgba(${maskColours.white}, 0) 100%`;
 
 export default {
-  imagePosition: ({ mq }: Theme) =>
-    css({
-      // [mq.GROUP_4_MIN_WIDTH]: {
-      //   position: 'absolute',
-      //   insetInlineEnd: 0,
-      //   top: '0',
-      //   height: '100%',
-      //   // aspectRatio: '16 / 9',
-      //   overflow: 'hidden',
-      //   // maxWidth: '80%', // can change this
-      // },
-    }),
   maskedImage: ({ mq }: Theme) =>
     css({
       maskSize: '100% 100%',
