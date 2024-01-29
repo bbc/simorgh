@@ -1,6 +1,13 @@
 /* eslint-disable import/first */
 /* eslint-disable import/order */
-import sendCustomMetric from '.';
+import sendCustomMetric, { Params } from '.';
+
+const metricParams = {
+  metricName: 'Metric Name',
+  statusCode: 500,
+  pageType: 'article',
+  requestUrl: '/request/url',
+} satisfies Params;
 
 // mocking of aws-emf-metrics logic borrowed from https://github.com/awslabs/aws-embedded-metrics-node/blob/master/examples/testing/tests/module.jest.test.js
 jest.mock('aws-embedded-metrics', () => {
@@ -17,19 +24,13 @@ jest.mock('aws-embedded-metrics', () => {
   // return the mocked module
   return {
     metricsLogger,
-    metricScope: fn => fn(metricsLogger),
+    metricScope: (fn: (params: object) => metricsLogger) => fn(metricsLogger),
     Unit,
   };
 });
 
+// @ts-expect-error - importing mocked module
 import { metricsLogger } from 'aws-embedded-metrics';
-
-const metricParams = {
-  metricName: 'Metric Name',
-  statusCode: 500,
-  pageType: 'Page Type',
-  requestUrl: '/request/url',
-};
 
 describe('Cloudwatch Custom Metrics', () => {
   afterEach(() => {
@@ -37,9 +38,9 @@ describe('Cloudwatch Custom Metrics', () => {
   });
 
   ['local'].forEach(environment => {
-    it(`should not send custom metrics on ${environment}`, async () => {
+    it(`should not send custom metrics on ${environment}`, () => {
       process.env.SIMORGH_APP_ENV = environment;
-      await sendCustomMetric(metricParams);
+      sendCustomMetric(metricParams);
 
       expect(metricsLogger.setNamespace).not.toBeCalled();
       expect(metricsLogger.putMetric).not.toBeCalled();
@@ -48,9 +49,9 @@ describe('Cloudwatch Custom Metrics', () => {
     });
   });
 
-  it('should send custom metrics on test', async () => {
+  it('should send custom metrics on test', () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await sendCustomMetric(metricParams);
+    sendCustomMetric(metricParams);
 
     expect(metricsLogger.setNamespace).toBeCalled();
     expect(metricsLogger.putMetric).toBeCalled();
@@ -63,29 +64,29 @@ describe('Cloudwatch Custom Metrics', () => {
       process.env.SIMORGH_APP_ENV = 'test';
     });
 
-    it('should set metric namespace', async () => {
-      await sendCustomMetric(metricParams);
+    it('should set metric namespace', () => {
+      sendCustomMetric(metricParams);
 
       expect(metricsLogger.setNamespace).toBeCalledWith('Simorgh/Server');
     });
 
-    it('should set metric with name and count', async () => {
-      await sendCustomMetric(metricParams);
+    it('should set metric with name and count', () => {
+      sendCustomMetric(metricParams);
 
       expect(metricsLogger.putMetric).toBeCalledWith('Metric Name', 1, 'Count');
     });
 
-    it('should set dimensions', async () => {
-      await sendCustomMetric(metricParams);
+    it('should set dimensions', () => {
+      sendCustomMetric(metricParams);
 
       expect(metricsLogger.putDimensions).toBeCalledWith({
-        PageType: 'Page Type',
+        PageType: 'article',
         StatusCode: '500',
       });
     });
 
-    it('should set URL property', async () => {
-      await sendCustomMetric(metricParams);
+    it('should set URL property', () => {
+      sendCustomMetric(metricParams);
 
       expect(metricsLogger.setProperty).toBeCalledWith('URL', '/request/url');
     });
