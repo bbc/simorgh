@@ -74,6 +74,10 @@ export default async ({
       pageType,
       ...(timeout && { timeout }),
     };
+
+    console.log({ environment, fetchUrl, pathname });
+
+
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 

@@ -77,6 +77,15 @@ module.exports = {
       'emotion-theming': toPath('node_modules/@emotion/react'),
     };
 
+    config.resolve.fallback = {
+      fs: false,
+      crypto: false,
+      browser: false,
+      https: false,
+      tls: false,
+    };
+
     return config;
   },
+  staticDirs: ['./static', '../data'],
 };

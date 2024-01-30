@@ -22,5 +22,5 @@ export default ({ addVariantHandling } = defaultValue) =>
       }
       return component;
     },
-    withHashChangeHandler,
+    // withHashChangeHandler,
   );
