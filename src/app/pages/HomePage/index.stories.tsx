@@ -22,7 +22,7 @@ const Component = ({ service, variant }: StoryProps) => {
         pageType: HOME_PAGE,
         path: `/${service}`,
       });
-      // ts-expect-error ignore
+      // @ts-expect-error suppressing this error as it is required to fetch data client-side
       setPageData(pageData);
     };
 
