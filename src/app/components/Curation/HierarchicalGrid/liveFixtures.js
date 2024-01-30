@@ -6,7 +6,7 @@ const livePromo = [
     lastPublished: '2022-11-13T13:34:32.000Z',
     link: 'https://www.bbc.com/pidgin/live/56000740',
     imageUrl:
-      'https://ichef.bbci.co.uk/news/{width}/cpsprodpb/C6E6/production/_116881905_trump.jpg',
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/C6E6/production/_116881905_trump.jpg',
     description:
       'Trump dey face one single charge of "incitement of insurrection" for di speech wey im make to im supporters ahead of di deadly riot for US Capitol for January.',
     imageAlt: 'Former US President Donald Trump',
@@ -19,7 +19,7 @@ const livePromo = [
     lastPublished: '2022-12-09T20:56:29.000Z',
     link: 'https://www.bbc.com/pidgin/live/tori-59901959',
     imageUrl:
-      'https://ichef.bbci.co.uk/news/{width}/cpsprodpb/DE3A/production/_122609865_january6timelinewetinhappunforjanuary6oneyearago.jpg',
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/DE3A/production/_122609865_january6timelinewetinhappunforjanuary6oneyearago.jpg',
     description:
       'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
     imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
@@ -32,7 +32,7 @@ const livePromo = [
     lastPublished: '2022-08-14T05:36:38.000Z',
     link: 'https://www.bbc.com/pidgin/live/tori-57396574',
     imageUrl:
-      'https://ichef.bbci.co.uk/news/{width}/cpsprodpb/10BB/production/_118838240_3164b6b1-d415-43c8-9bce-3e497aac61bf.jpg',
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/10BB/production/_118838240_3164b6b1-d415-43c8-9bce-3e497aac61bf.jpg',
     description:
       'Former US President Donald Trump don tell Fox Business say im see Bitcoin as \'scam" wey dey affect di value of di US dollar.',
     imageAlt: 'Donald Trump',
