@@ -35,10 +35,10 @@ interface UrlConstructParams {
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => path;
 const getFrontPageId = (path: string) => `${path}/front_page`;
-const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
+const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
 const isFrontPage = ({
   path,
