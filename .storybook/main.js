@@ -41,7 +41,6 @@ module.exports = {
         transcludeMarkdown: true,
       },
     },
-    'storybook-addon-mock',
   ],
   webpackFinal: async config => {
     config.target = ['web', 'es5'];
@@ -75,14 +74,6 @@ module.exports = {
       '@emotion/core': toPath('node_modules/@emotion/react'),
       '@emotion/styled': toPath('node_modules/@emotion/styled'),
       'emotion-theming': toPath('node_modules/@emotion/react'),
-    };
-
-    config.resolve.fallback = {
-      fs: false,
-      crypto: false,
-      browser: false,
-      https: false,
-      tls: false,
     };
 
     return config;
