@@ -3,10 +3,10 @@ import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import useTrackingToggle from '#hooks/useTrackingToggle';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import useTrackingToggle from '../useTrackingToggle';
+import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
+import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
@@ -19,6 +19,7 @@ const useClickTrackerHandler = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
   const optimizely = path(['optimizely'], props);
+  const detailedPlacement = props?.detailedPlacement;
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -85,6 +86,7 @@ const useClickTrackerHandler = (props = {}) => {
               advertiserID,
               statsDestination,
               url,
+              detailedPlacement,
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
@@ -112,6 +114,7 @@ const useClickTrackerHandler = (props = {}) => {
       advertiserID,
       format,
       optimizely,
+      detailedPlacement,
     ],
   );
 };

@@ -56,7 +56,7 @@ export const ExampleImage = () => {
   );
 };
 
-export const ExampleMediaIndicator = styled(MediaIndicator)``;
+export const ExampleMediaIndicator = MediaIndicator;
 
 export const ExampleTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};

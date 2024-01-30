@@ -83,7 +83,8 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #121212;
+  background-color: #141414;
+  color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -340,7 +341,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   margin: 0;
 }
 
-.emotion-35 {
+.emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -353,20 +354,20 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-39 {
+.emotion-37 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -379,27 +380,27 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-103 {
+.emotion-94 {
   display: inline;
 }
 
-.emotion-106 {
+.emotion-97 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #545658;
+  color: #E6E8EA;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -413,28 +414,28 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-106 {
+  .emotion-97 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-106 {
+  .emotion-97 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-106 {
+  .emotion-97 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-106 {
+  .emotion-97 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -545,29 +546,29 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
+                  class="episode-list__title--hover episode-list__title--visited emotion-34 emotion-35"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
+                  class="episode-list__description--hover episode-list__description--visited emotion-37 emotion-38"
                   dir="ltr"
                 >
                   13 novembre 2020
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , Durée 15,00 
                 </span>
@@ -648,29 +649,29 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
+                  class="episode-list__title--hover episode-list__title--visited emotion-34 emotion-35"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
+                  class="episode-list__description--hover episode-list__description--visited emotion-37 emotion-38"
                   dir="ltr"
                 >
                   12 novembre 2020
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , Durée 15,00 
                 </span>
@@ -751,39 +752,39 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
+                  class="episode-list__title--hover episode-list__title--visited emotion-34 emotion-35"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
+                  class="episode-list__description--hover episode-list__description--visited emotion-37 emotion-38"
                   dir="ltr"
                 >
                   Oui, je suis le chef
                 </span>
                 <span
-                  class="emotion-33 emotion-34"
+                  class="emotion-33"
                 >
                   , Durée 15,00 
                 </span>
               </span>
             </a>
             <div
-              class="emotion-103 emotion-104"
+              class="emotion-94 emotion-95"
             >
               <time
-                class="emotion-105 emotion-106 emotion-107"
+                class="emotion-96 emotion-97 emotion-98"
                 datetime="2020-11-11"
               >
                 11 novembre 2020

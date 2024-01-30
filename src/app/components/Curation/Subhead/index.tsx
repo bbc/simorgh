@@ -1,6 +1,9 @@
-import React, { Fragment, PropsWithChildren, useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { Fragment, PropsWithChildren, useContext } from 'react';
 
-import H2 from './index.styled';
+import styles from './index.styles';
 
 import { LeftChevron, RightChevron } from '../../icons';
 
@@ -8,11 +11,11 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 
 interface Props {
   link?: string;
-  a11yID?: string;
+  id?: string;
 }
 
-const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
-  const { service, script, dir } = useContext(ServiceContext);
+const Subhead = ({ children, link, id }: PropsWithChildren<Props>) => {
+  const { dir } = useContext(ServiceContext);
 
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
@@ -23,12 +26,10 @@ const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
       )
     : Fragment;
   return (
-    <H2 service={service} script={script} id={a11yID}>
+    <h2 css={styles.h2} id={id}>
       <Wrapper>{children}</Wrapper>
-    </H2>
+    </h2>
   );
 };
-
-Subhead.defaultProps = { link: '', a11yID: '' };
 
 export default Subhead;

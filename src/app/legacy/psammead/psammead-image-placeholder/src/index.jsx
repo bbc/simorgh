@@ -19,9 +19,9 @@ const StyledImagePlaceholder = styled.div`
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: ${({ darkMode }) =>
+  background-color: ${({ darkPlaceholder }) =>
     props =>
-      darkMode ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
+      darkPlaceholder ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 60px 17px;
@@ -32,8 +32,8 @@ const StyledImagePlaceholder = styled.div`
     background-size: 93px 27px;
   }
   width: 100%;
-  background-image: ${({ darkMode }) =>
-    darkMode ? bgImageDark : bgImageRegular};
+  background-image: ${({ darkPlaceholder }) =>
+    darkPlaceholder ? bgImageDark : bgImageRegular};
 `;
 
 const ImagePlaceholder = props => {
@@ -50,12 +50,12 @@ const ImagePlaceholder = props => {
 
 ImagePlaceholder.propTypes = {
   ratio: number.isRequired,
-  darkMode: bool,
+  darkPlaceholder: bool,
   forwardStyle: objectOf(string),
 };
 
 ImagePlaceholder.defaultProps = {
-  darkMode: false,
+  darkPlaceholder: false,
   forwardStyle: null,
 };
 

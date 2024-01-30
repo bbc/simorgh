@@ -5,9 +5,9 @@ import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../ThemeProvider';
 import CurationGrid from '.';
-import { StorybookProps } from '../types';
+import { StoryProps } from '../../../models/types/storybook';
 
-const Component = ({ service, variant }: StorybookProps) => {
+const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>

@@ -14,6 +14,8 @@ import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import _OnDemandTvPage from './OnDemandTvPage';
 
+const pageType = MEDIA_PAGE;
+
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
 const toggles = {
@@ -30,7 +32,8 @@ const Page = ({ pageData, service, isAmp = false }) => (
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
-          pageType={MEDIA_PAGE}
+          pageType={pageType}
+          derivedPageType="On Demand TV"
           pathname="/pathname"
           service={service}
           statusCode={200}
@@ -47,6 +50,10 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
   await act(async () => {
     result = await render(
       <Page pageData={pageData} service={service} isAmp={isAmp} />,
+      {
+        pageType,
+        derivedPageType: 'On Demand TV',
+      },
     );
   });
 
@@ -55,14 +62,12 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
 const { env } = process;
-
-const pageType = MEDIA_PAGE;
 
 describe('OnDemand TV Brand Page ', () => {
   beforeEach(() => {
@@ -83,7 +88,7 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     const visuallyHiddenHeadline = document.querySelector(
-      'h1[class*="VisuallyHiddenText"]',
+      'h1[class*="visuallyHiddenText"]',
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();

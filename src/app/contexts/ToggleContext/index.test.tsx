@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useContext } from 'react';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { queryByText } from '@testing-library/dom';
+import { Toggles } from '../../models/types/global';
 import { ToggleContext, ToggleContextProvider } from '.';
 
 jest.mock('#lib/config/toggles', () => ({
@@ -18,7 +18,8 @@ type Props = {
 
 const TestComponent = ({ toggle, children }: PropsWithChildren<Props>) => {
   const { toggleState } = useContext(ToggleContext);
-  const toggleIsEnabled = toggleState[toggle] && toggleState[toggle].enabled;
+  // @ts-expect-error - mocking a fake toggle
+  const toggleIsEnabled = !!toggleState[toggle as Toggles]?.enabled;
   if (!toggleIsEnabled) {
     return null;
   }

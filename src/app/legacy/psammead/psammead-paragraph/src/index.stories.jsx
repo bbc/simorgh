@@ -4,10 +4,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import InlineLink from '#psammead/psammead-inline-link/src';
-import {
-  withServicesKnob,
-  themes,
-} from '#psammead/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Paragraph from './index';
 
@@ -22,15 +19,6 @@ storiesOf('Components/Paragraph', module)
       </Paragraph>
     ),
     { notes, knobs: { escapeHTML: false } },
-  )
-  .add(
-    'dark mode',
-    ({ text, script, service }) => (
-      <Paragraph script={script} service={service} darkMode>
-        {text}
-      </Paragraph>
-    ),
-    { notes, knobs: { escapeHTML: false }, options: { theme: themes.dark } },
   )
   .add(
     'containing an inline link',

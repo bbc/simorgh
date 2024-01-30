@@ -59,6 +59,7 @@ describe('Logger node - for the server', () => {
         winston.format.timestamp = jest.fn();
         winston.format.colorize = jest.fn();
         winston.format.metadata = jest.fn();
+        winston.format.label = jest.fn();
         winston.transports = jest.fn();
         winston.transports.File = jest.fn();
         winston.transports.Console = jest.fn();
@@ -70,6 +71,7 @@ describe('Logger node - for the server', () => {
         winston.format.colorize.mockImplementation(() => 'Colorize Mock');
         winston.format.metadata.mockImplementation(() => 'Metadata Mock');
         winston.format.prettyPrint.mockImplementation(() => 'PrettyPrint Mock');
+        winston.format.label.mockImplementation(() => 'Label Mock');
 
         fs.existsSync = jest.fn();
         fs.mkdirSync = jest.fn();
@@ -146,7 +148,7 @@ describe('Logger node - for the server', () => {
       });
 
       describe('createLogger', () => {
-        it('is configured correctly', () => {
+        it('is configured correctly for Express', () => {
           const loggerNode = require('./logger.node');
           loggerNode('path/file/foo.js');
 
@@ -166,6 +168,7 @@ describe('Logger node - for the server', () => {
             3,
             'Simple Mock',
             'Timestamp Mock',
+            'Label Mock',
             'Metadata Mock',
           );
 
@@ -178,7 +181,43 @@ describe('Logger node - for the server', () => {
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',
-            transports: [{}, {}],
+            transports: [{}],
+          });
+        });
+
+        it('is configured correctly for NextJS', () => {
+          process.env.NEXTJS = 'true';
+          const loggerNode = require('./logger.node');
+          loggerNode('path/file/foo.js');
+
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            1,
+            'Json Mock',
+          );
+
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            2,
+            'Json Mock',
+          );
+
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            3,
+            'Simple Mock',
+            'Timestamp Mock',
+            'Label Mock',
+            'Metadata Mock',
+          );
+
+          expect(winston.format.simple).toHaveBeenCalled();
+          expect(winston.format.timestamp).toHaveBeenCalledWith({
+            format: 'YYYY-MM-DD HH:mm:ss.SSS',
+          });
+          expect(winston.format.metadata).toHaveBeenCalledWith({
+            fillExcept: ['timestamp', 'level', 'message'],
+          });
+          expect(winston.createLogger).toHaveBeenCalledWith({
+            format: 'Combine Mock',
+            transports: [{}],
           });
         });
       });

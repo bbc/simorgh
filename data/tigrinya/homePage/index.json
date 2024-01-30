@@ -1,0 +1,1011 @@
+{
+  "data": {
+    "title": "ዜና - BBC News ትግርኛ",
+    "description": "ብድምጽን ስእልን ጽሑፍን ንዝቐርብ: ዕለታውን ሰበር ዜናታትን ዛንታታት ቢቢሲን ንምክትታል፡ ናብ ድሕረ ገጻት መርበብ ሓበሬታና ብጽሑ። ቢቢሲ፡ ርጡብን እሙንን ዘቤታውን ዓለማውን ዜናታትን ኣመለኻኸታን የቕርብ። ከምኡ እውን ዘዛኒ መደባት፡ ንቢዝነስ፡ ሳይንስ፡ ቴክኖሎጂን ጥዕናን ዝምልከት ትሕዝቶታት የቕርብ እዩ’ሞ ንኽትከታትሉና ናብ መርበብ ሓበሬታ ቢቢሲ ንዕድመኩም",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ቅልውላው ቀርኒ ኣፍሪቃ፡ ዝምድና ሃገራት እንታይ ይመስል?",
+            "firstPublished": "2024-01-25T05:35:37.001Z",
+            "lastPublished": "2024-01-25T05:35:37.001Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c3g0lx1x1dko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6133/live/1c4bbc40-bb4f-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ቀርኒ ኣፍሪቃ ኣብ ዓለም ካብ ዘለዉ ዞባታት ብግጭት፡ ምትእትታው ሓያላን ሃገራትን ግህሰት ሰብኣዊ መሰላትን እዩ ዝፍለጥ። ቀርኒ ኣፍሪቃ ኣማኢት ኣሽሓት ዝሞቱሉ ኲናት ዘአንግድ እዚ ወጥሪ ዘይጠፍኣሉ ምኽንያት ሓደ ብሰንኪ ውሽጣዊ ጉዳያት እተን ሃገራት እዩ። ኣብ መንጐ እተን ሃገራት ዘሎ ፖለቲካውን ዲፕሎማስያውን ምትፍናን’ውን ጽልዋ ኣለዎ።",
+            "imageAlt": "መራሕቲ ቀርኒ ኣፍሪቃ",
+            "id": "c3g0lx1x1dko"
+          },
+          {
+            "type": "article",
+            "title": "ኑክሌራዊ ምጾታት ዓለም ክሳብ ክንደይ የስግእ?",
+            "firstPublished": "2024-01-26T05:33:37.134Z",
+            "lastPublished": "2024-01-26T05:33:37.134Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c2j58rmvm9lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d7e/live/d0219c60-bb9c-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ቅድሚ ሒደት መዓልታት ሰዓት ምጾታት ዓለም ወይ ‘ዘ ዱምስደይ ክሎክ’ 90 ካልኢት ጐደል ንፍርቂ ለይቲ ኰይና ተመሊኣ ኣላ። ስግኣት ሓድሽ ውድድር ኒዩክለራዊ ኣጽዋር፡ ኲናት ዩክረይን፡ ሰብሰርሖ ብልሒን ስክፍታታት ለውጢ ክሊማን፡ ዓለም ናብ \"ጥፍኣት\" ክትቀርብ ክገብሩ ዝኽእሉ ረቛሒታት ምዃኖም ተመራመርቲ ስነፍልጠት ይገልጹ።",
+            "imageAlt": "ኑክሌራዊ ኲናት ንዓለም ከጥፍኣ ይኽእል’ዩ ዝብል ፍርሒ ኣሎ",
+            "id": "c2j58rmvm9lo"
+          },
+          {
+            "type": "article",
+            "title": "መጥቃዕቲ ዒራቕ፡ ኣሜሪካ ንመን እያ ዒላማ ትገብር ዘላ?",
+            "firstPublished": "2024-01-26T05:12:05.213Z",
+            "lastPublished": "2024-01-26T05:12:05.213Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cl752jqkxedo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b5a0/live/343bb5c0-bc09-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "እቲ መጥቃዕቲ፡ \"ቀጥታዊ ምላሽ ናይቲ ኣብ ልዕሊ ኣብ ዒራቕን ሶርያን ኣብ ልዕሊ ሓይልታት ኣሜሪካን ኣህጉራውያን ሓይልታትን ዝፍጸም ዘሎ ቀጻሊ መጥቃዕቲ\" ምዃኑ ገሊጻ።",
+            "imageAlt": "ምስ ኢራን ምትእስሳር ዘለዎም ጕጅለታት",
+            "id": "cl752jqkxedo"
+          },
+          {
+            "type": "article",
+            "title": "ብጥሜት ዝሞቱ 'ዓያሹ ጥራይ' እዮም ዝብል ርእይቶ ሚኒስተር ሓያል ቁጥዐ ኣልዒሉ",
+            "firstPublished": "2024-01-26T05:03:32.997Z",
+            "lastPublished": "2024-01-26T05:03:32.997Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crgknjj8ngko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ea1c/live/86988cd0-bba0-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ሚኒስተር ጉዳያት ወጻኢ ዩጋንዳ፡ ኣብታ ሃገር \"ብጥሜት ክመውት ዝኽእል ዓሻ፡ ናይ ብሓቂ ዓሻ ጥራይ'ዩ\" ምባሉ ቁጥዐ ኣበጊሱ።",
+            "imageAlt": "ነቐፍቲ፡ እቲ ሚኒስተር ብዛዕባ ጠንቂ ብድሆታት ውሕስነት መግቢ ርድኢት የብሉን ይብሉ",
+            "id": "crgknjj8ngko"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራ፡ ነፋሪት ሚኒስተር ጉዳያት ወጻኢ ጀርመን ብክሊ ኣየራ ክትሓልፍ ከሊኣ ድያ?",
+            "firstPublished": "2024-01-25T08:34:47.764Z",
+            "lastPublished": "2024-01-25T08:34:47.764Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cglmg5pzndxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1853/live/ca426890-bb58-11ee-8685-316409d66f25.jpg",
+            "description": "ፍቓድ በረራ ክሊ ኣየር ግን ብዝተፈላለየ ምኽንያታት ክነጽግ ይኽእል እዩ። እዚ ከኣ ብሓፈሻ ኣብ ፖሊሲታትን ስርዓታትን ናይታ ነፋሪት እትሓልፈላ ሃገር ወይ ሃገራት ዝምርኮስ ኰይኑ፡ ምስ ጉዳይ ሃገራዊ ድሕነት፡ ገደባት ክሊ ኣየር፡ ክፍሊት፡ ክሊማዊ ኵነታት፡ ድኹም ዲፕሎማስያዊ ዝምድናን ካልእ ምክንያታትን እቲ ሕቶ ፍቓድ ክሊኣየር ተቐባልነት ክስእን ይኽእል።",
+            "imageAlt": "ሚኒስተር ጉዳያት ወጻ'ኢ ጀርመን",
+            "id": "cglmg5pzndxo"
+          },
+          {
+            "type": "article",
+            "title": "ብቀይሕ ባሕሪ ዘይሓልፋ መራኽብ ናበይ ይኸዳ ኣለዋ?",
+            "firstPublished": "2024-01-25T10:54:21.588Z",
+            "lastPublished": "2024-01-25T10:54:21.588Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crg4znvxpjgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3722/live/bf9b9160-bb52-11ee-8685-316409d66f25.jpg",
+            "description": "እተን ካብ ደቡብ ኤሽያ፡ ብመገዲ መትረብ ስወጽ ናብ ኤውሮጳ ዝሰግራ ዝነበራ መራኽብ፡ ብኢራን ብዝድገፉ የመናውያን ሑቲ ዝትኮሰለን ሚሳይላትን ድሮናትን ብምስጋእ ብጸንፊ ጽቡቕ ተስፋ (ኬፕ ኦፍ ጉድ ሆፕ)  ይኸዳ ስለዘለዋ፡ ወኪላት መራኽብ ንግድ፡ እቲ ዝጸንሐ ዓለማዊ ጉዕዞ ይቕየር ምህላው ይሕብሩ።",
+            "imageAlt": "መራኽብ ንግዲ",
+            "id": "crg4znvxpjgo"
+          },
+          {
+            "type": "article",
+            "title": "ኣመሪካዊ ጀነራል ናብ ሶማልያ ብምብጻሕ ብዛዕባ 'ዞባዊ ጸጥታዊ ጉዳያት' ተዘራሪቡ",
+            "firstPublished": "2024-01-25T14:45:07.606Z",
+            "lastPublished": "2024-01-25T14:45:07.606Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c4njxpnk45jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dbf6/live/be7adb50-bba3-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "ኣዛዚ ናይቲ ኣብ ኣፍሪቃ ዝዋፈር ሓይልታት ኣመሪካ ዝኾነ ጀነራል ጀነራል ማይክል ኢ. ላንግለይ፡ ብረቡዕ ኣብ ሶማልያ ምብጻሕ ብምክያድ ምስ ፕረዚደንት ሶማልያ ሓሰን ሸኽ ሳልሕ ተራኺቡ።",
+            "imageAlt": "ጀነራል ማይክል ኢ. ላንግለይ",
+            "id": "c4njxpnk45jo"
+          },
+          {
+            "type": "article",
+            "title": "ተኣጊደን ዝጸንሓ ነፈርቲ ቦይንግ ፍቓድ በረራ ረኺበን",
+            "firstPublished": "2024-01-25T06:43:25.913Z",
+            "lastPublished": "2024-01-25T06:43:25.913Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cpdez2mx0n3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0283/live/1e7091b0-bb47-11ee-8685-316409d66f25.jpg",
+            "description": "ተቘጻጻሪ ኣቬሽን ኣሜሪካ፡ ስርሓት ቦይንግ ዝዀና 737 ማክስ 9 ዝዓይነተን ነፈርቲ፡ ዘካይዶ ዘሎ መርመራታት ምስተዛዘመ ዳግማይ በረራ ክጅምራ ከምዘፍቅድ ገሊጹ።",
+            "imageAlt": "ስርሒት ነፋሪት ቦይንግ",
+            "id": "cpdez2mx0n3o"
+          },
+          {
+            "type": "article",
+            "title": "ዋንጫ ኣፍሪቃ፡ ናብ ኣውዲቕካ ምሕላፍ ዝኣተዋ ሃገራት ኣየኖት እየን? ቀጻሊ ግጥማት ከ?",
+            "firstPublished": "2024-01-25T08:43:06.159Z",
+            "lastPublished": "2024-01-25T08:43:06.159Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cy6eng4j3p7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8b81/live/a4c365a0-bb54-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ሞሮካዊ ሓኪም ዚያች ዘቝጸራ ሽቶ ንተስፋ ዛምቢያ ኣጸልሚታ ጻንሒት ኣይቮሪኮስት ዘለምለመት ኰይና።",
+            "imageAlt": "ሳዲዮ ማነ",
+            "id": "cy6eng4j3p7o"
+          },
+          {
+            "type": "article",
+            "title": "ቢንያም ግርማይ ሓደ ካብ 100 ኣዝዮም ጸለውቲ ኣፍሪቃውያን ኮይኑ ተረቚሑ",
+            "firstPublished": "2024-01-24T11:10:00.283Z",
+            "lastPublished": "2024-01-24T11:10:00.283Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c6pqge1g947o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c7fd/live/2cc1e6a0-bac6-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "“ጉዕዞ ቢንያም ተምሳሌት ናይቲ እናዓበየ ዝመጽእ ዘሎ ጽልዋ ኣፍሪቃውያን እዩ። ተወፋይነትን ብርቂ ዓወታትን ቢንያም ንብዙሓት ኣብ መላእ እታ ኣሕጉር ዝርከቡ ናብ ዝለዓለ ደረጃታት ዘቋምቱ ተቐዳደምቲ ድርኺት ዝፈጥር እዩ።”  ኣብ ታሪኽ ቅድድም ብሽክለታ ኣፍሪቃ ሓያለ ቅድሚ ሕጂ ተበጺሖም ዘይፈልጡ ዓወታት ብሽሙ ከመዝግብ ዝኽኣለ ወዲ 23 ዓመት ቢንያም ግርማይ ‘መራሒ ሰውራ ቅድድም ብሽክለታ ኣፍሪቃ’ ክበሃል በቒዑ እዩ።",
+            "imageAlt": "ቢንያም ግርማይ",
+            "id": "c6pqge1g947o"
+          },
+          {
+            "type": "article",
+            "title": "ዩክረይን ምሩኻት ወተሃደራታ ንዝጸዓነት ነፋሪት ሩስያ ብምህራማ ንሞስኮ ከሲሳ",
+            "firstPublished": "2024-01-25T05:47:56.969Z",
+            "lastPublished": "2024-01-25T05:47:56.969Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cd17yvepx75o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c562/live/c10e1250-bb40-11ee-8685-316409d66f25.jpg",
+            "description": "ሩስያ ካብታ ኣይኤል-76 ዝዓይነታ 65 ዩክረይናውያን ምሩኻት፣ ሽዱሽተ ሰራሕተኛታት እታ ነፋሪትን ሰለስተ ሓለውትን ጽዒና እንትትበርር ብሰራዊት ዩክረይን ተወቒዓ ዝወደቐት ነፋሪት ብህይወት ዝተረፈ ከምዘየለ ገሊጻ።",
+            "imageAlt": "ነፋሪት",
+            "id": "cd17yvepx75o"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ መቐለ ዝርከቡ ተፈናቐልቲ ናብ መረበቶም ክምለሱ ጸዊዖም",
+            "firstPublished": "2024-01-24T14:17:07.475Z",
+            "lastPublished": "2024-01-24T14:17:07.475Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c72g62q457lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aa85/live/042cc6e0-babe-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "ኣብ ክልል ትግራይ መቐለ ዝርከቡ ብኣሽሓት ዝቑጸሩ ተፈናቐልቲ፡ ናብ ሃገሮም ክምለሱን ህጹጽ ሰብኣዊ ምትእትታው ክግበርን ዝጽውዕ ሰልፊ ኣካይዶም። ነቲ ንኽልተ ዓመት ዝጸንሐ ደማዊ ኲናት ዘብቅዐ ስምምዕ ፕሪቶርያ ምሉእ ብምሉእ ክትግበር እውን ሓቲቶም። ኣብ ዝሓለፉ ሰለስተ ኣዋርሕ ጥራሕ ኣብ ማእኸላት ተመዛበልቲ ብውሕዱ 39 ሰባት ብሰንኪ ጥምየትን ሕፅረት መድሓኒትን ከምዝሞቱ ኣዳለዊ እቲ ሰልፊ ብርሃነ ጠቒሱ።",
+            "imageAlt": "ተመዛበልቲ",
+            "id": "c72g62q457lo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d8a9ce0b-d718-4ac2-8d10-c81d5cbc0e67",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Tigrinya Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ክሪፕቶ፡ ሚልዮናት ዶላር ኤርትራውያን ኣበይ ኣተወ? በዓል መን ከ ረቢሖም?",
+            "firstPublished": "2024-01-23T07:51:35.709Z",
+            "lastPublished": "2024-01-23T07:51:35.709Z",
+            "link": "https://www.bbc.com/tigrinya/articles/ckd4vxnggxxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1676/live/17c0e9f0-bac0-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ኣብ ዝሓለፈ ቀረባ ዓመታት፡ ምስ ምምጻእ ዲጂታዊ ባጤራ ኣብ ናይ ‘ሓበሻ ኮምዩኒቲ’ ንግዲ ክሪፕቶ ካረንሲ፡ ኣርባሒ ምዃኑን ሰባት ነቲ ዕድል ክጥቀመሉን ክጒስጐስ  ጸኒሑ ኣሎ። ግን እቲ ዝተባህለ ማዕረ እቲ ዝንገር ሓቅነት ኣለዎ ድዩ?  ሓደጋታቱ ኸ እንታይ ይመልስ? ኣብ ከምዚ ወፊሩ ዝበሃል ሚልዮናት ዶላር ኤርትራውያን ኣበይ ኣተወ፡ መን’ከ ረቢሑሉ ንዝብል ሕቶ ቢቢሲ ብዝርዝር ዳህሲስዎ ኣሎ።",
+            "imageAlt": "ቢትኮይን ክሪፕቶ ካረንሲ",
+            "id": "ckd4vxnggxxo"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራ፡ ዘይተነግረ ክፋል ዛንታ ተጋዳሊት ወርቁ ዘርኣይ",
+            "firstPublished": "2024-01-20T08:57:27.435Z",
+            "lastPublished": "2024-01-20T08:58:18.561Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cv2e2xlg6rpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b707/live/a5748b50-b771-11ee-beb5-e1400df560f2.png",
+            "description": "ሓንቲ ካብተን ንፈለማ እዋን ኣብ ህዝባዊ ሓይልታት ኤርትራ ብረት ዓጢቐን ዝተቓለሳ ቀዳሞት ደቀንስትዮ ዝኾነት ተጋዳሊት ወርቁ ዘርኣይ፡ ኣብ መበል 75 ዓመታ ብሕማም ዓሪፋ። ታሪኻ ግን እቲ ኣብ ስነስርዓት ቀብራ ኣብ መቓብር ሓርበኛታት ኣስመራ ዝተነበበ ጥራይ ድዩ ወይስ ካልእ ክምላእን ዝግባኦ ዘይተነግረ ክፋል ኣሎዎ? ቢቢሲ ትግርኛ ንቀረባ ፈለጥታን መቓልስታን ኣዘራሪቡ ዳህሲስዎ ኣሎ።",
+            "imageAlt": "ተጋዳሊት ወርቁ ዘርኣይ",
+            "id": "cv2e2xlg6rpo"
+          },
+          {
+            "type": "audio",
+            "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/tigrinya/bbc_tigrinya_radio/programmes/w13xttny",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b98/live/6bc2c260-45bf-11ee-9b58-cb80889117a8.jpg",
+            "description": "21:09 EAT - 21:24 EAT",
+            "imageAlt": "BBC Microphone",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Ftigrinya%2Fbbc_tigrinya_radio%2Fprogrammes%2Fw13xttny"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራ፡ ምስ ክቱር ሓዘና ዝሓለፈት ወላዲት 'ተጋዳላይ ሰኣላይ' ስዩም ጸሃየ",
+            "firstPublished": "2024-01-22T08:36:41.213Z",
+            "lastPublished": "2024-01-22T08:36:41.213Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cldqwgky2wgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/90bb/live/24fbb460-b903-11ee-8fcb-4198d23794c5.jpg",
+            "description": "",
+            "imageAlt": "ሮማ ሰሎሞን",
+            "id": "cldqwgky2wgo"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራ-ኢትዮጵያ፡ ዝምድና ፕረዚደንት ኢሳይያስን ቀዳማይ ሚኒስተር ኣብይን ካበይ ናበይ?",
+            "firstPublished": "2024-01-05T06:15:24.089Z",
+            "lastPublished": "2024-01-05T06:15:24.089Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c0jy43j9gk1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e383/live/1f9d9730-ad29-11ee-8f07-bbfdfa890097.jpg",
+            "description": "እቲ ኣብ መፋርቕ 2018 ዝፈለመን ንብዙሓት ዘገረመ ዝምድና ፕረዚደንት ኢሳይያስ ኣፈወርቂን ቀዳማይ ሚኒስተር ኣቢይ ኣሕመድን ድሕሪ ስምምዕ ሰላም ፕሪቶርያ ከም ቀደሙ የለን ዝብል መረዳእታ ኣሎ። እዚ ግን ክሳብ ክንደይ ወድዓውነትን ሓቅነትን ኣለዎ? ኣብ መንጐኦም’ከ ወጥርን ምትፍናንን ኣሎ ድዩ? ህሉው ኵነታት ዝምድና ክልቲአን ሃገራት እንታይ ይመስል? ቢቢሲ ትግርኛ ብስፍሓት ዳህሲሱዎ ኣሎ።",
+            "imageAlt": "ፕረዚደንት ኢሳይያስን ቀዳማይ ሚኒስተር ኣብይን",
+            "id": "c0jy43j9gk1o"
+          },
+          {
+            "type": "article",
+            "title": "ትግራይ፡ ዘስካሕክሕ ጥሜት ‘77’ ኣብ 40 ዓመቱ ክድገም’ዶ ይኸውን?",
+            "firstPublished": "2024-01-08T05:19:34.057Z",
+            "lastPublished": "2024-01-08T05:19:34.057Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cerlk0mevg3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/87bf/live/ddde4690-ade2-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኣብ ዘመነ መሳፍንቲ ይዅን ብድሕሪኡ ኣብ ኢትዮጵያ ብፍላይ ኣብ ሰሜን ጥሜትን ድርቂን ብተደጋጋሚ ኣጋጢሙ እዩ። እቲ ኣዝዩ ዝኸፍአ ዝበሃል ኣብ መንጐ 1888ን 1892ን ዘጋጠመ ኰይኑ ኣስታት ሓደ ሲሶ ህዝቢ ቀቲሉ። እቲ ኣብ 1984 (1977 - ግእዝ) ዘጋጠመ ድርቂ ግን ካብ ኵሎም ዝኸፍአ ከምዝነበረ እዩ ዝግለጽ። እዚ ከይድገም ድማ ከቢድ ሻቕሎት ፈጢሩ’ሎ፤",
+            "imageAlt": "ብዓጸቦ ዝተጠቕዐ ቈልዓ",
+            "id": "cerlk0mevg3o"
+          },
+          {
+            "type": "article",
+            "title": "ዋንጫ ኣፍሪቃ 2023፡ ሰሌዳ ግጥማትን ውጽኢትን",
+            "firstPublished": "2023-12-21T10:52:10.000Z",
+            "lastPublished": "2023-12-21T10:52:10.000Z",
+            "link": "https://www.bbc.com/tigrinya/news-67785371",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4346/live/79c7e5e0-b449-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ዋንጫ ኣፍሪቃ 2023 (ኣፍኮን) ካብ ሰንበት 13 ጥሪ ጀሚሩ ክሳዕ ሰንበት 11 ለካቲት 2024 ኣብ ኣይቮሪኮስት ክካየድ’ዩ።",
+            "imageAlt": "ዋንጫ ኣፍሪቃ",
+            "id": "0a8595a1-ed79-4b35-99cd-bec3ee37073a"
+          },
+          {
+            "type": "article",
+            "title": "ኣመሪካ ትመርሖ ሓድሽ ወተሃደራዊ ተበግሶ ኣብ ቀይሕ ባሕርን ወሽመጥ ዓደንን",
+            "firstPublished": "2023-12-23T05:27:32.147Z",
+            "lastPublished": "2023-12-23T05:27:32.147Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cn04vee9r3wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3c23/live/239780f0-a0cf-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "ሰፊሕ ክፋል የመን ዝቈጻጸሩ ዘለዉ ዕጡቓት ሑቲ፡ ነተን ናብ እስራኤል ዘቕንዓ ብቀይሕ ባሕሪ ዝሓልፋ መራኽብ ዒላማ ብምግባር፡ መራኽብ ንግዲ ክጨውዩን ሚሳይላት ክትኩስን ምጽንሖም ይፍለጥ። ",
+            "imageAlt": "መራኽብ ኲናት ኣመሪካ ኣብ ቀይሕ ባሕርን ወሽመጥን ዓደንን ተዋፊረን ኣለዋ",
+            "id": "cn04vee9r3wo"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ ቀይሕ ባሕሪ ኣንጸላልዩ ዘሎ ስግኣትን ሳዕቤናቱን እንታይ እዩ?",
+            "firstPublished": "2023-12-19T08:38:38.912Z",
+            "lastPublished": "2023-12-19T08:38:38.912Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cgr3937jll6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e000/live/f6c4a790-9e41-11ee-8df3-1d2983d8814f.jpg",
+            "description": "ዕጡቓት ሑቲ ብዝፍጽምዎ ዘለዉ መጥቃዕቲ፡ እተን በዚ መስመር ክሓልፋ ግድን ዝዀነን መራኽብ ዓበይቲ ኩባንያታት፡ ካብቲ ከባቢ ክርሕቃን፡ ኣብ ውሑስ ማያት ክዕሸጋን መምርሒ ተዋሂቡወን ኣሎ። እዚ ተወሳኺ ወጻኢታት ሰራሕተኛታት፡ ነዳዲን መድሕንን ተደማሚሩ ኣብ ዝባን ተጠቃሚ ህዝቢ ዝጸዓን ምዃኑ ፍሉጥ ኰይኑ፡ ከጋድዶ ዝኽእል ቍጠባዊ ቅልውላው ብኣጋኡ ኣስጊኡ ኣሎ። ",
+            "imageAlt": "መርከብ",
+            "id": "cgr3937jll6o"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራ-ኢትዮጵያ፡ ዶባት ኣብ ባይታ ዘይምምልካቱ እንታይ ስግኣት ክህልዎ ይኽእል?",
+            "firstPublished": "2023-12-13T04:53:05.717Z",
+            "lastPublished": "2023-12-13T04:53:05.717Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c0wy9pkek7yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a6ee/live/fe121960-994b-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "እተን ክሳብ ቍጠባዊ ውህደት ብምፍጣር ናብ ‘ኮንፈደረሽን’ ክበጽሓ ይኽእላ’የን ዝበሃለለን ዝነበራ ሃገራት- ንጽቡቕን ሕማቕን- ተነቃፊ ጉዳይ ዶብ ብምጕሳይ ክኸዳ ፈቲነን- ክሳብ’ቲ ቍጠባዊን ፖለቲካዊን ዓለምለኻዊን ጠንቅታት ነይርዎ ዝተባሃለ ዶባዊ ኲናት ኣትየ። ድሕሪ 'ቲ ኲናት ውሳነ ቤት ፍርዲ ዝተዋህቦ ጉዳይ ዶብ ክሳብ ሕጂ ስለምንታይ’ዩ ኣብ ባይታ ክፍጸም ዘይክኣለ? መርገጺ ኤርትራን ኢትዮጵያንከ እንታይ ይመስል?",
+            "imageAlt": "ወከልቲ ክልቲኤን ሃገራት ብመንጎኝነት ዓቃብ-ሰላም ሰራዊት ሕቡራት ሃገራት ዝተራኸብሉ ድልድል መረብ",
+            "id": "c0wy9pkek7yo"
+          },
+          {
+            "type": "article",
+            "title": "“ኣብ ትግራይ ዝተፈፀመ ኩሉ ክንገርን ክፍለጥን ኣለዎ” ኰኾብ ሆሊዉድ ፍርቱና ገብረስላሴ",
+            "firstPublished": "2023-12-23T05:19:42.133Z",
+            "lastPublished": "2023-12-23T05:19:42.133Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c892pgq5ywjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/eefc/live/e59aa670-a14f-11ee-8df3-1d2983d8814f.png",
+            "description": "ንጥበብ ህይወት እትልውጠሉ ዕድል ወይ መገዲ ንሆሊውድ ድማ ቤት-ትምህርቲ ብምባል እያ ትገልፆ፡ ኰኾብ ሆሊዉድ ስነ-ጥበባዊት ፍርቱና ገብረስላሴ። “ከመይ ገይርና ኢና ዝሐሽና ንኸውን? ከመይ ገይርና ኢና ንነብስና ነኽብር?” ኢላ እያ ትሓስብ። እቲ ብዙሕ ሰብ ዝከታተሎ ኢንዳስትሪ መዘናግዒ ድማ ነዚ ሓሳባ ናብ ተግባር ትልውጠሉ ባይታ እዩ። ስነ-ጥበባዊት ፍርቱና ገብረስላሴ፡ ታሪኽን ባህልን ተጋሩ ንዓለም ክፋለጥ ከም ዘይተሰርሐሉ ትገልፅ።",
+            "imageAlt": "ኰኾብ ሆሊዉድ ስነ-ጥበባዊት ፍርቱና ገብረስላሴ",
+            "id": "c892pgq5ywjo"
+          },
+          {
+            "type": "article",
+            "title": "ኢትዮጵያውያን ስደተኛታት ብልመና ዘጨነቕዋ ከተማ ",
+            "firstPublished": "2023-12-18T06:18:46.010Z",
+            "lastPublished": "2023-12-18T06:18:46.010Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c03yzye819no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e093/live/41f67280-9ce8-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "ዓሰርተታት ኣሽሓት ዝሓሸ ህይወት ንምርካብ ዝቃለሱ ኢትዮጵያውያን፡ ብየመን ኣቢሎም ናብ ስዑዲ ዓረብ ክኣትዉ ተስፋ ብምግባር ብጅቡቲ ይሰግሩ። ኣብታ ካብ የመን ብዙሕ ዘይትርሕቕን ከተማ ኦቦክ፡ ኣብ ትሕቲ ሓያል ጸሓይ ላዕልን ታሕትን ክብሉ ዝረኣዩ ኢትዮጵያውያን ስደተኛታት ጥራይ እዮም። መብዛሕትኦም ካብ ገጠራት ኢትዮጵያ ዝመጹ ስደተኛታት፡ ጥዑይ ሳእኒ ዘይብሎም፡ ክዳውንቶም ዝበለየን ኣብታ ሰብ ዝመልአት ከተማ ተነጺሎም ዝነብሩን እዮም። ቢቢሲ ናብቲ ቦታ ተጓዒዙ ነቲ ሕሱም መነባብሮኦም ዳህሲሱ’ሎ፤",
+            "imageAlt": "ከተማ ኦቦክ",
+            "id": "c03yzye819no"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:01980d36-ea6b-49bc-876d-10019b213025",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "ከይሓልፈኩም",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ኣብ ትግራይ ዝጋደድ ዘሎ ስግኣት ጥሜት",
+            "firstPublished": "2024-01-24T08:18:16.371Z",
+            "lastPublished": "2024-01-24T08:18:16.371Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cl4xlxjpg2po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e022/live/70876a40-ba8a-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ኣብ ኢትዮጵያ ብፍላይ እታ ኣብ ቀረባ ዓመታት ደማዊ ኲናት ዘአንገደት ትግራይ፡ ጥሜት ብሰላሕታ ይጋፋሕ ከምዘሎ፣ እንተዀነ መንግስቲ ፈደራል ነቲ ስግኣት ከምዘይቅበሎ ተንታኒ ኣፍሪቃ ኣሌክስ ደ ዋል ብዝርዝር ይገልጽ።",
+            "imageAlt": "ተጸበይቲ ሰብኣዊ ሓገዝ",
+            "id": "cl4xlxjpg2po"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ ኢትዮጵያን ካልኦት ሃገራትን ስክፍታ ትፈጥር ዘላ ጣንጡ እንታይ'ያ?",
+            "firstPublished": "2024-01-23T05:16:52.192Z",
+            "lastPublished": "2024-01-23T05:16:52.192Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cp498lkw7l9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8cde/live/25cb3690-b949-11ee-8685-316409d66f25.jpg",
+            "description": "ሓዳስ ዓይነት መድሃኒት ትጻወር ጣንጡ ኣብ ኣፍሪቃ ረኽሲ ዓሶ ተጋድድ ከምዘላ ውድብ ጥዕና ዓለም ቅድሚ ሒደት መዓልታት ኣተሓሳሲቡ። እዚ ድማ ሕማም ዓሶ ንምምካት ዝግበር ቃልሲ ዝገደደ ከም ሽክብድ ብምግባር ኣብ ጥዕና ህዝብታት እንተላይ ኣብ ኢትዮጵያ ስክፍታታት ፈጢሩ ኣሎ።",
+            "imageAlt": "ሕማም ዓሶ ብቀንዱ ብጣንጡ ይመሓላለፍ",
+            "id": "cp498lkw7l9o"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ ቀይሕ ባሕሪ ዝፍጸም መጥቃዕቲ ጭንቀት ዝፈጠረሎም መርከበኛታት",
+            "firstPublished": "2024-01-22T06:38:28.561Z",
+            "lastPublished": "2024-01-22T06:38:28.561Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c9x04jd9663o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bd03/live/0d623480-b8e7-11ee-8f07-bbfdfa890097.jpg",
+            "description": "‘ሚሽን ቱ ሲፌረርስ’ ዝተባህለ ንድሕነት መርከበኛታት ዝሰርሕ ትካል፡ ኣብ ዓለም ኣብ መራኽብ ዘገልግሉ ኣስታት 1.9 ሚልዮን ሰራሕተኛታት ከምዘለዉ ይገልጽ። 90 ሚእታዊት ንዝዀነ ንብረት ንግዲ ዓለም ድማ ኣብ ባሕሪ የጓዓዕዙ።",
+            "imageAlt": "ኮንተይነራት ዝጸዓነት መርከብ",
+            "id": "c9x04jd9663o"
+          },
+          {
+            "type": "article",
+            "title": "ሓያለ ሃገራት ዘሳተፈ ብመጥቃዕቲ ሚሳይላት ዝተሰነየ ሰሙን፤ እንታይ’ዩ ዝኽሰት ዘሎ?",
+            "firstPublished": "2024-01-22T05:08:17.631Z",
+            "lastPublished": "2024-01-22T05:08:17.631Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cq5xlv2nnqro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5b2d/live/f09b6750-b868-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ኣብ ዝሓለፈ ሰሙን፡ ንኵነታት ዓለም ክጸልዉ ዝኽእሉ ተባሂሎም ዘስግኡ ዘለዉ፡ ኣብ መላእ ማእከላይ ምብራቕ ሓደስቲ ግጭታት ተራእዮም እዮም። ኣብቲ ዞባ ዘሎ ወጥሪ ከምኡ'ውን ናበይ ክመርሕ ከምዝኽእል ዝድህስስ ሓጺር መብርሂ ከኣ ቀጺሉ ቀሪቡ ኣሎ፤",
+            "imageAlt": "ተቓውሞ",
+            "id": "cq5xlv2nnqro"
+          },
+          {
+            "type": "article",
+            "title": "ብዛዕባ ኣካላት ደቂ ኣንስትዮ ተጻወትቲ ኩዕሶ እግሪ ስለምንታይ ኣሉታዊ ርእይቶ  ይወሃብ?",
+            "firstPublished": "2024-01-21T07:02:23.014Z",
+            "lastPublished": "2024-01-21T07:02:23.014Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cz9mppymz1yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/baf0/live/2dfde280-b828-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ንደቂ ኣንስትዮ ስፖርተኛታት ብፍላይ ድማ ተጻወትቲ ኩዕሶ እግሪ ብዛዕባ ሰብነተን ዝተፈላለየ ኣሉታዊ ርእይቶታት ክወሃብ ምስማዕ ሓዱሽ ነገር ኣይኰነን። ",
+            "imageAlt": "ዴይዚ ክሌመንትስ፡ ኣብ ቤት ትምህርቲ “ገዚፍ ሰለፍ” ከምዘለዋ ርእይቶ ይወሃባ ከምዝነበረ ትዛረብ",
+            "id": "cz9mppymz1yo"
+          },
+          {
+            "type": "article",
+            "title": "ብሪጣንያ ብዛዕባ ምምላስ ኣምባሳደር ኤርትራ እንታይ ትብል?",
+            "firstPublished": "2024-01-20T07:20:17.170Z",
+            "lastPublished": "2024-01-20T07:20:17.170Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crgx7n7kv44o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/df0b/live/90389230-b74f-11ee-beb5-e1400df560f2.jpg",
+            "description": "ክፍሊ ጉዳያት ወጻኢ፡ ኮመንዌልዝን ዓለምለኻዊ ልምዓትን ንቢቢሲ ኣብ ዝሃቦ መልሲ፡ ናብ ኣስመራ ዝመደቦ ኣምባሳደሩ ምንጻጉ ዘለዎ ተቓውሞ ንምስማዕ ኣብ ወርሒ መስከረም 2022 ንኣምባሳደር እስቲፋኖስ ጸዊዑ ኣዘራሪብዎ ከምዝነበረ ይገልጽ።",
+            "imageAlt": "ባንደራ ብሪጣንያን ኤርትራን",
+            "id": "crgx7n7kv44o"
+          },
+          {
+            "type": "article",
+            "title": "ኤርትራውያን ስደተኛታት፡ ኣብ ሞያለ-ኢትዮጵያ ንኣዋርሕ ተኣሲሮም ከምዘለዉ ተፈሊጡ",
+            "firstPublished": "2024-01-19T06:33:21.339Z",
+            "lastPublished": "2024-01-19T06:33:21.339Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cmjrjg2vp7vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9c52/live/3d1fb210-b68f-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ዋሕዚ ኤርትራውያን ስደተኛታታት ካብ ዓቐን ንላዕሊ ኰይኑ ኣብ ዘለወሉ፡ ብዙሓት ኣብ ጫካታት ኬንያ ተደርብዮም ከምዘለዉ’ውን ይንገር እዩ። ቍጽሮም ብልክዕ ዘይተፈልጠ ድማ ኣብ ዝተፈላለዩ መደበራት ፖሊስ ተቐይዶም ከምዘለዉ ቢቢሲ ትግርኛ ኣረጋጊጹ።",
+            "imageAlt": "ደኒና ዝተከዘት ሰበይቲ",
+            "id": "cmjrjg2vp7vo"
+          },
+          {
+            "type": "article",
+            "title": "ኢትዮጵያ - ሶማልያ፡ ንኵነታት 1977 ኣብ ዘዘኻኽር ወጥሪ ",
+            "firstPublished": "2024-01-19T06:32:25.210Z",
+            "lastPublished": "2024-01-19T06:32:25.210Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crgjg0npeylo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a470/live/6ef829c0-b68f-11ee-8f07-bbfdfa890097.jpg",
+            "description": "እቲ ‘ኣብ 1977 ዝገበናዮ ዘክሩ’ ዘርእስቱ ከምኡ’ውን ካልኦት ክልተ ምስ ኢትዮጵያ ዝተኣሳሰራ ደርፍታት ኣብ ማሕበራዊ መራኸቢታት ብሶማላውያን ብብዝሒ ተዘርጊሐን ኣለዋ። \n",
+            "imageAlt": "ወተሃደራት ሶማል ኣብ ስልጠና 1977  ",
+            "id": "crgjg0npeylo"
+          },
+          {
+            "type": "article",
+            "title": "ኢራን፡ ናብ ጐረባብታ ብምትኳስ ዓቕሚ ሚሳይላታ ተርኢ ኣላ ",
+            "firstPublished": "2024-01-18T06:26:24.060Z",
+            "lastPublished": "2024-01-18T06:26:24.060Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cn0902y940xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8b72/live/5240fb50-b5c1-11ee-beb5-e1400df560f2.jpg",
+            "description": "እስላማዊ ሰውራ፡ ኣብ ማእከላይ ምብራቕ ዝርከቡ ወታሃደራዊ ማእከላት ኣመሪካን ኣብ ተል ኣቪቭን ሃይፋን ዝርከቡ ማእከላት እስራኤልን ኣብ ውሽጢ ርሕቐት ባላስቲክ ሚሳይል ኢራን ከምዘለዋ ብግልጺ ተዛሪቡ እዩ።",
+            "imageAlt": "ሚሳይላት ኢራን",
+            "id": "cn0902y940xo"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ ኢትዮጵያ መከላኸሊ መንሽሮ ክሳድ ማህጸን ብነጻ ይወሃብ ድዩ?",
+            "firstPublished": "2024-01-18T05:12:22.287Z",
+            "lastPublished": "2024-01-18T05:12:22.287Z",
+            "link": "https://www.bbc.com/tigrinya/articles/czdl8d4ygqqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c4dc/live/835ec970-b55c-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኣብ ኢትዮጵያ ኣስታት 37 ሚልዮን ዕድመአን 15 ዓመትን ልዕሊኡን ዝዀና ደቂ ኣንስትዮ ኣለዋ፤ እዚአን መንሽሮ ክሳድ ማህጸን ንምምዕባል ኣብ ሓደጋ ዝርከባ እየን። እዋናዊ ግምታት ከምዘመልክትዎ ኣብ ዓመት 7445 ደቂ ኣንስትዮ ብመንሽሮ ክሳድ ማህጸን ክልከፋ እንከለዋ 5338 ድማ ብሰንኪ እቲ ሕማም ይሞታ። መንሽሮ ክሳድ ማህጸን ኣብ ኢትዮጵያ ኣብ ደቂ ኣንስትዮ ምስ መንሽሮ ዝተኣሳሰር ሞት ብምስዓብ ካልኣይ ደረጃ ሒዙ ይርከብ።",
+            "imageAlt": "ኣብ ኢትዮጵያ ዓመታዊ 5338 ደቂ ኣንስትዮ ብሰንኪ መንሽሮ ክሳድ ማህጸን ይሞታ",
+            "id": "czdl8d4ygqqo"
+          },
+          {
+            "type": "article",
+            "title": "ኢራን ኣብ ዒራቕን ሶርያን ዘካየደቶ መጥቃዕቲ ሚሳይል እንታይ ትርጕም ኣለዎ?",
+            "firstPublished": "2024-01-17T09:57:48.580Z",
+            "lastPublished": "2024-01-17T09:57:48.580Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cv2ljzed084o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a91f/live/572ac090-b51e-11ee-beb5-e1400df560f2.jpg",
+            "description": " ኢራን፡ እቲ ቀንዲ ክተሕልፎ ዝደለየት መልእኽቲ፡ ዝተፈላለየ ርሕቀት ዝውንጨፍ ሚሳይላት ብምርኣይ፡ ናብ ዝተፈላለየ ቦታታት ናብታ ምስ ሶርያ እትዳወብ እስራኤል ናይ ምህራም ዓቕሚ ከምዘለዋ ንዓለም ምርኣይ’ዩ።",
+            "imageAlt": "ዝተተኰሰ ሚሳይል",
+            "id": "cv2ljzed084o"
+          },
+          {
+            "type": "article",
+            "title": "መንሽሮ ክሳድ ማህጸን ዝከላኸል ክታበት ኤችፒቪ",
+            "firstPublished": "2024-01-16T10:03:20.221Z",
+            "lastPublished": "2024-01-16T10:03:20.221Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cevqexnyzz1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dce6/live/79ebd9e0-b44f-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኤችፒቪ (ህዩማን ፓፒሎማቫይረስ)፡ ልሙዳት ጕጅለ ቫይረስ ዝጽውዑሉ ሽም እዩ። ልዕሊ 100 ዝተፈላለዩ ዓይነታት ኤችፒቪ ኣለዉ፤ ውሑዳት ጡብ ኣድጊ ዝመስል ምልክት ዘርእዩ እኳ እንተዀነ መብዛሕትኦም ግን ምልክት ኣየርእዩን።",
+            "imageAlt": "ክታበት እትወስድ ንእስቲ",
+            "id": "cevqexnyzz1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 7,
+        "curationId": "urn:bbc:vivo:curation:908fa347-4f92-41e1-9c08-3ca609a618bb",
+        "curationType": "vivo-stream",
+        "position": 2,
+        "title": "ትንታነ",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ኤርትራ፡ ሃንደበት ዝዓረፈ ኮኾብ ተጻዋታይ ኵዕሶ እግሪ ሱሌማን ማሕሙድ (ስኾይ) መን'ዩ?",
+            "firstPublished": "2024-01-23T13:00:01.727Z",
+            "lastPublished": "2024-01-23T13:00:01.727Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cv29d7ng945o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/55f3/live/9beff260-b9ef-11ee-9c89-ddb6731d5962.jpg",
+            "description": "ተጻዋታይ ኵዕሶ እግሪ ዝነበረ ክለባት ዓንሰባ - ከረን፡ ቀይሕ ባሕሪ [ኤልፓ] ከምኡ’ውን ንሃገራዊት ጋንታ ኤርትራ ኣብ ዝተፈላለየ ክሊ ዕድመ ተሰሊፉ ዝተጻወተ ሱሌማን ማሕሙድ፡ ሰንበት 21 ጥሪ ወጋሕታ ኣብ ሪያድ ስዑድ ዓረብ፡ ኣብ ገዛኡ ብሃንደበታዊ ሕማም ከምዝዓረፈ፡ ቤተሰብን ፈተውትን ንቢቢሲ ገሊጾም።",
+            "imageAlt": "ሱሌማን ማሕሙድ - ስኾይ",
+            "id": "cv29d7ng945o"
+          },
+          {
+            "type": "article",
+            "title": "ፕሪሚየር ሊግ፡ ብዓወት ጋንትኦም ዝተሓጎሱ ደገፍቲ ኣርሰናል ንፈጣሪ የመስግኑ",
+            "firstPublished": "2024-01-22T14:59:46.638Z",
+            "lastPublished": "2024-01-22T14:59:46.638Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cd176pgvld0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/99dc/live/433d8740-b91d-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ትማሊ ሰንበት ዝነበረ ዝዓበየ ግጥም ድማ ኣብ መንጎ ሊቨርፑልን ቦርንመዝን ዝነበረ'ዩ። እታ 48 ነጥቢ ሒዛ ነቲ ሊግ ትመርሖ ዘላ ሊቨርፑል ነታ ኣብ ሜዳኣ ዝተጻወተት ቦርንመዝ 4 ብ 0 ኣፋንያታ። \n",
+            "imageAlt": "ደገፍቲ ኣርሰናል ኣብ ቤተክርስትያን፡ ኬንያ",
+            "id": "cd176pgvld0o"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ መንጎ ኤርትራን ብሪጣንያን እንታይ’ዩ ኣጋጢሙ ዘሎ?",
+            "firstPublished": "2024-01-19T05:52:41.114Z",
+            "lastPublished": "2024-01-19T05:52:41.114Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c72y2gxqpyxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5335/live/4f8b3b00-b68e-11ee-8f07-bbfdfa890097.jpg",
+            "description": "መርበብ ሓበሬታ ክፍሊ ጉዳያት ወጻኢ ብሪጣንያ፡ ኣብ ኣስመራ ዝርከብ ኤምባሲ እታ ሃገር ንዜጋታቱ ቆንስላዊ ኣገልግሎታት ከምዝህብ ብምጥቃስ፡ ነቶም ዜግነት ክልቲአን ሃገራት ዘለዎም ንምሕጋዝ ከምዝጽገም ግን ኣስፊሩ’ሎ።",
+            "imageAlt": "ኤምባሲ ኤርትራ",
+            "id": "c72y2gxqpyxo"
+          },
+          {
+            "type": "article",
+            "title": "ኢትዮጵያ ሓደስቲ ነፈርቲ ውግእን ድሮናትን ከምዝዓጠቐት ኣፍሊጣ",
+            "firstPublished": "2024-01-17T09:14:25.419Z",
+            "lastPublished": "2024-01-17T09:14:25.419Z",
+            "link": "https://www.bbc.com/tigrinya/articles/ce7krpxyrrno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f2c3/live/6f230ca0-b516-11ee-beb5-e1400df560f2.jpg",
+            "description": "እተን ‘ኣዝየን ዘመናውያን ነፈርቲ ውግእን ኣጥቃዕቲ ድሮናትን’ ዝተባህላ ብዝሐንን ካበየነይቲ ሃገር ምዃነንን ኣይተገልጸን። ፊልድ ማርሻል ብርሃኑ ግን፡ “እዚ ሓደስቲ ዘመናዊ ወተሃደራዊ ዕጥቂ፡ ነታ ሃገር ንምጥቃዕ ዝግበር ዝዀነ ይዅን ፈተነ ንምምካን ኣገዳሲ እዩ፡” ክብል ኣተሓሳሲቡ።",
+            "imageAlt": "ነፈርቲ ውግእ ኢትዮጵያ",
+            "id": "ce7krpxyrrno"
+          },
+          {
+            "type": "article",
+            "title": "ኢትዮጵያ፡ ብመጥባሕቲ ሕክምና ጥይት ካብ ሓንጐል ሰብ ወጺኣ",
+            "firstPublished": "2024-01-17T07:27:09.280Z",
+            "lastPublished": "2024-01-17T07:27:09.280Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crgwy156491o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0fd0/live/9499b480-b501-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኣብ ኦሮሚያ ዞባ ምብራቕ ወለጋ፡ ኣብ ርእሲ ጓል 24 ዓመት ተሓካሚት ዝነበረ ጥይት ብመጥባሕቲ ከምዝወጽአት ተገሊጹ።",
+            "imageAlt": "ካብ ተሓካሚት ብመጥባሕቲ ዝወጽአት ጥይት",
+            "id": "crgwy156491o"
+          },
+          {
+            "type": "article",
+            "title": "ዩጋንዳ፡ ልዕሊ 45 ጽምዲ ኤርትራውያን ኣብ ሓደ ሰንበት ቃልኪዳን ኣሲሮም",
+            "firstPublished": "2024-01-15T08:36:28.632Z",
+            "lastPublished": "2024-01-15T08:36:28.632Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c72y03z53elo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cd31/live/755574d0-b37e-11ee-bc2f-cb5579b90709.jpg",
+            "description": "እዞም ኣብ ካምፓላ መርዓ ዘካይዱ መጻምዲ፡ መብዛሕትኡ ግዜ ሓዲኦም ወይ ክልቲኦም ካብ ወጻኢ ሃገር ዝመጽኡ ኰይኖም፡ ብዝተፈላለየ ምኽንያት መርዓኦም ኣብ ሃገሮም ክጽንብልዎ ዘይክእሉ እዮም። ",
+            "imageAlt": "ቤተክርስትያን",
+            "id": "c72y03z53elo"
+          },
+          {
+            "type": "article",
+            "title": "ቅልውላው ቀይሕ ባሕሪ፡ ወተሃደራዊ ዓቕሚ ሑታውያን ማዕረ ክንደይ እዩ?",
+            "firstPublished": "2024-01-15T06:52:05.843Z",
+            "lastPublished": "2024-01-15T06:52:05.843Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c72yd10xnr1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c12e/live/cf113980-b367-11ee-beb5-e1400df560f2.jpg",
+            "description": "ብኢራን ዝድገፍ ጕጅለ፡ ኣብ ቀይሕ ባሕሪ ኣብ ልዕሊ መራኽብ ንግድ መራኽብ መጥቃዕቲ ንምክያድ ዝጥቀመሉ ዘሎ ኣጽዋር እንታይ እዩ? እቲ ብኣሜሪካ ዝምራሕ መጥቃዕቲ’ኸ ካብ ዕላማኡ ክገትኦ ይኽእል’ዶ?",
+            "imageAlt": "ሑታውያን ተቃለስቲ",
+            "id": "c72yd10xnr1o"
+          },
+          {
+            "type": "article",
+            "title": "ኢጋድ፡ ብጉዳይ ኢትዮጵያን ሶማልያን ንምዝርራብ ህጹጽ ኣኼባ ጸዊዑ",
+            "firstPublished": "2024-01-12T09:38:01.333Z",
+            "lastPublished": "2024-01-12T09:38:01.333Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cz9eemn255do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b37e/live/f729f2f0-b122-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ኣቦ መንበር ኢጋድን ፕረዚደንት ጅቡቲን እስማዒል ዑመር ገለ፡ ኣባላት ኢጋድ ንሓሙስ 18 ጥሪ ኣብ ዩጋንዳ ክካየድ ኣብ ዝጸውዖ ፍሉይ ኣኼባ ተረኺበን ኣብ ጉዳይ ሱዳን፡ ኢትዮጵያን ሶማልያን ክዘራረባ ዓዲሙ።",
+            "imageAlt": "መራሕቲ ሃገራት ኢጋድ",
+            "id": "cz9eemn255do"
+          },
+          {
+            "type": "article",
+            "title": "ኣብ ቀይሕ ባሕሪ ዘጋጥም ዘሎ መጥቃዕቲ ኣብ ዓለማዊ ንግዲ እንታይ ጽልዋ ኣለዎ?",
+            "firstPublished": "2024-01-12T06:39:49.006Z",
+            "lastPublished": "2024-01-12T06:39:49.006Z",
+            "link": "https://www.bbc.com/tigrinya/articles/crgllpey845o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e899/live/880af7b0-b10f-11ee-8f07-bbfdfa890097.jpg",
+            "description": "መትረብ ስወጽ ኣብ መንጐ እስያን ኣውሮጳን ንዝግበር ጕዕዞ ባሕሪ ዘቀላጥፍ ስሉጥ መስመር ስለዝዀነ ነዳድን ጋዝን በዚ መገዲ እዚ እዩ ዝመሓላለፍ። ስለዝዀነ፡ ዝዀነት መርከብ ካብን ናብን ደቡብን ሰሜንን ዝግበር ጕዕዞ በዚ መትረብ ክትሓልፍ ትግደድ።",
+            "imageAlt": "መርከብ",
+            "id": "crgllpey845o"
+          },
+          {
+            "type": "article",
+            "title": "ደቡብ ኣፍሪቃ ኣንጻር እስራኤል ኣበጊሳቶ ዘላ ክሲ 'ምጽናት ዓሌት ፍልስጤማውያን' እንታይ እዩ?",
+            "firstPublished": "2024-01-11T12:55:28.684Z",
+            "lastPublished": "2024-01-11T12:55:28.684Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cw4kkn55wp0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f512/live/183446a0-b077-11ee-beb5-e1400df560f2.jpg",
+            "description": "እዚ ቤት ፍርዲ ኣብ መንጐ ሃገራት ንዝፍጠር ዘይምርድዳእ ንምፍታሕን ኣብ ሕጋዊ መዳይ ምኽሪን ርእይቶን ንምሃብ ድሕሪ ካልኣይ ኲናት ዓለም ዝተመስረተ እዩ። እዚ ድማ ኣብ ጉዳይ እስራኤል ግብራዊ ክኸውን ዝሕተት ዘሎ እዩ።",
+            "imageAlt": "ዝበኽያ ዘለዋ ኣደታት ፍልስጤም",
+            "id": "cw4kkn55wp0o"
+          },
+          {
+            "type": "article",
+            "title": "ቀይሕ ባሕሪ፡ ኣመሪካን ብሪጣንያን ኣንጻር ሑቲ ወተሃደራዊ ስጕምቲ ከምዝወስዳ ኣአንፊተን",
+            "firstPublished": "2024-01-11T07:11:43.087Z",
+            "lastPublished": "2024-01-11T07:11:43.087Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c51zzdn8p18o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c4d2/live/8c28f230-b050-11ee-a40c-ad5b13e9658c.jpg",
+            "description": "ኣመሪካን ብሪጣንያን፡ ዕጡቓት ሑቲ ኣብ ልዕሊ መራኽብ ቀይሕ ባሕሪ ዝፈተንዎ ዝዓበየ መጥቃዕቲ ድሕሪ ምፍሻለን፡ ወተሃደራዊ ስጕምቲ ክወስዳ ከምዝኽእላ ኣአንፊተን። ብሰሉስ ምሸት ነፈርቲ ውግእን መራኽብን፡ ካብቲ ብኢራን ዝድገፍ ጉጅለ ዝተተኮሱ 21 ድሮናትን ሚሳይላትን ወቒዐን ኣውዲቐን።",
+            "imageAlt": "መርከብ ኣመሪካ",
+            "id": "c51zzdn8p18o"
+          },
+          {
+            "type": "article",
+            "title": "ምኻድን ምዝራብን ዝኸልእ ጠንቍ ዘይተፈልጠ ንሓካይም ኣደናጊሩ ዘሎ ሕማም እንታይ እዩ?",
+            "firstPublished": "2024-01-11T05:17:22.615Z",
+            "lastPublished": "2024-01-11T05:17:22.615Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cd1jp870x0lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0604/live/d9593310-afe4-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኣብ መላእ ዓለም ዝርከቡ ሓካይም፡ ብሰንኪ ርኡይ ጠንቂ ዘይብሉ ሳሕቲ ዘጋጥም ኵነታት ሓደ ቈልዓ ከምዝተደናገሩ ይግለጽ ኣሎ።",
+            "imageAlt": "ጁድ",
+            "id": "cd1jp870x0lo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 8,
+        "curationId": "urn:bbc:vivo:curation:3cb06ed0-6134-4c95-ad23-7f2ba581127f",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "ኣዘራረብቲ ዛዕባታት",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ዓለም ብዛዕባ ንመጻኢ ከጋጥም ዝኽእል ለበዳ ሕማም 'ኤክስ' ትዝቲ",
+            "firstPublished": "2024-01-24T07:12:18.634Z",
+            "lastPublished": "2024-01-24T07:12:18.634Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c87ndk0rg3do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dc9c/live/443e6e70-ba7b-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ኣብ ስዊዘርላንድ ከተማ ዳቮስ ኣብ ዝካየድ ዘሎ ዓለምለኸ ቁጠባዊ መድረኽ መራሕቲ ኢንዱስትሪ ጥዕና፡ \"ሕማም ኤክስ\" ተባሂሉ ዝጽዋዕ ለበዳ ሕማም ክጋጥም ከምዝኽእል ምውጣን ኣገዳሲ ከምዝዀነ ክዛተዩ ጸኒሖም እዮም።",
+            "imageAlt": "ሕማም ኤክስ እንታይ እዩ? ",
+            "id": "c87ndk0rg3do"
+          },
+          {
+            "type": "article",
+            "title": "ንግሆ እንግሊዝኛ ምሸት ጀርመንኛ፡ ‘ድሕሪ ሓደጋ ብሽክለታ ቋንቋይ ጠፊኡኒ’",
+            "firstPublished": "2024-01-24T05:16:34.109Z",
+            "lastPublished": "2024-01-24T05:16:34.109Z",
+            "link": "https://www.bbc.com/tigrinya/articles/ckrdn3m8981o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b79/live/ccffaff0-b9fc-11ee-8685-316409d66f25.png",
+            "description": "\"ንግሆ ንግሆ ጽቡቕ እየ፤ ድሕሪ ቀትሪ ግን እቲ ድኻም ብሓቂ ይብርትዕ'ሞ ኣብ ኣእምሮይ ብቋንቋ ጀርመን ምሕሳብ ይጅምር\" ብምባል ካብ ድሕሪ ቀትሪ ጀሚሩ ሓንጎላ ናብ ቋንቋ ጀርመን ከምዘዘንብል ትዛረብ።",
+            "imageAlt": "ሃና ጀንኪንስ ",
+            "id": "ckrdn3m8981o"
+          },
+          {
+            "type": "article",
+            "title": "‘መናፍስቲ ምዉታን’ ሻቕሎት ዝፈጠሩሉ ገዛ",
+            "firstPublished": "2024-01-19T05:05:46.767Z",
+            "lastPublished": "2024-01-19T05:05:46.767Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cd1l1509j5qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/41dc/live/e9017270-b627-11ee-bc2f-cb5579b90709.jpg",
+            "description": "እዚ ኣብ መበል 17 ክፍለ ዘመን ዝተሃንጸ መንበሪ ገዛ ሃገራዊ ሽፋን ማዕከናት ዜና ክረክብ ክኢሉ’ዩ። ታሪኻዊ ቅርሲ ስለዝዀነ ግን ኣይነበረን። ኣብቲ ገዛ ኣስታት 300 ክንዮ-ባህርያዊ ተርእዮታት ከምዘጋጠሙ ጸብጸባት ይገልጹ። ‘ፓራኖርማል: ዘ ገርል፡ ዘ ጎስት ኤንድ ዘ ግሬቭስቶን’ ብዘርእስታ ሓዳሽ ተኸታታሊ ሰነዳዊት ፊልም ብዛዕባ እቲ ዘስካሕክሕ ታሪኽ ኣቃሊዓ ኣላ።",
+            "imageAlt": "ብቋንቋ ዌልስ መወዳእታ ጽርግያ ዝብል ትርጉም ዘለዎ ፔኒፎርድ ፋርም ኣብ ርሑቕ ከባቢ ሰሜን ዌልስ ይርከብ ",
+            "id": "cd1l1509j5qo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M11S",
+            "title": "ካብ ቀልቀል ገንዘብ ዘመንጩ ዓይኒ-ምድሪ",
+            "firstPublished": "2024-01-17T11:45:54.418Z",
+            "lastPublished": "2024-01-17T11:45:54.418Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cw0d7ln91j9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6345/live/c7034c00-b52a-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኣብ ምዕራብ ኬንያ ዝርከቡ መንእሰያት፡ ንላርቫ ዕኮት መሳሊ ሓሰኻ ተጠቂሞም ንቀልቀል ሰባት ናብ ኦርጋኒክ ድዅዒን መግቢ እንስሳን ዝቕይር ዓይን-ምድሪ ኣማዕቢሎም። እቲ ዓይን-ምድሪ ዳግማይ ካብ ዝተመስርሐ ነገራት ከምዝራሕ ዝገልጹ ኣካየድቲ ሳኒዋይዝ፡ ጨና’ውን ከምዘይብሉ የረድኡ። ",
+            "imageAlt": "ገንዘብ ዘመንጩ ዓይን-ምድሪ",
+            "id": "cw0d7ln91j9o"
+          },
+          {
+            "type": "article",
+            "title": "ሰብሰርሖ ብልሒ፡ ቅሩብ ኣይበዝሐን’ዶ?",
+            "firstPublished": "2024-01-17T05:05:27.931Z",
+            "lastPublished": "2024-01-17T05:05:27.931Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cl4e081pgdgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2749/live/62d55920-b495-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ኵሉ ሰብ ብዛዕባ ኤኣይ ዝዛረብ ዘሎ፡ ትካል ‘ኦፕንኤኣይ’ ንምእማኑ ዘጸግም ዕዉት ቻትጂፒቲ (ChatGPT) ብምጅማሩን ከምኡ’ውን ኤኣይ ልዑል ዓቕሚ ስለዘለዎን እዩ። ይዅን’ምበር ኤኣይ ኣስባስላ ስኒን ኤኣይ መተርኣስን ግን ካብ ቻትጂፒቲ ኣዝዩ ነዊሕ ርሕቀት ዝኸደ እዩ።",
+            "imageAlt": "ሕርናኸ ደው ዘብል መተርኣስ ሰብ-ሰርሖ ብልሒ",
+            "id": "cl4e081pgdgo"
+          },
+          {
+            "type": "article",
+            "title": "ትግራይ፡ ብኣማኢት ዝቑጸሩ ሰባት ብጥሜት ሞይቶም",
+            "firstPublished": "2024-01-16T11:58:51.485Z",
+            "lastPublished": "2024-01-16T11:58:51.485Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c1dy451lkmro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/118c/live/8864d140-b461-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኣብ ኢትዮጵያ ኣብ ክልል ትግራይ፡ ህጻናት ዝርከብዎም ኣስታት 225 ሰባት ብጥምየት ከምዝሞቱ ሰብመዚ እቲ ከባቢ ገሊጾም። ሰበስልጣን መንግስቲ ፈደራል ኣብ ኢትዮጵያ ይኹን ኣብ ክልል ትግራይ “ጥሜት ኣሎ” ዝብል ጸብጻብ ዝነጸግዎ’ኳ እንተዀነ፡ ሕቡራት ሃገራትን ግን ኣብታ ሃገር ኣስታት 20 ሚልዮን ሰባት ሓገዝ መግቢ ከምዘድልዮም የተሓሳስብ።",
+            "imageAlt": "ኣብ ኢትዮጵያ ልዕሊ 20 ሚልዮን ሰባት ሓገዝ መግቢ ከምዘድልዮም ውድብ ሕቡራት ሃገራት ይገልጽ",
+            "id": "c1dy451lkmro"
+          },
+          {
+            "type": "article",
+            "title": "ኣመሪካ፡ ሕማም ጸሓፊ ምክልኻል ምሕብኡ ስለምንታይ ኣዛራቢ ኰይኑ'ሎ?",
+            "firstPublished": "2024-01-10T10:27:01.534Z",
+            "lastPublished": "2024-01-10T10:27:01.534Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c872840yzxdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9dd8/live/fc27bba0-af9e-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ወዲ 70 ዓመት ኦስቲን ብ 1 ለካቲት ናብ ሆስፒታል ዝኣተወ ኮይኑ፡ ነቲ ኣብ ታሕሳስ ዝገበሮ መጥባሕቲ ስዒቡ ብዘጋጠሞ ጸገም ናብ ክፍሊ ጽኑዕ ክትትል ኣትዩ።",
+            "imageAlt": "ሎይድ ኦስቲን",
+            "id": "c872840yzxdo"
+          },
+          {
+            "type": "article",
+            "title": "'ሓካይም ብእግርኺ ክትከድን ክትዛረቢን ኣይትኽእልን ኢኺ ኢሎምኒ ነይሮም'",
+            "firstPublished": "2024-01-05T05:03:48.799Z",
+            "lastPublished": "2024-01-05T05:03:48.799Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cqq1403d4neo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cce8/live/1d5bd000-ab25-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኢሊ ጐልድስታይን ኣብ ታሕሳስ 2001 ኣብ ዝተወልደትሉ እዋን፡ ብሰንኪ ሕማም ዳውንዝ ሲንድሮም ብእግራ ክትከይድ ወይ ክትዛረብ ፈጺማ ከምዘይትኽእል ሓካይም ገሊጾም ነይሮም። ነዊሕ ከይጸንሐት እቶም ሓካይም ተጋግዮም ከምዝነበሩ ኣረጋጊጻ። ኢሊ ዳውንዝ ሲንድሮም ዘለዋ ኣብ ቅድሚት ገጽ ቮግ ዝወጸት ፈላመይቲ ሞዴል ብምዃን ታሪኽ ክሳብ ምስራሕ በጺሓ።",
+            "imageAlt": "ኤሊ ሞዴል ክትከውን ድሌት’ኳ እንተነበራ ከምኣ ዝመስሉ ሰባት ከምዘይረኣየት ትዛረብ",
+            "id": "cqq1403d4neo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 5,
+        "curationId": "urn:bbc:vivo:curation:410ae3a1-8325-4d6f-9790-e61c3fedd082",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "ሳይንስን ጥዕናን",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_tigrinya_radio",
+            "publishedTimeStart": "2024-01-22T18:09:47.000Z",
+            "publishedTimeEnd": "2024-01-22T18:24:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+            "brandPid": "w13xttny",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w3ct66d3",
+            "broadcastPid": "p0h0cb6x",
+            "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_tigrinya_radio",
+            "publishedTimeStart": "2024-01-23T18:09:47.000Z",
+            "publishedTimeEnd": "2024-01-23T18:24:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+            "brandPid": "w13xttny",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w3ct66gc",
+            "broadcastPid": "p0h0m7vh",
+            "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_tigrinya_radio",
+            "publishedTimeStart": "2024-01-24T18:09:47.000Z",
+            "publishedTimeEnd": "2024-01-24T18:24:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+            "brandPid": "w13xttny",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w3ct66hh",
+            "broadcastPid": "p0h0tpm2",
+            "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_tigrinya_radio",
+            "publishedTimeStart": "2024-01-25T18:09:47.000Z",
+            "publishedTimeEnd": "2024-01-25T18:24:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+            "brandPid": "w13xttny",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w3ct66f7",
+            "broadcastPid": "p0h1164m",
+            "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ካብ መርዓ ኣማኢት ክሳብ ዋንጫ ኣፍሪቃ - ናይዚ ሰሙን ውቁባት ኣሳእል ኣፍሪቃውያን",
+            "firstPublished": "2024-01-21T06:37:14.555Z",
+            "lastPublished": "2024-01-21T06:37:14.555Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c4nkqqqepw7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0dfe/live/2e908260-b824-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኣብ ኢትዮጵያ ኣዲስ ኣበባ ካብ ዝተኻየደ መርዓ ኣማኢት መጻምድቲ ክሳብ ጸወታታት ዋንጫ ኣፍሪቃ፡ ኣብዚ ዘሕለፍናዮ ሰሙን ብዙሓት ፍጻመታት ተራእዮም እዮም።",
+            "imageAlt": "ሰንበት፡ ኣብ ኢትዮጵያ ኣዲስ ኣበባ ‘የሺ ጋብቻ’ ኣብ ዝብል ጃምላዊ መርዓ ብኣማኢት ዝቑጸሩ መጻምድቲ ሓዳር መስሪቶም...",
+            "id": "c4nkqqqepw7o"
+          },
+          {
+            "type": "article",
+            "title": "ኣከባብራ በዓል ጥምቀት ኣብ ኢትዮጵያን ኤርትራን ብስእሊ",
+            "firstPublished": "2024-01-20T10:35:29.178Z",
+            "lastPublished": "2024-01-20T10:35:29.178Z",
+            "link": "https://www.bbc.com/tigrinya/articles/clmey5n8xv3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cb13/live/84d1e540-b77c-11ee-beb5-e1400df560f2.jpg",
+            "description": "ሎሚ ቀዳም 11 ጥሪ 2016 ኣቈጻጽራ ግእዝ ኣብ ኤርትራን ኢትዮጵያን በዓል ጥምቀት ይኽበር ኣሎ። ",
+            "imageAlt": "ኣከባብራ በዓል ጥምቀት ኣብ ኣስመራ ",
+            "id": "clmey5n8xv3o"
+          },
+          {
+            "type": "article",
+            "title": "‘ጓል፡ ጓል ብምዃና ጥራይ ቈንጆ እያ’ - ማህሌት ብርሃነ",
+            "firstPublished": "2024-01-17T06:31:40.602Z",
+            "lastPublished": "2024-01-17T06:31:40.602Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cnd7kyzr157o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/833f/live/522fc8e0-b4f3-11ee-98b1-f73097a69dc1.jpg",
+            "description": "ማህሌት፡ ኣብ ኣብ መቐለ ተወሊዳ፡ ኣብ ቤት ትምህርቲ መርሃ ጥበብ ተማሂራ። ብድሕር’ዚ ስድራቤታ ናብ ኣዲስ ኣበባ ስለዝገዓዙ ናይ ካልኣይ ደረጃ ትምህርታ ኣብ ጊብሰን ኢንተርናሽናል ስኩል ዛዚማ። ኣብ ኣዲስ ኣበባ ዩኒቨርስቲ ድማ ብሲቪል ኢንጂነሪን ቀዳማይ ዲግሪ ተመሪቓ። ኣብዚ እዋን ድማ ብዘይካ ኣብ ሞዴልነትን ኣብ ስርሓት ምውዕዋዕን፡ ደቀንስትዮ ምብርታዕን ኣምባሳደር ‘ንቍ ሴት እንቍ ሴት' ኰይና ትነጥፍ ኣላ። ",
+            "imageAlt": "ሚስ ኣፍሪካ ቢዩቲ 2023",
+            "id": "cnd7kyzr157o"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M45S",
+            "title": "ኣብ ንእስነታ መገዲ ዓወት ዝረገጸት መንእሰይ ተመኵሮኣ ትጸዊ",
+            "firstPublished": "2024-01-16T09:45:34.835Z",
+            "lastPublished": "2024-01-16T09:45:34.835Z",
+            "link": "https://www.bbc.com/tigrinya/articles/ce9mrep27rpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/14b6/live/f0bc7fa0-b451-11ee-beb5-e1400df560f2.jpg",
+            "description": "ጓል 13 ዓመት ትራሲ ካብ 8 ዓመት ዕድመኣ ብዛዕባ ንግድን ምውህላል ገንዘብን ስለዝተምሃረት ኣብዚ እዋን ንርእሳ ክኢላ ተመኵሮኣ ንካልኦት ንኣሽቱ ቈልዑ ትምህር ኣላ። ",
+            "imageAlt": "ትራሲ",
+            "id": "ce9mrep27rpo"
+          },
+          {
+            "type": "video",
+            "duration": "PT4M34S",
+            "title": "ኣብ ቤተክርስትያን ኦርቶዶክስ ኢትዮጵያ ካብ ድያቈን ክሳዕ ቀሺ ዝበጽሑ ኣባላት ፊሊፒናዊ ስድራ",
+            "firstPublished": "2024-01-11T12:52:19.280Z",
+            "lastPublished": "2024-01-11T12:52:19.280Z",
+            "link": "https://www.bbc.com/tigrinya/articles/ce9eevq37n3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/613c/live/142bcf00-b07d-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኣብ ፊሊፒንስ ተወሊዶም ዝዓበዩ ቀሺ ዳንቴ ኣሎንዞ፡ ምስ ስድራኦም ናብ ካናዳ ክኸዱ ከለው ወዲ 16 ዓመት እዮም ኔሮም። ሓደ እዋን መጽሓፍ ቅዱስ እናንበቡ እንከለው፡ ብዛዕባ ኢትዮጵያ ከምዝፈለጡን ኣብ ካናዳ ናብ ዝርከብ ቤተክርስትያን ኦርቶዶክስ ተዋህዶ ኢትዮጵያ ድሕሪ ምኻድ በቲ ዝረኣይዎ ኣዝዮም ከምዝተማረኹን ይገልጹ።",
+            "imageAlt": " ካብ ድያቈን ክሳዕ ቀሺ ዝበጽሑ ኣባላት ፊሊፒናዊ ስድራ",
+            "id": "ce9eevq37n3o"
+          },
+          {
+            "type": "video",
+            "duration": "PT7M49S",
+            "title": "'ኣብ ህይወት ተስፋ ዝህቡ፡ ዘነቃቕሑ ስራሓት እየ ክሰርሕ ዝደሊ' - መርከብ ቦኒታ",
+            "firstPublished": "2024-01-11T12:05:26.039Z",
+            "lastPublished": "2024-01-11T12:05:26.039Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cv2mmqg77nlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/343c/live/0d11f9b0-b078-11ee-beb5-e1400df560f2.jpg",
+            "description": "መርከብ ባርያጋብር (ቦኒታ) ‘ሂፕሃፕ ጓይላ’ ብዝበሃል ቅዲ ሙዚቃ ትግርኛ ዝፍለጥ ስነ ጥበባዊ እዩ። ቅድሚ ሒደት መዓልታት ከኣ ኣፍሮ-ጓይላ ብዝብል ቅዲ ዘቕረቦ ስራሓት ኣቓልቦ ብዙሓት ስሒቡ ኣሎ። ነዚ ኣመልኪትና ምስ መርከብ ሓጺር ጻንሒት ጌርና ኣለና።",
+            "imageAlt": "መርከብ ቦኒታ",
+            "id": "cv2mmqg77nlo"
+          },
+          {
+            "type": "article",
+            "title": "‘ኣይጸዓርኩሉን’ ዝበለቶ 25 ሚልዮን ዶላር ውርሻ ንኻልኦት ክትህብ ዝወሰነት ኦስትርያዊት",
+            "firstPublished": "2024-01-11T08:58:38.139Z",
+            "lastPublished": "2024-01-11T08:58:38.139Z",
+            "link": "https://www.bbc.com/tigrinya/articles/c72yyk07451o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4e78/live/a2d39fe0-b059-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኣብ ቬና እትነብር ጓል 31 ዓመት ማርሊን ኢንገልሆርን፡ ካብቲ ዝወረሰቶ ነቲ 25 ሚልዮን ብኸመይ መልክዑ ንኻልኦት ክተካፍሎ ከምዘለዋ ዝውስኑ 50 ኦስትርያውያን ትምልምል ኣላ።",
+            "imageAlt": "ማርሊን ኢንገልሆርን",
+            "id": "c72yyk07451o"
+          },
+          {
+            "type": "article",
+            "title": "ንኣስታት 50 ዓመት ብጌጋ ዝተኣሰረ ጸሊም ኣመሪካዊ መን እዩ ዝኽሕሶ?",
+            "firstPublished": "2024-01-07T11:10:18.721Z",
+            "lastPublished": "2024-01-07T11:10:18.721Z",
+            "link": "https://www.bbc.com/tigrinya/articles/cxe64e3p4d2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bdab/live/b8293430-ad49-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ብጌጋ ንኣስታት 50 ዓመታት ዝተኣሰረ ሲሞንስ ንጽህናኡ ምፍላጡ፡ ኣብ ማእሰርቲ ንዝነበረ ግዜ ንኽጻወር ከምዝሓገዞ ይገልጽ። ኣብዚ እዋን ድማ ብጌጋ ምእሳሩ ዝፈጠሮ ቂምታ ክገድፎ ይጽዕር ኣሎ። ",
+            "imageAlt": "ሲሞንስ ብጌጋ ምእሳሩ ዝፈጠሮ ቂምታ ክገድፎ ይጽዕር ኣሎ",
+            "id": "cxe64e3p4d2o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 7,
+        "curationId": "urn:bbc:vivo:curation:041e5816-d90c-438c-adee-d912a7809a4a",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "መዛነዪ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 7,
+        "title": "ብብዝሒ ዝተነበ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/tigrinya/popular/read",
+        "mostRead": {
+          "generated": "2024-01-26T10:06:41.113Z",
+          "lastRecordTimeStamp": "2024-01-26T10:04:00Z",
+          "firstRecordTimeStamp": "2024-01-26T08:04:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:c2j58rmvm9lo",
+              "rank": 1,
+              "title": "ኑክሌራዊ ምጾታት ዓለም ክሳብ ክንደይ የስግእ?",
+              "href": "https://www.bbc.com/tigrinya/articles/c2j58rmvm9lo",
+              "timestamp": 1706247217134
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cglmg5pzndxo",
+              "rank": 2,
+              "title": "ኤርትራ፡ ነፋሪት ሚኒስተር ጉዳያት ወጻኢ ጀርመን ብክሊ ኣየራ ክትሓልፍ ከሊኣ ድያ?",
+              "href": "https://www.bbc.com/tigrinya/articles/cglmg5pzndxo",
+              "timestamp": 1706171687764
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crgknjj8ngko",
+              "rank": 3,
+              "title": "ብጥሜት ዝሞቱ 'ዓያሹ ጥራይ' እዮም ዝብል ርእይቶ ሚኒስተር ሓያል ቁጥዐ ኣልዒሉ",
+              "href": "https://www.bbc.com/tigrinya/articles/crgknjj8ngko",
+              "timestamp": 1706245412997
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3g0lx1x1dko",
+              "rank": 4,
+              "title": "ቅልውላው ቀርኒ ኣፍሪቃ፡ ዝምድና ሃገራት እንታይ ይመስል?",
+              "href": "https://www.bbc.com/tigrinya/articles/c3g0lx1x1dko",
+              "timestamp": 1706160937001
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cl752jqkxedo",
+              "rank": 5,
+              "title": "መጥቃዕቲ ዒራቕ፡ ኣሜሪካ ንመን እያ ዒላማ ትገብር ዘላ?",
+              "href": "https://www.bbc.com/tigrinya/articles/cl752jqkxedo",
+              "timestamp": 1706245925213
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4njxpnk45jo",
+              "rank": 6,
+              "title": "ኣመሪካዊ ጀነራል ናብ ሶማልያ ብምብጻሕ ብዛዕባ 'ዞባዊ ጸጥታዊ ጉዳያት' ተዘራሪቡ",
+              "href": "https://www.bbc.com/tigrinya/articles/c4njxpnk45jo",
+              "timestamp": 1706193907606
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ckd4vxnggxxo",
+              "rank": 7,
+              "title": "ክሪፕቶ፡ ሚልዮናት ዶላር ኤርትራውያን ኣበይ ኣተወ? በዓል መን ከ ረቢሖም?",
+              "href": "https://www.bbc.com/tigrinya/articles/ckd4vxnggxxo",
+              "timestamp": 1705996295709
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c6pqge1g947o",
+              "rank": 8,
+              "title": "ቢንያም ግርማይ ሓደ ካብ 100 ኣዝዮም ጸለውቲ ኣፍሪቃውያን ኮይኑ ተረቚሑ",
+              "href": "https://www.bbc.com/tigrinya/articles/c6pqge1g947o",
+              "timestamp": 1706094600283
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd17yvepx75o",
+              "rank": 9,
+              "title": "ዩክረይን ምሩኻት ወተሃደራታ ንዝጸዓነት ነፋሪት ሩስያ ብምህራማ ንሞስኮ ከሲሳ",
+              "href": "https://www.bbc.com/tigrinya/articles/cd17yvepx75o",
+              "timestamp": 1706161676969
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv29d7ng945o",
+              "rank": 10,
+              "title": "ኤርትራ፡ ሃንደበት ዝዓረፈ ኮኾብ ተጻዋታይ ኵዕሶ እግሪ ሱሌማን ማሕሙድ (ስኾይ) መን'ዩ?",
+              "href": "https://www.bbc.com/tigrinya/articles/cv29d7ng945o",
+              "timestamp": 1706014801727
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c87ndk0rg3do",
+              "rank": 11,
+              "title": "ዓለም ብዛዕባ ንመጻኢ ከጋጥም ዝኽእል ለበዳ ሕማም 'ኤክስ' ትዝቲ",
+              "href": "https://www.bbc.com/tigrinya/articles/c87ndk0rg3do",
+              "timestamp": 1706080338634
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crg4znvxpjgo",
+              "rank": 12,
+              "title": "ብቀይሕ ባሕሪ ዘይሓልፋ መራኽብ ናበይ ይኸዳ ኣለዋ?",
+              "href": "https://www.bbc.com/tigrinya/articles/crg4znvxpjgo",
+              "timestamp": 1706180061588
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv2e2xlg6rpo",
+              "rank": 13,
+              "title": "ኤርትራ፡ ዘይተነግረ ክፋል ዛንታ ተጋዳሊት ወርቁ ዘርኣይ",
+              "href": "https://www.bbc.com/tigrinya/articles/cv2e2xlg6rpo",
+              "timestamp": 1705741098561
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cldqwgky2wgo",
+              "rank": 14,
+              "title": "ኤርትራ፡ ምስ ክቱር ሓዘና ዝሓለፈት ወላዲት 'ተጋዳላይ ሰኣላይ' ስዩም ጸሃየ",
+              "href": "https://www.bbc.com/tigrinya/articles/cldqwgky2wgo",
+              "timestamp": 1705912601213
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4nkqqqepw7o",
+              "rank": 15,
+              "title": "ካብ መርዓ ኣማኢት ክሳብ ዋንጫ ኣፍሪቃ - ናይዚ ሰሙን ውቁባት ኣሳእል ኣፍሪቃውያን",
+              "href": "https://www.bbc.com/tigrinya/articles/c4nkqqqepw7o",
+              "timestamp": 1705819034555
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cy6eng4j3p7o",
+              "rank": 16,
+              "title": "ዋንጫ ኣፍሪቃ፡ ናብ ኣውዲቕካ ምሕላፍ ዝኣተዋ ሃገራት ኣየኖት እየን? ቀጻሊ ግጥማት ከ?",
+              "href": "https://www.bbc.com/tigrinya/articles/cy6eng4j3p7o",
+              "timestamp": 1706172186159
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crgx7n7kv44o",
+              "rank": 17,
+              "title": "ብሪጣንያ ብዛዕባ ምምላስ ኣምባሳደር ኤርትራ እንታይ ትብል?",
+              "href": "https://www.bbc.com/tigrinya/articles/crgx7n7kv44o",
+              "timestamp": 1705735217170
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0jy43j9gk1o",
+              "rank": 18,
+              "title": "ኤርትራ-ኢትዮጵያ፡ ዝምድና ፕረዚደንት ኢሳይያስን ቀዳማይ ሚኒስተር ኣብይን ካበይ ናበይ?",
+              "href": "https://www.bbc.com/tigrinya/articles/c0jy43j9gk1o",
+              "timestamp": 1704435324089
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c72y2gxqpyxo",
+              "rank": 19,
+              "title": "ኣብ መንጎ ኤርትራን ብሪጣንያን እንታይ’ዩ ኣጋጢሙ ዘሎ?",
+              "href": "https://www.bbc.com/tigrinya/articles/c72y2gxqpyxo",
+              "timestamp": 1705643561114
+            },
+            {
+              "id": "0a8595a1-ed79-4b35-99cd-bec3ee37073a",
+              "rank": 20,
+              "title": "ዋንጫ ኣፍሪቃ 2023፡ ሰሌዳ ግጥማትን ውጽኢትን",
+              "href": "/tigrinya/news-67785371",
+              "timestamp": 1703155930000
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cq01ke649v0t",
+        "contentType": "index-home",
+        "pageIdentifier": "tigrinya.page",
+        "pageTitle": "ዜና - BBC News ትግርኛ"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

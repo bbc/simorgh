@@ -1,38 +1,30 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import arabicData from '#data/arabic/frontpage';
-import igboData from '#data/igbo/frontpage';
-import newsData from '#data/news/frontpage';
-import serbianCyrData from '#data/serbian/frontpage/cyr';
-import serbianLatData from '#data/serbian/frontpage/lat';
-import japaneseData from '#data/japanese/frontpage/';
-import { service as arabicConfig } from '../../lib/config/services/arabic';
-import { service as igboConfig } from '../../lib/config/services/igbo';
+import { data as urduData } from '#data/urdu/frontpage';
+import { data as newsData } from '#data/news/frontpage';
+import { data as serbianCyrData } from '#data/serbian/frontpage/cyr';
+import { data as serbianLatData } from '#data/serbian/frontpage/lat';
+import { service as urduConfig } from '../../lib/config/services/urdu';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
-import { service as japaneseConfig } from '../../lib/config/services/japanese';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
 const serviceDataSets = {
-  arabic: { default: arabicData },
-  igbo: { default: igboData },
-  news: { default: newsData },
-  japanese: { default: japaneseData },
+  urdu: { default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead } },
+  news: { default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead } },
   serbian: {
-    cyr: serbianCyrData,
-    lat: serbianLatData,
-  },
+    cyr: { ...serbianCyrData.article, mostRead: serbianCyrData.secondaryData.mostRead },
+    lat: { ...serbianLatData.article, mostRead: serbianLatData.secondaryData.mostRead },
+  }
 };
 
 const serviceConfigs = {
-  arabic: arabicConfig,
-  igbo: igboConfig,
+  urdu: urduConfig,
   news: newsConfig,
-  japanese: japaneseConfig,
   serbian: serbianConfig,
 };
 
@@ -65,10 +57,8 @@ export default {
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
 };
 
-export const Arabic = () => <Component service="arabic" />;
-export const Igbo = () => <Component service="igbo" />;
+export const Urdu = () => <Component service="urdu" />;
 export const News = () => <Component service="news" />;
-export const Japanese = () => <Component service="japanese" />;
 export const SerbianCyrillic = () => (
   <Component service="serbian" variant="cyr" />
 );

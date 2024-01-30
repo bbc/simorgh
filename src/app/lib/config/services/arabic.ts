@@ -46,17 +46,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'البودكاست',
-      brandTitle: 'بي بي سي إكسترا',
+      title: 'يستحق الانتباه',
+      brandTitle: 'يستحق الانتباه',
       brandDescription:
-        'بودكاست أسبوعي يقدم  قصصا إنسانية عن العالم العربي وشبابه.',
+        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg',
-        alt: 'بي بي سي إكسترا',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -86,6 +86,13 @@ export const service: DefaultServiceConfig = {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
+      },
+      liveExperiencePage: {
+        liveLabel: 'مباشر',
+        liveCoverage: 'تغطية مباشرة',
+        breaking: 'عاجل',
+        postedAt: 'توقيت النشر',
+        summary: 'ملخص',
       },
       gist: 'ملخص',
       error: {
@@ -142,7 +149,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'موافق',
           reject: 'إطلع على التغييرات',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -155,7 +162,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ملفات الارتباط',
                 last: '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'ادارة خياراتي',
             },
@@ -171,7 +178,7 @@ export const service: DefaultServiceConfig = {
                   'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
                 para4: {
                   text: 'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
                 heading3: 'شروط اختيارية لجمع المعلومات',
@@ -203,13 +210,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ملفات ارتباط',
                 last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'نعم، موافق',
             reject: 'كلا، أعدني إلى الإعدادات',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -326,8 +333,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

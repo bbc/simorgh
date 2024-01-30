@@ -1,13 +1,16 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
+import useViewTracker from '#app/hooks/useViewTracker';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
-import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
+import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import CallToActionLink from '../CallToActionLink';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface MessageBannerProps {
   heading: string;
@@ -15,7 +18,71 @@ interface MessageBannerProps {
   link?: string;
   linkText: string;
   image?: string;
+  eventTrackingData?: EventTrackingMetadata;
 }
+
+const Banner = forwardRef(
+  (
+    {
+      heading,
+      description,
+      link,
+      linkText,
+      image,
+      eventTrackingData,
+    }: MessageBannerProps,
+    viewRef,
+  ) => {
+    const { dir } = useContext(ServiceContext);
+    const isRtl = dir === 'rtl';
+
+    const id = `message-banner-${idSanitiser(heading)}`;
+
+    return (
+      <section
+        css={styles.container}
+        role="region"
+        aria-labelledby={id}
+        data-testid={id}
+      >
+        <div ref={viewRef} css={styles.card}>
+          <div css={styles.textWrap}>
+            <Heading level={2} size="paragon" css={styles.heading} id={id}>
+              {heading}
+            </Heading>
+            <Paragraph size="longPrimer" css={styles.paragraph}>
+              {description}
+            </Paragraph>
+          </div>
+          <div css={styles.flex}>
+            <CallToActionLink
+              href={link}
+              css={styles.callToActionLink}
+              className="focusIndicatorInvert"
+              eventTrackingData={eventTrackingData}
+            >
+              {linkText}
+              {isRtl ? (
+                <LeftChevron css={styles.chevron} />
+              ) : (
+                <RightChevron css={styles.chevron} />
+              )}
+            </CallToActionLink>
+            {image && (
+              <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
+                <Image
+                  alt=""
+                  src={image.replace('{width}', 'raw')}
+                  placeholder={false}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  },
+);
 
 const MessageBanner = ({
   heading,
@@ -23,57 +90,21 @@ const MessageBanner = ({
   link,
   linkText,
   image,
+  eventTrackingData,
 }: MessageBannerProps) => {
-  const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
-
-  const id = `message-banner-${heading.replaceAll(' ', '-')}`;
+  const viewRef = useViewTracker(eventTrackingData);
 
   return (
-    <section
-      css={styles.container}
-      role="region"
-      aria-labelledby={id}
-      data-testid={id}
-    >
-      <div css={styles.card}>
-        <div css={styles.textWrap}>
-          <Heading level={2} size="paragon" css={styles.heading} id={id}>
-            {heading}
-          </Heading>
-          <Paragraph size="longPrimer" css={styles.paragraph}>
-            {description}
-          </Paragraph>
-        </div>
-        <div css={styles.flex}>
-          <a
-            href={link}
-            css={styles.linkBackground}
-            className="focusIndicatorInvert"
-          >
-            <div css={styles.linkAndChevron}>
-              <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                {linkText}
-                {isRtl ? (
-                  <LeftChevron css={styles.chevron} />
-                ) : (
-                  <RightChevron css={styles.chevron} />
-                )}
-              </Text>
-            </div>
-          </a>
-          {image && (
-            <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
-              <Image
-                alt=""
-                src={image.replace('{width}', 'raw')}
-                placeholder={false}
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+    <Banner
+      heading={heading}
+      linkText={linkText}
+      description={description}
+      link={link}
+      image={image}
+      eventTrackingData={eventTrackingData}
+      ref={viewRef}
+    />
   );
 };
+
 export default MessageBanner;

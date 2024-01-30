@@ -37,14 +37,14 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -58,17 +58,17 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
     class="emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Play audio, "Dog barks at cat."
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12px"
         viewBox="0 0 13 12"
@@ -123,7 +123,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -131,7 +131,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -140,7 +140,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -150,17 +150,17 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
     class="foo emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Play audio, "Dog barks at cat.", 2 minutes 30 seconds
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12px"
         viewBox="0 0 13 12"
@@ -176,7 +176,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       datetime="PT2M30S"
     >
       2:30
@@ -222,14 +222,14 @@ exports[`PlayButton should render video by default 1`] = `
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -243,17 +243,17 @@ exports[`PlayButton should render video by default 1`] = `
     class="emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Play video, "Dog chases cat."
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -315,7 +315,7 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -323,7 +323,7 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -332,7 +332,7 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   height: 0.75rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -342,17 +342,17 @@ exports[`PlayButton should render video correctly with duration and guidance mes
     class="emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Guidance: May contain strong language that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -375,7 +375,7 @@ exports[`PlayButton should render video correctly with duration and guidance mes
     </div>
     <time
       aria-hidden="true"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       datetime="PT2M30S"
     >
       2:30
@@ -421,14 +421,14 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -442,17 +442,17 @@ exports[`PlayButton should render video correctly without duration details 1`] =
     class="emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Play video, "Dog chases cat."
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -514,7 +514,7 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   margin: 0;
 }
 
-.emotion-4>svg {
+.emotion-3>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -522,7 +522,7 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   width: 1.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -531,7 +531,7 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -541,17 +541,17 @@ exports[`PlayButton should render video indicator correctly 1`] = `
     class="foo emotion-0 emotion-1"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Play video, "Dog chases cat.", 2 minutes 30 seconds
     </span>
     <div
       aria-hidden="true"
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <svg
         aria-hidden="true"
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -574,7 +574,7 @@ exports[`PlayButton should render video indicator correctly 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       datetime="PT2M30S"
     >
       2:30

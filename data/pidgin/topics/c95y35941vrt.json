@@ -1,11 +1,71 @@
 {
   "data": {
     "title": "Donald Trump",
-    "description": "",
+    "description": "Description of Donald Trump topic page",
     "imageData": null,
     "curations": [
       {
         "summaries": [
+          {
+            "type": "article",
+            "title": "Di 34 criminal charges against former US President Donald Trump and di likely punishment",
+            "firstPublished": "2023-04-05T07:46:57.258Z",
+            "link": "https://www.bbc.com/pidgin/articles/c97dqy49r6mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg",
+            "description": "Donald Trump face 34 felony charges of falsifying business records in di first degree – e dey under Article 175 of di New York Penal Law.",
+            "imageAlt": "Donald Trump in court wit im lawyers, including Todd Blanche (far left) and Susan Necheles (second from left)",
+            "id": "c97dqy49r6mo"
+          },
+          {
+            "type": "article",
+            "title": "Trump plead not guilty to 34 criminal charges dem sama am",
+            "firstPublished": "2023-04-04T18:07:11.414Z",
+            "link": "https://www.bbc.com/pidgin/articles/cgr1873031po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8f73/live/11591400-d323-11ed-be2e-754a65c11505.jpg",
+            "description": " Donald Trump na di first former US President to dey arrested on criminal charges. ",
+            "imageAlt": "Trump for court room ",
+            "id": "cgr1873031po"
+          },
+          {
+            "type": "article",
+            "title": "Donald Trump fit plead not guilty for New York court",
+            "firstPublished": "2023-04-04T08:39:03.724Z",
+            "link": "https://www.bbc.com/pidgin/articles/cl70nnzwygno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8abe/live/33a0e790-d2b5-11ed-be2e-754a65c11505.jpg",
+            "description": "Oga Trump former Vice-President Mike Pence say di indictment send a \"terrible message\" to di world about American justice.",
+            "imageAlt": "Former U.S President Donald Trump",
+            "id": "cl70nnzwygno"
+          },
+          {
+            "type": "article",
+            "title": "Next tin wey fit happun to Donald Trump wen dem arrest am",
+            "firstPublished": "2023-03-31T14:53:24.211Z",
+            "link": "https://www.bbc.com/pidgin/articles/c108qmg34lno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bd48/live/0b97a170-cfaa-11ed-be2e-754a65c11505.jpg",
+            "description": "Donald Trump dey face impending arrest on charges wey come from investigation into $130,000 (£106,000) payment to one porn star Stormy Daniels for 2016.",
+            "imageAlt": "Wetin go happun to Donald Trump wen dem arrest am",
+            "id": "c108qmg34lno"
+          },
+          {
+            "type": "article",
+            "title": "Wetin happun between Donald Trump and ex-porn star Stormy Daniels?",
+            "firstPublished": "2023-03-31T10:56:48.202Z",
+            "link": "https://www.bbc.com/pidgin/articles/c3grn1vp22no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c596/live/4be388b0-cfb0-11ed-be2e-754a65c11505.jpg",
+            "description": "Di former president alleged night wit porn actress don turn into serious legal battle.",
+            "imageAlt": "Collage foto of oga Trump and im wife, Melania and adult film star Stormy Daniels ",
+            "id": "c3grn1vp22no"
+          },
+          {
+            "type": "article",
+            "title": "Trump raise alarm over planned arrest on Tuesday",
+            "firstPublished": "2023-03-18T16:06:43.388Z",
+            "link": "https://www.bbc.com/pidgin/articles/ce42l3rxzz5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1183/live/84cf2d50-c5a1-11ed-95f8-0154daa64c44.jpg",
+            "description": "Prosecutors for New York dey consider charges on top alleged hush money payments to one former porn star.",
+            "imageAlt": "Former US President Donald Trump dey tok for inside mic for one event for di Adler Theatre",
+            "id": "ce42l3rxzz5o"
+          },
           {
             "type": "article",
             "title": "Why Meta want allow Donald Trump back on Facebook and Instagram",
@@ -185,78 +245,30 @@
             "description": "Users of Donald Trump new website go dey able to like posts - and also share them on Twitter and Facebook accounts.",
             "imageAlt": "Trump",
             "id": "682b5bcd-0dfd-4e9f-b1a0-14dfe206df83"
-          },
-          {
-            "type": "article",
-            "title": "Three things Donald Trump reveal during Hannity TV interview",
-            "firstPublished": "2021-04-20T09:00:36.000Z",
-            "link": "https://www.bbc.com/pidgin/tori-56813336",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C816/production/_118122215_donaldtrumpinterviewtoday-seanhannitytelevisionprogramwit46thuspresident.jpg",
-            "description": "Di one hour special interview happen ontop Trump Mar-a-Lago resort for Palm Beach, Florida and na im first major television interview since e comot office.",
-            "imageAlt": "\"Donald Trump interview today\": [Sean Hannity television program wit 46th US president]",
-            "id": "567227f0-4783-4637-a2cc-9cfed501476d"
-          },
-          {
-            "type": "article",
-            "title": "How pipo react to Trump ''Radical left Crazies'' Easter Message",
-            "firstPublished": "2021-04-05T14:22:58.000Z",
-            "link": "https://www.bbc.com/pidgin/world-56641015",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8C22/production/_117847853_p096152f.jpg",
-            "description": "Dis no go be di first time di former presido go comot address di nation since im comot presidency.",
-            "imageAlt": "Donald J. Trump",
-            "id": "a891c423-3f36-4c6d-a838-50f6cd3eb03f"
-          },
-          {
-            "type": "article",
-            "title": "How many law suits Trump go face now wey im no be president",
-            "firstPublished": "2021-03-31T12:00:25.000Z",
-            "link": "https://www.bbc.com/pidgin/world-56587964",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ADF9/production/_117773544_45officeofdonaldtrump.jpg",
-            "description": "About fourteen different cases against Trump, im family and business dey court.",
-            "imageAlt": "\"45 Office of Donald Trump:\"",
-            "id": "64dbe4ba-7f2a-4eaf-9c5e-4bdb0fd159d8"
-          },
-          {
-            "type": "article",
-            "title": "Five tins Trump tok for im first political appearance afta e comot White House",
-            "firstPublished": "2021-03-01T15:26:35.000Z",
-            "link": "https://www.bbc.com/pidgin/tori-56243119",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/77AA/production/_117343603_f0869a29-2abf-4775-be06-ecbbf00626f0.jpg",
-            "description": "Di former president for im first political appearance for one conservative conference for Florida also tok say im fit run for presidency again for 2024.",
-            "imageAlt": "Former US President Donald Trump",
-            "id": "f6ec81d9-1152-4648-a319-33e116b219e8"
-          },
-          {
-            "type": "article",
-            "title": "US Senate fail to convict Trump, everytin you suppose know about Trump impeachment",
-            "firstPublished": "2021-02-14T05:26:11.000Z",
-            "link": "https://www.bbc.com/pidgin/world-56059489",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3290/production/_116944921_trump.jpg",
-            "description": "A total of 57 senators vote to convict di former president, far short of di 67 votes dem need.",
-            "imageAlt": "Donald Trump (file pic Dec 2020)",
-            "id": "97463752-18f3-4783-ada6-56f3aa841384"
-          },
-          {
-            "type": "article",
-            "title": "Trump second impeachment trial don begin",
-            "firstPublished": "2021-02-09T17:17:07.000Z",
-            "link": "https://www.bbc.com/pidgin/56000740",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C6E6/production/_116881905_trump.jpg",
-            "description": "Trump dey face one single charge of \"incitement of insurrection\" for di speech wey im make to im supporters ahead of di deadly riot for US Capitol for January.",
-            "imageAlt": "Former US President Donald Trump",
-            "id": "7ca69c90-2ccb-42bf-85de-9db681119f73"
           }
         ],
         "activePage": 1,
-        "pageCount": 6,
+        "pageCount": 7,
         "curationId": "urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-41759cdeb30c",
         "curationType": "vivo-stream",
         "visualProminence": "NORMAL"
       }
     ],
     "activePage": 1,
-    "pageCount": 6,
-    "variantTopicId": null
+    "pageCount": 7,
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "pidgin.topics.c95y35941vrt.page",
+        "producer": "PIDGIN"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c95y35941vrt",
+        "contentType": "index-category",
+        "pageIdentifier": "pidgin.topics.c95y35941vrt.page",
+        "pageTitle": "Donald Trump"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

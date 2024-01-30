@@ -1,23 +1,14 @@
 import React, { useContext } from 'react';
-import useToggle from '#hooks/useToggle';
-import CanonicalChartbeatBeacon from '#containers/ChartbeatAnalytics/canonical';
+import useToggle from '../../../hooks/useToggle';
+import CanonicalChartbeatBeacon from '../../../components/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
+import { CanonicalChartbeatConfig } from '../../../components/ChartbeatAnalytics/types';
 
-type Props = {
-  domain: string;
-  sections: string;
-  uid: number;
-  title: string;
-  virtualReferrer: string | null;
-  idSync: {
-    // eslint-disable-next-line camelcase
-    bbc_hid: string;
-  };
-  type: string;
-  useCanonical: boolean;
-} | null;
-
-const Chartbeat = ({ config = null }: { config: Props }) => {
+const Chartbeat = ({
+  config = null,
+}: {
+  config: CanonicalChartbeatConfig | null;
+}) => {
   const { enabled } = useToggle('chartbeatAnalytics');
   const { isAmp } = useContext(RequestContext);
 

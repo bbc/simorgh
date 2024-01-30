@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
+import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -18,8 +20,8 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+jest.mock('../../components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });
 
@@ -42,6 +44,10 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,
@@ -84,7 +90,7 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('section').length).toEqual(0);
   });
 
-  it('should render curation subheading when curation title exists', () => {
+  it('should render curation subheading as h2 when curation title exists', () => {
     const { container } = render(
       <TopicPage pageData={mundoMultipleCurations} />,
       getOptionParams({ service: 'mundo', lang: 'es' }),
@@ -120,6 +126,22 @@ describe('Topic Page', () => {
 
     expect(queryByTestId('topic-badge')).toBeInTheDocument();
     expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should resize the badge image from 480 to 128', () => {
+    const { queryByTestId } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+
+    const topicBadge = queryByTestId('topic-badge');
+
+    expect(topicBadge).toBeInTheDocument();
+    const topicBadgeSrc = topicBadge.getAttribute('src');
+    expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
+    expect(topicBadgeSrc).toBe(
+      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+    );
   });
 
   it('should render description without badge', () => {
@@ -227,21 +249,45 @@ describe('Topic Page', () => {
     });
 
     it('should only render the first summary if there is more than one summary in the curation', () => {
-      const messageBannerCuration =
-        kyrgyzTopicWithMessageBanners.curations.find(
-          ({ visualStyle, visualProminence, summaries }) =>
-            visualProminence === VISUAL_PROMINENCE.NORMAL &&
-            visualStyle === VISUAL_STYLE.BANNER &&
-            summaries.length > 1,
-        );
+      const messageBannerCuration = mundoBannerVariations.curations.find(
+        ({ visualStyle, visualProminence, summaries }) =>
+          visualProminence === VISUAL_PROMINENCE.NORMAL &&
+          visualStyle === VISUAL_STYLE.BANNER &&
+          summaries.length > 1,
+      );
       const { queryAllByRole } = render(
-        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
-        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
       );
       const messageBanners = queryAllByRole('region', {
         name: messageBannerCuration.title,
       });
       expect(messageBanners).toHaveLength(1);
+    });
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });

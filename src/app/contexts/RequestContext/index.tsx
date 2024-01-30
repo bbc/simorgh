@@ -5,6 +5,7 @@ import {
   PageTypes,
   Services,
   Variants,
+  MvtExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
@@ -12,7 +13,7 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 
-type RequestContextProps = {
+export type RequestContextProps = {
   ampLink: string;
   ampUkLink: string;
   ampNonUkLink: string;
@@ -22,15 +23,14 @@ type RequestContextProps = {
   env: Environments;
   id: string | null;
   isAmp: boolean;
+  isApp: boolean;
+  isCaf: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   origin: string;
   pageType: PageTypes;
+  derivedPageType: string | null;
   pathname: string;
   platform: Platforms;
   previousPath: string | null;
@@ -49,8 +49,11 @@ export const RequestContext = React.createContext<RequestContextProps>(
 
 type RequestProviderProps = {
   bbcOrigin?: string | null;
+  derivedPageType?: string | null;
   id?: string | null;
   isAmp: boolean;
+  isApp: boolean;
+  isCaf?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
@@ -59,19 +62,19 @@ type RequestProviderProps = {
   showAdsBasedOnLocation?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
+  isUK?: boolean | null;
 };
 
 export const RequestContextProvider = ({
   bbcOrigin = null,
+  derivedPageType = null,
   children,
   id = null,
   isAmp,
+  isApp,
+  isCaf = false,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
@@ -82,12 +85,26 @@ export const RequestContextProvider = ({
   statusCode = null,
   timeOnServer = null,
   variant = null,
+  isUK = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
+  const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
-  const platform: Platforms = isAmp ? 'amp' : 'canonical';
+  const formattedIsUK = isUK ?? false;
+
+  const getPlatform = (): Platforms => {
+    switch (true) {
+      case isApp:
+        return 'app';
+      case isAmp:
+        return 'amp';
+      default:
+        return 'canonical';
+    }
+  };
+
+  const platform = getPlatform();
   const statsDestination = getStatsDestination({
-    isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
+    isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
   });
@@ -100,10 +117,13 @@ export const RequestContextProvider = ({
   const value = {
     env,
     id,
-    isUK,
+    isUK: formattedIsUK,
     origin,
     pageType,
+    derivedPageType,
     isAmp,
+    isApp,
+    isCaf,
     isNextJs,
     platform,
     statsDestination,

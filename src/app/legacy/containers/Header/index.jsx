@@ -11,17 +11,24 @@ import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  /* eslint-disable react/prop-types */
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  /* eslint-enable react/prop-types */
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
     const isRejectButton =
-      event.target.getAttribute('data-terms-banner') === 'reject' ||
-      event.target.getAttribute('data-cookie-banner') === 'reject';
+      event.target?.getAttribute('data-terms-banner') === 'reject' ||
+      event.target?.getAttribute('data-cookie-banner') === 'reject';
     const isAcceptButton =
-      event.relatedTarget.getAttribute('data-terms-banner') === 'accept' ||
-      event.relatedTarget.getAttribute('data-cookie-banner') === 'accept';
+      event.relatedTarget?.getAttribute('data-terms-banner') === 'accept' ||
+      event.relatedTarget?.getAttribute('data-cookie-banner') === 'accept';
     const hasMovedToContent = !isAcceptButton && event.relatedTarget !== 'null';
 
     if (isRejectButton && hasMovedToContent) {
@@ -45,7 +52,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 };
 
 const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
-  const { pageType, isAmp } = useContext(RequestContext);
+  const { pageType, isAmp, isApp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
@@ -76,6 +83,8 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
   );
 
   const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+
+  if (isApp) return null;
 
   return (
     <header role="banner" lang={serviceLang}>

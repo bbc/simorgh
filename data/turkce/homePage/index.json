@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "Haberler - BBC News Türkçe",
+    "description": "Türkiye ve dünya gündemindeki son gelişmeler, son dakika haberleri, video, analiz, teknoloji haberleri, sağlık haberleri, spor haberleri, ekonomi haberleri, fotoğraf albümleri, canlı yayınlar BBC Türkçe sayfalarında.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Hissedilen enflasyon: Kişisel enflasyonunuzu hesaplayın",
+            "firstPublished": "2023-03-30T08:55:53.000Z",
+            "link": "https://www.bbc.com/turkce/haberler-turkiye-64876429",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4B33/production/_129215291_index_549.png",
+            "description": "Açıklanan enflasyonun, hissettiğiniz enflasyondan yüksek olduğunu mu düşünüyorsunuz? Tüketici enflasyonu hesaplanırken kullanılan harcama sepeti sizi yansıtmıyor olabilir. Kişisel enflasyon hesaplayıcımızla, kendi harcamalarınıza göre enflasyon oranını hesaplayabilirsiniz.",
+            "imageAlt": "grafik",
+            "id": "f7265ccd-92c1-4562-b2cc-c97bf70f612f"
+          },
+          {
+            "type": "article",
+            "title": "Türkiye'de seçmenlerin kişisel verileri manipülasyon için kullanılıyor mu?",
+            "firstPublished": "2023-03-30T04:37:15.479Z",
+            "link": "https://www.bbc.com/turkce/articles/c84mm9lvzv0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b33f/live/0b755da0-ce50-11ed-8790-0b6b0487822e.jpg",
+            "description": "Yüksek Seçim Kurulu'nun (YSK) Mart ortasında yayımladığı propaganda dönemi esasları ve yayın ilkeleri ağırlıkla TV yayıncılığına odaklanıyor. Seçim düzenlemelerinde \"sosyal medya ve dijital pazarlamanın etkisinin gözardı edilmesi\" seçmenlerin manipülasyonu açısından endişe yaratıyor. \n",
+            "imageAlt": "hedefleme ",
+            "id": "c84mm9lvzv0o"
+          },
+          {
+            "type": "article",
+            "title": "Trump ile eski porno yıldızı Stormy Daniels arasında ne yaşandı, neden ceza davası açıldı?",
+            "firstPublished": "2023-03-31T10:00:02.024Z",
+            "link": "https://www.bbc.com/turkce/articles/cyd68q0vrqdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4557/live/c9e670c0-cf96-11ed-9374-e7827bf8df49.jpg",
+            "description": "ABD eski başkanı Donald Trump ile kendisiyle 2006 yılında cinsel ilişki yaşadığı ve bu nedenle susturulmak için ödeme yapıldığını iddia eden Stormy Daniels arasında bugüne kadar neler yaşandığını araştırdık. ",
+            "imageAlt": "Trump ve Daniels ",
+            "id": "cyd68q0vrqdo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:eb6ca135-cf1e-48aa-ad76-aaa5f4975aaa",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Seçtiklerimiz",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cmvw7884exet",
+        "contentType": "index-home",
+        "pageIdentifier": "turkce.page",
+        "pageTitle": "Haberler - BBC News Türkçe"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
 
 import Timestamp from '#components/Promo/timestamp';
-import LiveLabel from '#psammead/psammead-live-label/src';
+import LiveLabel from '#app/components/LiveLabel';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Title from './Title';
@@ -19,11 +19,12 @@ const Promo = ({
   ariaLabelledBy,
   mediaType,
   eventTrackingData,
+  className,
 }) => {
   const { service } = useContext(ServiceContext);
 
   return (
-    <PromoWrapper>
+    <PromoWrapper className={className}>
       <PromoContext.Provider
         value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
       >
@@ -50,8 +51,14 @@ Promo.propTypes = {
   ariaLabelledBy: string.isRequired,
   mediaType: string,
   eventTrackingData: shape({ block: shape({ componentName: string }) }),
+  className: string,
 };
 
-Promo.defaultProps = { to: '', mediaType: '', eventTrackingData: null };
+Promo.defaultProps = {
+  to: '',
+  mediaType: '',
+  eventTrackingData: null,
+  className: undefined,
+};
 
 export default Promo;

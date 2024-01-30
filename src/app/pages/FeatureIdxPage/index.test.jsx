@@ -4,9 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import urduPageData from '#data/urdu/cpsAssets/science-51314202';
+import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import { Helmet } from 'react-helmet';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
@@ -25,7 +26,7 @@ const mockToggles = {
 const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
   pageType: FEATURE_INDEX_PAGE,
   service,
-  pathname: '/pathname',
+  pathname: '/urdu/science-51314202',
   data: { status: 200 },
   showAdsBasedOnLocation,
 });
@@ -63,11 +64,11 @@ jest.mock('uuid', () => {
     },
   };
 });
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('#containers/ATIAnalytics/amp', () => {
+jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
@@ -90,14 +91,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   return props => (
     <div id="PageWrapperContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  return props => (
-    <div id="LoadingContainer">
       <Component {...props} />
     </div>
   );
@@ -127,21 +120,15 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
-jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
-  const CanonicalAdBootstrapJs = () => (
-    <div data-testid="adBootstrap">bootstrap</div>
-  );
-  return CanonicalAdBootstrapJs;
-});
-
 describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
     fetch.mockResponse(JSON.stringify(urduPageData));
+    delete process.env.SIMORGH_APP_ENV;
 
     ({ pageData } = await getInitialData({
-      path: 'some-feature-idx-page-path',
+      path: '/urdu/science-51314202',
       service: 'urdu',
     }));
   });
@@ -233,15 +220,14 @@ describe('Feature Idx Page', () => {
           },
         };
 
-        let getByTestId;
         await act(async () => {
-          ({ getByTestId } = render(
+          render(
             <FeatureIdxPageWithContext
               pageData={pageData}
               showAdsBasedOnLocation
               toggles={toggles}
             />,
-          ));
+          );
         });
 
         const leaderboardAd = document.querySelector(
@@ -252,8 +238,11 @@ describe('Feature Idx Page', () => {
         const mpuAd = document.querySelector('[id="dotcom-mpu"]');
         expect(mpuAd).toBeInTheDocument();
 
-        const adBootstrap = getByTestId('adBootstrap');
-        expect(adBootstrap).toBeInTheDocument();
+        const bootstrapScript = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+          innerHTML.includes('window.dotcom'),
+        );
+
+        expect(bootstrapScript).toBeTruthy();
       });
 
       it('should not render canonical ad bootstrap on amp', async () => {

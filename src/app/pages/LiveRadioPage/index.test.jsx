@@ -36,7 +36,7 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

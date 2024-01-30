@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "முகப்பு - BBC News தமிழ்",
+    "description": "தமிழ்நாடு, இந்தியா, இலங்கை மற்றும் சர்வதேச செய்திகளையும், ஆழமான கண்ணோட்டங்களையும் அறிந்துகொள்ள.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ஹிட்லருக்காக 'ஆரிய' கர்ப்பிணிகள் பிரசவித்த பல ஆயிரம் குழந்தைகள் - அதிகம் அறியப்படாத வரலாறு",
+            "firstPublished": "2021-10-03T06:25:30.000Z",
+            "link": "https://www.bbc.com/tamil/global-58766073",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7B46/production/_120785513_gettyimages-105211758.jpg",
+            "description": "துணைவரைத் தேர்வு செய்யும்போது உங்களுடைய தலை முடி நிறமும் அவரது கண்களும் கிட்டத்தட்ட ஒரே மாதிரியாக இருக்கும் வகையில் பார்த்துக் கொள்ளுங்கள் என்றும் பெண்களுக்கு அறிவுறுத்தப்பட்டது. இப்படி பழகும் எந்தவொரு ஆண் வீரர் அல்லது அதிகாரியின் பெயரும் அந்த பெண்களிடம் பகிரப்படவில்லை. அதுதான் லெபென்ஸ்போர்ன் திட்டத்தின் அடிப்படை.",
+            "imageAlt": "German Women Carrying Children On An Alleged Aryan Purity In A Lebensborn, Selection Center Births By Methods Eugenicists During The Second World War. (Photo by Keystone-France/Gamma-Keystone via Getty Images)",
+            "id": "8ed5f5aa-3f8f-4efc-8b68-c45275a5f34b"
+          },
+          {
+            "type": "article",
+            "title": "பறையா பருந்தும் பிராமினி பருந்தும்: பறவைகளுக்கு சாதிப் பெயர் சூட்டப்பட்டது ஏன்?",
+            "firstPublished": "2019-09-03T04:53:03.000Z",
+            "link": "https://www.bbc.com/tamil/india-49509651",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1020B/production/_108595066_gettyimages-167643368.jpg",
+            "description": "இந்த ஆங்கிலச் சொல்லின் வேர்ச்சொல் எது? அது தமிழ்நாட்டில் தீண்டப்படாதவர்களாக நடத்தப்பட்ட மக்களை குறிக்கும் சொல்லில் இருந்து பிறந்ததா என்கிற மொழி ஆராய்ச்சி ஒருபுறம் இருக்கிறது.",
+            "imageAlt": "கருடன் அல்லது செம்பருந்து.",
+            "id": "7c5e4544-636b-0a4b-b684-96a43190ed9f"
+          },
+          {
+            "type": "article",
+            "title": "மக்கள் ஏன் 'வாயு'வை வெளியேற்றுகிறார்கள்? அதை தடுக்க முடியுமா?",
+            "firstPublished": "2018-02-23T07:55:15.000Z",
+            "link": "https://www.bbc.com/tamil/india-43166184",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/27BE/production/_100147101_5afc7374-ce81-49c3-9d6f-d00159d4a2f3.jpg",
+            "description": "மலக்குடலில் இருந்து காற்று வெளியேற்றுவதில் உங்களுக்கு சிரமம் ஏற்பட்டிருந்தாலோ அல்லது அது குறித்து கேலி கிண்டலுக்கு ஆளாகியிருந்தாலோ இந்த கட்டுரையை படித்த பிறகு தெளிவு ஏற்படலாம்.",
+            "imageAlt": "மக்கள் ஏன் வாயுவை வெளியேற்றுகிறார்கள்? அதை தடுக்க முடியுமா?",
+            "id": "bfd55039-2265-a64c-881b-e65cd6472990"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:8390f780-9e33-42c8-9381-f9efc96ea1f8",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "சிறப்புச் செய்திகள்",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cvp5j113jjwt",
+        "contentType": "index-home",
+        "pageIdentifier": "tamil.page",
+        "pageTitle": "முகப்பு - BBC News தமிழ்"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

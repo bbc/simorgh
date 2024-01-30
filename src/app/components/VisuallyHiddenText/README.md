@@ -1,4 +1,3 @@
-# Visually Hidden Text
 ## Description
 
 Adds non-visible text to the page, to be utilised by screen-readers and other assistive technology.

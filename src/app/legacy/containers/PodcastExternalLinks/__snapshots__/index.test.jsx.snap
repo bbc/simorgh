@@ -160,7 +160,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Apple
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>
@@ -187,7 +187,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Spotify
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>
@@ -214,7 +214,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               RSS
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>
@@ -241,7 +241,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Загрузить эпизод
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>

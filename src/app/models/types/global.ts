@@ -1,6 +1,10 @@
+import * as PAGE_TYPES from '../../routes/utils/pageTypes';
+
 export type Environments = 'local' | 'test' | 'live';
 
-export type Platforms = 'amp' | 'canonical';
+export type Platforms = 'amp' | 'canonical' | 'app';
+
+export type Direction = 'rtl' | 'ltr';
 
 export type SocialEmbedProviders =
   | 'facebook'
@@ -9,21 +13,22 @@ export type SocialEmbedProviders =
   | 'youtube'
   | 'tiktok';
 
-export type PageTypes =
-  | 'article'
-  | 'frontPage'
-  | 'media'
-  | 'mostRead'
-  | 'mostWatched'
-  | 'error'
-  | 'IDX'
-  | 'FIX'
-  | 'MAP'
-  | 'STY'
-  | 'PGL'
-  | 'CSP'
-  | 'TOPIC'
-  | 'home';
+export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
+
+export type Toggles =
+  | {
+      [key: string]: {
+        enabled: boolean;
+        value?: string | number;
+      };
+    }
+  | { _environment: string };
+
+export type MvtExperiment = {
+  experimentName: string;
+  variation: string;
+  type: 'experiment' | 'feature';
+};
 
 export type SerbianService = {
   service: 'serbian';

@@ -15,7 +15,13 @@ export const getActionCount = metadata => {
 };
 
 export const isExempt = context => {
-  const EXEMPTED = ['docs', 'coding standards', 'new components'];
+  const EXEMPTED = [
+    'docs',
+    'hooks',
+    'simorgh structure',
+    'cypress',
+    'coding standards',
+  ];
 
   const kind = path(['kind'], context) as string;
   if (!kind) return false;

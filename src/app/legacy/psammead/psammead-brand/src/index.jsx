@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { string, number, node, shape, bool } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -13,6 +12,7 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
@@ -90,7 +90,7 @@ const StyledLink = styled.a`
     margin-bottom: -${GEL_SPACING_HLF};
   }
 
-  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
     ${styledLinkOutline}
     border-top: ${GEL_SPACING_HLF} solid ${props =>
@@ -148,6 +148,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
     {svg && (
       <>
         <BrandSvg
+          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
           viewBox={[
             svg.viewbox.minX || 0,
             svg.viewbox.minY || 0,

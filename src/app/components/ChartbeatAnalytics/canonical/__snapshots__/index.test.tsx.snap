@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the script snippet 1`] = `
+[
+  {
+    "async": true,
+    "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          var config = {"domain":"test-domain","sections":"section1 section2","virtualReferrer":null,"useCanonical":true,"title":"Page A","uid":123};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
+          }
+        })();
+      ",
+    "type": "text/javascript",
+  },
+  {
+    "defer": true,
+    "src": "//chartbeat.js",
+    "type": "text/javascript",
+  },
+]
+`;

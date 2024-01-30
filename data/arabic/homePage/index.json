@@ -1,0 +1,1250 @@
+{
+  "data": {
+    "title": "BBC News عربي",
+    "description": "بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "الجمعية العامة للأمم المتحدة تعتمد بأغلبية ساحقة قرارا يطالب بوقف فوري إنساني لإطلاق النار في غزة",
+            "firstPublished": "2023-12-12T00:13:58.000Z",
+            "lastPublished": "2023-12-12T00:13:58.000Z",
+            "link": "https://www.bbc.com/arabic/live/67688656",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C32B/production/_132036994_gettyimages-1850614064.jpg",
+            "description": "متابعة مستمرة لآخر تطورات حرب غزة",
+            "imageAlt": "الجمعية العامة للأمم المتحدة",
+            "id": "95b8aa1c-e12a-4428-91ce-9a2c6eae7eef"
+          },
+          {
+            "type": "article",
+            "title": "حرب غزة: \"أين أمي، أين جدتي وعائلتي، أين ذهبوا؟\"",
+            "firstPublished": "2023-12-12T12:14:09.198Z",
+            "lastPublished": "2023-12-12T12:14:09.198Z",
+            "link": "https://www.bbc.com/arabic/articles/cg6p4p0k6x7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4ee4/live/08f900e0-98d0-11ee-91bf-230bfab3fcba.jpg",
+            "description": "قصة بعض سكان غزة الذين تعرضت مساكنهم للقصف الإسرائيلي وقتل عدد كبير من أفراد أسرهم، وكيف يعيشون وكيف يتلقون العلاج بعد تعرض معظم مستشفيات القطاع للقصف، وما الأمل الذي يطمحون إليه.",
+            "imageAlt": "بعض المصابين الذين وصلوا إلى مستشفى دير البلح بعد قصف إسرائيلي وسط غزة",
+            "id": "cg6p4p0k6x7o"
+          },
+          {
+            "type": "article",
+            "title": "مستشفى كمال عدوان، ماذا يحدث لآخر المستشفيات الحكومية شمالي قطاع غزة؟",
+            "firstPublished": "2023-12-12T05:52:02.338Z",
+            "lastPublished": "2023-12-12T05:52:02.338Z",
+            "link": "https://www.bbc.com/arabic/articles/c51ey2z5z8lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/92dc/live/d8f042c0-9864-11ee-9d90-0f472186b217.png",
+            "description": "وكان مدير عام الصحة في غزة قد صرح الأسبوع الماضي أنه تم حفر مقبرة جماعية في سوق جباليا لدفن أكثر من 100 شخص تعفنت جثامينهم بسبب استمرار الحصار على مستشفى كمال عدوان.\n",
+            "imageAlt": "مستشفى كمال عدوان ",
+            "id": "c51ey2z5z8lo"
+          },
+          {
+            "type": "article",
+            "title": "هل ستقرر المحكمة العليا الأمريكية محاكمة الرئيس السابق ترامب؟",
+            "firstPublished": "2023-12-12T11:54:07.948Z",
+            "lastPublished": "2023-12-12T11:54:07.948Z",
+            "link": "https://www.bbc.com/arabic/articles/cd1pr4lzrx8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d28d/live/0cf7f710-98d4-11ee-8df3-1d2983d8814f.png",
+            "description": "طلب المستشار القانوني الخاص الذي يشرف على تحقيقين جنائيين بشأن ترامب، من المحكمة العليا إصدار حكم سريع بشأن ما إذا كان ترامب يتمتع بالحصانة من الملاحقة الفيدرالية أم لا.",
+            "imageAlt": "الانتخابات الأمريكية 2024",
+            "id": "cd1pr4lzrx8o"
+          },
+          {
+            "type": "article",
+            "title": "الإضراب الشامل: ما أبرز الإضرابات في التاريخ الحديث؟",
+            "firstPublished": "2023-12-11T19:43:02.800Z",
+            "lastPublished": "2023-12-11T19:43:02.800Z",
+            "link": "https://www.bbc.com/arabic/articles/cz92x7kvwl7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c85b/live/250245c0-9822-11ee-91bf-230bfab3fcba.jpg",
+            "description": "شاركت قطاعات وشركات عديدة في مدن حول العالم بحملة \"الإضراب الشامل\" والتي تهدف إلى الضغط على الحكومات من أجل وقف الحرب على غزة.",
+            "imageAlt": "صورة لحملة الإضراب على مواقع التواصل",
+            "id": "cz92x7kvwl7o"
+          },
+          {
+            "type": "article",
+            "title": "ميانمار تتفوق على أفغانستان في إنتاج الأفيون",
+            "firstPublished": "2023-12-12T13:48:35.896Z",
+            "lastPublished": "2023-12-12T13:48:35.896Z",
+            "link": "https://www.bbc.com/arabic/articles/cmlp2gdk1rzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9308/live/4eac6270-98ef-11ee-91bf-230bfab3fcba.jpg",
+            "description": "يعد إنتاج الهيروين والاتجار به النشاط الأكثر ربحاً في اقتصاد الأفيون، ويقدر تقرير أنه تم تصدير ما يصل إلى154 طناً من الهيروين هذا العام من ميانمار، بقيمة تصل إلى 2.2 مليار دولار.",
+            "imageAlt": "نبات الأفيون",
+            "id": "cmlp2gdk1rzo"
+          },
+          {
+            "type": "article",
+            "title": " \"زارا\" تعتذر وتزيل إعلانا تجاريا مثيرا للجدل من منصات التواصل الاجتماعي؟",
+            "firstPublished": "2023-12-11T18:35:10.058Z",
+            "lastPublished": "2023-12-12T11:54:28.827Z",
+            "link": "https://www.bbc.com/arabic/articles/cp9pvjyp4xzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f3e7/live/4998cb60-9850-11ee-8df3-1d2983d8814f.jpg",
+            "description": "إعلان  تجاري لشركة \"زارا\" للملابس يثير احتجاجات بسبب ربط منتقديه بينه وبين صور ضحايا الحرب في غزة.",
+            "imageAlt": "أكياس تسوق تحمل شعار \"زارا\"",
+            "id": "cp9pvjyp4xzo"
+          },
+          {
+            "type": "article",
+            "title": "غوتيريش \"لن أستسلم برغم فشل مجلس الأمن\" – في الغارديان",
+            "firstPublished": "2023-12-11T17:57:32.313Z",
+            "lastPublished": "2023-12-11T17:57:32.313Z",
+            "link": "https://www.bbc.com/arabic/articles/c2e24qg8n7no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c0d0/live/7b11d1e0-9838-11ee-a0f1-bd1b43b6d22b.jpg",
+            "description": "استعراض الصحف اليوم يركز على مساعي أنطونيو غوتيريش لوقف إطلاق النار في غزة بعد استخدام واشنطن لحق النقض (الفيتو)، وموقف إسرائيل من مساعيه، ورأي كتاب فلسطينيين وعرب في ما حدث في مجلس الأمن.   ",
+            "imageAlt": "لافتة تدعو إلى وقف إطلاق النار",
+            "id": "c2e24qg8n7no"
+          },
+          {
+            "type": "article",
+            "title": "أم فلسطينية غادرت القطاع قبل الحرب، ليقضي القصف على سبعة من أبنائها",
+            "firstPublished": "2023-12-10T14:03:12.849Z",
+            "lastPublished": "2023-12-10T14:03:12.849Z",
+            "link": "https://www.bbc.com/arabic/articles/cxx1xy5kkwwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f614/live/1b215280-975f-11ee-91bf-230bfab3fcba.jpg",
+            "description": "ذهبت إلى مصر في زيارة... فمات من بقي من أبنائها وبناتها في غزة جراء القصف.\n",
+            "imageAlt": "فقدت شيرين سبعة من أبنائها ",
+            "id": "cxx1xy5kkwwo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:eaa5c761-8d5f-4f56-b498-8644e5882424",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "الخبر الرئيسي",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT1M24S",
+            "title": "حرب غزة: ما هو القرار رقم 377 \"متحدون من أجل السلام\" في الجمعية العامة للأمم المتحدة؟",
+            "firstPublished": "2023-12-12T13:09:58.350Z",
+            "lastPublished": "2023-12-12T13:09:58.350Z",
+            "link": "https://www.bbc.com/arabic/articles/ckkpgvk1ndno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8c1d/live/8ba2ebe0-98ef-11ee-91bf-230bfab3fcba.jpg",
+            "description": "تعقد الجمعية العامة للأمم المتحدة الثلاثاء جلسة استثنائية طارئة لطلب الوقف الفوري لإطلاق النار في غزة بعدما استخدمت واشنطن حق النقض ضد تحرك مماثل في مجلس الأمن.",
+            "imageAlt": "الجمعية العامة للأمم المتحدة عام 1948",
+            "id": "ckkpgvk1ndno"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M37S",
+            "title": "حرب غزة: الأونروا تحذر من دفع الفلسطينيين باتجاه الحدود المصرية",
+            "firstPublished": "2023-12-12T14:06:19.278Z",
+            "lastPublished": "2023-12-12T14:06:19.278Z",
+            "link": "https://www.bbc.com/arabic/articles/cd1p792prw0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7115/live/34fddae0-98f7-11ee-91bf-230bfab3fcba.jpg",
+            "description": "تصريحات لازاريني تشير إلى احتمال اختراق عدد كبير من الفلسطينيين الشريط الحدودي مع مصر هربا من الحرب والأزمة الإنسانية الطاحنة.",
+            "imageAlt": "مدير وكالة الأونروا فيليب لازاريني",
+            "id": "cd1p792prw0o"
+          },
+          {
+            "type": "video",
+            "duration": "PT40S",
+            "title": "حرب غزة: نازحون في جنوب غزة يتسلقون شاحنات الإغاثة في مدينة رفح",
+            "firstPublished": "2023-12-11T12:26:35.118Z",
+            "lastPublished": "2023-12-11T12:26:35.118Z",
+            "link": "https://www.bbc.com/arabic/articles/c7249d43rzeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9ec3/live/523d8840-981a-11ee-8df3-1d2983d8814f.jpg",
+            "description": "تسلقت مجموعات من الأشخاص شاحنات المساعدات المارة في رفح يوم الأحد في محاولة للحصول على الإمدادات.",
+            "imageAlt": "نازحون في جنوب غزة يتسلقون شاحنات الإغاثة في مدينة رفح",
+            "id": "c7249d43rzeo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M47S",
+            "title": "حرب غزة: ما هي معاناة أحد مرضى السرطان في القطاع؟",
+            "firstPublished": "2023-12-09T15:25:34.057Z",
+            "lastPublished": "2023-12-09T15:25:34.057Z",
+            "link": "https://www.bbc.com/arabic/articles/cd1p1g81jyno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5f8a/live/a3c30a70-96a6-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "تعرض مستشفى الصداقة التركي الخاص بمرضى السرطان في قطاع غزة لقصف إسرائيلي أخرجه عن الخدمة بالإضافة إلى محاصرته بالدبابات الإسرائيلية، مما أرغم العديد من المرضى إلى البحث عن مكان آخر للعلاج",
+            "imageAlt": "إسلام ابو رقعة وزوجته",
+            "id": "cd1p1g81jyno"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M6S",
+            "title": "حرب غزة: كيف يعيش الصم في قطاع غزة خلال الحرب؟",
+            "firstPublished": "2023-12-03T07:42:09.158Z",
+            "lastPublished": "2023-12-09T09:14:58.173Z",
+            "link": "https://www.bbc.com/arabic/articles/cgrpple58rzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/268c/live/6f650d80-910d-11ee-833d-0f8d294ddc97.jpg",
+            "description": "تحدثت بي بي سي مع هبة أبو جزر وهي من ذوي الإعاقة السمعية في قطاع غزة، عن رحلتها الصعبة في ظل حرب غزة، وكيف كانت تدرك القصف الإسرائيلي على منطقتها.",
+            "imageAlt": "هبة أبو الجزر",
+            "id": "cgrpple58rzo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M50S",
+            "title": "حرب غزة: لماذا يتجه رعاة بقر أمريكيون إلى إسرائيل؟",
+            "firstPublished": "2023-12-11T13:59:14.697Z",
+            "lastPublished": "2023-12-11T13:59:14.697Z",
+            "link": "https://www.bbc.com/arabic/articles/c252lj5g1p7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6bf5/live/b5f24300-982c-11ee-91bf-230bfab3fcba.jpg",
+            "description": "انتشرت صور لمجموعة من المتطوعين الأمريكيين المسافرين إلى إسرائيل وهم يرتدون قبعات رعاة البقر.",
+            "imageAlt": "American cowboys",
+            "id": "c252lj5g1p7o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/c3g9vj200v5t",
+        "curationId": "urn:bbc:tipo:list:aaa73f85-b7fd-45a9-b562-5583a1a8d9fc",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "فيديو",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "زيلينسكي يواجه امتحان تنشيط الدعم الغربي لأوكرانيا",
+            "firstPublished": "2023-12-11T05:28:35.205Z",
+            "lastPublished": "2023-12-11T05:28:35.205Z",
+            "link": "https://www.bbc.com/arabic/articles/c7249wereljo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/74f5/live/abb16090-97d9-11ee-8df3-1d2983d8814f.jpg",
+            "description": "الرئيس الأوكراني، فولوديمير زيلينسكي يواجه تحديات في أوروبا والولايات المتحدة لضمان المزيد من المساعدات المالية والعسكرية لبلاده",
+            "imageAlt": "زيلينسكي يتلقي الرئيس الأرجنتيني الجديد بعد تنصيبه",
+            "id": "c7249wereljo"
+          },
+          {
+            "type": "article",
+            "title": "انتخابات الرئاسة المصرية: \"الفقراء منسيون\"",
+            "firstPublished": "2023-12-10T06:57:06.137Z",
+            "lastPublished": "2023-12-10T06:57:06.137Z",
+            "link": "https://www.bbc.com/arabic/articles/c252re35n5no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/74bb/live/cca40de0-95ca-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "",
+            "imageAlt": "لافتات الدعاية الانتخابية تنتشر في شوارع القاهرة",
+            "id": "c252re35n5no"
+          },
+          {
+            "type": "article",
+            "title": "ماذا نعرف عن الملثم أبو عبيدة الواجهة الإعلامية لحماس؟",
+            "firstPublished": "2023-12-09T12:05:42.988Z",
+            "lastPublished": "2023-12-09T12:05:42.988Z",
+            "link": "https://www.bbc.com/arabic/articles/c6pekpl2kywo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ec82/live/61e34fd0-950b-11ee-91bf-230bfab3fcba.jpg",
+            "description": "لفت المتحدث الرسمي باسم كتائب القسام، المعروف بكنية \"أبي عبيدة\"، الأنظار بظهوره المتكرر كممثل للحركة على وسائل التواصل الاجتماعي وهالة الغموض التي تحوطه كشخص ملثم لا يكشف عن هويته، فمن هو؟ ",
+            "imageAlt": "أبو عبيدة المتحدث باسم كتائب عز الدين القسام خلال عرض عسكري ضد إسرائيل جنوب قطاع غزة عام 2019",
+            "id": "c6pekpl2kywo"
+          },
+          {
+            "type": "article",
+            "title": "هل من أمل في العودة إلى طريق سلام حل الدولتين؟",
+            "firstPublished": "2023-12-07T16:52:17.331Z",
+            "lastPublished": "2023-12-07T16:52:17.331Z",
+            "link": "https://www.bbc.com/arabic/articles/crgp4qg4qqeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9962/live/2e227500-92da-11ee-8df3-1d2983d8814f.jpg",
+            "description": "دعاة حل الدولتين في الصراع الإسرائيلي الفلسطيني يعتقدون أن أحداث 7 أكتوبر/تشرين الأول وما بعدها دليل آخر على أن الحل لا يكون إلا بإقامة دولتين واحدة  للإسرائيليين والأخرى للفلسطينيين، فهل يمكن تحقيق ذلك؟",
+            "imageAlt": "من اتفاقية أوسلو ",
+            "id": "crgp4qg4qqeo"
+          },
+          {
+            "type": "article",
+            "title": "كيف أعدّت حماس قوة لضرب إسرائيل في السابع من أكتوبر؟",
+            "firstPublished": "2023-11-28T11:44:42.610Z",
+            "lastPublished": "2023-11-28T13:34:36.096Z",
+            "link": "https://www.bbc.com/arabic/articles/czr21dz8nv8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f064/live/b80dca50-8d47-11ee-833d-0f8d294ddc97.png",
+            "description": "جمعت بي بي سي أدلة عديدة حول تلك النشاطات، وأظهر فحصها كيف قامت حماس بلم شمل فصائل فلسطينية عدة في قطاع غزة لتطوير الأساليب القتالية لمسلحيها، وفي نهاية المطاف تمكنت الحركة بالتعاون مع تلك الفصائل من شن هجومها على إسرائيل في السابع من أكتوبر/تشرين الأول الماضي.",
+            "imageAlt": "غزة",
+            "id": "czr21dz8nv8o"
+          },
+          {
+            "type": "article",
+            "title": "خمس حروب خاضها نتنياهو في غزة منذ انسحاب إسرائيل من القطاع، فماذا نعرف عنها؟ ",
+            "firstPublished": "2023-12-04T18:33:39.291Z",
+            "lastPublished": "2023-12-04T18:33:39.291Z",
+            "link": "https://www.bbc.com/arabic/articles/cjmppm4ezrpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/48d4/live/4cffa030-91c5-11ee-a671-07fbb7340174.jpg",
+            "description": "تاريخ المواجهات العسكرية والحروب التي خاضتها إسرائيل على غزة، منذ خطة الانسحاب التي جرت عام 2005، وما تبعها من اختطاف الجندي الإسرائيلي شاليط إلى أحداث 7 أكتوبر/ تشرين الأول الماضي ",
+            "imageAlt": "مقاتلون فلسطينيون يرفعون أسلحتهم ",
+            "id": "cjmppm4ezrpo"
+          },
+          {
+            "type": "article",
+            "title": "بريطانيا درست خططاً تعيد رسم خرائط غزة وسيناء  وتيران وصنافير لإقامة مناطق عازلة بين مصر وإسرائيل- وثائق بريطانية",
+            "firstPublished": "2023-12-01T15:58:47.233Z",
+            "lastPublished": "2023-12-01T15:58:47.233Z",
+            "link": "https://www.bbc.com/arabic/articles/cjqpn151q7go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/02e2/live/e3f7a1d0-8de8-11ee-833d-0f8d294ddc97.png",
+            "description": " وثائق بريطانية تكشف عن أن الحكومة البريطانية درست خططاً عدة شملت دمج جزء من سيناء، وقطاع غزة، وجزيرتي تيران وصنافير، وجزء من الأردن لإنشاء منطقة عازلة بين مصر وإسرائيل، في إطار تسوية الصراع بين إسرائيل والعرب.",
+            "imageAlt": "الوثائق لم تشر إلى ما إذا كانت بريطانيا قد تحدث مع الدول المعنية بشأن خطط إنشاء المناطق العازلة المقترحة ",
+            "id": "cjqpn151q7go"
+          },
+          {
+            "type": "article",
+            "title": "كيف أصبحت قطر وسيطا في أزمات الشرق الأوسط وحروبه؟",
+            "firstPublished": "2023-12-01T08:31:04.153Z",
+            "lastPublished": "2023-12-01T08:31:04.153Z",
+            "link": "https://www.bbc.com/news/articles/cy021zgll03o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/07e5/live/29f97060-8f9b-11ee-ad61-47cc1505ef2c.jpg",
+            "description": "في ذروة الحرب بين إسرائيل وحماس كَثُر الحديث عن دور قطر التي أصبحت وسيطا في مفاوضات الهدن وتبادل الرهائن والمعتقلين بين طرفين بلغت العداوة بينهما مبلغا غير ذي مثيل. ",
+            "imageAlt": "وزير الخارجية القطري محمد عبد الرحمان بن جاسم أثناء اجتماع مجلس الأمن الدولي ",
+            "id": "cy021zgll03o"
+          },
+          {
+            "type": "article",
+            "title": "من هو يحيى السنوار الذي توعّدت إسرائيل بملاحقته؟",
+            "firstPublished": "2023-10-31T07:34:25.757Z",
+            "lastPublished": "2023-11-21T08:25:10.591Z",
+            "link": "https://www.bbc.com/arabic/articles/c04032r14pzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ca15/live/1ab5ee50-7725-11ee-a503-4588075e3427.png",
+            "description": "استفاد السنوار من معرفة بالسجون الإسرائيلية، حصّلها خلال السنوات الطويلة التي قضاها في زواياها، مما أعطاه نفوذا بين القيادات العسكرية في حماس.",
+            "imageAlt": "يحيى السنوار",
+            "id": "c04032r14pzo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:7edde43a-22e2-4c51-bb2e-71bb6e4db46d",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "اخترنا لكم",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "مايكل أوين عن فقدان نجله للبصر: \"لو كان بإمكاني لأعطيته عيني\"",
+            "firstPublished": "2024-01-24T13:00:22.535Z",
+            "lastPublished": "2024-01-24T13:00:22.535Z",
+            "link": "https://www.bbc.com/arabic/articles/c3gk9l9y5w3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1d29/live/a0dfe090-baa9-11ee-8685-316409d66f25.jpg",
+            "description": "نجم كرة القدم العالمي، مايكل أوين، يتحدث عن إصابة ابنه بمرض أفقده بصره، وكيف أنه يسعى إلى مساعدته على التأقلم مع حالته.",
+            "imageAlt": "مايكل أوين (يسارا) مع ابنه جيمس ",
+            "id": "c3gk9l9y5w3o"
+          },
+          {
+            "type": "article",
+            "title": "لماذا أثار إعلان إتش آند إم للزي الدراسي الغضب؟",
+            "firstPublished": "2024-01-22T23:13:34.087Z",
+            "lastPublished": "2024-01-22T23:13:34.087Z",
+            "link": "https://www.bbc.com/arabic/articles/c2emp4gmld2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5f10/live/922f7fd0-b976-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "ولاقت حملة دعاية إتش آند إم انتقادات من قبل أشخاص على وسائل التواصل الاجتماعي، حيث وصفت بأنها \"حقيرة\" و\"مثيرة للاشمئزاز\".",
+            "imageAlt": "أحد متاجر إتش آند إم",
+            "id": "c2emp4gmld2o"
+          },
+          {
+            "type": "article",
+            "title": "هل تنجح أحزاب ألمانية يمينية بترحيل المواطنين والمقيمين من المهاجرين وطالبي اللجوء؟",
+            "firstPublished": "2024-01-21T01:53:08.551Z",
+            "lastPublished": "2024-01-21T01:53:08.551Z",
+            "link": "https://www.bbc.com/arabic/articles/c6p12j7n0jdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1619/live/d8162cb0-b7f0-11ee-b5b3-f7b072a05ec4.png",
+            "description": "قالت شبكة دويتشه فيله الرسمية إن مئات الآلاف شاركوا في مظاهرات بعموم ألمانيا يوم السبت. فماذا يحدث في ألمانيا؟",
+            "imageAlt": "متظاهرون ",
+            "id": "c6p12j7n0jdo"
+          },
+          {
+            "type": "article",
+            "title": "ماذا نعرف عن علاج السرطان الجديد \"الألطف\" من العلاج الكيميائي؟",
+            "firstPublished": "2024-01-17T20:03:31.865Z",
+            "lastPublished": "2024-01-17T20:03:31.865Z",
+            "link": "https://www.bbc.com/arabic/articles/cd1d35y9k7ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f500/live/e46cfa40-b537-11ee-beb5-e1400df560f2.jpg",
+            "description": "آرثر، طفل يبلغ من العمر 11 عاما،  وهو واحد من أوائل من جربوا نوعا جديدا من العلاج بالعقاقير يتضمن سموما أقل بكثير من العلاج الكيميائي.",
+            "imageAlt": "آرثر",
+            "id": "cd1d35y9k7ko"
+          },
+          {
+            "type": "article",
+            "title": "ماذا حدث لمراهقين اكتشفا واحدة من أكبر الماسات في العالم؟",
+            "firstPublished": "2024-01-16T15:55:55.836Z",
+            "lastPublished": "2024-01-16T15:55:55.836Z",
+            "link": "https://www.bbc.com/arabic/articles/cn053v3kj4zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e388/live/6e4dfbe0-b472-11ee-8f07-bbfdfa890097.jpg",
+            "description": "كان كومبا جونبول وأندرو سافيا الأصغر سنًا ضمن مجموعة مكونة من خمسة أفراد، اكتشفت \"ماسة السلام\"، وهي واحدة من أكبر الماسات في العالم، ولكن ماذا حل بهما منذ ذلك الحين؟",
+            "imageAlt": "ماسة السلام",
+            "id": "cn053v3kj4zo"
+          },
+          {
+            "type": "article",
+            "title": "كيف كشف مقتل امرأة كينية كراهية النساء على الإنترنت؟",
+            "firstPublished": "2024-01-16T14:55:40.808Z",
+            "lastPublished": "2024-01-16T14:55:40.808Z",
+            "link": "https://www.bbc.com/arabic/articles/cmljdnlxp1zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aa50/live/44c97970-b472-11ee-beb5-e1400df560f2.jpg",
+            "description": "أثار القتل الوحشي لامرأة كينية شابة في شقة مستأجرة لفترة قصيرة غضبا عارما وكشف عن \"المحيط\" العنيف الذي يديم كراهية النساء عبر الإنترنت في البلاد.",
+            "imageAlt": "مظاهرة نسوية في كينيا",
+            "id": "cmljdnlxp1zo"
+          },
+          {
+            "type": "article",
+            "title": "\"عيون إسرائيل\" التي لم يستمع أحد إلى تحذيراتها",
+            "firstPublished": "2024-01-15T19:34:54.100Z",
+            "lastPublished": "2024-01-15T19:34:54.100Z",
+            "link": "https://www.bbc.com/arabic/articles/cn04w4rq7lro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d4f/live/a311cd90-b3cb-11ee-8549-c517c53bfd5b.png",
+            "description": "كثيرات من جنديات المراقبة بالجيش الإسرائيلي يقلن لبي بي سي إنهن خشين ألا يستمع أحد من القيادات لما يُبدين من مخاوف بشأن هجوم كبير وشيك.",
+            "imageAlt": "جنديات إسرائيليات",
+            "id": "cn04w4rq7lro"
+          },
+          {
+            "type": "article",
+            "title": "ما هي العدوى المنقولة جنسيا، وكيف تحمي نفسك منها؟",
+            "firstPublished": "2024-01-11T13:32:27.116Z",
+            "lastPublished": "2024-01-11T13:32:27.116Z",
+            "link": "https://www.bbc.com/arabic/articles/cv2lzy89jr4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d726/live/be319de0-afdd-11ee-bc2f-cb5579b90709.jpg",
+            "description": "أكثر من مليون شخص يصابون بعدوى منقولة جنسيا جديدة كل يوم، عبر العالم، حسب منظمة الصحة العالمية. ولكن ما هي حقيقة العدوى المنقولة جنسيا، وما هي أنواعها وأعراضها، وكيف نقي أنفسنا منها؟ ",
+            "imageAlt": "خلية مصابة بالأيدز ",
+            "id": "cv2lzy89jr4o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/cdr56gkndzqt",
+        "curationId": "urn:bbc:vivo:curation:4dee43f5-7a60-444f-8d12-c52070164de7",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "مجتمع",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": " الصحة العالمية تحذر من تضاعف الإصابة بالحصبة 45 مرة في أوروبا  ",
+            "firstPublished": "2024-01-24T01:02:48.688Z",
+            "lastPublished": "2024-01-24T01:02:48.688Z",
+            "link": "https://www.bbc.com/arabic/articles/c4nj5qwpw5qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1ef9/live/5a93b150-ba51-11ee-8685-316409d66f25.jpg",
+            "description": "منظمة الصحة العالمية حذرت من زيادة \"مثيرة للقلق\" بنحو 45 ضعفا، في حالات الإصابة بالحصبة في أوروبا العام الماضي.",
+            "imageAlt": "طفل مصاب بالحصبة في أوروبا",
+            "id": "c4nj5qwpw5qo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M50S",
+            "title": "ماذا نعرف عن التهاب الكبد الوبائي المنتشر في غزة؟",
+            "firstPublished": "2024-01-17T15:42:21.088Z",
+            "lastPublished": "2024-01-17T15:42:21.088Z",
+            "link": "https://www.bbc.com/arabic/articles/c842zzxe34go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "تنتقل العدوى بفيروس التهاب الكبد A أساساً عن طريق البراز والفم أي عندما يتناول شخص غير مصاب بالعدوى أطعمة أو مياهاً ملوّثة ببراز شخص مصاب بالعدوى بالمرض",
+            "imageAlt": "",
+            "id": "c842zzxe34go"
+          },
+          {
+            "type": "article",
+            "title": "علماء يستنسخون قردا لتسريع الأبحاث الطبية",
+            "firstPublished": "2024-01-17T14:00:34.013Z",
+            "lastPublished": "2024-01-17T14:00:34.013Z",
+            "link": "https://www.bbc.com/arabic/articles/ckv47w2w5w8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fb46/live/48bb33b0-b53b-11ee-bc2f-cb5579b90709.jpg",
+            "description": "قال الباحثون إن استنساخ القرد ستسرع من اختبار الأدوية، لكن الناشطين في مجال حقوق الحيوان لديهم مخاوف جدية.",
+            "imageAlt": "قرد الريسوس المستنسخ",
+            "id": "ckv47w2w5w8o"
+          },
+          {
+            "type": "article",
+            "title": "المرض إكس: ما هو الوباء غير المعروف الذي يستعدّ العالم لمواجهته؟",
+            "firstPublished": "2024-01-16T16:37:30.631Z",
+            "lastPublished": "2024-01-16T16:37:30.631Z",
+            "link": "https://www.bbc.com/arabic/articles/cgl6vdrx023o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/99c6/live/96c1bdb0-b48a-11ee-bc2f-cb5579b90709.jpg",
+            "description": "تكثف التداول بمصطلح \"المرض أكس\" عبر مواقع التواصل حول العالم، بالتزامن انطلاق المنتدى الاقتصادي العالمي في دافوس وعلى برنامجه اجتماع بعنوان \"الاستعداد للمرض أكس\"، يعقد الأربعاء.",
+            "imageAlt": "أشخاص يرتدون أقنعة لمنع انتشار فيروس كورونا يسيرون أمام لافتة تؤكد على حملة التباعد الاجتماعي المعروضة على جدار قاعة مدينة سيول في 25 نوفمبر 2020 في سيول، كوريا الجنوبية.",
+            "id": "cgl6vdrx023o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/c95y3q70znjt",
+        "curationId": "urn:bbc:vivo:curation:6fbc610b-1882-4b78-85ac-ba13de4a6a2a",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "صحة",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_arabic_radio",
+            "publishedTimeStart": "2024-01-21T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-21T15:29:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "غزة اليوم ",
+            "brandPid": "w13xtvs4",
+            "episodeTitle": "21/01/2024 GMT",
+            "episodePid": "w172zm1sprz4s2d",
+            "broadcastPid": "p0h2y0nn",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض "
+          },
+          {
+            "serviceId": "bbc_arabic_radio",
+            "publishedTimeStart": "2024-01-22T05:59:30.000Z",
+            "publishedTimeEnd": "2024-01-22T06:29:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "غزة اليوم ",
+            "brandPid": "w13xtvs4",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkzkmhvhm57",
+            "broadcastPid": "p0h06c0v",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض "
+          },
+          {
+            "serviceId": "bbc_arabic_radio",
+            "publishedTimeStart": "2024-01-22T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-22T15:29:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "غزة اليوم ",
+            "brandPid": "w13xtvs4",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zm1t218cj7n",
+            "broadcastPid": "p0h2y5cz",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض "
+          },
+          {
+            "serviceId": "bbc_arabic_radio",
+            "publishedTimeStart": "2024-01-23T05:59:30.000Z",
+            "publishedTimeEnd": "2024-01-23T06:29:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "غزة اليوم ",
+            "brandPid": "w13xtvs4",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172zkzkmhvlj2b",
+            "broadcastPid": "p0h0f91l",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض "
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "لماذا يتمتع ترامب بشعبية كبيرة بين الجمهوريين؟",
+            "firstPublished": "2024-01-17T13:13:55.242Z",
+            "lastPublished": "2024-01-24T15:12:37.516Z",
+            "link": "https://www.bbc.com/arabic/articles/cn04r432gv1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e6e1/live/4bb51180-bac7-11ee-8685-316409d66f25.jpg",
+            "description": "دونالد ترامب سيكون فيما يبدو مرشح الحزب الجمهوري للرئاسة الأمريكية لعام 2024، بعد فوزه في الانتخابات التمهيدية في نيو هامبشاير، متغلبا على آخر منافسيه المتبقين.",
+            "imageAlt": "أحد مؤيدي ترامب",
+            "id": "cn04r432gv1o"
+          },
+          {
+            "type": "article",
+            "title": "رون ديسانتيس ينسحب من السباق الرئاسي الأمريكي ويعلن دعمه لدونالد ترامب",
+            "firstPublished": "2024-01-22T03:35:51.352Z",
+            "lastPublished": "2024-01-22T03:35:51.352Z",
+            "link": "https://www.bbc.com/arabic/articles/cj538evydn7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f1fc/live/feb5e300-b8d2-11ee-8f07-bbfdfa890097.jpg",
+            "description": "كان ديسانتيس يعتبر في السابق منافسا قويا على ترشيح الحزب، لكنه قال يوم الأحد إنه \"ليس لديه طريق واضح نحو النصر\".",
+            "imageAlt": "ديسانتيس",
+            "id": "cj538evydn7o"
+          },
+          {
+            "type": "article",
+            "title": "ما أسباب ارتفاع أسعار الذهب في مصر؟",
+            "firstPublished": "2024-01-21T03:04:58.120Z",
+            "lastPublished": "2024-01-21T03:04:58.120Z",
+            "link": "https://www.bbc.com/arabic/articles/cl50y81xz4qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3daf/live/11f96ea0-b720-11ee-bc2f-cb5579b90709.jpg",
+            "description": "شهدت أسعار المعدن الأصفر في مصر خلال العامين الماضيين قفزات غير مسبوقة على الرغم من تراجع أسعاره عالمياً. الأمر الذي دفع بعض أصحاب محال الذهب التجارية، في بعض الأوقات، إلى وقف أعمال البيع والشراء، لحين استقرار الأسعار.",
+            "imageAlt": "أسعار الذهب",
+            "id": "cl50y81xz4qo"
+          },
+          {
+            "type": "article",
+            "title": "ماسك يرغب بالسيطرة على \"تسلا\" بشراء حصة أكبر",
+            "firstPublished": "2024-01-17T01:27:13.267Z",
+            "lastPublished": "2024-01-17T01:27:13.267Z",
+            "link": "https://www.bbc.com/arabic/articles/crgvyj54mrro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/44a3/live/9ff9db20-b4bb-11ee-9c04-75119f5a0b7b.jpg",
+            "description": "الملياردير الأمريكي إيلون ماسك يعرب عن رغبته بشراء 25 في المئة من أسهم \"تسلا\"",
+            "imageAlt": "إيلون ماسك.",
+            "id": "crgvyj54mrro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/cez1ey7d8l5t",
+        "curationId": "urn:bbc:vivo:curation:5c126ad6-2b59-40eb-9b92-e872563fc3a1",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "اقتصاد",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ما هي الأعراض التي يجب الانتباه إليها مع ارتفاع معدلات الإصابة بالحصبة في جميع أنحاء العالم؟",
+            "firstPublished": "2024-01-24T11:49:01.173Z",
+            "lastPublished": "2024-01-24T11:49:01.173Z",
+            "link": "https://www.bbc.com/arabic/articles/c2xjmvpndkyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d17b/live/e6151140-baa3-11ee-8685-316409d66f25.jpg",
+            "description": "تقول منظمة الصحة العالمية إن هناك ارتفاعاً \"مثيراً للقلق\" بمقدار 30 ضعفاً في حالات الحصبة في أوروبا العام الماضي. وقد أُبلغ عن إصابة أكثر من 30 ألف شخص في جميع أنحاء القارة في عام 2023، مقارنة بـ 941 إصابة خلال عام 2022 بأكمله.\n",
+            "imageAlt": "الحصبة",
+            "id": "c2xjmvpndkyo"
+          },
+          {
+            "type": "article",
+            "title": "ما الذي يحدث عندما تعتقد أن الذكاء الاصطناعي يختلق أكاذيب عنك؟",
+            "firstPublished": "2024-01-20T18:42:39.955Z",
+            "lastPublished": "2024-01-20T18:42:39.955Z",
+            "link": "https://www.bbc.com/arabic/articles/cj7gd994v71o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8c0c/live/728b82d0-b7c5-11ee-8702-85f448aaedc9.jpg",
+            "description": "كيف ستواجه الذكاء الاصطناعي اذا لفق معلومات كاذبة عنك وهل هناك قوانين تحمي البشر من حالات كهذه؟",
+            "imageAlt": "امرأة تهمس في أذن امرأة أخرى",
+            "id": "cj7gd994v71o"
+          },
+          {
+            "type": "article",
+            "title": "منظمة الصحة العالمية تسعى إلى منع منتجي المحتوى من الترويج للحليب الصناعي",
+            "firstPublished": "2024-01-19T19:52:16.685Z",
+            "lastPublished": "2024-01-19T19:52:16.685Z",
+            "link": "https://www.bbc.com/arabic/articles/cll7ll9l68no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b25/live/26311990-b6b2-11ee-beb5-e1400df560f2.jpg",
+            "description": "ستدرس منظمة الصحة العالمية مبادئ توجيهية جديدة تهدف إلى استئصال الممارسات \"الاستغلالية\" التي تمارسها شركات الحليب الصناعي عبر الإنترنت.",
+            "imageAlt": "توصي منظمة الصحة العالمية الأمهات بإرضاع أطفالهن رضاعة طبيعية فقط خلال الأشهر الستة الأولى إن أمكن",
+            "id": "cll7ll9l68no"
+          },
+          {
+            "type": "article",
+            "title": "الاستخبارات البريطانية تكشف معلومات جديدة عن حاسوب ساعد في حسم الحرب العالمية الثانية",
+            "firstPublished": "2024-01-18T03:14:23.349Z",
+            "lastPublished": "2024-01-18T03:14:23.349Z",
+            "link": "https://www.bbc.com/arabic/articles/cv2m2684j5zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bffa/live/697f3640-b5a5-11ee-a024-d111e8c9fea3.jpg",
+            "description": "صور تنشر لأول مرة لحاسوب كولوساس الذي ساعد في حسم الحرب العالمية الثانية لصالح الحلفاء",
+            "imageAlt": "صورة الحاسوب",
+            "id": "cv2m2684j5zo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 2,
+        "link": "https://www.bbc.com/arabic/topics/c719d2ely7xt",
+        "curationId": "urn:bbc:vivo:curation:9287cb38-a394-4592-9537-8dbf489c12fb",
+        "curationType": "vivo-stream",
+        "position": 7,
+        "title": "علوم وتكنولوجيا",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "تعرف على القائمة الكاملة لترشيحات الأوسكار 2024",
+            "firstPublished": "2024-01-24T00:38:39.762Z",
+            "lastPublished": "2024-01-24T00:38:39.762Z",
+            "link": "https://www.bbc.com/arabic/articles/cg3kg4wn072o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0640/live/fabce550-ba44-11ee-8685-316409d66f25.jpg",
+            "description": "ترشيحات جوائز الأوسكار لعام 2024، من بينها فيلم \"بنات ألفة\" للمخرجة التونسية كوثر بن هنية في فئة أفضل فيلم وثائقي طويل",
+            "imageAlt": "جوائز الأوسكار",
+            "id": "cg3kg4wn072o"
+          },
+          {
+            "type": "article",
+            "title": "هل تسهم محطة الضبعة النووية في حل أزمة الطاقة في مصر؟",
+            "firstPublished": "2024-01-23T23:51:50.059Z",
+            "lastPublished": "2024-01-23T23:51:50.059Z",
+            "link": "https://www.bbc.com/arabic/articles/c06mjpdzjzmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1556/live/d3e46bb0-ba26-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "أعطى الرئيسان المصري عبدالفتاح السيسي والروسي فلاديمير بوتين الإذن ببدء صب الخرسانة للوحدة الرابعة والأخيرة من وحدات محطة إنتاج الكهرباء بالوقود النووي بمنطقة الضبعة على ساحل البحر المتوسط شمال غرب مصر.",
+            "imageAlt": "الرئيسان المصري والروسي يعطيان الإذن ببدء صب الخرسانة للوحدة الرابعة والأخيرة من وحدات محطة إنتاج الكهرباء بالوقود النووي",
+            "id": "c06mjpdzjzmo"
+          },
+          {
+            "type": "article",
+            "title": "التحقيق مع وزير الدولة الإيطالي لشؤون الثقافة بشأن لوحة فنية مسروقة",
+            "firstPublished": "2024-01-16T03:03:13.305Z",
+            "lastPublished": "2024-01-16T03:03:13.305Z",
+            "link": "https://www.bbc.com/arabic/articles/c2jyx37yj07o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b2e6/live/6ac2a1f0-b414-11ee-8f07-bbfdfa890097.jpg",
+            "description": "اتهام وزير الدولة الإيطالي لشؤون الثقافة بحيازة وعرض لوحة فنية مسروقة تعود إلى القرن السابع عشر، ولكنه ينفي التهمة الموجهة له. ",
+            "imageAlt": "وزير الدولة الإيطالي لشؤون الثقافة يزعم أنه وجد اللوحة في بيت اشترته أمه منذ أكثر من عشرين عاما ",
+            "id": "c2jyx37yj07o"
+          },
+          {
+            "type": "article",
+            "title": "تقنية جديدة لمراقبة جودة الهواء والحد من التلوث في ليبيا",
+            "firstPublished": "2024-01-12T12:01:42.152Z",
+            "lastPublished": "2024-01-12T12:01:42.152Z",
+            "link": "https://www.bbc.com/arabic/articles/c4nyy1qxz97o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bbb9/live/081a18f0-b142-11ee-bc2f-cb5579b90709.jpg",
+            "description": "في ظل التحديات المتزايدة التي تواجه العالم بسبب تلوث الهواء أطلق المهندس الليبي أحمد أبو شرود تقنية جديدة تحمل اسم \"لمة\" لقياس جودة الهواء والعمل على تحسينها. ",
+            "imageAlt": "تقنية جديدة لمراقبة جودة الهواء والحد من التلوث في ليبيا ",
+            "id": "c4nyy1qxz97o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/c1d8ye54xxlt",
+        "curationId": "urn:bbc:vivo:curation:be8f16cf-9755-4069-bc74-b340cf5ec348",
+        "curationType": "vivo-stream",
+        "position": 8,
+        "title": "ثقافة وفنون",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "موريتانيا تحقق فوزا تاريخيا على الجزائر وتقصيها من كأس أمم أفريقيا 2023",
+            "firstPublished": "2024-01-24T02:58:47.247Z",
+            "lastPublished": "2024-01-24T02:58:47.247Z",
+            "link": "https://www.bbc.com/arabic/articles/cl5l49nwv4wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/292d/live/c7f6efa0-ba60-11ee-9f1e-e52c6da4311c.jpg",
+            "description": "الجزائر ودعت  كأس الأمم الأفريقية 2023، بعد الهزيمة من موريتانيا لأول مرة على الإطلاق في بطولة أفريقية 0-1، لتصعد موريتانيا إلى ثمن النهائي، دور الستة عشر في البطولة، في ختام مباريات المجموعة الرابعة.",
+            "imageAlt": "لاعبو موريتانيا يحتفلون بالفوز التاريخي على الحزائر والصعود للدور الثاني في أمم أفريقيا",
+            "id": "cl5l49nwv4wo"
+          },
+          {
+            "type": "article",
+            "title": "كيف حقق منتخب فلسطين فوزا \"تاريخيا\" يؤهله إلى ثمن نهائي كأس آسيا لأول مرة في مسيرته؟  ",
+            "firstPublished": "2024-01-23T20:46:09.240Z",
+            "lastPublished": "2024-01-23T20:49:24.787Z",
+            "link": "https://www.bbc.com/arabic/articles/cz9m1r8z7qpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/be00/live/ae7386a0-ba2f-11ee-a1a6-f75f751e3e8a.jpg",
+            "description": "هذا أول فوز يحققه منتخب فلسطين على مدار ثلاث مشاركات له في نهائيات كأس آسيا في نسخ 2015 و2019 والنسخة الحالية.",
+            "imageAlt": "لاعبو المنتخب الفلسطيني خلال مباراة المجموعة الثالثة لكأس آسيا بين هونغ كونغ وفلسطين ",
+            "id": "cz9m1r8z7qpo"
+          },
+          {
+            "type": "article",
+            "title": "ما فرص منتخب مصر اليوم في المواجهة الصعبة أمام الرأس الأخضر؟",
+            "firstPublished": "2024-01-22T14:47:50.455Z",
+            "lastPublished": "2024-01-22T14:47:50.455Z",
+            "link": "https://www.bbc.com/arabic/articles/c04reym9zygo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dc61/live/e8a9f9d0-b92b-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "منتخب مصر الأكثر تتويجًا بالبطولة في التاريخ بسبع بطولات، أوقعته القرعة في مواجهة منتخب غانا القوي تاريخيًا، مع موزمبيق وكاب فيردي، وكان المتابعون يتوقعون أن يكون الصراع على صدارة المجموعة بين منتخبي مصر وغانا، إلا أن كاب فيردي فاجأ الجميع، وبات المنتخب الوحيد في البطولة، الذي ضمن تأهله للدور الثاني. ",
+            "imageAlt": "جزء من الفريق المصري في مباراة مصر ضد غانا - ملعب فيليكس هوفويت بوانيي، أبيدجان، ساحل العاج - 18 يناير/كانون الثاني 2024",
+            "id": "c04reym9zygo"
+          },
+          {
+            "type": "article",
+            "title": "هل تعدّ مغادرة جوردان هندرسون لنادي الاتفاق نكسة للدوري السعودي؟",
+            "firstPublished": "2024-01-19T17:13:23.484Z",
+            "lastPublished": "2024-01-19T17:13:23.484Z",
+            "link": "https://www.bbc.com/arabic/articles/c28ye7kjej9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6309/live/2efd78b0-b6ea-11ee-8f07-bbfdfa890097.jpg",
+            "description": "لاعب خط وسط إنجلترا يلتحق بنادي أياكس الهولندي في عقد لمدة عامين ونصف بعدما أمضى أقل من ستة أشهر في السعودية.",
+            "imageAlt": "لاعب خط وسط إنجلترا جوردان هندرسون",
+            "id": "c28ye7kjej9o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/cyx5kw7g1j2t",
+        "curationId": "urn:bbc:vivo:curation:cc83f44c-eb2f-4c0f-8a51-68cfc48ce218",
+        "curationType": "vivo-stream",
+        "position": 9,
+        "title": "رياضة",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M13S",
+            "title": "السودان يطرد 15 دبلوماسيا إماراتيا في تصعيد على خلفية الحرب",
+            "firstPublished": "2023-12-11T16:41:47.000Z",
+            "lastPublished": "2023-12-11T16:41:47.000Z",
+            "link": "https://www.bbc.com/arabic/67686049",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/120A/production/_131981640_p0gyybg0.jpg",
+            "description": "فصل جديد من التوتر الإماراتي السوداني بعد أن أعلنت وزارة الخارجية السودانية أن 15 دبلوماسياً إماراتياً غير مرغوب فيهم",
+            "imageAlt": "BBC",
+            "id": "ce4732fd-f55e-412d-94ae-189ac03f2f86"
+          },
+          {
+            "type": "video",
+            "duration": "PT5M10S",
+            "title": "لبلبة: الفنانة المصرية تدلي بصوتها مرتين في انتخابات الرئاسة وإحالة الواقعة للتحقيق",
+            "firstPublished": "2023-12-11T16:37:06.000Z",
+            "lastPublished": "2023-12-11T16:37:06.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-67686046",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/153EA/production/_131981078_p0gyy9px.jpg",
+            "description": "أثارت الفنانة المصرية لبلبة الجدل بعد أن قامت بالتصويت مرتين في الانتخابات الرئاسية المصرية في مخالفة للقانون قد تصل عقوبتها للحبس.",
+            "imageAlt": "BBC",
+            "id": "25caf1f6-df68-47e0-8a8b-cb9218195a11"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M16S",
+            "title": "لماذا التزم وزير الخارجية الفلسطيني الصمت قبل لقائه أنطوني بلينكن في واشنطن؟",
+            "firstPublished": "2023-12-11T15:56:22.000Z",
+            "lastPublished": "2023-12-11T15:56:22.000Z",
+            "link": "https://www.bbc.com/arabic/67686043",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/427A/production/_131981071_p0gyxxfl.jpg",
+            "description": "حرب غزة.. هل منعت واشنطن وزير الخارجية الفلسطيني من الحديث للإعلام؟",
+            "imageAlt": "bbc",
+            "id": "5c8a633d-f14e-4d39-a8de-b00e3e7d451d"
+          },
+          {
+            "type": "video",
+            "duration": "PT6M13S",
+            "title": "\"مشينا حفاة في الشارع بالظلام\".. فلسطيني مفرج عنه من الذين جردوا من ملابسهم يروي ما حدث",
+            "firstPublished": "2023-12-11T16:25:06.000Z",
+            "lastPublished": "2023-12-11T16:25:06.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-67686179",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9996/production/_131981393_p0gyy668.jpg",
+            "description": "أثارت صور الفلسطينيين المعتقلين الذين جردوا من ملابسهم وهم يسلمون بعض الأسلحة للقوات الإسرائيلية في قطاع غزة تكهنات حول ملابسات الأحداث والتصوير. و روى أحد المفرج عنهم من المعتقلين لبي بي سي، أنه أُجبر على الجلوس في الشارع لساعات، مقيد اليدين ومعصوب العينين، واستجوبوا بشكلٍ عشوائي حول علاقتهم بحماس وتُركوا شبه عراة ولكن تم إعطاؤهم بطانية في أثناء الليل، وقال الشاب إنه بعد الإفراج عنهم مشوا حفاةً في الشارع في الظلام، وكانت الطرق مليئة بالحجارة والزجاج. وردت متحدثة من الجيش الإسرائيلي على أسئلة ترندينغ حول تجريد المعتقلين من ملابسهم قائلة إنها كانت لدواع أمنية وللتأكد من عدم حيازتهم على متفجرات.",
+            "imageAlt": "اعتقال فلسطينيين",
+            "id": "d4c01749-a3ec-4cbc-924d-42f10a6e0b23"
+          },
+          {
+            "type": "video",
+            "duration": "PT6M43S",
+            "title": "كيف تتصدى السلطات في فرنسا لغزو بق الفراش للعاصمة باريس؟",
+            "firstPublished": "2023-10-02T16:19:56.000Z",
+            "lastPublished": "2023-10-02T16:19:56.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-66989108",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E6F1/production/_131312195_p0ghzw6j.jpg",
+            "description": "تشهد العاصمة الفرنسية باريس انتشار موجة من \"بق الفراش\" في الأماكن العامة والخاصة. ونشر فرنسيون على مواقع التواصل الاجتماعي فيديوهات توثق انتشار البق في دور السينما ووسائل المواصلات مثل القطارات. وأدى انتشار البق إلى بروز نقاش في فرنسا، بعد أن دعت بلدية باريس إلى التصدي لهذه الحشرات، قبل انطلاق دورة الألعاب الأولمبية التي تحتضنها المدينة العام المقبل.",
+            "imageAlt": "بق الفراش في فرنسا",
+            "id": "68732bb4-ec0b-4e34-8320-a68b7d434ef4"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M58S",
+            "title": "دعوات لإضراب شامل دعما لغزة ومطالبة بوقف إطلاق النار",
+            "firstPublished": "2023-12-11T15:43:25.000Z",
+            "lastPublished": "2023-12-11T15:43:25.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-67685807",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E1D0/production/_131980875_p0gyxpx4.jpg",
+            "description": "دشن ناشطون وإعلاميون فلسطينيون مبادرة تحمل عنوان \"إضراب شامل\"، وذلك ضمن حراك حول العالم، للمطالبة بوقف الحرب في غزة. وشارك عشرات الآلاف هاشتاغ #إضراب_من_أجل_غزة على مواقع التواصل وتجاوب معه البعض لاسيما مدن الضفة الغربية والأردن ولبنان.",
+            "imageAlt": "إضراب عالمي لنصرة غزة وتوقعات بشلل الحركة في دول عربية",
+            "id": "7dd89e1d-c72b-493a-bd93-02c40b2028fe"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/tv-and-radio-37728883",
+        "curationId": "urn:bbc:tipo:list:33527541-c885-45f9-9c15-25ac8cc6b322",
+        "curationType": "tipo-curation",
+        "position": 10,
+        "title": "برامجنا",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "\"لا يجوز لإسرائيل أن تبقى صامتة في وجه الدعم التركي لحركة حماس\" - جيروزاليم بوست",
+            "firstPublished": "2024-01-17T14:48:17.564Z",
+            "lastPublished": "2024-01-17T14:48:17.564Z",
+            "link": "https://www.bbc.com/arabic/articles/cgl4x42jx7po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0193/live/a6960fd0-b51f-11ee-a84c-41ffbd26c07b.png",
+            "description": "تواصل الصحف البريطانية والإسرائيلية والعربية تغطيتها بشأن الحرب الإسرائيلية على قطاع غزة، ونستعرض في جولة الصحف لهذا اليوم، مقالات نشرتها كل من الفايننشال تايمز وجيروزاليم بوست والقدس العربي.",
+            "imageAlt": "الرئيس التركي مع وزير الخارجية الأمريكي",
+            "id": "cgl4x42jx7po"
+          },
+          {
+            "type": "article",
+            "title": "الإسرائيليون وقادتهم يرفضون دفع ثمن صفقة الرهائن - هآرتس",
+            "firstPublished": "2024-01-16T16:27:03.143Z",
+            "lastPublished": "2024-01-16T16:27:03.143Z",
+            "link": "https://www.bbc.com/arabic/articles/ce5jlyzel61o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b505/live/67bbe770-b45d-11ee-bc2f-cb5579b90709.png",
+            "description": "نستعرض في فقرة الصحف أبرز ما جاء في الصحفة الإسرائيلية والفلسطينية والبريطانية، التي ما زالت تخصص جزءاً كبيراً في مقالاتها لمناقشة تبعات الحرب الإسرائيلية على قطاع غزة.",
+            "imageAlt": "متظاهرون إسرائيليون",
+            "id": "ce5jlyzel61o"
+          },
+          {
+            "type": "article",
+            "title": "\"شبح العزلة الدولية الذي طالما تخوّف منه قادة إسرائيل ظهر أخيرا في محكمة العدل الدولية\"- في الغارديان",
+            "firstPublished": "2024-01-11T17:13:57.025Z",
+            "lastPublished": "2024-01-11T17:13:57.025Z",
+            "link": "https://www.bbc.com/arabic/articles/c2jyyg7re2eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/394e/live/0849c140-b08e-11ee-b59c-4d0c20952d00.png",
+            "description": "تابعت الصحف العالمية انطلاق جلسات محكمة العدل الدولية في لاهاي لنظر دعوى تقدمت بها جنوب أفريقيا ضد إسرائيل تتهمها فيه بارتكاب جرائم إبادة جماعية بحق الفلسطينيين في قطاع غزة.",
+            "imageAlt": "صورة أرشيفية من محكمة العدل الدولية ",
+            "id": "c2jyyg7re2eo"
+          },
+          {
+            "type": "article",
+            "title": "فلسطينيون يدفعون آلاف الدولارات في محاولة للفرار من الحرب في غزة – في الغارديان",
+            "firstPublished": "2024-01-09T17:26:02.341Z",
+            "lastPublished": "2024-01-09T17:26:02.341Z",
+            "link": "https://www.bbc.com/arabic/articles/cyr32k4ykj1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e484/live/2f49e4e0-aef0-11ee-beb5-e1400df560f2.jpg",
+            "description": "سماسرة يطلبون آلاف الدولارات مقابل تهريب فلسطينيين من الحرب في غزة عبر معبر رفح، واحتمال وقوع مواجهات بين حزب الله وإسرائيل، ومحاولات التهجير القسري للفلسطينيين ضمن أبرز القضايا التي تناولتها الصحف.",
+            "imageAlt": "معبر رفح",
+            "id": "cyr32k4ykj1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/c08gmd9rp97t",
+        "curationId": "urn:bbc:vivo:curation:c2bf32a7-fc33-4401-a649-b3cebeea0916",
+        "curationType": "vivo-stream",
+        "position": 11,
+        "title": "عرض الصحف",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "\"يستحق الانتباه\" مدخلك لفهم ما وراء الأحداث",
+            "firstPublished": "2024-01-24T15:57:13.846Z",
+            "lastPublished": "2024-01-24T15:57:13.846Z",
+            "link": "https://www.bbc.com/arabic/articles/c28lkjxkjp8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3624/live/d49709b0-bab1-11ee-8685-316409d66f25.jpg",
+            "description": "شرح معمق لقصة تستحق الانتباه من أخباراليوم، يساعدك على فهم أهم الأحداث حولك وأثرها على حياتك بلغة بسيطة وأسلوب جديد.  ",
+            "imageAlt": "بودكاست يسنحق الانتباه ",
+            "id": "c28lkjxkjp8o"
+          },
+          {
+            "type": "article",
+            "title": "ما دلالة أسبوع من الضربات الصاروخية في أرجاء الشرق الأوسط؟",
+            "firstPublished": "2024-01-22T17:40:38.045Z",
+            "lastPublished": "2024-01-22T17:40:38.045Z",
+            "link": "https://www.bbc.com/arabic/articles/c3g43284epmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5cc1/live/6f0d2f00-b919-11ee-beb5-e1400df560f2.jpg",
+            "description": "الأسبوع الماضي شهد جولة جديدة من العنف في الشرق الأوسط، تعزز المخاوف من توسع دائرة النزاع، في المنطقة المضطربة أصلا. ",
+            "imageAlt": " فلسطينيون يدفنون ضحايا الغارات الإسرائيلية على غزة",
+            "id": "c3g43284epmo"
+          },
+          {
+            "type": "article",
+            "title": "أين تقع بلوشستان ولماذا يتم استهدافها؟",
+            "firstPublished": "2024-01-21T18:49:26.217Z",
+            "lastPublished": "2024-01-21T18:49:26.217Z",
+            "link": "https://www.bbc.com/arabic/articles/ce95d1pepzro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a0c9/live/27672110-b83d-11ee-8f07-bbfdfa890097.jpg",
+            "description": "أصبحت منطقة بلوشستان ساحة قتال بين إيران وباكستان - وإليكم السبب.",
+            "imageAlt": "تم تعزيز الإجراءات الأمنية في بلوشستان، بعد هجوم صاروخي إيراني على الحدود الباكستانية الإيرانية",
+            "id": "ce95d1pepzro"
+          },
+          {
+            "type": "article",
+            "title": "هل يمكن أن يستمر التصعيد بين باكستان وإيران؟",
+            "firstPublished": "2024-01-19T01:23:11.789Z",
+            "lastPublished": "2024-01-19T01:23:11.789Z",
+            "link": "https://www.bbc.com/arabic/articles/cmljlrw0dn1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a8f5/live/f2953420-b5fa-11ee-bc2f-cb5579b90709.jpg",
+            "description": "بعد الهجمات المتبادلة أصبحت التوترات بين إيران وباكستان مصدر قلق دولي، فما أسباب التوتر وكيف سينتهي؟",
+            "imageAlt": "العلمان الباكستاني والإيراني",
+            "id": "cmljlrw0dn1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:ed2fcfb6-0666-4aab-9c8c-ce86f6d6ac33",
+        "curationType": "vivo-stream",
+        "position": 12,
+        "title": "مجلة",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "هل يبدو الموقف الأمريكي متناقضا بشأن حرب غزة؟",
+            "firstPublished": "2023-12-12T12:17:11.000Z",
+            "lastPublished": "2023-12-12T12:17:11.000Z",
+            "link": "https://www.bbc.com/arabic/interactivity-67693215",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/19DD/production/_132012660_gettyimages-1833765155-1.jpg",
+            "description": "اتهامات متتالية من قبل الجانب الفلسطيني وأطراف دولية للموقف الأمريكي بشأن حرب غزة بالتناقض وإبداء الأسى لمأساة المدنيين بينما يدعم استمرار الحرب.",
+            "imageAlt": "المندوب الأمريكي لدى مجلس الأمن الدولي مستخدما حق النقض(الفيتو) ضد مشروع قرار أممي بوقف الحرب في غزة الجمعة 8 ديسمبر",
+            "id": "cec48309-e71b-4768-9f94-50edb41bc4b1"
+          },
+          {
+            "type": "article",
+            "title": "اليوم العالمي لحقوق الإنسان: هل بات انتشار المجاعة في قطاع غزة مسألة وقت؟",
+            "firstPublished": "2023-12-11T13:32:12.000Z",
+            "lastPublished": "2023-12-11T13:32:12.000Z",
+            "link": "https://www.bbc.com/arabic/interactivity-67683225",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E6D9/production/_131979095_gettyimages-1835604780.jpg",
+            "description": "يحيي العالم يوم حقوق الإنسان في 10 ديسمبر من كل عام. ويأتي الاحتفال بعد دخول الحرب بين إسرائيل وحركة حماس شهرها الثالث. كما يأتي أيضا بعد ثالث فشل لمجلس الأمن الدولي في تمرير مشروع قرار للمطالبة بوقف إطلاق النار في غزة.",
+            "imageAlt": "تزايد التحذيرات الدولية من حدوث مجاعة وشيكة في غزة.",
+            "id": "7e66f653-cfb2-4998-96f3-0675d135d199"
+          },
+          {
+            "type": "article",
+            "title": "كيف يمكن تجنيب المدنيين في القطاع مزيدا من المعاناة الإنسانية؟",
+            "firstPublished": "2023-12-05T17:50:13.000Z",
+            "lastPublished": "2023-12-05T17:50:13.000Z",
+            "link": "https://www.bbc.com/arabic/interactivity-67631289",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3CE9/production/_131939551_gettyimages-1825442692.jpg",
+            "description": "الأوضاع الإنسانية تزداد ترديا في قطاع غزة في ظل مزيد من النزوح لعائلات فلسطينية من منازلها في جنوب القطاع بناء على أوامر إسرائيلية",
+            "imageAlt": "عائلات فلسطينية في العراء بعد نزوحها من منازلها في خانيونس باتجاه رفح بناء على أوامر إسرائيلية",
+            "id": "86647abf-f770-46f9-9e68-733cd9bb30fe"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/interactivity",
+        "curationId": "urn:bbc:tipo:list:63f45d6b-a8d9-448d-a40b-896d2a4fe118",
+        "curationType": "tipo-curation",
+        "position": 13,
+        "title": "نقطة حوار:",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "title": "شاهد البث المباشر لتلفزيون بي بي سي",
+            "firstPublished": "2019-08-30T08:36:18.000Z",
+            "lastPublished": "2019-08-30T08:36:18.000Z",
+            "link": "https://www.bbc.com/arabic/media-49522519",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2640/live/b0ee96e0-9900-11ee-8df3-1d2983d8814f.png",
+            "description": "شاهد البث المباشر لتلفزيون بي بي سي",
+            "imageAlt": "شاهد البث المباشر لتلفزيون بي بي سي\n\n",
+            "id": "5ca4f187-e266-614b-8fed-a80e2880f293"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/media-49522519",
+        "curationId": "urn:bbc:tipo:list:4a408d63-0adc-4f25-87c7-5ab4adce053b",
+        "curationType": "tipo-curation",
+        "position": 14,
+        "title": "البث المباشر",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/arabic/topics/c404vr23x4dt",
+        "curationId": "urn:bbc:vivo:curation:3e7ef57d-02aa-4ebd-82e4-16f02c59c949",
+        "curationType": "vivo-stream",
+        "position": 15,
+        "title": "بي بي سي ترند",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "تعرف على أبرز ملامح حرب غزة بالأرقام والصور",
+            "firstPublished": "2023-11-08T18:12:34.793Z",
+            "lastPublished": "2023-11-08T18:12:34.793Z",
+            "link": "https://www.bbc.com/arabic/articles/cpwpnlqndweo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b71c/live/8704fd20-7e3d-11ee-8139-61b1db4c8e2f.png",
+            "description": "مجموعة من الصوروالخرائط والإحصائيات توضح أعداد الضحايا والجرحى والنازحين وحجم الدمار الذي لحق بمدينة غزة نتيجة القصف والغارات الجوية منذ هجوم حماس على إسرائيل في 7 أكتوبر/ تشرين الأول.",
+            "imageAlt": "أعداد القتلى من الجانبين",
+            "id": "cpwpnlqndweo"
+          },
+          {
+            "type": "article",
+            "title": "بالصور: كيف كانت غزة قبل الحرب وكيف تبدو الآن؟",
+            "firstPublished": "2023-10-28T13:35:12.217Z",
+            "lastPublished": "2023-10-28T13:35:12.217Z",
+            "link": "https://www.bbc.com/arabic/articles/c1674d4xj8zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf0b/live/b5e68a40-74ed-11ee-904f-51c1b76d01d2.jpg",
+            "description": "نشرت شركة \"ماكسار\" للتكنولوجيا صورا تقارن بين ما قبل القصف الإسرائيلي وما بعده في مناطق مثل بيت حانون، وحي الكرامة، وحي العطاطرة في قطاع غزة.",
+            "imageAlt": "دخان وغبار يغطي سماء قطاع غزة جراء القصف الإسرائيلي المستمر منذ 7 أكتوبر",
+            "id": "c1674d4xj8zo"
+          },
+          {
+            "type": "article",
+            "title": "بالصور :أفضل اللقطات من أفريقيا",
+            "firstPublished": "2023-03-31T15:54:16.000Z",
+            "lastPublished": "2023-03-31T15:54:16.000Z",
+            "link": "https://www.bbc.com/arabic/art-and-culture-65140458",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/183BF/production/_129236299_17e220a6-6822-49c8-9f4e-a31e1ff4d654.jpg",
+            "description": "مجموعة مختارة من أفضل الصور من جميع أنحاء إفريقيا وخارجها هذا الأسبوع",
+            "imageAlt": "إفريقيا في أسبوع",
+            "id": "c979e5f8-c7d2-4f4d-ad0e-5be4722bf0fe"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:69b3b644-79df-44b9-9f86-421fa3f19711",
+        "curationType": "tipo-curation",
+        "position": 16,
+        "title": "بالصور",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 17,
+        "title": "الأكثر قراءة",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/arabic/popular/read",
+        "mostRead": {
+          "generated": "2024-01-25T12:19:23.094Z",
+          "lastRecordTimeStamp": "2024-01-25T12:16:00Z",
+          "firstRecordTimeStamp": "2024-01-25T12:01:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:clj9r29k60xo",
+              "rank": 1,
+              "title": "السعودية تفتح أول متجر للمشروبات الكحولية منذ أكثر من 70 عاما",
+              "href": "https://www.bbc.com/arabic/articles/clj9r29k60xo",
+              "timestamp": 1706172804302
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3gk9l9y5w3o",
+              "rank": 2,
+              "title": "مايكل أوين عن فقدان نجله للبصر: \"لو كان بإمكاني لأعطيته عيني\"",
+              "href": "https://www.bbc.com/arabic/articles/c3gk9l9y5w3o",
+              "timestamp": 1706101222535
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd1kwvex420o",
+              "rank": 3,
+              "title": "كيف انتهت قصة 15 رهينة احتجزهم مقاتلو القسام في بئيري؟",
+              "href": "https://www.bbc.com/arabic/articles/cd1kwvex420o",
+              "timestamp": 1704384043252
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ceq4yqzv71zo",
+              "rank": 4,
+              "title": "كيف بدأت حماس ولماذا لاحقتها الشائعات؟",
+              "href": "https://www.bbc.com/arabic/articles/ceq4yqzv71zo",
+              "timestamp": 1704294627575
+            },
+            {
+              "id": "361f8447-335b-4e9a-9bbc-c23a94c99eb7",
+              "rank": 5,
+              "title": "وثائق: إسرائيل أبلغت بريطانيا قبل 52 عاما بخطة سرية لتهجير الفلسطينيين من غزة إلى العريش المصرية",
+              "href": "/arabic/middleeast-67253400",
+              "timestamp": 1698672779000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce9eg210ex1o",
+              "rank": 6,
+              "title": "كيف تستخدم إسرائيل الذكاء الصناعي في حربها؟",
+              "href": "https://www.bbc.com/news/articles/ce9eg210ex1o",
+              "timestamp": 1704613567157
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cxrwg7101rro",
+              "rank": 7,
+              "title": "لماذا تحتفظ أمريكا بمخزون أسلحة في إسرائيل؟",
+              "href": "https://www.bbc.com/arabic/articles/cxrwg7101rro",
+              "timestamp": 1704527098277
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cl5l4qqq9pvo",
+              "rank": 8,
+              "title": "\"بعد عائلات الرهائن.. حان الآن دور عائلات الجنود لزعزعة إسرائيل\" - في هآرتس",
+              "href": "https://www.bbc.com/arabic/articles/cl5l4qqq9pvo",
+              "timestamp": 1706116180663
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd156jpwrdjo",
+              "rank": 9,
+              "title": "ما الفرق بين معاداة السامية ومعاداة الصهيونية؟",
+              "href": "https://www.bbc.com/arabic/articles/cd156jpwrdjo",
+              "timestamp": 1697505363810
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn04r432gv1o",
+              "rank": 10,
+              "title": "لماذا يتمتع ترامب بشعبية كبيرة بين الجمهوريين؟",
+              "href": "https://www.bbc.com/arabic/articles/cn04r432gv1o",
+              "timestamp": 1706109157516
+            },
+            {
+              "id": "692eb0ae-26a9-4301-8fc4-c2bb98ccc97f",
+              "rank": 11,
+              "title": "ماهي فرص السلام في السودان بعد تجميد الحكومة عضوية بلادها في\"إيغاد\"؟",
+              "href": "/arabic/interactivity-68070203",
+              "timestamp": 1706013030000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cmlrv38ymmmo",
+              "rank": 12,
+              "title": "ما هي حماس وماذا يحدث في إسرائيل وقطاع غزة؟",
+              "href": "https://www.bbc.com/arabic/articles/cmlrv38ymmmo",
+              "timestamp": 1696951616634
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn09p2vvry4o",
+              "rank": 13,
+              "title": "ماذا يعني الإعلان الإسرائيلي عن المرحلة الثالثة من حرب غزة؟",
+              "href": "https://www.bbc.com/arabic/articles/cn09p2vvry4o",
+              "timestamp": 1704831520984
+            },
+            {
+              "id": "c16c590c-d4cc-4435-bcd7-5f975dd7b500",
+              "rank": 14,
+              "title": "تلفزيون / راديو",
+              "href": "/arabic/media-61824782",
+              "timestamp": 1699289623000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3g34zdj9p7o",
+              "rank": 15,
+              "title": "من هم أبرز قادة حماس الحاليين؟",
+              "href": "https://www.bbc.com/arabic/articles/c3g34zdj9p7o",
+              "timestamp": 1701456259875
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ckkv0kkr7dno",
+              "rank": 16,
+              "title": "لماذا تواجه الأمم المتحدة انتقادات بسبب أوكرانيا وغزة؟",
+              "href": "https://www.bbc.com/arabic/articles/ckkv0kkr7dno",
+              "timestamp": 1706112929037
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c28lkgyr1n0o",
+              "rank": 17,
+              "title": "تحقيق لبي بي سي يكشف أن الإمارات العربية المتحدة موّلت اغتيالات سياسية في اليمن",
+              "href": "https://www.bbc.com/arabic/articles/c28lkgyr1n0o",
+              "timestamp": 1705997343149
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c6p1xvrmr03o",
+              "rank": 18,
+              "title": "كيف تغيرت أعراض فيروس كورونا مع ظهور كل متحور جديد؟",
+              "href": "https://www.bbc.com/arabic/articles/c6p1xvrmr03o",
+              "timestamp": 1705238729160
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czr21dz8nv8o",
+              "rank": 19,
+              "title": "كيف أعدّت حماس قوة لضرب إسرائيل في السابع من أكتوبر؟",
+              "href": "https://www.bbc.com/arabic/articles/czr21dz8nv8o",
+              "timestamp": 1701178476096
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c904q5x1vlno",
+              "rank": 20,
+              "title": "دليل مبسط  لفهم مختلف مراحل الانتخابات الرئاسية الأمريكية 2024",
+              "href": "https://www.bbc.com/arabic/articles/c904q5x1vlno",
+              "timestamp": 1706119399145
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cq01ke64p2et",
+        "contentType": "index-home",
+        "pageIdentifier": "arabic.page",
+        "pageTitle": "BBC News عربي"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

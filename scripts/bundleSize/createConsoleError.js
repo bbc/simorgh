@@ -1,6 +1,6 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
-module.exports = ({ service, pageType, size, adjective }) =>
+export default ({ service, pageType, size, adjective }) =>
   [
     chalk.red('Bundle size for'),
     chalk.red.bold(`${service} ${pageType}`),

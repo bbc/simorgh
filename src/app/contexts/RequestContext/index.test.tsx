@@ -36,7 +36,6 @@ jest.mock('./getMetaUrls');
   'getStatsPageIdentifier',
 );
 (getOriginContext.default as jest.Mock).mockReturnValue({
-  isUK: true,
   origin: 'origin',
 });
 (getEnv.default as jest.Mock).mockReturnValue('getEnv');
@@ -61,6 +60,7 @@ const input = {
   variant: 'simp',
   showAdsBasedOnLocation: true,
   mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+  isUK: true,
 };
 
 const expectedOutput = {
@@ -69,8 +69,10 @@ const expectedOutput = {
   isUK: true,
   origin: 'origin',
   pageType: input.pageType,
+  derivedPageType: null,
   isAmp: true,
   isNextJs: false,
+  isCaf: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,
@@ -123,6 +125,27 @@ describe('RequestContext', () => {
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });
 
+  it('should return expected values for app requests', () => {
+    const appInput = {
+      ...input,
+      isAmp: false,
+      isApp: true,
+    };
+
+    render(
+      <RequestContextProvider {...appInput}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(React.useContext).toHaveReturnedWith({
+      ...expectedOutput,
+      isAmp: false,
+      isApp: true,
+      platform: 'app',
+    });
+  });
+
   describe('platform', () => {
     it('should be "amp" when isAmp is true', () => {
       render(
@@ -152,9 +175,23 @@ describe('RequestContext', () => {
       });
     });
 
+    it('should be "app" when isAmp is false and isApp is true', () => {
+      render(
+        <RequestContextProvider {...input} isAmp={false} isApp>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isAmp: false,
+        isApp: true,
+        platform: 'app',
+      });
+    });
+
     it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
       (getOriginContext.default as jest.Mock).mockReturnValue({
-        isUK: false,
         origin: 'origin',
       });
       render(
@@ -167,6 +204,25 @@ describe('RequestContext', () => {
         env: 'getEnv',
         isUK: true,
         service: 'service',
+      });
+    });
+
+    it('should set isUK to false when the input isUK value is null', () => {
+      (getOriginContext.default as jest.Mock).mockReturnValue({
+        origin: 'origin',
+      });
+
+      const inputProps = { ...input, isUK: null };
+
+      render(
+        <RequestContextProvider {...inputProps}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isUK: false,
       });
     });
   });

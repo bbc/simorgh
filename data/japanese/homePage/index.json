@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "最新ニュース - BBCニュース",
+    "description": "BBCニュースが伝える世界の動き、BBCニュースならではの視点を日本語でお届けします。世界各地で取材する日々の出来事、世界の人が注目している話題の紹介や解説を、日本語の記事、ビデオ、写真ギャラリーなどで",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "過去最深の海中で泳ぐ魚を確認　伊豆・小笠原海溝＝国際研究グループ",
+            "firstPublished": "2023-04-03T08:50:19.000Z",
+            "link": "https://www.bbc.com/japanese/features-and-analysis-65161437",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/EED8/production/_129244116_index.jpg",
+            "description": "日本やオーストラリアなどの科学者が参加する国際研究チームがこのほど、これまでに最も深い海中で泳ぐ魚を確認した。「スネイルフィッシュ」として知られるクサウオの一種で、伊豆・小笠原海溝の水深8336メートルで撮影された。",
+            "imageAlt": "Deepest fish",
+            "id": "21b5533a-7624-42b8-84df-0893de57db4d"
+          },
+          {
+            "type": "article",
+            "title": "【解説】 トランプ氏起訴はみんな分かっていた、それでも大きな衝撃",
+            "firstPublished": "2023-03-31T08:36:38.000Z",
+            "link": "https://www.bbc.com/japanese/features-and-analysis-65136156",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/139AF/production/_129230308_trumpintexas.jpg",
+            "description": "トランプ前米大統領が起訴された。大きな衝撃が米政界に広がっている。",
+            "imageAlt": "Donald Trump dances during a rally at the Waco Regional Airport on March 25, 2023",
+            "id": "a083dc05-69aa-4644-8087-09863c3e21be"
+          },
+          {
+            "type": "article",
+            "title": "トランプ前米大統領を訴追するマンハッタンの検事とは",
+            "firstPublished": "2023-04-02T02:51:23.000Z",
+            "link": "https://www.bbc.com/japanese/features-and-analysis-65152671",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8420/production/_129042833_gettyimages-1447235029.jpg",
+            "description": "アルヴィン・ブラッグ氏（49）は2021年、黒人男性として史上初めて、ニューヨーク地区検事に公選された。そのブラッグ検事が浴びる歴史のスポットライトは、ますますまぶしさを増している。",
+            "imageAlt": "Manhattan District Attorney Alvin Bragg at the New York Supreme Court in December 2022",
+            "id": "b294dcfa-5e33-4efe-88c9-a3ab5a04fa44"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:eb3bbee0-b44a-43bb-8a6d-d29a9127ce2d",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "読み物・解説",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c44evppzl99t",
+        "contentType": "index-home",
+        "pageIdentifier": "japanese.page",
+        "pageTitle": "最新ニュース - BBCニュース"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

@@ -11,6 +11,7 @@ jest.mock('@loadable/server', () => ({
     getScriptElements: () => '__mock_script_elements__',
     getLinkElements: () => '__mock_link_elements__',
   })),
+  ChunkExtractorManager: jest.fn(),
 }));
 
 jest.mock('./component', () => jest.fn());
@@ -52,6 +53,7 @@ describe('Render Document', () => {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       data: { test: 'data' },
       isAmp: false,
+      isApp: false,
       routes: ['someRoute'],
       service: 'news',
       url: '/',
@@ -70,6 +72,7 @@ describe('Render Document', () => {
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
+        isApp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
@@ -83,6 +86,7 @@ describe('Render Document', () => {
         context: {},
         data: { test: 'data' },
         isAmp: false,
+        isApp: false,
         location: '/',
         routes: ['someRoute'],
         service: 'news',

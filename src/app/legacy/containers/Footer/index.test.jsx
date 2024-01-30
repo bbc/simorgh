@@ -64,5 +64,13 @@ describe(`FooterContainer`, () => {
         'Read about our approach to external linking.',
       );
     });
+
+    it('should omit the footer when isApp is set to true', () => {
+      const { container } = render(<FooterContainer />, { isApp: true });
+
+      const footer = container.querySelector("footer[role='contentinfo']");
+
+      expect(footer).toBeNull();
+    });
   });
 });

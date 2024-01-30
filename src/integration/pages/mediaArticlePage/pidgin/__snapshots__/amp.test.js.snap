@@ -1,0 +1,530 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Media Article Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+
+exports[`AMP Media Article Page AMP Consent config 1`] = `
+{
+  "consents": {
+    "user-consent": {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": {
+    "default": {
+      "timeout": {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": {
+        "user-consent": [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP Media Article Page AMP Geo config 1`] = `
+{
+  "AmpBind": true,
+  "ISOCountryGroups": {
+    "eea": [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+    "gbOrUnknown": [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
+  },
+}
+`;
+
+exports[`AMP Media Article Page Analytics ATI 1`] = `
+{
+  "requests": {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=70&p=pidgin.articles.cw0x29n2pvqo.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acw0x29n2pvqo]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-sfv]&x8=[simorgh]&x9=[Nigeria%25202023%2520elections%3A%2520INEC%2520Chairman%2520Mahmood%2520Yakubu%2520rule%2520out%2520postponement%2C%2520tok%2520about%2520preparations%2520for%2520di%2520polls]&x11=[2023-01-20T09%3A43%3A06.574Z]&x12=[2023-01-20T09%3A43%3A06.574Z]&x13=[Nigeria~Politics~Nigeria%2Bpolitics~Nigerian%2Belections%2B2023]&x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~75612fa6-147c-4a43-97fa-fcf70d9cced3~7d65828a-85c1-41f4-96cf-c758da75e401~ad97dddb-ea75-4493-a4ed-95ad1477049f]&x17=[Nigeria~Politics~Nigeria%2Bpolitics~Nigerian%2Belections%2B2023]&ref=\${documentReferrer}",
+  },
+  "transport": {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Media Article Page Analytics chartbeat 1`] = `
+{
+  "vars": {
+    "contentType": "article-sfv",
+    "domain": "test.bbc.co.uk",
+    "sections": "Pidgin, Pidgin - video",
+    "title": "Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP Media Article Page Analytics comscore 1`] = `
+{
+  "extraUrlParams": {
+    "comscorekw": "amp",
+  },
+  "vars": {
+    "c2": "17986528",
+  },
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Pidgin",
+  "url": "/pidgin",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Why you fit trust BBC News",
+  "url": "https://www.bbc.com/pidgin/institutional-48528766",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "How dem dey take use am",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "As e concern BBC",
+  "url": "https://www.bbc.com/aboutthebbc",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Call BBC",
+  "url": "https://www.bbc.co.uk/pidgin/send/u50853577",
+}
+`;
+
+exports[`AMP Media Article Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "De way wey we de take go external link.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`AMP Media Article Page Footer Cookie Settings Button should match text and on handler 1`] = `
+{
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "Do not share or sell my info",
+}
+`;
+
+exports[`AMP Media Article Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`AMP Media Article Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`AMP Media Article Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Home",
+  "url": "/pidgin",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Nigeria",
+  "url": "/pidgin/topics/c2dwqd1zr92t",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Africa",
+  "url": "/pidgin/topics/c404v061z85t",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "World",
+  "url": "/pidgin/topics/c0823e52dd0t",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Sport",
+  "url": "/pidgin/topics/cjgn7gv77vrt",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Entertainment",
+  "url": "/pidgin/topics/cqywjyzk2vyt",
+}
+`;
+
+exports[`AMP Media Article Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 1`] = `
+{
+  "text": "Video, How to vote for Nigeria general election, Duration 1,46",
+  "url": "/pidgin/tori-64758904",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 2`] = `
+{
+  "text": "Video, Wetin e take to win election for Nigeria, Duration 3,59",
+  "url": "/pidgin/64626014",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 3`] = `
+{
+  "text": "Video, Tins you go do during election wey go land you for INEC hot soup, Duration 1,33",
+  "url": "/pidgin/tori-64534844",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 4`] = `
+{
+  "text": "Video, 'We dey good to go for dis election' - INEC Boss, Duration 6,17",
+  "url": "/pidgin/articles/cw0x29n2pvqo",
+}
+`;
+
+exports[`AMP Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
+
+exports[`AMP Media Article Page Related Content should match text and url 1`] = `
+{
+  "text": "Key tins wey INEC chairman Mahmood Yakubu tok for Chattam house about 2023 elections",
+  "url": "/pidgin/articles/cgrznj8yg5do",
+}
+`;
+
+exports[`AMP Media Article Page Related Content should match text and url 2`] = `
+{
+  "text": "PDP fire back afta APC call for di prosecution of Atiku for corruption",
+  "url": "/pidgin/articles/c1w09yl32yeo",
+}
+`;
+
+exports[`AMP Media Article Page Related Content should match text and url 3`] = `
+{
+  "text": "Security go be one of my biggest priority - Kwankwaso ",
+  "url": "/pidgin/articles/cl519qjj0lvo",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Media Article Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/articles/cw0x29n2pvqo"`;
+
+exports[`AMP Media Article Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP Media Article Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Media Article Page SEO Heading level 1 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
+
+exports[`AMP Media Article Page SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`AMP Media Article Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "about": [
+        {
+          "@type": "Place",
+          "name": "Nigeria",
+        },
+        {
+          "@type": "Thing",
+          "name": "Politics",
+          "sameAs": [
+            "http://dbpedia.org/resource/Politics",
+          ],
+        },
+        {
+          "@type": "Thing",
+          "name": "Nigeria politics",
+          "sameAs": [
+            "http://dbpedia.org/resource/Politics_of_Nigeria",
+          ],
+        },
+        {
+          "@type": "Thing",
+          "name": "Nigerian Presidential Election 2023",
+          "sameAs": [
+            "http://dbpedia.org/resource/2023_Nigerian_general_election",
+          ],
+        },
+      ],
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+      },
+      "dateModified": "2023-01-20T09:43:06.574Z",
+      "datePublished": "2023-01-20T09:43:06.574Z",
+      "headline": "Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/pidgin/articles/cw0x29n2pvqo",
+        "@type": "WebPage",
+        "name": "Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg",
+      "url": "http://localhost:7080/pidgin/articles/cw0x29n2pvqo",
+    },
+  ],
+}
+`;
+
+exports[`AMP Media Article Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "INEC boss interview",
+  "duration": "PT6M17S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/cw0x29n2pvqo/p0dxnwbk/pcm/amp",
+  "name": "INEC",
+  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0dxnxnv.jpg",
+  "uploadDate": "2023-01-20T09:07:40.000Z",
+}
+`;
+
+exports[`AMP Media Article Page SEO OG description 1`] = `"Professor Mahmood Yakubu speak wit BBC on Inec plans to conduct free and fair elections."`;
+
+exports[`AMP Media Article Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg"`;
+
+exports[`AMP Media Article Page SEO OG image alt 1`] = `"Inec boss Prof. Mahmood Yakubu"`;
+
+exports[`AMP Media Article Page SEO OG locale 1`] = `"pcm"`;
+
+exports[`AMP Media Article Page SEO OG site name 1`] = `"BBC News Pidgin"`;
+
+exports[`AMP Media Article Page SEO OG title 1`] = `"Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls - BBC News Pidgin"`;
+
+exports[`AMP Media Article Page SEO OG type 1`] = `"article"`;
+
+exports[`AMP Media Article Page SEO OG url 1`] = `"http://localhost:7080/pidgin/articles/cw0x29n2pvqo"`;
+
+exports[`AMP Media Article Page SEO Page title 1`] = `"Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls - BBC News Pidgin"`;
+
+exports[`AMP Media Article Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`AMP Media Article Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Media Article Page SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`AMP Media Article Page SEO Twitter description 1`] = `"Professor Mahmood Yakubu speak wit BBC on Inec plans to conduct free and fair elections."`;
+
+exports[`AMP Media Article Page SEO Twitter image alt 1`] = `"Inec boss Prof. Mahmood Yakubu"`;
+
+exports[`AMP Media Article Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg"`;
+
+exports[`AMP Media Article Page SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`AMP Media Article Page SEO Twitter title 1`] = `"Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls - BBC News Pidgin"`;
+
+exports[`AMP Media Article Page Timestamp should match text and date 1`] = `
+{
+  "date": "2023-01-20",
+  "text": "20 January 2023",
+}
+`;

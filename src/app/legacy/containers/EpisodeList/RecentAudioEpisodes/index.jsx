@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   formatDuration,
   formatUnixTimestamp,
@@ -24,6 +23,7 @@ import EpisodeList from '#containers/EpisodeList';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const Spacer = styled.aside`
   position: relative;

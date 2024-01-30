@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 21,
+    "month": "April",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=109%3A7572&t=8huBcqS3fa7mbudx-1",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Optimo-videomedia-page-AAC-Screen-reader-UX--B0fBlfkmBT4q0KmxbxP9nn65AQ-6GZgnLy75GOgJ3pWrjEK2",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1wE4KOagK912n4uZ80Oztb2MBC62LsnfPgFeleXMKQMA/edit#gid=588203697",
+      "label": "A11y swarm notes"
+    }
+  }
+}

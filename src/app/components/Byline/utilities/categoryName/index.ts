@@ -1,21 +1,14 @@
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
+import {
+  MetadataFormats,
+  MetadataTaggings,
+} from '../../../../models/types/metadata';
 
 export default (
-  taggings: { predicate: string; value: string }[] = [],
-  formats: {
-    value: string;
-    thingLabel: string;
-    thingUri: string;
-    thingId: string;
-    thingType: string[];
-    thingSameAs: string[];
-    thingEnglishLabel: string;
-    thingPreferredLabel: string;
-    thingLabelLanguage: string;
-    type: string;
-  }[] = [],
   isTrustProjectParticipant: boolean,
+  taggings: MetadataTaggings = [],
+  formats: MetadataFormats = [],
 ) => {
   const supportedPredicate = taggings.filter(
     tagging =>

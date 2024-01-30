@@ -22,7 +22,12 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
 describe('Recent Video Episodes', () => {
   it('should render video episodes correctly', () => {
     const { container } = render(
-      <RecentVideoEpisodesWithContext episodes={afrique} />,
+      <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={afrique} />,
+      {
+        pageType: 'media',
+        derivedPageType: 'On Demand TV',
+        service: 'afrique',
+      },
     );
     expect(container).toMatchSnapshot();
   });

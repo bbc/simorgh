@@ -3,21 +3,21 @@
 exports[`AMP Story Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
 exports[`AMP Story Page AMP Consent config 1`] = `
-Object {
-  "consents": Object {
-    "user-consent": Object {
+{
+  "consents": {
+    "user-consent": {
       "promptIfUnknownForGeoGroup": "eea",
       "promptUI": "consent-prompt",
     },
   },
-  "policy": Object {
-    "default": Object {
-      "timeout": Object {
+  "policy": {
+    "default": {
+      "timeout": {
         "fallbackAction": "reject",
         "seconds": 0,
       },
-      "waitFor": Object {
-        "user-consent": Array [],
+      "waitFor": {
+        "user-consent": [],
       },
     },
   },
@@ -25,10 +25,10 @@ Object {
 `;
 
 exports[`AMP Story Page AMP Geo config 1`] = `
-Object {
+{
   "AmpBind": true,
-  "ISOCountryGroups": Object {
-    "eea": Array [
+  "ISOCountryGroups": {
+    "eea": [
       "at",
       "ax",
       "be",
@@ -82,7 +82,7 @@ Object {
       "wf",
       "yt",
     ],
-    "gbOrUnknown": Array [
+    "gbOrUnknown": [
       "gb",
       "gg",
       "im",
@@ -95,18 +95,18 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics ATI 1`] = `
-Object {
-  "requests": Object {
+{
+  "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=58&p=kyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test%2520STY%2520for%2520social%2520embeds%2520-%2520BBC%2520News%2520%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2520%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B]&x11=[2020-04-24T14%3A51%3A17.000Z]&x12=[2020-04-24T14%3A51%3A17.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=58&p=kyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Abb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test%2520STY%2520for%2520social%2520embeds%2520-%2520BBC%2520News%2520%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2520%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B]&x11=[2020-04-24T14%3A51%3A17.000Z]&x12=[2020-04-24T14%3A51%3A17.000Z]&ref=\${documentReferrer}",
   },
-  "transport": Object {
+  "transport": {
     "beacon": false,
     "image": true,
     "xhrpost": false,
   },
-  "triggers": Object {
-    "trackPageview": Object {
+  "triggers": {
+    "trackPageview": {
       "on": "visible",
       "request": "pageview",
     },
@@ -115,11 +115,11 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics chartbeat 1`] = `
-Object {
-  "vars": Object {
+{
+  "vars": {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY",
     "title": "Test STY for social embeds",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
@@ -128,122 +128,122 @@ Object {
 `;
 
 exports[`AMP Story Page Analytics comscore 1`] = `
-Object {
-  "extraUrlParams": Object {
+{
+  "extraUrlParams": {
     "comscorekw": "amp",
   },
-  "vars": Object {
+  "vars": {
     "c2": "17986528",
   },
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Кыргыз КызMATы",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Эмнеге BBC News ишенсе болот?",
   "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Колдонуу эрежелери",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Би-Би-Си жөнүндө",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Купуялык",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
-  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Би-Би-Си менен байланышыңыз",
   "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
 }
 `;
 
 exports[`AMP Story Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
-Object {
+{
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Башталгыч бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "Кыргызстан",
   "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Дүйнө",
   "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "САПАР",
   "url": "/kyrgyz/topics/c6z8lg83w7mt",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Подкасттар",
   "url": "/kyrgyz/podcasts/p0c80v81",
 }
@@ -254,7 +254,7 @@ exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн
 exports[`AMP Story Page Image should match snapshot 1`] = `
 <amp-img
   alt="social media"
-  attribution=""
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="351"
@@ -268,70 +268,70 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-512x512.png",
 }
@@ -348,14 +348,14 @@ exports[`AMP Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`
 exports[`AMP Story Page SEO Lang attribute 1`] = `"ky"`;
 
 exports[`AMP Story Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "NewsArticle",
-      "author": Object {
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
@@ -368,25 +368,25 @@ Object {
       "datePublished": "2020-04-24T14:51:17.000Z",
       "description": "A test STY for social embeds",
       "headline": "Test STY for social embeds",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "ky",
         "name": "Kyrgyz",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/kyrgyz/23292889",
         "@type": "WebPage",
         "name": "Test STY for social embeds",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
@@ -437,7 +437,7 @@ exports[`AMP Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 exports[`AMP Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
 exports[`AMP Story Page Timestamp should match text and date 1`] = `
-Object {
+{
   "date": "2020-04-24",
   "text": "24 апрель 2020",
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { bool, number } from 'prop-types';
+import { number } from 'prop-types';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
@@ -17,15 +17,14 @@ const smallScreenMargin = `
 const Wrapper = styled.time`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) =>
-    props =>
-      darkMode ? props.theme.palette.PEBBLE : props.theme.palette.METAL};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
   display: inline-block;
 
-  ${({ darkMode }) => !darkMode && smallScreenMargin}
+  ${({ theme }) => !theme.isDarkUi && smallScreenMargin}
 `;
 
-const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
+const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
   const { script, service, timezone, datetimeLocale } =
     useContext(ServiceContext);
   const formattedTimestamp = formatUnixTimestamp({
@@ -47,7 +46,6 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
     <Wrapper
       script={script}
       service={service}
-      darkMode={darkMode}
       dateTime={dateTime}
       suppressHydrationWarning
     >
@@ -58,11 +56,6 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
 
 OnDemandFooterTimestamp.propTypes = {
   releaseDateTimeStamp: number.isRequired,
-  darkMode: bool,
-};
-
-OnDemandFooterTimestamp.defaultProps = {
-  darkMode: false,
 };
 
 export default OnDemandFooterTimestamp;

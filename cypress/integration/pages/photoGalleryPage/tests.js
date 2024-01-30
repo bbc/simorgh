@@ -5,13 +5,19 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
+  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType}`, () => {
     it('should render a description for the page', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const description = body.promo.summary;
-        cy.get('main p').first().should('contain', description);
-      });
+      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+        ({ body }) => {
+          const description = body.data.article.promo.summary;
+          cy.get('main p').first().should('contain', description);
+        },
+      );
     });
   });
 };

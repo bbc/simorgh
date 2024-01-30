@@ -25,14 +25,18 @@ import {
   GHOST,
   GREY_10,
   GREY_11,
+  GREY_1,
   GREY_2,
   GREY_3,
+  GREY_4,
   GREY_5,
   GREY_6,
   GREY_7,
   GREY_8,
   KINGFISHER,
   LE_TEAL,
+  LIVE_LIGHT,
+  LIVE_DARK,
   LUNAR,
   LUNAR_LIGHT,
   METAL,
@@ -119,7 +123,16 @@ import {
   GROUP_D_MIN_WIDTH,
 } from './fontMediaQueries';
 
+import gridWidths from './gridWidths';
+
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { PageTypes } from '../../models/types/global';
+
+const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
+  pageType === MEDIA_ARTICLE_PAGE ||
+  (pageType === MEDIA_PAGE &&
+    derivedPageType?.toLowerCase() === 'on demand tv');
 
 type Props = {
   children: React.ReactNode;
@@ -142,7 +155,7 @@ const withThemeProvider = ({
     BRAND_HIGHLIGHT,
     BRAND_BORDER,
   } = brandPalette;
-  const theme: Theme = {
+  const themeConfig: Theme = {
     fontSizes: {
       atlas: getAtlasSize(script),
       elephant: getElephantSize(script),
@@ -214,14 +227,18 @@ const withThemeProvider = ({
       GHOST,
       GREY_10,
       GREY_11,
+      GREY_1,
       GREY_2,
       GREY_3,
+      GREY_4,
       GREY_5,
       GREY_6,
       GREY_7,
       GREY_8,
       KINGFISHER,
       LE_TEAL,
+      LIVE_LIGHT,
+      LIVE_DARK,
       LUNAR,
       LUNAR_LIGHT,
       METAL,
@@ -260,10 +277,18 @@ const withThemeProvider = ({
       SEXTUPLE,
     },
     brandSVG,
+    gridWidths,
+    isDarkUi: false,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp } = useContext(RequestContext);
+    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
+
+    const theme = {
+      ...themeConfig,
+      isDarkUi: isDarkUiPage(pageType, derivedPageType),
+    };
+
     return (
       <EmotionThemeProvider theme={theme}>
         {children}

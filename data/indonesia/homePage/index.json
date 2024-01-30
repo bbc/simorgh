@@ -1,0 +1,103 @@
+{
+  "data": {
+    "title": "Berita - BBC News Indonesia",
+    "description": "Berbagai laporan mendalam yang membahas teknologi dan ilmu pengetahuan dalam tahap riset, penerapan, maupun konsep.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "WHO kembali temukan obat batuk sirup beracun buatan India",
+            "firstPublished": "2023-04-26T08:31:30.519Z",
+            "link": "https://www.bbc.com/indonesia/articles/c510wq291ywo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c6ed/live/0b7cb6a0-e407-11ed-9232-39fabe427fdc.jpg",
+            "description": "Organisasi Kesehatan Dunia (WHO) mengatakan bahwa sejumlah sirup obat batuk yang diproduksi di India yang terkontaminasi telah ditemukan di Kepulauan Marshall dan Mikronesia. Obat tersebut mengandung senyawa yang beracun dan 'bisa berakibat fatal' jika dikonsumsi manusia.",
+            "imageAlt": "Guaifenesin digunakan sebagai obat untuk meredakan dada yang tersumbat dan gejala batuk",
+            "id": "c510wq291ywo"
+          },
+          {
+            "type": "article",
+            "title": "PPP dan PDIP pilih Ganjar Pranowo sebagai capres ",
+            "firstPublished": "2023-04-21T06:59:39.827Z",
+            "link": "https://www.bbc.com/indonesia/articles/ckrk2ynv9npo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b81/live/53f2ce40-e08f-11ed-a76d-f53e6a30358f.jpg",
+            "description": "Ketua Umum DPP PDIP, Megawati Soekarnoputri, resmi mengumumkan Ganjar Pranowo sebagai calon presiden pilihan Partai Demokrasi Indonesia Perjuangan (PDIP) menjelang Pemilu 2024.",
+            "imageAlt": "Ketua Umum PDI Perjuangan Megawati Soekarnoputri (tengah) menyematkan peci kepada calon Presiden 2024 yang diajukan PDI Perjuangan Ganjar Pranowo (kanan) di Istana Batu Tulis, Bogor, Jawa Barat, Jumat (21/04). ",
+            "id": "ckrk2ynv9npo"
+          },
+          {
+            "type": "article",
+            "title": "Petani sebut 'panas luar biasa', apakah Indonesia terkena gelombang panas?",
+            "firstPublished": "2023-04-26T01:18:38.091Z",
+            "link": "https://www.bbc.com/indonesia/articles/cnk0xyz0495o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9dc9/live/21d2a8b0-e3d0-11ed-b5e3-a77137eaf5ea.jpg",
+            "description": "Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) mengatakan bahwa gelombang panas Asia yang tengah melanda Asia Selatan tidak terjadi pada Indonesia. Namun, para petani dan warganet mulai khawatir cuaca di Indonesia akan semakin panas mendekati musim kemarau. ",
+            "imageAlt": "Petani di Banda Aceh terdampak kekeringan.",
+            "id": "cnk0xyz0495o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:cc23f79c-5394-4402-9339-e33176d13e78",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Rusia pimpin Dewan Keamanan PBB, Ukraina: ‘Lelucon April Mop terburuk’",
+            "firstPublished": "2023-04-01T23:54:37.000Z",
+            "link": "https://www.bbc.com/indonesia/dunia-65152584",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C2FA/production/_129241994_3c97db3984891d5791181fba703f3d2473bf143b0_0_5184_35791000x690.jpg",
+            "description": "Menteri Luar Negeri Ukraina, Dmytro Kuleba, menyebut kepemimpinan Rusia dalam DK PBB merupakan \"lelucon terburuk yang pernah ada untuk Hari April Mop\".",
+            "imageAlt": "Tank Rusia bergerak di Kota Mariupol, Ukraina, pada Maret 2022.",
+            "id": "a856ef6a-49c3-4c45-ab84-b050c34a3ca6"
+          },
+          {
+            "type": "article",
+            "title": "Menyandingkan penolakan Israel di Piala Dunia U-20 dengan sikap Sukarno di Asian Games 1962, relevankah? ",
+            "firstPublished": "2023-04-01T02:39:32.722Z",
+            "link": "https://www.bbc.com/indonesia/articles/c25vev1re52o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7303/live/4b53ddf0-cfd3-11ed-b15c-a1f77745679f.jpg",
+            "description": "",
+            "imageAlt": "Anggota komunitas CentennialZ memegang poster saat melakukan \"Aksi Duka 1 Juta Pita Hitam\" di kawasan Senayan, Jakarta, Jumat (31/03)",
+            "id": "c25vev1re52o"
+          },
+          {
+            "type": "article",
+            "title": "'Saya kasihan pada putri saya' - Warga Thailand keluhkan kabut polusi kuning yang semakin tebal",
+            "firstPublished": "2023-04-02T04:43:44.755Z",
+            "link": "https://www.bbc.com/indonesia/articles/crgjl25711go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da12/live/a97667e0-cfab-11ed-ba41-8f6fba0dffcb.jpg",
+            "description": "Thommamoon Khowasat telah berusaha menjelaskan pada putrinya yang berumur empat tahun bahwa awan kuning di luar jendela mereka – yang telah menangkap imajinasinya – sebenarnya berbahaya bagi kesehatannya.",
+            "imageAlt": "Thommamoon Khowasat khawatir akan kualitas udara buruk yang semakin parah di Chiang Rai",
+            "id": "crgjl25711go"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:02c6143c-e86a-47f4-bb44-953623d15f7a",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Majalah",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:ck2nelljke2t",
+        "contentType": "index-home",
+        "pageIdentifier": "indonesia.page",
+        "pageTitle": "Berita - BBC News Indonesia"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

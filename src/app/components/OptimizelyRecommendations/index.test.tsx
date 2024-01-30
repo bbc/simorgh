@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -13,6 +12,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
 import OptimizelyRecommendations, { ArticlePageType } from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 // 005_brasil_recommendations_experiment
 const optimizely = {
@@ -34,7 +34,7 @@ jest.mock('@optimizely/react-sdk', () => {
 });
 
 // 005_brasil_recommendations_experiment
-jest.mock('#containers/ATIAnalytics/beacon', () => {
+jest.mock('../ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
     default: jest.fn(),
@@ -69,6 +69,7 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
+        isApp={false}
         pageType={STORY_PAGE}
         pathname="/service/085965"
         service={service}
@@ -77,13 +78,9 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
         <ToggleContext.Provider
           value={{ toggleState, toggleDispatch: jest.fn() }}
         >
-          {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            <OptimizelyProvider optimizely={optimizely} isServerSide>
-              <OptimizelyRecommendations pageData={pageData} />
-            </OptimizelyProvider>
-          }
+          <OptimizelyProvider optimizely={optimizely} isServerSide>
+            <OptimizelyRecommendations pageData={pageData} />
+          </OptimizelyProvider>
         </ToggleContext.Provider>
       </RequestContextProvider>
     </ServiceContextProvider>,
@@ -97,6 +94,12 @@ describe('OptimizelyRecommendations', () => {
     });
 
     it('should render the default recommendation if no experiment is set', () => {
+      suppressPropWarnings([
+        'pageData.metadata.locators.optimoUrn',
+        'OptimizelyRecommendation',
+        'undefined',
+      ]);
+
       (OptimizelyExperiment as jest.Mock).mockImplementation(makeMockFn(null));
 
       const { getByText } = renderContainer(

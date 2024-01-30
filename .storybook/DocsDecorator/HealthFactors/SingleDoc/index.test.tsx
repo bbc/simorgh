@@ -3,17 +3,19 @@ import { render, screen, act } from '@testing-library/react';
 import SingleDoc from '.';
 import ThemeProvider from '../../../../src/app/components/ThemeProvider';
 
+interface SingleDocFixtureProps {
+  label: string;
+  status?: boolean;
+  url: string;
+  urlLabel: string;
+}
+
 const SingleDocFixture = ({
   label,
   status,
   url,
   urlLabel,
-}: {
-  label: string;
-  status?: boolean;
-  url: string;
-  urlLabel: string;
-}) => (
+}: SingleDocFixtureProps) => (
   <ThemeProvider service="news" variant="default">
     <SingleDoc label={label} status={status} url={url} urlLabel={urlLabel} />
   </ThemeProvider>

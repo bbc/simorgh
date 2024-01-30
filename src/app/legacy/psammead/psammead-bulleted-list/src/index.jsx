@@ -14,6 +14,7 @@ const BulletedList = styled.ul`
 
   & > li {
     position: relative;
+    color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
   }
 
   & > li::before {
@@ -21,8 +22,11 @@ const BulletedList = styled.ul`
     content: ' ';
     position: absolute;
     border-width: 1rem;
-    border: 0.1875rem solid ${({ bulletPointColour }) => bulletPointColour};
-    background-color: ${({ bulletPointColour }) => bulletPointColour};
+    border: 0.1875rem solid
+      ${({ bulletPointColour, theme }) =>
+        theme.isDarkUi ? theme.palette.GREY_4 : bulletPointColour};
+    background-color: ${({ bulletPointColour, theme }) =>
+      theme.isDarkUi ? theme.palette.GREY_4 : bulletPointColour};
     border-radius: ${({ bulletPointShape }) =>
       bulletPointShape === 'round' ? '50%' : '0'};
     ${({ dir }) => (dir === 'rtl' ? 'right: -1rem;' : 'left: -1rem;')}

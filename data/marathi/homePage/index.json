@@ -1,0 +1,616 @@
+{
+  "data": {
+    "title": "बातम्या - BBC News मराठी",
+    "description": "महाराष्ट्र, देश आणि जगभरातल्या ताज्या बातम्या, लेख आणि व्हीडिओ. Get the latest BBC News stories from India and the world in Marathi.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "'कोण संजय राऊत' ते 'अजित पवार गोड माणूस'... पवार-राऊत वादाचा अर्थ काय?",
+            "firstPublished": "2023-04-21T12:05:47.129Z",
+            "link": "https://www.bbc.com/marathi/articles/crgxwdldgzwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff1b/live/88110e10-e0cd-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "महाविकास आघाडीतील दोन प्रमुख नेते – अजित पवार आणि संजय राऊत हे गेल्या काही दिवसांपासून आमनेसामने उभे ठाकले आहेत.",
+            "imageAlt": "अजित पवार",
+            "id": "crgxwdldgzwo"
+          },
+          {
+            "type": "article",
+            "title": "गोध्रा रेल्वे हिंसाचार प्रकरणातील आठ दोषींना जामीन मंजूर",
+            "firstPublished": "2019-12-11T08:56:11.000Z",
+            "link": "https://www.bbc.com/marathi/india-50739241",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F80A/production/_110089436_85a42487-7ccb-4437-aa15-d26707a06966.jpg",
+            "description": "या प्रकरणातील इतर 4 दोषींची संबंधित गुन्ह्यातील भूमिका पाहून त्यांना जामीन नाकारण्यात आल्याचं कोर्टाने सांगितलं.",
+            "imageAlt": "नानावटी अहवाल",
+            "id": "85e39c68-5bd3-1148-9440-a2b5464750f6"
+          },
+          {
+            "type": "article",
+            "title": "'माझा जन्म बलात्कारातून झाला; पण ती ओळख मला नकोय'",
+            "firstPublished": "2023-04-21T10:23:24.713Z",
+            "link": "https://www.bbc.com/marathi/articles/cjr1xl9wpjvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/02b6/live/bc1aa8c0-e02c-11ed-97eb-f9fe665d2627.jpg",
+            "description": "बलात्कारातून जन्माला येणाऱ्या मुलांना इंग्लंड आणि वेल्समध्ये आता गुन्हातले पीडित (victims of crime)अशी ओळख मिळणार, असं तिथल्या सरकारने जाहीर केलं आहे. ",
+            "imageAlt": "तसनिम",
+            "id": "cjr1xl9wpjvo"
+          },
+          {
+            "type": "article",
+            "title": "मराठा आरक्षणाच्या मागणीचा 40 वर्षांचा प्रवास, काय काय घडलं होतं आतापर्यंत?",
+            "firstPublished": "2020-07-14T14:43:45.000Z",
+            "link": "https://www.bbc.com/marathi/india-53408193",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/494B/production/_129436781_gettyimages-1152519784.jpg",
+            "description": "मराठा आरक्षण सुप्रीम कोर्टाने फेटाळलं आहे. इंद्रा साहनी प्रकरणात सुप्रीम कोर्टाने जी 50 टक्के आरक्षण मर्यादा आखली होती ती ओलंडण्यास नकार दिला आहे.",
+            "imageAlt": "मराठा आरक्षणाच्या मागणीचा 40 वर्षांचा प्रवास, काय काय घडलं होतं आतापर्यंत?",
+            "id": "77ef59b4-edc2-4062-af82-5b4c85580176"
+          },
+          {
+            "type": "article",
+            "title": "मटण विक्रेता ते युट्यूबर बनलेल्या 'राजा'ला  'बिझनेस मॉडेल' असं सापडलं..",
+            "firstPublished": "2023-04-21T09:21:35.238Z",
+            "link": "https://www.bbc.com/marathi/articles/czvkl8lxvywo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1349/live/6bbf9160-e022-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "पहिल्या सहा महिन्यात राजाला युट्यूबमधून केवळ 8 हजार रुपयांचं उत्पन्न मिळालं. पण त्या एका व्हीडिओने त्याचं बिझनेस मॉडेल सापडलं..",
+            "imageAlt": "बुहारी जंक्शन",
+            "id": "czvkl8lxvywo"
+          },
+          {
+            "type": "article",
+            "title": "सोन्याच्या खाणी असलेल्या सुदानसाठी हे सोनंच शाप बनलंय, कारण...",
+            "firstPublished": "2023-04-21T05:45:45.111Z",
+            "link": "https://www.bbc.com/marathi/articles/cev4lxln094o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cc14/live/cec6d2b0-dfb3-11ed-8527-1de9829b7a0e.jpg",
+            "description": "",
+            "imageAlt": "सुदान, सोनं, अर्थकारण",
+            "id": "cev4lxln094o"
+          },
+          {
+            "type": "article",
+            "title": "बीबीसी मराठी : या आठवड्यातील महत्त्वाच्या बातम्या आणि लेख..",
+            "firstPublished": "2023-04-21T12:53:33.205Z",
+            "link": "https://www.bbc.com/marathi/articles/cd1kdv8lzg4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e77d/live/0695f3a0-e041-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "राजकारण, मनोरंजन, प्रेरणादायी, ट्रेंडिंग आणि ज्ञानवर्धक असे पाच लेख जे तुम्ही नक्की वाचले पाहिजेत.. ",
+            "imageAlt": "ऐश्वर्या राय बच्चन आणि आराध्या बच्चन",
+            "id": "cd1kdv8lzg4o"
+          },
+          {
+            "type": "article",
+            "title": "'शेतीपेक्षा नोकरी मोठी नाही' असं म्हणत फेसबुकवरून शेती शिकवणारी सविता ताई",
+            "firstPublished": "2023-04-21T07:19:44.234Z",
+            "link": "https://www.bbc.com/marathi/articles/c4npqp7d50vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0310/live/6b077c10-e00e-11ed-846f-77d452f521b4.jpg",
+            "description": "“शेतकरी राजा आहे. कोरोनाने दाखवून दिलं की नोकरी कधीही जाऊ शकते. पण शेतात आपण कधीही पिकवून पोट भरू शकतो. दुसऱ्यांना खाऊ घालू शकतो.”",
+            "imageAlt": "शेतकरी सविता डकले",
+            "id": "c4npqp7d50vo"
+          },
+          {
+            "type": "link",
+            "title": "बाळाच्या जन्मापूर्वीच त्यात आवडीनुसार गुण आणणं शक्य आहे का? ऐका ही गोष्ट दुनियेची",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/marathi/podcasts/p0b1s4nm",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a581/live/2b46d450-e049-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "BBC Marathi podcast",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fmarathi%2Fpodcasts%2Fp0b1s4nm"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:9e770afa-9fff-4e31-b078-08d270c75723",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT4M29S",
+            "title": "चाकोरी मोडून हवेत उडणाऱ्या 'या' मुलींना भेटलात?",
+            "firstPublished": "2023-04-19T15:36:04.963Z",
+            "link": "https://www.bbc.com/marathi/articles/cd121xww570o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5440/live/4a02f430-e04b-11ed-8df1-d74cbf1089d7.jpg",
+            "description": " बीर बिलिंगला अ‍ॅक्युरसी पॅराग्लायडिंग चॅम्पियनशिप पार पडली.",
+            "imageAlt": "BBC Marathi",
+            "id": "cd121xww570o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M58S",
+            "title": "रमझानदरम्यान या बायका आपली पाळी का लपवतात?",
+            "firstPublished": "2023-04-17T15:55:13.670Z",
+            "link": "https://www.bbc.com/marathi/articles/c6plpd484l5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3fb8/live/22e05e30-dd38-11ed-bebb-19e897771a2d.jpg",
+            "description": " रमझानच्या महिन्यात महिलांना पाळी आली तर त्यांना जेवणाची सूट असते\n",
+            "imageAlt": "महिला ",
+            "id": "c6plpd484l5o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M32S",
+            "title": "सानपाड्याच्या उड्डाणपुलाखाली असं उभारलं क्रीडा संकुल",
+            "firstPublished": "2023-04-17T05:58:36.810Z",
+            "link": "https://www.bbc.com/marathi/articles/cleqe4dpn91o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e0a0/live/7d474b10-dce1-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "\nनवी मुंबईतील सानपाडा येथील उड्डाणपुलाखाली महानगरपालिकेतर्फे क्रीडा संकुल सुरू बनवण्यात आलं आहे.",
+            "imageAlt": "सानपाडा ",
+            "id": "cleqe4dpn91o"
+          },
+          {
+            "type": "video",
+            "duration": "PT5M14S",
+            "title": "डान्स करुन हे आजी-आजोबा पार्किन्सन कसे विसरले?",
+            "firstPublished": "2023-04-12T16:24:46.676Z",
+            "link": "https://www.bbc.com/marathi/articles/c2j7y5zr1z3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3109/live/6589f590-d94e-11ed-8f78-bbb0e517b829.png",
+            "description": "पार्किन्सन हा आजार मेंदूमधल्या बदलांमुळे होतो.",
+            "imageAlt": "parkinson",
+            "id": "c2j7y5zr1z3o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M24S",
+            "title": "पतीच्या मृतदेहासाठी ती 84 दिवस लढली आणि...",
+            "firstPublished": "2023-04-21T11:19:02.366Z",
+            "link": "https://www.bbc.com/marathi/articles/ce96dejv6mvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f65/live/08bac3e0-e04b-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "पतीचा मृत्यू झाल्यानंतर त्याच्या मृतदेहासाठी त्यांना इतकं का झगडावं लागलं?",
+            "imageAlt": "BBC Marathi",
+            "id": "ce96dejv6mvo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M56S",
+            "title": "अंधश्रद्धेपोटी या पती–पत्नीने होम करून स्वतःला असं संपवलं...",
+            "firstPublished": "2023-04-21T09:13:27.847Z",
+            "link": "https://www.bbc.com/marathi/articles/c97653er2elo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6637/live/dda78b20-e04a-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "अतिशय धार्मिक वृत्तीच्या जोडप्याने मुक्ती मिळवण्याच्या उद्देशाने कमळ पूजा केली. बळी म्हणून त्यांनी स्वत:लाच अर्पण केलं. ",
+            "imageAlt": "BBC Marathi",
+            "id": "c97653er2elo"
+          },
+          {
+            "type": "video",
+            "duration": "PT8M",
+            "title": "मासिक पाळी : शारीरिक वाढ योग्य, पण वयात येऊनही पाळी सुरू न होण्यामागची कारणं काय?",
+            "firstPublished": "2023-04-17T06:00:58.606Z",
+            "link": "https://www.bbc.com/marathi/articles/cp4142vwy4xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b1de/live/cc24b230-dce2-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "period",
+            "id": "cp4142vwy4xo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M29S",
+            "title": "पुण्यात हापूस आंबाही आता EMIवर मिळतोय, पाहा कसा...",
+            "firstPublished": "2023-04-14T10:26:44.005Z",
+            "link": "https://www.bbc.com/marathi/articles/cxepzp6prmjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b683/live/07879080-e04a-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "पुण्यात हापूस आंबा EMI वर मिळू लागलाय. पुण्यातल्या एका आंबे व्यापाऱ्याने ही शक्कल लढवलीय.",
+            "imageAlt": "BBC Marathi",
+            "id": "cxepzp6prmjo"
+          },
+          {
+            "type": "video",
+            "duration": "PT5M28S",
+            "title": "वेताळ टेकडी की रस्ता - पुणेकरांना नेमकं काय हवंय?",
+            "firstPublished": "2023-04-13T15:34:32.098Z",
+            "link": "https://www.bbc.com/marathi/articles/c19wx74vxkgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5dc8/live/7baf2080-da10-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "प्रस्तावित बालभारती ते पौड फाटा रस्ता वादाचं कारण ठरले आहेत.",
+            "imageAlt": "वेताळ टेकडी",
+            "id": "c19wx74vxkgo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/marathi/topics/cl29j0epz13t",
+        "curationId": "urn:bbc:tipo:list:895e4320-6bd5-4bba-8c1f-cb5f041501c4",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "व्हीडिओ",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "मराठा आरक्षणाच्या मागणीचा 40 वर्षांचा प्रवास, काय काय घडलं होतं आतापर्यंत?",
+            "firstPublished": "2020-07-14T14:43:45.000Z",
+            "link": "https://www.bbc.com/marathi/india-53408193",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/494B/production/_129436781_gettyimages-1152519784.jpg",
+            "description": "मराठा आरक्षण सुप्रीम कोर्टाने फेटाळलं आहे. इंद्रा साहनी प्रकरणात सुप्रीम कोर्टाने जी 50 टक्के आरक्षण मर्यादा आखली होती ती ओलंडण्यास नकार दिला आहे.",
+            "imageAlt": "मराठा आरक्षणाच्या मागणीचा 40 वर्षांचा प्रवास, काय काय घडलं होतं आतापर्यंत?",
+            "id": "77ef59b4-edc2-4062-af82-5b4c85580176"
+          },
+          {
+            "type": "article",
+            "title": "बीबीसी मराठी : या आठवड्यातील महत्त्वाच्या बातम्या आणि लेख..",
+            "firstPublished": "2023-04-21T12:53:33.205Z",
+            "link": "https://www.bbc.com/marathi/articles/cd1kdv8lzg4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e77d/live/0695f3a0-e041-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "राजकारण, मनोरंजन, प्रेरणादायी, ट्रेंडिंग आणि ज्ञानवर्धक असे पाच लेख जे तुम्ही नक्की वाचले पाहिजेत.. ",
+            "imageAlt": "ऐश्वर्या राय बच्चन आणि आराध्या बच्चन",
+            "id": "cd1kdv8lzg4o"
+          },
+          {
+            "type": "article",
+            "title": "शिवाजी महाराजांचे हिंदुत्व आणि आताचे हिंदुत्व वेगळे आहे, असं शाहू महाराज छत्रपती यांनी का म्हटलं? ",
+            "firstPublished": "2023-04-20T06:19:33.007Z",
+            "link": "https://www.bbc.com/marathi/articles/c04v75d4y8jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dd8a/live/e3d7b1b0-df68-11ed-b18c-c7bc9fbbf441.jpg",
+            "description": "“हमे समझाने का मौका भी नहीं मिला. कोई साथ नही दे रहा था. मेरे चाचा का गोडाऊन भी जलाया. गाव मे सब बोल रहे थे की हमे निकालनेवाले है.”",
+            "imageAlt": "शाहू महाराज छत्रपती ",
+            "id": "c04v75d4y8jo"
+          },
+          {
+            "type": "article",
+            "title": "'महाराष्ट्र भूषण' कार्यक्रमातील दुर्घटनेच्या चौकशीसाठी एक सदस्यीय समिती",
+            "firstPublished": "2023-04-21T03:33:03.656Z",
+            "link": "https://www.bbc.com/marathi/articles/cd1gy3y9ed3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5213/live/ddfad9b0-dfe6-11ed-8ca4-a1ea302e69ef.jpg",
+            "description": "नवी मुंबईतील खारघरमध्ये पार पडलेल्या महाराष्ट्र भूषण पुरस्कार सोहळ्यात चेंगराचेंगरी आणि उष्माघातामुळे 14 श्रीसेवकांचा मृत्यू झाला.",
+            "imageAlt": "अप्पासाहेब धर्माधिकारी",
+            "id": "cd1gy3y9ed3o"
+          },
+          {
+            "type": "article",
+            "title": "गौतम अदानी-शरद पवार यांची भेट, अदानींबद्दल शरद पवार यांनी काय लिहून ठेवलंय?",
+            "firstPublished": "2023-04-08T07:35:09.250Z",
+            "link": "https://www.bbc.com/marathi/articles/cndr86d4z3lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2a45/live/74aba960-d5d9-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "हिंडनबर्ग अहवाल प्रकरणात गौतम अदानी यांना लक्ष्य करण्यात आलं. विरोधी पक्षांनीही हा मुद्दा समजून न घेता त्यावरून राजकारण करण्यावर भर दिला, असं स्पष्ट वक्तव्य राष्ट्रवादी काँग्रेस अध्यक्ष शरद पवार यांनी केलं आहे.",
+            "imageAlt": "शऱद पवार, गौतम अदानी",
+            "id": "cndr86d4z3lo"
+          },
+          {
+            "type": "article",
+            "title": "शेतकऱ्याचा अपघाती मृत्यू झाल्यास 2 लाख रुपये मदत मिळवण्यासाठी 'या' गोष्टी करा",
+            "firstPublished": "2023-04-20T07:50:54.485Z",
+            "link": "https://www.bbc.com/marathi/articles/c98nq87pn1go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/61ca/live/cfb58270-df45-11ed-9edd-65d06cd4e0d6.jpg",
+            "description": "या योजनेत विमा कंपनीकडून दावे वेळेत निकाली न काढणं, अनावश्यक त्रुटी काढून विमा नाकारणं या बाबी समोर आल्या होत्या. पण आता या योजनेत सुधारणा करण्यात आल्या आहेत. ",
+            "imageAlt": "प्रातिनिधिक फोटो",
+            "id": "c98nq87pn1go"
+          },
+          {
+            "type": "link",
+            "title": "तीन गोष्टी पॉडकास्ट: एन्काउंटर का होतात? कायदा यावर काय सांगतो?",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/marathi/podcasts/p09431p4",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d557/live/3ad4cbe0-e060-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "BBC Marathi",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fmarathi%2Fpodcasts%2Fp09431p4"
+          },
+          {
+            "type": "link",
+            "title": "सोपी गोष्ट पॉडकास्ट: महाराष्ट्र भूषण कार्यक्रमासारखा उष्माघात कसा टाळावा?",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/marathi/podcasts/p09437hm",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cbd2/live/a4063aa0-e05f-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "BBC Marathi",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fmarathi%2Fpodcasts%2Fp09437hm"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/marathi/topics/c5qvpxvv7y3t",
+        "curationId": "urn:bbc:tipo:list:ed72965c-ba76-4af8-b923-303848b6cb4a",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "महाराष्ट्र",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "आराध्या बच्चनशी संबंधित व्हीडिओवरून यूट्यूबला कोर्टाने म्हटलं...",
+            "firstPublished": "2023-04-21T04:26:07.013Z",
+            "link": "https://www.bbc.com/marathi/articles/clm9ndle4peo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/71b5/live/cb6663a0-dff5-11ed-8484-ef64a8a974f5.jpg",
+            "description": "यूट्यूबर आराध्या बच्चन हिच्याशी संबंधित काही व्हीडिओ आहेत. या व्हिडिओबद्दल यूट्यूबविरोधात दाखल केलेल्या याचिकेत आराध्याने म्हटलेलं...",
+            "imageAlt": "आराध्या बच्चन, ऐश्वर्या राय बच्चन",
+            "id": "clm9ndle4peo"
+          },
+          {
+            "type": "article",
+            "title": "दहशतवाद्यांनी लष्कराचा ट्रक पेटवला, 5 भारतीय सैनिकांचा मृत्यू ",
+            "firstPublished": "2023-04-20T16:22:57.916Z",
+            "link": "https://www.bbc.com/marathi/articles/cd1gykpk0z0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1959/live/05070cf0-df96-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "लष्कर ",
+            "id": "cd1gykpk0z0o"
+          },
+          {
+            "type": "article",
+            "title": "जातनिहाय जनगणनेच्या मुद्द्यावर 2024 मध्ये विरोधी पक्ष एकत्र येतील का?",
+            "firstPublished": "2023-04-21T01:34:48.770Z",
+            "link": "https://www.bbc.com/marathi/articles/c72j34dr4nko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1300/live/b9dbe3f0-df8a-11ed-a158-1d8a463a971f.jpg",
+            "description": "भारतात जातनिहाय जनगणनेच्या मुद्द्यावर 1951 मध्ये तत्कालीन पंतप्रधान जवाहरलाल नेहरू यांच्या कार्यकाळात चर्चा झाली होती. पण त्यावेळी जातनिहाय जनगणना मात्र झाली नाही. ",
+            "imageAlt": "राहुल गांधी",
+            "id": "c72j34dr4nko"
+          },
+          {
+            "type": "article",
+            "title": "सलमान खान त्याचे चित्रपट ईदलाच का रिलीज करतो?",
+            "firstPublished": "2021-05-13T12:34:17.000Z",
+            "link": "https://www.bbc.com/marathi/india-57099674",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/158D6/production/_118487288_53b25bd5-e585-46e5-9546-1e60fa6821dc.jpg",
+            "description": "सलमानचा चित्रपट आणि ईद हे समीकरण इतकं घट्ट झालं आहे की, इतर कोणताही बिग बजेट चित्रपट यावेळी प्रदर्शित होत नाही.",
+            "imageAlt": "सलमान ख़ान",
+            "id": "db1d044b-4e3a-4dcf-939a-f0a9c65fb8b3"
+          },
+          {
+            "type": "article",
+            "title": "काविळ कशामुळे होते? काविळीचे प्रकार कोणते आणि त्याची लक्षणं कशी ओळखायची?",
+            "firstPublished": "2023-04-19T04:27:58.253Z",
+            "link": "https://www.bbc.com/marathi/articles/cv2r2743203o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0fe8/live/b840e6a0-dddf-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "काविळीची अशी वेगवेगळी कारणं असल्यामुळे त्यावरील उपचारही ती कशामुळे झाली यावर अवलंबून असतात. ",
+            "imageAlt": "काविळ",
+            "id": "cv2r2743203o"
+          },
+          {
+            "type": "article",
+            "title": "नरोडा गाव हत्याकांड प्रकरणातून माया कोडनानी आणि बाबू बजरंगी यांची निर्दोष सुटका",
+            "firstPublished": "2023-04-20T13:09:06.597Z",
+            "link": "https://www.bbc.com/marathi/articles/c6pe356j9ygo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/09fa/live/39dc6fc0-df7c-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "माया कोडनानी आणि बाबू बजरंगी ",
+            "id": "c6pe356j9ygo"
+          },
+          {
+            "type": "article",
+            "title": "समलिंगी विवाह सुनावणीशी संबंधित 5 मुलभूत प्रश्नं आणि 5 उत्तरं",
+            "firstPublished": "2023-04-20T12:01:34.107Z",
+            "link": "https://www.bbc.com/marathi/articles/cgx4qx9vnv8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/13bf/live/ed748960-df62-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "समलिंगी विवाह ही संकल्पना ‘शहरी किंवा तत्सम’ असल्याचे दर्शवणारी कोणतीही माहिती सरकारकडे नाही, असे सरन्यायाधीश धनंजय चंद्रचूड यांनी नमूद केले आहे.",
+            "imageAlt": "महिला",
+            "id": "cgx4qx9vnv8o"
+          },
+          {
+            "type": "article",
+            "title": "रमजान ईद : ईद-उल-फित्र म्हणजे काय? ईदची तारीख कशी ठरते?",
+            "firstPublished": "2023-04-20T04:21:57.000Z",
+            "link": "https://www.bbc.com/marathi/international-65332910",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F155/production/_129418716_gettyimages-1317419494.jpg",
+            "description": "मुस्लीम धर्मीयांमध्ये ईद हा सण अत्यंत पवित्र मानला जातो. रमजान ईद मुस्लीम धर्मींयांचा सर्वात मोठा सण म्हणूनही ओळखला जातो.",
+            "imageAlt": "नमाज पढणारी मुलगी",
+            "id": "90cdb2b2-8d64-49c4-a455-9b1323c2df2c"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/marathi/topics/cxnyk3y49x6t",
+        "curationId": "urn:bbc:tipo:list:2e5faf80-82ce-4980-9910-19f4d5abe5c2",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "भारत",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "दीड लाख लोकांवर भूतविद्येचा प्रयोग करणारा धर्मोपदेशक, त्याने भूतांबद्दल काय म्हटलं? ",
+            "firstPublished": "2023-04-21T08:10:57.713Z",
+            "link": "https://www.bbc.com/marathi/articles/c9rxpx3g2ndo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0ac0/live/49d21aa0-e013-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "“भूतं पळवून लावण्याच्या विनंत्या सोमवारी संध्याकाळी 6.30 ते 7.30 या वेळेतच स्वीकारल्या जातील. रोमच्या बिशपच्या अख्त्यारित नसलेल्यांनी आपल्या भागातील बिशपकडे जावं.”",
+            "imageAlt": "गॅब्रिएल अमार्थ",
+            "id": "c9rxpx3g2ndo"
+          },
+          {
+            "type": "article",
+            "title": "ट्विटर : पैसे न भरणाऱ्या अकाऊंट्सची ब्ल्यू टिक गायब",
+            "firstPublished": "2022-11-02T05:06:18.000Z",
+            "link": "https://www.bbc.com/marathi/international-63481458",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9815/production/_129433983_gettyimages-1247307955.jpg",
+            "description": "भारतासह जगभरातील अनेक नेते, अभिनेते, पत्रकार, गायक आणि सेलिब्रिटीजचे ब्ल्यू टिक काढण्यास सुरुवात झालीय.",
+            "imageAlt": "इलॉन मस्क",
+            "id": "9a604d82-ce47-42e7-ba9e-6a9ccccde072"
+          },
+          {
+            "type": "article",
+            "title": "कोरडा ब्रेड आणि पिण्यासाठी टॉयलेटमधील नळाचे पाणी; सुदानमध्ये अडकलेल्या भारतीयांचे हाल",
+            "firstPublished": "2023-04-20T15:25:52.906Z",
+            "link": "https://www.bbc.com/marathi/articles/cn3vlgpgmemo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e681/live/5658cd40-df88-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "भारतीय ",
+            "id": "cn3vlgpgmemo"
+          },
+          {
+            "type": "article",
+            "title": "100 ठार, एका भारतीयाचाही मृत्यू: सुदान का पेटलंय? 5 प्रश्न, 5 उत्तरं",
+            "firstPublished": "2023-04-20T02:02:26.524Z",
+            "link": "https://www.bbc.com/marathi/articles/cjqdez8dl4ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8200/live/7f1e9a00-decc-11ed-8df1-d74cbf1089d7.png",
+            "description": "सुदानमध्ये सध्या देशाचं लष्कर आणि निमलष्करी दल एकमेकांसमोर उभं ठाकलेत.",
+            "imageAlt": "सुदानमध्ये शनिवारपासून हिंसाचार उफाळला आहे",
+            "id": "cjqdez8dl4ko"
+          },
+          {
+            "type": "article",
+            "title": "येमेन : रमजानच्या कार्यक्रमावेळी चेंगराचेंगरी, 78 जण ठार ",
+            "firstPublished": "2023-04-20T02:32:54.723Z",
+            "link": "https://www.bbc.com/marathi/articles/ce42qe8xyl7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7fa2/live/27fb0330-df21-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "रॉयटर्सने दिलेल्या बातमीनुसार एका शाळेत प्रत्येक व्यक्तीला 700 रुपये दान म्हणून मिळणार होते. त्यावेळी अनेक लोक एकत्र आले आणि ही घटना घडली.",
+            "imageAlt": "येमन ",
+            "id": "ce42qe8xyl7o"
+          },
+          {
+            "type": "article",
+            "title": "सुदानमध्ये काय घडतंय, कशावरून निर्माण झाला वाद?",
+            "firstPublished": "2023-04-17T12:24:00.152Z",
+            "link": "https://www.bbc.com/marathi/articles/cll94eln84zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4a1/live/5d166f80-dc71-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "सुदानची राजधानी खार्तूममध्ये शनिवारी लष्कर आणि निमलष्करी दलांमध्ये झालेल्या गोळीबार आणि स्फोटानंतर परिस्थिती कठीण झाली आहे.",
+            "imageAlt": "सुदान",
+            "id": "cll94eln84zo"
+          },
+          {
+            "type": "article",
+            "title": "अल्पवयीन मुलींवर बलात्कार, गरोदरपणाच्या प्रकरणांचं वाढतं प्रमाण पण आरोपी मोकाट ",
+            "firstPublished": "2023-04-18T15:10:58.380Z",
+            "link": "https://www.bbc.com/marathi/articles/cv2v28r3yk2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/99be/live/34fbd910-dd3c-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "तरुण मुलींच्या लैंगिक शोषणात वाढ झाल्यामुळे हे प्रमाण देखील वाढलंय. पण यातले गुन्हेगार मात्र मोकाट फिरत आहेत. बीबीसी आफ्रिका आयचा रिपोर्ट. ",
+            "imageAlt": "महिला, अत्याचार, सुरक्षा",
+            "id": "cv2v28r3yk2o"
+          },
+          {
+            "type": "article",
+            "title": "आर्टिफिशियल इंटेलिजन्समुळे नोकरी जाईल अशी भीती तुम्हाला वाटते का?",
+            "firstPublished": "2023-04-19T13:59:12.567Z",
+            "link": "https://www.bbc.com/marathi/articles/cn328vnyk1go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/33b0/live/23b0b850-debe-11ed-a633-85787213893a.jpg",
+            "description": "काही कर्मचाऱ्यांच्या मनात अशी चिंता आहे की त्यांच्या नोकरीचं काय होणार. त्यांनी अशा प्रकारची चिंता व्यक्त केल्याची देखील अनेक उदाहरणं आहेत. आपली कौशल्यं ही काळानुसार प्रासंगिक राहतील की नाही, येत्या काही वर्षांत नोकरीच्या बाजारात आपल्या कौशल्यांना काही किंमत राहील की नाही याची चिंता त्यांना भेडसावत आहे.",
+            "imageAlt": "कर्मचारी ",
+            "id": "cn328vnyk1go"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/marathi/topics/c719d2enyn3t",
+        "curationId": "urn:bbc:tipo:list:907b0119-a1c7-4f03-a6c0-f35018b6e28c",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "जगभरात",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "उस्ताद झाकिर हुसैन यांचा तबला बनवणाऱ्या मराठी मुलाला राष्ट्रीय पुरस्कार ",
+            "firstPublished": "2023-04-11T12:03:39.398Z",
+            "link": "https://www.bbc.com/marathi/articles/c0k0jev0rd2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b75/live/898af6f0-d463-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "",
+            "imageAlt": "किशोर व्हटकर पुरस्कारासमवेत ",
+            "id": "c0k0jev0rd2o"
+          },
+          {
+            "type": "article",
+            "title": "मुंबईच्या सफाई कामगाराने मिळवली परदेशी विद्यापीठात Ph.D साठी स्कॉलरशिप",
+            "firstPublished": "2023-04-02T11:20:38.261Z",
+            "link": "https://www.bbc.com/marathi/articles/c51vq78ln17o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0748/live/7c815d30-d113-11ed-8cbd-114449e5a4bd.jpg",
+            "description": "कुटुंबाचा उदरनिर्वाह चालवण्यासाठी मयूरला शिक्षण सोडून सफाई कर्मचाऱ्याची नोकरी करण्याचा निर्णय घ्यावा लागला होता.",
+            "imageAlt": "मयूर हेलिया",
+            "id": "c51vq78ln17o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M59S",
+            "title": "रेशीम शेतीसाठी तुतीच्या रोपांची नर्सरी उभारली आणि केली लाखोंची कमाई ",
+            "firstPublished": "2023-03-21T15:21:14.006Z",
+            "link": "https://www.bbc.com/marathi/articles/c8v745e23ezo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e637/live/ec5d91e0-c7fa-11ed-95f8-0154daa64c44.jpg",
+            "description": "वशिष्ट वासुदेव पिसाळ यांनी बीड जिल्ह्यातल्या कांबी गावात तुतीची नर्सरी सुरू केली आहे.",
+            "imageAlt": "रेशीम शेती",
+            "id": "c8v745e23ezo"
+          },
+          {
+            "type": "article",
+            "title": "क्रिकेटमुळे बळकट होत असलेल्या दिव्यांग महिलांची कहाणी",
+            "firstPublished": "2023-03-17T01:13:30.875Z",
+            "link": "https://www.bbc.com/marathi/articles/c2j789jxy4mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8754/live/9df49690-c40b-11ed-95f8-0154daa64c44.jpg",
+            "description": "\"घरी बसा, मुलांची काळजी घ्या, घराबाहेर जाण्यात वेळ वाया घालवू नका अशा कित्येक गोष्टी कानावर पडत असतात.\"",
+            "imageAlt": "क्रिकेट",
+            "id": "c2j789jxy4mo"
+          },
+          {
+            "type": "article",
+            "title": "तृतीयपंथी सेक्सवर्कर अलिशा जेव्हा आरोग्यदूत बनते...",
+            "firstPublished": "2023-03-20T01:19:03.330Z",
+            "link": "https://www.bbc.com/marathi/articles/czk8lypr1v9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e3c5/live/8a6923e0-c66b-11ed-95f8-0154daa64c44.jpg",
+            "description": "नटून थटून रात्रीच्या अंधारात रस्त्यावर उभी राहिलेली, गाड्यांच्या आत डोकावणारी अलिशा एक सेक्स वर्कर आहे. ",
+            "imageAlt": "आलिशा",
+            "id": "czk8lypr1v9o"
+          },
+          {
+            "type": "article",
+            "title": "एका खुर्चीपासून ब्युटी पार्लरची सुरुवात, आता मात्र 4 लाखांचा सेटअप",
+            "firstPublished": "2023-02-20T04:33:16.000Z",
+            "link": "https://www.bbc.com/marathi/india-64696093",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/25CD/production/_128677690_p3.jpg",
+            "description": "प्रीती जाधव औरंगाबाद जिल्ह्यामध्ये एका छोटाश्या रांजनगाव गावात राहतात. तिथंच घरातच त्यांनी पार्लर सुरू केलं आहे.",
+            "imageAlt": "प्रीती जाधव",
+            "id": "cb839033-455b-42b0-838d-c871a548a6a9"
+          },
+          {
+            "type": "article",
+            "title": "'शेळीपालनामुळे 10-12 लाखांचं घर झालं, आज माझा संसारगाडा शेळ्यांवरच सुरू आहे'",
+            "firstPublished": "2023-02-11T13:11:54.000Z",
+            "link": "https://www.bbc.com/marathi/india-64610340",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/821E/production/_128601333_36feaf70-6ba1-4fc3-99a2-cee33da008f6.jpg",
+            "description": "\"शेळींनी मला जगण्याचा मार्ग दाखवला. शेळीपालनामुळे 10 ते 12 लाखाचं घर झालं, गाडी झाली. जो काही संसारगाडा चालू आहे, हा फक्त शेळीपालनावरच चालू आहे.\"",
+            "imageAlt": "रवी राजपूत",
+            "id": "8eec5fb2-362d-4baf-9c66-4a3d176aabcf"
+          },
+          {
+            "type": "article",
+            "title": "हुरडा विक्रीतून 'ही' 2 गावं 4 महिन्यात कोट्यवधी रुपये कशी कमावताहेत?",
+            "firstPublished": "2023-01-24T04:47:32.911Z",
+            "link": "https://www.bbc.com/marathi/articles/crgv96n6yd4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b8ad/live/d33a7cc0-9ae4-11ed-af00-ed950259f6d8.jpg",
+            "description": "“ज्वारी 3 ते 4 हजार रुपये क्विंटल जाते. हुरड्याचा दर आम्हाला 200, 120 रुपये प्रती किलो मिळतो. त्याच्यामुळे आम्ही हुरड्यातच विकून टाकतो.”",
+            "imageAlt": "शेतकरी संतोष गावंडे",
+            "id": "crgv96n6yd4o"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M36S",
+            "title": "सांगलीमध्ये रिक्षा रिव्हर्स चालवण्याची स्पर्धा पाहिलीत? ",
+            "firstPublished": "2023-01-29T05:07:48.406Z",
+            "link": "https://www.bbc.com/marathi/articles/c1dz47py99ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d43c/live/a65ce1e0-9f92-11ed-937f-9f0b0599f176.png",
+            "description": "सांगलीमध्ये हरिपूर गावात ‘ऑटो रिक्षा  रिव्हर्स ड्रायव्हिंग स्पर्धा’ पार पडली.",
+            "imageAlt": "रिक्षा ",
+            "id": "c1dz47py99ko"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a62d55b7-5673-4f27-a840-31f482c1b749",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "आशेचे किरण",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:ck2nellj5ppt",
+        "contentType": "index-home",
+        "pageIdentifier": "marathi.page",
+        "pageTitle": "बातम्या - BBC News मराठी"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

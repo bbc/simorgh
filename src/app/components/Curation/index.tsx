@@ -1,22 +1,26 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   CurationProps,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
+import idSanitiser from '../../lib/utilities/idSanitiser';
+import MostRead from '../MostRead';
+import { GHOST } from '../ThemeProvider/palette';
 
 const {
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
+  MOST_READ,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -32,10 +36,6 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-const createID = (titleText: string) => {
-  return titleText.replaceAll(' ', '-');
-};
-
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -46,45 +46,69 @@ const Curation = ({
   headingLevel = 2,
   position = 0,
   curationLength = 0,
+  mostRead,
+  nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
-  if (!promos.length) return null;
-
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
-  const id = createID(title || topStoriesTitle);
-
-  const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
+  const curationSubheading = title || topStoriesTitle;
+  const id = idSanitiser(curationSubheading);
 
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case MESSAGE_BANNER:
-      return (
+      return promos.length > 0 ? (
         <MessageBanner
           heading={title}
           description={promos[0].description}
           link={promos[0].link}
           linkText={promos[0].title}
           image={promos[0].imageUrl}
+          eventTrackingData={{
+            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+            detailedPlacement: `${position + 1}`,
+          }}
+        />
+      ) : null;
+    case MOST_READ:
+      return (
+        <MostRead
+          data={mostRead}
+          columnLayout="twoColumn"
+          headingBackgroundColour={GHOST}
         />
       );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 && (title || isFirstCuration) ? (
+      return curationLength > 1 &&
+        promos.length > 0 &&
+        (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
-          <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
-            {title || topStoriesTitle}
-          </SubheadingComponent>
+          {isFirstCuration ? (
+            <VisuallyHiddenText id={id} as="h2">
+              {curationSubheading}
+            </VisuallyHiddenText>
+          ) : (
+            <Subheading id={id} link={link}>
+              {curationSubheading}
+            </Subheading>
+          )}
           <GridComponent
             promos={promos}
             headingLevel={isFirstCuration ? 3 : headingLevel}
+            isFirstCuration={isFirstCuration}
           />
         </section>
       ) : (
-        <GridComponent promos={promos} headingLevel={headingLevel} />
+        <GridComponent
+          promos={promos}
+          headingLevel={headingLevel}
+          isFirstCuration={isFirstCuration}
+        />
       );
   }
 };

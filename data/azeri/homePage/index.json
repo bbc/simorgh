@@ -1,0 +1,315 @@
+{
+  "data": {
+    "title": "BBC News Azərbaycanca",
+    "description": "BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News Azerbaijan for the latest from Azerbaijan, Armenia, Georgia.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "“İran nüvə silahı əldə edərsə, ən böyük təhlükə Azərbaycana qarşı olacaq”, - Sülhəddin Əkbər",
+            "firstPublished": "2023-04-13T05:32:22.000Z",
+            "link": "https://www.bbc.com/azeri/azerbaijan-65260036",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6AEE/production/_129347372_sullll.jpg",
+            "description": "İsraillə əməkdaşlığa böyük önəm verən Azərbaycanın İranla münasibətlərində leksikonun getdikcə sərtləşdiyi görünür. İrana qarşı ittihamlar sadəcə, təzyiqdirmi yoxsa, daha ciddi planlar üçün ictimai fikrin hazırlanmasıdır? Siyasi təhlilçi Sülhəddin Əkbər şərh edir.",
+            "imageAlt": "Azərbaycan, İran, gərginlik, siyasət",
+            "id": "a46135b4-4758-457d-b26d-141ddb39ec8f"
+          },
+          {
+            "type": "article",
+            "title": "Azərbaycan-Ermənistan sərhədində atışma: tərəflər bir-birini \"sülh prosesini pozmaqda\" ittiham edirlər",
+            "firstPublished": "2023-04-11T14:00:46.000Z",
+            "link": "https://www.bbc.com/azeri/region-65243498",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15D13/production/_129336398_gettyimages-154788448.jpg",
+            "description": "Azərbaycan-Ermənistan sərhədində çərşənbə axşamı baş verən atışmada ümumilikdə 7 hərbçi həlak olub. Tərəflər bir-birini \"təxribatda\" və \"sülh prosesini pozmaqda\" günahlandırırlar.",
+            "imageAlt": "Azərbaycan, Ermənistan, Qarabağ, münaqişə, müharibə, sərhəd, Azərbaycan Müdafiə Nazirliyi",
+            "id": "ea52dbb7-2a8e-45d6-a8a7-d9727ea2d8be"
+          },
+          {
+            "type": "article",
+            "title": "İran hicabsız qadınları aşkarlamaq üçün “ağıllı\" kameralar yerləşdirir",
+            "firstPublished": "2023-04-11T06:00:08.000Z",
+            "link": "https://www.bbc.com/azeri/international-65237252",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/FBC4/production/_129325446_86cabc4a9a53de7a6430f7c1ec59f5ee3eb752d40_0_3507_23011000x656.jpg",
+            "description": "İran hökuməti hicab geyinməkdən yayınan qadınları müəyyən etmək üçün \"ağıllı\" kameralardan istifadə edir. Hökumət bu üsulla hicab geyinmək istəməyən qadınları aşkarlayıb, onlara xəbərdarlıq mesajı göndərəcək.",
+            "imageAlt": "Иранские женщины, Тегеран, сентябрь 2022 г.",
+            "id": "a8549357-0e0f-4efb-bb5d-9124b917c818"
+          },
+          {
+            "type": "article",
+            "title": "Ukrayna müharibəsi: ABŞ-ın sızdırılan gizli sənədlərinə görə, Rusiyanın muzdlu əsgər qrupu \"Wagner\" Türkiyədən \"silah almaq istəyib\"; sənədləri kim və niyə sızdırıb?",
+            "firstPublished": "2023-04-10T16:42:57.346Z",
+            "link": "https://www.bbc.com/azeri/articles/cd1rjd93dg9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3bac/live/9f5482a0-d7bd-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "Ukraynadakı müharibə ilə bağlı internetdə sızdırılan ABŞ Müdafiə Nazirliyinə məxsus onlarla gizli sənəd arasında Rusiyanın muzdlu əsgər qrupu \"Vaqner\"in Türkiyədən silah və təchizat almağa cəhd etdiyinə dair iddialar da var.",
+            "imageAlt": "Rusiya, Ukrayna, müharibə, münaqişə",
+            "id": "cd1rjd93dg9o"
+          },
+          {
+            "type": "article",
+            "title": "Müqəddəs Qarabağ. Keçmişin müqədəsləşdirilməsi Azərbaycanla Ermənistan arasında sülh prosesinə necə mane olur",
+            "firstPublished": "2023-04-10T05:51:28.881Z",
+            "link": "https://www.bbc.com/azeri/articles/c0k0jngl8rlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f531/live/f5ea7c40-d764-11ed-a519-2fbe7c84229a.png",
+            "description": "Birinci və ikinci Qarabağ müharibələri arxada qalıb. Ancaq otuz ildən bir qədər artıq müddətdə, tək hakimiyyətlərin deyil, həm də şair, yazısı və musiqiçilərin səyləri nəticəsində xalqlar arasında elə bir uçurum əmələ gəlib ki, onun hər iki tərəfində bunsuz daha öz ömürlərini belə təsəvvür etmirlər.",
+            "imageAlt": "Müqəddəsləşdirilən Qarabağ",
+            "id": "c0k0jngl8rlo"
+          },
+          {
+            "type": "article",
+            "title": "İraq ABŞ işğalından 20 il sonra: əksəriyyət Səddam Hüseynin dövründə daha yaxşı yaşadığını düşünür",
+            "firstPublished": "2023-04-09T07:38:16.294Z",
+            "link": "https://www.bbc.com/azeri/articles/crg5p9gxqljo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dcbb/live/b6cad650-d669-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "İraqda keçirilmiş sorğuya görə, əhalinin əksəriyyəti 2003-cü ildə ABŞ-ın işğalından sonra ölkədə həyat şəraitinin pisləşdiyini düşünür. Sorğu İraqın keçmiş prezidenti Səddam Hüseynin devrilməsinin 20-ci ildönümü ilə bağlı keçirilib.",
+            "imageAlt": "İraq, 2003",
+            "id": "crg5p9gxqljo"
+          },
+          {
+            "type": "article",
+            "title": "Türkiyə: Zəlzələ zonasında 300-dən çox binadan götürülmüş beton nümunələri davamlılıq testindən keçməyib ",
+            "firstPublished": "2023-04-09T15:30:02.904Z",
+            "link": "https://www.bbc.com/azeri/articles/cedyppjlqplo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b4bd/live/fbef8ad0-d6e8-11ed-a7c9-5303a236525c.png",
+            "description": "Türkiyədə Trabzon Karadeniz Texniki Universitetinin (KTU) İnşaat Mühəndisliyi fakültəsinin alimləri tərəfindən bu ilin 6 fevral zəlzələsi nəticəsində dağılmış 300-dən çox binadan götürülmüş nümunələr zəlzələyə davamlılıq testindən keçməyib.",
+            "imageAlt": "Türkiyə, 6 fevral zəlzələsinin dağıntıları",
+            "id": "cedyppjlqplo"
+          },
+          {
+            "type": "article",
+            "title": "İraqın işğalı dünyanın ən zəngin mədəniyyətlərdən birini necə məhv etdi?",
+            "firstPublished": "2023-04-08T15:52:05.063Z",
+            "link": "https://www.bbc.com/azeri/articles/c80rwl4xlzko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36fe/live/2021ae30-d5f7-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "İraqdakı nisbi sabitliyə baxmayaraq, ölkənin adı hələ də qətllər, partlayışlar, sünni və şiə silahlıları arasındakı qarşıdurma ilə əlaqələndirilir. Bunlardan bəzilərinin kökləri 2000-ci illərin əvvəllərindəki ABŞ-ın hərbi müdaxiləsi ilə bağlıdır.",
+            "imageAlt": "Divarda şir təsviri ",
+            "id": "c80rwl4xlzko"
+          },
+          {
+            "type": "article",
+            "title": "Vətənpərvərlik mahnıları, təhdidlər və kamera qarşısında üzr istəmə. Müharibə ilə razı olmayan rusiyalıların alçaldılması necə baş verir?",
+            "firstPublished": "2023-04-08T08:32:57.468Z",
+            "link": "https://www.bbc.com/azeri/articles/cerzkv919zvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/51ed/live/663df670-d5e4-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "\nMoskvadakı barda polis tərəfindən “Lyube” qrupunun mahnısını oxumağa məcbur edilən insanların videosu sosial şəbəkələrdə yayılandan sonra qızğın müzakirələrə səbəb olub. Ukrayna müharibəsi başlandıqdan sonra Rusiya güc xidmətlərinin bu kimi “qorxutma” hərəkətlərinin bir neçə halı qeydə alınıb. \n",
+            "imageAlt": "Polis və mahnı oxumağa məcbur edilənlər ",
+            "id": "cerzkv919zvo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:7e0fe940-b454-43cd-940b-a320035ee393",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top stories",
+        "visualProminence": "HIGH"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Azərbaycanda 17 yaşlı yeniyetmə nə üçün Psixiatriyada saxlanılıb? ",
+            "firstPublished": "2023-04-05T18:07:07.945Z",
+            "link": "https://www.bbc.com/azeri/articles/cyjrw0grd7go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f8ca/live/b927bc70-d3d4-11ed-826b-7d79db1d67b1.jpg",
+            "description": "Bir neçə gündür ki, 1 saylı Psixiatriya Xəstəxanasında saxlanılan 17 yaşlı yeniyetmə bu gün xəstəxanadan buraxılıb, bu barədə Səhiyyə Nazirliyindən BBC-yə məlumat verilib.",
+            "imageAlt": "3 saylı uşaq internat evi Məhəmməd Hacıyev internatdan qaçan uşaq Ağahəsən Rəsulov Ailə, Qadın, Uşaq problemləri üzrə Dövlət Komitəsi  Elşad Hacıyev Daxili İşlər Nazirliyi Azərbaycan Bakı Xətai rayonu ",
+            "id": "cyjrw0grd7go"
+          },
+          {
+            "type": "article",
+            "title": "Erməni hərbçilər Azərbaycanda: terrorçu, girov, yoxsa alver materialıdırlar?",
+            "firstPublished": "2023-03-14T18:30:14.115Z",
+            "link": "https://www.bbc.com/azeri/articles/cn4rdgv22g6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b33/live/0c218310-c292-11ed-ad29-1d38fe2e3505.jpg",
+            "description": "İki ölkə arasında müharibənin və Dağlıq Qarabağda son toqquşmaların girovu olan onlarla erməni hərbi əsiri Bakıda dustaqlıqda qalmaqdadır. Bu hərbçiləri “terrorçu” adlandıran Azərbaycan onları Ermənistana verməyə tələsmir. Bu insanlar sülhə gətirəcəyi gözlənilən, lakin çıxmaza düşmüş danışıqlarda xırda karta çevrilib.",
+            "imageAlt": "Əsgərlər",
+            "id": "cn4rdgv22g6o"
+          },
+          {
+            "type": "article",
+            "title": "Türkiyə Finlandiyanın NATO-ya üzvlüyünü təsdiqləyib - Bu, niyə vacibdir?",
+            "firstPublished": "2023-03-31T06:27:52.570Z",
+            "link": "https://www.bbc.com/azeri/articles/c72dz858dnvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/606a/live/915a78f0-cf8c-11ed-b9a0-5749f01c568f.jpg",
+            "description": "Türkiyə parlamenti Finlandiyanın NATO-ya üzvlüyü ilə bağlı müraciətini təsdiqlədikdən sonra bu ölkə NATO-nun sayca 31-ci üzvü olacaq.",
+            "imageAlt": "Türkiyə, Nato, Finlandiya, Rusiya, ordu",
+            "id": "c72dz858dnvo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:00a85f79-e018-415e-8296-10525b110ed6",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Təhlil",
+        "visualProminence": "HIGH"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Küçə süpürgəçisi: \"Ölümümüzə qol çəkib işləyirik\"",
+            "firstPublished": "2023-04-01T07:14:52.940Z",
+            "link": "https://www.bbc.com/azeri/articles/c149ngev7rqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4b6b/live/b11d35d0-cc8d-11ed-be2e-754a65c11505.jpg",
+            "description": "Ötən ilin noyabrında Bakının Sabunçu rayonunda 7 aylıq hamilə olan 36 yaşlı küçə süpürgəçisi Pərvanə Məmmədova iş başında - avto-qəzada həyatını itirib.  Bu hadisə təmizlik işçilərinin təhlükəsizliyi məsələsini aktuallaşdırdı.  ",
+            "imageAlt": "Süpürgəçilər",
+            "id": "c149ngev7rqo"
+          },
+          {
+            "type": "article",
+            "title": "Bakıda son silahlı atışmalardan narahatsınız? Sakinlər cavab verirlər",
+            "firstPublished": "2023-04-04T16:51:51.000Z",
+            "link": "https://www.bbc.com/azeri/azerbaijan-65182374",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/174FF/production/_129278459_qadnmsahib.png",
+            "description": "Son vaxtlar Bakıda baş vermiş silahlı hücumlar sakinləri narahat edirmi? Bakı sakinlərinin bu suala cavabları.",
+            "imageAlt": "Bakı sakinləri son günlər paytaxtda olan atışmalardan keçirdikləri hisslər barədə danışırlar",
+            "id": "eb2cc68f-980b-40ba-85dd-b67d7ec4a2f0"
+          },
+          {
+            "type": "article",
+            "title": "“Azərbaycanın Təl-Əvivdə səfirlik açması İran üçün çox ciddi mesaj idi”, - Keyvan Hüseyni",
+            "firstPublished": "2023-04-01T08:22:55.000Z",
+            "link": "https://www.bbc.com/azeri/azerbaijan-65147142",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1017A/production/_129241956_kayvan.jpg",
+            "description": "İran və Azərbaycan arasında pisləşən münasibətlər və söz savaşı hansı nəticələrə gətirib çıxara bilər? BBC Farscadan Yaxın Şərq üzrə siyasi təhlilçi Keyvan Hüseyni cavab verir. Həftə bu gün proqramını Aygül Mehman təqdim edir.",
+            "imageAlt": "Kayvan Hosseini Keyvan Hüseyni BBC Farsca xidmeti yaxın şərq üzrə siyasi təhlilçi siyasət siyasi təhlillər siyasi ekspert İran-Azərbaycan İran-Azərbaycan münasibətləri İran-Azerbaycan əlaqələri O taylı bu taylı Azərbaycan Güney Azərbaycan İran azərbaycanlıları",
+            "id": "217aeb8e-2ddd-47b7-8308-241ddd279de2"
+          },
+          {
+            "type": "article",
+            "title": "\"Məmurların övladları cibində dollar gəzdirəndə, mən dərman gəzdirirəm\", - müharibə iştirakçısı",
+            "firstPublished": "2023-03-29T13:26:58.000Z",
+            "link": "https://www.bbc.com/azeri/azerbaijan-65106907",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4E13/production/_129178991_qazilrinaksiyasphoto1.jpg",
+            "description": "Çərşənbə axşamı günü bir neçə İkinci Qarabağ müharibəsinin iştirakçısı Əmək və Əhalinin Sosial Müdafiəsi Nazirliyinin qarşısında etiraz aksiyası keçiriblər.",
+            "imageAlt": "Martın 28-də bir qrup qazi Əmək və Əhalinin Sosial Müdafiəsi Nazirliyinn qarşısında etiraz aksiyası keçirib",
+            "id": "300f57cf-3272-4225-a8ce-416b597fbb8a"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6d723f36-5c35-4b57-8fe9-7375b4dd2b61",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Video və audio",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": " \"Pojarnı olmayan\" reproduktiv sağlamlıq və ailə planlaşdırılması haqqında qanun Azərbaycanda niyə qəbul olunmur? ",
+            "firstPublished": "2023-03-27T14:16:06.168Z",
+            "link": "https://www.bbc.com/azeri/articles/cw0914kxwdeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e311/live/946faf00-cca9-11ed-81b1-bb32d8fa8ed0.jpg",
+            "description": "Azərbaycanda 2000-ci illərin sonlarından başlayaraq, reproduktiv sağlamlıq və ailə planlaşdırılması haqqında qanun layihəsinin qəbulu ilə bağlı müzakirələr gedir.",
+            "imageAlt": "hamilə, qadınlar, ",
+            "id": "cw0914kxwdeo"
+          },
+          {
+            "type": "article",
+            "title": "Əfqanıstanda qızların təhsili: \"Oğlanların məktəbə getdiyini görəndə ürəyim ağrıyır\"",
+            "firstPublished": "2023-03-28T06:43:21.000Z",
+            "link": "https://www.bbc.com/azeri/international-65096653",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/AD13/production/_129170344_95fdb310-7066-41c0-8533-696b44f39c29.jpg",
+            "description": "Əfqanıstanlı yeniyetmə qızlar Talibanın məktəbə getmək qadağasından sonra çarəsiz hiss etdiklərini deyirlər. Qızlar hər gün ağrı ilə yaşadıqlarını və başlarına gələnlərə görə qlobal qəzəbin səngiməsindən qorxduqlarını deyirlər - bu həftə onlarsız başqa bir məktəb dövrü başlayandan sonra bu hiss daha da güclənib.",
+            "imageAlt": "Əfqanıstan qadın qadın azadlıqları",
+            "id": "61ce2f65-121e-4ae0-8c02-ab00c1ba9dad"
+          },
+          {
+            "type": "article",
+            "title": "Ukrayna müharibəsi: Rusiyanın enerji müharibəsi strategiyası niyə işləmir?",
+            "firstPublished": "2023-03-16T06:18:24.234Z",
+            "link": "https://www.bbc.com/azeri/articles/c72849w02kzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2185/live/9622a230-c3c1-11ed-95f8-0154daa64c44.jpg",
+            "description": "Rusiyanın son bir ayda Ukraynanın enerji infrastrukturunu hədəf alması Kremlin ilk böyük və koordinasiya edilmiş hücum dalğasıdır. Lakin bundan əvvəl Ukraynanın işğalının bir ilini qeyd etmək məqsədi ilə başladılan hücum strategiyası da qoyulan hədəflərə çatmaqda uğursuz oldu. ",
+            "imageAlt": "Rusiya, Ukrayna, müharibə, münaqişə",
+            "id": "c72849w02kzo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bebcfc8c-1dff-4366-b658-cb49873726cf",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Dərgi",
+        "visualProminence": "HIGH"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "İlham Əliyevin yenilənən komandası: Paşayevlərin və Cabbarovun  \"adamları\", texnokratlar və hakimiyyətə loyal kadrlar",
+            "firstPublished": "2023-04-04T18:33:41.708Z",
+            "link": "https://www.bbc.com/azeri/articles/cyjrgwwkk1ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/42d4/live/df7b06c0-d311-11ed-a594-39471b35c943.jpg",
+            "description": "Parlamentdə kənd təsərrüfatı naziri İnam Kərimovun Ramiz Rzayevin təqaüdə göndərilməsi ilə boşalan Ali Məhkəmənin sədrliyi postuna təyin olunması  bu səbəbdən müzakirə olunur: nazir olmazdan əvvəl hökumətin uğurlu layihələrindən biri sayılan, əhali arasında rəğbətlə qarşılanan ASAN xidmətin ilk rəhbəri olmuş İnam Kərimov hüquqşünas olsa da, onun bioqrafiyasında hakimlik təcrübəsi yoxdur.  ",
+            "imageAlt": "İlham Əliyev, İnam Kərimov",
+            "id": "cyjrgwwkk1ro"
+          },
+          {
+            "type": "article",
+            "title": "Bu gündən Rusiya Ermənistandan süd məhsullarının idxalını dayandırır",
+            "firstPublished": "2023-03-31T15:43:06.100Z",
+            "link": "https://www.bbc.com/azeri/articles/c0d49vrm8nvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ac78/live/c65ad050-d378-11ed-be2e-754a65c11505.jpg",
+            "description": "Rusiya bu qərarını qida təhlükəsizliyi ilə əlaqələndirir, amma Ermənistan bunu təkzib edir. Digər tərəfdən Rusiya Ukrayna müharibəsi başlayandan bəri Ermənistana üz tutan rus miqrantlar bu ölkənin iqtisadiyyatında müsbət dönüş yarada bilirlər. BBC-ə danışan bəzi təhlilçilər rusiyalı miqrantların Ermənistan iqtisadiyyatda rolunun mənfi təsirləri də olduğunu deyirlər.",
+            "imageAlt": "Rusiya Ermənistandan süd almağı dayandırıb",
+            "id": "c0d49vrm8nvo"
+          },
+          {
+            "type": "article",
+            "title": "Ukrayna müharibəsi: Rusiyanın müharibə bloqçuları kimlərdir və onlar niyə məşhurdur?",
+            "firstPublished": "2023-04-06T06:31:49.769Z",
+            "link": "https://www.bbc.com/azeri/articles/c3g69yqjgq9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c284/live/160367e0-d444-11ed-aa8e-31a9f3ff4e07.jpg",
+            "description": "Bazar günü Sankt Peterburqdakı partlayışda ölən Vladlen Tatarski Rusiyanın “müharibə müxbirlərindən” biri olub. Bəs bu bloqçular kimlərdir və onlar niyə məşhurdurlar?",
+            "imageAlt": "Rusiya, Ukrayna, müharibə, münaqişə",
+            "id": "c3g69yqjgq9o"
+          },
+          {
+            "type": "article",
+            "title": "“Biz Müdafiə Nazirliyi ilə çox yaxınıq”. Baş komandan Salyukovun ailəsi vətənpərvərliyi necə biznesə çevirib",
+            "firstPublished": "2023-04-02T10:02:21.129Z",
+            "link": "https://www.bbc.com/azeri/articles/cv2q1nxe54go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5bd5/live/f6209900-d125-11ed-be2e-754a65c11505.png",
+            "description": "Rusiya ordusu Ukraynada müharibə apardığı bir vaxtda ölkənin hərbi hissələrində ilin adət halını almış ən mühüm hadisəsi – 9 may Qələbə paradına hazırlıq da gedir. Moskva Qırmızı meydanında keçirilən əsas hərbi parada isə artıq onuncu dəfə Quru Qoşunların komandanı, ordu generalı Oleq Salyukov komandanlıq edəcək. Çoxsaylı vətənpərvərlik və hərbi bayram tədbirlərinin təşkilindən isə, onun ailəsi qazanır. Bütün bunların necə olmasını – BBC Rusca xidməti araşdırıb.",
+            "imageAlt": "General Salyukov Qırmızı meydanda",
+            "id": "cv2q1nxe54go"
+          },
+          {
+            "type": "article",
+            "title": "Fazil Mustafa kimdir? ",
+            "firstPublished": "2023-03-30T15:44:27.711Z",
+            "link": "https://www.bbc.com/azeri/articles/cp3jj0278x8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff59/live/9e3dd1e0-cefe-11ed-be2e-754a65c11505.jpg",
+            "description": "Çərşənbə axşamı günü Milli Məclisin deputatı Fazil Mustafa öz evinin qarşısında güllələndi. Dövlət Təhlükəsizlik Xidməti bu hadisəni \"terror aktı\" kimi araşdırdığını açıqladı. ",
+            "imageAlt": "Fazil Mustafa",
+            "id": "cp3jj0278x8o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:34570907-4f35-4c41-b7a3-fd023a938fbb",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Bunları da oxuyun",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cx35pee66wwt",
+        "contentType": "index-home",
+        "pageIdentifier": "azeri.page",
+        "pageTitle": "BBC News Azərbaycanca"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO home page"
+}

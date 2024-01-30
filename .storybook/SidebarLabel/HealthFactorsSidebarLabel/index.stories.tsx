@@ -52,5 +52,5 @@ export const OutstandingActions = () => (
 );
 
 export const Missing = () => (
-  <HealthFactorsSidebarLabel metadata={null} name="Component name" />
+  <HealthFactorsSidebarLabel name="Component name" />
 );

@@ -1,0 +1,1476 @@
+{
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "1dec37a8",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "bcc7307b",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "74ef6eed",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "اختبار تضمين اللغة العربية",
+                            "blocks": [
+                              {
+                                "id": "7aa9256e",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "اختبار تضمين اللغة العربية",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "af3af859",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1678442923609,
+                "lastPublished": 1678445530897
+              },
+              "position": [2]
+            },
+            {
+              "id": "2f1d8d0b",
+              "type": "embedUploader",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "27eb6af6",
+                    "type": "aresUploader",
+                    "model": {
+                      "openingTime": "2021-10-01T10:00:00.000Z",
+                      "closingTime": "2023-03-20T13:05:00.000Z",
+                      "signinRequired": false,
+                      "campaignStatus": "closed",
+                      "blocks": [
+                        {
+                          "id": "32b98e36",
+                          "type": "title",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "218a8b39",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "064680d8",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Get involved",
+                                        "blocks": [
+                                          {
+                                            "id": "82aa4d67",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Get involved",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        },
+                        {
+                          "id": "81242d5e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e4770a2a",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "UGC Core Features 1 - Custom Form",
+                                  "blocks": [
+                                    {
+                                      "id": "291ebaf0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "UGC Core Features 1 - Custom Form",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 2]
+                        },
+                        {
+                          "id": "bbb31921",
+                          "type": "link",
+                          "model": {
+                            "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fsend%2Fu94753086",
+                            "blocks": [
+                              {
+                                "id": "6db96fbb",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "b3540818",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Send form",
+                                        "blocks": [
+                                          {
+                                            "id": "a4dc8f07",
+                                            "type": "urlLink",
+                                            "model": {
+                                              "text": "Send form",
+                                              "locator": "https://www.bbc.com/send/u94753086",
+                                              "blocks": [
+                                                {
+                                                  "id": "6df4b80a",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Send form",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    3, 1, 3, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [3, 1, 3, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 3, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 3]
+                        },
+                        {
+                          "id": "993b10e7",
+                          "type": "aresSendCTA",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "819d2c9d",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "20adf971",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Send form",
+                                        "blocks": [
+                                          {
+                                            "id": "81df15e4",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Send form",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 4, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 4, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 4, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 4]
+                        },
+                        {
+                          "id": "14d2f7fd",
+                          "type": "aresClosedText",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d2d70f2d",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "b4c16d06",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "This closed on 20th March 2023.",
+                                        "blocks": [
+                                          {
+                                            "id": "65282d92",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "This closed on 20th March 2023.",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 5, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 5, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 5, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 5]
+                        },
+                        {
+                          "id": "c7a15b0c",
+                          "type": "aresPreOpenText",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2a8c3cd2",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "35ca92ff",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "This isn’t open yet. Form available from 10:0 on 1st October 2021.",
+                                        "blocks": [
+                                          {
+                                            "id": "fbdb379a",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "This isn’t open yet. Form available from 10:0 on 1st October 2021.",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 6, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 6, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 6, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 6]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            { "id": "57d047b9", "type": "mpu", "model": {}, "position": [4] },
+            {
+              "id": "8a7bccb4",
+              "type": "wsoj",
+              "model": { "type": "recommendations" },
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c46z5nw461mo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c46z5nw461mo",
+          "canonicalUrl": "https://www.bbc.com/arabic/articles/c46z5nw461mo"
+        },
+        "type": "article",
+        "createdBy": "Arabic",
+        "language": "ar",
+        "firstPublished": 1678442923609,
+        "lastPublished": 1678445530897,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c46z5nw461mo",
+          "producer": "Arabic",
+          "page": "arabic.articles.c46z5nw461mo.page"
+        },
+        "passport": {
+          "language": "ar",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "embed",
+          "aresClosedText",
+          "aresPreOpenText",
+          "aresUploader",
+          "title",
+          "link",
+          "aresSendCTA",
+          "urlLink"
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "اختبار تضمين اللغة العربية",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "اختبار تضمين اللغة العربية",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "اختبار تضمين اللغة العربية",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": { "headline": "مرأة الخارقة \"" },
+          "locators": {
+            "assetUri": "/arabic/tv-and-radio-23233470",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6bc4c1da-8b0d-544f-8e7f-a02d969e4236",
+            "assetId": "23233470",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/tv-and-radio-23233470",
+            "curie": "http://www.bbc.co.uk/asset/6bc4c1da-8b0d-544f-8e7f-a02d969e4236"
+          },
+          "summary": "الممثلة الإسرائيلية",
+          "timestamp": 1552491110000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63702041",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/36C4/test/_63702041_tv000117434.jpg",
+            "path": "/cpsdevpb/36C4/test/_63702041_tv000117434.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "الرياضه",
+            "caption": "الخم",
+            "copyrightHolder": "BBC ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63702046",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/FA14/test/_63702046_penguins.jpg",
+            "path": "/cpsdevpb/FA14/test/_63702046_penguins.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "بسسس",
+            "caption": "البز",
+            "copyrightHolder": "Corbis",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:arabic/tv-and-radio-23233470",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Small Island and Long Song author dies aged 62"
+          },
+          "locators": {
+            "assetUri": "/swahili/23231091",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6f02f033-e855-784e-b408-b997eb03809e",
+            "assetId": "23231091",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23231091",
+            "curie": "http://www.bbc.co.uk/asset/6f02f033-e855-784e-b408-b997eb03809e"
+          },
+          "summary": "British author Andrea Levy, whose award-winning novels captured the black British experience in the years after Windrush, has died at the age of 62.",
+          "timestamp": 1550232273000,
+          "language": "sw",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "campaigns": [
+              {
+                "campaignId": "5ad86285c93a9f000eecb256",
+                "campaignName": "Give me perspective"
+              }
+            ],
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63700520",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/09C4/test/_63700520_000964414-1.jpg",
+            "path": "/cpsdevpb/09C4/test/_63700520_000964414-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Andrea Levy black and white picture",
+            "caption": "Andrea Levy",
+            "copyrightHolder": "Publicity Photo",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC Swahili",
+            "uri": "/swahili",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23231091",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108",
+            "overtyped": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض  1 features 08"
+          },
+          "locators": {
+            "assetUri": "/arabic/trending-23083197",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:897c1da8-656c-c743-88e4-ef5901fbfb50",
+            "assetId": "23083197",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/trending-23083197",
+            "curie": "http://www.bbc.co.uk/asset/897c1da8-656c-c743-88e4-ef5901fbfb50"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454252000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/trending-23083197",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 103"
+          },
+          "locators": {
+            "assetUri": "/arabic/business-23083189",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:036ad2c9-654b-e74a-a832-f39bb3576a53",
+            "assetId": "23083189",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/business-23083189",
+            "curie": "http://www.bbc.co.uk/asset/036ad2c9-654b-e74a-a832-f39bb3576a53"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454070000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/business-23083189",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 102"
+          },
+          "locators": {
+            "assetUri": "/arabic/world-23083188",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bf46474e-b56f-e14c-8abc-dde124d3b110",
+            "assetId": "23083188",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23083188",
+            "curie": "http://www.bbc.co.uk/asset/bf46474e-b56f-e14c-8abc-dde124d3b110"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454080000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/world-23083188",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108"
+          },
+          "locators": {
+            "assetUri": "/arabic/inthepress-23083196",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:976839bb-e56b-c548-a9a7-52a089b252a2",
+            "assetId": "23083196",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-23083196",
+            "curie": "http://www.bbc.co.uk/asset/976839bb-e56b-c548-a9a7-52a089b252a2"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454225000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/inthepress-23083196",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 107",
+            "overtyped": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض  press review 107"
+          },
+          "locators": {
+            "assetUri": "/arabic/vert-cap-23083193",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:3101fca0-e0d0-e14f-84ed-a72d903fde77",
+            "assetId": "23083193",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-23083193",
+            "curie": "http://www.bbc.co.uk/asset/3101fca0-e0d0-e14f-84ed-a72d903fde77"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454188000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/vert-cap-23083193",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-04-13T13:18:57.317Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "bf46474e-b56f-e14c-8abc-dde124d3b110",
+            "rank": 1,
+            "count": 9849,
+            "urn": "urn:bbc:curie:asset:bf46474e-b56f-e14c-8abc-dde124d3b110",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 102",
+                "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 05"
+              },
+              "locators": {
+                "assetUri": "/arabic/world-23083188",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23083188",
+                "curie": "http://www.bbc.co.uk/asset/bf46474e-b56f-e14c-8abc-dde124d3b110",
+                "assetId": "23083188"
+              },
+              "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+              "timestamp": 1476454080000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63504578",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "planet",
+                "copyrightHolder": "ESA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/world-23083188",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "41a45995-cbf8-4545-b410-8a59a521306d",
+            "rank": 2,
+            "count": 9816,
+            "urn": "urn:bbc:curie:asset:41a45995-cbf8-4545-b410-8a59a521306d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "أربعة أسباب وراء غزو قناديل البحر للشواطئ المصرية 02",
+                "headline": "أربعة أسباب وراء غزو قناديل البحر للشواطئ المصرية 02"
+              },
+              "locators": {
+                "assetUri": "/arabic/science-and-tech-23137405",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:41a45995-cbf8-4545-b410-8a59a521306d",
+                "assetId": "23137405",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/science-and-tech-23137405",
+                "curie": "http://www.bbc.co.uk/asset/41a45995-cbf8-4545-b410-8a59a521306d"
+              },
+              "summary": "وقالت وزارة البيئة المصرية إنها شكلت مجموعة عمل \"علمية\" للتعامل مع هذه الظاهرة.",
+              "timestamp": 1499094372000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63530221",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/2FAB/test/_63530221_mediaitem63530220.jpg",
+                "path": "/cpsdevpb/2FAB/test/_63530221_mediaitem63530220.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "وأضافت أن ظهور قناديل",
+                "caption": "وأضافت أن ظهور قناديل",
+                "copyrightHolder": "Not mine",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/science-and-tech-23137405",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "085c72f7-df70-cf44-868a-8c7ca7dfb7d2",
+            "rank": 3,
+            "count": 9799,
+            "urn": "urn:bbc:curie:asset:085c72f7-df70-cf44-868a-8c7ca7dfb7d2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات12",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات12"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078421",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078421",
+                "curie": "http://www.bbc.co.uk/asset/085c72f7-df70-cf44-868a-8c7ca7dfb7d2",
+                "assetId": "23078421"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899097000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078421",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "37156084-498d-044b-adbd-af7dc893e49a",
+            "rank": 4,
+            "count": 9718,
+            "urn": "urn:bbc:curie:asset:37156084-498d-044b-adbd-af7dc893e49a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات25",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات25"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078434",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078434",
+                "curie": "http://www.bbc.co.uk/asset/37156084-498d-044b-adbd-af7dc893e49a",
+                "assetId": "23078434"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899269000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078434",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "23d65e86-75ba-2341-92f9-3f379a53d93f",
+            "rank": 5,
+            "count": 9645,
+            "urn": "urn:bbc:curie:asset:23d65e86-75ba-2341-92f9-3f379a53d93f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 106",
+                "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 05"
+              },
+              "locators": {
+                "assetUri": "/arabic/sports-23083192",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-23083192",
+                "curie": "http://www.bbc.co.uk/asset/23d65e86-75ba-2341-92f9-3f379a53d93f",
+                "assetId": "23083192"
+              },
+              "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+              "timestamp": 1476454163000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63504578",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+                "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "planet",
+                "copyrightHolder": "ESA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/sports-23083192",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8770f476-b542-b242-bd6a-eb597eb62473",
+            "rank": 6,
+            "count": 9613,
+            "urn": "urn:bbc:curie:asset:8770f476-b542-b242-bd6a-eb597eb62473",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات45",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات45"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078477",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078477",
+                "curie": "http://www.bbc.co.uk/asset/8770f476-b542-b242-bd6a-eb597eb62473",
+                "assetId": "23078477"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474900263000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078477",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e29969d-1dcb-2046-811d-a916dc7a1c06",
+            "rank": 7,
+            "count": 9148,
+            "urn": "urn:bbc:curie:asset:4e29969d-1dcb-2046-811d-a916dc7a1c06",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "الأمن التونسي يفرق متظاهرين يطالبون بتوفير فرص عمل",
+                "headline": "الأمن التونسي يفرق متظاهرين يطالبون بتوفير فرص عمل"
+              },
+              "locators": {
+                "assetUri": "/arabic/23127131",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23127131",
+                "curie": "http://www.bbc.co.uk/asset/4e29969d-1dcb-2046-811d-a916dc7a1c06",
+                "assetId": "23127131"
+              },
+              "summary": "أطلقت قوات الأمن التونسية قنابل الغاز لتفريق محتجين حاولوا اقتحام محطة لضخ النفط في الكامور بصحراء تطاوين بجنوب تونس لإغلاقها بعد أن أعاد الجيش فتحها الأحد، بحسب ما ذكره شهود.",
+              "timestamp": 1495459140000,
+              "language": "ar",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63537943",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/889D/test/_63537943_mediaitem63537942.jpg",
+                "path": "/cpsdevpb/889D/test/_63537943_mediaitem63537942.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "شرطي تونسي يحاول تفريق متظاهرين في شارع بورقيبة الرئيسي",
+                "caption": "شرطي تونسي يفرق متظاهرين",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23127131",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "971f7b87-c4b2-8848-9908-8fdb52f0026c",
+            "rank": 8,
+            "count": 9127,
+            "urn": "urn:bbc:curie:asset:971f7b87-c4b2-8848-9908-8fdb52f0026c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات29",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات29"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078438",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078438",
+                "curie": "http://www.bbc.co.uk/asset/971f7b87-c4b2-8848-9908-8fdb52f0026c",
+                "assetId": "23078438"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899331000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078438",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b70b73eb-d1dd-d244-95b7-259895001ca8",
+            "rank": 9,
+            "count": 9047,
+            "urn": "urn:bbc:curie:asset:b70b73eb-d1dd-d244-95b7-259895001ca8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "التدخين \"يسبب مئات التحورات في الحامض النووي\"",
+                "headline": "التدخين"
+              },
+              "locators": {
+                "assetUri": "/arabic/science-and-tech-23089566",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/science-and-tech-23089566",
+                "curie": "http://www.bbc.co.uk/asset/b70b73eb-d1dd-d244-95b7-259895001ca8",
+                "assetId": "23089566"
+              },
+              "summary": "اكتشف علماء أن التدخين يترك \"سجلا\" من مئات التحورات، التي تطرأ على الحامض النووي دي إن إيه.",
+              "timestamp": 1478518210000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63521273",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/915C/test/_63521273_0e94ff2b-c431-44ca-b08a-a36c77a75234.jpg",
+                "path": "/cpsdevpb/915C/test/_63521273_0e94ff2b-c431-44ca-b08a-a36c77a75234.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "التدخين",
+                "caption": "التدخين",
+                "copyrightHolder": " VT Freeze Frame",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/science-and-tech-23089566",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "14fc93a8-c93c-b743-9a49-39b0c90fc129",
+            "rank": 10,
+            "count": 8907,
+            "urn": "urn:bbc:curie:asset:14fc93a8-c93c-b743-9a49-39b0c90fc129",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات24",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات24"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078433",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078433",
+                "curie": "http://www.bbc.co.uk/asset/14fc93a8-c93c-b743-9a49-39b0c90fc129",
+                "assetId": "23078433"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899258000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078433",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cf2a4aea-c25d-1742-a77f-b91f6285adc4",
+            "rank": 11,
+            "count": 8416,
+            "urn": "urn:bbc:curie:asset:cf2a4aea-c25d-1742-a77f-b91f6285adc4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ترامب الابن ينشر مراسلاته مع ويكيليكس",
+                "headline": "ترامب الابن ينشر مراسلاته مع ويكيليكس"
+              },
+              "locators": {
+                "assetUri": "/arabic/23165584",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23165584",
+                "curie": "http://www.bbc.co.uk/asset/cf2a4aea-c25d-1742-a77f-b91f6285adc4",
+                "assetId": "23165584"
+              },
+              "summary": "نشر نجل الرئيس الأمريكي دونالد ترامب مراسلاته مع موقع ويكيليكس على تويتر، بعد أن كشفت مجلة أمريكية عن اتصالات بين الطرفين قبل انتخاب ترامب رئيسا للولايات المتحدة بفترة وجيزة.",
+              "timestamp": 1510749167000,
+              "language": "ar",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63600963",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9024/test/_63600963_010985521-1.jpg",
+                "path": "/cpsdevpb/9024/test/_63600963_010985521-1.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "نجل الرئيس الأمريكي دونالد ترامب",
+                "caption": "نشر نجل الرئيس الأمريكي دونالد ترامب مراسلاته مع موقع ويكيليكس على تويتر",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23165584",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d0d4e3d5-a7bc-9b4e-9b51-3be0459db3f0",
+            "rank": 12,
+            "count": 8351,
+            "urn": "urn:bbc:curie:asset:d0d4e3d5-a7bc-9b4e-9b51-3be0459db3f0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات15",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات15"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078424",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d0d4e3d5-a7bc-9b4e-9b51-3be0459db3f0",
+                "assetId": "23078424",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078424",
+                "curie": "http://www.bbc.co.uk/asset/d0d4e3d5-a7bc-9b4e-9b51-3be0459db3f0"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899138000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078424",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7e24ad9a-377e-f64f-9cfa-7a96f6065200",
+            "rank": 13,
+            "count": 8277,
+            "urn": "urn:bbc:curie:asset:7e24ad9a-377e-f64f-9cfa-7a96f6065200",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات21",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات21"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078430",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078430",
+                "curie": "http://www.bbc.co.uk/asset/7e24ad9a-377e-f64f-9cfa-7a96f6065200",
+                "assetId": "23078430"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899211000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078430",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "89a9dad0-ca63-7345-bed7-0b204f224a30",
+            "rank": 14,
+            "count": 8216,
+            "urn": "urn:bbc:curie:asset:89a9dad0-ca63-7345-bed7-0b204f224a30",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات43",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات43"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078475",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:89a9dad0-ca63-7345-bed7-0b204f224a30",
+                "assetId": "23078475",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078475",
+                "curie": "http://www.bbc.co.uk/asset/89a9dad0-ca63-7345-bed7-0b204f224a30"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474900232000,
+              "language": "ar",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078475",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8587f0e1-20a8-1a45-8538-8e4a621b4723",
+            "rank": 15,
+            "count": 8119,
+            "urn": "urn:bbc:curie:asset:8587f0e1-20a8-1a45-8538-8e4a621b4723",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "القوات العراقية تسيطر على جامعة الموصل",
+                "headline": "القوات العراقية تسيطر على جامعة الموصل"
+              },
+              "locators": {
+                "assetUri": "/arabic/23097814",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23097814",
+                "curie": "http://www.bbc.co.uk/asset/8587f0e1-20a8-1a45-8538-8e4a621b4723",
+                "assetId": "23097814"
+              },
+              "summary": "اقتحمت القوات الخاصة العراقية جامعة الموصل صباح اليوم، وسيطرت على أجزاء عدة من مجمع المباني.",
+              "timestamp": 1484312055000,
+              "language": "ar",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63526889",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1822E/test/_63526889_035903948-1.jpg",
+                "path": "/cpsdevpb/1822E/test/_63526889_035903948-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "القوات العراقية",
+                "caption": "القوات العراقية",
+                "copyrightHolder": "BBC News",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23097814",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2bc1ddab-42cb-0443-befa-c3a4fabd726b",
+            "rank": 16,
+            "count": 7838,
+            "urn": "urn:bbc:curie:asset:2bc1ddab-42cb-0443-befa-c3a4fabd726b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات27",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات27"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078436",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078436",
+                "curie": "http://www.bbc.co.uk/asset/2bc1ddab-42cb-0443-befa-c3a4fabd726b",
+                "assetId": "23078436"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899305000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078436",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "05c293c6-50fb-4642-9889-2522e0af34fa",
+            "rank": 17,
+            "count": 7776,
+            "urn": "urn:bbc:curie:asset:05c293c6-50fb-4642-9889-2522e0af34fa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "توتنهام يقيل ترامب بنهاية الموسم",
+                "headline": "توتنهام يستغني عن خدمات ترامب بعد خسارتين في الدوري"
+              },
+              "locators": {
+                "assetUri": "/arabic/world-23199631",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23199631",
+                "curie": "http://www.bbc.co.uk/asset/05c293c6-50fb-4642-9889-2522e0af34fa",
+                "assetId": "23199631"
+              },
+              "summary": "توتنهام يستغني عن خدمات ترامب بعد خسارتين في الدوري النمساوي لهوكي الجليد يومي السبت والخميس",
+              "timestamp": 1525778453000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63677915",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/CB09/test/_63677915_d0946939-c44f-4ada-89a2-2232d8fc4cd7.jpg",
+                "path": "/cpsdevpb/CB09/test/_63677915_d0946939-c44f-4ada-89a2-2232d8fc4cd7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "أخبار أخبار أبخار أخبار",
+                "caption": "لماذا نقاط نيمو ليسوا أحرارا؟",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/world-23199631",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0ebfc7a9-c13e-1649-b72d-6039c7c64d7c",
+            "rank": 18,
+            "count": 7714,
+            "urn": "urn:bbc:curie:asset:0ebfc7a9-c13e-1649-b72d-6039c7c64d7c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "الانتخابات الفرنسية: لوبن وماكرون يتبادلان الإهانات في مناظرة حاسمة قبل الجولة الفاصلة",
+                "headline": "احتدام المعركة بين ماكرون ولوبن قبل الجولة الحاسمة"
+              },
+              "locators": {
+                "assetUri": "/arabic/23122757",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23122757",
+                "curie": "http://www.bbc.co.uk/asset/0ebfc7a9-c13e-1649-b72d-6039c7c64d7c",
+                "assetId": "23122757"
+              },
+              "summary": "المعركة الانتخابية في فرنسا تحتدم قبل بداية الجولة الثانية وماكرون ولوبن يتبادلان التلاسن",
+              "timestamp": 1493893767000,
+              "language": "ar",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63535249",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1702D/test/_63535249_038898622-1.jpg",
+                "path": "/cpsdevpb/1702D/test/_63535249_038898622-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ماكرون كان يحيي المئات من مؤيديه قبل بدء المناظره مع لوبن",
+                "caption": "ماكرون يحيي مؤيديه قبل المناظره",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23122757",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ce7fd1bd-ba24-bc45-8802-823c46765b60",
+            "rank": 19,
+            "count": 7650,
+            "urn": "urn:bbc:curie:asset:ce7fd1bd-ba24-bc45-8802-823c46765b60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "قطر تؤكد أنها لن تطرد مواطني الدول التي قطعت العلاقات معها",
+                "headline": "قطر تؤكد أنها لن تطرد مواطني الدول التي قطعت العلاقات معها"
+              },
+              "locators": {
+                "assetUri": "/arabic/23131224",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23131224",
+                "curie": "http://www.bbc.co.uk/asset/ce7fd1bd-ba24-bc45-8802-823c46765b60",
+                "assetId": "23131224"
+              },
+              "summary": "وقطعت السعودية والإمارات والبحرين ومصر العلاقات مع قطر في خطوة منسقة الاثنين الماضي واتهموها بدعم جماعات إرهابية والتدخل في شؤون تلك الدول فيما تعد أسوأ أزمة دبلوماسية يشهدها الخليج منذ سنوات.",
+              "timestamp": 1497276356000,
+              "language": "ar",
+              "byline": {
+                "name": "جيمس لاندل",
+                "title": "Deputy political editor",
+                "persons": [
+                  {
+                    "name": "James Landale",
+                    "function": "Deputy political editor",
+                    "url": "/news/correspondents/jameslandale",
+                    "correspondentId": "jameslandale",
+                    "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63081000/jpg/_63081856_landale_112x63.jpg",
+                    "twitterName": "bbcjlandale"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63540406",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/EBF4/test/_63540406_mediaitem63540405.jpg",
+                "path": "/cpsdevpb/EBF4/test/_63540406_mediaitem63540405.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Qatar",
+                "caption": "قطر تؤكد أنها لن تطرد مواطني الدول التي قطعت العلاقات معها",
+                "copyrightHolder": "Qatar Airways",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23131224",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b25909e3-6851-484e-8389-dd107e29ecfb",
+            "rank": 20,
+            "count": 7595,
+            "urn": "urn:bbc:curie:asset:b25909e3-6851-484e-8389-dd107e29ecfb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات38",
+                "headline": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات38"
+              },
+              "locators": {
+                "assetUri": "/arabic/23078448",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23078448",
+                "curie": "http://www.bbc.co.uk/asset/b25909e3-6851-484e-8389-dd107e29ecfb",
+                "assetId": "23078448"
+              },
+              "summary": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات",
+              "timestamp": 1474899545000,
+              "language": "ar",
+              "indexImage": {
+                "id": "63512196",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "path": "/cpsdevpb/10E01/test/_63512196_160926115449_drone__640x360_ap_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "مستخدميها",
+                "caption": "مستخدميها",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23078448",
+              "type": "cps"
+            }
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

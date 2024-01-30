@@ -20,7 +20,7 @@ import {
   StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
-import generatePromoId from '../generatePromoId';
+import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
@@ -167,16 +167,18 @@ const RelatedContentSection = ({ content }) => {
 };
 
 RelatedContentSection.propTypes = {
-  content: shape({
-    type: string,
-    model: shape({
-      blocks: arrayOf(
-        shape({
-          type: string,
-        }),
-      ),
+  content: arrayOf(
+    shape({
+      type: string,
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            type: string,
+          }),
+        ),
+      }),
     }),
-  }).isRequired,
+  ).isRequired,
 };
 
 export default RelatedContentSection;

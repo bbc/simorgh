@@ -1,0 +1,776 @@
+{
+  "data": {
+    "title": "BBC News Gahuza",
+    "description": "BBC Gahuza itanga amakuru yizewe yo kw’isi hamwe no mu karere",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Uko impanga zatandukanyijwe zikagurishwa zikivuka zahujwe na video yo kuri TikTok",
+            "firstPublished": "2024-01-26T09:01:46.029Z",
+            "lastPublished": "2024-01-26T09:01:46.029Z",
+            "link": "https://www.bbc.com/gahuza/articles/crgkn7mx9jxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/322b/live/a6b42d80-bc22-11ee-8685-316409d66f25.jpg",
+            "description": "Izi mpanga zabayeho ubuzima bwazo buri umwe yumva hari ikibura mu buzima bwe, kugeza babonanye bwa mbere bafite imyaka 19.",
+            "imageAlt": "Amy Khvitia (ibumoso) na Ano Sartania (iburyo) ntibari bazi ko umwe afite impanga ye iriho kugeza ku myaka 19",
+            "id": "crgkn7mx9jxo"
+          },
+          {
+            "type": "article",
+            "title": "‘Ndabakunda mwese’ ijambo rya nyuma ry’imfungwa ya mbere yicishijwe nitrogen gas",
+            "firstPublished": "2024-01-26T05:07:32.014Z",
+            "lastPublished": "2024-01-26T05:07:32.014Z",
+            "link": "https://www.bbc.com/gahuza/articles/cw0r5v7rx02o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7776/live/9d7c0e10-bc07-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Smith yemerewe gusurwa n'umuryango we n'inshuti ze amasaha macye mbere y'uko aterwa uyu mwuka wica ibye bikarangira. ",
+            "imageAlt": "Ifoto ya Kenneth Eugene Smith igihe yafatwaga ashinjwa ubwicanyi mu 1988",
+            "id": "cw0r5v7rx02o"
+          },
+          {
+            "type": "article",
+            "title": "Abana bariko baricwa n'inzara ariko Ethiopia ivuga ko ata nzu iriko irasha ",
+            "firstPublished": "2024-01-26T06:44:55.937Z",
+            "lastPublished": "2024-01-26T06:44:55.937Z",
+            "link": "https://www.bbc.com/gahuza/articles/crg5dk72z68o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f173/live/5a41ae60-bacd-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Amakuru y'abana amajana bicwa n'inzara mu bice vya kure  vy'intara ya Tigray  aguma yongerekana. ",
+            "imageAlt": "Abanyagihugu bashonje muri Ethiopiya",
+            "id": "crg5dk72z68o"
+          },
+          {
+            "type": "article",
+            "title": "Abicwa n'inzara ni ibijuju -umushikiranganji wa Uganda ",
+            "firstPublished": "2024-01-25T14:24:23.529Z",
+            "lastPublished": "2024-01-25T14:24:23.529Z",
+            "link": "https://www.bbc.com/gahuza/articles/cw8j4l4n06wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4833/live/ebc9b8c0-bb8e-11ee-8bff-8311bfc2fc68.jpg",
+            "description": "Bamwe bavuga ko ayo majambo ari ayo umuntu atagira akababaro mu gihe abantu 2.200 bishwe n'inzara n'indwara ziyiturutseko mu 2022. ",
+            "imageAlt": "Henry Okello Oryem,  umushikiranganji wa Uganda ajejwe imigenderanire, ariko aravugisha abamenyeshamakuru i Kampala ku wa 17 Gitugutu, 2012.",
+            "id": "cw8j4l4n06wo"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M48S",
+            "title": "Emile Irakoze yoba azanye inyishu ku kibazo c'umuyagankuba mu Burundi?",
+            "firstPublished": "2024-01-25T15:02:47.384Z",
+            "lastPublished": "2024-01-25T15:02:47.384Z",
+            "link": "https://www.bbc.com/gahuza/articles/cxery5gnvd8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/392d/live/f30e5980-bb91-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Uyu musore w'imyaka 20 wo mu ntara ya Rumonge yubatse urugomero rw'umuyagankuba rwa KW 15, ubu akaba arahurira imihana 17.",
+            "imageAlt": "Emile Irakoze",
+            "id": "cxery5gnvd8o"
+          },
+          {
+            "type": "article",
+            "title": "Ukraine yoba yarashe indege y’Uburusiya yari itwaye impfungwa zayo z’intambara, vyagenze gute?",
+            "firstPublished": "2024-01-25T07:25:15.904Z",
+            "lastPublished": "2024-01-25T07:25:15.904Z",
+            "link": "https://www.bbc.com/gahuza/articles/cn0nl6j6v10o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/108c/live/70486ef0-bb5a-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Uburusiya bwagiriza Ukraine ko ari yo yarashe iyi ndege yari itwaye impfungwa z’intambara za Ukraine mu gikorwa cari gitegekanijwe co guhanahana impfungwa z’intambara.",
+            "imageAlt": "Indege",
+            "id": "cn0nl6j6v10o"
+          },
+          {
+            "type": "article",
+            "title": "Urwo gupfa: Imfungwa ya mbere igiye kwicwa hakoreshejwe umwuka wa nitrogen (azote)",
+            "firstPublished": "2024-01-25T08:56:39.248Z",
+            "lastPublished": "2024-01-25T08:56:39.248Z",
+            "link": "https://www.bbc.com/gahuza/articles/cv29w3dnl9xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cb07/live/a66ada70-bb5c-11ee-8685-316409d66f25.jpg",
+            "description": "Eugene Smith yakatiwe urwo gupfa nyuma yo kwica umugore mu bwicanyi bari bishyuwe n'umugabo we wari umuvugabutumwa.",
+            "imageAlt": "Kenneth Eugene Smith ategereje kwicwa kubera ubwicanyi yahamijwe ko yakoze mu 1988",
+            "id": "cv29w3dnl9xo"
+          },
+          {
+            "type": "article",
+            "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Kimmich, Martial, Greenwood, Godfrey, Onana, Lukaku",
+            "firstPublished": "2024-01-25T08:43:04.136Z",
+            "lastPublished": "2024-01-25T08:43:04.136Z",
+            "link": "https://www.bbc.com/gahuza/articles/c80npvzpn4wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0a08/live/990079a0-bb5a-11ee-8685-316409d66f25.jpg",
+            "description": "Liverpool yahambije Manchester City mu rugamba rwo kurondera  Joshua Kimmich wa Bayern Munich, nayo Chelsea ikaba iriko iraraba ko yorondera umusatirizi wa Aston Villa Jhon Duran, aya n’ayandi ni mu yavugwa kuri uno wa kane. ",
+            "imageAlt": "Joshua Kimmich",
+            "id": "c80npvzpn4wo"
+          },
+          {
+            "type": "article",
+            "title": "Impagarara nyuma y'uko umunya Ukraine atowe nka Miss w'Ubuyapani ",
+            "firstPublished": "2024-01-25T05:50:42.524Z",
+            "lastPublished": "2024-01-25T05:50:42.524Z",
+            "link": "https://www.bbc.com/gahuza/articles/cn0nwr4k9v4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2d29/live/afa73220-bad3-11ee-8685-316409d66f25.jpg",
+            "description": "Ni we mukobwa wa mbere wahawe ubwenegihugu bw'Ubuyapani watsinze irushanwa ry'uburanga rya Miss Japan.",
+            "imageAlt": "Carolina Shiino Nyampinga w'Ubuyapani 2024",
+            "id": "cn0nwr4k9v4o"
+          },
+          {
+            "type": "article",
+            "title": "‘Icyayi nyacyo ni icyongewemo umunyu’ – Umuhanga muri science",
+            "firstPublished": "2024-01-25T05:36:27.766Z",
+            "lastPublished": "2024-01-25T05:36:27.766Z",
+            "link": "https://www.bbc.com/gahuza/articles/c88nlkpy40eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/062a/live/8a98f620-bb42-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Kongera akunyu gacye cyane mu cyayi ngo byaba bifasha cyane abakunzi b'iki kinyobwa.",
+            "imageAlt": "Umugore urimo kunywa icyayi",
+            "id": "c88nlkpy40eo"
+          },
+          {
+            "type": "article",
+            "title": "Adrienne Nahimana: ' yari afise impano mu kwigisha urukundo...ubutwari, ubutore n'ubuhizi' - ivyavugiwe ku maziko",
+            "firstPublished": "2024-01-24T16:25:18.098Z",
+            "lastPublished": "2024-01-24T16:25:18.098Z",
+            "link": "https://www.bbc.com/gahuza/articles/ckrdngj84jmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0cf1/live/02bc9da0-bad5-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Umurwi wa Ninde Adrienne yahora akinamwo watanguye mu mwaka w'1981 ugizwe n’abantu 13, muri abo bawutanguje hasigaye 8. ",
+            "imageAlt": "Adrienne Nahimana",
+            "id": "ckrdngj84jmo"
+          },
+          {
+            "type": "article",
+            "title": "Reba uko amakipe arimo gutsindana muri CAN 2023",
+            "firstPublished": "2024-01-22T07:43:48.052Z",
+            "lastPublished": "2024-01-22T07:58:48.370Z",
+            "link": "https://www.bbc.com/gahuza/articles/cermj7d44ljo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/84a6/live/55cd35a0-b8fe-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "Igikombe cya Africa",
+            "id": "cermj7d44ljo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:cf1b146e-c9de-4b47-b345-f85f32d2a80b",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "BBC News Gahuza Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "title": "Amakuru ya Gahuzamiryango",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/bbc_gahuza_radio/programmes/p0340x2n",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b8d6/live/377f6090-4d93-11ee-aef7-af0179de8ea1.jpg",
+            "description": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "imageAlt": "Microphone",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Fbbc_gahuza_radio%2Fprogrammes%2Fp0340x2n"
+          },
+          {
+            "type": "audio",
+            "title": "Imvo n'Imvano",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/bbc_gahuza_radio/programmes/p030s1fb",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/72e6/live/70e80fc0-4ccc-11ee-b5fc-8f212b46bd1e.jpg",
+            "description": "Ikiganiro gicukumbuye ku bibazo bitandukanye.",
+            "imageAlt": "BBC News",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Fbbc_gahuza_radio%2Fprogrammes%2Fp030s1fb"
+          },
+          {
+            "type": "audio",
+            "duration": "PT59M",
+            "title": "Imvo n’imvano: Igice ca kabiri c’ikiganiro ku ntsinzi ya Tshisekedi mu matora ya DR Congo",
+            "firstPublished": "2024-01-13T06:34:47.468Z",
+            "lastPublished": "2024-01-13T06:34:47.468Z",
+            "link": "https://www.bbc.com/gahuza/articles/cp0r7d7pg0zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a251/live/8c531d10-b1dd-11ee-beb5-e1400df560f2.jpg",
+            "description": "Imvo n’Imvano ikomeza ikiganiro twabagejejeho kuwa gatandatu ushize cyavugaga ku byavuye mu matora y’umukuru w’igihugu muri Repubulika ya Demokarasi ya Congo amatora yabaye kw'itariki 20 z'ukwezi kwa 12 k'umwaka ushize.",
+            "imageAlt": "Tshisekedi",
+            "id": "cp0r7d7pg0zo"
+          },
+          {
+            "type": "audio",
+            "duration": "PT59M",
+            "title": "Imvo n'imvano: Abahiganywe na Tshisekedi muri DRC ntibemera intsinzi ye. Biraherera he?",
+            "firstPublished": "2024-01-06T05:57:22.632Z",
+            "lastPublished": "2024-01-06T05:57:22.632Z",
+            "link": "https://www.bbc.com/gahuza/articles/cmjr1d7zzd2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/259f/live/ffbc8060-ac57-11ee-87c1-cb266bfae39a.jpg",
+            "description": "Mu gihe Felix Tshisekedi w'itoje ku giti cye ariko ashyigikiwe n'amashyaka agera kuri 200 yishyize mw'ihuriro yise Union Sacre, baririmbaga intsinzi mu mpera z'iki cyumweru gishize, abahanganye nawe bo bari mu kwamagana ibyavuye mu matora bavuga ko habayemo uburiganya",
+            "imageAlt": "Felix Antoine Tshisekedi",
+            "id": "cmjr1d7zzd2o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6052d180-bf10-4453-8a1f-e5ad4844b5a0",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Ibiganiro bya radiyo",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Tanzania: Samia Suluhu yemereye igisirikare ko leta igiye guhagurukira ikibazo c’impunzi",
+            "firstPublished": "2024-01-24T10:54:52.790Z",
+            "lastPublished": "2024-01-24T15:25:08.414Z",
+            "link": "https://www.bbc.com/gahuza/articles/c6permm4n56o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36e2/live/339a3b60-baa5-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Jenerali Jacob John Mkunda arongoye igisirikare ca Tanzania avuga ko ikibazo nyamukuru gihanze umutekano mu ntara zo mu burengero bwa Tanzania ari uko ako karere gahaye indaro impunzi n’abasaba ubuhungiro igihe kirekire.",
+            "imageAlt": "Jenerali Jacob John Mkunda ",
+            "id": "c6permm4n56o"
+          },
+          {
+            "type": "article",
+            "title": "'Garura abagabo bacu'- Abarusiyakazi mu myigaragambyo idasanzwe",
+            "firstPublished": "2024-01-24T12:02:14.048Z",
+            "lastPublished": "2024-01-24T12:02:14.048Z",
+            "link": "https://www.bbc.com/gahuza/articles/cv20dym2p89o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2c69/live/927f1d60-ba9d-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Itsinda ry'abagore bafite abagabo babo bagabwe muri Ukraine bari mu myigaragambyo kuri Kremlin basaba ko abagabo babo bagarurwa mu rugo. ",
+            "imageAlt": "Maria Andreeva standsmu kivunge afite indabo z'umutuku",
+            "id": "cv20dym2p89o"
+          },
+          {
+            "type": "article",
+            "title": "Isaha y’imperuka kirimbuzi ubu irabura amasegonga 90 kuri saa sita z’ijoro",
+            "firstPublished": "2024-01-24T05:57:08.855Z",
+            "lastPublished": "2024-01-24T05:57:08.855Z",
+            "link": "https://www.bbc.com/gahuza/articles/c51w37e9339o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b7b7/live/02fa8b40-ba78-11ee-9e8b-95161aef8c25.jpg",
+            "description": "Urushinge rw’iyi saha ikoreshwa n’abahanga muri siyanse barwegereza hafi ya saa sita z’ijoro aho igice cyayo kinini kiba cyabaye umutuku batanga ubutumwa n’impamvu ko isi yegereye “Armageddon”. ",
+            "imageAlt": "Isaha y'imperuka",
+            "id": "c51w37e9339o"
+          },
+          {
+            "type": "article",
+            "title": "M23 yashyizeho abategetsi b’uturere igenzura",
+            "firstPublished": "2024-01-24T06:56:20.029Z",
+            "lastPublished": "2024-01-24T06:56:20.029Z",
+            "link": "https://www.bbc.com/gahuza/articles/cjev3gzge29o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/948a/live/bb4a39b0-ba83-11ee-8615-b12f9d25c3c6.jpg",
+            "description": "Ishyirwaho ry'abategetsi mu gace M23 igenzura ryavuzweho mu buryo butandukanye n'abakurikira aya makimbirane mu burasirazuba bwa DR Congo. ",
+            "imageAlt": "Abakuriye teritwari ya Rutshuru na centres zayo bashyizweho n'itangazo rya Bertrand Bisimwa ukuriye M23",
+            "id": "cjev3gzge29o"
+          },
+          {
+            "type": "article",
+            "title": "Tanganyika aho igeze iduga  ''hateye ubwoba ... benshi bazohunga''-umuhinga ",
+            "firstPublished": "2024-01-23T14:04:28.374Z",
+            "lastPublished": "2024-01-23T14:04:28.374Z",
+            "link": "https://www.bbc.com/gahuza/articles/c2xjmrn12kro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/09b3/live/d7377a00-b9f4-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Uwo muhinga agereranya ko uyu mwaka amazi ya Tanganyika ashobora kuzoduga ku rugero rusumba urwo mu 1964 aho '' n'i Gihanga hari hashikiriwe''. ",
+            "imageAlt": "Avenue de la Plage, Bujumbura 2021",
+            "id": "c2xjmrn12kro"
+          },
+          {
+            "type": "article",
+            "title": "Korea: Ubwo Kim Jong Un yoba ariko ategura intambara?",
+            "firstPublished": "2024-01-23T08:54:51.351Z",
+            "lastPublished": "2024-01-23T08:54:51.351Z",
+            "link": "https://www.bbc.com/gahuza/articles/c0d70w0pl8po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0a3e/live/b55784b0-b9cd-11ee-8685-316409d66f25.jpg",
+            "description": "Ubucuti bwa hafi cane hagati ya Korea ya Ruguru n’Uburusiya hamwe n’imfashanyo y’Ubushinwa ibandanya vyayitumye ataco ibona yotinya, nk’uko abahinga babivuga. ",
+            "imageAlt": "Kim",
+            "id": "c0d70w0pl8po"
+          },
+          {
+            "type": "article",
+            "title": "U Rwanda rwamaganye “amagambo rutwitsi” ya Ndayishimiye",
+            "firstPublished": "2024-01-22T21:40:12.774Z",
+            "lastPublished": "2024-01-22T21:40:12.774Z",
+            "link": "https://www.bbc.com/gahuza/articles/czvqlxg7xk8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2bd5/live/2a374370-b96e-11ee-a1e4-b1126922a25b.jpg",
+            "description": "Leta y'u Rwanda yatangaje ko ibyatangajwe na Ndayishimiye ari i Kinshasa \"biteye ikibazo\" kandi binyuranye n'ihame shingiro ry'ubumwe bwa Africa. ",
+            "imageAlt": "Perezida Evariste Ndayishimiye",
+            "id": "czvqlxg7xk8o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:de476937-7ca0-4a72-8ab7-5c2c3817271f",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Ivyo BBC Gahuza ibahitiramwo",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "title": "Kanda wumve",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/bbc_gahuza_radio/liveradio",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8d37/live/8ab28790-5155-11ee-b3da-11329d550b2e.png",
+            "description": "Umva ibiganiro vya BBC Gahuza ikibiriraho (live) kuwa mbere gushika ku gatanu isaha 1730 GMT, no kuwa gatandatu 0600 GMT & 0900 GMT no kuwa Mungu 0630 GMT & 1600 GMT.",
+            "imageAlt": "BBC microphone",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Fbbc_gahuza_radio%2Fliveradio"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:93331aa7-6cfc-4052-b9cf-d718cb7f2341",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "BBC Gahuza  LIVE RADIO",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT1M14S",
+            "title": "Ubwato bwa USA buhanganye n’ibitero vy’aba Houthi bumeze gute?",
+            "firstPublished": "2024-01-25T13:35:47.258Z",
+            "lastPublished": "2024-01-25T13:35:47.258Z",
+            "link": "https://www.bbc.com/gahuza/articles/c72g4jld518o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6f08/live/7b345080-bb83-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "",
+            "imageAlt": "Umumenyeshamakuru wa BBC yashitse ku bwato USS Bataan buhanganye n'aba Houthi.",
+            "id": "c72g4jld518o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M11S",
+            "title": "India: Igisengero cubatswe ahanasesetse amaraso mu 1992",
+            "firstPublished": "2024-01-24T19:12:50.829Z",
+            "lastPublished": "2024-01-24T19:12:50.829Z",
+            "link": "https://www.bbc.com/gahuza/articles/cmjg08vev2ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/98b8/live/25102f90-baec-11ee-a16f-8b9f065401a4.jpg",
+            "description": "",
+            "imageAlt": "India, hari abavuga ko iki gisengero ari igikoresho ca politike.",
+            "id": "cmjg08vev2ro"
+          },
+          {
+            "type": "video",
+            "duration": "PT5M1S",
+            "title": "Yemen - itohoza: Abacangero b’abany’ Amerika batumwe na nde? Kuki?",
+            "firstPublished": "2024-01-24T12:05:32.935Z",
+            "lastPublished": "2024-01-24T12:05:32.935Z",
+            "link": "https://www.bbc.com/gahuza/articles/c4nvd14npz4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7c32/live/7c53ef30-bab0-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "",
+            "imageAlt": "Mw’itohoza rya BBC Eye ryubuye ko hari abacangero batumwe kugwana muri Yemen.",
+            "id": "c4nvd14npz4o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M35S",
+            "title": "Gaza: “Turara dusezeye abana”",
+            "firstPublished": "2024-01-24T11:56:11.000Z",
+            "lastPublished": "2024-01-24T11:56:11.000Z",
+            "link": "https://www.bbc.com/gahuza/articles/c978yzxzllpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/98cd/live/65ce0360-baae-11ee-8685-316409d66f25.png",
+            "description": "",
+            "imageAlt": "Khaled, ivyo akorera i muhira bigira ingaruka k’ubuzima bw’abana biwe.",
+            "id": "c978yzxzllpo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 16,
+        "link": "https://www.bbc.com/gahuza/topics/crldzm936jmt",
+        "curationId": "urn:bbc:vivo:curation:187eb2c6-a4f0-4a31-adf1-5941beaf849d",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Video",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_gahuza_radio",
+            "publishedTimeStart": "2024-01-22T16:29:30.000Z",
+            "publishedTimeEnd": "2024-01-22T16:59:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "Amakuru ya Gahuzamiryango",
+            "brandPid": "p0340x2n",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkg6l88f17l",
+            "broadcastPid": "p0h0bpwh",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+          },
+          {
+            "serviceId": "bbc_gahuza_radio",
+            "publishedTimeStart": "2024-01-23T16:29:30.000Z",
+            "publishedTimeEnd": "2024-01-23T16:59:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "Amakuru ya Gahuzamiryango",
+            "brandPid": "p0340x2n",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172zkg6l88hy4p",
+            "broadcastPid": "p0h0ld61",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+          },
+          {
+            "serviceId": "bbc_gahuza_radio",
+            "publishedTimeStart": "2024-01-24T16:29:30.000Z",
+            "publishedTimeEnd": "2024-01-24T16:59:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "Amakuru ya Gahuzamiryango",
+            "brandPid": "p0340x2n",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172zkg6l88lv1s",
+            "broadcastPid": "p0h0t33l",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+          },
+          {
+            "serviceId": "bbc_gahuza_radio",
+            "publishedTimeStart": "2024-01-25T16:29:30.000Z",
+            "publishedTimeEnd": "2024-01-25T16:59:30.000Z",
+            "publishedTimeDuration": "PT30M",
+            "title": "Amakuru ya Gahuzamiryango",
+            "brandPid": "p0340x2n",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172zkg6l88pqyw",
+            "broadcastPid": "p0h10m1n",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Amacakubiri muri football: Umurwi ukwiye gutsindwa impaga iyo abafana  berekanye ivanguramoko -  Infantino wa FIFA",
+            "firstPublished": "2024-01-22T10:38:23.643Z",
+            "lastPublished": "2024-01-22T10:38:23.643Z",
+            "link": "https://www.bbc.com/gahuza/articles/cyxd41env7go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b0b0/live/b91bcdd0-b90b-11ee-beb5-e1400df560f2.jpg",
+            "description": "Mu rukino rwahuje Udinese na AC Milan, umunyegori wa AC Milan Mike Maignan yaravuye mu kibuga mu kwiyamiriza ibitutsi vy’ivangura vy’abafana ba Udinese n’abakinyi baca baramukurikira, imbere y’aha, Kasey Palmer wa Coventry yariko ikina na Sheffield Wednesday na we nyene yavuze ko yabwiwe amajambo y’ibitutsi ashingiye kw’ivanguraruhu. ",
+            "imageAlt": "Umunyegori wa AC Milan Mike Maignan yabanje kubwira umuhagarikizi Fabio Maresca ibitutsi yariko arabwirwa ",
+            "id": "cyxd41env7go"
+          },
+          {
+            "type": "article",
+            "title": "Reba ikiganiro na Marciana Mukamirenzi wamamaye mu gusiganwa ku maguru mu Rwanda",
+            "firstPublished": "2024-01-20T10:07:23.601Z",
+            "lastPublished": "2024-01-20T10:07:23.601Z",
+            "link": "https://www.bbc.com/gahuza/articles/cz5xr1x0mdko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/00fd/live/952870e0-b77b-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Marciana Mukamurenzi benshi mu Rwanda bakuze bumva ko nta muntu wiruka kumurusha, yaganiriye na BBC.",
+            "imageAlt": "Marciana Mukamurenzi",
+            "id": "cz5xr1x0mdko"
+          },
+          {
+            "type": "article",
+            "title": "Imvo n'imvano: Ikiganiro na Marcianna Mukamurenzi icyamamare mu mikino ngororamubiri mu Rwanda",
+            "firstPublished": "2024-01-20T05:56:25.935Z",
+            "lastPublished": "2024-01-20T05:56:25.935Z",
+            "link": "https://www.bbc.com/gahuza/articles/c8927eeqv2vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/848d/live/fec2ef90-b757-11ee-beb5-e1400df560f2.jpg",
+            "description": "Iki kiganiro kibanzirirza uruhererekane rw’ibiganiro twabateguriye ku bahoze bakina imikino ngororamubiri mu Rwanda. ",
+            "imageAlt": "Marcianna Mukamurenzi ari kumwe n'uwo bahiganwaga",
+            "id": "c8927eeqv2vo"
+          },
+          {
+            "type": "article",
+            "title": "Jose Mourinho: Roma yirukanye uwahoze amenyereza Manchester United na Chelsea ica igena De Rossi",
+            "firstPublished": "2024-01-16T15:39:51.343Z",
+            "lastPublished": "2024-01-16T15:39:51.343Z",
+            "link": "https://www.bbc.com/gahuza/articles/cz9e63zdz55o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2f12/live/971f55c0-b484-11ee-90d5-0d8f1481544e.jpg",
+            "description": "Jose Mourinho yirukanywe  mu mabanga yo kumenyereza umugwi wa Roma aca asubirizwa uwahoze ari kizigenza w'uwo mugwi Daniele de Rossi. ",
+            "imageAlt": "Mourinho yari yagiye kumenyereza Roma avuye muri Tottenham",
+            "id": "cz9e63zdz55o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 19,
+        "link": "https://www.bbc.com/gahuza/topics/c5qvpq0jzy7t",
+        "curationId": "urn:bbc:vivo:curation:622a5a2a-9b1b-44d8-b37c-13771d75897b",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "Imikino",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "title": "Podcast: Imvo n'Imvano",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/institutional-50169255",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4a63/live/d5ee2900-52d9-11ee-bb35-018b118380ce.png",
+            "description": "Ikiganiro mpaka ku bibazo bitandukanye",
+            "imageAlt": "Podcast: Imvo n'Imvano",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Finstitutional-50169255"
+          },
+          {
+            "type": "audio",
+            "title": "Podcast: Ikiganiro cy’abagore",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/institutional-51111781",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fc2d/live/d9aac780-5147-11ee-b3da-11329d550b2e.png",
+            "description": "Ikiganiro cy’abagore",
+            "imageAlt": "Ikiganiro cy’abagore",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Finstitutional-51111781"
+          },
+          {
+            "type": "audio",
+            "title": "Podcast: Amakuru ya BBC Gahuzamiryango",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/institutional-50948665",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bdeb/live/dfb3f2d0-4b3b-11ee-9b58-cb80889117a8.jpg",
+            "description": "Amakuru y'akarere na mpuzamakungu mutegurirwa na BBC Gahuzamiryango",
+            "imageAlt": "Amakuru ya BBC Gahuzamiryango",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Finstitutional-50948665"
+          },
+          {
+            "type": "audio",
+            "title": "Podcast: Ikinamico Urunana",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/institutional-51111776",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5d72/live/31e52ac0-4b3b-11ee-9b58-cb80889117a8.jpg",
+            "description": "Teramana na BBC Gahuzamiryango mu kinamico Urunana",
+            "imageAlt": "Ikinamico Urunana",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Finstitutional-51111776"
+          },
+          {
+            "type": "audio",
+            "title": "Podcast: Baza Muganga",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/gahuza/institutional-51112056",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b595/live/0ab8f030-4b3b-11ee-9b58-cb80889117a8.jpg",
+            "description": "Mubaza ibibazo mufise ku vy'amagara, Muganga akabaha inyishu kuri BBC Gahuzamiryango",
+            "imageAlt": "Baza Muganga",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fgahuza%2Finstitutional-51112056"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:9e08b522-27b3-4694-9980-870cf799f140",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Podcasts",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 8,
+        "title": "Ibisomwa cane",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/gahuza/popular/read",
+        "mostRead": {
+          "generated": "2024-01-26T09:53:18.002Z",
+          "lastRecordTimeStamp": "2024-01-26T09:50:00Z",
+          "firstRecordTimeStamp": "2024-01-26T07:50:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cw0r5v7rx02o",
+              "rank": 1,
+              "title": "‘Ndabakunda mwese’ ijambo rya nyuma ry’imfungwa ya mbere yicishijwe nitrogen gas",
+              "href": "https://www.bbc.com/gahuza/articles/cw0r5v7rx02o",
+              "timestamp": 1706245652014
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crgkn7mx9jxo",
+              "rank": 2,
+              "title": "Uko impanga zatandukanyijwe zikagurishwa zikivuka zahujwe na video yo kuri TikTok",
+              "href": "https://www.bbc.com/gahuza/articles/crgkn7mx9jxo",
+              "timestamp": 1706259706029
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crg5dk72z68o",
+              "rank": 3,
+              "title": "Abana bariko baricwa n'inzara ariko Ethiopia ivuga ko ata nzu iriko irasha ",
+              "href": "https://www.bbc.com/gahuza/articles/crg5dk72z68o",
+              "timestamp": 1706251495937
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn0nl6j6v10o",
+              "rank": 4,
+              "title": "Ukraine yoba yarashe indege y’Uburusiya yari itwaye impfungwa zayo z’intambara, vyagenze gute?",
+              "href": "https://www.bbc.com/gahuza/articles/cn0nl6j6v10o",
+              "timestamp": 1706167515904
+            },
+            {
+              "id": "3060a354-6ba9-254a-a95c-e659d74148e0",
+              "rank": 5,
+              "title": "Inkuru y'umwana muto wakatiwe urwo gupfa mu mateka ya vuba ya USA",
+              "href": "/gahuza/amakuru-53060900",
+              "timestamp": 1592290348000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cw8j4l4n06wo",
+              "rank": 6,
+              "title": "Abicwa n'inzara ni ibijuju -umushikiranganji wa Uganda ",
+              "href": "https://www.bbc.com/gahuza/articles/cw8j4l4n06wo",
+              "timestamp": 1706192663529
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjev3gzge29o",
+              "rank": 7,
+              "title": "M23 yashyizeho abategetsi b’uturere igenzura",
+              "href": "https://www.bbc.com/gahuza/articles/cjev3gzge29o",
+              "timestamp": 1706079380029
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c51w37e9339o",
+              "rank": 8,
+              "title": "Isaha y’imperuka kirimbuzi ubu irabura amasegonga 90 kuri saa sita z’ijoro",
+              "href": "https://www.bbc.com/gahuza/articles/c51w37e9339o",
+              "timestamp": 1706075828855
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv29w3dnl9xo",
+              "rank": 9,
+              "title": "Urwo gupfa: Imfungwa ya mbere igiye kwicwa hakoreshejwe umwuka wa nitrogen (azote)",
+              "href": "https://www.bbc.com/gahuza/articles/cv29w3dnl9xo",
+              "timestamp": 1706172999248
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c80npvzpn4wo",
+              "rank": 10,
+              "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Kimmich, Martial, Greenwood, Godfrey, Onana, Lukaku",
+              "href": "https://www.bbc.com/gahuza/articles/c80npvzpn4wo",
+              "timestamp": 1706172184136
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv20dym2p89o",
+              "rank": 11,
+              "title": "'Garura abagabo bacu'- Abarusiyakazi mu myigaragambyo idasanzwe",
+              "href": "https://www.bbc.com/gahuza/articles/cv20dym2p89o",
+              "timestamp": 1706097734048
+            },
+            {
+              "id": "415ba28c-8052-430d-89fc-d22d0393474e",
+              "rank": 12,
+              "title": "Uburenganzira n'imihango bya nyuma ku bagiye guhanishwa urupfu ku isi",
+              "href": "/gahuza/amakuru-59230219",
+              "timestamp": 1636531451000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cpe0w70v3kzo",
+              "rank": 13,
+              "title": "Perezida Kagame yahaye gasopo abibaza ko batera u Rwanda",
+              "href": "https://www.bbc.com/gahuza/articles/cpe0w70v3kzo",
+              "timestamp": 1706029697404
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c88nlkpy40eo",
+              "rank": 14,
+              "title": "‘Icyayi nyacyo ni icyongewemo umunyu’ – Umuhanga muri science",
+              "href": "https://www.bbc.com/gahuza/articles/c88nlkpy40eo",
+              "timestamp": 1706160987766
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn0nwr4k9v4o",
+              "rank": 15,
+              "title": "Impagarara nyuma y'uko umunya Ukraine atowe nka Miss w'Ubuyapani ",
+              "href": "https://www.bbc.com/gahuza/articles/cn0nwr4k9v4o",
+              "timestamp": 1706161842524
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cy0m9r373d4o",
+              "rank": 16,
+              "title": "Uburundi bwishuye kw'itangazo ry'Urwanda ryiyamiriza amajambo ya Ndayishimiye i Kinshasa",
+              "href": "https://www.bbc.com/gahuza/articles/cy0m9r373d4o",
+              "timestamp": 1706033840769
+            },
+            {
+              "id": "88b1afab-4142-41ba-94c4-2293e3c70a52",
+              "rank": 17,
+              "title": "Ifunguro rya nyuma basabye mbere yo kwicwa",
+              "href": "/gahuza/amakuru-53805444",
+              "timestamp": 1597662011000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0d70w0pl8po",
+              "rank": 18,
+              "title": "Korea: Ubwo Kim Jong Un yoba ariko ategura intambara?",
+              "href": "https://www.bbc.com/gahuza/articles/c0d70w0pl8po",
+              "timestamp": 1706000091351
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c51z12l8ldno",
+              "rank": 19,
+              "title": "Intambara nshya yaba igiye kubura hagati ya M23, FARDC na SADC?",
+              "href": "https://www.bbc.com/gahuza/articles/c51z12l8ldno",
+              "timestamp": 1705557587124
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czvqlxg7xk8o",
+              "rank": 20,
+              "title": "U Rwanda rwamaganye “amagambo rutwitsi” ya Ndayishimiye",
+              "href": "https://www.bbc.com/gahuza/articles/czvqlxg7xk8o",
+              "timestamp": 1705959612774
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Uhora ugira ibibazo vyo kuja ku rubuga rwa BBC Gahuza? Ubu ni uburyo wokoresha",
+            "firstPublished": "2019-10-23T15:10:17.000Z",
+            "lastPublished": "2019-10-23T15:10:17.000Z",
+            "link": "https://www.bbc.com/gahuza/institutional-50154590",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5438/live/6c598e70-8f9d-11ee-833d-0f8d294ddc97.png",
+            "description": "Birashika abantu mu bihugu bimwe bimwe canke uturere bakagira ibibazo vyo kuja ku mbuga za BBC ahanini bitewe n'uko haba hari abazizibiye, ariko hariho uburyo bwo gukemura ico kibazo.",
+            "imageAlt": "BBC Gahuza",
+            "id": "fa70b87c-12b6-cc4c-9063-bb6d02788184"
+          },
+          {
+            "type": "link",
+            "title": "Reba ibiganiro byose",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "http://www.bbc.com/gahuza/ibindi_wifashisha/2010/10/101005_schedules_gahuza",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b32/live/7cfdf680-8f9d-11ee-952c-5f8de97ee99b.png",
+            "description": "",
+            "imageAlt": "BBC Gahuza",
+            "id": "http%3A%2F%2Fwww.bbc.com%2Fgahuza%2Fibindi_wifashisha%2F2010%2F10%2F101005_schedules_gahuza"
+          },
+          {
+            "type": "link",
+            "title": "Abandi Dukorana",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "http://www.bbc.com/gahuza/ibindi_wifashisha/2013/05/130524_bbcgahuza_partners",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8bac/live/8ce32d40-8f9d-11ee-ac7f-c97dfdb65d91.png",
+            "description": "",
+            "imageAlt": "BBc Gahuza",
+            "id": "http%3A%2F%2Fwww.bbc.com%2Fgahuza%2Fibindi_wifashisha%2F2013%2F05%2F130524_bbcgahuza_partners"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:24ba20f5-bc7d-4359-b5a4-7cc9c0a40ca7",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Amarembo ngirakamaro",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cz4vn9gy9pyt",
+        "contentType": "index-home",
+        "pageIdentifier": "gahuza.page",
+        "pageTitle": "BBC News Gahuza"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

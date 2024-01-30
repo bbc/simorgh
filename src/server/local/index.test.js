@@ -20,8 +20,8 @@ describe('Local Server', () => {
     pageType                           | dataPath                                                         | expectedDataFile
     ${'Article'}                       | ${'/news/articles/c0g992jmmkko.json'}                            | ${'/news/articles/c0g992jmmkko.json'}
     ${'Article with variant'}          | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}                   | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}
-    ${'Front Page'}                    | ${'/pidgin.json'}                                                | ${'/pidgin/frontpage/index.json'}
     ${'Front Page with variant'}       | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/frontpage/trad.json'}
+    ${'Migrated Home Page'}            | ${'/pidgin.json'}                                                | ${'/pidgin/homePage/index.json'}
     ${'Home Page'}                     | ${'/kyrgyz/tipohome.json'}                                       | ${'/kyrgyz/homePage/index.json'}
     ${'Most Read'}                     | ${'/pidgin/mostread.json'}                                       | ${'/pidgin/mostRead/index.json'}
     ${'Most Read with variant'}        | ${'/zhongwen/mostread/trad.json'}                                | ${'/zhongwen/mostRead/trad.json'}
@@ -38,7 +38,7 @@ describe('Local Server', () => {
     ${'Secondary Column'}              | ${'/igbo/sty-secondary-column.json'}                             | ${'/igbo/secondaryColumn/index.json'}
     ${'Secondary Column with variant'} | ${'/ukchina/sty-secondary-column/trad.json'}                     | ${'/ukchina/secondaryColumn/trad.json'}
     ${'Recommendations'}               | ${'/hindi/vert-fut-53035307/recommendations.json'}               | ${'/hindi/recommendations/index.json'}
-    ${'IDX'}                           | ${'/persian/afghanistan.json'}                                   | ${'/persian/afghanistan/index.json'}
+    ${'IDX'}                           | ${'/ukrainian/ukraine_in_russian.json'}                          | ${'/ukrainian/ukraine_in_russian/index.json'}
     ${'Africa Eye TV Brand'}           | ${'/worldservice/tv/africa_eye/w13xttpn.json'}                   | ${'/worldservice/tv/africa_eye/w13xttpn.json'}
     ${'Africa Eye TV Episode'}         | ${'/worldservice/tv/africa_eye/p08jbbg.json'}                    | ${'/worldservice/tv/africa_eye/p08jbbg.json'}
     ${'Live Radio'}                    | ${'/korean/bbc_korean_radio/liveradio.json'}                     | ${'/korean/bbc_korean_radio/liveradio.json'}

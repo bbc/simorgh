@@ -65,6 +65,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'ઓડિયો પ્લેયર',
         videoPlayer: 'વીડિયો પ્લેયર',
       },
+      liveExperiencePage: {
+        liveLabel: 'લાઇવ',
+        liveCoverage: 'લાઇવ કવરેજ',
+        breaking: 'બ્રેકિંગ',
+        postedAt: 'અહીં પોસ્ટ કર્યું',
+        summary: 'સારાંશ',
+      },
       gist: 'સારાંશ',
       error: {
         404: {
@@ -126,7 +133,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ઓકે',
           reject: 'જાણો, શું ફેરફારો થયા છે',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -141,7 +148,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'કુકીઝ',
                 last: ' નો ઉપયોગ કરીને અમે બ્રાઉઝિંગ ડેટા દ્વારા તમને સારી અને ખાસ પ્રકારની સેવાઓ આપીએ છીએ. જેનાથી અમને તમારા માટે ખાસ કન્ટેન્ટ અને યોગ્ય જાહેરાત દર્શાવવામાં મદદ મળે છે. અમને જણાવો કે તમે આ અંગે સહમત છો.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'સેટિંગ્સ મૅનેજ કરો.',
             },
@@ -157,7 +164,7 @@ export const service: DefaultServiceConfig = {
                   'અમારી વેબસાઇટને યોગ્ય રીતે કાર્યરત રાખવા માટે સીમિત સ્તરે કેટલીક જાણકારીઓ સેવ કરવી પડે છે જેના માટે અમે આપની મંજૂરી નથી માગતા.',
                 para4: {
                   text: 'એ જરૂરી જાણકારીઓ વિશે વધારે વાંચો જે અમે આપની ડિવાઇસ પર સ્ટોર કર્યું છે જેથી અમારું પેજ આપને યોગ્ય રીતે દેખાય.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'અમે આપની મંજૂરી અને પસંદગીઓને આપની ડિવાઇસના લોકલ સ્ટોરેજમાં સ્ટોર કરીએ છીએ.',
@@ -190,13 +197,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'કુકીઝ',
                 last: ' નો ઉપયોગ કરીએ છીએ. અમને જણાવો કે તમે આ તમામ કુકીઝથી સહમત છો.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'હાં, હું સહમત છું',
             reject: 'ના, મને સેટિંગ્સમાં લઈ જાવ',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -303,8 +310,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -317,20 +324,32 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati',
       },
       {
-        title: 'વીડિયો',
-        url: '/gujarati/media/video',
-      },
-      {
-        title: 'લોકપ્રિય',
-        url: '/gujarati/popular/read',
+        title: 'ગુજરાત',
+        url: '/gujarati/topics/cz74kjn4j5wt',
       },
       {
         title: 'ભારત',
         url: '/gujarati/topics/c06gq3993v3t',
       },
       {
-        title: 'આંતરરાષ્ટ્રીય',
+        title: 'વિદેશ',
         url: '/gujarati/topics/c83plvezd90t',
+      },
+      {
+        title: 'સ્પોર્ટ્સ',
+        url: '/gujarati/topics/c404vn5qxq9t',
+      },
+      {
+        title: 'વીડિયો',
+        url: '/gujarati/topics/cpev7m0rry0t',
+      },
+      {
+        title: 'મૅગેઝિન',
+        url: '/gujarati/topics/c89lm5l6w4pt',
+      },
+      {
+        title: 'લોકપ્રિય',
+        url: '/gujarati/popular/read',
       },
     ],
   },

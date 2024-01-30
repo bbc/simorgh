@@ -1,6 +1,10 @@
+import isLive from '#app/lib/utilities/isLive';
+
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
-const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
+const appRegex = '.app';
+const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
+const assetUriRegex = '[a-z0-9-_+]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
@@ -9,7 +13,7 @@ const topicIdRegex = '[a-z0-9]+';
 const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
 const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
-const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
+const idxRegex = 'ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
 const sportDisciplineRegex = '/[a-z0-9-_]{1,}';
 
@@ -17,7 +21,7 @@ const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
 export const getArticleSwRegex = services => {
@@ -30,14 +34,74 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
+const homePageServices = [
+  'afaanoromoo',
+  'afrique',
+  'amharic',
+  'azeri',
+  'bengali',
+  'burmese',
+  'gahuza',
+  'gujarati',
+  'hausa',
+  'igbo',
+  'indonesia',
+  'kyrgyz',
+  'korean',
+  'marathi',
+  'nepali',
+  'pashto',
+  'persian',
+  'pidgin',
+  'portuguese',
+  'punjabi',
+  'sinhala',
+  'somali',
+  'swahili',
+  'tamil',
+  'telugu',
+  'thai',
+  'tigrinya',
+  'turkce',
+  'ukrainian',
+  'urdu',
+  'vietnamese',
+  'yoruba',
+];
+
+const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+
 export const getFrontPageRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  let frontPages = services;
+  if (isLive()) {
+    frontPages = services.filter(
+      service => !homePageServices.includes(service),
+    );
+  } else {
+    frontPages = services.filter(service =>
+      servicesWithVariants.includes(service),
+    );
+  }
+  const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
-export const getHomePageRegex = services => {
+export const getTipoHomeRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
+};
+
+export const getHomePageRegex = services => {
+  let homePages = services;
+  if (isLive()) {
+    homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(
+      service => !servicesWithVariants.includes(service),
+    );
+  }
+  const homePageServiceRegex = getServiceRegex(homePages);
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {
@@ -48,16 +112,6 @@ export const getSwRegex = services => {
 export const getManifestRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/manifest.json`;
-};
-
-export const getHomePageSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/sw.js`;
-};
-
-export const getHomePageManifestRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {

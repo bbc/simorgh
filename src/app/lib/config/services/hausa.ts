@@ -79,6 +79,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Kai-tsaye',
+        liveCoverage: 'Rahoto kai-tsaye',
+        breaking: 'Labarai da dumi-dumi',
+        postedAt: 'An wallafa a',
+        summary: 'Takaitacce',
+      },
       gist: 'Takaitacce',
       error: {
         404: {
@@ -137,7 +144,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Madalla',
           reject: 'Duba abin da ya sauya',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -152,7 +159,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'tattara',
                 last: ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Na ba da damar aiwatar da tsare-tsarena',
             },
@@ -168,7 +175,7 @@ export const service: DefaultServiceConfig = {
                   'Domin shafukanmu su gudana, mun tattara wasu ƴan bayanai kan wayarku ba tare da izininku ba.',
                 para4: {
                   text: 'Karanta muhimman bayanan da muka tattara kan wayarku domin inganta shafukanmu.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: 'Muna adana bayanan da kuka amice mu ɗauka na wayarku.',
                 heading3: 'Zaɓi kan tara bayanai',
@@ -200,13 +207,13 @@ export const service: DefaultServiceConfig = {
                 linkText: "ka'idoji",
                 last: " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Eh, na gamsu',
             reject: "A'a, ku kai ni wurin zabar tsari",
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -272,7 +279,7 @@ export const service: DefaultServiceConfig = {
           'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
-      featuresAnalysisTitle: 'Minti Daya Da BBC',
+      featuresAnalysisTitle: 'Labarai na musamman',
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',
@@ -326,8 +333,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

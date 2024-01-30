@@ -8,10 +8,8 @@ import { withEpisodeContext } from './helpers';
 const Description = styled.span`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) =>
-    darkMode
-      ? props => props.theme.palette.WHITE
-      : props => props.theme.palette.EBON};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
   display: inline-block;
   width: 100%;
   margin: ${GEL_SPACING_HLF} 0;

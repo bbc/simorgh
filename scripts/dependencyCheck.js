@@ -4,7 +4,7 @@ const depcheck = require('depcheck');
 
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
-  ignoreDirs: ['build', '.storybook/SidebarLabel'],
+  ignoreDirs: ['build', '.storybook', '.yarn', 'cypress'],
   ignoreMatches: [
     'puppeteer',
     'isarray',
@@ -28,14 +28,15 @@ depcheck(
 
       return {
         ...obj,
-        key: missing[key],
+        [key]: missing[key],
       };
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
     Object.keys(missingFiltered).forEach(key => {
       console.log(key);
-      console.log(`  ${missingFiltered[key].join('\n  ')}`);
+      console.log(`\t${missingFiltered[key].join('\n\t')}`);
+      console.log('\n');
     });
 
     if (dependencies.length > 0 || Object.keys(missingFiltered).length > 0) {

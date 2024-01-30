@@ -6,18 +6,13 @@ import React, {
   PropsWithChildren,
 } from 'react';
 import defaultToggles from '#lib/config/toggles';
-import { Environments } from '#app/models/types/global';
+import { Environments, Toggles } from '#app/models/types/global';
 import toggleReducer from './reducer';
 
 const environment = (process.env.SIMORGH_APP_ENV || 'local') as Environments;
 
 type ToggleContextProps = {
-  toggleState: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggleState: Toggles;
   toggleDispatch: Dispatch<ReducerAction<typeof toggleReducer>>;
 };
 
@@ -26,12 +21,7 @@ const ToggleContext = createContext<ToggleContextProps>(
 );
 
 type ToggleContextProviderProps = {
-  toggles?: {
-    [key: symbol]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggles?: Toggles;
 };
 
 const ToggleContextProvider = ({

@@ -1,0 +1,103 @@
+{
+  "data": {
+    "title": "BBC News فارسی",
+    "description": "سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "چرا «انقلاب مهسا» باید به دنبال دادخواهی برود نه خونخواهی؟",
+            "firstPublished": "2023-04-03T20:06:13.000Z",
+            "link": "https://www.bbc.com/persian/iran-65158865",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/16536/production/_129264419_gozar-shirin-ebadi.jpg",
+            "description": "امیر پیام، بی‌بی‌سی، که برای پوشش کنفرانس «گذار به مردمسالاری در ایران» به دانشگاه استنفورد کالیفرنیا سفر کرده بود با چند چهره برجسته حاضر در این رویداد گفتگو کرده که بخش‌هایی از آن را در تلویزیون و شبکه‌های اجتماعی بی‌بی‌سی فارسی طی روزهای گذشته مشاهده کردید. او در مجموعه «یک نگاه» بنا دارد به بخش‌های منتشر نشده این گفتگوها بپردازد. یادداشت زیر نسخه کامل گفتگوی او با شیرین عبادی، حقوقدان و برنده جایزه صلح نوبل است که درباره عدالت محوری و دادخواهی در دوران گذار است.",
+            "imageAlt": "شیرین عبادی",
+            "id": "d07bb776-00d6-40d4-8bdb-4185b59980d3"
+          },
+          {
+            "type": "article",
+            "title": "روایت یک «مهماندار هواپیما» از زیر پل سوخته کابل تا مرکز ترک اعتیاد طالبان ",
+            "firstPublished": "2023-04-03T10:53:20.379Z",
+            "link": "https://www.bbc.com/persian/articles/c51e2wpl9jyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/600b/live/c1aeafb0-d1ff-11ed-be2e-754a65c11505.jpg",
+            "description": "در ماه‌های اخیر، صدها مرد در سراسر پایتخت، از زیر پل، از پارک‌ها‌ و از بالای تپه‌ها‌، جمع‌آوری شده‌اند. بیشتر آنها به اردوگاهی که قبلا یک پایگاه نظامی‌ آمریکایی بود، برده شده‌اند که اکنون به یک مرکز موقت ترک اعتیاد تبدیل شده است.\nافغانستان، پایتخت اعتیاد به مواد مخدر در جهان است. به گفته اداره بین المللی مواد مخدر، حدود ۳.۵ میلیون نفر، در کشوری با جمعیت حدود ۴۰ میلیونی معتاد به مواد مخدر هستند.",
+            "imageAlt": "محمد عمر می‌گوید او مهماندار هواپیما بود",
+            "id": "c51e2wpl9jyo"
+          },
+          {
+            "type": "article",
+            "title": "گراهام پاتر اخراج شد؛ سرمربی بعدی چلسی کیست؟",
+            "firstPublished": "2023-04-03T14:05:22.571Z",
+            "link": "https://www.bbc.com/persian/articles/cx85y7j3rl9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c940/live/dc5f24d0-d221-11ed-921a-b9310c388ff8.jpg",
+            "description": "در حالی که لیگ برتر فوتبال انگلیس به اوج خود رسیده است، شماری از بزرگ‌ترین مربیان حال حاضر فوتبال جهان در انتظار پیدا کردن شغل جدیدی نشسته‌اند.",
+            "imageAlt": "یولیان ناگلزمن که از بایرن مونیخ اخراج شده یکی از مربیانی است که گفته می‌شود راهی لیگ برتر فوتبال انگلیس خواهد شد",
+            "id": "cx85y7j3rl9o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:794aa745-4de3-44b3-83aa-031aa12f46f3",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "گزارش و تحلیل",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "طالبان از انتقال نخستین گروه از ده‌ها شهروند گیرمانده افغانستان از سودان به عربستان سعودی خبر داد",
+            "firstPublished": "2023-04-27T11:35:21.042Z",
+            "link": "https://www.bbc.com/persian/articles/crge3mg5r8eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/321d/live/aa4ebe30-e4ee-11ed-8685-fd075442e2f0.jpg",
+            "description": "وزارت خارجه طالبان اعلام کرده که اولین گروه از شهروندان گیرمانده افغانستان در سودان به کمک عربستان سعودی به شهر جده منتقل شده و قرار است به زودی به افغانستان برگردند. در پی آغاز مجدد درگیری‌ها در سودان ده‌ها شهروند افغانستان از جمله دانشجویان و کارمندان سازمان‌های بین‌المللی در شهرهای مختلف سودان گیر مانده‌اند، شماری از آنها از خارطوم پایتخت بیرون شده‌اند و تعداد کمی از آنها موفق به ترک سودان شده‌اند. ",
+            "imageAlt": "خارطوم",
+            "id": "crge3mg5r8eo"
+          },
+          {
+            "type": "article",
+            "title": "چطور مجری فاکس‌نیوز بر موج خشم مردم سوار شد",
+            "firstPublished": "2023-04-27T04:55:03.871Z",
+            "link": "https://www.bbc.com/persian/articles/cp35n605n2eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4205/live/40ae74d0-e3ee-11ed-8df1-d74cbf1089d7.png",
+            "description": "تاکر کارلسون، مجری سرشناس فاکس‌نیوز، متهم به برانگیختن نکات نژادپرستانه و ضد مهاجرت و ترویج تئوری‌های توطئه بود. \n",
+            "imageAlt": "تاکر کارلسون",
+            "id": "cp35n605n2eo"
+          },
+          {
+            "type": "article",
+            "title": "صدای آمریکا از امکان آزادی مشروط ۷ میلیارد دلار ایران در کره جنوبی خبر داد",
+            "firstPublished": "2023-04-27T12:04:56.266Z",
+            "link": "https://www.bbc.com/persian/articles/cv2me4jv86eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/01d9/live/d4ccf4d0-e4ec-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "بخش فارسی صدای آمریکا، رسانه رسمی دولت آمریکا، در گزارشی اختصاصی از چراغ سبز کاخ سفید به آزادی مشروط هفت میلیارد دلار از دارایی‌های بلوکه‌شده ایران در کره جنوبی خبر داده است.\n",
+            "imageAlt": "پرچم ایران و آمریکا",
+            "id": "cv2me4jv86eo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:362895c7-2b82-43d8-8f76-9c8106734bc9",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c3rpqvvzem3t",
+        "contentType": "index-home",
+        "pageIdentifier": "persian.page",
+        "pageTitle": "BBC News فارسی"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

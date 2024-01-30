@@ -7,7 +7,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -60,7 +60,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: inline-block;
   margin: 0;
   font-size: 1.125rem;
@@ -71,35 +71,35 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
@@ -118,12 +118,12 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
         Dunia Pagi Ini
       </span>
       <span
-        class="emotion-4 emotion-5"
+        class="emotion-4"
       >
         , 
       </span>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
       >
         27 April 2020
       </span>
@@ -208,7 +208,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: inline-block;
   margin: 0;
   font-size: 1.125rem;
@@ -219,35 +219,35 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
@@ -266,12 +266,12 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
         Dunia Pagi Ini
       </span>
       <span
-        class="emotion-4 emotion-5"
+        class="emotion-4"
       >
         , 
       </span>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
       >
         27 April 2020
       </span>

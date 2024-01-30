@@ -10,7 +10,7 @@ import OnDemandHeadingContainer from '.';
 
 const releaseDateTimeStamp = 1587945600000;
 // eslint-disable-next-line react/prop-types
-const Component = ({ ariaHidden, idAttr, darkMode, episodeTitle }) => (
+const Component = ({ ariaHidden, idAttr, episodeTitle }) => (
   <ServiceContextProvider service="news">
     <OnDemandHeadingContainer
       brandTitle="Dunia Pagi Ini"
@@ -18,7 +18,6 @@ const Component = ({ ariaHidden, idAttr, darkMode, episodeTitle }) => (
       uuid="uuid"
       idAttr={idAttr}
       ariaHidden={ariaHidden}
-      darkMode={darkMode}
       episodeTitle={episodeTitle}
     />
   </ServiceContextProvider>
@@ -31,7 +30,11 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   });
 
   it('should render correctly - dark mode', () => {
-    const { container } = render(<Component darkMode />);
+    const { container } = render(<Component />, {
+      pageType: 'media',
+      derivedPageType: 'On Demand TV',
+      service: 'afrique',
+    });
     expect(container).toMatchSnapshot();
   });
 
@@ -74,7 +77,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     render(<Component />);
 
     const visuallyHiddenComma = document.querySelector(
-      'span[class*="VisuallyHiddenText"]',
+      'span[class*="visuallyHiddenText"]',
     );
 
     expect(visuallyHiddenComma).toBeInTheDocument();

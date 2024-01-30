@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-1 {
   padding: 0;
   margin: 0;
@@ -246,7 +260,6 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-10>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }
@@ -407,17 +420,52 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   color: #6E6E73;
 }
 
-.emotion-24:hover .emotion-33 {
+.emotion-24:hover .emotion-32 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-24:focus .emotion-33 {
+.emotion-24:focus .emotion-32 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-26 {
+  color: #006666;
+  display: inline-block;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-26 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-27 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-28 {
+  color: #006666;
+  display: inline-block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-29 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -428,16 +476,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   margin: 0;
 }
 
-.emotion-28 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.emotion-32 {
+.emotion-31 {
   color: #3F3F42;
   padding: 0.5rem 0 0 0;
   display: inline-block;
@@ -450,20 +489,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-36 {
+.emotion-34 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -476,53 +515,53 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-36 {
+  .emotion-34 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-36 {
+  .emotion-34 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-38 {
+.emotion-36 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-36 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-36 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-38 {
+  .emotion-36 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-40>svg {
+.emotion-38>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -531,12 +570,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-40>svg {
+  .emotion-38>svg {
     fill: canvasText;
   }
 }
 
-.emotion-42 {
+.emotion-40 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -545,11 +584,11 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   padding-left: 0.5rem;
 }
 
-.emotion-79 {
+.emotion-74 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -562,27 +601,27 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-79 {
+  .emotion-74 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-79 {
+  .emotion-74 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-79 {
+  .emotion-74 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-147 {
+.emotion-139 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -593,45 +632,45 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-147 {
+  .emotion-139 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-147 {
+  .emotion-139 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-151 {
+.emotion-142 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-right: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-151 {
+  .emotion-142 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-151 {
+  .emotion-142 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-155 {
+.emotion-145 {
   color: #6E6E73;
   padding: 0.5rem 0 0 0;
   display: inline-block;
@@ -644,20 +683,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-155 {
+  .emotion-145 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-155 {
+  .emotion-145 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-161 {
+.emotion-150 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -666,32 +705,32 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-161 {
+  .emotion-150 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-161 {
+  .emotion-150 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-161 {
+  .emotion-150 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-163>svg {
-  color: #11708C;
+.emotion-152>svg {
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -699,7 +738,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-163>svg {
+  .emotion-152>svg {
     fill: canvasText;
   }
 }
@@ -766,43 +805,63 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-0"
+              aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-0"
+                id="scheduleItem-p0"
                 role="text"
               >
-                <span
-                  class="emotion-26 emotion-27"
+                <svg
+                  aria-hidden="true"
+                  class="emotion-26"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16"
+                  viewBox="0 0 32 32"
+                  width="16"
                 >
-                  Listen Live, 
-                </span>
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  />
+                  <circle
+                    class="emotion-27"
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                  />
+                </svg>
                 <span
                   role="text"
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-28 emotion-29"
+                    class="emotion-28"
                     dir="ltr"
                   >
                     LIVE 
                   </span>
+                  <span
+                    class="emotion-29"
+                    lang="en-GB"
+                  >
+                    Listen Live, 
+                  </span>
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 14:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -810,20 +869,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             The critic, author, poet and TV host was known for his witty commentary on international television.
           </p>
         </div>
         <div
-          class="emotion-38 emotion-39"
+          class="emotion-36 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -838,7 +897,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="ltr"
           >
@@ -907,32 +966,32 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-1"
+              aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-1"
+                id="scheduleItem-p1"
                 role="text"
               >
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   Listen, 
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 14:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -940,20 +999,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             The critic, author, poet and TV host was known for his witty commentary on international television.
           </p>
         </div>
         <div
-          class="emotion-79 emotion-39"
+          class="emotion-74 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -968,7 +1027,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="ltr"
           >
@@ -1037,32 +1096,32 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-2"
+              aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
-                id="scheduleItem-2"
+                id="scheduleItem-p2"
                 role="text"
               >
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   Listen, 
                 </span>
                 Could a computer ever create better art than a human?
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 14:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 August 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , Duration 1,00,00 
                 </span>
@@ -1070,20 +1129,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             The critic, author, poet and TV host was known for his witty commentary on international television.
           </p>
         </div>
         <div
-          class="emotion-79 emotion-39"
+          class="emotion-74 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -1098,7 +1157,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="ltr"
           >
@@ -1164,57 +1223,57 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
           class="emotion-20 emotion-21"
         >
           <h3
-            class="emotion-147 emotion-23"
+            class="emotion-139 emotion-23"
           >
             <span
-              id="scheduleItem-3"
+              id="scheduleItem-p3"
               role="text"
             >
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 Listen Next, 
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-151 emotion-152"
+                class="emotion-142 emotion-143"
                 dir="ltr"
               >
                 NEXT 
               </span>
               Could a computer ever create better art than a human?
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 , 14:54, 
               </span>
               <span
-                class="emotion-155 emotion-33"
+                class="emotion-145 emotion-32"
               >
                 27 August 2019
               </span>
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 , Duration 1,00,00 
               </span>
             </span>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             The critic, author, poet and TV host was known for his witty commentary on international television.
           </p>
         </div>
         <div
-          class="emotion-161 emotion-39"
+          class="emotion-150 emotion-37"
         >
           <span
-            class="emotion-163 emotion-41"
+            class="emotion-152 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -1229,7 +1288,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="ltr"
           >
@@ -1247,6 +1306,20 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 `;
 
 exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-1 {
   padding: 0;
   margin: 0;
@@ -1492,7 +1565,6 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-10>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
@@ -1525,7 +1597,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1.125rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1557,7 +1629,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   line-height: 1.25rem;
   color: #545658;
   display: block;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1599,7 +1671,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-22 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1653,17 +1725,52 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   color: #6E6E73;
 }
 
-.emotion-24:hover .emotion-33 {
+.emotion-24:hover .emotion-32 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-24:focus .emotion-33 {
+.emotion-24:focus .emotion-32 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-26 {
+  color: #006666;
+  display: inline-block;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-26 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-27 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-28 {
+  color: #006666;
+  display: inline-block;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-29 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1674,21 +1781,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   margin: 0;
 }
 
-.emotion-28 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-.emotion-32 {
+.emotion-31 {
   color: #3F3F42;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1696,21 +1794,21 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-36 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-34 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
@@ -1722,53 +1820,53 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-36 {
+  .emotion-34 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-36 {
+  .emotion-34 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-38 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-36 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #B80000;
+  background-color: #006666;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-36 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-36 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-38 {
+  .emotion-36 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-40>svg {
+.emotion-38>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1777,12 +1875,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-40>svg {
+  .emotion-38>svg {
     fill: canvasText;
   }
 }
 
-.emotion-42 {
+.emotion-40 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1791,12 +1889,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   padding-right: 0.5rem;
 }
 
-.emotion-79 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-74 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1808,28 +1906,28 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-79 {
+  .emotion-74 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-79 {
+  .emotion-74 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-79 {
+  .emotion-74 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-147 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-139 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1839,50 +1937,50 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-147 {
+  .emotion-139 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-147 {
+  .emotion-139 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-151 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-142 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-151 {
+  .emotion-142 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-151 {
+  .emotion-142 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-155 {
+.emotion-145 {
   color: #6E6E73;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1890,21 +1988,21 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-155 {
+  .emotion-145 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-155 {
+  .emotion-145 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-161 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-150 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1912,32 +2010,32 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-161 {
+  .emotion-150 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-161 {
+  .emotion-150 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-161 {
+  .emotion-150 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-163>svg {
-  color: #11708C;
+.emotion-152>svg {
+  color: #B80000;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1945,7 +2043,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-163>svg {
+  .emotion-152>svg {
     fill: canvasText;
   }
 }
@@ -2012,43 +2110,63 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-0"
+              aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-0"
+                id="scheduleItem-p0"
                 role="text"
               >
-                <span
-                  class="emotion-26 emotion-27"
+                <svg
+                  aria-hidden="true"
+                  class="emotion-26"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16"
+                  viewBox="0 0 32 32"
+                  width="16"
                 >
-                  استمع للبث المباشر, 
-                </span>
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  />
+                  <circle
+                    class="emotion-27"
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                  />
+                </svg>
                 <span
                   role="text"
                 >
                   <span
                     aria-hidden="true"
-                    class="emotion-28 emotion-29"
+                    class="emotion-28"
                     dir="rtl"
                   >
                     مباشر 
                   </span>
+                  <span
+                    class="emotion-29"
+                    lang="en-GB"
+                  >
+                    استمع للبث المباشر, 
+                  </span>
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 13:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2056,20 +2174,20 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.
           </p>
         </div>
         <div
-          class="emotion-38 emotion-39"
+          class="emotion-36 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -2084,7 +2202,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="rtl"
           >
@@ -2153,32 +2271,32 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-1"
+              aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-1"
+                id="scheduleItem-p1"
                 role="text"
               >
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   استمع, 
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 13:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2186,20 +2304,20 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.
           </p>
         </div>
         <div
-          class="emotion-79 emotion-39"
+          class="emotion-74 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -2214,7 +2332,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="rtl"
           >
@@ -2283,32 +2401,32 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
-              aria-labelledby="scheduleItem-2"
+              aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
-                id="scheduleItem-2"
+                id="scheduleItem-p2"
                 role="text"
               >
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   استمع, 
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , 13:54, 
                 </span>
                 <span
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   27 أغسطس/ آب 2019
                 </span>
                 <span
-                  class="emotion-26 emotion-27"
+                  class="emotion-29"
                 >
                   , المدة الزمنية 1،00،00 
                 </span>
@@ -2316,20 +2434,20 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </a>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.
           </p>
         </div>
         <div
-          class="emotion-79 emotion-39"
+          class="emotion-74 emotion-37"
         >
           <span
-            class="emotion-40 emotion-41"
+            class="emotion-38 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -2344,7 +2462,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="rtl"
           >
@@ -2410,57 +2528,57 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
           class="emotion-20 emotion-21"
         >
           <h3
-            class="emotion-147 emotion-23"
+            class="emotion-139 emotion-23"
           >
             <span
-              id="scheduleItem-3"
+              id="scheduleItem-p3"
               role="text"
             >
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 واصل الاستماع, 
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-151 emotion-152"
+                class="emotion-142 emotion-143"
                 dir="rtl"
               >
                 لاحق 
               </span>
               لماذا يخجل البعض من اسم قريته في مصر؟
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 , 13:54, 
               </span>
               <span
-                class="emotion-155 emotion-33"
+                class="emotion-145 emotion-32"
               >
                 27 أغسطس/ آب 2019
               </span>
               <span
-                class="emotion-26 emotion-27"
+                class="emotion-29"
               >
                 , المدة الزمنية 1،00،00 
               </span>
             </span>
           </h3>
           <p
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
           >
             هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.
           </p>
         </div>
         <div
-          class="emotion-161 emotion-39"
+          class="emotion-150 emotion-37"
         >
           <span
-            class="emotion-163 emotion-41"
+            class="emotion-152 emotion-39"
           >
             <svg
               aria-hidden="true"
-              class="emotion-42 emotion-43"
+              class="emotion-40 emotion-41"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -2475,7 +2593,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             </svg>
           </span>
           <time
-            class="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
             datetime="PT1H"
             dir="rtl"
           >

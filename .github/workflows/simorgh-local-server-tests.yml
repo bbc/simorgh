@@ -17,10 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
+      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
+      LIGHTHOUSE_BUILD: true
 
     steps:
       - uses: actions/checkout@v3
@@ -33,18 +35,28 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh
+      - name: Build Simorgh - Express App
         run: yarn build:local
 
-      - name: Start Simorgh Server
+      - name: Start Simorgh Server - Express App
         run: nohup node build/server.js > /dev/null 2>&1 &
+
+      - name: Build Simorgh - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: yarn build:local
+
+      - name: Start Simorgh Server - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
 
       - name: Run AMP Validator
         run: yarn amp:validate

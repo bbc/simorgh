@@ -1,3 +1,5 @@
+import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
+
 export default ({ service, pageType, variant }) => {
   let topicId;
   let variantTopicId;
@@ -5,10 +7,10 @@ export default ({ service, pageType, variant }) => {
   let firstItemHeadline;
   let pageCount;
   let numberOfItems;
-  let appendVariant = '';
   let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
+
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
@@ -22,7 +24,6 @@ export default ({ service, pageType, variant }) => {
           .split('?')[0];
 
         if (scriptSwitchServices.includes(service)) {
-          appendVariant = `&variant=${variant}`;
           if (service === 'serbian') {
             otherVariant = variant === 'lat' ? 'cyr' : 'lat';
           }
@@ -31,19 +32,12 @@ export default ({ service, pageType, variant }) => {
           }
         }
 
-        const requestObject = {
-          method: 'GET',
-          url: `https://web-cdn.${
-            env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
-        };
-
-        if (Cypress.env('currentPath').includes('?renderer_env=test')) {
-          requestObject.headers = { 'ctx-service-env': 'test' };
-        }
-
         // Gets the topic page data for all the tests
-        cy.request(requestObject).then(({ body }) => {
+        cy.getPageData({
+          service,
+          pageType: 'topic',
+          variant,
+        }).then(({ body }) => {
           topicTitle = body.data.title;
           variantTopicId = body.data.variantTopicId;
           pageCount = body.data.pageCount;
@@ -57,7 +51,6 @@ export default ({ service, pageType, variant }) => {
         });
         cy.log(`topic id ${topicId}`);
       }
-      cy.clearLocalStorage();
     });
 
     describe(`Page content`, () => {
@@ -120,22 +113,21 @@ export default ({ service, pageType, variant }) => {
         if (messageBanner) {
           cy.go('back');
           cy.get(
-            `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
-              ' ',
-              '-',
+            `[data-testid="${`message-banner-${idSanitiser(
+              messageBanner.title,
             )}`}"]`,
-          )
-            .scrollIntoView()
-            .should('exist')
-            .within(() => {
-              cy.get('a')
-                .should('have.attr', 'href')
-                .then($href => {
-                  cy.log($href);
-                  cy.get('a').click();
-                  cy.url().should('eq', messageBanner.summaries[0].link);
-                });
-            });
+          ).as('messageBanner');
+          cy.get('@messageBanner').should('exist');
+          cy.get('@messageBanner').scrollIntoView();
+          cy.get('@messageBanner').within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.log($href);
+                cy.get('a').click();
+                cy.url().should('eq', messageBanner.summaries[0].link);
+              });
+          });
         } else {
           cy.log('No Message Banner exist on Page!');
         }

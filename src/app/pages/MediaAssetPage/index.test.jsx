@@ -8,8 +8,8 @@ import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import mapPageData from '#data/pidgin/cpsAssets/23248703';
-import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
+import mapPageData from '#data/pidgin/cpsAssets/23248703.json';
+import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721.json';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
@@ -17,7 +17,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import MediaAssetPage from '.';
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -58,16 +58,6 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   );
 
   return PageWrapperContainer;
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return LoadingContainer;
 });
 
 jest.mock('#containers/PageHandlers/withError', () => Component => {
@@ -113,7 +103,9 @@ const escapedText = text => {
     'gi',
   );
 
-  return text.replace(replacementsRegex, match => textReplacements[match]);
+  return text
+    .replace(replacementsRegex, match => textReplacements[match])
+    .trim();
 };
 
 const getBlockTextAtIndex = (index, originalPageData) => {
@@ -159,6 +151,7 @@ describe('Media Asset Page', () => {
 
     ({ asFragment, getByText } = render(
       createAssetPage({ pageData }, 'pidgin'),
+      { service: 'pidgin', toggles: { mostRead: { enabled: true } } },
     ));
   });
 
@@ -209,14 +202,14 @@ describe('Media Asset Page', () => {
   });
 
   it('should render paragraph', () => {
-    const paragraphText = getBlockTextAtIndex(1, mapPageData);
+    const paragraphText = getBlockTextAtIndex(2, mapPageData.data.article);
     expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
   });
 
   it('should render image', () => {
     const imageCaption = path(
-      ['content', 'blocks', 25, 'caption'],
-      mapPageData,
+      ['content', 'blocks', 11, 'caption'],
+      mapPageData.data.article,
     );
     // Images not rendered properly due to lazyload, therefore can only check caption text
     expect(getByText(escapedText(imageCaption))).toBeInTheDocument();
@@ -285,7 +278,7 @@ describe('Media Asset Page', () => {
     };
 
     beforeAll(() => {
-      headingText = getBlockTextAtIndex(2, mapPageData);
+      headingText = getBlockTextAtIndex(2, mapPageData.data.article);
     });
 
     it('should render faux headline', () => {
@@ -304,13 +297,12 @@ describe('Media Asset Page', () => {
   });
 
   it('should render sub heading', () => {
-    const subHeadingText = getBlockTextAtIndex(3, mapPageData);
-
+    const subHeadingText = getBlockTextAtIndex(5, mapPageData.data.article);
     expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
   });
 
   it('should render crosshead', () => {
-    const crossHeadText = getBlockTextAtIndex(4, mapPageData);
+    const crossHeadText = getBlockTextAtIndex(6, mapPageData.data.article);
 
     expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
   });
@@ -320,7 +312,7 @@ describe('Media Asset Page', () => {
   });
 
   it('should render lastPublished timestamp for Pidgin', () => {
-    expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
+    expect(getByText('New Informate 10 June 2020')).toBeInTheDocument();
   });
 
   it('has a single "main" element, and a single "region" element (a11y)', async () => {
@@ -347,15 +339,10 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
-  const { pageData } = await mockInitialData({
-    assetId: 'uzbek/a-media-asset',
-    service: 'uzbek',
-    pageData: uzbekPageData,
-  });
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
-    pageData,
+    uzbekPageData,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
@@ -371,7 +358,7 @@ it('should not show the iframe when available is false', async () => {
 
 it('should show the media message when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
     uzbekPageData,
   );
@@ -381,6 +368,7 @@ it('should show the media message when available is false', async () => {
     service: 'uzbek',
     pageData: uzbekDataExpiredLivestream,
   });
+
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -391,15 +379,19 @@ it('should show the media message when available is false', async () => {
 });
 
 it('should show the media message when there is no media block', async () => {
-  const blocks = pathOr([], ['content', 'blocks'], uzbekPageData);
-  const blockTypes = pathOr([], ['metadata', 'blockTypes'], uzbekPageData);
+  const blocks = pathOr([], ['content', 'blocks'], uzbekPageData.data.article);
+  const blockTypes = pathOr(
+    [],
+    ['metadata', 'blockTypes'],
+    uzbekPageData.data.article,
+  );
   const uzbekDataWithNoMediaBlock = assocPath(
-    ['content', 'blocks'],
+    ['data', 'article', 'content', 'blocks'],
     blocks.filter(block => block.type !== 'version'),
     uzbekPageData,
   );
   const uzbekDataWithNoMediaType = assocPath(
-    ['metadata', 'blockTypes'],
+    ['data', 'article', 'metadata', 'blockTypes'],
     blockTypes.filter(type => type !== 'version'),
     uzbekDataWithNoMediaBlock,
   );

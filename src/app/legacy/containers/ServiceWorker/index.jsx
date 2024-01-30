@@ -31,7 +31,10 @@ const ServiceWorkerContainer = () => {
 
   useEffect(() => {
     const shouldInstallServiceWorker =
-      swPath && onClient() && 'serviceWorker' in navigator;
+      process.env.SIMORGH_APP_ENV !== 'local' &&
+      swPath &&
+      onClient() &&
+      'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);

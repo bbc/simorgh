@@ -41,7 +41,8 @@ const StyledLink = styled(Link)`
     text-decoration: underline;
   }
 
-  color: ${props => props.theme.palette.GREY_8};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_10 : theme.palette.GREY_8};
   &:visited {
     color: ${props => props.theme.palette.GREY_6};
   }
@@ -49,7 +50,8 @@ const StyledLink = styled(Link)`
 
 const PromoBox = styled.div`
   position: relative;
-  background-color: ${props => props.theme.palette.WHITE};
+  background-color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
@@ -65,7 +67,8 @@ const PromoBox = styled.div`
 
 const OperaPromoBox = styled.div`
   position: relative;
-  background-color: ${props => props.theme.palette.WHITE};
+  background-color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
   width: calc(100% - ${GEL_SPACING});
@@ -76,6 +79,7 @@ const OperaPromoBox = styled.div`
 
 const TimeStamp = styled(PromoTimestamp)`
   margin-top: ${GEL_SPACING};
+  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
 const Promo = ({ block, onClick }) => {

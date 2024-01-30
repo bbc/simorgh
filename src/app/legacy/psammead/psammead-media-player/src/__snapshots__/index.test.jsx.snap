@@ -204,7 +204,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -212,7 +212,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -221,12 +221,12 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -252,17 +252,17 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
         class="emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"
@@ -285,7 +285,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
@@ -293,7 +293,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
       </button>
       <img
         alt=""
-        class="emotion-19 emotion-20"
+        class="emotion-18 emotion-19"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -411,7 +411,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -419,7 +419,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -428,12 +428,12 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -465,17 +465,17 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
         class="emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"
@@ -498,7 +498,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
@@ -506,7 +506,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
       </button>
       <img
         alt=""
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -598,7 +598,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -606,7 +606,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -615,12 +615,12 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -646,17 +646,17 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
         class="emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"
@@ -679,7 +679,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
@@ -687,7 +687,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
       </button>
       <img
         alt=""
-        class="emotion-19 emotion-20"
+        class="emotion-18 emotion-19"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -904,7 +904,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -912,7 +912,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -921,12 +921,12 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -958,17 +958,17 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
         class="emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"
@@ -991,7 +991,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
@@ -999,7 +999,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
       </button>
       <img
         alt=""
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
         src="http://foo.bar/placeholder.png"
       />
     </div>

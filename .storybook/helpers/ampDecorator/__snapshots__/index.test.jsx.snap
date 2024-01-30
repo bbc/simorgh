@@ -6,7 +6,7 @@ exports[`AmpDecorator should render correctly 1`] = `
     defer={true}
     encodeSpecialCharacters={true}
     htmlAttributes={
-      Object {
+      {
         "amp": "",
       }
     }

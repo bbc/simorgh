@@ -1,0 +1,220 @@
+{
+  "data": {
+    "title": "BBC News Ìgbò",
+    "description": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "title": "Akụkọ BBC Igbo na Nkeji",
+            "firstPublished": "2018-01-22T17:25:03.000Z",
+            "lastPublished": "2018-01-22T17:25:03.000Z",
+            "link": "https://www.bbc.com/igbo/23183171",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/AB95/test/_63652934_p01g1v11.jpg",
+            "description": "Akụkọ ihe na-eme n'ụwa niile",
+            "imageAlt": "Akụkọ ihe na-eme n'ụwa niile",
+            "id": "371a4efb-be07-944b-9073-4255a59e20aa"
+          },
+          {
+            "type": "video",
+            "title": "etiela otu egwuregwu bọọlụ Chelsea ịchaka n'asọmpi Champions League",
+            "firstPublished": "2018-01-20T20:13:11.000Z",
+            "lastPublished": "2018-01-20T20:13:11.000Z",
+            "link": "https://www.bbc.com/igbo/23182766",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/b3c8/test/bdc49910-4030-11ee-ab8d-9d4cf3ebd5e5.jpg",
+            "description": "Urata ekwoola n'isi ndị chelsea",
+            "imageAlt": "Chelsea",
+            "id": "8d557026-688f-174a-a1fc-0f6cfc79a7cd"
+          },
+          {
+            "type": "article",
+            "title": "DSS: Wepụ aka enwe n'ofe na Benue",
+            "firstPublished": "2018-01-22T07:23:31.000Z",
+            "lastPublished": "2019-09-25T09:36:55.000Z",
+            "link": "https://www.bbc.com/igbo/23182501",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/C23D/test/_63652794_hi043976049.jpg",
+            "description": "DSS achọpụtala n'aka ndị ISS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa",
+            "imageAlt": "DSS na Benue Steeti",
+            "id": "4a559b9f-5165-414a-aff5-df7c7e00ea71"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:97c7bccd-d175-4359-9eb3-8663b92d787f",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Lee ihe Barcelona mere Real Betis",
+            "firstPublished": "2018-01-22T10:13:55.000Z",
+            "lastPublished": "2018-01-22T10:13:55.000Z",
+            "link": "https://www.bbc.com/igbo/23182930",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0721/test/_63652810_hi016761180.jpg",
+            "description": "Barcelona emerigo Real Betis na asọmpị La Liga",
+            "imageAlt": "Lionel Messi",
+            "id": "acc14be3-0e2d-ad44-b452-475726998e1a"
+          },
+          {
+            "type": "article",
+            "title": "Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise",
+            "firstPublished": "2018-01-21T14:51:44.000Z",
+            "lastPublished": "2018-01-21T14:51:44.000Z",
+            "link": "https://www.bbc.com/igbo/23182890",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9EB1/test/_63652604_aubameyang.jpg",
+            "description": "Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.",
+            "imageAlt": "Aubameyang enyela ọkpụ goolu iri na atọ n'ime asọmpi iri na ise na oge a",
+            "id": "140306d0-dd86-ca48-93ac-6b54bc8b35be"
+          },
+          {
+            "type": "article",
+            "title": "\"Alexis Sanchez ga-abanye Manchester united ma ọ buru na.....\" Wenger",
+            "firstPublished": "2018-01-21T08:29:37.000Z",
+            "lastPublished": "2018-01-21T08:29:37.000Z",
+            "link": "https://www.bbc.com/igbo/23182810",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/FF91/test/_63652456_henrykandsanchez.jpg",
+            "description": "Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal",
+            "imageAlt": "Alexis Sanchez gawa Manchester United,Henrikh Mkhitaryan a bata Arsenal Fc",
+            "id": "b31b1d97-e133-fa45-924f-43ac66f1edeb"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bfc90fa6-512b-4b7f-accd-29a4c4530679",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Editor's choice",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Promo with Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "Pidgin test 2 - Description",
+            "imageAlt": "",
+            "id": "c7p765ynk9qt"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 1 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cgl2vz8d587t"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 2 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cy0mg3kvxnlt"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 3 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cly58zvmwygt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Normal Curation with Live Promos",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c44evppzkj4t",
+        "contentType": "index-home",
+        "pageIdentifier": "igbo.page",
+        "pageTitle": "BBC News Ìgbò"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

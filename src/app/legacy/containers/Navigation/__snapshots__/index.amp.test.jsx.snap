@@ -112,20 +112,20 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-11 {
   background-color: #FFFFFF;
   clear: both;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -134,15 +134,15 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-15::-webkit-scrollbar {
+  .emotion-14::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-15:focus-visible {
+  .emotion-14:focus-visible {
     outline: none;
   }
 
-  .emotion-15:focus-visible::after {
+  .emotion-14:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -150,7 +150,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     height: 100%;
   }
 
-  .emotion-15:after {
+  .emotion-14:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -161,21 +161,21 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 100%
-        );
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
   }
 
   @media (min-width: 25rem) {
-    .emotion-15:after {
+    .emotion-14:after {
       width: 6rem;
     }
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-15.si-nav-scrollable-hidden {
+  .emotion-14.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
@@ -203,7 +203,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       <button
         aria-expanded="false"
         class="focusIndicatorRemove emotion-4 emotion-5"
-        data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+        data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"
         on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
         si-nav-dropdown-menu.toggleVisibility,
@@ -241,13 +241,13 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           />
         </svg>
         <span
-          class="emotion-10 emotion-11"
+          class="emotion-10"
         >
           menu
         </span>
       </button>
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
         data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
@@ -261,7 +261,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
         </ul>
       </div>
       <div
-        class="emotion-14 emotion-15 emotion-16"
+        class="emotion-13 emotion-14 emotion-15"
         data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"

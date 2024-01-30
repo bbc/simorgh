@@ -89,7 +89,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-4 emotion-5"
+      class="emotion-4"
     >
       Menu
     </span>
@@ -186,7 +186,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-4 emotion-5"
+      class="emotion-4"
     >
       Menu
     </span>
@@ -284,7 +284,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-4 emotion-5"
+      class="emotion-4"
     >
       Menu
     </span>
@@ -382,7 +382,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-4 emotion-5"
+      class="emotion-4"
     >
       Menu
     </span>
@@ -472,7 +472,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   <button
     aria-expanded="false"
     class="focusIndicatorRemove emotion-0 emotion-1"
-    data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+    data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="ltr"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
     type="button"
@@ -506,7 +506,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-6 emotion-7"
+      class="emotion-6"
     >
       Menu
     </span>
@@ -596,7 +596,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   <button
     aria-expanded="false"
     class="focusIndicatorRemove emotion-0 emotion-1"
-    data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+    data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="rtl"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
     type="button"
@@ -630,7 +630,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
       />
     </svg>
     <span
-      class="emotion-6 emotion-7"
+      class="emotion-6"
     >
       Menu
     </span>
@@ -805,7 +805,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
             role="text"
           >
             <span
-              class="emotion-22 emotion-23"
+              class="emotion-22"
             >
               Current page, 
             </span>
@@ -1066,7 +1066,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
             role="text"
           >
             <span
-              class="emotion-22 emotion-23"
+              class="emotion-22"
             >
               Current page, 
             </span>

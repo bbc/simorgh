@@ -4,48 +4,20 @@ import { withKnobs } from '@storybook/addon-knobs';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import fixture from '#data/igbo/frontpage';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-const bulletinFixture = type =>
-  pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
-    .find(
-      item =>
-        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
-        pathOr(null, ['contentType'], item) === type &&
-        !pathOr(null, ['isLive'], item),
-    );
+import { tvBulletinItem, liveTvBulletinItem, radioBulletinItem, liveRadioBulletinItem} from './fixtureData';
+import { dissocPath } from 'ramda';
 
-const noImageBulletinFixture = type =>
-  pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
-    .find(
-      item =>
-        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
-        pathOr(null, ['contentType'], item) === type &&
-        !pathOr(null, ['indexImage'], item),
-    );
+const tvFixture = tvBulletinItem;
+const audioFixture = radioBulletinItem;
+const noImageAudioFixture = dissocPath(['indexImage'], radioBulletinItem);
 
-const liveBulletinFixture = type =>
-  pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
-    .find(
-      item =>
-        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
-        pathOr(null, ['contentType'], item) === type &&
-        pathOr(null, ['isLive'], item) === true,
-    );
-
-const tvFixture = bulletinFixture('TVBulletin');
-const audioFixture = bulletinFixture('RadioBulletin');
-const noImageAudioFixture = noImageBulletinFixture('RadioBulletin');
-
-const liveTvFixture = liveBulletinFixture('TVBulletin');
-const audioLiveFixture = liveBulletinFixture('RadioBulletin');
+const liveTvFixture = liveTvBulletinItem;
+const audioLiveFixture = liveRadioBulletinItem;
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, item }) => (

@@ -556,7 +556,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
 .emotion-10 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
@@ -601,7 +601,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
 .emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -1153,7 +1153,7 @@ exports[`SectionLabel With bar With plain title should render correctly with ara
 .emotion-8 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
@@ -1906,7 +1906,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
 .emotion-10 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
@@ -1951,7 +1951,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
 .emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -2431,7 +2431,7 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
 .emotion-8 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;

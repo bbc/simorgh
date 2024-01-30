@@ -5,8 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import getInitialData from '#app/routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -67,11 +66,11 @@ jest.mock('uuid', () => {
   };
 });
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('#containers/ATIAnalytics/amp', () => {
+jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
@@ -94,14 +93,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   return props => (
     <div id="PageWrapperContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  return props => (
-    <div id="LoadingContainer">
       <Component {...props} />
     </div>
   );
@@ -132,24 +123,26 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Front Page', () => {
+  beforeEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+    fetchMock.mock(
+      'begin:http://localhost/serbian/lat',
+      JSON.stringify(serbianFrontPageData),
+    );
+  });
+
   afterEach(() => {
+    jest.clearAllMocks();
     fetchMock.restore();
   });
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
-      );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
-      fetchMock.mock(
-        ' /pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
 
       let container;
       await act(async () => {
@@ -175,17 +168,10 @@ describe('Front Page', () => {
     });
 
     it('should render front page sections', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
-      );
-      fetchMock.mock(
-        '/pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
 
       let container;
@@ -196,7 +182,7 @@ describe('Front Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(3);
+      expect(sections).toHaveLength(6);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });

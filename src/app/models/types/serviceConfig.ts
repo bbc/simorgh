@@ -5,6 +5,7 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
+  Direction,
 } from './global';
 import { Translations } from './translations';
 
@@ -41,7 +42,7 @@ export type ServiceConfig = {
   serviceLocalizedName?: string;
   defaultImage: string;
   defaultImageAltText: string;
-  dir: string;
+  dir: Direction;
   externalLinkText: string;
   imageCaptionOffscreenText: string;
   videoCaptionOffscreenText: string;
@@ -74,13 +75,12 @@ export type ServiceConfig = {
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;
   disclaimer?: {
-    para1: string;
-    para2: {
+    para1: {
       text: string;
       url: string;
       isExternal: boolean;
     };
-    para3: string;
+    para2: string;
   };
   translations: Translations;
   mostRead: MostRead;
@@ -126,7 +126,7 @@ export type PodcastPromo = {
 export interface MostRead {
   header: string;
   lastUpdated: string;
-  numberOfItems?: number;
+  numberOfItems: number;
   hasMostRead: boolean;
   onIdxPage?: boolean;
 }

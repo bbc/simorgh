@@ -65,6 +65,16 @@
             "description": "Summary",
             "imageAlt": "Ukraine crisis",
             "id": "7749dd1a-a80d-e646-8b1c-74611e425917"
+          },
+          {
+            "type": "article",
+            "title": "WS STY TEST - Headline",
+            "firstPublished": "2020-02-03T15:58:27.000Z",
+            "link": "https://www.bbc.com/mundo/23263889",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+            "description": "This is the summary",
+            "imageAlt": "Index image large",
+            "id": "f776ad93-e486-b14a-b5ea-55955dd0644f"
           }
         ],
         "activePage": 1,
@@ -124,9 +134,21 @@
         "visualStyle": "BANNER"
       }
     ],
-    "activePage": null,
-    "pageCount": null,
-    "variantTopicId": null
+    "activePage": 1,
+    "pageCount": 1,
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "mundo.topics.cw90edn9kw4t.page",
+        "producer": "MUNDO"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cw90edn9kw4t",
+        "contentType": "index-category",
+        "pageIdentifier": "mundo.topics.cw90edn9kw4t.page",
+        "pageTitle": "Economía"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

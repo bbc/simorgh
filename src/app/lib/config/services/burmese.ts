@@ -80,6 +80,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      liveExperiencePage: {
+        liveLabel: 'တိုက်ရိုက်',
+        liveCoverage: 'တိုက်ရိုက် ထုတ်လွှင့်ချက်',
+        breaking: 'သတင်းထူး',
+        postedAt: 'ပို့စ် တင်တဲ့အချိန်',
+        summary: 'အနှစ်ချုပ်',
+      },
       gist: 'အနှစ်ချုပ်',
       error: {
         404: {
@@ -141,7 +148,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ကောင်းပါပြီ။',
           reject: 'ဘာတွေပြောင်းလဲသွားသလဲ ကြည့်ရန်',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -154,7 +161,7 @@ export const service: DefaultServiceConfig = {
                 linkText: ' နှင့် ကွတ်ကီးများ ',
                 last: ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'လိုလားချက်များကို သတ်မှတ်/ပြောင်းလဲရန်',
             },
@@ -171,7 +178,7 @@ export const service: DefaultServiceConfig = {
                   'မိမိတို့၏စာမျက်နှာများအလုပ်လုပ်နိုင်ရန် သင်အသုံးပြုသောစက်ထဲတွင် အချက်အလက်အနည်းငယ်ကို သင့်ခွင့်ပြုချက်မပါဘဲ သိုမှီးထားပါသည်။',
                 para4: {
                   text: 'မိမိတို့စာမျက်နှာများအလုပ်လုပ်ရန် မရှိမဖြစ်လိုအပ်သောအချက်များ သင့်စက်ထဲတွင် သိုမှီးထားခြင်းနှင့်ပတ်သက်၍ နောက်ထပ်သိလိုပါက ဖတ်ရှုရန်',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'သင်သဘောတူထားသောနှစ်ခြိုက်သည့်ပုံစံများကို သင့်စက်ထဲတွင် သိမ်းဆည်းထားပါသည်။',
@@ -206,13 +213,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'နှင့် ကွတ်ကီးများ',
                 last: ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'သဘောတူပါသည်။',
             reject: 'သဘောမတူပါ၊ ဆက်တင်ကို သွားကြည့်လိုပါသည်။',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -328,8 +335,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -352,11 +359,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ဆောင်းပါး',
-        url: '/burmese/in-depth-54539126',
+        url: '/burmese/topics/cl3rq8rkqgxt',
       },
       {
-        title: 'အားကစား',
-        url: '/burmese/topics/cxnykndgd87t',
+        title: 'အင်တာဗျူး',
+        url: '/burmese/topics/cdg42x4kek0t',
       },
       {
         title: 'ကုန်သွယ်စီးပွား',
@@ -364,7 +371,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ဗီဒီယိုများ',
-        url: '/burmese/media/video',
+        url: '/burmese/topics/cj7v92le02qt',
       },
     ],
   },

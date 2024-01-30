@@ -24,6 +24,13 @@ export interface Translations {
     audioPlayer: string;
     videoPlayer: string;
   };
+  liveExperiencePage: {
+    liveLabel: string;
+    liveCoverage: string;
+    breaking: string;
+    postedAt: string;
+    summary: string;
+  };
   gist?: string;
   error: {
     home?: string;
@@ -179,6 +186,7 @@ export interface Translations {
   topStoriesTitle?: string;
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
+  infoBannerLabel?: string;
 }
 
 export interface TranslationsError {

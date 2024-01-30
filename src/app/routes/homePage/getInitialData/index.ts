@@ -1,71 +1,56 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Agent } from 'https';
-import Url from 'url-parse';
-import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import fetchPageData from '../../utils/fetchPageData';
-import { Services } from '../../../models/types/global';
-import HOME_PAGE_CONFIG from './page-config';
+import { PageTypes, Services, Variants } from '../../../models/types/global';
+import { FetchError } from '../../../models/types/fetch';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import { HOME_PAGE } from '../../utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
 type Props = {
-  getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: string;
+  pageType: PageTypes;
+  variant?: Variants;
 };
 
 export default async ({
-  getAgent,
   service,
   path: pathname,
   pageType,
+  variant,
 }: Props) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = isLocal ? null : await getAgent();
-    const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
-
-    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id,
+    const { status, json } = await fetchDataFromBFF({
+      pathname,
+      pageType: HOME_PAGE,
       service,
-      pageType,
+      variant,
     });
 
-    if (isLocal) {
-      fetchUrl = Url(`/${service}/tipohome`);
-    }
-
-    const optHeaders = { 'ctx-service-env': env };
-
-    // @ts-ignore - Ignore fetchPageData argument types
-    const { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
-    });
-
-    const { data } = json;
+    const {
+      data: { title, description, curations, metadata },
+    } = json;
 
     return {
       status,
       pageData: {
-        id,
-        title: data.title,
-        pageType,
-        curations: data.curations,
+        title,
+        metadata: { ...metadata, type: pageType },
+        curations,
+        description,
       },
     };
-  } catch ({ message, status }) {
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
       pathname,
       message,
     });
+
     return { error: message, status };
   }
 };

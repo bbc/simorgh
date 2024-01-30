@@ -18,18 +18,18 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-3 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -42,34 +42,34 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #6E6E73;
 }
 
-.emotion-8 svg {
+.emotion-7 svg {
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -83,20 +83,20 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-9 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +108,7 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
   height: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -123,35 +123,35 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
     data-e2e="index-alsos"
   >
     <h4
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Karin bayani
     </h4>
     <ul
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       role="list"
     >
       <li
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         role="listitem"
       >
         <a
           aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-7 emotion-8"
           href="/hausa/labarai-48916590"
         >
           <div
             aria-hidden="true"
-            class="emotion-10 emotion-11"
+            class="emotion-9 emotion-10"
             data-e2e="media-indicator"
             dir="ltr"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-11 emotion-12"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-14 emotion-15"
+                class="emotion-13 emotion-14"
                 focusable="false"
                 height="12"
                 viewBox="0 0 12 12"
@@ -178,7 +178,7 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
             role="text"
           >
             <span
-              class="emotion-2 emotion-3"
+              class="emotion-2"
             >
               Bidiyo, 
             </span>
@@ -189,11 +189,11 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         </a>
       </li>
       <li
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         role="listitem"
       >
         <a
-          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-7 emotion-8"
           href="/hausa/labarai-42837051"
         >
           <span>
@@ -202,11 +202,11 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         </a>
       </li>
       <li
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         role="listitem"
       >
         <a
-          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-7 emotion-8"
           href="https://www.bbc.com/persian"
         >
           <span>
@@ -237,12 +237,12 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-3 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -255,34 +255,34 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-5:hover,
+.emotion-5:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:visited {
+.emotion-5:visited {
   color: #6E6E73;
 }
 
-.emotion-6 svg {
+.emotion-5 svg {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -296,20 +296,20 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -321,7 +321,7 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-11 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -336,30 +336,30 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
     data-e2e="index-alsos"
   >
     <h4
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Karin bayani
     </h4>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
     >
       <a
         aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-        class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
+        class="focusIndicatorDisplayInlineBlock emotion-5 emotion-6"
         href="/hausa/labarai-48916590"
       >
         <div
           aria-hidden="true"
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
           data-e2e="media-indicator"
           dir="ltr"
         >
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-9 emotion-10"
           >
             <svg
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-11 emotion-12"
               focusable="false"
               height="12"
               viewBox="0 0 12 12"
@@ -386,7 +386,7 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
           role="text"
         >
           <span
-            class="emotion-2 emotion-3"
+            class="emotion-2"
           >
             Bidiyo, 
           </span>

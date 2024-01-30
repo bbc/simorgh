@@ -66,6 +66,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: '오디오 플레이어',
         videoPlayer: '비디오 플레이어',
       },
+      liveExperiencePage: {
+        liveLabel: 'Live',
+        liveCoverage: '생중계',
+        breaking: '속보',
+        postedAt: '작성',
+        summary: '요약',
+      },
       gist: '요약',
       error: {
         404: {
@@ -126,7 +133,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: '네',
           reject: '변경사항을 확인하세요',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -139,7 +146,7 @@ export const service: DefaultServiceConfig = {
                 linkText: '쿠키',
                 last: ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '나의 설정 바꾸기',
             },
@@ -155,7 +162,7 @@ export const service: DefaultServiceConfig = {
                   '홈페이지를 가동하기 위해 사용자의 동의 없이 기기의 정보를 제한적으로 저장합니다.',
                 para4: {
                   text: '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   '사용자의 정보 수집 동의 여부는 로컬 스토리지에 저장됩니다.',
@@ -188,13 +195,13 @@ export const service: DefaultServiceConfig = {
                 linkText: '쿠키',
                 last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '네, 동의합니다',
             reject: '아니요, 설정 화면으로 이동합니다',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -245,7 +252,7 @@ export const service: DefaultServiceConfig = {
           'Sorry, we can’t display this part of the story on this lightweight mobile page.',
         linkText: 'View the full version of the page to see all the content.',
       },
-      topStoriesTitle: '주요뉴스',
+      topStoriesTitle: '주요 뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
       latestMediaTitle: '최신',
     },
@@ -278,24 +285,24 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: '이용 약관',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'BBC 소개',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: '개인정보취급방침',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: '쿠키정책',
         },
         {
@@ -304,8 +311,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -320,6 +327,10 @@ export const service: DefaultServiceConfig = {
       {
         title: '비디오',
         url: '/korean/topics/cnwng7v0e54t',
+      },
+      {
+        title: '라디오',
+        url: '/korean/bbc_korean_radio/programmes/w13xttll',
       },
       {
         title: '다운로드',

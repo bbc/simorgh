@@ -1,5 +1,5 @@
 import React from 'react';
-import { Services, Variants } from '../../../models/types/global';
+import { StoryProps } from '../../../models/types/storybook';
 import defaultServiceVariants from '../defaultServiceVariants';
 
 import afaanoromoo from '../themes/afaanoromoo';
@@ -118,10 +118,8 @@ const themeProviders: ThemeProvider = {
   },
 };
 
-interface Props {
+interface Props extends StoryProps {
   children: React.ReactNode;
-  service: Services;
-  variant: Variants;
 }
 
 const ThemeProvider = ({ children, service, ...rest }: Props) => {

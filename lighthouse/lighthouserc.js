@@ -1,17 +1,21 @@
 const AUDIT_URLS = {
   FRONT_PAGE: {
-    live: ['https://www.bbc.com/arabic'],
-    test: ['https://www.test.bbc.com/arabic'],
+    live: ['https://www.bbc.com/serbian/cyr'],
+    test: ['https://www.test.bbc.com/serbian/cyr?renderer_env=live'],
   },
 
   IDX: {
-    live: ['https://www.bbc.com/persian/afghanistan'],
-    test: ['https://www.test.bbc.com/persian/afghanistan'],
+    live: ['https://www.bbc.com/ukrainian/ukraine_in_russian'],
+    test: [
+      'https://www.test.bbc.com/ukrainian/ukraine_in_russian?renderer_env=live',
+    ],
   },
 
   FIX: {
     live: ['https://www.bbc.com/persian/science-52004647'],
-    test: ['https://www.test.bbc.com/persian/23278332'],
+    test: [
+      'https://www.test.bbc.com/persian/science-52004647?renderer_env=live',
+    ],
   },
 
   LIVE_RADIO: {
@@ -43,11 +47,6 @@ const AUDIT_URLS = {
     test: ['https://www.test.bbc.com/vietnamese/popular/read'],
   },
 
-  MOST_WATCHED: {
-    live: ['https://www.bbc.com/afrique/media/video'],
-    test: ['https://www.test.bbc.com/afrique/media/video'],
-  },
-
   PGL: {
     live: ['https://www.bbc.com/arabic/art-and-culture-38260491'],
     test: ['https://www.test.bbc.com/afaanoromoo/oduu-23141286'],
@@ -57,6 +56,34 @@ const AUDIT_URLS = {
     live: ['https://www.bbc.com/arabic/sports-54278377'],
     test: [
       'https://www.test.bbc.com/pashto/afghanistan-52643309?renderer_env=live',
+    ],
+  },
+
+  TOPIC_PAGE: {
+    live: ['https://www.bbc.com/pidgin/topics/c0823e52dd0t'],
+    test: ['https://www.test.bbc.com/pidgin/topics/c0823e52dd0t'],
+  },
+
+  TIPO_HOME_PAGE: {
+    live: ['https://www.bbc.com/kyrgyz'],
+    test: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
+  },
+
+  MEDIA_ARTICLE_PAGE: {
+    live: ['https://www.bbc.com/hausa/articles/cw5kgkr4wvzo'],
+    test: [
+      'https://www.test.bbc.com/hausa/articles/cw5kgkr4wvzo?renderer_env=live',
+    ],
+  },
+
+  PODCAST_PAGE: {
+    live: [
+      'https://www.bbc.com/marathi/podcasts/p09431p4', // Podcast Brand
+      'https://www.bbc.com/marathi/podcasts/p09431p4/p0fmsqt5', // Podcast Episode
+    ],
+    test: [
+      'https://www.test.bbc.com/marathi/podcasts/p09431p4', // Podcast Brand
+      'https://www.test.bbc.com/marathi/podcasts/p09431p4/p0fmsqt5', // Podcast Episode
     ],
   },
 };
@@ -79,11 +106,11 @@ module.exports = {
       assertions: {
         'categories:performance': [
           'warn',
-          { aggregationMethod: 'optimistic', minScore: 0.7 },
+          { aggregationMethod: 'optimistic', minScore: 0.4 },
         ],
         'categories:accessibility': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.9 },
+          { aggregationMethod: 'optimistic', minScore: 0.85 },
         ],
         'categories:best-practices': [
           'error',

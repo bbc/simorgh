@@ -23,7 +23,7 @@ const Canonical = ({
   noJsMessage,
   showPlaceholder,
   showLoadingImage,
-  darkMode,
+  darkPlaceholder,
   onMediaInitialised,
   onMediaPlaying,
   onMediaPause,
@@ -94,7 +94,7 @@ const Canonical = ({
       />
       {showLoadingImage && (
         <LoadingImageWrapper>
-          <ImagePlaceholder ratio={56.25} darkMode={darkMode} />
+          <ImagePlaceholder ratio={56.25} darkPlaceholder={darkPlaceholder} />
         </LoadingImageWrapper>
       )}
       <noscript>
@@ -118,7 +118,7 @@ Canonical.propTypes = {
   noJsMessage: string.isRequired,
   showPlaceholder: bool.isRequired,
   showLoadingImage: bool.isRequired,
-  darkMode: bool.isRequired,
+  darkPlaceholder: bool.isRequired,
   onMediaInitialised: func.isRequired,
   onMediaPlaying: func.isRequired,
   onMediaPause: func.isRequired,

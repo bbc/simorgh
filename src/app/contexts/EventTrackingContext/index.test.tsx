@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
-import React, { PropsWithChildren, useContext } from 'react';
-import { render, screen } from '@testing-library/react';
+import React, { useContext } from 'react';
+import {
+  render,
+  screen,
+} from '../../components/react-testing-library-with-providers';
 
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
-import { ServiceContextProvider } from '../ServiceContext';
-import { EventTrackingContextProvider, EventTrackingContext } from '.';
+import { STORY_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import { EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 
 const defaultToggles = {
@@ -17,49 +16,19 @@ const defaultToggles = {
   },
 };
 
-type Props = {
-  pageData?: object | null;
-  pageType?: PageTypes;
-  toggles?: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+const defaultATIData = {
+  contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+  contentType: 'index-home',
+  pageIdentifier: 'kyrgyz.page',
+  pageTitle: 'pageTitle',
 };
 
-// eslint-disable-next-line react/prop-types
-const Wrapper = ({
-  children,
-  pageData = fixtureData,
-  pageType = STORY_PAGE,
-  toggles = defaultToggles,
-}: PropsWithChildren<Props>) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    pageType={pageType}
-    isAmp={false}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
-  >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider pageData={pageData}>
-          {children}
-        </EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
-
-const { error } = console;
-
 beforeEach(() => {
-  console.error = jest.fn();
+  console.warn = jest.fn();
 });
 
 afterEach(() => {
-  console.error = error;
+  jest.clearAllMocks();
 });
 
 const TestComponent = () => {
@@ -70,11 +39,18 @@ const TestComponent = () => {
 
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
-    render(
-      <Wrapper>
-        <TestComponent />
-      </Wrapper>,
-    );
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
+    render(<TestComponent />, {
+      pageData: fixtureData,
+      atiData: atiAnalytics,
+      service: 'pidgin',
+      toggles: defaultToggles,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin/tori-51745682',
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -88,6 +64,27 @@ describe('Expected use', () => {
     });
   });
 
+  it('should provide tracking data to all child components using the ATI metadata block', () => {
+    render(<TestComponent />, {
+      atiData: defaultATIData,
+      pageType: HOME_PAGE,
+      pathname: '/kyrgyz',
+      service: 'kyrgyz',
+      toggles: defaultToggles,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({
+      campaignID: 'index-home',
+      pageIdentifier: 'kyrgyz.page',
+      platform: 'canonical',
+      producerId: '58',
+      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+    });
+  });
+
   it('should provide an empty object if the eventTracking toggle is disabled', () => {
     const eventTrackingToggle = {
       eventTracking: {
@@ -95,11 +92,88 @@ describe('Expected use', () => {
       },
     };
 
-    render(
-      <Wrapper toggles={eventTrackingToggle}>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      pageData: fixtureData,
+      toggles: eventTrackingToggle,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if pageData and atiData are missing and eventTracking toggle is disabled', () => {
+    const eventTrackingToggle = {
+      eventTracking: {
+        enabled: false,
+      },
+    };
+
+    render(<TestComponent />, {
+      toggles: eventTrackingToggle,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if pageData and atiData are missing', () => {
+    render(<TestComponent />, {
+      isNextJs: true,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if pageData is provided', () => {
+    render(<TestComponent />, {
+      isNextJs: true,
+      pageData: fixtureData,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if atiData is provided', () => {
+    render(<TestComponent />, {
+      isNextJs: true,
+      atiData: defaultATIData,
+      pageType: HOME_PAGE,
+      pathname: '/kyrgyz',
+      service: 'kyrgyz',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if pageData and atiData are missing - 1', () => {
+    render(<TestComponent />, {
+      toggles: defaultToggles,
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if atiData properties are undefined', () => {
+    render(<TestComponent />, {
+      atiData: undefined,
+      toggles: defaultToggles,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -113,11 +187,12 @@ describe('Error handling', () => {
     let errorMessage;
 
     try {
-      render(
-        <Wrapper pageData={null}>
-          <TestComponent />
-        </Wrapper>,
-      );
+      render(<TestComponent />, {
+        pageType: STORY_PAGE,
+        pathname: '/pidgin/tori-51745682',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
     } catch ({ message }) {
       errorMessage = message;
     }
@@ -132,14 +207,13 @@ describe('Error handling', () => {
 
   it('should not provide tracking props when there is no page type campaign ID', async () => {
     let errorMessage;
-
     try {
-      render(
-        // @ts-expect-error - testing handling of a page type that does not exist
-        <Wrapper pageType="funky-page-type">
-          <TestComponent />
-        </Wrapper>,
-      );
+      render(<TestComponent />, {
+        pageData: fixtureData,
+        // @ts-expect-error - testing handling of a page type that doesn't exist
+        pageType: 'funky-page-type',
+        toggles: defaultToggles,
+      });
     } catch ({ message }) {
       errorMessage = message;
     }
@@ -149,7 +223,7 @@ describe('Error handling', () => {
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
+    expect(console.warn).toHaveBeenCalledWith(
       expect.stringContaining(
         "ATI Event Tracking Error: Could not get the page type's campaign name",
       ),
@@ -157,3 +231,5 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });
+
+export default defaultATIData;

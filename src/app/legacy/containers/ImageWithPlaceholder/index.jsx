@@ -43,7 +43,7 @@ const ImageWithPlaceholder = ({
   primaryMimeType,
   fallbackMimeType,
   width,
-  darkMode,
+  darkPlaceholder,
   imageComponent: ImageComponent,
 }) => {
   const { isAmp } = useContext(RequestContext);
@@ -87,7 +87,7 @@ const ImageWithPlaceholder = ({
       <ImagePlaceholder
         forwardStyle={isLoaded ? { background: 'none' } : null}
         ratio={ratio}
-        darkMode={darkMode}
+        darkPlaceholder={darkPlaceholder}
       >
         {isAmp ? (
           <AmpImg
@@ -115,7 +115,7 @@ ImageWithPlaceholder.propTypes = {
   alt: string.isRequired,
   copyright: string,
   children: node,
-  darkMode: bool,
+  darkPlaceholder: bool,
   height: number,
   fade: bool,
   fallback: bool,
@@ -135,7 +135,7 @@ ImageWithPlaceholder.propTypes = {
 ImageWithPlaceholder.defaultProps = {
   copyright: null,
   children: null,
-  darkMode: null,
+  darkPlaceholder: null,
   height: null,
   fade: false,
   fallback: true,

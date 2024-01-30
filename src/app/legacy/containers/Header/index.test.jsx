@@ -240,5 +240,49 @@ describe(`Header`, () => {
         expect(container).not.toContainElement(reject);
       });
     });
+
+    it('should remove the site branding when isApp is set to true', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          isApp: true,
+        },
+      });
+
+      expect(
+        document.querySelector(`header[role='banner'] div div:nth-of-type(2)`),
+      ).toBeNull();
+    });
+
+    it('should remove the nav when isApp is set to true', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          isApp: true,
+        },
+      });
+
+      expect(document.querySelector(`header[role='banner'] nav`)).toBeNull();
+    });
+
+    it('should remove the privacy/cookie banner when isApp is set to true', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          isApp: true,
+          service: 'pidgin',
+          pageType: ARTICLE_PAGE,
+        },
+      });
+
+      const pidginPrivacyAcceptText =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieAcceptText =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .accept;
+
+      const privacyBanner = screen.queryByText(pidginPrivacyAcceptText);
+      const cookieBanner = screen.queryByText(pidginCookieAcceptText);
+
+      expect(container).not.toContainElement(privacyBanner);
+      expect(container).not.toContainElement(cookieBanner);
+    });
   });
 });

@@ -1,7 +1,6 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
   GEL_SPACING_HLF,
@@ -16,6 +15,7 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 

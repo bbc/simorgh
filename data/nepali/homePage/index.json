@@ -1,0 +1,647 @@
+{
+  "data": {
+    "title": "BBC News नेपाली",
+    "description": "बीबीसी नेपाली सेवाले विश्व घटनाका साथै स्थानीय र क्षेत्रीय घटनाका विश्वसनीय समाचार प्रस्तुत गर्दछ।",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "नेपाल र अफगानिस्तान दुवै यू-१९ विश्वकपको  'सुपर सिक्स'मा पुग्ने दाउमा",
+            "firstPublished": "2024-01-26T06:56:56.285Z",
+            "lastPublished": "2024-01-26T06:56:56.285Z",
+            "link": "https://www.bbc.com/nepali/articles/c0d7zdvn8pyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b927/live/d9165750-bc11-11ee-a4b7-efd038a1a73d.jpg",
+            "description": "कडा प्रतिद्वन्द्वी अफगानिस्तानसँग शुक्रवारको खेलले यू-१९ विश्वकप क्रिकेटमा  नेपालको आगामी यात्रा तय गर्ने छ।",
+            "imageAlt": "यू-१९ नेपाली क्रिकेट टोली",
+            "id": "c0d7zdvn8pyo"
+          },
+          {
+            "type": "article",
+            "title": "विश्वमै पहिलो पटक नाइट्रोजन ग्यास सुँघाएर मृत्युदण्ड",
+            "firstPublished": "2024-01-26T04:54:16.699Z",
+            "lastPublished": "2024-01-26T05:48:19.576Z",
+            "link": "https://www.bbc.com/nepali/articles/cmmg7q66mrjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d8ab/live/297c3960-bbf6-11ee-a38b-2367b3ffb01e.jpg",
+            "description": "यसअघि परीक्षण नगरिएको विधिअन्तर्गत एलाबामाका केनेथ युजिन स्मिथलाई मास्कभित्रबाट नाइट्रोजन ग्यास दिएर मृत्युदण्ड दिइएको हो। ",
+            "imageAlt": "सन् १९८८ मा भएको हत्याका निम्ति केनेथ युजिन स्थिलाई मृत्युदण्ड सजाय तोकिएको थियो",
+            "id": "cmmg7q66mrjo"
+          },
+          {
+            "type": "article",
+            "title": "दिनकै ४०० जना कालोसूचीमा, कसरी घट्दै छ ऋण तिर्ने क्षमता",
+            "firstPublished": "2024-01-26T01:10:44.143Z",
+            "lastPublished": "2024-01-26T01:10:44.143Z",
+            "link": "https://www.bbc.com/nepali/articles/cjrkvek09n0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/55db/live/facf9b90-bb58-11ee-8b96-87b2ebecbd26.jpg",
+            "description": "अर्थतन्त्र शिथिल भएको बताइँदै गर्दा वित्तीय संस्थाका ऋण नतिर्ने वा चेक भुक्तान नहुने घटना ह्वात्तै बढेको आँकडाले देखाएका छन्।",
+            "imageAlt": "काठमान्डू",
+            "id": "cjrkvek09n0o"
+          },
+          {
+            "type": "article",
+            "title": "थाईल्यान्डको सडकमा जब कारमा चढाएर सिंह डुलाएको देखियो ",
+            "firstPublished": "2024-01-26T06:17:47.143Z",
+            "lastPublished": "2024-01-26T06:17:47.143Z",
+            "link": "https://www.bbc.com/nepali/articles/cn0nwvwn6lgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6688/live/0184b730-bc04-11ee-84a6-3128841f8922.jpg",
+            "description": "थाईल्यान्डमा भाइरल भएको एउटा भिडिओमा पतायाको सडकमा गुडिरहेको एउटा खुला कारमा घाँटीमा पेटी बाँधिएको एउटा सानो सिंह देखिन्छ।",
+            "imageAlt": "गाडीमा सिंहको बच्चा",
+            "id": "cn0nwvwn6lgo"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M7S",
+            "title": "‘बाँदर टापु’ जहाँ वैज्ञानिकहरू मानव व्यवहार अध्ययन गर्न जान्छन्",
+            "firstPublished": "2024-01-26T01:20:00.472Z",
+            "lastPublished": "2024-01-26T01:20:00.472Z",
+            "link": "https://www.bbc.com/nepali/articles/cqv6en04d2jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a26/live/098648b0-bbee-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "भारतबाट सुरुमा लगिएका बाँदरहरूलाई त्यहाँ अध्ययन गर्न थालिएको ८० वर्ष पुग्यो। ",
+            "imageAlt": "बाँदर टापु",
+            "id": "cqv6en04d2jo"
+          },
+          {
+            "type": "article",
+            "title": "राष्ट्रिय सभामा एमाले खुम्चियो, अधिकांश सीटमा सत्ता गठबन्धनको जित",
+            "firstPublished": "2024-01-25T14:02:10.247Z",
+            "lastPublished": "2024-01-25T14:02:10.247Z",
+            "link": "https://www.bbc.com/nepali/articles/c1e14knw9zpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a90f/live/b8118030-bb70-11ee-b8ef-d57b8ed3e30e.jpg",
+            "description": "सत्तारूढ दलहरूले गरेको तालमेलका कारण प्रमुख प्रतिपक्षी एमाले राष्ट्रिय सभामा अझ खुम्चिएको छ। ",
+            "imageAlt": "राष्ट्रिय सभा निर्वाचन ",
+            "id": "c1e14knw9zpo"
+          },
+          {
+            "type": "article",
+            "title": "युद्धबन्दी सवार विमान कसले र किन खसाल्यो?   यस्ता छन् रुस र युक्रेनका दाबी",
+            "firstPublished": "2024-01-25T09:55:30.598Z",
+            "lastPublished": "2024-01-25T10:05:22.779Z",
+            "link": "https://www.bbc.com/nepali/articles/c3g0e16z34ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d088/live/1a011f10-bb46-11ee-8685-316409d66f25.jpg",
+            "description": "युक्रेनी राष्ट्रपति भोलोदिमिर जेलेन्स्कीले बुधवार विमान खसालिएको घटनाबारे अन्तर्राष्ट्रिय छानबिनको माग गरेका छन्। ",
+            "imageAlt": "रुसी विमान",
+            "id": "c3g0e16z34ro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6c48b4bc-e6dc-4205-ae31-ca3b82b29f31",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "मुख्य समाचार",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "क्यानडाको नयाँ नीतिले नेपाली विद्यार्थीलाई कस्तो असर?",
+            "firstPublished": "2024-01-24T11:16:24.713Z",
+            "lastPublished": "2024-01-24T11:16:24.713Z",
+            "link": "https://www.bbc.com/nepali/articles/crgk5dvj40xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/69b7/live/d4f4f840-ba9d-11ee-b035-13965d35b29a.jpg",
+            "description": "शिक्षा मन्त्रालयका अनुसार पछिल्लो समय क्यानडा नेपाली विद्यार्थीहरूको प्रमुख शैक्षिक गन्तव्य बनिरहेको छ।",
+            "imageAlt": "विदेश जान लागेका नेपाली",
+            "id": "crgk5dvj40xo"
+          },
+          {
+            "type": "article",
+            "title": "के किम जङ-अन युद्धको तयारी गर्दै छन्?",
+            "firstPublished": "2024-01-25T03:06:44.324Z",
+            "lastPublished": "2024-01-25T03:06:44.324Z",
+            "link": "https://www.bbc.com/nepali/articles/cpr8zp510e2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d29a/live/53149540-ba72-11ee-97ec-91bc160a2449.jpg",
+            "description": "उत्तर कोरियाली नेताका पछिल्ला भनाइ तथा क्रियाकलापले कतिपय विश्लेषकहरूको मनमा चिसो पसेको छ।",
+            "imageAlt": "किम जङ्-अन",
+            "id": "cpr8zp510e2o"
+          },
+          {
+            "type": "article",
+            "title": "भिजिट भिसामा जाने नेपालीका लागि जारी यात्रा परामर्श कति व्यावहारिक?",
+            "firstPublished": "2024-01-25T01:16:32.212Z",
+            "lastPublished": "2024-01-25T01:16:32.212Z",
+            "link": "https://www.bbc.com/nepali/articles/c0d7037y02vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5b8d/live/4820d4c0-baa7-11ee-afec-4167a72f68f9.jpg",
+            "description": "विभागले मङ्गलवार १३ बुँदे सुझाव र भिजिट भिसामा भ्रमण गर्दा नेपाली अध्यागमन अधिकारीसमक्ष पेस गर्नुपर्ने कागजपत्रहरूको सूचीसहितको सूचना जारी गरेको छ।",
+            "imageAlt": "नेपाली इमिग्रेसन ",
+            "id": "c0d7037y02vo"
+          },
+          {
+            "type": "article",
+            "title": "साउदी अरबमा ७० वर्षमा पहिलो पटक मदिरा पसल खुल्दै",
+            "firstPublished": "2024-01-25T05:06:22.973Z",
+            "lastPublished": "2024-01-25T05:42:43.684Z",
+            "link": "https://www.bbc.com/nepali/articles/cw541dn60g1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b671/live/91e32d40-bb26-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "साउदी अरबमा सात दशकपछि पहिलो पटक मदिरा पसल खुल्न लागेको छ। तर मदिरा किन्ने सुविधा केही विदेशीका लागि मात्र सीमित पारिने छ।",
+            "imageAlt": "रियादस्थित एउटा पप-अप बार",
+            "id": "cw541dn60g1o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M11S",
+            "title": "अयोध्यामा निर्मित राम मन्दिर किन विवादास्पद छ ",
+            "firstPublished": "2024-01-24T04:15:56.574Z",
+            "lastPublished": "2024-01-24T04:15:56.574Z",
+            "link": "https://www.bbc.com/nepali/articles/cw9el84je5zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/75ff/live/22656c50-b9b7-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "भगवान् राम जन्मिएको ठाउँमा 'मुस्लिम अतिक्रमणकारीहरू'ले मस्जिद बनाएको दाबी हिन्दू अभियानकर्मीहरूले गर्दै आएका छन्। ",
+            "imageAlt": "अयोध्याको राम मन्दिरमा एक साधु ",
+            "id": "cw9el84je5zo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bfdf9f2e-4881-4cf0-9f79-3ca75437dbf4",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "अनि यो पनि",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "राम मन्दिरबारे इस्लामिक देशहरूले दिए आक्रोशपूर्ण प्रतिक्रिया",
+            "firstPublished": "2024-01-24T11:17:24.597Z",
+            "lastPublished": "2024-01-24T11:17:24.597Z",
+            "link": "https://www.bbc.com/nepali/articles/c97v107gr45o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c099/live/85bcf790-baa8-11ee-afec-4167a72f68f9.jpg",
+            "description": "इस्लामिक अथवा मुस्लिम बहुल विश्वका ५७ वटा देशहरू संलग्न ओआईसीले भारतको अयोध्यामा बनाइएको राम मन्दिर र त्यसको प्राणप्रतिष्ठाबारे किन आक्रोशपूर्ण प्रतिक्रिया दियो?",
+            "imageAlt": "ओआईसी",
+            "id": "c97v107gr45o"
+          },
+          {
+            "type": "article",
+            "title": "स्मार्ट लाइसेन्स: यही गतिमा पास भएकाहरूको लाइसेन्स वितरण गर्न 'वर्षदिन लाग्ने'",
+            "firstPublished": "2024-01-24T00:54:49.867Z",
+            "lastPublished": "2024-01-24T00:54:49.867Z",
+            "link": "https://www.bbc.com/nepali/articles/cw0r42w7w0go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d826/live/e207d340-b92b-11ee-8685-316409d66f25.jpg",
+            "description": "लाखौँको सङ्ख्यामा सवारीचालकहरू भौचरलाई लाइसेन्सका रूपमा बोकेर हिँडिरहेका छन्। तर अझै सरकारसामु यस समस्या सुल्झाउने प्रस्ट उपाय छैन।",
+            "imageAlt": "स्मार्ट लाइसेन्स",
+            "id": "cw0r42w7w0go"
+          },
+          {
+            "type": "article",
+            "title": "युक्रेनी युद्धबन्दी बोकेको रुसी जहाज दुर्घटनाग्रस्त- मस्को",
+            "firstPublished": "2024-01-24T10:16:08.923Z",
+            "lastPublished": "2024-01-24T12:47:58.041Z",
+            "link": "https://www.bbc.com/nepali/articles/cp3em0jyxryo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ae56/live/bcf374b0-bab6-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "रिया नोभोस्ती न्यूज एजेन्सीका अनुसार उक्त जहाजमा ६ जना चालक दलका सदस्यसहित युक्रेनी युद्धबन्दीबाहेक अन्य ९ जना पनि यात्रारत थिए।",
+            "imageAlt": "रुसी जहाज दुर्घटना ",
+            "id": "cp3em0jyxryo"
+          },
+          {
+            "type": "article",
+            "title": "के यसपालिको हिउँद सुक्खा नै रहला? पानी पर्ने सम्भावना कति?",
+            "firstPublished": "2024-01-23T09:52:22.193Z",
+            "lastPublished": "2024-01-23T09:52:22.193Z",
+            "link": "https://www.bbc.com/nepali/articles/c0d701jyrgeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1df4/live/22932780-b9c1-11ee-85d0-a9bd4298a362.jpg",
+            "description": "हिउँदमा पानी पर्न नसक्दा प्रदूषण बढेको छ भने हिउँदे बालीहरूमा असर पर्ने चिन्ता छाएको छ।",
+            "imageAlt": "कुहिरो",
+            "id": "c0d701jyrgeo"
+          },
+          {
+            "type": "article",
+            "title": "सरकारको नीतिले करिब ७०० विद्यालयहरू बन्द, विद्यार्थीहरूलाई सुविधा कि सकस?",
+            "firstPublished": "2024-01-22T01:30:51.254Z",
+            "lastPublished": "2024-01-22T01:30:51.254Z",
+            "link": "https://www.bbc.com/nepali/articles/cmjrj275k48o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/edb4/live/6aa27ee0-b6c9-11ee-8f07-bbfdfa890097.jpg",
+            "description": "पछिल्लो तीन वर्षमा देशभरका १२ सय भन्दा धेरै विद्यालयहरू समायोजन भएको र अर्को विद्यालयमा गाभिएका कारण करिब ७०० वटा विद्यालयमा पढाई नै बन्द भएका छन्।",
+            "imageAlt": "विद्यार्थीहरू ",
+            "id": "cmjrj275k48o"
+          },
+          {
+            "type": "article",
+            "title": "सहकारी ठगी मामिलामा बारम्बार नाम जोडिएपछि रवि लामिछानेले के भने? ",
+            "firstPublished": "2024-01-22T12:03:48.410Z",
+            "lastPublished": "2024-01-22T12:03:48.410Z",
+            "link": "https://www.bbc.com/nepali/articles/cv203e20kkyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ca66/live/8f6a4e50-b913-11ee-82f2-0d6339e13c50.jpg",
+            "description": "राजनीतिमा प्रवेश गर्नुअघि लामिछाने ग्यालेक्सी टीभीका शेअरधनी तथा उक्त कम्पनीका प्रबन्ध निर्देशक थिए। उक्त कम्पनीले कर्जा भुक्तानी नगरी हिनामिना गरेको आरोप उजुरीमा लगाइएको छ।",
+            "imageAlt": "रवि लामिछाने ",
+            "id": "cv203e20kkyo"
+          },
+          {
+            "type": "article",
+            "title": "अमेरिका र यूकेद्वारा हूथी समूहविरुद्ध यमनमा अर्को चरणको आक्रमण",
+            "firstPublished": "2024-01-23T05:00:36.514Z",
+            "lastPublished": "2024-01-23T05:00:36.514Z",
+            "link": "https://www.bbc.com/nepali/articles/ce7ld999gwjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2b82/live/f113bf90-b9b0-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "संयुक्त राज्य अमेरिका र यूकेले यमनका हूथी विद्रोहीविरुद्ध फेरि संयुक्त हवाई आक्रमण गरेका छन्।",
+            "imageAlt": "ब्रिटिश लडाकु विमान",
+            "id": "ce7ld999gwjo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M52S",
+            "title": "‘ग्राहकहरू मलाई नपत्याएर फोटोग्राफर बोलाउनुहोस् त भन्छन्’  ",
+            "firstPublished": "2024-01-20T08:21:22.898Z",
+            "lastPublished": "2024-01-20T08:21:22.898Z",
+            "link": "https://www.bbc.com/nepali/articles/c80200r0gvlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f344/live/963e7c30-b6b4-11ee-8f07-bbfdfa890097.jpg",
+            "description": "फोटोग्राफर श्रीमान्‌बाट फोटो खिच्न सिकेकी ७० वर्षीया मैया श्रेष्ठका कामका कुरा यो भिडिओमा। ",
+            "imageAlt": "७० वर्षीया हजुरआमा फोटोग्राफर ",
+            "id": "c80200r0gvlo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:40f6e9c4-68a6-4e01-ae5e-11ac695fd990",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "थप समाचार",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "वैदेशिक सहयोग, दान, कर र क्रिप्टोकरेन्सी : हमासले कसरी खर्च जुटाउँछ",
+            "firstPublished": "2024-01-20T02:49:34.415Z",
+            "lastPublished": "2024-01-20T02:49:34.415Z",
+            "link": "https://www.bbc.com/nepali/articles/cn09yq92y3yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dce1/live/32a896d0-a398-11ee-91bf-230bfab3fcba.jpg",
+            "description": "अमेरिका र ईयूद्वारा आतङ्कवादी घोषित हमास दशकौँदेखि अन्तर्राष्ट्रिय ब्याङ्किङ प्रणालीमा प्रतिबन्धित छ। तर उक्त समूहले कसरी खर्च जुटाउँछ?",
+            "imageAlt": "हमास समर्थकको प्रदर्शन",
+            "id": "cn09yq92y3yo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M29S",
+            "title": "इजरेली सेनाले गाजामा फेला पारेको हमासको सबैभन्दा ठूलो सुरुङमा के छ ",
+            "firstPublished": "2023-12-29T06:26:10.621Z",
+            "lastPublished": "2023-12-29T06:26:10.621Z",
+            "link": "https://www.bbc.com/nepali/articles/c4nyl9y9p97o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a6b7/live/fa74d350-a60d-11ee-beb5-e1400df560f2.jpg",
+            "description": "गाजामा हमासका लडाकुहरूले लुकीछिपी इजरेली सैनिकहरूमाथि आक्रमण गरी भागेर लुक्न सुरुङ \nप्रयोग गर्दै आएको इजरेलले दाबी गरेको छ।",
+            "imageAlt": "हमास सुरुङ",
+            "id": "c4nyl9y9p97o"
+          },
+          {
+            "type": "article",
+            "title": "इजरेल-गाजा युद्ध : शान्तिको मूल्य के हो? ",
+            "firstPublished": "2023-12-20T01:58:56.052Z",
+            "lastPublished": "2023-12-20T01:58:56.052Z",
+            "link": "https://www.bbc.com/nepali/articles/cpex5gpxp7po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b301/live/ba12df90-9e52-11ee-8df3-1d2983d8814f.jpg",
+            "description": "के गाजामा भइरहेको युद्धले इजरेली र प्यालेस्टिनीहरूलाई भूमध्यसागर र जोर्डन नदीबीचको भूभागमा शताब्दीदेखि चलेको द्वन्द्व अन्त्य गर्न प्रेरित गर्न सक्ला?",
+            "imageAlt": "इजरेली सैनिकहरू",
+            "id": "cpex5gpxp7po"
+          },
+          {
+            "type": "article",
+            "title": "हमासले इजरेलमा घातक आक्रमण गर्ने शक्ति कसरी जुटायो",
+            "firstPublished": "2023-12-05T11:15:25.189Z",
+            "lastPublished": "2023-12-05T11:15:25.189Z",
+            "link": "https://www.bbc.com/nepali/articles/cn3p9xjdelro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/60cb/live/d24fac60-8eac-11ee-835e-0ff56f3659b0.jpg",
+            "description": "गाजाका सशस्त्र समूहहरू एकजुट भएर अक्टोबर ७ मा इजरेलमा अप्रत्याशित रूपमा कसरी घातक आक्रमण गरे? बीबीसी अरबिक र बीबीसी भेरिफाईको विश्लेषण। ",
+            "imageAlt": "सन् २०२० देखि प्यालेस्टिनी लडाकु समूहहरूले संयुक्त सैन्य अभ्यास गर्दै आएका थिए ",
+            "id": "cn3p9xjdelro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b6543cea-5fd5-4f9b-89fb-45f3550fe9b2",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "गाजा-इजरेल तनाव",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "हिउँदमा पानी नपर्दा नेपालका हिमालमा हिउँको मात्रा कम, असर के?",
+            "firstPublished": "2024-01-25T00:59:41.045Z",
+            "lastPublished": "2024-01-25T00:59:41.045Z",
+            "link": "https://www.bbc.com/nepali/articles/cn0ny5xeekno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2d47/live/c2bef670-bb1b-11ee-af19-f5aeba5dfd84.jpg",
+            "description": "नेपालका हिमालहरूमा यो साल केही वर्षयताकै कम परिमाणमा हिउँ रहेको अधिकारीहरूले बताएका छन्। त्यसको असर के हुनसक्छ? ",
+            "imageAlt": "केही साताअघि मुस्ताङको लोमान्थाङमा परेको हिउँ ",
+            "id": "cn0ny5xeekno"
+          },
+          {
+            "type": "article",
+            "title": "सहकारीमा फस्यो ‘जीवनभरिको’ कमाइ - सरकारले सहमति गर्‍यो तर ‘कार्यान्वयन गरेन’",
+            "firstPublished": "2024-01-23T01:14:32.845Z",
+            "lastPublished": "2024-01-23T01:14:32.845Z",
+            "link": "https://www.bbc.com/nepali/articles/c0kdwy2vvwko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ee7e/live/a5a7d290-b92d-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "सञ्चालन भएका करिब १५ हजार सहकारीमध्ये ५०० वटा सहकारी वित्तीय समस्यामा परेको ठानिए पनि हालसम्म १५ वटा सहकारीलाई मात्रै सरकारले सङ्कटग्रस्त घोषणा गरेको छ।",
+            "imageAlt": "सहकारी पीडित महिला",
+            "id": "c0kdwy2vvwko"
+          },
+          {
+            "type": "article",
+            "title": "सरकारी स्वास्थ्य बीमा : अब कस्ता सेवामा अतिरिक्त शुल्क तिर्नुपर्छ?",
+            "firstPublished": "2024-01-22T01:56:13.344Z",
+            "lastPublished": "2024-01-22T01:56:13.344Z",
+            "link": "https://www.bbc.com/nepali/articles/c97278ll423o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/de92/live/8ba4dee0-b6c3-11ee-91ce-31cfad0a8b96.jpg",
+            "description": "बोर्डका अधिकारीहरूका अनुसार स्वास्थ्य बिमा कार्यक्रम अन्तर्गत नि:शुल्क सेवाबापत कतिपय अस्पतालहरूले गरेको दाबी अस्वाभाविक देखिएपछि उक्त कार्यक्रमको दुरुपयोग भएको आशङ्का गरिएको थियो।",
+            "imageAlt": "तनहुँको व्यास नगरपालिका–२ स्थित केराबारी स्वास्थ्य केन्द्रमा कोभिड–१९ विरुद्धको खोप लगाउँदै",
+            "id": "c97278ll423o"
+          },
+          {
+            "type": "article",
+            "title": "राम मन्दिर प्राणप्रतिष्ठाबारे नेपाली विद्वान् पनि असन्तुष्ट शङ्कराचार्यकै पक्षमा, तर्क के हो",
+            "firstPublished": "2024-01-23T11:03:27.190Z",
+            "lastPublished": "2024-01-23T11:03:27.190Z",
+            "link": "https://www.bbc.com/nepali/articles/c04rnzlvkgyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/35cb/live/722e5b30-b9d4-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "भारतको अयोध्यामा सोमवार नवनिर्मित राम मन्दिरमा प्राणप्रतिष्ठा गरिँदा नेपालका विभिन्न भागमा त्यसको उल्लासपूर्वक स्वागत गरियो। तर नेपालका केही शास्त्रविद्ले प्राणप्रतिष्ठाको विषयबारे प्रश्न उठाएका छन्। ",
+            "imageAlt": "रामको प्रतिमा",
+            "id": "c04rnzlvkgyo"
+          },
+          {
+            "type": "article",
+            "title": "मेलम्चीको पानी कति महँगो, आयोजना असफल बन्ने आशङ्का किन?",
+            "firstPublished": "2024-01-21T10:00:50.990Z",
+            "lastPublished": "2024-01-21T10:00:50.990Z",
+            "link": "https://www.bbc.com/nepali/articles/czv5j55r2g9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1c18/live/ad030680-b528-11ee-8f07-bbfdfa890097.jpg",
+            "description": "पछिल्लो पटक माघे सङ्क्रान्तिका दिन काठमाण्डूमा झारिएको मेलम्चीको पानीको मूल्य कसरी महँगो बन्दै छ र यसको निरन्तरतामा अझै किन आशङ्का देखिन्छ?",
+            "imageAlt": "सुन्दरीजल",
+            "id": "czv5j55r2g9o"
+          },
+          {
+            "type": "article",
+            "title": "विवाहपूर्व नै डिम्ब र शुक्रकीट सुरक्षित राख्न चाहने मानिसको सङ्ख्या बढ्दै",
+            "firstPublished": "2024-01-21T02:29:20.670Z",
+            "lastPublished": "2024-01-21T02:29:20.670Z",
+            "link": "https://www.bbc.com/nepali/articles/cy6wynv4qjgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c42f/live/b18171a0-b065-11ee-b6c9-05ac1b8d7fe9.jpg",
+            "description": "आफ्नो प्रजनन क्षमता जोगाउनका लागि अण्डा(डिम्बा) र शुक्रकिट चिस्याएर राख्ने प्रक्रिया केवल स्वास्थ्य समस्याका कारण मात्रै नभइ इच्छाले राख्ने महिला र पुरुषको सङ्ख्या पछिल्ला वर्षमा बढ्दै गएको चिकित्सकहरूले बताएका छन्। महिला र पुरुषले किन र कसरी आफ्नो सम्भावित सन्तान जोगाइरहेका छन्?",
+            "imageAlt": "डिम्ब चिस्याउने र वीर्य सेचन गर्ने विधि",
+            "id": "cy6wynv4qjgo"
+          },
+          {
+            "type": "article",
+            "title": "पोखरा र भैरहवा अन्तर्राष्ट्रिय विमानस्थलको ऋण कति छ र कसरी तिरिँदैछ?",
+            "firstPublished": "2024-01-15T01:27:16.572Z",
+            "lastPublished": "2024-01-15T01:27:16.572Z",
+            "link": "https://www.bbc.com/nepali/articles/c25ydr58velo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/479b/live/e4a97160-b2a2-11ee-beb5-e1400df560f2.jpg",
+            "description": "नियमित अन्तर्राष्ट्रिय उडान सञ्चालन गर्न नसकिरहेका पोखरा अन्तर्राष्ट्रिय विमानस्थल र गौतम बुद्ध अन्तर्राष्ट्रिय विमानस्थलको ऋण सरकारले कसरी तिरिरहेको छ?",
+            "imageAlt": "गौतमबुद्ध अन्तर्राष्ट्रिय विमानस्थल ",
+            "id": "c25ydr58velo"
+          },
+          {
+            "type": "article",
+            "title": "पीआर लिएर सन् २०२३ मा कुन कुन देशमा कति नेपाली पुगे?",
+            "firstPublished": "2024-01-16T10:26:16.419Z",
+            "lastPublished": "2024-01-16T10:26:16.419Z",
+            "link": "https://www.bbc.com/nepali/articles/c72ypjx8rylo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/42c8/live/8fb9cf10-b44b-11ee-8f07-bbfdfa890097.jpg",
+            "description": "सन् २०२३ स्थायी बसोबासको अनुमतिपत्र लिएर १०९ वटा देशमा र अस्थायी बसोबासको अनुमतिपत्र लिएर १४४ देशमा नेपालीहरू पुगेका थिए। कुन देशमा कति नेपाली पुगे?  ",
+            "imageAlt": "EPA",
+            "id": "c72ypjx8rylo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:845198c5-41df-49e6-bff7-eb365c03dc6b",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "बीबीसी विशेष",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_nepali_radio",
+            "publishedTimeStart": "2024-01-22T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-22T15:14:30.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "सांझपख",
+            "brandPid": "p0340xzv",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkhfrc5ft8b",
+            "broadcastPid": "p0h09wsy",
+            "summary": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+          },
+          {
+            "serviceId": "bbc_nepali_radio",
+            "publishedTimeStart": "2024-01-23T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-23T15:14:30.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "सांझपख",
+            "brandPid": "p0340xzv",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172zkhfrc5jq5f",
+            "broadcastPid": "p0h0kc23",
+            "summary": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+          },
+          {
+            "serviceId": "bbc_nepali_radio",
+            "publishedTimeStart": "2024-01-24T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-24T15:14:30.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "सांझपख",
+            "brandPid": "p0340xzv",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w172zkhfrc5mm2j",
+            "broadcastPid": "p0h0sc68",
+            "summary": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+          },
+          {
+            "serviceId": "bbc_nepali_radio",
+            "publishedTimeStart": "2024-01-25T14:59:30.000Z",
+            "publishedTimeEnd": "2024-01-25T15:14:30.000Z",
+            "publishedTimeDuration": "PT15M",
+            "title": "सांझपख",
+            "brandPid": "p0340xzv",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w172zkhfrc5qhzm",
+            "broadcastPid": "p0h0zwyf",
+            "summary": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+          }
+        ]
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 6,
+        "title": "धेरै पढिएको",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/nepali/popular/read",
+        "mostRead": {
+          "generated": "2024-01-26T10:00:18.525Z",
+          "lastRecordTimeStamp": "2024-01-26T09:57:00Z",
+          "firstRecordTimeStamp": "2024-01-26T09:42:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cn0nwvwn6lgo",
+              "rank": 1,
+              "title": "थाईल्यान्डको सडकमा जब कारमा चढाएर सिंह डुलाएको देखियो ",
+              "href": "https://www.bbc.com/nepali/articles/cn0nwvwn6lgo",
+              "timestamp": 1706249867143
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cmmg7q66mrjo",
+              "rank": 2,
+              "title": "विश्वमै पहिलो पटक नाइट्रोजन ग्यास सुँघाएर मृत्युदण्ड",
+              "href": "https://www.bbc.com/nepali/articles/cmmg7q66mrjo",
+              "timestamp": 1706248099576
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjrkvek09n0o",
+              "rank": 3,
+              "title": "आर्थिक मन्दी: दिनकै ४ सयसम्म कालोसूचीमा, कसरी घट्दैछ ऋण तिर्ने क्षमता",
+              "href": "https://www.bbc.com/nepali/articles/cjrkvek09n0o",
+              "timestamp": 1706231444143
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cw541dn60g1o",
+              "rank": 4,
+              "title": "साउदी अरबमा ७० वर्षमा पहिलो पटक मदिरा पसल खुल्दै",
+              "href": "https://www.bbc.com/nepali/articles/cw541dn60g1o",
+              "timestamp": 1706161363684
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crgk5dvj40xo",
+              "rank": 5,
+              "title": "क्यानडाको नयाँ नीतिले नेपाली विद्यार्थीलाई कस्तो असर?",
+              "href": "https://www.bbc.com/nepali/articles/crgk5dvj40xo",
+              "timestamp": 1706094984713
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0d7zdvn8pyo",
+              "rank": 6,
+              "title": "नेपाल र अफगानिस्तान दुवै यू-१९ विश्वकपको  'सुपर सिक्स'मा पुग्ने दाउमा",
+              "href": "https://www.bbc.com/nepali/articles/c0d7zdvn8pyo",
+              "timestamp": 1706252216285
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1e14knw9zpo",
+              "rank": 7,
+              "title": "राष्ट्रिय सभामा एमाले खुम्चियो, अधिकांश सीटमा सत्ता गठबन्धनको जित",
+              "href": "https://www.bbc.com/nepali/articles/c1e14knw9zpo",
+              "timestamp": 1706191330247
+            },
+            {
+              "id": "8a439fdd-d42a-4f1c-87a6-aea21a8f7eba",
+              "rank": 8,
+              "title": "मृत्युदण्ड पाउनुअघि कैदीहरूको अन्तिम भोजन यस्तो...",
+              "href": "/nepali/news-53816818",
+              "timestamp": 1597744474000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c97mgp98je6o",
+              "rank": 9,
+              "title": "युरोपेली देशसँग नेपालको पहिलो पटक श्रम सम्झौता, जर्मनी र रोमेनिआ कस्ता गन्तव्य हुन्?",
+              "href": "https://www.bbc.com/nepali/articles/c97mgp98je6o",
+              "timestamp": 1696647729528
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c04rnzlvkgyo",
+              "rank": 10,
+              "title": "राम मन्दिर प्राणप्रतिष्ठाबारे नेपाली विद्वान् पनि असन्तुष्ट शङ्कराचार्यकै पक्षमा, तर्क के हो",
+              "href": "https://www.bbc.com/nepali/articles/c04rnzlvkgyo",
+              "timestamp": 1706007807190
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3g0e16z34ro",
+              "rank": 11,
+              "title": "युद्धबन्दी सवार विमान कसले र किन खसाल्यो?   यस्ता छन् रुस र युक्रेनका दाबी",
+              "href": "https://www.bbc.com/nepali/articles/c3g0e16z34ro",
+              "timestamp": 1706177122779
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c6p8zg069r8o",
+              "rank": 12,
+              "title": "मौरीलाई रोगबाट जोगाउन बन्यो पहिलो खोप",
+              "href": "https://www.bbc.com/nepali/articles/c6p8zg069r8o",
+              "timestamp": 1673430685667
+            },
+            {
+              "id": "urn:bbc:optimo:asset:clw8p2ln0djo",
+              "rank": 13,
+              "title": "नेपाली क्रिकेटलाई कोसेली 'भारतीय होम ग्राउन्ड'",
+              "href": "https://www.bbc.com/nepali/articles/clw8p2ln0djo",
+              "timestamp": 1704805079508
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cyd0dm49dqvo",
+              "rank": 14,
+              "title": "रवि लामिछानेको नाम मुछेर दर्ता भएको उजुरीमा सहकारी विभाग के गर्दै छ",
+              "href": "https://www.bbc.com/nepali/articles/cyd0dm49dqvo",
+              "timestamp": 1705575873371
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c97v107gr45o",
+              "rank": 15,
+              "title": "राम मन्दिरबारे इस्लामिक देशहरूले दिए आक्रोशपूर्ण प्रतिक्रिया",
+              "href": "https://www.bbc.com/nepali/articles/c97v107gr45o",
+              "timestamp": 1706095044597
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv20l2lnvqwo",
+              "rank": 16,
+              "title": "३८ वर्षअघि क्यानडाबाट उडेको भारतीय विमानमा कसले राखेको थियो बम",
+              "href": "https://www.bbc.com/nepali/articles/cv20l2lnvqwo",
+              "timestamp": 1695984461416
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce5j3zjg171o",
+              "rank": 17,
+              "title": "कालीगण्डकीबाट अयोध्याको राम मन्दिर लगिएका शिला कहाँ छन्? त्यसबाट किन बनाइएन मूर्ति?",
+              "href": "https://www.bbc.com/nepali/articles/ce5j3zjg171o",
+              "timestamp": 1703727704966
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c72g8314823o",
+              "rank": 18,
+              "title": "जापानकी राजकुमारी आइकोले विश्वविद्यालयको पढाइपछि रेडक्रसमा काम गर्ने",
+              "href": "https://www.bbc.com/nepali/articles/c72g8314823o",
+              "timestamp": 1706058791413
+            },
+            {
+              "id": "193e1e96-d371-4a48-afeb-0f576bd98b2b",
+              "rank": 19,
+              "title": "नेतृत्व चयन नगरी सकियो माओवादी महाधिवेशन",
+              "href": "/nepali/news-59851149",
+              "timestamp": 1641133352000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czv5j55r2g9o",
+              "rank": 20,
+              "title": "मेलम्चीको पानी कति महँगो, आयोजना असफल बन्ने आशङ्का किन?",
+              "href": "https://www.bbc.com/nepali/articles/czv5j55r2g9o",
+              "timestamp": 1705831250990
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c44d8kpmzlgt",
+        "contentType": "index-home",
+        "pageIdentifier": "nepali.page",
+        "pageTitle": "BBC News नेपाली"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

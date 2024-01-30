@@ -65,6 +65,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Na Eme Ozugbo',
+        liveCoverage: 'Mkpuchi Na Eme Ozugbo',
+        breaking: 'Na Akpọtụ Ugbu A',
+        postedAt: 'Ebisara na',
+        summary: 'Nchịkọta',
+      },
       gist: 'Nchịkọta',
       error: {
         home: 'Akụkọ',
@@ -129,7 +136,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ọ dị mma',
           reject: 'Chọpụta ihe gbanwere',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -143,7 +150,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Hazie akara usoro m',
             },
@@ -159,7 +166,7 @@ export const service: DefaultServiceConfig = {
                   "Ime ka peeji anyị rụọ ọrụ, anyị na-edowe ozi ụfọdụ n'ekwenti gị na-agwaghị gị.",
                 para4: {
                   text: "Gụkọọ maka ozi dị mkpa anyị na-edowe n'igwe ekwenti gị n'iji me ka peeji websaịt anyị rụọ ọrụ.",
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: "Anyị na-edowe nnabata gị n'ime igwe ekwenti gị.",
                 heading3: 'Nnabata gị ma ịchọ',
@@ -191,13 +198,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Eeh, ekwere m',
             reject: "Mba, duga m n'ebe mwube",
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -257,7 +264,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     mostWatched: {
@@ -295,24 +302,24 @@ export const service: DefaultServiceConfig = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms',
+          href: 'https://www.bbc.com/usingthebbc/terms',
           text: 'Usoro Ojiji',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'Gbasara BBC',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Iwu Nzuzo',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Kuki',
         },
         {
@@ -321,8 +328,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

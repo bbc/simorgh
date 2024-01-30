@@ -1,32 +1,33 @@
 import { matchPath } from 'react-router-dom';
 import {
-  articlePath,
   articleDataPath,
-  articleSwPath,
   articleManifestPath,
-  frontPagePath,
+  articlePath,
+  articleSwPath,
+  cpsAssetPageDataPath,
+  cpsAssetPagePath,
   frontPageDataPath,
   frontPageManifestPath,
+  frontPagePath,
   frontPageSwPath,
-  homePagePath,
-  homePageDataPath,
-  homePageManifestPath,
-  homePageSwPath,
-  cpsAssetPagePath,
-  cpsAssetPageDataPath,
-  podcastEpisodePath,
-  podcastBrandPath,
+  legacyAssetPageDataPath,
+  legacyAssetPagePath,
   liveRadioPath,
-  onDemandRadioPath,
-  onDemandTvPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
   mostWatchedPagePath,
-  legacyAssetPagePath,
-  legacyAssetPageDataPath,
-  secondaryColumnDataRegexPath,
+  onDemandRadioPath,
+  onDemandTvPath,
+  podcastBrandPath,
+  podcastEpisodePath,
   recommendationsDataRegex,
+  secondaryColumnDataRegexPath,
+  tipoHomeDataPath,
+  tipoHomePath,
 } from './index';
+
+import serviceConfig from '../../../lib/config/services/loadableConfig';
+import { getFrontPageRegex, getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
   news: {},
@@ -104,14 +105,10 @@ describe('articleDataPath', () => {
 
 describe('frontPagePath', () => {
   const validRoutes = [
-    '/news',
-    '/persian',
-    '/news.amp',
-    '/persian.amp',
-    '/news/simp',
-    '/persian/trad',
-    '/news/lat.amp',
-    '/persian/cyr.amp',
+    '/ukchina/simp',
+    '/ukchina/trad',
+    '/serbian/lat.amp',
+    '/serbian/cyr.amp',
   ];
   shouldMatchValidRoutes(validRoutes, frontPagePath);
 
@@ -121,17 +118,14 @@ describe('frontPagePath', () => {
     '/iplayer',
     '/news/foobar',
     '/news/foobar.amp',
+    '/kyrgyz',
+    '/kyrgyz.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = [
-    '/news.json',
-    '/persian.json',
-    '/news/cyr.json',
-    '/persian/trad.json',
-  ];
+  const validRoutes = ['/serbian/cyr.json', '/ukchina/trad.json'];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
@@ -139,11 +133,12 @@ describe('frontPageDataPath', () => {
     '/iplayer.json',
     '/news/foobar.json',
     '/persian/.json',
+    '/persian.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
 
-describe('homePagePath', () => {
+describe('tipoHomePath', () => {
   const validRoutes = [
     '/news/tipohome',
     '/persian/tipohome',
@@ -154,7 +149,7 @@ describe('homePagePath', () => {
     '/news/lat/tipohome.amp',
     '/persian/cyr/tipohome.amp',
   ];
-  shouldMatchValidRoutes(validRoutes, homePagePath);
+  shouldMatchValidRoutes(validRoutes, tipoHomePath);
 
   const invalidRoutes = [
     '/news/tipohome/simp',
@@ -162,17 +157,17 @@ describe('homePagePath', () => {
     '/tipohome/persian',
     '/tipohome/persian.amp',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, tipoHomePath);
 });
 
-describe('homePageDataPath', () => {
+describe('tipoHomeDataPath', () => {
   const validRoutes = [
     '/news/tipohome.json',
     '/kyrgyz/tipohome.json',
     '/news/cyr/tipohome.json',
     '/persian/trad/tipohome.json',
   ];
-  shouldMatchValidRoutes(validRoutes, homePageDataPath);
+  shouldMatchValidRoutes(validRoutes, tipoHomeDataPath);
 
   const invalidRoutes = [
     '/news/data/tipohome.json',
@@ -180,7 +175,7 @@ describe('homePageDataPath', () => {
     '/news/foobar/tipohome.json',
     '/persian/nontrad/tipohome.json',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, tipoHomeDataPath);
 });
 
 describe('articleSwPath', () => {
@@ -238,33 +233,6 @@ describe('frontPageManifestPath', () => {
     '/news/trad/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageManifestPath);
-});
-
-describe('homePageSwPath', () => {
-  const validRoutes = ['/news/tipohome/sw.js', '/persian/tipohome/sw.js'];
-  shouldMatchValidRoutes(validRoutes, homePageSwPath);
-
-  const invalidRoutes = [
-    '/news/articles/tipohome/sw.js',
-    '/persian/tipohome/sw',
-    '/persian/simp/tipohome/sw.js',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
-});
-
-describe('homePageManifestPath', () => {
-  const validRoutes = [
-    '/news/tipohome/manifest.json',
-    '/persian/tipohome/manifest.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, homePageManifestPath);
-
-  const invalidRoutes = [
-    '/news/articles/tipohome/manifest.json',
-    '/hausa/tipohome/manifest',
-    '/hausa/simp/tipohome/manifest.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
 
 describe('onDemandRadioPath', () => {
@@ -467,6 +435,7 @@ describe('cpsAssetPagePath', () => {
     '/zhongwen/simp/test-12345678.amp',
     '/cymrufyw/etholiad-2017-39407507',
     '/cymrufyw/etholiad-2017-39407507.amp',
+    '/news/world-middle+east-10642960.amp',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
@@ -554,4 +523,128 @@ describe('legacyAssetPageDataPath', () => {
     return `${path}.json`;
   });
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
+});
+
+describe('frontPage -> homePage migration', () => {
+  const services = Object.keys(serviceConfig);
+
+  const servicesNotCoveredByWorldService = [
+    'sport',
+    'scotland',
+    'newsround',
+    'news',
+    'naidheachdan',
+    'cymrufyw',
+    'archive',
+  ];
+
+  const worldServices = services.filter(
+    service => !servicesNotCoveredByWorldService.includes(service),
+  );
+
+  const serviceToRoute = service => `/${service}`;
+
+  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+  const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
+
+  const servicesWithoutVariantsRoutes = worldServices
+    .filter(service => !servicesWithVariants.includes(service))
+    .map(serviceToRoute);
+
+  const migratedServices = [
+    'afaanoromoo',
+    'afrique',
+    'amharic',
+    'azeri',
+    'bengali',
+    'burmese',
+    'gahuza',
+    'gujarati',
+    'hausa',
+    'igbo',
+    'indonesia',
+    'kyrgyz',
+    'korean',
+    'marathi',
+    'nepali',
+    'pashto',
+    'persian',
+    'pidgin',
+    'portuguese',
+    'punjabi',
+    'sinhala',
+    'somali',
+    'swahili',
+    'tamil',
+    'telugu',
+    'thai',
+    'tigrinya',
+    'turkce',
+    'ukrainian',
+    'urdu',
+    'vietnamese',
+    'yoruba',
+  ];
+  const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
+
+  const liveFrontPageServices = worldServices.filter(
+    service => !migratedServices.includes(service),
+  );
+
+  const liveFrontPageRoutes = liveFrontPageServices.map(serviceToRoute);
+
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
+  });
+
+  describe.each(['local', 'test'])(
+    `homePage regex on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const homePageRegex = getHomePageRegex(services);
+
+      shouldMatchValidRoutes(servicesWithoutVariantsRoutes, homePageRegex);
+
+      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
+    },
+  );
+
+  describe.each(['local', 'test'])(
+    `frontPage regex on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const frontPageRegex = getFrontPageRegex(services);
+
+      shouldMatchValidRoutes(servicesWithVariantsRoutes, frontPageRegex);
+
+      shouldNotMatchInvalidRoutes(
+        servicesWithoutVariantsRoutes,
+        frontPageRegex,
+      );
+    },
+  );
+
+  describe(`frontPage regex on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const frontPageRegex = getFrontPageRegex(services);
+
+    shouldMatchValidRoutes(liveFrontPageRoutes, frontPageRegex);
+
+    shouldNotMatchInvalidRoutes(migratedWorldServiceRoutes, frontPageRegex);
+  });
+
+  describe(`homePage regex on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const homePageRegex = getHomePageRegex(services);
+
+    shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
+
+    shouldNotMatchInvalidRoutes(liveFrontPageRoutes, homePageRegex);
+  });
 });

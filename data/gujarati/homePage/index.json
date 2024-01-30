@@ -1,0 +1,103 @@
+{
+  "data": {
+    "title": "સમાચાર - BBC News ગુજરાતી",
+    "description": "બ્રેકિંગ ન્યુઝ, હવામાન, વેપાર, મનોરંજન, ગુજરાત, ભારત અને વિશ્વના સમાચાર, વિશ્લેષણ, BBCના ખાસ અહેવાલો, ટીવી બુલેટિન, વિડિઓ અને ફોટો ગેલેરી.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ભારતમાં વિદેશથી લવાયેલા ચિત્તાનાં ‘રહસ્યમય’ મૃત્યુ પાછળ શું છે કારણ?",
+            "firstPublished": "2023-04-26T08:28:52.629Z",
+            "link": "https://www.bbc.com/gujarati/articles/cqv025vj45yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e8ee/live/48ee90f0-e40f-11ed-8df1-d74cbf1089d7.png",
+            "description": "ગત વર્ષે વડા પ્રધાન મોદીના જન્મદિવસે 17 સપ્ટેમ્બરના રોજ નામીબિયાથી આઠ ચિત્તા લાવવામાં આવ્યા.",
+            "imageAlt": "વર્ષ 2022માં નરેન્દ્ર મોદીના જન્મદિવસે નામીબિયાથી ચિત્તા ભારત લાવવામાં આવ્યા હતા",
+            "id": "cqv025vj45yo"
+          },
+          {
+            "type": "article",
+            "title": "સુદાનમાં એક ગુજરાતી વેપારીએ 150 વર્ષ પહેલાં ખોલ્યો હતો ધંધાનો રસ્તો, હવે ત્યાં શું કરે છે ભારતીયો?",
+            "firstPublished": "2023-04-26T03:10:58.624Z",
+            "link": "https://www.bbc.com/gujarati/articles/c0wg7pelze7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/87e4/live/6ca1e5c0-e37d-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "સુદાનમાં ચાલી રહેલા સંઘર્ષ વચ્ચે ભારતીયોને બહાર કાઢવા માટે મોદી સરકારે ઑપરેશન કાવેરી શરૂ કર્યું છે. ચાલો જાણીએ સુદાન અને ભારતની ઐતિહાસિક સંબંધોની કહાણી.",
+            "imageAlt": "પ્રભુ એસ કે",
+            "id": "c0wg7pelze7o"
+          },
+          {
+            "type": "article",
+            "title": "18 વર્ષના સ્પિનર નૂર અહમદ કોણ છે જેમણે મુંબઈ ઇન્ડિયન્સને હંફાવીને ગુજરાત ટાઇટન્સને વિજેતા બનાવ્યું?",
+            "firstPublished": "2023-04-26T04:49:34.167Z",
+            "link": "https://www.bbc.com/gujarati/articles/cl52n1x84l5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ece0/live/3a098f20-e3ee-11ed-8df1-d74cbf1089d7.png",
+            "description": "છેલ્લી ઓવરનો પહેલો બૉલ વાઈડ હતો. આ અંગે મુંબઈ ઈન્ડિયન્સનો રિવ્યુ લેવામાં આવ્યો હતો. પરિણામ ગુજરાતની તરફેણમાં રહ્યું હતું.",
+            "imageAlt": "નૂર મોહમ્મદ",
+            "id": "cl52n1x84l5o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a3085ae7-27b9-4ec7-95ea-f7e7935a6b08",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "વિરાટ કોહલીની એ સિક્સરે ચાહકોને 12 વર્ષ પહેલાં ધોનીએ મારેલી સિક્સરની યાદ અપાવી દીધી",
+            "firstPublished": "2023-04-03T06:11:15.502Z",
+            "link": "https://www.bbc.com/gujarati/articles/cqvjq5e27ewo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4933/live/768cfa60-d1e5-11ed-be2e-754a65c11505.png",
+            "description": "આઈપીએલ-16માં દમદાર શરૂઆત પછી તમામ લોકો અનુમાન લગાવી રહ્યા હતા કે કોહલી આઈપીએલમાં ટ્રૉફી જીતવાનું મિશન લઈને જ મેદાને ઊતર્યા છે.",
+            "imageAlt": "વિરાટ કોહલી",
+            "id": "cqvjq5e27ewo"
+          },
+          {
+            "type": "article",
+            "title": "રાહુલ ગાંધીને માનહાનિ કેસમાં 13 એપ્રિલ સુધી જામીન, 3મેએ આગામી સુનાવણી",
+            "firstPublished": "2023-04-02T15:23:25.000Z",
+            "link": "https://www.bbc.com/gujarati/india-65156517",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17C0E/production/_129249279_5b0b310a-ca89-4908-ab79-55f22b52418e.jpg",
+            "description": "સુરતની સેશન કોર્ટે સોમવારે કૉંગ્રેસના પૂર્વ અધ્યક્ષ રાહુલ ગાંધીના જામીન 13 એપ્રીલ સુધી વધારી દીધા છે. રાહુલ ગાંધીએ વર્ષ 2019માં એક માનહાનિ કેસમાં દોષિત ગણવા અને બે વર્ષની સજાના વિરુદ્ધમાં અરજી દાખલ કરી હતી.",
+            "imageAlt": "રાહુલ ગાંધી",
+            "id": "e36c4828-67e1-4b76-84e5-c03ca985c09e"
+          },
+          {
+            "type": "article",
+            "title": "અમેરિકા બૉર્ડર પાસેથી મળેલા મૃતદેહો ગુજરાતીઓના? મહેસાણાનો પરિવાર કઈ રીતે પહોંચ્યો હતો કૅનેડા?",
+            "firstPublished": "2023-04-02T09:26:30.299Z",
+            "link": "https://www.bbc.com/gujarati/articles/cw9rwr4l9yqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/91be/live/70ccca40-d133-11ed-be2e-754a65c11505.jpg",
+            "description": "મહેસાણાનો ચાર સભ્યોનો પરિવાર એક મહિના પહેલાં ફરવા માટે કૅનેડા ગયો હતો. છેલ્લા 15 દિવસથી આ પરિવાર સંપર્કવિહોણો છે.",
+            "imageAlt": "કૅનેડામાં ભારતીયોનાં મૃત્યુ",
+            "id": "cw9rwr4l9yqo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f936e873-0700-42bf-8c6a-18196bc60720",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "બીબીસી વિશેષ",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cnnmzrr14w9t",
+        "contentType": "index-home",
+        "pageIdentifier": "gujarati.page",
+        "pageTitle": "સમાચાર - BBC News ગુજરાતી"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO page"
+}

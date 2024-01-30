@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostReadSectionLabel assertion should render most-read section with correct attributes 1`] = `
+<div>
+  <section
+    aria-labelledby="Most-Read"
+    class=""
+    data-e2e="most-read"
+    data-testid="most-read"
+    role="region"
+  >
+    Some child content
+  </section>
+</div>
+`;

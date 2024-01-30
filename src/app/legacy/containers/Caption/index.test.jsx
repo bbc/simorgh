@@ -199,7 +199,9 @@ describe('with offscreen text', () => {
         <CaptionContainer block={captionBlock} type="caption" />
       </ServiceContext.Provider>,
     );
-    expect(container.querySelector('span').textContent).toEqual('Caption, ');
+    expect(container.querySelector('span').textContent).toEqual(
+      'Caption, Some caption text...',
+    );
   });
 
   it('should render the video offscreen text', () => {
@@ -209,7 +211,7 @@ describe('with offscreen text', () => {
       </ServiceContext.Provider>,
     );
     expect(container.querySelector('span').textContent).toEqual(
-      'Video caption, ',
+      'Video caption, Some caption text...',
     );
   });
 
@@ -220,7 +222,7 @@ describe('with offscreen text', () => {
       </ServiceContext.Provider>,
     );
     expect(container.querySelector('span').textContent).toEqual(
-      'Image caption, ',
+      'Image caption, Some caption text...',
     );
   });
 
@@ -231,7 +233,7 @@ describe('with offscreen text', () => {
       </ServiceContext.Provider>,
     );
     expect(container.querySelector('span').textContent).toEqual(
-      ' ، عنوان تصویر',
+      ' ، عنوان تصویرSome caption text...',
     );
   });
 
@@ -242,7 +244,7 @@ describe('with offscreen text', () => {
       </ServiceContext.Provider>,
     );
     expect(container.querySelector('span').textContent).toEqual(
-      ' ، عنوان تصویر',
+      ' ، عنوان تصویرSome caption text...',
     );
   });
 

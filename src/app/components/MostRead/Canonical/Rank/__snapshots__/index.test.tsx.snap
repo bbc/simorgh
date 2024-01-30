@@ -1,0 +1,1308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostReadRank should render as expected when dir=ltr, service=bengali, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.1875rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      ১
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=japanese, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "Hiragino Kaku Gothic Pro","ﾋﾗギﾉ角ゴPro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=1, numberOfItems=5, size=default, columnLayout=multiColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=1, numberOfItems=5, size=default, columnLayout=twoColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 2rem;
+    }
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=1, numberOfItems=5, size=small, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=10, numberOfItems=10, size=default, columnLayout=multiColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      10
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=10, numberOfItems=10, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      10
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=10, numberOfItems=10, size=default, columnLayout=twoColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 4rem;
+    }
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      10
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, listIndex=10, numberOfItems=10, size=small, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      10
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=1, numberOfItems=5, size=default, columnLayout=multiColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=1, numberOfItems=5, size=default, columnLayout=twoColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 1.5rem;
+    }
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=1, numberOfItems=5, size=small, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=10, numberOfItems=10, size=default, columnLayout=multiColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱۰
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=10, numberOfItems=10, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱۰
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=10, numberOfItems=10, size=default, columnLayout=twoColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      min-width: 2rem;
+    }
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱۰
+    </span>
+  </div>
+</div>
+`;
+
+exports[`MostReadRank should render as expected when dir=rtl, service=persian, listIndex=10, numberOfItems=10, size=small, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="rtl"
+  >
+    <span
+      class="emotion-1"
+    >
+      ۱۰
+    </span>
+  </div>
+</div>
+`;

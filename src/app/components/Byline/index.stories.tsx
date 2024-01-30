@@ -12,13 +12,10 @@ import {
 import Byline from '.';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../ThemeProvider';
-import { Services, Variants } from '../../models/types/global';
+import { StoryProps } from '../../models/types/storybook';
+import md from './README.md';
 
-interface Props {
-  service: Services;
-  variant: Variants;
-}
-interface ComponentProps extends Props {
+interface ComponentProps extends StoryProps {
   fixture: object[];
 }
 
@@ -38,20 +35,30 @@ const Component = ({
 export default {
   title: 'Components/Byline',
   Component,
+  parameters: {
+    docs: {
+      component: {
+        title: 'Byline',
+      },
+      page: md,
+    },
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const AuthorRoleByline = ({ service, variant }: Props) => (
+export const AuthorRoleByline = ({ service, variant }: StoryProps) => (
   <Component
     fixture={bylineWithNameAndRole}
     service={service}
     variant={variant}
   />
 );
-export const LinkByline = ({ service, variant }: Props) => (
+
+export const LinkByline = ({ service, variant }: StoryProps) => (
   <Component fixture={bylineWithLink} service={service} variant={variant} />
 );
-export const AuthorRoleTimestampByline = ({ service, variant }: Props) => (
+
+export const AuthorRoleTimestampByline = ({ service, variant }: StoryProps) => (
   <Component fixture={bylineWithLink} service={service} variant={variant}>
     <Timestamp
       firstPublished={1660658887}
@@ -60,7 +67,7 @@ export const AuthorRoleTimestampByline = ({ service, variant }: Props) => (
     />
   </Component>
 );
-export const LinkAndLocationByline = ({ service, variant }: Props) => (
+export const LinkAndLocationByline = ({ service, variant }: StoryProps) => (
   <Component
     fixture={bylineWithLinkAndLocation}
     service={service}
@@ -73,7 +80,7 @@ export const LinkAndLocationByline = ({ service, variant }: Props) => (
     />
   </Component>
 );
-export const LinkLocationNoPhotoByline = ({ service, variant }: Props) => (
+export const LinkLocationNoPhotoByline = ({ service, variant }: StoryProps) => (
   <Component
     fixture={bylineWithNonPngPhoto}
     service={service}
@@ -86,7 +93,7 @@ export const LinkLocationNoPhotoByline = ({ service, variant }: Props) => (
     />
   </Component>
 );
-export const LinkLocationPhotoByline = ({ service, variant }: Props) => (
+export const LinkLocationPhotoByline = ({ service, variant }: StoryProps) => (
   <Component fixture={bylineWithPngPhoto} service={service} variant={variant}>
     <Timestamp
       firstPublished={1660658887}

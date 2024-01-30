@@ -1,8 +1,25 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    // Having this enabled causes issues with compilation of some TS files in the legacy codebase
+    // We don't really need this enabled as we don't need explicit type definitions generated for our files as they aren't used anywhere else
+    // https://github.com/microsoft/TypeScript/issues/47663
+    "declaration": false,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../src/**/*.d.ts",
+    "next.config.js",
+    "integration/IntegrationTestEnvironment.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "src/app/legacy/**/*",
+    "cypress",
+    "cypress.config.ts"
+  ]
 }

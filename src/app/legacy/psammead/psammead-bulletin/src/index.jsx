@@ -20,9 +20,9 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
@@ -210,8 +210,6 @@ const Bulletin = ({
           >
             {isLive ? (
               <LiveLabel
-                service={service}
-                dir={dir}
                 liveText={liveText}
                 ariaHidden
                 offScreenText={offScreenText}

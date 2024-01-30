@@ -6,13 +6,12 @@ import HealthFactors from './HealthFactors';
 import HealthFactorsMetadata from './types';
 import { isExempt } from '../helpers/healthFactors';
 
-const DocsDecorator = ({
-  context,
-  children,
-}: {
+interface DocsDecoratorProps {
   context: DocsContextProps;
   children: JSX.Element;
-}) => {
+}
+
+const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   const title = path(
     ['parameters', 'docs', 'component', 'title'],
     context,

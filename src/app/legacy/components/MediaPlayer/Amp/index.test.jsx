@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Amp from '.';
-import '@testing-library/jest-dom/extend-expect';
 
 describe('Media Player: Amp', () => {
   it('should render an amp-iframe with an amp-img nested inside', () => {

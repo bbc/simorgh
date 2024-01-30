@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string, shape, arrayOf } from 'prop-types';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import Metadata from '../Metadata';
+import Metadata from '../../../components/Metadata';
 
 const ArticleMetadata = ({
   articleId,

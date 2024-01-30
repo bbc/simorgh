@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 23,
+    "month": "January",
+    "year": 2024
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/doY7xZ14jG6ieIssJ4BgAy/Live-promo---handoff?type=design&node-id=365-2256&mode=design&t=YgJSJUbiATEtvcp3-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Live-Promo-Accessibility-Acceptance-Criteria--CCAJaa__JJNYghOq4ZqTQh8BAg-fpUZaurfrsL1nzMjVfetB",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1AjcnMSp0S5UfwDFeMgg_wjcKIpsN0wJ2kTdOzCxoQQM/edit#gid=1748460042",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

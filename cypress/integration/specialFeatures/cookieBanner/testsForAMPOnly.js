@@ -103,10 +103,10 @@ export default ({ service, variant, pageType, path }) => {
         getPrivacyBannerAccept(service, variant).click();
         getCookieBannerAcceptAmp(service, variant).click();
 
-        cy.get('[data-testid="amp-cookie-settings-button"]')
-          .click()
-          .get('[data-testid="amp-cookie-banner-manage-settings"]')
-          .should('be.visible');
+        cy.get('[data-testid="amp-cookie-settings-button"]').click();
+        cy.get('[data-testid="amp-cookie-banner-manage-settings"]').should(
+          'be.visible',
+        );
       });
     },
   );

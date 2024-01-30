@@ -4,7 +4,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #545658;
@@ -14,7 +14,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
+  border-left: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -38,12 +38,12 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   }
 }
 
-.emotion-0>p {
+.emotion-0>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>p:last-child {
+.emotion-0>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -80,13 +80,17 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      role="text"
     >
-       ، عنوان
+      <span
+        class="emotion-2"
+      >
+         ، عنوان
+      </span>
+      <p>
+        Some caption text...
+      </p>
     </span>
-    <p>
-      Some caption text...
-    </p>
   </figcaption>
 </div>
 `;
@@ -105,7 +109,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
+  border-left: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -129,12 +133,12 @@ exports[`should render caption text with example News offscreen text 1`] = `
   }
 }
 
-.emotion-0>p {
+.emotion-0>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>p:last-child {
+.emotion-0>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -171,13 +175,17 @@ exports[`should render caption text with example News offscreen text 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      role="text"
     >
-      Caption, 
+      <span
+        class="emotion-2"
+      >
+        Caption, 
+      </span>
+      <p>
+        Some caption text...
+      </p>
     </span>
-    <p>
-      Some caption text...
-    </p>
   </figcaption>
 </div>
 `;
@@ -196,7 +204,7 @@ exports[`should render caption with multiple paragraphs 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
+  border-left: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -220,12 +228,12 @@ exports[`should render caption with multiple paragraphs 1`] = `
   }
 }
 
-.emotion-0>p {
+.emotion-0>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>p:last-child {
+.emotion-0>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -262,19 +270,23 @@ exports[`should render caption with multiple paragraphs 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      role="text"
     >
-      Caption, 
+      <span
+        class="emotion-2"
+      >
+        Caption, 
+      </span>
+      <p>
+        This is paragraph 1
+      </p>
+      <p>
+        This is paragraph 2
+      </p>
+      <p>
+        Paragraph 3
+      </p>
     </span>
-    <p>
-      This is paragraph 1
-    </p>
-    <p>
-      This is paragraph 2
-    </p>
-    <p>
-      Paragraph 3
-    </p>
   </figcaption>
 </div>
 `;
@@ -293,7 +305,7 @@ exports[`should render correctly with inline block 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
+  border-left: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -317,12 +329,12 @@ exports[`should render correctly with inline block 1`] = `
   }
 }
 
-.emotion-0>p {
+.emotion-0>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>p:last-child {
+.emotion-0>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -353,25 +365,25 @@ exports[`should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-3 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-6:visited {
+.emotion-5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-6:focus,
-.emotion-6:hover {
+.emotion-5:focus,
+.emotion-5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -382,27 +394,31 @@ exports[`should render correctly with inline block 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      role="text"
     >
-      Caption, 
-    </span>
-    <p>
-      <b>
-        This is some text.
-      </b>
       <span
-        class="emotion-4 emotion-5"
-        lang="fa"
+        class="emotion-2"
       >
-        <a
-          aria-label="چیسربرگرundefined"
-          class="focusIndicatorReducedWidth emotion-6 emotion-7"
-          href="https://google.com"
-        >
-          چیسربرگر
-        </a>
+        Caption, 
       </span>
-    </p>
+      <p>
+        <b>
+          This is some text.
+        </b>
+        <span
+          class="emotion-3 emotion-4"
+          lang="fa"
+        >
+          <a
+            aria-label="چیسربرگرundefined"
+            class="focusIndicatorReducedWidth emotion-5 emotion-6"
+            href="https://google.com"
+          >
+            چیسربرگر
+          </a>
+        </span>
+      </p>
+    </span>
   </figcaption>
 </div>
 `;

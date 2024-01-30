@@ -198,7 +198,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -223,7 +223,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -269,7 +269,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1273,7 +1273,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1298,7 +1298,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -1344,7 +1344,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1999,7 +1999,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -2024,7 +2024,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -2070,7 +2070,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;

@@ -15,7 +15,7 @@ describe('ImagePlaceholderAmp', () => {
   it('should render dark mode version correctly', () => {
     const { container } = render(
       <amp-img src="foo" width="645px" height="128px">
-        <ImagePlaceholderAmp darkMode />
+        <ImagePlaceholderAmp darkPlaceholder />
       </amp-img>,
     );
     expect(container).toMatchSnapshot();
