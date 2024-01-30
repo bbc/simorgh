@@ -41,6 +41,7 @@ module.exports = {
         transcludeMarkdown: true,
       },
     },
+    'storybook-addon-mock',
   ],
   webpackFinal: async config => {
     config.target = ['web', 'es5'];
