@@ -4,7 +4,7 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const styles = {
   wrapper: css({
-    height: 0,
+    height: '100%',
     overflow: 'hidden',
     position: 'relative',
   }),
@@ -28,8 +28,6 @@ const styles = {
   }),
   imageAspectRatioOverride: css({
     height: '100%',
-    width: '100%',
-    objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
 };
 

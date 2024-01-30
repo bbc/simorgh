@@ -103,138 +103,86 @@ const Image = ({
           />
         </Helmet>
       )}
-      {overridesImageRatio ? (
-        <>
-          {isAmp ? (
-            <>
-              {!hasDimensions && (
-                // ensures amp-img will render when width and height is not provided
-                // https://amp.dev/documentation/examples/style-layout/how_to_support_images_with_unknown_dimensions/
-                <Global
-                  styles={{
-                    '.bbc-image img': {
-                      objectFit: 'cover',
-                    },
-                  }}
+      <div
+        className={className}
+        css={theme => [
+          styles.wrapper,
+          showPlaceholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
+        ]}
+        style={{
+          paddingBottom: overridesImageRatio ? 0 : legacyBrowserAspectRatio,
+        }}
+      >
+        {isAmp ? (
+          <>
+            {!hasDimensions && (
+              // ensures amp-img will render when width and height is not provided
+              // https://amp.dev/documentation/examples/style-layout/how_to_support_images_with_unknown_dimensions/
+              <Global
+                styles={{
+                  '.bbc-image img': {
+                    objectFit: 'cover',
+                  },
+                }}
+              />
+            )}
+            <amp-img
+              class="bbc-image"
+              layout={ampImgLayout}
+              alt={alt}
+              src={src}
+              width={width}
+              height={height}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
+              fallback=""
+              attribution={attribution}
+              {...(preload && { 'data-hero': true })}
+            />
+          </>
+        ) : (
+          <ImageWrapper>
+            {hasFallback && pageType === FRONT_PAGE && (
+              <>
+                <source srcSet={srcSet} type={mediaType} sizes={sizes} />
+                <source
+                  srcSet={fallbackSrcSet}
+                  type={fallbackMediaType}
+                  sizes={sizes}
                 />
-              )}
-              <amp-img
-                class="bbc-image"
-                layout={ampImgLayout}
-                alt={alt}
-                src={src}
-                width={width}
-                height={height}
-                srcSet={getImgSrcSet()}
-                sizes={getImgSizes()}
-                fallback=""
-                attribution={attribution}
-                {...(preload && { 'data-hero': true })}
-              />
-            </>
-          ) : (
-            <ImageWrapper>
-              {hasFallback && pageType === FRONT_PAGE && (
-                <>
-                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                  <source
-                    srcSet={fallbackSrcSet}
-                    type={fallbackMediaType}
-                    sizes={sizes}
-                  />
-                </>
-              )}
-              <img
-                onLoad={() => setIsLoaded(true)}
-                src={src}
-                srcSet={getImgSrcSet()}
-                sizes={getImgSizes()}
-                alt={alt}
-                loading={lazyLoad ? 'lazy' : undefined}
-                width={width}
-                height={height}
-                css={styles.imageAspectRatioOverride}
-                fetchpriority={fetchpriority}
-              />
-            </ImageWrapper>
-          )}
-          {children}
-        </>
-      ) : (
-        <div
-          className={className}
-          css={theme => [
-            styles.wrapper,
-            showPlaceholder && [
-              styles.placeholder,
-              {
-                backgroundColor: darkPlaceholder
-                  ? theme.palette.SHADOW
-                  : theme.palette.LUNAR,
-              },
-            ],
-          ]}
-          style={{
-            paddingBottom: legacyBrowserAspectRatio,
-          }}
-        >
-          {isAmp ? (
-            <>
-              {!hasDimensions && (
-                // ensures amp-img will render when width and height is not provided
-                // https://amp.dev/documentation/examples/style-layout/how_to_support_images_with_unknown_dimensions/
-                <Global
-                  styles={{
-                    '.bbc-image img': {
-                      objectFit: 'cover',
-                    },
-                  }}
-                />
-              )}
-              <amp-img
-                class="bbc-image"
-                layout={ampImgLayout}
-                alt={alt}
-                src={src}
-                width={width}
-                height={height}
-                srcSet={getImgSrcSet()}
-                sizes={getImgSizes()}
-                fallback=""
-                attribution={attribution}
-                {...(preload && { 'data-hero': true })}
-              />
-            </>
-          ) : (
-            <ImageWrapper>
-              {hasFallback && pageType === FRONT_PAGE && (
-                <>
-                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                  <source
-                    srcSet={fallbackSrcSet}
-                    type={fallbackMediaType}
-                    sizes={sizes}
-                  />
-                </>
-              )}
-              <img
-                onLoad={() => setIsLoaded(true)}
-                src={src}
-                srcSet={getImgSrcSet()}
-                sizes={getImgSizes()}
-                alt={alt}
-                loading={lazyLoad ? 'lazy' : undefined}
-                width={width}
-                height={height}
-                css={styles.image}
-                fetchpriority={fetchpriority}
-                style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
-              />
-            </ImageWrapper>
-          )}
-          {children}
-        </div>
-      )}
+              </>
+            )}
+            <img
+              onLoad={() => setIsLoaded(true)}
+              src={src}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
+              alt={alt}
+              loading={lazyLoad ? 'lazy' : undefined}
+              width={width}
+              height={height}
+              css={[
+                styles.image,
+                overridesImageRatio && styles.imageAspectRatioOverride,
+              ]}
+              fetchpriority={fetchpriority}
+              style={{
+                aspectRatio: overridesImageRatio
+                  ? 'auto'
+                  : `${aspectRatioX} / ${aspectRatioY}`,
+              }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+            />
+          </ImageWrapper>
+        )}
+        {children}
+      </div>
     </>
   );
 };
