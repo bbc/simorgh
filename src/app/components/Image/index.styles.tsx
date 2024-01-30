@@ -8,6 +8,9 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
   }),
+  wrapperAspectRatioOverride: css({
+    height: '100%',
+  }),
   placeholder: (theme: Theme) =>
     css({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -25,6 +28,9 @@ const styles = {
     width: '100%',
     height: 'auto',
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+  }),
+  imageAspectRatioOverride: css({
+    height: '100%',
   }),
 };
 

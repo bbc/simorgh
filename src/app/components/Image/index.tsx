@@ -32,6 +32,7 @@ type Props = {
   src: string;
   width?: number;
   fetchpriority?: 'high';
+  overrideAspectRatio?: boolean;
 };
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
@@ -61,6 +62,7 @@ const Image = ({
   width,
   children,
   fetchpriority,
+  overrideAspectRatio,
 }: PropsWithChildren<Props>) => {
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -86,6 +88,7 @@ const Image = ({
     if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
     return undefined;
   };
+  const overridesAspectRatio = !!overrideAspectRatio;
 
   return (
     <>
@@ -104,6 +107,7 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
+          overridesAspectRatio && styles.wrapperAspectRatioOverride,
           showPlaceholder && [
             styles.placeholder,
             {
@@ -114,7 +118,7 @@ const Image = ({
           ],
         ]}
         style={{
-          paddingBottom: legacyBrowserAspectRatio,
+          paddingBottom: overridesAspectRatio ? 0 : legacyBrowserAspectRatio,
         }}
       >
         {isAmp ? (
@@ -165,9 +169,16 @@ const Image = ({
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
-              css={styles.image}
+              css={[
+                styles.image,
+                overridesAspectRatio && styles.imageAspectRatioOverride,
+              ]}
               fetchpriority={fetchpriority}
-              style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+              style={{
+                aspectRatio: overridesAspectRatio
+                  ? 'auto'
+                  : `${aspectRatioX} / ${aspectRatioY}`,
+              }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>
         )}
