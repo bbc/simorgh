@@ -26,6 +26,11 @@ const styles = {
     height: 'auto',
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
+  imageAspectRatioOverride: css({
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+  }),
 };
 
 export default styles;

@@ -120,12 +120,12 @@ export default {
       maskImage: `linear-gradient(
       180deg, ${mobileImageMask})`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        position: 'absolute',
-        insetInlineEnd: 0,
-        top: '0',
+        insetInlineEnd: 0, // remove?
         height: '100%',
-        aspectRatio: '16 / 9',
-        overflow: 'hidden',
+        maxWidth: '60%', // can change this
+        objectFit: 'cover',
+        position: 'absolute',
+        right: '0',
       },
     }),
   linearGradientLtr: ({ mq }: Theme) =>
