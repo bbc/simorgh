@@ -4,12 +4,9 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const styles = {
   wrapper: css({
-    height: 0,
+    height: '100%',
     overflow: 'hidden',
     position: 'relative',
-  }),
-  wrapperAspectRatioOverride: css({
-    height: '100%',
   }),
   placeholder: (theme: Theme) =>
     css({
@@ -25,12 +22,16 @@ const styles = {
       },
     }),
   image: css({
+    height: '100%',
     width: '100%',
-    height: 'auto',
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
-  imageAspectRatioOverride: css({
-    height: '100%',
+  // awful naming
+  heightAuto: css({
+    height: 'auto',
+  }),
+  removeHeight: css({
+    height: 0,
   }),
 };
 

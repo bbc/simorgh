@@ -32,9 +32,10 @@ type Props = {
   src: string;
   width?: number;
   fetchpriority?: 'high';
-  overrideAspectRatio?: boolean;
 };
 
+// having issues removing this because I get an error:
+// Type '0 | [x: number, y: number] | undefined' must have a '[Symbol.iterator]()' method that returns an iterator.
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
@@ -62,23 +63,28 @@ const Image = ({
   width,
   children,
   fetchpriority,
-  overrideAspectRatio,
 }: PropsWithChildren<Props>) => {
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
+  const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
+
+  // ideally this wouldn't run every time
   const [aspectRatioX, aspectRatioY] =
     (aspectRatio && aspectRatio) ||
     (hasDimensions && [width, height]) ||
     DEFAULT_ASPECT_RATIO;
+
   const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
     aspectRatioX,
     aspectRatioY,
   );
+
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
     if (pageType !== FRONT_PAGE) return fallbackSrcSet;
@@ -88,7 +94,6 @@ const Image = ({
     if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
     return undefined;
   };
-  const overridesAspectRatio = !!overrideAspectRatio;
 
   return (
     <>
@@ -107,7 +112,7 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
-          overridesAspectRatio && styles.wrapperAspectRatioOverride,
+          hasFixedAspectRatio && styles.removeHeight,
           showPlaceholder && [
             styles.placeholder,
             {
@@ -118,7 +123,7 @@ const Image = ({
           ],
         ]}
         style={{
-          paddingBottom: overridesAspectRatio ? 0 : legacyBrowserAspectRatio,
+          paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
         }}
       >
         {isAmp ? (
@@ -169,15 +174,12 @@ const Image = ({
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
-              css={[
-                styles.image,
-                overridesAspectRatio && styles.imageAspectRatioOverride,
-              ]}
+              css={[styles.image, hasFixedAspectRatio && styles.heightAuto]}
               fetchpriority={fetchpriority}
               style={{
-                aspectRatio: overridesAspectRatio
-                  ? 'auto'
-                  : `${aspectRatioX} / ${aspectRatioY}`,
+                aspectRatio: hasFixedAspectRatio
+                  ? `${aspectRatioX} / ${aspectRatioY}`
+                  : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>

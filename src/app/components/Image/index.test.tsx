@@ -170,8 +170,11 @@ describe('Image - Canonical', () => {
     });
   });
 
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
-    render(<Fixture width={undefined} height={undefined} />);
+  // need to rewrite this test
+  it('should render the container with an aspect ratio of 16/9 when width and height is not provided and aspect ratio of 16/9 is provided', () => {
+    render(
+      <Fixture width={undefined} height={undefined} aspectRatio={[16, 9]} />,
+    );
 
     const imageEl = screen.getByAltText('Test image alt text');
 
@@ -204,7 +207,11 @@ describe('Image - Canonical', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image alt="Test image alt text" src="/test-image-500.jpg" />,
+      <Image
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        aspectRatio={[16, 9]}
+      />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -225,6 +232,7 @@ describe('Image - Canonical', () => {
         alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        aspectRatio={[16, 9]}
       />,
     );
 
@@ -353,8 +361,16 @@ describe('Image - AMP pages', () => {
     });
   });
 
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
-    render(<Fixture width={undefined} height={undefined} isAmp />);
+  // need to rewrite this test
+  it('should render the container with an aspect ratio of 16/9 when width and height is not provided and aspect ratio of 16/9 is provided', () => {
+    render(
+      <Fixture
+        width={undefined}
+        height={undefined}
+        aspectRatio={[16, 9]}
+        isAmp
+      />,
+    );
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -392,7 +408,12 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image isAmp alt="Test image alt text" src="/test-image-500.jpg" />,
+      <Image
+        isAmp
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        aspectRatio={[16, 9]}
+      />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -416,6 +437,7 @@ describe('Image - AMP pages', () => {
         alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        aspectRatio={[16, 9]}
       />,
     );
 
@@ -445,6 +467,7 @@ describe('Image - AMP pages', () => {
         mediaType="image/webp"
         fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         fallbackMediaType="image/jpeg"
+        aspectRatio={[16, 9]}
       />,
     );
 

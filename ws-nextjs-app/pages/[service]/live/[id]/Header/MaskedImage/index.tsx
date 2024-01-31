@@ -47,7 +47,6 @@ const MaskedImage = ({
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
         sizes="(min-width: 1008px) 660px, 100vw"
-        overrideAspectRatio
       />
     </div>
   );
