@@ -4,7 +4,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const PULSE_END_MARGIN = HALF;
 const PULSE_SIZE = TRIPLE;
-const PULSE_SIZE_TOTAL_WIDTH = HALF + TRIPLE;
+const PULSE_SIZE_TOTAL_WIDTH = PULSE_END_MARGIN + PULSE_SIZE;
 
 const styles = {
   liveLabelPulse: ({ mq, palette }: Theme) =>
