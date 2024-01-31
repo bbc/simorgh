@@ -124,7 +124,7 @@ export default {
         maxWidth: '60%', // can change this
         objectFit: 'cover',
         position: 'absolute',
-        right: '0',
+        insetInlineEnd: 0,
       },
     }),
 
