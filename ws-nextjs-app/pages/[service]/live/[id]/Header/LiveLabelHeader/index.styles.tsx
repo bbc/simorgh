@@ -6,6 +6,7 @@ const styles = {
       width: `${spacings.TRIPLE}rem`,
       height: `${spacings.TRIPLE}rem`,
       color: palette.LIVE_LIGHT,
+      verticalAlign: '0',
     }),
   liveLabelTextWithImage: ({ palette }: Theme) =>
     css({

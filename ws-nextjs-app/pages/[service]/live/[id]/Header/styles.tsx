@@ -82,6 +82,7 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'calc(100% / 3 * 2)',
         display: 'inline-flex',
+        marginTop: '0',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         display: 'inline-flex',
