@@ -24,7 +24,7 @@ const Header = ({
 }) => {
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
 
-  const LiveLabelTitle = (
+  const Title = (
     <span
       css={isHeaderImage ? styles.titleWithImage : styles.titleWithoutImage}
     >
@@ -55,10 +55,10 @@ const Header = ({
           <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
             {showLiveLabel ? (
               <LiveLabelHeader isHeaderImage={isHeaderImage}>
-                {LiveLabelTitle}
+                {Title}
               </LiveLabelHeader>
             ) : (
-              LiveLabelTitle
+              Title
             )}
           </Heading>
           {description && (
