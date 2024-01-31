@@ -112,7 +112,7 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
-          hasFixedAspectRatio && styles.removeHeight,
+          hasFixedAspectRatio ? styles.heightNone : styles.heightFull,
           showPlaceholder && [
             styles.placeholder,
             {
@@ -174,7 +174,10 @@ const Image = ({
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
-              css={[styles.image, hasFixedAspectRatio && styles.heightAuto]}
+              css={[
+                styles.image,
+                hasFixedAspectRatio ? styles.heightAuto : styles.heightFull,
+              ]}
               fetchpriority={fetchpriority}
               style={{
                 aspectRatio: hasFixedAspectRatio
