@@ -53,6 +53,7 @@ const Component = ({
 };
 
 describe('Frosted Glass Promo', () => {
+  // this snapshot changes and I'm not sure why
   it('when given props directly', () => {
     const { container } = render(
       <Component {...(promoProps as unknown as PromoProps)} />,
@@ -86,6 +87,7 @@ describe('Frosted Glass Promo', () => {
     expect(container).toMatchSnapshot();
   });
 
+  // what's the desired behavioir here?
   it('when given props for an a Optimo promo with no image', () => {
     const optimoPromoFixtureNoImage = makeOptimoPromoFixture({});
     const { container } = render(<Component {...optimoPromoFixtureNoImage} />);
