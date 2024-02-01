@@ -37,17 +37,15 @@ const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <BrowserRouter>
-          <HomePage
-            service={service}
-            variant={variant}
-            pageType={HOME_PAGE}
-            status={200}
-            isAmp={false}
-            pathname={`/${service}`}
-            pageData={pageData}
-          />
-        </BrowserRouter>
+        <HomePage
+          service={service}
+          variant={variant}
+          pageType={HOME_PAGE}
+          status={200}
+          isAmp={false}
+          pathname={`/${service}`}
+          pageData={pageData}
+        />
       </ServiceContextProvider>
     </ThemeProvider>
   );
