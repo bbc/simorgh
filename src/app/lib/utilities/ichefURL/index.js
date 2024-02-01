@@ -1,4 +1,4 @@
-// List of originCodes that support webp on '/ace/standard/' iChef
+// List of originCodes that support webp on '/ace/ws/' iChef
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
@@ -28,7 +28,7 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   const url = [
     process.env.SIMORGH_ICHEF_BASE_URL || 'https://ichef.bbci.co.uk',
     'ace',
-    'standard',
+    'ws',
     resolution,
     originCode,
     locator,

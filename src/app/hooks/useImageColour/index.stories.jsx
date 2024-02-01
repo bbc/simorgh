@@ -24,7 +24,7 @@ const Typo = styled.div`
 const Component = () => {
   const url = text(
     'URL',
-    'https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/12555/production/_121339057_scallopedhammerheadsimonpierce-gct.jpg',
+    'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/12555/production/_121339057_scallopedhammerheadsimonpierce-gct.jpg',
   );
   const contrastColour = color('Contrast Colour', '#fff');
 

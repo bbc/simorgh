@@ -44,7 +44,7 @@ This is how to render a basic image (non-responsive):
 ```tsx
 <Image
   alt="A penguin stands on an ice floe"
-  src="https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
   width={500}
   height={281}
 />
@@ -55,8 +55,8 @@ This is how to render a responsive image:
 ```tsx
 <Image
   alt="A penguin stands on an ice floe"
-  src="https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-  srcSet="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
+  src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
   sizes="(min-width: 1008px) 645px, 100vw"
   width={500}
   height={281}
@@ -68,10 +68,10 @@ This is how to render a responsive webp image with a jpeg fallback:
 ```tsx
 <Image
   alt="A penguin stands on an ice floe"
-  src="https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-  srcSet="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
+  src="https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  srcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
   mediaType="image/webp"
-  fallbackSrcSet="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
+  fallbackSrcSet="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
   fallbackMediaType="image/jpeg"
   sizes="(min-width: 1008px) 645px, 100vw"
   width={500}
@@ -83,7 +83,7 @@ You can generate the `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMedia
 
 ```tsx
 const src =
-  'https://ichef.bbci.co.uk/ace/standard/624/cpsprodpb/164AF/production/_110911319_antartica.jpg';
+  'https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg';
 
 const { srcSet, primaryMimeType, fallbackSrcSet, fallbackMimeType } =
   createSrcsets({
