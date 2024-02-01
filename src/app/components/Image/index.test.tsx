@@ -170,16 +170,13 @@ describe('Image - Canonical', () => {
     });
   });
 
-  // need to rewrite this test
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided and aspect ratio of 16/9 is provided', () => {
-    render(
-      <Fixture width={undefined} height={undefined} aspectRatio={[16, 9]} />,
-    );
+  it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
+    render(<Fixture width={undefined} height={undefined} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
-      paddingBottom: '56.25%',
+      paddingBottom: '0',
     });
   });
 
@@ -361,21 +358,13 @@ describe('Image - AMP pages', () => {
     });
   });
 
-  // need to rewrite this test
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided and aspect ratio of 16/9 is provided', () => {
-    render(
-      <Fixture
-        width={undefined}
-        height={undefined}
-        aspectRatio={[16, 9]}
-        isAmp
-      />,
-    );
+  it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
+    render(<Fixture width={undefined} height={undefined} isAmp />);
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
-      paddingBottom: '56.25%',
+      paddingBottom: 0,
     });
   });
 
