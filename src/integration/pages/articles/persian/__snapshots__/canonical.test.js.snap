@@ -162,7 +162,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح �
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
