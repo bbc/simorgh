@@ -34,9 +34,6 @@ type Props = {
   fetchpriority?: 'high';
 };
 
-// having issues removing this because I get an error:
-// Type '0 | [x: number, y: number] | undefined' must have a '[Symbol.iterator]()' method that returns an iterator.
-const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
   roundNumber((y / x) * 100)
@@ -70,11 +67,9 @@ const Image = ({
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
 
-  // ideally this wouldn't run every time
-  const [aspectRatioX, aspectRatioY] =
-    (aspectRatio && aspectRatio) ||
-    (hasDimensions && [width, height]) ||
-    DEFAULT_ASPECT_RATIO;
+  // [16, 9] fallback here is to stop a typescript error
+  const [aspectRatioX, aspectRatioY] = (aspectRatio && aspectRatio) ||
+    (hasDimensions && [width, height]) || [16, 9];
 
   const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
     aspectRatioX,
@@ -112,7 +107,9 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
-          hasFixedAspectRatio ? styles.heightNone : styles.heightFull,
+          hasFixedAspectRatio
+            ? styles.wrapperFixedAspectRatio
+            : styles.wrapperResponsiveRatio,
           showPlaceholder && [
             styles.placeholder,
             {
@@ -176,7 +173,9 @@ const Image = ({
               height={height}
               css={[
                 styles.image,
-                hasFixedAspectRatio ? styles.heightAuto : styles.heightFull,
+                hasFixedAspectRatio
+                  ? styles.imageFixedAspectRatio
+                  : styles.imageResponsiveRatio,
               ]}
               fetchpriority={fetchpriority}
               style={{

@@ -7,6 +7,12 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
   }),
+  wrapperFixedAspectRatio: css({
+    height: 0,
+  }),
+  wrapperResponsiveRatio: css({
+    height: '100%',
+  }),
   placeholder: (theme: Theme) =>
     css({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -24,15 +30,11 @@ const styles = {
     width: '100%',
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
-  // awful naming
-  heightAuto: css({
+  imageFixedAspectRatio: css({
     height: 'auto',
   }),
-  heightFull: css({
+  imageResponsiveRatio: css({
     height: '100%',
-  }),
-  heightNone: css({
-    height: 0,
   }),
 };
 
