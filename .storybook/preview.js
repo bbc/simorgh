@@ -566,19 +566,7 @@ export const parameters = {
     sidebarAnimations: true,
     storySort: {
       method: 'alphabetical',
-      locales: 'en-GB',
-      order: [
-        'Docs',
-        'New Components',
-        'Components',
-        'Containers',
-        'Topic',
-        'Pages',
-        'Coding Standards',
-        'Simorgh Structure',
-        'Hooks',
-        'Cypress',
-      ],
+      order: ['Pages', 'New Components', 'Components', 'Containers', 'Docs'],
     },
   },
   docs: {
