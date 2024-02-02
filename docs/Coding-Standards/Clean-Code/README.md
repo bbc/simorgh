@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/Clean code" />
-
 # Coding standards: Clean code
 
 ## Place code as close to where it's relevant as possible (Colocation)

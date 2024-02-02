@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/Code-Reviews" />
-
 # Helpful code reviews
 
 This document presents some of the principles behind how and why we do code reviews, as well as collecting some useful bits of advice to make code reviews more effective and enjoyable for everyone.
