@@ -78,5 +78,5 @@ module.exports = {
 
     return config;
   },
-  staticDirs: ['./static', '../data'],
+  staticDirs: ['./static', { from: '../data', to: 'data' }],
 };

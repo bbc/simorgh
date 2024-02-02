@@ -15,7 +15,9 @@ const Component = ({ service, variant }: StoryProps) => {
 
   useEffect(() => {
     const loadPageData = async () => {
-      const response = await fetch(new Url(`${service}/homePage/index.json`));
+      const response = await fetch(
+        new Url(`data/${service}/homePage/index.json`),
+      );
       const { data } = await response.json();
       setPageData(data);
     };
