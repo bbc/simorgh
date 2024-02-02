@@ -20,7 +20,7 @@ const Component = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Topic/Pager',
+  title: 'Components/Pagination',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
