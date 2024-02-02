@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/Test-Strategy-Info" />
-
 # Test Strategy for adding integration/cypress tests
 
 This document gives a brief overview on what basis integration and e2e tests are added.

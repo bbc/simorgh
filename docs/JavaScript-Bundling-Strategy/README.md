@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/JavaScript-Bundling-Strategy" />
-
 # JavaScript Bundling
 
 ## Differential serving - modern and legacy bundles using module/nomodule scripts

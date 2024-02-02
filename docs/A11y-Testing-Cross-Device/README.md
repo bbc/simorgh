@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/A11y-Testing-Cross-Device" />
-
 # How to test on multiple devices during development for accessibility
 
 When developing any feature for this project we ensure we check our site is as accessible to as many users as we can by completing an [a11y swarm](https://bbc.github.io/accessibility-news-and-you/guides/accessibility-swarms.html). When developing any feature for this project we ensure we check our site is as accessible to as many users as we can. We often need to test a branch of Simorgh across multiple devices, e.g. on mobile device and an [A11y](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean) laptop with the [Assistive Technology we support](https://bbc.github.io/accessibility-news-and-you/accessibility-and-supported-assistive-technology), such as screen readers.

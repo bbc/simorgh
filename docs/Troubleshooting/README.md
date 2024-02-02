@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/Troubleshooting" />
-
 # Unsigned commits in latest are preventing me from pushing my branch
 
 If for some reason unsigned commits have been merged into the latest branch, possibly because of an admin merge, then you will need to sign any previously unsigned commits.

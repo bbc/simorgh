@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/Media-Player-Guide" />
-
 # Media Player Overview
 
 This document gives a brief overview of how embedded media (audio and video) works within Simorgh. More details can be found within the `news-av-player` module documentation.

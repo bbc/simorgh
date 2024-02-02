@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="docs/GPG-Signing-Guide" />
-
 # GPG Signing Guide
 
 ## Why?
