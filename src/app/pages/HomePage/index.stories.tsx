@@ -1,8 +1,9 @@
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
+import Url from 'url-parse';
 import { withKnobs } from '@storybook/addon-knobs';
-import fetchPageData from '#app/routes/utils/fetchPageData';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import fetch from 'node-fetch';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -14,13 +15,9 @@ const Component = ({ service, variant }: StoryProps) => {
 
   useEffect(() => {
     const loadPageData = async () => {
-      const {
-        json: { data: pageData },
-        // @ts-expect-error args required
-      } = await fetchPageData({
-        path: `/${service}/homePage/index`,
-      });
-      setPageData(pageData);
+      const response = await fetch(new Url(`${service}/homePage/index.json`));
+      const { data } = await response.json();
+      setPageData(data);
     };
 
     loadPageData();
