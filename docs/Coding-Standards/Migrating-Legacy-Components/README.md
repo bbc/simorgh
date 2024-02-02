@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/Migrating Legacy Components" />
-
 # Coding standards: Migrating Legacy Components
 
 ## Props / Typing

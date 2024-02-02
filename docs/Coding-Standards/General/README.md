@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/General" />
-
 # Coding standards: General
 
 ## Avoid disabling ESLint rules

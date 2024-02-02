@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/React Components" />
-
 # Coding standards: React Components
 
 ## Avoid JSX props spreading

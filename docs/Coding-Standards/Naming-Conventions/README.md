@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/Naming conventions" />
-
 # Coding standards: Naming conventions
 
 ## Name things consistently
@@ -11,7 +7,7 @@ By enforcing a convention and naming things consistently, we accomplish two thin
 1. Discoverability: How quickly can someone find a folder, file, component or function they need to change?
 2. Understanding: How fast can someone look at our code and understand what it is they're looking at?
 
-#### Use PascalCase when naming a component.
+### Use PascalCase when naming a component.
 
 ❌
 
@@ -29,7 +25,7 @@ const RadioSchedule = () => <div />;
 const ImageWithPlaceholder = () => <div />;
 ```
 
-#### Give a component a descriptive name rather something too generic or naming a component after an HTML element.
+### Give a component a descriptive name rather something too generic or naming a component after an HTML element.
 
 ❌
 
@@ -45,7 +41,7 @@ const TopicPromo = () => <div />;
 const InlineLink = ({ to, children }) => <a href={to}>{children}</a>;
 ```
 
-#### Avoid using the type of entity in naming. The entity type should already be obvious from other naming conventions e.g. PascalCase for components or `use` prefix for React Hooks.
+### Avoid using the type of entity in naming. The entity type should already be obvious from other naming conventions e.g. PascalCase for components or `use` prefix for React Hooks.
 
 ❌
 
@@ -63,7 +59,7 @@ const useToggle = () => {};
 const getPath = () => {};
 ```
 
-#### The definition name and directory name should be identical. This makes it easier to locate code.
+### The definition name and directory name should be identical. This makes it easier to locate code.
 
 ❌
 
@@ -85,7 +81,7 @@ const TopicPromo = () => <div />;
 const RadioSchedule = () => <div />;
 ```
 
-#### Component test filenames should be identical to the component filename with `.test` preceding the file extension. This makes it easier to locate tests for the component.
+### Component test filenames should be identical to the component filename with `.test` preceding the file extension. This makes it easier to locate tests for the component.
 
 ❌
 
@@ -101,7 +97,7 @@ TopicPromo; // index.js; // the component filename
 TopicPromo; // index.test.js; // the component test filename
 ```
 
-#### Component and component test filenames should use the `.tsx` file extension. This makes it easier to identify which files in the codebase are components.
+### Component and component test filenames should use the `.tsx` file extension. This makes it easier to identify which files in the codebase are components.
 
 ❌
 
@@ -117,7 +113,7 @@ TopicPromo; // index.tsx;
 TopicPromo; // index.test.tsx;
 ```
 
-#### Use camelCase when naming variables, functions and methods.
+### Use camelCase when naming variables, functions and methods.
 
 ❌
 
@@ -133,7 +129,7 @@ let pageType;
 const getPageType = () => {};
 ```
 
-#### Use SCREAMING_SNAKE_CASE when naming constants to indicate the value is a [primitive type](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and will point at the same value throughout the application.
+### Use SCREAMING_SNAKE_CASE when naming constants to indicate the value is a [primitive type](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and will point at the same value throughout the application.
 
 ❌
 
@@ -147,7 +143,7 @@ const appEnv = 'test';
 const APP_ENV = 'test';
 ```
 
-#### Avoid using visually descriptive names for components. This is for 2 reasons:
+### Avoid using visually descriptive names for components. This is for 2 reasons:
 
 1.  Components can change appearance depending on CSS breakpoints and the language content is presented in. e.g. `InlinePromo` may not look inline on mobile or `RightSection` may be a section on the left in right-to-left languages.
 2.  Requirements often change which means we are likely to update the UI and the naming of the component may no longer match the appearance. For example, a component named `BlurredBg` that no longer has a blurred background image would incur an additional bit of mental thought processing every time we work on it.

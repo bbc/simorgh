@@ -1,13 +1,3 @@
-import { Meta, Story } from '@storybook/addon-docs';
-import figmaImage from './images/figma-link.png';
-import storyIcon from './images/storybook-story-icon.png';
-import groupIcon from './images/storybook-group-icon.png';
-import folderIcon from './images/storybook-folder-icon.png';
-import docsIcon from './images/storybook-docs-icon.png';
-import figmaPreview from './images/figma-preview.png';
-
-<Meta title="Coding Standards/Storybook" />
-
 # Coding standards: storybook
 
 ## What is storybook
@@ -39,15 +29,19 @@ For any of our stories or documentation to correctly display in storybook we mus
 ### How to add documentation
 
 Make sure that the place where you store your documentation is pointed by any of the glob patterns in `.storybook/main.js`.
-Then create a `.stories.mdx` file and write your documentation in normal markdown. Once you have the documentation file ready, add these lines at the top of the file:
+Create a `README.md` and a `.stories.mdx` file, writing the documentation in normal markdown in the README file. Once you have the documentation file ready, add these lines at the top of the .stories.mdx file:
 
 NB: Your documentation should follow markdown format. Guidelines on markdown can be found [here](https://www.markdownguide.org/basic-syntax/).
 
 ```jsx
 import { Meta } from '@storybook/addon-docs';
+import README from './README.md';
 
 //Title follows the path structure where the documentation needs to be stored. More about this is explained in later sections
 <Meta title="Coding Standards/Storybook" />;
+
+// This will render the contents of the markdown file
+<README />;
 ```
 
 The above code will allow Storybook to import the markdown you wrote below the `Meta` tag and display it into a story documentation.
@@ -93,7 +87,7 @@ export const Variant2 = () => <MyComponent prop1={variant2} />;
 
 You must first co-locate documentation to your component in storybook by placing a readme file in the same location as the index.stories.tsx file.
 
-Make use of [markdown](https://www.markdownguide.org/) when writing your documentation. Once your documentation is ready open the `index.stories.tsx`, import the newly created `README.md/mdx` as `md` and pass it down to the default export as shown below:
+Make use of [markdown](https://www.markdownguide.org/) when writing your documentation. Once your documentation is ready open the `index.stories.tsx`, import the newly created `README.md` as `md` and pass it down to the default export as shown below:
 
 ```jsx
 import md from './README.md';
@@ -173,7 +167,7 @@ Once this is done, our storybook will take care of adding the health factors com
 
 Preview example:
 
-<img src={figmaPreview} alt="Figma preview tab in storybook" />
+![Figma preview tab in storybook](../images/figma-preview.png)
 
 To create a sidebar windows with Figma or Zepplin UX designs, add the following `array of objects` to the parameters of your `index.stories.jsx` export:
 
@@ -218,10 +212,7 @@ export default {
 
 To create Figma's URL pointing to specific sections of a design, select the design you want to display and copy the link showed by the browser:
 
-<img
-  src={figmaImage}
-  alt="Image showing how to get a link from figma interface. Firstly select the component from the navigation, then copy the link provided by the browser"
-/>
+![Image showing how to get a link from figma interface. Firstly select the component from the navigation, then copy the link provided by the browser](../images/figma-link.png)
 
 ## Stories Standards
 
@@ -311,13 +302,13 @@ Storybook provides us with a simple folder structure. Item's in this structure c
 
 - Root (showcased by a text label with the root's name)
 - Folders
-  <img src={folderIcon} alt="folder icon" style={{ width: '1rem' }} />
+  ![folder icon](../images/storybook-folder-icon.png)
 - Groups
-  <img src={groupIcon} alt="group icon" style={{ width: '1rem' }} />
+  ![group icon](../images/storybook-group-icon.png)
 - Stories
-  <img src={storyIcon} alt="story icon" style={{ width: '1rem' }} />
+  ![story icon](../images/storybook-story-icon.png)
 - Documentation
-  <img src={docsIcon} alt="documentation icon" style={{ width: '1rem' }} />
+  ![documentation icon](../images/storybook-docs-icon.png)
 
 The folder structure can be controlled via the story title by the following pattern:
 `title="root_name/folder_name/name_of_story"`
