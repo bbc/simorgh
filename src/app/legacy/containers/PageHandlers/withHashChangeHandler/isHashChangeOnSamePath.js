@@ -1,7 +1,7 @@
-export default (previous, next) => {
-  const { hash: prevHash, pathname: prevPathname } = previous?.location || {};
-  const { hash: nextHash, pathname: nextPathname } = next?.location || {};
-
+export default (
+  { location: { hash: prevHash, pathname: prevPathname } = {} },
+  { location: { hash: nextHash, pathname: nextPathname } = {} },
+) => {
   const isSamePath = prevPathname === nextPathname;
   const isDifferentHash = prevHash !== nextHash;
 
