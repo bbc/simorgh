@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs';
-
-<Meta title="Coding Standards/Testing" />
-
 # Coding standards: Testing
 
 It’s important to have readable and maintainable tests because they help to catch defects and bugs in new features and when changing existing functionality. Tests are also another way of understanding our code.
