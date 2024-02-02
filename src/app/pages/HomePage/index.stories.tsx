@@ -1,7 +1,6 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from '#app/routes/homePage/getInitialData';
