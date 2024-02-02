@@ -74,7 +74,6 @@ export default async ({
       pageType,
       ...(timeout && { timeout }),
     };
-
     // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData(fetchPageDataArgs);
 
