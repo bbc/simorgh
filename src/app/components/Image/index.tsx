@@ -67,13 +67,12 @@ const Image = ({
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
 
-  // [16, 9] fallback here is to stop a typescript error
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
-    (hasDimensions && [width, height]) || [16, 9];
+    (hasDimensions && [width, height]) || [null, null];
 
   const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
-    aspectRatioX,
-    aspectRatioY,
+    aspectRatioX as number,
+    aspectRatioY as number,
   );
 
   const hasFallback = srcSet && fallbackSrcSet;

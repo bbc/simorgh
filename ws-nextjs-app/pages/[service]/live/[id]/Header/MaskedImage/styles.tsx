@@ -122,7 +122,7 @@ export default {
       aspectRatio: '16 /9',
       [mq.GROUP_4_MIN_WIDTH]: {
         height: '100%',
-        maxWidth: '60%', // can change this
+        maxWidth: '60%',
         objectFit: 'cover',
         position: 'absolute',
         insetInlineEnd: 0,
