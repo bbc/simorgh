@@ -119,6 +119,7 @@ export default {
       maskSize: '100% 100%',
       maskImage: `linear-gradient(
       180deg, ${mobileImageMask})`,
+      aspectRatio: '16 /9',
       [mq.GROUP_4_MIN_WIDTH]: {
         height: '100%',
         maxWidth: '60%', // can change this
