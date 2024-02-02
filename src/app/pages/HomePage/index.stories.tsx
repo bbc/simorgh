@@ -1,9 +1,8 @@
-/* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
+import fetchPageData from '#app/routes/utils/fetchPageData';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import getInitialData from '#app/routes/homePage/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -15,18 +14,16 @@ const Component = ({ service, variant }: StoryProps) => {
 
   useEffect(() => {
     const loadPageData = async () => {
-      const { pageData } = await getInitialData({
-        service,
-        variant,
-        pageType: HOME_PAGE,
-        path: `/${service}`,
+      const {
+        json: { data: pageData },
+        // @ts-expect-error args required
+      } = await fetchPageData({
+        path: `/${service}/homePage/index`,
       });
-      // @ts-expect-error suppressing this error as it is required to fetch data client-side
       setPageData(pageData);
     };
 
     loadPageData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [service]);
 
   if (Object.keys(pageData).length === 0) {

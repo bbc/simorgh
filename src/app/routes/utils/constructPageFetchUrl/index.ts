@@ -79,7 +79,7 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       getIdFunction = () => {
         return env !== 'local'
           ? HOME_PAGE_CONFIG?.[service]?.[env]
-          : 'homepage/index.json';
+          : 'tipohome';
       };
       break;
     case MOST_READ_PAGE:
