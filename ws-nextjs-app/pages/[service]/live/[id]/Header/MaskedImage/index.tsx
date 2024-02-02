@@ -35,7 +35,7 @@ const MaskedImage = ({
   return (
     <div
       css={[
-        styles.maskedImage,
+        styles.maskedImageWrapper,
         isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
       ]}
     >

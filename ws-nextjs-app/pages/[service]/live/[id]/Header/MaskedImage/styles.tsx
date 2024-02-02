@@ -114,7 +114,7 @@ const extraWideMask = `
   rgba(${maskColours.white}, 0) 100%`;
 
 export default {
-  maskedImage: ({ mq }: Theme) =>
+  maskedImageWrapper: ({ mq }: Theme) =>
     css({
       maskSize: '100% 100%',
       maskImage: `linear-gradient(
