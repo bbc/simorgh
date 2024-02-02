@@ -68,7 +68,7 @@ const Image = ({
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
 
   // [16, 9] fallback here is to stop a typescript error
-  const [aspectRatioX, aspectRatioY] = (aspectRatio && aspectRatio) ||
+  const [aspectRatioX, aspectRatioY] = aspectRatio ||
     (hasDimensions && [width, height]) || [16, 9];
 
   const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
