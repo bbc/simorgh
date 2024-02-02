@@ -5,6 +5,8 @@
 The following is a collection of coding standards agreed on by the team. Some of the examples are borrowed from online resources.
 
 - [Clean Code](./Clean-Code/README.md)
+- [Code Reviews](./Code-Reviews/README.md)
+
 - [General](./General/README.md)
 
 - [Migrating Legacy Component](./Migrating-Legacy-Components/README.md)
