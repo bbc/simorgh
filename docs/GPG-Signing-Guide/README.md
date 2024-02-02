@@ -44,7 +44,7 @@ brew install pinentry-mac
 
 ### Unsigned commits in latest are preventing me from pushing my branch
 
-Please refer to [these docs](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.stories.mdx#unsigned-commits-in-latest-are-preventing-me-from-pushing-my-branch).
+Please refer to [these docs](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting/README.md#unsigned-commits-in-latest-are-preventing-me-from-pushing-my-branch).
 
 ### I've signed my commits but I'm unable to push my changes to a remote branch
 
