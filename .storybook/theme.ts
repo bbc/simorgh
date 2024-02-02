@@ -33,6 +33,6 @@ export default create({
   inputBorderRadius: 4,
 
   brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://https://github.com/bbc/simorgh.com',
+  brandUrl: 'https://github.com/bbc/simorgh#simorgh',
   brandImage: logo,
 });
