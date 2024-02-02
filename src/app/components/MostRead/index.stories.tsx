@@ -20,7 +20,7 @@ interface Props extends StoryProps {
 
 const Component = ({
   service,
-  variant = 'default',
+  variant,
   columnLayout = 'multiColumn',
   size = 'default',
 }: Props) => {
