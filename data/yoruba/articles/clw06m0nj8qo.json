@@ -27,33 +27,19 @@
                                   "text": "Eyi ni akọle ti nkan idanwo yii",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "b031bffa",
@@ -83,37 +69,19 @@
                                         "text": "Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "ad6c8d86",
@@ -138,37 +106,19 @@
                                         "text": "Maapu ti Ilu Faranse ṣafihan Paris ati Cognac",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            2,
-                            1
-                          ]
+                          "position": [2, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   },
                   {
                     "id": "697ad13b",
@@ -180,16 +130,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [
-                      2,
-                      3
-                    ]
+                    "position": [2, 3]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "bba6b0bd",
@@ -198,9 +143,7 @@
                 "firstPublished": 1562936993391,
                 "lastPublished": 1569601498248
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "1e1f4e70",
@@ -220,11 +163,7 @@
                             "text": "Eyi jẹ ohun idena ọrọ kan, eyiti o ni ọna asopọ url kan si oju-iwe ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "4c099a80",
@@ -239,35 +178,21 @@
                                   "text": "Oju opo Oju opo BBC.",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 1, 2, 1]
                               }
                             ],
                             "locator": "https://www.bbc.com/weather",
                             "isExternal": false
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "9899edc1",
@@ -298,37 +223,19 @@
                                         "text": "Eyi jẹ ohun idena fidio ti o ni fidio kan nipa kokoro",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "80257817",
@@ -354,9 +261,7 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -375,11 +280,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         },
                         {
                           "id": "fadb6ba3",
@@ -396,12 +297,7 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [5, 2, 2, 1]
                               },
                               {
                                 "id": "3e396d57",
@@ -427,65 +323,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    5, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              5,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [5, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        5,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [5, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [5, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            2,
-                            2
-                          ]
+                          "position": [5, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "ddd4dd5c",
@@ -510,33 +373,19 @@
                                   "text": "Eyi jẹ ohun idena isalẹ-isalẹ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "7aeb5dd3",
@@ -566,37 +415,19 @@
                                         "text": "\rAwọn ẹlẹsẹ lẹhin bọọlu kan",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "eea7520f",
@@ -608,16 +439,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "48266038",
@@ -637,18 +463,11 @@
                             "text": "A ti ṣẹda nkan idanwo yii ki a le ṣiṣẹ awọn idanwo ipari-si-opin lori oju opo wẹẹbu wa.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "7b889a7a",
@@ -669,43 +488,27 @@
                                   "text": "This is a link to the test article in Afaan Oromoo",
                                   "attributes": []
                                 },
-                                "position": [
-                                  8,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 2, 1, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/afaanoromoo/articles/c4g19kgl85ko",
                             "isExternal": false
                           },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
+                          "position": [8, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "813a49fb",
               "type": "mpu",
               "model": {},
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "a5de70df",
@@ -713,9 +516,7 @@
               "model": {
                 "type": "recommendations"
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
@@ -766,44 +567,60 @@
       "topStories": [
         {
           "headlines": {
-            "headline": "Lassa: Ipinlẹ Ondo ati Kogi fara kaasa",
-            "overtyped": "Overtyped headline"
+            "headline": "NEWSPALDECOM-738"
           },
           "locators": {
-            "assetUri": "/yoruba/23183190",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23183190",
-            "curie": "http://www.bbc.co.uk/asset/aa128189-ef3f-b948-b6fc-fa5c4adcc1c3",
-            "assetId": "23183190"
+            "assetUri": "/zhongwen/trad/23285038",
+            "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/23285038",
+            "assetId": "23285038"
           },
-          "summary": "Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si, nitori ọwọja arun naa ti ran de ipinlẹ Ondo ati Kogi, ti eniyan marun ti ku latipase iba naa nipinlẹ Ondo, ti Merindinlogoji min si ti wa labe ayewo nipinle Kogi.",
-          "timestamp": 1516688065000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63652975",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
-            "path": "/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
-            "height": 351,
-            "width": 624,
-            "altText": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
-            "caption": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
+          "summary": "PID p01plp19",
+          "timestamp": 1586171613000,
+          "language": "zh-Hant",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01plp19",
+            "subType": "clip",
+            "format": "video",
+            "title": "Test igbo",
+            "synopses": {
+              "short": "Test igbo",
+              "long": "Test igbo",
+              "medium": "Test igbo"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Test igbo",
+            "versions": [
+              {
+                "versionId": "p01plp1c",
+                "types": ["Original"],
+                "duration": 29,
+                "durationISO8601": "PT29S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true,
+                  "world": false
+                },
+                "availableFrom": 1575384062000
+              }
+            ],
+            "type": "media"
           },
           "options": {
             "isBreakingNews": false,
             "isFactCheck": false
           },
+          "prominence": "standard",
           "section": {
             "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
+            "name": "主頁",
+            "uri": "/zhongwen/trad/front_page",
             "type": "simple"
           },
-          "overtypedSummary": "Overtyped summary: Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si.",
-          "id": "urn:bbc:ares::asset:yoruba/23183190",
+          "id": "urn:bbc:ares::asset:zhongwen/trad/23285038",
           "type": "cps"
         },
         {
@@ -1040,9 +857,7 @@
             "versions": [
               {
                 "versionId": "p01fq9rq",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 55,
                 "durationISO8601": "PT55S",
                 "warnings": {},
