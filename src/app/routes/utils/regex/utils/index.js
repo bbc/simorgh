@@ -185,7 +185,13 @@ export const getSecondaryColumnDataRegex = services => {
 };
 
 export const getIdxPageRegex = () => {
-  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
+  let idxPageRegex = idxRegex;
+
+  if (isLive()) {
+    idxPageRegex = `${idxRegex}|persian/afghanistan`;
+  }
+
+  return `/:idx(${idxPageRegex}):amp(${ampRegex})?`;
 };
 
 export const getRecommendationsDataRegex = services => {
