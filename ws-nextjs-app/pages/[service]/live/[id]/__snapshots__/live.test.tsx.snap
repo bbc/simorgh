@@ -108,17 +108,27 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: #00CCC7;
-  vertical-align: -0.1875rem;
+  vertical-align: -0.3125rem;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
 
+@media (min-width: 15rem) {
+  .emotion-6 {
+    vertical-align: -0.4375rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-6 {
-    vertical-align: 0;
+    vertical-align: -0.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -142,13 +152,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-8 span:first-child {
-    width: calc(100% / 3  - 1.75rem);
+    width: calc(100% / 3  - 2.25rem);
   }
 }
 
 @media (min-width: 80rem) {
   .emotion-8 span:first-child {
-    width: calc(25%  - 1.75rem);
+    width: calc(25%  - 2.25rem);
   }
 }
 
