@@ -567,60 +567,44 @@
       "topStories": [
         {
           "headlines": {
-            "headline": "NEWSPALDECOM-738"
+            "headline": "Lassa: Ipinlẹ Ondo ati Kogi fara kaasa",
+            "overtyped": "Overtyped headline"
           },
           "locators": {
-            "assetUri": "/zhongwen/trad/23285038",
-            "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/23285038",
-            "assetId": "23285038"
+            "assetUri": "/yoruba/23183190",
+            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23183190",
+            "curie": "http://www.bbc.co.uk/asset/aa128189-ef3f-b948-b6fc-fa5c4adcc1c3",
+            "assetId": "23183190"
           },
-          "summary": "PID p01plp19",
-          "timestamp": 1586171613000,
-          "language": "zh-Hant",
-          "cpsType": "MAP",
-          "media": {
-            "id": "p01plp19",
-            "subType": "clip",
-            "format": "video",
-            "title": "Test igbo",
-            "synopses": {
-              "short": "Test igbo",
-              "long": "Test igbo",
-              "medium": "Test igbo"
-            },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Test igbo",
-            "versions": [
-              {
-                "versionId": "p01plp1c",
-                "types": ["Original"],
-                "duration": 29,
-                "durationISO8601": "PT29S",
-                "warnings": {},
-                "availableTerritories": {
-                  "uk": true,
-                  "nonUk": true,
-                  "world": false
-                },
-                "availableFrom": 1575384062000
-              }
-            ],
-            "type": "media"
+          "summary": "Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si, nitori ọwọja arun naa ti ran de ipinlẹ Ondo ati Kogi, ti eniyan marun ti ku latipase iba naa nipinlẹ Ondo, ti Merindinlogoji min si ti wa labe ayewo nipinle Kogi.",
+          "timestamp": 1516688065000,
+          "language": "yo",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63652975",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
+            "path": "/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
+            "caption": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
           },
           "options": {
             "isBreakingNews": false,
             "isFactCheck": false
           },
-          "prominence": "standard",
           "section": {
             "subType": "IDX",
-            "name": "主頁",
-            "uri": "/zhongwen/trad/front_page",
+            "name": "Àbáwọlé",
+            "uri": "/yoruba/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:zhongwen/trad/23285038",
+          "overtypedSummary": "Overtyped summary: Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si.",
+          "id": "urn:bbc:ares::asset:yoruba/23183190",
           "type": "cps"
         },
         {
