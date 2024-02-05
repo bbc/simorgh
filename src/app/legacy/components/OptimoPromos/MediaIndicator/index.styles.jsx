@@ -11,7 +11,7 @@ export const MediaIndicatorAlignment = styled.div`
   align-items: center;
   height: 100%;
   > svg {
-    @media screen and (-ms-high-contrast: active) {
+    @media screen and (-ms-forced-colors: active) {
       fill: canvasText;
     }
   }
