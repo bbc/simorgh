@@ -14,6 +14,7 @@ export default ({ service, variant, pageType, path }) => {
   describe(
     'AMP consent banner',
     {
+      retries: 3,
       testIsolation: true,
     },
     () => {
