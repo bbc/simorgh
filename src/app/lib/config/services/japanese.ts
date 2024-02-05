@@ -307,7 +307,7 @@ export const service: DefaultServiceConfig = {
         url: '/japanese',
       },
       {
-        title: 'イスラエル・ガザ戦争',
+        title: 'ガザ',
         url: '/japanese/topics/cw5wn2e9rpnt',
       },
       {
