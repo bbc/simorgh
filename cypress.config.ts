@@ -152,4 +152,5 @@ export default defineConfig({
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 100000,
   responseTimeout: 50000,
+  chromeWebSecurity: false,
 });
