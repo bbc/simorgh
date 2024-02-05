@@ -4,17 +4,17 @@ import {
   testsThatAlwaysRunForAllPages,
   testsThatFollowSmokeTestConfigforAllPages,
   testsThatNeverRunDuringSmokeTestingForAllPageTypes,
-} from '../../integration/pages/testsForAllPages';
+} from '../../e2e/pages/testsForAllPages';
 import {
   testsThatAlwaysRunForAllAMPPages,
   testsThatFollowSmokeTestConfigForAllAMPPages,
   testsThatNeverRunDuringSmokeTestingForAllAMPPages,
-} from '../../integration/pages/testsForAllAMPPages';
+} from '../../e2e/pages/testsForAllAMPPages';
 import {
   testsThatAlwaysRunForAllCanonicalPages,
   testsThatFollowSmokeTestConfigForAllCanonicalPages,
   testsThatNeverRunDuringSmokeTestingForAllCanonicalPages,
-} from '../../integration/pages/testsForAllCanonicalPages';
+} from '../../e2e/pages/testsForAllCanonicalPages';
 
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
