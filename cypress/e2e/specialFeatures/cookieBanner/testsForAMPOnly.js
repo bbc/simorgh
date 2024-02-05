@@ -15,6 +15,7 @@ export default ({ service, variant, pageType, path }) => {
     'AMP consent banner',
     {
       retries: 3,
+      testIsolation: true,
     },
     () => {
       it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
