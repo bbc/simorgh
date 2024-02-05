@@ -2,11 +2,14 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  headerContainer: () =>
+  headerContainer: ({ mq }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
+      [mq.HIGH_CONTRAST]: {
+        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+      },
     }),
   backgroundContainer: () =>
     css({
@@ -16,16 +19,13 @@ export default {
       width: '100%',
       overflow: 'hidden',
     }),
-  backgroundColor: ({ palette, mq }: Theme) =>
+  backgroundColor: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_10,
       width: '100%',
       top: 0,
       bottom: 0,
       position: 'absolute',
-      [mq.HIGH_CONTRAST]: {
-        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
-      },
     }),
   contentContainer: ({ mq, gridWidths }: Theme) =>
     css({

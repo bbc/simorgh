@@ -6,7 +6,7 @@ The `Image` component is used to render an image. It supports responsive images,
 
 ### Aspect ratio and the web-vitals [CLS](https://web.dev/cls/) (Cumulative Layout Shift) metric
 
-The `Image` component uses an aspect ratio to prevent layout shift and preserve visual stability which contributes to a page's CLS metric. The aspect ratio is calculated using `width` and `height` props when provided but you can override this with a custom aspect ratio using the `aspectRatio` prop or use this prop if you do not know `width` and `height`. If neither `width`, `height` or `aspectRatio` is provided then a default aspect ratio of 16 / 9 will be used.
+The `Image` component uses an aspect ratio to prevent layout shift and preserve visual stability which contributes to a page's CLS metric. The aspect ratio is calculated using `width` and `height` props when provided but you can override this with a custom aspect ratio using the `aspectRatio` prop or use this prop if you do not know `width` and `height`. If neither `width`, `height` or `aspectRatio` is provided then the image will not have a fixed aspect ratio.
 
 #### How does aspect ratio work?
 

@@ -165,3 +165,19 @@ export const TitleWithLiveLabelAndImage = ({
     imageWidth={660}
   />
 );
+
+export const TitleAndDescriptionWithLiveLabelAndImageExtraLongText = ({
+  service,
+  variant,
+}: StoryProps) => (
+  <Component
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan An kai wa jirgin kwashe yan Turkiyya hari a Sudan An kai wa jirgin kwashe yan Turkiyya hari a Sudan An kai wa jirgin kwashe yan Turkiyya hari a Sudan An kai wa jirgin kwashe yan Turkiyya hari a Sudan v v An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
+    description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban v"
+    showLiveLabel
+    service={service}
+    variant={variant}
+    imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+    imageWidth={660}
+  />
+);
