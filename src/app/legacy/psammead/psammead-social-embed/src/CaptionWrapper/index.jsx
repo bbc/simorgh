@@ -35,7 +35,6 @@ const WarningText = styled.small`
 const CaptionWrapper = ({
   children,
   service,
-  textPrefixVisuallyHidden,
   text,
   additionalText,
   descById,
@@ -53,7 +52,6 @@ const CaptionWrapper = ({
         isLive={isLive}
         service={service}
       >
-        {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </WarningText>
     </Container>
@@ -61,7 +59,6 @@ const CaptionWrapper = ({
 };
 
 CaptionWrapper.defaultProps = {
-  textPrefixVisuallyHidden: null,
   additionalText: null,
   descById: null,
 };
@@ -69,7 +66,6 @@ CaptionWrapper.defaultProps = {
 CaptionWrapper.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
-  textPrefixVisuallyHidden: string,
   text: string.isRequired,
   additionalText: string,
   descById: string,
