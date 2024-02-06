@@ -1,40 +1,143 @@
 {
   "data": {
     "title": "BBC News Afaan Oromoo",
-    "description": "",
+    "description": "BBC Afaan Oromoo irratti Oduu, Odeessaa fi taateewwan haaraa Itoophiyaa, Afriikaa fi guutuu addunyaa irratti ta’an argattu. Yeroo mara waan haaraa jiru baruuf gara keenya koottaa.",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Ameerikaan rakkoo Oromiyaa furuuf abdii ta'uu dandeessii?",
-            "firstPublished": "2023-03-27T04:27:59.358Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c2j7gzjee32o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d3d6/live/753c1470-cc13-11ed-a741-8d6cd0640e9f.jpg",
-            "description": "",
-            "imageAlt": "Ministirri Dhimma Alaa US MM Abiy Ahimad waliin marii gaggeessaniin haala Oromiyaa keessaarratti ''yaaddoo'' ibsuu isaanii himaniiru. Gama mootummaa wanti jedhame hin jiru. ",
-            "id": "c2j7gzjee32o"
+            "title": "Itoophiyaatti waa'ee gammoojjii namoonni jumlaan itti hidhaman, Awaash Arbaa, maal beekna?",
+            "firstPublished": "2024-01-24T04:23:43.350Z",
+            "lastPublished": "2024-01-24T04:23:43.350Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cv29d7g04zqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5218/live/e8f7d230-ba1c-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Waggoota kurnan dabran Magaalaa Finfinnee keessa sarbami mirgaa hamaan bakki itti raawwachaa ture waa’ee Maa’ikalaawii hedduun himameera.",
+            "imageAlt": "Namoota lafarra taa'aniifi polisoota",
+            "id": "cv29d7g04zqo"
           },
           {
             "type": "article",
-            "title": "Boorana - Gujii: Murteen mootummaa akkamiin hawaasa gidduutti muddama hammeesse?",
-            "firstPublished": "2023-03-25T04:09:34.478Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cp41zjyl7jro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aeed/live/7fa09550-cac2-11ed-a5d9-253527d593f2.jpg",
-            "description": "Mootummaan Naannoo Oromiyaa baatii Guraandhalaa keessa ture magaalotaa fi godinaalee akka haaraatti gurmeessuu kan beeksise. \nHaatahu malee, haga ammaatti mormii fi komiin qaamolee hawaasaa garagaraarraa kahu itti fufee jira - keessattuu dhimma magaalaa Nageelleefi hundeeffama Godina Boorana Bahaa irratti. Furmaanni maali?",
-            "imageAlt": "Alaabaa Mootummaa Naannoo Oromiyaa",
-            "id": "cp41zjyl7jro"
+            "title": "Ashaboo dabaltee albuudonni dhiheenya Godina Baalee Bahaatti argaman maali?",
+            "firstPublished": "2024-01-24T04:37:07.493Z",
+            "lastPublished": "2024-01-24T04:37:07.493Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cv2vl1yp6j2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3eb6/live/23f034c0-b9e8-11ee-896d-39d9bd3cadbb.png",
+            "description": "Naannoo Oromiyaa Godina Baalee Bahaatti ashaboon nyaataa argamuu Waajjirri Misooma Albuudaa godinichaa ibse.",
+            "imageAlt": "Kuufama ashaboo",
+            "id": "cv2vl1yp6j2o"
           },
           {
             "type": "article",
-            "title": "Raashiyaan diroonii Yukireen daangaa ishee seente lafaan dhahuu himte",
-            "firstPublished": "2023-03-27T06:55:05.947Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cp6w2g36l07o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5999/live/3ac27140-cc68-11ed-aa65-33c7684ed007.jpg",
-            "description": "",
-            "imageAlt": "Ministeera Ittisaa Raashiyaa Sargeeyi Shaayigu",
-            "id": "cp6w2g36l07o"
+            "title": "Waancaa Afrikaa:  Tapha daanyaa Itoophiyaan durfame, Kaameeruuniif carraa kenne, Aljeeriyaa yeroon gaggeesse",
+            "firstPublished": "2024-01-24T09:06:54.983Z",
+            "lastPublished": "2024-01-24T09:06:54.983Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c1w18y6ldg0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2b38/live/ff3b3fb0-ba7f-11ee-8685-316409d66f25.jpg",
+            "description": "Tapha Waancaa Afrikaa diraamaan guutame, tilmaamuuf nama dhibu kan kilaboota waancaaf abdataman ofirraa harcaasaa jiru qalbii addunyaa hawwateera.",
+            "imageAlt": "Kaameeruun gooliiwwan daqiiqaawwan dhumaarratti galchiteen yoo milkooftu, Aljeeriyaan gaggeeffamteetti",
+            "id": "c1w18y6ldg0o"
+          },
+          {
+            "type": "article",
+            "title": "Humni waraanaa Itoophiyaafi Somaaliyaa walbira qabamee yeroo ilaalamu maal fakkaata?",
+            "firstPublished": "2024-01-23T04:45:06.992Z",
+            "lastPublished": "2024-01-23T04:45:06.992Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cjjgjwvj3q0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a6c4/live/f0e5c750-ba98-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Dhiheenya kana muddamni Somaaliyaa fi Itoophiyaa jidduutti umame cimuun, keessattuu gama mootummaa Somaaliyaa kan walabummaan koo sarbame jedhuun waamicha wal-dhibdee hammeessaniifi qophiin waraanaa dhagahamaa jira.\n",
+            "imageAlt": "Loltoota Itoophiyaa ",
+            "id": "cjjgjwvj3q0o"
+          },
+          {
+            "type": "commentary",
+            "title": "Itoophiyaan waliigaltee Somaaliland waliin taasifte ilaalchisuun mariif qophiidha -Aanga’aa",
+            "firstPublished": "2024-01-21T21:10:29.000Z",
+            "lastPublished": "2024-01-21T21:10:29.000Z",
+            "link": "https://www.bbc.com/afaanoromoo/live/67987845",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d6bf/live/8d3d58e0-ba97-11ee-8685-316409d66f25.jpg",
+            "description": "Waraanaa Gaazaatti deemaa jiruun saatii 24 darban keessatti namoonni 178 kan du’an yoo ta’u, erga Israa’el haleellaa bantee kaasee 25,000 ajjeefamuu ministeerri fayyaa Hamaas hogganu himeera.",
+            "imageAlt": "gorsaan nageenya biyyaalessaa Ministira Muummee Itoophiyaa Ambaasaaddar Rediwan Huseen",
+            "id": "7d947bdb-4c9a-41b6-99cd-a6bc0d39ea68"
+          },
+          {
+            "type": "article",
+            "title": "Abaarsa moo carraa- Miidhama Mohaammad Saalaa abjuu isaa dimimmeesse",
+            "firstPublished": "2024-01-24T04:26:33.697Z",
+            "lastPublished": "2024-01-24T04:26:33.697Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4nvlx5v33xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/50aa/live/2e18c560-b958-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Yeroo lama xumura waancaa Afrikaaf dhaqabuun yeroo lamaanuu mo'amuun waancaa kan dhabe Mohaammad Saalaan bara 2022 yeroo Senegaal shaampiyoonaa taatu hedduu gaddee ture.",
+            "imageAlt": "Mohaammad Saalaan xumura Waancaa Shaampiyoonsi Liigii 2018 irratti miidhamee bahe",
+            "id": "c4nvlx5v33xo"
+          },
+          {
+            "type": "article",
+            "title": "AFCON 2023: Garee Afrikaa hawwitan tokko ijaaruuf eessarratti, eenyuun filattu?",
+            "firstPublished": "2024-01-23T04:40:45.380Z",
+            "lastPublished": "2024-01-23T04:40:45.380Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c9922w8jg9do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e687/live/6557e230-b15c-11ee-beb5-e1400df560f2.jpg",
+            "description": "Kun odeeffannoo AFCON 2023 irratti isiniif qophaa'eedha. Odeessa asii gadii kana fayyadamuun, garee cimaa Waancaa Afrikaa arguuf hawwitan tarree keessaa filadhaa. \nAkkasumas hiriyoota keessaniifis qoodi.",
+            "imageAlt": "Garii cimaa hawwii keessanii filadhaa",
+            "id": "c9922w8jg9do"
+          },
+          {
+            "type": "article",
+            "title": "Waancaa Afriikaa 2023: Sagantaa taphaa fi qabxilee galmaa'an",
+            "firstPublished": "2024-01-15T07:17:44.074Z",
+            "lastPublished": "2024-01-15T07:17:44.074Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cl4ekdl8gn6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/40f6/live/2ba197a0-b375-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Waancaan Afriikaa 34ffaa qopheessummaa Ayivorii Koostiin gaggeeffamaa jiru irratti, sagantaa tapha hundaa fi qabxiilee galmaa'an asiin argachuu dandeessu. ",
+            "imageAlt": "Waancaa",
+            "id": "cl4ekdl8gn6o"
+          },
+          {
+            "type": "article",
+            "title": "Himatamtoonni albuuda Meerkurii seeraan ala daddabarsan hidhaan adabaman",
+            "firstPublished": "2024-01-24T04:37:24.223Z",
+            "lastPublished": "2024-01-24T04:37:24.223Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4n34d8rpd3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12d6/live/a87ab5b0-b9fe-11ee-b3a7-93109d41efd2.jpg",
+            "description": "Himatamtoonni Ayyaalaw Birhaanee, Gaayam Alam fi Akliiluu Mokonnin jedhaman daldala albuuda Meerkurii karaa seeraan ala irratti hirmaachuun himatamanii adabbiin hidhaafii maallaqaa irratti muramuu Pirezidaantiin Mana Murtii Aanaa Gimbii Taarraqany Fufaa BBC’tti himaniiru. \n",
+            "imageAlt": "Elementii merkurii qaruuraa keessa ",
+            "id": "c4n34d8rpd3o"
+          },
+          {
+            "type": "article",
+            "title": "Loltoonni Israa’el 24 guyyaa tokko keessatti ajjeefamuu Waraanni Israa’el beeksise",
+            "firstPublished": "2024-01-23T13:54:59.627Z",
+            "lastPublished": "2024-01-23T13:54:59.627Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cxx5kjx3n3jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f6e1/live/dae81b60-b9f3-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Waraanni Israa’el akka beeksisetti loltoonni isaa 24 Wixata kaleessaa Gaazaatti du’an - erga tarkaanfii  waraanaa lafoo Gaazaatti banamee eegalee guyyaa loltootanni Israa’el hunda caala danuun itti du’an.",
+            "imageAlt": "Loltoota Israa'el reeffa loltuu Wixata du'ee baatan",
+            "id": "cxx5kjx3n3jo"
+          },
+          {
+            "type": "article",
+            "title": "Haleellaa Huutii Galaana Diimaarratti yaaddoo uume dhaabsisuuf yaaliin taasifamu milkaa’aa?",
+            "firstPublished": "2024-01-23T08:36:22.245Z",
+            "lastPublished": "2024-01-23T08:36:22.245Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c3g0v4e6dndo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d4a2/live/b53b8a80-b9c8-11ee-8c2b-b995b2d82f58.jpg",
+            "description": "Torbanoota muraasa darban keessa dooniin fe’isaa karaa Galaana Diimaa darbuun qormaata ta’eera.  Deeggarsa Iraan irraa kan argatan hidhattoonni Huutii dirooniifi misaa’elaan dooniiwwan irratti haleellaa raawwatu.",
+            "imageAlt": "Loltuu Huutii yeroo dooniirra dhaabbatee Galaana Diimaa caqasaa jirutti",
+            "id": "c3g0v4e6dndo"
+          },
+          {
+            "type": "video",
+            "duration": "PT4M20S",
+            "title": "Oromoo Waataa: 'Foon arbaa akka malee miyaa'u har'a nyaachuu hin dandeenye'",
+            "firstPublished": "2024-01-23T04:26:44.145Z",
+            "lastPublished": "2024-01-23T04:26:44.145Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c72y22d9wj3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/31d9/live/532ed580-b6b8-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Ummanni Oromoo Waataa biyya Keeniyaa qarqara galaanaa jiraatu dur jireenyisaanii adamoo fi ija mukaa irratti kan hundaa'e ture.\nHar'a garuu naannoo isaan dur jiraachaa turan lafa bosonaa eegumsi taasifamuuf waan ta'eef haala jireenyaa midhaan qotanii jiraachuu akka eegalan himu.",
+            "imageAlt": "Dubartii BBC'f ibsaa turte",
+            "id": "c72y22d9wj3o"
           }
         ],
         "activePage": 1,
@@ -43,466 +146,1067 @@
         "curationType": "tipo-curation",
         "position": 0,
         "title": "Top stories",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Miseensonni Paarlaamaa Gamtaan Afrikaa mootummaafi hidhattoota WBO akka araarsu gaafatan ",
-            "firstPublished": "2023-03-21T03:56:59.779Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/ce42jl03gqyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7594/live/50433fc0-c7a1-11ed-a93b-913a0ccefba4.jpg",
-            "description": "",
-            "imageAlt": "Gamtaan Afrikaa dura aantummaan mootummaafi TPLF waraana dhaabanii wal dhibdee mariin akka furan gargaareera",
-            "id": "ce42jl03gqyo"
+            "title": "Iraan haleellaa Sooriyaatti raawwatameef deebii osoo hin kenniin bira akka darbine akkeekkachiifte",
+            "firstPublished": "2024-01-21T07:26:45.913Z",
+            "lastPublished": "2024-01-21T07:26:45.913Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c84nllgln14o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0800/live/b0d2ed40-b828-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Pirezedantiin Iraan haleellaan qilleensaa magaalaa guddoo Sooriyaatti  miseensota humnoota nageenyaa Iraan gameeyyii shan ajjeese ''deebiin kennamu malee bira hin darbamu'' jechuun akeekkachiisan.",
+            "imageAlt": "Namoonni bakka haleellan xiyyaaraa itti gaggeeffametti yoo argaman",
+            "id": "c84nllgln14o"
           },
           {
-            "type": "link",
+            "type": "article",
+            "title": "Eeruun loltoota dubartoota Israa’el angawoota raayyaa ittisaan dhageettii dhabe akkamiin Israa’el haleellaaf saaxile?",
+            "firstPublished": "2024-01-20T05:06:09.293Z",
+            "lastPublished": "2024-01-20T05:06:09.293Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4ny1089e52o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d526/live/063075b0-b495-11ee-9015-e1b313b8fdbe.jpg",
+            "description": "Ji'a Onkoloolessaa keessa Hamaas osoo Israa'el hin haleelin dura sochii Hamaas dhiyeenya daangaa Israa'elitti gaggeessu shakkuun Hamaas waa gochuuf karooraa akka jiruufi waan kana dura hin baramne gaggeessaa akka jiru ajajootafi qondaalota tikaatti guyyaa guyyaan inuma gabaasu. Garuu, abbaa kanaa namni isaanin jedhe hin jiru.",
+            "imageAlt": "Loltoota Israa'el",
+            "id": "c4ny1089e52o"
+          },
+          {
+            "type": "article",
+            "title": "Muddama tibbanaa waraana Itiiyoo -Somaaliyaa darbe Moqaadishoo yaadachiise",
+            "firstPublished": "2024-01-19T07:48:45.749Z",
+            "lastPublished": "2024-01-19T07:48:45.749Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cz454z4v75ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1808/live/0277cb30-b69d-11ee-b0ad-45e6d754f932.jpg",
+            "description": "Tibba kana miidiyaaleen biyya Somaaliiyaa ajandaa wal fakkaataa tokkoo qabataniiru.\nInnis miidiyaaleen mootummaa biyyattii muuziiqaa Itoophiyaa akka diina seenaa biyyasaanii gochuu kan ibsuufi waraanaa kakaasuu irra dedeebiin taphachiisaa jiru.",
+            "imageAlt": "Lola Itiyoo-Somaaliiyaa bara 1977",
+            "id": "cz454z4v75ro"
+          },
+          {
+            "type": "article",
+            "title": "Iraan biyyoota ollaa keessatti haleellaa gaggeessiteen misaa'eloota akkamii akka qabdu agarsiiste",
+            "firstPublished": "2024-01-18T06:35:20.309Z",
+            "lastPublished": "2024-01-18T06:35:20.309Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cgekeneweyno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d4a2/live/1f982200-b5c6-11ee-957f-351c3e1a975b.jpg",
+            "description": "Eegdonni Warraaqsa Islaamaa Iraan (IRGC)n buufataalen waraanaa US Baha Giddu-galeessaa keessa jiraniifi buufataalen waraanaa Israa'el Telaviivifi Hayifaa jiran qiyyaaffannoo misaa'olatasaanii jalaa akka hin baane agarsiisaa jiru.",
+            "imageAlt": "Misaa'el Iraan",
+            "id": "cgekeneweyno"
+          },
+          {
+            "type": "article",
+            "title": "Filisxeemoonni jaha wayita mana hidhaa Israa'el keessa turan reebamuu himan",
+            "firstPublished": "2024-01-18T03:52:12.736Z",
+            "lastPublished": "2024-01-18T03:52:25.270Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cp6r3rp1x1jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/789f/live/67c14110-9dd4-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "Filisxeemonni ja'a Gaazaarraa ta'an gara baatii tokkoof yeroo hidhaa turanitti waraana Isra'eeliin garmalee reebamuu isaanii himu.",
+            "imageAlt": "Hidhamtoota Israa'el",
+            "id": "cp6r3rp1x1jo"
+          },
+          {
+            "type": "article",
+            "title": "Dhimma Itoophiyaafi Somaaliyaa gidduu qaamoleen alaa akka hin galle, Obasaanjoon akka mariisisan gaafataman",
+            "firstPublished": "2024-01-17T17:41:24.551Z",
+            "lastPublished": "2024-01-17T17:41:24.551Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4ny1nkvvero",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/be4d/live/250fa680-b55e-11ee-beb5-e1400df560f2.jpg",
+            "description": "Manni-maree Nageenyaafi Tasgabbii (PSC) Gamtaa Afrikaa qaamoleen alaa dhimma keessoo Itoophiyaafi Somaaliyaa gidduu akka hin seenne gaafateera. \nKana malees, Komishiniin Gamtaa Afrikaa Bakka-bu’aa Olaanaa Gaanfa Afrikaa Gamtichaa kan ta’an pirezidantii duraanii Naajeeriyaa Oliseegun Obasaanjoo biyyoota lamaan gidduutti marii akka jalqabsiisanis gaafateera.",
+            "imageAlt": "Oliiseegun Obasaanjoo",
+            "id": "c4ny1nkvvero"
+          },
+          {
+            "type": "article",
+            "title": "Xayyaarriifi dirooniin waraanaa Itoophiyaan haaraa bitte dandeettii waraanaa hangamii qabu?  ",
+            "firstPublished": "2024-01-17T11:10:24.565Z",
+            "lastPublished": "2024-01-17T11:10:24.565Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51znzznq3qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3426/live/fe351360-b526-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Humni Qilleensa Itoophiyaa xayyaarota waraanaafi diroonii dandeettii waraanaa rayyaa ittisaa cimsu jedhaman hidhachuu beeksise. \nHumni qilleensaa jeettii waraanaa Raashiyaan oomishte SU-30 fi diroonii Turkiin oomishte Baraaktar Akinchi akkasumas xayyaara nam-maleessa bitachuu Kibxata kaleessaa, Amajjii 16, beeksisee ture. Ofii jeettiifi diroonii kana maaltu adda taasisa? ",
+            "imageAlt": "Jeettii SU-30",
+            "id": "c51znzznq3qo"
+          },
+          {
+            "type": "article",
+            "title": "Hamaas meeshaalee waraanaa akkamiin Israa'el lolaa jira?",
+            "firstPublished": "2024-01-17T04:19:25.793Z",
+            "lastPublished": "2024-01-17T04:19:25.793Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/clkwwxj8klwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b368/live/a96675d0-b0a9-11ee-91f2-abf5208f9e37.jpg",
+            "description": "aazatti Israa'el wajjin wal-hadhaa kan jiru Hamaas meeshaalee ammayyaa garaa garaa akka fayyadamu BBC Arabic qoratee bira gahe. Beektonni saayinsii waraanaa akka jedhanitti meeshaalen Hamaas amma fayyadama jiru kan dur fayyadama ture caala baay'ee kan fooyya'eefi haareffameedha. ",
+            "imageAlt": "Loltuu Hamaas",
+            "id": "clkwwxj8klwo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 8,
+        "curationId": "urn:bbc:vivo:curation:fba06acf-57ed-4d4e-bc6a-315055329456",
+        "curationType": "vivo-stream",
+        "position": 1,
+        "title": "Walitti bu'iinsa",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "'Warri michuu Somaaliyaa fakkaatan, diinumma Itoophiyaaf qaban irraati'- Redwaan Huseen",
+            "firstPublished": "2024-01-22T05:05:04.618Z",
+            "lastPublished": "2024-01-22T05:05:04.618Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c3gdn4g7gx7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/16ab/live/ab614c30-b940-11ee-9bc7-a122c29f220e.jpg",
+            "description": "Pirezidaantiin Masirii Abdal Fattaa al-Siisii duraanuu dhimma hidha Guddicha Abayyaa irratti Itoophiyaa waliin wal dhabdee kan qaban, biyyi isaanii waan walabummaa Somaaliyaatti bu’u kamiyyuu akka hin eeyyamne dubbatan.\n''Masirriin qaamni kamiyyuu walabummaa Somaaliyaatti akka bu’u ykn nageenya isheef yaaddoo tahu hin eeyyamtu,’’ jedhan.",
+            "imageAlt": "Gorsaa Dhimma Nageenyaa MM Itoophiyaa, Ambaasadar Reedwaan Huseen",
+            "id": "c3gdn4g7gx7o"
+          },
+          {
+            "type": "article",
+            "title": "Somaalilaand deebii doorsiisa Masriif kenniiteen 'jiddu-seentummaa qaamolee alaa kamuu cimseen morma' jette",
+            "firstPublished": "2024-01-22T16:06:21.513Z",
+            "lastPublished": "2024-01-22T16:06:21.513Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51686e3l78o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5e7a/live/9d8b86c0-b93b-11ee-ab12-7ff508ad3b0c.jpg",
+            "description": "Ministeerri Dhimma Alaa Somaalilaand ibsa gaafa Wiixataa baaseen, Masrii wajjin hariiroo gaarii qabaachuu ibsuun, garuu \"jiddu-seentummaa qaamolee alaa kamuu cimsinee balaaleeffanna,\" jedha. ",
+            "imageAlt": "Alaabaa Somaaliilaand fakkii kaafame",
+            "id": "c51686e3l78o"
+          },
+          {
+            "type": "article",
+            "title": "Itoophiyaan 'qajeeltoowwan karaa nagaafi faayidaa waloo' hordofuun ulaa galaanaa argachuuf hojjechuu itti fufti- MM Abiy",
+            "firstPublished": "2024-01-20T05:15:03.912Z",
+            "lastPublished": "2024-01-20T05:15:03.912Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cek59xd0x9jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4bd1/live/ce8dcd20-b853-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Kora biyyoota walabaa Yugaandaa, Kaampaalaatti gaggeeffamaa jirurratti kan argaman Ministirri Muummee Itoophiyaa Abiy Ahmad, biyyisaanii hanga fedhiin ulaa galaanaa argachuuf qabdu guutamutti hojii akka itti fuftu dubbatan.",
+            "imageAlt": "Pirezidantii Keeniyaa Wiliyaam Ruutoo (bitaarraan), Ministira Muummee Abiy Ahmad (PhD) (mirgaarraan kora NAM irratti yeroo waliin  haasa'aa jiranitti",
+            "id": "cek59xd0x9jo"
+          },
+          {
+            "type": "article",
+            "title": "IGAD waa'ee Itoophiyaafi Somaaliyaa maal jedhe?",
+            "firstPublished": "2024-01-19T08:39:00.770Z",
+            "lastPublished": "2024-01-19T08:39:00.770Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/crgjg0jnd96o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/82da/live/34622af0-b6a2-11ee-bc2f-cb5579b90709.jpg",
+            "description": "IGAD wal gahii dhimma waraana Sudaanii fi muddama Itoophiyaa fi Somaaliyaa ilaalchisee Yugaandaa magaalaa Kaampaalaatti Kamisa kaleessaa wal gahii gaggeessera. MM Itoophiyaa Dr Abiy Ahimed jila isaanii waliin gahii 19ffaa 'Non-Aligned Movement' jedhamu irratti hirmaachuuf Yugaandaa Kampaalaa galaniiru.",
+            "imageAlt": "Gaggeesitoota wal gahii IGAD Kaampaalaatti gaggeeffame irratti argaman",
+            "id": "crgjg0jnd96o"
+          },
+          {
+            "type": "article",
+            "title": "Baankiin Misoomaa Afrikaa hojjetootasaa Itoophiyaa baasee ture deebisuuf akka jiru hime",
+            "firstPublished": "2024-01-19T16:17:15.582Z",
+            "lastPublished": "2024-01-19T16:17:15.582Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c892700q8w0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a43a/live/3d3e7320-b6db-11ee-8f07-bbfdfa890097.jpg",
+            "description": "",
+            "imageAlt": "Pirezidantii Baankii Misoomaa Afrikaa  Dr. Akinwemii  Adesiinaa MM Abiy Ahimad waliin",
+            "id": "c892700q8w0o"
+          },
+          {
+            "type": "article",
+            "title": "'Raajiiwwan fayyinaa' sobaa Paastarii beekamaan TB Joshuwaa duuka buutota isaa miiliyoona ittiin guwwoomse ",
+            "firstPublished": "2024-01-14T11:38:11.499Z",
+            "lastPublished": "2024-01-14T11:38:11.499Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c72y0nv6ww6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/13b8/live/be16c270-b2c8-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Bara 2021 umrii isaa waggaa 57tti kan du'e Paastar Joshuwaa ogummaa 'gowwoomsaatiin' akkaan milkaa'aa ture.\nHanni kun Naayijeeriyaa bira darbee gara UK, Gaanaa, Afrikaa Kibbaa, US fi Jarmanitti akka babal’ate qorannoon BBCn gaggeesseen saaxilameera.\nMee gowwoomsaa Paastar Joshuwaa 6 armaan gadii kana dubbisaa!",
+            "imageAlt": "Raajiiwwan TB Joshuwaa karaa TV Amaanu'eel jedhamuu himaa ture hundinuu kan qindeeffamaniidha",
+            "id": "c72y0nv6ww6o"
+          },
+          {
+            "type": "article",
+            "title": "Itoophiyaan waliigaltee ittiin ulaa galaanaa argattu Somaaliilaand waliin mallatteessite",
+            "firstPublished": "2024-01-01T15:15:23.564Z",
+            "lastPublished": "2024-01-01T15:15:23.564Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cqe1z07nez0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e130/live/16d9d440-a8b7-11ee-aec8-4dd53e1933cb.jpg",
+            "description": "Itoophiyaan waliigaltee ulaa galaanaa ittiin argattuufi misoomsuu ishee dandeessisu Somaaleeland waliin wal mallatteessuu miidiyaaleen biyya keessaa gabaasan.",
+            "imageAlt": "MM Abiy Ahmad fi Pire. Musee Baahii",
+            "id": "cqe1z07nez0o"
+          },
+          {
+            "type": "audio",
             "title": "Oduu BBC Afaan Oromoo",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.bbc.com/afaanoromoo/bbc_oromo_radio/programmes/w13xttnw",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d012/live/1ea24b70-cc86-11ed-be2e-754a65c11505.jpg",
-            "description": "",
-            "imageAlt": "BBC radio microphone",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/294b/live/f52e37c0-4239-11ee-9b58-cb80889117a8.jpg",
+            "description": "20:49 EAT - 21:04 EAT",
+            "imageAlt": "BBC",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fafaanoromoo%2Fbbc_oromo_radio%2Fprogrammes%2Fw13xttnw"
           },
           {
             "type": "article",
-            "title": "Paarlaamaan Itoophiyaa TPLF tarree shororkeessummaa jalaa baase ",
-            "firstPublished": "2023-03-22T09:49:04.848Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cgld283278yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/edd0/live/4334b250-c896-11ed-996f-17d83cede2bf.jpg",
-            "description": "Paarlaamaan Itoophiyaa dhaaba Adda Bilisummaa Ummata Tigraay (ABBUT/ TPLF) galmee shororkeessummaa jalaa baase.",
-            "imageAlt": "Dhaabi TPLF bara ADWUI siyaasa Itoophiyaa keessa olaantummaa qaba ture",
-            "id": "cgld283278yo"
+            "title": "Gidiraafi yaaddoo godaantota Itoophiyaa Afrikaa Kibbaatti hammaate ",
+            "firstPublished": "2024-01-01T04:13:03.202Z",
+            "lastPublished": "2024-01-01T04:13:03.202Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cpw39w18jx4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d614/live/96436060-a81d-11ee-9f37-1d0104eea0af.jpg",
+            "description": "Lammiileen Itoophiyaa Afrikaa Kibbaa keessatti balaa nurra gahu mala jedhanii yaadda’aa jiraatu. \nWaggoota  23 Afrikaa Kibbaa keessa kan jiraate Sisaay namoota haala kanaan bir'ataa jiraatan keessaa tokko.",
+            "imageAlt": "Hookkara irra deddeebiin Afrikaa Kibbaa keessa dhalatuun lammiilee Itoophiyaa dabalatee kanneen bakkee biraatii dhufanirratti haleellaan dhaqqabaa ture",
+            "id": "cpw39w18jx4o"
+          },
+          {
+            "type": "article",
+            "title": "'Beela hamaa Tigraayitti mudachuuf jiru hambisuuf mootummaan federaalaa dirqamasaa bahachuu qaba'",
+            "firstPublished": "2023-12-30T08:07:30.014Z",
+            "lastPublished": "2023-12-30T08:07:30.014Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/ce4d2l3282eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7a3d/live/3c5a5a60-a6e5-11ee-aa59-df815bf41047.jpg",
+            "description": "Hongee hamaa naannoo Tigraayitti mudate hambisuuf mootummaan federaalaafi hawaasi idil-addunyaa deeggarsa akka taasisan pirezidaantin mootummaa yeroo naannoo Tigraay Obbo Getaachoo Raddaa gaafatan. ",
+            "imageAlt": "Obbo Getaachoo Raddaa",
+            "id": "ce4d2l3282eo"
+          },
+          {
+            "type": "article",
+            "title": "Waldaan Guutuu Wangeelaa Itoophiyaa haleellaa Gudurutti miseensotasheerra  gahe akka qoratamu gaafatte",
+            "firstPublished": "2023-12-30T05:27:10.970Z",
+            "lastPublished": "2023-12-30T05:27:10.970Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cv27jl10n3jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5559/live/1efaddc0-a6b6-11ee-bdc5-dbe901a920be.jpg",
+            "description": "Waldaan Amantoota Guutuu Wangeelaa Itoophiyaa ‘’haleellaa tasaan’’ miseensotni waldittii Godina Horroo Guduruu Wallaggaa aanaa Guduruu ajjeefamuu balaaleffatte.",
+            "imageAlt": "Pirezidaantii Waldaa Guutuu Wangeelaa Itoophiyaa, Paaster Laakoo Badhaasoo",
+            "id": "cv27jl10n3jo"
+          },
+          {
+            "type": "article",
+            "title": "Bakka Obbo Taayyeefi aangawaa biyyaa bahanii hafan hoggantoonni haaraa muudaman",
+            "firstPublished": "2023-12-27T15:09:29.130Z",
+            "lastPublished": "2023-12-27T15:09:29.130Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cg6wrg1qr35o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d860/live/7a790f80-a4c9-11ee-872e-61c9b27c982a.jpg",
+            "description": "",
+            "imageAlt": "Obbo Taayyeen torban lama dura dura aangoorraa kan kaafaman",
+            "id": "cg6wrg1qr35o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:c8ecc8ce-50a3-4946-9619-89dd91d79efd",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 2,
         "title": "Maaltu haasa'ama?",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Wal-morkii Darbii Miilaan waraanaan fakkeefamu",
-            "firstPublished": "2023-05-10T14:31:29.386Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c7299yve048o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/69ac/live/49002dc0-ef3f-11ed-bcdc-b7d2ae776c82.jpg",
-            "description": "Roobii har'aa fi torban dhufuu qalbiin jaallattoota kubbaa miilaa addunyaa Istaadiyoomii guddicha magaala Miilaan Saan Siiroo irraa ta'a. ",
-            "imageAlt": "Andriiy Shvesheenkoo",
-            "id": "c7299yve048o"
+            "title": "Waancaa Afrikaa: Diraamaa tapha Masrii, dhiphina Gaanaa fi Ayivorii Koost, miidhama Saalaa",
+            "firstPublished": "2024-01-23T07:20:41.347Z",
+            "lastPublished": "2024-01-23T07:20:41.347Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c1r1ne7z53wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/71f3/live/f5fd4760-b9b5-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Taateewwan ajaayibaa, diraamaawwan taphaan qalbii namootaa kan hawwate taphi waancaa Afrikaa ramaddii B kaleessaa galgala gaggeeffameen Masriin  Keeppi Vardee faana goolii lama walqixa ba'uun gulantaa kuffisanii darbuutti ce'uu mirkaneeffatteetti.",
+            "imageAlt": "Miidhamni Mohaammad Saalaa hamma yaadameen olitti yaaddessaadha jedhame",
+            "id": "c1r1ne7z53wo"
           },
           {
             "type": "article",
-            "title": "Arsenaal, Maan Yunaayitid fi Chelsiin Raayis irratti wal qabaa jiraachuu dabalatee jijjiirraa  Saakaa, Feliiks fi kaan odeeffamaa jiru",
-            "firstPublished": "2023-05-10T14:10:39.007Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cekdd5nm3glo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da51/live/2f223e50-ef32-11ed-9786-c5f09860cda1.jpg",
-            "description": "",
-            "imageAlt": "Raayis warra West Haam (bitaan) Saakaa warra Arsenaal (mirgaan)",
-            "id": "cekdd5nm3glo"
+            "title": "Gareen deeggartoonnisaa sanyummaan nama arrabsan foorfeen akka adabamuuf pirezidantiin FIFA gaafatan",
+            "firstPublished": "2024-01-22T09:07:58.286Z",
+            "lastPublished": "2024-01-22T09:07:58.286Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cldqwg167v4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cb0b/live/f4e0a850-b8fb-11ee-beb5-e1400df560f2.jpg",
+            "description": "Pirezidantiin bulchaa kubbaa miilaa idil-addunyaa, FIFA, Jiyaanaa Infaantiinoo deeggartoonni sanyummaan yoo nama arrabsan taphni addaan citee gareen isaanii 'foorfeen' akka adabamu gaafatan.",
+            "imageAlt": "Karra eegaa AC Miilaan, Maayik Maayinyaa",
+            "id": "cldqwg167v4o"
           },
           {
             "type": "article",
-            "title": "Dirree keenya irratti 'waan nu dhaabsisan miti' - Jaak Giriilish",
-            "firstPublished": "2023-05-10T05:51:43.018Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c72zz3ppv6zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/63d8/live/504e6f40-eef1-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Vinishiyes Juuner fi Kaayil Wooker",
-            "id": "c72zz3ppv6zo"
+            "title": "Karra eegaan AC Miilaan arrabsoo sanyummaa irra gaheen tapha gidduutti dirree dhiisee bahe",
+            "firstPublished": "2024-01-21T09:53:05.960Z",
+            "lastPublished": "2024-01-21T09:53:05.960Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c0jvez74lz9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1ddd/live/81827ad0-b83a-11ee-8a26-e1ebd7ca088b.jpg",
+            "description": "Seeriyaa A Xaaliyaan keessatti tapha Ac Miilaan Yudiniizii waliin taasisan irratti arrabsoo karra eegaa AC Miilaan gaheen taphni daqiiqaa muraasaaf addaan cite.",
+            "imageAlt": "Karra eegaa AC Miilaan, Maayik",
+            "id": "c0jvez74lz9o"
           },
           {
             "type": "article",
-            "title": "Riyaal Maadirid v Maan Siitii- Maanchistar Siitiin haloo bahuuf qophiidhaa?",
-            "firstPublished": "2023-05-09T06:42:43.459Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/ckdyyw5p74zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4419/live/69141520-ee33-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Taphattoota Maan Siitii",
-            "id": "ckdyyw5p74zo"
+            "title": "Waancaa darbe kan harkaa qabdu Senegaal ammas gulantaa itti aanutti darbuu dursitee mirkaneeffatteetti",
+            "firstPublished": "2024-01-20T06:55:57.640Z",
+            "lastPublished": "2024-01-20T06:55:57.640Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51zyp09kxno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0c76/live/a8173360-b755-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Waancaa isa darbe kan nyaatte biyyi Saadiyoo Maanee, Senegaal, dorgommii alanaas tapha hanga yoonaa jiru mo'achuun qabxii ja'aan gara gulantaa itti aanutti darbuu dursitee mirkaneeffatteetti.",
+            "imageAlt": "Saadiyoo Maanee",
+            "id": "c51zyp09kxno"
           },
           {
             "type": "article",
-            "title": "Dogoggorri de Gea hegeree isaafi kilabichaatti qormaata ta'aa?",
-            "firstPublished": "2023-05-08T06:38:20.256Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cnejl1kyl9zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2891/live/a4d64180-ed68-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Deeviid Dee Hiiyaa",
-            "id": "cnejl1kyl9zo"
+            "title": "Arsenaal vs Kiristaal Paalas, Liiverpuul vs Bornimaz dabalatee taphoota Piriimer Liigii torban kana eegamanin eenyu mo'a?",
+            "firstPublished": "2024-01-19T12:47:55.695Z",
+            "lastPublished": "2024-01-19T12:47:55.695Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51z1yr7kq0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3567/live/aae31520-b6c7-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Tapha Piriimer Liigii Ingilizii torban 21ffaatiin taphoonni 5 torban darbe gaggeeffamaniiru. Taphoonni hafan ammoo Sambata, Dilbataafi Wixata gaggeeffamu. \nKiriis Suutan eenyu akka mo'atu tirlmaama taphoota torban kanaa akka itti aanutti kaa'eera. ",
+            "imageAlt": "Taphattoota Arsenaaliif Kiristaal Palaas",
+            "id": "c51z1yr7kq0o"
           },
           {
             "type": "article",
-            "title": "Mesiin Saawudiitti imaluusaaf dhiifama gaafate, Manasaa duratti mormiin gaggeefame",
-            "firstPublished": "2023-05-06T06:48:36.208Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cz4p1vx9ljro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2267/live/98128540-ebd7-11ed-a142-ab0e42bfd9c3.jpg",
+            "title": "Ayit Nuurii Arsenaal fi Liiverpuuliin barbaadamaa jiraachuu dabalatee jijjiirraa taphattootaa odeeffamaa jiru",
+            "firstPublished": "2024-01-17T13:08:55.771Z",
+            "lastPublished": "2024-01-17T13:08:55.771Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cmjr6g5xprxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ee73/live/d2a18610-b531-11ee-8f07-bbfdfa890097.jpg",
             "description": "",
-            "imageAlt": "Liyooneel Meesii",
-            "id": "cz4p1vx9ljro"
+            "imageAlt": "Taphataa lammiiAljeeriyaa Ayit Nuurii",
+            "id": "cmjr6g5xprxo"
           },
           {
             "type": "article",
-            "title": "Neymaar gara Niwukaasil, Mesiin gara Chelsii… hamii jijjiirraa taphattootaa",
-            "firstPublished": "2023-05-05T08:29:29.762Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c4n3d8eyrm8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3637/live/795313a0-eb1d-11ed-a27c-b9593cb00f1d.jpg",
-            "description": "",
-            "imageAlt": "Liyoonel Mesiifi Neemaar",
-            "id": "c4n3d8eyrm8o"
+            "title": "Kariim Beenzeemaan ministira 'garee Muslim Brotherhood waliin hidhata qaba' jedheen maqa balleessiin himate",
+            "firstPublished": "2024-01-17T06:03:04.095Z",
+            "lastPublished": "2024-01-17T06:03:04.095Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cye6r376860o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/268f/live/13978840-b4f1-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Taphattoota kubbaa miilaa collee Faransaay keessaa tokko kan ta'e Kariim Beenzeemaa, qondaala mootummaa ''garee Msulim Brotherhood waliin hidhata qaba'' ittiin jedhe maqa balleesseen himateera.",
+            "imageAlt": "Taphataan duraanii Madriid amma Sa'udiif taphata",
+            "id": "cye6r376860o"
           },
           {
             "type": "article",
-            "title": "Naappoliin waggaa 33 booda Seeriyaa Xaaliyaan injifate",
-            "firstPublished": "2023-05-05T05:18:24.772Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/crg3w5wvn9ro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cbfd/live/95579b20-eaff-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Viktoor Osmiheen",
-            "id": "crg3w5wvn9ro"
+            "title": "Liyonel Mesiin taphataa cimaa, Gaardiyoolaan leenjisaa cimaa FIFA bara 2023 tahuun filaman",
+            "firstPublished": "2024-01-16T06:58:02.997Z",
+            "lastPublished": "2024-01-16T06:58:02.997Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/ckk577l7g1go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e2a8/live/ee3de9e0-b437-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Liyonel Mesiin badhaasa taphataa cimaa Fifa bara 2023 Landanitti kenname mo'ate.",
+            "imageAlt": "Liyonel Mesiin badhaasa taphataa cimaa Fifa 2023 mo'ate",
+            "id": "ckk577l7g1go"
           },
           {
             "type": "article",
-            "title": "Halaand Pirimer Liigii  keessatti ammas rikkardii haaraa galmeesse ",
-            "firstPublished": "2023-05-04T07:31:08.506Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c4nwe7djpnxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f098/live/59516ec0-ea47-11ed-8db4-b95175d51f0e.jpg",
-            "description": "",
-            "imageAlt": "Halaand yeroo namoota waliin gammachuu ibsachaa jirutti",
-            "id": "c4nwe7djpnxo"
+            "title": "Sadiyoo Maanee haadha warraasaa barattuu ganna 18 taate akkamiin argate?",
+            "firstPublished": "2024-01-16T04:33:07.622Z",
+            "lastPublished": "2024-01-16T04:33:07.622Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cyr3zpv5pyno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4d3a/live/f86e86d0-b415-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Taphataan duraanii Liiverpuul Sadiyoo Maanee dubartoota adunyaarratti gurra horatan meeqa osoo jiranii ganda dhaloota isaatii barbaadee barattuu ganna 18 fuudhuun tibbana dubbii ijoo taheera.",
+            "imageAlt": "Sadiyoo Maanee, barattuu ganna 18 Ayishaa jedhamtu fudhe",
+            "id": "cyr3zpv5pyno"
           },
           {
             "type": "article",
-            "title": "Kiristaanoo Rodaaldoo kilaba al-Naasir erga galee miindaa argatuun addunyaarratti  tokkoffaa ta'e",
-            "firstPublished": "2023-05-04T05:21:17.672Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c4npk555wxzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d97f/live/47dd0720-ea34-11ed-856a-d76c1e21a7c6.jpg",
-            "description": "",
-            "imageAlt": "Kiristoaanoo Ronaaldoo",
-            "id": "c4npk555wxzo"
+            "title": "Masirii fi Naayijeeriyaan qabxii gatuun dorgommii AFCON jalqaban",
+            "firstPublished": "2024-01-15T06:50:36.923Z",
+            "lastPublished": "2024-01-15T06:50:36.923Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c72y0qp15eko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b1c8/live/a2e2b6a0-b370-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Tapha jalqabaa Garee B keessatti Masiriin Moozaambik waliin taasifte galchii 2-2 qixa xumurame. Garuu Masiriin qabxii tokko kan argatte rukuttaa peenaalitii Mohaammad Saalaan daqiiqaa xumuraatti lakkoofsiseeni.",
+            "imageAlt": "Mohaammad Saalaan galchii wal qixxesituu Masiriif lakkoofsise",
+            "id": "c72y0qp15eko"
           },
           {
             "type": "article",
-            "title": "Kilabni kubbaa miilaa Shaashamannee waggaa 15 booda piriimerliigiitti deebi'e",
-            "firstPublished": "2023-05-04T04:18:47.843Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c6pe8nw9lw9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/974e/live/a5cd3a10-e996-11ed-9451-a9c1eccdd6c1.jpg",
-            "description": "",
-            "imageAlt": "Taphattoota Kilaba Magaala Shashamannee",
-            "id": "c6pe8nw9lw9o"
+            "title": "Waancaa Afrikaa: Dorgommii Afrikaa bara kanaa eenyutu injifata? Tilmaama BBC",
+            "firstPublished": "2024-01-15T04:15:01.404Z",
+            "lastPublished": "2024-01-15T04:15:01.404Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c6p1j50n7nyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2752/live/9c6b1cc0-b313-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Tabni waancaa Afriikaa Somabata Amajjii 13, 2024 eegaleera. Tapha baniinsaas qopheessituun taphichaa Ayivoorii Koostii Giinii BIsaawu waliin injifachuun eegalte jirti.",
+            "imageAlt": "Bara eenyutu waancaa fudhata laata?",
+            "id": "c6p1j50n7nyo"
           },
           {
             "type": "article",
-            "title": "Yargan Kiloop 'daanyaatti' darbaa dubbachuusaatiif himatame",
-            "firstPublished": "2023-05-03T09:31:05.846Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cd1rvw5edn1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8df9/live/f9d2cec0-e993-11ed-9451-a9c1eccdd6c1.jpg",
-            "description": "",
-            "imageAlt": "Yargan Kiloopfi abbaa murtoo Pool Tiyeerniii",
-            "id": "cd1rvw5edn1o"
+            "title": "Afcon 2023: Qopheessituun dorgommichaa Ayivoriikoost tapha jalqabaan mirgaan galte ",
+            "firstPublished": "2024-01-14T07:35:32.860Z",
+            "lastPublished": "2024-01-14T07:35:32.860Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/czr8lr3wkmko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d28b/live/38194700-b2a6-11ee-beb5-e1400df560f2.jpg",
+            "description": "Taphi waancaa biyyoota Afrikaa kan 2023 eegaleera, marsaa kana dorgommicha biyyasheetti kan qopheessite Ayivoriikoost tapha jalqabaan 2 fi 0 dhaan Giinii Bisaawoo injifatte.",
+            "imageAlt": "Qopheessituun dorgommii kanaa Ayivoriikoost 2 fi 0 dhaan Giinii Bisaawoo mo'atte",
+            "id": "czr8lr3wkmko"
           }
         ],
         "activePage": 1,
-        "pageCount": 23,
+        "pageCount": 33,
         "curationId": "urn:bbc:vivo:curation:bbc3cdcf-2034-48e2-9c72-1b9bd1083fda",
         "curationType": "vivo-stream",
-        "position": 2,
-        "title": "Ispoortii",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Itoophiyaan hayyama tajaajila maallaqaa moobaayilii biyya alaaf isa jalqabaa Safaricom'f kennite",
-            "firstPublished": "2023-05-11T08:33:12.771Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c6p0v6294nwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5aa2/live/981a68d0-efda-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Asxaa MPesa fi alaabaa Itoophiyaa",
-            "id": "c6p0v6294nwo"
-          },
-          {
-            "type": "article",
-            "title": "Gaanfa Afriikaatti Ergamaan Addaa US Oromoota dabaltee diyaasporaa Itoophiyaa waliin mari’achuuf ",
-            "firstPublished": "2023-05-11T06:27:12.516Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c3gp03ljjzno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cdc6/live/e02d74d0-efc3-11ed-996c-49f4c42bc5e0.jpg",
-            "description": "Gaanfa Afriikaatti Ergamaan Addaa Ameerikaa Ambaasaadar Maayik Haamar, Isteetiiwwan adda addaa keessatti bakka bu’oota diyaasporaa Itoophiyaa waliin mari’achuuf akka ta’e Waajjirri Dhimma Alaa Ameerikaa beeksiise.\nIbsa Waajjirri Dubbi Himaa Dhimma Alaa Ameerikaa kaleessa Caamsaa 10, 2023 baasee kanaan, Ergamaan Addaa Ambaasaadar Maayik Haamar imalasaanii kanaan Caamsaa 10-19, 2023tti Isteetiiwwan akka Loos Anjilas, Kaaliforniyaa, Saantaa Fe fi Niiw Meeksiikootti imaluun dhimmoota Itoophiyaa ilaalata garaa garaa irratti akka mari’atan beeksiiseera.",
-            "imageAlt": "MIke Hammer",
-            "id": "c3gp03ljjzno"
-          },
-          {
-            "type": "article",
-            "title": "Barraaqoo Muudaa: 'Ani jaalala malee rikardii cabsuu hin yaanne ture'",
-            "firstPublished": "2023-05-11T04:09:19.526Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/czvkk7rk8rwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d45f/live/1dc160b0-ef09-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Obbo Barraaqoon Naannoo Oromiyaa Godina Booranaatti dhalatee guddate. Akkuma ijoollee badiyyaa kaan yeroo ijoollummaatti jabbii tiksaa maatiidhaaf ergamaa guddate. \nUmamaan gabaabaa ojjaan isaa seentimeetira 89 qofa dheeratu ta’ulleen, dhaabbiin isaa kun galma namni kaan gahu kamirraayyuu akka isa hin daangessines hima.",
-            "imageAlt": "Barraaqoo Muudaa fi Leensaa Culii ",
-            "id": "czvkk7rk8rwo"
-          },
-          {
-            "type": "article",
-            "title": "'Himannaa sobaatiin shororkeessaa jedhamee baqataa ta’ee hafuu hin barbaadu'- Lidatu Ayaaleew",
-            "firstPublished": "2023-05-10T12:27:42.581Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/ce7ggpw76rro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a57c/live/ba70ddd0-ef29-11ed-9f61-d1683a024483.jpg",
-            "description": "Mootummaan Itoophiyaa biyya alaa taa’un hookkara kaasuun mootummaa Federaalaafi naannoo humnaan kuffisuuf sochii taasisaniiru jechuun dabarfamanii akka kennamaniif naoota ajaja irratti baasuu beeksiisee keessaa tokko kan ta’e Obbo Lidatu Ayaaleew yoo himannaan irratti baname gara Itoophiyaatti akka deebii’an BBCtti himan.",
-            "imageAlt": "Obbo Lidatu Ayaaleew",
-            "id": "ce7ggpw76rro"
-          },
-          {
-            "type": "article",
-            "title": "Itoophiyaatti abokaatoo baasii ofiisaatiin dhaabbileen gurguddoo naannoo faalan himataa jiru",
-            "firstPublished": "2023-05-10T04:26:46.337Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c3gvvdz740vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/62b5/live/999890c0-ee8f-11ed-a176-819931ba62cb.jpg",
-            "description": "",
-            "imageAlt": "Abokaatoo Malkaamuu Oggoo",
-            "id": "c3gvvdz740vo"
-          },
-          {
-            "type": "article",
-            "title": "Ta'iiwwan ijoo seenaa qabsoo ABO -WBO: Hundeeffamaa hanga marii Zaanzibaar",
-            "firstPublished": "2023-05-10T04:21:26.548Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c9810971xqno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d407/live/e399bfb0-ee4d-11ed-93be-bd1c7e2c6a44.jpg",
-            "description": "Tibba kana dhimmi marii nagaa mootummaa Itoophiyaa fi Waraana Bilisummaa Oromoo (WBO) waliin gaggeeffame ajandaa ijoo uummataafi namoota siyaasaa ta'ee ture. Barreeffama kana keessatti hundeeffama isaa irraa ka'ee hanga ammaatti ta'iiwwan ijoo mooraa qabsoo ABO-WBO gaggabaabsinee ilaalla.",
-            "imageAlt": "Alaabaa ABO Dirree Masqalaatti",
-            "id": "c9810971xqno"
-          },
-          {
-            "type": "article",
-            "title": "Haati buddeenaa ijoollee lama ajjeestee miliquun shakkamte 'osoo of ajjeesuuf yaaltuu' qabamte",
-            "firstPublished": "2023-05-09T16:10:55.631Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cd14424pq7po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f28f/live/e4d193e0-ee83-11ed-a5d9-116a18401604.jpg",
-            "description": "",
-            "imageAlt": "Shakkamtuun Nagaasee Kabbadaa Birrii",
-            "id": "cd14424pq7po"
-          },
-          {
-            "type": "article",
-            "title": "'Galgala gargar baana waliin jennee ani hojiittan bahe' - Abbaa ijoollee haadha buddeenaan ajjeefamanii",
-            "firstPublished": "2023-05-08T10:26:01.698Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c1w3d3pzl9do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2874/live/9e721d40-ed87-11ed-b5d4-19633df8b18e.jpg",
-            "description": "",
-            "imageAlt": "Shakkamtuu Nagaasee Kabbadaa Birrii",
-            "id": "c1w3d3pzl9do"
-          },
-          {
-            "type": "article",
-            "title": "Lola Sudaan keessatti Itoophiyaafi Ertiraan gahee attamii qabaachuu malu?",
-            "firstPublished": "2023-05-08T04:25:49.397Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cn0x58l59n6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3132/live/6061a350-ed0e-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "MM Abiy Ahimad, Pre. Isaayaas Afawarqii, Al-Burhaan, Heemetii",
-            "id": "cn0x58l59n6o"
-          },
-          {
-            "type": "article",
-            "title": "Lakkoofsi namootaa waraana Sudaan baqachuun Itoophiyaa seenanii '12,000 ol gahe'",
-            "firstPublished": "2023-05-07T08:11:59.733Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cv2v3y957qzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6359/live/512b8f60-ecad-11ed-8321-5749865c9b53.jpg",
-            "description": "",
-            "imageAlt": "haadhaa fi daa'ima harree koranii gara Chaaditti baqachaa jiran",
-            "id": "cv2v3y957qzo"
-          },
-          {
-            "type": "article",
-            "title": "Nama bakakkaan rukute biyyoo keessa tursiisuun ija saayinsiin akkamiin ilaalama?",
-            "firstPublished": "2023-05-07T05:22:09.382Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cd14d4pl1e8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4201/live/5b7151b0-ec2d-11ed-877b-f3bbade15223.jpg",
-            "description": "",
-            "imageAlt": "Dubartii biyyoo keessa awwaalamte",
-            "id": "cd14d4pl1e8o"
-          },
-          {
-            "type": "article",
-            "title": "Imala gaarreen qaxxaamuruu tibbana jiraattoota magaalaan ‘faashinii’ ta’aa dhufe",
-            "firstPublished": "2023-05-06T05:46:30.541Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cv278231rv4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f548/live/9b5d8e60-ebd3-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Namoota gaara fi tulluu bahan ",
-            "id": "cv278231rv4o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 40,
-        "link": "https://www.bbc.com/afaanoromoo/topics/c2dwqdy81y1t",
-        "curationId": "urn:bbc:vivo:curation:537aabd8-ee27-4091-861a-c0de0d025353",
-        "curationType": "vivo-stream",
         "position": 3,
-        "title": "Nageenya Itoophiyaa",
-        "visualProminence": "NORMAL"
+        "title": "Ispoortii",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Kaameruun talaallii busaa akka addunyaatti isa jalqabaa ta'e kennuu jalqabde",
+            "firstPublished": "2024-01-23T04:37:33.384Z",
+            "lastPublished": "2024-01-23T04:37:33.384Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cqedr1j3z98o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e60f/live/000d8120-b93e-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Sagantaan talaallii busaa addunyaarra isa jalqabaa tahe Kaameruuniitti jalqabameera. Kanaanis lubbuu daa'imman Afrikaa kumaatamatti lakkaa'amanii baraaruuf abdiin irra kaa'ameera. ",
+            "imageAlt": "Daa'imni ji'a saddeet Daani'elaa (mirga) daa'ima Kaameruun ishee jalqabaa talaallicha argatte taate",
+            "id": "cqedr1j3z98o"
+          },
+          {
+            "type": "article",
+            "title": "Saayintisitoonni jaldeessa qaccee dhala namaatti dhiyaatu qabu uuman",
+            "firstPublished": "2024-01-22T04:10:27.482Z",
+            "lastPublished": "2024-01-22T04:10:27.482Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4ny1nj9xxyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5333/live/253c9520-b8db-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Saayintisitoonni Chaayinaa jaldeessa resuus jedhamu kan qaccee dhala namaatti dhiyaatu qabu mala kilooniing jedhamuun uuman. Argannoo kunis qorannoo fayyaarratti taasifamu saffisiisa jedhameera.",
+            "imageAlt": "Jaldeessa resuus jedhamu",
+            "id": "c4ny1nj9xxyo"
+          },
+          {
+            "type": "article",
+            "title": "'Jiraachuuf jennee foon hiriyoota keenya du'anii nyaanne' - namoota balaa xayyaararraa guyyaa 72 booda baraaraman",
+            "firstPublished": "2024-01-22T03:49:39.197Z",
+            "lastPublished": "2024-01-22T03:49:39.197Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cx9k2p5lv0ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4ae3/live/3ffae610-b7c2-11ee-a0c9-55c80f3d5081.jpg",
+            "description": "Seenaan dhugaa kun waggaa 50 dura raawwatedha. Bara 1972 xayyaarri waraana Yuraaguwaayi namoota 45 fe'ee gara Chiilii deema ture gaarren Andes irratti kufee caccabe. \nIsaan keessaa namoonni 12 battaluma xayyarri kufee caccabetti du'an. Namoonni 6 ammoo guyyoota muraasa ittaanan keessatti du'an. ",
+            "imageAlt": "Namoota baraaraman ",
+            "id": "cx9k2p5lv0ro"
+          },
+          {
+            "type": "article",
+            "title": "Mootiin Abbaa Jifaar mana fincaanii socho’aa qabaachuu beektuu?",
+            "firstPublished": "2024-01-21T05:04:18.330Z",
+            "lastPublished": "2024-01-21T05:04:18.330Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cq5y3x3qllro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a425/live/1dd5e170-b6eb-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Magaaloota fi baadiyyaalee Itoophiyaatti yeroo namoonni daandii cinaa ykn xiqqoo daandiirraa maqanii fincaansaanii fincaa’an arguun waan baramedha. \nWaggoota 120’n dura Abbaan Jifaar Lammaffaa (1861-1934) yeroo imalaaf bahan meeshaalee murteessoo qabatanii imalan keessaa tokko mana fincaanii aadaa ykn socho’aadha.",
+            "imageAlt": "Mana fincaanii isaa Abbaa Jifaar",
+            "id": "cq5y3x3qllro"
+          },
+          {
+            "type": "article",
+            "title": "''Qaamnisaa foolii qurxummii waan qabuuf gaa'elli keenya diigame''",
+            "firstPublished": "2024-01-21T04:41:47.292Z",
+            "lastPublished": "2024-01-21T04:41:47.292Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cw4e2lznw4go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/110e/live/b6e804e0-aefa-11ee-81f4-834debe313c9.jpg",
+            "description": "Dhukkubni Tiraamzaayiloomninooriyaa dhukkuba nama baayyee muraasa irratti qofa mul’atu yoo tahu, qaamni namaa foolii qurxummii akka qabaatu taasisa (\"fish odour syndrome\".) ",
+            "imageAlt": "Jaalalleewwan siree irra jiran",
+            "id": "cw4e2lznw4go"
+          },
+          {
+            "type": "article",
+            "title": "Meeshaaleen dhuunfaa Neelsan Mandeellaa gabaaf dhiyaachun dheekkamsa kaase",
+            "firstPublished": "2024-01-20T06:55:26.060Z",
+            "lastPublished": "2024-01-20T06:55:26.060Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cz45718l083o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/406c/live/4c6a6000-b75f-11ee-9a69-e99c9a10fc49.jpg",
+            "description": "Meeshaalee dhuunfaa Neelsan Mandeellaa bara lubuun jiru itti fayyadamaa ture 70 gabaaf akka hin dhiyaanne mootummaan Afrikaa Kibbaa dhorkaa jira.",
+            "imageAlt": "Nelsan Mandeellaa",
+            "id": "cz45718l083o"
+          },
+          {
+            "type": "article",
+            "title": "Kolfi seelonni dhukkuba lolan qaama keessatti akka oomishaman gargaara",
+            "firstPublished": "2024-01-20T05:15:41.286Z",
+            "lastPublished": "2024-01-20T05:15:41.286Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/crgp9124472o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9ab8/live/b6ccd8e0-9529-11ee-bac2-3fbf37f9c412.jpg",
+            "description": "Uummatni addunyaa biiliyoona torba ol afaan, aadaa fi amantiidhaan gargar tahus wantoota waloodhaan qabu keessaa tokko kolfa dha.\n",
+            "imageAlt": "Dubartoota kolfaa",
+            "id": "crgp9124472o"
+          },
+          {
+            "type": "article",
+            "title": "Magaalaa Baatuu bakka Ayyaanni Cuuphaa ‘haroorratti jalqabamee haroorratti itti xummuramu’",
+            "firstPublished": "2024-01-19T09:21:58.798Z",
+            "lastPublished": "2024-01-19T09:21:58.798Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cmlj9v2z3mpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/210d/live/39c60420-b6ad-11ee-b94f-11e222f25ecb.jpg",
+            "description": "Magaalaan Baatuu kabaja Ayyaana Cuuphaa bara kanaarratti keessummoota 20,000 ta’an simachuuf qophaa’uushee Itti Gaafatamaan Waajjira Komishinii Tuurizimii Magaalaa Baatuu Obbo Kadir Abbittii BBC’tti himaniiru. ",
+            "imageAlt": "Kabaja ayyaana cuuphaa bara 2023",
+            "id": "cmlj9v2z3mpo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 32,
+        "curationId": "urn:bbc:vivo:curation:ad52ba8d-8b9e-4ec3-9913-7cde576443be",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Jiruufi Aartii",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_oromo_radio",
+            "publishedTimeStart": "2024-01-22T17:49:47.000Z",
+            "publishedTimeEnd": "2024-01-22T18:09:30.000Z",
+            "publishedTimeDuration": "PT19M43S",
+            "title": "Oduu BBC Afaan Oromoo",
+            "brandPid": "w13xttnw",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w3ct66wy",
+            "broadcastPid": "p0h0bzr6",
+            "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+          },
+          {
+            "serviceId": "bbc_oromo_radio",
+            "publishedTimeStart": "2024-01-23T17:49:47.000Z",
+            "publishedTimeEnd": "2024-01-23T18:09:30.000Z",
+            "publishedTimeDuration": "PT19M43S",
+            "title": "Oduu BBC Afaan Oromoo",
+            "brandPid": "w13xttnw",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w3ct66z6",
+            "broadcastPid": "p0h0lywf",
+            "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+          },
+          {
+            "serviceId": "bbc_oromo_radio",
+            "publishedTimeStart": "2024-01-24T17:49:47.000Z",
+            "publishedTimeEnd": "2024-01-24T18:09:30.000Z",
+            "publishedTimeDuration": "PT19M43S",
+            "title": "Oduu BBC Afaan Oromoo",
+            "brandPid": "w13xttnw",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w3ct670b",
+            "broadcastPid": "p0h0tgn6",
+            "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+          },
+          {
+            "serviceId": "bbc_oromo_radio",
+            "publishedTimeStart": "2024-01-25T17:49:47.000Z",
+            "publishedTimeEnd": "2024-01-25T18:09:30.000Z",
+            "publishedTimeDuration": "PT19M43S",
+            "title": "Oduu BBC Afaan Oromoo",
+            "brandPid": "w13xttnw",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w3ct66y2",
+            "broadcastPid": "p0h10xbl",
+            "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+          }
+        ]
       },
       {
         "summaries": [
           {
             "type": "video",
-            "duration": "PT1M9S",
-            "title": "Battala Chaarlas III Mootii tahuun muudame",
-            "firstPublished": "2023-05-07T10:25:10.100Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cgr10r11eg3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "duration": "PT4M11S",
+            "title": "Dhalataa Dambi-Doolloo qonna ancootee Kanaadaatti jalqabee ardii hundatti beeksisaa jiru",
+            "firstPublished": "2023-12-31T05:26:37.233Z",
+            "lastPublished": "2023-12-31T05:26:37.233Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c72ylq0793mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d567/live/22945240-a634-11ee-bc2f-cb5579b90709.jpg",
             "description": "",
-            "imageAlt": "",
-            "id": "cgr10r11eg3o"
+            "imageAlt": "Ancootee qotuun kan milkaa'e, Ibsaa Asaffaa silgaa ",
+            "id": "c72ylq0793mo"
+          },
+          {
+            "type": "article",
+            "title": "Pirojektii Maaddii Dhalootaf jedhuun qonnaan bultoonni magaala Hayiq beenyaa malee lafti keenya qotamaa jira jedhan",
+            "firstPublished": "2023-12-30T06:47:07.166Z",
+            "lastPublished": "2023-12-30T06:47:07.166Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cw0del7lx70o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e1a7/live/11c9cde0-a6df-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Pirojektii Maaddii Biyyaaf jedhuun qote bultoonni naannoo Amaaraa, Godiina Wallo Kibbaa naannoo Hara Loogoo jiraatan “beenyan osoo nuuf hin kaffalaminiifi komiin keenya hin dhagahamin lafti keenya qotamaa jira,” jedhan. ",
+            "imageAlt": "Pirojektii Maaddii Dhalootaaf jedhuun qonnaan bultootni naannoo Haayiq beenyaa gahaa malee lafa isaanii dhabuu himu",
+            "id": "cw0del7lx70o"
+          },
+          {
+            "type": "article",
+            "title": "Jaalattoota saala wal fakkaataa yoo argitan ''dhagaan tumaa ajjeessaa'' jedhan Pirezidaantin Burundii",
+            "firstPublished": "2023-12-30T05:39:13.637Z",
+            "lastPublished": "2023-12-30T05:39:13.637Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cpex7pkz2k4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8c94/live/ac6995c0-a6bb-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Pirezidaantiin Burundii Indaayishimiyyee Evaaristee, jaalattootni Saala wal fakkaataa Burundii keessa jiran ''dhagaan tumamanii ajjeefamuu qabu'' jedhan.\nPirezidaantichi namni jaalattoota saala wal fakkaataa dhagaadhaan tume yakkaan itti hin gaafatamu jedhan.",
+            "imageAlt": "Pirezidaantiin Burundii  Indaayishimiyyee Evaaristee, jaalattoota saala wal fakkaataa arginaan dhagaan tumaa jedhan",
+            "id": "cpex7pkz2k4o"
           },
           {
             "type": "video",
-            "duration": "PT1M37S",
-            "title": "Nama umuriisaa duubatti deebisuuf miiliyoonota baasaa jiruun walbaraa",
-            "firstPublished": "2023-05-02T04:25:39.682Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c4nj4vxd3j4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/63a6/live/119484e0-e8a4-11ed-a292-25eca75c17a1.jpg",
-            "description": "",
-            "imageAlt": "Nama umurii isaa duubatti deebiyuuf miliyoonaan baasaa jiru",
-            "id": "c4nj4vxd3j4o"
+            "duration": "PT5M10S",
+            "title": "Dargaggoo roobootii hojjechuutii hanga pirojektoota rakkoo hawaasaa furanitti milkaa'aa jiru",
+            "firstPublished": "2023-12-30T06:54:31.397Z",
+            "lastPublished": "2023-12-30T06:54:31.397Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c3gyzxgnl24o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/825d/live/1546c410-a639-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Gaaddisaa Saanii Software Engineering' barateera. Roobootii dabalatee appilikeeshinii yunivarsiitota Itoophiyaa bakka tokkotti fidan hojjeteera. Pirojektoota biroo rakkoo hawaasaa furan akka maashina daabboos hojjeteera. ",
+            "imageAlt": "Dargaggoo Gaaddisaa Saanii",
+            "id": "c3gyzxgnl24o"
+          },
+          {
+            "type": "article",
+            "title": "Hemaan Baqqalaa: Dhalataa Itoophiyaa UStti saayintistii ol-adeemaa ‘tokkoffaa’ ta’uun badhaafame",
+            "firstPublished": "2023-12-27T03:57:11.816Z",
+            "lastPublished": "2023-12-27T04:05:18.217Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cd1mvek99mpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff2e/live/6c50c540-a46c-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "“Ameerikaatti saayintistii ol-adeemaa 1ffaa” bara kanaa ta’uun badhaasa kan mo’ate dhalataa Itoophiyaa kan ta’e Hemaan Baqqalaadha",
+            "imageAlt": "Hemaan Baqqalaa",
+            "id": "cd1mvek99mpo"
+          },
+          {
+            "type": "article",
+            "title": "Daa'ima Filisxeem erga du'ee booda beekamtii guddaa argate",
+            "firstPublished": "2023-12-25T04:35:32.801Z",
+            "lastPublished": "2023-12-25T04:35:32.801Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c872g423gg5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3a5b/live/254e8330-a2a5-11ee-b4a9-9143d3e09055.jpg",
+            "description": "Awnii Aldohuus, daa'ima Filiseem umuriin isaa ganna 13 YouTube irratti beekamuun abjuusaa ganamaa ture.\nAbjuun daa'ima kana garuu jiraatti otoo hin taane erga lubbuun darbee dhugoome.",
+            "imageAlt": "Awni Aldohus daa'ima ol adeemaa guddoo abdatan akka ta'e miseensonni maatii himan",
+            "id": "c872g423gg5o"
+          },
+          {
+            "type": "article",
+            "title": "Itoophiyaatti Falaasamaan Pirofeesara jalqabaa kan ta'an Prof. Baqqalaa Guutamaa maal jedhu?",
+            "firstPublished": "2023-12-19T05:03:35.688Z",
+            "lastPublished": "2023-12-19T05:03:35.688Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cw0ldjy45p0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9c35/live/91d81070-9e2c-11ee-b84b-ffc45281d5e8.png",
+            "description": "Piroofeesar Baqqalaan, Falaasama afrikaarratti hedduu qorataniiru, barreessaniiru. Gara fuula duraaf ammoo Falaasama bal’aafi gadi fagoo sabni Oromoo qabu irratti xiyyeeffatanii hojjechuuf karoorfachuus BBCtti himaniiru.",
+            "imageAlt": "Piroofeesar Baqqalaa Guutamaa",
+            "id": "cw0ldjy45p0o"
+          },
+          {
+            "type": "article",
+            "title": " Ruutoon nama akka Zakkiyoos isa Macaafa Qulqulluu keessaa qaraxa funaanutti fakkeeffaman",
+            "firstPublished": "2023-12-20T11:52:01.356Z",
+            "lastPublished": "2023-12-20T11:52:01.356Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c4nypr0vk2yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/14d4/live/6b3e2490-9f0d-11ee-97ae-a991128b5819.jpg",
+            "description": "Pirezidaantin Keeniyaa Wiiliyaam Ruutoo qarata guddaa lammiilen biyyattii akka kaffalan gochuusaanirraa kan ka'e 'nama akka Zakkiyoos gabira funaanuu jaalatu' jechuun namoonni itti qoosan. ",
+            "imageAlt": "Wiiliyaam Ruutoo",
+            "id": "c4nypr0vk2yo"
+          },
+          {
+            "type": "article",
+            "title": "Dubartii reeffishee wagga 10 booda mana cufame keessaa argameefi rakkoo qofummaa inni saaxile",
+            "firstPublished": "2023-12-19T04:31:27.198Z",
+            "lastPublished": "2023-12-19T04:31:27.198Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cv2e69vded3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cec0/live/10d80ce0-9db5-11ee-8df3-1d2983d8814f.jpg",
+            "description": "Biyya Awurooppaa, Holaan keessatti dubartiin umuriin ishee wagga 70oota keessatti argamu duutee wagga kudhan booda reeffishee manashee keessatti argamuun biyyattii keessatti rakkoo qofummaa hambisuudhaaf duula biyyaalessaa jalqabdeef ka’umsa ta’eera.",
+            "imageAlt": "Dubartii kilaba qofummaa dargaggootaa hir'isuuf hojjetu hundeessite",
+            "id": "cv2e69vded3o"
+          },
+          {
+            "type": "article",
+            "title": "Baankiin Misooma Afrikaa hojjettootasaa Itoophiyaatii baasuufi",
+            "firstPublished": "2023-12-20T07:13:06.584Z",
+            "lastPublished": "2023-12-20T07:13:06.584Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cg3x28plgdpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ef34/live/a9cd7770-9f02-11ee-9c0e-6300bb87da62.jpg",
+            "description": "Baankiin Misoomaa Afrikaa hojjetoota isaa idil-addunyaa ta’an Itoophiyaa keessaa baasuuf akka jiru madden madda oduu Roohitarsitti himan.",
+            "imageAlt": "Teessoo Baankii Misooma Afrikaa",
+            "id": "cg3x28plgdpo"
+          },
+          {
+            "type": "article",
+            "title": "Gimbiitti dubartiin obboleessashee poolisii ta'e lubbuun jiru 'du'eera' jettee qabeenyasaa dhaalte adabamte",
+            "firstPublished": "2023-12-19T09:24:34.698Z",
+            "lastPublished": "2023-12-19T09:24:34.698Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cz45qdrq91po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d5a/live/e4d715a0-9f5d-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "Himatamtuu Warqinash Dafaa Lamuu, Godina Wallagga Lixaatti jiraattuu Magaalaa Gimbii ganda 01 yemmuu tahan, 'obboleessikoo du'eera' jechuun qabeenya obboleessa isaanii lubbuun osoo jiruu dhaaluuf yaaluun himatamanii murtiin hidhaa irratti darbe.",
+            "imageAlt": "Aadde Warqinash Dafaa ",
+            "id": "cz45qdrq91po"
           },
           {
             "type": "video",
-            "duration": "PT3M15S",
-            "title": "Warqee maaliif garmalee jaalanna?",
-            "firstPublished": "2023-04-09T11:11:28.153Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/crgqplm3rmyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "duration": "PT2M49S",
+            "title": "\"Hongee bara 1977 kan caaluuti mudate\"-Anga'oota Tigraay",
+            "firstPublished": "2023-12-13T09:23:04.479Z",
+            "lastPublished": "2023-12-13T09:23:04.479Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c0vy8q43zg7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a8e3/live/abb2bb00-9998-11ee-91bf-230bfab3fcba.jpg",
             "description": "",
-            "imageAlt": "",
-            "id": "crgqplm3rmyo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M18S",
-            "title": "'Yeroo baay'ee ulfaataan dabarse' -  Atileet Gudaaf Tsaggaay ",
-            "firstPublished": "2023-03-31T04:06:03.774Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cqvj0dx5yjpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cqvj0dx5yjpo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M35S",
-            "title": "'Haati warraakoo beelaan duute' - Maanguddoo Somaaliyaa ",
-            "firstPublished": "2023-03-22T10:11:31.409Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c721n6yv4zro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/df42/live/39b91080-c897-11ed-996f-17d83cede2bf.jpg",
-            "description": "",
-            "imageAlt": "Ummata Somaaliyaa keessaa walakkaan gargaarsa namoomaa barbaada jedheera UN",
-            "id": "c721n6yv4zro"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M38S",
-            "title": "'Harka dhabus luka kiyyaan daa'ima kiyya nan hammadha'",
-            "firstPublished": "2023-03-20T11:31:05.537Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/crgq3gp7993o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "crgq3gp7993o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M19S",
-            "title": "Pirezidantii US'tti kophee darbachuu kiyyatti hin gaabbu - Gaazexeessaa Iraaq",
-            "firstPublished": "2023-03-18T05:26:51.248Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c84m9me9lllo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "c84m9me9lllo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M55S",
-            "title": "Allaattii nama lubbuu isa baraare firoomfate",
-            "firstPublished": "2023-03-10T11:24:55.780Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cl5jyd2zjgjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cl5jyd2zjgjo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M3S",
-            "title": "Qonnaan bulaa udaan lukkuurraa humna ibsaa maddisiisu",
-            "firstPublished": "2023-03-07T09:18:02.701Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cn05wvq7lq5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cn05wvq7lq5o"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M13S",
-            "title": "'Dur loon keenya bobbaafannee kolfaafi gammadaa oolla ture' - Waariyoo Galgaloo",
-            "firstPublished": "2023-02-20T04:06:36.314Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/c4nmmekmpdeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "c4nmmekmpdeo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M35S",
-            "title": "'Dubartoota 12 irraa ijoollee 102 fi akaakilee 578 argadhe'",
-            "firstPublished": "2023-02-13T05:37:01.549Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cx097lwyde2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cx097lwyde2o"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M54S",
-            "title": "'Nuti ilmeen Booranaa waa kadhachuu ni qaanfanna turre'- Aayyoo hongeen miidhaman",
-            "firstPublished": "2023-01-27T04:46:10.034Z",
-            "link": "https://www.bbc.com/afaanoromoo/articles/cy6g3j6z04po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da97/live/9757f6f0-9dfb-11ed-8f65-71bfa0525ce3.jpg",
-            "description": "",
-            "imageAlt": "Hayyoo boranaa hongeen miidhaman keessaa",
-            "id": "cy6g3j6z04po"
+            "imageAlt": "Qoannaan-bulaa baaqelaa ammaaraa jiran",
+            "id": "c0vy8q43zg7o"
           }
         ],
         "activePage": 1,
-        "pageCount": 6,
-        "link": "https://www.bbc.com/afaanoromoo/topics/ck0dg7dpjwwt",
-        "curationId": "urn:bbc:vivo:curation:652d94de-3748-4e6d-b08f-1060a3539084",
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:3e7f3fca-8f69-489d-bbc4-5a8ac80d963f",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "Bitaa, Mirga",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Naqamtee: Ogeeyyiin fayyaa sammuu shamarree ganna 24 keessaa raasaasa baasuun du’a oolchan",
+            "firstPublished": "2024-01-16T04:09:18.546Z",
+            "lastPublished": "2024-01-16T04:09:18.546Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/crg7v9q364ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dda5/live/d2c5ac00-b3d5-11ee-92db-9322d4ef760c.jpg",
+            "description": "Shamarreen cimina miidhaa irra gaherraan kan ka’e of wallaaltee turte kun haala lubbuusheef yaaddessu keessa turte. Kutaan sammuushee rasaasaan rukkutames faayidaan ala ta’uu eegalee ture.",
+            "imageAlt": "Wallaansa baqaqsanii yaaluun rasaasa sammuu keessaa baafamaa jiru",
+            "id": "crg7v9q364ko"
+          },
+          {
+            "type": "video",
+            "duration": "PT50S",
+            "title": "Hantuunni balleessaaf malee gaarummaaf hedduu maqaan hin ka'u; kun garuu adda",
+            "firstPublished": "2024-01-12T10:21:47.776Z",
+            "lastPublished": "2024-01-12T10:21:47.776Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cd1ee85n6gwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e281/live/ea1204a0-b130-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "Hantuuta halkan mana qulqulleessitu",
+            "id": "cd1ee85n6gwo"
+          },
+          {
+            "type": "article",
+            "title": "Indiyaatti carraa hojii haaraa ''dubartoota ulfeessuu'' jedhuun kan gowwoomfaman maal himu?",
+            "firstPublished": "2024-01-12T04:37:43.717Z",
+            "lastPublished": "2024-01-12T04:37:43.717Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51zevxdgxno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cec7/live/743806f0-af99-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Indiyaa keessatti namoonni dubartoota daa'ima hin qabne ulfeessuun maallaqa argattu jedhaman hedduun gowwoomfamaniiru. Kanneen seenaasaanii himan jiru.",
+            "imageAlt": "Namoonni maallaqa argachuuf jedhanii carraa hojii dubartoota daa'imman hin qabne ulfeessuu jedhuun guwwoomfamaniiru jedha poolisiin",
+            "id": "c51zevxdgxno"
+          },
+          {
+            "type": "article",
+            "title": "Dhaabbata Aviyeeshinii bobbaa namaa irraa boba’aa xiyyaaraa oomishe",
+            "firstPublished": "2024-01-10T04:19:28.867Z",
+            "lastPublished": "2024-01-10T04:19:28.867Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cv2e15rkrn0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/abb2/live/db91f6d0-aa17-11ee-ad73-876b445d607f.jpg",
+            "description": "Qorannoo isaanitiin namni tokko udaan waggaatti haguun boba’a jeettii liitira 4-5 ta’u kan faalama naannoo hin geechisne gumaachuu akka danda’u shallaganiiru.",
+            "imageAlt": "Qorataa ",
+            "id": "cv2e15rkrn0o"
+          },
+          {
+            "type": "article",
+            "title": "‘Nyaanni hin jiru ijoollee akkamiinan hoosisaa?’ - Haadha Gaazaatti lakkuu afur deesse",
+            "firstPublished": "2024-01-09T10:08:54.029Z",
+            "lastPublished": "2024-01-09T10:08:54.029Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c28y27drxppo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da2d/live/62d9c4d0-aed5-11ee-8f07-bbfdfa890097.jpg",
+            "description": "",
+            "imageAlt": "Haadha Hospitaala Gaazaatti takkaatti lakkuu afur deesse",
+            "id": "c28y27drxppo"
+          },
+          {
+            "type": "article",
+            "title": "Sareen doolaara 4,000 nyaattee maatii harka qullaatti hambiste",
+            "firstPublished": "2024-01-05T07:43:53.057Z",
+            "lastPublished": "2024-01-05T07:43:53.057Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51z2j5397lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8708/live/26e74fe0-ab9e-11ee-999d-7b8ac3889003.jpg",
+            "description": "Sareen kun waan nyaatu hin dhabne, kunuunsa ga'aa qaba. Garuu maallaqa nyaachuutu araada itti ta'e.\nBakka maatiin maallaqa kaa'anii fuudhee kutaa sarootaa seenee fedhiisaa dhugoomfate- doolaara 4,000 nyaatee fixe.",
+            "imageAlt": "Saree doolaara 4,000 nyaate",
+            "id": "c51z2j5397lo"
+          },
+          {
+            "type": "article",
+            "title": "Ijoollee lamaan daayimandii guddicha addunyaa argatan maaltu mudate?",
+            "firstPublished": "2024-01-04T04:26:25.265Z",
+            "lastPublished": "2024-01-04T04:26:25.265Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cz9egzl85v7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1d7f/live/c1a47460-aa75-11ee-8e4f-f741c649fdc8.jpg",
+            "description": "Guyyaan isaa Jimaata ture; Bitootessa 13, 2017. Karoorri isaanii hojii albuuda baasuuf of qopheessuu ture.  Albuuda baasuu ykn qotuun kun lafa qotanii, cirracha baasuu yoo ta’u, waqtii bokkaan roobutti lolaa wajjin wallaansoo walqabuudha.",
+            "imageAlt": "Diyaamandii Seraaliyoonitti ijoollee laama argatan, dolaara miliyoona 6.5tti gurgurame",
+            "id": "cz9egzl85v7o"
+          },
+          {
+            "type": "article",
+            "title": "Mana amantaa hordoftoota amantii hundaaf ijaarame argitanii beektuu?",
+            "firstPublished": "2023-12-31T05:23:54.324Z",
+            "lastPublished": "2023-12-31T05:23:54.324Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c51z07y3wx8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d9d8/live/c613fec0-a79c-11ee-93b4-b15e8a75b590.jpg",
+            "description": "",
+            "imageAlt": "Mana amantaa ijaarame",
+            "id": "c51z07y3wx8o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 5,
+        "curationId": "urn:bbc:vivo:curation:ec44605d-2b22-4dd6-a588-91d11eee5a5e",
         "curationType": "vivo-stream",
-        "position": 5,
-        "title": "Viidiyoo",
-        "visualProminence": "NORMAL"
+        "position": 7,
+        "title": "Ajaa'iba",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Itoophiyaatti barattoonni ‘KG’ fi afaan Ingilizii maaliif adda bahan?",
+            "firstPublished": "2024-01-22T03:22:37.748Z",
+            "lastPublished": "2024-01-22T03:22:37.748Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c3gek040p2no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/514d/live/911569e0-b89d-11ee-beb5-e1400df560f2.jpg",
+            "description": "Itoophiyaatti baranarraa kaasee barattoonni ‘KG’ [oolmaa daa’imanii afaan Ingilizii barachuutii adda bahaniiru. Daa’immaan gara manneen-barnootaa dhuunfaa, keessumaa kanneen magaalaa Finfinnee keessa jiran deeman akka kanaan dura baratame maqaasaanii Ingiliffaan barreessuu shaakaluun hafeera.",
+            "imageAlt": "Barattuu gabatee dura dhaabbachaa jirtu",
+            "id": "c3gek040p2no"
+          },
+          {
+            "type": "article",
+            "title": "Magaalaa turistoonni maqaa jaalalaan sossobamanii waamamuun itti ajjeeffaman",
+            "firstPublished": "2024-01-21T12:49:55.727Z",
+            "lastPublished": "2024-01-21T12:49:55.727Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/crg90x3rykro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f5c8/live/b5dbf810-b83a-11ee-beb5-e1400df560f2.jpg",
+            "description": "Iccitiin dhiirota Ameerikaa  Kolombiyaa keessatti walitti aansuun ajjeefamanii appii jaalalaa waliin walqabata.",
+            "imageAlt": "Tuur Ger lammmilee Ameerikaa Kolombiyaatti ajjeefaman keeessa tokko",
+            "id": "crg90x3rykro"
+          },
+          {
+            "type": "article",
+            "title": "Bu'uura Barreeffama Afaan Oromoo: Imala gaaffii seenaa afaanichaarratti ka'aniif deebii soquu",
+            "firstPublished": "2024-01-19T03:44:32.932Z",
+            "lastPublished": "2024-01-19T03:44:32.932Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c9720gjve6lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8fe2/live/6edb0d00-b3eb-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Afaan Oromoon barreessuu jalqabuu  ilaalchisee yaadota gara garaatu kennama. Fakkeenyaaf, Qubeen Afaan Oromoo har'a ittiin barataafi barreessaa jirru yoom eegalame? gaaffiin jedhu yoo gaafatame deebii wal hin fakkaannetu kennama. Qorattootni maal jedhu?",
+            "imageAlt": "Barreessituufi Qorattuu Askaalee Tarfaa",
+            "id": "c9720gjve6lo"
+          },
+          {
+            "type": "article",
+            "title": "Pirezidaantiin duraanii US, Donaald Tiraamp maaliif caalaa jaalatamaa dhufan",
+            "firstPublished": "2024-01-19T02:59:27.136Z",
+            "lastPublished": "2024-01-19T02:59:27.136Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cnd76dkez5po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3706/live/2d8c54d0-b5df-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Tiraamp deebii’anii dhufaa jiru waan ta’eef jaaladhaanii ykn jibbaa.\nPirezadantiin duraanii Ameerikaa Donaaldi Tiraamp kaadhidhamaa pirezidaantummaa Riippablikaanootaa bara 2024 ta’usaa sagalee olaanaa Lowaatti argataniin mirkaneessaniiru. \nInnis ammuma himatamuu leellistoota isaanii biratti jaalatamaa dhufuun sagalee olaanaa argateera. ",
+            "imageAlt": "Donaald Tiraamp",
+            "id": "cnd76dkez5po"
+          },
+          {
+            "type": "article",
+            "title": "‘Gammachuun saal-qunnamtii kennaa Waaqayyooti’- Poop Firaansis",
+            "firstPublished": "2024-01-18T18:32:26.946Z",
+            "lastPublished": "2024-01-18T18:32:26.946Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cyj9jppwkwxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0357/live/a866b9d0-b61f-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Phaaphaasiin mana amantaa Kaatolikii, Poop Firaansis gammachuun saalqunnamtii ''kennaa Waaqayyoo'' waan ta'eef ''obsaan safuu isaa eegamuu qaba'' jedhan.",
+            "imageAlt": "Poop Firaansis bara 2013 irra eegalanii  mana amantaa Kaatolikii dursaa jiru ",
+            "id": "cyj9jppwkwxo"
+          },
+          {
+            "type": "article",
+            "title": "Bakkeewwan amantaa Gaazaa keesatti barbadaa'an meeqa? ",
+            "firstPublished": "2024-01-18T03:39:53.954Z",
+            "lastPublished": "2024-01-18T03:39:53.954Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cjqg5p238lzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/63f6/live/62c20f10-b520-11ee-a84c-41ffbd26c07b.jpg",
+            "description": "Gaazan bakka bataskaanonniifi masjiidunni waggoota heddu lakkoofsisan keessatti argamaniidha. Haa ta'u garuu, hedduunsaanii haleellaa Israa'el gaggeessituun manca'uu jalaa hin oolle. ",
+            "imageAlt": "Masjiida Khalid Bin Al-Waleed",
+            "id": "cjqg5p238lzo"
+          },
+          {
+            "type": "article",
+            "title": "Ayyaanni ‘yaadannoo warra abbaa Oromoo’ kan Waaqeffattoonni tibbana kabajan maali?",
+            "firstPublished": "2024-01-18T03:34:35.521Z",
+            "lastPublished": "2024-01-18T03:34:35.521Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c1eyj57x2x9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2d9d/live/434561e0-b56c-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Hordoftoonni amantaa Waaqeffannaa tibbana Ayyaana yaadannoo warra abbaa Oromoo jedhamu kabajan. Ofii ayyaanni kun maali? ",
+            "imageAlt": "Hirmaattoota kabaja ayyaanichaa",
+            "id": "c1eyj57x2x9o"
+          },
+          {
+            "type": "article",
+            "title": "Ameerikaa fi UK’n maaliif Huutii haleelu?",
+            "firstPublished": "2024-01-17T04:07:45.227Z",
+            "lastPublished": "2024-01-17T04:07:45.227Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cd148g8rd24o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4f2e/live/d49c8ba0-b495-11ee-beb5-e1400df560f2.jpg",
+            "description": "Humnoonni Galaana Ameerikaa fi UK haleellaa Huutiin Yamanitti aragaman irratti bananiiru. \nBiyyoonni kunneen dooniiwwaan Galaana Diimaa qaxxaamuranirratti haleellaa Huutiin raawwataa jiru dhaabsisuuf deebii kennuu ibsan.",
+            "imageAlt": "Doonii waraana Ameerikaa xiyyaarota baatu USS Tehudoow Roosvelt",
+            "id": "cd148g8rd24o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 14,
+        "curationId": "urn:bbc:vivo:curation:f8c326be-0592-4dfe-8f4e-1482a45b4c3e",
+        "curationType": "vivo-stream",
+        "position": 8,
+        "title": "Barumsaaf",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 9,
+        "title": "Baay'ee kan dubbifame",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/afaanoromoo/popular/read",
+        "mostRead": {
+          "generated": "2024-01-24T11:52:27.561Z",
+          "lastRecordTimeStamp": "2024-01-24T11:49:00Z",
+          "firstRecordTimeStamp": "2024-01-24T09:49:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cjjgjwvj3q0o",
+              "rank": 1,
+              "title": "Humni waraanaa Itoophiyaafi Somaaliyaa walbira qabamee yeroo ilaalamu maal fakkaata?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cjjgjwvj3q0o",
+              "timestamp": 1705985106992
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1w18y6ldg0o",
+              "rank": 2,
+              "title": "Waancaa Afrikaa:  Tapha daanyaa Itoophiyaan durfame, Kaameeruuniif carraa kenne, Aljeeriyaa yeroon gaggeesse",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c1w18y6ldg0o",
+              "timestamp": 1706087214983
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv29d7g04zqo",
+              "rank": 3,
+              "title": "Itoophiyaatti waa'ee gammoojjii namoonni jumlaan itti hidhaman, Awaash Arbaa, maal beekna?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cv29d7g04zqo",
+              "timestamp": 1706070223350
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv2vl1yp6j2o",
+              "rank": 4,
+              "title": "Ashaboo dabaltee albuudonni dhiheenya Godina Baalee Bahaatti argaman maali?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cv2vl1yp6j2o",
+              "timestamp": 1706071027493
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4nvlx5v33xo",
+              "rank": 5,
+              "title": "Abaarsa moo carraa- Miidhama Mohaammad Saalaa abjuu isaa dimimmeesse",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c4nvlx5v33xo",
+              "timestamp": 1706070393697
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4n34d8rpd3o",
+              "rank": 6,
+              "title": "Himatamtoonni albuuda Meerkurii seeraan ala daddabarsan hidhaan adabaman",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c4n34d8rpd3o",
+              "timestamp": 1706071044223
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cx9k2p5lv0ro",
+              "rank": 7,
+              "title": "'Jiraachuuf jennee foon hiriyoota keenya du'anii nyaanne' - namoota balaa xayyaararraa guyyaa 72 booda baraaraman",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cx9k2p5lv0ro",
+              "timestamp": 1705895379197
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cxx5kjx3n3jo",
+              "rank": 8,
+              "title": "Loltoonni Israa’el 24 guyyaa tokko keessatti ajjeefamuu Waraanni Israa’el beeksise",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cxx5kjx3n3jo",
+              "timestamp": 1706018099627
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq50z5r4202o",
+              "rank": 9,
+              "title": "Afaan jecha 'lakki' jedhu hin qabne beektuu?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cq50z5r4202o",
+              "timestamp": 1663477718571
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce9m6z8plmlo",
+              "rank": 10,
+              "title": "Sirboota qabsoo jaalala fakkeessine sirbaa turre - Shaabee Sheekoo",
+              "href": "https://www.bbc.com/afaanoromoo/articles/ce9m6z8plmlo",
+              "timestamp": 1704604991518
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3gdn4g7gx7o",
+              "rank": 11,
+              "title": "'Warri michuu Somaaliyaa fakkaatan, diinumma Itoophiyaaf qaban irraati'- Redwaan Huseen",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c3gdn4g7gx7o",
+              "timestamp": 1705899904618
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3g0v4e6dndo",
+              "rank": 12,
+              "title": "Haleellaa Huutii Galaana Diimaarratti yaaddoo uume dhaabsisuuf yaaliin taasifamu milkaa’aa?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c3g0v4e6dndo",
+              "timestamp": 1705998982245
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c51686e3l78o",
+              "rank": 13,
+              "title": "Somaalilaand deebii doorsiisa Masriif kenniiteen 'jiddu-seentummaa qaamolee alaa kamuu cimseen morma' jette",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c51686e3l78o",
+              "timestamp": 1705939581513
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1eyj57x2x9o",
+              "rank": 14,
+              "title": "Ayyaanni ‘yaadannoo warra abbaa Oromoo’ kan Waaqeffattoonni tibbana kabajan maali?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c1eyj57x2x9o",
+              "timestamp": 1705548875521
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cek59xd0x9jo",
+              "rank": 15,
+              "title": "Itoophiyaan 'qajeeltoowwan karaa nagaafi faayidaa waloo' hordofuun ulaa galaanaa argachuuf hojjechuu itti fufti- MM Abiy",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cek59xd0x9jo",
+              "timestamp": 1705727703912
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c290dnz98l9o",
+              "rank": 16,
+              "title": "Bilbilli ofii akkamiin mana hidhaa nama buusuu danda'a?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c290dnz98l9o",
+              "timestamp": 1675139175233
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz454z4v75ro",
+              "rank": 17,
+              "title": "Muddama tibbanaa waraana Itiiyoo -Somaaliyaa darbe Moqaadishoo yaadachiise",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cz454z4v75ro",
+              "timestamp": 1705650525749
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crgjg0jnd96o",
+              "rank": 18,
+              "title": "IGAD waa'ee Itoophiyaafi Somaaliyaa maal jedhe?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/crgjg0jnd96o",
+              "timestamp": 1705653540770
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c51znzznq3qo",
+              "rank": 19,
+              "title": "Xayyaarriifi dirooniin waraanaa Itoophiyaan haaraa bitte dandeettii waraanaa hangamii qabu?  ",
+              "href": "https://www.bbc.com/afaanoromoo/articles/c51znzznq3qo",
+              "timestamp": 1705489824565
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd1z3g93m0ko",
+              "rank": 20,
+              "title": "Akkamitti daa'ima dandeetti addaa qabu adda baasuu dandeenya?",
+              "href": "https://www.bbc.com/afaanoromoo/articles/cd1z3g93m0ko",
+              "timestamp": 1679286977177
+            }
+          ]
+        }
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:c93v2kkzl24t",
+        "contentId": "urn:bbc:tipo:topic:c44dyn08mejt",
         "contentType": "index-home",
         "pageIdentifier": "afaanoromoo.page",
         "pageTitle": "BBC News Afaan Oromoo"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from Live Tipo"
+  "contentType": "application/json; charset=utf-8"
 }
