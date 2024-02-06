@@ -23,7 +23,7 @@ const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
     firstPublished: '2023-03-30T04:10:35.206Z',
     link: 'https://www.bbc.com/hausa/articles/cg311yd88jgo',
     imageUrl:
-      'https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
     description:
       "A wannan bidiyo, malamin ya yi bayani a kan muhimmancin tafsirin Alqur'ani mai girma wanda akan yawaita yi cikin watan azumin Ramadan.",
     imageAlt,
@@ -45,7 +45,7 @@ describe('Latest Media Item', () => {
     render(<Fixture />);
 
     const imgUrl =
-      'https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png';
+      'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png';
     const img = screen.getByRole('img');
 
     expect(img.getAttribute('src')).toEqual(imgUrl);
