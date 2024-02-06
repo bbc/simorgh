@@ -43,10 +43,12 @@ export default ({ service }) => {
               });
 
               // Leaderboard & MPU
-              cy.get('[data-e2e="advertisement"]').within(() => {
-                cy.get('[id="dotcom-leaderboard"]').should('exist');
-                cy.get('[id="dotcom-mpu"]').should('exist');
-              });
+              cy.get(
+                '[data-e2e="advertisement"] [id="dotcom-leaderboard"]',
+              ).should('exist');
+              cy.get('[data-e2e="advertisement"] [id="dotcom-mpu"]').should(
+                'exist',
+              );
             });
           } else {
             cy.log(`Ads not enabled for ${service}`);

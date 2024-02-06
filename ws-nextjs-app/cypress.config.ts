@@ -3,7 +3,7 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
-    setupNodeEvents(_on, config) {
+    setupNodeEvents(on, config) {
       if (!config.env.APP_ENV) {
         config.env.APP_ENV = 'local';
       }
@@ -22,6 +22,16 @@ export default defineConfig({
       // console.log('UK:', config.env.UK);
       console.log('\n\n\n\n\n');
       /* eslint-enable no-console */
+
+      // Add options for the cypress terminal report (cy.logs) here
+      const logPrinterOptions = {
+        defaultTrimLength: 2000,
+      };
+      // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+      require('cypress-terminal-report/src/installLogsPrinter')(
+        on,
+        logPrinterOptions,
+      );
 
       return config;
     },
