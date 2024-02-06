@@ -10,7 +10,7 @@ storiesOf('Components/Images/ImagePlaceholderAmp', module)
     'Amp Image placeholder',
     () => (
       <amp-img
-        src="https://ichef.bbci.co.uk/news/800/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png_"
+        src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png_"
         width="645px"
         height="128px"
         layout="intrinsic"
@@ -24,7 +24,7 @@ storiesOf('Components/Images/ImagePlaceholderAmp', module)
     'Amp Image placeholder dark mode',
     () => (
       <amp-img
-        src="https://ichef.bbci.co.uk/news/800/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png_"
+        src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png_"
         width="645px"
         height="128px"
         layout="intrinsic"
