@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { node, string } from 'prop-types';
+import { node, string, id } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -9,14 +9,14 @@ import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 import { GREY_6, WHITE } from '../../../../../components/ThemeProvider/palette';
 
-const Figure = styled.figure`
+const Container = styled.div`
   margin: 0;
   background-color: ${({ isTransparentPage }) =>
     props =>
       isTransparentPage ? 'transparent' : props.theme.palette.BLACK};
 `;
 
-const FigCaption = styled.figcaption`
+const WarningText = styled.small`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   
@@ -37,29 +37,32 @@ const CaptionWrapper = ({
   textPrefixVisuallyHidden,
   text,
   additionalText,
+  descById,
 }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
   const isTransparentPage = pageType === ARTICLE_PAGE || isLive;
 
   return (
-    <Figure isTransparentPage={isTransparentPage}>
+    <Container isTransparentPage={isTransparentPage}>
       {children}
-      <FigCaption
+      <WarningText
+        {...(descById && { id: descById })}
         isTransparentPage={isTransparentPage}
         isLive={isLive}
         service={service}
       >
         {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
-      </FigCaption>
-    </Figure>
+      </WarningText>
+    </Container>
   );
 };
 
 CaptionWrapper.defaultProps = {
   textPrefixVisuallyHidden: null,
   additionalText: null,
+  descById: null,
 };
 
 CaptionWrapper.propTypes = {
@@ -68,6 +71,7 @@ CaptionWrapper.propTypes = {
   textPrefixVisuallyHidden: string,
   text: string.isRequired,
   additionalText: string,
+  descById: id,
 };
 
 export default CaptionWrapper;

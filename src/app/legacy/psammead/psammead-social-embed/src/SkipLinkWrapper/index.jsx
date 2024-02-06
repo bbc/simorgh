@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, id } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -57,6 +57,7 @@ const SkipLinkWrapper = ({
   text,
   children,
   endTextVisuallyHidden,
+  descById,
 }) => {
   const dictionary = dictionaryFactory({ provider });
   return (
@@ -65,6 +66,7 @@ const SkipLinkWrapper = ({
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
         className="focusIndicatorRemove"
+        {...(descById && { 'aria-describedby': descById })}
       >
         <span>{detokenise(text, dictionary)}</span>
       </SkipLink>
@@ -76,6 +78,10 @@ const SkipLinkWrapper = ({
   );
 };
 
+SkipLinkWrapper.defaultProps = {
+  descById: null,
+};
+
 SkipLinkWrapper.propTypes = {
   provider: string.isRequired,
   service: string.isRequired,
@@ -83,6 +89,7 @@ SkipLinkWrapper.propTypes = {
   children: node.isRequired,
   text: string.isRequired,
   endTextVisuallyHidden: string.isRequired,
+  descById: id,
 };
 
 export default SkipLinkWrapper;

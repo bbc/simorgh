@@ -1842,6 +1842,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
+    aria-describedby=":r9:"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1849,7 +1850,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
       Skip YouTube content
     </span>
   </a>
-  <figure
+  <div
     class="emotion-4 emotion-5"
   >
     <div
@@ -1864,15 +1865,16 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
         width="480"
       />
     </div>
-    <figcaption
+    <small
       class="emotion-8 emotion-9"
+      id=":r9:"
     >
       <span>
         Video caption, 
       </span>
       undefined
-    </figcaption>
-  </figure>
+    </small>
+  </div>
   <p
     class="emotion-10 emotion-11"
     id="skip-youtube-content"

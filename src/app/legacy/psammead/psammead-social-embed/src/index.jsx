@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useId } from 'react';
 import { shape, string, func } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import {
@@ -56,6 +56,7 @@ export const CanonicalSocialEmbed = ({
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
+  const captionId = useId();
 
   if (!isSupportedProvider || !oEmbed)
     return (
@@ -65,9 +66,18 @@ export const CanonicalSocialEmbed = ({
     );
 
   return (
-    <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
+    <SkipLinkWrapper
+      service={service}
+      provider={provider}
+      {...(embedCaption && { descById: captionId })}
+      {...skipLink}
+    >
       {embedCaption ? (
-        <CaptionWrapper service={service} {...embedCaption}>
+        <CaptionWrapper
+          service={service}
+          descById={captionId}
+          {...embedCaption}
+        >
           <EmbedConsentBannerCanonical provider={provider}>
             <CanonicalEmbed
               provider={provider}
