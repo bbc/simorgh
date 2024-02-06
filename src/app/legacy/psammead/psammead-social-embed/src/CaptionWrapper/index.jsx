@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { node, string, id } from 'prop-types';
+import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -19,7 +19,8 @@ const Container = styled.div`
 const WarningText = styled.small`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
-  
+  display: block;
+
   ${({ isTransparentPage, isLive }) => `
     color: ${isTransparentPage ? GREY_6 : WHITE};
     padding: ${isTransparentPage ? `${GEL_SPACING} 0` : GEL_SPACING};
@@ -71,7 +72,7 @@ CaptionWrapper.propTypes = {
   textPrefixVisuallyHidden: string,
   text: string.isRequired,
   additionalText: string,
-  descById: id,
+  descById: string,
 };
 
 export default CaptionWrapper;
