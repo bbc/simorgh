@@ -409,9 +409,6 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
           class="emotion-14 emotion-15"
           id=":r8:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
         </small>
       </div>
@@ -739,9 +736,6 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
           class="emotion-12 emotion-13"
           id=":r4:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
         </small>
       </div>
@@ -1066,9 +1060,6 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
           class="emotion-12 emotion-13"
           id=":r5:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
         </small>
       </div>
@@ -1493,9 +1484,6 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
           class="emotion-14 emotion-15"
           id=":r3:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites. TikTok content may contain adverts
         </small>
       </div>
@@ -1798,9 +1786,6 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
           class="emotion-12 emotion-13"
           id=":r0:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
         </small>
       </div>
@@ -2225,9 +2210,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
           class="emotion-14 emotion-15"
           id=":r2:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites. YouTube content may contain adverts
         </small>
       </div>
@@ -2523,9 +2505,6 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
           class="emotion-12 emotion-13"
           id=":r1:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
         </small>
       </div>
