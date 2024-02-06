@@ -9,7 +9,7 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-} from '.';
+} from './directiveGenerators';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
