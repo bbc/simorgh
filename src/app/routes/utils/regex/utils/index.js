@@ -46,6 +46,7 @@ const homePageServices = [
   'hausa',
   'igbo',
   'indonesia',
+  'japanese',
   'kyrgyz',
   'korean',
   'marathi',
