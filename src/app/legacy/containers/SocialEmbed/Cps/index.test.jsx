@@ -9,13 +9,6 @@ import {
   fireEvent,
 } from '../../../../components/react-testing-library-with-providers';
 
-/* eslint-disable react/prop-types */
-jest.mock('react-lazyload', () => {
-  return function MockedLazyload({ children }) {
-    return <>{children}</>;
-  };
-});
-
 describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {
     loggerMock.info.mockClear();

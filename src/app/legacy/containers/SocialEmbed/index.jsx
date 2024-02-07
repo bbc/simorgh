@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
-import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -13,7 +12,7 @@ import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
-import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
+import Wrapper from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const SocialEmbedContainer = ({ blocks, source }) => {

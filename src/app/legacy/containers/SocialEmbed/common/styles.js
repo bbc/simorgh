@@ -4,8 +4,6 @@ import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
  *                  at 500px, which is why this is set to 31.25rem.)
- * LAZYLOAD_OFFSET  The distance in pixels above or below the viewport before
- *                  an embed is allowed to load.
  */
 const MAX_WIDTH = '31.25rem';
 
