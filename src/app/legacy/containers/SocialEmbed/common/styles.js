@@ -31,4 +31,8 @@ export const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
   ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
+
+  .no-js & {
+    min-height: 0;
+  }
 `;

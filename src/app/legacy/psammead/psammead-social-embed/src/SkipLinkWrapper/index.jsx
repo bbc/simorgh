@@ -13,6 +13,10 @@ const GEL_SPACING_THREE_QRTS = `0.75rem`;
 
 const Wrapper = styled.div`
   position: relative;
+
+  .no-js & {
+    display: none;
+  }
 `;
 
 const SkipLink = styled.a`
