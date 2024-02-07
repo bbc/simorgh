@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { arrayOf, oneOfType, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import useLocation from '#hooks/useLocation';
 import useToggle from '#hooks/useToggle';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
+import { RadioScheduleData } from '#app/legacy/components/RadioSchedule/types';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import radioSchedulesShape from './utilities/radioScheduleShape';
@@ -46,7 +47,10 @@ const RadioScheduleContainer = ({
 
 RadioScheduleContainer.propTypes = {
   radioScheduleEndpointOverride: string,
-  initialData: radioSchedulesShape,
+  initialData: oneOfType([
+    shape(radioSchedulesShape),
+    arrayOf(shape(RadioScheduleData)),
+  ]),
   lang: string,
   className: string,
 };
