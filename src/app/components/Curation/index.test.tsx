@@ -16,7 +16,6 @@ import {
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../legacy/components/RadioSchedule/types';
-import radioSchedule from 'src/integration/common/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
@@ -56,7 +55,7 @@ const components = {
     visualStyle: NONE,
     visualProminence: NORMAL,
     curationType: 'radio-schedule',
-    radioSchedule: afriqueRadioSchedule
+    radioSchedule: afriqueRadioSchedule,
   },
 };
 
@@ -66,7 +65,7 @@ interface TestProps {
   promos?: Summary[];
   mostRead?: MostReadData;
   curationType?: string;
-  radioSchedule?: RadioScheduleData
+  radioSchedule?: RadioScheduleData[];
 }
 
 describe('Curation', () => {
@@ -78,7 +77,14 @@ describe('Curation', () => {
     `should render a %s component`,
     (
       testId: string, // testId is the key in the components object above
-      { visualStyle, visualProminence, promos, mostRead, curationType, radioSchedule }: TestProps,
+      {
+        visualStyle,
+        visualProminence,
+        promos,
+        mostRead,
+        curationType,
+        radioSchedule,
+      }: TestProps,
     ) => {
       console.log('radioSchedule in Curation tests', radioSchedule);
       // console.log('mostReadin Curation tests', mostRead);
@@ -89,12 +95,14 @@ describe('Curation', () => {
           promos={promos || []}
           mostRead={mostRead}
           curationType={curationType}
-          radioSchedule={radioSchedule}
+          radioSchedule={radioSchedule || []}
         />,
         {
           toggles: {
             mostRead: { enabled: true },
+            radioSchedule: { enabled: true },
           },
+          service: 'afrique',
         },
       );
 
