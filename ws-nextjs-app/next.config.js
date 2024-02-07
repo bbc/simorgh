@@ -25,12 +25,40 @@ module.exports = {
     externalDir: true,
   },
   env: {
-    // Only add client env vars in local development
-    // In preview, test and live, these are set on the Lambda function directly
-    ...(isLocal && clientEnvVars),
+    // Only add client env variables and values in local development
+    // In preview, test and live, the variables are set on the Lambda function directly and their values only read here
+    ...(isLocal
+      ? clientEnvVars
+      : {
+          // These are a subset of the env variables that are set on the Lambda function that need exposing to the client
+          SIMORGH_BASE_URL: process.env.SIMORGH_BASE_URL,
+          SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN:
+            process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+          SIMORGH_PUBLIC_STATIC_ASSETS_PATH:
+            process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+          SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
+          SIMORGH_CONFIG_URL: process.env.SIMORGH_CONFIG_URL,
+          SIMORGH_INCLUDES_BASE_URL: process.env.SIMORGH_INCLUDES_BASE_URL,
+          SIMORGH_INCLUDES_BASE_AMP_URL:
+            process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+          SIMORGH_ICHEF_BASE_URL: process.env.SIMORGH_ICHEF_BASE_URL,
+          SIMORGH_APP_ENV: process.env.SIMORGH_APP_ENV,
+          SIMORGH_CONFIG_CACHE_ITEMS: process.env.SIMORGH_CONFIG_CACHE_ITEMS,
+          SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS:
+            process.env.SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS,
+          SIMORGH_CONFIG_TIMEOUT_SECONDS:
+            process.env.SIMORGH_CONFIG_TIMEOUT_SECONDS,
+          SIMORGH_MOST_READ_CDN_URL: process.env.SIMORGH_MOST_READ_CDN_URL,
+          SIMORGH_WEBVITALS_REPORTING_ENDPOINT:
+            process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
+          SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE:
+            process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
+          SIMORGH_CSP_REPORTING_ENDPOINT:
+            process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          SIMORGH_OPTIMIZELY_SDK_KEY: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
+        }),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
-    SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
   },
   compiler: {
     emotion: true,
