@@ -5,6 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import RadioScheduleContainer from '#app/legacy/containers/RadioSchedule';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -14,7 +15,6 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
-import RadioScheduleContainer from '#app/legacy/containers/RadioSchedule';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -91,12 +91,12 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-  //     initialData,
-  // radioScheduleEndpointOverride,
-  // lang,
-  // className,
+      //     initialData,
+      // radioScheduleEndpointOverride,
+      // lang,
+      // className,
       console.log('in case RADIO_SCHEDULE', radioSchedule);
-      return radioSchedule && <RadioScheduleContainer initialData={radioSchedule} />
+      return <RadioScheduleContainer initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
