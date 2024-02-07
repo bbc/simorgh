@@ -4,6 +4,7 @@ import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
+import { radioSchedule as afriqueRadioSchedule } from '../../../../data/afrique/bbc_afrique_radio/scheduleInProcessedShape.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -14,6 +15,8 @@ import {
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
+import { RadioScheduleData } from '../../legacy/components/RadioSchedule/types';
+import radioSchedule from 'src/integration/common/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
@@ -49,6 +52,12 @@ const components = {
     visualProminence: NORMAL,
     mostRead: kyrgyzMostRead,
   },
+  'radio-schedule': {
+    visualStyle: NONE,
+    visualProminence: NORMAL,
+    curationType: 'radio-schedule',
+    radioSchedule: afriqueRadioSchedule
+  },
 };
 
 interface TestProps {
@@ -56,6 +65,8 @@ interface TestProps {
   visualProminence: VisualProminence;
   promos?: Summary[];
   mostRead?: MostReadData;
+  curationType?: string;
+  radioSchedule?: RadioScheduleData
 }
 
 describe('Curation', () => {
@@ -67,14 +78,18 @@ describe('Curation', () => {
     `should render a %s component`,
     (
       testId: string, // testId is the key in the components object above
-      { visualStyle, visualProminence, promos, mostRead }: TestProps,
+      { visualStyle, visualProminence, promos, mostRead, curationType, radioSchedule }: TestProps,
     ) => {
+      console.log('radioSchedule in Curation tests', radioSchedule);
+      // console.log('mostReadin Curation tests', mostRead);
       const { getByTestId } = render(
         <Curation
           visualStyle={visualStyle}
           visualProminence={visualProminence}
           promos={promos || []}
           mostRead={mostRead}
+          curationType={curationType}
+          radioSchedule={radioSchedule}
         />,
         {
           toggles: {

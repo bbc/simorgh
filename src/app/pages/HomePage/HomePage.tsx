@@ -86,11 +86,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualProminence,
                   summaries,
                   curationId,
+                  curationType,
                   title: curationTitle,
                   link,
                   position,
                   visualStyle,
                   mostRead,
+                  radioSchedule,
                 },
                 index,
               ) => {
@@ -115,6 +117,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
+                      curationType={curationType}
+                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }

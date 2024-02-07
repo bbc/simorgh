@@ -14,6 +14,7 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
+import RadioScheduleContainer from '#app/legacy/containers/RadioSchedule';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -21,6 +22,7 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
   MOST_READ,
+  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -47,9 +49,15 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
+  curationType,
+  radioSchedule,
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
-  const componentName = getComponentName(visualStyle, visualProminence);
+  const componentName = getComponentName(
+    visualStyle,
+    visualProminence,
+    curationType,
+  );
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -74,6 +82,7 @@ const Curation = ({
         />
       ) : null;
     case MOST_READ:
+      console.log('in case MOST_READ', mostRead);
       return (
         <MostRead
           data={mostRead}
@@ -81,6 +90,13 @@ const Curation = ({
           headingBackgroundColour={GHOST}
         />
       );
+    case RADIO_SCHEDULE:
+  //     initialData,
+  // radioScheduleEndpointOverride,
+  // lang,
+  // className,
+      console.log('in case RADIO_SCHEDULE', radioSchedule);
+      return <RadioScheduleContainer initialData={radioSchedule} />
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

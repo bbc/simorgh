@@ -480,52 +480,40 @@
         "visualProminence": "NORMAL",
         "radioSchedule": [
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-01-22T06:00:00.000Z",
-            "publishedTimeEnd": "2024-01-22T06:15:00.000Z",
-            "publishedTimeDuration": "PT15M",
-            "title": "Le Journal",
-            "brandPid": "p03p35rt",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w172z9v5y9h5lcf",
-            "broadcastPid": "p0h06c79",
-            "summary": "Le premier rendez-vous d'information de la matinée."
+            "id": "p086pmtv",
+            "state": "next",
+            "startTime": 1893488400000,
+            "link": "/afrique/bbc_afrique_radio/w172x35f0x552vh",
+            "brandTitle": "A Vous L'antenne",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+            "duration": "PT15M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-01-22T06:20:00.000Z",
-            "publishedTimeEnd": "2024-01-22T06:30:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "Au Coeur De L'actu",
-            "brandPid": "w13xtvfw",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w172z9kzj0g9lb7",
-            "broadcastPid": "p0h06c7f",
-            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+            "id": "p086pmts",
+            "state": "onDemand",
+            "startTime": 1585200600000,
+            "link": "/afrique/bbc_afrique_radio/w172x371xccjp2q",
+            "brandTitle": "Actu Monde",
+            "summary": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
+            "duration": "PT6M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-01-22T06:50:00.000Z",
-            "publishedTimeEnd": "2024-01-22T07:00:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "A Vous L'antenne",
-            "brandPid": "p030s6g6",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w172z9g90qr6s8h",
-            "broadcastPid": "p0h06c7p",
-            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+            "id": "p086pmv1",
+            "state": "onDemand",
+            "startTime": 1585199760000,
+            "link": "/afrique/bbc_afrique_radio/w172x6djbb3rg44",
+            "brandTitle": "Reportage",
+            "summary": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+            "duration": "PT8M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-01-22T07:00:00.000Z",
-            "publishedTimeEnd": "2024-01-22T07:10:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "Le Journal",
-            "brandPid": "p03p35rt",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w172z9ts6y5v1wx",
-            "broadcastPid": "p0h06kr5",
-            "summary": "Le premier rendez-vous d'information de la matinée."
+            "id": "p086pmtq",
+            "state": "onDemand",
+            "startTime": 1585199700000,
+            "link": "/afrique/bbc_afrique_radio/w172x5n20y5f68g",
+            "brandTitle": "Bulletin D'informations",
+            "summary": "Le tour du monde de l'actualité en 2 minutes ",
+            "duration": "PT1M"
           }
         ]
       },

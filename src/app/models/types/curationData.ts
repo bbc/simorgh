@@ -1,4 +1,5 @@
 import { MostReadData } from '../../components/MostRead/types';
+import { RadioScheduleData } from '#app/legacy/components/RadioSchedule/types';
 
 export interface Summary {
   imageUrl?: string;
@@ -36,6 +37,7 @@ export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
+  curationType?: string;
   promos?: Summary[];
   title?: string;
   link?: string;
@@ -45,6 +47,7 @@ export interface CurationProps {
   curationLength?: number;
   mostRead?: MostReadData;
   nthCurationByStyleAndProminence?: number;
+  radioSchedule?: RadioScheduleData;
 }
 
 export interface CurationData {
@@ -59,4 +62,5 @@ export interface CurationData {
   pageCount?: number;
   curationType?: string;
   mostRead?: MostReadData;
+  radioSchedule?: RadioScheduleData;
 }
