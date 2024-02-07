@@ -8,7 +8,6 @@ import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
  *                  an embed is allowed to load.
  */
 const MAX_WIDTH = '31.25rem';
-export const LAZYLOAD_OFFSET = 250;
 
 const getWrapperHeightStyles = oEmbed => {
   /**
@@ -27,7 +26,7 @@ const getWrapperHeightStyles = oEmbed => {
   return '';
 };
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
   ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
@@ -36,3 +35,5 @@ export const Wrapper = styled.div`
     min-height: 0;
   }
 `;
+
+export default Wrapper;
