@@ -574,7 +574,7 @@ describe('IndexPageSection Container', () => {
       const image = images[0];
 
       expect(image.getAttribute('src')).toEqual(
-        'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
+        'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image1.jpg',
       );
     });
 
