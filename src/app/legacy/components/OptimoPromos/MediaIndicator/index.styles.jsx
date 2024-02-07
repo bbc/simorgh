@@ -11,8 +11,8 @@ export const MediaIndicatorAlignment = styled.div`
   align-items: center;
   height: 100%;
   > svg {
-    @media screen and (-ms-high-contrast: active) {
-      fill: ${props => props.theme.palette.WHITE};
+    @media screen and (forced-colors: active) {
+      fill: canvasText;
     }
   }
 `;
