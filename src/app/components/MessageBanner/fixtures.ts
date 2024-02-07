@@ -6,7 +6,7 @@ const kyrgyzMessageBannerOnePromo = {
       firstPublished: '',
       link: 'https://www.bbc.com/kyrgyz',
       imageUrl:
-        'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
+        'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
       description:
         'Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.',
       imageAlt: 'alt text',
@@ -31,7 +31,7 @@ const kyrgyzMessageBannerTwoPromos = {
       firstPublished: '2016-11-09T03:55:21.000Z',
       link: 'https://www.bbc.com/kyrgyz/world-23090100',
       imageUrl:
-        'https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
+        'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
       description:
         'Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.',
       imageAlt: 'Trump',
@@ -43,7 +43,7 @@ const kyrgyzMessageBannerTwoPromos = {
       firstPublished: '2017-02-24T12:04:09.000Z',
       link: 'https://www.bbc.com/kyrgyz/23103378',
       imageUrl:
-        'https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1086C/test/_63529676_000141412-1.jpg',
+        'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/1086C/test/_63529676_000141412-1.jpg',
       description:
         'Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.',
       imageAlt: "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",

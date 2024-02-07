@@ -19,6 +19,7 @@ const useViewTracker = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
   const optimizely = path(['optimizely'], props);
+  const detailedPlacement = props?.detailedPlacement;
 
   const observer = useRef();
   const timer = useRef(null);
@@ -97,6 +98,7 @@ const useViewTracker = (props = {}) => {
             type: EVENT_TYPE,
             advertiserID,
             url,
+            detailedPlacement,
           });
           setEventSent(true);
           observer.current.disconnect();
@@ -127,6 +129,7 @@ const useViewTracker = (props = {}) => {
     advertiserID,
     url,
     optimizely,
+    detailedPlacement,
   ]);
 
   return async element => {
