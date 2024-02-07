@@ -68,7 +68,7 @@ CaptionWrapper.propTypes = {
   service: string.isRequired,
   text: string.isRequired,
   additionalText: string,
-  descById: string,
+  describedById: string,
 };
 
 export default CaptionWrapper;
