@@ -66,18 +66,28 @@ export const CanonicalSocialEmbed = ({
     );
 
   return (
-    <SkipLinkWrapper
-      service={service}
-      provider={provider}
-      {...(embedCaption && { describedById: captionId })}
-      {...skipLink}
-    >
-      {embedCaption ? (
-        <CaptionWrapper
-          service={service}
-          describedById={captionId}
-          {...embedCaption}
-        >
+    <>
+      <SkipLinkWrapper
+        service={service}
+        provider={provider}
+        {...(embedCaption && { describedById: captionId })}
+        {...skipLink}
+      >
+        {embedCaption ? (
+          <CaptionWrapper
+            service={service}
+            describedById={captionId}
+            {...embedCaption}
+          >
+            <EmbedConsentBannerCanonical provider={provider}>
+              <CanonicalEmbed
+                provider={provider}
+                oEmbed={oEmbed}
+                onRender={onRender}
+              />
+            </EmbedConsentBannerCanonical>
+          </CaptionWrapper>
+        ) : (
           <EmbedConsentBannerCanonical provider={provider}>
             <CanonicalEmbed
               provider={provider}
@@ -85,17 +95,12 @@ export const CanonicalSocialEmbed = ({
               onRender={onRender}
             />
           </EmbedConsentBannerCanonical>
-        </CaptionWrapper>
-      ) : (
-        <EmbedConsentBannerCanonical provider={provider}>
-          <CanonicalEmbed
-            provider={provider}
-            oEmbed={oEmbed}
-            onRender={onRender}
-          />
-        </EmbedConsentBannerCanonical>
-      )}
-    </SkipLinkWrapper>
+        )}
+      </SkipLinkWrapper>
+      <noscript>
+        <Notice service={service} provider={provider} {...fallback} />
+      </noscript>
+    </>
   );
 };
 
