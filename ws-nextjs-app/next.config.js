@@ -4,7 +4,6 @@ const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezon
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
-const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -28,7 +27,7 @@ module.exports = {
     // Only add client env variables and values in local development
     // In preview, test and live, the variables are set on the Lambda function directly and their values only read here
     ...(isLocal
-      ? clientEnvVars
+      ? getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })
       : {
           // These are a subset of the env variables that are set on the Lambda function that need exposing to the client
           SIMORGH_BASE_URL: process.env.SIMORGH_BASE_URL,
