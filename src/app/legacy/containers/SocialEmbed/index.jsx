@@ -71,16 +71,14 @@ const SocialEmbedContainer = ({ blocks, source }) => {
             source={source}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
-            <CanonicalSocialEmbed
-              provider={provider}
-              service={service}
-              oEmbed={oEmbed}
-              fallback={fallback}
-              skipLink={skipLink}
-              caption={caption}
-            />
-          </Lazyload>
+          <CanonicalSocialEmbed
+            provider={provider}
+            service={service}
+            oEmbed={oEmbed}
+            fallback={fallback}
+            skipLink={skipLink}
+            caption={caption}
+          />
         )}
       </Wrapper>
     </GridItemMedium>
