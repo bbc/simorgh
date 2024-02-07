@@ -312,11 +312,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ウクライナ侵攻',
-        url: '/japanese/60631515',
+        url: '/japanese/topics/c50vpymk750t',
       },
       {
         title: '気候変動',
-        url: '/japanese/58771282',
+        url: '/japanese/topics/c2dwqjr27zjt',
       },
       {
         title: '日本',
@@ -336,7 +336,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: '解説・読み物',
-        url: '/japanese/features-and-analysis-54539120',
+        url: '/japanese/topics/c2xj7ep5812t',
       },
       {
         title: 'ビデオ',
