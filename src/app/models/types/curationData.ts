@@ -62,5 +62,5 @@ export interface CurationData {
   pageCount?: number;
   curationType?: string;
   mostRead?: MostReadData;
-  radioSchedule?: RadioScheduleData;
+  radioSchedule?: RadioScheduleData[];
 }
