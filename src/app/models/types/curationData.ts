@@ -1,5 +1,5 @@
-import { MostReadData } from '../../components/MostRead/types';
 import { RadioScheduleData } from '#app/legacy/components/RadioSchedule/types';
+import { MostReadData } from '../../components/MostRead/types';
 
 export interface Summary {
   imageUrl?: string;
@@ -47,7 +47,7 @@ export interface CurationProps {
   curationLength?: number;
   mostRead?: MostReadData;
   nthCurationByStyleAndProminence?: number;
-  radioSchedule?: RadioScheduleData;
+  radioSchedule?: RadioScheduleData[];
 }
 
 export interface CurationData {
