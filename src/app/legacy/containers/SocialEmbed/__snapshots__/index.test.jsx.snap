@@ -107,8 +107,16 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -420,6 +428,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -531,8 +540,16 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -747,6 +764,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
         End of Facebook content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -855,11 +873,18 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 55.5rem;
+}
+
+min-height:55.5rem .no-js .emotion-2 {
+  min-height: 0;
 }
 
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -1071,6 +1096,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
         End of Facebook content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1182,8 +1208,16 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -1495,6 +1529,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
         End of TikTok content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1606,8 +1641,16 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -1797,6 +1840,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1905,11 +1949,18 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 7.0625rem;
+}
+
+min-height:7.0625rem .no-js .emotion-2 {
+  min-height: 0;
 }
 
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -2221,6 +2272,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
         End of YouTube content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -2332,8 +2384,16 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -2516,6 +2576,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
         End of Instagram content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;

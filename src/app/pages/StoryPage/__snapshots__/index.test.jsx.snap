@@ -1118,6 +1118,10 @@ exports[`Story Page should render correctly when the secondary column data is no
   min-height: 14rem;
 }
 
+.no-js .emotion-113 {
+  min-height: 0;
+}
+
 .emotion-120 {
   margin-top: 0.5rem;
 }
@@ -3897,6 +3901,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 14rem;
+}
+
+.no-js .emotion-113 {
+  min-height: 0;
 }
 
 .emotion-120 {
