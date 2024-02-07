@@ -1175,6 +1175,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1225,7 +1226,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
         Skip YouTube content
       </span>
     </a>
-    <figure
+    <div
       class="emotion-4 emotion-5"
     >
       <div
@@ -1281,12 +1282,12 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
           width="16"
         />
       </div>
-      <figcaption
+      <small
         class="emotion-10 emotion-11"
       >
         undefined
-      </figcaption>
-    </figure>
+      </small>
+    </div>
     <p
       class="emotion-12 emotion-13"
       id="skip-youtube-content"
@@ -1800,6 +1801,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1842,6 +1844,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
+    aria-describedby=":r9:"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1849,7 +1852,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
       Skip YouTube content
     </span>
   </a>
-  <figure
+  <div
     class="emotion-4 emotion-5"
   >
     <div
@@ -1864,15 +1867,13 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
         width="480"
       />
     </div>
-    <figcaption
+    <small
       class="emotion-8 emotion-9"
+      id=":r9:"
     >
-      <span>
-        Video caption, 
-      </span>
       undefined
-    </figcaption>
-  </figure>
+    </small>
+  </div>
   <p
     class="emotion-10 emotion-11"
     id="skip-youtube-content"
