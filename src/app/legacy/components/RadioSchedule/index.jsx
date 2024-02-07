@@ -67,10 +67,10 @@ const programGridProps = {
 
 const RadioSchedule = ({ schedule, ...props }) => {
   const { dir } = useContext(ServiceContext);
-console.log('inside RadioSchedule component', schedule, 'props', props);
-if(schedule.hasOwnProperty('radioSchedule')){
-schedule = schedule.radioSchedule;
-}
+  // console.log('inside RadioSchedule component', schedule, 'props', props);
+  // if (schedule.hasOwnProperty('radioSchedule')) {
+  //   schedule = schedule.radioSchedule;
+  // }
   const eventTrackingData = {
     componentName: 'radio-schedule',
   };
