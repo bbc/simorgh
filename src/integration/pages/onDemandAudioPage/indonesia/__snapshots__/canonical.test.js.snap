@@ -104,14 +104,14 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Liputan Mendalam",
-  "url": "/indonesia/laporan-khusus-51267199",
+  "url": "/indonesia/topics/cw9qgeqd18zt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Majalah",
-  "url": "/indonesia/majalah-51456120",
+  "url": "/indonesia/topics/cpxrqmrkeg8t",
 }
 `;
 
