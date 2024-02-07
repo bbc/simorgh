@@ -30,6 +30,7 @@ module.exports = {
     ...(isLocal && clientEnvVars),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
+    SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
   },
   compiler: {
     emotion: true,
