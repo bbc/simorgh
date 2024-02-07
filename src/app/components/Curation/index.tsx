@@ -96,7 +96,7 @@ const Curation = ({
   // lang,
   // className,
       console.log('in case RADIO_SCHEDULE', radioSchedule);
-      return <RadioScheduleContainer initialData={radioSchedule} />
+      return radioSchedule && <RadioScheduleContainer initialData={radioSchedule} />
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
