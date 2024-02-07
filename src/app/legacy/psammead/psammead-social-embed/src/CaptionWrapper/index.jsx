@@ -37,7 +37,7 @@ const CaptionWrapper = ({
   service,
   text,
   additionalText,
-  descById,
+  describedById,
 }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
@@ -47,7 +47,7 @@ const CaptionWrapper = ({
     <Container isTransparentPage={isTransparentPage}>
       {children}
       <WarningText
-        {...(descById && { id: descById })}
+        {...(describedById && { id: describedById })}
         isTransparentPage={isTransparentPage}
         isLive={isLive}
         service={service}
@@ -60,7 +60,7 @@ const CaptionWrapper = ({
 
 CaptionWrapper.defaultProps = {
   additionalText: null,
-  descById: null,
+  describedById: null,
 };
 
 CaptionWrapper.propTypes = {

@@ -69,13 +69,13 @@ export const CanonicalSocialEmbed = ({
     <SkipLinkWrapper
       service={service}
       provider={provider}
-      {...(embedCaption && { descById: captionId })}
+      {...(embedCaption && { describedById: captionId })}
       {...skipLink}
     >
       {embedCaption ? (
         <CaptionWrapper
           service={service}
-          descById={captionId}
+          describedById={captionId}
           {...embedCaption}
         >
           <EmbedConsentBannerCanonical provider={provider}>

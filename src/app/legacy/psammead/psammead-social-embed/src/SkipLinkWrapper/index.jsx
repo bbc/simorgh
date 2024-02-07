@@ -57,7 +57,7 @@ const SkipLinkWrapper = ({
   text,
   children,
   endTextVisuallyHidden,
-  descById,
+  describedById,
 }) => {
   const dictionary = dictionaryFactory({ provider });
   return (
@@ -66,7 +66,7 @@ const SkipLinkWrapper = ({
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
         className="focusIndicatorRemove"
-        {...(descById && { 'aria-describedby': descById })}
+        {...(describedById && { 'aria-describedby': describedById })}
       >
         <span>{detokenise(text, dictionary)}</span>
       </SkipLink>
@@ -79,7 +79,7 @@ const SkipLinkWrapper = ({
 };
 
 SkipLinkWrapper.defaultProps = {
-  descById: null,
+  describedById: null,
 };
 
 SkipLinkWrapper.propTypes = {
@@ -89,7 +89,7 @@ SkipLinkWrapper.propTypes = {
   children: node.isRequired,
   text: string.isRequired,
   endTextVisuallyHidden: string.isRequired,
-  descById: string,
+  describedById: string,
 };
 
 export default SkipLinkWrapper;
