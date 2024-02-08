@@ -2080,6 +2080,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
       End of unknown content
     </p>
   </div>
+  <noscript />
 </div>
 `;
 
@@ -2247,5 +2248,6 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       End of Twitter content
     </p>
   </div>
+  <noscript />
 </div>
 `;

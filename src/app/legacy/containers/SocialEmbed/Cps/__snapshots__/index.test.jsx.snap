@@ -927,6 +927,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;

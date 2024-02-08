@@ -60,9 +60,14 @@ export const CanonicalSocialEmbed = ({
 
   if (!isSupportedProvider || !oEmbed)
     return (
-      <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-        <Notice service={service} provider={provider} {...fallback} />
-      </SkipLinkWrapper>
+      <>
+        <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
+          <Notice service={service} provider={provider} {...fallback} />
+        </SkipLinkWrapper>
+        <noscript>
+          <Notice service={service} provider={provider} {...fallback} />
+        </noscript>
+      </>
     );
 
   return (
