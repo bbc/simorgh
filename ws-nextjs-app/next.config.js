@@ -10,7 +10,7 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 const isLocal =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
