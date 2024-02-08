@@ -20,10 +20,10 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
-      "label": ""
+      "url": "https://docs.google.com/spreadsheets/d/19hnmvykMfe3ycmNznFAUrbgH7LETGuP_2IpqolW608A/edit?usp=drive_link",
+      "label": "Accessibility Swarm"
     }
   }
 }

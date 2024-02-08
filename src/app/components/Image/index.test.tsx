@@ -170,13 +170,13 @@ describe('Image - Canonical', () => {
     });
   });
 
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
+  it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
     render(<Fixture width={undefined} height={undefined} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
-      paddingBottom: '56.25%',
+      paddingBottom: '0',
     });
   });
 
@@ -204,7 +204,11 @@ describe('Image - Canonical', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image alt="Test image alt text" src="/test-image-500.jpg" />,
+      <Image
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        aspectRatio={[16, 9]}
+      />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -225,6 +229,7 @@ describe('Image - Canonical', () => {
         alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        aspectRatio={[16, 9]}
       />,
     );
 
@@ -353,13 +358,13 @@ describe('Image - AMP pages', () => {
     });
   });
 
-  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
+  it('should render the container with no fixed aspect ratio if no width, height or aspect ratio is provided', () => {
     render(<Fixture width={undefined} height={undefined} isAmp />);
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
-      paddingBottom: '56.25%',
+      paddingBottom: 0,
     });
   });
 
@@ -392,7 +397,12 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image isAmp alt="Test image alt text" src="/test-image-500.jpg" />,
+      <Image
+        isAmp
+        alt="Test image alt text"
+        src="/test-image-500.jpg"
+        aspectRatio={[16, 9]}
+      />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -416,6 +426,7 @@ describe('Image - AMP pages', () => {
         alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        aspectRatio={[16, 9]}
       />,
     );
 
@@ -445,6 +456,7 @@ describe('Image - AMP pages', () => {
         mediaType="image/webp"
         fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         fallbackMediaType="image/jpeg"
+        aspectRatio={[16, 9]}
       />,
     );
 
