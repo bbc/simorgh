@@ -22,6 +22,11 @@ type ComponentProps = {
     title: string;
     description?: string;
     isLive: boolean;
+    headerImage?: {
+      url: string;
+      urlTemplate: string;
+      width: number;
+    } | null;
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: {
       content: StreamResponse | null;
@@ -47,7 +52,14 @@ const LivePage = ({ pageData }: ComponentProps) => {
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
+    headerImage,
   } = pageData;
+
+  const {
+    url: imageUrl,
+    urlTemplate: imageUrlTemplate,
+    width: imageWidth,
+  } = headerImage || {};
 
   const { index: activePage, total: pageCount } =
     liveTextStream?.content?.data?.page || {};
@@ -100,6 +112,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
           showLiveLabel={isLive}
           title={title}
           description={description}
+          imageUrl={imageUrl}
+          imageUrlTemplate={imageUrlTemplate}
+          imageWidth={imageWidth}
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
