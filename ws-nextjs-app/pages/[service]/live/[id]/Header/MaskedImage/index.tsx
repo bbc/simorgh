@@ -35,14 +35,13 @@ const MaskedImage = ({
   return (
     <div
       css={[
-        styles.maskedImage,
+        styles.maskedImageWrapper,
         isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
       ]}
     >
       <Image
         alt=""
         src={imageUrl}
-        aspectRatio={[16, 9]}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
