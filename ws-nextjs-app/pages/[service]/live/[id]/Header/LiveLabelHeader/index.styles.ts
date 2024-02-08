@@ -24,6 +24,9 @@ const styles = {
         width: `${spacings.QUADRUPLE}rem`,
         height: `${spacings.QUADRUPLE}rem`,
       },
+      [mq.HIGH_CONTRAST]: {
+        color: 'canvasText',
+      },
     }),
   liveLabelTextWithImage: ({ palette }: Theme) =>
     css({
