@@ -8,7 +8,7 @@ describe('getIchefURL', () => {
       resolution: '660',
     };
     const expectedOutput =
-      'https://ichef.bbci.co.uk/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg';
+      'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg';
 
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
@@ -21,7 +21,7 @@ describe('getIchefURL', () => {
       isWebP: true,
     };
     const expectedOutput =
-      'https://ichef.bbci.co.uk/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp';
+      'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp';
 
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
@@ -36,7 +36,7 @@ describe('getIchefURL', () => {
     };
 
     const expectedOutput =
-      'https://ichef.bbci.co.uk/news/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg';
+      'https://ichef.bbci.co.uk/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg';
 
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
