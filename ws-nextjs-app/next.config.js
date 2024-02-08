@@ -4,14 +4,13 @@ const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezon
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
-const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 const isLocal =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -27,7 +26,7 @@ module.exports = {
   env: {
     ...(isLocal
       ? // Add all env variables to the client when running locally
-        clientEnvVars
+        getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })
       : {
           // Expose subset of env variables to the client when on preview, test or live
           // The rest are set directly on the Lambda and accessible via process.env on the server
