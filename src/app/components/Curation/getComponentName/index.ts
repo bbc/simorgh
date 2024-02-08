@@ -25,10 +25,11 @@ const {
   RADIO_SCHEDULE
 } = COMPONENT_NAMES;
 
-export default (
-  visualStyle: VisualStyle,
-  visualProminence: VisualProminence,
+export default ({
+  visualStyle,
+  visualProminence,
   curationType = ''
+  }: Curation) 
 ) => {
 
   if(curationType === 'radio-schedule'){
