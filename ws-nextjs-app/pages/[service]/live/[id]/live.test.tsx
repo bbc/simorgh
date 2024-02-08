@@ -27,6 +27,15 @@ const mockPageData = {
     },
     contributors: 'Not a random dude',
   },
+  headerImage: {
+    url: 'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    urlTemplate:
+      'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Man',
+    copyright: 'BBC',
+  },
 };
 
 const mockPageDataWithPosts = {
@@ -246,6 +255,18 @@ describe('Live Page', () => {
     expect(
       screen.getByText('Pidgin test 2 - the description'),
     ).toBeInTheDocument();
+  });
+
+  it('should render the live page header image if provided', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    const headerImage = screen.getByRole('img');
+    expect(headerImage).toHaveAttribute(
+      'src',
+      'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    );
   });
 
   it('should render the key points section', async () => {
