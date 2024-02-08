@@ -132,6 +132,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    color: canvasText;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .emotion-7 {
     -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
