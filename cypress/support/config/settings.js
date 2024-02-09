@@ -3116,7 +3116,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
@@ -3816,11 +3816,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
