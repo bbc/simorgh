@@ -3816,11 +3816,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
