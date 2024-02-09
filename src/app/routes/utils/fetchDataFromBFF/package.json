@@ -2,7 +2,11 @@
   "browser": "client.js",
   "main": "index.ts",
   "types": "index.d.ts",
-  "name": "src/app/routes/utils/fetchDataFromBFF",
+  "sideEffects": [
+    "../../../../../src/app/legacy/psammead/moment-timezone-include/**/*.*",
+    "../../../../../src/app/legacy/psammead/psammead-locales/**/*.*",
+    "../../../../../cypress/**/*.*"
+  ],
   "eslintConfig": {
     "parserOptions": {
       "parser": "@babel/eslint-parser",
