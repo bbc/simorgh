@@ -5,7 +5,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useLocation from '#hooks/useLocation';
 import useToggle from '#hooks/useToggle';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
-import { RadioScheduleData } from '#app/models/types/types';
+import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import radioSchedulesShape from './utilities/radioScheduleShape';
