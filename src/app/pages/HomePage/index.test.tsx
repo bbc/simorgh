@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
@@ -21,20 +22,31 @@ const homePageData = {
   },
 };
 
+const afriqueHomePageData = {
+  title: afriqueHomePageDataFixture.title,
+  description: afriqueHomePageDataFixture.description,
+  curations: afriqueHomePageDataFixture.curations,
+  metadata: {
+    ...afriqueHomePageDataFixture.metadata,
+    type: 'home',
+  },
+};
+
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it('should render a section for each curation with summaries', () => {
-    const { container } = render(<HomePage pageData={homePageData} />, {
-      service: 'kyrgyz',
+    const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
+      service: 'afrique',
       toggles: {
         mostRead: { enabled: true },
+        radioSchedule: { enabled: true },
       },
     });
-
-    const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
-      ({ summaries, mostRead }) =>
-        (summaries && summaries?.length > 0) || mostRead,
+    console.log('curations', afriqueHomePageData.curations);
+    const curationsWithSummaries = afriqueHomePageDataFixture.curations.filter(
+      ({ summaries, mostRead, radioSchedule }) =>
+        (summaries && summaries?.length > 0) || mostRead || radioSchedule,
     );
 
     expect(container).not.toBeEmptyDOMElement();
