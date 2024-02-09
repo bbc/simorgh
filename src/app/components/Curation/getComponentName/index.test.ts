@@ -17,27 +17,23 @@ const {
 
 describe('getComponentName', () => {
   it.each`
-    visualStyle     | visualProminence     | expected
-    ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
-    ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
-    ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
-    ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
-    ${BANNER}       | ${MAXIMUM}           | ${NOT_SUPPORTED}
-    ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
-    ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
-    ${COLLECTION}   | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
-    ${RANKED}       | ${NORMAL}            | ${MOST_READ}
-    ${'fake-style'} | ${'fake-prominence'} | ${null}
+    visualStyle     | visualProminence     | curationType        | expected
+    ${BANNER}       | ${MINIMUM}           | ${null}             | ${NOT_SUPPORTED}
+    ${BANNER}       | ${LOW}               | ${null}             | ${NOT_SUPPORTED}
+    ${BANNER}       | ${NORMAL}            | ${null}             | ${MESSAGE_BANNER}
+    ${BANNER}       | ${HIGH}              | ${null}             | ${NOT_SUPPORTED}
+    ${BANNER}       | ${MAXIMUM}           | ${null}             | ${NOT_SUPPORTED}
+    ${NONE}         | ${NORMAL}            | ${null}             | ${SIMPLE_CURATION_GRID}
+    ${NONE}         | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
+    ${COLLECTION}   | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
+    ${RANKED}       | ${NORMAL}            | ${null}             | ${MOST_READ}
+    ${NONE}         | ${NORMAL}            | ${'radio-schedule'} | ${RADIO_SCHEDULE}
+    ${'fake-style'} | ${'fake-prominence'} | ${null}             | ${null}
   `(
-    'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
-    ({ visualStyle, visualProminence, expected }) => {
-      expect(getComponentName(visualStyle, visualProminence)).toBe(expected);
+    'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence and curation type is $curationType',
+    ({ visualStyle, visualProminence, curationType, expected }) => {
+      expect(getComponentName({visualStyle, visualProminence, curationType})).toBe(expected);
+      
     },
   );
-  // Include this test in the table above instead even though we are using the extra optional argument?
-  it('should return radio schedule when curationType is radio-schedule and visual style is NONE and visualProminence is NORMAL', () => {
-    expect(getComponentName(NONE, 'NORMAL', 'radio-schedule')).toBe(
-      `${RADIO_SCHEDULE}`,
-    );
-  });
 });
