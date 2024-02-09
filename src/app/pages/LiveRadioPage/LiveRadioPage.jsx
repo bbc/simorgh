@@ -55,7 +55,7 @@ const LiveRadioPage = ({ pageData }) => {
     translations,
   );
   const hasRadioScheduleData = Boolean(radioScheduleData);
-console.log('in live radio page', radioScheduleData);
+
   return (
     <>
       <ATIAnalytics data={pageData} />

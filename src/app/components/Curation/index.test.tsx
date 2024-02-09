@@ -86,8 +86,6 @@ describe('Curation', () => {
         radioSchedule,
       }: TestProps,
     ) => {
-      console.log('radioSchedule in Curation tests', radioSchedule);
-      // console.log('mostReadin Curation tests', mostRead);
       const { getByTestId } = render(
         <Curation
           visualStyle={visualStyle}

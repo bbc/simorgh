@@ -31,13 +31,13 @@ describe('getComponentName', () => {
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
-      console.log(getComponentName(visualStyle, visualProminence));
       expect(getComponentName(visualStyle, visualProminence)).toBe(expected);
-      
     },
   );
   // Include this test in the table above instead even though we are using the extra optional argument?
   it('should return radio schedule when curationType is radio-schedule and visual style is NONE and visualProminence is NORMAL', () => {
-    expect(getComponentName(NONE, 'NORMAL', 'radio-schedule')).toBe(`${RADIO_SCHEDULE}`);
+    expect(getComponentName(NONE, 'NORMAL', 'radio-schedule')).toBe(
+      `${RADIO_SCHEDULE}`,
+    );
   });
 });

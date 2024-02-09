@@ -82,7 +82,6 @@ const Curation = ({
         />
       ) : null;
     case MOST_READ:
-      console.log('in case MOST_READ', mostRead);
       return (
         <MostRead
           data={mostRead}
@@ -95,7 +94,6 @@ const Curation = ({
       // radioScheduleEndpointOverride,
       // lang,
       // className,
-      console.log('in case RADIO_SCHEDULE', radioSchedule);
       return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
