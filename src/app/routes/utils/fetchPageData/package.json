@@ -1,6 +1,7 @@
 {
   "browser": "client.js",
   "main": "index.js",
+  "name": "src/app/routes/utils/fetchPageData",
   "eslintConfig": {
     "parserOptions": {
       "parser": "@babel/eslint-parser",

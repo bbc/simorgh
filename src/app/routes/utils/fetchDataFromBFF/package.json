@@ -2,6 +2,7 @@
   "browser": "client.js",
   "main": "index.ts",
   "types": "index.d.ts",
+  "name": "src/app/routes/utils/fetchDataFromBFF",
   "eslintConfig": {
     "parserOptions": {
       "parser": "@babel/eslint-parser",
