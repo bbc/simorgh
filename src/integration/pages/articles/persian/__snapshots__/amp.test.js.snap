@@ -247,13 +247,6 @@ exports[`AMP Articles Header Navigation link should match text and url 12`] = `
 }
 `;
 
-exports[`AMP Articles Header Navigation link should match text and url 13`] = `
-{
-  "text": "رادیو",
-  "url": "/persian/tv-and-radio-37434376",
-}
-`;
-
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
