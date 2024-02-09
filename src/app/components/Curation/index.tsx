@@ -54,9 +54,9 @@ const Curation = ({
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
   const componentName = getComponentName(
-    visualStyle,
+    {visualStyle,
     visualProminence,
-    curationType,
+    curationType}
   );
   const GridComponent = getGridComponent(componentName);
 
@@ -90,10 +90,7 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-      //     initialData,
-      // radioScheduleEndpointOverride,
-      // lang,
-      // className,
+      console.log('in case RADIO_SCHEDULE', radioSchedule);
       return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
