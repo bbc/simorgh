@@ -30,11 +30,11 @@ const styles = {
     }),
   liveLabelTextWithImage: ({ palette }: Theme) =>
     css({
-      'span:first-child': { color: palette.LIVE_LIGHT },
+      'span:first-of-type': { color: palette.LIVE_LIGHT },
     }),
   liveLabelTextWithoutImage: ({ mq, palette }: Theme) =>
     css({
-      'span:first-child': {
+      'span:first-of-type': {
         display: 'inline-flex',
         color: palette.LIVE_LIGHT,
         'overflow-wrap': 'anywhere',
