@@ -15,7 +15,7 @@ import {
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
-import { RadioScheduleData } from '../../legacy/components/RadioSchedule/types';
+import { RadioScheduleData } from '../../models/types/types';
 
 jest.mock('../ThemeProvider');
 
