@@ -48,6 +48,9 @@ export default ({
             url: defaultImage,
           },
         },
+        mainEntityOfPage: url,
+        // @ts-ignore - deeply nested
+        articleBody: paragraphBlocks.map(block => block.model.text).join(' '),
         ...(imageBlock && {
           image: buildIChefURL({
             locator: imageSource?.model?.locator,
@@ -55,11 +58,12 @@ export default ({
             resolution: 640,
           }),
         }),
-        datePublished: result?.dates?.firstPublished,
-        dateModified: result?.dates?.lastPublished,
-        mainEntityOfPage: url,
-        // @ts-ignore - deeply nested
-        articleBody: paragraphBlocks.map(block => block.model.text).join(' '),
+        ...(result?.dates?.firstPublished && {
+          datePublished: result?.dates?.firstPublished,
+        }),
+        ...(result?.dates?.lastPublished && {
+          dateModified: result?.dates?.lastPublished,
+        }),
       };
     }),
   };
