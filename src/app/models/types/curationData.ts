@@ -1,4 +1,4 @@
-import { RadioScheduleData } from '#app/models/types/types';
+import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
 export interface Summary {
