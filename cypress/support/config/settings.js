@@ -3116,7 +3116,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
