@@ -1,6 +1,4 @@
 import {
-  VisualStyle,
-  VisualProminence,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
   CurationProps,
