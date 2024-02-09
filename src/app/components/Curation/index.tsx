@@ -5,7 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import RadioScheduleContainer from '#app/legacy/containers/RadioSchedule';
+import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -96,7 +96,7 @@ const Curation = ({
       // lang,
       // className,
       console.log('in case RADIO_SCHEDULE', radioSchedule);
-      return <RadioScheduleContainer initialData={radioSchedule} />;
+      return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

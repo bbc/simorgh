@@ -10,7 +10,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import radioSchedulesShape from './utilities/radioScheduleShape';
 
-const RadioScheduleContainer = ({
+const RadioSchedule = ({
   initialData,
   radioScheduleEndpointOverride,
   lang,
@@ -45,7 +45,7 @@ const RadioScheduleContainer = ({
   );
 };
 
-RadioScheduleContainer.propTypes = {
+RadioSchedule.propTypes = {
   radioScheduleEndpointOverride: string,
   initialData: oneOfType([
     shape(radioSchedulesShape),
@@ -55,11 +55,11 @@ RadioScheduleContainer.propTypes = {
   className: string,
 };
 
-RadioScheduleContainer.defaultProps = {
+RadioSchedule.defaultProps = {
   radioScheduleEndpointOverride: null,
   initialData: undefined,
   lang: null,
   className: '',
 };
 
-export default RadioScheduleContainer;
+export default RadioSchedule;
