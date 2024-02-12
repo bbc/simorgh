@@ -10,7 +10,7 @@ export const COMPONENT_NAMES = {
   HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
-  RADIO_SCHEDULE: 'radio-schedule'
+  RADIO_SCHEDULE: 'radio-schedule',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -21,20 +21,19 @@ const {
   HIERARCHICAL_CURATION_GRID,
   MOST_READ,
   NOT_SUPPORTED,
-  RADIO_SCHEDULE
+  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
   visualProminence,
-  curationType = ''
-  }: CurationProps) => {
-
-// There are more combinations possible now that curationType is added.
-// I am thinking about adding more of these for the NOT_SUPPORTED types to 
-// make this safer. But as this process of choosing a radio-schedule with a different
-// curation type might change, I am going to hold off until I read the slack
-// messages again
+  curationType = '',
+}: CurationProps) => {
+  // There are more combinations possible now that curationType is added.
+  // I am thinking about adding more of these for the NOT_SUPPORTED types to
+  // make this safer. But as this process of choosing a radio-schedule with a different
+  // curation type might change, I am going to hold off until I read the slack
+  // messages again
 
   const componentsByVisualStyleAndProminenceAndCurationType = {
     [`${BANNER}_${MINIMUM}_${null}`]: NOT_SUPPORTED,
@@ -51,5 +50,9 @@ export default ({
 
   const visualStyleAndProminenceAndCurationType = `${visualStyle}_${visualProminence}_${curationType}`;
 
-  return componentsByVisualStyleAndProminenceAndCurationType[visualStyleAndProminenceAndCurationType] || null;
+  return (
+    componentsByVisualStyleAndProminenceAndCurationType[
+      visualStyleAndProminenceAndCurationType
+    ] || null
+  );
 };
