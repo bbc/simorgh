@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Post } from '../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
@@ -34,7 +33,7 @@ export default ({
 
         const imageBlock = contentBlocks.find(block => block.type === 'image');
 
-        // @ts-ignore - deeply nested
+        // @ts-expect-error - deeply nested
         const imageSource = imageBlock?.model?.blocks.find(
           (block: OptimoBlock) => block.type === 'rawImage',
         );
@@ -42,7 +41,7 @@ export default ({
         return {
           '@type': 'BlogPosting',
           headline:
-            // @ts-ignore - deeply nested
+            // @ts-expect-error - deeply nested
             headlineBlock?.model.blocks[0].model.blocks[0].model.text ?? null,
           publisher: {
             '@type': 'Organization',
@@ -53,7 +52,7 @@ export default ({
             },
           },
           mainEntityOfPage: url,
-          // @ts-ignore - deeply nested
+          // @ts-expect-error - deeply nested
           articleBody: paragraphBlocks.map(block => block.model.text).join(' '),
           ...(imageBlock && {
             image: buildIChefURL({
