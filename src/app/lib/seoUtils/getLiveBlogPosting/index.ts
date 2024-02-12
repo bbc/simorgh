@@ -17,54 +17,59 @@ export default ({
   if (!posts) return null;
 
   return {
-    liveBlogPosting: posts.map(result => {
-      const headerBlock = result.header.model.blocks.find(
-        block => block.type === 'headline',
-      );
+    liveBlogPosting: posts
+      .map(result => {
+        const headerBlocks = result.header.model.blocks;
+        const contentBlocks = result.content.model.blocks;
 
-      const paragraphBlocks = result.content.model.blocks.filter(
-        block => block.type === 'paragraph',
-      );
+        if (!headerBlocks || !contentBlocks) return null;
 
-      const imageBlock = result.content.model.blocks.find(
-        block => block.type === 'image',
-      );
+        const headlineBlock = headerBlocks.find(
+          block => block.type === 'headline',
+        );
 
-      // @ts-ignore - deeply nested
-      const imageSource = imageBlock?.model?.blocks.find(
-        (block: OptimoBlock) => block.type === 'rawImage',
-      );
+        const paragraphBlocks = contentBlocks.filter(
+          block => block.type === 'paragraph',
+        );
 
-      return {
-        '@type': 'BlogPosting',
-        headline:
-          // @ts-ignore - deeply nested
-          headerBlock?.model.blocks[0].model.blocks[0].model.text ?? null,
-        publisher: {
-          '@type': 'Organization',
-          name: brandName,
-          logo: {
-            '@type': 'ImageObject',
-            url: defaultImage,
-          },
-        },
-        mainEntityOfPage: url,
+        const imageBlock = contentBlocks.find(block => block.type === 'image');
+
         // @ts-ignore - deeply nested
-        articleBody: paragraphBlocks.map(block => block.model.text).join(' '),
-        ...(imageBlock && {
-          image: buildIChefURL({
-            locator: imageSource?.model?.locator,
-            originCode: imageSource?.model?.originCode,
-            resolution: 640,
+        const imageSource = imageBlock?.model?.blocks.find(
+          (block: OptimoBlock) => block.type === 'rawImage',
+        );
+
+        return {
+          '@type': 'BlogPosting',
+          headline:
+            // @ts-ignore - deeply nested
+            headlineBlock?.model.blocks[0].model.blocks[0].model.text ?? null,
+          publisher: {
+            '@type': 'Organization',
+            name: brandName,
+            logo: {
+              '@type': 'ImageObject',
+              url: defaultImage,
+            },
+          },
+          mainEntityOfPage: url,
+          // @ts-ignore - deeply nested
+          articleBody: paragraphBlocks.map(block => block.model.text).join(' '),
+          ...(imageBlock && {
+            image: buildIChefURL({
+              locator: imageSource?.model?.locator,
+              originCode: imageSource?.model?.originCode,
+              resolution: 640,
+            }),
           }),
-        }),
-        ...(result?.dates?.firstPublished && {
-          datePublished: result?.dates?.firstPublished,
-        }),
-        ...(result?.dates?.lastPublished && {
-          dateModified: result?.dates?.lastPublished,
-        }),
-      };
-    }),
+          ...(result?.dates?.firstPublished && {
+            datePublished: result?.dates?.firstPublished,
+          }),
+          ...(result?.dates?.lastPublished && {
+            dateModified: result?.dates?.lastPublished,
+          }),
+        };
+      })
+      .filter(Boolean),
   };
 };
