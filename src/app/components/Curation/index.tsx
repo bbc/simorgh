@@ -49,15 +49,26 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
-  curationType,
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
-  const componentName = getComponentName(
+
+  let componentName;
+  if(radioSchedule){
+    componentName = RADIO_SCHEDULE;
+    console.log('radio schedule', radioSchedule);
+  }
+  else{
+  componentName = getComponentName(
     {visualStyle,
-    visualProminence,
-    curationType}
+    visualProminence}
   );
+    }
+console.log('component name', componentName);
+  // const componentName = getComponentName(
+  //   {visualStyle,
+  //   visualProminence}
+  // );
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -90,7 +101,6 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-      console.log('in case RADIO_SCHEDULE', radioSchedule);
       return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
