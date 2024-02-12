@@ -26,7 +26,7 @@ describe('getComponentName', () => {
     ${NONE}         | ${NORMAL}            | ${null}             | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
     ${COLLECTION}   | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
-    ${RANKED}       | ${NORMAL}            | ${null}             | ${MOST_READ}
+    ${RANKED}       | ${NORMAL}            | ${'most-popular'}   | ${MOST_READ}
     ${NONE}         | ${NORMAL}            | ${'radio-schedule'} | ${RADIO_SCHEDULE}
     ${'fake-style'} | ${'fake-prominence'} | ${null}             | ${null}
   `(

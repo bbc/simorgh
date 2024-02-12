@@ -30,40 +30,26 @@ export default ({
   curationType = ''
   }: CurationProps) => {
 
-  // Do we definitely want it so that if Visual Style and Prominence are anything other than
-  // NONE and NORMAL, we don't want the radio schedule to show regardless of it having
-  // the radio-schedule curation type?
-  // without adding style and prominence, it is a radio schedule if it has 'radio-schedule'
-  // curation type and the others don't matter
-  // As long as the people creating the page know this combination of conditions have to hold
-  // it is fine to be more specific. If they don't know, the radio-schedule won't show
-    
-  if(curationType === 'radio-schedule' && visualStyle === NONE && visualProminence === NORMAL){
-    return RADIO_SCHEDULE;
-  }
+// There are more combinations possible now that curationType is added.
+// I am thinking about adding more of these for the NOT_SUPPORTED types to 
+// make this safer. But as this process of choosing a radio-schedule with a different
+// curation type might change, I am going to hold off until I read the slack
+// messages again
 
-  // I haven't included curationType in this because if I do, we would
-  // also need to put one in for 'most-popular' and I don't know if this is 
-  // something we want to do?
-  // Maybe we can to keep it all the same? Keeps it consistent, but also adds another
-  // condition which has to be satisfied for most read to show
-
-  // If we include the third condition of curationType, the radio schedule can never accidentally
-  // be given a different style and prominence and then fall through the above condition into instead one
-  // of these and then cause problems with the radio schedule trying to be a message banner
-  const componentsByVisualStyleAndProminence = {
-    [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
-    [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
-    [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
-    [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
-    [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
-    [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
-    [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
-    [`${RANKED}_${NORMAL}`]: MOST_READ,
+  const componentsByVisualStyleAndProminenceAndCurationType = {
+    [`${BANNER}_${MINIMUM}_${null}`]: NOT_SUPPORTED,
+    [`${BANNER}_${LOW}_${null}`]: NOT_SUPPORTED,
+    [`${BANNER}_${NORMAL}_${null}`]: MESSAGE_BANNER,
+    [`${BANNER}_${HIGH}_${null}`]: NOT_SUPPORTED,
+    [`${BANNER}_${MAXIMUM}_${null}`]: NOT_SUPPORTED,
+    [`${NONE}_${NORMAL}_${null}`]: SIMPLE_CURATION_GRID,
+    [`${NONE}_${HIGH}_${null}`]: HIERARCHICAL_CURATION_GRID,
+    [`${COLLECTION}_${HIGH}_${null}`]: HIERARCHICAL_CURATION_GRID,
+    [`${RANKED}_${NORMAL}_${'most-popular'}`]: MOST_READ,
+    [`${NONE}_${NORMAL}_${'radio-schedule'}`]: RADIO_SCHEDULE,
   };
 
-  const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
+  const visualStyleAndProminenceAndCurationType = `${visualStyle}_${visualProminence}_${curationType}`;
 
-  return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
+  return componentsByVisualStyleAndProminenceAndCurationType[visualStyleAndProminenceAndCurationType] || null;
 };
