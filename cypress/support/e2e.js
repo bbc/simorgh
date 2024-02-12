@@ -2,10 +2,6 @@ import 'cypress-axe';
 
 import './commands';
 
-Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
-});
-
 const KNOWN_URLS = ['https://www.bbc.com/usingthebbc'];
 
 const isKnownUrl = testLocation =>
