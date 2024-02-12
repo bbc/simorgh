@@ -54,7 +54,6 @@ const components = {
   'radio-schedule': {
     visualStyle: NONE,
     visualProminence: NORMAL,
-    curationType: 'radio-schedule',
     radioSchedule: afriqueHomePage.data.curations[5].radioSchedule,
   },
 };
@@ -82,7 +81,6 @@ describe('Curation', () => {
         visualProminence,
         promos,
         mostRead,
-        curationType,
         radioSchedule,
       }: TestProps,
     ) => {
@@ -92,8 +90,7 @@ describe('Curation', () => {
           visualProminence={visualProminence}
           promos={promos || []}
           mostRead={mostRead}
-          curationType={curationType}
-          radioSchedule={radioSchedule || []}
+          radioSchedule={radioSchedule}
         />,
         {
           toggles: {

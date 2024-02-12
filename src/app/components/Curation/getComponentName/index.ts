@@ -21,38 +21,27 @@ const {
   HIERARCHICAL_CURATION_GRID,
   MOST_READ,
   NOT_SUPPORTED,
-  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
-  visualProminence,
-  curationType = '',
-}: CurationProps) => {
-  // There are more combinations possible now that curationType is added.
-  // I am thinking about adding more of these for the NOT_SUPPORTED types to
-  // make this safer. But as this process of choosing a radio-schedule with a different
-  // curation type might change, I am going to hold off until I read the slack
-  // messages again
+  visualProminence
+  }: CurationProps) => {
 
-  const componentsByVisualStyleAndProminenceAndCurationType = {
-    [`${BANNER}_${MINIMUM}_${null}`]: NOT_SUPPORTED,
-    [`${BANNER}_${LOW}_${null}`]: NOT_SUPPORTED,
-    [`${BANNER}_${NORMAL}_${null}`]: MESSAGE_BANNER,
-    [`${BANNER}_${HIGH}_${null}`]: NOT_SUPPORTED,
-    [`${BANNER}_${MAXIMUM}_${null}`]: NOT_SUPPORTED,
-    [`${NONE}_${NORMAL}_${null}`]: SIMPLE_CURATION_GRID,
-    [`${NONE}_${HIGH}_${null}`]: HIERARCHICAL_CURATION_GRID,
-    [`${COLLECTION}_${HIGH}_${null}`]: HIERARCHICAL_CURATION_GRID,
-    [`${RANKED}_${NORMAL}_${'most-popular'}`]: MOST_READ,
-    [`${NONE}_${NORMAL}_${'radio-schedule'}`]: RADIO_SCHEDULE,
+
+  const componentsByVisualStyleAndProminence = {
+    [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
+    [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
+    [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
+    [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
+    [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
+    [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
+    [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
+    [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
+    [`${RANKED}_${NORMAL}`]: MOST_READ,
   };
 
-  const visualStyleAndProminenceAndCurationType = `${visualStyle}_${visualProminence}_${curationType}`;
+  const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
 
-  return (
-    componentsByVisualStyleAndProminenceAndCurationType[
-      visualStyleAndProminenceAndCurationType
-    ] || null
-  );
+  return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
 };
