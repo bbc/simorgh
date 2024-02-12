@@ -68,46 +68,25 @@ export default {
         maxWidth: '50%', // determines width of text overlay.
       },
     }),
-  rowAlign: ({ mq }: Theme) =>
+  titleWithImage: ({ palette }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignSelf: 'flex-end',
-        justifyContent: 'flex-start',
-        width: '100%',
-      },
-    }),
-  label: ({ palette, mq, spacings }: Theme) =>
-    css({
-      color: palette.LIVE_LIGHT,
-      marginBottom: `${spacings.DOUBLE}rem`,
-      textTransform: 'uppercase',
       display: 'block',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'flex',
-        flex: '1 auto',
-        paddingInlineEnd: `${spacings.DOUBLE}rem`,
-      },
+      color: palette.GREY_1,
+      width: '100%',
     }),
-  labelWithoutImage: ({ mq }: Theme) =>
+  titleWithoutImage: ({ mq, palette, spacings }: Theme) =>
     css({
+      display: 'block',
+      color: palette.GREY_1,
+      marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: 0,
-        minWidth: 'calc(100% / 3)',
-        maxWidth: 'calc(100% / 3)',
+        width: 'calc(100% / 3 * 2)',
+        display: 'inline-flex',
+        marginTop: '0',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        minWidth: 'calc(100% / 4)',
-        maxWidth: 'calc(100% / 4)',
-      },
-    }),
-  title: ({ mq, palette }: Theme) =>
-    css({
-      color: palette.GREY_1,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        flex: '1 auto',
+        display: 'inline-flex',
+        width: '75%',
       },
     }),
   description: ({ palette, spacings }: Theme) =>

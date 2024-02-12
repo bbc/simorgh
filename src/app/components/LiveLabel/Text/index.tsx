@@ -12,6 +12,7 @@ const Text = ({
   id,
   children,
   offScreenText,
+  className,
 }: PropsWithChildren<TextProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -48,6 +49,7 @@ const Text = ({
       id={id}
       // eslint-disable-next-line jsx-a11y/aria-role
       role="text"
+      className={className}
     >
       <span
         css={styles.liveLabelText}

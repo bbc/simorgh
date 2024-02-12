@@ -42,11 +42,11 @@ describe('Live Page Header', () => {
     });
 
     it('should not render if the liveLabel flag is false', async () => {
-      render(<Header title="I am a title" showLiveLabel={false} />);
-
-      await waitFor(() => {
-        expect(document.querySelectorAll('span').length).toBe(2);
+      await act(async () => {
+        render(<Header title="I am a title" showLiveLabel={false} />);
       });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
     });
   });
   describe('image', () => {
