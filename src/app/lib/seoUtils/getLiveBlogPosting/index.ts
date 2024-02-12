@@ -19,8 +19,8 @@ export default ({
   return {
     liveBlogPosting: posts
       .map(result => {
-        const headerBlocks = result.header.model.blocks;
-        const contentBlocks = result.content.model.blocks;
+        const headerBlocks = result?.header?.model?.blocks;
+        const contentBlocks = result?.content?.model?.blocks;
 
         if (!headerBlocks || !contentBlocks) return null;
 
