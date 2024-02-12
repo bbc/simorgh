@@ -13,12 +13,12 @@ describe('Live Page Spec', () => {
 
   if (Cypress.env('APP_ENV') === 'test') {
     it('visits page and passes', () => {
-      cy.visit('/pidgin/live/c7p765ynk9qt?renderer_env=test');
+      cy.visit('/pidgin/live/c7p765ynk9qt');
     });
 
     describe(`SEO Metadata`, () => {
       it('should include mainEntityOfPage in the LinkedData', () => {
-        cy.visit('/pidgin/live/c7p765ynk9qt?renderer_env=test');
+        cy.visit('/pidgin/live/c7p765ynk9qt');
 
         cy.get('script[type="application/ld+json"]')
           .should('contain', 'mainEntityOfPage')
