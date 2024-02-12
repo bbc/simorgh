@@ -30,8 +30,6 @@ const messageBannerCuration = kyrgyzHomePage.data.curations.find(
     summaries.length > 0,
 );
 
-// const afriqueRadioSchedule = afriqueHomePage.data.curations[4].radioSchedule;
-
 const components = {
   'curation-grid-normal': {
     visualStyle: NONE,
