@@ -4,7 +4,7 @@ import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
-import { radioSchedule as afriqueRadioSchedule } from '../../../../data/afrique/bbc_afrique_radio/scheduleInProcessedShape.json';
+import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -29,6 +29,8 @@ const messageBannerCuration = kyrgyzHomePage.data.curations.find(
     summaries &&
     summaries.length > 0,
 );
+
+// const afriqueRadioSchedule = afriqueHomePage.data.curations[4].radioSchedule;
 
 const components = {
   'curation-grid-normal': {
@@ -55,7 +57,7 @@ const components = {
     visualStyle: NONE,
     visualProminence: NORMAL,
     curationType: 'radio-schedule',
-    radioSchedule: afriqueRadioSchedule,
+    radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
 };
 
