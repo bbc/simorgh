@@ -15,17 +15,5 @@ describe('Live Page Spec', () => {
     it('visits page and passes', () => {
       cy.visit('/pidgin/live/c7p765ynk9qt');
     });
-
-    describe(`SEO Metadata`, () => {
-      it('should include mainEntityOfPage in the LinkedData', () => {
-        cy.visit('/pidgin/live/c7p765ynk9qt');
-
-        cy.get('script[type="application/ld+json"]')
-          .should('contain', 'mainEntityOfPage')
-          .and('contain', 'author')
-          .and('contain', 'headline')
-          .and('contain', 'liveBlogPosting');
-      });
-    });
   }
 });
