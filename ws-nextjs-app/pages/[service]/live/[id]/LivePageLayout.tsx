@@ -38,6 +38,8 @@ type ComponentProps = {
       datePublished: string;
       dateModified: string;
     }>;
+    startDateTime?: string;
+    endDateTime?: string;
     atiAnalytics: ATIData;
   };
 };
@@ -48,6 +50,8 @@ const LivePage = ({ pageData }: ComponentProps) => {
     title,
     description,
     seo: { seoTitle, seoDescription, datePublished, dateModified },
+    startDateTime,
+    endDateTime,
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
@@ -104,6 +108,12 @@ const LivePage = ({ pageData }: ComponentProps) => {
         })}
         {...(dateModified && {
           dateModified,
+        })}
+        {...(startDateTime && {
+          coverageStartTime: startDateTime,
+        })}
+        {...(endDateTime && {
+          coverageEndTime: endDateTime,
         })}
         showAuthor
       />
