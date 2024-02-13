@@ -93,7 +93,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@bbc/reverb": "git@github.com:bbc/reverb.git#3.9.0",
+    "@bbc/reverb": "git+ssh://git@github.com:bbc/reverb.git#semver:^3.9.0",
     "@bbc/web-vitals": "1.2.0",
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.1",

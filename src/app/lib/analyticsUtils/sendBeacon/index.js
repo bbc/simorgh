@@ -14,17 +14,16 @@ const initaliseReverb = async ({ pageVars, userVars }) => {
       getPageVariables: () => Promise.resolve(pageVars),
       getUserVariables: () => Promise.resolve(userVars),
     });
+  } else {
+    Reverb.getPageVariables = () => Promise.resolve(pageVars);
+    Reverb.getUserVariables = () => Promise.resolve(userVars);
   }
 };
 
-const firePageEvent = async () => {
-  Reverb.initialise()
-    .then(async () => {
-      Reverb.viewEvent();
-    })
-    .then(() => {
-      Reverb = null;
-    });
+const firePageViewEvent = async () => {
+  Reverb.initialise().then(async () => {
+    Reverb.viewEvent();
+  });
 };
 
 const sendBeacon = async (url, reverbBeaconConfig) => {
@@ -37,7 +36,7 @@ const sendBeacon = async (url, reverbBeaconConfig) => {
 
         await initaliseReverb({ pageVars: page, userVars: user }).then(
           async () => {
-            await firePageEvent();
+            await firePageViewEvent();
           },
         );
       } else {
