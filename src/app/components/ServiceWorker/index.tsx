@@ -37,17 +37,19 @@ const AmpServiceWorker = ({
 
 export default () => {
   const { swPath, service } = useContext(ServiceContext);
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { isAmp, isNextJs, canonicalLink } = useContext(RequestContext);
   const swSrc = `${process.env.SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {
+    const isLocalNextJs = isLocal() && isNextJs;
+
     const shouldInstallServiceWorker =
-      swPath && onClient() && 'serviceWorker' in navigator;
+      !isLocalNextJs && swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
-  }, [swPath, service]);
+  }, [isNextJs, swPath, service]);
 
   return !isLocal() && isAmp && swPath ? (
     <>
