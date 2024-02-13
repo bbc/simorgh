@@ -375,7 +375,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-1384138850478346243"
         >
           <strong
             class="emotion-11"
@@ -1476,7 +1476,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-7086167423639997701"
         >
           <strong
             class="emotion-11"
@@ -2219,7 +2219,7 @@ min-height:7.0625rem .no-js .emotion-2 {
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-oembed"
         >
           <strong
             class="emotion-11"

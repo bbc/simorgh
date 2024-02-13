@@ -47,6 +47,7 @@ export const CanonicalSocialEmbed = ({
   provider,
   service,
   skipLink,
+  id,
   oEmbed,
   caption,
   fallback,
@@ -84,7 +85,7 @@ export const CanonicalSocialEmbed = ({
             describedById={captionId}
             {...embedCaption}
           >
-            <EmbedConsentBannerCanonical provider={provider}>
+            <EmbedConsentBannerCanonical provider={provider} id={id}>
               <CanonicalEmbed
                 provider={provider}
                 oEmbed={oEmbed}
@@ -93,7 +94,7 @@ export const CanonicalSocialEmbed = ({
             </EmbedConsentBannerCanonical>
           </CaptionWrapper>
         ) : (
-          <EmbedConsentBannerCanonical provider={provider}>
+          <EmbedConsentBannerCanonical provider={provider} id={id}>
             <CanonicalEmbed
               provider={provider}
               oEmbed={oEmbed}

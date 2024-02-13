@@ -65,6 +65,7 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
           <CanonicalSocialEmbed
             provider={provider}
             service={service}
+            id={id}
             oEmbed={oEmbed}
             fallback={fallback}
             skipLink={skipLink}
