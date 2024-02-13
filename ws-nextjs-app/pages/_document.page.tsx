@@ -29,8 +29,15 @@ export default class AppDocument extends Document<DocProps> {
     const headScript = helmet.script.toComponent();
 
     return (
-      <Html {...htmlAttrs}>
+      <Html {...htmlAttrs} className="no-js">
         <Head>
+          <script
+            type="text/javascript"
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `document.documentElement.classList.remove("no-js");`,
+            }}
+          />
           {isApp && <meta name="robots" content="noindex" />}
           {meta}
           {title}
