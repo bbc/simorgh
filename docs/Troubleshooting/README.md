@@ -1,0 +1,20 @@
+# Unsigned commits in latest are preventing me from pushing my branch
+
+If for some reason unsigned commits have been merged into the latest branch, possibly because of an admin merge, then you will need to sign any previously unsigned commits.
+
+## How to Sign Previous Commits
+
+The following instructions were taken from [here](https://hyperledger-indy.readthedocs.io/projects/sdk/en/latest/docs/contributors/signing-commits.html).
+
+1. Use `git log --show-signature` to see which commits need to be signed.
+2. Go into interactive rebase mode using `git rebase -i HEAD~X` where `X` is the number of commits up to the most current commit you would like to see.
+3. You will see a list of the commits in a text file. On the line after each commit you need to sign, add `exec git commit --amend --no-edit -s` with the lowercase `-s` adding a text signature in the commit body.
+
+   Example that signs both commits:
+
+   ```
+   pick 12345 some commit message
+   exec git commit --amend --no-edit -s
+   pick 67890 another commit message
+   exec git commit --amend --no-edit -s
+   ```

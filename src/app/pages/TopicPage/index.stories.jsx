@@ -66,7 +66,7 @@ const Component = ({
 };
 
 export default {
-  title: 'Topic/Page',
+  title: 'Pages/Topic Page',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'mundo' })],
   parameters: { chromatic: { disable: true }, layout: 'fullscreen' },

@@ -560,9 +560,14 @@ addDecorator((Story, context) => {
 
 export const parameters = {
   passArgsFirst: false,
+  layout: 'fullscreen',
   options: {
     panelPosition: 'right',
-    sidebarAnimcations: true,
+    sidebarAnimations: true,
+    storySort: {
+      method: 'alphabetical',
+      order: ['Pages', 'New Components', 'Components', 'Containers', 'Docs'],
+    },
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
