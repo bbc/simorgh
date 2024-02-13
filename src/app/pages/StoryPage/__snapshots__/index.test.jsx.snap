@@ -2395,7 +2395,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       <div
                         class="emotion-119"
                         data-testid="consentBanner"
-                        id="consentBanner"
+                        id="consentBanner-1184522157050748929"
                       >
                         <strong
                           class="emotion-120"
@@ -5878,7 +5878,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <div
                         class="emotion-119"
                         data-testid="consentBanner"
-                        id="consentBanner"
+                        id="consentBanner-1184522157050748929"
                       >
                         <strong
                           class="emotion-120"
