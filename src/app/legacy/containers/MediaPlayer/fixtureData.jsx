@@ -170,7 +170,6 @@ export const validAresWebcastVideoBlock = {
   type: 'aresMedia',
 };
 
-
 export const validAresMediaAudioBlock = {
   model: {
     blocks: [
