@@ -144,6 +144,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         sizes="(min-width: 1008px) 760px, 100vw"
         className="mediaStyles"
         css={styles.bodyMedia}
+        position="9"
       />
     ),
     video: (props: ComponentToRenderProps) => (
