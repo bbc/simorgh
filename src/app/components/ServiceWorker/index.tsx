@@ -44,7 +44,7 @@ export default () => {
     const isLocalNextJs = isLocal() && isNextJs;
 
     const shouldInstallServiceWorker =
-      !isLocalNextJs && swPath && onClient() && 'serviceWorker' in navigator;
+      swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
