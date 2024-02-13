@@ -40,4 +40,4 @@ next-env.d.ts
 .vscode
 
 # Consider removing this once we move Express app over to Next.js
-/public/sw.js
+/public
