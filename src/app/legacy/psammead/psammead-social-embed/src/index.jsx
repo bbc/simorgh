@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useId } from 'react';
 import { shape, string, func } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import {
@@ -47,6 +47,7 @@ export const CanonicalSocialEmbed = ({
   provider,
   service,
   skipLink,
+  id,
   oEmbed,
   caption,
   fallback,
@@ -56,36 +57,56 @@ export const CanonicalSocialEmbed = ({
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
+  const captionId = useId();
 
   if (!isSupportedProvider || !oEmbed)
     return (
-      <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-        <Notice service={service} provider={provider} {...fallback} />
-      </SkipLinkWrapper>
+      <>
+        <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
+          <Notice service={service} provider={provider} {...fallback} />
+        </SkipLinkWrapper>
+        <noscript>
+          <Notice service={service} provider={provider} {...fallback} />
+        </noscript>
+      </>
     );
 
   return (
-    <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-      {embedCaption ? (
-        <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerCanonical provider={provider}>
+    <>
+      <SkipLinkWrapper
+        service={service}
+        provider={provider}
+        {...(embedCaption && { describedById: captionId })}
+        {...skipLink}
+      >
+        {embedCaption ? (
+          <CaptionWrapper
+            service={service}
+            describedById={captionId}
+            {...embedCaption}
+          >
+            <EmbedConsentBannerCanonical provider={provider} id={id}>
+              <CanonicalEmbed
+                provider={provider}
+                oEmbed={oEmbed}
+                onRender={onRender}
+              />
+            </EmbedConsentBannerCanonical>
+          </CaptionWrapper>
+        ) : (
+          <EmbedConsentBannerCanonical provider={provider} id={id}>
             <CanonicalEmbed
               provider={provider}
               oEmbed={oEmbed}
               onRender={onRender}
             />
           </EmbedConsentBannerCanonical>
-        </CaptionWrapper>
-      ) : (
-        <EmbedConsentBannerCanonical provider={provider}>
-          <CanonicalEmbed
-            provider={provider}
-            oEmbed={oEmbed}
-            onRender={onRender}
-          />
-        </EmbedConsentBannerCanonical>
-      )}
-    </SkipLinkWrapper>
+        )}
+      </SkipLinkWrapper>
+      <noscript>
+        <Notice service={service} provider={provider} {...fallback} />
+      </noscript>
+    </>
   );
 };
 

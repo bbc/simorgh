@@ -1,8 +1,9 @@
-import React from 'react';
-
+/* eslint-disable no-shadow */
+import React, { useEffect, useState } from 'react';
+import Url from 'url-parse';
 import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import fetch from 'node-fetch';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -10,6 +11,24 @@ import { StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
 const Component = ({ service, variant }: StoryProps) => {
+  const [pageData, setPageData] = useState({});
+
+  useEffect(() => {
+    const loadPageData = async () => {
+      const response = await fetch(
+        new Url(`data/${service}/homePage/index.json`),
+      );
+      const { data } = await response.json();
+      setPageData(data);
+    };
+
+    loadPageData();
+  }, [service]);
+
+  if (Object.keys(pageData).length === 0) {
+    return <>Unable to render Homepage for {service}</>;
+  }
+
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -19,8 +38,8 @@ const Component = ({ service, variant }: StoryProps) => {
           pageType={HOME_PAGE}
           status={200}
           isAmp={false}
-          pathname="/kyrgyz"
-          pageData={kyrgyzHomePageData}
+          pathname={`/${service}`}
+          pageData={pageData}
         />
       </ServiceContextProvider>
     </ThemeProvider>
@@ -30,9 +49,9 @@ const Component = ({ service, variant }: StoryProps) => {
 export default {
   Component,
   title: 'Pages/Home Page',
-  decorators: [withKnobs, withServicesKnob()],
+  decorators: [withKnobs, withServicesKnob({ defaultService: 'kyrgyz' })],
 };
 
-export const Kyrgyz = ({ variant }: StoryProps) => (
-  <Component service="kyrgyz" variant={variant} />
+export const Example = ({ service, variant }: StoryProps) => (
+  <Component service={service} variant={variant} />
 );

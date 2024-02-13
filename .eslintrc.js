@@ -37,6 +37,7 @@ module.exports = {
           'amp-custom',
           'amp-access',
           'amp-access-hide',
+          'amp-install-serviceworker',
           'css',
           'custom-element',
           'custom-template',

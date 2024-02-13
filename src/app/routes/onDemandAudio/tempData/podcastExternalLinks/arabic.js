@@ -116,6 +116,19 @@ const externalLinks = {
         linkType: 'apple',
       },
     ],
+    p0h6d6nm: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/2IidLqm28ZVS9E75ZJ9Fqj',
+        linkType: 'spotify',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/%D9%8A%D8%B3%D8%AA%D8%AD%D9%82-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%A8%D8%A7%D9%87/id1726949222',
+        linkType: 'apple',
+      },
+    ],
   },
 };
 

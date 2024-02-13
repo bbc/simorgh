@@ -148,11 +148,11 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="549"
   sizes="(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/ace/ws/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
   style="aspect-ratio:549 / 549"
   width="549"
 />
