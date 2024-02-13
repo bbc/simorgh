@@ -1,6 +1,7 @@
 {
   "browser": "client.js",
   "main": "index.js",
+  "name": "@bbc/simorgh-fetchPageData",
   "sideEffects": [
     "../../../../../src/app/legacy/psammead/moment-timezone-include/**/*.*",
     "../../../../../src/app/legacy/psammead/psammead-locales/**/*.*",
