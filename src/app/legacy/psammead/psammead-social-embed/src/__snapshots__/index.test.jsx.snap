@@ -5,6 +5,10 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -165,6 +169,10 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -437,6 +445,10 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -712,6 +724,10 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -982,6 +998,10 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -1306,6 +1326,10 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1584,6 +1608,10 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1713,6 +1741,10 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
 exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -1889,6 +1921,10 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2044,12 +2080,17 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
       End of unknown content
     </p>
   </div>
+  <noscript />
 </div>
 `;
 
 exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed response 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -2207,5 +2248,6 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       End of Twitter content
     </p>
   </div>
+  <noscript />
 </div>
 `;
