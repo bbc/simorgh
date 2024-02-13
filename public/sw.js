@@ -12,7 +12,7 @@ self.addEventListener('install', event => {
 
 const fetchEventHandler = async event => {
   if (
-    /^https:\/\/ichef(\.test)\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+(\.jpg|\.png)$/.test(
+    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+(\.jpg|\.png)$/.test(
       event.request.url,
     )
   ) {
