@@ -148,6 +148,7 @@ export default defineConfig({
     ],
   },
   video: false,
+  screenshotOnRunFailure: false,
   blockHosts: 'gn-web-assets.api.bbc.com',
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 100000,
