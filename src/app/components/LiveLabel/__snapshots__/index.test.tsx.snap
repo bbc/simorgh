@@ -1,22 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-1 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-2 {
+  color: #006666;
+  display: inline-block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 <div>
+  <svg
+    aria-hidden="true"
+    class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    height="16"
+    viewBox="0 0 32 32"
+    width="16"
+  >
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
     <span
-      class="emotion-0"
+      class="emotion-2"
       dir="rtl"
     >
       مباشر 
@@ -26,17 +84,56 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 `;
 
 exports[`LiveLabel should render correctly with English live text 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-1 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-2 {
+  color: #006666;
+  display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -48,18 +145,37 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 }
 
 <div>
+  <svg
+    aria-hidden="true"
+    class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    height="16"
+    viewBox="0 0 32 32"
+    width="16"
+  >
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-2"
       dir="ltr"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-3"
       lang="en-GB"
     >
       Live
@@ -69,17 +185,56 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 `;
 
 exports[`LiveLabel should render correctly with English live text and children 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-1 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-2 {
+  color: #006666;
+  display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -91,18 +246,37 @@ exports[`LiveLabel should render correctly with English live text and children 1
 }
 
 <div>
+  <svg
+    aria-hidden="true"
+    class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    height="16"
+    viewBox="0 0 32 32"
+    width="16"
+  >
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-2"
       dir="ltr"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-3"
       lang="en-GB"
     >
       Live, 
@@ -113,17 +287,56 @@ exports[`LiveLabel should render correctly with English live text and children 1
 `;
 
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-1 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-2 {
+  color: #006666;
+  display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -135,18 +348,37 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 }
 
 <div>
+  <svg
+    aria-hidden="true"
+    class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    height="16"
+    viewBox="0 0 32 32"
+    width="16"
+  >
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-2"
       dir="ltr"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-3"
       lang="en-GB"
     >
       Watch Live
@@ -156,22 +388,80 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 `;
 
 exports[`LiveLabel should render correctly with localised live text 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
+  vertical-align: -0.125rem;
+  position: relative;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-1 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+  }
+}
+
+.emotion-2 {
+  color: #006666;
+  display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 <div>
+  <svg
+    aria-hidden="true"
+    class="emotion-0"
+    fill="currentColor"
+    focusable="false"
+    height="16"
+    viewBox="0 0 32 32"
+    width="16"
+  >
+    <path
+      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+    />
+    <circle
+      class="emotion-1"
+      cx="16"
+      cy="16"
+      r="8.5"
+    />
+  </svg>
   <span
     role="text"
   >
     <span
-      class="emotion-0"
+      class="emotion-2"
       dir="ltr"
     >
       As E Dey Happen 

@@ -196,7 +196,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Cookie Settings Button
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
@@ -421,8 +421,8 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   height="576"
   layout="responsive"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 660w"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 660w"
   width="1024"
 />
 `;

@@ -67,6 +67,7 @@ describe('Bulletin Container', () => {
         <BulletinContainer item={liveRadioBulletinItem} />,
         { service: 'igbo' },
       );
+
       const span = container.getElementsByTagName('span')[1];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');

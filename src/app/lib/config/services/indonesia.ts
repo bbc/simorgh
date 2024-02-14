@@ -86,6 +86,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      liveExperiencePage: {
+        liveLabel: 'Langsung',
+        liveCoverage: 'Liputan langsung',
+        breaking: 'Terbaru',
+        postedAt: 'Diterbitkan di',
+        summary: 'Rangkuman',
+      },
       gist: 'Rangkuman',
       error: {
         404: {
@@ -361,11 +368,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Liputan Mendalam',
-        url: '/indonesia/laporan-khusus-51267199',
+        url: '/indonesia/topics/cw9qgeqd18zt',
       },
       {
         title: 'Majalah',
-        url: '/indonesia/majalah-51456120',
+        url: '/indonesia/topics/cpxrqmrkeg8t',
       },
     ],
     timezone: 'Asia/Jakarta',

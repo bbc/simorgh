@@ -21,6 +21,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
@@ -65,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isLow } = useContext(RequestContext);
+  const { isApp, isCaf, isLow } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -136,11 +137,11 @@ const ArticlePage = ({ pageData }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: props => <UnsupportedEmbed {...props} />,
-    embedHtml: props => <EmbedHtml {...props} />,
-    oEmbed: props => <OEmbedLoader {...props} />,
-    embedImages: props => <EmbedImages {...props} />,
-    embedUploader: props => <Uploader {...props} />,
+    embed: UnsupportedEmbed,
+    embedHtml: EmbedHtml,
+    oEmbed: OEmbedLoader,
+    embedImages: EmbedImages,
+    embedUploader: Uploader,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -235,7 +236,8 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
+          {!isCaf && <RelatedContentSection content={blocks} />}
         </div>
         {!isApp && !isLow && <SecondaryColumn pageData={pageData} />}
       </div>
