@@ -7,8 +7,10 @@ import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import MetadataContainer from '../../../../../src/app/components/Metadata';
-import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
+import { RequestContext } from '#app/contexts/RequestContext';
+import MetadataContainer from '#app/components/Metadata';
+import LinkedDataContainer from '#app/components/LinkedData';
+import getLiveBlogPosting from '#app/lib/seoUtils/getLiveBlogPosting';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -45,7 +47,9 @@ type ComponentProps = {
 };
 
 const LivePage = ({ pageData }: ComponentProps) => {
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, translations, defaultImage, brandName } =
+    useContext(ServiceContext);
+  const { canonicalNonUkLink } = useContext(RequestContext);
   const {
     title,
     description,
@@ -88,6 +92,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const postBodySchema = getLiveBlogPosting({
+    posts: liveTextStream?.content?.data.results,
+    brandName,
+    defaultImage,
+    url: canonicalNonUkLink,
+  });
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -103,6 +114,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
         type="NewsArticle"
         seoTitle={pageTitle}
         headline={pageTitle}
+        showAuthor
         {...(datePublished && {
           datePublished,
         })}
@@ -115,7 +127,9 @@ const LivePage = ({ pageData }: ComponentProps) => {
         {...(endDateTime && {
           coverageEndTime: endDateTime,
         })}
-        showAuthor
+        {...(postBodySchema && {
+          entities: [postBodySchema],
+        })}
       />
       <main>
         <Header
