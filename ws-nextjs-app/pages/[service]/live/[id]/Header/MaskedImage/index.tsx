@@ -47,6 +47,9 @@ const MaskedImage = ({
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
         sizes="(min-width: 1008px) 660px, 100vw"
+        preload={true}
+        width={800}
+        height={533}
       />
     </div>
   );
