@@ -47,6 +47,12 @@ export default defineConfig({
         baseUrl: 'http://localhost:7081',
       },
     },
+    testIsolation: false,
   },
+  defaultCommandTimeout: 10000,
+  pageLoadTimeout: 60000,
+  responseTimeout: 60000,
+  requestTimeout: 60000,
   video: false,
+  screenshotOnRunFailure: false,
 });
