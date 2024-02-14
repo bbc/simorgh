@@ -188,7 +188,7 @@ const Post = ({ post }: { post: PostType }) => {
             timestamp={timestamp}
           />
           {headerBlocks.map(headerBlock => (
-            <PostHeadings headerBlock={headerBlock} />
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
         </span>
       </Heading>
