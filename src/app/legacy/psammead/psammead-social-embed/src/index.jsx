@@ -47,6 +47,7 @@ export const CanonicalSocialEmbed = ({
   provider,
   service,
   skipLink,
+  id,
   oEmbed,
   caption,
   fallback,
@@ -60,42 +61,52 @@ export const CanonicalSocialEmbed = ({
 
   if (!isSupportedProvider || !oEmbed)
     return (
-      <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-        <Notice service={service} provider={provider} {...fallback} />
-      </SkipLinkWrapper>
+      <>
+        <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
+          <Notice service={service} provider={provider} {...fallback} />
+        </SkipLinkWrapper>
+        <noscript>
+          <Notice service={service} provider={provider} {...fallback} />
+        </noscript>
+      </>
     );
 
   return (
-    <SkipLinkWrapper
-      service={service}
-      provider={provider}
-      {...(embedCaption && { describedById: captionId })}
-      {...skipLink}
-    >
-      {embedCaption ? (
-        <CaptionWrapper
-          service={service}
-          describedById={captionId}
-          {...embedCaption}
-        >
-          <EmbedConsentBannerCanonical provider={provider}>
+    <>
+      <SkipLinkWrapper
+        service={service}
+        provider={provider}
+        {...(embedCaption && { describedById: captionId })}
+        {...skipLink}
+      >
+        {embedCaption ? (
+          <CaptionWrapper
+            service={service}
+            describedById={captionId}
+            {...embedCaption}
+          >
+            <EmbedConsentBannerCanonical provider={provider} id={id}>
+              <CanonicalEmbed
+                provider={provider}
+                oEmbed={oEmbed}
+                onRender={onRender}
+              />
+            </EmbedConsentBannerCanonical>
+          </CaptionWrapper>
+        ) : (
+          <EmbedConsentBannerCanonical provider={provider} id={id}>
             <CanonicalEmbed
               provider={provider}
               oEmbed={oEmbed}
               onRender={onRender}
             />
           </EmbedConsentBannerCanonical>
-        </CaptionWrapper>
-      ) : (
-        <EmbedConsentBannerCanonical provider={provider}>
-          <CanonicalEmbed
-            provider={provider}
-            oEmbed={oEmbed}
-            onRender={onRender}
-          />
-        </EmbedConsentBannerCanonical>
-      )}
-    </SkipLinkWrapper>
+        )}
+      </SkipLinkWrapper>
+      <noscript>
+        <Notice service={service} provider={provider} {...fallback} />
+      </noscript>
+    </>
   );
 };
 
