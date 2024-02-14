@@ -79,6 +79,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Kai-tsaye',
+        liveCoverage: 'Rahoto kai-tsaye',
+        breaking: 'Labarai da dumi-dumi',
+        postedAt: 'An wallafa a',
+        summary: 'Takaitacce',
+      },
       gist: 'Takaitacce',
       error: {
         404: {
@@ -272,7 +279,7 @@ export const service: DefaultServiceConfig = {
           'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
-      featuresAnalysisTitle: 'Minti Daya Da BBC',
+      featuresAnalysisTitle: 'Labarai na musamman',
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',

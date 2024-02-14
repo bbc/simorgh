@@ -7,8 +7,10 @@ import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import MetadataContainer from '../../../../../src/app/components/Metadata';
-import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
+import { RequestContext } from '#app/contexts/RequestContext';
+import MetadataContainer from '#app/components/Metadata';
+import LinkedDataContainer from '#app/components/LinkedData';
+import getLiveBlogPosting from '#app/lib/seoUtils/getLiveBlogPosting';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -22,30 +24,50 @@ type ComponentProps = {
     title: string;
     description?: string;
     isLive: boolean;
+    headerImage?: {
+      url: string;
+      urlTemplate: string;
+      width: number;
+    } | null;
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: {
       content: StreamResponse | null;
       contributors: string | null;
     };
-    seo: {
-      seoTitle?: string;
-      seoDescription?: string;
-    };
+    seo: Partial<{
+      seoTitle: string;
+      seoDescription: string;
+      datePublished: string;
+      dateModified: string;
+    }>;
+    startDateTime?: string;
+    endDateTime?: string;
     atiAnalytics: ATIData;
   };
 };
 
 const LivePage = ({ pageData }: ComponentProps) => {
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, translations, defaultImage, brandName } =
+    useContext(ServiceContext);
+  const { canonicalNonUkLink } = useContext(RequestContext);
   const {
     title,
     description,
-    seo: { seoTitle, seoDescription },
+    seo: { seoTitle, seoDescription, datePublished, dateModified },
+    startDateTime,
+    endDateTime,
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
     atiAnalytics,
+    headerImage,
   } = pageData;
+
+  const {
+    url: imageUrl,
+    urlTemplate: imageUrlTemplate,
+    width: imageWidth,
+  } = headerImage || {};
 
   const { index: activePage, total: pageCount } =
     liveTextStream?.content?.data?.page || {};
@@ -70,6 +92,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const postBodySchema = getLiveBlogPosting({
+    posts: liveTextStream?.content?.data.results,
+    brandName,
+    defaultImage,
+    url: canonicalNonUkLink,
+  });
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -81,12 +110,35 @@ const LivePage = ({ pageData }: ComponentProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
+      <LinkedDataContainer
+        type="NewsArticle"
+        seoTitle={pageTitle}
+        headline={pageTitle}
+        showAuthor
+        {...(datePublished && {
+          datePublished,
+        })}
+        {...(dateModified && {
+          dateModified,
+        })}
+        {...(startDateTime && {
+          coverageStartTime: startDateTime,
+        })}
+        {...(endDateTime && {
+          coverageEndTime: endDateTime,
+        })}
+        {...(postBodySchema && {
+          entities: [postBodySchema],
+        })}
+      />
       <main>
         <Header
           showLiveLabel={isLive}
           title={title}
           description={description}
+          imageUrl={imageUrl}
+          imageUrlTemplate={imageUrlTemplate}
+          imageWidth={imageWidth}
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>

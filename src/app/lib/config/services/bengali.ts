@@ -68,6 +68,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'অডিও প্লেয়ার',
         videoPlayer: 'ভিডিও প্লেয়ার',
       },
+      liveExperiencePage: {
+        liveLabel: 'লাইভ',
+        liveCoverage: 'সরাসির কভারেজ',
+        breaking: 'ব্রেকিং',
+        postedAt: 'পোস্ট করা হয়েছে',
+        summary: 'সার সংক্ষেপ',
+      },
       gist: 'সার সংক্ষেপ',
       error: {
         404: {
@@ -320,12 +327,16 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'বিশ্ব',
-        url: '/bengali/topics/c907347rezkt',
-      },
-      {
         title: 'রাজনীতি',
         url: '/bengali/topics/cqywj91rkg6t',
+      },
+      {
+        title: 'সর্বাধিক পঠিত',
+        url: '/bengali/popular/read',
+      },
+      {
+        title: 'বিশ্ব',
+        url: '/bengali/topics/c907347rezkt',
       },
       {
         title: 'অর্থনীতি',
@@ -346,10 +357,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ভিডিও',
         url: '/bengali/topics/cxy7jg418e7t',
-      },
-      {
-        title: 'সর্বাধিক পঠিত',
-        url: '/bengali/popular/read',
       },
     ],
   },

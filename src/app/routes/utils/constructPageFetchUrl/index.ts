@@ -12,6 +12,10 @@ import {
 } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
+  TOPIC_PAGE_CONFIG,
+  TopicPagePaths,
+} from '../../topic/getInitialData/page-config';
+import {
   ARTICLE_PAGE,
   CPS_ASSET,
   HOME_PAGE,
@@ -31,10 +35,10 @@ interface UrlConstructParams {
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => path;
 const getFrontPageId = (path: string) => `${path}/front_page`;
-const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
+const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
 const isFrontPage = ({
   path,
@@ -83,7 +87,11 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       break;
     case LIVE_PAGE:
     case TOPIC_PAGE:
-      getIdFunction = getTipoId;
+      getIdFunction = (path: string) => {
+        return (
+          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
+        );
+      };
       break;
     default:
       getIdFunction = () => null;

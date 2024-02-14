@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 /** @jsx jsx */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
@@ -9,59 +8,69 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
+import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import ImageWithCaption from '#app/components/ImageWithCaption';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
-import ImageWithCaption from '#app/components/ImageWithCaption';
-import styles from './styles';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
-  breakingNewsLabelText = 'Breaking',
+  breakingNewsLabelText,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
 }) => {
   return isBreakingNews ? (
-    <Text
-      css={styles.breakingNewsLabel}
-      size="brevier"
-      fontVariant="sansBold"
-      data-testid="breaking-news-label"
-    >
-      {breakingNewsLabelText}
-    </Text>
+    <>
+      <Text
+        css={styles.breakingNewsLabel}
+        size="brevier"
+        fontVariant="sansBold"
+        data-testid="breaking-news-label"
+      >
+        {breakingNewsLabelText}
+      </Text>
+      <VisuallyHiddenText>, </VisuallyHiddenText>
+    </>
   ) : null;
 };
 
 const PostHeaderBanner = ({
   isBreakingNews,
-  breakingNewsLabelText,
   timestamp: curated,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
 }) => {
-  const { timezone, locale, altCalendar, service, script } =
-    useContext(ServiceContext);
-
+  const {
+    timezone,
+    locale,
+    altCalendar,
+    service,
+    script,
+    translations: {
+      liveExperiencePage: { breaking = 'Breaking' },
+    },
+  } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={styles.postHeaderBanner}>
+    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
-        format="DD MMMM YYYY"
+        format="D MMMM YYYY"
         locale={locale}
         timezone={timezone}
         service={service}
@@ -71,9 +80,10 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
+      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={breakingNewsLabelText}
+        breakingNewsLabelText={breaking}
       />
     </div>
   );
@@ -129,15 +139,26 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     image: (props: { blocks: OptimoBlock[] }) => (
-      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      <ImageWithCaption
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        className="mediaStyles"
+        css={styles.bodyMedia}
+        position={[9]}
+      />
+    ),
+    video: (props: ComponentToRenderProps) => (
+      <LivePageMediaPlayer
+        blocks={props.blocks}
+        className="mediaStyles"
+        css={styles.bodyMedia}
+      />
     ),
     social: SocialEmbedContainer,
   };
 
   return (
-    <div css={styles.postContent}>
-      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-    </div>
+    <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );
 };
 
@@ -158,20 +179,23 @@ const Post = ({ post }: { post: PostType }) => {
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <div css={styles.postContainer}>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} timestamp={timestamp} />
-      <div css={styles.postBody}>
-        <Heading level={3}>
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
-          <span role="text">
-            {headerBlocks.map(headerBlock => (
-              <PostHeadings headerBlock={headerBlock} />
-            ))}
-          </span>
-        </Heading>
+    <article css={styles.postContainer}>
+      <Heading level={3}>
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          <PostHeaderBanner
+            isBreakingNews={isBreakingNews}
+            timestamp={timestamp}
+          />
+          {headerBlocks.map(headerBlock => (
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+          ))}
+        </span>
+      </Heading>
+      <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-    </div>
+    </article>
   );
 };
 

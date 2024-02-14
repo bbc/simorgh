@@ -13,7 +13,7 @@ import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
 import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorkerContainer from '../../legacy/containers/ServiceWorker';
+import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import ThemeProvider from '../ThemeProvider';
@@ -21,14 +21,35 @@ import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
 import styles from './index.styles';
 
+type ModelType = {
+  blocks?: [
+    {
+      type: string;
+      text?: string;
+      model?: ModelType;
+    },
+  ];
+  text?: string;
+};
+
 type Props = {
   pageData: {
     metadata: {
       type: PageTypes;
+      topics?: [
+        {
+          topicName: string;
+        },
+      ];
+    };
+    content?: {
+      model?: ModelType;
     };
   };
   status: number;
 };
+
+type wordCountType = number | undefined;
 
 const PageLayoutWrapper = ({
   children,
@@ -36,13 +57,29 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, isNextJs, variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
+  const reportingPageType = pageType?.replace(/ /g, '');
+  let wordCount: wordCountType = 0;
+  if (pageType === 'article') {
+    wordCount = pageData?.content?.model?.blocks
+      ?.filter(block => block.type === 'text')
+      ?.reduce((reducer, block) => {
+        const innerBlocks = block?.model?.blocks
+          ?.filter(innerBlock => innerBlock.type === 'paragraph')
+          .reduce((innerReducer, p) => {
+            return `${innerReducer} ${p.model?.text}`;
+          }, '');
+
+        if (!innerBlocks) return reducer;
+        return reducer + innerBlocks.split(' ').length;
+      }, 0);
+  }
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
@@ -101,6 +138,56 @@ const PageLayoutWrapper = ({
                     }
                 });
                 }
+                let wrappedPageTimeStart = new Date();
+                let wrappedYear = wrappedPageTimeStart.getFullYear();
+                let wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
+                let wrappedStorageKey = 'ws_bbc_wrapped';
+                let wrappedContents = {};
+                wrappedContents[wrappedYear] = {
+                    'byMonth': {},
+                    'pageTypeCounts': {},
+                    'serviceCounts': {},
+                    'topicCounts': {},
+                    'duration': 0,
+                    'wordCount': 0,
+                };
+                wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
+                let saveWrapped = () => {
+                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
+                }
+                let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
+                if (wrappedLocalStorageContents) {
+                    const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
+                    if (wrappedLocalStorageContentsParsed.hasOwnProperty(wrappedYear)) {
+                        wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedContents[wrappedYear];
+                        wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
+                    }
+                }
+                let wrappedContentsShortcut = wrappedContents[wrappedYear];
+                let wrappedTopics = ${JSON.stringify(
+                  pageData?.metadata?.topics,
+                )};
+                if (wrappedTopics) {
+                    wrappedTopics.forEach(({ topicName }) => {
+                        wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
+                    });
+                }
+                document.onvisibilitychange = () => {
+                  if (document.visibilityState === "hidden") {
+                    const wrappedTimeNow = new Date();
+                    const wrappedDifference = wrappedTimeNow - wrappedPageTimeStart;
+                    wrappedContentsShortcut.duration = wrappedContentsShortcut.duration ? wrappedContentsShortcut.duration + wrappedDifference : wrappedDifference;
+                    saveWrapped();
+                  }
+                  else {
+                    wrappedPageTimeStart = new Date();
+                  }
+                };
+                wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
+                wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
+                wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
+                wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
+                wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
 
   return (
@@ -114,7 +201,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && <ServiceWorkerContainer />}
+        <ServiceWorker />
         <ManifestContainer />
         {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />

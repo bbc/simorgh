@@ -3116,7 +3116,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
@@ -3816,11 +3816,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali/articles/cl90j9m3mn6o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4569,7 +4569,6 @@ module.exports = () => ({
               '/persian/media-49522521', // CPS MAP with live stream
               '/persian/world-51497110', // CPS MAP with video clip
               '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
-              '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -4642,23 +4641,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: {
-        environments: {
-          live: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/persian/afghanistan'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
+      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -4683,7 +4666,6 @@ module.exports = () => ({
           live: {
             paths: [
               // '/persian/articles/c7eel0lmr4do', // Article
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/magazine-49281981', // CPS PGL
               // '/persian/world-51497110', // CPS MAP
@@ -4702,7 +4684,6 @@ module.exports = () => ({
             paths: [
               // '/persian/articles/cej3lzd5e0go', // Article
               // '/persian', // Front Page
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/iran-23231114', // CPS MAP
               // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
@@ -4720,7 +4701,6 @@ module.exports = () => ({
             paths: [
               // '/persian/articles/cej3lzd5e0go', // Article
               // '/persian', // Front Page
-              // '/persian/afghanistan', // IDX
               // '/persian/popular/read', // Most Read
               // '/persian/iran-23231114', // CPS MAP
               // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
@@ -8181,7 +8161,7 @@ module.exports = () => ({
               '/urdu/entertainment-51584098', // CPS MAP with audio clip
               '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [

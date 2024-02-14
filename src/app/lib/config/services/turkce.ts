@@ -67,6 +67,13 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      liveExperiencePage: {
+        liveLabel: 'Canlı',
+        liveCoverage: 'Canlı yayın',
+        breaking: 'Son dakika',
+        postedAt: 'Basım saati',
+        summary: 'Özet',
+      },
       gist: 'Özet',
       error: {
         404: {
@@ -316,6 +323,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
+      },
+      {
+        title: '31 Mart 2024 Yerel Seçimleri',
+        url: '/turkce/topics/cv2lyll8e02t',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',
