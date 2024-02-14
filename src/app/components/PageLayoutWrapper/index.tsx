@@ -57,7 +57,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, isNextJs, variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -201,7 +201,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && <ServiceWorker />}
+        <ServiceWorker />
         <ManifestContainer />
         {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />
