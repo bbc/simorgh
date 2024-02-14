@@ -24,6 +24,7 @@ const pageTypeMap = {
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
   const { id, pageType } = useContext(RequestContext);
+  const hasPlaceholder = pageType !== 'mediaArticle';
 
   return (
     <GridItemMediumNoMargin>
@@ -31,7 +32,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
         blocks={blocks}
         assetId={formatAssetId(id)}
         assetType={pageTypeMap[pageType]}
-        showPlaceholder
+        showPlaceholder={hasPlaceholder}
       />
     </GridItemMediumNoMargin>
   );
