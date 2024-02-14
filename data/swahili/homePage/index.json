@@ -1,40 +1,142 @@
 {
   "data": {
     "title": "BBC News Swahili",
-    "description": "",
+    "description": "Hii ni tovuti ya idhaa ya Kiswahili ya BBC ambayo hukuletea habari na makala kutoka Afrika na kote duniani kwa lugha ya Kiswahili. Tembelea tovuti hii pia kusikiliza vipindi vya redio.",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Kwa nini makombora ya urani iliyorutubishwa hutumiwa na yana madhara gani?",
-            "firstPublished": "2023-03-28T11:44:37.230Z",
-            "link": "https://www.bbc.com/swahili/articles/ceq5vwqv5d7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf18/live/15cdbe00-cd56-11ed-be2e-754a65c11505.jpg",
-            "description": "Madini ya Urani yaliyorutubishwa hufanya silaha kuwa na nguvu zaidi, lakini kuna wasiwasi kwamba silaha hizi ni tishio kwa watu wanaoishi katika maeneo ambayo hutumiwa.",
-            "imageAlt": ".",
-            "id": "ceq5vwqv5d7o"
+            "title": "Je, Marekani inamlenga nani kwa mashambulizi yake nchini Iraq?",
+            "firstPublished": "2024-01-25T10:43:20.419Z",
+            "lastPublished": "2024-01-25T10:43:20.419Z",
+            "link": "https://www.bbc.com/swahili/articles/ce7l941rpw7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0de8/live/21983e80-bafa-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Marekani imeyapiga makundi yanayoungwa mkono na Iran nchini Iraq kujibu shambulio lao kwenye moja ya kambi zake za kijeshi nchini Iraq mwishoni mwa juma.",
+            "imageAlt": "Fighters lift flags of Iraq and paramilitary groups, including al-Nujaba and Kataib Hezbollah, during a funeral in Baghdad for five militants killed a day earlier in a US strike in northern Iraq, on 23 December 2023",
+            "id": "ce7l941rpw7o"
           },
           {
-            "type": "article",
-            "title": "Tume ya Umoja wa Afrika yaomba utulivu Kenya baada ya maandamano dhidi ya serikali",
-            "firstPublished": "2023-03-28T03:49:26.000Z",
-            "link": "https://www.bbc.com/swahili/live/habari-65096091",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/11A37/production/_129174227_maandamano-getty.jpg",
-            "description": "Mwenyekiti wa tume ya Umoja wa Afrika AU Moussa faki Mahamat ameonesha wasiwasi wake kuhusu ghasia zilizotokea na kusababisha kifo cha mtu mmoja huku mali ya thamani isiojulikana ikiharibiwa kufuatia maandamano dhidi ya serikali",
+            "type": "commentary",
+            "title": "Saudi Arabia kufungua duka la kwanza la pombe baada ya zaidi ya miaka 70",
+            "firstPublished": "2024-01-25T04:32:52.000Z",
+            "lastPublished": "2024-01-25T04:32:52.000Z",
+            "link": "https://www.bbc.com/swahili/live/habari-68090650",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4CA6/production/_132422691_52029efc-fb56-4530-bf94-0ea5cd410d57.jpg",
+            "description": "Saudi Arabia imesema itafungua duka la pombe kwa wahamiaji maalum wasio Waislamu, mjini Riyadh, likiwa la kwanza kufunguliwa kwa zaidi ya miaka 70.",
             "imageAlt": ".",
-            "id": "b59c3240-dbb0-4b67-9053-ac0e97b6a83f"
+            "id": "4dd11cf2-35a8-4e30-ba04-67279392f9c8"
           },
           {
-            "type": "article",
-            "title": "Maandamano ya Azimio: Odinga alaani uvamizi wa shamba la rais mstaafu Uhuru Kenyatta ",
-            "firstPublished": "2023-03-28T02:56:27.116Z",
-            "link": "https://www.bbc.com/swahili/articles/cxxr77rn584o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9fc2/live/8627e340-cd67-11ed-be2e-754a65c11505.jpg",
+            "type": "link",
+            "title": "Kenya yagundua hifadhi za madini ya coltan - Waziri wa Madini Salim Mvurya",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/3Oj6Srf",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/03e2/live/e33ef7b0-bb70-11ee-ace0-c35c1b4f6d82.jpg",
             "description": "",
+            "imageAlt": "TH",
+            "id": "https%3A%2F%2Fbbc.in%2F3Oj6Srf"
+          },
+          {
+            "type": "article",
+            "title": "Urusi-Ukraine: Nani ameitungua ndege ya Urusi iliyokuwa na wafungwa wa kivita?",
+            "firstPublished": "2024-01-25T05:21:20.864Z",
+            "lastPublished": "2024-01-25T05:21:20.864Z",
+            "link": "https://www.bbc.com/swahili/articles/c80nkp56kwjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/75a4/live/71720430-bb41-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Ripoti za ndege aina ya Il-76 kuanguka kwanza zilionekana kwenye mashirika ya habari ya serikali ya Urusi. Nani aliidungua?\n",
             "imageAlt": ".",
-            "id": "cxxr77rn584o"
+            "id": "c80nkp56kwjo"
+          },
+          {
+            "type": "link",
+            "title": "Chai tamu ni ile ilioongezwa chumvi - Mwanasayansi",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/429Otmz",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0876/live/73c5fbf0-bb65-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "",
+            "imageAlt": "Chai",
+            "id": "https%3A%2F%2Fbbc.in%2F429Otmz"
+          },
+          {
+            "type": "link",
+            "title": "'Waganda wanaokufa na njaa ni wajinga' - Waziri Oryem",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/42cljDe",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6abe/live/0f58c170-bb65-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "",
+            "imageAlt": "Waziri Okelo Oryem",
+            "id": "https%3A%2F%2Fbbc.in%2F42cljDe"
+          },
+          {
+            "type": "article",
+            "title": "Je, mwili wako unahitaji sukari kiasi gani?",
+            "firstPublished": "2024-01-25T07:44:29.381Z",
+            "lastPublished": "2024-01-25T07:44:29.381Z",
+            "link": "https://www.bbc.com/swahili/articles/cz9m5v4jm9po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0471/live/e4d6ffd0-bb4f-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Kipi kitatokea ukiacha kutumia sukari?",
+            "imageAlt": "sx",
+            "id": "cz9m5v4jm9po"
+          },
+          {
+            "type": "article",
+            "title": "Afcon 2023: Tanzania yaaga mashindano huku DR Congo ikisonga mbele",
+            "firstPublished": "2024-01-25T03:16:49.974Z",
+            "lastPublished": "2024-01-25T03:16:49.974Z",
+            "link": "https://www.bbc.com/swahili/articles/cy95gl4vl1ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5fdd/live/9092a250-bb2f-11ee-8685-316409d66f25.jpg",
+            "description": "DR Congo ilitinga hatua ya mtoano ya Kombe la Mataifa ya Afrika 2023 baada ya kutoka sare tasa na Tanzania mjini Korhogo.",
+            "imageAlt": ".",
+            "id": "cy95gl4vl1ko"
+          },
+          {
+            "type": "article",
+            "title": "Kwanini Chadema inaingia barabarani?",
+            "firstPublished": "2024-01-24T06:25:40.292Z",
+            "lastPublished": "2024-01-24T06:25:40.292Z",
+            "link": "https://www.bbc.com/swahili/articles/cd1j4l24dl1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cd54/live/5b6a7df0-ba80-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Zijue sababu za Chadema kuingia barabarani asubuhi hii",
+            "imageAlt": "Bh",
+            "id": "cd1j4l24dl1o"
+          },
+          {
+            "type": "link",
+            "title": "Kagame aapa kuilinda Rwanda huku kukiwa na mvutano na Burundi, na DRC",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/48K6URf",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e6b2/live/8e99a2a0-ba99-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "",
+            "imageAlt": "Rais Paul Kagame",
+            "id": "https%3A%2F%2Fbbc.in%2F48K6URf"
+          },
+          {
+            "type": "article",
+            "title": "Saa ya Siku za Mwisho za dunia iko sekunde 90 kabla ya janga ",
+            "firstPublished": "2024-01-24T10:04:32.838Z",
+            "lastPublished": "2024-01-24T10:04:32.838Z",
+            "link": "https://www.bbc.com/swahili/articles/cn0njqp345zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a46b/live/fe2b0400-ba86-11ee-8685-316409d66f25.png",
+            "description": "Saa ya Siku ya Mwisho - ni saa ya ishara ambayo inaonyesha jinsi dunia ilivyo karibu  kuharibiwa na silaha za nyuklia. Kwanini iko sekunde 90?",
+            "imageAlt": "Uuu",
+            "id": "cn0njqp345zo"
+          },
+          {
+            "type": "article",
+            "title": "Lishe: Haya  ndio unayohitaji kujua kuhusu ulaji wa ‘kuku wa kizungu’",
+            "firstPublished": "2024-01-24T10:57:58.726Z",
+            "lastPublished": "2024-01-24T10:57:58.726Z",
+            "link": "https://www.bbc.com/swahili/articles/cn0ndwr3lvjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/61f6/live/e0b34800-baa5-11ee-8685-316409d66f25.jpg",
+            "description": "Barani Afrika, wafugaji wengi hutegemea zaidi kuku kizungu. Kuku hawa pia  nyama pia huitwa \"kuku wa kisas, kuku wa nyama \"  ambapo huitwa majina hayo kwamepewa kutokana na nyama yake na  ukuaji wake wa haraka. ",
+            "imageAlt": "g",
+            "id": "cn0ndwr3lvjo"
           }
         ],
         "activePage": 1,
@@ -42,79 +144,587 @@
         "curationId": "urn:bbc:tipo:list:fac42fdd-6486-481c-9ee4-d9e2d40647a2",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "BBC News Swahili Top Stories",
-        "visualProminence": "HIGH"
+        "title": "Habari kuu",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Ramadhan: Nchi gani zina mfungo mrefu au mfupi zaidi duniani?",
-            "firstPublished": "2023-03-27T03:33:55.791Z",
-            "link": "https://www.bbc.com/swahili/articles/cyx0wzn31e2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f484/live/cfb34b30-cc4f-11ed-be2e-754a65c11505.jpg",
-            "description": "Ramadhan: Nchi gani zina mfungo mrefu au mfupi zaidi duniani?",
-            "imageAlt": "Ramadhan",
-            "id": "cyx0wzn31e2o"
-          },
-          {
-            "type": "article",
-            "title": "'Ninapowaona wavulana wakienda shule, ninaumia'",
-            "firstPublished": "2023-03-27T04:50:42.040Z",
-            "link": "https://www.bbc.com/swahili/articles/c4nz8jw5e8jo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/00eb/live/31bead70-cc3b-11ed-be2e-754a65c11505.png",
-            "description": "Mwaka mmoja na nusu tangu maisha yao kielimu yasitishwe, huzuni yao bado mbichi.",
-            "imageAlt": "Tamana ",
-            "id": "c4nz8jw5e8jo"
-          },
-          {
-            "type": "article",
-            "title": "Faida 5 Kuu za Kiafya za Kufunga",
-            "firstPublished": "2023-03-26T14:35:56.645Z",
-            "link": "https://www.bbc.com/swahili/articles/c2xez5ynpk6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/737d/live/22916430-c94a-11ed-be2e-754a65c11505.jpg",
-            "description": "Faida 5 Kuu za Kiafya za Kufunga",
+            "title": "Afcon 2023: Wanasoka wa Afrika wanaocheza uwanjani licha ya kuhatarisha maisha yao",
+            "firstPublished": "2024-01-23T12:57:24.835Z",
+            "lastPublished": "2024-01-23T12:58:23.481Z",
+            "link": "https://www.bbc.com/swahili/articles/c72g67j6rl7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9c6a/live/63283070-b9ed-11ee-8685-316409d66f25.jpg",
+            "description": "Nyota mmoja wa Zambia amekosekana kwenye Kombe la Mataifa ya Afrika kutokana na tatizo la moyo, lakini Waafrika wengine wamecheza licha ya hatari ya moyo.",
             "imageAlt": ".",
-            "id": "c2xez5ynpk6o"
+            "id": "c72g67j6rl7o"
+          },
+          {
+            "type": "article",
+            "title": "AFCON 2023: Tanzania yapokwa ‘tonge mdomoni’ na Zambia",
+            "firstPublished": "2024-01-21T19:38:55.412Z",
+            "lastPublished": "2024-01-21T19:38:55.412Z",
+            "link": "https://www.bbc.com/swahili/articles/cv2039v4rezo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/80b9/live/ebd62500-b892-11ee-beb5-e1400df560f2.jpg",
+            "description": "Tanzania iliandikisha goli la kwanza katika dakika ya 11 kupitia winga wake wa kimataifa Simon Msuva ",
+            "imageAlt": "TH",
+            "id": "cv2039v4rezo"
+          },
+          {
+            "type": "article",
+            "title": "Tetesi za soka Jumapili 21.01.2024",
+            "firstPublished": "2024-01-21T03:12:40.162Z",
+            "lastPublished": "2024-01-21T03:12:40.162Z",
+            "link": "https://www.bbc.com/swahili/articles/cxx32xp5wejo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c765/live/7c373280-b80a-11ee-beb5-e1400df560f2.jpg",
+            "description": "Newcastle United wamekataa ofa ya  Bayern Munich kumnunua beki Kieran Trippier, 33.",
+            "imageAlt": "TH",
+            "id": "cxx32xp5wejo"
+          },
+          {
+            "type": "article",
+            "title": "Tetesi za soka  Jumamosi 20.01.2024 ",
+            "firstPublished": "2024-01-20T03:14:31.309Z",
+            "lastPublished": "2024-01-20T03:14:31.309Z",
+            "link": "https://www.bbc.com/swahili/articles/cpdl92kjrjdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c9a8/live/8b454430-b73b-11ee-beb5-e1400df560f2.jpg",
+            "description": "Newcastle imemtambua  kiungo wa kati wa Everton na Ubelgiji Amadou Onana, 22, kama chaguo zuri la kuimarisha safu yao huku wasiwasi ukiongezeka kuhusu mustakabali wa kiungo wa kati wa Brazil, Joelinton, 27, ambaye bado hajakubali mkataba mpya katika uwanja wa St James' Park. (Telegraph - subscription required)",
+            "imageAlt": "g",
+            "id": "cpdl92kjrjdo"
+          },
+          {
+            "type": "article",
+            "title": "Afcon 2023: Kichapo cha Morocco kwa Tanzania  kitawafanya kubeba ubingwa?",
+            "firstPublished": "2024-01-19T09:14:48.662Z",
+            "lastPublished": "2024-01-19T09:14:48.662Z",
+            "link": "https://www.bbc.com/swahili/articles/clmemd5r4xjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1c39/live/a177a990-b610-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Mechi za mzunguko wa pili wa kundi hilo zitafanyika Jumapili ijayo. \n",
+            "imageAlt": "Hh",
+            "id": "clmemd5r4xjo"
+          },
+          {
+            "type": "article",
+            "title": "Tetesi za Soka Ulaya  Ijumaa 19.01.2024",
+            "firstPublished": "2024-01-19T03:03:38.490Z",
+            "lastPublished": "2024-01-19T03:03:38.490Z",
+            "link": "https://www.bbc.com/swahili/articles/crg0g0k989wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/76a3/live/4d5f03a0-b677-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Manchester United wanafikiria kurekebisha safu yao ya ulinzi katika msimu wa joto jambo ambalo linaweza kumaanisha beki wa kati wa Uingereza Harry Maguire, 30",
+            "imageAlt": "TH",
+            "id": "crg0g0k989wo"
+          },
+          {
+            "type": "article",
+            "title": "Tetesi za Soka Ulaya Alhamisi 18.01.2024",
+            "firstPublished": "2024-01-18T03:04:08.517Z",
+            "lastPublished": "2024-01-18T03:04:08.517Z",
+            "link": "https://www.bbc.com/swahili/articles/c1wywlxej28o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8ca8/live/1b5b9db0-b5ae-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Atletico Madrid na Barcelona ni miongoni mwa takriban  klabu sita zinazowania kumsajili kiungo wa kati wa Uingereza Kalvin Phillips",
+            "imageAlt": "TH",
+            "id": "c1wywlxej28o"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M46S",
+            "title": "Taifa stars dhidi ya Morocco Afcon:  ‘Tumejiandaa vizuri’ - Mbwana Samatta",
+            "firstPublished": "2024-01-17T03:58:21.675Z",
+            "lastPublished": "2024-01-17T03:58:21.675Z",
+            "link": "https://www.bbc.com/swahili/articles/c4ny1rxpe31o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9926/live/6ff06f90-b4e6-11ee-856a-4b02df18d36b.jpg",
+            "description": "Kuelekea mchezo wa Tanzania na Morocco hii leo Jumatano utakao pigwa saa 2 usiku kwa saa za Afrika Mashariki, nahodha wa Timu ya  Taifa stars ya Tanzania Mbwana Samatta   na kocha Adel Adel Amrouche wameelezea jinsi kikosi kilivyojiandaa kushuka dimbani ",
+            "imageAlt": "w",
+            "id": "c4ny1rxpe31o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 4,
+        "link": "https://www.bbc.com/swahili/topics/ckdxndddjkxt",
+        "curationId": "urn:bbc:vivo:curation:d09d1fc1-7283-4371-a317-a817f58fcdeb",
+        "curationType": "vivo-stream",
+        "position": 1,
+        "title": "Michezo",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Je, Félix Tshisekedi ataleta vita au amani kwa DR Congo na Rwanda?",
+            "firstPublished": "2024-01-20T08:48:08.888Z",
+            "lastPublished": "2024-01-20T08:48:08.888Z",
+            "link": "https://www.bbc.com/swahili/articles/cx9k2q27xvlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/277f/live/80a96f10-b76d-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Félix Tshisekedi anaapishwa kwa muhula wa pili kama rais wa Jamhuri ya Kidemokrasia ya Congo kufuatia uchaguzi uliokumbwa na machafuko na wenye utata.",
+            "imageAlt": "w",
+            "id": "cx9k2q27xvlo"
+          },
+          {
+            "type": "link",
+            "title": "Felix Tshisekedi aapishwa  kuiongoza DRC kwa muhula wa pili",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/48HVHAu",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ce68/live/418056c0-b784-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Uwanja wa Martyr wenye viti 80,000 katika mji mkuu Kinshasa unakaribia kufurika raia wa Congo na wageni wa heshima kwa ajili ya sherehe ya kuapishwa kwa Felix Tshisekedi, ambaye alishinda uchaguzi wa rais wa hivi karibuni kwa asilimia 73 na hivyo kuongoza muhula wa pili madarakani.",
+            "imageAlt": "Sherehe za kuapishwa",
+            "id": "https%3A%2F%2Fbbc.in%2F48HVHAu"
+          },
+          {
+            "type": "article",
+            "title": "Felix Tshisekedi: Changamoto kuu za muhula wa pili kama rais wa DRC",
+            "firstPublished": "2024-01-10T13:17:18.202Z",
+            "lastPublished": "2024-01-10T13:17:18.202Z",
+            "link": "https://www.bbc.com/swahili/articles/c3gy22zl4zko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a14b/live/62d61840-afba-11ee-ad32-3bc162df4919.jpg",
+            "description": "Mahakama ya Katiba ya Congo imethibitisha Jumanne , tarehe 9 Januari, ushindi wa rais anayemaliza muda wake katika uchaguzi wa rais wa  tarehe 20 Disemba  2023.  Kufuatia kutangazwa kwake sasa Tshisekedi anakabiliwa na changamoto kadhaa ambazo anapaswa kuzitatua.",
+            "imageAlt": "w",
+            "id": "c3gy22zl4zko"
+          },
+          {
+            "type": "link",
+            "title": "Mahakama ya DR Congo imethibitisha ushindi wa Tshisekedi katika uchaguzi wa urais",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/4aNC1N8",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b697/live/7798b8c0-af86-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "th",
+            "id": "https%3A%2F%2Fbbc.in%2F4aNC1N8"
+          },
+          {
+            "type": "article",
+            "title": "Uchaguzi wa DR Congo: Jinsi Félix Tshisekedi alivyoshinda uchaguzi uliokumbwa na machafuko",
+            "firstPublished": "2024-01-03T09:53:31.571Z",
+            "lastPublished": "2024-01-03T09:53:31.571Z",
+            "link": "https://www.bbc.com/swahili/articles/cv2lr1xgg19o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aa1a/live/ddd564e0-aa1c-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Rais aliendesha kampeni ya uzalendo, huku upinzani ukigawanyika.",
+            "imageAlt": "Wafuasi wa Rais Tshitsekedi",
+            "id": "cv2lr1xgg19o"
+          },
+          {
+            "type": "link",
+            "title": "Mgombea urais wa Jamhuri ya Kidemokrasia ya Congo Fayulu ataja uchaguzi kuwa wenye 'vurugu'",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bbc.in/3v9xuEx",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/330a/live/5378bb70-9f2d-11ee-8df3-1d2983d8814f.jpg",
+            "description": "",
+            "imageAlt": "Fayulu",
+            "id": "https%3A%2F%2Fbbc.in%2F3v9xuEx"
+          },
+          {
+            "type": "article",
+            "title": "Kuzinduliwa kwa muungano wa waasi wa DR Congo, Kenya kwaibua mzozo wa kidiplomasia",
+            "firstPublished": "2023-12-20T09:54:48.921Z",
+            "lastPublished": "2023-12-20T09:54:48.921Z",
+            "link": "https://www.bbc.com/swahili/articles/cp0rqdqqz6vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b61/live/fa2b3d00-9f03-11ee-8df3-1d2983d8814f.jpg",
+            "description": "Tangazo, la muungano mpya wa waasi wa Kongo lililotolewa mjini Nairobi limeharibu uhusiano wa kidiplomasia.",
+            "imageAlt": "Rais wa Kenya William Ruto (kushoto) alikuwa Kinshasa kukutana na mwenzake wa Kongo Felix Tshisekedi (Kulia) mwezi Novemba mwaka jana.",
+            "id": "cp0rqdqqz6vo"
+          },
+          {
+            "type": "article",
+            "title": "Uchaguzi DRC 2023: Ni upi mustakabali wa Joseph Kabila na chama chake cha PPRD?",
+            "firstPublished": "2023-12-19T12:12:44.411Z",
+            "lastPublished": "2023-12-19T12:12:44.411Z",
+            "link": "https://www.bbc.com/swahili/articles/clmex3kkx7yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f9dd/live/7dee7890-9e65-11ee-8df3-1d2983d8814f.jpg",
+            "description": "Tangu aondoke madarakani Januari 2019, Joseph Kabila amekuwa akiishi kwa kujitenga katika shamba lake huko Kingakati, kilomita 50 mashariki mwa Kinshasa,",
+            "imageAlt": "Kabila",
+            "id": "clmex3kkx7yo"
+          },
+          {
+            "type": "article",
+            "title": "Uchaguzi DRC: 'Tungechagua amani iwapo tungepiga kura'",
+            "firstPublished": "2023-12-14T03:51:12.027Z",
+            "lastPublished": "2023-12-14T03:51:12.027Z",
+            "link": "https://www.bbc.com/swahili/articles/cd14l4legxmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3bf3/live/1e6c7680-9a2b-11ee-91bf-230bfab3fcba.jpg",
+            "description": "\"M23 walikuja. Walikuwa wakipigana na askari wetu [wa serikali]. Tulianza kukimbia na wale ambao hawakuweza kukimbia, waliuawa,\" anaieleza BBC.",
+            "imageAlt": "f",
+            "id": "cd14l4legxmo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/swahili/topics/c1v2n3zgn66t",
+        "curationId": "urn:bbc:tipo:list:a82e9a0b-8ee9-45c6-a671-6382f238c38b",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Uchaguzi wa DRC 2023",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "title": "Tazama",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_tv/tv_programmes/w13xtvrs",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/83c0/live/0270ce10-5f00-11ee-93e8-5d16174eb488.png",
+            "description": "Kipindi cha habari motomoto, kinachowaweka watazamaji karibu zaidi na yanayojiri duniani",
+            "imageAlt": "Camera",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b509fb6c-37a4-4c14-a5fd-02e55ae80d08",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Dira ya Dunia TV",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Gereza la kale lenye 'meno ya binadamu' katika sakafu yake",
+            "firstPublished": "2024-01-24T07:17:09.224Z",
+            "lastPublished": "2024-01-24T07:17:09.224Z",
+            "link": "https://www.bbc.com/swahili/articles/cp07lr4rj9vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "Baadhi ya waliopelekwa katika gereza hilo miaka 200 iliyopita ni pamoja na wanawake ambao walipata watoto nje ya ndoa",
+            "imageAlt": "",
+            "id": "cp07lr4rj9vo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M48S",
+            "title": "“Nilidhani nitaolewa na tajiri, lakini nikagundua sio rahisi hivyo”",
+            "firstPublished": "2024-01-23T11:08:41.131Z",
+            "lastPublished": "2024-01-23T11:08:41.131Z",
+            "link": "https://www.bbc.com/swahili/articles/ckve92zny0no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5215/live/5cee3f60-b9de-11ee-9320-43d6cfb3921e.jpg",
+            "description": "Kutana na Zarinah Hassan maarufu kama  Zari the Boss Lady, mfanyabiashara na mmoja kati ya wanawake wenye ushawishi katika mitandao ya kijamii ambaye ana asili ya Uganda akijibu maswali yetu matano kuhusu masuala mbali mbali katika maisha yake.",
+            "imageAlt": "g",
+            "id": "ckve92zny0no"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M35S",
+            "title": "TFF: Tanzania bado ina nafasi ya kufanya vizuri ",
+            "firstPublished": "2024-01-20T06:10:40.792Z",
+            "lastPublished": "2024-01-20T06:10:40.792Z",
+            "link": "https://www.bbc.com/swahili/articles/cy9e4d013n8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cfd0/live/ce741330-b759-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "w",
+            "id": "cy9e4d013n8o"
+          },
+          {
+            "type": "article",
+            "title": "Jinsi nyota wa muziki walivyochangia kuboresha viwango vya soka Tanzania",
+            "firstPublished": "2024-01-16T16:38:31.603Z",
+            "lastPublished": "2024-01-16T16:38:31.603Z",
+            "link": "https://www.bbc.com/swahili/articles/cd1d3y0dyvdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b59/live/d05641f0-b43e-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Timu ya taifa ya mpira wa miguu ya Tanzania inalenga kupita hatua ya makundi ya dimba la Afcon kwa mara ya kwanza katika historia yake.",
+            "imageAlt": "h",
+            "id": "cd1d3y0dyvdo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M45S",
+            "title": "Mtaalamu wa pesa mwenye umri wa miaka 13 kutoka Tanzania",
+            "firstPublished": "2024-01-16T06:48:15.618Z",
+            "lastPublished": "2024-01-16T06:48:15.618Z",
+            "link": "https://www.bbc.com/swahili/articles/cz5xd7llnxpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b5d1/live/817dc430-b43a-11ee-beb5-e1400df560f2.jpg",
+            "description": "Tracy Rabi ni mtaalamu wa masuala ya fedha za vijana kutoka Tanzania ambaye yuko katika juhudi za  kuwafundisha watoto wengine kuhusu fedha na ujasiriamali.",
+            "imageAlt": "g",
+            "id": "cz5xd7llnxpo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M15S",
+            "title": "Tazama: 'Hii sio ngoma bali ni dhikiri'",
+            "firstPublished": "2024-01-05T13:19:54.924Z",
+            "lastPublished": "2024-01-05T13:19:54.924Z",
+            "link": "https://www.bbc.com/swahili/articles/cv2l1ym1gyro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fa09/live/e24ed7c0-abcc-11ee-bc2f-cb5579b90709.jpg",
+            "description": "",
+            "imageAlt": "Ngoma",
+            "id": "cv2l1ym1gyro"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M5S",
+            "title": "'Naona aibu inabidi ninyoe nywele zangu za usoni'",
+            "firstPublished": "2023-12-28T06:58:58.630Z",
+            "lastPublished": "2023-12-28T06:58:58.630Z",
+            "link": "https://www.bbc.com/swahili/articles/c3gy1z0dlnmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4eb/live/6bce4d30-a4cc-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "Glory amejaribu mbinu tofauti katika jitihada zake za kuondoa nywele hizo",
+            "imageAlt": "Mwanamke wa Nigeria",
+            "id": "c3gy1z0dlnmo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M23S",
+            "title": "Kupigwa na kutishiwa: Jinsi wanawake wa Uzbek wanavyolazimishwa kufanya kazi ya ngono nchini India",
+            "firstPublished": "2023-12-15T03:27:14.785Z",
+            "lastPublished": "2023-12-15T03:27:14.785Z",
+            "link": "https://www.bbc.com/swahili/articles/c8890mnle0xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a439/live/759780b0-98c0-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "Wanawake wawili wa Uzbek waliolazimishwa kufanya kazi za ngono nchini India walifichua unyanyasaji, vitisho na ukatili ambao  wamekuwa wakitendewa",
+            "imageAlt": "h",
+            "id": "c8890mnle0xo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 11,
+        "link": "https://www.bbc.com/swahili/topics/cz40xlzvj6kt",
+        "curationId": "urn:bbc:vivo:curation:d6d0b811-beda-4ab9-9794-e98bbfca3306",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Sikiza / Tazama",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_swahili_radio",
+            "publishedTimeStart": "2024-01-22T02:59:30.000Z",
+            "publishedTimeEnd": "2024-01-22T03:29:00.000Z",
+            "publishedTimeDuration": "PT29M30S",
+            "title": "Amka Na BBC",
+            "brandPid": "p03411mj",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkb30byt187",
+            "broadcastPid": "p0h05fmb",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+          },
+          {
+            "serviceId": "bbc_swahili_radio",
+            "publishedTimeStart": "2024-01-22T03:59:30.000Z",
+            "publishedTimeEnd": "2024-01-22T04:29:00.000Z",
+            "publishedTimeDuration": "PT29M30S",
+            "title": "Amka Na BBC",
+            "brandPid": "p03411mj",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkb30byt50c",
+            "broadcastPid": "p0h06c7r",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+          },
+          {
+            "serviceId": "bbc_swahili_radio",
+            "publishedTimeStart": "2024-01-22T15:29:30.000Z",
+            "publishedTimeEnd": "2024-01-22T16:29:30.000Z",
+            "publishedTimeDuration": "PT1H",
+            "title": "Dira Ya Dunia",
+            "brandPid": "p03411ml",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w172zkbhqq8669h",
+            "broadcastPid": "p0h0b9nb",
+            "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+          },
+          {
+            "serviceId": "bbc_swahili_radio",
+            "publishedTimeStart": "2024-01-23T02:59:30.000Z",
+            "publishedTimeEnd": "2024-01-23T03:29:00.000Z",
+            "publishedTimeDuration": "PT29M30S",
+            "title": "Amka Na BBC",
+            "brandPid": "p03411mj",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w172zkb30bywy5b",
+            "broadcastPid": "p0h0d9xv",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "UAE imefadhili mauaji ya kisiasa nchini Yemen, uchunguzi wa BBC",
+            "firstPublished": "2024-01-24T10:30:33.375Z",
+            "lastPublished": "2024-01-24T10:31:13.677Z",
+            "link": "https://www.bbc.com/swahili/articles/ce94z0nzvvxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/08d3/live/b72da110-b9c9-11ee-8685-316409d66f25.png",
+            "description": "Umoja wa Falme za Kiarabu (UAE) umefadhili mauaji yanayochochewa kisiasa nchini Yemen, uchunguzi wa BBC umegundua",
+            "imageAlt": "as",
+            "id": "ce94z0nzvvxo"
+          },
+          {
+            "type": "article",
+            "title": "Jinsi mwanadiplomasia wa Tanzania alivyotaka kutatua mzozo wa mateka wa Marekani nchini Iran",
+            "firstPublished": "2024-01-23T01:45:23.888Z",
+            "lastPublished": "2024-01-23T01:45:23.888Z",
+            "link": "https://www.bbc.com/swahili/articles/c4nvl1xg4v5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6774/live/98ba5400-b959-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "Mzozo wa utekwaji nyara wa rai awa Marekani nchini Iran, ulioanza tarehe 4 Novemba 1979, ulikuwa nimoja ya matukio makubwa namuhimu sana yaliyotokea wakati wa uongozi wa rais Jimmy Carter, nchini Marekani.",
+            "imageAlt": "f",
+            "id": "c4nvl1xg4v5o"
+          },
+          {
+            "type": "article",
+            "title": "'Turudishieni waume zetu' - Wanawake wa Urusi katika maandamano yasiyo ya kawaida",
+            "firstPublished": "2024-01-23T11:37:10.448Z",
+            "lastPublished": "2024-01-23T11:37:10.448Z",
+            "link": "https://www.bbc.com/swahili/articles/c89n0p15099o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/404f/live/7c93d910-b9d9-11ee-8685-316409d66f25.jpg",
+            "description": "Kundi la wanawake wa Urusi wanatoa madai nadra kwa umma wakitaka wanajeshi wa akiba kurejea kutoka vitani. ",
+            "imageAlt": ".",
+            "id": "c89n0p15099o"
+          },
+          {
+            "type": "article",
+            "title": "Waziri Mkuu wa India azindua hekalu kuu la mungu lililochukua nafasi ya msikiti",
+            "firstPublished": "2024-01-22T14:01:58.630Z",
+            "lastPublished": "2024-01-22T14:02:16.049Z",
+            "link": "https://www.bbc.com/swahili/articles/c1913y0mvk2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/38e1/live/779a5680-b936-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "Waziri Mkuu wa India Narendra Modi amezindua hekalu kuu la mungu wa Kihindu Ram katika mji wa Ayodhya.",
+            "imageAlt": "h",
+            "id": "c1913y0mvk2o"
+          },
+          {
+            "type": "article",
+            "title": "Makaburi ya kushangaza ya zama za kale yagunduliwa",
+            "firstPublished": "2024-01-22T02:18:01.847Z",
+            "lastPublished": "2024-01-22T02:18:01.847Z",
+            "link": "https://www.bbc.com/swahili/articles/c2vywxplynxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/872d/live/d16a76a0-b476-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Watu waliozikwa hapa ni akina nani?",
+            "imageAlt": "cx ",
+            "id": "c2vywxplynxo"
+          },
+          {
+            "type": "article",
+            "title": "Israel-Palestine: Mvutano usio wa kawaida kati ya Marekani na Israel wazuka",
+            "firstPublished": "2024-01-22T04:03:49.768Z",
+            "lastPublished": "2024-01-22T04:03:49.768Z",
+            "link": "https://www.bbc.com/swahili/articles/c6pq30pp35lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/27ec/live/4c6f0e10-b8d7-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Ni mambo gani yamekuwa chanzo cha mabishano ya Israel na Marekani?",
+            "imageAlt": "dfcv ",
+            "id": "c6pq30pp35lo"
+          },
+          {
+            "type": "article",
+            "title": "Teksi zinazopaa zinajiandaa kuruka",
+            "firstPublished": "2024-01-22T09:30:43.215Z",
+            "lastPublished": "2024-01-22T09:30:43.215Z",
+            "link": "https://www.bbc.com/swahili/articles/c3gdn8540ego",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d832/live/e56aa160-b8eb-11ee-8f07-bbfdfa890097.jpg",
+            "description": "Je, uko tayari kupanda teksi inayopaa?",
+            "imageAlt": "x",
+            "id": "c3gdn8540ego"
+          },
+          {
+            "type": "article",
+            "title": "Uharibifu wa maeneo ya kidini huko Gaza",
+            "firstPublished": "2024-01-17T09:55:23.224Z",
+            "lastPublished": "2024-01-17T09:57:39.997Z",
+            "link": "https://www.bbc.com/swahili/articles/c72ypdv2r0ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/be9f/live/eababe20-b459-11ee-8f07-bbfdfa890097.jpg",
+            "description": "\nBaadhi ya makanisa na misikiti mikongwe zaidi duniani imeharibiwa kabisa katika mzozo huo.",
+            "imageAlt": "The inside of the destroyed Khalid Bin Al-Waleed mosque. A man is observing the damage from inside the dome",
+            "id": "c72ypdv2r0ko"
+          },
+          {
+            "type": "article",
+            "title": "Bab el Mandeb: Fahamu mkondo wa Bahari ya Shamu unaotumiwa na Houthi kushambulia meli",
+            "firstPublished": "2024-01-17T15:01:49.572Z",
+            "lastPublished": "2024-01-17T15:01:49.572Z",
+            "link": "https://www.bbc.com/swahili/articles/c992z4ndlvzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f8c5/live/9adbfea0-b53f-11ee-bc2f-cb5579b90709.jpg",
+            "description": "Jina la mlango wa Bahari ya Shamu, ni Bab el Mandeb, likimaanisha kwa Kiarabu \"mlango wa machozi\" au \"mlango wa huzuni.\" Kwanini eneo hilo ni muhimu kimataifa?",
+            "imageAlt": "d",
+            "id": "c992z4ndlvzo"
+          },
+          {
+            "type": "article",
+            "title": "'Mambo ya kutisha yalitokea'-Ndani ya kanisa la TB Joshua lenye simulizi za kuogofya",
+            "firstPublished": "2024-01-09T03:00:10.778Z",
+            "lastPublished": "2024-01-09T03:00:10.778Z",
+            "link": "https://www.bbc.com/swahili/articles/c6p1j93g21go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1cb1/live/623205d0-ae56-11ee-beb5-e1400df560f2.jpg",
+            "description": " Ni pamoja  na simulizi  nyingi za moja kwa moja za wanawake waliovuliwa nguo, na kubakwa kwa vitu - ikiwa ni pamoja na mwanamke mmoja ambaye anasema ilimtokea mara mbili kabla ya umri wa miaka 15.",
+            "imageAlt": "th",
+            "id": "c6p1j93g21go"
+          },
+          {
+            "type": "article",
+            "title": "Kwa nini kanisa la Kiafrika linaipinga Vatican kuhusu suala la mapenzi ya jinsi moja?",
+            "firstPublished": "2024-01-13T05:02:36.488Z",
+            "lastPublished": "2024-01-13T05:02:36.488Z",
+            "link": "https://www.bbc.com/swahili/articles/c51zzp5x2dmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e9f2/live/fd3e8a60-b231-11ee-beb5-e1400df560f2.jpg",
+            "description": "Taarifa ya kwamba Vatcan  imeidhinisha baraka kwa wenzi wapenzi wa jinsia moja iligonga vichwa vya habari na kurasa za mbele za vyombo vyote vya habari hususan vya kimataifa. ",
+            "imageAlt": "Baba Mtakatifu Francisko anaongoza Ibada ya Misa Takatifu ya kumbukumbu ya Hayati Baba Mtakatifu Benedikto XVI na Makardinali na Maaskofu waliofariki dunia mwaka 2023.",
+            "id": "c51zzp5x2dmo"
+          },
+          {
+            "type": "article",
+            "title": "Jinsi binti yake TB Joshua alivyokabiliana na baba yake kwa kufichua maovu yake",
+            "firstPublished": "2024-01-10T06:02:26.423Z",
+            "lastPublished": "2024-01-10T06:02:26.423Z",
+            "link": "https://www.bbc.com/swahili/articles/c51z7vdzqjpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/83a2/live/df4c8930-af7a-11ee-bc2f-cb5579b90709.jpg",
+            "description": "\"Ajoke alikuwa na ujasiri wa kukabiliana naye. Ninamwona kama shujaa.\"",
+            "imageAlt": "th",
+            "id": "c51z7vdzqjpo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:16e0bbb4-dad0-43b2-a6af-3a76f8d5c7dc",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 6,
         "title": "Gumzo mitandaoni",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
-            "type": "video",
-            "duration": "PT1M24S",
-            "title": "'Nilijenga nyumba yangu ndogo kwa kutumia plastiki 35,000… ",
-            "firstPublished": "2023-05-10T11:32:14.612Z",
-            "link": "https://www.bbc.com/swahili/articles/c51pper4nzvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/20cb/live/965f06d0-ef22-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Mwanaharakati ajenga nyumba ya plastiki kuokoa mazingira Indonesia",
-            "imageAlt": ".",
-            "id": "c51pper4nzvo"
+            "type": "audio",
+            "duration": "PT29M",
+            "title": "Je Malezi yanasaidia kujenga afya ya akili?",
+            "firstPublished": "2023-10-12T16:32:59.000Z",
+            "lastPublished": "2023-10-12T16:32:59.000Z",
+            "link": "https://www.bbc.com/swahili/habari-67095472",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E128/production/_131404675_p0gl5d96.jpg",
+            "description": "Je Malezi yanasaidia kujenga afya ya akili?",
+            "imageAlt": "Mama",
+            "id": "f8931803-e3ef-41d6-a590-2a865d1ff902"
           },
           {
-            "type": "video",
-            "duration": "PT2M58S",
-            "title": "Dereva 'bodaboda' mwenye ulemavu wa kusikia Tanzania ",
-            "firstPublished": "2023-05-02T10:43:50.676Z",
-            "link": "https://www.bbc.com/swahili/articles/cjm7e9mdd04o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ef27/live/7e022780-e8d2-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Licha ya ulemavu wake wa kutosikia, Ally Jumanne amekuwa dereva wa 'bodaboda' kwa miaka 11",
-            "imageAlt": "w",
-            "id": "cjm7e9mdd04o"
+            "type": "audio",
+            "duration": "PT29M",
+            "title": "Namna gani unaweza kupambana na mabadiliko ya Tabia nchi? ",
+            "firstPublished": "2023-01-08T12:20:58.750Z",
+            "lastPublished": "2023-01-08T12:20:58.750Z",
+            "link": "https://www.bbc.com/swahili/articles/cn0y28vp30po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e8e7/live/664d0ca0-8f4e-11ed-9a1a-f3662015ae8e.jpg",
+            "description": "Jitihada za kupanda miti na kutunza mazingira kwa wakulima ni moja ya harakati zifanywazo nchini humo.",
+            "imageAlt": "mm",
+            "id": "cn0y28vp30po"
           },
           {
             "type": "audio",
             "duration": "PT29M12S",
             "title": "Unafanyaje kuhakikisha shughuli za kiuchumi hazimkwamishi mtoto kupata elimu?",
             "firstPublished": "2023-04-30T12:25:38.291Z",
+            "lastPublished": "2023-04-30T12:25:38.291Z",
             "link": "https://www.bbc.com/swahili/articles/cj70e83vm9po",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/28b4/live/fb3e7660-e5a6-11ed-a142-ab0e42bfd9c3.jpg",
             "description": "",
@@ -122,256 +732,314 @@
             "id": "cj70e83vm9po"
           },
           {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "Katika eneo la tukio la vifo vya dhehebu tata la Kenya  ",
-            "firstPublished": "2023-04-27T09:59:48.137Z",
-            "link": "https://www.bbc.com/swahili/articles/ce40l414gw8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/821e/live/58db2c60-e4ac-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Miili ya watu zaidi ya 90 imepatikana katika msitu wa  Shakahola  mashariki mwa Kenya. Wahanga wanadhaniwa kuwa ni wafuasi wa  dhehebu tata la kidini walioshawishiwa kufunga hadi kufa, ili kukutana na Yesu.",
-            "imageAlt": "g",
-            "id": "ce40l414gw8o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M36S",
-            "title": "Unajua mtama unaweza kupunguza kasi ya uzee na magonjwa?",
-            "firstPublished": "2023-04-27T05:47:39.128Z",
-            "link": "https://www.bbc.com/swahili/articles/cd1gk4wx538o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0592/live/7e0dd4c0-e447-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "w",
-            "id": "cd1gk4wx538o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M7S",
-            "title": "Paul Makenzie: '' Alisema yeye na familia yake watakua wa mwisho kuaga Dunia na kwenda mbinguni''",
-            "firstPublished": "2023-04-26T13:20:06.682Z",
-            "link": "https://www.bbc.com/swahili/articles/cw5k3rg42dwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a651/live/da27b0e0-e434-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Titus Katana ambaye aliwahi kushiriki katika kundi hilo na baadae kujitoa aliiambia BBC kuwa Mchungaji Makenzie aliwataka waumini waanze kufunga hadi kufa kisha yeye na familia watakua wa mwisho.",
-            "imageAlt": "w",
-            "id": "cw5k3rg42dwo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "Waislamu wa madhehebu ya Answar Sunnah washeherekea Eid Tanzania",
-            "firstPublished": "2023-04-21T12:48:58.914Z",
-            "link": "https://www.bbc.com/swahili/articles/c6p9453n87do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Nchini Tanzania, wakati Waislamu wengi bado wanatazamia kusheherekea siku kuu ya Eid Ul-Fitr kesho, madhehebu ya Answar Sunnah leo wameendelea na sherehe hizo. ",
-            "imageAlt": "",
-            "id": "c6p9453n87do"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M27S",
-            "title": "Wanafunzi waliokwama walazimika kumzika rafiki yao Sudan  ",
-            "firstPublished": "2023-04-19T12:25:26.829Z",
-            "link": "https://www.bbc.com/swahili/articles/c2lnknz8ze0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a1f/live/15f18a20-dea3-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Wanafunzi na wafanyakazi  katika Chuo Kikuu cha Khartoum wanasema wamekwama katika makabiliano ya silaha kwa siku nne, bila chakula na maji . ",
-            "imageAlt": "g",
-            "id": "c2lnknz8ze0o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M14S",
-            "title": "Kwanini binadamu tunaipenda dhahabu?",
-            "firstPublished": "2023-04-08T13:02:52.310Z",
-            "link": "https://www.bbc.com/swahili/articles/crgqp4jg638o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Kwa nini tunaona dhahabu inapendeza sana?",
-            "imageAlt": "",
-            "id": "crgqp4jg638o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M56S",
-            "title": "“Sufuria ya ugali iliniangukia nikiwa mtoto, niliungua mwili mzima”",
-            "firstPublished": "2023-04-08T10:19:58.840Z",
-            "link": "https://www.bbc.com/swahili/articles/c2ln2jgkwqxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": " Dkt Ipyana Kibona anawahamasisha Wakristo kwamba moyo wa kushukuru kwa matendo mema waliyotendewa na Mungu ni jambo la msingi ",
-            "imageAlt": "",
-            "id": "c2ln2jgkwqxo"
-          },
-          {
-            "type": "video",
-            "duration": "PT44S",
-            "title": "Video: Paka amrukia imamu anayeongoza sala wakati wa ibada ya Ramadhan",
-            "firstPublished": "2023-04-06T03:25:54.000Z",
-            "link": "https://www.bbc.com/swahili/habari-65198205",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5F4E/production/_129289342_p0ff5445.jpg",
-            "description": "Video yamuonyesha paka akiruka juu ya mabega ya imamu wakati wa sala ya Tarawehe ndani ya msikiti.",
-            "imageAlt": "Walid Mehsas na paka katika mabega yake",
-            "id": "3d347202-ae91-47d2-9033-22f9fee4585e"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M2S",
-            "title": "Viboko wa Pablo Escobar kuhamishwa kwa dola milioni 3.5",
-            "firstPublished": "2023-03-31T13:29:23.247Z",
-            "link": "https://www.bbc.com/swahili/articles/cq5ewd0w7p0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b816/live/60665ce0-cf83-11ed-be2e-754a65c11505.jpg",
-            "description": "",
-            "imageAlt": "viboko",
-            "id": "cq5ewd0w7p0o"
+            "type": "audio",
+            "duration": "PT29M",
+            "title": "Unapambanaje na ukatili wa kijinsia?",
+            "firstPublished": "2022-12-27T06:40:34.000Z",
+            "lastPublished": "2022-12-27T06:40:34.000Z",
+            "link": "https://www.bbc.com/swahili/64100225",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/11F33/production/_128132537_p0drpqv0.jpg",
+            "description": "Shirika la Usawa wa KIjinsia linasema Jamii inapaswa kutambua kuwa ukatili wa kijinsia ni adui wa Maisha ya mwanadamu",
+            "imageAlt": "d",
+            "id": "3f72bc0c-340c-4914-b87f-814e7966f522"
           }
         ],
         "activePage": 1,
-        "pageCount": 5,
-        "link": "https://www.bbc.com/swahili/topics/cz40xlzvj6kt",
-        "curationId": "urn:bbc:vivo:curation:d6d0b811-beda-4ab9-9794-e98bbfca3306",
-        "curationType": "vivo-stream",
-        "position": 2,
-        "title": "Video",
-        "visualProminence": "NORMAL"
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:9b54b402-c2af-4150-95fe-0ef528dfc511",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Tuyajenge",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
       },
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "Baada ya utafiti wa miaka mitatu mnyama huyu atajwa kuwa chanzo cha Corona ",
-            "firstPublished": "2023-03-25T09:36:03.756Z",
-            "link": "https://www.bbc.com/swahili/articles/clw1g5qp9zvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fa18/live/cede8bd0-caeb-11ed-be2e-754a65c11505.jpg",
-            "description": "Baada ya utafiti wa miaka mitatu mnyama huyu atajwa kuwa chanzo cha Corona ",
-            "imageAlt": "CORONA",
-            "id": "clw1g5qp9zvo"
+            "type": "audio",
+            "duration": "PT29M30S",
+            "title": "25/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-25T04:29:00.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkb30bz2vqn",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkb30bz2vqn"
           },
           {
-            "type": "article",
-            "title": "Asili ya Covid: Kwa nini nadharia ya uvujaji wa maabara ya Wuhan inabishaniwa sana?",
-            "firstPublished": "2023-03-02T05:45:21.972Z",
-            "link": "https://www.bbc.com/swahili/articles/cqv81wg5373o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f93b/live/e0625f70-b8b8-11ed-93f1-01f57b5ba1ca.jpg",
-            "description": "Zaidi ya miaka mitatu baada ya Covid-19 kugunduliwa katika jiji la Wuhan, China swali la jinsi virusi hivyo viliibuka kwa mara ya kwanza bado ni kitendawili.",
-            "imageAlt": "Nadharia ya kuvuja kwa maabara imekataliwa vikali na China",
-            "id": "cqv81wg5373o"
+            "type": "audio",
+            "duration": "PT29M30S",
+            "title": "25/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-25T03:29:00.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkb30bz2qzj",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkb30bz2qzj"
           },
           {
-            "type": "article",
-            "title": "Kwa nini Covid-19 itaendelea kuwepo sana?",
-            "firstPublished": "2023-01-13T05:59:07.859Z",
-            "link": "https://www.bbc.com/swahili/articles/cxrndw50xdvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/96b8/live/ba861e10-9264-11ed-9a1a-f3662015ae8e.jpg",
-            "description": "Kwa nini Covid-19 itaendelea kuwepo sana?",
-            "imageAlt": "w",
-            "id": "cxrndw50xdvo"
+            "type": "audio",
+            "duration": "PT29M30S",
+            "title": "24/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-24T04:29:00.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkb30byzytk",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkb30byzytk"
           },
           {
-            "type": "article",
-            "title": "Ni nini kinachojulikana kuhusu aina mpya ya Covid XBB.1.5? ",
-            "firstPublished": "2023-01-11T02:18:09.654Z",
-            "link": "https://www.bbc.com/swahili/articles/cxx4ygrlxlno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d9c4/live/c8869db0-9150-11ed-9a1a-f3662015ae8e.jpg",
-            "description": "Aina mpya ya Covid inasababisha wasiwasi huko Marekani ambapo inaenea haraka.",
-            "imageAlt": "w",
-            "id": "cxx4ygrlxlno"
-          },
-          {
-            "type": "article",
-            "title": "Jinsi Covid inavyoathiri uwezo wa kuzaa kwa wanaume",
-            "firstPublished": "2023-01-02T10:22:17.000Z",
-            "link": "https://www.bbc.com/swahili/habari-64144356",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C491/production/_122612305_gettyimages-824853668.jpg",
-            "description": "Ni miaka miwili sasa tangu virusi vya Covid vigundulike duniani na baadaye kuwa janga, lakini ni sasa ambapo uwezekano wa athari za ugonjwa huu kwa uzazi wa wanaume zimefichuliwa.",
-            "imageAlt": "පිරිමින්ගේ සරුභාවයට කොවිඩ්වලින් බලපෑමක්",
-            "id": "ca8a7024-2184-4d70-b4c3-7b40fec4cb3d"
-          },
-          {
-            "type": "article",
-            "title": "Mambo matano makubwa zaidi ya mwaka 2022 tuliyojifunza kuhusu mapenzi na ngono",
-            "firstPublished": "2022-12-24T10:56:46.790Z",
-            "link": "https://www.bbc.com/swahili/articles/c9e19739z2yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fe75/live/bf378b30-81dc-11ed-90a7-556e529f9f89.jpg",
-            "description": "Jinsi tunavyofikiri kuhusu ngono na upendo daima zinabadilika, zimeathiriwa mara kwa mara na matukio ya kitamaduni, kisiasa na kimataifa.",
-            "imageAlt": "Kuachana ilikuwa rahisi na ngumu zaidi mnamo 2022",
-            "id": "c9e19739z2yo"
-          },
-          {
-            "type": "article",
-            "title": "Kwanini kuna misururu ya kuchoma miili ya wafu China?",
-            "firstPublished": "2022-12-22T10:43:03.880Z",
-            "link": "https://www.bbc.com/swahili/articles/cd1518xlyy0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/28cb/live/42328d00-80f7-11ed-90a7-556e529f9f89.jpg",
-            "description": "Huku China ikipambana na wimbi la visa vya Covid, wafanyakazi katika maeneo ya uchomaji wa miili ya wafu  kote nchini Uchina wanasema wanahangaika kushughulikia miili ya wafu inayoletwa  kwa ajili ya kuchomwa.   ",
-            "imageAlt": "g",
-            "id": "cd1518xlyy0o"
-          },
-          {
-            "type": "article",
-            "title": "Miji ghali zaidi duniani kuishi 2022",
-            "firstPublished": "2022-12-02T06:38:16.798Z",
-            "link": "https://www.bbc.com/swahili/articles/ck54e6858dgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/79d1/live/e8795aa0-720a-11ed-94b2-efbc7109d3dd.jpg",
-            "description": "Miji ghali zaidi duniani ni New York na Singapore, kulingana na utafiti wa kila mwaka wa Kitengo cha Ujasusi cha Economist (EIU).",
-            "imageAlt": ".",
-            "id": "ck54e6858dgo"
-          },
-          {
-            "type": "article",
-            "title": "Jinsi uwepo wa Covid unavyo wakosesha China shamrashamra za Kombe la Dunia ",
-            "firstPublished": "2022-11-24T10:44:47.933Z",
-            "link": "https://www.bbc.com/swahili/articles/cmm654vgj0zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5732/live/6cabc710-6bab-11ed-94b2-efbc7109d3dd.jpg",
-            "description": "Vyombo vya habari vimeangazia pakubwa Kombe la Dunia wiki hii , lakini mechi zimechochea hasira kwamba watu nchini humo wamezuiwa kusherehekea.  ",
-            "imageAlt": "g",
-            "id": "cmm654vgj0zo"
-          },
-          {
-            "type": "article",
-            "title": "Utafiti wabaini sababu za homa ya ini kwa watoto",
-            "firstPublished": "2022-07-27T04:52:13.816Z",
-            "link": "https://www.bbc.com/swahili/articles/c8488v7jrk9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/605c/live/e47e36e0-0cee-11ed-93ba-314ede9cd985.jpg",
-            "description": "Watafiti wanaamini kuwa nyuma ya mlipuko huo mpya kuna virusi viwili vya kawaida ambavyo vimerudi baada ya kumalizika kwa marufuku ya kutoka nje kufuatia mlipuko wa corona",
-            "imageAlt": "ggg",
-            "id": "c8488v7jrk9o"
-          },
-          {
-            "type": "article",
-            "title": "Urusi inavyotumia pesa nyingi kumlinda Putin dhidi ya Covid",
-            "firstPublished": "2022-07-19T03:29:23.964Z",
-            "link": "https://www.bbc.com/swahili/articles/c19m3vkn02zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4765/live/b8a39f10-0712-11ed-93ba-314ede9cd985.jpg",
-            "description": "Vipimo vya matibabu, ikiwa ni pamoja na katika baadhi ya visa  sampuli za kinyesi vinafanywa. Je, mfumo unaolinda afya ya Vladimir Putin unafanya kazi vipi?",
-            "imageAlt": "th",
-            "id": "c19m3vkn02zo"
-          },
-          {
-            "type": "article",
-            "title": "Korea Kaskazini yapambana na Covid kwa maji ya chumvi na tangawizi",
-            "firstPublished": "2022-05-20T11:09:02.000Z",
-            "link": "https://www.bbc.com/swahili/habari-61524344",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2335/production/_124831090_978d7935-cd85-4cd0-903c-e98a54d10b1c.jpg",
-            "description": "Korea Kaskazini inapambana kupunguza maambukizi ya Covid kwa raia wake ambao hawajachanjwa.",
-            "imageAlt": "ggg",
-            "id": "ffd4c465-6d23-4b4a-b308-6f9fc7d6e137"
+            "type": "audio",
+            "duration": "PT29M30S",
+            "title": "24/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-24T03:29:00.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkb30byzv2f",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkb30byzv2f"
           }
         ],
         "activePage": 1,
-        "pageCount": 12,
-        "link": "https://www.bbc.com/swahili/topics/c8jvpjklx1dt",
-        "curationId": "urn:bbc:vivo:curation:5fb3375d-f7ba-41c4-bf92-67e379be83fe",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Taarifa kuhusu Coronavirus",
-        "visualProminence": "NORMAL"
+        "pageCount": 1,
+        "link": "https://www.bbc.com/swahili/bbc_swahili_radio/programmes/p03411mj",
+        "curationId": "urn:bbc:programmes:available-episodes:p03411mj",
+        "curationType": "available-episodes",
+        "position": 8,
+        "title": "Redio | Amka Na BBC",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "duration": "PT1H",
+            "title": "24/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-24T16:29:30.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkbhqq8d03p",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkbhqq8d03p"
+          },
+          {
+            "type": "audio",
+            "duration": "PT1H",
+            "title": "23/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-23T16:29:30.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkbhqq8936l",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkbhqq8936l"
+          },
+          {
+            "type": "audio",
+            "duration": "PT1H",
+            "title": "22/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-22T16:29:30.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkbhqq8669h",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkbhqq8669h"
+          },
+          {
+            "type": "audio",
+            "duration": "PT1H",
+            "title": "19/01/2024 GMT",
+            "firstPublished": "",
+            "lastPublished": "2024-01-19T16:29:30.000Z",
+            "link": "https://www.bbc.com/swahili/bbc_swahili_radio/w172zkbhcfysnb1",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0gwv2hj.png",
+            "description": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "imageAlt": "",
+            "id": "w172zkbhcfysnb1"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/swahili/bbc_swahili_radio/programmes/p03411ml",
+        "curationId": "urn:bbc:programmes:available-episodes:p03411ml",
+        "curationType": "available-episodes",
+        "position": 9,
+        "title": "Redio | Dira Ya Dunia",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 10,
+        "title": "Iliyosomwa zaidi",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/swahili/popular/read",
+        "mostRead": {
+          "generated": "2024-01-25T11:36:27.748Z",
+          "lastRecordTimeStamp": "2024-01-25T11:34:00Z",
+          "firstRecordTimeStamp": "2024-01-25T10:34:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:ce7l941rpw7o",
+              "rank": 1,
+              "title": "Je, Marekani inamlenga nani kwa mashambulizi yake nchini Iraq?",
+              "href": "https://www.bbc.com/swahili/articles/ce7l941rpw7o",
+              "timestamp": 1706179400419
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn0ndwr3lvjo",
+              "rank": 2,
+              "title": "Lishe: Haya  ndio unayohitaji kujua kuhusu ulaji wa ‘kuku wa kizungu’",
+              "href": "https://www.bbc.com/swahili/articles/cn0ndwr3lvjo",
+              "timestamp": 1706093878726
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjk6mxe7g6ko",
+              "rank": 3,
+              "title": "Tetesi za soka Ulaya Alhamisi 25.01.2023",
+              "href": "https://www.bbc.com/swahili/articles/cjk6mxe7g6ko",
+              "timestamp": 1706154069925
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c80nkp56kwjo",
+              "rank": 4,
+              "title": "Urusi-Ukraine: Nani ameitungua ndege ya Urusi iliyokuwa na wafungwa wa kivita?",
+              "href": "https://www.bbc.com/swahili/articles/c80nkp56kwjo",
+              "timestamp": 1706160080864
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn0njqp345zo",
+              "rank": 5,
+              "title": "Saa ya Siku za Mwisho za dunia iko sekunde 90 kabla ya janga ",
+              "href": "https://www.bbc.com/swahili/articles/cn0njqp345zo",
+              "timestamp": 1706090672838
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz9m5v4jm9po",
+              "rank": 6,
+              "title": "Je, mwili wako unahitaji sukari kiasi gani?",
+              "href": "https://www.bbc.com/swahili/articles/cz9m5v4jm9po",
+              "timestamp": 1706168669381
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cy95gl4vl1ko",
+              "rank": 7,
+              "title": "Afcon 2023: Tanzania yaaga mashindano huku DR Congo ikisonga mbele",
+              "href": "https://www.bbc.com/swahili/articles/cy95gl4vl1ko",
+              "timestamp": 1706152609974
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq57rlqxzddo",
+              "rank": 8,
+              "title": "Tetesi za soka Ulaya Jumatano 24.01.2024",
+              "href": "https://www.bbc.com/swahili/articles/cq57rlqxzddo",
+              "timestamp": 1706066058207
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c6pv35x4jxdo",
+              "rank": 9,
+              "title": "F-16 : Kwa nini ndege hii ya kivita  bado inahitajika sana?",
+              "href": "https://www.bbc.com/swahili/articles/c6pv35x4jxdo",
+              "timestamp": 1705827559779
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c72g67j6rl7o",
+              "rank": 10,
+              "title": "Afcon 2023: Wanasoka wa Afrika wanaocheza uwanjani licha ya kuhatarisha maisha yao",
+              "href": "https://www.bbc.com/swahili/articles/c72g67j6rl7o",
+              "timestamp": 1706014703481
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq5xrnyzd1yo",
+              "rank": 11,
+              "title": "\"Nilifungwa kizazi mwaka jana, kwa nini nina mimba tena?\"",
+              "href": "https://www.bbc.com/swahili/articles/cq5xrnyzd1yo",
+              "timestamp": 1706099781418
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cevr1p2pdx1o",
+              "rank": 12,
+              "title": "Mbwana Samatta: Adel Amrouche ni 'mmoja wetu'",
+              "href": "https://www.bbc.com/swahili/articles/cevr1p2pdx1o",
+              "timestamp": 1706069586758
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cxx32xp5wejo",
+              "rank": 13,
+              "title": "Tetesi za soka Jumapili 21.01.2024",
+              "href": "https://www.bbc.com/swahili/articles/cxx32xp5wejo",
+              "timestamp": 1705806760162
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cp07lr4rj9vo",
+              "rank": 14,
+              "title": "Gereza la kale lenye 'meno ya binadamu' katika sakafu yake",
+              "href": "https://www.bbc.com/swahili/articles/cp07lr4rj9vo",
+              "timestamp": 1706080629224
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cyejgll9j90o",
+              "rank": 15,
+              "title": "Tetesi za soka Ulaya Jumanne 23.01.2024",
+              "href": "https://www.bbc.com/swahili/articles/cyejgll9j90o",
+              "timestamp": 1705979704526
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cd1j4l24dl1o",
+              "rank": 16,
+              "title": "Kwanini Chadema inaingia barabarani?",
+              "href": "https://www.bbc.com/swahili/articles/cd1j4l24dl1o",
+              "timestamp": 1706077540292
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c89n0p15099o",
+              "rank": 17,
+              "title": "'Turudishieni waume zetu' - Wanawake wa Urusi katika maandamano yasiyo ya kawaida",
+              "href": "https://www.bbc.com/swahili/articles/c89n0p15099o",
+              "timestamp": 1706009830448
+            },
+            {
+              "id": "201d5ea6-3f8f-4c36-8040-525453eb3284",
+              "rank": 18,
+              "title": "Vyakula vilivyoagizwa na wafungwa Marekani kabla ya kunyongwa",
+              "href": "/swahili/habari-53809489",
+              "timestamp": 1607521175000
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c2vywxplynxo",
+              "rank": 19,
+              "title": "Makaburi ya kushangaza ya zama za kale yagunduliwa",
+              "href": "https://www.bbc.com/swahili/articles/c2vywxplynxo",
+              "timestamp": 1705889881847
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1913y0mvk2o",
+              "rank": 20,
+              "title": "Waziri Mkuu wa India azindua hekalu kuu la mungu lililochukua nafasi ya msikiti",
+              "href": "https://www.bbc.com/swahili/articles/c1913y0mvk2o",
+              "timestamp": 1705932136049
+            }
+          ]
+        }
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cw95pllwe11t",
+        "contentId": "urn:bbc:tipo:topic:c5q13805z69t",
         "contentType": "index-home",
         "pageIdentifier": "swahili.page",
         "pageTitle": "BBC News Swahili"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

@@ -47,6 +47,7 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
+  nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
@@ -66,6 +67,10 @@ const Curation = ({
           link={promos[0].link}
           linkText={promos[0].title}
           image={promos[0].imageUrl}
+          eventTrackingData={{
+            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+            detailedPlacement: `${position + 1}`,
+          }}
         />
       ) : null;
     case MOST_READ:
