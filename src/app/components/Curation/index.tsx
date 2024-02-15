@@ -52,13 +52,11 @@ const Curation = ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
-
-
-  const componentName = getComponentName(
-    {visualStyle,
-    visualProminence, radioSchedule}
-  );
-
+  const componentName = getComponentName({
+    visualStyle,
+    visualProminence,
+    radioSchedule,
+  });
 
   const GridComponent = getGridComponent(componentName);
 
