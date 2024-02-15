@@ -53,22 +53,13 @@ const Curation = ({
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
 
-  let componentName;
-  if(radioSchedule){
-    componentName = RADIO_SCHEDULE;
-    console.log('radio schedule', radioSchedule);
-  }
-  else{
-  componentName = getComponentName(
+
+  const componentName = getComponentName(
     {visualStyle,
-    visualProminence}
+    visualProminence, radioSchedule}
   );
-    }
-console.log('component name', componentName);
-  // const componentName = getComponentName(
-  //   {visualStyle,
-  //   visualProminence}
-  // );
+
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;

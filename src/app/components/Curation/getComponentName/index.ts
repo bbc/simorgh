@@ -21,13 +21,17 @@ const {
   HIERARCHICAL_CURATION_GRID,
   MOST_READ,
   NOT_SUPPORTED,
+  RADIO_SCHEDULE
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
-  visualProminence
+  visualProminence, radioSchedule
   }: CurationProps) => {
 
+    if(radioSchedule){
+      return RADIO_SCHEDULE
+    }
 
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,

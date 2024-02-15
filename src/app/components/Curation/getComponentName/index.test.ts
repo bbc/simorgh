@@ -3,6 +3,7 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import getComponentName, { COMPONENT_NAMES } from '.';
+import afriqueHomePage from '../../../../../data/afrique/homePage/index.json';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -17,23 +18,32 @@ const {
 
 describe('getComponentName', () => {
   it.each`
-    visualStyle     | visualProminence     | curationType        | expected
-    ${BANNER}       | ${MINIMUM}           | ${null}             | ${NOT_SUPPORTED}
-    ${BANNER}       | ${LOW}               | ${null}             | ${NOT_SUPPORTED}
-    ${BANNER}       | ${NORMAL}            | ${null}             | ${MESSAGE_BANNER}
-    ${BANNER}       | ${HIGH}              | ${null}             | ${NOT_SUPPORTED}
-    ${BANNER}       | ${MAXIMUM}           | ${null}             | ${NOT_SUPPORTED}
-    ${NONE}         | ${NORMAL}            | ${null}             | ${SIMPLE_CURATION_GRID}
-    ${NONE}         | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
-    ${COLLECTION}   | ${HIGH}              | ${null}             | ${HIERARCHICAL_CURATION_GRID}
-    ${RANKED}       | ${NORMAL}            | ${'most-popular'}   | ${MOST_READ}
-    ${NONE}         | ${NORMAL}            | ${'radio-schedule'} | ${RADIO_SCHEDULE}
-    ${'fake-style'} | ${'fake-prominence'} | ${null}             | ${null}
+    visualStyle     | visualProminence     | expected
+    ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
+    ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
+    ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
+    ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
+    ${BANNER}       | ${MAXIMUM}           | ${NOT_SUPPORTED}
+    ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
+    ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
+    ${COLLECTION}   | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
+    ${RANKED}       | ${NORMAL}            | ${MOST_READ}
+    ${'fake-style'} | ${'fake-prominence'} | ${null}
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence and curation type is $curationType',
-    ({ visualStyle, visualProminence, curationType, expected }) => {
-      expect(getComponentName({visualStyle, visualProminence, curationType})).toBe(expected);
+    ({ visualStyle, visualProminence, expected }) => {
+      expect(getComponentName({visualStyle, visualProminence, radioSchedule: undefined })).toBe(expected);
       
     },
   );
+  it('should return radio schedule when curationType is radio-schedule and visual style is NONE and visualProminence is NORMAL', () => {
+    const visualProminence = NORMAL;
+    const visualStyle = NONE;
+    const radioSchedule = afriqueHomePage.data.curations[5].radioSchedule;
+
+    expect(getComponentName({visualStyle, visualProminence, radioSchedule})).toBe(
+      `${RADIO_SCHEDULE}`,
+    );
+  });
+
 });
