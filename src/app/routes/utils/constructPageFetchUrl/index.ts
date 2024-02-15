@@ -77,7 +77,7 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local'
+        return process.env.JEST_WORKER_ID === undefined
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
@@ -109,7 +109,7 @@ const constructPageFetchUrl = ({
   isAmp,
   isCaf,
 }: UrlConstructParams) => {
-  const env = getEnvironment(pathname);
+  const env = process?.env?.BFF_ENV || getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
   const id = getId({ pageType, service, env, variant, isCaf })(pathname);
