@@ -1,6 +1,7 @@
 import moment from 'moment-timezone';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import prop from 'ramda/src/prop';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
@@ -29,6 +30,12 @@ export default ({
     path(['model', 'blocks'], aresMediaBlock),
     'caption',
   );
+  const hasWebcastVersions = prop(
+    'webcastVersions',
+    path(['model', 'blocks', 0, 'model'], aresMediaBlock),
+  );
+
+  const versionParameter = hasWebcastVersions ? 'webcastVersions' : 'versions';
 
   const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
@@ -38,7 +45,7 @@ export default ({
     aresMediaBlock,
   );
   const versionId = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
+    ['model', 'blocks', 0, 'model', versionParameter, 0, 'versionId'],
     aresMediaBlock,
   );
   const blockId = path(
@@ -51,7 +58,7 @@ export default ({
     aresMediaBlock,
   );
   const rawDuration = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'duration'],
+    ['model', 'blocks', 0, 'model', versionParameter, 0, 'duration'],
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
@@ -70,12 +77,12 @@ export default ({
       separator,
     })}`,
     datetime: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
+      ['model', 'blocks', 0, 'model', versionParameter, 0, 'durationISO8601'],
       aresMediaBlock,
     ),
     type: format === 'audio' ? 'audio' : 'video',
     guidanceMessage: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'warnings', 'short'],
+      ['model', 'blocks', 0, 'model', versionParameter, 0, 'warnings', 'short'],
       aresMediaBlock,
     ),
   };

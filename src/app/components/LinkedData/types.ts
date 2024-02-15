@@ -32,4 +32,6 @@ export interface LinkedDataProps {
   entities?: object[];
   imageLocator?: string;
   bylineLinkedData?: BylineLinkedData | null;
+  coverageStartTime?: string;
+  coverageEndTime?: string;
 }
