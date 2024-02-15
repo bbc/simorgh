@@ -169,71 +169,71 @@ exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی 
 
 exports[`Canonical Articles Most Read has item with rank 1`] = `
 {
-  "text": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
-  "url": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+  "text": "رئیس جمهوری فیلیپین: با خوشحالی همه معتادان را می‌کشم",
+  "url": "/persian/world-23080010",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 2`] = `
 {
-  "text": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
-  "url": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+  "text": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 11",
+  "url": "/persian/afghanistan-23069393",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 3`] = `
 {
-  "text": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
-  "url": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+  "text": "آثممخ فاهس آثشیمهدث BBC حلم حثقسهشد عدیثق هقشد سثزفهخد - صهفا ش سحثزهشم زاشقشزفثق",
+  "url": "/persian/iran-23072988",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 4`] = `
 {
-  "text": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
-  "url": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+  "text": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 46",
+  "url": "/persian/media-23069776",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 5`] = `
 {
-  "text": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
-  "url": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+  "text": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 21",
+  "url": "/persian/iran-23069600",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 6`] = `
 {
-  "text": "سگم سرطان پستان مرا تشخیص داد",
-  "url": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+  "text": "کلینتون و ترامپ یکدیگر را مسئول حملات خشونت‌ آمیز اخیر دانستند",
+  "url": "/persian/interactivity-23075863",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 7`] = `
 {
-  "text": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
-  "url": "https://www.bbc.com/persian/articles/cydg800g89yo",
+  "text": "گزارش تازه درباره قتل بیژن ابراهیمی: پلیس می‌توانست مانع قتل شود",
+  "url": "/persian/23137875",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 8`] = `
 {
-  "text": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
-  "url": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+  "text": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 36",
+  "url": "/persian/afghan-press-review-23069767",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 9`] = `
 {
-  "text": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
-  "url": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+  "text": "کسانی دولت را استیضاح می‌کنند که خود باید پاسخگوی اقداماتشان باشند/ اقتصاد امسال مقاومتی‌تر شد",
+  "url": "/persian/23104785",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 10`] = `
 {
-  "text": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
-  "url": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+  "text": "ندهجئوس کلاوکسی مکنکگد",
+  "url": "/persian/iran-23147873",
 }
 `;
 
