@@ -13,7 +13,7 @@ const resolvePath = (relativePath: string) =>
 export default defineConfig({
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
-    configFile: 'reporter-config.json',
+    configFile: 'cypress/reporter-config.json',
   },
   e2e: {
     setupNodeEvents(on, config) {
