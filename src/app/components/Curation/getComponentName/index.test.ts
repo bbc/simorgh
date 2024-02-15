@@ -32,18 +32,22 @@ describe('getComponentName', () => {
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence and curation type is $curationType',
     ({ visualStyle, visualProminence, expected }) => {
-      expect(getComponentName({visualStyle, visualProminence, radioSchedule: undefined })).toBe(expected);
-      
+      expect(
+        getComponentName({
+          visualStyle,
+          visualProminence,
+          radioSchedule: undefined,
+        }),
+      ).toBe(expected);
     },
   );
   it('should return radio schedule when curationType is radio-schedule and visual style is NONE and visualProminence is NORMAL', () => {
     const visualProminence = NORMAL;
     const visualStyle = NONE;
-    const radioSchedule = afriqueHomePage.data.curations[5].radioSchedule;
+    const { radioSchedule } = afriqueHomePage.data.curations[5];
 
-    expect(getComponentName({visualStyle, visualProminence, radioSchedule})).toBe(
-      `${RADIO_SCHEDULE}`,
-    );
+    expect(
+      getComponentName({ visualStyle, visualProminence, radioSchedule }),
+    ).toBe(`${RADIO_SCHEDULE}`);
   });
-
 });

@@ -102,7 +102,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     visualStyle,
                     visualProminence,
                   });
-                  console.log('in home page', radioSchedule);
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <Curation

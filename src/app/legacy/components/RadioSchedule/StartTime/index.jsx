@@ -8,6 +8,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
 import TimestampContainer from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { oneOfType } from 'prop-types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -96,7 +97,7 @@ export const StartTimestamp = ({
 };
 
 StartTimestamp.propTypes = {
-  timestamp: number.isRequired,
+  timestamp: oneOfType([number, string]).isRequired,
   timezone: string,
   locale: string,
   script: shape(scriptPropType).isRequired,
@@ -128,7 +129,7 @@ const StartTime = ({ timestamp }) => {
 };
 
 StartTime.propTypes = {
-  timestamp: number.isRequired,
+  timestamp: oneOfType([number, string]).isRequired,
 };
 
 export default StartTime;
