@@ -35,7 +35,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
     expect(schema?.coverageEndTime).toBeFalsy();
   });
 
-  it('should convert posts into liveBlogPosting list', () => {
+  it('should convert posts into liveBlogUpdate list', () => {
     const schema = getLiveBlogPostingSchema({
       posts,
       brandName: 'BBC News Mundo',
