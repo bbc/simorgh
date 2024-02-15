@@ -25,15 +25,24 @@ describe('Service Worker', () => {
   });
 
   describe('webp', () => {
+    const TEST_IMAGE_URL = 'https://ichef.test.bbci.co.uk';
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
 
     describe('image requested', () => {
       it.each`
         image                                           | expectedUrl
+        ${`${TEST_IMAGE_URL}/news/puppies.jpg`}         | ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`}
+        ${`${TEST_IMAGE_URL}/news/puppies.png`}         | ${`${TEST_IMAGE_URL}/news/puppies.png.webp`}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg`} | ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg.webp`}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.png`} | ${`${TEST_IMAGE_URL}/ace/standard/puppies.png.webp`}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg`}       | ${`${TEST_IMAGE_URL}/ace/ws/puppies.jpg.webp`}
+        ${`${TEST_IMAGE_URL}/ace/ws/puppies.png`}       | ${`${TEST_IMAGE_URL}/ace/ws/puppies.png.webp`}
         ${`${BASE_IMAGE_URL}/news/puppies.jpg`}         | ${`${BASE_IMAGE_URL}/news/puppies.jpg.webp`}
         ${`${BASE_IMAGE_URL}/news/puppies.png`}         | ${`${BASE_IMAGE_URL}/news/puppies.png.webp`}
         ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg`} | ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg.webp`}
         ${`${BASE_IMAGE_URL}/ace/standard/puppies.png`} | ${`${BASE_IMAGE_URL}/ace/standard/puppies.png.webp`}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg`}       | ${`${BASE_IMAGE_URL}/ace/ws/puppies.jpg.webp`}
+        ${`${BASE_IMAGE_URL}/ace/ws/puppies.png`}       | ${`${BASE_IMAGE_URL}/ace/ws/puppies.png.webp`}
       `(`for $image is $expectedUrl`, async ({ image, expectedUrl }) => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 
@@ -53,8 +62,16 @@ describe('Service Worker', () => {
     describe('image is not requested', () => {
       it.each`
         image                                                 | headers               | reason
-        ${`${BASE_IMAGE_URL}/sport/puppies.jpg`}              | ${{ accept: 'webp' }} | ${'image url must include news or ace/standard'}
-        ${`${BASE_IMAGE_URL}/ace/stndard/puppies.jpg`}        | ${{ accept: 'webp' }} | ${'image url must include news or ace/standard'}
+        ${`${TEST_IMAGE_URL}/sport/puppies.jpg`}              | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/ace/stndard/puppies.jpg`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/ace/sw/puppies.jpg`}             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${TEST_IMAGE_URL}/news/puppies.jpeg`}              | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
+        ${`${TEST_IMAGE_URL}/news/amz/puppies.jpeg`}          | ${{ accept: 'webp' }} | ${'image url must not include amz'}
+        ${`${TEST_IMAGE_URL}/news/worldservice/puppies.jpeg`} | ${{ accept: 'webp' }} | ${'image url must not include worldservice'}
+        ${`${TEST_IMAGE_URL}/news/puppies.jpg`}               | ${{}}                 | ${`webp not supported in request headers`}
+        ${`${BASE_IMAGE_URL}/sport/puppies.jpg`}              | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${BASE_IMAGE_URL}/ace/stndard/puppies.jpg`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
+        ${`${BASE_IMAGE_URL}/ace/sw/puppies.jpg`}             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
         ${`${BASE_IMAGE_URL}/news/puppies.jpeg`}              | ${{ accept: 'webp' }} | ${'image extension must be jpg or png'}
         ${`${BASE_IMAGE_URL}/news/amz/puppies.jpeg`}          | ${{ accept: 'webp' }} | ${'image url must not include amz'}
         ${`${BASE_IMAGE_URL}/news/worldservice/puppies.jpeg`} | ${{ accept: 'webp' }} | ${'image url must not include worldservice'}
