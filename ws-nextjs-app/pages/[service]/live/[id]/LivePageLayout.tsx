@@ -10,7 +10,7 @@ import { ATIData } from '#app/components/ATIAnalytics/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
-import getLiveBlogPosting from '#app/lib/seoUtils/getLiveBlogPosting';
+import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -92,11 +92,13 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   const pageDescription = seoDescription || description || pageSeoTitle;
 
-  const postBodySchema = getLiveBlogPosting({
+  const liveBlogPostingSchema = getLiveBlogPostingSchema({
     posts: liveTextStream?.content?.data.results,
     brandName,
     defaultImage,
     url: canonicalNonUkLink,
+    startDateTime,
+    endDateTime,
   });
 
   return (
@@ -121,14 +123,8 @@ const LivePage = ({ pageData }: ComponentProps) => {
         {...(dateModified && {
           dateModified,
         })}
-        {...(startDateTime && {
-          coverageStartTime: startDateTime,
-        })}
-        {...(endDateTime && {
-          coverageEndTime: endDateTime,
-        })}
-        {...(postBodySchema && {
-          entities: [postBodySchema],
+        {...(liveBlogPostingSchema && {
+          entities: [liveBlogPostingSchema],
         })}
       />
       <main>
