@@ -71,9 +71,13 @@ const mockPageDataWithMetadata = ({
   seoDescription,
   datePublished,
   dateModified,
+  startDateTime,
+  endDateTime,
 }: {
   title: string;
   description?: string;
+  startDateTime?: string;
+  endDateTime?: string;
   seoTitle?: string;
   seoDescription?: string;
   datePublished?: string;
@@ -83,6 +87,8 @@ const mockPageDataWithMetadata = ({
     ...mockPageData,
     title,
     description,
+    startDateTime,
+    endDateTime,
     seo: {
       seoTitle,
       seoDescription,
@@ -160,6 +166,7 @@ describe('Live Page', () => {
       expect(schemaHeadline).toBeTruthy();
     },
   );
+
   it('SEO should use datePublished and dateModified when present', async () => {
     const datePublished = '2018-09-28T22:59:02.448804522Z';
     const dateModified = '2020-09-28T22:59:02.448804522Z';
@@ -209,6 +216,57 @@ describe('Live Page', () => {
 
     expect(SEODatePublished).toBeFalsy();
     expect(SEODateModified).toBeFalsy();
+  });
+
+  it('SEO should use coverageStartTime and coverageEndTime when present', async () => {
+    const startDateTime = '2023-04-05T10:22:00.000Z';
+    const endDateTime = '2024-04-05T10:21:00.000Z';
+
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+            startDateTime,
+            endDateTime,
+          })}
+        />,
+      );
+    });
+
+    const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageStartTime":"${startDateTime}"`),
+    );
+
+    const CoverageEndTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageEndTime":"${endDateTime}"`),
+    );
+
+    expect(CoverageStartTime).toBeTruthy();
+    expect(CoverageEndTime).toBeTruthy();
+  });
+
+  it('SEO should NOT contain coverageStartTime and coverageEndTime when absent', async () => {
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+          })}
+        />,
+      );
+    });
+
+    const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageStartTime":null`),
+    );
+
+    const CoverageEndTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageEndTime":null`),
+    );
+
+    expect(CoverageStartTime).toBeFalsy();
+    expect(CoverageEndTime).toBeFalsy();
   });
 
   it('should use the title value combined with the pagination value as the page title', async () => {
