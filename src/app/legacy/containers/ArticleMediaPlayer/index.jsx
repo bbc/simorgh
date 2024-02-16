@@ -5,12 +5,6 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-import {
-  ARTICLE_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
 const formatAssetId = assetUri => {
@@ -22,15 +16,14 @@ const formatAssetId = assetUri => {
 };
 
 const pageTypeMap = {
-  [ARTICLE_PAGE]: 'articles',
-  [MEDIA_ARTICLE_PAGE]: 'articles',
-  [STORY_PAGE]: 'cps',
-  [CORRESPONDENT_STORY_PAGE]: 'cps',
+  article: 'articles',
+  mediaArticle: 'articles',
+  STY: 'cps',
+  CSP: 'cps',
 };
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
   const { id, pageType } = useContext(RequestContext);
-  const hasPlaceholder = pageType !== MEDIA_ARTICLE_PAGE;
 
   return (
     <GridItemMediumNoMargin>
@@ -38,7 +31,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
         blocks={blocks}
         assetId={formatAssetId(id)}
         assetType={pageTypeMap[pageType]}
-        showPlaceholder={hasPlaceholder}
+        showPlaceholder
       />
     </GridItemMediumNoMargin>
   );
