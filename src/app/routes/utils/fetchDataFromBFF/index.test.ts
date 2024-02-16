@@ -24,6 +24,8 @@ jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
 );
 
+const timeout = 60000;
+
 describe('Fetch Data from BFF', () => {
   beforeEach(() => {
     process.env.BFF_PATH = 'https://mock-bff-path';
@@ -62,6 +64,7 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout,
         });
       },
     );
@@ -95,6 +98,7 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout,
         });
       },
     );
@@ -129,6 +133,7 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout,
         });
       },
     );
@@ -162,6 +167,7 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout,
         });
       },
     );
@@ -195,6 +201,7 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout,
         });
       },
     );
