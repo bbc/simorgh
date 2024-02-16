@@ -65,8 +65,8 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
-      <TimeStampContainer
+    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+      {/* <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
@@ -79,13 +79,16 @@ const PostHeaderBanner = ({
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
-      />
+      /> */}
+      <time css={styles.timeStamp} dateTime="20:00">
+        20:00
+      </time>
       <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </span>
+    </div>
   );
 };
 
