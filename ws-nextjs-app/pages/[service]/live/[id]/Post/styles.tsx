@@ -9,12 +9,15 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
+      display: 'inline',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
-      alignItems: 'flex-start',
-      display: 'flex',
-      flexWrap: 'wrap',
+      // alignItems: 'flex-start',
+      // display: 'flex',
+      // flexWrap: 'wrap',
+      display: 'inline-block',
+      width: '100%',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,

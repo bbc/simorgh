@@ -66,7 +66,7 @@ const PostHeaderBanner = ({
 
   return (
     <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
-      {/* <TimeStampContainer
+      <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
@@ -79,10 +79,10 @@ const PostHeaderBanner = ({
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
-      /> */}
-      <time css={styles.timeStamp} dateTime="20:00">
+      />
+      {/* <time css={styles.timeStamp} dateTime="20:00">
         20:00
-      </time>
+      </time> */}
       <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
