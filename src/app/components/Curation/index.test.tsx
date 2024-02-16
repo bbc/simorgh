@@ -63,7 +63,6 @@ interface TestProps {
   visualProminence: VisualProminence;
   promos?: Summary[];
   mostRead?: MostReadData;
-  curationType?: string;
   radioSchedule?: RadioScheduleData[];
 }
 
