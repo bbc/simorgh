@@ -383,7 +383,7 @@ exports[`Canonical Media Article Page SEO Twitter title 1`] = `"Nigeria 2023 ele
 
 exports[`Canonical Media Article Page Timestamp should match text and date 1`] = `
 {
-  "date": "PT6M17S",
-  "text": "06:17",
+  "date": "2023-01-20",
+  "text": "20 January 2023",
 }
 `;
