@@ -65,7 +65,7 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       {/* <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
@@ -88,7 +88,7 @@ const PostHeaderBanner = ({
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </div>
+    </span>
   );
 };
 
