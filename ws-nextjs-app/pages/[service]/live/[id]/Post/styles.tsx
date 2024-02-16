@@ -9,6 +9,7 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
+      display: 'inline',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
@@ -34,7 +35,7 @@ export default {
   postHeadings: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
-      display: `block`,
+      display: `inline-block`,
       margin: 0 /* Reset */,
     }),
   postHeadline: ({ spacings }: Theme) =>
