@@ -563,6 +563,7 @@ describe('frontPage -> homePage migration', () => {
     'hausa',
     'igbo',
     'indonesia',
+    'japanese',
     'kyrgyz',
     'korean',
     'marathi',

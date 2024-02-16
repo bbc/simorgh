@@ -1,40 +1,142 @@
 {
   "data": {
-    "title": "BBC News Amharic",
-    "description": "",
+    "title": "BBC News አማርኛ",
+    "description": "ከዓለም ዙሪያ የተውጣጡ ዜናዎችንና የተለያዩ መረጃዎችን በየዕለቱ እናቀርባለን። ምንጊዜም ከቢቢሲ አማርኛ ከማንም ያልወገኑ፣ ሚዛናዊ፣ ተዓማኒ፣ ግልጽና እውነተኛ መረጃዎችን ማግኘት እንደሚችሉ እናምናለን።",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "መነኩሴዋ ፒያኒስት፡ እማሆይ ጽጌ ማርያም ገብሩ አረፉ",
-            "firstPublished": "2022-03-15T04:07:52.000Z",
-            "link": "https://www.bbc.com/amharic/news-60741168",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9F90/production/_123684804_emahoy1.jpg",
-            "description": "በድንቅ የፒያኖ የሙዚቃ ሥራዎቻቸው የሚታወቁት እማሆይ ጽጌማርያም ገብሩ ማረፋቸውን በቅርብ የሚያውቋቸው ሰዎች ገለጹ። እማሆይ ጽጌማርያም በምንኩስና ወደ መንፈሳዊው ሕይወት ከመግባታቸው በፊት ቤተሰቦቻቸው የውብዳር የሚል ስም ነበር የሰጧቸው። በ1916 ዓ.ም. በአዲስ አበባ ውስጥ የተወለዱ እማሆይ ጽጌማርያም ገብሩ በኢትዮጵያ በቫዮሊን እና በፒያኖ ሙዚቃዎችን በማቀናበር በቀዳሚነት የሚጠቀሱ ናቸው። እማሆይ ጽጌማርያም በ99 ዓመታቸው ነው ከዚህ ዓለም በሞት የተለዩት።",
-            "imageAlt": "እማሆይ ጽጌ ማሪያም ገብሩ",
-            "id": "3e4fac31-4dc8-408f-af18-9f634d4fa4eb"
+            "title": "አዋሽ አርባ፡ በኢትዮጵያ ከጅምላ እስር ጋር ስሙ የሚነሳው ‘የበረሃው ጓንታናሞ’",
+            "firstPublished": "2024-01-24T04:03:34.251Z",
+            "lastPublished": "2024-01-24T04:03:34.251Z",
+            "link": "https://www.bbc.com/amharic/articles/cyejgk207ero",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/57f1/live/c93e58a0-b9f0-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "በኢትዮጵያ በተለያዩ ጊዜያት ተቃውሞዎች እና የፖለቲካ እንቅስቃሴ በሚያጋጥም ጊዜ ተሳትፈዋል ተብለው የሚጠረጠሩ ሰዎች በጅምላ ታፍሰው ከሚታሰሩባቸው ስፍራዎች መካከል አዋሽ አርባ ይጠቀሳል። ይህ የእስር ማዕከል በተደጋጋሚ ስሙ ቢጠራም ስለታሪኩ እና ዝርዝር ሁኔታው እምብዛም አይነሳል። ስለ አዋሽ አርባ በተከታታይ ከምናቀርባቸው ታሪኮች መካከል ይህ ስለካምፑ አመሠራረት እና አሁን ስለደረሰበት ይቃኛል።",
+            "imageAlt": "እስረኞች",
+            "id": "cyejgk207ero"
           },
           {
             "type": "article",
-            "title": "ሕጻናት በቤት ሠራተኞች ማደጋቸው ችግሩ ምንድን ነው?",
-            "firstPublished": "2023-03-27T04:21:55.787Z",
-            "link": "https://www.bbc.com/amharic/articles/cglndmlkr2eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f789/live/eaca39e0-cb2a-11ed-be2e-754a65c11505.jpg",
-            "description": "ከቅርብ ጊዜ ወዲህ የሚሰሙት የጨቅላ ሕጻናት ደብዛ ከመጥፋት ጀምሮ እስከ ሚፈጸሙባቸው አሰቃቂ ወንጀሎች ድረስ ወላጆችን በተለይ እናቶችን እንቅልፍ የሚነሳ ጉዳይ ሆኗል። ከዚህ ባሻገር ግን ጨቅላ ልጆችን ቤት ውስጥ ትቶ መሄድ ብዙም ልብ ያልተባሉ ከአካላዊ ባሻገር ሥነ ልቦናዊ ፈተናዎችን እንዲጋፈጡ ያደርጋቸዋል። ታዲያ የኑሮ ግዴታን ለመወጣት ነፍስ ያላወቁ እና ለትምህርት ያልደረሱ ልጆችን ቤት ውስጥ ከሠራተኛ ጋር ትቶ ከመሄድ ውጪ ምን አማራጭ አለ?",
-            "imageAlt": "በእናቷ እቅፍ ውስጥ ሆና የምታለቅስ ሕጻን",
-            "id": "cglndmlkr2eo"
+            "title": "አቶ ጌታቸው ረዳ ተፈናቃዮች ላሉበት ችግር የትግራይ ክልል ጊዜያዊ አስተዳደር ተጠያቂ ነው አሉ",
+            "firstPublished": "2024-01-24T12:32:54.752Z",
+            "lastPublished": "2024-01-24T12:32:54.752Z",
+            "link": "https://www.bbc.com/amharic/articles/cq57rny8qg3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff65/live/de811600-bab6-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "በትግራይ ክልል በጦርነት ምክንያት ተፈናቅለው በችግር ላይ ባሉ ሰዎች ሁኔታ ውስጥ አንዱ ተጠያቂ መሆኑን የክልሉ ጊዜያዊ አስተዳደር ገለጸ።",
+            "imageAlt": "የትግራይ ክልል ጊዜያዊ ፕሬዝደንት ጌታቸው ረዳ ",
+            "id": "cq57rny8qg3o"
           },
           {
             "type": "article",
-            "title": "በአርባ ምንጭ ጫሞ ሐይቅ ላይ ከሰጠሙት ሰዎች መካከል የሰባቱ አስከሬን ተገኘ",
-            "firstPublished": "2023-03-27T10:05:21.524Z",
-            "link": "https://www.bbc.com/amharic/articles/cpd80931m27o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1187/live/12357290-cc86-11ed-8826-bd7de7756a42.jpg",
-            "description": "ቅዳሜ መጋቢት 16/2015 ዓ.ም. በደቡብ ክልል ጋሞ ዞን በምትገኘው አርባ ምንጭ ውስጥ ጫሞ ሐይቅ ላይ በጀልባ ሲጓዙ ሰጥመው የደረሱበት ካልታወቀ ሰዎች መካከል የሰባቱ ሰዎች አስክሬን መገኘቱ ፖሊስ አስታውቋል።",
-            "imageAlt": "ቱሪስቶች በጫሞ ሐይቅ ላይ",
-            "id": "cpd80931m27o"
+            "title": "የዩክሬን ምርኮኞችን የያዘች ጄት ድንበር አቅራቢያ መከስከሷን ሩሲያ ገለጠች",
+            "firstPublished": "2024-01-24T13:28:56.308Z",
+            "lastPublished": "2024-01-24T13:28:56.308Z",
+            "link": "https://www.bbc.com/amharic/articles/crg94g3lmmdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aba0/live/7e6ab5b0-baba-11ee-8685-316409d66f25.jpg",
+            "description": "ኢሉሺን-76 የተባለች የሩሲያ ወታደራዊ አውሮፕላን ዩክሬንን በሚያዋስነው ደቡባዊው ቤልጎሮድ ግዛት መከስከሷ ተሰማ።",
+            "imageAlt": "የተከሰከችው አውሮፕላን ",
+            "id": "crg94g3lmmdo"
+          },
+          {
+            "type": "article",
+            "title": "የሶማሊያ መንግሥት ወታደሮች እና አልሻባብ ከባድ ውጊያ እያካሄዱ መሆኑ ተዘገበ",
+            "firstPublished": "2024-01-24T10:50:40.547Z",
+            "lastPublished": "2024-01-24T10:50:40.547Z",
+            "link": "https://www.bbc.com/amharic/articles/cpv6x4xw2gko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/54cb/live/15d2a2c0-baa5-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "በሶማሊያ መንግሥት ወታደሮች እና በአልሻባብ ታጣቂዎች መካከል ሙዱግ በተባለው በአገሪቱ ማዕከላዊ ክልል ውስጥ ከባድ ውጊያ እየተካሄደ መሆኑ ተዘገበ።",
+            "imageAlt": "የወታደር መኪና ",
+            "id": "cpv6x4xw2gko"
+          },
+          {
+            "type": "article",
+            "title": "ዶናልድ ትራምፕ በኒው ሐምፕሻየር ግዛት ድል ቀናቸው",
+            "firstPublished": "2024-01-24T05:33:40.866Z",
+            "lastPublished": "2024-01-24T05:33:40.866Z",
+            "link": "https://www.bbc.com/amharic/articles/c04rn2jpdpdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/548c/live/cb67edf0-ba75-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "ለአሜሪካ ፕሬዝዳንታዊ ምርጫ የሪፐብሊካን ፓርቲ ዕጩ ለመሆን በሚደረገው ትንቅንቅ ዶናልድ ትራምፕ ትናንት ማክሰኞ በድጋሚ ድል ቀንቷቸዋል። ተፎካካሪያቸው አምባሳደር ኒኪ ሔሊ “እጅ አልሰጥም’’ ብለዋል።",
+            "imageAlt": "ዶናልድ ትራምፕ",
+            "id": "c04rn2jpdpdo"
+          },
+          {
+            "type": "video",
+            "title": "በናይሮቢ እንደ አዲስ የደመቀው የቀዳማዊ ኃይለ ሥላሴ ስም",
+            "firstPublished": "2024-01-24T04:04:18.359Z",
+            "lastPublished": "2024-01-24T04:04:18.359Z",
+            "link": "https://www.bbc.com/amharic/articles/ckm3nyve5lzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3072/live/91e1e550-b9d4-11ee-8685-316409d66f25.jpg",
+            "description": "የኬንያዋን ዋና ከተማ ከሚያቋርጡ ዋነኛ መንገዶች መካከል በቀዳማዊ አጼ ኃይለ ሥላሴ የተሰየመው ጎዳና አንዱ ነው። ንጉሡ በኬንያ ብሎም በአፍሪካ በነበራቸው ተሰሚነት፣ እንዲሁም ከኬንያው የነጻነት መሪ ጆሞ ኬንያታ ጋር በነበራቸው የቀረበ ወዳጅነት ነው በስማቸው ጎዳና የተሰየመላቸው። በመኪኖች የምትጨናነቀውን የናይሮቢን ጫና ለማቅለል በቅርቡ ተገንብቶ ሥራ ከጀመረው የፈጣን መንገድ መግቢያ በሮች መካከል በአጼ ኃይለ ሥላሴ ተሰይመዋል።",
+            "imageAlt": "የቀዳማዊ ኃይለ ሥላሴ ጎዳና",
+            "id": "ckm3nyve5lzo"
+          },
+          {
+            "type": "article",
+            "title": "የ2023 የአፍሪካ ዋንጫ የጨዋታ ፕሮግራም እና ውጤቶች",
+            "firstPublished": "2024-01-15T05:03:09.845Z",
+            "lastPublished": "2024-01-15T05:03:09.845Z",
+            "link": "https://www.bbc.com/amharic/articles/cjkgdy62428o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8e6c/live/36fc1b50-b363-11ee-8f07-bbfdfa890097.jpg",
+            "description": "በአይቮሪ ኮስት አስተናጋጅነት እየተካሄ የሚገኘውን 34ኛው የአፍሪካ ዋንጫ የሁሉንም የጨዋታ መርሃ ግብሮች እና ውጤት ከዚህ ገጽ ማግኘት ይችላሉ።",
+            "imageAlt": "የአፍሪካ ዋንጫ",
+            "id": "cjkgdy62428o"
+          },
+          {
+            "type": "article",
+            "title": "የደቡብ አፍሪካ ፕሬዝዳንት በሐሰተኛ የትምህርት ማስረጃ የተጠረጠሩትን አማካሪ ከሥልጣን አነሱ",
+            "firstPublished": "2024-01-24T05:01:09.749Z",
+            "lastPublished": "2024-01-24T05:01:09.749Z",
+            "link": "https://www.bbc.com/amharic/articles/c80nl89jr6eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0650/live/e4c6f1c0-ba74-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "የደቡብ አፍሪካ ፕሬዝዳንት ሲሪል ራማፎሳ ዶክትሬት ድግሪያቸው ሐሰተኛ ነው በሚል የተጠረጠሩትን የምጣኔ ሃብት አማካሪን ከሥራ አሰናበቱ። ",
+            "imageAlt": "ታቢ ሌኦካ",
+            "id": "c80nl89jr6eo"
+          },
+          {
+            "type": "article",
+            "title": "አረብ ኤምሬትስ በየመን ፖለቲካዊ ግድያዎችን በገንዘብ መደገፏን የቢቢሲ ምርመራ አጋለጠ",
+            "firstPublished": "2024-01-24T04:05:13.592Z",
+            "lastPublished": "2024-01-24T04:05:13.592Z",
+            "link": "https://www.bbc.com/amharic/articles/cndn3w14yd5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7e8b/live/5e911e20-b9d7-11ee-896d-39d9bd3cadbb.jpg",
+            "description": "በየመን በፖለቲካ ምክንያት ለተፈጸሙ ግድያዎች የተባበሩት አረብ ኢምሬትስ የገንዘብ ድጋፍ ማድረጓን ቢቢሲ ባደረገው ምርመራ እንደደረሰበት አስታውቋል።",
+            "imageAlt": "ልጇ የተገደለባት የመናዊቷ የሰብአዊ መብቶች ጠበቃ ሁዳ አል-ሳራሪ ",
+            "id": "cndn3w14yd5o"
+          },
+          {
+            "type": "article",
+            "title": "የአፍሪካ ዋንጫ፡ አልጄሪያ ስትሰናበት ካሜሮን በመጨረሻዎቹ ደቂቃዎች ባስቆጠረቻቸው ጎሎች ጥሎ ማለፉን ተቀላቀለች",
+            "firstPublished": "2024-01-24T05:25:44.965Z",
+            "lastPublished": "2024-01-24T05:25:44.965Z",
+            "link": "https://www.bbc.com/amharic/articles/c25qn2gg5gko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b7cf/live/dc496990-ba76-11ee-ace0-c35c1b4f6d82.jpg",
+            "description": "የአፍሪካ ዋንጫ አሁንም ያልተጠበቁ ውጤቶችን እያስመዘገበ የትም አይደርሱም የተባሉት ቡድኖች የዋንጫ ግምት የተሰጣቸውን አገራት በጊዜ እየሸኙ ነው። ",
+            "imageAlt": "ሪያድ ማህሬዝ",
+            "id": "c25qn2gg5gko"
+          },
+          {
+            "type": "article",
+            "title": "የቱርክ ፓርላማ ስዊድን የኔቶ አባል እንድትሆን ድጋፉን ሰጠ",
+            "firstPublished": "2024-01-24T07:23:17.323Z",
+            "lastPublished": "2024-01-24T07:23:17.323Z",
+            "link": "https://www.bbc.com/amharic/articles/c2v46yggl3no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5387/live/775cde30-ba7c-11ee-8685-316409d66f25.jpg",
+            "description": "ስዊድን ኔቶን ለመቀላቀል ያቀረበችው ጥያቄ በቱርክ ፓርላማ አባለት ድጋፍ አገኘ። ",
+            "imageAlt": "የቱርክ ፓርላማ",
+            "id": "c2v46yggl3no"
+          },
+          {
+            "type": "article",
+            "title": "የኢትዮጵያ እና የሶማሊያ ወታደራዊ አቅም ሲነጻጸር",
+            "firstPublished": "2024-01-23T04:16:27.874Z",
+            "lastPublished": "2024-01-23T04:16:27.874Z",
+            "link": "https://www.bbc.com/amharic/articles/cw0l00dg5n1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b1f2/live/fbd861c0-b6b2-11ee-9e08-f533a7cfb33b.jpg",
+            "description": "ኢትዮጵያ ከሶማሊላንድ ጋር የተፈራረመችው ስምምነት በአፍሪካ ቀንድ ውጥትን ፈጥሯል። በአካባቢው ሌላ ጦርነት እንዳይቀሰቀስም ተሰግቷል። በተለይ በሶማሊያ በኩል ባለሥልጣናት ጦርነት ቀስቃሽ ንግግር ሲያደርጉ ተሰምተዋል። ውጥረቱ ወደ ግጭት ያመራል? ለመሆኑ የሁለቱ አገራት ጦር ሠራዊት በምን ደረጃ ላይ ይገኛሉ?",
+            "imageAlt": "የኢትዮጵያ ጦር ሠራዊት አባላት",
+            "id": "cw0l00dg5n1o"
           }
         ],
         "activePage": 1,
@@ -43,203 +145,897 @@
         "curationType": "tipo-curation",
         "position": 0,
         "title": "BBC News Amharic Top Stories",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "ድብቁ የወሲብ ንግድ በሶማሊያ ",
-            "firstPublished": "2023-03-25T05:06:04.228Z",
-            "link": "https://www.bbc.com/amharic/articles/cl46gv53m6xo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/907f/live/d23af420-ca65-11ed-be2e-754a65c11505.jpg",
-            "description": "በሶማሊያ ዋና ከተማ ሞቃዲሾ ነዋሪ የሆኑ ሁለት ሴቶች እንዴት ምስጢራዊ ወደሆነው የወሲብ ንግድ እንደተሳቡ ለቢቢሲ ተናግረዋል። ለዓመታት በእርስ በርስ ጦርነት ስትናወጥ በነበረችው ሶማሊያ ውስጥ ጦርነቱ ጋብ ቢልም፣ አሁንም ሁከቶችን ማስተናገዷ አልቀረም።",
-            "imageAlt": "በጨለማ ውስጥ ከጀርባ የምትታይ ሴት ",
-            "id": "cl46gv53m6xo"
+            "title": "“ኤ፣ ቢ፣ ሲ፣ ዲ…” የማይቆጥሩት የዘንድሮ የ“ኬጂ” ተማሪዎች",
+            "firstPublished": "2024-01-22T04:10:03.323Z",
+            "lastPublished": "2024-01-22T04:10:03.323Z",
+            "link": "https://www.bbc.com/amharic/articles/c8vnpp21d41o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b2a/live/dccd5110-b87d-11ee-a184-bf215c0af5f3.jpg",
+            "description": "ከዚህ ዓመት ጀምሮ የኢትዮጵያ የመዋዕለ ህጻናት ተማሪዎች የእንግሊዝኛ ፊደላትን መቁጠር እንዲያቆሙ ተደርገዋል። በዚህም ህጻናቱ በለጋ ዕድሜያቸው ከአፍ መፍቻ ቋንቋቸው ጎን ለጎን የእንግሊዝኛ ቋንቋ መማራቸው እንዲቀር በመደረጉ ወላጆች እና ትምህርት ቤቶች ደስተኛ አይደሉም። የዚህ ውሳኔ መነሻ ምክንያቱ ምንድን ነው? ልጆቹስ በአፀደ ህጻናት ቆይታቸው ምን ይማራሉ?",
+            "imageAlt": "የእንግሊዝኛ ፊደላት የምትጽፍታዳጊ ",
+            "id": "c8vnpp21d41o"
           },
           {
             "type": "article",
-            "title": "የአሜሪካዋ ግዛት በልጆች የቲክቶክ እና ኢኒስታግራም አጠቃቀም ላይ ገደብ ጣለች",
-            "firstPublished": "2023-03-24T07:44:02.634Z",
-            "link": "https://www.bbc.com/amharic/articles/cpr5el75rl2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/210e/live/f9504f20-ca14-11ed-be2e-754a65c11505.jpg",
-            "description": "የአሜሪካዋ ዩታህ ግዛት አዳጊዎች ፌስቡክን፣ ቲክቶክ እና ኢነስታግራምን የመሰሉ ማኅበራዊ ሚዲያ አጠቃቀማቸው ላይ ገደብ በመጣል የመጀመሪያዋ ግዛት ሆነች።",
-            "imageAlt": "ለልጆች የአእምሮ ጤና ስጋት የሆነው ማኅበራዊ ሚዲያ ለወላጆችም አሳሳቢ ሆኗል",
-            "id": "cpr5el75rl2o"
+            "title": "የአሜሪካ ፕሬዝዳንታዊ ምርጫ በቀረበበት ጊዜ ዶናልድ ትራምፕ ለምን ተወዳጅ እየሆኑ መጡ?",
+            "firstPublished": "2024-01-18T05:16:09.625Z",
+            "lastPublished": "2024-01-18T05:16:09.625Z",
+            "link": "https://www.bbc.com/amharic/articles/c992zezxg4ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f82/live/72152080-b537-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ዶናልድ ትራምፕ ወደ ዋይት ሐውስ እያቀኑ ነው። እየገሰገሱ ነው ማለት ይቀላል። በተለይ በሪፐብሊካኖች ዘንድ ከመቼውም ጊዜ በላይ ተወዳጅ ሆነዋል። ጠላትም ወዳጅም እየመሠከረ ያለው ይኸው ነው።",
+            "imageAlt": "ትራምፕ በተከሰሱ ቁጥር ተወዳጅ እየሆኑ ነው",
+            "id": "c992zezxg4ro"
           },
           {
             "type": "article",
-            "title": "በረመዳን ወር ጤናችንን ለመጠበቅ የሚጠቅሙ አምስት ምክሮች",
-            "firstPublished": "2023-03-23T04:14:23.725Z",
-            "link": "https://www.bbc.com/amharic/articles/c19w4n30jdpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8127/live/ab46bfa0-c89b-11ed-95f8-0154daa64c44.jpg",
-            "description": "በዓለም ላይ ወደ 2 ቢሊዮን የሚጠጉ ሙስሊሞች ዓመታዊውን የረምዳን ጾም ጀምረዋል። በጾም ወቅት አማኞች ከንጋት እስከ ምሽት ራሳቸውን ከምግብ እና ከመጠጥ ያርቃሉ። በዚህ ወቅት ስፖርት ማዘውተር ችግር አለው? የትኞቹን ምግቦች በይበልጥ መመገብ ይመከራል? የሰውነት እንቅስቃሴ ባለሙያው ቢላል ሐፊዝ፣ የሥነ ምግብ ባለሙያዋ ናዚማ ቁረሺ ለዚህ ጽሑፍ ተማክረዋል።",
-            "imageAlt": "ቴምር",
-            "id": "c19w4n30jdpo"
+            "title": "በአገው ታጣቂዎች ወደተያዙ የዋግ ኽምራ ቀበሌዎች የመንግሥት ሠራተኞችን ማስገባት ተጀመረ",
+            "firstPublished": "2024-01-22T15:05:15.338Z",
+            "lastPublished": "2024-01-22T15:05:15.338Z",
+            "link": "https://www.bbc.com/amharic/articles/c3gekexp83wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0902/live/3ba06010-b937-11ee-ab12-7ff508ad3b0c.jpg",
+            "description": "በአማራ ክልል ዋግ ኽምራ ብሔረሰብ አስተዳደር ስር በሚገኙ እና በአገው ዴሞክራሲያዊ ንቅናቄ (አዴን) በተያዙ የአበርገሌ ወረዳ 12 ቀበሌዎች ውስጥ የመንግሥት ሠራተኞች በድጋሚ ማሰማራት እንደተጀመረ የአበርገሌ ወረዳ አስተዳደር እና አዴን ለቢቢሲ ገለጹ።",
+            "imageAlt": "የአገው ታጣቂ ቡድን አባላት",
+            "id": "c3gekexp83wo"
+          },
+          {
+            "type": "article",
+            "title": "በዓለም የመጀመሪያው የወባ መከላከያ ክትባት በካሜሩን መሰጠት ተጀመረ",
+            "firstPublished": "2024-01-22T14:23:10.744Z",
+            "lastPublished": "2024-01-22T14:23:10.744Z",
+            "link": "https://www.bbc.com/amharic/articles/c4n3zykjdy7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/86e4/live/68706c60-b929-11ee-8685-316409d66f25.png",
+            "description": "በዓለም የመጀመሪያው የወባ መከላከያ ክትባት በካሜሩን ተጀመረ። በመላው አፍሪካ በሺዎች የሚቆጠሩ ልጆችን ሕይወት ያድናል ተብሏል።",
+            "imageAlt": "በቀኝ በኩል ያለችው የስምንት ወር ዕድሜ ያላት ዳንዜላ በካሜሩን ክትባቱን በመውሰድ የመጀመሪያዋ ሆናላች ",
+            "id": "c4n3zykjdy7o"
+          },
+          {
+            "type": "article",
+            "title": "ቀይ ባሕርን ያወከውን የሁቲዎች ጥቃት ለማስቆም የሚደረገው ጥረት ይሳካ ይሆን?",
+            "firstPublished": "2024-01-23T04:18:35.096Z",
+            "lastPublished": "2024-01-23T04:18:35.096Z",
+            "link": "https://www.bbc.com/amharic/articles/czd7w2qg142o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf49/live/badfdc40-b91c-11ee-bc2f-cb5579b90709.png",
+            "description": "ባለፉት ሳምንታት በቀይ ባሕር በኩል በመርከቦች ጭነት ማጓጓዝ ፈታኝ ሆኗል። በኢራን የሚደገፉት የየመን ሁቲ አማጽያን በሰው አልባ አውሮፕላን እና በሚሳኤል መርከቦች ላይ ጥቃት እየፈጸሙ ነው። ታጣቂዎቹ በተጨማሪም በጀልባ እና በሄሊኮፕተርም ጥቃት አድርሰዋል።",
+            "imageAlt": "መርከብ",
+            "id": "czd7w2qg142o"
+          },
+          {
+            "type": "article",
+            "title": "ግብፅ ጣልቃ እንድትገባ ከተጠየቀች ከሶማሊያ ጎን እንደምትሰለፍ አል ሲሲ ተናገሩ",
+            "firstPublished": "2024-01-22T05:25:19.908Z",
+            "lastPublished": "2024-01-22T05:25:19.908Z",
+            "link": "https://www.bbc.com/amharic/articles/c9045w27dzlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/adb9/live/b6861880-b8ef-11ee-beb5-e1400df560f2.jpg",
+            "description": "ግብፅ ከኢትዮጵያ ጋር ውዝግብ ውስጥ የገባችው ሶማሊያ ጥያቄ ካቀረበች ከጎኗ ለመቆም ጣልቃ እንደምትገባ ፕሬዝዳንት አብደል ፋታህ አል ሲሲ ተናገሩ። ፕሬዝዳንት አብደል ፋታህ አል ሲሲ አገራቸው በሶማሊያም ሆነ በፀጥታዋ ላይ ምንም አይነት የደኅንነት ስጋት እንዲፈጠር እንደማትፈቅድ በይፋ ገልጸዋል።",
+            "imageAlt": "ፕሬዝዳንት አብድል ፋታህ አል-ሲሲ",
+            "id": "c9045w27dzlo"
+          },
+          {
+            "type": "article",
+            "title": "በሞቃዲሾ የኢትዮ-ሶማሊያ ጦርነት ትዝታን የቀሰቀሰው የወቅቱ ውጥረት",
+            "firstPublished": "2024-01-19T05:08:36.852Z",
+            "lastPublished": "2024-01-19T05:08:36.852Z",
+            "link": "https://www.bbc.com/amharic/articles/c9x2x0e31n6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b3fc/live/27e32870-b688-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ከሰሞኑ የሶማሊያ መገናኛ ብዙሃን በአንድ በተመሳሳይ አጀንዳ ተይዘዋል። መገናኛ ብዙሃኑ ኢትዮጵያን እንደ ታሪካዊ ጠላት አድርጎ የሚገልጸውን እና ጦርነት የሚጎስመውን ሙዚቃ ደጋግመው እያጫወቱ ይገኛሉ።  ",
+            "imageAlt": "በኢትዮ-ሶማሊ ጦርነት",
+            "id": "c9x2x0e31n6o"
+          },
+          {
+            "type": "article",
+            "title": "“ዓላማዬ የኢትዮጵያ የሀገረ-ሰብ ሙዚቃ መሳሪያዎችን ማጉላት ነው”- አስቻለው ፈጠነ",
+            "firstPublished": "2024-01-20T04:47:21.509Z",
+            "lastPublished": "2024-01-20T04:47:21.509Z",
+            "link": "https://www.bbc.com/amharic/articles/c0wy02nw72ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/627b/live/d127dbe0-b685-11ee-89af-fb0dd698e51c.jpg",
+            "description": "ድምጻዊ አስቻለው ፈጠነ ግዕዝን ጨምሮ በአምስት የኢትዮጵያ ቋንቋዎች የሠራውን የሙዚቃ ሰንዱቅ ‘አስቻለ’ ሲል ሰይሞ ወደ ሕዝብ አድርሷል። ባህል፣ ታሪክ፣ ትውፊት በአልበሙ ላይ ገነው የሚሰሙ ድምጾች ናቸው። ራሱን “ከያኒ” በማለት የሚጠራው የቀድሞው የግብርና ባለሙያ፣ አስቻለው ፈጠነ (አርዲ) ስለልጅነቱ፣ ስለሙዚቃ አጀማመሩ እንዲሁም ስለ አዲሱ አልበሙ ከቢቢሲ ጋር ቆይታ አድርጓል።",
+            "imageAlt": "አስቻለው ፈጠነ ክራር እየተጫወተ",
+            "id": "c0wy02nw72ko"
+          },
+          {
+            "type": "article",
+            "title": "የሥነ ዜጋ እና ሥነ ምግባር ትምህርት ከ12ተኛ ክፍል ፈተናዎች መካከል እንዲወጣ ተደረገ",
+            "firstPublished": "2024-01-20T04:48:41.398Z",
+            "lastPublished": "2024-01-20T04:48:41.398Z",
+            "link": "https://www.bbc.com/amharic/articles/c51zyrlqpego",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e44d/live/070cdcb0-b6ea-11ee-ab6e-3dcd5bd12d17.jpg",
+            "description": "ትምህርት ሚኒስቴር የ12ተኛ ክፍል ፈተና ላይ ከሚሰጡ የትምህርት ዓይነቶች ውስጥ የሥነ ዜጋ እና ሥነ ምግባር ትምህርትን ሲያስወጣ፣ በአንጻሩ የኢኮኖሚክስ ትምህርት በማኅበራዊ ሳይንስ ተማሪዎች ፈተና ውስጥ ተካተተ።",
+            "imageAlt": "ያለፈው ዓመት የ12ኛ ክፍል ተፈታኞች በከፍተኛ ትምህርት ተቋም ውስጥ ፈተናውን ሲወስዱ",
+            "id": "c51zyrlqpego"
+          },
+          {
+            "type": "article",
+            "title": "የአፍሪካ ልማት ባንክ ከኢትዮጵያ ያስወጣቸውን ሠራተኞቹን ሊመልስ ነው",
+            "firstPublished": "2024-01-19T13:28:49.703Z",
+            "lastPublished": "2024-01-19T13:28:49.703Z",
+            "link": "https://www.bbc.com/amharic/articles/cz9qx65legvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/354b/live/bd8672c0-b6cd-11ee-91ce-31cfad0a8b96.jpg",
+            "description": "የኢትዮጵያ ፀጥታ ኃይሎች ጥቃትን ተከትሎ ዓለም አቀፍ ሠራተኞቹን ከኢትዮጵያ አስወጥቶ የነበረው የአፍሪካ ልማት ባንክ፤ ሠራተኞቹን ወደ አገሪቱ ሊመልስ መሆኑን አስታወቀ።",
+            "imageAlt": "የአፍሪካ ልማት ባንክ ፕሬዝዳንት ዶ/ር አኪንውሚ አዴሲና እና ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ",
+            "id": "cz9qx65legvo"
+          },
+          {
+            "type": "article",
+            "title": "ዩናይትድ ኪንግደም የኤርትራው አምባሳደር ከአገሯ ለቀው እንዲወጡ አዘዘች",
+            "firstPublished": "2024-01-19T08:31:23.720Z",
+            "lastPublished": "2024-01-19T08:31:23.720Z",
+            "link": "https://www.bbc.com/amharic/articles/c3gygqd61ryo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/737d/live/d9730670-b6a4-11ee-b4e9-f7d0dd42ed50.jpg",
+            "description": "የብሪታኒያ መንግሥት በለንደን የኤርትራ አምባሳደር የሆኑት እስጢፋኖስ ሃብተማርያም ከአገሩ እንዲወጡ ማዘዙን ዲፕሎማቲክ ምንጮች ለቢቢሲ ገለጹ።",
+            "imageAlt": "አምባሳደር እስጢፋኖስ ሃብተማርያም",
+            "id": "c3gygqd61ryo"
+          },
+          {
+            "type": "article",
+            "title": "የሰሜን ኮሪያው መሪ ኪም ጆንግ ኡንን ትተካለች የምትባለው ትንሿ ልጃቸው ማን ናት?",
+            "firstPublished": "2024-01-19T04:20:29.337Z",
+            "lastPublished": "2024-01-19T04:20:29.337Z",
+            "link": "https://www.bbc.com/amharic/articles/czkjk9r9k0ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b64/live/24610930-b61d-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ኪም ጁ ኤ ለመጀመሪያ ጊዜ ለሕዝብ የታየችው በአውሮፓውያኑ 2022 ነበር። ኪም ጁ ኤ አባቷን ለመተካት ትልቅ ተስፋ የተጣለባት እንደሆነች የደቡብ ኮሪያ የስለላ ኤጀንሲ ያምናል። ለመሆኑ ስለዚህች ሴት ምን የሚታወቅ ነገር አለ?",
+            "imageAlt": "ኪም ጆንግ ኡን እና ሴት ልጃቸው ኪም ጁ ኤ ባለፈው ዓመት በኮሪያ ሕዝባዊ ሠራዊት ምሥረታ በዓል ላይ",
+            "id": "czkjk9r9k0ro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:99d33e24-45ba-489a-858f-2708279c807e",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "አነጋጋሪ ጉዳይ",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ኢትዮጵያ አዲስ የታጠቀቻቸው ጄት እና ድሮን አቅማቸው ምን ያህል ነው?",
+            "firstPublished": "2024-01-17T09:51:24.748Z",
+            "lastPublished": "2024-01-17T09:51:24.748Z",
+            "link": "https://www.bbc.com/amharic/articles/c3gyly3zve7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/772e/live/ba617e40-b51b-11ee-9526-cb48c5b04880.jpg",
+            "description": "የአገሪቱን ሠራዊት የውጊያ አቅም ይጨምራሉ የተባሉ ተዋጊ የጦር ጄት እና ሰው አልባ አውሮፕላን (ድሮን) የኢትዮጵያ አየር ኃይል መረከቡን ይፋ ተደርጓል። አየር ኃይሉ ማክሰኞ ጥር 7/2016 ዓ.ም. የተረከበው ሩሲያ ሰራሹ ሱሆይ ሱ-30 ጦር ጀት እና ቱርክ ሰራሹን ባይራክታር አኪንቺ የተባለ ዘመናዊ ሰው አልባ አውሮፕላን ነው።",
+            "imageAlt": "ሱ-30 ጀት",
+            "id": "c3gyly3zve7o"
+          },
+          {
+            "type": "audio",
+            "title": "ቢቢሲ አማርኛ ዜና",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/amharic/bbc_amharic_radio/programmes/w13xttnt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ef82/live/accd9e50-463d-11ee-9b58-cb80889117a8.jpg",
+            "description": "",
+            "imageAlt": "BBC",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Famharic%2Fbbc_amharic_radio%2Fprogrammes%2Fw13xttnt"
+          },
+          {
+            "type": "article",
+            "title": "የደጋ ሰው “የዘመኑ የኢትዮጵያ ሙዚቃ ድምጽ”",
+            "firstPublished": "2024-01-18T04:25:37.004Z",
+            "lastPublished": "2024-01-18T04:25:37.004Z",
+            "link": "https://www.bbc.com/amharic/articles/cx0j3jjej8xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/02dc/live/20db4dd0-b56d-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ከሦስት አህጉራት የተውጣጡ 25 ሙዚቀኞች፤ አራት የግጥም ደራሲዎች እና አንዲት ድምጻዊት፤ የደጋ ሰው አልበምን እውን ያደረገው ጥምረት ነው። \nለ57 ደቂቃ እርዝማኔ ያላቸው 12 የሀገረ ሰብ ሙዚቃዎች በአልበሙ ተካትተዋል። \nበመድረክ ስሟ የማ (የማርያም ቸርነት) ሙዚቃዎቹን ተጫውታቸዋለች። የያሬድ ሙዘቃ ትምህርት ቤት ዳይሬክተሩ ኢዩኤል መንግሥቱ ደግሞ የአልበሙ ፕሮዲዩሰር ነው። ቢቢሲ ፕሮዲውሰሩን እና ድምጻዊቷን ስለ አልበሙ ጠይቋል።",
+            "imageAlt": "የደጋ ሰው የድምጻዊት የማርያም ቸርነት (የማ) የመጀመርያ የሙዚቃ ሰንዱቅ",
+            "id": "cx0j3jjej8xo"
+          },
+          {
+            "type": "article",
+            "title": "ኬንያውያን የአርሰናል ደጋፊዎች ከድል በኋላ ለምስጋና በቤተክርስቲያን መሰብሰባቸው አነጋጋሪ ሆነ",
+            "firstPublished": "2024-01-22T11:38:12.007Z",
+            "lastPublished": "2024-01-22T11:38:12.007Z",
+            "link": "https://www.bbc.com/amharic/articles/cn0nlpgp1j6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f40e/live/275c5eb0-b919-11ee-82f2-0d6339e13c50.jpg",
+            "description": "ኬንያውያን የአርሰናል ደጋፊዎች ቡድናቸው ድል ከተቀዳጀ በኋላ በቤተክርስቲያን ተሰባስበው ለቡድናቸው ድል ፈጣሪን ማመስገናቸው መነጋገሪያ ሆነ።",
+            "imageAlt": "ኬንያውያን የአርሰናል ደጋፊዎች ",
+            "id": "cn0nlpgp1j6o"
+          },
+          {
+            "type": "article",
+            "title": "በጋዛ ምን ያህል የእምነት ተቋማት ወደሙ? ምዕመናንስ የት ተጠለሉ?",
+            "firstPublished": "2024-01-18T04:29:11.777Z",
+            "lastPublished": "2024-01-18T04:29:11.777Z",
+            "link": "https://www.bbc.com/amharic/articles/cpv6g0vnn54o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1e2c/live/87ea3fa0-b549-11ee-beb5-e1400df560f2.jpg",
+            "description": "ጋዛ እጅግ የጥንታዊ አብያተ ክርስቲያናት እና መስጂዶች መገኛ ናት። ነገር ግን እኒህ የእምነት ሥፍራዎች የእስራኤልን ድብደባ መቋቋም የቻሉ አይመስሉም።",
+            "imageAlt": "በጋዛ ጉዳት ከደረሰባቸው መስጂዶች አንዱ ",
+            "id": "cpv6g0vnn54o"
+          },
+          {
+            "type": "article",
+            "title": "የማኅጸን በር ጫፍ ካንሰር መከላከያ ክትባት ለማን ይሰጣል? በኢትዮጵያስ ማግኘት ይቻላል?",
+            "firstPublished": "2024-01-17T04:17:43.402Z",
+            "lastPublished": "2024-01-17T04:17:43.402Z",
+            "link": "https://www.bbc.com/amharic/articles/c902zl53e91o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c1ef/live/9dab88b0-b497-11ee-8f07-bbfdfa890097.jpg",
+            "description": "የማኅጸን በር ጫፍ ካንሰር በዓለም ላይ አራተኛው ገዳይ የካንሰር ዓይነት ነው። በየዓመቱ 300 ሺህ ሰዎችን ይገድላል። ጥናቶች የበሽታው መከላከያ ክትባት 90 ከመቶ የማኅጸን በር ጫፍ ካንሰርን እንደሚከላከል ያሳያሉ።",
+            "imageAlt": "ክትባቱን የያዘች ሐኪም",
+            "id": "c902zl53e91o"
+          },
+          {
+            "type": "article",
+            "title": "“ያለብኝ ራስ ምታት እየጮህኩ ጭንቅላቴን ከግድግዳ እንዳጋጭ ያስገድደኛል”",
+            "firstPublished": "2024-01-21T07:42:54.165Z",
+            "lastPublished": "2024-01-21T07:42:54.165Z",
+            "link": "https://www.bbc.com/amharic/articles/cq57jjpl3epo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/76a8/live/030f4f20-b830-11ee-81db-4dcd678c7108.png",
+            "description": "ክላስተር ሄድኤክ የተሰኘው የራስ ምታት ዓይነት ከ1000 ሰዎች መካከል አንድ ሰው ነው የሚያጠቃው። በዚህ ራስ ምታት የሚሰቃዩ አብዛኛዎቹ ሰዎች ዕድሜያቸው ከ30 በላይ ሰዎች ናቸው።",
+            "imageAlt": "ዳረን ፍራንኪሽ ",
+            "id": "cq57jjpl3epo"
+          },
+          {
+            "type": "article",
+            "title": "ፓኪስታን እና ኢራንን ጦር ያማዘዘው ምንድን ነው? ውጥረቱስ ወዴት ያመራ ይሆን?",
+            "firstPublished": "2024-01-21T05:02:46.765Z",
+            "lastPublished": "2024-01-21T05:02:46.765Z",
+            "link": "https://www.bbc.com/amharic/articles/c72y4947zyno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a8f5/live/f2953420-b5fa-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ኢራን እና ፓኪስታን አንዳቸው በሌላኛቸው ግዛት ውስጥ አሉ ያሏቸውን የመንግሥታቶቻቸው ተቀናቃኝ የሆኑ ሸማቂዎችን ዓላማ አድርገው ጥቃት ፈጽመዋል። ይህ ሁኔታ በሁለቱ አገራት መካከል መቃቃርን ፈጥሯል። ይህም የአካባቢው ወታደራዊ ኃያላን የሆኑት ኢራን እና ፓኪስታን ወደ ለየለት ወታደራዊ ግጭት እንዳይገቡ ስጋት ፈጥሯል።",
+            "imageAlt": "ፓኪስታን እና ኢራን ",
+            "id": "c72y4947zyno"
+          },
+          {
+            "type": "article",
+            "title": "ለእንቅልፍ የሚውለውን ሜላቶኒን ከመጠን በላይ ሲወስዱ ምን ይገጥመዎታል?",
+            "firstPublished": "2024-01-21T05:04:10.878Z",
+            "lastPublished": "2024-01-21T05:04:10.878Z",
+            "link": "https://www.bbc.com/amharic/articles/cw0l22v4wreo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3237/live/59541200-afb4-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ሜላቶኒን እንቅልፍ በሚያስቸግራቸው ሰዎች ተወዳጅነትን እያተረፈ ያለ አጋዥ ንጥረ ነገር ነው። ነገር ግን ከቅርብ ጊዜ ወዲህ ሜላቶኒንን ከመጠን በላይ መውሰድ በጣም እየጨመረ ይገኛል። ንጥረ ነገሩን ከመጠን በላይ መውሰድ ምን ያህል ጉዳት ያደርሳል?",
+            "imageAlt": "የአንጎል ምልክት፣ ምሽትና ቀን የሚወክል ምስል",
+            "id": "cw0l22v4wreo"
+          },
+          {
+            "type": "article",
+            "title": "በኢትዮጵያ እና ሶማሊያ መካከል የተፈጠረው ውጥረት ለምሥራቅ አፍሪካ ምን አንደምታ አለው?",
+            "firstPublished": "2024-01-19T04:20:18.710Z",
+            "lastPublished": "2024-01-19T04:20:18.710Z",
+            "link": "https://www.bbc.com/amharic/articles/c9020klklglo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/99c1/live/0a1276d0-b682-11ee-a3ac-3530965f3398.jpg",
+            "description": "ኢትዮጵያ እና ነጻ አገርነቷን ያወጀችው ሶማሊላንድ መሪዎች ስምምነት መፈረማቸውን ተከትሎ በምሥራቅ አፍሪካ አካባቢ ፖለቲካዊ ውጥረት ተፈጥሯል። ስምምነቱ ሉዓላዊነቴን የሚጻረር ነው ያለችው ሶማሊያ ተግባራዊ እንደማይሆን ስታሳውቅ፣ ኢትዮጵያ እና ሶማሊያ ግን ተግባራዊ እንደሚሆን አሳውቀዋል። ይህ ሁኔታ በምሥራቅ አፍሪካ ውስጥ ምን ውጤት ይኖረዋል?",
+            "imageAlt": "ሶማሊያዊያን ወጣቶች ",
+            "id": "c9020klklglo"
+          },
+          {
+            "type": "article",
+            "title": "የሐማስን የጥቃት ዝግጅት ቀድመው ሪፖርት ቢያደርጉም ሰሚ ያላገኙት የእስራኤል ‘ዐይኖች’",
+            "firstPublished": "2024-01-17T04:18:23.116Z",
+            "lastPublished": "2024-01-17T04:18:23.116Z",
+            "link": "https://www.bbc.com/amharic/articles/cw0d7ppkkzgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8534/live/ce438990-b475-11ee-8f07-bbfdfa890097.jpg",
+            "description": "የእስራኤል ‘ዐይኖች’ በመባል ይታወቃሉ። ሁሉም ወጣት ሴቶች ናቸው። መቀመጫቸው ጋዛ ደንበር ላይ ነው። ወጣቶቹ ድንበሩ ላይ አንድ ሥራ ብቻ ነው ያላቸው። ድንበር ላይ በመሆን ለሰዓታት ቅኝት በመድረግ ማንኛውንም አጠራጣሪ እንቅስቀሴ መከታተል ነው ብቻኛው ኃላፊነታቸው።",
+            "imageAlt": "የእስራኤል 'ዓይኖች'",
+            "id": "cw0d7ppkkzgo"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M13S",
+            "title": "ኢትዮጵያ እና ሶማሊላንድ የተፈራረሙትን የመግባቢያ ሰነድ ተከትሎ የተነሱ ውዝግቦች",
+            "firstPublished": "2024-01-20T04:49:28.125Z",
+            "lastPublished": "2024-01-20T04:49:28.125Z",
+            "link": "https://www.bbc.com/amharic/articles/cpw3g37lp48o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c7da/live/58cfe0e0-b525-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "ጠቅላይ ሚንስትር ዐቢይ አሕመድ እና ፕሬዝዳንት ሙሴ ቢሂ",
+            "id": "cpw3g37lp48o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:a84415ed-8305-4d6d-875c-dda5c7d7a686",
         "curationType": "tipo-curation",
-        "position": 1,
+        "position": 2,
         "title": "ከየፈርጁ",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
-            "type": "video",
-            "duration": "PT1M24S",
-            "title": "በ35 ሺህ የወዳደቁ ፕላስቲኮች የተሰራው ቅልብጭ ያለ ቤት",
-            "firstPublished": "2023-05-11T03:45:19.181Z",
-            "link": "https://www.bbc.com/amharic/articles/cekddm21533o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በዓለም ላይ እጅግ የተበከለ ወንዝ ካላቸው አገራት መካከል ኢንዶኔዥያ አንዷ ናት። የአካባቢ ተቆርቋሪው ጋሪ ቤንችጊብ ይህንን ብክለት ለመከላከል ሥራ ጀምሯል። ወደ ወንዞች እና የባሕር ዳርቻዎች የተጣሉ ፕላስቲኮችን በማሰባሰብ ከ35 ሺህ በላይ በሚሆኑ ፕላስቲኮች የራሱን መኖሪያ ቤት ሰርቷል። ይህ ቤት ውስጡ ምን ይመስላል? በውስጡስ ምን ምን አካቷል?",
-            "imageAlt": "",
-            "id": "cekddm21533o"
+            "type": "article",
+            "title": "ዝነኛው ፓስተር ጆሽዋ ሚሊዮን ተከታዮቹን ያታለለባቸው 6 “ተአምራዊ የፈውስ’’ ዘዴዎች",
+            "firstPublished": "2024-01-14T06:37:30.448Z",
+            "lastPublished": "2024-01-14T06:37:30.448Z",
+            "link": "https://www.bbc.com/amharic/articles/cw4kqdy4kgdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bb6e/live/308d3d00-b2a3-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ዝነኛው ፓስተር ጆሽዋ ሚሊዮን ተከታዮቹን ያታለለባቸው 6 “ተአምራዊ የፈውስ’’ ዘዴዎች",
+            "imageAlt": "ቲቢ ጆሽዋ በኢማኑኤል ቲቪ ያሰራጫቸው 'ተአምራዊ ፈውሶች'  ሁሉ የተቀናበሩ ነበሩ",
+            "id": "cw4kqdy4kgdo"
           },
           {
-            "type": "video",
-            "duration": "PT2M39S",
-            "title": "በቱርክ ላይ ጉልህ ለውጥ ማምጣት የቻሉት ፕሬዝዳንት ኤርዶዋን እና ተጽእኗቸው",
-            "firstPublished": "2023-05-10T04:06:46.201Z",
-            "link": "https://www.bbc.com/amharic/articles/c1v00gwv6vro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ባለፉት ሁለት አስርት ዓመታት ቱርክን የመሩት ረሲፕ ታይፕ ኤርዶዋን በአገራቸው ውስጥ ታላቅ እመርታን ማስመዝገባቸው እና በዓለም ዙሪያም ተደማጭነቷን ማጉላታቸው ይነገርላቸዋል። በተለይ በምጣኔ ሃብት፣ በሴቶች መብት፣ በዓለም አቀፍ ግንኙነት እና በሐይማኖት ረገድ የሚጠቀሱ ለውጦችን ማስመዝገብ እንደቻሉ ይነገርላቸዋል። በቱርክ ላይ ጉልህ ለውጥ ማምጣት የቻሉት ፕሬዝዳንት ኤርዶዋን በሥልጣን ላይ ለመቆየት በምርጫ ይወዳደራሉ።",
-            "imageAlt": "",
-            "id": "c1v00gwv6vro"
+            "type": "article",
+            "title": "ሕግ የማያከብሩ የጣሊያን ማህበራዊ ሚዲያ ተፅዕኖ ፈጣሪዎች ቅጣት ሊጣልባቸው ነው",
+            "firstPublished": "2024-01-18T05:26:07.382Z",
+            "lastPublished": "2024-01-18T05:26:07.382Z",
+            "link": "https://www.bbc.com/amharic/articles/c6p1p6p3yl3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8d24/live/2a071390-b5bc-11ee-8f07-bbfdfa890097.jpg",
+            "description": "",
+            "imageAlt": "ቺያራ ፌግራኒ",
+            "id": "c6p1p6p3yl3o"
           },
           {
-            "type": "video",
-            "duration": "PT1M35S",
-            "title": "ለ35 ዓመታት ከወንዝ ውስጥ ብረታ ብረት በመሰብሰብ የኖሩት ‘ማግኔቱ’ አዛውንት",
-            "firstPublished": "2023-05-09T03:39:07.589Z",
-            "link": "https://www.bbc.com/amharic/articles/c037nxg3ylyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "እኚህ ግለሰብ ጋንጉሊ ሳርካር ይባላል። ነዋሪነቱ በባንግላዲሽ መዲና ዳካ ነው። ላለፉት 35 ዓመታት ኑሯቸውን የመሩት ከሌሎች ሰዎች ለየት ባለ መልኩ ነው። ከተማዋቸውን የሚያልፍ ቡሪጋንጋ የሚባል ወንዝ አለ። ሰው ሁሉ ከእዚህ ወንዝ ዓሳ በማጥመድ ኑሮውን ይደጉማል። ጋንጉሊ ግን ላለፉት 35 ዓመታት ዓሳ አጥምደው አያውቁም። መተዳደሪያቸው ወንዙ ውስጥ የተጣሉ ብረታ ብረቶችን በማግኔት በመሰብሰብ ነው። በቀን ከ10 እስከ 15 ኪሎ ግራም ብረት እየሰበሰቡ በመሸጥ ዘመናትን አሳልፈዋል፤ አሁን ግን ችግር ገጥሟቸዋል።",
-            "imageAlt": "",
-            "id": "c037nxg3ylyo"
+            "type": "article",
+            "title": "በወሲብ ነጋዴዎች እየማለሉ፣ በአደገኛ እጽ እየናወዙ ቱሪስቶች የሚገደሉባት ከተማ",
+            "firstPublished": "2024-01-21T08:40:40.940Z",
+            "lastPublished": "2024-01-21T08:40:40.940Z",
+            "link": "https://www.bbc.com/amharic/articles/cn0nrz4l6neo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0879/live/adb03d90-b835-11ee-bc2f-cb5579b90709.jpg",
+            "description": "የሜዴይን ከተማ ከንቲባ ፌዴሪኮ ጉቴሬዝ የውጭ ዜጎች በብዛት ወደ ከተማችን እንዲመጡ እንፈልጋለን ካሉ በኋላ ነገር ግን ለወሲብና ለአደገኛ እጽ ሲሉ ብቻ የሚመጡ ቱሪስቶች በእኛ ዘንድ ተቀባይነት የላቸውም ብለዋል",
+            "imageAlt": "ሟች ከወላጅ እናቱ ጋር",
+            "id": "cn0nrz4l6neo"
           },
           {
-            "type": "video",
-            "duration": "PT2M45S",
-            "title": "የንጉሥ ቻርለስ ሦስተኛ የንግሥና ሥነ ሥርዓት ገጽታዎች",
-            "firstPublished": "2023-05-08T08:30:44.529Z",
-            "link": "https://www.bbc.com/amharic/articles/czqn995y9n4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ንጉሥ ቻርለስ ሦስተኛ እና ንግሥት ካሚላ የንግሥና ሥነ ሥርዓት በደማቅ ሁኔታ ቅዳሜ ዕለት አከናውነዋል። በሥነ ሥርዓቱ ላይ ከ2 ሺህ በላይ ሰው ታድሟል። ሌሎች በ10 ሺህ የሚቆጠሩ ሰዎች ደግሞ ጥንዶቹን ለማየት በለንደን ጎዳናዎች ላይ ተሰልፈው ውለዋል። በአንጻሩ የዘውዳዊ ሥርዓቱን የሚቃወሙ ሰዎችም ድምጻቸውን ያሰሙበት ዕለት ነበር። የንግሥና ሥነ ሥርዓቱ በአመዛኙ ይህንን ይመስል ነበር።",
-            "imageAlt": "",
-            "id": "czqn995y9n4o"
+            "type": "article",
+            "title": "ልጃቸውን በስለት ለቤተ ክርስቲያን የሰጡት ፊሊፒንሳዊው የኢትዮጵያ ኦርቶዶክስ ተዋህዶ ካህን",
+            "firstPublished": "2024-01-06T05:20:02.445Z",
+            "lastPublished": "2024-01-06T05:20:02.445Z",
+            "link": "https://www.bbc.com/amharic/articles/cd1pn51n44yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/afcc/live/79eb2fa0-8dd9-11ee-952c-5f8de97ee99b.jpg",
+            "description": "ዳንቴ አሎንዞ ካህን ናቸው። አገልግሎታቸው በኢትዮጵያ ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ውስጥ ነው። \nበቤተ ክርስትያኒቱ ለጥቂቶች ብቻ የተፈቀደውንም ሚስጥር ያውቃሉ። ሁለተኛ ቄስ ሆነው ቅዳሴ ይመራሉ። ከቅዳሴ በኋላ ምዕመናንን ያቆርባሉ።",
+            "imageAlt": "ቀሲስ ዳንቴና ዲያቆን ዮሐንስ",
+            "id": "cd1pn51n44yo"
           },
           {
-            "type": "video",
-            "duration": "PT2M46S",
-            "title": "የውሃ ሃብቷ ተሟጦ ያለውሃ ልትቀር ትችላለች የተባለችው አገር የገጠማት ፈተና",
-            "firstPublished": "2023-05-08T04:04:36.780Z",
-            "link": "https://www.bbc.com/amharic/articles/c2e91d4nv8zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በ﻿አየር ንብረት ለውጥ ምክንያት በ2050 ከፊሉ የመካከለኛው ምሥራቅ አካባቢ ለመኖሪያነት አይሆንም ተብሎ ተሰግቷል። በከፍተኛ ሁኔታ በአየር ንብረት ለውጥ ምክንያት ለፈተና ይጋለጣሉ ከተባሉ የአካባቢው አገራት መካከል ዮርዳኖስ አንዷ ነች። በዚህም ሳቢያ የወደፊት ዕጣ ፈንታዋ የከፋ እንደሚሆን የተተነበየባት ዮርዳኖስ፣ ከወዲሁ ለውጦችን እና ምልክቶችን እየተጋፈጠች ነው። በአሁኑ ወቅት የሙት ባሕር መጠን እየቀነሰ ሲሆን ብዙ ቤቶችም ውሃ የሚያገኙት በሳምንት አንድ ቀን ብቻ ነው። ስለዚህ ዮርዳኖስ በአጭር ጊዜ ውስጥ ካለ ውሃ ልትቀር ይሆን?",
-            "imageAlt": "",
-            "id": "c2e91d4nv8zo"
+            "type": "article",
+            "title": "ታካሚዎች ያለ ልክ እንዲወፍሩ የሚገፋፋው የሰውነት ቅነሳ ቀዶ ሕክምና ባለሙያ",
+            "firstPublished": "2024-01-16T04:29:13.240Z",
+            "lastPublished": "2024-01-16T04:29:13.240Z",
+            "link": "https://www.bbc.com/amharic/articles/c51z7q8gnxjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8f3c/live/ca5db630-b3ac-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ዶ/ር ኦጉን ኤርሰን ይባላል። ቱርካዊ የሰውነት ክብደት ቅነሳ የቀዶ ሕክምና ባለሙያ ነው።  “ክብደት መቀነሻ” መንገዶች የሚላቸውን በመሸጥ ይታወቃል። ቀዶ ሕክምናው የማያስፈልጋቸው ታካሚዎችን የሰውነት ክብደት እንዲጨምሩና ከዚያም ሕክምናውን እንዲያገኙ እንደሚያግባባ የቢቢሲ ምርመራ ደርሶበታል።",
+            "imageAlt": "ቀዶ ሕክምና",
+            "id": "c51z7q8gnxjo"
           },
           {
-            "type": "video",
-            "duration": "PT7M8S",
-            "title": "ሽመልስ አራርሶ እና ታዋቂው የኬንያ ዘም መሽሩምስ ባንድ ሲታወሱ",
-            "firstPublished": "2023-05-07T04:57:09.476Z",
-            "link": "https://www.bbc.com/amharic/articles/c0wgdyddx53o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ታዋቂው ሙዚቀኛ ሽመልስ አራርሶ እና የኬንያው ዘም መሽሩምስ ባንድ በኢትዮጵያ አቆጣጠር ከ1980ዎቹ መጀመሪያ አንስቶ አስከ ሽመልስ ህልፈት ድረስ ኬንያን እና ኢትዮጵያን በሙዚቃ ያስተሳሰረ የጋራ ታሪኮች አሏቸው። ሽመልስ ከዘም መሽሩምስ ባንድ ጋር ሁለት አልበሞችን ሰርቷል። በሽመልስ ምክንያት ዘም መሽሩምስ ባንድ ወደ ኢትዮጵያ እየተመላለሰ ብዙ የሙዚቃ ድግሶችን አቅርቧል። አምስት አስርት ዓመታት ያስቆጠረ ዕድሜ ያለው ከዘም መሽሩምስ ባንድ አባላት ከሆኑት አምስት ወንድማማቾች መካከል ሁለቱ ከቢቢሲ ጋር ቆይታ አድርገዋል። በዚህ ቆይታቸው ስለሽመልስ አራርሶ እና ከሦስት አስርት ዓመታት በፊት ኢትዮጵያ ውስጥ ስላቀረቧቸው የሙዚቃዎች ድግሶች አውግተውናል።",
-            "imageAlt": "",
-            "id": "c0wgdyddx53o"
+            "type": "article",
+            "title": "የታይላንድን ዘውዳዊ ሥርዓትን አንቋሿል የተባለው የ50 ዓመት እስር ተፈረደበት",
+            "firstPublished": "2024-01-19T09:49:57.760Z",
+            "lastPublished": "2024-01-19T09:49:57.760Z",
+            "link": "https://www.bbc.com/amharic/articles/ced7dqpqyzzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e389/live/7b2c66a0-b6b4-11ee-8f07-bbfdfa890097.jpg",
+            "description": "የታይላንድ ፍርድ ቤት የአገሪቱን ዘውዳዊ ሥርዓት ስም አጠልሽቷል በተባለው ግለሰብ ላይ የ50 ዓመት እስራት ፈርዶበታል። ውሳኔው በዘውዳዊው ሕግ ከፍተኛው ቅጣት ነው ተብሏል።",
+            "imageAlt": "የታይላንድ ንጉሥ ቫጂራሎንግኮር",
+            "id": "ced7dqpqyzzo"
           },
           {
-            "type": "video",
-            "duration": "PT1M17S",
-            "title": "ሦስት ሳምንታትን ያስቆጠረው የሱዳን ግጭት ያስከተለው ቀውስ",
-            "firstPublished": "2023-05-06T05:08:11.761Z",
-            "link": "https://www.bbc.com/amharic/articles/cd1r8p01gp2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በሱዳን ጦር እና በፈጥኖ ደራሽ ኃይሉ መካከል የተቀሰቀሰው ጦርነት ሦስት ሳምንታትን አስቆጥሯል። ሦስት ጊዜ የተኩስ አቁም ስምምነት ተደርጎ ነገር ግን በተደጋጋሚ ተጥሷል። ከ100 ሺህ በላይ ሰዎች አገራቸውን ለቀው ሲሰደዱ ሌሎች በመቶ ሺህ የሚቆጠሩ ደግሞ ከመኖሪያቸው ተፈናቅለዋል። በ10 ሚሊዮን የሚቆጠሩ ሱዳናውያን የአስቸኳይ ሰብዓዊ ድጋፍ ጠባቂ ሆነዋል። አሁንም ለሰባት ቀናት የሚቆይ ተኩስ አቁም ተደርጓል ቢባልም በካርቱም እና በሌሎች ከተሞች ከባድ ውጊያ እየተካሄደ ነው። ሁለቱም ኃይሎች ግጭቱን በቅርብ ጊዜ ያቆማሉ ተብሎ አይጠበቅም።\n",
-            "imageAlt": "",
-            "id": "cd1r8p01gp2o"
+            "type": "article",
+            "title": "'ሰው ሠራሽ አስተውሎት 40% ሠራተኞችን ሥራ ሊነጥቅ ይችላል' አይኤምኤፍ",
+            "firstPublished": "2024-01-15T05:29:57.329Z",
+            "lastPublished": "2024-01-15T05:29:57.329Z",
+            "link": "https://www.bbc.com/amharic/articles/c982rnzdevwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f327/live/9f4d7860-b364-11ee-8f07-bbfdfa890097.jpg",
+            "description": "የዓለም አቀፉ የገንዘብ ተቋም (አይኤምኤፍ) ወደፊት ሰው ሠራሽ አስተውሎት (AI) 40 በመቶ የሚሆነውን ሠራተኛ ከሥራ ውጭ ሊያደርግ ይችላል ሲል ተነበየ።",
+            "imageAlt": "ሰው ሠራሽ አስተውሎት የሰዎችን የገቢ ልዩነት ያሰፋል",
+            "id": "c982rnzdevwo"
           },
           {
-            "type": "video",
-            "duration": "PT1M48S",
-            "title": "ለንጉሥ ቻርለስ የንግሥና ሥነ ሥርዓት የተዘጋጁት ወርቃማ ሰረገላዎች",
-            "firstPublished": "2023-05-05T03:58:05.569Z",
-            "link": "https://www.bbc.com/amharic/articles/cp6yjzdnpp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "የንጉሥ ቻርለስ ሦሰተኛ የንግሥና ሥነ ሥርዓት ነገ ቅዳሜ ሚያዚያ 28/2015 ዓ.ም. በታላቅ ዝግጅት ለንደን ውስጥ ይከናወናራል። ንጉሡ እና ባለቤታቸው በዓለም ዕድሜ ጠገብ በሆኑ ወርቃማ ሰረገላዎች ላይ ሆነው ሥነ ሥርዓቱ ወደሚካሄድበት ቦታ ይሄዳሉ። በይፋ ንግሥናቸውን ከተቀበሉ በኋላም ወደ ባኪንግሃም ቤተ መንግሥት በልዩ ሥነ ሥርዓት ሲመለሱም ሰረገላዎቹ ተሳፍረው ይሆናል። እነዚህ ልዩ ሰረገላዎች ከአውሮፓውያኑ 1830ዎቹ ጀምሮ በተከናወኑ በእያንዳንዱ የንግሥና ሥነ ሥርዓቶች ላይ ያገለገሉ እጅግ የተዋቡ ሰረገላዎች ናቸው።",
-            "imageAlt": "",
-            "id": "cp6yjzdnpp4o"
+            "type": "article",
+            "title": "ሳልሠራ ያገኘሁት ነው በሚል በውርስ ያገኘችውን 25 ሚሊዮን ዩሮ በስጦታ ልታከፋፍል የወሰነችው ኦስትሪያዊት",
+            "firstPublished": "2024-01-11T06:24:39.995Z",
+            "lastPublished": "2024-01-11T06:24:39.995Z",
+            "link": "https://www.bbc.com/amharic/articles/c3gyyny6g95o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9744/live/2a75ef50-b048-11ee-beb5-e1400df560f2.jpg",
+            "description": "",
+            "imageAlt": "የ31 ዓመቷ ማርሊን ኤንገልሆርን",
+            "id": "c3gyyny6g95o"
           },
           {
-            "type": "video",
-            "duration": "PT1M37S",
-            "title": "እርጅናን ለማሸነፍ በየዓመቱ ሚሊዮን ዶላሮችን የሚያፈሰው ባለሃብት",
-            "firstPublished": "2023-05-03T05:10:59.867Z",
-            "link": "https://www.bbc.com/amharic/articles/ce7gn3rkxw7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ሚሊየነሩ ብሪያን ጆንሰን እርጅናውን ለመቀልበስ በየዓመቱ በሚሊዮኖች የሚቆጠር ዶላር በማውጣት ጥረት እያደረገ ነው። ብሪያን አሁን ዕድሜው 45 ነው። በስፖርት እና በሕክምና ግን ወደ 18 ዓመት መመለስ ይፈልጋል። ይህንንም ለማሳካት ሂደቱን የሚከታተሉ 30 አባላት ያሉት የሐኪሞች እና ሳይንቲስቶች ቡድን ቀጥሯል።",
-            "imageAlt": "",
-            "id": "ce7gn3rkxw7o"
+            "type": "article",
+            "title": "በርካቶችን ያስቆጣው እና ያነጋገረው የእንግሊዛዊት እና የኬንያዊው ጋብቻ",
+            "firstPublished": "2024-01-07T05:12:22.529Z",
+            "lastPublished": "2024-01-07T05:12:22.529Z",
+            "link": "https://www.bbc.com/amharic/articles/c9824dn182yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/83dc/live/93838ad0-a0cf-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "ነጭ እንግሊዛዊት ሴት በጥቁሩ ዓይነ ስውር ኬንያዊ ፍቅር ወድቃ ትዳር የመመስረቷ ዜና፤ ከማነጋገርም አልፎ የነጭ የበላይነት ስሜት ያላቸውን ያስቆጣ ድርጊት ነበር።ሩት ኬንያዊውን ልታገባው እንደሆነ ለወላጆቿ እንዲሁም ለቀጣሪዋ ለማሳወቅ በመርከብ ወደ ዩኬ ባቀናች ወቅት ከወላጆቿ እና ከአሰሪዋ ትልቅ ውግዘት ገጠማት። \nየአገሩ መገናኛ ብዙሃን ሳይቀሩ በዘገባዎቻቸው ተዘባበቱባት።",
+            "imageAlt": "ሩት ሆልዌይ እና ጆን ኪሙዩ",
+            "id": "c9824dn182yo"
           },
           {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "‘እየሱስን ለማግኘት’ ጾም ላይ የቆዩ 100 የሚጠጉ ሰዎች አስከሬን የተገኘበት ስፍራ",
-            "firstPublished": "2023-04-29T05:13:46.030Z",
-            "link": "https://www.bbc.com/amharic/articles/cpvxwz7d1x5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "እየሱስን ለማግኘት እራሳቸውን በጾም አድክመው እንዲሞቱ በሚያበረታታ የእምነት ቡድን ስብከት የተነሳ የሞቱ ወደ 100 የሚደርሱ ሰዎች አስከሬን በምሥራቅ ኬንያ ተገኝቷል። አሁንም በዚሁ ስፍራ ከሃይማኖታዊው ትዕዛዝ አናፈነግጥም ብለው በርካታ ሰዎች በጾም ላይ እንደሚገኙ ፖሊስ አስታውቋል። በዚህም ሳቢያ የሟቾች ቁጥር ሊያሻቅብ ይችላል ተብሏል። የኬንያ መንግሥትም በእንዲህ አይነቱ ሃይማኖታዊ አስተምህሮ ዙሪያ እርምጃ እንዲወስድ ግፊት እየተደረገበት ነው።",
-            "imageAlt": "",
-            "id": "cpvxwz7d1x5o"
+            "type": "article",
+            "title": "በመልክ የምትመስላትን ሴት በመግደል የተጠረጠረችው ጀርመናዊት ፍርድ ቤት ቀረበች",
+            "firstPublished": "2024-01-17T15:18:38.440Z",
+            "lastPublished": "2024-01-17T15:18:38.440Z",
+            "link": "https://www.bbc.com/amharic/articles/c10y33v50pyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9be9/live/ab73ed20-b54b-11ee-9a00-7f39d5e78a34.jpg",
+            "description": "አንዲት ጀርመናዊት በመልክ የምትመስላትን አምሳያዋን በመግደል እራሷ እንደሞተች ለማስመሰል ሞክራለች ተብላ ተከሳለች።",
+            "imageAlt": "ተጠርጣሪዋ ሻራባን ኬ ችሎት ፊት ስትቀርብ",
+            "id": "c10y33v50pyo"
           },
           {
-            "type": "video",
-            "duration": "PT1M29S",
-            "title": "ሱዳንን እያመሰ ያለው ግጭት የተቀሰቀሰበት ምክንያት ምንድን ነው?",
-            "firstPublished": "2023-04-28T04:10:15.219Z",
-            "link": "https://www.bbc.com/amharic/articles/cxxypw3zwdzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ሁለት ሳምንት ሊሞላው የተቃረበው በሱዳን በተፈጠረው ወታደራዊ ግጭት በመቶዎች የሚቆጠሩ ሰዎች ተገድለዋል። ግጭቱ የሥልጣን ሽኩቻ ውስጥ በገቡት በአገሪቱ ሁለት ኃያላን የጦር ጄኔራሎች መካከል የሚደረግ ሲሆን የሌሎች አገራት እጅ እንዳለበትም ይነገራል። ለመሆኑ ይህ ግጭት መቀስቀስ ምክንያቱ ምንድን ነው?",
-            "imageAlt": "",
-            "id": "cxxypw3zwdzo"
+            "type": "article",
+            "title": "‘ሰካራም መንገደኛ’ የበረራ አስተናጋጅ በመናከሱ አንድ አውሮፕላን ጉዞውን አቋርጦ ወደ ጃፓን ተመለሰ",
+            "firstPublished": "2024-01-17T12:18:44.258Z",
+            "lastPublished": "2024-01-17T12:18:44.258Z",
+            "link": "https://www.bbc.com/amharic/articles/cg6w7dndgpeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/21a6/live/2dc866f0-b530-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኤኤንኤ የተሰኘው አየር መንገድ ንብረት የሆነ አውሮፕላን በአንድ ሰካራም መንገደኛ ምክንያት ወደ ዩናይትድ ስቴትስ የሚያደርገውን ጉዞ አቋርጦ ወደ ጃፓን ተመልሷል።",
+            "imageAlt": "የኤንኤንኤ አየር መንገድ አውሮፕላን",
+            "id": "cg6w7dndgpeo"
           },
           {
-            "type": "video",
-            "duration": "PT2M27S",
-            "title": "የሱዳንን ግጭት በተመለከተ ከሚሰራጩ ቪዲዮዎች ምን ያህሎቹ እውነተኛ ናቸው?",
-            "firstPublished": "2023-04-26T04:13:57.766Z",
-            "link": "https://www.bbc.com/amharic/articles/c2lp0l7qvjzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "የሱዳንን ግጭት ተከትሎ እውነተኛ ያልሆኑ እና አሳሳች ቪዲዮዎች በማኅበራዊ ሚዲያ ላይ እየተሰራጩ ነው። ቢቢሲ አንዳንዶቹን ቪዲዮዎች በመመርመር ሐሰተኛነታቸውን እና ምንጫቸውን ለማወቅ ችሏል። ይህ ቪዲዮም ተጠቃሽ የሆኑትን ዳሷል። ",
-            "imageAlt": "",
-            "id": "c2lp0l7qvjzo"
+            "type": "article",
+            "title": "ምሥሎች በሰው ሰራሽ አስተውሎት እንዴት ይሠራሉ? ከእውነተኞቹስ እንዴት መለየት ይቻላል?",
+            "firstPublished": "2023-12-19T04:19:42.246Z",
+            "lastPublished": "2023-12-19T04:19:42.246Z",
+            "link": "https://www.bbc.com/amharic/articles/c51zw24z5eko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/00cd/live/ee4aaad0-9b6f-11ee-b0d1-eb1e5908e241.jpg",
+            "description": "በሰው ሰራሽ አስተውሎት (ኤአይ) አማካይነት የሚዘጋጁት ምሥሎች ለእውነታ በእጅጉ የቀረቡ በመሆናቸው ምክንያት ትክክለኛ ፎቶዎች ወይም የሰው ልጅ የአእምሮ እና የእጅ ሥራ ውጤት ከሆኑት አንጻር ለመለየት አዳጋች እየሆኑ መጥተዋል። ታዲያ በዚህ ቴክኖሎጂ የተዘጋጁትን ምሥሎች ከእውነተኞቹ እንዴት መለየት እንችላለን? ",
+            "imageAlt": "በኤአይ የወጡ ፎቶዎች",
+            "id": "c51zw24z5eko"
           }
         ],
         "activePage": 1,
-        "pageCount": 7,
-        "link": "https://www.bbc.com/amharic/topics/c917ezk2pmvt",
-        "curationId": "urn:bbc:vivo:curation:a899f5cd-ad96-4585-8ed8-07b22070dc2d",
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a35f83b4-5c5d-4936-b606-18bded6a26fe",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "አጃኢብ!",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ከወጪ ጋር በተያያዘ ፕሪሚየር ሊጉ ለምን ክለቦችን ይቀጣል?",
+            "firstPublished": "2024-01-19T04:27:09.421Z",
+            "lastPublished": "2024-01-19T04:27:09.421Z",
+            "link": "https://www.bbc.com/amharic/articles/c3gyg7g014go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e2c1/live/280b6f00-b5da-11ee-8f07-bbfdfa890097.jpg",
+            "description": "ኤቨርተን እና ኖቲንግሃም ፎረስት የፕሪሚር ሊጉን የፋይናንስ ሕጎች ጥሰዋል በሚል አዲስ ክስ ተመስርቶባቸዋል። ኤቨርተን ከዚህ ቀደም በቀረበበት ክስ 10 ነጥብ ተቀንሶበት ይግባኝ ጠይቋል። ቢቢሲ በጉዳዩ ዙሪያ ሚነሱ ጥያቄዎችን እንደሚከተለው ተመልክቷቸዋል። ",
+            "imageAlt": "ፕሪሚር ሊግ",
+            "id": "c3gyg7g014go"
+          },
+          {
+            "type": "article",
+            "title": "ተመራማሪዎች ከሰው ዐይነ ምድር የአውሮፕላን ነዳጅ ፈጠሩ",
+            "firstPublished": "2024-01-12T04:24:46.792Z",
+            "lastPublished": "2024-01-12T04:24:46.792Z",
+            "link": "https://www.bbc.com/amharic/articles/c72yqdevp8go",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b2eb/live/e6651db0-aec9-11ee-8f07-bbfdfa890097.jpg",
+            "description": "የሰው ልጆች ዐይነ ምድር የአውሮፕላን ነዳጅን ለመተካት የተሻለ አማራጭ ሆኖ ቀርቧል።\nበዚህ ሂደት ውስጥ መጀመርያ ልክ እንደ ነዳጅ ሁሉ ድፍድፍ የሆነ ነገር ይፈጠራል፣ ከዚያ ወፍራም ጥቁር ፈሳሽ ሆኖ ከኬሚካሎች ጋ ተቀላቅሎ ነው ወደ ነዳጅነት የሚቀየረው።\nይህ ግኝት ገና በላቦራቶሪ ደረጃ ያለ ሲሆን ወደ ተግባር ለመሄድ በጣም ረዥም ዓመታት ሊወስድ ይችላል።\nእያንዳንዱ የሰው ልጅ በዓመት በአማካይ 5 ሊትር የአውሮፕላን ነዳጅ መሥሪያ የሚሆን ዐይነ ምድር ያስወግዳል።\n",
+            "imageAlt": "ዶክተር ሰርጊዯ ሊማ ",
+            "id": "c72yqdevp8go"
+          },
+          {
+            "type": "article",
+            "title": "ከዋክብትን ከመግዛት የክለብ አውቶብሶችን ወደ መሸጥ የወረደው የቻይናው ሱፕር ሊግ",
+            "firstPublished": "2024-01-11T04:32:47.562Z",
+            "lastPublished": "2024-01-11T04:32:47.562Z",
+            "link": "https://www.bbc.com/amharic/articles/cv24zdjdg25o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a4f0/live/d33af850-aecd-11ee-8f07-bbfdfa890097.jpg",
+            "description": " የቻያና ሱፐር ሊግ መነቃቃት የጀመረው ፕሬዚዳንት ዢ ጂንፒንግ አገሪቱን ወደ እግር ኳስ ማዕከልነት ለመቀየር ካላቸው ፍላጎት ጋር ተያይዞ የመጣ ነው።  እአአ በ2011 የወንዶቹ ብሔራዊ ቡድን ለዓለም ዋንጫ እንዲበቃ እና ቻይናም ውድድሩን እንድታዘጋጅ ማቀዷን አስታወቁ። ሱፐር ሊጉ በርካታ ገንዘብ ማውጣት ሲጀምር አገሪቱን ወደ እግር ኳስ ልዕለ ኃያልነት የመቀየር ፍላጎታቸው እውን መሆን የጀመረ መሰለ። ይህ ግን ብዙ አልቆየም።\n\n",
+            "imageAlt": "የ29 ዓመቱ ብራዚላዊ ሃልክ",
+            "id": "cv24zdjdg25o"
+          },
+          {
+            "type": "article",
+            "title": "አንዱ የሰውነት አካል ከሌላው አንጻር በፍጥነት እያረጀ መሆኑን ማወቅ ይቻላል?",
+            "firstPublished": "2024-01-10T04:18:52.413Z",
+            "lastPublished": "2024-01-10T04:18:52.413Z",
+            "link": "https://www.bbc.com/amharic/articles/c4n7mj422mro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e526/live/5e07cd90-93fe-11ee-8df3-1d2983d8814f.jpg",
+            "description": "በተለምዶ ዕድሜ አንድ ሰው በሕይወት በኖረባቸው ዓመታት ብዛት የሚገለጽ ነው። \nሳይንቲስቶች ደግሞ የደም ምርመራ በማካሄድ የአንድን ሰው የውስጥ አካላት የእርጅና መጠን ለማወቅ እንደሚችሉ ያምናሉ።\n ይህ ደግሞ የትኞቹ የአካል ክፍሎች ሥራ የማቆም አደጋ እንዳንዣበባቸው ለመተንበይ ሊረዳ ይችላል።\n",
+            "imageAlt": "የደም ምርመራ የሚያደርግ ሰው",
+            "id": "c4n7mj422mro"
+          },
+          {
+            "type": "article",
+            "title": "'ዶክተሮች እንደማልራመድም ሆነ እንደማልናገር ነግረውኝ ነበር'",
+            "firstPublished": "2024-01-04T05:56:49.384Z",
+            "lastPublished": "2024-01-04T05:56:49.384Z",
+            "link": "https://www.bbc.com/amharic/articles/cv2dwvpryrvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/93a1/live/8242e780-a88a-11ee-beb5-e1400df560f2.jpg",
+            "description": "ኤሊ ጎልድስተይን እአአ ታህሳስ 2021  ስትወለድ ጀምሮ ዳውንስ ሲንድረም ነበረባት። በዚህ ምክንያት መራመድም ሆነ ማውራት እንደማትችል ሐኪሞች ተናግረዋል። ብዙም ሳይቆይ መሳሳታቸውን አረጋገጠችላቸው። ኤሊ ቮግ በተሰኘው መጽሔት የፊት ሽፋን ላይ በመውጣት ዳውንስ ሲንድረም ያለባት የመጀመሪያዋ ሞዴል በመሆን ታሪክ ሠርታለች።",
+            "imageAlt": "ኤሊ ጎልድስታይን",
+            "id": "cv2dwvpryrvo"
+          },
+          {
+            "type": "article",
+            "title": "በቀላሉ ለጉዳት ተጋላጭ የሆነውን ዐይናችንን እንዴት መንከባከብ እንችላለን?",
+            "firstPublished": "2024-01-04T04:09:58.133Z",
+            "lastPublished": "2024-01-04T04:09:58.133Z",
+            "link": "https://www.bbc.com/amharic/articles/cv2lx3499d2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ffa3/live/59780600-9c32-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "የዐይን ህመም የሌለባቸው ሰዎች የዐይን እንክብካቤ እምብዛም ላያሳስባቸው ይችላል። የዐይን ህመም ላለባቸው ሰዎች ግን የዘወትር ጉዳይ ነው። ዕይታችን ላይ ችግር ከማጋጠሙ በፊት ጥንቃቄ ማድረግ ለዐይናችን ጤና ጠቃሚ ነው። ለመሆኑ ዐይንን እንዴት መንከባከብ ይቻላል?",
+            "imageAlt": "ዐይን",
+            "id": "cv2lx3499d2o"
+          },
+          {
+            "type": "article",
+            "title": "ሕዝበኝነት ምንድን ነው? ለዲሞክራሲስ ጠንቅ ሊሆን ይችላል?",
+            "firstPublished": "2024-01-02T08:34:39.904Z",
+            "lastPublished": "2024-01-02T08:34:39.904Z",
+            "link": "https://www.bbc.com/amharic/articles/clepjv0v5x1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d34/live/afc7fbb0-94e3-11ee-91bf-230bfab3fcba.jpg",
+            "description": "",
+            "imageAlt": "ሕዝበኛ እንደሆኑ የሚነገርላቸው የአርጀንቲናው ሃቪየር ሚሌ",
+            "id": "clepjv0v5x1o"
+          },
+          {
+            "type": "article",
+            "title": "የዘንድሮው የዓለም የቱሪዝም መንደር ስለሆነችው የምዕራብ አርሲዋ ሌጲስ ምን እናውቃለን?",
+            "firstPublished": "2023-12-26T04:10:01.355Z",
+            "lastPublished": "2023-12-26T04:10:01.355Z",
+            "link": "https://www.bbc.com/amharic/articles/cw903wx9z1lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a191/live/3eac6cf0-a351-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "የተባበሩት መንግሥታት የዓለም ቱሪዝም ድርጅት (UNWTO) በምዕራብ አርሲ የምትገኘውን፣ ሌጲስን የ2023 የዓለም የቱሪዝም መንደር ብሎ ከመረጣቸው መንደሮች መካከል አንዷ ናት። ኢትዮጵያ ከዚህ ቀደም በኦሮሚያ እና አማራ ክልሎች የሚገኙትን ወንጪን እና ጮቄን በዓለም ቱሪዝም መንደርነት አስመዝግባለች።",
+            "imageAlt": "የሌጲስ ፏፏቴ",
+            "id": "cw903wx9z1lo"
+          },
+          {
+            "type": "article",
+            "title": "በምሥራቅ አፍሪካ የተቀሰቀሰው አንትራክስ ምንድን ነው? ምን ያህልስ አደገኛ ነው?",
+            "firstPublished": "2023-12-21T04:26:37.119Z",
+            "lastPublished": "2023-12-21T04:26:37.119Z",
+            "link": "https://www.bbc.com/amharic/articles/cl5py53n103o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/41cc/live/9ea954f0-9f33-11ee-9085-5dbd7574f90f.jpg",
+            "description": "የዓለም ጤና ድርጅት በምሥራቅ እና ደቡብ አፍሪካ በሚገኙ አምስት አገራት ውስጥ የባክቴሪያ በሽታ የሆነው አንትራክስ መቀስቀሱን ሪፖርት አድርጓል።",
+            "imageAlt": "አንትራክስ",
+            "id": "cl5py53n103o"
+          },
+          {
+            "type": "article",
+            "title": "ከ10 ዓመት በኋላ አስከሬናቸው በተዘጋ ቤት በተገኘው ሴት ሞት የተጋለጠው የሆላንዳውያን ብቸኝነት",
+            "firstPublished": "2023-12-18T04:22:43.390Z",
+            "lastPublished": "2023-12-18T04:22:43.390Z",
+            "link": "https://www.bbc.com/amharic/articles/cx8vnr7xqd4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a327/live/f61836e0-9cc0-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "በሆላንድ በ70ዎቹ የሚገኙ ሴት ከሞቱ ከአስር ዓመት በኋላ አስከሬናቸው በቤታቸው መገኘቱ አገሪቷ  ብቸኝነትን ለመቅረፍ ለጀመረችው ብሔራዊ ዘመቻ መነሻ ሆኗል። የአገሪቱ ፖለቲከኞችም እያንዳንዱ ዜጋ በማኅበረሰቡ ውስጥ ቦታ ሊኖራቸው ይገባል በሚል በርካታ ተነሳሽነቶች ጀምረዋል።",
+            "imageAlt": "እየተመገቡ ያሉ አረጋውያን",
+            "id": "cx8vnr7xqd4o"
+          },
+          {
+            "type": "article",
+            "title": "የተጣላ ሳይታረቅ የማይከበረው አዲስ ዓመት - ድሽታ ግና",
+            "firstPublished": "2023-12-09T04:46:17.809Z",
+            "lastPublished": "2023-12-09T04:46:17.809Z",
+            "link": "https://www.bbc.com/amharic/articles/c84vnx17n9no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/71dd/live/83c28570-94bc-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "በአብዛኛው የኢትዮጵያ ክፍል ውስጥ የመስከረም ወር የዓመቱ መጀመሪያ ሲሆን፣ በደቡብ ኢትዮጵያ ክልል ለሚገኙት አሪዎች ደግሞ መስከረም ወይንም ታማ 10ኛ ወራቸው ነው። ለአሪዎች የዓመቱ መጀመሪያ ወር ሎንጋ ይሰኛል፤ ታኅሣሥ እንደ ማለት ነው። የማኅበረሰቡ አዲስ ዓመትን ከመጀመራቸው በፊት የቋጠሩትን ቂም በይቅርታ ይሽራሉ። አዲሱ ዓመት ሲጀመር ልብንም ልብስንም፣... ንጹህ አድርጎ ነው ይላሉ ቢቢሲ ያነጋገራቸው የብሔረሰቡ ሽማግሌዎቹ።",
+            "imageAlt": "በአሪ ዞን ቶልታ ከተማ ተከስቶ የነበረ ግጭት እርቅ ስርአት ሲከናወን",
+            "id": "c84vnx17n9no"
+          },
+          {
+            "type": "article",
+            "title": "ከቀጣሪ ድርጅቷ 28 ሚሊዮን ዶላር የሰረቀችው የሂሳብ ሠራተኛ የ50 ዓመት እስር ተፈረደባት",
+            "firstPublished": "2023-12-09T04:42:33.732Z",
+            "lastPublished": "2023-12-09T04:42:33.732Z",
+            "link": "https://www.bbc.com/amharic/articles/clep0ny7yz4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9d68/live/bcc20d30-9653-11ee-b9a7-c91b9dfa91e5.jpg",
+            "description": "ከቀጣሪ ድርጅቷ 28 ሚሊዮን ዶላር የሰረቀችው ደቡብ አፍሪካዊት የሂሳብ ሠራተኛ የ50 ዓመት እስር ተፈረደባት።",
+            "imageAlt": "የደቡብ አፍሪካ ገንዘብ በመቁጠሪያ ማሽን ላይ ",
+            "id": "clep0ny7yz4o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 3,
+        "curationId": "urn:bbc:vivo:curation:c6e972ae-9fb5-4b01-bdbb-1569e9fcff2e",
         "curationType": "vivo-stream",
-        "position": 2,
-        "title": "ቪዲዮ",
-        "visualProminence": "NORMAL"
+        "position": 4,
+        "title": "የተመለሱ ጥያቄዎች",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "title": "radio-schedule",
+        "curationId": "radio-schedule",
+        "curationType": "radio-schedule",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "radioSchedule": [
+          {
+            "serviceId": "bbc_amharic_radio",
+            "publishedTimeStart": "2024-01-22T17:29:47.000Z",
+            "publishedTimeEnd": "2024-01-22T17:44:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ አማርኛ ዜና",
+            "brandPid": "w13xttnt",
+            "episodeTitle": "22/01/2024 GMT",
+            "episodePid": "w3ct6631",
+            "broadcastPid": "p0h0bzqm",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_amharic_radio",
+            "publishedTimeStart": "2024-01-23T17:29:47.000Z",
+            "publishedTimeEnd": "2024-01-23T17:44:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ አማርኛ ዜና",
+            "brandPid": "w13xttnt",
+            "episodeTitle": "23/01/2024 GMT",
+            "episodePid": "w3ct6659",
+            "broadcastPid": "p0h0lyvz",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_amharic_radio",
+            "publishedTimeStart": "2024-01-24T17:29:47.000Z",
+            "publishedTimeEnd": "2024-01-24T17:44:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ አማርኛ ዜና",
+            "brandPid": "w13xttnt",
+            "episodeTitle": "24/01/2024 GMT",
+            "episodePid": "w3ct666f",
+            "broadcastPid": "p0h0tgmc",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+          },
+          {
+            "serviceId": "bbc_amharic_radio",
+            "publishedTimeStart": "2024-01-25T17:29:47.000Z",
+            "publishedTimeEnd": "2024-01-25T17:44:30.000Z",
+            "publishedTimeDuration": "PT14M43S",
+            "title": "ቢቢሲ አማርኛ ዜና",
+            "brandPid": "w13xttnt",
+            "episodeTitle": "25/01/2024 GMT",
+            "episodePid": "w3ct6645",
+            "broadcastPid": "p0h10xb6",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ከሜዳው ውጪ የሚጫወተው ሊቨርፑል እንዴት ይሆናል?",
+            "firstPublished": "2024-01-19T09:03:43.124Z",
+            "lastPublished": "2024-01-19T09:03:43.124Z",
+            "link": "https://www.bbc.com/amharic/articles/c8020zqgpzko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d0e5/live/2ee7fcf0-b83f-11ee-bc2f-cb5579b90709.jpg",
+            "description": "አርሰናል ወደ ድል ይመለስ ይሆን? ከሜዳው ውጪ የሚጫወተው ሊቨርፑልስ እንዴት ይሆናል?",
+            "imageAlt": "የቦርንመዝ እና የሊቨርፑል ሎጎ",
+            "id": "c8020zqgpzko"
+          },
+          {
+            "type": "article",
+            "title": "የአፍሪካ ዋንጫ፡ አህጉራዊውን ውድድር ማን ያሸንፋል? የቢቢሲ ግምት",
+            "firstPublished": "2024-01-14T05:18:11.838Z",
+            "lastPublished": "2024-01-14T05:18:11.838Z",
+            "link": "https://www.bbc.com/amharic/articles/cerllxxp1zeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/179e/live/70f346b0-b05e-11ee-bc2f-cb5579b90709.jpg",
+            "description": "",
+            "imageAlt": "ሪያድ ማሕሬዝ እና ሌሎችም ተጫዋቾች የሚታዩበት ምስል",
+            "id": "cerllxxp1zeo"
+          },
+          {
+            "type": "article",
+            "title": "አይቮሪ ኮስት፡ ከእርስ በርስ ጦርነት በቢሊዮን ዶላር የአፍሪካ ዋንጫን ወደ ማዘጋጀት ",
+            "firstPublished": "2024-01-13T04:49:04.361Z",
+            "lastPublished": "2024-01-13T04:49:04.361Z",
+            "link": "https://www.bbc.com/amharic/articles/cn044499p1no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6c04/live/7d5f2760-b11d-11ee-8f07-bbfdfa890097.jpg",
+            "description": "አይቮሪ ኮስት፡ ከእርስ በርስ ጦርነት በቢሊዮን ዶላር የአፍሪካ ዋንጫን ወደ ማዘጋጀት ",
+            "imageAlt": "አይቮሪ ኮስት",
+            "id": "cn044499p1no"
+          },
+          {
+            "type": "article",
+            "title": "ብሩንዲ 'መጥፎ ጎረቤት' ካለቻት ሩዋንዳ ጋር የሚያዋስናትን ድንበር ዘጋች",
+            "firstPublished": "2024-01-12T05:18:29.644Z",
+            "lastPublished": "2024-01-12T05:18:29.644Z",
+            "link": "https://www.bbc.com/amharic/articles/cw5002pgrkpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7749/live/d4fa9990-b105-11ee-beb5-e1400df560f2.jpg",
+            "description": "ቡሩንዲ ለአማፂያን የገንዘብ ድጋፍ ታደርጋለች በሚል ከሩዋንዳ ጋር የሚያዋስናትን ድንበር ዘግታለች ።",
+            "imageAlt": "የቡሩንዲው ፕሬዝዳንት ኢቫሪስቴ ንዳይሺሚዬ እና የሩዋንዳው አቻቸው ፖል ካጋሜ",
+            "id": "cw5002pgrkpo"
+          },
+          {
+            "type": "article",
+            "title": "የዓለም አቀፉ የፍትሕ ፍርድ ሸንጎ ምንድነው? እስራኤል ላይ ምን መዘዝ ይዞ ይመጣል?",
+            "firstPublished": "2024-01-11T11:36:42.025Z",
+            "lastPublished": "2024-01-11T11:36:42.025Z",
+            "link": "https://www.bbc.com/amharic/articles/c6p11z4w43lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5c73/live/c8bbb950-b067-11ee-bc2f-cb5579b90709.jpg",
+            "description": "",
+            "imageAlt": "የጋዛ ጦርነት ",
+            "id": "c6p11z4w43lo"
+          },
+          {
+            "type": "article",
+            "title": "የሲንጋፖር ታዳጊዎች በሒሳብ ትምህርት ለምን ጎበዝ ሆኑ?",
+            "firstPublished": "2024-01-09T04:12:17.110Z",
+            "lastPublished": "2024-01-09T04:12:17.110Z",
+            "link": "https://www.bbc.com/amharic/articles/cprpgv5gvq2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/90fe/live/db1843c0-95af-11ee-8df3-1d2983d8814f.jpg",
+            "description": "ሲንጋፖር በተማሪዎች መካከል በተደረገው በዓለም አቀፉ የ2022 የፒሳ ፈተና በሂሳብ፣ በንባብ እና በሳይንስ ቀዳሚ ለመሆን በቅታለች። \nአገሪቱ በሂሳብ ትምህርት በተደጋጋሚ ውጤታማ ሆናለች። ለስኬቱ የተሞገሰው ደግሞ ትምህርቱ የሚሰጥበት ልዩ መንገድ ነው። ",
+            "imageAlt": "ሒሳብ የምታሰላ ታዳጊ",
+            "id": "cprpgv5gvq2o"
+          },
+          {
+            "type": "article",
+            "title": "ሶማሊላንድ ከኢትዮጵያ እውቅና ማግኘትን ለምን አጥብቃ ፈለገች?",
+            "firstPublished": "2024-01-06T05:11:36.423Z",
+            "lastPublished": "2024-01-06T05:11:36.423Z",
+            "link": "https://www.bbc.com/amharic/articles/crgv8nmr6ppo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff1f/live/cf3ffdf0-ac51-11ee-bc2f-cb5579b90709.jpg",
+            "description": "ባለፉት ሶስት አስርት ዓመታት እንደ ሀገር የሚያስቆጥራትን እውቅና ለማግኘት ስትባዝን የቆየችው ራስ ገዟ ሶማሊላንድ፤ በቅርቡ ከኢትዮጵያ ጋር የተፈራረመችው የመግባቢያ ሠነድ የመጀመሪያውን እውቅና እንደሚያስገኝላት ይፋ አድርጋለች። ",
+            "imageAlt": "የሶማሊላንድ መዲና ሐርጌሳ",
+            "id": "crgv8nmr6ppo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 9,
+        "curationId": "urn:bbc:vivo:curation:5356366f-ef56-41b1-beae-690e2dd7d666",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "ሌላ ዕይታ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 7,
+        "title": "ብዙ የተነበቡ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/amharic/popular/read",
+        "mostRead": {
+          "generated": "2024-01-24T14:34:18.043Z",
+          "lastRecordTimeStamp": "2024-01-24T14:32:00Z",
+          "firstRecordTimeStamp": "2024-01-24T12:32:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cq57rny8qg3o",
+              "rank": 1,
+              "title": "አቶ ጌታቸው ረዳ ተፈናቃዮች ላሉበት ችግር የትግራይ ክልል ጊዜያዊ አስተዳደር ተጠያቂ ነው አሉ",
+              "href": "https://www.bbc.com/amharic/articles/cq57rny8qg3o",
+              "timestamp": 1706099574752
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cpv6x4xw2gko",
+              "rank": 2,
+              "title": "የሶማሊያ መንግሥት ወታደሮች እና አልሻባብ ከባድ ውጊያ እያካሄዱ መሆኑ ተዘገበ",
+              "href": "https://www.bbc.com/amharic/articles/cpv6x4xw2gko",
+              "timestamp": 1706093440547
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cyejgk207ero",
+              "rank": 3,
+              "title": "አዋሽ አርባ፡ በኢትዮጵያ ከጅምላ እስር ጋር ስሙ የሚነሳው ‘የበረሃው ጓንታናሞ’",
+              "href": "https://www.bbc.com/amharic/articles/cyejgk207ero",
+              "timestamp": 1706069014251
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cw0l00dg5n1o",
+              "rank": 4,
+              "title": "የኢትዮጵያ እና የሶማሊያ ወታደራዊ አቅም ሲነጻጸር",
+              "href": "https://www.bbc.com/amharic/articles/cw0l00dg5n1o",
+              "timestamp": 1705983387874
+            },
+            {
+              "id": "urn:bbc:optimo:asset:crg94g3lmmdo",
+              "rank": 5,
+              "title": "የዩክሬን ምርኮኞችን የያዘች ጄት ድንበር አቅራቢያ መከስከሷን ሩሲያ ገለጠች",
+              "href": "https://www.bbc.com/amharic/articles/crg94g3lmmdo",
+              "timestamp": 1706102936308
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c04rn2jpdpdo",
+              "rank": 6,
+              "title": "ዶናልድ ትራምፕ በኒው ሐምፕሻየር ግዛት ድል ቀናቸው",
+              "href": "https://www.bbc.com/amharic/articles/c04rn2jpdpdo",
+              "timestamp": 1706074420866
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cndn3w14yd5o",
+              "rank": 7,
+              "title": "አረብ ኤምሬትስ በየመን ፖለቲካዊ ግድያዎችን በገንዘብ መደገፏን የቢቢሲ ምርመራ አጋለጠ",
+              "href": "https://www.bbc.com/amharic/articles/cndn3w14yd5o",
+              "timestamp": 1706069113592
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjkgdy62428o",
+              "rank": 8,
+              "title": "የ2023 የአፍሪካ ዋንጫ የጨዋታ ፕሮግራም እና ውጤቶች",
+              "href": "https://www.bbc.com/amharic/articles/cjkgdy62428o",
+              "timestamp": 1705294989845
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c80nl89jr6eo",
+              "rank": 9,
+              "title": "የደቡብ አፍሪካ ፕሬዝዳንት በሐሰተኛ የትምህርት ማስረጃ የተጠረጠሩትን አማካሪ ከሥልጣን አነሱ",
+              "href": "https://www.bbc.com/amharic/articles/c80nl89jr6eo",
+              "timestamp": 1706072469749
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c25qn2gg5gko",
+              "rank": 10,
+              "title": "የአፍሪካ ዋንጫ፡ አልጄሪያ ስትሰናበት ካሜሮን በመጨረሻዎቹ ደቂቃዎች ባስቆጠረቻቸው ጎሎች ጥሎ ማለፉን ተቀላቀለች",
+              "href": "https://www.bbc.com/amharic/articles/c25qn2gg5gko",
+              "timestamp": 1706073944965
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3gyly3zve7o",
+              "rank": 11,
+              "title": "ኢትዮጵያ አዲስ የታጠቀቻቸው ጄት እና ድሮን አቅማቸው ምን ያህል ነው?",
+              "href": "https://www.bbc.com/amharic/articles/c3gyly3zve7o",
+              "timestamp": 1705485084748
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c8vnpp21d41o",
+              "rank": 12,
+              "title": "“ኤ፣ ቢ፣ ሲ፣ ዲ…” የማይቆጥሩት የዘንድሮ የ“ኬጂ” ተማሪዎች",
+              "href": "https://www.bbc.com/amharic/articles/c8vnpp21d41o",
+              "timestamp": 1705896603323
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq5xrzlkq5vo",
+              "rank": 13,
+              "title": "አዲሱ የላይቤሪያ ፕሬዝደንት ቃለ-መሐላ ከፈፀሙ በኋላ ንግግራቸውን መጨረስ ተሳናቸው",
+              "href": "https://www.bbc.com/amharic/articles/cq5xrzlkq5vo",
+              "timestamp": 1705985814318
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv2lx94nnx2o",
+              "rank": 14,
+              "title": "የአፍሪካ ዋንጫ፡ የግብፅ ድራማዊ ትዕይንት፣ የጋና እና አይቮሪ ኮስት አጣብቂኝ ",
+              "href": "https://www.bbc.com/amharic/articles/cv2lx94nnx2o",
+              "timestamp": 1705988008639
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ckd4v7xkd7wo",
+              "rank": 15,
+              "title": "የስፖርት እና የታሪክ ማጣቀሻው ጋዜጠኛ ገነነ መኩሪያ (ሊብሮ) ከዚህ ዓለም በሞት ተለየ",
+              "href": "https://www.bbc.com/amharic/articles/ckd4v7xkd7wo",
+              "timestamp": 1705993832587
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3gekexp83wo",
+              "rank": 16,
+              "title": "በአገው ታጣቂዎች ወደተያዙ የዋግ ኽምራ ቀበሌዎች የመንግሥት ሠራተኞችን ማስገባት ተጀመረ",
+              "href": "https://www.bbc.com/amharic/articles/c3gekexp83wo",
+              "timestamp": 1705935915338
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c2v46yggl3no",
+              "rank": 17,
+              "title": "የቱርክ ፓርላማ ስዊድን የኔቶ አባል እንድትሆን ድጋፉን ሰጠ",
+              "href": "https://www.bbc.com/amharic/articles/c2v46yggl3no",
+              "timestamp": 1706080997323
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cn0nlpgp1j6o",
+              "rank": 18,
+              "title": "ኬንያውያን የአርሰናል ደጋፊዎች ከድል በኋላ ለምስጋና በቤተክርስቲያን መሰብሰባቸው አነጋጋሪ ሆነ",
+              "href": "https://www.bbc.com/amharic/articles/cn0nlpgp1j6o",
+              "timestamp": 1705923492007
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c51d57pvl21o",
+              "rank": 19,
+              "title": "ግብፅ ሶማሊያን እደግፋለሁ ማለቷን ተከትሎ ሶማሊላንድ ‘የውጭ ጣልቃ ገብነት’ እንደምትቃወም ገለጸች",
+              "href": "https://www.bbc.com/amharic/articles/c51d57pvl21o",
+              "timestamp": 1705995988367
+            },
+            {
+              "id": "urn:bbc:optimo:asset:czd7w2qg142o",
+              "rank": 20,
+              "title": "ቀይ ባሕርን ያወከውን የሁቲዎች ጥቃት ለማስቆም የሚደረገው ጥረት ይሳካ ይሆን?",
+              "href": "https://www.bbc.com/amharic/articles/czd7w2qg142o",
+              "timestamp": 1705983515096
+            }
+          ]
+        }
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cx35pee6zw8t",
+        "contentId": "urn:bbc:tipo:topic:cg58k91re1gt",
         "contentType": "index-home",
         "pageIdentifier": "amharic.page",
-        "pageTitle": "BBC News Amharic"
+        "pageTitle": "BBC News አማርኛ"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live home page"
+  "contentType": "application/json; charset=utf-8"
 }

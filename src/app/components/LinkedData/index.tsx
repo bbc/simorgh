@@ -15,6 +15,8 @@ const LinkedData = ({
   description,
   datePublished,
   dateModified,
+  coverageStartTime,
+  coverageEndTime,
   aboutTags,
   entities = [],
   imageLocator,
@@ -146,6 +148,8 @@ const LinkedData = ({
     description,
     datePublished,
     dateModified,
+    coverageStartTime,
+    coverageEndTime,
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
