@@ -43,12 +43,10 @@ describe('Home Page', () => {
         radioSchedule: { enabled: true },
       },
     });
-    console.log('curations', afriqueHomePageData.curations);
     const curationsWithSummaries = afriqueHomePageDataFixture.curations.filter(
       ({ summaries, mostRead, radioSchedule }) =>
         (summaries && summaries?.length > 0) || mostRead || radioSchedule,
     );
-
     expect(container).not.toBeEmptyDOMElement();
     expect(container.getElementsByTagName('section').length).toEqual(
       curationsWithSummaries.length,

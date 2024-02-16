@@ -41,12 +41,9 @@ describe('getComponentName', () => {
     },
   );
   it('should return radio schedule when a radio schedule is present', () => {
-    const visualProminence = NORMAL;
-    const visualStyle = NONE;
-    const { radioSchedule } = afriqueHomePage.data.curations[5];
-
+    const { radioSchedule } = afriqueHomePage.data.curations[2];
     expect(
-      getComponentName({ visualStyle, visualProminence, radioSchedule }),
+      getComponentName({ radioSchedule }),
     ).toBe(`${RADIO_SCHEDULE}`);
   });
 });

@@ -26,7 +26,6 @@ const RadioSchedule = ({
   if (!radioScheduleEnabled) {
     return null;
   }
-
   const endpoint =
     radioScheduleEndpointOverride ||
     getRadioScheduleEndpoint({
