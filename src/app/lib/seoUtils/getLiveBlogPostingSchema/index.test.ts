@@ -1,12 +1,42 @@
 import { Post } from '../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import { samplePost, twitterSamplePost, videoSamplePost } from './fixtures';
-import getLiveBlogPosting from '.';
+import getLiveBlogPostingSchema from '.';
 
 const posts = [samplePost, twitterSamplePost, videoSamplePost] as Post[];
 
-describe('SEO Utils | getLiveBlogPosting', () => {
-  it('should convert posts into liveBlogPosting list', () => {
-    const results = getLiveBlogPosting({
+describe('SEO Utils | getLiveBlogPostingSchema', () => {
+  it('should return LiveBlogPosting schema structure', () => {
+    const schema = getLiveBlogPostingSchema({
+      posts,
+      brandName: 'BBC News Mundo',
+      defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      url: 'https://www.bbc.com/mundo',
+      startDateTime: '2023-09-08T09:58:44+00:00',
+      endDateTime: '2023-09-08T10:09:41+00:00',
+    });
+
+    expect(schema?.['@type']).toEqual('LiveBlogPosting');
+    expect(schema?.liveBlogUpdate).toHaveLength(3);
+    expect(schema?.coverageStartTime).toEqual('2023-09-08T09:58:44+00:00');
+    expect(schema?.coverageEndTime).toEqual('2023-09-08T10:09:41+00:00');
+  });
+
+  it('should return LiveBlogPosting schema without coverage times if datetimes are excluded', () => {
+    const schema = getLiveBlogPostingSchema({
+      posts,
+      brandName: 'BBC News Mundo',
+      defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      url: 'https://www.bbc.com/mundo',
+    });
+
+    expect(schema?.['@type']).toEqual('LiveBlogPosting');
+    expect(schema?.liveBlogUpdate).toHaveLength(3);
+    expect(schema?.coverageStartTime).toBeFalsy();
+    expect(schema?.coverageEndTime).toBeFalsy();
+  });
+
+  it('should convert posts into liveBlogUpdate list', () => {
+    const schema = getLiveBlogPostingSchema({
       posts,
       brandName: 'BBC News Mundo',
       defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
@@ -62,13 +92,13 @@ describe('SEO Utils | getLiveBlogPosting', () => {
       },
     ];
 
-    expect(results?.liveBlogPosting).toHaveLength(3);
+    expect(schema?.liveBlogUpdate).toHaveLength(3);
 
-    expect(results?.liveBlogPosting).toEqual(expected);
+    expect(schema?.liveBlogUpdate).toEqual(expected);
   });
 
   it('should return null if posts are not provided', () => {
-    const results = getLiveBlogPosting({
+    const results = getLiveBlogPostingSchema({
       brandName: 'BBC News Mundo',
       defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
       url: 'https://www.bbc.com/mundo',
