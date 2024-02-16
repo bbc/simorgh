@@ -9953,6 +9953,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress-multi-reporters@npm:1.6.4":
+  version: 1.6.4
+  resolution: "cypress-multi-reporters@npm:1.6.4"
+  dependencies:
+    debug: ^4.3.4
+    lodash: ^4.17.21
+  peerDependencies:
+    mocha: ">=3.1.2"
+  checksum: d13b1eef8ab6295cebdb311313b4eb84dec986e51d92a61e76167c84c750d5200d2c711b1d3c022e4686cf512a2936112a9436de37dbe881547ab5fb83822c4e
+  languageName: node
+  linkType: hard
+
 "cypress-terminal-report@npm:5.3.12":
   version: 5.3.12
   resolution: "cypress-terminal-report@npm:5.3.12"
@@ -13843,6 +13855,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ip-address@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "ip-address@npm:9.0.5"
+  dependencies:
+    jsbn: 1.1.0
+    sprintf-js: ^1.1.3
+  checksum: aa15f12cfd0ef5e38349744e3654bae649a34c3b10c77a674a167e99925d1549486c5b14730eebce9fea26f6db9d5e42097b00aa4f9f612e68c79121c71652dc
+  languageName: node
+  linkType: hard
+
 "ip@npm:^2.0.0":
   version: 2.0.0
   resolution: "ip@npm:2.0.0"
@@ -15396,6 +15418,13 @@ __metadata:
   bin:
     js-yaml: bin/js-yaml.js
   checksum: bef146085f472d44dee30ec34e5cf36bf89164f5d585435a3d3da89e52622dff0b188a580e4ad091c3341889e14cb88cac6e4deb16dc5b1e9623bb0601fc255c
+  languageName: node
+  linkType: hard
+
+"jsbn@npm:1.1.0":
+  version: 1.1.0
+  resolution: "jsbn@npm:1.1.0"
+  checksum: 944f924f2bd67ad533b3850eee47603eed0f6ae425fd1ee8c760f477e8c34a05f144c1bd4f5a5dd1963141dc79a2c55f89ccc5ab77d039e7077f3ad196b64965
   languageName: node
   linkType: hard
 
@@ -20761,6 +20790,7 @@ __metadata:
     crypto: 1.0.1
     cypress: 13.6.3
     cypress-axe: 1.5.0
+    cypress-multi-reporters: 1.6.4
     cypress-terminal-report: 5.3.12
     depcheck: 1.4.7
     dotenv: 16.0.3
@@ -21013,13 +21043,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socks@npm:^2.6.2":
-  version: 2.7.1
-  resolution: "socks@npm:2.7.1"
+"socks@npm:2.7.3":
+  version: 2.7.3
+  resolution: "socks@npm:2.7.3"
   dependencies:
-    ip: ^2.0.0
+    ip-address: ^9.0.5
     smart-buffer: ^4.2.0
-  checksum: 259d9e3e8e1c9809a7f5c32238c3d4d2a36b39b83851d0f573bfde5f21c4b1288417ce1af06af1452569cd1eb0841169afd4998f0e04ba04656f6b7f0e46d748
+  checksum: a3eedee3054d55edb1395db1fb4689259b76af062aadd4c3e757961c7122f27baedd9a0947d70cfc902cf8d8c378f5874293ea96c6fb805033d7a08da32f012e
   languageName: node
   linkType: hard
 
@@ -21181,6 +21211,13 @@ __metadata:
   dependencies:
     extend-shallow: ^3.0.0
   checksum: ae5af5c91bdc3633628821bde92fdf9492fa0e8a63cf6a0376ed6afde93c701422a1610916f59be61972717070119e848d10dfbbd5024b7729d6a71972d2a84c
+  languageName: node
+  linkType: hard
+
+"sprintf-js@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "sprintf-js@npm:1.1.3"
+  checksum: a3fdac7b49643875b70864a9d9b469d87a40dfeaf5d34d9d0c5b1cda5fd7d065531fcb43c76357d62254c57184a7b151954156563a4d6a747015cfb41021cad0
   languageName: node
   linkType: hard
 

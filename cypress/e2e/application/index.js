@@ -6,8 +6,6 @@ import envConfig from '../../support/config/envs';
 import getPaths from '../../support/helpers/getPaths';
 import { getTopicPagePath } from '../pages/topicPage/helpers';
 
-const servicesUsingArticlePaths = ['news', 'scotland'];
-
 describe('Application', () => {
   Object.keys(config)
     .filter(service =>
@@ -16,13 +14,18 @@ describe('Application', () => {
       ),
     )
     .forEach(service => {
-      const usesArticlePath = servicesUsingArticlePaths.includes(service);
       if (!ampOnlyServices.includes(service)) {
         it(`should return a 200 status code for ${service}'s service worker`, () => {
           cy.testResponseCodeAndType({
-            path: usesArticlePath
-              ? `/${config[service].name}/articles/sw.js`
-              : `/${config[service].name}/sw.js`,
+            path: `/${config[service].name}/sw.js`,
+            responseCode: 200,
+            type: 'application/javascript',
+          });
+        });
+
+        it(`should return a 200 status code for ${service}'s article service worker`, () => {
+          cy.testResponseCodeAndType({
+            path: `/${config[service].name}/articles/sw.js`,
             responseCode: 200,
             type: 'application/javascript',
           });
@@ -30,13 +33,20 @@ describe('Application', () => {
 
         it(`should return a 200 status code for ${service} manifest file`, () => {
           cy.testResponseCodeAndType({
-            path: usesArticlePath
-              ? `/${config[service].name}/articles/manifest.json`
-              : `/${config[service].name}/manifest.json`,
+            path: `/${config[service].name}/manifest.json`,
             responseCode: 200,
             type: 'application/json',
           });
         });
+
+        it(`should return a 200 status code for ${service} article manifest file`, () => {
+          cy.testResponseCodeAndType({
+            path: `/${config[service].name}/articles/manifest.json`,
+            responseCode: 200,
+            type: 'application/json',
+          });
+        });
+
         it(`should awaken fresh data for pages for later tests`, () => {
           // Add more here if you want to awaken fresh data for other page types
           if (serviceHasPageType(service, 'topicPage')) {

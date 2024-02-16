@@ -45,7 +45,7 @@ const getPageData = async ({
   page,
   service,
   variant,
-  rendererEnv = 'test',
+  rendererEnv,
   resolvedUrl,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
