@@ -53,8 +53,7 @@ export default async ({
   });
 
   const agent = isLocal || BFF_IS_LOCAL ? undefined : await getAgent();
-  const timeout = 60000;
-
+  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
   const optHeaders: OptHeaders =
     (!isLocal && {
       'ctx-service-env': environment,
