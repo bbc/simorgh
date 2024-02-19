@@ -13,9 +13,7 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 });
 
 const homePageData = {
-  title: kyrgyzHomePageData.title,
-  description: kyrgyzHomePageData.description,
-  curations: kyrgyzHomePageData.curations,
+  ...kyrgyzHomePageData,
   metadata: {
     ...kyrgyzHomePageData.metadata,
     type: 'home',
@@ -23,9 +21,7 @@ const homePageData = {
 };
 
 const afriqueHomePageData = {
-  title: afriqueHomePageDataFixture.title,
-  description: afriqueHomePageDataFixture.description,
-  curations: afriqueHomePageDataFixture.curations,
+  ...afriqueHomePageDataFixture,
   metadata: {
     ...afriqueHomePageDataFixture.metadata,
     type: 'home',
