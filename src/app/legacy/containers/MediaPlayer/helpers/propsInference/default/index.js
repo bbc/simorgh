@@ -32,7 +32,7 @@ export default ({
   const { webcastVersions = [] } =
     aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
 
-  const hasWebcastItems = webcastVersions?.length > 0;
+  const hasWebcastItems = webcastVersions.length > 0;
 
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
   const captionBlock = articleCaptionBlock || cpsCaptionBlock;
