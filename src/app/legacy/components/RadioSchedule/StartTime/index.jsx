@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number, string, shape, oneOf } from 'prop-types';
+import { number, string, shape, oneOf, oneOfType } from 'prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
@@ -8,7 +8,6 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
 import TimestampContainer from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { oneOfType } from 'prop-types';
 
 const Wrapper = styled.div`
   display: flex;
