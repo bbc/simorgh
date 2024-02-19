@@ -5,10 +5,10 @@ import AmpComscoreAnalytics from './Amp';
 import CanonicalComscoreAnalytics from './Canonical';
 
 const ComscoreAnalytics = () => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
   const { enabled } = useToggle('comscoreAnalytics');
 
-  if (!enabled) {
+  if (!enabled || isLite) {
     return null;
   }
 

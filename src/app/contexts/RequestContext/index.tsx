@@ -54,7 +54,7 @@ type RequestProviderProps = {
   id?: string | null;
   isAmp: boolean;
   isApp: boolean;
-  isLite: boolean;
+  isLite?: boolean;
   isCaf?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
@@ -76,7 +76,7 @@ export const RequestContextProvider = ({
   id = null,
   isAmp,
   isApp,
-  isLite,
+  isLite = false,
   isCaf = false,
   isNextJs = false,
   mvtExperiments = null,
