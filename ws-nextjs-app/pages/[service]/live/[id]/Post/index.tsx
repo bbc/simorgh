@@ -66,15 +66,15 @@ const PostBreakingNewsLabel = ({
   ) : null;
 };
 
-const PostHeaderBanner = ({
+const PostHeader = ({
   isBreakingNews,
   timestamp: curated,
-  contentForChildren,
+  headerBlocks,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
-  contentForChildren: PostHeadingBlock[];
+  headerBlocks: PostHeadingBlock[];
 }) => {
   const {
     timezone,
@@ -92,10 +92,13 @@ const PostHeaderBanner = ({
     <span
       // eslint-disable-next-line jsx-a11y/aria-role
       role="text"
-      css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}
+      css={styles.postHeaderContainer}
     >
       <TimeStampContainer
-        css={styles.timeStamp}
+        css={[
+          styles.timeStamp,
+          isBreakingNews && styles.timestampWithBreakingNewsLabel,
+        ]}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
         format="D MMMM YYYY"
@@ -113,7 +116,7 @@ const PostHeaderBanner = ({
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-      {contentForChildren.map(headerBlock => (
+      {headerBlocks.map(headerBlock => (
         <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
       ))}
     </span>
@@ -190,10 +193,10 @@ const Post = ({ post }: { post: PostType }) => {
   return (
     <article css={styles.postContainer}>
       <Heading level={3}>
-        <PostHeaderBanner
+        <PostHeader
           isBreakingNews={isBreakingNews}
           timestamp={timestamp}
-          contentForChildren={headerBlocks}
+          headerBlocks={headerBlocks}
         />
       </Heading>
       <div css={styles.postContent}>

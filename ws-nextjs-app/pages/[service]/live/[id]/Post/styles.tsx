@@ -11,7 +11,7 @@ export default {
       backgroundColor: palette.BRAND_BACKGROUND,
       display: 'inline',
     }),
-  postHeaderBanner: ({ palette, mq }: Theme) =>
+  postHeaderContainer: ({ palette, mq }: Theme) =>
     css({
       alignItems: 'flex-start',
       display: 'flex',
@@ -21,15 +21,17 @@ export default {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
-  fullWidth: ({ palette }: Theme) =>
+  timestampWithBreakingNewsLabel: ({ mq }: Theme) =>
     css({
-      // backgroundColor: palette.BRAND_BACKGROUND,
+      [mq.GROUP_1_MAX_WIDTH]: {
+        width: '100%', // not entirely resolved
+      },
     }),
   breakingNewsLabel: ({ palette, spacings }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 1',
+      flex: '1 0 auto',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
     }),
   postHeadings: ({ palette }: Theme) =>
@@ -38,7 +40,6 @@ export default {
       display: `block`,
       margin: 0 /* Reset */,
       width: '100%',
-      backgroundColor: 'unset',
     }),
   postHeadline: ({ spacings }: Theme) =>
     css({
