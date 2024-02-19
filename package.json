@@ -25,6 +25,8 @@
   "workspaces": {
     "packages": [
       "ws-nextjs-app",
+      "src/app/routes/article/getInitialData",
+      "src/app/routes/cpsAsset/getInitialData",
       "src/app/routes/utils/fetchDataFromBFF",
       "src/app/routes/utils/fetchPageData",
       "scripts/bundleSize"
