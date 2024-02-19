@@ -83,7 +83,6 @@ describe('Curation', () => {
         radioSchedule,
       }: TestProps,
     ) => {
-      console.log('in curation tests', radioSchedule);
       const { getByTestId } = render(
         <Curation
           visualStyle={visualStyle}
