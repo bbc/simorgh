@@ -25,9 +25,9 @@ export default {
     }),
   timestampWithBreakingNewsLabel: ({ mq }: Theme) =>
     css({
-      // [mq.GROUP_1_MAX_WIDTH]: {
-      //   width: '100%', // not entirely resolved
-      // },
+      [mq.GROUP_1_MAX_WIDTH]: {
+        // width: '100%', // not entirely resolved
+      },
     }),
   breakingNewsLabel: ({ palette, spacings }: Theme) =>
     css({

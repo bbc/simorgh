@@ -730,18 +730,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-37 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: block;
+  width: 100%;
   border-top: solid 0.125rem #B80000;
 }
 
@@ -795,12 +785,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-38 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-38 {
-    width: 100%;
   }
 }
 
