@@ -13,9 +13,11 @@ export default {
     }),
   postHeaderContainer: ({ palette, mq }: Theme) =>
     css({
-      alignItems: 'flex-start',
-      display: 'flex',
-      flexWrap: 'wrap',
+      // alignItems: 'flex-start',
+      // display: 'flex',
+      // flexWrap: 'wrap',
+      display: 'block',
+      width: '100%',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
@@ -23,9 +25,9 @@ export default {
     }),
   timestampWithBreakingNewsLabel: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_1_MAX_WIDTH]: {
-        width: '100%', // not entirely resolved
-      },
+      // [mq.GROUP_1_MAX_WIDTH]: {
+      //   width: '100%', // not entirely resolved
+      // },
     }),
   breakingNewsLabel: ({ palette, spacings }: Theme) =>
     css({
