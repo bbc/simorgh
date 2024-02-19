@@ -24,6 +24,7 @@ export type RequestContextProps = {
   id: string | null;
   isAmp: boolean;
   isApp: boolean;
+  isLite: boolean;
   isCaf: boolean;
   isNextJs: boolean;
   isUK: boolean;
@@ -53,6 +54,7 @@ type RequestProviderProps = {
   id?: string | null;
   isAmp: boolean;
   isApp: boolean;
+  isLite: boolean;
   isCaf?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
@@ -74,6 +76,7 @@ export const RequestContextProvider = ({
   id = null,
   isAmp,
   isApp,
+  isLite,
   isCaf = false,
   isNextJs = false,
   mvtExperiments = null,
@@ -123,6 +126,7 @@ export const RequestContextProvider = ({
     derivedPageType,
     isAmp,
     isApp,
+    isLite,
     isCaf,
     isNextJs,
     platform,
