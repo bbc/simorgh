@@ -98,7 +98,7 @@ exports[`AMP Most Read Page Analytics ATI 1`] = `
 {
   "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=mundo.popular.read.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[list-datadriven]&x8=[simorgh]&x9=[M%C3%A1s%2520le%C3%ADdas%2520-%2520BBC%2520News%2520Mundo]&x11=[2021-05-04T11%3A38%3A00Z]&x12=[2021-05-04T11%3A53%3A00Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=62&p=mundo.popular.read.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[list-datadriven]&x8=[simorgh]&x9=[M%C3%A1s%2520le%C3%ADdas%2520-%2520BBC%2520News%2520Mundo]&x11=[2023-06-19T14%3A41%3A00Z]&x12=[2023-06-19T14%3A56%3A00Z]&ref=\${documentReferrer}",
   },
   "transport": {
     "beacon": false,
@@ -286,95 +286,95 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 11`
 
 exports[`AMP Most Read Page I can see the headline 1`] = `"Más leídas"`;
 
-exports[`AMP Most Read Page I can see the list items 1`] = `"1¿Cuán viable es que el petro, la criptomoneda de Venezuela, sirva para aliviar la crisis en el país?Última actualización: 5 diciembre 2017"`;
+exports[`AMP Most Read Page I can see the list items 1`] = `"1"Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidadesÚltima actualización: 19 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 2`] = `"2Cómo usar Google Maps sin conexión a internetÚltima actualización: 5 mayo 2016"`;
+exports[`AMP Most Read Page I can see the list items 2`] = `"2La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantesÚltima actualización: 18 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 3`] = `"3Vivo sports test for nationsÚltima actualización: 2 julio 2015"`;
+exports[`AMP Most Read Page I can see the list items 3`] = `"3Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electoralesÚltima actualización: 19 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 4`] = `"4El inquietante arte de fotografiar a los muertosÚltima actualización: 6 junio 2016"`;
+exports[`AMP Most Read Page I can see the list items 4`] = `"4Diego García, la pequeña isla británica militarizada en el Índico que se convirtió en un "infierno" para decenas de migrantes varadosÚltima actualización: 19 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 5`] = `"5What's best for wine: cork or screw-capÚltima actualización: 21 septiembre 2017"`;
+exports[`AMP Most Read Page I can see the list items 5`] = `"5Las confesiones de un banquero que fue a prisión por la millonaria manipulación de tasas de interés de uno de los bancos más importantes del mundoÚltima actualización: 19 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 6`] = `"6El poder del "chilango" llegó a Londres 38Última actualización: 5 mayo 2016"`;
+exports[`AMP Most Read Page I can see the list items 6`] = `"6"Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"Última actualización: 19 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 7`] = `"7El obrero que colgó una bandera de México en una torre Trump en Canadá 1Última actualización: 5 abril 2016"`;
+exports[`AMP Most Read Page I can see the list items 7`] = `"7Quién era Mesalina, la emperatriz con la reputación más escandalosa de la Antigua RomaÚltima actualización: 18 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 8`] = `"8Zika en PanamáÚltima actualización: 6 junio 2016"`;
+exports[`AMP Most Read Page I can see the list items 8`] = `"8La polémica historia del mexicano que asegura haber inventado los Flamin’ Hot Cheetos en EE.UU. (y cuya vida llevó al cine Eva Longoria)Última actualización: 16 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 9`] = `"95 proyectos descomunales con los que China quiere mostrar su poderío científicoÚltima actualización: 5 mayo 2016"`;
+exports[`AMP Most Read Page I can see the list items 9`] = `"9Entender si somos amigos por placer o por utilidad y otros consejos del filósofo griego Aristóteles para conservar la amistadÚltima actualización: 17 junio 2023"`;
 
-exports[`AMP Most Read Page I can see the list items 10`] = `"10"Los peces se están haciendo adictos a comer plástico"Última actualización: 6 junio 2016"`;
+exports[`AMP Most Read Page I can see the list items 10`] = `"10La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el "Oscar" de la gastronomíaÚltima actualización: 19 junio 2023"`;
 
 exports[`AMP Most Read Page Main heading should match text 1`] = `"Más leídas"`;
 
 exports[`AMP Most Read Page Most Read has item with rank 1`] = `
 {
-  "text": "¿Cuán viable es que el petro, la criptomoneda de Venezuela, sirva para aliviar la crisis en el país?",
-  "url": "/mundo/23169857",
+  "text": ""Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
+  "url": "/mundo/noticias-65372150",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 2`] = `
 {
-  "text": "Cómo usar Google Maps sin conexión a internet",
-  "url": "/mundo/blog-de-los-editores-23038590",
+  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
+  "url": "/mundo/noticias-65919722",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 3`] = `
 {
-  "text": "Vivo sports test for nations",
-  "url": "/sport/live/22997963",
+  "text": "Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electorales",
+  "url": "https://www.bbc.com/mundo/articles/cw8ld1799d3o",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 4`] = `
 {
-  "text": "El inquietante arte de fotografiar a los muertos",
-  "url": "/mundo/noticias-internacional-23048329",
+  "text": "Diego García, la pequeña isla británica militarizada en el Índico que se convirtió en un "infierno" para decenas de migrantes varados",
+  "url": "/mundo/noticias-internacional-65874454",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 5`] = `
 {
-  "text": "What's best for wine: cork or screw-cap",
-  "url": "/mundo/23154175",
+  "text": "Las confesiones de un banquero que fue a prisión por la millonaria manipulación de tasas de interés de uno de los bancos más importantes del mundo",
+  "url": "/mundo/noticias-65941469",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 6`] = `
 {
-  "text": "El poder del "chilango" llegó a Londres 38",
-  "url": "/mundo/aprenda-ingles-23038493",
+  "text": ""Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"",
+  "url": "/mundo/noticias-65930070",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 7`] = `
 {
-  "text": "El obrero que colgó una bandera de México en una torre Trump en Canadá 1",
-  "url": "/mundo/america-latina-23032483",
+  "text": "Quién era Mesalina, la emperatriz con la reputación más escandalosa de la Antigua Roma",
+  "url": "/mundo/noticias-65827480",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 8`] = `
 {
-  "text": "Zika en Panamá",
-  "url": "/mundo/noticias-america-latina-23049958",
+  "text": "La polémica historia del mexicano que asegura haber inventado los Flamin’ Hot Cheetos en EE.UU. (y cuya vida llevó al cine Eva Longoria)",
+  "url": "/mundo/noticias-65936328",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 9`] = `
 {
-  "text": "5 proyectos descomunales con los que China quiere mostrar su poderío científico",
-  "url": "/mundo/vert-cap-23038373",
+  "text": "Entender si somos amigos por placer o por utilidad y otros consejos del filósofo griego Aristóteles para conservar la amistad",
+  "url": "/mundo/noticias-65787837",
 }
 `;
 
 exports[`AMP Most Read Page Most Read has item with rank 10`] = `
 {
-  "text": ""Los peces se están haciendo adictos a comer plástico"",
-  "url": "/mundo/noticias-internacional-23049978",
+  "text": "La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el "Oscar" de la gastronomía",
+  "url": "https://www.bbc.com/mundo/articles/cn088dgrjyeo",
 }
 `;
 

@@ -195,67 +195,137 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+  "url": "http://localhost:7080/arabic/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 2`] = `
 {
   "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 6`] = `
 {
   "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 7`] = `
 {
   "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 8`] = `
 {
   "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 9`] = `
 {
   "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 11`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 12`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 13`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 14`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 15`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 16`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 17`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 18`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 19`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 20`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-512x512.png",
@@ -273,6 +343,492 @@ exports[`Canonical Podcast Page SEO Heading level 1 1`] = `"Que História!, 'A v
 exports[`Canonical Podcast Page SEO Lang attribute 1`] = `"pt-br"`;
 
 exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "BBC News عربي",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/arabic",
+        "@type": "WebPage",
+        "name": "BBC News عربي",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+      "url": "http://localhost:7080/arabic",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/arabic/live/67688656",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.bbc.com/arabic/articles/cg6p4p0k6x7o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/arabic/articles/c51ey2z5z8lo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/arabic/articles/cd1pr4lzrx8o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/arabic/articles/cz92x7kvwl7o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/arabic/articles/cmlp2gdk1rzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/arabic/articles/cp9pvjyp4xzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/arabic/articles/c2e24qg8n7no",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.bbc.com/arabic/articles/cxx1xy5kkwwo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.bbc.com/arabic/articles/ckkpgvk1ndno",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.bbc.com/arabic/articles/cd1p792prw0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.bbc.com/arabic/articles/c7249d43rzeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.bbc.com/arabic/articles/cd1p1g81jyno",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://www.bbc.com/arabic/articles/cgrpple58rzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://www.bbc.com/arabic/articles/c252lj5g1p7o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.bbc.com/arabic/articles/c7249wereljo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://www.bbc.com/arabic/articles/c252re35n5no",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://www.bbc.com/arabic/articles/c6pekpl2kywo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://www.bbc.com/arabic/articles/crgp4qg4qqeo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://www.bbc.com/arabic/articles/czr21dz8nv8o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://www.bbc.com/arabic/articles/cjmppm4ezrpo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://www.bbc.com/arabic/articles/cjqpn151q7go",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://www.bbc.com/news/articles/cy021zgll03o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://www.bbc.com/arabic/articles/c04032r14pzo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://www.bbc.com/arabic/articles/c3gk9l9y5w3o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://www.bbc.com/arabic/articles/c2emp4gmld2o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://www.bbc.com/arabic/articles/c6p12j7n0jdo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://www.bbc.com/arabic/articles/cd1d35y9k7ko",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://www.bbc.com/arabic/articles/cn053v3kj4zo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 30,
+          "url": "https://www.bbc.com/arabic/articles/cmljdnlxp1zo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 31,
+          "url": "https://www.bbc.com/arabic/articles/cn04w4rq7lro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 32,
+          "url": "https://www.bbc.com/arabic/articles/cv2lzy89jr4o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 33,
+          "url": "https://www.bbc.com/arabic/articles/c4nj5qwpw5qo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 34,
+          "url": "https://www.bbc.com/arabic/articles/c842zzxe34go",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 35,
+          "url": "https://www.bbc.com/arabic/articles/ckv47w2w5w8o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 36,
+          "url": "https://www.bbc.com/arabic/articles/cgl6vdrx023o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 37,
+          "url": "https://www.bbc.com/arabic/articles/cn04r432gv1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 38,
+          "url": "https://www.bbc.com/arabic/articles/cj538evydn7o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 39,
+          "url": "https://www.bbc.com/arabic/articles/cl50y81xz4qo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 40,
+          "url": "https://www.bbc.com/arabic/articles/crgvyj54mrro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 41,
+          "url": "https://www.bbc.com/arabic/articles/c2xjmvpndkyo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 42,
+          "url": "https://www.bbc.com/arabic/articles/cj7gd994v71o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 43,
+          "url": "https://www.bbc.com/arabic/articles/cll7ll9l68no",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 44,
+          "url": "https://www.bbc.com/arabic/articles/cv2m2684j5zo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 45,
+          "url": "https://www.bbc.com/arabic/articles/cg3kg4wn072o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 46,
+          "url": "https://www.bbc.com/arabic/articles/c06mjpdzjzmo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 47,
+          "url": "https://www.bbc.com/arabic/articles/c2jyx37yj07o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 48,
+          "url": "https://www.bbc.com/arabic/articles/c4nyy1qxz97o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 49,
+          "url": "https://www.bbc.com/arabic/articles/cl5l49nwv4wo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 50,
+          "url": "https://www.bbc.com/arabic/articles/cz9m1r8z7qpo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 51,
+          "url": "https://www.bbc.com/arabic/articles/c04reym9zygo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 52,
+          "url": "https://www.bbc.com/arabic/articles/c28ye7kjej9o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 53,
+          "url": "https://www.bbc.com/arabic/67686049",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 54,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-67686046",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 55,
+          "url": "https://www.bbc.com/arabic/67686043",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 56,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-67686179",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 57,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-66989108",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 58,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-67685807",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 59,
+          "url": "https://www.bbc.com/arabic/articles/cgl4x42jx7po",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 60,
+          "url": "https://www.bbc.com/arabic/articles/ce5jlyzel61o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 61,
+          "url": "https://www.bbc.com/arabic/articles/c2jyyg7re2eo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 62,
+          "url": "https://www.bbc.com/arabic/articles/cyr32k4ykj1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 63,
+          "url": "https://www.bbc.com/arabic/articles/c28lkjxkjp8o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 64,
+          "url": "https://www.bbc.com/arabic/articles/c3g43284epmo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 65,
+          "url": "https://www.bbc.com/arabic/articles/ce95d1pepzro",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 66,
+          "url": "https://www.bbc.com/arabic/articles/cmljlrw0dn1o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 67,
+          "url": "https://www.bbc.com/arabic/interactivity-67693215",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 68,
+          "url": "https://www.bbc.com/arabic/interactivity-67683225",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 69,
+          "url": "https://www.bbc.com/arabic/interactivity-67631289",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 70,
+          "url": "https://www.bbc.com/arabic/media-49522519",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 71,
+          "url": "https://www.bbc.com/arabic/articles/cpwpnlqndweo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 72,
+          "url": "https://www.bbc.com/arabic/articles/c1674d4xj8zo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 73,
+          "url": "https://www.bbc.com/arabic/art-and-culture-65140458",
+        },
+      ],
+      "name": "BBC News عربي",
+      "numberOfItems": 73,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Podcast Page SEO Linked data should match text 2`] = `
 {
   "@context": "http://schema.org",
   "@graph": [

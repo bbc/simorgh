@@ -98,7 +98,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `
 {
   "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A403f7f6c-6ea1-998d-e050-a00a7ec06c07]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-01T15%3A29%3A47.000Z]&x12=[2020-08-04T10%3A51%3A50.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-22T07%3A16%3A56.000Z]&x12=[2022-02-24T13%3A24%3A42.000Z]&ref=\${documentReferrer}",
   },
   "transport": {
     "beacon": false,
@@ -241,6 +241,8 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should
   "url": "/ukrainian/podcasts/p09jsy3h",
 }
 `;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Index Alsos should match visually hidden text 1`] = `"Читайте также"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 
@@ -398,31 +400,29 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = `"@BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"Watch/Listen"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"Главное"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Special reports 1"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Спецпроект"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Also in the news"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"BBC ЖурналПосмотреть все"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Features"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Статьи"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 5`] = `"Verticals"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 5`] = `"Подробно"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 6`] = `"Picture galleries"`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Новости тест 26"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Россия напала на Украину. Москва наносит удары по целям в Киеве, Харькове и других городах"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <amp-img
-  alt="депутаты"
-  attribution="BBC"
+  alt="Чугуїв"
+  attribution="Getty Images"
   class="bbc-image"
   fallback=""
-  height="371"
+  height="576"
   layout="responsive"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/04B2/test/_63520210_161025142910_bbc_book_2016_babkina_kateryna_adult_640x360_bbc.jpg 660w"
-  width="660"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 660w"
+  width="1024"
 />
 `;
