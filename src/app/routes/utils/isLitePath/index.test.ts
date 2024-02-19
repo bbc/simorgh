@@ -1,44 +1,44 @@
-import isAppPath from '#app/routes/utils/isAppPath';
+import isLitePath from '#app/routes/utils/isLitePath';
 
-describe('isAppPath', () => {
+describe('isLitePath', () => {
   [
     {
-      description: 'should return true if path ends in ".app"',
-      path: '/news/foobar.app',
-      expectedIsApp: true,
+      description: 'should return true if path ends in ".lite"',
+      path: '/news/foobar.lite',
+      expectedIsLite: true,
     },
     {
       description:
-        'should return false if path contains ".app" but does not end in it',
-      path: '/news/foobar.appfoo',
-      expectedIsApp: false,
+        'should return false if path contains ".lite" but does not end in it',
+      path: '/news/foobar.litefoo',
+      expectedIsLite: false,
     },
     {
       description:
-        'should return false if path only contains ".app" as part of the trailing text',
-      path: '/news/foobar.fooappbar',
-      expectedIsApp: false,
+        'should return false if path only contains ".lite" as part of the trailing text',
+      path: '/news/foobar.foolitebar',
+      expectedIsLite: false,
     },
     {
       description:
-        'should return true when path ends with .app and has renderer_env override specified',
-      path: '/news/foobar.app?renderer_env=live',
-      expectedIsApp: true,
+        'should return true when path ends with .lite and has renderer_env override specified',
+      path: '/news/foobar.lite?renderer_env=live',
+      expectedIsLite: true,
     },
     {
       description:
-        'should return true when path ends with .app and has any query params specified',
-      path: '/news/foobar.app?blah=1',
-      expectedIsApp: true,
+        'should return true when path ends with .lite and has any query params specified',
+      path: '/news/foobar.lite?blah=1',
+      expectedIsLite: true,
     },
     {
-      description: 'should return false if path ends in just "app"',
-      path: '/news/foobar/app',
-      expectedIsApp: false,
+      description: 'should return false if path ends in just "lite"',
+      path: '/news/foobar/lite',
+      expectedIsLite: false,
     },
-  ].forEach(({ description, path, expectedIsApp }) => {
+  ].forEach(({ description, path, expectedIsLite }) => {
     it(description, () => {
-      expect(isAppPath(path)).toEqual(expectedIsApp);
+      expect(isLitePath(path)).toEqual(expectedIsLite);
     });
   });
 });
