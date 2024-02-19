@@ -1,7 +1,6 @@
 import moment from 'moment-timezone';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import prop from 'ramda/src/prop';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
@@ -30,10 +29,8 @@ export default ({
     path(['model', 'blocks'], aresMediaBlock),
     'caption',
   );
-  const webcastVersions = prop(
-    'webcastVersions',
-    path(['model', 'blocks', 0, 'model'], aresMediaBlock),
-  );
+  const { webcastVersions = [] } =
+    aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
 
   const hasWebcastItems = webcastVersions?.length > 0;
 
