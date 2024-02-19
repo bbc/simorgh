@@ -54,7 +54,7 @@ const components = {
   'radio-schedule': {
     visualStyle: NONE,
     visualProminence: NORMAL,
-    radioSchedule: afriqueHomePage.data.curations[2].radioSchedule,
+    radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
 };
 
