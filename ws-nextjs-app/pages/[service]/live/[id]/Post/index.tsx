@@ -22,6 +22,28 @@ import {
   ComponentToRenderProps,
 } from './types';
 
+const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
+  const isHeadline = headerBlock.type === 'headline';
+  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
+
+  return (
+    <>
+      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
+      <Text
+        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+        size={isHeadline ? 'greatPrimer' : 'brevier'}
+        className="headingStyling"
+        css={[
+          styles.postHeadings,
+          isHeadline ? styles.postHeadline : styles.postSubHeadline,
+        ]}
+      >
+        {headingText}
+      </Text>
+    </>
+  );
+};
+
 const PostBreakingNewsLabel = ({
   isBreakingNews,
   breakingNewsLabelText,
@@ -47,10 +69,12 @@ const PostBreakingNewsLabel = ({
 const PostHeaderBanner = ({
   isBreakingNews,
   timestamp: curated,
+  contentForChildren,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
+  contentForChildren: PostHeadingBlock[];
 }) => {
   const {
     timezone,
@@ -85,29 +109,10 @@ const PostHeaderBanner = ({
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
+      {contentForChildren.map(headerBlock => (
+        <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+      ))}
     </div>
-  );
-};
-
-const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
-  const isHeadline = headerBlock.type === 'headline';
-  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
-
-  return (
-    <>
-      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
-      <Text
-        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
-        size={isHeadline ? 'greatPrimer' : 'brevier'}
-        className="headingStyling"
-        css={[
-          styles.postHeadings,
-          isHeadline ? styles.postHeadline : styles.postSubHeadline,
-        ]}
-      >
-        {headingText}
-      </Text>
-    </>
   );
 };
 
@@ -186,10 +191,8 @@ const Post = ({ post }: { post: PostType }) => {
           <PostHeaderBanner
             isBreakingNews={isBreakingNews}
             timestamp={timestamp}
+            contentForChildren={headerBlocks}
           />
-          {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-          ))}
         </span>
       </Heading>
       <div css={styles.postContent}>
