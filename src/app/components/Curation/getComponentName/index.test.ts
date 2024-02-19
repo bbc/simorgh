@@ -42,8 +42,6 @@ describe('getComponentName', () => {
   );
   it('should return radio schedule when a radio schedule is present', () => {
     const { radioSchedule } = afriqueHomePage.data.curations[2];
-    expect(
-      getComponentName({ radioSchedule }),
-    ).toBe(`${RADIO_SCHEDULE}`);
+    expect(getComponentName({ radioSchedule })).toBe(`${RADIO_SCHEDULE}`);
   });
 });
