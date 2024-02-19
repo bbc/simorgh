@@ -30,13 +30,14 @@ export default ({
     path(['model', 'blocks'], aresMediaBlock),
     'caption',
   );
-  const hasWebcastVersions = prop(
+  const webcastVersions = prop(
     'webcastVersions',
     path(['model', 'blocks', 0, 'model'], aresMediaBlock),
   );
 
-  const versionParameter = hasWebcastVersions ? 'webcastVersions' : 'versions';
+  const hasWebcastItems = webcastVersions?.length > 0;
 
+  const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
   const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
   const { originCode, locator } = pathOr(
@@ -48,6 +49,7 @@ export default ({
     ['model', 'blocks', 0, 'model', versionParameter, 0, 'versionId'],
     aresMediaBlock,
   );
+
   const blockId = path(
     ['model', 'blocks', 0, 'model', 'blockId'],
     aresMediaBlock,
