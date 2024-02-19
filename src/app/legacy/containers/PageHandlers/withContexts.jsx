@@ -21,6 +21,7 @@ const WithContexts = Component => {
       service,
       isAmp,
       isApp,
+      isLite,
       isCaf,
       pageType,
       pathname,
@@ -49,6 +50,7 @@ const WithContexts = Component => {
             id={id}
             isAmp={isAmp}
             isApp={isApp}
+            isLite={isLite}
             isCaf={isCaf}
             pageType={pageType}
             service={service}
@@ -83,6 +85,7 @@ const WithContexts = Component => {
     id: string,
     isAmp: bool.isRequired,
     isApp: bool.isRequired,
+    isLite: bool,
     isCaf: bool,
     pageData: pageDataPropType,
     pageType: string.isRequired,
@@ -113,6 +116,7 @@ const WithContexts = Component => {
     isNextJs: false,
     isUK: false,
     isCaf: false,
+    isLite: false,
   };
 
   return WithContextsContainer;

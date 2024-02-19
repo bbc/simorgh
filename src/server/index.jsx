@@ -201,6 +201,7 @@ server.get(
         service,
         isAmp,
         isApp,
+        isLite,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -268,6 +269,7 @@ server.get(
           data,
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -295,6 +297,7 @@ server.get(
           data: { error: true, status },
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -331,6 +334,7 @@ server.get(
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
 
         if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');

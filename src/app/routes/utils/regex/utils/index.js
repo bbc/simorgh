@@ -3,6 +3,7 @@ import isLive from '#app/lib/utilities/isLive';
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
+const liteRegex = '.lite';
 const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
 const assetUriRegex = '[a-z0-9-_+]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
@@ -102,7 +103,7 @@ export const getHomePageRegex = services => {
     );
   }
   const homePageServiceRegex = getServiceRegex(homePages);
-  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:lite(${liteRegex})?`;
 };
 
 export const getSwRegex = services => {

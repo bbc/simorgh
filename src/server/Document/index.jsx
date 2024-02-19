@@ -18,6 +18,7 @@ const renderDocument = async ({
   data,
   isAmp,
   isApp,
+  isLite,
   routes,
   service,
   url,
@@ -69,6 +70,7 @@ const renderDocument = async ({
             service={service}
             isAmp={isAmp}
             isApp={isApp}
+            isLite={isLite}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -84,14 +86,31 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
+  const headHelmet = Helmet.renderStatic();
+
+  if (isLite) {
+    const doc = renderToStaticMarkup(
+      <DocumentComponent
+        app={app}
+        data={data}
+        helmet={headHelmet}
+        isAmp={isAmp}
+        isApp={isApp}
+      />,
+    );
+
+    return { html: `<!doctype html>${doc}`, redirectUrl: null };
+  }
+
   const modernScripts = modernExtractor.getScriptElements(
     getScriptAttributes('modern'),
   );
+
   const legacyScripts =
     !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
-  const headHelmet = Helmet.renderStatic();
+
   const doc = renderToStaticMarkup(
     <DocumentComponent
       modernScripts={modernScripts}
