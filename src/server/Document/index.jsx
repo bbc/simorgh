@@ -96,6 +96,7 @@ const renderDocument = async ({
         helmet={headHelmet}
         isAmp={isAmp}
         isApp={isApp}
+        isLite={isLite}
       />,
     );
 

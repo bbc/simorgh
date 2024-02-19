@@ -17,6 +17,7 @@ const Document = ({
   helmet,
   isAmp,
   isApp,
+  isLite,
   modernScripts,
   legacyScripts,
   links,
