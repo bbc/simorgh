@@ -19,23 +19,21 @@ const bundleToExecute = isModernBrowser ? 'modern' : 'legacy';
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
-  if (!window.location.pathname.includes('.lite')) {
-    loadableReady(
-      () => {
-        const cache = createCache({ key: 'bbc' });
+  loadableReady(
+    () => {
+      const cache = createCache({ key: 'bbc' });
 
-        hydrateRoot(
-          root,
-          <CacheProvider value={cache}>
-            <ClientApp data={data} />
-          </CacheProvider>,
-        );
-      },
-      {
-        namespace: bundleToExecute, // execute the correct __LOADABLE_REQUIRED_CHUNKS__ found in json script tag
-      },
-    );
-  }
+      hydrateRoot(
+        root,
+        <CacheProvider value={cache}>
+          <ClientApp data={data} />
+        </CacheProvider>,
+      );
+    },
+    {
+      namespace: bundleToExecute, // execute the correct __LOADABLE_REQUIRED_CHUNKS__ found in json script tag
+    },
+  );
 } else {
   logger.warn(`
     Simorgh refused to hydrate.

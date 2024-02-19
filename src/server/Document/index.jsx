@@ -88,21 +88,6 @@ const renderDocument = async ({
 
   const headHelmet = Helmet.renderStatic();
 
-  if (isLite) {
-    const doc = renderToStaticMarkup(
-      <DocumentComponent
-        app={app}
-        data={data}
-        helmet={headHelmet}
-        isAmp={isAmp}
-        isApp={isApp}
-        isLite={isLite}
-      />,
-    );
-
-    return { html: `<!doctype html>${doc}`, redirectUrl: null };
-  }
-
   const modernScripts = modernExtractor.getScriptElements(
     getScriptAttributes('modern'),
   );
@@ -122,6 +107,7 @@ const renderDocument = async ({
       helmet={headHelmet}
       isAmp={isAmp}
       isApp={isApp}
+      isLite={isLite}
     />,
   );
 

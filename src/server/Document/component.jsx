@@ -28,7 +28,8 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
-  const scriptsAllowed = !isAmp;
+  const scriptsAllowed = !isAmp && !isLite;
+  const linksAllowed = !isAmp && !isLite;
 
   const { html, css, ids } = app;
 
@@ -45,6 +46,7 @@ const Document = ({
       {legacyScripts}
     </IfAboveIE9>
   );
+
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
@@ -95,7 +97,7 @@ const Document = ({
             }}
           />
         )}
-        {!isAmp && links}
+        {linksAllowed && links}
         {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
           <script
