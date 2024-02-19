@@ -64,6 +64,74 @@
         "summaries": [
           {
             "type": "article",
+            "title": "This is the headline of the article",
+            "firstPublished": "2023-07-28T20:51:59.819Z",
+            "lastPublished": "2023-07-28T20:51:59.819Z",
+            "link": "https://www.bbc.com/mundo/articles/cmyk0d45ddpo",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1243/test/36c8a940-b134-11ee-9627-8141b3381959.jpg",
+            "description": "This is the summary of the article",
+            "imageAlt": "test",
+            "id": "cmyk0d45ddpo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:89df7c50-e6ca-472c-aed4-8e4eb6c08045",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "This is the title of the curation",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Headline of the first article",
+            "firstPublished": "2023-05-31T14:57:35.971Z",
+            "lastPublished": "2023-05-31T14:57:35.971Z",
+            "link": "https://www.bbc.com/mundo/articles/c77qvvm012vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/90d0/test/b0a42fe0-ffbf-11ed-980d-ad3b774efdb4.png",
+            "description": "summary text",
+            "imageAlt": "alt text",
+            "id": "c77qvvm012vo"
+          },
+          {
+            "type": "article",
+            "title": "Harry Kane: el Tottenham debería \"hacer caja\" con el delantero para la reconstrucción",
+            "firstPublished": "2023-06-06T14:10:34.719Z",
+            "lastPublished": "2023-06-15T15:43:19.177Z",
+            "link": "https://www.bbc.com/mundo/articles/c57d6p258lvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/c7b1/test/86c48e80-0538-11ee-aa87-8dac976de138.jpg",
+            "description": "El conjunto londinense tiene el difícil dilema de si deja marchar al máximo goleador de su historia o reconstruye el equipo alrededor de él.",
+            "imageAlt": "Harry Kane",
+            "id": "c57d6p258lvo"
+          },
+          {
+            "type": "article",
+            "title": " “Por qué detestamos a los extranjeros”",
+            "firstPublished": "2023-11-14T17:01:12.364Z",
+            "lastPublished": "2023-11-14T17:01:12.364Z",
+            "link": "https://www.bbc.com/mundo/articles/crd06j96mjlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/8383/test/136d0520-5623-11ee-b251-fd487cacd038.jpg",
+            "description": "Una mezcla tóxica de pobreza, drogas y miedo ha resultado en un juego de culpas en el que los inmigrantes se han convertido en chivos expiatorios en Sudáfrica.",
+            "imageAlt": "Zandile Dabula",
+            "id": "crd06j96mjlo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:0743951a-c247-45a0-bf5a-0e26507c2283",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Billboard multiple items - this is the curation title",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
             "title": "Cameroun: pas d'intervention extérieure",
             "firstPublished": "2018-07-09T12:21:15.000Z",
             "lastPublished": "2018-07-09T12:21:15.000Z",
@@ -103,37 +171,37 @@
         "visualStyle": "NONE",
         "radioSchedule": [
           {
-            "id": "p0h4t1m6",
+            "id": "p0h55kgb",
             "state": "next",
-            "startTime": "2024-02-17T05:00:00.000Z",
-            "link": "/afrique/bbc_afrique_radio/w172z9tt9r4mrrn",
-            "brandTitle": "Le Journal",
-            "summary": "Le premier rendez-vous d'information de la matinée.",
-            "duration": "PT10M"
+            "startTime": "2024-02-19T18:10:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9h4xjm21l8",
+            "brandTitle": "A Vous L'antenne",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+            "duration": "PT20M"
           },
           {
-            "id": "p0h4p0ft",
+            "id": "p0h537p5",
             "state": "onDemand",
-            "startTime": "2024-02-16T12:20:00.000Z",
-            "link": "/afrique/bbc_afrique_radio/w172z9fxd5dlv3g",
+            "startTime": "2024-02-19T12:20:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9fxrfq0d2x",
             "brandTitle": "A Vous L'antenne",
             "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
             "duration": "PT10M"
           },
           {
-            "id": "p0h4p0fp",
+            "id": "p0h537p3",
             "state": "onDemand",
-            "startTime": "2024-02-16T12:10:00.000Z",
-            "link": "/afrique/bbc_afrique_radio/w172z9lfb5qczv6",
+            "startTime": "2024-02-19T12:10:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9lfpg0sjtn",
             "brandTitle": "Au Coeur De L'actu",
             "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique",
             "duration": "PT10M"
           },
           {
-            "id": "p0h4mk3q",
+            "id": "p0h523rx",
             "state": "onDemand",
-            "startTime": "2024-02-16T09:02:00.000Z",
-            "link": "/afrique/bbc_afrique_radio/w172z9fxd5dlfr7",
+            "startTime": "2024-02-19T09:02:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9fxrfpzzqp",
             "brandTitle": "A Vous L'antenne",
             "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
             "duration": "PT10M"
@@ -149,7 +217,7 @@
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/afrique/popular/read",
         "mostRead": {
-          "generated": "2024-02-16T16:32:56.486Z",
+          "generated": "2024-02-19T12:47:56.521Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
           "items": [
@@ -306,195 +374,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.5",
-        "nodeJSVersion": "v18.19.0",
-        "standardLibraryVersion": "4.6.1"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "moduleRequests": [
-      {
-        "response": {
-          "headers": {
-            "content-type": "application/json; charset=utf-8",
-            "date": "Fri, 16 Feb 2024 16:44:51 GMT",
-            "connection": "close",
-            "content-length": "2905"
-          },
-          "responseCode": 200,
-          "responseTime": 460
-        },
-        "request": {
-          "module": "topic",
-          "params": {
-            "?showInvisible": "true",
-            "id": "cjln1ww62p1t",
-            "service": "afrique",
-            "pageType": "home",
-            "serviceEnv": "test"
-          }
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "content-type": "application/json; charset=utf-8",
-            "date": "Fri, 16 Feb 2024 16:44:56 GMT",
-            "connection": "close",
-            "content-length": "3839"
-          },
-          "responseCode": 200,
-          "responseTime": 4749
-        },
-        "request": {
-          "module": "content-summaries",
-          "params": {
-            "urn": "urn:bbc:tipo:list:89df7c50-e6ca-472c-aed4-8e4eb6c08045",
-            "page": 1
-          }
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "content-type": "application/json; charset=utf-8",
-            "date": "Fri, 16 Feb 2024 16:44:56 GMT",
-            "connection": "close",
-            "content-length": "9671"
-          },
-          "responseCode": 200,
-          "responseTime": 5542
-        },
-        "request": {
-          "module": "content-summaries",
-          "params": {
-            "urn": "urn:bbc:tipo:list:b327c1d9-9454-4061-9d79-f27a313f6fec",
-            "page": 1
-          }
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "content-type": "application/json; charset=utf-8",
-            "date": "Fri, 16 Feb 2024 16:44:57 GMT",
-            "connection": "close",
-            "content-length": "11684"
-          },
-          "responseCode": 200,
-          "responseTime": 5790
-        },
-        "request": {
-          "module": "content-summaries",
-          "params": {
-            "urn": "urn:bbc:tipo:list:0fa07975-8996-4264-b722-e220a4c5eda1",
-            "page": 1
-          }
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "content-type": "application/json; charset=utf-8",
-            "date": "Fri, 16 Feb 2024 16:44:57 GMT",
-            "connection": "close",
-            "content-length": "9026"
-          },
-          "responseCode": 200,
-          "responseTime": 5855
-        },
-        "request": {
-          "module": "content-summaries",
-          "params": {
-            "urn": "urn:bbc:tipo:list:0743951a-c247-45a0-bf5a-0e26507c2283",
-            "page": 1
-          }
-        }
-      }
-    ],
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Fri, 16 Feb 2024 16:44:51 GMT",
-            "content-type": "application/json",
-            "content-length": "4372",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"867ad75e555d0c89ca1c84516aaf87001da1f0a2\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Fri, 16 Feb 2024 16:42:44 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-shared-cache": "STALE",
-            "x-local-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 80
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/afrique",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Fri, 16 Feb 2024 16:44:51 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "x-shared-cache": "MISS",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "\"2b422df88b0c9ed82de0629b44f1cddf9bfab7df\"",
-            "last-modified": "Fri, 16 Feb 2024 16:44:51 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "822c71cf-77e4-4701-bc99-9a91baa69a15",
-            "expires": "Fri, 16 Feb 2024 16:45:51 GMT",
-            "content-encoding": "gzip",
-            "x-local-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 180
-        },
-        "request": {
-          "service": "ares",
-          "path": "/ws-media/schedule/bbc_afrique_radio",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "?showInvisible": "true",
-      "id": "cjln1ww62p1t",
-      "service": "afrique",
-      "pageType": "home",
-      "serviceEnv": "test"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }
