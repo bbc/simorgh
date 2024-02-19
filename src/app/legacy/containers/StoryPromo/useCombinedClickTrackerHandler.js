@@ -23,15 +23,17 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     }),
   });
 
+  const eventData = pathOr(null, ['eventData'], eventTrackingData);
+
   return async event => {
     const nextPageUrl =
       path(['target', 'href'], event) || path(['url'], eventTrackingData);
 
     if (blockData) {
-      await handleBlockLevelClick(event);
+      await handleBlockLevelClick(event, eventData);
     }
     if (linkData) {
-      await handleLinkLevelClick(event);
+      await handleLinkLevelClick(event, eventData);
     }
     if (nextPageUrl) {
       if (optimizely) optimizely.close();

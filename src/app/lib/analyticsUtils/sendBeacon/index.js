@@ -20,13 +20,44 @@ const initaliseReverb = async ({ pageVars, userVars }) => {
   }
 };
 
+const fireComponentSelectEvent = async (event, eventData) => {
+  await Reverb.userActionEvent(
+    null,
+    eventData.detail.label,
+    eventData.detail,
+    event.target,
+    event,
+    true,
+  );
+};
+
 const firePageViewEvent = async () => {
   Reverb.initialise().then(async () => {
     Reverb.viewEvent();
   });
 };
 
-const sendBeacon = async (url, reverbBeaconConfig) => {
+export const sendUserActionBeacon = async (
+  event,
+  eventData,
+  reverbBeaconConfig,
+) => {
+  try {
+    const {
+      params: { page, user },
+    } = reverbBeaconConfig;
+
+    await initaliseReverb({ pageVars: page, userVars: user }).then(async () => {
+      await fireComponentSelectEvent(event, eventData);
+    });
+  } catch (error) {
+    logger.error(ATI_LOGGING_ERROR, {
+      error,
+    });
+  }
+};
+
+export const sendBeacon = async (url, reverbBeaconConfig) => {
   if (onClient()) {
     try {
       if (reverbBeaconConfig) {
@@ -50,4 +81,4 @@ const sendBeacon = async (url, reverbBeaconConfig) => {
   }
 };
 
-export default sendBeacon;
+// export default sendBeacon;

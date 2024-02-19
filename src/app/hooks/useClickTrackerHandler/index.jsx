@@ -6,7 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
-import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
+import { sendActionBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
@@ -39,7 +39,7 @@ const useClickTrackerHandler = (props = {}) => {
   const { service } = useContext(ServiceContext);
 
   return useCallback(
-    async event => {
+    async (event, eventData) => {
       const shouldRegisterClick = [
         trackingIsEnabled,
         !clicked,
@@ -80,21 +80,25 @@ const useClickTrackerHandler = (props = {}) => {
           }
 
           try {
-            await sendEventBeacon({
-              type: EVENT_TYPE,
-              campaignID,
-              componentName,
-              format,
-              pageIdentifier,
-              platform,
-              producerId,
-              producerName,
-              service,
-              advertiserID,
-              statsDestination,
-              url,
-              useReverb,
-            });
+            await sendActionBeacon(
+              {
+                type: EVENT_TYPE,
+                campaignID,
+                componentName,
+                format,
+                pageIdentifier,
+                platform,
+                producerId,
+                producerName,
+                service,
+                advertiserID,
+                statsDestination,
+                url,
+                useReverb,
+              },
+              event,
+              eventData,
+            );
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {

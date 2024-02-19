@@ -45,10 +45,18 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
+  const eventData = {
+    detail: {
+      container: 'Top Stories',
+      label: 'top-stories',
+      type: 'click',
+    },
+  };
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
     },
+    eventData,
     useReverb: true,
   };
   const eventTrackingDataSend = {

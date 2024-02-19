@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+// eslint-disable-next-line import/named
+import { sendBeacon } from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
