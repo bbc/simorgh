@@ -91,7 +91,7 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-      return !isLive() && <RadioSchedule initialData={radioSchedule} />;
+      return isLive() ? null : <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
