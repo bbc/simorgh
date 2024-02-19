@@ -1,4 +1,5 @@
 {
   "browser": "client.js",
-  "main": "index.js"
+  "main": "index.js",
+  "name": "@bbc/simorgh-getInitialDataCpsAsset"
 }
