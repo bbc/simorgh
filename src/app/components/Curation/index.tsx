@@ -91,7 +91,6 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-      // test commit
       return isLive() ? null : <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
