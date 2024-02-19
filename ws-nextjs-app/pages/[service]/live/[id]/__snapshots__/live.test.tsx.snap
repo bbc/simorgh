@@ -743,7 +743,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
-  background-color: #B80000;
 }
 
 @media screen and (forced-colors: active) {
@@ -768,6 +767,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 400;
   padding: 0.25rem 0.75rem;
   background-color: #B80000;
+  display: inline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -795,6 +795,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-38 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-38 {
+    width: 100%;
   }
 }
 
@@ -807,9 +813,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 700;
   color: #FFFFFF;
   background-color: #B80000;
-  -webkit-flex: 1 0 1;
-  -ms-flex: 1 0 1;
-  flex: 1 0 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   padding: 0.25rem 0.75rem;
 }
 
@@ -837,6 +843,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #000000;
   display: block;
   margin: 0;
+  width: 100%;
   padding: 1.5rem 1rem 0;
 }
 
@@ -1024,25 +1031,50 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-52 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  border-top: solid 0.125rem #B80000;
+.emotion-53 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0.25rem 0.75rem;
+  background-color: #B80000;
+  display: inline;
 }
 
-@media screen and (forced-colors: active) {
-  .emotion-52 {
-    border-bottom: solid 0.1875rem transparent;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-53 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-53 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-53 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-53 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1056,6 +1088,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #000000;
   display: block;
   margin: 0;
+  width: 100%;
   padding: 0.25rem 1rem 0;
 }
 
@@ -1432,34 +1465,31 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   class="emotion-36"
                 >
                   <span
+                    class="emotion-37"
                     role="text"
                   >
-                    <div
-                      class="emotion-37"
+                    <time
+                      class="emotion-38 emotion-39"
+                      datetime="09 May 2023"
                     >
-                      <time
-                        class="emotion-38 emotion-39"
-                        datetime="09 May 2023"
-                      >
-                        9 May 2023
-                      </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
-                      <span
-                        class="emotion-41"
-                        data-testid="breaking-news-label"
-                      >
-                        Breaking
-                      </span>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
-                    </div>
+                      9 May 2023
+                    </time>
+                    <span
+                      class="emotion-10"
+                    >
+                      , 
+                    </span>
+                    <span
+                      class="emotion-41"
+                      data-testid="breaking-news-label"
+                    >
+                      Breaking
+                    </span>
+                    <span
+                      class="emotion-10"
+                    >
+                      , 
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1494,23 +1524,20 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   class="emotion-36"
                 >
                   <span
+                    class="emotion-37"
                     role="text"
                   >
-                    <div
-                      class="emotion-52"
+                    <time
+                      class="emotion-53 emotion-39"
+                      datetime="09 May 2023"
                     >
-                      <time
-                        class="emotion-38 emotion-39"
-                        datetime="09 May 2023"
-                      >
-                        9 May 2023
-                      </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
-                    </div>
+                      9 May 2023
+                    </time>
+                    <span
+                      class="emotion-10"
+                    >
+                      , 
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1545,23 +1572,20 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   class="emotion-36"
                 >
                   <span
+                    class="emotion-37"
                     role="text"
                   >
-                    <div
-                      class="emotion-52"
+                    <time
+                      class="emotion-53 emotion-39"
+                      datetime="21 March 2023"
                     >
-                      <time
-                        class="emotion-38 emotion-39"
-                        datetime="21 March 2023"
-                      >
-                        21 March 2023
-                      </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
-                    </div>
+                      21 March 2023
+                    </time>
+                    <span
+                      class="emotion-10"
+                    >
+                      , 
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1730,23 +1754,20 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   class="emotion-36"
                 >
                   <span
+                    class="emotion-37"
                     role="text"
                   >
-                    <div
-                      class="emotion-52"
+                    <time
+                      class="emotion-53 emotion-39"
+                      datetime="21 March 2023"
                     >
-                      <time
-                        class="emotion-38 emotion-39"
-                        datetime="21 March 2023"
-                      >
-                        21 March 2023
-                      </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
-                    </div>
+                      21 March 2023
+                    </time>
+                    <span
+                      class="emotion-10"
+                    >
+                      , 
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
