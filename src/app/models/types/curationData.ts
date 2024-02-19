@@ -35,8 +35,8 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
 export interface CurationProps {
-  visualStyle: Partial<VisualStyle>;
-  visualProminence: Partial<VisualProminence>;
+  visualStyle: VisualStyle;
+  visualProminence: VisualProminence;
   promos?: Summary[];
   title?: string;
   link?: string;
@@ -46,7 +46,7 @@ export interface CurationProps {
   curationLength?: number;
   mostRead?: MostReadData;
   nthCurationByStyleAndProminence?: number;
-  radioSchedule?: Partial<RadioScheduleData[]>;
+  radioSchedule?: RadioScheduleData[];
 }
 
 export interface CurationData {
