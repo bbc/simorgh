@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "next": "14.1.0",
-    "undici": "5.27.0"
+    "undici": "6.6.2"
   }
 }
