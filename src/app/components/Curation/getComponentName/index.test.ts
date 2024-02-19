@@ -30,24 +30,20 @@ describe('getComponentName', () => {
     ${RANKED}       | ${NORMAL}            | ${MOST_READ}
     ${'fake-style'} | ${'fake-prominence'} | ${null}
   `(
-    'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence and curation type is $curationType',
+    'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
       expect(
         getComponentName({
           visualStyle,
           visualProminence,
-          radioSchedule: undefined,
         }),
       ).toBe(expected);
     },
   );
-  it('should return radio schedule when curationType is radio-schedule and visual style is NONE and visualProminence is NORMAL', () => {
-    const visualProminence = NORMAL;
-    const visualStyle = NONE;
-    const { radioSchedule } = afriqueHomePage.data.curations[5];
-
+  it('should return radio schedule when a radio schedule is present', () => {
+    const { radioSchedule } = afriqueHomePage.data.curations[2];
     expect(
-      getComponentName({ visualStyle, visualProminence, radioSchedule }),
+      getComponentName({ radioSchedule }),
     ).toBe(`${RADIO_SCHEDULE}`);
   });
 });

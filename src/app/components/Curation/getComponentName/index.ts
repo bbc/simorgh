@@ -28,7 +28,7 @@ export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
-}: CurationProps) => {
+}: Partial<CurationProps>) => {
   if (radioSchedule) {
     return RADIO_SCHEDULE;
   }

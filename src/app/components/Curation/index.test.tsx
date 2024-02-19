@@ -54,7 +54,7 @@ const components = {
   'radio-schedule': {
     visualStyle: NONE,
     visualProminence: NORMAL,
-    radioSchedule: afriqueHomePage.data.curations[5].radioSchedule,
+    radioSchedule: afriqueHomePage.data.curations[2].radioSchedule,
   },
 };
 
@@ -63,7 +63,6 @@ interface TestProps {
   visualProminence: VisualProminence;
   promos?: Summary[];
   mostRead?: MostReadData;
-  curationType?: string;
   radioSchedule?: RadioScheduleData[];
 }
 
@@ -84,6 +83,7 @@ describe('Curation', () => {
         radioSchedule,
       }: TestProps,
     ) => {
+      console.log('in curation tests', radioSchedule);
       const { getByTestId } = render(
         <Curation
           visualStyle={visualStyle}
