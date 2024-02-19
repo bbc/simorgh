@@ -89,33 +89,34 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
-      {/* eslint-disable-next-line jsx-a11y/aria-role */}
-      <span role="text">
-        <TimeStampContainer
-          css={styles.timeStamp}
-          timestamp={curated}
-          dateTimeFormat="DD MMMM YYYY"
-          format="D MMMM YYYY"
-          locale={locale}
-          timezone={timezone}
-          service={service}
-          // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
-          script={script}
-          altCalendar={altCalendar}
-          padding={false}
-          isRelative={isRelative}
-        />
-        <VisuallyHiddenText>, </VisuallyHiddenText>
-        <PostBreakingNewsLabel
-          isBreakingNews={isBreakingNews}
-          breakingNewsLabelText={breaking}
-        />
-        {contentForChildren.map(headerBlock => (
-          <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-        ))}
-      </span>
-    </div>
+    <span
+      // eslint-disable-next-line jsx-a11y/aria-role
+      role="text"
+      css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}
+    >
+      <TimeStampContainer
+        css={styles.timeStamp}
+        timestamp={curated}
+        dateTimeFormat="DD MMMM YYYY"
+        format="D MMMM YYYY"
+        locale={locale}
+        timezone={timezone}
+        service={service}
+        // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
+        script={script}
+        altCalendar={altCalendar}
+        padding={false}
+        isRelative={isRelative}
+      />
+      <VisuallyHiddenText>, </VisuallyHiddenText>
+      <PostBreakingNewsLabel
+        isBreakingNews={isBreakingNews}
+        breakingNewsLabelText={breaking}
+      />
+      {contentForChildren.map(headerBlock => (
+        <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+      ))}
+    </span>
   );
 };
 

@@ -9,6 +9,7 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
+      display: 'inline',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
@@ -22,7 +23,7 @@ export default {
     }),
   fullWidth: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.BRAND_BACKGROUND,
+      // backgroundColor: palette.BRAND_BACKGROUND,
     }),
   breakingNewsLabel: ({ palette, spacings }: Theme) =>
     css({
@@ -36,6 +37,8 @@ export default {
       color: palette.BLACK,
       display: `block`,
       margin: 0 /* Reset */,
+      width: '100%',
+      backgroundColor: 'unset',
     }),
   postHeadline: ({ spacings }: Theme) =>
     css({
