@@ -2636,6 +2636,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData"
+  languageName: unknown
+  linkType: soft
+
 "@bbc/web-vitals@npm:1.2.0":
   version: 1.2.0
   resolution: "@bbc/web-vitals@npm:1.2.0"
@@ -12658,18 +12670,6 @@ __metadata:
   checksum: 5c3b99cb5398ea8016bf46ff17afc5d1d286874d2ad38ca5edb6e87d75c0965b0094cb9a9dddef2c59c23d250702323539a7fbdd870620db38c7e7d7ec87c1eb
   languageName: node
   linkType: hard
-
-"getInitialData-3af6bf@workspace:src/app/routes/cpsAsset/getInitialData":
-  version: 0.0.0-use.local
-  resolution: "getInitialData-3af6bf@workspace:src/app/routes/cpsAsset/getInitialData"
-  languageName: unknown
-  linkType: soft
-
-"getInitialData-45e163@workspace:src/app/routes/article/getInitialData":
-  version: 0.0.0-use.local
-  resolution: "getInitialData-45e163@workspace:src/app/routes/article/getInitialData"
-  languageName: unknown
-  linkType: soft
 
 "getos@npm:^3.2.1":
   version: 3.2.1
