@@ -15,6 +15,7 @@ export const cpsAssetPageDataPropTypes = shape({
 
 const cpsAssetPagePropTypes = {
   isAmp: bool,
+  isLow: bool,
   data: cpsAssetPageDataPropTypes,
   service: string,
   status: number,

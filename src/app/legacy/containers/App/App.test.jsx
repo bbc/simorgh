@@ -62,6 +62,7 @@ describe('App', () => {
       id: undefined,
       isAmp: false,
       isApp: false,
+      isLow: false,
       pageType: 'article',
       service: 'ukchina',
       status: undefined,

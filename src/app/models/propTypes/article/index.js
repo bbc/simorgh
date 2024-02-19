@@ -13,6 +13,7 @@ export const articleDataPropTypes = shape({
 
 const articlePropTypes = {
   isAmp: bool,
+  isLow: bool,
   data: articleDataPropTypes,
   service: string,
   status: number,

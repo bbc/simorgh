@@ -37,6 +37,7 @@ const createAssetPage = ({ pageData }, service) => (
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             isAmp={false}
+            isLow={false}
             pageType={pageData.metadata.type}
             pathname={pageData.metadata.locators.assetUri}
             service={service}

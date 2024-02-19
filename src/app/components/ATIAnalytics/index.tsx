@@ -9,7 +9,7 @@ import buildATIUrl from './params';
 const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
-  const { isAmp } = requestContext;
+  const { isAmp, isLow } = requestContext;
 
   const pageviewParams = buildATIUrl({
     requestContext,
@@ -22,7 +22,7 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
     return null;
   }
 
-  return isAmp ? (
+  return isAmp || isLow ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />

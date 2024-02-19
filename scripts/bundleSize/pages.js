@@ -12,4 +12,5 @@ export const pages = [
   'OnDemandTvPage',
   'PhotoGalleryPage',
   'StoryPage',
+  'StoryPage-StoryPage-low',
 ];

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
-import { node, string, shape } from 'prop-types';
+import { bool, node, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -16,6 +16,16 @@ const SCROLLABLE_ID = 'si-nav-scrollable';
 const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 const OPEN_CLASS_NAME = 'si-nav-open';
 
+const StyledNavigation = styled(Navigation)`
+  ${({ isLow }) =>
+    isLow &&
+    `
+      > div:first-of-type {
+        margin: unset;
+      }
+    `}
+`;
+
 const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {
     @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
@@ -28,15 +38,17 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
 const AmpNavigationContainer = ({
   script,
   service,
+  isLow,
   dir,
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
 }) => (
-  <Navigation
+  <StyledNavigation
     script={script}
     service={service}
     dir={dir}
+    isLow={isLow}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME}
   >
@@ -58,11 +70,12 @@ const AmpNavigationContainer = ({
     <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
-  </Navigation>
+  </StyledNavigation>
 );
 
 AmpNavigationContainer.propTypes = {
   service: string.isRequired,
+  isLow: bool.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
   scrollableListItems: node.isRequired,

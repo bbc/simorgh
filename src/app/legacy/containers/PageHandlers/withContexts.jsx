@@ -22,6 +22,7 @@ const WithContexts = Component => {
       isAmp,
       isApp,
       isCaf,
+      isLow,
       pageType,
       pathname,
       previousPath,
@@ -50,6 +51,7 @@ const WithContexts = Component => {
             isAmp={isAmp}
             isApp={isApp}
             isCaf={isCaf}
+            isLow={isLow}
             pageType={pageType}
             service={service}
             statusCode={status}
@@ -84,6 +86,7 @@ const WithContexts = Component => {
     isAmp: bool.isRequired,
     isApp: bool.isRequired,
     isCaf: bool,
+    isLow: bool,
     pageData: pageDataPropType,
     pageType: string.isRequired,
     pathname: string.isRequired,
