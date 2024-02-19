@@ -21,24 +21,14 @@ const LiveLabelHeader = ({
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   return (
     <div data-testid="live-label">
-      <LiveLabel.Pulse
-        className={className}
-        width="24"
-        height="24"
-        css={styles.liveLabelPulse}
-      />
-      <LiveLabel.Text
-        lang={lang}
-        id={id}
-        offScreenText={offScreenText}
-        css={
-          isHeaderImage
-            ? styles.liveLabelTextWithImage
-            : styles.liveLabelTextWithoutImage
-        }
+      <span // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
       >
+        <time dateTime="09 May 2023" style={{ color: '#ffffff' }}>
+          9 May 2023
+        </time>
         {children}
-      </LiveLabel.Text>
+      </span>
     </div>
   );
 };

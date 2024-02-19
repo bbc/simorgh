@@ -90,28 +90,31 @@ const PostHeaderBanner = ({
 
   return (
     <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
-      <TimeStampContainer
-        css={styles.timeStamp}
-        timestamp={curated}
-        dateTimeFormat="DD MMMM YYYY"
-        format="D MMMM YYYY"
-        locale={locale}
-        timezone={timezone}
-        service={service}
-        // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
-        script={script}
-        altCalendar={altCalendar}
-        padding={false}
-        isRelative={isRelative}
-      />
-      <VisuallyHiddenText>, </VisuallyHiddenText>
-      <PostBreakingNewsLabel
-        isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={breaking}
-      />
-      {contentForChildren.map(headerBlock => (
-        <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-      ))}
+      {/* eslint-disable-next-line jsx-a11y/aria-role */}
+      <span role="text">
+        <TimeStampContainer
+          css={styles.timeStamp}
+          timestamp={curated}
+          dateTimeFormat="DD MMMM YYYY"
+          format="D MMMM YYYY"
+          locale={locale}
+          timezone={timezone}
+          service={service}
+          // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
+          script={script}
+          altCalendar={altCalendar}
+          padding={false}
+          isRelative={isRelative}
+        />
+        <VisuallyHiddenText>, </VisuallyHiddenText>
+        <PostBreakingNewsLabel
+          isBreakingNews={isBreakingNews}
+          breakingNewsLabelText={breaking}
+        />
+        {contentForChildren.map(headerBlock => (
+          <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+        ))}
+      </span>
     </div>
   );
 };
@@ -186,14 +189,11 @@ const Post = ({ post }: { post: PostType }) => {
   return (
     <article css={styles.postContainer}>
       <Heading level={3}>
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text">
-          <PostHeaderBanner
-            isBreakingNews={isBreakingNews}
-            timestamp={timestamp}
-            contentForChildren={headerBlocks}
-          />
-        </span>
+        <PostHeaderBanner
+          isBreakingNews={isBreakingNews}
+          timestamp={timestamp}
+          contentForChildren={headerBlocks}
+        />
       </Heading>
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
