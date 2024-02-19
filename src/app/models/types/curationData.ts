@@ -37,7 +37,6 @@ export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 export interface CurationProps {
   visualStyle: Partial<VisualStyle>;
   visualProminence: Partial<VisualProminence>;
-  curationType?: string;
   promos?: Summary[];
   title?: string;
   link?: string;
