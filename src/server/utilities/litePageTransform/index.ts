@@ -16,18 +16,6 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
   const $ = cheerio.load(html, {}, false);
 
-  // Remove heavier elements
-  $(`
-    img, figure, picture, 
-    [data-e2e=media-indicator],
-    [aria-labelledby=podcast-promo],
-    a[href^="#end-of-recommendations"],
-    p[id^=end-of-recommendations]
-  `).remove();
-
-  // Remove header navigation
-  $('header > nav[role=navigation]').remove();
-
   // Remove includes
   $('div[id^=include-]').parent().remove();
 
@@ -44,13 +32,33 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
     }
   });
 
+  // Remove heavier elements
+  $(`
+    img, figure, picture, 
+    [data-e2e=media-indicator],
+    [aria-labelledby=podcast-promo],
+    a[href^="#end-of-recommendations"],
+    p[id^=end-of-recommendations]
+  `).remove();
+
+  // Style header
+  $('[data-e2e=dropdown-nav]').remove();
+  $('header').addClass('lite-header');
+  $('header > div').addClass('lite-header-brand-wrapper');
+  // Not sure how fast 'find' is
+  $('header').find('button').remove();
+  $('header').find('ul').addClass('lite-nav-list');
+  $('header').find('li').addClass('lite-nav-list-item');
+
   // Remove header skip to content - probably want to keep this though
   $('header').find('a[href="#content"]').remove();
 
-  // Style header
-  $('header').addClass('lite-header');
-  // Style footer - bit too hacky imo
+  // Style footer
+  // bit too hacky
   $('footer').children().first().addClass('lite-footer');
+  $('footer').find('ul').addClass('lite-footer-list');
+  $('footer').find('li').addClass('lite-footer-list-item');
+  $('footer').find('p').addClass('lite-footer-copyright');
 
   return {
     html: $.html(),
