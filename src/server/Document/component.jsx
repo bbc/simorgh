@@ -36,7 +36,7 @@ const Document = ({
   const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
+  const noJsHtmlAttrs = isCanonical && { className: 'no-js' };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
@@ -45,6 +45,7 @@ const Document = ({
   let cleanedHtml = html;
   let cleanedHelmetLinkTags = helmetLinkTags;
 
+  // Apply HTML transformations for Lite pages
   if (isLite) {
     const litePage = litePageTransform({ html, helmetLinkTags });
     cleanedHtml = litePage.html;
