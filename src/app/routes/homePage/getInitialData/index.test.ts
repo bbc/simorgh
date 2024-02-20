@@ -43,6 +43,7 @@ describe('Home Page - BFF Fetching', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/kyrgyz/tipohome',
       pageType: HOME_PAGE,
+      timeout: 60000,
     });
   });
 

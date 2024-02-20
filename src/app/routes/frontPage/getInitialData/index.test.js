@@ -68,6 +68,7 @@ describe('Front Page - Get Initial Data', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/serbian/lat',
       pageType,
+      timeout: 60000,
     });
   });
 

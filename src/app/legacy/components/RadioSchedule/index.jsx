@@ -7,7 +7,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import Grid from '#psammead/psammead-grid/src';
-import { arrayOf, number, shape, string } from 'prop-types';
+import { arrayOf, number, oneOfType, shape, string } from 'prop-types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
@@ -109,7 +109,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
 
 const programPropTypes = shape({
   state: string.isRequired,
-  startTime: number.isRequired,
+  startTime: oneOfType([number, string]).isRequired,
   link: string.isRequired,
   brandTitle: string.isRequired,
   summary: string,

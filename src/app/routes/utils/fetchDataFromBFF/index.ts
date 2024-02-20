@@ -54,13 +54,16 @@ export default async ({
     page,
   });
 
-  const agent = certsRequired(pathname) ? await getAgent() : undefined;
-  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : undefined;
-  const optHeaders: OptHeaders =
-    isLocal && !BFF_IS_LOCAL ? undefined : { 'ctx-service-env': environment };
+  const agent = isLocal || BFF_IS_LOCAL ? undefined : await getAgent();
+  const timeout = isLocal || BFF_IS_LOCAL ? 60000 : null;
+
+  const optHeaders: OptHeaders = isLocal
+    ? undefined
+    : {
+        'ctx-service-env': environment,
+      };
 
   if (BFF_IS_LOCAL && optHeaders) {
-    optHeaders['ctx-service-env'] = process.env.BFF_ENV || 'live';
     optHeaders.Accept = 'text/html,application/xhtml+xml,application/xml';
   }
 

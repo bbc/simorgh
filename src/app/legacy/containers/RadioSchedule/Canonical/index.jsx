@@ -162,6 +162,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
       className={className}
       role="region"
       aria-labelledby="Radio-Schedule"
+      data-testid="radio-schedule"
       {...(lang && { lang })}
     >
       <RadioScheduleSectionLabel

@@ -26,6 +26,8 @@ const mockGetAgent = () => Promise.resolve(mockAgent);
 
 jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
+const localTimeout = 60000;
+
 describe('Fetch Data from BFF', () => {
   beforeEach(() => {
     process.env.BFF_PATH = 'https://mock-bff-path';
@@ -65,6 +67,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -99,6 +105,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -134,6 +144,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -168,6 +182,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -202,6 +220,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
