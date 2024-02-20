@@ -64,7 +64,8 @@ export default function litePageTransform({
   // Style header
   $('[data-e2e=dropdown-nav]').remove();
   $('header').addClass('lite-header');
-  $('header > div').addClass('lite-header-brand-wrapper');
+  $('#topPage').parent().addClass('lite-header-brand-wrapper');
+
   // Not sure how fast 'find' is
   $('header').find('button').remove();
   $('header').find('ul').addClass('lite-nav-list');
