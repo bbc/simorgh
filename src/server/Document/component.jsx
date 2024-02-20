@@ -46,19 +46,6 @@ const Document = ({
   let cleanedHelmetLinkTags = helmetLinkTags;
 
   if (isLite) {
-    // // This is a bad way to do it
-    // // Remove all images, figures, pictures and inline styles
-    // // Avoids having `isLite` checks everywhere
-    // const imgRegex = /<img\b[^>]*>/gi;
-    // const figureRegex = /<figure\b[^>]*>[\s\S]*?<\/figure>/gi;
-    // const pictureRegex = /<picture\b[^>]*>[\s\S]*?<\/picture>/gi;
-    // const inlineStyleRegex = /style="[^"]*"/gi;
-
-    // cleanedHtml = cleanedHtml.replace(imgRegex, '');
-    // cleanedHtml = cleanedHtml.replace(figureRegex, '');
-    // cleanedHtml = cleanedHtml.replace(pictureRegex, '');
-    // cleanedHtml = cleanedHtml.replace(inlineStyleRegex, '');
-
     // Prevent preloading images
     cleanedHelmetLinkTags = cleanedHelmetLinkTags.filter(
       tag =>
@@ -68,18 +55,37 @@ const Document = ({
 
     const $ = cheerio.load(cleanedHtml);
 
+    // Remove heavier elements
     $(`
       img, figure, picture, 
-      div[id^=include-],
       nav[role=navigation],
       span[id=BrandLink-topPage],
       span[id=BrandLink-footer],
       [data-e2e=media-indicator],
-      [data-e2e*="embed"]
+      [aria-labelledby=podcast-promo],
+      a[href^="#end-of-recommendations"],
+      p[id^=end-of-recommendations]
     `).remove();
+
+    // Remove includes
+    $('div[id^=include-]').parent().remove();
+
+    // Remove embeds
+    $('[data-e2e*="embed"]').parent().remove();
 
     // Remove inline styles
     $('[style]').removeAttr('style');
+
+    // Remove class names
+    $('[class]').removeAttr('class');
+
+    // Remove header skip to content - probably want to keep this though
+    $('header').find('a[href="#content"]').remove();
+
+    // Style header
+    $('header').addClass('lite-header');
+    // Style footer - bit too hacky imo
+    $('footer').children().first().addClass('lite-footer');
 
     cleanedHtml = $.html();
   }
@@ -110,7 +116,8 @@ const Document = ({
     />
   );
 
-  const normalize = `html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}`;
+  // Base styling used for Lite pages
+  const normalize = `html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}.lite-header{background-color:#b80000; padding:10px;}#brandSvgHeader,#brandSvgFooter{fill:white;height:24px;}main,aside,[data-e2e=related-content-heading],[data-e2e=top-stories-heading],[data-e2e=features-analysis-heading],[data-e2e=most-read]{padding:0 20px;}.lite-footer{background-color:#b80000; padding:10px;}`;
 
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
