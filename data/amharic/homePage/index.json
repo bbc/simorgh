@@ -93,6 +93,52 @@
         "title": "የኛ ምርጫ",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_amharic_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p07vwmt2",
+            "state": "next",
+            "startTime": 1893488400000,
+            "link": "/amharic/bbc_amharic_radio/w3csz5nm",
+            "brandTitle": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+            "summary": "",
+            "duration": "PT5M"
+          },
+          {
+            "id": "p07vwmt1",
+            "state": "onDemand",
+            "startTime": 1575491370000,
+            "link": "/amharic/bbc_amharic_radio/w3csz5wd",
+            "brandTitle": "ቢቢሲ አማርኛ ዜና",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+            "duration": "PT15M"
+          },
+          {
+            "id": "p07vwkgq",
+            "state": "onDemand",
+            "startTime": 1575488670000,
+            "link": "/amharic/bbc_amharic_radio/w3csz5nm",
+            "brandTitle": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+            "summary": "",
+            "duration": "PT5M"
+          },
+          {
+            "id": "p07vwkgp",
+            "state": "onDemand",
+            "startTime": 1575487770000,
+            "link": "/amharic/bbc_amharic_radio/w3csz5wd",
+            "brandTitle": "ቢቢሲ አማርኛ ዜና",
+            "summary": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+            "duration": "PT15M"
+          }
+        ]
       }
     ],
     "metadata": {
