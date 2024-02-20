@@ -153,12 +153,12 @@ export const getOnDemandTvRegex = services => {
 
 export const getTopicPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/topics/:id(${topicIdRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/topics/:id(${topicIdRegex})?:lite(${liteRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?`;
+  return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?:lite(${liteRegex})?`;
 };
 
 export const getMostReadPageRegex = services => {
@@ -187,7 +187,7 @@ export const getSecondaryColumnDataRegex = services => {
 };
 
 export const getIdxPageRegex = () => {
-  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
+  return `/:idx(${idxRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
 };
 
 export const getRecommendationsDataRegex = services => {
@@ -196,5 +196,5 @@ export const getRecommendationsDataRegex = services => {
 };
 
 export const getAfricaEyeTVPageRegex = () => {
-  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?`;
+  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?:lite(${liteRegex})?`;
 };

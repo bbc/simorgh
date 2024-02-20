@@ -26,7 +26,7 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   `).remove();
 
   // Remove header navigation
-  $('nav[role=navigation]').remove();
+  $('header > nav[role=navigation]').remove();
 
   // Remove includes
   $('div[id^=include-]').parent().remove();
