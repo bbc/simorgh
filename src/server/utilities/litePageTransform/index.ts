@@ -13,7 +13,8 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
       (tag.props.rel !== 'preload' && tag.props.as !== 'image'),
   );
 
-  const $ = cheerio.load(html);
+  // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
+  const $ = cheerio.load(html, {}, false);
 
   // Remove heavier elements
   $(`
@@ -36,7 +37,7 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   // Remove inline styles
   $('[style]').removeAttr('style');
 
-  // Remove class names except for visuallyHiddenText which we want to use for accessibility
+  // Remove all class names except for visuallyHiddenText which we want to use for accessibility
   $('[class]').each((_, el) => {
     if (el && !$(el).attr('class')?.includes('visuallyHiddenText')) {
       $(el).removeAttr('class');
