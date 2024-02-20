@@ -19,7 +19,8 @@
     "react-is": "16.13.1",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "ramda@0.28.0": "patch:ramda@npm:0.28.0#.yarn/patches/ramda-npm-0.28.0-6a5fe8f6cc.patch",
-    "postcss": "8.4.31"
+    "postcss": "8.4.31",
+    "socks": "2.7.3"
   },
   "workspaces": {
     "packages": [
@@ -35,7 +36,7 @@
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
     "build:preview": "cp envConfig/preview.env .env && NODE_ENV=production webpack",
-    "build:storybook": "yarn build && node .storybook/buildFontPreloads && build-storybook -s .storybook/static -c .storybook -o storybook_dist",
+    "build:storybook": "yarn build && node .storybook/buildFontPreloads && build-storybook -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
@@ -56,7 +57,7 @@
     "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node --no-experimental-fetch --max-old-space-size=3500 build/server.js",
     "stop": "./scripts/killApp.sh",
-    "storybook": "node .storybook/buildFontPreloads && start-storybook -p 9001 -s .storybook/static -c .storybook",
+    "storybook": "node .storybook/buildFontPreloads && start-storybook -p 9001 -c .storybook",
     "test": "yarn build && yarn test:local",
     "test:local": "yarn test:lint && yarn test:dependencies && yarn test:unit && run-p --race start amp:validate && run-p --race start test:integration:ci",
     "test:dependencies": "node ./scripts/dependencyCheck",
@@ -196,6 +197,7 @@
     "crypto": "1.0.1",
     "cypress": "13.6.3",
     "cypress-axe": "1.5.0",
+    "cypress-multi-reporters": "1.6.4",
     "cypress-terminal-report": "5.3.12",
     "depcheck": "1.4.7",
     "eslint": "7.32.0",

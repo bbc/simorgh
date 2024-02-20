@@ -4,6 +4,7 @@ import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
+import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -14,6 +15,7 @@ import {
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
+import { RadioScheduleData } from '../../models/types/radioSchedule';
 
 jest.mock('../ThemeProvider');
 
@@ -49,6 +51,11 @@ const components = {
     visualProminence: NORMAL,
     mostRead: kyrgyzMostRead,
   },
+  'radio-schedule': {
+    visualStyle: NONE,
+    visualProminence: NORMAL,
+    radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
+  },
 };
 
 interface TestProps {
@@ -56,6 +63,7 @@ interface TestProps {
   visualProminence: VisualProminence;
   promos?: Summary[];
   mostRead?: MostReadData;
+  radioSchedule?: RadioScheduleData[];
 }
 
 describe('Curation', () => {
@@ -67,7 +75,13 @@ describe('Curation', () => {
     `should render a %s component`,
     (
       testId: string, // testId is the key in the components object above
-      { visualStyle, visualProminence, promos, mostRead }: TestProps,
+      {
+        visualStyle,
+        visualProminence,
+        promos,
+        mostRead,
+        radioSchedule,
+      }: TestProps,
     ) => {
       const { getByTestId } = render(
         <Curation
@@ -75,11 +89,14 @@ describe('Curation', () => {
           visualProminence={visualProminence}
           promos={promos || []}
           mostRead={mostRead}
+          radioSchedule={radioSchedule}
         />,
         {
           toggles: {
             mostRead: { enabled: true },
+            radioSchedule: { enabled: true },
           },
+          service: 'afrique',
         },
       );
 

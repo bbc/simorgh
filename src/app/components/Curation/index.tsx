@@ -5,6 +5,8 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -21,6 +23,7 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
   MOST_READ,
+  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -47,9 +50,15 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
+  radioSchedule,
   nthCurationByStyleAndProminence = 1,
 }: CurationProps) => {
-  const componentName = getComponentName(visualStyle, visualProminence);
+  const componentName = getComponentName({
+    visualStyle,
+    visualProminence,
+    radioSchedule,
+  });
+
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -81,6 +90,8 @@ const Curation = ({
           headingBackgroundColour={GHOST}
         />
       );
+    case RADIO_SCHEDULE:
+      return isLive() ? null : <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
