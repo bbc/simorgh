@@ -41,6 +41,7 @@ export default async ({
   page,
   getAgent,
 }: FetchDataFromBffParams) => {
+  const useCerts = certsRequired(pathname);
   const environment = getEnvironment(pathname);
   const isLocal = !environment || environment === 'local';
 
@@ -54,8 +55,8 @@ export default async ({
     page,
   });
 
-  const agent = isLocal || BFF_IS_LOCAL ? undefined : await getAgent();
-  const timeout = isLocal || BFF_IS_LOCAL ? 60000 : null;
+  const agent = useCerts ? await getAgent() : undefined;
+  const timeout = useCerts ? undefined : 60000;
 
   const optHeaders: OptHeaders = isLocal
     ? undefined
