@@ -18,8 +18,6 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   // Remove heavier elements
   $(`
     img, figure, picture, 
-    span[id=BrandLink-topPage],
-    span[id=BrandLink-footer],
     [data-e2e=media-indicator],
     [aria-labelledby=podcast-promo],
     a[href^="#end-of-recommendations"],
