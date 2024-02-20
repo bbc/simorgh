@@ -27,7 +27,7 @@ const Document = ({
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const helmetLinkTags = helmet.link.toComponent();
-  const headScript = helmet.script.toComponent();
+  const helmetScriptTags = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp && !isLite;
   const linksAllowed = !isAmp && !isLite;
@@ -43,13 +43,20 @@ const Document = ({
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
   let cleanedHtml = html;
+  let cleanedHelmetScriptTags = helmetScriptTags;
   let cleanedHelmetLinkTags = helmetLinkTags;
 
   // Apply HTML transformations for Lite pages
   if (isLite) {
-    const litePage = litePageTransform({ html, helmetLinkTags });
-    cleanedHtml = litePage.html;
-    cleanedHelmetLinkTags = litePage.helmetLinkTags;
+    const litePageTransforms = litePageTransform({
+      html,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    cleanedHtml = litePageTransforms.html;
+    cleanedHelmetScriptTags = litePageTransforms.helmetScriptTags;
+    cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
   }
 
   const scriptTags = (
@@ -90,7 +97,7 @@ const Document = ({
         {meta}
         {title}
         {cleanedHelmetLinkTags}
-        {headScript}
+        {cleanedHelmetScriptTags}
         {isCanonical && CANONICAL_STYLES}
         {isLite && <style>{NORMALIZE_STYLES}</style>}
         {isAmp && (

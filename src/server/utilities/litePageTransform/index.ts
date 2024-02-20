@@ -2,25 +2,36 @@ import * as cheerio from 'cheerio';
 
 type Props = {
   html: string;
+  helmetScriptTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];
 };
 
-export default function litePageTransform({ html, helmetLinkTags }: Props) {
+export default function litePageTransform({
+  html,
+  helmetScriptTags,
+  helmetLinkTags,
+}: Props) {
   // Prevent preloading images
-  const cleanedHelmetLinkTags = helmetLinkTags.filter(
+  const cleanedHelmetLinkTags = helmetLinkTags?.filter(
     tag =>
       !tag.props.rel ||
       (tag.props.rel !== 'preload' && tag.props.as !== 'image'),
+  );
+
+  // Strip out some Helmet injected script tags we don't want
+  const cleanedHelmetScriptTags = helmetScriptTags?.filter(
+    tag => !tag.props.src || !tag.props.src?.includes('vendor/require'),
   );
 
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
   const $ = cheerio.load(
     html,
     {
-      // // Uses htmlparser2 which could be faster but less accurate
-      // xml: {
-      //   xmlMode: false,
-      // },
+      // Uses htmlparser2 which could be faster but less accurate
+      // https://cheerio.js.org/docs/advanced/configuring-cheerio#using-htmlparser2-for-html
+      xml: {
+        xmlMode: false,
+      },
     },
     false,
   );
@@ -70,6 +81,7 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
 
   return {
     html: $.html(),
+    helmetScriptTags: cleanedHelmetScriptTags,
     helmetLinkTags: cleanedHelmetLinkTags,
   };
 }
