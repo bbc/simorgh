@@ -14,7 +14,16 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   );
 
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
-  const $ = cheerio.load(html, {}, false);
+  const $ = cheerio.load(
+    html,
+    {
+      // // Uses htmlparser2 which could be faster but less accurate
+      // xml: {
+      //   xmlMode: false,
+      // },
+    },
+    false,
+  );
 
   // Remove includes
   $('div[id^=include-]').parent().remove();
@@ -54,8 +63,7 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   $('header').find('a[href="#content"]').remove();
 
   // Style footer
-  // bit too hacky
-  $('footer').children().first().addClass('lite-footer');
+  $('footer').children().first().addClass('lite-footer'); // bit too hacky
   $('footer').find('ul').addClass('lite-footer-list');
   $('footer').find('li').addClass('lite-footer-list-item');
   $('footer').find('p').addClass('lite-footer-copyright');
