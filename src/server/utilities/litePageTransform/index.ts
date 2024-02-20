@@ -38,7 +38,7 @@ export default function litePageTransform({ html, helmetLinkTags }: Props) {
   // Remove inline styles
   $('[style]').removeAttr('style');
 
-  // Remove class names except for visuallyHiddenText which we want to hide still
+  // Remove class names except for visuallyHiddenText which we want to use for accessibility
   $('[class]').each((_, el) => {
     if (el && !$(el).attr('class')?.includes('visuallyHiddenText')) {
       $(el).removeAttr('class');
