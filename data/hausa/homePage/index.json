@@ -93,6 +93,52 @@
         "title": "Labarai da Rahotanni Na Musamman",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_hausa_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p086pmsx",
+            "state": "next",
+            "startTime": 1893488400000,
+            "link": "/hausa/bbc_hausa_radio/w3cszrny",
+            "brandTitle": "Shirin Safe",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p086p3fz",
+            "state": "onDemand",
+            "startTime": 1585164570000,
+            "link": "/hausa/bbc_hausa_radio/w3cszryz",
+            "brandTitle": "Shirin Yamma",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p086nhzb",
+            "state": "onDemand",
+            "startTime": 1585144770000,
+            "link": "/hausa/bbc_hausa_radio/w3cszrh9",
+            "brandTitle": "Shirin Rana",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p086mrxm",
+            "state": "onDemand",
+            "startTime": 1585117800000,
+            "link": "/hausa/bbc_hausa_radio/w172x6g56sb19pv",
+            "brandTitle": "Shirin Hantsi",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT29M30S"
+          }
+        ]
       }
     ],
     "metadata": {
