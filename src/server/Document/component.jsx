@@ -63,7 +63,7 @@ const Document = ({
       cleanedHelmetScriptTags = litePageTransforms.helmetScriptTags;
       cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
     } catch (e) {
-      // Bail out on error and revert to canonical (or AMP?)
+      // Bail out on error and revert to canonical
       isLiteMode = false;
       isCanonical = true;
       scriptsAllowed = true;
@@ -76,25 +76,6 @@ const Document = ({
       {modernScripts}
       {legacyScripts}
     </IfAboveIE9>
-  );
-
-  const AMP_STYLES = (
-    <style
-      amp-custom=""
-      data-emotion-css={ids.join(' ')}
-      dangerouslySetInnerHTML={{
-        __html: css,
-      }}
-    />
-  );
-
-  const CANONICAL_STYLES = (
-    <style
-      data-emotion-css={ids.join(' ')}
-      dangerouslySetInnerHTML={{
-        __html: css,
-      }}
-    />
   );
 
   // Base styling used for Lite pages
@@ -110,11 +91,24 @@ const Document = ({
         {title}
         {cleanedHelmetLinkTags}
         {cleanedHelmetScriptTags}
-        {isCanonical && CANONICAL_STYLES}
+        {isCanonical && (
+          <style
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{
+              __html: css,
+            }}
+          />
+        )}
         {isLiteMode && <style>{NORMALIZE_STYLES}</style>}
         {isAmp && (
           <>
-            {AMP_STYLES}
+            <style
+              amp-custom=""
+              data-emotion-css={ids.join(' ')}
+              dangerouslySetInnerHTML={{
+                __html: css,
+              }}
+            />
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
               <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
