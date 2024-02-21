@@ -201,10 +201,13 @@ server.get(
         service,
         isAmp,
         isApp,
-        isLite,
+        isLite: isLiteRouteSuffix,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
+
+      // Check if using the .lite route or if the 'save-data' header is set
+      const isLite = isLiteRouteSuffix || headers['save-data'] === 'on';
 
       const { page, renderer_env } = query;
 
