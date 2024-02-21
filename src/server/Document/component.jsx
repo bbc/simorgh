@@ -31,7 +31,7 @@ const Document = ({
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp && !isLite;
   const linksAllowed = !isAmp && !isLite;
-  const isCanonical = !isAmp && !isLite;
+  let isCanonical = !isAmp && !isLite;
 
   const { html, css, ids } = app;
 
@@ -48,15 +48,20 @@ const Document = ({
 
   // Apply HTML transformations for Lite pages
   if (isLite) {
-    const litePageTransforms = litePageTransform({
-      html,
-      helmetScriptTags,
-      helmetLinkTags,
-    });
+    try {
+      const litePageTransforms = litePageTransform({
+        html,
+        helmetScriptTags,
+        helmetLinkTags,
+      });
 
-    cleanedHtml = litePageTransforms.html;
-    cleanedHelmetScriptTags = litePageTransforms.helmetScriptTags;
-    cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
+      cleanedHtml = litePageTransforms.html;
+      cleanedHelmetScriptTags = litePageTransforms.helmetScriptTags;
+      cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
+    } catch (e) {
+      // Bail out on error and revert to canonical (or AMP?)
+      isCanonical = true;
+    }
   }
 
   const scriptTags = (
