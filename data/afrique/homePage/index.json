@@ -151,6 +151,17 @@
             "description": "Le campus de Bingerville à Abidjan, la capitale de la Côte d'Ivoire, possède désormais un ordinateur surpuissant capable d'effectuer des calculs complexes à très grande vitesse.",
             "imageAlt": "Ordinateur supercalculateur",
             "id": "0dafcaff-9b96-7c41-a572-e7ab306ee0cd"
+          },
+          {
+            "type": "link",
+            "title": "Acoutez en direct",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/afrique/bbc_afrique_radio/liveradio",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "https%3A%2F%2Fwww.test.bbc.com%2Fafrique%2Fbbc_afrique_radio%2Fliveradio"
           }
         ],
         "activePage": 1,
@@ -171,52 +182,40 @@
         "visualStyle": "NONE",
         "radioSchedule": [
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-02-12T06:00:00.000Z",
-            "publishedTimeEnd": "2024-02-12T06:15:00.000Z",
-            "publishedTimeDuration": "PT15M",
-            "title": "Le Journal",
-            "brandPid": "p03p35rt",
-            "episodeTitle": "12/02/2024 GMT",
-            "episodePid": "w172z9v713fj15y",
-            "broadcastPid": "p0h3n118",
-            "summary": "Le premier rendez-vous d'information de la matinée."
+            "id": "p0h55kgb",
+            "state": "next",
+            "startTime": "2024-02-19T18:10:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9h4xjm21l8",
+            "brandTitle": "A Vous L'antenne",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+            "duration": "PT20M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-02-12T06:20:00.000Z",
-            "publishedTimeEnd": "2024-02-12T06:30:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "Au Coeur De L'actu",
-            "brandPid": "w13xtvfw",
-            "episodeTitle": "12/02/2024 GMT",
-            "episodePid": "w172z9l0ltdn14r",
-            "broadcastPid": "p0h3n11d",
-            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique"
+            "id": "p0h537p5",
+            "state": "onDemand",
+            "startTime": "2024-02-19T12:20:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9fxrfq0d2x",
+            "brandTitle": "A Vous L'antenne",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+            "duration": "PT10M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-02-12T06:50:00.000Z",
-            "publishedTimeEnd": "2024-02-12T07:00:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "A Vous L'antenne",
-            "brandPid": "p030s6g6",
-            "episodeTitle": "12/02/2024 GMT",
-            "episodePid": "w172z9gb3jpk730",
-            "broadcastPid": "p0h3n11n",
-            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+            "id": "p0h537p3",
+            "state": "onDemand",
+            "startTime": "2024-02-19T12:10:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9lfpg0sjtn",
+            "brandTitle": "Au Coeur De L'actu",
+            "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique",
+            "duration": "PT10M"
           },
           {
-            "serviceId": "bbc_afrique_radio",
-            "publishedTimeStart": "2024-02-12T07:00:00.000Z",
-            "publishedTimeEnd": "2024-02-12T07:10:00.000Z",
-            "publishedTimeDuration": "PT10M",
-            "title": "Le Journal",
-            "brandPid": "p03p35rt",
-            "episodeTitle": "12/02/2024 GMT",
-            "episodePid": "w172z9tt9r45hqf",
-            "broadcastPid": "p0h3n69h",
-            "summary": "Le premier rendez-vous d'information de la matinée."
+            "id": "p0h523rx",
+            "state": "onDemand",
+            "startTime": "2024-02-19T09:02:00.000Z",
+            "link": "/afrique/bbc_afrique_radio/w172z9fxrfpzzqp",
+            "brandTitle": "A Vous L'antenne",
+            "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+            "duration": "PT10M"
           }
         ]
       },
@@ -229,7 +228,7 @@
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/afrique/popular/read",
         "mostRead": {
-          "generated": "2024-02-16T10:33:00.74Z",
+          "generated": "2024-02-19T14:17:57.254Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
           "items": [

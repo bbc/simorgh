@@ -52,7 +52,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
 
   const itemList = getItemList({ curations, name: brandName });
-
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -91,6 +90,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   position,
                   visualStyle,
                   mostRead,
+                  radioSchedule,
                 },
                 index,
               ) => {
@@ -101,7 +101,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     visualStyle,
                     visualProminence,
                   });
-
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <Curation
@@ -115,6 +114,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
+                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
