@@ -9953,6 +9953,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress-multi-reporters@npm:1.6.4":
+  version: 1.6.4
+  resolution: "cypress-multi-reporters@npm:1.6.4"
+  dependencies:
+    debug: ^4.3.4
+    lodash: ^4.17.21
+  peerDependencies:
+    mocha: ">=3.1.2"
+  checksum: d13b1eef8ab6295cebdb311313b4eb84dec986e51d92a61e76167c84c750d5200d2c711b1d3c022e4686cf512a2936112a9436de37dbe881547ab5fb83822c4e
+  languageName: node
+  linkType: hard
+
 "cypress-terminal-report@npm:5.3.12":
   version: 5.3.12
   resolution: "cypress-terminal-report@npm:5.3.12"
@@ -20697,7 +20709,7 @@ __metadata:
     next: 14.0.1
     npm-run-all: ^4.1.5
     ts-node: ^10.9.1
-    undici: 5.27.0
+    undici: 6.6.2
   languageName: unknown
   linkType: soft
 
@@ -20778,6 +20790,7 @@ __metadata:
     crypto: 1.0.1
     cypress: 13.6.3
     cypress-axe: 1.5.0
+    cypress-multi-reporters: 1.6.4
     cypress-terminal-report: 5.3.12
     depcheck: 1.4.7
     dotenv: 16.0.3
@@ -22632,12 +22645,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.27.0":
-  version: 5.27.0
-  resolution: "undici@npm:5.27.0"
+"undici@npm:6.6.2":
+  version: 6.6.2
+  resolution: "undici@npm:6.6.2"
   dependencies:
     "@fastify/busboy": ^2.0.0
-  checksum: 3acad25bfe5957aa5edc24eb160b5da7a9c67a5061e2e001929bef4bafed07d93a2accb36d407179c35b3ae56adbe89b49e1dd80d8cea9fdc44dca2037174330
+  checksum: 33f527e010a8bb56b6cd37e7b5395b9b8efc14f175a9beb2c1d32f64bd2e91a8ded6480106095ad1cfca1f6ac214875127de4b89862a5405902e8729af092815
   languageName: node
   linkType: hard
 
