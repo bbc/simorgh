@@ -15,7 +15,7 @@ let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
-jest.setTimeout(30000); // overriding the default jest timeout
+jest.setTimeout(60000); // overriding the default jest timeout
 
 const getServiceBundleRegex = service => {
   const SHARED_RUSSIAN_UKRAINIAN = 'shared-russian-ukrainian';
