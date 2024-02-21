@@ -144,6 +144,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         sizes="(min-width: 1008px) 760px, 100vw"
         className="mediaStyles"
         css={styles.bodyMedia}
+        position={[9]}
       />
     ),
     video: (props: ComponentToRenderProps) => (
@@ -187,7 +188,7 @@ const Post = ({ post }: { post: PostType }) => {
             timestamp={timestamp}
           />
           {headerBlocks.map(headerBlock => (
-            <PostHeadings headerBlock={headerBlock} />
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
         </span>
       </Heading>
