@@ -29,9 +29,13 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const helmetScriptTags = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
-  const scriptsAllowed = !isAmp && !isLite;
-  const linksAllowed = !isAmp && !isLite;
-  let isCanonical = !isAmp && !isLite;
+
+  // Bit icky but we need to reassign these to allow them to be modified later
+  let isLiteMode = isLite;
+
+  let scriptsAllowed = !isAmp && !isLiteMode;
+  let linksAllowed = !isAmp && !isLiteMode;
+  let isCanonical = !isAmp && !isLiteMode;
 
   const { html, css, ids } = app;
 
@@ -47,7 +51,7 @@ const Document = ({
   let cleanedHelmetLinkTags = helmetLinkTags;
 
   // Apply HTML transformations for Lite pages
-  if (isLite) {
+  if (isLiteMode) {
     try {
       const litePageTransforms = litePageTransform({
         html,
@@ -60,7 +64,10 @@ const Document = ({
       cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
     } catch (e) {
       // Bail out on error and revert to canonical (or AMP?)
+      isLiteMode = false;
       isCanonical = true;
+      scriptsAllowed = true;
+      linksAllowed = true;
     }
   }
 
@@ -104,7 +111,7 @@ const Document = ({
         {cleanedHelmetLinkTags}
         {cleanedHelmetScriptTags}
         {isCanonical && CANONICAL_STYLES}
-        {isLite && <style>{NORMALIZE_STYLES}</style>}
+        {isLiteMode && <style>{NORMALIZE_STYLES}</style>}
         {isAmp && (
           <>
             {AMP_STYLES}
