@@ -37,6 +37,8 @@ describe('Js bundle requests', () => {
     });
     page = await browser.newPage();
 
+    page.setDefaultNavigationTimeout(0);
+
     page.on('request', request => {
       requests.push(request.url());
     });
@@ -61,11 +63,9 @@ describe('Js bundle requests', () => {
 
           describe(service, () => {
             beforeAll(async () => {
-              await page
-                .setDefaultNavigationTimeout(0)
-                .goto(`${localBaseUrl}${path}`, {
-                  waitUntil: 'networkidle2',
-                });
+              await page.goto(`${localBaseUrl}${path}`, {
+                waitUntil: 'networkidle2',
+              });
             });
 
             afterAll(() => {
