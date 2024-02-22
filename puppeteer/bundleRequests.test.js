@@ -62,7 +62,8 @@ describe('Js bundle requests', () => {
           describe(service, () => {
             beforeAll(async () => {
               await page.goto(`${localBaseUrl}${path}`, {
-                waitUntil: 'networkidle2',
+                waitUntil: 'load',
+                timeout: 0,
               });
             });
 
