@@ -60,6 +60,7 @@ export default ({
     ['model', 'blocks', 0, 'model', versionParameter, 0, 'duration'],
     aresMediaBlock,
   );
+
   const duration = moment.duration(rawDuration, 'seconds');
   const durationSpokenPrefix = pathOr(
     'Duration',
@@ -70,20 +71,23 @@ export default ({
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
-    duration: formatDuration({ duration, padMinutes: true }),
-    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
-      duration,
-      separator,
-    })}`,
-    datetime: path(
-      ['model', 'blocks', 0, 'model', versionParameter, 0, 'durationISO8601'],
-      aresMediaBlock,
-    ),
     type: format === 'audio' ? 'audio' : 'video',
     guidanceMessage: path(
       ['model', 'blocks', 0, 'model', versionParameter, 0, 'warnings', 'short'],
       aresMediaBlock,
     ),
+    // Don't show duration / datetime for live streams
+    ...(!hasWebcastItems && {
+      datetime: path(
+        ['model', 'blocks', 0, 'model', versionParameter, 0, 'durationISO8601'],
+        aresMediaBlock,
+      ),
+      duration: formatDuration({ duration, padMinutes: true }),
+      durationSpoken: `${durationSpokenPrefix} ${formatDuration({
+        duration,
+        separator,
+      })}`,
+    }),
   };
 
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });

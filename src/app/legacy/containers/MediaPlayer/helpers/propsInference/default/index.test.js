@@ -251,9 +251,6 @@ describe('getDefaultProps', () => {
       mediaBlock: validAresWebcastVideoBlock,
       mediaInfo: {
         title: 'Five things ants can teach us about management',
-        duration: '03:11',
-        durationSpoken: 'Duration 3,11',
-        datetime: 'PT3M11S',
         type: 'video',
         guidanceMessage: 'Contains strong language and adult humour.',
       },
@@ -345,9 +342,6 @@ describe('getDefaultProps', () => {
       mediaBlock: validAresWebcastVideoBlockVersionsPresent,
       mediaInfo: {
         title: 'Five things ants can teach us about management',
-        duration: '03:11',
-        durationSpoken: 'Duration 3,11',
-        datetime: 'PT3M11S',
         type: 'video',
         guidanceMessage: 'Contains strong language and adult humour.',
       },
