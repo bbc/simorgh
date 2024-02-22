@@ -61,10 +61,11 @@ describe('Js bundle requests', () => {
 
           describe(service, () => {
             beforeAll(async () => {
-              await page.goto(`${localBaseUrl}${path}`, {
-                waitUntil: 'load',
-                timeout: 0,
-              });
+              await page
+                .setDefaultNavigationTimeout(0)
+                .goto(`${localBaseUrl}${path}`, {
+                  waitUntil: 'networkidle2',
+                });
             });
 
             afterAll(() => {
