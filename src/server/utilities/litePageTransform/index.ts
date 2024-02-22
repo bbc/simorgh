@@ -62,23 +62,22 @@ export default function litePageTransform({
   `).remove();
 
   // Style header
-  $('[data-e2e=dropdown-nav]').remove();
-  $('header').addClass('lite-header');
-  $('#topPage').parent().addClass('lite-header-brand-wrapper');
+  $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
+  $('header').addClass('lite-header'); // Add class to header for custom styling
+  $('#topPage').parent().addClass('lite-header-brand-wrapper'); // Add class to header SVG wrapper for custom styling
 
-  // Not sure how fast 'find' is
-  $('header').find('button').remove();
-  $('header').find('ul').addClass('lite-nav-list');
-  $('header').find('li').addClass('lite-nav-list-item');
+  $('header').find('button').remove(); // Remove mobile menu button
+  $('header').find('ul').addClass('lite-nav-list'); // Add class to nav list for custom styling
+  $('header').find('li').addClass('lite-nav-list-item'); // Add class to nav list items for custom styling
 
-  // Remove header skip to content - probably want to keep this though
+  // Remove header skip to content - may want to keep this though
   $('header').find('a[href="#content"]').remove();
 
   // Style footer
-  $('footer').children().first().addClass('lite-footer'); // bit too hacky
-  $('footer').find('ul').addClass('lite-footer-list');
-  $('footer').find('li').addClass('lite-footer-list-item');
-  $('footer').find('p').addClass('lite-footer-copyright');
+  $('footer').children().first().addClass('lite-footer'); // bit too hacky - add class to footer SVG wrapper for custom styling
+  $('footer').find('ul').addClass('lite-footer-list'); // Add class to footer list for custom styling
+  $('footer').find('li').addClass('lite-footer-list-item'); // Add class to footer list items for custom styling
+  $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
 
   return {
     html: $.html(),
