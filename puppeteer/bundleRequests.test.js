@@ -15,7 +15,9 @@ let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
-jest.setTimeout(60000); // overriding the default jest timeout
+const TIMEOUT = 60000;
+
+jest.setTimeout(TIMEOUT); // overriding the default jest timeout
 
 const getServiceBundleRegex = service => {
   const SHARED_RUSSIAN_UKRAINIAN = 'shared-russian-ukrainian';
@@ -37,7 +39,7 @@ describe('Js bundle requests', () => {
     });
     page = await browser.newPage();
 
-    page.setDefaultNavigationTimeout(0);
+    page.setDefaultNavigationTimeout(TIMEOUT);
 
     page.on('request', request => {
       requests.push(request.url());
