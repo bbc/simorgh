@@ -14,7 +14,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'service',
         'isAmp',
         'isApp',
-        'isLite',
+        'isLite', // isLite is here as it can come from the .lite route extension
         'variant',
         'id',
         'assetUri',
@@ -23,7 +23,15 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
       routeProps,
     ),
     pick(
-      ['pageData', 'status', 'error', 'timeOnServer', 'errorCode', 'isCaf'],
+      [
+        'pageData',
+        'status',
+        'error',
+        'timeOnServer',
+        'errorCode',
+        'isCaf',
+        'isLite', // isLite is here as it can come from the 'save-data' header setting
+      ],
       initialData,
     ),
     {
