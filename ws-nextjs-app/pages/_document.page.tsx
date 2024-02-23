@@ -39,12 +39,20 @@ export default class AppDocument extends Document<DocProps> {
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
-    let helmetMetaTags =
+    const helmetMetaTags =
       helmet.meta.toComponent() as unknown as React.ReactElement[];
-    let helmetLinkTags =
+    const helmetLinkTags =
       helmet.link.toComponent() as unknown as React.ReactElement[];
-    let helmetScriptTags =
+    const helmetScriptTags =
       helmet.script.toComponent() as unknown as React.ReactElement[];
+
+    const helmetProps = {
+      htmlAttrs,
+      title,
+      helmetMetaTags,
+      helmetLinkTags,
+      helmetScriptTags,
+    };
 
     if (isLiteMode) {
       try {
@@ -61,33 +69,14 @@ export default class AppDocument extends Document<DocProps> {
         });
 
         initialProps.html = liteHtml;
-        helmetMetaTags = liteHelmetMetaTags;
-        helmetLinkTags = liteHelmetLinkTags;
-        helmetScriptTags = liteHelmetScriptTags;
+        helmetProps.helmetMetaTags = liteHelmetMetaTags;
+        helmetProps.helmetLinkTags = liteHelmetLinkTags;
+        helmetProps.helmetScriptTags = liteHelmetScriptTags;
       } catch (e) {
         // Bail out and return normal version on error
-        return {
-          ...initialProps,
-          helmetProps: {
-            htmlAttrs,
-            title,
-            helmetMetaTags,
-            helmetLinkTags,
-            helmetScriptTags,
-          },
-          isApp,
-          isLiteMode: false,
-        };
+        return { ...initialProps, helmetProps, isApp, isLiteMode: false };
       }
     }
-
-    const helmetProps = {
-      htmlAttrs,
-      title,
-      helmetMetaTags,
-      helmetLinkTags,
-      helmetScriptTags,
-    };
 
     return { ...initialProps, helmetProps, isApp, isLiteMode };
   }
@@ -113,6 +102,7 @@ export default class AppDocument extends Document<DocProps> {
             {helmetLinkTags}
             {helmetMetaTags}
             {helmetScriptTags}
+            <meta name="robots" content="noindex" />
             <style>{LITE_STYLES}</style>
           </head>
           <body>

@@ -91,7 +91,7 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {isApp && <meta name="robots" content="noindex" />}
+        {(isApp || isLiteMode) && <meta name="robots" content="noindex" />}
         {modifiedHelmetMetaTags}
         {title}
         {modifiedHelmetLinkTags}
