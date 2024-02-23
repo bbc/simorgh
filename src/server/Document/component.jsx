@@ -46,22 +46,26 @@ const Document = ({
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
-  let cleanedHtml = html;
-  let cleanedHelmetScriptTags = helmetScriptTags;
-  let cleanedHelmetLinkTags = helmetLinkTags;
+  let modifiedHtml = html;
+  let modifiedHelmetScriptTags = helmetScriptTags;
+  let modifiedHelmetLinkTags = helmetLinkTags;
 
   // Apply HTML transformations for Lite pages
   if (isLiteMode) {
     try {
-      const litePageTransforms = litePageTransform({
+      const {
+        html: liteHtml,
+        helmetScriptTags: liteHelmetScriptTags,
+        helmetLinkTags: liteHelmetLinkTags,
+      } = litePageTransform({
         html,
         helmetScriptTags,
         helmetLinkTags,
       });
 
-      cleanedHtml = litePageTransforms.html;
-      cleanedHelmetScriptTags = litePageTransforms.helmetScriptTags;
-      cleanedHelmetLinkTags = litePageTransforms.helmetLinkTags;
+      modifiedHtml = liteHtml;
+      modifiedHelmetScriptTags = liteHelmetScriptTags;
+      modifiedHelmetLinkTags = liteHelmetLinkTags;
     } catch (e) {
       // Bail out on error and revert to canonical
       isLiteMode = false;
@@ -87,8 +91,8 @@ const Document = ({
         {isApp && <meta name="robots" content="noindex" />}
         {meta}
         {title}
-        {cleanedHelmetLinkTags}
-        {cleanedHelmetScriptTags}
+        {modifiedHelmetLinkTags}
+        {modifiedHelmetScriptTags}
         {isCanonical && (
           <style
             data-emotion-css={ids.join(' ')}
@@ -119,7 +123,7 @@ const Document = ({
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        <div id="root" dangerouslySetInnerHTML={{ __html: cleanedHtml }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: modifiedHtml }} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
