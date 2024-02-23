@@ -53,15 +53,12 @@ const Document = ({
   // Apply HTML transformations for Lite pages
   if (isLiteMode) {
     try {
-      const {
-        html: liteHtml,
-        helmetScriptTags: liteHelmetScriptTags,
-        helmetLinkTags: liteHelmetLinkTags,
-      } = litePageTransform({
-        html,
-        helmetScriptTags,
-        helmetLinkTags,
-      });
+      const { liteHtml, liteHelmetScriptTags, liteHelmetLinkTags } =
+        litePageTransform({
+          html,
+          helmetScriptTags,
+          helmetLinkTags,
+        });
 
       modifiedHtml = liteHtml;
       modifiedHelmetScriptTags = liteHelmetScriptTags;

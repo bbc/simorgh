@@ -54,7 +54,7 @@ export default function litePageTransform({
 
   // Remove heavier elements
   $(`
-    img, figure, picture, 
+    img, figure, picture,
     [data-e2e=media-indicator],
     [aria-labelledby=podcast-promo],
     a[href^="#end-of-recommendations"],
@@ -80,8 +80,8 @@ export default function litePageTransform({
   $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
 
   return {
-    html: $.html(),
-    helmetScriptTags: cleanedHelmetScriptTags,
-    helmetLinkTags: cleanedHelmetLinkTags,
+    liteHtml: $.html(),
+    liteHelmetScriptTags: cleanedHelmetScriptTags,
+    liteHelmetLinkTags: cleanedHelmetLinkTags,
   };
 }
