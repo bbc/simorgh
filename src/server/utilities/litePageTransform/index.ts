@@ -68,15 +68,13 @@ export default function litePageTransform({
 
   $('header').find('button').remove(); // Remove mobile menu button
   $('header').find('ul').addClass('lite-nav-list'); // Add class to nav list for custom styling
-  $('header').find('li').addClass('lite-nav-list-item'); // Add class to nav list items for custom styling
 
   // Remove header skip to content - may want to keep this though
   $('header').find('a[href="#content"]').remove();
 
   // Style footer
   $('footer').children().first().addClass('lite-footer'); // bit too hacky - add class to footer SVG wrapper for custom styling
-  $('footer').find('ul').addClass('lite-footer-list'); // Add class to footer list for custom styling
-  $('footer').find('li').addClass('lite-footer-list-item'); // Add class to footer list items for custom styling
+  $('footer').find('ul').addClass('lite-nav-list'); // Add class to footer list for custom styling
   $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
 
   return {
