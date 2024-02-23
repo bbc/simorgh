@@ -44,6 +44,9 @@ export default function litePageTransform({
   // Remove embeds
   $('[data-e2e*="embed"]').parent().remove();
 
+  // Remove style tags
+  $('style').remove();
+
   // Remove inline styles
   $('[style]').removeAttr('style');
 
