@@ -24,8 +24,8 @@ const Document = ({
   links,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
-  const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
+  const helmetMetaTags = helmet.meta.toComponent();
   const helmetLinkTags = helmet.link.toComponent();
   const helmetScriptTags = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
@@ -47,20 +47,27 @@ const Document = ({
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
   let modifiedHtml = html;
+  let modifiedHelmetMetaTags = helmetMetaTags;
   let modifiedHelmetScriptTags = helmetScriptTags;
   let modifiedHelmetLinkTags = helmetLinkTags;
 
   // Apply HTML transformations for Lite pages
   if (isLiteMode) {
     try {
-      const { liteHtml, liteHelmetScriptTags, liteHelmetLinkTags } =
-        litePageTransform({
-          html,
-          helmetScriptTags,
-          helmetLinkTags,
-        });
+      const {
+        liteHtml,
+        liteHelmetMetaTags,
+        liteHelmetScriptTags,
+        liteHelmetLinkTags,
+      } = litePageTransform({
+        html,
+        helmetMetaTags,
+        helmetScriptTags,
+        helmetLinkTags,
+      });
 
       modifiedHtml = liteHtml;
+      modifiedHelmetMetaTags = liteHelmetMetaTags;
       modifiedHelmetScriptTags = liteHelmetScriptTags;
       modifiedHelmetLinkTags = liteHelmetLinkTags;
     } catch (e) {
@@ -80,13 +87,13 @@ const Document = ({
   );
 
   // Styling used for Lite pages - consider moving to a separate file
-  const LITE_STYLES = `html{line-height:1.15;-webkit-text-size-adjust:100%;font-size:16px;font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;}body{margin:0}ul{padding-inline-start:1.25rem}ol{padding-inline-start:1.25rem;list-style-type:none;}.lite-header-brand-wrapper{background-color:#b80000; padding:0.625rem;display:flex;justify-content:space-between;align-items:center;}#brandSvgHeader,#brandSvgFooter{fill:white;height:1.5rem;}#topPage,#footer{display:flex;}main,aside,[data-e2e=related-content-heading],[data-e2e=top-stories-heading],[data-e2e=features-analysis-heading],[data-e2e=most-read]{padding:0 1.25rem;}.lite-footer{background-color:#b80000; padding:0.625rem;}[class*=visuallyHiddenText]{clip-path:inset(100%);clip rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}.lite-nav-list{margin:0;padding:0.625rem;list-style-type:none; border-bottom:1px solid #E6E8EA;display:flex;flex-wrap:wrap;gap:0.625rem;}.lite-footer-copyright{padding-inline-start:0.625rem;}`;
+  const LITE_STYLES = `html{line-height:1.15;-webkit-text-size-adjust:100%;font-size:16px;font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;}body{margin:0}ul{padding-inline-start:1.25rem}ol{padding-inline-start:1.25rem;list-style-type:none;}.lite-header-brand-wrapper{background-color:#b80000; padding:0.625rem;display:flex;justify-content:space-between;align-items:center;}#brandSvgHeader,#brandSvgFooter{fill:white;height:1.5rem;}#topPage,#footer{display:flex;}main,aside,[data-e2e=related-content-heading],[data-e2e=top-stories-heading],[data-e2e=features-analysis-heading],[data-e2e=most-read]{padding:0 1.25rem;}.lite-footer{background-color:#b80000; padding:0.625rem;}[class*=visuallyHiddenText]{clip-path:inset(100%);clip rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}.lite-nav-list{margin:0;padding:0.625rem;list-style-type:none; border-bottom:1px solid #E6E8EA;display:flex;flex-wrap:wrap;gap:0.625rem;}.lite-footer-copyright{padding-inline-start:0.625rem;}.most-read-list-item{display:flex;flex-direction:row;gap:0.625rem;margin-bottom:0.625rem;}`;
 
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {isApp && <meta name="robots" content="noindex" />}
-        {meta}
+        {modifiedHelmetMetaTags}
         {title}
         {modifiedHelmetLinkTags}
         {modifiedHelmetScriptTags}

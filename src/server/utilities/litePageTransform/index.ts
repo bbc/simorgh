@@ -2,12 +2,14 @@ import * as cheerio from 'cheerio';
 
 type Props = {
   html: string;
+  helmetMetaTags: React.ReactElement[];
   helmetScriptTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];
 };
 
 export default function litePageTransform({
   html,
+  helmetMetaTags,
   helmetScriptTags,
   helmetLinkTags,
 }: Props) {
@@ -61,6 +63,9 @@ export default function litePageTransform({
     p[id^=end-of-recommendations]
   `).remove();
 
+  // Style most-read
+  $('[data-e2e=most-read]').find('li > div').addClass('most-read-list-item'); // Style most read list items
+
   // Style header
   $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
   $('header').addClass('lite-header'); // Add class to header for custom styling
@@ -79,6 +84,7 @@ export default function litePageTransform({
 
   return {
     liteHtml: $.html(),
+    liteHelmetMetaTags: helmetMetaTags,
     liteHelmetScriptTags: cleanedHelmetScriptTags,
     liteHelmetLinkTags: cleanedHelmetLinkTags,
   };
