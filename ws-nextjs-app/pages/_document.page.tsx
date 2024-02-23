@@ -39,32 +39,54 @@ export default class AppDocument extends Document<DocProps> {
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
-    const helmetMetaTags = helmet.meta.toComponent();
-    const helmetLinkTags = helmet.link.toComponent();
-    const helmetScriptTags = helmet.script.toComponent();
+    let helmetMetaTags =
+      helmet.meta.toComponent() as unknown as React.ReactElement[];
+    let helmetLinkTags =
+      helmet.link.toComponent() as unknown as React.ReactElement[];
+    let helmetScriptTags =
+      helmet.script.toComponent() as unknown as React.ReactElement[];
 
-    const { html: originalHtml } = initialProps;
+    if (isLiteMode) {
+      try {
+        const {
+          liteHtml,
+          liteHelmetLinkTags,
+          liteHelmetMetaTags,
+          liteHelmetScriptTags,
+        } = litePageTransform({
+          html: initialProps.html,
+          helmetLinkTags,
+          helmetMetaTags,
+          helmetScriptTags,
+        });
 
-    const {
-      liteHtml,
-      liteHelmetLinkTags,
-      liteHelmetMetaTags,
-      liteHelmetScriptTags,
-    } = litePageTransform({
-      html: initialProps.html,
-      helmetLinkTags: helmetLinkTags as unknown as React.ReactElement[],
-      helmetMetaTags: helmetMetaTags as unknown as React.ReactElement[],
-      helmetScriptTags: helmetScriptTags as unknown as React.ReactElement[],
-    });
-
-    initialProps.html = isLiteMode ? liteHtml : originalHtml;
+        initialProps.html = liteHtml;
+        helmetMetaTags = liteHelmetMetaTags;
+        helmetLinkTags = liteHelmetLinkTags;
+        helmetScriptTags = liteHelmetScriptTags;
+      } catch (e) {
+        // Bail out and return normal version on error
+        return {
+          ...initialProps,
+          helmetProps: {
+            htmlAttrs,
+            title,
+            helmetMetaTags,
+            helmetLinkTags,
+            helmetScriptTags,
+          },
+          isApp,
+          isLiteMode: false,
+        };
+      }
+    }
 
     const helmetProps = {
       htmlAttrs,
       title,
-      helmetMetaTags: isLiteMode ? liteHelmetMetaTags : helmetMetaTags,
-      helmetLinkTags: isLiteMode ? liteHelmetLinkTags : helmetLinkTags,
-      helmetScriptTags: isLiteMode ? liteHelmetScriptTags : helmetScriptTags,
+      helmetMetaTags,
+      helmetLinkTags,
+      helmetScriptTags,
     };
 
     return { ...initialProps, helmetProps, isApp, isLiteMode };
