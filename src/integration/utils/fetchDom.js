@@ -31,10 +31,16 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
       try {
         const response = await fetch(url, headers && { headers });
         const html = await response.text();
-        const dom = new JSDOM(
-          html,
-          runScripts ? { runScripts: 'dangerously' } : {},
-        );
+
+        let options = { url };
+        if (runScripts) {
+          options = {
+            ...options,
+            runScripts: 'dangerously',
+          };
+        }
+
+        const dom = new JSDOM(html, options);
 
         resolve(dom);
       } catch (error) {
