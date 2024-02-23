@@ -34,7 +34,6 @@ type Props = {
   fetchpriority?: 'high';
 };
 
-const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
   roundNumber((y / x) * 100)
@@ -66,17 +65,20 @@ const Image = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
-  const [aspectRatioX, aspectRatioY] =
-    (aspectRatio && aspectRatio) ||
-    (hasDimensions && [width, height]) ||
-    DEFAULT_ASPECT_RATIO;
+  const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
+
+  const [aspectRatioX, aspectRatioY] = aspectRatio ||
+    (hasDimensions && [width, height]) || [null, null];
+
   const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
-    aspectRatioX,
-    aspectRatioY,
+    aspectRatioX as number,
+    aspectRatioY as number,
   );
+
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
     if (pageType !== FRONT_PAGE) return fallbackSrcSet;
@@ -104,6 +106,9 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
+          hasFixedAspectRatio
+            ? styles.wrapperFixedAspectRatio
+            : styles.wrapperResponsiveRatio,
           showPlaceholder && [
             styles.placeholder,
             {
@@ -114,7 +119,7 @@ const Image = ({
           ],
         ]}
         style={{
-          paddingBottom: legacyBrowserAspectRatio,
+          paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
         }}
       >
         {isAmp ? (
@@ -165,9 +170,18 @@ const Image = ({
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
-              css={styles.image}
+              css={[
+                styles.image,
+                hasFixedAspectRatio
+                  ? styles.imageFixedAspectRatio
+                  : styles.imageResponsiveRatio,
+              ]}
               fetchpriority={fetchpriority}
-              style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
+              style={{
+                aspectRatio: hasFixedAspectRatio
+                  ? `${aspectRatioX} / ${aspectRatioY}`
+                  : 'auto',
+              }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>
         )}
