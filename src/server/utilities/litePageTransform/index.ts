@@ -46,11 +46,8 @@ export default function litePageTransform({
   // Remove embeds
   $('[data-e2e*="embed"]').parent().remove();
 
-  // Remove style tags
-  $('style').remove();
-
-  // Remove inline styles
-  $('[style]').removeAttr('style');
+  // Remove style and inline style tags
+  $('style, [style]').remove();
 
   // Remove all class names except for visuallyHiddenText which we want to use for accessibility
   $('[class]').each((_, el) => {
@@ -62,9 +59,7 @@ export default function litePageTransform({
   $(`
     img, figure, picture,
     [data-e2e=media-indicator],
-    [aria-labelledby=podcast-promo],
-    a[href^="#end-of-recommendations"],
-    p[id^=end-of-recommendations]
+    [aria-labelledby=podcast-promo]
   `).remove();
 
   // Style most-read
