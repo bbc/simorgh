@@ -58,7 +58,7 @@ export default function litePageTransform({
   // Remove embeds
   $('[data-e2e*="embed"]').parent().remove();
 
-  // Remove heavier elements
+  // Remove image, figure and picture elements
   $('img, figure, picture').remove();
 
   // Remove podcast promos
@@ -69,7 +69,6 @@ export default function litePageTransform({
 
   // Style header
   $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
-  $('header').addClass('lite-header'); // Add class to header for custom styling
   $('#topPage').parent().addClass('lite-header-brand-wrapper'); // Add class to header SVG wrapper for custom styling
 
   $('header').find('button').remove(); // Remove mobile menu button
