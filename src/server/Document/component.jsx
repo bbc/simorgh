@@ -25,6 +25,21 @@ const Document = ({
   legacyScripts,
   links,
 }) => {
+  // Determine render mode to ensure we don't mix up rendered elements
+  let renderMode = 'canonical';
+
+  switch (true) {
+    case isAmp:
+      renderMode = 'amp';
+      break;
+    case isLite:
+      renderMode = 'lite';
+      break;
+    default:
+      renderMode = 'canonical';
+      break;
+  }
+
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const title = helmet.title.toComponent();
   const helmetMetaTags = helmet.meta.toComponent();
@@ -42,13 +57,10 @@ const Document = ({
   const { html, css, ids } = app;
 
   // Bit icky but we need to reassign these to allow them to be modified later
-  let isLiteMode = isLite;
   let renderedHtml = html;
 
-  let isCanonical = !isAmp && !isLiteMode;
-
   // Apply HTML transformations for Lite pages
-  if (isLiteMode) {
+  if (renderMode === 'lite') {
     try {
       const {
         liteHtml,
@@ -68,27 +80,30 @@ const Document = ({
       helmetProps.helmetScriptTags = liteHelmetScriptTags;
     } catch (e) {
       // Bail out on error and revert to canonical
-      isLiteMode = false;
-      isCanonical = true;
+      renderMode = 'canonical';
     }
   }
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = isCanonical && { className: 'no-js' };
+  const noJsHtmlAttrs = renderMode === 'canonical' && { className: 'no-js' };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
-  const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
+  const ampGeoPendingAttrs = renderMode === 'amp' && {
+    className: 'amp-geo-pending',
+  };
 
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {(isApp || isLiteMode) && <meta name="robots" content="noindex" />}
+        {(isApp || renderMode === 'lite') && (
+          <meta name="robots" content="noindex" />
+        )}
         {title}
         {helmetProps.helmetMetaTags}
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
-        {isCanonical && (
+        {renderMode === 'canonical' && (
           <style
             data-emotion-css={ids.join(' ')}
             dangerouslySetInnerHTML={{
@@ -96,8 +111,8 @@ const Document = ({
             }}
           />
         )}
-        {isLiteMode && <style>{LITE_STYLES}</style>}
-        {isAmp && (
+        {renderMode === 'lite' && <style>{LITE_STYLES}</style>}
+        {renderMode === 'amp' && (
           <>
             <style
               amp-custom=""
@@ -119,7 +134,7 @@ const Document = ({
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />
-        {isCanonical && (
+        {renderMode === 'canonical' && (
           <>
             <script
               dangerouslySetInnerHTML={{
