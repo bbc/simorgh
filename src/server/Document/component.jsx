@@ -45,16 +45,7 @@ const Document = ({
   let isLiteMode = isLite;
   let renderedHtml = html;
 
-  let scriptsAllowed = !isAmp && !isLiteMode;
-  let linksAllowed = !isAmp && !isLiteMode;
   let isCanonical = !isAmp && !isLiteMode;
-
-  // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = isCanonical && { className: 'no-js' };
-
-  // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
-  // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
-  const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
   // Apply HTML transformations for Lite pages
   if (isLiteMode) {
@@ -79,17 +70,15 @@ const Document = ({
       // Bail out on error and revert to canonical
       isLiteMode = false;
       isCanonical = true;
-      scriptsAllowed = true;
-      linksAllowed = true;
     }
   }
 
-  const scriptTags = (
-    <IfAboveIE9>
-      {modernScripts}
-      {legacyScripts}
-    </IfAboveIE9>
-  );
+  // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
+  const noJsHtmlAttrs = isCanonical && { className: 'no-js' };
+
+  // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
+  // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
+  const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
@@ -130,22 +119,25 @@ const Document = ({
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />
-        {scriptsAllowed && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
-            }}
-          />
-        )}
-        {linksAllowed && links}
-        {scriptsAllowed && scriptTags}
-        {scriptsAllowed && (
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `document.documentElement.classList.remove("no-js");`,
-            }}
-          />
+        {isCanonical && (
+          <>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.SIMORGH_DATA=${serialisedData}`,
+              }}
+            />
+            {links}
+            <IfAboveIE9>
+              {modernScripts}
+              {legacyScripts}
+            </IfAboveIE9>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `document.documentElement.classList.remove("no-js");`,
+              }}
+            />
+          </>
         )}
       </body>
     </html>
