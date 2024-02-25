@@ -40,12 +40,6 @@ export default function litePageTransform({
     false,
   );
 
-  // Remove includes
-  $('div[id^=include-]').parent().remove();
-
-  // Remove embeds
-  $('[data-e2e*="embed"]').parent().remove();
-
   // Remove style
   $('style').remove();
 
@@ -58,12 +52,17 @@ export default function litePageTransform({
     $(el).removeAttr('class');
   });
 
+  // Remove includes
+  $('div[id^=include-]').parent().remove();
+
+  // Remove embeds
+  $('[data-e2e*="embed"]').parent().remove();
+
   // Remove heavier elements
-  $(`
-    img, figure, picture,
-    [data-e2e=media-indicator],
-    [aria-labelledby=podcast-promo]
-  `).remove();
+  $('img, figure, picture').remove();
+
+  // Remove podcast promos
+  $('[aria-labelledby=podcast-promo]').parent().remove();
 
   // Style most-read
   $('[data-e2e=most-read]').find('li > div').addClass('most-read-list-item'); // Style most read list items
