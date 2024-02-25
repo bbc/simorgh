@@ -1,13 +1,13 @@
 import * as cheerio from 'cheerio';
 
+export const LITE_STYLES = `html{line-height:1.15;-webkit-text-size-adjust:100%;font-size:16px;font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;}body{margin:0}ul{padding-inline-start:1.25rem}ol{padding-inline-start:1.25rem;list-style-type:none;}.lite-header-brand-wrapper{background-color:#b80000; padding:0.625rem;display:flex;justify-content:space-between;align-items:center;}#brandSvgHeader,#brandSvgFooter{fill:white;height:1.5rem;}#topPage,#footer{display:flex;}main,aside,[data-e2e=related-content-heading],[data-e2e=top-stories-heading],[data-e2e=features-analysis-heading],[data-e2e=most-read]{padding:0 1.25rem;}.lite-footer{background-color:#b80000; padding:0.625rem;}.visuallyHiddenText{clip-path:inset(100%);clip rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}.lite-nav-list{margin:0;padding:0.625rem;list-style-type:none; border-bottom:1px solid #E6E8EA;display:flex;flex-wrap:wrap;gap:0.625rem;}.lite-footer-copyright{padding-inline-start:0.625rem;}.most-read-list-item{display:flex;flex-direction:row;gap:0.625rem;margin-bottom:0.625rem;}`;
+
 type Props = {
   html: string;
   helmetMetaTags: React.ReactElement[];
   helmetScriptTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];
 };
-
-export const LITE_STYLES = `html{line-height:1.15;-webkit-text-size-adjust:100%;font-size:16px;font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;}body{margin:0}ul{padding-inline-start:1.25rem}ol{padding-inline-start:1.25rem;list-style-type:none;}.lite-header-brand-wrapper{background-color:#b80000; padding:0.625rem;display:flex;justify-content:space-between;align-items:center;}#brandSvgHeader,#brandSvgFooter{fill:white;height:1.5rem;}#topPage,#footer{display:flex;}main,aside,[data-e2e=related-content-heading],[data-e2e=top-stories-heading],[data-e2e=features-analysis-heading],[data-e2e=most-read]{padding:0 1.25rem;}.lite-footer{background-color:#b80000; padding:0.625rem;}.visuallyHiddenText{clip-path:inset(100%);clip rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}.lite-nav-list{margin:0;padding:0.625rem;list-style-type:none; border-bottom:1px solid #E6E8EA;display:flex;flex-wrap:wrap;gap:0.625rem;}.lite-footer-copyright{padding-inline-start:0.625rem;}.most-read-list-item{display:flex;flex-direction:row;gap:0.625rem;margin-bottom:0.625rem;}`;
 
 export default function litePageTransform({
   html,
@@ -46,8 +46,11 @@ export default function litePageTransform({
   // Remove embeds
   $('[data-e2e*="embed"]').parent().remove();
 
-  // Remove style and inline style tags
-  $('style, [style]').remove();
+  // Remove style
+  $('style').remove();
+
+  // Remove inline style attributes
+  $('[style]').removeAttr('style');
 
   // Remove all class names except for visuallyHiddenText which we want to use for accessibility
   $('[class]').each((_, el) => {

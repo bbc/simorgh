@@ -32,14 +32,22 @@ const Document = ({
   const helmetScriptTags = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
 
+  const helmetProps = {
+    htmlAttrs,
+    helmetMetaTags,
+    helmetLinkTags,
+    helmetScriptTags,
+  };
+
+  const { html, css, ids } = app;
+
   // Bit icky but we need to reassign these to allow them to be modified later
   let isLiteMode = isLite;
+  let renderedHtml = html;
 
   let scriptsAllowed = !isAmp && !isLiteMode;
   let linksAllowed = !isAmp && !isLiteMode;
   let isCanonical = !isAmp && !isLiteMode;
-
-  const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = isCanonical && { className: 'no-js' };
@@ -48,30 +56,25 @@ const Document = ({
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
-  let modifiedHtml = html;
-  let modifiedHelmetMetaTags = helmetMetaTags;
-  let modifiedHelmetScriptTags = helmetScriptTags;
-  let modifiedHelmetLinkTags = helmetLinkTags;
-
   // Apply HTML transformations for Lite pages
   if (isLiteMode) {
     try {
       const {
         liteHtml,
+        liteHelmetLinkTags,
         liteHelmetMetaTags,
         liteHelmetScriptTags,
-        liteHelmetLinkTags,
       } = litePageTransform({
         html,
+        helmetLinkTags,
         helmetMetaTags,
         helmetScriptTags,
-        helmetLinkTags,
       });
 
-      modifiedHtml = liteHtml;
-      modifiedHelmetMetaTags = liteHelmetMetaTags;
-      modifiedHelmetScriptTags = liteHelmetScriptTags;
-      modifiedHelmetLinkTags = liteHelmetLinkTags;
+      renderedHtml = liteHtml;
+      helmetProps.helmetMetaTags = liteHelmetMetaTags;
+      helmetProps.helmetLinkTags = liteHelmetLinkTags;
+      helmetProps.helmetScriptTags = liteHelmetScriptTags;
     } catch (e) {
       // Bail out on error and revert to canonical
       isLiteMode = false;
@@ -92,10 +95,10 @@ const Document = ({
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {(isApp || isLiteMode) && <meta name="robots" content="noindex" />}
-        {modifiedHelmetMetaTags}
         {title}
-        {modifiedHelmetLinkTags}
-        {modifiedHelmetScriptTags}
+        {helmetProps.helmetMetaTags}
+        {helmetProps.helmetLinkTags}
+        {helmetProps.helmetScriptTags}
         {isCanonical && (
           <style
             data-emotion-css={ids.join(' ')}
@@ -126,7 +129,7 @@ const Document = ({
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        <div id="root" dangerouslySetInnerHTML={{ __html: modifiedHtml }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
