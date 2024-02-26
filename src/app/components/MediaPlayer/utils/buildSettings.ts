@@ -7,9 +7,7 @@ const isTestURL = () => {
 
   if (onClient()) {
     const search = new URLSearchParams(window.location.search);
-    isTestRender =
-      process.env.NODE_ENV !== 'production' &&
-      search.get('renderer_env') === 'test';
+    isTestRender = search.get('renderer_env') === 'test';
   }
 
   return isTestRender;
@@ -37,15 +35,13 @@ const buildConfig = ({
     placeholderSrc,
   } = playerProps;
 
-  const isTest = isTestURL();
-
   const playlistItem = { versionID: clipId, kind, duration: rawDuration };
 
   return {
     product: 'news',
     superResponsive: true,
     ...(counterName && { counterName }),
-    ...(isTest && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    ...(isTestURL() && { mediator: { host: 'open.test.bbc.co.uk' } }),
     playlistObject: {
       title,
       holdingImageURL: placeholderSrc,

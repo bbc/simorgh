@@ -7,7 +7,7 @@ import {
 } from '#models/propTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
-const MorphLivePageMediaPlayer = ({ blocks, className }) => {
+const LegacyLivePageMediaPlayer = ({ blocks, className }) => {
   const { id } = useContext(RequestContext);
 
   return (
@@ -22,9 +22,9 @@ const MorphLivePageMediaPlayer = ({ blocks, className }) => {
   );
 };
 
-MorphLivePageMediaPlayer.propTypes = mediaPlayerPropTypes;
-MorphLivePageMediaPlayer.defaultProps = {
+LegacyLivePageMediaPlayer.propTypes = mediaPlayerPropTypes;
+LegacyLivePageMediaPlayer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
 
-export default MorphLivePageMediaPlayer;
+export default LegacyLivePageMediaPlayer;

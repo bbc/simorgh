@@ -11,3 +11,12 @@ declare namespace JSX {
     div: DivProps;
   }
 }
+
+declare global {
+  interface Window {
+    requirejs: (
+      bumpVersion: string[],
+      callback: (Bump: BumpType) => void,
+    ) => void;
+  }
+}

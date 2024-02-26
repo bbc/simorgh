@@ -1,8 +1,7 @@
-/* eslint-disable import/order */
 import React, { useState } from 'react';
-import MediaPlayer from '.';
 import { act } from '@testing-library/react-hooks';
 import { Helmet } from 'react-helmet';
+import MediaPlayer from '.';
 import sampleBlocks from './fixture';
 import { render } from '../react-testing-library-with-providers';
 

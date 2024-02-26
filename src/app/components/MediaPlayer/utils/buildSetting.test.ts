@@ -3,6 +3,14 @@ import buildConfig from './buildSettings';
 import blocks from '../fixture';
 
 describe('buildSettings', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
+
+  afterEach(() => {
+    delete process.env.NODE_ENV;
+  });
+
   it('Should process an AresMedia block into a valid playlist item.', () => {
     const result = buildConfig({
       id: 'testID',
@@ -44,8 +52,6 @@ describe('buildSettings', () => {
   });
 
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
-    process.env.NODE_ENV = 'production';
-
     const result = buildConfig({
       id: 'testID',
       blocks,

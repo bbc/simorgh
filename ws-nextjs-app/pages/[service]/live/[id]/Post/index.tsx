@@ -9,7 +9,7 @@ import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
 import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
-import MorphMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer/morphMediaPlayer';
+import LegacyMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer/legacyMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -151,7 +151,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     ),
     video: (props: ComponentToRenderProps) =>
       isLive() ? (
-        <MorphMediaPlayer
+        <LegacyMediaPlayer
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}

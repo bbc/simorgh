@@ -52,12 +52,3 @@ export type BuildConfigProps = {
   blocks: MediaBlock[];
   counterName: string | null;
 };
-
-declare global {
-  interface Window {
-    requirejs: (
-      bumpVersion: string[],
-      callback: (Bump: BumpType) => void,
-    ) => void;
-  }
-}
