@@ -15,8 +15,10 @@ const singlePostWithTitleAndSubtitle = postFixture.data.results[2];
 
 describe('Post', () => {
   beforeEach(() => {
+    // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
   });
+
   afterEach(() => {
     jest.useRealTimers();
   });
