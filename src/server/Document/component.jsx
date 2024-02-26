@@ -48,7 +48,6 @@ const Document = ({
   const serialisedData = serialiseForScript(data);
 
   const helmetProps = {
-    htmlAttrs,
     helmetMetaTags,
     helmetLinkTags,
     helmetScriptTags,
@@ -75,6 +74,7 @@ const Document = ({
       });
 
       renderedHtml = liteHtml;
+
       helmetProps.helmetMetaTags = liteHelmetMetaTags;
       helmetProps.helmetLinkTags = liteHelmetLinkTags;
       helmetProps.helmetScriptTags = liteHelmetScriptTags;
