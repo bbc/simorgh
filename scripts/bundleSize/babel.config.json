@@ -1,0 +1,1 @@
+{ "transform": {},"extensionsToTreatAsEsm": ['.js'], "extends": "../../babel.config.main" }
