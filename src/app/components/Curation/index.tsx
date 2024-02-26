@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -91,7 +90,7 @@ const Curation = ({
         />
       );
     case RADIO_SCHEDULE:
-      return isLive() ? null : <RadioSchedule initialData={radioSchedule} />;
+      return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
