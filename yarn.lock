@@ -2618,6 +2618,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData"
+  languageName: unknown
+  linkType: soft
+
 "@bbc/web-vitals@npm:1.2.0":
   version: 1.2.0
   resolution: "@bbc/web-vitals@npm:1.2.0"
