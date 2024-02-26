@@ -47,7 +47,7 @@ export type Props = {
 };
 
 export type BuildConfigProps = {
-  id?: string;
+  id: string | null;
   pageType: string;
   blocks: MediaBlock[];
   counterName: string | null;
