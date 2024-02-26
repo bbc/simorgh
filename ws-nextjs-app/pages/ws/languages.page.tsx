@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { useEffect } from "react"
 import omit from 'ramda/src/omit';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
