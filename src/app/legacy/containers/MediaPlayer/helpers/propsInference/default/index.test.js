@@ -263,6 +263,8 @@ describe('getDefaultProps', () => {
         durationSpoken: 'Duration 3,11',
         datetime: 'PT3M11S',
         type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
         guidanceMessage: 'Contains strong language and adult humour.',
       },
       placeholderSrc:
@@ -310,6 +312,8 @@ describe('getDefaultProps', () => {
         durationSpoken: 'Duration 3,11',
         datetime: 'PT3M11S',
         type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
         guidanceMessage: 'Contains strong language and adult humour.',
       },
       placeholderSrc:
@@ -357,6 +361,8 @@ describe('getDefaultProps', () => {
         durationSpoken: 'Duration 3,11',
         datetime: 'PT3M11S',
         type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
         guidanceMessage: 'Contains strong language and adult humour.',
       },
       placeholderSrc:
