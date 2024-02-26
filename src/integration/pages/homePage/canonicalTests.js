@@ -14,16 +14,14 @@ export default ({ service, pageData, displayAds }) => {
     runCanonicalAdsTests();
   }
 
-  describe('Most Read', () => {
-    it('should render the correct number of curations, including most read', () => {
-      const curationsWithSummaries = pageData.curations.filter(
-        ({ summaries, mostRead, radioSchedule }) =>
-          (summaries && summaries?.length > 0) || mostRead || radioSchedule,
-      );
+  it('should render the correct number of curations, including most read & radio schedule', () => {
+    const curationsWithSummaries = pageData.curations.filter(
+      ({ summaries, mostRead, radioSchedule }) =>
+        (summaries && summaries?.length > 0) || mostRead || radioSchedule,
+    );
 
-      const numberOfCurations = document.querySelectorAll('main h2').length;
-      expect(numberOfCurations).toEqual(curationsWithSummaries.length);
-    });
+    const numberOfCurations = document.querySelectorAll('main h2').length;
+    expect(numberOfCurations).toEqual(curationsWithSummaries.length);
   });
 
   describe('Radio Schedule', () => {
