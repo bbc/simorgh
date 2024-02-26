@@ -20,12 +20,7 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   Omit<ComponentPropsWithoutRef<T>, keyof VisuallyHiddenTextProps<T>>) => {
   const Component = as || 'span';
   return (
-    <Component
-      css={styles.visuallyHiddenText}
-      id={id}
-      tabIndex={tabIndex}
-      {...htmlAttributes}
-    >
+    <Component id={id} tabIndex={tabIndex} {...htmlAttributes}>
       {children}
     </Component>
   );

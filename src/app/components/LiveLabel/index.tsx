@@ -4,7 +4,7 @@
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { LiveLabelProps } from './types';
-import styles from './index.styles';
+// import styles from './index.styles';
 import Text from './Text';
 import Pulse from './Pulse';
 
@@ -15,14 +15,14 @@ const LiveLabel = ({
   offScreenText,
   className,
 }: PropsWithChildren<LiveLabelProps>) => {
-  const pulse = [
-    styles.liveLabelPulse,
-    className === 'first-promo' && styles.firstPromo,
-  ];
+  // const pulse = [
+  //   styles.liveLabelPulse,
+  //   className === 'first-promo' && styles.firstPromo,
+  // ];
 
   return (
     <>
-      <Pulse className={className} width="16" height="16" css={pulse} />
+      <Pulse className={className} width="16" height="16" />
       <Text lang={lang} id={id} offScreenText={offScreenText}>
         {children}
       </Text>
