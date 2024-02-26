@@ -25,7 +25,7 @@ const BumpLoader = () => (
 );
 
 const VideoPlayer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
-  const playerElementRef = useRef();
+  const playerElementRef = useRef(null);
 
   useEffect(() => {
     try {

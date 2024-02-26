@@ -1,3 +1,5 @@
+export {};
+
 declare module '*.md';
 
 declare namespace JSX {
