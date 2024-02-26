@@ -14,7 +14,14 @@ jest.mock('react', () => ({
 describe('MediaPlayer', () => {
   describe('BUMP Loader', () => {
     beforeEach(() => {
+      // @ts-expect-error Only mocking config
+      window.require = { config: jest.fn() };
       (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+    });
+
+    afterEach(() => {
+      // @ts-expect-error Only mocking config
+      window.require = null;
     });
 
     it('Loads requireJS and Bump4', async () => {
