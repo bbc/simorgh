@@ -93,12 +93,106 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   }
 }
 
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #545658;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+  }
+}
+
+.emotion-2>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-2>span>p:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <div />
+    <button
+      type="button"
+    >
+      TODO: CLICK TO SEE VIDEO
+    </button>
+    <figcaption
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <span
+        role="text"
+      >
+        <span
+          class="emotion-4"
+        >
+          Wetin we call dis Video, 
+        </span>
+        <p>
+          BBC launch trailer for We Know Our Place women's sport campaign"
+        </p>
+      </span>
+    </figcaption>
   </div>
 </div>
 `;
@@ -196,12 +290,106 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   }
 }
 
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #545658;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+  }
+}
+
+.emotion-2>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-2>span>p:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <div />
+    <button
+      type="button"
+    >
+      TODO: CLICK TO SEE VIDEO
+    </button>
+    <figcaption
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <span
+        role="text"
+      >
+        <span
+          class="emotion-4"
+        >
+          Wetin we call dis Video, 
+        </span>
+        <p>
+          BBC launch trailer for We Know Our Place women's sport campaign"
+        </p>
+      </span>
+    </figcaption>
   </div>
 </div>
 `;
