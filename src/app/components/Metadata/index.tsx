@@ -75,6 +75,7 @@ const MetadataContainer = ({
     twitterCreator,
     twitterSite,
     iTunesAppId,
+    googleSiteVerification,
   } = useContext(ServiceContext);
   const {
     palette: { BRAND_BACKGROUND },
@@ -123,6 +124,12 @@ const MetadataContainer = ({
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
       <meta name="theme-color" content={BRAND_BACKGROUND} />
+      {googleSiteVerification && (
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
+      )}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
