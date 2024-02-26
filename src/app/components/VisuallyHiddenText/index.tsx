@@ -2,7 +2,7 @@
 /** @jsxRuntime classic */
 import { jsx } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
-import styles from './index.styles';
+// import styles from './index.styles';
 
 interface VisuallyHiddenTextProps<T extends React.ElementType> {
   id?: string;
