@@ -6,7 +6,7 @@ import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
-import styles from './styles';
+// import styles from './styles';
 
 const MaskedImage = ({
   imageUrl,
@@ -34,10 +34,10 @@ const MaskedImage = ({
 
   return (
     <div
-      css={[
-        styles.maskedImageWrapper,
-        isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
-      ]}
+    // css={[
+    //   styles.maskedImageWrapper,
+    //   isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
+    // ]}
     >
       <Image
         alt=""

@@ -5,7 +5,7 @@ import Text from '#app/components/Text';
 
 import MaskedImage from './MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
-import styles from './styles';
+// import styles from './styles';
 
 const Header = ({
   showLiveLabel,
@@ -24,20 +24,14 @@ const Header = ({
 }) => {
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
 
-  const Title = (
-    <span
-      css={isHeaderImage ? styles.titleWithImage : styles.titleWithoutImage}
-    >
-      {title}
-    </span>
-  );
+  const Title = <span>{title}</span>;
 
   return (
-    <div css={styles.headerContainer}>
-      <div css={styles.backgroundContainer}>
-        <div css={styles.backgroundColor} />
+    <div>
+      <div>
+        <div />
       </div>
-      <div css={styles.contentContainer}>
+      <div>
         {isHeaderImage ? (
           <MaskedImage
             imageUrl={imageUrl}
@@ -45,13 +39,7 @@ const Header = ({
             imageWidth={imageWidth}
           />
         ) : null}
-        <div
-          css={
-            isHeaderImage
-              ? styles.textContainerWithImage
-              : styles.textContainerWithoutImage
-          }
-        >
+        <div>
           <Heading size="trafalgar" level={1} id="content" tabIndex={-1}>
             {showLiveLabel ? (
               <LiveLabelHeader isHeaderImage={isHeaderImage}>
@@ -61,19 +49,7 @@ const Header = ({
               Title
             )}
           </Heading>
-          {description && (
-            <Text
-              as="p"
-              css={[
-                styles.description,
-                showLiveLabel &&
-                  !isHeaderImage &&
-                  styles.layoutWithLiveLabelNoImage,
-              ]}
-            >
-              {description}
-            </Text>
-          )}
+          {description && <Text as="p">{description}</Text>}
         </div>
       </div>
     </div>
