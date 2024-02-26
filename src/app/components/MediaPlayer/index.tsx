@@ -50,7 +50,11 @@ const VideoPlayer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
 
 const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   return (
-    <button type="button" onClick={() => setter(false)}>
+    <button
+      type="button"
+      data-e2e="media-player__placeholder"
+      onClick={() => setter(false)}
+    >
       TODO: CLICK TO SEE VIDEO
     </button>
   );
