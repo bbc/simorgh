@@ -42,7 +42,7 @@ describe('buildSettings', () => {
   });
 
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
-    process.env.NODE_ENV = 'live';
+    process.env.NODE_ENV = 'production';
 
     const result = buildConfig({
       id: 'testID',
