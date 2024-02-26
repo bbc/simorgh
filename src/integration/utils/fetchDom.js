@@ -31,7 +31,6 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
       try {
         const response = await fetch(url, headers && { headers });
         const html = await response.text();
-        
         const dom = new JSDOM(html, {
           url,
           ...(runScripts ? { runScripts: 'dangerously' } : {}),
