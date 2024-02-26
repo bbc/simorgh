@@ -1,12 +1,13 @@
 /* eslint-disable import/order */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { BumpType, Props } from './types.d';
+import { BumpType, PlayerConfig, Props } from './types.d';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Caption from '#app/legacy/containers/Caption';
 import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
+import { RequestContext } from '#contexts/RequestContext';
 
 const logger = nodeLogger(__filename);
 
@@ -25,14 +26,8 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const VideoPlayer = ({ id, pageType, blocks, counterName }: Props) => {
+const VideoPlayer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   const playerElementRef = useRef();
-  const playerConfig = buildConfig({
-    id,
-    pageType,
-    blocks,
-    counterName,
-  });
 
   useEffect(() => {
     try {
@@ -61,8 +56,9 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   );
 };
 
-const Player = ({ id, pageType, blocks, counterName }: Props) => {
+const Player = ({ blocks }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
+  const { id, pageType, counterName } = useContext(RequestContext);
 
   const { mediaInfo, captionBlock } = getPlayerProps({
     assetId: id,
@@ -70,18 +66,24 @@ const Player = ({ id, pageType, blocks, counterName }: Props) => {
     blocks,
   });
 
+  const playerConfig = buildConfig({
+    id,
+    pageType,
+    blocks,
+    counterName,
+  });
+
+  if (playerConfig?.playlistObject == null) {
+    return null;
+  }
+
   return (
     <>
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder setter={setIsPlaceholder} />
       ) : (
-        <VideoPlayer
-          id={id}
-          pageType={pageType}
-          blocks={blocks}
-          counterName={counterName}
-        />
+        <VideoPlayer playerConfig={playerConfig} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
     </>

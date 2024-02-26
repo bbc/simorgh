@@ -1,6 +1,6 @@
 export type PlayerConfig = {
-  product: string;
-  superResponsive: true;
+  product?: string;
+  superResponsive: boolean;
   counterName?: string;
   playlistObject: {
     title: string;
@@ -43,10 +43,14 @@ export type MediaBlock = {
 };
 
 export type Props = {
-  id: string;
+  blocks: MediaBlock[];
+};
+
+export type BuildConfigProps = {
+  id?: string;
   pageType: string;
   blocks: MediaBlock[];
-  counterName?: string;
+  counterName: string | null;
 };
 
 declare global {

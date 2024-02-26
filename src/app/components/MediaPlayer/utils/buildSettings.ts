@@ -1,6 +1,6 @@
 import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import onClient from '#app/lib/utilities/onClient';
-import { Props } from '../types.d';
+import { BuildConfigProps } from '../types.d';
 
 const isTestURL = () => {
   let isTestRender = false;
@@ -15,7 +15,12 @@ const isTestURL = () => {
   return isTestRender;
 };
 
-const buildConfig = ({ id, blocks, pageType, counterName }: Props) => {
+const buildConfig = ({
+  id,
+  blocks,
+  pageType,
+  counterName,
+}: BuildConfigProps) => {
   const playerProps = getPlayerProps({
     assetId: id,
     pageType,
@@ -38,7 +43,7 @@ const buildConfig = ({ id, blocks, pageType, counterName }: Props) => {
 
   return {
     product: 'news',
-    superResponsive: true as const,
+    superResponsive: true,
     ...(counterName && { counterName }),
     ...(isTest && { mediator: { host: 'open.test.bbc.co.uk' } }),
     playlistObject: {

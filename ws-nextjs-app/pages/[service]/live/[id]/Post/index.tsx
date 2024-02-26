@@ -9,12 +9,14 @@ import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
 import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
+import MorphMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer/morphMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import isLive from '#lib/utilities/isLive';
 import styles from './styles';
 import {
   Post as PostType,
@@ -147,13 +149,20 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) => (
-      <LivePageMediaPlayer
-        blocks={props.blocks}
-        className="mediaStyles"
-        css={styles.bodyMedia}
-      />
-    ),
+    video: (props: ComponentToRenderProps) =>
+      isLive() ? (
+        <MorphMediaPlayer
+          blocks={props.blocks}
+          className="mediaStyles"
+          css={styles.bodyMedia}
+        />
+      ) : (
+        <LivePageMediaPlayer
+          blocks={props.blocks}
+          className="mediaStyles"
+          css={styles.bodyMedia}
+        />
+      ),
     social: SocialEmbedContainer,
   };
 

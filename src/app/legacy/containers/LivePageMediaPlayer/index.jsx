@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
-import { GridItemMediumNoMargin } from '#components/Grid';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
@@ -8,17 +7,10 @@ import {
 import MediaPlayer from '../../../components/MediaPlayer';
 
 const LivePageMediaPlayer = ({ blocks, className }) => {
-  const { id, pageType, counterName } = useContext(RequestContext);
-
   return (
-    <GridItemMediumNoMargin className={className}>
-      <MediaPlayer
-        blocks={blocks}
-        assetId={id}
-        pageType={pageType}
-        counterName={counterName}
-      />
-    </GridItemMediumNoMargin>
+    <div className={className}>
+      <MediaPlayer blocks={blocks} />
+    </div>
   );
 };
 

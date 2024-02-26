@@ -8,6 +8,7 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
+      counterName: null,
     });
     expect(result).toStrictEqual({
       product: 'news',
@@ -37,6 +38,7 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
+      counterName: null,
     });
     expect(result).toHaveProperty('mediator', { host: 'open.test.bbc.co.uk' });
   });
@@ -48,6 +50,7 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks,
       pageType: 'article',
+      counterName: null,
     });
     expect(result?.mediator).toBe(undefined);
   });
@@ -62,7 +65,18 @@ describe('buildSettings', () => {
       id: 'testID',
       blocks: sampleBlock,
       pageType: 'article',
+      counterName: null,
     });
     expect(result).toBe(null);
+  });
+
+  it('Should return super responsive as true, to make the video expand to its parent container.', () => {
+    const result = buildConfig({
+      id: 'testID',
+      blocks,
+      pageType: 'article',
+      counterName: null,
+    });
+    expect(result?.superResponsive).toStrictEqual(true);
   });
 });

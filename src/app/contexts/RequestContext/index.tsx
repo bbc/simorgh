@@ -20,6 +20,7 @@ export type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
+  counterName: string | null;
   env: Environments;
   id: string | null;
   isAmp: boolean;
