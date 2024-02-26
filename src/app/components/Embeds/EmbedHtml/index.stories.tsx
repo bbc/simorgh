@@ -21,9 +21,9 @@ export const IDT2QuotePic = () => (
   <EmbedHtml embeddableContent={quotePicEmbedHtml} />
 );
 
-export const Riddle = () => ({
-  component: <EmbedHtml embeddableContent={riddleHTML} />,
+export const Riddle = {
+  render: () => <EmbedHtml embeddableContent={riddleHTML} />,
   parameters: { chromatic: { disableSnapshot: true } },
-});
+};
 
 export const VJCanonical = () => <EmbedHtml embeddableContent={vjHTML} />;
