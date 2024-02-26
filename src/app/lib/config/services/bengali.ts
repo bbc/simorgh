@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
         page: 'পৃষ্ঠা',
