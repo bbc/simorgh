@@ -13,6 +13,10 @@ const GEL_SPACING_THREE_QRTS = `0.75rem`;
 
 const Wrapper = styled.div`
   position: relative;
+
+  .no-js & {
+    display: none;
+  }
 `;
 
 const SkipLink = styled.a`
@@ -57,6 +61,7 @@ const SkipLinkWrapper = ({
   text,
   children,
   endTextVisuallyHidden,
+  describedById,
 }) => {
   const dictionary = dictionaryFactory({ provider });
   return (
@@ -65,6 +70,7 @@ const SkipLinkWrapper = ({
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
         className="focusIndicatorRemove"
+        {...(describedById && { 'aria-describedby': describedById })}
       >
         <span>{detokenise(text, dictionary)}</span>
       </SkipLink>
@@ -76,6 +82,10 @@ const SkipLinkWrapper = ({
   );
 };
 
+SkipLinkWrapper.defaultProps = {
+  describedById: null,
+};
+
 SkipLinkWrapper.propTypes = {
   provider: string.isRequired,
   service: string.isRequired,
@@ -83,6 +93,7 @@ SkipLinkWrapper.propTypes = {
   children: node.isRequired,
   text: string.isRequired,
   endTextVisuallyHidden: string.isRequired,
+  describedById: string,
 };
 
 export default SkipLinkWrapper;
