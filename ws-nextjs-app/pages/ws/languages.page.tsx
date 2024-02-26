@@ -5,7 +5,6 @@ import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
-import { ATIData } from '#app/components/ATIAnalytics/types';
 import MetadataContainer from '#app/components/Metadata';
 
 import {
