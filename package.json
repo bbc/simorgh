@@ -103,7 +103,7 @@
     "@loadable/server": "5.15.3",
     "@optimizely/react-sdk": "2.9.2",
     "aws-embedded-metrics": "2.0.6",
-    "colors": "^1.4.0",
+    "colors": "1.4.0",
     "compression": "1.7.4",
     "core-js": "3.30.2",
     "dotenv": "16.0.3",
