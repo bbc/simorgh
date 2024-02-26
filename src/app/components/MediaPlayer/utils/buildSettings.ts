@@ -8,7 +8,8 @@ const isTestURL = () => {
   if (onClient()) {
     const search = new URLSearchParams(window.location.search);
     isTestRender =
-      process.env.NODE_ENV !== 'live' && search.get('renderer_env') === 'test';
+      process.env.NODE_ENV !== 'production' &&
+      search.get('renderer_env') === 'test';
   }
 
   return isTestRender;
