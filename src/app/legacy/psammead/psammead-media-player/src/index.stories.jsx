@@ -147,11 +147,7 @@ storiesOf('Components/Media Player', module)
         />
       </ThemeProvider>
     ),
-    {
-      notes, knobs: { escapeHTML: false }, parameters: {
-        chromatic: { delay: 8000 },
-      },
-    },
+    { notes, knobs: { escapeHTML: false }, chromatic: { delay: 8000 }, },
   );
 
 storiesOf('Components/Media Player', module)
