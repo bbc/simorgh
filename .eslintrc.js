@@ -70,7 +70,7 @@ module.exports = {
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
-    'no-only-tests/no-only-tests': ['error', { fix: true }],
+    'no-only-tests/no-only-tests': 'error',
   },
   settings: {
     'import/resolver': {
