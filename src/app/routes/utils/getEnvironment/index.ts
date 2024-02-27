@@ -5,7 +5,8 @@ import Url from 'url-parse';
 export default (pathname: string) => {
   const url = new Url(`https://www.bbc.com${pathname}`, true);
 
-  const rendererEnv = url?.query?.renderer_env;
+  // const rendererEnv = url?.query?.renderer_env;
+  const rendererEnv = 'live' as string;
 
   switch (rendererEnv) {
     case 'test':
