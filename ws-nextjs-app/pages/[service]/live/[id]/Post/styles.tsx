@@ -9,13 +9,14 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
-      float: 'inline-start',
+      display: 'inline-block',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       display: 'inline-block',
       width: '100%',
+      lineHeight: 0,
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
@@ -29,7 +30,7 @@ export default {
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
-      float: 'inline-start',
+      display: 'inline-block',
     }),
   postHeadings: ({ palette }: Theme) =>
     css({
