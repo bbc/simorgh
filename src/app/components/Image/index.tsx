@@ -88,6 +88,8 @@ const Image = ({
     if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
     return undefined;
   };
+  const imgSrcSet = getImgSrcSet();
+  const imgSizes = getImgSizes();
 
   return (
     <>
@@ -142,8 +144,8 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              {...(srcSet && { srcSet: getImgSrcSet() })}
-              {...(getImgSizes() && { sizes: getImgSizes() })}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               fallback=""
               attribution={attribution}
               {...(preload && { 'data-hero': true })}
@@ -164,8 +166,8 @@ const Image = ({
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
-              {...(srcSet && { srcSet: getImgSrcSet() })}
-              {...(getImgSizes() && { sizes: getImgSizes() })}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
