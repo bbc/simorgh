@@ -1,6 +1,6 @@
+import Head from 'next/head';
 import * as React from 'react';
 import { GetServerSideProps } from 'next';
-import { Helmet } from 'react-helmet';
 import omit from 'ramda/src/omit';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -116,10 +116,10 @@ const pageLayout = () => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <Helmet>
+      <Head>
         <style>{morphCSS1}</style>
         <style>{morphCSS2}</style>
-      </Helmet>
+      </Head>
       <main>
         <div id="page" className="atlas-languages-page">
           <div className="container c-open" role="main">
