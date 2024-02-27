@@ -13,7 +13,6 @@ import { StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
-const TEN_MINUTES_IN_MILLISECONDS = 10 * 1000;
 
 const overrideRadioSchedule = (
   data: { curations: CurationData[] },
@@ -27,24 +26,27 @@ const overrideRadioSchedule = (
 
     // First radio program is tomorrow
     radioSchedule[0].state = 'next';
-    radioSchedule[0].startTime = new Date(
-      currentTime + ONE_DAY_IN_MILLISECONDS,
-    ).toISOString();
+    const originalStartTime = new Date(radioSchedule[0].startTime);
+    const tomorrow = new Date(currentTime + ONE_DAY_IN_MILLISECONDS);
+    tomorrow.setHours(originalStartTime.getHours());
+    tomorrow.setMinutes(originalStartTime.getMinutes());
+    tomorrow.setSeconds(originalStartTime.getSeconds());
+    tomorrow.setMilliseconds(originalStartTime.getMilliseconds());
+    radioSchedule[0].startTime = new Date(tomorrow).toISOString();
 
     // Second radio programme is live
     radioSchedule[1].state = 'live';
-    radioSchedule[1].startTime = new Date(
-      currentTime - TEN_MINUTES_IN_MILLISECONDS,
-    ).toISOString();
+    radioSchedule[1].startTime = new Date(currentTime).toISOString();
     radioSchedule[1].link = `${service}/bbc_${service}_radio/liveradio`;
 
     // Radio Program started 1 day ago
     radioSchedule[2].startTime = new Date(
-      currentTime - ONE_DAY_IN_MILLISECONDS,
+      new Date(radioSchedule[2].startTime).getTime() - ONE_DAY_IN_MILLISECONDS,
     ).toISOString();
     // Radio Program started 2 days ago
     radioSchedule[3].startTime = new Date(
-      currentTime - 2 * ONE_DAY_IN_MILLISECONDS,
+      new Date(radioSchedule[2].startTime).getTime() -
+        2 * ONE_DAY_IN_MILLISECONDS,
     ).toISOString();
   }
 };
