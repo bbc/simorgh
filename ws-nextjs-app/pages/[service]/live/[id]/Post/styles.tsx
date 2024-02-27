@@ -38,6 +38,12 @@ export default {
       display: `block`,
       margin: 0 /* Reset */,
     }),
+  heading: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_1_MIN_WIDTH]: {
+        lineHeight: '0', // required to prevent the background colour appearing above red top border
+      },
+    }),
   postHeadline: ({ spacings }: Theme) =>
     css({
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
