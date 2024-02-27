@@ -4,7 +4,7 @@ import blocks from '../fixture';
 
 describe('buildSettings', () => {
   beforeEach(() => {
-    jest.resetAllMocks();
+    jest.restoreAllMocks();
   });
 
   afterEach(() => {
