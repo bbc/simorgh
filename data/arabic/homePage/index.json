@@ -103,40 +103,40 @@
         "visualStyle": "NONE",
         "radioSchedule": [
           {
-            "id": "p086pmsd",
+            "id": "p0h5jzqz",
             "state": "next",
-            "startTime": 1893488400000,
-            "link": "/arabic/bbc_arabic_radio/w172x9qcpbyd2h1",
-            "brandTitle": "العالم هذا الصباح",
-            "summary": "الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.",
-            "duration": "PT1H30M30S"
+            "startTime": "2024-02-21T14:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zm1vj3jnxh6",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
           },
           {
-            "id": "p086pjpz",
+            "id": "p0h5fqfz",
             "state": "onDemand",
-            "startTime": 1585191540000,
-            "link": "/arabic/bbc_arabic_radio/w172x9qcpbyctzs",
-            "brandTitle": "العالم هذا الصباح",
-            "summary": "الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.",
-            "duration": "PT2H"
+            "startTime": "2024-02-21T05:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zkzm2l3t0ds",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
           },
           {
-            "id": "p086pjpx",
+            "id": "p0h5bjvz",
             "state": "onDemand",
-            "startTime": 1585189800000,
-            "link": "/arabic/bbc_arabic_radio/w172xbf7kbvtt4h",
-            "brandTitle": "موجز الأنباء",
-            "summary": "نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية",
-            "duration": "PT2M"
+            "startTime": "2024-02-20T14:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zm1vj3jl0l3",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
           },
           {
-            "id": "p086pjpp",
+            "id": "p0h579xx",
             "state": "onDemand",
-            "startTime": 1585188000000,
-            "link": "/arabic/bbc_arabic_radio/w172xbdf3m84fx2",
-            "brandTitle": "نشرة الأخبار",
-            "summary": "نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا",
-            "duration": "PT6M"
+            "startTime": "2024-02-20T05:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zkzm2l3q3hp",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
           }
         ]
       }
