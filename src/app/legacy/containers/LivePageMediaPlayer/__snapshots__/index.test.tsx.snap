@@ -2,6 +2,10 @@
 
 exports[`MediaPlayer Calls the amp media player 1`] = `
 .emotion-0 {
+  margin: 1px;
+}
+
+.emotion-1 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -18,37 +22,37 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-0 {
+  .emotion-1 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-0>span>p {
+.emotion-1>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-1>span>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
+  .emotion-1 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -57,13 +61,13 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-0 {
+  .emotion-1 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -75,21 +79,24 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 }
 
 <div>
-  <div>
+  <div
+    class="MediaPlayer emotion-0"
+  >
     <button
+      data-e2e="media-player__placeholder"
       type="button"
     >
       TODO: CLICK TO SEE VIDEO
     </button>
     <figcaption
-      class="emotion-0 emotion-1"
+      class="emotion-1 emotion-2"
       dir="ltr"
     >
       <span
         role="text"
       >
         <span
-          class="emotion-2"
+          class="emotion-3"
         >
           Wetin we call dis Video, 
         </span>
@@ -104,6 +111,10 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
 .emotion-0 {
+  margin: 1px;
+}
+
+.emotion-1 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -120,37 +131,37 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-0 {
+  .emotion-1 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-0>span>p {
+.emotion-1>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-0>span>p:last-child {
+.emotion-1>span>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
+  .emotion-1 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -159,13 +170,13 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 @media (min-width: 63rem) {
-  .emotion-0 {
+  .emotion-1 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -177,21 +188,24 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 <div>
-  <div>
+  <div
+    class="MediaPlayer emotion-0"
+  >
     <button
+      data-e2e="media-player__placeholder"
       type="button"
     >
       TODO: CLICK TO SEE VIDEO
     </button>
     <figcaption
-      class="emotion-0 emotion-1"
+      class="emotion-1 emotion-2"
       dir="ltr"
     >
       <span
         role="text"
       >
         <span
-          class="emotion-2"
+          class="emotion-3"
         >
           Wetin we call dis Video, 
         </span>

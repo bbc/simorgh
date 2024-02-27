@@ -7,6 +7,8 @@ import { GridItemMediumNoMargin } from '../../components/Grid';
 const LegacyLivePageMediaPlayer = ({ blocks, className }: Props) => {
   const { id } = useContext(RequestContext);
 
+  if (id === null) return null;
+
   return (
     <GridItemMediumNoMargin
       className={className}

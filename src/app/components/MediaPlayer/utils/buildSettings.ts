@@ -19,11 +19,15 @@ const buildConfig = ({
   pageType,
   counterName,
 }: BuildConfigProps) => {
+  if (id === null) return null;
+
   const playerProps = getPlayerProps({
     assetId: id,
     pageType,
     blocks,
   });
+
+  const { mediaInfo, captionBlock } = playerProps;
 
   if (playerProps.mediaBlock === null) {
     return null;
@@ -37,7 +41,7 @@ const buildConfig = ({
 
   const playlistItem = { versionID: clipId, kind, duration: rawDuration };
 
-  return {
+  const playerConfig = {
     product: 'news',
     superResponsive: true,
     ...(counterName && { counterName }),
@@ -49,6 +53,8 @@ const buildConfig = ({
       ...(guidanceMessage && { guidance: guidanceMessage }),
     },
   };
+
+  return { mediaInfo, captionBlock, playerConfig };
 };
 
 export default buildConfig;

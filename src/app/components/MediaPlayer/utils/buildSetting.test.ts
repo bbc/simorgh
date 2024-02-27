@@ -18,7 +18,7 @@ describe('buildSettings', () => {
       pageType: 'article',
       counterName: null,
     });
-    expect(result).toStrictEqual({
+    expect(result?.playerConfig).toStrictEqual({
       product: 'news',
       superResponsive: true,
       playlistObject: {
@@ -48,7 +48,9 @@ describe('buildSettings', () => {
       pageType: 'article',
       counterName: null,
     });
-    expect(result).toHaveProperty('mediator', { host: 'open.test.bbc.co.uk' });
+    expect(result?.playerConfig).toHaveProperty('mediator', {
+      host: 'open.test.bbc.co.uk',
+    });
   });
 
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
@@ -58,7 +60,7 @@ describe('buildSettings', () => {
       pageType: 'article',
       counterName: null,
     });
-    expect(result?.mediator).toBe(undefined);
+    expect(result?.playerConfig.mediator).toBe(undefined);
   });
 
   it('Should return null if the AresMedia block contains invalid data.', () => {
@@ -83,6 +85,6 @@ describe('buildSettings', () => {
       pageType: 'article',
       counterName: null,
     });
-    expect(result?.superResponsive).toStrictEqual(true);
+    expect(result?.playerConfig.superResponsive).toStrictEqual(true);
   });
 });

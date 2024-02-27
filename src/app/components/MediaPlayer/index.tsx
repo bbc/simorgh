@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { BumpType, PlayerConfig, Props } from './types';
@@ -62,22 +61,16 @@ const Player = ({ blocks }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { id, pageType, counterName } = useContext(RequestContext);
 
-  const { mediaInfo, captionBlock } = getPlayerProps({
-    assetId: id,
-    pageType,
-    blocks,
-  });
-
-  const playerConfig = buildConfig({
+  const config = buildConfig({
     id,
     pageType,
     blocks,
     counterName,
   });
 
-  if (playerConfig?.playlistObject == null) {
-    return null;
-  }
+  if (config === null) return null;
+
+  const { mediaInfo, captionBlock, playerConfig } = config;
 
   return (
     <>
