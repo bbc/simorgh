@@ -93,6 +93,52 @@
         "title": "Gumzo mitandaoni",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_swahili_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6p3dc",
+            "state": "next",
+            "startTime": "2024-02-27T15:29:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkbkk1v5v7s",
+            "brandTitle": "Dira Ya Dunia",
+            "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "duration": "PT1H"
+          },
+          {
+            "id": "p0h6kmvt",
+            "state": "onDemand",
+            "startTime": "2024-02-27T03:59:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkb4tpjssyn",
+            "brandTitle": "Amka Na BBC",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "duration": "PT29M30S"
+          },
+          {
+            "id": "p0h6js7j",
+            "state": "onDemand",
+            "startTime": "2024-02-27T02:59:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkb4tpjsp6j",
+            "brandTitle": "Amka Na BBC",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "duration": "PT29M30S"
+          },
+          {
+            "id": "p0h6h4d2",
+            "state": "onDemand",
+            "startTime": "2024-02-26T15:29:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkbkk1v2ybp",
+            "brandTitle": "Dira Ya Dunia",
+            "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "duration": "PT1H"
+          }
+        ]
       }
     ],
     "metadata": {
