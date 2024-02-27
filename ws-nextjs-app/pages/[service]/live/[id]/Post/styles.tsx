@@ -13,11 +13,11 @@ export default {
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
-      // alignItems: 'flex-start',
-      // display: 'flex',
-      // flexWrap: 'wrap',
-      display: 'inline-block',
-      width: '100%',
+      alignItems: 'flex-start',
+      display: 'flex',
+      flexWrap: 'wrap',
+      // display: 'inline-block',
+      // width: '100%',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
@@ -31,7 +31,7 @@ export default {
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 1',
+      flex: '1 0 0',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
     }),
   postHeadings: ({ palette }: Theme) =>
