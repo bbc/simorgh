@@ -18,6 +18,7 @@ export const sendEventBeacon = async ({
   type,
   advertiserID,
   url,
+  detailedPlacement,  
   useReverb,
 }: ATIEventTrackingProps) => {
   const atiClickTrackingUrl = buildATIEventTrackUrl({
@@ -32,6 +33,7 @@ export const sendEventBeacon = async ({
     type,
     advertiserID,
     url,
+    detailedPlacement,
   });
 
   const reverbParams = useReverb

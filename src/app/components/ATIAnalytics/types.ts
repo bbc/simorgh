@@ -118,6 +118,7 @@ export interface ATIEventTrackingProps {
   type?: string;
   advertiserID?: string;
   url?: string;
+  detailedPlacement?: string;
   useReverb?: boolean;
 }
 

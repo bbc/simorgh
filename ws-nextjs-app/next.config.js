@@ -4,14 +4,13 @@ const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezon
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
-const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 const isLocal =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -24,7 +23,19 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
-  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
+  env: {
+    ...(isLocal
+      ? // Add all env variables to the client when running locally
+        getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })
+      : {
+          // Expose subset of env variables to the client when on preview, test or live
+          // The rest are set directly on the Lambda and accessible via process.env on the server
+          SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
+          SIMORGH_OPTIMIZELY_SDK_KEY: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
+        }),
+    LOG_TO_CONSOLE: 'true',
+    NEXTJS: 'true',
+  },
   compiler: {
     emotion: true,
   },

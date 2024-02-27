@@ -104,6 +104,7 @@ export type ServiceConfig = {
       [key: string]: string;
     };
   };
+  googleSiteVerification?: string;
 };
 
 export type PodcastPromo = {

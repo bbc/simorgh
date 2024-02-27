@@ -19,6 +19,7 @@ const useViewTracker = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
   const optimizely = path(['optimizely'], props);
+  const detailedPlacement = props?.detailedPlacement;
 
   const useReverb = pathOr(false, ['useReverb'], props);
 
@@ -106,6 +107,7 @@ const useViewTracker = (props = {}) => {
             type: EVENT_TYPE,
             advertiserID,
             url,
+            detailedPlacement,
             useReverb,
           });
           setEventSent(true);
@@ -138,6 +140,7 @@ const useViewTracker = (props = {}) => {
     advertiserID,
     url,
     optimizely,
+    detailedPlacement,
     useReverb,
   ]);
 

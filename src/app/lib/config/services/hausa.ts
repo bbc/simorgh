@@ -280,7 +280,7 @@ export const service: DefaultServiceConfig = {
           'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
-      featuresAnalysisTitle: 'Minti Daya Da BBC',
+      featuresAnalysisTitle: 'Labarai na musamman',
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',

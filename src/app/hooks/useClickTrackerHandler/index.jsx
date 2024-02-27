@@ -19,6 +19,8 @@ const useClickTrackerHandler = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
   const optimizely = path(['optimizely'], props);
+  const detailedPlacement = props?.detailedPlacement;
+
   const useReverb = pathOr(false, ['useReverb'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -93,6 +95,7 @@ const useClickTrackerHandler = (props = {}) => {
               advertiserID,
               statsDestination,
               url,
+              detailedPlacement,
               useReverb,
             });
           } finally {
@@ -122,6 +125,7 @@ const useClickTrackerHandler = (props = {}) => {
       advertiserID,
       format,
       optimizely,
+      detailedPlacement,
       useReverb,
     ],
   );

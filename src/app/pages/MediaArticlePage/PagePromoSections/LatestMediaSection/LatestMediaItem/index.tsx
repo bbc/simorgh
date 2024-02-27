@@ -31,8 +31,8 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
             <Promo.Image
               src={src}
               altText={item.imageAlt ?? 'Media image placeholder'}
-              width={50}
-              height={50}
+              width={240}
+              height={135}
             />
             <LatestMediaIndicator duration={item.duration} />
           </div>

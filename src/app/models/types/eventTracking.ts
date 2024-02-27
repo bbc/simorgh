@@ -1,5 +1,6 @@
 export type EventTrackingMetadata = {
   componentName: string;
+  detailedPlacement?: string;
 };
 
 export type EventTrackingBlock = {
