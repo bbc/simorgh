@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { GetServerSideProps } from 'next';
 import { Helmet } from 'react-helmet';
 import omit from 'ramda/src/omit';
