@@ -1,4 +1,4 @@
-var plugins = [
+const plugins = [
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
@@ -40,15 +40,15 @@ module.exports = api => {
         targets: {
           ...(useModern
             ? {
-                browsers: ['safari > 9', 'supports es6-module'],
+                browsers: ['safari > 12', 'supports es6-module'],
               }
             : {
                 browsers: [
                   'chrome >= 53',
                   'firefox >= 45.0',
                   'ie >= 11',
-                  'edge >= 37',
-                  'safari >= 9',
+                  'edge >= 100',
+                  'safari >= 10',
                   'opera >= 40',
                   'op_mini >= 18',
                   'Android >= 7',

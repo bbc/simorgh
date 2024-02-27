@@ -2618,6 +2618,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData"
+  languageName: unknown
+  linkType: soft
+
 "@bbc/web-vitals@npm:1.2.0":
   version: 1.2.0
   resolution: "@bbc/web-vitals@npm:1.2.0"
@@ -11337,6 +11367,13 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: f166dd5fe7257c7b891c6692e6a3ede6f237a14043ae3d97581daf318fc5833ddc6b4871aa34ab7656187430170500f6d806895747ea17ecdf8231a666c3c2fd
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-no-only-tests@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "eslint-plugin-no-only-tests@npm:3.1.0"
+  checksum: 2a5de82f3a732dbd46792661dd0f8546cf819f76d8828968166dee35741e8039904ba473dafe1eed585f401a496d260c2c38354bb887c94bd4ced0ddca00fb62
   languageName: node
   linkType: hard
 
@@ -20909,6 +20946,7 @@ __metadata:
     eslint-plugin-import: 2.27.5
     eslint-plugin-json: 3.1.0
     eslint-plugin-jsx-a11y: 6.7.1
+    eslint-plugin-no-only-tests: ^3.1.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.32.2
     eslint-plugin-react-hooks: 4.6.0
