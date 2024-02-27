@@ -20,9 +20,18 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+    requireConfigFile: false,
   },
   ignorePatterns: ['**/tz/**', 'index.stories.jsx', 'index.amp.stories.jsx'],
-  plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress', 'import'],
+  plugins: [
+    'prettier',
+    'json',
+    'jsx-a11y',
+    'react-hooks',
+    'cypress',
+    'import',
+    'no-only-tests',
+  ],
   rules: {
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
@@ -62,6 +71,7 @@ module.exports = {
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
+    'no-only-tests/no-only-tests': 'error',
   },
   settings: {
     'import/resolver': {
