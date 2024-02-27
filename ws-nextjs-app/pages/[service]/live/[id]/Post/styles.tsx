@@ -9,13 +9,13 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
+      float: 'inline-start',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
-      alignItems: 'flex-start',
-      display: 'flex',
-      flexWrap: 'wrap',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
+      display: 'inline-block',
+      width: '100%',
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
@@ -28,8 +28,8 @@ export default {
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 1',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
+      float: 'inline-start',
     }),
   postHeadings: ({ palette }: Theme) =>
     css({
