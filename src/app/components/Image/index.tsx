@@ -144,8 +144,8 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              srcSet={imgSrcSet}
-              sizes={imgSizes}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               fallback=""
               attribution={attribution}
               {...(preload && { 'data-hero': true })}
@@ -166,8 +166,8 @@ const Image = ({
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
-              srcSet={imgSrcSet}
-              sizes={imgSizes}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
