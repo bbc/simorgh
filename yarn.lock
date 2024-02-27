@@ -2618,7 +2618,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-
 "@bbc/reverb@git+ssh://git@github.com:bbc/reverb.git#semver:^3.9.0":
   version: 3.9.1
   resolution: "@bbc/reverb@git+ssh://git@github.com:bbc/reverb.git#commit=eb5275b934dbedc498366790f3dc1e2e0c39dc16"
@@ -21028,6 +21027,9 @@ __metadata:
     winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
     xmldoc: 1.3.0
     yaml-js: 0.3.1
+  dependenciesMeta:
+    "@bbc/reverb":
+      optional: true
   languageName: unknown
   linkType: soft
 
