@@ -1,68 +1,24 @@
 import Head from 'next/head';
 import * as React from 'react';
-import { GetServerSideProps } from 'next';
-import omit from 'ramda/src/omit';
+import { GetStaticProps } from 'next';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
-import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 
-import {
-  ROUTING_INFORMATION,
-  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
-} from '#app/lib/logger.const';
-
-import extractHeaders from '../../../src/server/utilities/extractHeaders';
-
-const logger = nodeLogger(__filename);
-
-export const getServerSideProps: GetServerSideProps = async context => {
-  logResponseTime(
-    {
-      path: context.resolvedUrl,
-    },
-    context.res,
-    () => null,
-  );
-
-  const service = 'ws';
-  const { headers: reqHeaders } = context.req;
-
-  logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-    url: context.resolvedUrl,
-    headers: omit(
-      (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
-      reqHeaders,
-    ),
-    pageType: STATIC_PAGE,
-  });
-
-  let routingInfoLogger = logger.debug;
-
-  routingInfoLogger(ROUTING_INFORMATION, {
-    url: context.resolvedUrl,
-    status: 200,
-    pageType: STATIC_PAGE,
-  });
-
-  context.res.statusCode = 200;
+export const getStaticProps: GetStaticProps = () => {
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: null,
       isAmp: false,
       isNextJs: true,
       page: null,
       pageData: null,
       pageType: STATIC_PAGE,
-      pathname: context.resolvedUrl,
-      service,
-      showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
+      pathname: '/ws/languages',
+      service: 'ws',
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
 };
