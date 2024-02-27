@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import LivePageMediaPlayer from '.';
 import { validLivePageVideoWithCaptionBlock } from '../MediaPlayer/fixtureData';
+import { LIVE_PAGE } from '../../../routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -11,7 +11,7 @@ const GenerateMediaPlayer = ({
   /* eslint-enable react/prop-types */
 }) => (
   <BrowserRouter>
-    <LivePageMediaPlayer blocks={blocks} />
+    <LivePageMediaPlayer blocks={blocks} className="MediaPlayer" />
   </BrowserRouter>
 );
 
