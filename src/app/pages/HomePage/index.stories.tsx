@@ -38,16 +38,6 @@ const overrideRadioSchedule = (
     radioSchedule[1].state = 'live';
     radioSchedule[1].startTime = new Date(currentTime).toISOString();
     radioSchedule[1].link = `${service}/bbc_${service}_radio/liveradio`;
-
-    // Radio Program started 1 day ago
-    radioSchedule[2].startTime = new Date(
-      new Date(radioSchedule[2].startTime).getTime() - ONE_DAY_IN_MILLISECONDS,
-    ).toISOString();
-    // Radio Program started 2 days ago
-    radioSchedule[3].startTime = new Date(
-      new Date(radioSchedule[2].startTime).getTime() -
-        2 * ONE_DAY_IN_MILLISECONDS,
-    ).toISOString();
   }
 };
 
