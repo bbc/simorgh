@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+import { Helmet } from 'react-helmet';
 import omit from 'ramda/src/omit';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -114,8 +115,10 @@ const pageLayout = () => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <style>{morphCSS1}</style>
-      <style>{morphCSS2}</style>
+      <Helmet>
+        <style>{morphCSS1}</style>
+        <style>{morphCSS2}</style>
+      </Helmet>
       <main>
         <div id="page" className="atlas-languages-page">
           <div className="container c-open" role="main">
@@ -125,17 +128,16 @@ const pageLayout = () => {
                   Get the news in your language
                 </h1>
                 <p className="language-switcher">
-                  <a
+                  <button
                     className="switcher"
                     id="switcher"
-                    href="#"
                     onClick={languageToggle}
                   >
                     <span className="toggle">Switch list to English</span>
                     <span className="toggle hide">
                       Switch list to localised scripts
                     </span>
-                  </a>
+                  </button>
                 </p>
                 <div id="localised_version" className="panel">
                   <div className="group-title-component">
