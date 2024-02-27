@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
-import { BumpType, PlayerConfig, Props } from './types.d';
+import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 

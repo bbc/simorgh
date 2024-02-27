@@ -1,6 +1,6 @@
 import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import onClient from '#app/lib/utilities/onClient';
-import { BuildConfigProps } from '../types.d';
+import { BuildConfigProps } from '../types';
 
 const isTestURL = () => {
   let isTestRender = false;

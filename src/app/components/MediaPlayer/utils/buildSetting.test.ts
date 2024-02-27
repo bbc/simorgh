@@ -1,4 +1,4 @@
-import { MediaBlock } from '../types.d';
+import { MediaBlock } from '../types';
 import buildConfig from './buildSettings';
 import blocks from '../fixture';
 
