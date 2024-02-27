@@ -28,7 +28,7 @@ describe('Service Worker', () => {
   afterEach(() => {
     jest.resetAllMocks();
 
-    global.navigator = originalNavigator;
+    global.navigator ??= originalNavigator;
   });
 
   describe('Canonical', () => {
