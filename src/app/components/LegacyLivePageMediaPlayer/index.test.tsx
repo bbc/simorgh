@@ -12,7 +12,7 @@ const GenerateMediaPlayer = ({ blocks }: { blocks: MediaBlock[] }) => (
   </BrowserRouter>
 );
 
-describe('MediaPlayer', () => {
+describe('LegacyLiveMediaPlayer', () => {
   it('Calls the canonical media player, with a placeholder', () => {
     const { container } = render(
       <GenerateMediaPlayer

@@ -12,8 +12,8 @@ const LegacyLivePageMediaPlayer = ({ blocks, className }: Props) => {
   return (
     <GridItemMediumNoMargin
       className={className}
-      gridColumnStart={null}
-      gridSpan={null}
+      gridColumnStart={2}
+      gridSpan={5}
     >
       <MediaPlayerContainer
         blocks={blocks}
