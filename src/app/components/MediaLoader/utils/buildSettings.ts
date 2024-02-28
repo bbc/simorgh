@@ -6,8 +6,8 @@ const isTestURL = () => {
   let isTestRender = false;
 
   if (onClient()) {
-    const search = new URLSearchParams(window.location.search);
-    isTestRender = search.get('renderer_env') === 'test';
+    const queryParams = new URLSearchParams(window.location.search);
+    isTestRender = queryParams.get('renderer_env') === 'test';
   }
 
   return isTestRender;
