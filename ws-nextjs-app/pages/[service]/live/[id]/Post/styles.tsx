@@ -16,7 +16,6 @@ export default {
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       display: 'inline-block',
       width: '100%',
-      lineHeight: 0,
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
