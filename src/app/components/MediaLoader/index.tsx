@@ -5,6 +5,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -38,7 +39,7 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
         }
       });
     } catch (error) {
-      logger.error('Failed to bind SMP', error);
+      logger.error(MEDIA_PLAYER_STATUS, error);
     }
   }, [playerConfig]);
 
