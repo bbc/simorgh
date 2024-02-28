@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
-import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
