@@ -93,6 +93,52 @@
         "title": "Ivyo BBC Gahuza ibahitiramwo",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_gahuza_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6phdp",
+            "state": "next",
+            "startTime": "2024-02-27T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg8dlvdp5w",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6hg1k",
+            "state": "onDemand",
+            "startTime": "2024-02-26T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg8dlv9s8s",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h64qm6",
+            "state": "onDemand",
+            "startTime": "2024-02-24T05:00:00.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w3ct6750",
+            "brandTitle": "Imvo n'Imvano",
+            "summary": "Ikiganiro gicukumbuye ku bibazo bitandukanye.",
+            "duration": "PT59M"
+          },
+          {
+            "id": "p0h62dm0",
+            "state": "onDemand",
+            "startTime": "2024-02-23T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg81bjx79b",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
+          }
+        ]
       }
     ],
     "metadata": {

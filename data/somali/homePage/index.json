@@ -104,6 +104,52 @@
         "title": "Xul",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_somali_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6nbqw",
+            "state": "next",
+            "startTime": "2024-02-27T13:59:30.000Z",
+            "link": "/somali/bbc_somali_radio/w172zkffyw7q2d8",
+            "brandTitle": "Dunida Iyo Maanta",
+            "summary": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+            "duration": "PT1H"
+          },
+          {
+            "id": "p0h6kmmz",
+            "state": "onDemand",
+            "startTime": "2024-02-27T04:00:00.000Z",
+            "link": "/somali/bbc_somali_radio/w172zkfvp7k0j5l",
+            "brandTitle": "Idaacadda Subaxnimo",
+            "summary": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+            "duration": "PT29M"
+          },
+          {
+            "id": "p0h6ggw0",
+            "state": "onDemand",
+            "startTime": "2024-02-26T13:59:30.000Z",
+            "link": "/somali/bbc_somali_radio/w172zkffyw7m5h5",
+            "brandTitle": "Dunida Iyo Maanta",
+            "summary": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+            "duration": "PT1H"
+          },
+          {
+            "id": "p0h6csjv",
+            "state": "onDemand",
+            "startTime": "2024-02-26T04:00:00.000Z",
+            "link": "/somali/bbc_somali_radio/w172zkfvp7jxm8h",
+            "brandTitle": "Idaacadda Subaxnimo",
+            "summary": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+            "duration": "PT29M"
+          }
+        ]
       }
     ],
     "metadata": {
