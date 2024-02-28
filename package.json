@@ -100,6 +100,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
+    "@bbc/reverb": "git+https://github.com/bbc/reverb.git#3.9.0",
     "@bbc/web-vitals": "1.2.0",
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.1",
@@ -260,9 +261,6 @@
     "webpack-merge": "5.8.0",
     "webpack-node-externals": "3.0.0",
     "yaml-js": "0.3.1"
-  },
-  "optionalDependencies": {
-    "@bbc/reverb": "git+https://github.com/bbc/reverb.git#3.9.0"
   },
   "spec": {
     "executable": [
