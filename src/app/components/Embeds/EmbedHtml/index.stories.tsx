@@ -10,7 +10,6 @@ import {
 export default {
   title: 'Components/Embeds/Embed HTML',
   component: EmbedHtml,
-  parameters: { chromatic: { disable: true } },
 };
 
 export const IDT2DataPic = () => (
