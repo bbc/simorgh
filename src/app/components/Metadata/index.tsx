@@ -13,7 +13,7 @@ import {
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
 
-const ENGLISH_SERVICES = ['news', 'sport'];
+const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
 const iconSizes: IconSizes = {
   'apple-touch-icon': [
