@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import MediaPlayer from '../../../components/MediaPlayer';
-import { MediaBlock } from '../../../components/MediaPlayer/types';
+import MediaLoader from '../MediaLoader';
+import { MediaBlock } from '../MediaLoader/types';
 import style from './index.style';
 
 const LivePageMediaPlayer = ({ blocks, className }: Props) => {
   return (
     <div css={style.EMPContainer} className={className}>
-      <MediaPlayer blocks={blocks} />
+      <MediaLoader blocks={blocks} />
     </div>
   );
 };

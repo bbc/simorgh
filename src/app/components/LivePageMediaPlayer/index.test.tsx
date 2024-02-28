@@ -1,15 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import LivePageMediaPlayer from '.';
-import { validLivePageVideoWithCaptionBlock } from '../MediaPlayer/fixtureData';
-import { LIVE_PAGE } from '../../../routes/utils/pageTypes';
+import { validLivePageVideoWithCaptionBlock } from '../../legacy/containers/MediaPlayer/fixtureData';
+import { LIVE_PAGE } from '../../routes/utils/pageTypes';
 
-const GenerateMediaPlayer = ({
-  /* eslint-disable react/prop-types */
-  blocks,
-  /* eslint-enable react/prop-types */
-}) => (
+const GenerateMediaPlayer = ({ blocks }) => (
   <BrowserRouter>
     <LivePageMediaPlayer blocks={blocks} className="MediaPlayer" />
   </BrowserRouter>

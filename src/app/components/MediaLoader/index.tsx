@@ -23,7 +23,7 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const VideoPlayer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
+const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   const playerElementRef = useRef(null);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ const Player = ({ blocks }: Props) => {
       {isPlaceholder ? (
         <Placeholder setter={setIsPlaceholder} />
       ) : (
-        <VideoPlayer playerConfig={playerConfig} />
+        <MediaContainer playerConfig={playerConfig} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
     </>

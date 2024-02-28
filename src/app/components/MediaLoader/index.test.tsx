@@ -10,9 +10,10 @@ jest.mock('react', () => ({
   useState: jest.fn(),
 }));
 
-describe('MediaPlayer', () => {
+describe('MediaLoader', () => {
   describe('BUMP Loader', () => {
     beforeEach(() => {
+      jest.restoreAllMocks();
       // @ts-expect-error Mocking require to prevent race condition.
       window.require = jest.fn();
       (useState as jest.Mock).mockImplementation(() => [false, () => false]);
