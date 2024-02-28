@@ -277,13 +277,6 @@ exports[`AMP Photo Gallery Page Header Navigation link should match text and url
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
-{
-  "text": "BBC Extra",
-  "url": "/mundo/noticias-48908206",
-}
-`;
-
 exports[`AMP Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
 
 exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
