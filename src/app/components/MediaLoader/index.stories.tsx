@@ -1,12 +1,11 @@
-/* eslint-disable import/order */
 import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaLoaderComponent from '.';
 import ThemeProvider from '../ThemeProvider';
 import md from './README.md';
 import sample from './fixture';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
 
 type Props = {
   pageType: PageTypes;
