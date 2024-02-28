@@ -56,7 +56,7 @@ const Text = ({
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveLabel} `}
+        {`${liveLabel}`}
       </span>
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
