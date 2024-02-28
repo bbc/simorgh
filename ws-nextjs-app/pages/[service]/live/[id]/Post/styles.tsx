@@ -34,7 +34,8 @@ export default {
   postHeadings: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
-      display: `block`,
+      display: `inline-block`,
+      width: '100%',
       margin: 0 /* Reset */,
     }),
   heading: ({ mq }: Theme) =>
