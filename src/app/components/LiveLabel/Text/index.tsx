@@ -12,7 +12,9 @@ const Text = ({
   id,
   children,
   offScreenText,
+  isHeaderImage,
   className,
+  pulse,
 }: PropsWithChildren<TextProps>) => {
   const { dir, translations } = useContext(ServiceContext);
 
@@ -51,16 +53,27 @@ const Text = ({
       role="text"
       className={className}
     >
-      <span
-        css={styles.liveLabelText}
-        dir={dir}
-        {...(ariaHidden && { 'aria-hidden': 'true' })}
+      <div
+        css={
+          isHeaderImage
+            ? styles.liveLabelContainerWithImage
+            : styles.liveLabelContainerWithoutImage
+        }
       >
-        {`${liveLabel} `}
-      </span>
-      {screenReaderText && (
-        <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
-      )}
+        {pulse}
+        <span
+          css={styles.liveLabelText}
+          dir={dir}
+          {...(ariaHidden && { 'aria-hidden': 'true' })}
+        >
+          {`${liveLabel} `}
+        </span>
+        {screenReaderText && (
+          <VisuallyHiddenText lang={lang}>
+            {screenReaderText}
+          </VisuallyHiddenText>
+        )}
+      </div>
       {children}
     </span>
   );

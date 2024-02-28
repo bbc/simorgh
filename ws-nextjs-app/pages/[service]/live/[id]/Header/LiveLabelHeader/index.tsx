@@ -21,20 +21,18 @@ const LiveLabelHeader = ({
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   return (
     <div data-testid="live-label">
-      <LiveLabel.Pulse
-        className={className}
-        width="24"
-        height="24"
-        css={styles.liveLabelPulse}
-      />
       <LiveLabel.Text
         lang={lang}
         id={id}
         offScreenText={offScreenText}
-        css={
-          isHeaderImage
-            ? styles.liveLabelTextWithImage
-            : styles.liveLabelTextWithoutImage
+        isHeaderImage={isHeaderImage}
+        pulse={
+          <LiveLabel.Pulse
+            className={className}
+            width="24"
+            height="24"
+            css={styles.liveLabelPulse}
+          />
         }
       >
         {children}

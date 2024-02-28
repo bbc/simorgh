@@ -68,17 +68,24 @@ export default {
         maxWidth: '50%', // determines width of text overlay.
       },
     }),
-  titleWithImage: ({ palette }: Theme) =>
+  titleWithImage: ({ palette, spacings, mq }: Theme) =>
     css({
       display: 'block',
       color: palette.GREY_1,
       width: '100%',
+      marginTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        marginTop: `${spacings.FULL}rem`,
+      },
     }),
   titleWithoutImage: ({ mq, palette, spacings }: Theme) =>
     css({
       display: 'block',
       color: palette.GREY_1,
       marginTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        marginTop: `${spacings.FULL}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'calc(100% / 3 * 2)',
         display: 'inline-flex',

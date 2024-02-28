@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface LiveLabelProps extends TextProps {
   className?: string;
 }
@@ -7,6 +9,8 @@ export interface TextProps {
   offScreenText?: string;
   lang?: string;
   id?: string;
+  isHeaderImage?: boolean;
+  pulse?: ReactNode;
 }
 
 export interface PulseProps {
