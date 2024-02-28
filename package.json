@@ -262,7 +262,7 @@
     "yaml-js": "0.3.1"
   },
   "optionalDependencies": {
-    "@bbc/reverb": "github:bbc/reverb#3.9.0"
+    "@bbc/reverb": "git+https://github.com/bbc/reverb.git#3.9.0"
   },
   "spec": {
     "executable": [
