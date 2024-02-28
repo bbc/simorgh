@@ -2618,10 +2618,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/reverb@git+ssh://git@github.com:bbc/reverb.git#semver:^3.9.0":
-  version: 3.9.1
-  resolution: "@bbc/reverb@git+ssh://git@github.com:bbc/reverb.git#commit=eb5275b934dbedc498366790f3dc1e2e0c39dc16"
-  checksum: 28d931c31d1b7066341ecc113454e5255f2708a1248a57b1cb2534e7dd4bebb08d56fb4daf30ffe83375781bb63728811fec61869acb2447a96a8f40e0e67632
+"@bbc/reverb@git@github.com:bbc/reverb.git#3.9.0":
+  version: 3.9.0
+  resolution: "@bbc/reverb@git@github.com:bbc/reverb.git#commit=2be814251e9b4f0ea565e6dfac58e942af049cc3"
+  checksum: 3a29ab6ff98b1c76350f884a64bda750695f0948306c14f71f98c75c65f2ec8eb8b950059bab8e97c45be1a68feb19fb19ff8d3c44b852e839fa1eef4a87cffc
   languageName: node
   linkType: hard
 
@@ -20880,7 +20880,7 @@ __metadata:
     "@babel/preset-react": 7.22.15
     "@babel/preset-typescript": 7.23.2
     "@babel/runtime": 7.23.2
-    "@bbc/reverb": "git+ssh://git@github.com:bbc/reverb.git#semver:^3.9.0"
+    "@bbc/reverb": "git@github.com:bbc/reverb.git#3.9.0"
     "@bbc/web-vitals": 1.2.0
     "@cypress/webpack-preprocessor": 6.0.1
     "@emotion/babel-plugin": 11.11.0
