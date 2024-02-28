@@ -93,6 +93,52 @@
         "title": "Labarai da Rahotanni Na Musamman",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_hausa_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6nbrn",
+            "state": "next",
+            "startTime": "2024-02-27T13:59:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct655y",
+            "brandTitle": "Shirin Rana",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6kmpj",
+            "state": "onDemand",
+            "startTime": "2024-02-27T06:30:00.000Z",
+            "link": "/hausa/bbc_hausa_radio/w172zjpf3d5y88h",
+            "brandTitle": "Shirin Hantsi",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT29M30S"
+          },
+          {
+            "id": "p0h6kmpg",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65fv",
+            "brandTitle": "Shirin Safe",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6j50j",
+            "state": "onDemand",
+            "startTime": "2024-02-26T19:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65j3",
+            "brandTitle": "Shirin Yamma",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
+          }
+        ]
       }
     ],
     "metadata": {
