@@ -80,7 +80,6 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
-      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
