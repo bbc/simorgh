@@ -52,6 +52,9 @@ export default function litePageTransform({
     $(el).removeAttr('class');
   });
 
+  // Remove all button elements
+  $('button').remove();
+
   // Remove includes
   $('div[id^=include-]').parent().remove();
 
@@ -71,7 +74,6 @@ export default function litePageTransform({
   $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
   $('#topPage').parent().addClass('lite-header-brand-wrapper'); // Add class to header SVG wrapper for custom styling
 
-  $('header').find('button').remove(); // Remove mobile menu button
   $('header').find('ul').addClass('lite-nav-list'); // Add class to nav list for custom styling
 
   // Remove header skip to content - may want to keep this though
