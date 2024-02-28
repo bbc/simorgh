@@ -58,7 +58,7 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   );
 };
 
-const Player = ({ blocks }: Props) => {
+const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { id, pageType, counterName } = useContext(RequestContext);
 
@@ -74,7 +74,7 @@ const Player = ({ blocks }: Props) => {
   const { mediaInfo, captionBlock, playerConfig } = config;
 
   return (
-    <>
+    <div className={className}>
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder setter={setIsPlaceholder} />
@@ -82,8 +82,8 @@ const Player = ({ blocks }: Props) => {
         <MediaContainer playerConfig={playerConfig} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
-    </>
+    </div>
   );
 };
 
-export default Player;
+export default MediaLoader;

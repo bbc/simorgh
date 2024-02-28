@@ -8,8 +8,8 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import LivePageMediaPlayer from '#app/components/LivePageMediaPlayer';
-import LegacyMediaPlayer from '#app/components/LivePageMediaPlayer/legacyMediaPlayer';
+import MediaLoader from '#app/components/MediaLoader';
+import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -157,7 +157,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
           css={styles.bodyMedia}
         />
       ) : (
-        <LivePageMediaPlayer
+        <MediaLoader
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}

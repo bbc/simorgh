@@ -21,7 +21,9 @@ describe('MediaLoader', () => {
 
     it('Loads requireJS and Bump4', async () => {
       await act(async () => {
-        render(<MediaPlayer blocks={sampleBlocks} />, { id: 'testId' });
+        render(<MediaPlayer blocks={sampleBlocks} className="mediaLoader" />, {
+          id: 'testId',
+        });
       });
 
       const requireScript = Helmet.peek().scriptTags[0];
@@ -42,7 +44,9 @@ describe('MediaLoader', () => {
       window.requirejs = mockRequire;
 
       await act(async () => {
-        render(<MediaPlayer blocks={sampleBlocks} />, { id: 'testId' });
+        render(<MediaPlayer blocks={sampleBlocks} className="mediaLoader" />, {
+          id: 'testId',
+        });
       });
 
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
@@ -58,9 +62,12 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(<MediaPlayer blocks={sampleBlocks} />, {
-          id: 'testId',
-        }));
+        ({ container } = render(
+          <MediaPlayer blocks={sampleBlocks} className="mediaLoader" />,
+          {
+            id: 'testId',
+          },
+        ));
       });
 
       const button = (container as unknown as HTMLElement).querySelector(
@@ -72,9 +79,12 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(<MediaPlayer blocks={sampleBlocks} />, {
-          id: 'testId',
-        }));
+        ({ container } = render(
+          <MediaPlayer blocks={sampleBlocks} className="mediaLoader" />,
+          {
+            id: 'testId',
+          },
+        ));
       });
 
       const caption = (container as unknown as HTMLElement).querySelector('p');
