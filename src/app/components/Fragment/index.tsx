@@ -1,15 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx  jsx  */
 /* @jsxFrag React.Fragment */
-import React, { PropsWithChildren, useContext } from 'react';
-import { Services } from '#app/models/types/global';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './index.style';
 
 const bold = ({ children }: PropsWithChildren) => <b>{children}</b>;
 
-const italic = ({ children }: PropsWithChildren<ItalicProps>) => (
+const italic = ({ children }: PropsWithChildren) => (
   <i css={styles.italicStyle}>{children}</i>
 );
 
@@ -27,12 +25,11 @@ const Fragment = ({ text, attributes = [] }: FragmentProps) => {
     These components are nested inside each other as children as the array is iterated through.
     The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
-  const { service } = useContext(ServiceContext);
   return attributes.reduce((previousAttribute, attribute) => {
     const Attribute =
       attributeComponents[attribute as keyof typeof attributeComponents] ||
       fallbackAttributeComponent; // If attribute is unknown, will use a fallback component that just returns the passed children
-    return <Attribute service={service}>{previousAttribute}</Attribute>;
+    return <Attribute>{previousAttribute}</Attribute>;
   }, <>{text}</>);
 };
 
@@ -40,7 +37,5 @@ type FragmentProps = {
   text: string;
   attributes?: string[];
 };
-
-type ItalicProps = { service: Services };
 
 export default Fragment;

@@ -8,6 +8,12 @@ export default blockContainingText(
   'mocked-id',
 );
 
+export const blockContainingPersianText = blockContainingText(
+  'caption',
+  'چیسربرگر',
+  'mocked-id',
+);
+
 export const fragmentBlock = ({
   text,
   attributes = [],

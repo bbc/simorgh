@@ -1,94 +1,61 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ServiceConfig } from '#app/models/types/serviceConfig';
 import Fragment from '.';
-
-const newsContext = {
-  service: 'news',
-};
-
-const persianContext = {
-  service: 'persian',
-};
-
-const CreateFragment = ({
-  context = newsContext as ServiceConfig,
-  attributes = [],
-  text = '',
-}: {
-  context?: ServiceConfig;
-  attributes?: string[];
-  text?: string;
-}) => (
-  <ServiceContext.Provider value={context}>
-    <Fragment text={text} attributes={attributes} />
-  </ServiceContext.Provider>
-);
+import { render } from '../react-testing-library-with-providers';
 
 describe('Fragment', () => {
-  describe('with no attributes', () => {
-    shouldMatchSnapshot(
-      'should render just text',
-      CreateFragment({ text: 'This is some text with no attributes' }),
+  it('with no attributes', () => {
+    const { getByText } = render(<Fragment text="HELLOWORLD" />);
+
+    expect(getByText('HELLOWORLD').textContent).toEqual('HELLOWORLD');
+  });
+
+  it('with bold attributes', () => {
+    const { container } = render(
+      <Fragment text="BOLD TEXT" attributes={['bold']} />,
+    );
+
+    expect(container.querySelector('b')?.textContent).toEqual('BOLD TEXT');
+  });
+
+  it('with italic attributes', () => {
+    const { container } = render(
+      <Fragment text="ITALIC TEXT" attributes={['italic']} />,
+    );
+
+    expect(container.querySelector('i')?.textContent).toEqual('ITALIC TEXT');
+  });
+
+  it('with unknown attributes', () => {
+    const { container } = render(
+      <Fragment
+        text="BOLD WITH UNKNOWN TEXT"
+        attributes={['bold', 'unknown']}
+      />,
+    );
+
+    expect(container.querySelector('b')?.textContent).toEqual(
+      'BOLD WITH UNKNOWN TEXT',
     );
   });
 
-  describe('with bold attributes', () => {
-    shouldMatchSnapshot(
-      'should render text wrapped in a bold DOM element',
-      CreateFragment({
-        text: 'This is some text with bold attributes',
-        attributes: ['bold'],
-      }),
+  it('with italic attributes in Farsi', () => {
+    const { container } = render(
+      <Fragment
+        text="ITALIC WITH PERSIAN TEXT"
+        attributes={['italic', 'unknown']}
+      />,
+      { service: 'persian' },
+    );
+
+    expect(container).toMatchSnapshot();
+    expect(container.querySelector('i')?.textContent).toEqual(
+      'ITALIC WITH PERSIAN TEXT',
     );
   });
 
-  describe('with italic attributes', () => {
-    shouldMatchSnapshot(
-      'should render text wrapped in an italic DOM element',
-      CreateFragment({
-        text: 'This is some text with italic attributes',
-        attributes: ['italic'],
-      }),
-    );
-  });
+  it('should emit a null when provided with no content', () => {
+    const { container } = render(<Fragment text="" />);
 
-  describe('with bold and italic attributes', () => {
-    shouldMatchSnapshot(
-      'should render text wrapped in bold and italic DOM elements',
-      CreateFragment({
-        text: 'This is some text with bold and italic attributes',
-        attributes: ['bold', 'italic'],
-      }),
-    );
-  });
-
-  describe('with an unknown attribute', () => {
-    shouldMatchSnapshot(
-      'should ignore the attribute',
-      CreateFragment({
-        text: 'This is some text with a bold and unknown attribute',
-        attributes: ['bold', 'unknown'],
-      }),
-    );
-  });
-
-  describe('with italic attributes in Farsi', () => {
-    shouldMatchSnapshot(
-      'should render text wrapped in an italic DOM element',
-      CreateFragment({
-        context: persianContext as ServiceConfig,
-        text: 'This is some text with italic attributes',
-        attributes: ['italic'],
-      }),
-    );
-  });
-
-  describe('should emit an empty div when provided with no content', () => {
-    render(CreateFragment({}));
-    expect(document.querySelector('div')).toBeInTheDocument();
-    expect(document.querySelector('div')?.textContent?.trim()).toBe('');
+    expect(container.querySelector('div')).toBe(null);
   });
 });

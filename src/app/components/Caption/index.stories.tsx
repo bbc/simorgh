@@ -4,7 +4,7 @@ import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
 import ThemeProvider from '../ThemeProvider';
 import CaptionComponent from '.';
-import captionBlock from './fixture';
+import captionBlock, { blockContainingPersianText } from './fixture';
 
 type Props = {
   type: string;
@@ -20,8 +20,15 @@ const Component = ({ block, service, type }: Props) => (
   </ServiceContextProvider>
 );
 
-export const PersionCaption = () => (
-  <Component block={captionBlock} service="persian" type="caption" />
+export const DefaultCaption = () => (
+  <Component block={captionBlock} service="news" type="caption" />
+);
+export const PersianCaption = () => (
+  <Component
+    block={blockContainingPersianText}
+    service="persian"
+    type="caption"
+  />
 );
 
 export default {

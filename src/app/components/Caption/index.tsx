@@ -5,7 +5,7 @@ import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
 
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import Fragment from '#app/legacy/containers/Fragment';
+import Fragment from '../Fragment';
 import Inline from '#app/legacy/containers/PodcastPromo/Inline';
 import InlineLink from '../InlineLink';
 import Blocks from '#app/legacy/containers/Blocks';
