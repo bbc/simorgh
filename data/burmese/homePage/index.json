@@ -8,6 +8,17 @@
         "summaries": [
           {
             "type": "article",
+            "title": "မျှော်လင့်ချက်ပျက်သုဥ်းနေတဲ့မြန်မာလူငယ်တွေနဲ့တရစ်ရစ်ကျပ်လာတဲ့ထိုင်းဥပဒေ",
+            "firstPublished": "2024-02-26T09:38:33.334Z",
+            "lastPublished": "2024-02-26T09:38:33.334Z",
+            "link": "https://www.bbc.com/burmese/articles/c4w9w44werxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/a7fe/test/20a2c3d0-d489-11ee-8336-9f401ab33b1f.jpg",
+            "description": "ဖခင်ရဲ့ ကျန်းမာရေးကြောင့် မွေးရပ်မြေ သထုံကို ပြန်သွားပြီး မဲဆောက်ကို မပြန်ဖြစ်တာကနေ ဒီနှစ် ဖေဖော်ဝါရီ ၁၀ ရက်နေ့က စစ်ကောင်စီအသက်သွင်းလိုက်တဲ့ ပြည်သူ့စစ်မှုထမ်းဥပဒေကြောင့် သူတို့လို လူငယ်တွေ စစ်မြေပြင်ကို အပို့ခံရတော့မလားဆိုတဲ့ စိုးရိမ်စိတ်နဲ့ နောက်တစ်ကြိမ် မဲဆောက်ကို ထွက်ပြေးလာခဲ့ရပြန်ပါတယ်။",
+            "imageAlt": "ထိုင်းလူဝင်မှုကြီးကြပ်ရေးအရာရှိတွေက မြန်မာရွှေ့ပြောင်းတွေနေထိုင်ရာနေရာမှာ သန်းခေါင်စာရင်းစစ်",
+            "id": "c4w9w44werxo"
+          },
+          {
+            "type": "article",
             "title": "ဖေဖော်ဝါရီ ၁၄ ရက် - အင်ဒိုနီးရှား လူငယ်မဲဆန္ဒရှင်တွေ ဖြစ်ချင်တဲ့ဆန္ဒက ဘာလဲ",
             "firstPublished": "",
             "lastPublished": "",
@@ -126,6 +137,52 @@
         "title": "ဆောင်းပါး",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_burmese_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6nbw8",
+            "state": "next",
+            "startTime": "2024-02-27T13:29:30.000Z",
+            "link": "/burmese/bbc_burmese_radio/w3ct61gy",
+            "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+            "duration": "PT15M"
+          },
+          {
+            "id": "p0h6ggz9",
+            "state": "onDemand",
+            "startTime": "2024-02-26T13:29:30.000Z",
+            "link": "/burmese/bbc_burmese_radio/w3ct61bf",
+            "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+            "duration": "PT15M"
+          },
+          {
+            "id": "p0h69fjy",
+            "state": "onDemand",
+            "startTime": "2024-02-25T13:29:30.000Z",
+            "link": "/burmese/bbc_burmese_radio/w3ct61dn",
+            "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+            "duration": "PT15M"
+          },
+          {
+            "id": "p0h65xbs",
+            "state": "onDemand",
+            "startTime": "2024-02-24T13:29:30.000Z",
+            "link": "/burmese/bbc_burmese_radio/w3ct61cj",
+            "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+            "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+            "duration": "PT15M"
+          }
+        ]
       }
     ],
     "metadata": {
