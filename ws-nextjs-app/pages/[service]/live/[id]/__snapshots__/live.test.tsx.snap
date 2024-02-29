@@ -102,6 +102,31 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #00CCC7;
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(100% / 3);
+  }
+}
+
+.emotion-7 {
   color: #006666;
   display: inline-block;
   vertical-align: -0.125rem;
@@ -111,65 +136,38 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   color: #00CCC7;
-  vertical-align: -0.3125rem;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
 
 @media (min-width: 15rem) {
-  .emotion-6 {
-    vertical-align: -0.4375rem;
+  .emotion-7 {
     width: 1.5rem;
     height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
-    vertical-align: -0.5rem;
+  .emotion-7 {
     width: 2rem;
     height: 2rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-6 {
+  .emotion-7 {
     color: canvasText;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .emotion-7 {
+  .emotion-8 {
     -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
     animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
   }
 }
 
-.emotion-8 span:first-of-type {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  color: #00CCC7;
-  overflow-wrap: anywhere;
-  -webkit-margin-end: 0;
-  margin-inline-end: 0;
-}
-
-@media (min-width: 63rem) {
-  .emotion-8 span:first-of-type {
-    width: calc(100% / 3  - 2.25rem);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-8 span:first-of-type {
-    width: calc(25%  - 2.25rem);
-  }
-}
-
 .emotion-9 {
-  color: #006666;
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -193,6 +191,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   display: block;
   color: #FEFEFE;
   margin-top: 1rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-11 {
+    margin-top: 0.5rem;
+  }
 }
 
 @media (min-width: 63rem) {
@@ -1295,41 +1299,45 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             <div
               data-testid="live-label"
             >
-              <svg
-                aria-hidden="true"
-                class="emotion-6"
-                fill="currentColor"
-                focusable="false"
-                height="24"
-                viewBox="0 0 32 32"
-                width="24"
-              >
-                <path
-                  d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                />
-                <circle
-                  class="emotion-7"
-                  cx="16"
-                  cy="16"
-                  r="8.5"
-                />
-              </svg>
               <span
-                class="emotion-8"
                 role="text"
               >
-                <span
-                  class="emotion-9"
-                  dir="ltr"
+                <div
+                  class="emotion-6"
+                  data-testid="liveLabelContainer"
                 >
-                  As E Dey Happen 
-                </span>
-                <span
-                  class="emotion-10"
-                  lang="en-GB"
-                >
-                  , 
-                </span>
+                  <svg
+                    aria-hidden="true"
+                    class="emotion-7"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 32 32"
+                    width="24"
+                  >
+                    <path
+                      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                    />
+                    <circle
+                      class="emotion-8"
+                      cx="16"
+                      cy="16"
+                      r="8.5"
+                    />
+                  </svg>
+                  <span
+                    class="emotion-9"
+                    dir="ltr"
+                  >
+                    As E Dey Happen 
+                  </span>
+                  <span
+                    class="emotion-10"
+                    lang="en-GB"
+                  >
+                    , 
+                  </span>
+                </div>
                 <span
                   class="emotion-11"
                 >
