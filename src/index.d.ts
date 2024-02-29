@@ -11,8 +11,14 @@ declare namespace JSX {
     key?: string | null;
   }
 
+  interface FigureCaptionProps extends React.HTMLAttributes<HTMLElement> {
+    script: TypographyScript;
+    service: Services;
+  }
+
   interface IntrinsicElements {
     div: DivProps;
     p: ParagraphProps;
+    figcaption: FigureCaptionProps;
   }
 }

@@ -2,15 +2,16 @@ import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInfe
 import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps } from '../types';
 
-const isTestURL = () => {
-  let isTestRender = false;
+const isTestRequested = () => {
+  let isTestLiveURL = false;
+  const isTestServer = process.env.NODE_ENV === 'development';
 
   if (onClient()) {
     const queryParams = new URLSearchParams(window.location.search);
-    isTestRender = queryParams.get('renderer_env') === 'test';
+    isTestLiveURL = queryParams.get('renderer_env') === 'test';
   }
 
-  return isTestRender;
+  return isTestServer && isTestLiveURL;
 };
 
 const buildConfig = ({
@@ -45,7 +46,7 @@ const buildConfig = ({
     product: 'news',
     superResponsive: true,
     ...(counterName && { counterName }),
-    ...(isTestURL() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
     playlistObject: {
       title,
       holdingImageURL: placeholderSrc,

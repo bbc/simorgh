@@ -8,10 +8,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Fragment from '#app/legacy/containers/Fragment';
 import Inline from '#app/legacy/containers/PodcastPromo/Inline';
 import InlineLink from '../InlineLink';
-import { InferProps } from 'prop-types';
-import { textBlockPropTypes } from '#app/models/propTypes/text';
 import Blocks from '#app/legacy/containers/Blocks';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import { OptimoBlock } from '#app/models/types/optimo';
+import { TypographyScript } from '#app/models/types/theming';
 
 const componentsToRender = {
   fragment: Fragment,
@@ -38,7 +38,7 @@ const chooseOffscreenText = (
   }
 };
 
-const renderParagraph = (block: TextBlock) => {
+const renderParagraph = (block: OptimoBlock) => {
   const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
 
   if (!paragraphBlock) return null;
@@ -51,9 +51,9 @@ const renderParagraph = (block: TextBlock) => {
 };
 
 const renderCaption = (
-  paragraphBlocks: TextBlock[],
+  paragraphBlocks: OptimoBlock[],
   offscreenText: string,
-  script: unknown,
+  script: TypographyScript,
   service: string,
   dir: string,
 ) => (
@@ -62,7 +62,7 @@ const renderCaption = (
       {offscreenText && (
         <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
       )}
-      {paragraphBlocks.map((block: TextBlock) => renderParagraph(block))}
+      {paragraphBlocks.map((block: OptimoBlock) => renderParagraph(block))}
     </span>
   </Caption>
 );
@@ -94,13 +94,17 @@ const CaptionContainer = ({ block, type }: Props) => {
 
   if (!paragraphBlocks) return null;
 
-  return renderCaption(paragraphBlocks, offscreenText, script, service, dir);
+  return renderCaption(
+    paragraphBlocks,
+    offscreenText,
+    script as TypographyScript,
+    service,
+    dir,
+  );
 };
 
-type TextBlock = InferProps<typeof textBlockPropTypes>;
-
 type Props = {
-  block: TextBlock[];
+  block: OptimoBlock[];
   type: string;
 };
 

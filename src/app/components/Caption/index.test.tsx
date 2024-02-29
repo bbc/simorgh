@@ -1,9 +1,13 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { blockContainingText } from '#models/blocks';
+import { OptimoBlock } from '#app/models/types/optimo';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import CaptionContainer from '.';
 import latin from '../ThemeProvider/fontScripts/latin';
 import arabic from '../ThemeProvider/fontScripts/arabic';
+import { render } from '../react-testing-library-with-providers';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -26,7 +30,13 @@ const captionBlock = blockContainingText(
   'mocked-id',
 );
 
-const fragmentBlock = (text, attributes = []) => ({
+const fragmentBlock = ({
+  text,
+  attributes = [],
+}: {
+  text: string;
+  attributes?: string[];
+}) => ({
   type: 'fragment',
   id: uuid(),
   model: {
@@ -35,7 +45,17 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
+const inlineLinkBlock = ({
+  text,
+  locator,
+  blocks,
+  isExternal,
+}: {
+  text: string;
+  locator: string;
+  blocks: OptimoBlock[];
+  isExternal: boolean;
+}) => ({
   type: 'urlLink',
   id: uuid(),
   model: {
@@ -46,7 +66,15 @@ const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
   },
 });
 
-const inlineSpanBlock = (blocks, language, text) => ({
+const inlineSpanBlock = ({
+  blocks,
+  language,
+  text,
+}: {
+  text: string;
+  language: string;
+  blocks: OptimoBlock[];
+}) => ({
   type: 'inline',
   id: uuid,
   model: {
@@ -57,14 +85,18 @@ const inlineSpanBlock = (blocks, language, text) => ({
 });
 
 const persianText = 'چیسربرگر';
-const persianLink = inlineLinkBlock(
-  persianText,
-  'https://google.com',
-  [fragmentBlock(persianText)],
-  true,
-);
+const persianLink = inlineLinkBlock({
+  text: persianText,
+  locator: 'https://google.com',
+  blocks: [fragmentBlock({ text: persianText })],
+  isExternal: true,
+});
 
-const inlinePersianBlock = inlineSpanBlock([persianLink], 'fa', persianText);
+const inlinePersianBlock = inlineSpanBlock({
+  blocks: [persianLink],
+  language: 'fa',
+  text: persianText,
+});
 
 const blocksWithInline = {
   model: {
@@ -75,7 +107,10 @@ const blocksWithInline = {
             {
               model: {
                 blocks: [
-                  fragmentBlock('This is some text.', ['bold']),
+                  fragmentBlock({
+                    text: 'This is some text.',
+                    attributes: ['bold'],
+                  }),
                   inlinePersianBlock,
                 ],
               },
@@ -152,7 +187,15 @@ const captionBlock3Paragraphs = {
   type: 'caption',
 };
 
-const CaptionWithContext = (block, contextStub, type) => (
+const CaptionWithContext = ({
+  block,
+  contextStub,
+  type,
+}: {
+  block: OptimoBlock[];
+  contextStub: ServiceConfig;
+  type: string;
+}) => (
   <ServiceContext.Provider value={contextStub}>
     <CaptionContainer block={block} type={type} />
   </ServiceContext.Provider>
@@ -160,7 +203,11 @@ const CaptionWithContext = (block, contextStub, type) => (
 
 it('should render caption text with example News offscreen text', () => {
   const { container } = render(
-    CaptionWithContext(captionBlock, newsServiceContextStub, 'caption'),
+    CaptionWithContext({
+      block: captionBlock,
+      contextStub: newsServiceContextStub as ServiceConfig,
+      type: 'caption',
+    }),
   );
   expect(container).toMatchSnapshot();
 });
