@@ -1,10 +1,7 @@
 import { css, Theme } from '@emotion/react';
-import { HALF, QUADRUPLE } from '#app/components/ThemeProvider/spacings';
-import pixelsToRem from '#app/utilities/pixelsToRem';
+import { HALF } from '#app/components/ThemeProvider/spacings';
 
 const PULSE_END_MARGIN = HALF;
-const PULSE_SIZE_3_4 = QUADRUPLE;
-const PULSE_SIZE_TOTAL_WIDTH_3_MIN = PULSE_END_MARGIN + PULSE_SIZE_3_4;
 
 const styles = {
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
