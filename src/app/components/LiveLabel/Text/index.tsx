@@ -54,6 +54,7 @@ const Text = ({
       className={className}
     >
       <div
+        data-testid="liveLabelContainer"
         css={
           isHeaderImage
             ? styles.liveLabelContainerWithImage

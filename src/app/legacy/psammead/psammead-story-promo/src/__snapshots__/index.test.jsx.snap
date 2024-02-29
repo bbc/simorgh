@@ -2211,7 +2211,31 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-14 {
-  color: #006666;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #00CCC7;
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    width: calc(100% / 3);
+  }
+}
+
+.emotion-15 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -2220,7 +2244,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin-inline-end: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2231,7 +2255,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2243,28 +2267,28 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
@@ -2320,25 +2344,30 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
           <span
             role="text"
           >
-            <span
-              aria-hidden="true"
+            <div
               class="emotion-14"
-              dir="ltr"
+              data-testid="liveLabelContainer"
             >
-              LIVE 
-            </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Live, 
-            </span>
+              <span
+                aria-hidden="true"
+                class="emotion-15"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+              <span
+                class="emotion-16"
+                lang="en-GB"
+              >
+                Live, 
+              </span>
+            </div>
             The live promo headline
           </span>
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-17 emotion-18"
       >
         The summary of the promo
       </p>
@@ -2532,7 +2561,31 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-14 {
-  color: #006666;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #00CCC7;
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    width: calc(100% / 3);
+  }
+}
+
+.emotion-15 {
   display: inline-block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
@@ -2541,7 +2594,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin-inline-end: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2552,7 +2605,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2564,28 +2617,28 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
@@ -2641,25 +2694,30 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
           <span
             role="text"
           >
-            <span
-              aria-hidden="true"
+            <div
               class="emotion-14"
-              dir="rtl"
+              data-testid="liveLabelContainer"
             >
-              مباشر 
-            </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Live, 
-            </span>
+              <span
+                aria-hidden="true"
+                class="emotion-15"
+                dir="rtl"
+              >
+                مباشر 
+              </span>
+              <span
+                class="emotion-16"
+                lang="en-GB"
+              >
+                Live, 
+              </span>
+            </div>
             The live promo headline
           </span>
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-17 emotion-18"
       >
         The summary of the promo
       </p>

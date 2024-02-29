@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  liveLabelText: ({ fontVariants, palette, spacings }: Theme) =>
+  liveLabelText: ({ fontVariants, spacings }: Theme) =>
     css({
       display: 'inline-block',
       ...fontVariants.sansBold,
