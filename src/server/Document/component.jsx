@@ -110,7 +110,6 @@ const Document = ({
             }}
           />
         )}
-        {renderMode === 'lite' && <style>{LITE_STYLES}</style>}
         {renderMode === 'amp' && (
           <>
             <style
@@ -130,6 +129,7 @@ const Document = ({
             {AMP_ANALYTICS_JS}
           </>
         )}
+        {renderMode === 'lite' && <style>{LITE_STYLES}</style>}
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />
