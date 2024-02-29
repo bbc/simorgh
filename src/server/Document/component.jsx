@@ -55,7 +55,6 @@ const Document = ({
 
   const { html, css, ids } = app;
 
-  // Bit icky but we need to reassign these to allow them to be modified later
   let renderedHtml = html;
 
   // Apply HTML transformations for Lite pages
