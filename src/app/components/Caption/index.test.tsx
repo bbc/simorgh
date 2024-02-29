@@ -1,11 +1,9 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { blockContainingText } from '#models/blocks';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import CaptionContainer from '.';
+import latin from '../ThemeProvider/fontScripts/latin';
+import arabic from '../ThemeProvider/fontScripts/arabic';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
