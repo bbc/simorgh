@@ -72,6 +72,52 @@
         "title": "کابل کې چاودنې اووه کسان وژلي، ۲۰ نور ټپیان دي",
         "visualProminence": "NORMAL",
         "intent": "overview"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_pashto_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6p3dy",
+            "state": "next",
+            "startTime": "2024-02-27T15:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w3ct6293",
+            "brandTitle": "ماښامنۍ خپرونه",
+            "summary": "له بي‌ بي سي دا خپرونه اورئ",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6nbwn",
+            "state": "live",
+            "startTime": "2024-02-27T13:30:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/liveradio",
+            "brandTitle": "پښتو تلویزیون",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT28M"
+          },
+          {
+            "id": "p0h6mywd",
+            "state": "onDemand",
+            "startTime": "2024-02-27T12:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w3ct62gq",
+            "brandTitle": "ځانگړې مرکه او عيني شاهد خپرونه ",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT1H"
+          },
+          {
+            "id": "p0h6kmy4",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w172zj2wgcvqnf9",
+            "brandTitle": "د نن خبرې",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT29M30S"
+          }
+        ]
       }
     ],
     "metadata": {
