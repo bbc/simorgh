@@ -16,6 +16,7 @@ import {
   ERROR_PAGE,
   LIVE_PAGE,
   CPS_ASSET,
+  STATIC_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildTvRadioATIParams,
@@ -52,6 +53,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   FEATURE_INDEX_PAGE,
   INDEX_PAGE,
   LIVE_PAGE,
+  STATIC_PAGE,
 ];
 
 const noOp = () => {
@@ -76,6 +78,7 @@ const pageTypeUrlBuilders = {
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
+  [STATIC_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -96,6 +99,7 @@ const pageTypeParamBuilders = {
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
+  [STATIC_PAGE]: noOp,
 };
 
 type BuilderFunction = {
