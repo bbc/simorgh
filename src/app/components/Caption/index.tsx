@@ -104,7 +104,7 @@ const CaptionContainer = ({ block, type }: Props) => {
 };
 
 type Props = {
-  block: OptimoBlock[];
+  block: OptimoBlock;
   type: string;
 };
 
