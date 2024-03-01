@@ -3826,6 +3826,7 @@ __metadata:
 "@next/swc-linux-x64-gnu@npm:14.0.1":
   version: 14.0.1
   resolution: "@next/swc-linux-x64-gnu@npm:14.0.1"
+  checksum: c7d2e29fd05ce752395cdf16a6bba6426761935106a7ff87e664cc28a5acd300cf7d489b7c7cb8f8fe67836b003ff188511ae2cc6b7cb20fafa946afe4fe423d
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -20894,6 +20895,7 @@ __metadata:
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
+    "@next/swc-linux-x64-gnu": "npm:14.0.1"
     "@optimizely/react-sdk": 2.9.2
     "@storybook/addon-a11y": 6.5.16
     "@storybook/addon-backgrounds": 6.5.16
