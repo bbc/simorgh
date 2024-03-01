@@ -1,4 +1,3 @@
-import { v4 as uuid } from 'uuid';
 import { blockContainingText } from '#models/blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 
@@ -22,7 +21,7 @@ export const fragmentBlock = ({
   attributes?: string[];
 }) => ({
   type: 'fragment',
-  id: uuid(),
+  id: 'someId',
   model: {
     text,
     attributes,
@@ -41,7 +40,7 @@ export const inlineLinkBlock = ({
   isExternal: boolean;
 }) => ({
   type: 'urlLink',
-  id: uuid(),
+  id: 'someId',
   model: {
     text,
     locator,
@@ -60,7 +59,7 @@ export const inlineSpanBlock = ({
   blocks: OptimoBlock[];
 }) => ({
   type: 'inline',
-  id: uuid,
+  id: 'someId',
   model: {
     blocks,
     language,
