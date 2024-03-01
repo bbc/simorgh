@@ -4,5 +4,5 @@ if [ "$1" = "--production" ]; then
   rm -rf node_modules | yarn workspaces focus --all --production
 else
   echo "Installing all node modules from cache"
-  rm -rf node_modules | yarn install --immutable --check-cache
+  rm -rf node_modules | yarn install --immutable --immutable-cache
 fi
