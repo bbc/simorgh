@@ -24,18 +24,20 @@ import getAmpUrl from './getAmpUrl';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
+const noOp = () => {};
+
 // Pass arguments in from each page's index.js file
 const runTestsForPage = ({
   pageType,
-  testsThatAlwaysRun,
-  testsThatAlwaysRunForCanonicalOnly,
-  testsThatAlwaysRunForAMPOnly,
-  testsThatFollowSmokeTestConfig,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForAMPOnly,
-  testsThatNeverRunDuringSmokeTesting,
-  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
-  testsThatNeverRunDuringSmokeTestingForAMPOnly,
+  testsThatAlwaysRun = noOp,
+  testsThatAlwaysRunForCanonicalOnly = noOp,
+  testsThatAlwaysRunForAMPOnly = noOp,
+  testsThatFollowSmokeTestConfig = noOp,
+  testsThatFollowSmokeTestConfigForCanonicalOnly = noOp,
+  testsThatFollowSmokeTestConfigForAMPOnly = noOp,
+  testsThatNeverRunDuringSmokeTesting = noOp,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly = noOp,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly = noOp,
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
 
