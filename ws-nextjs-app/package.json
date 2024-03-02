@@ -38,7 +38,7 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.1.0",
+    "next": "14.1.1",
     "undici": "6.6.2"
   }
 }
