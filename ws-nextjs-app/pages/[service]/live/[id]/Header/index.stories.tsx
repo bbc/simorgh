@@ -1,5 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../../../src/app/contexts/ServiceContext';
 import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
@@ -28,16 +30,26 @@ const Component = ({
 }: ComponentProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Header
-          showLiveLabel={showLiveLabel}
-          title={title}
-          description={description}
-          imageUrl={imageUrl}
-          imageUrlTemplate={imageUrlTemplate}
-          imageWidth={imageWidth}
-        />
-      </ServiceContextProvider>
+      <RequestContextProvider
+        isAmp={false}
+        isApp={false}
+        pageType={LIVE_PAGE}
+        service={service}
+        statusCode={200}
+        pathname="/pathname"
+        variant={variant}
+      >
+        <ServiceContextProvider service={service} variant={variant}>
+          <Header
+            showLiveLabel={showLiveLabel}
+            title={title}
+            description={description}
+            imageUrl={imageUrl}
+            imageUrlTemplate={imageUrlTemplate}
+            imageWidth={imageWidth}
+          />
+        </ServiceContextProvider>
+      </RequestContextProvider>
     </ThemeProvider>
   );
 };
