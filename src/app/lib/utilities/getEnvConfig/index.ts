@@ -1,8 +1,9 @@
 import onClient from '#app/lib/utilities/onClient';
 
-export type EnvConfig = typeof SERVER_ENV_VARS;
+export type EnvConfig = typeof APP_ENV_VARIABLES;
 
-export const SERVER_ENV_VARS = {
+// Any environment variables added here will be available to the client and server
+export const APP_ENV_VARIABLES = {
   SIMORGH_APP_ENV: process.env.SIMORGH_APP_ENV,
   SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
   SIMORGH_ICHEF_BASE_URL: process.env.SIMORGH_ICHEF_BASE_URL,
@@ -14,7 +15,7 @@ export function getEnvConfig(): EnvConfig {
     return window.SIMORGH_ENV_VARS;
   }
 
-  return SERVER_ENV_VARS;
+  return APP_ENV_VARIABLES;
 }
 
 declare global {

@@ -10,7 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
-import { SERVER_ENV_VARS } from '#lib/utilities/getEnvConfig';
+import { APP_ENV_VARIABLES } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -91,7 +91,7 @@ const Document = ({
             dangerouslySetInnerHTML={{
               // Read env variables from the server and expose them to the client
               __html: `window.SIMORGH_ENV_VARS=${serialiseForScript(
-                SERVER_ENV_VARS,
+                APP_ENV_VARIABLES,
               )}`,
             }}
           />
