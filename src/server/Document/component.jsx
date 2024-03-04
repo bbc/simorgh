@@ -10,7 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
-import { APP_ENV_VARIABLES } from '#lib/utilities/getEnvConfig';
+import { initialiseAppEnvVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -28,6 +28,8 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(initialiseAppEnvVariables());
+
   const scriptsAllowed = !isAmp;
 
   const { html, css, ids } = app;
@@ -90,9 +92,7 @@ const Document = ({
             id="simorgh-envvars"
             dangerouslySetInnerHTML={{
               // Read env variables from the server and expose them to the client
-              __html: `window.SIMORGH_ENV_VARS=${serialiseForScript(
-                APP_ENV_VARIABLES,
-              )}`,
+              __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
             }}
           />
         )}

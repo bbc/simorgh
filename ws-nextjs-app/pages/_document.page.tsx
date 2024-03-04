@@ -10,7 +10,10 @@ import Script from 'next/script';
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
-import { EnvConfig, APP_ENV_VARIABLES } from '#lib/utilities/getEnvConfig';
+import {
+  EnvConfig,
+  initialiseAppEnvVariables,
+} from '#lib/utilities/getEnvConfig';
 
 type DocProps = {
   helmet: HelmetData;
@@ -24,7 +27,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(ctx.asPath || '');
 
     // Read env variables from the server and expose them to the client
-    const clientSideEnvVariables: EnvConfig = APP_ENV_VARIABLES;
+    const clientSideEnvVariables: EnvConfig = initialiseAppEnvVariables();
 
     return {
       ...initialProps,
