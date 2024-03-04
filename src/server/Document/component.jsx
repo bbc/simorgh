@@ -10,6 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
+import { SERVER_ENV_VARS } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -83,6 +84,16 @@ const Document = ({
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
           </>
+        )}
+        {scriptsAllowed && (
+          <script
+            id="simorgh-envvars"
+            dangerouslySetInnerHTML={{
+              __html: `window.SIMORGH_ENV_VARS=${serialiseForScript(
+                SERVER_ENV_VARS,
+              )}`,
+            }}
+          />
         )}
       </head>
       <body {...ampGeoPendingAttrs}>

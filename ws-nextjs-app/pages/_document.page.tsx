@@ -10,7 +10,10 @@ import Script from 'next/script';
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
-import { EnvConfig } from '../utilities/getEnvConfig';
+import {
+  EnvConfig,
+  SERVER_ENV_VARS,
+} from '../../src/app/lib/utilities/getEnvConfig';
 
 type DocProps = {
   helmet: HelmetData;
@@ -24,11 +27,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(ctx.asPath || '');
 
     // Read env variables from the server and expose them to the client
-    const clientSideEnvVariables: EnvConfig = {
-      SIMORGH_APP_ENV: process.env.SIMORGH_APP_ENV,
-      SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
-      SIMORGH_ICHEF_BASE_URL: process.env.SIMORGH_ICHEF_BASE_URL,
-    };
+    const clientSideEnvVariables: EnvConfig = SERVER_ENV_VARS;
 
     return {
       ...initialProps,
@@ -57,8 +56,10 @@ export default class AppDocument extends Document<DocProps> {
               __html: `document.documentElement.classList.remove("no-js");`,
             }}
           />
-          <Script id="simorgh-envars" strategy="beforeInteractive">
-            {`window.simorghEnvVars=${JSON.stringify(clientSideEnvVariables)}`}
+          <Script id="simorgh-envvars" strategy="beforeInteractive">
+            {`window.SIMORGH_ENV_VARS=${JSON.stringify(
+              clientSideEnvVariables,
+            )}`}
           </Script>
           {isApp && <meta name="robots" content="noindex" />}
           {meta}
