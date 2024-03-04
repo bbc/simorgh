@@ -3,17 +3,17 @@ import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps } from '../types';
 
 const isTestRequested = () => {
-  let isRenderEnvLive = false;
-  const isTestServer =
-    process.env.SIMORGH_APP_ENV === 'test' ||
-    process.env.SIMORGH_APP_ENV === 'local';
-
   if (onClient()) {
+    const testLiterals = window.location.hostname.match(/localhost|test/g);
+    const isTest = testLiterals && testLiterals.length > 0;
+
     const queryParams = new URLSearchParams(window.location.search);
-    isRenderEnvLive = queryParams.get('renderer_env') === 'live';
+    const isRenderEnvLive = queryParams.get('renderer_env') === 'live';
+
+    return isTest && !isRenderEnvLive;
   }
 
-  return isTestServer && !isRenderEnvLive;
+  return false;
 };
 
 const buildConfig = ({
