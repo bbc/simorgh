@@ -4,7 +4,9 @@ import { BuildConfigProps } from '../types';
 
 const isTestRequested = () => {
   let isRenderEnvLive = false;
-  const isTestServer = process.env.NODE_ENV === 'development';
+  const isTestServer =
+    process.env.SIMORGH_APP_ENV === 'test' ||
+    process.env.SIMORGH_APP_ENV === 'local';
 
   if (onClient()) {
     const queryParams = new URLSearchParams(window.location.search);

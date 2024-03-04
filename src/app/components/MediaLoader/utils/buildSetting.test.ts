@@ -8,7 +8,7 @@ describe('buildSettings', () => {
   });
 
   afterEach(() => {
-    delete process.env.NODE_ENV;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('Should process an AresMedia block into a valid playlist item.', () => {
@@ -32,7 +32,7 @@ describe('buildSettings', () => {
   });
 
   it('Should include the mediator parameter if we are on a test url.', () => {
-    process.env.NODE_ENV = 'development';
+    process.env.SIMORGH_APP_ENV = 'test';
 
     const mockWindowObj = {
       location: {
@@ -54,7 +54,7 @@ describe('buildSettings', () => {
   });
 
   it('Should include the mediator parameter if we are on a dev environment.', () => {
-    process.env.NODE_ENV = 'development';
+    process.env.SIMORGH_APP_ENV = 'test';
 
     const mockWindowObj = {
       location: {
@@ -76,7 +76,7 @@ describe('buildSettings', () => {
   });
 
   it('Should NOT include the mediator parameter if we are on a test environemnt, but renderer_env is set to live.', () => {
-    process.env.NODE_ENV = 'development';
+    process.env.SIMORGH_APP_ENV = 'test';
 
     const mockWindowObj = {
       location: {
