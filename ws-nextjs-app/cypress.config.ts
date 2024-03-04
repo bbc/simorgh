@@ -2,6 +2,7 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
+  // Consider moving 'retries' to a per-test level once we have more tests
   retries: 3,
   e2e: {
     setupNodeEvents(on, config) {
