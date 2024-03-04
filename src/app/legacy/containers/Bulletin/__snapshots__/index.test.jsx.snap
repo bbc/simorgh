@@ -399,8 +399,10 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             >
               Gee ntị Live, 
             </span>
-            Test Radio Bulletin promo
           </span>
+          <div>
+            Test Radio Bulletin promo
+          </div>
         </a>
       </h3>
       <p
@@ -843,8 +845,10 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             >
               Lee Live, 
             </span>
-            Test TV Bulletin promo
           </span>
+          <div>
+            Test TV Bulletin promo
+          </div>
         </a>
       </h3>
       <p

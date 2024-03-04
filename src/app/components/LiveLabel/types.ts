@@ -4,6 +4,7 @@ export interface LiveLabelProps extends TextProps {
 
 export interface TextProps {
   className?: string;
+  populatedChildren?: boolean;
   offScreenText?: string;
   lang?: string;
   id?: string;

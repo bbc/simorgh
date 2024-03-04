@@ -21,13 +21,18 @@ const LiveLabel = ({
     styles.liveLabelPulse,
     className === 'first-promo' && styles.firstPromo,
   ];
+  const populatedChildren = Boolean(children);
 
   return (
     <>
       <Pulse className={className} width="16" height="16" css={pulse} />
-      <Text lang={lang} id={id} offScreenText={offScreenText}>
-        {children}
-      </Text>
+      <Text
+        lang={lang}
+        id={id}
+        offScreenText={offScreenText}
+        populatedChildren={populatedChildren}
+      />
+      <Title>{children}</Title>
     </>
   );
 };

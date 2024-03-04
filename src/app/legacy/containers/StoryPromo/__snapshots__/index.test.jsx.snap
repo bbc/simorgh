@@ -7023,10 +7023,12 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             >
               , 
             </span>
+          </span>
+          <div>
             <span>
               A live item
             </span>
-          </span>
+          </div>
         </a>
       </h3>
       <p
@@ -7414,10 +7416,12 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             >
               , 
             </span>
+          </span>
+          <div>
             <span>
               A live item
             </span>
-          </span>
+          </div>
         </a>
       </h3>
       <p
@@ -7808,10 +7812,12 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             >
               , 
             </span>
+          </span>
+          <div>
             <span>
               A live item
             </span>
-          </span>
+          </div>
         </a>
       </h3>
       <p
@@ -8238,10 +8244,12 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             >
               , 
             </span>
+          </span>
+          <div>
             <span>
               A live item
             </span>
-          </span>
+          </div>
         </a>
       </h3>
       <p

@@ -2333,8 +2333,10 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
             >
               Live, 
             </span>
-            The live promo headline
           </span>
+          <div>
+            The live promo headline
+          </div>
         </a>
       </h3>
       <p
@@ -2654,8 +2656,10 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
             >
               Live, 
             </span>
-            The live promo headline
           </span>
+          <div>
+            The live promo headline
+          </div>
         </a>
       </h3>
       <p

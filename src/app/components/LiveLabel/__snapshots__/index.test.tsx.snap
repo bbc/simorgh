@@ -80,6 +80,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
       مباشر 
     </span>
   </span>
+  <div />
 </div>
 `;
 
@@ -181,6 +182,7 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
       Live
     </span>
   </span>
+  <div />
 </div>
 `;
 
@@ -281,8 +283,10 @@ exports[`LiveLabel should render correctly with English live text and children 1
     >
       Live, 
     </span>
-     this is a headline 
   </span>
+  <div>
+     this is a headline 
+  </div>
 </div>
 `;
 
@@ -384,6 +388,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
       Watch Live
     </span>
   </span>
+  <div />
 </div>
 `;
 
@@ -467,5 +472,6 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
       As E Dey Happen 
     </span>
   </span>
+  <div />
 </div>
 `;

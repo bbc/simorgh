@@ -1044,8 +1044,10 @@ exports[`Bulletin should render live audio correctly 1`] = `
             >
               Listen LIVE, 
             </span>
-            This is the headline
           </span>
+          <div>
+            This is the headline
+          </div>
         </a>
       </h3>
       <p
@@ -1458,8 +1460,10 @@ exports[`Bulletin should render live video correctly 1`] = `
             >
               Watch LIVE, 
             </span>
-            This is the headline
           </span>
+          <div>
+            This is the headline
+          </div>
         </a>
       </h3>
       <p

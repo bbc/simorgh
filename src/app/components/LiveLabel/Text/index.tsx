@@ -11,7 +11,7 @@ import { TextProps } from '../types';
 const Text = ({
   lang = 'en-GB',
   id,
-  children,
+  populatedChildren,
   offScreenText,
   className,
 }: PropsWithChildren<TextProps>) => {
@@ -42,7 +42,7 @@ const Text = ({
     screenReaderText = 'Live';
   }
   // comma is added to screenReaderText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
-  if (children) {
+  if (populatedChildren) {
     // Otherwise, the screenreader will pause after reading the word / translation of "Live"
     screenReaderText += ', ';
   }
@@ -65,7 +65,6 @@ const Text = ({
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
       )}
-      {!isLivePage && children}
     </span>
   );
 };
