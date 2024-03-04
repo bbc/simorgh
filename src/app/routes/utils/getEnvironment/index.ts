@@ -1,12 +1,7 @@
 import { Environments } from '#app/models/types/global';
 
-import Url from 'url-parse';
-
-export default (pathname: string) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const url = new Url(`https://www.bbc.com${pathname}`, true);
-
-  // const rendererEnv = url?.query?.renderer_env;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default (_pathname: string) => {
   const rendererEnv = 'live' as string;
 
   switch (rendererEnv) {
