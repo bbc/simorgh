@@ -18,7 +18,7 @@ import {
 type DocProps = {
   helmet: HelmetData;
   isApp: boolean;
-  clientSideEnvVariables: Record<string, string>;
+  clientSideEnvVariables: EnvConfig;
 };
 
 export default class AppDocument extends Document<DocProps> {
@@ -27,7 +27,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(ctx.asPath || '');
 
     // Read env variables from the server and expose them to the client
-    const clientSideEnvVariables: EnvConfig = initialiseAppEnvVariables();
+    const clientSideEnvVariables = initialiseAppEnvVariables();
 
     return {
       ...initialProps,
