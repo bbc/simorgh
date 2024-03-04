@@ -53,6 +53,26 @@ describe('buildSettings', () => {
     });
   });
 
+  it('Should NOT include the mediator parameter if we are on a test environemnt, but renderer_env is set to live.', () => {
+    process.env.NODE_ENV = 'development';
+
+    const mockWindowObj = {
+      location: {
+        search: '?renderer_env=live',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildConfig({
+      id: 'testID',
+      blocks,
+      pageType: 'article',
+      counterName: null,
+    });
+    expect(result?.playerConfig.mediator).toBe(undefined);
+  });
+
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
     const result = buildConfig({
       id: 'testID',
