@@ -21,7 +21,7 @@ const LiveLabelHeader = ({
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   const populatedChildren = Boolean(children);
   return (
-    <div data-testid="live-label">
+    <div data-testid="live-label" aria-labelledby="live-label">
       <LiveLabel.Container
         css={isHeaderImage && styles.liveLabelContainerWithoutImage}
       >
