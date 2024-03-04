@@ -146,6 +146,7 @@ export const themes = {
   vietnamese: loadable(
     () => import(/* webpackChunkName: "themes-vietnamese" */ './vietnamese'),
   ),
+  ws: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './ws')),
   yoruba: loadable(
     () => import(/* webpackChunkName: "themes-yoruba" */ './yoruba'),
   ),
