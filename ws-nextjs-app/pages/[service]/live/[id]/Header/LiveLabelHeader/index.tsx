@@ -21,7 +21,8 @@ const LiveLabelHeader = ({
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   const populatedChildren = Boolean(children);
   return (
-    <div data-testid="live-label" aria-labelledby="live-label">
+    // eslint-disable-next-line jsx-a11y/aria-role
+    <span data-testid="live-label" role="text">
       <LiveLabel.Container
         css={isHeaderImage && styles.liveLabelContainerWithoutImage}
       >
@@ -39,7 +40,7 @@ const LiveLabelHeader = ({
         />
       </LiveLabel.Container>
       <LiveLabel.Title>{children}</LiveLabel.Title>
-    </div>
+    </span>
   );
 };
 
