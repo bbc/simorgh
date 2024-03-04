@@ -96,7 +96,6 @@ describe('Hierarchical Grid Curation', () => {
     const container = render(
       <HierarchicalGrid headingLevel={headingLevel} promos={mediaFixture} />,
     );
-
     expect(container.queryAllByTestId('visually-hidden-text')).toHaveLength(2);
     expect(container.getByText('Test image gallery')).toBeInTheDocument();
   });

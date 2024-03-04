@@ -92,12 +92,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
   color: #6E6E73;
 }
 
-.emotion-6:hover .emotion-15 {
+.emotion-6:hover .emotion-14 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:focus .emotion-15 {
+.emotion-6:focus .emotion-14 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -128,40 +128,16 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 .emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-11 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -172,7 +148,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #3F3F42;
   padding: 0.5rem 0 0 0;
   display: inline-block;
@@ -185,20 +161,20 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -211,20 +187,20 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -237,27 +213,27 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-19 {
+  .emotion-18 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-21>svg {
+.emotion-20>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -266,12 +242,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-21>svg {
+  .emotion-20>svg {
     fill: canvasText;
   }
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -280,7 +256,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   height: 0.75rem;
 }
 
-.emotion-25 {
+.emotion-24 {
   padding-left: 0.5rem;
 }
 
@@ -325,38 +301,33 @@ exports[`ProgramCard should render correctly for live 1`] = `
             <span
               role="text"
             >
-              <div
+              <span
+                aria-hidden="true"
                 class="emotion-10"
-                data-testid="liveLabelContainer"
+                dir="ltr"
               >
-                <span
-                  aria-hidden="true"
-                  class="emotion-11"
-                  dir="ltr"
-                >
-                  LIVE 
-                </span>
-                <span
-                  class="emotion-12"
-                  lang="en-GB"
-                >
-                  Listen Live, 
-                </span>
-              </div>
+                LIVE 
+              </span>
+              <span
+                class="emotion-11"
+                lang="en-GB"
+              >
+                Listen Live, 
+              </span>
             </span>
             Could a computer ever create better art than a human?
             <span
-              class="emotion-12"
+              class="emotion-11"
             >
               , 14:54, 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-13 emotion-14"
             >
               27 August 2019
             </span>
             <span
-              class="emotion-12"
+              class="emotion-11"
             >
               , Duration 30,00 
             </span>
@@ -364,20 +335,20 @@ exports[`ProgramCard should render correctly for live 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
       >
         The critic, author, poet and TV host was known for his witty commentary on international television.
       </p>
     </div>
     <div
-      class="emotion-19 emotion-20"
+      class="emotion-18 emotion-19"
     >
       <span
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
       >
         <svg
           aria-hidden="true"
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -392,7 +363,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
         </svg>
       </span>
       <time
-        class="emotion-25 emotion-26"
+        class="emotion-24 emotion-25"
         datetime="PT30M"
         dir="ltr"
       >
@@ -1378,12 +1349,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   color: #6E6E73;
 }
 
-.emotion-6:hover .emotion-15 {
+.emotion-6:hover .emotion-14 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:focus .emotion-15 {
+.emotion-6:focus .emotion-14 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1414,40 +1385,16 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 .emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-11 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1458,7 +1405,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #3F3F42;
   padding: 0.5rem 0 0 0;
   display: inline-block;
@@ -1471,20 +1418,20 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1497,27 +1444,27 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-17 {
+  .emotion-16 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-19>svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1526,12 +1473,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-19>svg {
+  .emotion-18>svg {
     fill: canvasText;
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1540,7 +1487,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   height: 0.75rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   padding-left: 0.5rem;
 }
 
@@ -1585,38 +1532,33 @@ exports[`ProgramCard should render correctly without summary 1`] = `
             <span
               role="text"
             >
-              <div
+              <span
+                aria-hidden="true"
                 class="emotion-10"
-                data-testid="liveLabelContainer"
+                dir="ltr"
               >
-                <span
-                  aria-hidden="true"
-                  class="emotion-11"
-                  dir="ltr"
-                >
-                  LIVE 
-                </span>
-                <span
-                  class="emotion-12"
-                  lang="en-GB"
-                >
-                  Listen Live, 
-                </span>
-              </div>
+                LIVE 
+              </span>
+              <span
+                class="emotion-11"
+                lang="en-GB"
+              >
+                Listen Live, 
+              </span>
             </span>
             Could a computer ever create better art than a human?
             <span
-              class="emotion-12"
+              class="emotion-11"
             >
               , 14:54, 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-13 emotion-14"
             >
               27 August 2019
             </span>
             <span
-              class="emotion-12"
+              class="emotion-11"
             >
               , Duration 30,00 
             </span>
@@ -1625,14 +1567,14 @@ exports[`ProgramCard should render correctly without summary 1`] = `
       </h3>
     </div>
     <div
-      class="emotion-17 emotion-18"
+      class="emotion-16 emotion-17"
     >
       <span
-        class="emotion-19 emotion-20"
+        class="emotion-18 emotion-19"
       >
         <svg
           aria-hidden="true"
-          class="emotion-21 emotion-22"
+          class="emotion-20 emotion-21"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -1647,7 +1589,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
         </svg>
       </span>
       <time
-        class="emotion-23 emotion-24"
+        class="emotion-22 emotion-23"
         datetime="PT30M"
         dir="ltr"
       >

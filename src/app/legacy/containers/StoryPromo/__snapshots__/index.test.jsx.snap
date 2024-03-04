@@ -6883,40 +6883,16 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-17 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-17 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-18 {
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -6927,7 +6903,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6939,28 +6915,28 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
@@ -7035,23 +7011,18 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             id="promo-1"
             role="text"
           >
-            <div
+            <span
               class="emotion-17"
-              data-testid="liveLabelContainer"
+              dir="ltr"
             >
-              <span
-                class="emotion-18"
-                dir="ltr"
-              >
-                NA EME UGBU A 
-              </span>
-              <span
-                class="emotion-19"
-                lang="en-GB"
-              >
-                , 
-              </span>
-            </div>
+              NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-18"
+              lang="en-GB"
+            >
+              , 
+            </span>
             <span>
               A live item
             </span>
@@ -7059,7 +7030,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-20 emotion-21"
+        class="emotion-19 emotion-20"
       >
         Summary text
       </p>
@@ -7303,40 +7274,16 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-18 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-18 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-19 {
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-20 {
+.emotion-19 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -7347,7 +7294,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   margin: 0;
 }
 
-.emotion-21 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7359,28 +7306,28 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-21 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
@@ -7455,23 +7402,18 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             id="promo-1"
             role="text"
           >
-            <div
+            <span
               class="emotion-18"
-              data-testid="liveLabelContainer"
+              dir="ltr"
             >
-              <span
-                class="emotion-19"
-                dir="ltr"
-              >
-                NA EME UGBU A 
-              </span>
-              <span
-                class="emotion-20"
-                lang="en-GB"
-              >
-                , 
-              </span>
-            </div>
+              NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-19"
+              lang="en-GB"
+            >
+              , 
+            </span>
             <span>
               A live item
             </span>
@@ -7479,7 +7421,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-21 emotion-22"
+        class="emotion-20 emotion-21"
       >
         Summary text
       </p>
@@ -7671,40 +7613,16 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-10 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-11 {
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -7715,7 +7633,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   margin: 0;
 }
 
-.emotion-13 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7727,34 +7645,34 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-12 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-13 {
+  .emotion-12 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-15 {
+.emotion-14 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -7762,20 +7680,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-14 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-15 {
+  .emotion-14 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -7783,25 +7701,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   position: relative;
 }
 
-.emotion-19 {
+.emotion-18 {
   overflow: hidden;
   position: relative;
   height: 0;
@@ -7815,25 +7733,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 25rem) {
-  .emotion-19 {
+  .emotion-18 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-18 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-20 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-20>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -7878,23 +7796,18 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             id="promo-1"
             role="text"
           >
-            <div
+            <span
               class="emotion-10"
-              data-testid="liveLabelContainer"
+              dir="ltr"
             >
-              <span
-                class="emotion-11"
-                dir="ltr"
-              >
-                NA EME UGBU A 
-              </span>
-              <span
-                class="emotion-12"
-                lang="en-GB"
-              >
-                , 
-              </span>
-            </div>
+              NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-11"
+              lang="en-GB"
+            >
+              , 
+            </span>
             <span>
               A live item
             </span>
@@ -7902,20 +7815,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-13 emotion-14"
+        class="emotion-12 emotion-13"
       >
         Summary text
       </p>
     </div>
     <div
-      class="emotion-15 emotion-16"
+      class="emotion-14 emotion-15"
       dir="ltr"
     >
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-19"
+          class="emotion-18"
           style="padding-bottom: 56.25%;"
         >
           <amp-img
@@ -7932,7 +7845,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           />
         </div>
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -8192,40 +8105,16 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-17 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-17 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-18 {
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -8236,7 +8125,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8248,21 +8137,21 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-20 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
@@ -8337,23 +8226,18 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             id="promo-1"
             role="text"
           >
-            <div
+            <span
               class="emotion-17"
-              data-testid="liveLabelContainer"
+              dir="ltr"
             >
-              <span
-                class="emotion-18"
-                dir="ltr"
-              >
-                NA EME UGBU A 
-              </span>
-              <span
-                class="emotion-19"
-                lang="en-GB"
-              >
-                , 
-              </span>
-            </div>
+              NA EME UGBU A 
+            </span>
+            <span
+              class="emotion-18"
+              lang="en-GB"
+            >
+              , 
+            </span>
             <span>
               A live item
             </span>
@@ -8361,7 +8245,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-20 emotion-21"
+        class="emotion-19 emotion-20"
       >
         Summary text
       </p>

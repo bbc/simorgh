@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import LiveLabel from '.';
 
 describe('LiveLabel', () => {
@@ -69,9 +69,7 @@ describe('LiveLabel', () => {
           liveLabelElement.querySelector(`[aria-hidden="true"]`);
 
         if (ariaHiddenTextElement) {
-          const container = screen.getByTestId('liveLabelContainer');
-
-          container.removeChild(ariaHiddenTextElement);
+          liveLabelElement.removeChild(ariaHiddenTextElement);
 
           expect(ariaHiddenTextElement.textContent).toBe(
             expectedAriaHiddenText,

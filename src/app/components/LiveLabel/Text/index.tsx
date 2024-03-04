@@ -18,6 +18,8 @@ const Text = ({
   const { pageType } = useContext(RequestContext);
   const { dir, translations } = useContext(ServiceContext);
 
+  const isLivePage = pageType === 'live';
+
   const { liveLabel } = translations.media;
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
@@ -54,9 +56,7 @@ const Text = ({
       className={className}
     >
       <span
-        css={
-          pageType === 'live' ? styles.livePageLabelText : styles.liveLabelText
-        }
+        css={isLivePage ? styles.livePageLabelText : styles.liveLabelText}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
@@ -65,6 +65,7 @@ const Text = ({
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
       )}
+      {!isLivePage && children}
     </span>
   );
 };

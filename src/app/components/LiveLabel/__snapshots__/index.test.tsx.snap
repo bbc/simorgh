@@ -41,37 +41,13 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-3 {
   display: inline-block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
 <div>
@@ -97,17 +73,12 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
   <span
     role="text"
   >
-    <div
+    <span
       class="emotion-2"
-      data-testid="liveLabelContainer"
+      dir="rtl"
     >
-      <span
-        class="emotion-3"
-        dir="rtl"
-      >
-        مباشر 
-      </span>
-    </div>
+      مباشر 
+    </span>
   </span>
 </div>
 `;
@@ -153,40 +124,16 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-3 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -220,24 +167,19 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
   <span
     role="text"
   >
-    <div
+    <span
+      aria-hidden="true"
       class="emotion-2"
-      data-testid="liveLabelContainer"
+      dir="ltr"
     >
-      <span
-        aria-hidden="true"
-        class="emotion-3"
-        dir="ltr"
-      >
-        LIVE 
-      </span>
-      <span
-        class="emotion-4"
-        lang="en-GB"
-      >
-        Live
-      </span>
-    </div>
+      LIVE 
+    </span>
+    <span
+      class="emotion-3"
+      lang="en-GB"
+    >
+      Live
+    </span>
   </span>
 </div>
 `;
@@ -283,40 +225,16 @@ exports[`LiveLabel should render correctly with English live text and children 1
 }
 
 .emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-3 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -350,24 +268,19 @@ exports[`LiveLabel should render correctly with English live text and children 1
   <span
     role="text"
   >
-    <div
+    <span
+      aria-hidden="true"
       class="emotion-2"
-      data-testid="liveLabelContainer"
+      dir="ltr"
     >
-      <span
-        aria-hidden="true"
-        class="emotion-3"
-        dir="ltr"
-      >
-        LIVE 
-      </span>
-      <span
-        class="emotion-4"
-        lang="en-GB"
-      >
-        Live, 
-      </span>
-    </div>
+      LIVE 
+    </span>
+    <span
+      class="emotion-3"
+      lang="en-GB"
+    >
+      Live, 
+    </span>
      this is a headline 
   </span>
 </div>
@@ -414,40 +327,16 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-3 {
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -481,24 +370,19 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
   <span
     role="text"
   >
-    <div
+    <span
+      aria-hidden="true"
       class="emotion-2"
-      data-testid="liveLabelContainer"
+      dir="ltr"
     >
-      <span
-        aria-hidden="true"
-        class="emotion-3"
-        dir="ltr"
-      >
-        LIVE 
-      </span>
-      <span
-        class="emotion-4"
-        lang="en-GB"
-      >
-        Watch Live
-      </span>
-    </div>
+      LIVE 
+    </span>
+    <span
+      class="emotion-3"
+      lang="en-GB"
+    >
+      Watch Live
+    </span>
   </span>
 </div>
 `;
@@ -544,37 +428,13 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00CCC7;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: calc(100% / 3);
-  }
-}
-
-.emotion-3 {
   display: inline-block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
 <div>
@@ -600,17 +460,12 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
   <span
     role="text"
   >
-    <div
+    <span
       class="emotion-2"
-      data-testid="liveLabelContainer"
+      dir="ltr"
     >
-      <span
-        class="emotion-3"
-        dir="ltr"
-      >
-        As E Dey Happen 
-      </span>
-    </div>
+      As E Dey Happen 
+    </span>
   </span>
 </div>
 `;
