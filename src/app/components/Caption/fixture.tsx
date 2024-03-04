@@ -1,6 +1,8 @@
 import { blockContainingText } from '#models/blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 
+const generateUUID = () => Math.random().toString(16).slice(2);
+
 export default blockContainingText(
   'caption',
   'Some caption text...',
@@ -21,7 +23,7 @@ export const fragmentBlock = ({
   attributes?: string[];
 }) => ({
   type: 'fragment',
-  id: 'someId',
+  id: generateUUID(),
   model: {
     text,
     attributes,
@@ -40,7 +42,7 @@ export const inlineLinkBlock = ({
   isExternal: boolean;
 }) => ({
   type: 'urlLink',
-  id: 'someId',
+  id: generateUUID(),
   model: {
     text,
     locator,
@@ -59,7 +61,7 @@ export const inlineSpanBlock = ({
   blocks: OptimoBlock[];
 }) => ({
   type: 'inline',
-  id: 'someId',
+  id: generateUUID(),
   model: {
     blocks,
     language,
