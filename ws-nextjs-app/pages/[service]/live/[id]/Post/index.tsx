@@ -15,6 +15,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import { getEnvConfig } from '../../../../../utilities/getEnvConfig';
 import styles from './styles';
 import {
   Post as PostType,
@@ -180,6 +181,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
+      {getEnvConfig().SIMORGH_APP_ENV}
       <Heading level={3}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
