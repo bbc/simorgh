@@ -7,6 +7,8 @@ import { LiveLabelProps } from './types';
 import styles from './index.styles';
 import Text from './Text';
 import Pulse from './Pulse';
+import Title from './Title';
+import Container from './Container';
 
 const LiveLabel = ({
   lang = 'en-GB',
@@ -32,5 +34,7 @@ const LiveLabel = ({
 
 LiveLabel.Text = Text;
 LiveLabel.Pulse = Pulse;
+LiveLabel.Title = Title;
+LiveLabel.Container = Container;
 
 export default LiveLabel;

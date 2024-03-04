@@ -2,6 +2,7 @@
 /** @jsxRuntime classic */
 import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
+import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -12,10 +13,9 @@ const Text = ({
   id,
   children,
   offScreenText,
-  isHeaderImage,
   className,
-  pulse,
 }: PropsWithChildren<TextProps>) => {
+  const { pageType } = useContext(RequestContext);
   const { dir, translations } = useContext(ServiceContext);
 
   const { liveLabel } = translations.media;
@@ -53,29 +53,18 @@ const Text = ({
       role="text"
       className={className}
     >
-      <div
-        data-testid="liveLabelContainer"
+      <span
         css={
-          isHeaderImage
-            ? styles.liveLabelContainerWithImage
-            : styles.liveLabelContainerWithoutImage
+          pageType === 'live' ? styles.livePageLabelText : styles.liveLabelText
         }
+        dir={dir}
+        {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {pulse}
-        <span
-          css={styles.liveLabelText}
-          dir={dir}
-          {...(ariaHidden && { 'aria-hidden': 'true' })}
-        >
-          {`${liveLabel} `}
-        </span>
-        {screenReaderText && (
-          <VisuallyHiddenText lang={lang}>
-            {screenReaderText}
-          </VisuallyHiddenText>
-        )}
-      </div>
-      {children}
+        {`${liveLabel} `}
+      </span>
+      {screenReaderText && (
+        <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
+      )}
     </span>
   );
 };

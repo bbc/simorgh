@@ -22,6 +22,15 @@ const styles = {
         color: 'canvasText',
       },
     }),
+  liveLabelContainerWithoutImage: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: `calc(100% / 3)`,
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        width: `calc(100% / 3)`,
+      },
+    }),
 };
 
 export default styles;

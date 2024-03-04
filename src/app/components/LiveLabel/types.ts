@@ -9,12 +9,14 @@ export interface TextProps {
   offScreenText?: string;
   lang?: string;
   id?: string;
-  isHeaderImage?: boolean;
-  pulse?: ReactNode;
 }
 
 export interface PulseProps {
   className?: string;
   width: string;
   height: string;
+}
+
+export interface ContainerProps {
+  className?: string;
 }

@@ -62,15 +62,7 @@ const Header = ({
             )}
           </Heading>
           {description && (
-            <Text
-              as="p"
-              css={[
-                styles.description,
-                showLiveLabel &&
-                  !isHeaderImage &&
-                  styles.layoutWithLiveLabelNoImage,
-              ]}
-            >
+            <Text as="p" css={[styles.description]}>
               {description}
             </Text>
           )}
