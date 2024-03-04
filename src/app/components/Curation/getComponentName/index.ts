@@ -23,9 +23,9 @@ const {
   HIERARCHICAL_CURATION_GRID,
   MOST_READ,
   NOT_SUPPORTED,
+  RADIO_SCHEDULE,
   FLOURISH_VIS,
   VJ_INCLUDE,
-  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -35,14 +35,14 @@ export default ({
   link,
   vjFetchResponse,
 }: Partial<CurationProps>) => {
+  if (radioSchedule) {
+    return RADIO_SCHEDULE;
+  }
   if (link?.includes('flo.uri.sh')) {
     return FLOURISH_VIS;
   }
   if (vjFetchResponse) {
     return VJ_INCLUDE;
-  }
-  if (radioSchedule) {
-    return RADIO_SCHEDULE;
   }
 
   const componentsByVisualStyleAndProminence = {
