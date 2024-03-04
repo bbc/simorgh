@@ -75,6 +75,8 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   return (
     <div className={className}>
+      CHECK: {process.env.SIMORGH_APP_ENV}
+      CHECK2: {(process.env.SIMORGH_APP_ENV === 'local').toString()}
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder setter={setIsPlaceholder} />
