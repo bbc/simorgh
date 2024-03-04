@@ -114,18 +114,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #00CCC7;
 }
 
-@media (min-width: 63rem) {
-  .emotion-6 {
-    width: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-6 {
-    width: calc(100% / 3);
-  }
-}
-
 .emotion-7 {
   color: #006666;
   display: inline-block;
@@ -174,6 +162,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  color: #006666;
 }
 
 .emotion-10 {
@@ -243,20 +232,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-12 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-12 {
-    -webkit-margin-start: calc(100% / 3);
-    margin-inline-start: calc(100% / 3);
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-12 {
-    -webkit-margin-start: calc(100% / 4);
-    margin-inline-start: calc(100% / 4);
   }
 }
 
@@ -1299,32 +1274,32 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             <div
               data-testid="live-label"
             >
-              <span
-                role="text"
+              <div
+                class="emotion-6"
+                data-testid="liveLabelContainer"
               >
-                <div
-                  class="emotion-6"
-                  data-testid="liveLabelContainer"
+                <svg
+                  aria-hidden="true"
+                  class="emotion-7"
+                  fill="currentColor"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 32 32"
+                  width="24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="emotion-7"
-                    fill="currentColor"
-                    focusable="false"
-                    height="24"
-                    viewBox="0 0 32 32"
-                    width="24"
-                  >
-                    <path
-                      d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                    />
-                    <circle
-                      class="emotion-8"
-                      cx="16"
-                      cy="16"
-                      r="8.5"
-                    />
-                  </svg>
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  />
+                  <circle
+                    class="emotion-8"
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                  />
+                </svg>
+                <span
+                  role="text"
+                >
                   <span
                     class="emotion-9"
                     dir="ltr"
@@ -1337,13 +1312,15 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   >
                     , 
                   </span>
-                </div>
+                </span>
+              </div>
+              <div>
                 <span
                   class="emotion-11"
                 >
                   Pidgin test 2
                 </span>
-              </span>
+              </div>
             </div>
           </h1>
           <p

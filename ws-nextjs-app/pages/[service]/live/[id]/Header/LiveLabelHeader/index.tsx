@@ -19,6 +19,7 @@ const LiveLabelHeader = ({
   className,
   isHeaderImage,
 }: PropsWithChildren<LiveLabelPromoProps>) => {
+  const populatedChildren = Boolean(children);
   return (
     <div data-testid="live-label">
       <LiveLabel.Container
@@ -30,9 +31,12 @@ const LiveLabelHeader = ({
           height="24"
           css={styles.liveLabelPulse}
         />
-        <LiveLabel.Text lang={lang} id={id} offScreenText={offScreenText}>
-          {children}
-        </LiveLabel.Text>
+        <LiveLabel.Text
+          lang={lang}
+          id={id}
+          offScreenText={offScreenText}
+          populatedChildren={populatedChildren}
+        />
       </LiveLabel.Container>
       <LiveLabel.Title>{children}</LiveLabel.Title>
     </div>
