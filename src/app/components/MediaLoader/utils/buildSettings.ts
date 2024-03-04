@@ -3,15 +3,15 @@ import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps } from '../types';
 
 const isTestRequested = () => {
-  let isTestLiveURL = false;
+  let isRenderEnvLive = false;
   const isTestServer = process.env.NODE_ENV === 'development';
 
   if (onClient()) {
     const queryParams = new URLSearchParams(window.location.search);
-    isTestLiveURL = queryParams.get('renderer_env') === 'test';
+    isRenderEnvLive = queryParams.get('renderer_env') === 'live';
   }
 
-  return isTestServer && isTestLiveURL;
+  return isTestServer && !isRenderEnvLive;
 };
 
 const buildConfig = ({

@@ -53,6 +53,28 @@ describe('buildSettings', () => {
     });
   });
 
+  it('Should include the mediator parameter if we are on a dev environment.', () => {
+    process.env.NODE_ENV = 'development';
+
+    const mockWindowObj = {
+      location: {
+        search: '',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildConfig({
+      id: 'testID',
+      blocks,
+      pageType: 'article',
+      counterName: null,
+    });
+    expect(result?.playerConfig).toHaveProperty('mediator', {
+      host: 'open.test.bbc.co.uk',
+    });
+  });
+
   it('Should NOT include the mediator parameter if we are on a test environemnt, but renderer_env is set to live.', () => {
     process.env.NODE_ENV = 'development';
 
