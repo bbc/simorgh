@@ -32,7 +32,6 @@ module.exports = {
           // The rest are set directly on the Lambda and accessible via process.env on the server
           SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
           SIMORGH_OPTIMIZELY_SDK_KEY: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
-          SIMORGH_OPTIMIZELY_SDK_KEY: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
           SIMORGH_APP_ENV: process.env.SIMORGH_APP_ENV,
         }),
     LOG_TO_CONSOLE: 'true',

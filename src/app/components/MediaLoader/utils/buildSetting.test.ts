@@ -7,11 +7,15 @@ describe('buildSettings', () => {
     jest.restoreAllMocks();
   });
 
-  afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
-  });
-
   it('Should process an AresMedia block into a valid playlist item.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
     const result = buildConfig({
       id: 'testID',
       blocks,
@@ -32,10 +36,9 @@ describe('buildSettings', () => {
   });
 
   it('Should include the mediator parameter if we are on a test url.', () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-
     const mockWindowObj = {
       location: {
+        hostname: 'https://www.test.bbc.com/',
         search: '?renderer_env=test',
       },
     } as Window & typeof globalThis;
@@ -58,6 +61,7 @@ describe('buildSettings', () => {
 
     const mockWindowObj = {
       location: {
+        hostname: 'https://www.test.bbc.com/',
         search: '',
       },
     } as Window & typeof globalThis;
@@ -76,10 +80,9 @@ describe('buildSettings', () => {
   });
 
   it('Should NOT include the mediator parameter if we are on a test environemnt, but renderer_env is set to live.', () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-
     const mockWindowObj = {
       location: {
+        hostname: 'https://www.test.bbc.com/',
         search: '?renderer_env=live',
       },
     } as Window & typeof globalThis;
@@ -96,6 +99,14 @@ describe('buildSettings', () => {
   });
 
   it('Should NOT include the mediator parameter if we are on a live url.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
     const result = buildConfig({
       id: 'testID',
       blocks,
