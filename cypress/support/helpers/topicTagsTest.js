@@ -16,7 +16,7 @@ const getPageData = (url, service, variant, pageType) => {
     const bffUrl = `https://web-cdn.${
       env === 'live' ? '' : `${env}.`
     }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${
-      variant ? `&variant=${variant}` : ''
+      variant !== 'default' ? `&variant=${variant}` : ''
     }`;
 
     cy.log(bffUrl);

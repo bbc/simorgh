@@ -361,10 +361,6 @@ export const service: DefaultServiceConfig = {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
       },
-      {
-        title: 'BBC Extra',
-        url: '/mundo/noticias-48908206',
-      },
     ],
   },
 };

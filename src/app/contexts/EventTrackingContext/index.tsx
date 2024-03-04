@@ -19,6 +19,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
   CPS_ASSET,
+  STATIC_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -63,6 +64,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_PAGE]: 'live-page',
     [HOME_PAGE]: 'index-home',
     [CPS_ASSET]: '',
+    [STATIC_PAGE]: '',
   }[pageType];
 
   if (!campaignID) {

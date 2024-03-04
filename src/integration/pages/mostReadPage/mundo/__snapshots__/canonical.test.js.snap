@@ -136,13 +136,6 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 11`] = `
-{
-  "text": "BBC Extra",
-  "url": "/mundo/noticias-48908206",
-}
-`;
-
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Más leídas"`;
 
 exports[`Canonical Most Read Page I can see the list items 1`] = `"1"Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidadesÚltima actualización: 19 junio 2023"`;
