@@ -1271,8 +1271,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             id="content"
             tabindex="-1"
           >
-            <div
+            <span
               data-testid="live-label"
+              role="text"
             >
               <div
                 class="emotion-6"
@@ -1321,7 +1322,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   Pidgin test 2
                 </span>
               </div>
-            </div>
+            </span>
           </h1>
           <p
             class="emotion-12"
