@@ -1,7 +1,6 @@
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-  CurationData,
   CurationProps,
 } from '#app/models/types/curationData';
 
@@ -35,7 +34,7 @@ export default ({
   radioSchedule,
   link,
   vjFetchResponse,
-}: Partial<CurationData>) => {
+}: Partial<CurationProps>) => {
   if (link?.includes('flo.uri.sh')) {
     return FLOURISH_VIS;
   }
