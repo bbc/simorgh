@@ -477,6 +477,17 @@
         "summaries": [
           {
             "type": "article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
+            "firstPublished": "2023-02-07T14:52:44.188Z",
+            "lastPublished": "2023-02-07T14:52:44.188Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+            "imageAlt": "test",
+            "id": "czmnz5184jeo"
+          },
+          {
+            "type": "article",
             "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
             "firstPublished": "2023-02-07T14:51:20.980Z",
             "lastPublished": "2023-02-07T14:51:20.980Z",
@@ -982,6 +993,62 @@
         "position": 17,
         "title": "Curation with Live Promo",
         "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 15,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
         "visualStyle": "NONE"
       }
     ],

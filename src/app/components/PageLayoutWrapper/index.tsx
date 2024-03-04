@@ -13,7 +13,7 @@ import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
 import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorkerContainer from '../../legacy/containers/ServiceWorker';
+import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import ThemeProvider from '../ThemeProvider';
@@ -57,7 +57,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, isNextJs, variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -139,8 +139,8 @@ const PageLayoutWrapper = ({
                 });
                 }
                 let wrappedPageTimeStart = new Date();
-                const wrappedYear = wrappedPageTimeStart.getFullYear();
-                const wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
+                let wrappedYear = wrappedPageTimeStart.getFullYear();
+                let wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
                 let wrappedStorageKey = 'ws_bbc_wrapped';
                 let wrappedContents = {};
                 wrappedContents[wrappedYear] = {
@@ -152,17 +152,19 @@ const PageLayoutWrapper = ({
                     'wordCount': 0,
                 };
                 wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
-                const saveWrapped = () => {
+                let saveWrapped = () => {
                     localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
                 }
                 let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
                 if (wrappedLocalStorageContents) {
                     const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
-                    wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedLocalStorageContentsParsed;
-                    wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
+                    if (wrappedLocalStorageContentsParsed.hasOwnProperty(wrappedYear)) {
+                        wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedContents[wrappedYear];
+                        wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
+                    }
                 }
-                const wrappedContentsShortcut = wrappedContents[wrappedYear];
-                const wrappedTopics = ${JSON.stringify(
+                let wrappedContentsShortcut = wrappedContents[wrappedYear];
+                let wrappedTopics = ${JSON.stringify(
                   pageData?.metadata?.topics,
                 )};
                 if (wrappedTopics) {
@@ -199,7 +201,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && <ServiceWorkerContainer />}
+        <ServiceWorker />
         <ManifestContainer />
         {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />

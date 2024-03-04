@@ -2,6 +2,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
   CurationData,
+  CurationProps,
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
@@ -10,6 +11,7 @@ export const COMPONENT_NAMES = {
   HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
+  RADIO_SCHEDULE: 'radio-schedule',
   FLOURISH_VIS: 'flourish-vis',
   VJ_INCLUDE: 'vj-include',
 } as const;
@@ -24,11 +26,13 @@ const {
   NOT_SUPPORTED,
   FLOURISH_VIS,
   VJ_INCLUDE,
+  RADIO_SCHEDULE,
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
   visualProminence,
+  radioSchedule,
   link,
   vjFetchResponse,
 }: Partial<CurationData>) => {
@@ -38,12 +42,16 @@ export default ({
   if (vjFetchResponse) {
     return VJ_INCLUDE;
   }
+  if (radioSchedule) {
+    return RADIO_SCHEDULE;
+  }
+
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
+    [`${BANNER}_${MAXIMUM}`]: MESSAGE_BANNER,
     [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
-    [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,

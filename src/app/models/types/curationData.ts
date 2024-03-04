@@ -1,3 +1,4 @@
+import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
 export interface Summary {
@@ -45,6 +46,8 @@ export interface CurationProps {
   topStoriesTitle?: string;
   curationLength?: number;
   mostRead?: MostReadData;
+  nthCurationByStyleAndProminence?: number;
+  radioSchedule?: RadioScheduleData[];
   vjFetchResponse?: string;
 }
 
@@ -60,5 +63,6 @@ export interface CurationData {
   pageCount?: number;
   curationType?: string;
   mostRead?: MostReadData;
+  radioSchedule?: RadioScheduleData[];
   vjFetchResponse?: string;
 }

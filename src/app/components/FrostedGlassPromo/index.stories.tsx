@@ -46,7 +46,7 @@ const Wrappers = ({
 const Component = (props: StoryProps) => {
   const imageUrl = text(
     'Image URL',
-    'https://ichef.bbci.co.uk/news/976/cpsprodpb/189F/production/_121530360_hi071904982.jpg',
+    'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/189F/production/_121530360_hi071904982.jpg',
   );
   const mainBody = text(
     'Main Body',

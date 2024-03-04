@@ -5,6 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -23,6 +24,7 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
   MOST_READ,
+  RADIO_SCHEDULE,
   FLOURISH_VIS,
   VJ_INCLUDE,
 } = COMPONENT_NAMES;
@@ -52,10 +54,13 @@ const Curation = ({
   curationLength = 0,
   mostRead,
   vjFetchResponse,
+  nthCurationByStyleAndProminence = 1,
+  radioSchedule,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
+    radioSchedule,
     link: link || promos[0].link,
     vjFetchResponse,
   });
@@ -94,6 +99,10 @@ const Curation = ({
           link={promos[0].link}
           linkText={promos[0].title}
           image={promos[0].imageUrl}
+          eventTrackingData={{
+            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+            detailedPlacement: `${position + 1}`,
+          }}
         />
       ) : null;
     case MOST_READ:
@@ -104,6 +113,8 @@ const Curation = ({
           headingBackgroundColour={GHOST}
         />
       );
+    case RADIO_SCHEDULE:
+      return <RadioSchedule initialData={radioSchedule} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

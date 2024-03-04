@@ -19,6 +19,7 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 export interface HomePageProps {
   pageData: {
@@ -50,7 +51,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     metadata: { atiAnalytics },
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
-
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -89,10 +89,18 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   position,
                   visualStyle,
                   mostRead,
+                  radioSchedule,
                   vjFetchResponse,
                 },
                 index,
               ) => {
+                const nthCurationByStyleAndProminence =
+                  getNthCurationByStyleAndProminence({
+                    curations,
+                    position,
+                    visualStyle,
+                    visualProminence,
+                  });
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <Curation
@@ -106,6 +114,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
+                      radioSchedule={radioSchedule}
+                      nthCurationByStyleAndProminence={
+                        nthCurationByStyleAndProminence
+                      }
                       vjFetchResponse={vjFetchResponse}
                     />
                     {index === 1 && <MPU />}

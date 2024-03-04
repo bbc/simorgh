@@ -15,6 +15,8 @@ const LinkedData = ({
   description,
   datePublished,
   dateModified,
+  coverageStartTime,
+  coverageEndTime,
   aboutTags,
   entities = [],
   imageLocator,
@@ -68,6 +70,7 @@ const LinkedData = ({
   const choosePublisherLogo = () => {
     switch (service) {
       case 'news':
+      case 'ws':
         return newsPublisherLogo;
       case 'sport':
         return sportPublisherLogo;
@@ -145,6 +148,8 @@ const LinkedData = ({
     description,
     datePublished,
     dateModified,
+    coverageStartTime,
+    coverageEndTime,
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
