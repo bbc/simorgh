@@ -14,6 +14,8 @@ export function getEnvConfig(): EnvConfig {
   const APP_ENV_VARIABLES = initialiseAppEnvVariables();
 
   if (onClient()) {
+    // Defaulting to APP_ENV_VARIABLES is mainly for tests
+    // window.SIMORGH_ENV_VARS is not set in tests, as they can sometimes manipulate process.env directly
     return window.SIMORGH_ENV_VARS ?? APP_ENV_VARIABLES;
   }
 
