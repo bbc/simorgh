@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface LiveLabelProps extends TextProps {
   className?: string;
 }
