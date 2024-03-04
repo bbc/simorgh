@@ -10,10 +10,7 @@ import Script from 'next/script';
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
-import {
-  EnvConfig,
-  SERVER_ENV_VARS,
-} from '../../src/app/lib/utilities/getEnvConfig';
+import { EnvConfig, SERVER_ENV_VARS } from '#lib/utilities/getEnvConfig';
 
 type DocProps = {
   helmet: HelmetData;
