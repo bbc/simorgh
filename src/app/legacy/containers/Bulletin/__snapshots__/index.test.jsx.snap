@@ -391,13 +391,13 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
               class="emotion-14"
               dir="ltr"
             >
-              NA EME UGBU A 
+              NA EME UGBU A
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Gee ntị Live, 
+               Gee ntị Live, 
             </span>
             Test Radio Bulletin promo
           </span>
@@ -835,13 +835,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
               class="emotion-14"
               dir="ltr"
             >
-              NA EME UGBU A 
+              NA EME UGBU A
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Lee Live, 
+               Lee Live, 
             </span>
             Test TV Bulletin promo
           </span>

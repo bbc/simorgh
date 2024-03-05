@@ -306,13 +306,13 @@ exports[`ProgramCard should render correctly for live 1`] = `
                 class="emotion-10"
                 dir="ltr"
               >
-                LIVE 
+                LIVE
               </span>
               <span
                 class="emotion-11"
                 lang="en-GB"
               >
-                Listen Live, 
+                 Listen Live, 
               </span>
             </span>
             Could a computer ever create better art than a human?
@@ -1537,13 +1537,13 @@ exports[`ProgramCard should render correctly without summary 1`] = `
                 class="emotion-10"
                 dir="ltr"
               >
-                LIVE 
+                LIVE
               </span>
               <span
                 class="emotion-11"
                 lang="en-GB"
               >
-                Listen Live, 
+                 Listen Live, 
               </span>
             </span>
             Could a computer ever create better art than a human?
