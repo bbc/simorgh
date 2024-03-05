@@ -40,9 +40,7 @@ const LiveLabelHeader = ({
             ? styles.liveLabelTextWithImage
             : [
                 styles.liveLabelTextWithoutImage,
-                !isBurmese && {
-                  'span:first-of-type': { verticalAlign: 'middle' },
-                },
+                isBurmese && styles.burmeseLiveLabelTextWithoutImage,
               ]
         }
       >

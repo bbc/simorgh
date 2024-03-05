@@ -38,6 +38,7 @@ const styles = {
       'span:first-of-type': {
         display: 'inline-flex',
         color: palette.LIVE_LIGHT,
+        verticalAlign: 'middle',
         'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
         [mq.GROUP_0_MAX_WIDTH]: {
@@ -48,6 +49,14 @@ const styles = {
         },
         [mq.GROUP_5_MIN_WIDTH]: {
           width: `calc(25%  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
+        },
+      },
+    }),
+  burmeseLiveLabelTextWithoutImage: ({ mq }: Theme) =>
+    css({
+      'span:first-of-type': {
+        [mq.GROUP_4_MIN_WIDTH]: {
+          fontSize: '2rem',
         },
       },
     }),

@@ -149,6 +149,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: #00CCC7;
+  vertical-align: middle;
   overflow-wrap: anywhere;
   -webkit-margin-end: 0;
   margin-inline-end: 0;
@@ -170,10 +171,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-8 span:first-of-type {
     width: calc(25%  - 2.25rem);
   }
-}
-
-.emotion-8 span:first-of-type {
-  vertical-align: middle;
 }
 
 .emotion-9 {
