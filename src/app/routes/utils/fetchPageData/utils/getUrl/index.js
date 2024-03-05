@@ -2,11 +2,12 @@ import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
 import { AMP_REGEX, APP_REGEX } from '#app/lib/regex.const';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getBaseUrl from '../getBaseUrl';
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
+  : getEnvConfig().SIMORGH_BASE_URL;
 
 export default pathname => {
   if (!pathname) return '';

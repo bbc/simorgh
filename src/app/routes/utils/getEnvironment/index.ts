@@ -1,3 +1,4 @@
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Environments } from '#app/models/types/global';
 
 import Url from 'url-parse';
@@ -17,6 +18,6 @@ export default (pathname: string) => {
     case 'caflive':
       return 'live';
     default:
-      return process.env.SIMORGH_APP_ENV as Environments;
+      return getEnvConfig().SIMORGH_APP_ENV as Environments;
   }
 };

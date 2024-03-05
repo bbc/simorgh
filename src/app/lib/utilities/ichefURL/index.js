@@ -28,7 +28,6 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   }
 
   const url = [
-    // process.env.SIMORGH_ICHEF_BASE_URL || 'https://ichef.bbci.co.uk',
     getEnvConfig().SIMORGH_ICHEF_BASE_URL,
     'ace',
     'ws',
