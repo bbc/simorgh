@@ -38,7 +38,6 @@ const styles = {
       'span:first-of-type': {
         display: 'inline-flex',
         color: palette.LIVE_LIGHT,
-        verticalAlign: 'middle',
         'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
         [mq.GROUP_0_MAX_WIDTH]: {

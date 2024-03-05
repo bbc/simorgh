@@ -1,10 +1,11 @@
 /** @jsx jsx */
 /** @jsxRuntime classic */
 /* @jsxFrag React.Fragment */
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { LiveLabelProps } from '#app/components/LiveLabel/types';
 import LiveLabel from '#app/components/LiveLabel';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
 interface LiveLabelPromoProps extends LiveLabelProps {
@@ -19,6 +20,9 @@ const LiveLabelHeader = ({
   className,
   isHeaderImage,
 }: PropsWithChildren<LiveLabelPromoProps>) => {
+  const { service } = useContext(ServiceContext);
+  const isBurmese = service === 'burmese';
+
   return (
     <div data-testid="live-label">
       <LiveLabel.Pulse
@@ -34,7 +38,12 @@ const LiveLabelHeader = ({
         css={
           isHeaderImage
             ? styles.liveLabelTextWithImage
-            : styles.liveLabelTextWithoutImage
+            : [
+                styles.liveLabelTextWithoutImage,
+                !isBurmese && {
+                  'span:first-of-type': { verticalAlign: 'middle' },
+                },
+              ]
         }
       >
         {children}
