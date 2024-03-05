@@ -30,14 +30,12 @@ export const initialiseAppEnvVariables = () => ({
 });
 
 export function getEnvConfig(): EnvConfig {
-  // Return window object on client
+  // Return window object on client and when window.SIMORGH_ENV_VARS is set
   if (onClient() && window?.SIMORGH_ENV_VARS) {
-    // Defaulting to APP_ENV_VARIABLES is mainly for tests
-    // window.SIMORGH_ENV_VARS is not being set in tests
     return window.SIMORGH_ENV_VARS;
   }
 
-  // Return APP_ENV_VARIABLES on server
+  // Return server side environment variables
   return initialiseAppEnvVariables();
 }
 
