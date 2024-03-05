@@ -1,6 +1,5 @@
 import { css, Theme } from '@emotion/react';
 import { HALF, QUADRUPLE } from '#app/components/ThemeProvider/spacings';
-import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const PULSE_END_MARGIN = HALF;
 const PULSE_SIZE_3_4 = QUADRUPLE;
@@ -12,15 +11,13 @@ const styles = {
       width: `${spacings.HALF + spacings.DOUBLE}rem`,
       height: `${spacings.HALF + spacings.DOUBLE}rem`,
       color: palette.LIVE_LIGHT,
-      verticalAlign: `${pixelsToRem(-5)}rem`,
+      verticalAlign: 'middle',
       marginInlineEnd: `${PULSE_END_MARGIN}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
-        verticalAlign: `${pixelsToRem(-7)}rem`,
         width: `${spacings.TRIPLE}rem`,
         height: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        verticalAlign: `${pixelsToRem(-8)}rem`,
         width: `${spacings.QUADRUPLE}rem`,
         height: `${spacings.QUADRUPLE}rem`,
       },
@@ -30,15 +27,23 @@ const styles = {
     }),
   liveLabelTextWithImage: ({ palette }: Theme) =>
     css({
-      'span:first-of-type': { color: palette.LIVE_LIGHT },
+      'span:first-of-type': {
+        color: palette.LIVE_LIGHT,
+        verticalAlign: 'middle',
+        display: 'inline',
+      },
     }),
   liveLabelTextWithoutImage: ({ mq, palette }: Theme) =>
     css({
       'span:first-of-type': {
         display: 'inline-flex',
         color: palette.LIVE_LIGHT,
+        verticalAlign: 'middle',
         'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
+        [mq.GROUP_0_MAX_WIDTH]: {
+          display: 'inline',
+        },
         [mq.GROUP_4_MIN_WIDTH]: {
           width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
         },
