@@ -11,7 +11,7 @@ import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+// import MessageBanner from '../MessageBanner';
 import Header from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
@@ -51,8 +51,8 @@ const Curation = ({
   curationLength = 0,
   mostRead,
   radioSchedule,
-  nthCurationByStyleAndProminence = 1,
-}: CurationProps) => {
+}: // nthCurationByStyleAndProminence = 1,
+CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
