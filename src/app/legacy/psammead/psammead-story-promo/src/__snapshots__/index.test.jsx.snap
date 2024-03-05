@@ -2325,13 +2325,13 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
               class="emotion-14"
               dir="ltr"
             >
-              LIVE 
+              LIVE
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Live, 
+               Live, 
             </span>
             The live promo headline
           </span>
@@ -2646,13 +2646,13 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
               class="emotion-14"
               dir="rtl"
             >
-              مباشر 
+              مباشر
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Live, 
+               Live, 
             </span>
             The live promo headline
           </span>
