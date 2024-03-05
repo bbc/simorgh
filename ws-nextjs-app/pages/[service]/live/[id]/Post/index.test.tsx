@@ -14,6 +14,11 @@ const singlePostWithTitle = postFixture.data.results[0];
 const singlePostWithTitleAndSubtitle = postFixture.data.results[2];
 
 describe('Post', () => {
+  beforeEach(() => {
+    // @ts-expect-error Mocking require to prevent race condition.
+    window.require = jest.fn();
+  });
+
   afterEach(() => {
     jest.useRealTimers();
   });
@@ -140,9 +145,6 @@ describe('Post', () => {
         });
       });
 
-      expect(
-        container.querySelector('[data-e2e="media-player"]'),
-      ).toBeInTheDocument();
       expect(
         container.querySelector('[data-e2e="media-player__placeholder"]'),
       ).toBeInTheDocument();

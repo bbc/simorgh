@@ -1,24 +1,23 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import LivePageMediaPlayer from '.';
-import { validLivePageVideoWithCaptionBlock } from '../MediaPlayer/fixtureData';
+import { validLivePageVideoWithCaptionBlock } from '../../legacy/containers/MediaPlayer/fixtureData';
+import { LIVE_PAGE } from '../../routes/utils/pageTypes';
+import { MediaBlock } from '../MediaLoader/types';
 
-const GenerateMediaPlayer = ({
-  /* eslint-disable react/prop-types */
-  blocks,
-  /* eslint-enable react/prop-types */
-}) => (
+const GenerateMediaPlayer = ({ blocks }: { blocks: MediaBlock[] }) => (
   <BrowserRouter>
-    <LivePageMediaPlayer blocks={blocks} />
+    <LivePageMediaPlayer blocks={blocks} className="MediaPlayer" />
   </BrowserRouter>
 );
 
-describe('MediaPlayer', () => {
+describe('LegacyLiveMediaPlayer', () => {
   it('Calls the canonical media player, with a placeholder', () => {
     const { container } = render(
-      <GenerateMediaPlayer blocks={validLivePageVideoWithCaptionBlock} />,
+      <GenerateMediaPlayer
+        blocks={validLivePageVideoWithCaptionBlock as MediaBlock[]}
+      />,
       {
         id: 'c7p765ynk9qt',
         service: 'pidgin',
@@ -32,7 +31,9 @@ describe('MediaPlayer', () => {
 
   it('Calls the amp media player', () => {
     const { container } = render(
-      <GenerateMediaPlayer blocks={validLivePageVideoWithCaptionBlock} />,
+      <GenerateMediaPlayer
+        blocks={validLivePageVideoWithCaptionBlock as MediaBlock[]}
+      />,
       {
         isAmp: true,
         id: 'c7p765ynk9qt',
