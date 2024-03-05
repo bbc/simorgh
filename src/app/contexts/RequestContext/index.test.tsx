@@ -90,7 +90,6 @@ const expectedOutput = {
   service: 'service',
   pathname: '/current-path',
   mvtExperiments: input.mvtExperiments,
-  counterName: null,
 };
 
 describe('RequestContext', () => {

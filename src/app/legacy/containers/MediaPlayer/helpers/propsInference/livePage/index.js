@@ -25,7 +25,6 @@ export default ({ assetId, assetType, blocks, isAmp, lang, translations }) => {
   );
   const originCode = source.replace('Image', '');
   const pid = path(['model', 'video', 'id'], clipMediaBlock);
-  const versionId = path(['model', 'video', 'version', 'id'], clipMediaBlock);
 
   const format = path(['model', 'type'], clipMediaBlock);
 
@@ -41,15 +40,10 @@ export default ({ assetId, assetType, blocks, isAmp, lang, translations }) => {
     translations,
   );
   const separator = ',';
+
   const mediaInfo = {
     title: path(['model', 'video', 'title'], clipMediaBlock),
-    kind: pathOr(
-      'programme',
-      ['model', 'video', 'video', 'kind'],
-      clipMediaBlock,
-    ),
     duration: formatDuration({ duration, padMinutes: true }),
-    rawDuration,
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
       separator,
@@ -57,7 +51,7 @@ export default ({ assetId, assetType, blocks, isAmp, lang, translations }) => {
     datetime: clipISO8601Duration,
     type: format === 'audio' ? 'audio' : 'video',
     guidanceMessage: path(
-      ['model', 'video', 'video', 'guidance', 'warnings', 'short'],
+      ['model', 'video', 'version', 'guidance', 'warnings', 'short'],
       clipMediaBlock,
     ),
   };
@@ -93,7 +87,7 @@ export default ({ assetId, assetType, blocks, isAmp, lang, translations }) => {
 
   return {
     captionBlock,
-    clipId: versionId,
+    clipId: pid,
     embedUrlParams,
     iframeTitle,
     mediaBlock: clipMediaBlock,
