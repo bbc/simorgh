@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer Calls the amp media player 1`] = `
+exports[`LegacyLiveMediaPlayer Calls the amp media player 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -33,7 +33,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
 @media (min-width: 80rem) {
   .emotion-0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -86,9 +86,9 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
   @media (min-width: 80rem) {
     .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
     }
   }
 }
@@ -208,7 +208,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="MediaPlayer emotion-0 emotion-1"
     dir="ltr"
   >
     <figure
@@ -258,7 +258,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 </div>
 `;
 
-exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
+exports[`LegacyLiveMediaPlayer Calls the canonical media player, with a placeholder 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -291,7 +291,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 @media (min-width: 80rem) {
   .emotion-0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -344,9 +344,9 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
   @media (min-width: 80rem) {
     .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
     }
   }
 }
@@ -560,7 +560,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="MediaPlayer emotion-0 emotion-1"
     dir="ltr"
   >
     <figure

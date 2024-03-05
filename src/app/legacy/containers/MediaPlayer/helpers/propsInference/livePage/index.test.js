@@ -24,7 +24,7 @@ describe('getLivePageProps', () => {
 
     expect(getLivePageProps(props)).toEqual({
       captionBlock: validLivePageVideoWithCaptionBlock[0],
-      clipId: 'p01thw20',
+      clipId: 'p01thw22',
       embedUrlParams: {
         isAmp: false,
         mediaId: 'c7p765ynk9qt/p01thw20/pcm',
@@ -40,6 +40,8 @@ describe('getLivePageProps', () => {
         datetime: 'PT54S',
         type: 'video',
         guidanceMessage: undefined,
+        kind: 'programme',
+        rawDuration: 54,
       },
       placeholderSrc:
         'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
@@ -70,7 +72,7 @@ describe('getLivePageProps', () => {
     expect(getLivePageProps(props)).toEqual({
       blockId: undefined,
       captionBlock: validLivePageVideoWithCaptionBlock[0],
-      clipId: 'p01thw20',
+      clipId: 'p01thw22',
       embedUrlParams: {
         isAmp: false,
         mediaId: 'c7p765ynk9qt/p01thw20/pcm',
@@ -86,6 +88,8 @@ describe('getLivePageProps', () => {
         datetime: 'PT54S',
         type: 'video',
         guidanceMessage: undefined,
+        kind: 'programme',
+        rawDuration: 54,
       },
       placeholderSrc:
         'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
