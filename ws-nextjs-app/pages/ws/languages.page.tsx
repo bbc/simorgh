@@ -13,7 +13,11 @@ export const getStaticProps: GetStaticProps = () => {
       isAmp: false,
       isNextJs: true,
       page: null,
-      pageData: null,
+      pageData: {
+        metadata: {
+            type: STATIC_PAGE,
+        },
+      },
       pageType: STATIC_PAGE,
       pathname: '/ws/languages',
       service: 'ws',
