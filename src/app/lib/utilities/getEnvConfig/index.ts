@@ -1,5 +1,5 @@
-import onClient from '#app/lib/utilities/onClient';
 import { Environments } from '#app/models/types/global';
+import onClient from '../onClient';
 
 export type EnvConfig = ReturnType<typeof initialiseAppEnvVariables>;
 
