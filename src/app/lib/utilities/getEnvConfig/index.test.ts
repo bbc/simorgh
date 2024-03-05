@@ -28,9 +28,6 @@ describe('getEnvConfig', () => {
   });
 
   it('client side - should return values from "getEnvConfig"', () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-    process.env.SIMORGH_BASE_URL = 'https://test.com';
-
     // simulate client side by adding window object
     windowSpy.mockImplementation(
       () =>
