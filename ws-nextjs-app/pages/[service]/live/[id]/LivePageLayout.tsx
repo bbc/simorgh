@@ -11,7 +11,6 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
-import Link from 'next/link';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -129,9 +128,6 @@ const LivePage = ({ pageData }: ComponentProps) => {
         })}
       />
       <main>
-        <Link href="/pidgin/live/c07zr0zwjnnt?renderer_env=test&page=2">
-          Go to page
-        </Link>
         <Header
           showLiveLabel={isLive}
           title={title}

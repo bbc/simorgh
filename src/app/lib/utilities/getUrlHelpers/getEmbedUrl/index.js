@@ -1,5 +1,5 @@
 import isLive from '../../isLive';
-import getEnvConfig from '../../getEnvConfig';
+import { getEnvConfig } from '../../getEnvConfig';
 
 const AV_ROUTE = 'ws/av-embeds';
 
