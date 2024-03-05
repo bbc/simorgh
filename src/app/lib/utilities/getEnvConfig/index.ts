@@ -1,10 +1,10 @@
 import { Environments } from '#app/models/types/global';
 import onClient from '../onClient';
 
-export type EnvConfig = ReturnType<typeof initialiseAppEnvVariables>;
+export type EnvConfig = ReturnType<typeof getProcessEnvAppVariables>;
 
 // Any environment variables added here will be available to the client and server
-export const initialiseAppEnvVariables = () => ({
+export const getProcessEnvAppVariables = () => ({
   SIMORGH_APP_ENV: process.env.SIMORGH_APP_ENV as Environments,
   SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
   SIMORGH_BASE_URL: process.env.SIMORGH_BASE_URL,
@@ -36,7 +36,7 @@ export function getEnvConfig(): EnvConfig {
   }
 
   // Return server side environment variables
-  return initialiseAppEnvVariables();
+  return getProcessEnvAppVariables();
 }
 
 declare global {

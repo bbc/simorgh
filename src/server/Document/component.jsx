@@ -10,7 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
-import { initialiseAppEnvVariables } from '#lib/utilities/getEnvConfig';
+import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -28,7 +28,7 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
-  const appEnvVariables = serialiseForScript(initialiseAppEnvVariables());
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
 
   const scriptsAllowed = !isAmp;
 

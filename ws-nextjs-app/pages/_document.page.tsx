@@ -12,7 +12,7 @@ import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
 import {
   EnvConfig,
-  initialiseAppEnvVariables,
+  getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
 type DocProps = {
@@ -27,7 +27,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(ctx.asPath || '');
 
     // Read env variables from the server and expose them to the client
-    const clientSideEnvVariables = initialiseAppEnvVariables();
+    const clientSideEnvVariables = getProcessEnvAppVariables();
 
     return {
       ...initialProps,
