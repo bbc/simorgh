@@ -15,16 +15,16 @@ describe('getEnvConfig', () => {
   });
 
   it('server side - should return values from "getEnvConfig"', () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-    process.env.SIMORGH_BASE_URL = 'https://example.com';
+    process.env.SIMORGH_APP_ENV = 'test';
+    process.env.SIMORGH_BASE_URL = 'https://test.com';
 
     // simulate server side by removing window object
     windowSpy.mockImplementation(() => undefined);
 
     const results = getEnvConfig();
 
-    expect(results.SIMORGH_APP_ENV).toEqual('local');
-    expect(results.SIMORGH_BASE_URL).toEqual('https://example.com');
+    expect(results.SIMORGH_APP_ENV).toEqual('test');
+    expect(results.SIMORGH_BASE_URL).toEqual('https://test.com');
   });
 
   it('client side - should return values from "getEnvConfig"', () => {
@@ -36,7 +36,7 @@ describe('getEnvConfig', () => {
       () =>
         ({
           location: {
-            origin: 'https://example.com',
+            origin: 'https://test.com',
           },
           SIMORGH_ENV_VARS: {
             SIMORGH_APP_ENV: 'test',
@@ -49,5 +49,9 @@ describe('getEnvConfig', () => {
 
     expect(results.SIMORGH_APP_ENV).toEqual('test');
     expect(results.SIMORGH_BASE_URL).toEqual('https://test.com');
+    expect(window.SIMORGH_ENV_VARS).toEqual({
+      SIMORGH_APP_ENV: 'test',
+      SIMORGH_BASE_URL: 'https://test.com',
+    });
   });
 });
