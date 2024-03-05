@@ -1,16 +1,17 @@
+/* eslint-disable jsx-a11y/aria-role */
 /** @jsxRuntime classic */
 /** @jsx  jsx  */
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import Fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 import Inline from '#app/legacy/containers/InlineContainer';
 import Blocks from '#app/legacy/containers/Blocks';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { OptimoBlock } from '#app/models/types/optimo';
 import styles from './index.style';
+import Fragment from '../Fragment';
+import InlineLink from '../InlineLink';
 
 const componentsToRender = {
   fragment: Fragment,
