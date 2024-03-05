@@ -2,16 +2,15 @@
 
 exports[`Captions should render caption text with example Farsi offscreen text 1`] = `
 .emotion-0 {
-  font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
   border-left: 0.0625rem solid #6E6E73;
@@ -20,14 +19,14 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 0.9375rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -47,7 +46,7 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
   padding-bottom: 0;
 }
 
-@media (min-width: 25rem) and (max-width: 62.9375rem) {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
@@ -63,7 +62,7 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -76,14 +75,13 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
 
 <div>
   <figcaption
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-0"
   >
     <span
       role="text"
     >
       <span
-        class="emotion-2"
+        class="emotion-1"
       >
          ، عنوان
       </span>
@@ -97,16 +95,15 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
 
 exports[`Captions should render caption text with example News offscreen text 1`] = `
 .emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
   border-left: 0.0625rem solid #6E6E73;
@@ -142,7 +139,7 @@ exports[`Captions should render caption text with example News offscreen text 1`
   padding-bottom: 0;
 }
 
-@media (min-width: 25rem) and (max-width: 62.9375rem) {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
@@ -158,7 +155,7 @@ exports[`Captions should render caption text with example News offscreen text 1`
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -171,14 +168,13 @@ exports[`Captions should render caption text with example News offscreen text 1`
 
 <div>
   <figcaption
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-0"
   >
     <span
       role="text"
     >
       <span
-        class="emotion-2"
+        class="emotion-1"
       >
         Caption, 
       </span>
@@ -192,16 +188,15 @@ exports[`Captions should render caption text with example News offscreen text 1`
 
 exports[`Captions should render caption with multiple paragraphs 1`] = `
 .emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
   border-left: 0.0625rem solid #6E6E73;
@@ -237,7 +232,7 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
   padding-bottom: 0;
 }
 
-@media (min-width: 25rem) and (max-width: 62.9375rem) {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
@@ -253,7 +248,7 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -266,14 +261,13 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
 
 <div>
   <figcaption
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-0"
   >
     <span
       role="text"
     >
       <span
-        class="emotion-2"
+        class="emotion-1"
       >
         Caption, 
       </span>
@@ -293,16 +287,15 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
 
 exports[`Captions should render correctly with inline block 1`] = `
 .emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
   border-left: 0.0625rem solid #6E6E73;
@@ -338,7 +331,7 @@ exports[`Captions should render correctly with inline block 1`] = `
   padding-bottom: 0;
 }
 
-@media (min-width: 25rem) and (max-width: 62.9375rem) {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
@@ -354,7 +347,7 @@ exports[`Captions should render correctly with inline block 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -365,16 +358,38 @@ exports[`Captions should render correctly with inline block 1`] = `
   margin: 0;
 }
 
+.emotion-2 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-4 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 <div>
   <figcaption
-    class="emotion-0 emotion-1"
-    dir="ltr"
+    class="emotion-0"
   >
     <span
       role="text"
     >
       <span
-        class="emotion-2"
+        class="emotion-1"
       >
         Caption, 
       </span>
@@ -382,6 +397,18 @@ exports[`Captions should render correctly with inline block 1`] = `
         <b>
           This is some text.
         </b>
+        <span
+          class="emotion-2 emotion-3"
+          lang="fa"
+        >
+          <a
+            aria-label="چیسربرگرundefined"
+            class="focusIndicatorReducedWidth emotion-4 emotion-5"
+            href="https://google.com"
+          >
+            چیسربرگر
+          </a>
+        </span>
       </p>
     </span>
   </figcaption>

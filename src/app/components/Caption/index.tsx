@@ -10,7 +10,6 @@ import Inline from '#app/legacy/containers/InlineContainer';
 import Blocks from '#app/legacy/containers/Blocks';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { OptimoBlock } from '#app/models/types/optimo';
-import { TypographyScript } from '#app/models/types/theming';
 import styles from './index.style';
 
 const componentsToRender = {
@@ -53,14 +52,13 @@ const renderParagraph = (block: OptimoBlock) => {
 const renderCaption = (
   paragraphBlocks: OptimoBlock[],
   offscreenText: string,
-  script: TypographyScript,
-  service: string,
   dir: string,
 ) => (
   <figcaption
-    css={styles.captionStyles}
-    script={script}
-    service={service}
+    css={[
+      styles.captionStyles,
+      dir === 'rtl' ? styles.rtlStyles : styles.ltrStyles,
+    ]}
     dir={dir}
   >
     <span role="text">
@@ -74,8 +72,6 @@ const renderCaption = (
 
 const CaptionContainer = ({ block, type }: Props) => {
   const {
-    script,
-    service,
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
     defaultCaptionOffscreenText,
@@ -99,13 +95,7 @@ const CaptionContainer = ({ block, type }: Props) => {
 
   if (!paragraphBlocks) return null;
 
-  return renderCaption(
-    paragraphBlocks,
-    offscreenText,
-    script as TypographyScript,
-    service,
-    dir,
-  );
+  return renderCaption(paragraphBlocks, offscreenText, dir);
 };
 
 type Props = {
