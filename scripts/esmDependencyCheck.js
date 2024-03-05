@@ -1,7 +1,11 @@
-// eslint-disable no-console
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable no-console */
 const { exec } = require('child_process');
 const fs = require('fs');
-const { dependencies, devDependencies } = JSON.parse(fs.readFileSync('./package.json'));
+
+const { dependencies, devDependencies } = JSON.parse(
+  fs.readFileSync('./package.json'),
+);
 
 const allDependencies = { ...dependencies, ...devDependencies };
 const dependencyTable = [];
@@ -17,12 +21,12 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
   let url = `https://api.github.com/repos/${gitDepUrl}/contents/package.json`;
   if (url.includes('/tree/')) {
     url = url
-      .replace(/\/tree\/[^\/]+\//, '/contents/')
+      .replace(/\/tree\/[^/]+\//, '/contents/')
       .replace('//contents/', '/')
       .replace('/contents/package.json', '/package.json');
   }
 
-  return await fetch(url, {
+  return fetch(url, {
     method: 'GET',
     headers: {
       Authorization: `token ${gitHubToken}`,
@@ -34,23 +38,23 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
         return res.json().then(data => {
           if (!data.type) {
             return { type: 'commonjs', ...args };
-          } else if (data.type) {
+          }
+          if (data.type) {
             return { type: data.type, ...args };
           }
           return false;
         });
-      } else {
-        return { type: 'error', ...args };
       }
+      return { type: 'error', ...args };
     })
     .catch(e => {
-      countedRepos++;
+      countedRepos += 1;
       console.error(e);
       return { type: 'error', ...args };
     });
 };
 
-const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
+const dealWithNonNumericCharacters = (versionString, timeJson) => {
   const patchVersion = versionString.match(/patch/);
   if (patchVersion) {
     const possibleVersionStrings = versionString.match(
@@ -61,11 +65,11 @@ const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
       : `Version number not processed in current form ${versionString}`;
   }
 
-  const plainVersion = versionString.match(/^[\d\.]+$/g);
+  const plainVersion = versionString.match(/^[\d.]+$/g);
   if (plainVersion) {
     return versionString; // if it's just numbers and dots
   }
-  const lowestVersionMatches = versionString.match(/[\d\.]+$/g);
+  const lowestVersionMatches = versionString.match(/[\d.]+$/g);
   if (!lowestVersionMatches) {
     return 'Unknown'; // if it contains a string that doesn't end in numbers and dots we give up
   }
@@ -73,18 +77,17 @@ const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
 
   let versionMatcherString = '';
   if (versionString.indexOf('^') !== -1) {
-    versionMatcherString = splitOurVersionArray[0]; // caret means we are going to get anything belonging to major
+    [versionMatcherString] = splitOurVersionArray; // caret means we are going to get anything belonging to major
   }
   if (versionString.indexOf('~') !== -1) {
     splitOurVersionArray.pop(); // tilde means we get all patches of the minor
     versionMatcherString = splitOurVersionArray.join('\\.');
   }
-  versionMatcherString = versionMatcherString + '\\.';
+  versionMatcherString += '\\.';
 
   let versionToReturn = '';
   // loop through response from npm (which is handily in series order) and match our version with regex
   Object.keys(timeJson).forEach(version => {
-    const splitVersionArray = version.split('.');
     const ourRegex = new RegExp(`^${versionMatcherString}`, 'gi');
     if (version.match(ourRegex)) {
       versionToReturn = version;
@@ -106,7 +109,8 @@ const getRepoFromNpmData = npmData => {
     npmData.repository.hasOwnProperty('url')
   ) {
     return npmData.repository.url;
-  } else if (npmData.hasOwnProperty('repository')) {
+  }
+  if (npmData.hasOwnProperty('repository')) {
     return npmData.repository;
   }
   return npmData.url || npmData.homepage;
@@ -116,33 +120,29 @@ const writeCsvFile = data => {
   let csvContents =
     'Dependency,Type,Most Recent Version,Most Recent Version Date,Our Version,Our Version Date,Our Version Freshness in Days';
 
-  data.sort((a, b) => {
-      if (a.type > b.type) {
+  data
+    .sort((a, b) => {
+      if (a.name < b.name) {
         return -1;
       }
-      else if (a.type < b.type) {
-        return 1;
-      }
-      else if (a.name < b.name) {
-        return -1;
-      }
-      else if (a.name > b.name) {
+      if (a.name > b.name) {
         return 1;
       }
       return 0;
-    }).forEach(
-    ({
-      name,
-      type,
-      mostRecentVersion,
-      mostRecentVersionDate,
-      ourVersion,
-      ourVersionDate,
-      ourFreshnessInDays,
-    }) => {
-      csvContents += `\n${name},${type},${mostRecentVersion},${mostRecentVersionDate},${ourVersion},${ourVersionDate},${ourFreshnessInDays}`;
-    },
-  );
+    })
+    .forEach(
+      ({
+        name,
+        type,
+        mostRecentVersion,
+        mostRecentVersionDate,
+        ourVersion,
+        ourVersionDate,
+        ourFreshnessInDays,
+      }) => {
+        csvContents += `\n${name},${type},${mostRecentVersion},${mostRecentVersionDate},${ourVersion},${ourVersionDate},${ourFreshnessInDays}`;
+      },
+    );
 
   fs.writeFileSync('./esmDependencyTable.csv', csvContents);
 };
@@ -153,10 +153,8 @@ if (gitHubToken) {
   console.log('Please wait. Gathering npm data...');
   Object.keys(allDependencies).forEach((dep, i) => {
     let gitRepo;
-    console.log(
-      `checking npm details for ${dep}`,
-    );
-    const cmd = exec(`npm view ${dep} --json`, (err, stdout, stderr) => {
+    console.log(`checking npm details for ${dep}`);
+    exec(`npm view ${dep} --json`, (err, stdout) => {
       if (err) {
         console.error(err);
       }
@@ -198,9 +196,9 @@ if (gitHubToken) {
               modifiedDate,
             };
             try {
-              const remoteGitFile = getRemoteGitFile(gitRepo, gitRepoArgs)
+              getRemoteGitFile(gitRepo, gitRepoArgs)
                 .then(data => {
-                  countedRepos++;
+                  countedRepos += 1;
                   dependencyTable.push({
                     name: dep,
                     type: data.type,
@@ -220,22 +218,20 @@ if (gitHubToken) {
                 })
                 .catch(e => {
                   console.error(e);
-                  countedRepos++;
+                  countedRepos += 1;
                 });
             } catch (e) {
               console.error(e);
             }
           } else {
-            countedRepos++;
+            countedRepos += 1;
             console.error(
               `dep ${dep} has no public repo so we're reading from local`,
             );
-            const depRepository = JSON.parse(
+            const repository = JSON.parse(
               fs.readFileSync(`./node_modules/${dep}/package.json`),
             );
-            const depType = depRepository.type
-              ? depRepository.type
-              : 'commonjs';
+            const depType = repository.type ? repository.type : 'commonjs';
             dependencyTable.push({
               name: dep,
               type: depType,
@@ -248,13 +244,12 @@ if (gitHubToken) {
           }
         }, i * 50);
       } else {
-        countedRepos++;
+        countedRepos += 1;
         console.log('no stdout', dep, stdout);
       }
     });
   });
-}
-else {
+} else {
   console.error(
     'No github token supplied. Please see ./scripts/README.md for details',
   );

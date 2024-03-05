@@ -1,1 +1,1 @@
-{ "extends": "../.babelrc.js" }
+{ "extends": "../babel.config.main.js" }

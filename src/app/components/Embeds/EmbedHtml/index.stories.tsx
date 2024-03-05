@@ -10,7 +10,6 @@ import {
 export default {
   title: 'Components/Embeds/Embed HTML',
   component: EmbedHtml,
-  parameters: { chromatic: { disable: true } },
 };
 
 export const IDT2DataPic = () => (
@@ -21,6 +20,9 @@ export const IDT2QuotePic = () => (
   <EmbedHtml embeddableContent={quotePicEmbedHtml} />
 );
 
-export const Riddle = () => <EmbedHtml embeddableContent={riddleHTML} />;
+export const Riddle = {
+  render: () => <EmbedHtml embeddableContent={riddleHTML} />,
+  parameters: { chromatic: { disableSnapshot: true } },
+};
 
 export const VJCanonical = () => <EmbedHtml embeddableContent={vjHTML} />;
