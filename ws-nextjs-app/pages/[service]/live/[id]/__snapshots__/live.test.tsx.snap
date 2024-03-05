@@ -111,14 +111,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   color: #00CCC7;
-  vertical-align: -0.3125rem;
+  vertical-align: middle;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
 }
 
 @media (min-width: 15rem) {
   .emotion-6 {
-    vertical-align: -0.4375rem;
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -126,7 +125,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-6 {
-    vertical-align: -0.5rem;
     width: 2rem;
     height: 2rem;
   }
@@ -151,9 +149,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: #00CCC7;
+  vertical-align: middle;
   overflow-wrap: anywhere;
   -webkit-margin-end: 0;
   margin-inline-end: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-8 span:first-of-type {
+    display: inline;
+  }
 }
 
 @media (min-width: 63rem) {
@@ -193,6 +198,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   display: block;
   color: #FEFEFE;
   margin-top: 1rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-11 {
+    margin-top: 0.5rem;
+  }
 }
 
 @media (min-width: 63rem) {
@@ -1309,7 +1320,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   class="emotion-9"
                   dir="ltr"
                 >
-                  As E Dey Happen 
+                  As E Dey Happen
                 </span>
                 <span
                   class="emotion-10"
