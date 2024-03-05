@@ -17,94 +17,12 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import isLive from '#lib/utilities/isLive';
-import { getEnvConfig } from '#lib/utilities/getEnvConfig';
 import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
-
-const imageBlock = [
-  {
-    id: 'fc238059',
-    type: 'rawImage',
-    model: {
-      height: 416,
-      width: 624,
-      locator:
-        'vivo/test/images/2023/12/7/0781b49d-0b5b-43b5-9b39-605b189c2136.jpg',
-      originCode: 'cpsdevpb',
-      copyrightHolder: 'AFP',
-    },
-  },
-  {
-    id: 'ccfa2c6f',
-    type: 'altText',
-    model: {
-      blocks: [
-        {
-          id: 'e76f2f22',
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                id: '03a73508',
-                type: 'paragraph',
-                model: {
-                  text: 'Bombing over the Gaza Strip',
-                  blocks: [
-                    {
-                      id: 'e7f83cb4',
-                      type: 'fragment',
-                      model: {
-                        text: 'Bombing over the Gaza Strip',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-  {
-    id: 'f5f6212a',
-    type: 'caption',
-    model: {
-      blocks: [
-        {
-          id: '64aa2df7',
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                id: 'f407ed3b',
-                type: 'paragraph',
-                model: {
-                  text: 'A view of Gaza shows smoke rising during Israeli shelling, taken from southern Israel',
-                  blocks: [
-                    {
-                      id: '1af79e32',
-                      type: 'fragment',
-                      model: {
-                        text: 'A view of Gaza shows smoke rising during Israeli shelling, taken from southern Israel',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-];
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -271,7 +189,6 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
-      {getEnvConfig().SIMORGH_APP_ENV}
       <Heading level={3}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
@@ -285,13 +202,6 @@ const Post = ({ post }: { post: PostType }) => {
         </span>
       </Heading>
       <div css={styles.postContent}>
-        <ImageWithCaption
-          blocks={imageBlock}
-          sizes="(min-width: 1008px) 760px, 100vw"
-          className="mediaStyles"
-          css={styles.bodyMedia}
-          position={[9]}
-        />
         <PostContent contentBlocks={contentBlocks} />
       </div>
     </article>
