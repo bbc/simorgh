@@ -17,7 +17,7 @@ const getOriginContext = (bbcOrigin: string | null) => {
     window.location &&
     window.location.origin
   ) {
-    origin = window.location.origin; // eslint-disable-line prefer-destructuring
+    origin = window.location.origin;
   }
 
   return {
