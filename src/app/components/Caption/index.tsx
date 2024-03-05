@@ -8,10 +8,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Inline from '#app/legacy/containers/InlineContainer';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
+import InlineLink from '../InlineLink';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.style';
 import Fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 
 const componentsToRender = {
   fragment: Fragment,
