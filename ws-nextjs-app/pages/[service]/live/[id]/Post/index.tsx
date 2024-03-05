@@ -65,7 +65,7 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
@@ -85,7 +85,7 @@ const PostHeaderBanner = ({
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </div>
+    </span>
   );
 };
 
@@ -180,7 +180,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
-      <Heading level={3}>
+      <Heading level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
