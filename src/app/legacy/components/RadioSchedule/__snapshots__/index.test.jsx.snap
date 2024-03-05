@@ -836,20 +836,24 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                   role="text"
                 >
                   <span
-                    aria-hidden="true"
-                    class="emotion-28"
-                    dir="ltr"
+                    data-testid="live-text"
                   >
-                    LIVE 
+                    <span
+                      aria-hidden="true"
+                      class="emotion-28"
+                      dir="ltr"
+                    >
+                      LIVE 
+                    </span>
+                    <span
+                      class="emotion-29"
+                      lang="en-GB"
+                    >
+                      Listen Live, 
+                    </span>
                   </span>
-                  <span
-                    class="emotion-29"
-                    lang="en-GB"
-                  >
-                    Listen Live, 
-                  </span>
+                  <div />
                 </span>
-                <div />
                 Could a computer ever create better art than a human?
                 <span
                   class="emotion-29"
@@ -2142,20 +2146,24 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                   role="text"
                 >
                   <span
-                    aria-hidden="true"
-                    class="emotion-28"
-                    dir="rtl"
+                    data-testid="live-text"
                   >
-                    مباشر 
+                    <span
+                      aria-hidden="true"
+                      class="emotion-28"
+                      dir="rtl"
+                    >
+                      مباشر 
+                    </span>
+                    <span
+                      class="emotion-29"
+                      lang="en-GB"
+                    >
+                      استمع للبث المباشر, 
+                    </span>
                   </span>
-                  <span
-                    class="emotion-29"
-                    lang="en-GB"
-                  >
-                    استمع للبث المباشر, 
-                  </span>
+                  <div />
                 </span>
-                <div />
                 لماذا يخجل البعض من اسم قريته في مصر؟
                 <span
                   class="emotion-29"

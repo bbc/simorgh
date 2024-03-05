@@ -7008,27 +7008,31 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             />
           </svg>
           <span
-            id="promo-1"
             role="text"
           >
             <span
-              class="emotion-17"
-              dir="ltr"
+              data-testid="live-text"
+              id="promo-1"
             >
-              NA EME UGBU A 
+              <span
+                class="emotion-17"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-18"
+                lang="en-GB"
+              >
+                , 
+              </span>
             </span>
-            <span
-              class="emotion-18"
-              lang="en-GB"
-            >
-              , 
-            </span>
+            <div>
+              <span>
+                A live item
+              </span>
+            </div>
           </span>
-          <div>
-            <span>
-              A live item
-            </span>
-          </div>
         </a>
       </h3>
       <p
@@ -7401,27 +7405,31 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             />
           </svg>
           <span
-            id="promo-1"
             role="text"
           >
             <span
-              class="emotion-18"
-              dir="ltr"
+              data-testid="live-text"
+              id="promo-1"
             >
-              NA EME UGBU A 
+              <span
+                class="emotion-18"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-19"
+                lang="en-GB"
+              >
+                , 
+              </span>
             </span>
-            <span
-              class="emotion-19"
-              lang="en-GB"
-            >
-              , 
-            </span>
+            <div>
+              <span>
+                A live item
+              </span>
+            </div>
           </span>
-          <div>
-            <span>
-              A live item
-            </span>
-          </div>
         </a>
       </h3>
       <p
@@ -7797,27 +7805,31 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             />
           </svg>
           <span
-            id="promo-1"
             role="text"
           >
             <span
-              class="emotion-10"
-              dir="ltr"
+              data-testid="live-text"
+              id="promo-1"
             >
-              NA EME UGBU A 
+              <span
+                class="emotion-10"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-11"
+                lang="en-GB"
+              >
+                , 
+              </span>
             </span>
-            <span
-              class="emotion-11"
-              lang="en-GB"
-            >
-              , 
-            </span>
+            <div>
+              <span>
+                A live item
+              </span>
+            </div>
           </span>
-          <div>
-            <span>
-              A live item
-            </span>
-          </div>
         </a>
       </h3>
       <p
@@ -8229,27 +8241,31 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             />
           </svg>
           <span
-            id="promo-1"
             role="text"
           >
             <span
-              class="emotion-17"
-              dir="ltr"
+              data-testid="live-text"
+              id="promo-1"
             >
-              NA EME UGBU A 
+              <span
+                class="emotion-17"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-18"
+                lang="en-GB"
+              >
+                , 
+              </span>
             </span>
-            <span
-              class="emotion-18"
-              lang="en-GB"
-            >
-              , 
-            </span>
+            <div>
+              <span>
+                A live item
+              </span>
+            </div>
           </span>
-          <div>
-            <span>
-              A live item
-            </span>
-          </div>
         </a>
       </h3>
       <p

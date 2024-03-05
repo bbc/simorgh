@@ -51,9 +51,8 @@ const Text = ({
     <span
       // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       id={id}
-      // eslint-disable-next-line jsx-a11y/aria-role
-      role="text"
       className={className}
+      data-testid="live-text"
     >
       <span
         css={isLivePage ? styles.livePageLabelText : styles.liveLabelText}

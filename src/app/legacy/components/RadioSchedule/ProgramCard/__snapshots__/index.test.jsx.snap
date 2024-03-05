@@ -302,20 +302,24 @@ exports[`ProgramCard should render correctly for live 1`] = `
               role="text"
             >
               <span
-                aria-hidden="true"
-                class="emotion-10"
-                dir="ltr"
+                data-testid="live-text"
               >
-                LIVE 
+                <span
+                  aria-hidden="true"
+                  class="emotion-10"
+                  dir="ltr"
+                >
+                  LIVE 
+                </span>
+                <span
+                  class="emotion-11"
+                  lang="en-GB"
+                >
+                  Listen Live, 
+                </span>
               </span>
-              <span
-                class="emotion-11"
-                lang="en-GB"
-              >
-                Listen Live, 
-              </span>
+              <div />
             </span>
-            <div />
             Could a computer ever create better art than a human?
             <span
               class="emotion-11"
@@ -1534,20 +1538,24 @@ exports[`ProgramCard should render correctly without summary 1`] = `
               role="text"
             >
               <span
-                aria-hidden="true"
-                class="emotion-10"
-                dir="ltr"
+                data-testid="live-text"
               >
-                LIVE 
+                <span
+                  aria-hidden="true"
+                  class="emotion-10"
+                  dir="ltr"
+                >
+                  LIVE 
+                </span>
+                <span
+                  class="emotion-11"
+                  lang="en-GB"
+                >
+                  Listen Live, 
+                </span>
               </span>
-              <span
-                class="emotion-11"
-                lang="en-GB"
-              >
-                Listen Live, 
-              </span>
+              <div />
             </span>
-            <div />
             Could a computer ever create better art than a human?
             <span
               class="emotion-11"

@@ -1028,26 +1028,30 @@ exports[`Bulletin should render live audio correctly 1`] = `
             />
           </svg>
           <span
-            id="bulletin-httpsbbccouk"
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="ltr"
+              data-testid="live-text"
+              id="bulletin-httpsbbccouk"
             >
-              LIVE 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Listen LIVE, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Listen LIVE, 
-            </span>
+            <div>
+              This is the headline
+            </div>
           </span>
-          <div>
-            This is the headline
-          </div>
         </a>
       </h3>
       <p
@@ -1444,26 +1448,30 @@ exports[`Bulletin should render live video correctly 1`] = `
             />
           </svg>
           <span
-            id="bulletin-httpsbbccouk"
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="ltr"
+              data-testid="live-text"
+              id="bulletin-httpsbbccouk"
             >
-              LIVE 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Watch LIVE, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Watch LIVE, 
-            </span>
+            <div>
+              This is the headline
+            </div>
           </span>
-          <div>
-            This is the headline
-          </div>
         </a>
       </h3>
       <p

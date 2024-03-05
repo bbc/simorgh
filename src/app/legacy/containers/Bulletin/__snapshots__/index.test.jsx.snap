@@ -383,26 +383,30 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             />
           </svg>
           <span
-            id="bulletin-TestRadioBulletinpromonews"
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="ltr"
+              data-testid="live-text"
+              id="bulletin-TestRadioBulletinpromonews"
             >
-              NA EME UGBU A 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Gee ntị Live, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Gee ntị Live, 
-            </span>
+            <div>
+              Test Radio Bulletin promo
+            </div>
           </span>
-          <div>
-            Test Radio Bulletin promo
-          </div>
         </a>
       </h3>
       <p
@@ -829,26 +833,30 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             />
           </svg>
           <span
-            id="bulletin-TestTVBulletinpromonews"
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="ltr"
+              data-testid="live-text"
+              id="bulletin-TestTVBulletinpromonews"
             >
-              NA EME UGBU A 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="ltr"
+              >
+                NA EME UGBU A 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Lee Live, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Lee Live, 
-            </span>
+            <div>
+              Test TV Bulletin promo
+            </div>
           </span>
-          <div>
-            Test TV Bulletin promo
-          </div>
         </a>
       </h3>
       <p

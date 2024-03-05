@@ -26,13 +26,16 @@ const LiveLabel = ({
   return (
     <>
       <Pulse className={className} width="16" height="16" css={pulse} />
-      <Text
-        lang={lang}
-        id={id}
-        offScreenText={offScreenText}
-        populatedChildren={populatedChildren}
-      />
-      <Title>{children}</Title>
+      {/* eslint-disable-next-line jsx-a11y/aria-role */}
+      <span role="text">
+        <Text
+          lang={lang}
+          id={id}
+          offScreenText={offScreenText}
+          populatedChildren={populatedChildren}
+        />
+        <Title>{children}</Title>
+      </span>
     </>
   );
 };

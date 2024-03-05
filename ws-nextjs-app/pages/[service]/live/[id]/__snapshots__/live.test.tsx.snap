@@ -1299,7 +1299,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   />
                 </svg>
                 <span
-                  role="text"
+                  data-testid="live-text"
                 >
                   <span
                     class="emotion-9"

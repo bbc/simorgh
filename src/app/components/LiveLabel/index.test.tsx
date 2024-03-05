@@ -56,14 +56,14 @@ describe('LiveLabel', () => {
         expectedAriaHiddenText,
         expectedScreenReaderText,
       }) => {
-        const { getByRole } = render(
+        const { getByTestId } = render(
           <LiveLabel offScreenText={offScreenText}>{children}</LiveLabel>,
           {
             service,
           },
         );
 
-        const liveLabelElement = getByRole('text');
+        const liveLabelElement = getByTestId('live-text');
 
         const ariaHiddenTextElement =
           liveLabelElement.querySelector(`[aria-hidden="true"]`);

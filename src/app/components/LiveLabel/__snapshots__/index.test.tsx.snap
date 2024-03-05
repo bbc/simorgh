@@ -74,13 +74,17 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
     role="text"
   >
     <span
-      class="emotion-2"
-      dir="rtl"
+      data-testid="live-text"
     >
-      مباشر 
+      <span
+        class="emotion-2"
+        dir="rtl"
+      >
+        مباشر 
+      </span>
     </span>
+    <div />
   </span>
-  <div />
 </div>
 `;
 
@@ -169,20 +173,24 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
     role="text"
   >
     <span
-      aria-hidden="true"
-      class="emotion-2"
-      dir="ltr"
+      data-testid="live-text"
     >
-      LIVE 
+      <span
+        aria-hidden="true"
+        class="emotion-2"
+        dir="ltr"
+      >
+        LIVE 
+      </span>
+      <span
+        class="emotion-3"
+        lang="en-GB"
+      >
+        Live
+      </span>
     </span>
-    <span
-      class="emotion-3"
-      lang="en-GB"
-    >
-      Live
-    </span>
+    <div />
   </span>
-  <div />
 </div>
 `;
 
@@ -271,22 +279,26 @@ exports[`LiveLabel should render correctly with English live text and children 1
     role="text"
   >
     <span
-      aria-hidden="true"
-      class="emotion-2"
-      dir="ltr"
+      data-testid="live-text"
     >
-      LIVE 
+      <span
+        aria-hidden="true"
+        class="emotion-2"
+        dir="ltr"
+      >
+        LIVE 
+      </span>
+      <span
+        class="emotion-3"
+        lang="en-GB"
+      >
+        Live, 
+      </span>
     </span>
-    <span
-      class="emotion-3"
-      lang="en-GB"
-    >
-      Live, 
-    </span>
+    <div>
+       this is a headline 
+    </div>
   </span>
-  <div>
-     this is a headline 
-  </div>
 </div>
 `;
 
@@ -375,20 +387,24 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
     role="text"
   >
     <span
-      aria-hidden="true"
-      class="emotion-2"
-      dir="ltr"
+      data-testid="live-text"
     >
-      LIVE 
+      <span
+        aria-hidden="true"
+        class="emotion-2"
+        dir="ltr"
+      >
+        LIVE 
+      </span>
+      <span
+        class="emotion-3"
+        lang="en-GB"
+      >
+        Watch Live
+      </span>
     </span>
-    <span
-      class="emotion-3"
-      lang="en-GB"
-    >
-      Watch Live
-    </span>
+    <div />
   </span>
-  <div />
 </div>
 `;
 
@@ -466,12 +482,16 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
     role="text"
   >
     <span
-      class="emotion-2"
-      dir="ltr"
+      data-testid="live-text"
     >
-      As E Dey Happen 
+      <span
+        class="emotion-2"
+        dir="ltr"
+      >
+        As E Dey Happen 
+      </span>
     </span>
+    <div />
   </span>
-  <div />
 </div>
 `;

@@ -2321,22 +2321,26 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="ltr"
+              data-testid="live-text"
             >
-              LIVE 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Live, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Live, 
-            </span>
+            <div>
+              The live promo headline
+            </div>
           </span>
-          <div>
-            The live promo headline
-          </div>
         </a>
       </h3>
       <p
@@ -2644,22 +2648,26 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
             role="text"
           >
             <span
-              aria-hidden="true"
-              class="emotion-14"
-              dir="rtl"
+              data-testid="live-text"
             >
-              مباشر 
+              <span
+                aria-hidden="true"
+                class="emotion-14"
+                dir="rtl"
+              >
+                مباشر 
+              </span>
+              <span
+                class="emotion-15"
+                lang="en-GB"
+              >
+                Live, 
+              </span>
             </span>
-            <span
-              class="emotion-15"
-              lang="en-GB"
-            >
-              Live, 
-            </span>
+            <div>
+              The live promo headline
+            </div>
           </span>
-          <div>
-            The live promo headline
-          </div>
         </a>
       </h3>
       <p
