@@ -12,6 +12,7 @@ import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
+import Header from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
@@ -69,16 +70,13 @@ const Curation = ({
       return null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
-        <MessageBanner
-          heading={title}
+        <Header
+          showLiveLabel={true}
+          title={promos[0].title}
           description={promos[0].description}
-          link={promos[0].link}
-          linkText={promos[0].title}
-          image={promos[0].imageUrl}
-          eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
+          imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+          imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+          imageWidth={660}
         />
       ) : null;
     case MOST_READ:
