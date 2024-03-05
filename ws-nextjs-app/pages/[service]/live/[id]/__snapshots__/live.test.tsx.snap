@@ -1421,7 +1421,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-37"
                     >
                       <time
@@ -1446,7 +1446,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1483,7 +1483,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1497,7 +1497,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1534,7 +1534,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1548,7 +1548,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1719,7 +1719,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1733,7 +1733,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
