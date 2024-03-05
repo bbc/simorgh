@@ -99,22 +99,22 @@ const Document = ({
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
-        {scriptsAllowed && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
-            }}
-          />
-        )}
         {!isAmp && links}
-        {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `document.documentElement.classList.remove("no-js");`,
-            }}
-          />
+          <>
+            {scriptTags}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.SIMORGH_DATA=${serialisedData}`,
+              }}
+            />
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `document.documentElement.classList.remove("no-js");`,
+              }}
+            />
+          </>
         )}
       </body>
     </html>
