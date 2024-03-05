@@ -16,13 +16,13 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
-import isLive from '#lib/utilities/isLive';
 import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import { isTestRequested } from '#app/components/MediaLoader/utils/buildSettings';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -150,14 +150,14 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     video: (props: ComponentToRenderProps) =>
-      isLive() ? (
-        <LegacyMediaPlayer
+      isTestRequested() ? (
+        <MediaLoader
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}
         />
       ) : (
-        <MediaLoader
+        <LegacyMediaPlayer
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}

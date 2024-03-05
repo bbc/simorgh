@@ -2,7 +2,7 @@ import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInfe
 import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps } from '../types';
 
-const isTestRequested = () => {
+export const isTestRequested = () => {
   if (onClient()) {
     const testLiterals = window.location.hostname.match(/localhost|test/g);
     const isTest = testLiterals && testLiterals.length > 0;
