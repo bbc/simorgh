@@ -1036,13 +1036,13 @@ exports[`Bulletin should render live audio correctly 1`] = `
               class="emotion-14"
               dir="ltr"
             >
-              LIVE 
+              LIVE
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Listen LIVE, 
+               Listen LIVE, 
             </span>
             This is the headline
           </span>
@@ -1450,13 +1450,13 @@ exports[`Bulletin should render live video correctly 1`] = `
               class="emotion-14"
               dir="ltr"
             >
-              LIVE 
+              LIVE
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Watch LIVE, 
+               Watch LIVE, 
             </span>
             This is the headline
           </span>
