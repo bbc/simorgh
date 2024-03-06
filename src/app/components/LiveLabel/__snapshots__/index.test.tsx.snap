@@ -77,7 +77,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
       class="emotion-2"
       dir="rtl"
     >
-      مباشر 
+      مباشر
     </span>
   </span>
 </div>
@@ -172,13 +172,13 @@ exports[`LiveLabel should render correctly with English live text 1`] = `
       class="emotion-2"
       dir="ltr"
     >
-      LIVE 
+      LIVE
     </span>
     <span
       class="emotion-3"
       lang="en-GB"
     >
-      Live
+       Live
     </span>
   </span>
 </div>
@@ -273,13 +273,13 @@ exports[`LiveLabel should render correctly with English live text and children 1
       class="emotion-2"
       dir="ltr"
     >
-      LIVE 
+      LIVE
     </span>
     <span
       class="emotion-3"
       lang="en-GB"
     >
-      Live, 
+       Live, 
     </span>
      this is a headline 
   </span>
@@ -375,13 +375,13 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
       class="emotion-2"
       dir="ltr"
     >
-      LIVE 
+      LIVE
     </span>
     <span
       class="emotion-3"
       lang="en-GB"
     >
-      Watch Live
+       Watch Live
     </span>
   </span>
 </div>
@@ -464,7 +464,7 @@ exports[`LiveLabel should render correctly with localised live text 1`] = `
       class="emotion-2"
       dir="ltr"
     >
-      As E Dey Happen 
+      As E Dey Happen
     </span>
   </span>
 </div>
