@@ -331,24 +331,47 @@ exports[`Captions should render correctly with inline block 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-3 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4:visited {
+.emotion-5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-4:focus,
-.emotion-4:hover {
+.emotion-5:focus,
+.emotion-5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -366,16 +389,18 @@ exports[`Captions should render correctly with inline block 1`] = `
         Caption, 
       </span>
       <p>
-        <b>
+        <b
+          class="emotion-2"
+        >
           This is some text.
         </b>
         <span
-          class="emotion-2 emotion-3"
+          class="emotion-3 emotion-4"
           lang="fa"
         >
           <a
             aria-label="چیسربرگرundefined"
-            class="focusIndicatorReducedWidth emotion-4 emotion-5"
+            class="focusIndicatorReducedWidth emotion-5 emotion-6"
             href="https://google.com"
           >
             چیسربرگر
