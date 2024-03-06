@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
@@ -6,6 +8,7 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import Placeholder from './Placeholder';
 
 const logger = nodeLogger(__filename);
 
@@ -46,18 +49,6 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   return <div ref={playerElementRef} data-e2e="media-player" />;
 };
 
-const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
-  return (
-    <button
-      type="button"
-      data-e2e="media-player__placeholder"
-      onClick={() => setter(false)}
-    >
-      TODO: CLICK TO SEE VIDEO
-    </button>
-  );
-};
-
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { id, pageType, counterName } = useContext(RequestContext);
@@ -71,13 +62,34 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   if (config === null) return null;
 
-  const { mediaInfo, captionBlock, playerConfig } = config;
+  const {
+    mediaInfo,
+    captionBlock,
+    playerConfig,
+    placeholderSrc,
+    placeholderSrcset,
+    translatedNoJSMessage,
+  } = config;
 
   return (
-    <div className={className}>
+    <div
+      css={
+        isPlaceholder && {
+          position: 'relative',
+          paddingTop: '56.25%',
+          overflow: 'hidden',
+        }
+      }
+    >
       <BumpLoader />
       {isPlaceholder ? (
-        <Placeholder setter={setIsPlaceholder} />
+        <Placeholder
+          src={placeholderSrc}
+          srcSet={placeholderSrcset}
+          noJsMessage={translatedNoJSMessage}
+          mediaInfo={mediaInfo}
+          onClick={() => setIsPlaceholder(false)}
+        />
       ) : (
         <MediaContainer playerConfig={playerConfig} />
       )}
