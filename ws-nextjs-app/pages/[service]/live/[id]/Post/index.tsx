@@ -8,7 +8,6 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import MediaLoader from '#app/components/MediaLoader';
 import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
@@ -16,7 +15,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
-import isLive from '#lib/utilities/isLive';
 import styles from './styles';
 import {
   Post as PostType,
@@ -67,7 +65,7 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
@@ -87,7 +85,7 @@ const PostHeaderBanner = ({
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </div>
+    </span>
   );
 };
 
@@ -149,20 +147,13 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) =>
-      isLive() ? (
-        <LegacyMediaPlayer
-          blocks={props.blocks}
-          className="mediaStyles"
-          css={styles.bodyMedia}
-        />
-      ) : (
-        <MediaLoader
-          blocks={props.blocks}
-          className="mediaStyles"
-          css={styles.bodyMedia}
-        />
-      ),
+    video: (props: ComponentToRenderProps) => (
+      <LegacyMediaPlayer
+        blocks={props.blocks}
+        className="mediaStyles"
+        css={styles.bodyMedia}
+      />
+    ),
     social: SocialEmbedContainer,
   };
 
@@ -189,7 +180,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
-      <Heading level={3}>
+      <Heading level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
