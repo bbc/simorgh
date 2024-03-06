@@ -1,4 +1,5 @@
 import { getHeadline, getUrl } from '#lib/utilities/getStoryPromoInfo';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default ({ item, index } = {}) => {
   const block = {
@@ -13,7 +14,7 @@ export default ({ item, index } = {}) => {
       campaignID: 'cps_wsoj',
       componentName: encodeURIComponent(headline),
       advertiserID,
-      url: `${process.env.SIMORGH_BASE_URL}${url}`,
+      url: `${getEnvConfig().SIMORGH_BASE_URL}${url}`,
       format: `CHD=promo::${index + 1}`,
     };
 

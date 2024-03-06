@@ -59,7 +59,7 @@ describe('Bulletin Container', () => {
       );
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('NA EME UGBU A ');
+      expect(span.textContent).toEqual('NA EME UGBU A');
     });
 
     it('should render the Live Radio offscreen text', () => {
@@ -70,7 +70,7 @@ describe('Bulletin Container', () => {
 
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('NA EME UGBU A ');
+      expect(span.textContent).toEqual('NA EME UGBU A');
     });
 
     it('should render the LIVE label', () => {
@@ -82,7 +82,7 @@ describe('Bulletin Container', () => {
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
-      expect(span.textContent).toEqual('NA EME UGBU A ');
+      expect(span.textContent).toEqual('NA EME UGBU A');
     });
   });
 });
