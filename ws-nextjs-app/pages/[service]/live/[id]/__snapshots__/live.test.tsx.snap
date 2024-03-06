@@ -1032,18 +1032,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-51 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
   display: inline-block;
   width: 100%;
@@ -1502,7 +1490,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-52"
+                      class="emotion-51"
                     >
                       <time
                         class="emotion-38 emotion-39"
@@ -1510,11 +1498,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         9 May 2023
                       </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
                     </span>
                     <span
                       class="headingStyling emotion-42"
@@ -1553,7 +1536,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-52"
+                      class="emotion-51"
                     >
                       <time
                         class="emotion-38 emotion-39"
@@ -1561,11 +1544,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         21 March 2023
                       </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
                     </span>
                     <span
                       class="headingStyling emotion-42"
@@ -1738,7 +1716,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-52"
+                      class="emotion-51"
                     >
                       <time
                         class="emotion-38 emotion-39"
@@ -1746,11 +1724,6 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         21 March 2023
                       </time>
-                      <span
-                        class="emotion-10"
-                      >
-                        , 
-                      </span>
                     </span>
                     <span
                       class="headingStyling emotion-42"
