@@ -13,6 +13,7 @@ import IfAboveIE9 from '#components/IfAboveIE9Comment';
 import litePageTransform, {
   LITE_STYLES,
 } from '#server/utilities/litePageTransform';
+import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -46,6 +47,7 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const helmetScriptTags = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
 
   const helmetProps = {
     helmetMetaTags,
@@ -130,6 +132,15 @@ const Document = ({
           </>
         )}
         {renderMode === 'lite' && <style>{LITE_STYLES}</style>}
+        {(renderMode === 'canonical' || renderMode === 'lite') && (
+          <script
+            id="simorgh-envvars"
+            dangerouslySetInnerHTML={{
+              // Read env variables from the server and expose them to the client
+              __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
+            }}
+          />
+        )}
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />

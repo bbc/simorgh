@@ -24,15 +24,7 @@ module.exports = {
     externalDir: true,
   },
   env: {
-    ...(isLocal
-      ? // Add all env variables to the client when running locally
-        getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })
-      : {
-          // Expose subset of env variables to the client when on preview, test or live
-          // The rest are set directly on the Lambda and accessible via process.env on the server
-          SIMORGH_ATI_BASE_URL: process.env.SIMORGH_ATI_BASE_URL,
-          SIMORGH_OPTIMIZELY_SDK_KEY: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
-        }),
+    ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },

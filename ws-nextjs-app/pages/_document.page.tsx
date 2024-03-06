@@ -5,6 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
+import Script from 'next/script';
+
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
@@ -12,6 +14,10 @@ import isLitePath from '#app/routes/utils/isLitePath';
 import litePageTransform, {
   LITE_STYLES,
 } from '#server/utilities/litePageTransform';
+import {
+  EnvConfig,
+  getProcessEnvAppVariables,
+} from '#lib/utilities/getEnvConfig';
 
 type DocProps = {
   helmetProps: {
@@ -23,9 +29,8 @@ type DocProps = {
   };
   isApp: boolean;
   isLiteMode?: boolean;
+  clientSideEnvVariables: EnvConfig;
 };
-
-// Styling used for Lite pages - consider moving to a separate file
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -45,6 +50,9 @@ export default class AppDocument extends Document<DocProps> {
       helmet.link.toComponent() as unknown as React.ReactElement[];
     const helmetScriptTags =
       helmet.script.toComponent() as unknown as React.ReactElement[];
+
+    // Read env variables from the server and expose them to the client
+    const clientSideEnvVariables = getProcessEnvAppVariables();
 
     const helmetProps = {
       htmlAttrs,
@@ -74,11 +82,23 @@ export default class AppDocument extends Document<DocProps> {
         helmetProps.helmetScriptTags = liteHelmetScriptTags;
       } catch (e) {
         // Bail out and return normal version on error
-        return { ...initialProps, helmetProps, isApp, isLiteMode: false };
+        return {
+          ...initialProps,
+          helmetProps,
+          clientSideEnvVariables,
+          isApp,
+          isLiteMode: false,
+        };
       }
     }
 
-    return { ...initialProps, helmetProps, isApp, isLiteMode };
+    return {
+      ...initialProps,
+      helmetProps,
+      clientSideEnvVariables,
+      isApp,
+      isLiteMode,
+    };
   }
 
   render() {
@@ -92,6 +112,7 @@ export default class AppDocument extends Document<DocProps> {
       },
       isApp,
       isLiteMode,
+      clientSideEnvVariables,
     } = this.props;
 
     if (isLiteMode) {
@@ -102,6 +123,16 @@ export default class AppDocument extends Document<DocProps> {
             {helmetLinkTags}
             {helmetMetaTags}
             {helmetScriptTags}
+            <script
+              id="simorgh-envvars"
+              type="text/javascript"
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: `window.SIMORGH_ENV_VARS=${JSON.stringify(
+                  clientSideEnvVariables,
+                )}`,
+              }}
+            />
             <meta name="robots" content="noindex" />
             <style>{LITE_STYLES}</style>
           </head>
@@ -122,6 +153,11 @@ export default class AppDocument extends Document<DocProps> {
               __html: `document.documentElement.classList.remove("no-js");`,
             }}
           />
+          <Script id="simorgh-envvars" strategy="beforeInteractive">
+            {`window.SIMORGH_ENV_VARS=${JSON.stringify(
+              clientSideEnvVariables,
+            )}`}
+          </Script>
           {isApp && <meta name="robots" content="noindex" />}
           {helmetMetaTags}
           {helmetLinkTags}
