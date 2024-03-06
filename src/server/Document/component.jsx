@@ -10,6 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 const Document = ({
   app,
@@ -32,7 +33,7 @@ const Document = ({
   const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
+  const noJsHtmlAttrs = !isAmp && { className: NO_JS_CLASSNAME };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
