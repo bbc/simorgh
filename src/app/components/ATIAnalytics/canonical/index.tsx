@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 
@@ -24,7 +25,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => (
 
 const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   const [atiPageViewUrl] = useState(
-    process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
+    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams,
   );
 
   useEffect(() => {

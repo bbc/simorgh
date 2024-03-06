@@ -10,6 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
+import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -27,6 +28,8 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
+
   const scriptsAllowed = !isAmp;
 
   const { html, css, ids } = app;
@@ -84,25 +87,34 @@ const Document = ({
             {AMP_ANALYTICS_JS}
           </>
         )}
-      </head>
-      <body {...ampGeoPendingAttrs}>
-        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
+            id="simorgh-envvars"
             dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
+              // Read env variables from the server and expose them to the client
+              __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
             }}
           />
         )}
+      </head>
+      <body {...ampGeoPendingAttrs}>
+        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {!isAmp && links}
-        {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `document.documentElement.classList.remove("no-js");`,
-            }}
-          />
+          <>
+            {scriptTags}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.SIMORGH_DATA=${serialisedData}`,
+              }}
+            />
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `document.documentElement.classList.remove("no-js");`,
+              }}
+            />
+          </>
         )}
       </body>
     </html>
