@@ -12,6 +12,7 @@ import { OptimoBlock } from '#app/models/types/optimo';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.style';
 import Fragment from '../Fragment';
+import Text from '../Text';
 
 const componentsToRender = {
   fragment: Fragment,
@@ -55,11 +56,14 @@ const renderCaption = (
   offscreenText: string,
   dir: string,
 ) => (
-  <figcaption
+  <Text
     css={[
       styles.captionStyles,
       dir === 'rtl' ? styles.rtlStyles : styles.ltrStyles,
     ]}
+    size="longPrimer"
+    fontVariant="sansRegular"
+    as="figcaption"
     dir={dir}
   >
     <span role="text">
@@ -68,7 +72,7 @@ const renderCaption = (
       )}
       {paragraphBlocks.map((block: OptimoBlock) => renderParagraph(block))}
     </span>
-  </figcaption>
+  </Text>
 );
 
 const CaptionContainer = ({ block, type }: Props) => {
