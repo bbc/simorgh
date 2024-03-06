@@ -40,6 +40,8 @@ const buildConfig = ({
     clipId,
     mediaInfo: { title, rawDuration, guidanceMessage, kind },
     placeholderSrc,
+    placeholderSrcset,
+    translatedNoJSMessage,
   } = playerProps;
 
   const playlistItem = { versionID: clipId, kind, duration: rawDuration };
@@ -57,7 +59,14 @@ const buildConfig = ({
     },
   };
 
-  return { mediaInfo, captionBlock, playerConfig };
+  return {
+    mediaInfo,
+    captionBlock,
+    playerConfig,
+    placeholderSrc,
+    placeholderSrcset,
+    translatedNoJSMessage,
+  };
 };
 
 export default buildConfig;
