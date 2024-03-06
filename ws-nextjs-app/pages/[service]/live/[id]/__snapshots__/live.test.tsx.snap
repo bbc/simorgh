@@ -740,20 +740,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+@media (min-width: 15rem) {
+  .emotion-36 {
+    line-height: 0;
+  }
+}
+
 .emotion-37 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
+  display: inline-block;
+  width: 100%;
   background-color: #B80000;
 }
 
@@ -779,6 +775,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 400;
   padding: 0.25rem 0.75rem;
   background-color: #B80000;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -818,10 +815,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: 700;
   color: #FFFFFF;
   background-color: #B80000;
-  -webkit-flex: 1 0 1;
-  -ms-flex: 1 0 1;
-  flex: 1 0 1;
   padding: 0.25rem 0.75rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -846,7 +841,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-style: normal;
   font-weight: 700;
   color: #000000;
-  display: block;
+  display: inline-block;
+  width: 100%;
   margin: 0;
   padding: 1.5rem 1rem 0;
 }
@@ -1036,19 +1032,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-52 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
+  display: inline-block;
+  width: 100%;
 }
 
 @media screen and (forced-colors: active) {
@@ -1065,7 +1051,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-style: normal;
   font-weight: 400;
   color: #000000;
-  display: block;
+  display: inline-block;
+  width: 100%;
   margin: 0;
   padding: 0.25rem 1rem 0;
 }
@@ -1445,7 +1432,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-37"
                     >
                       <time
@@ -1470,7 +1457,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1507,7 +1494,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1521,7 +1508,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1558,7 +1545,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1572,7 +1559,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
@@ -1743,7 +1730,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   <span
                     role="text"
                   >
-                    <div
+                    <span
                       class="emotion-52"
                     >
                       <time
@@ -1757,7 +1744,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                       >
                         , 
                       </span>
-                    </div>
+                    </span>
                     <span
                       class="headingStyling emotion-43"
                     >
