@@ -2,6 +2,7 @@ import path from 'ramda/src/path';
 import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
@@ -49,7 +50,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   if (classification === 'vj-supports-amp') {
     ampMetadata = ampMetadataExtractor(
       href,
-      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+      getEnvConfig().SIMORGH_INCLUDES_BASE_AMP_URL,
     );
   }
 
