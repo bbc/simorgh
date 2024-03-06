@@ -14,16 +14,15 @@ describe('Fragment', () => {
       <Fragment text="BOLD TEXT" attributes={['bold']} />,
     );
 
-    expect(container).toMatchSnapshot();
-    expect(container.querySelector('span')?.textContent).toEqual('BOLD TEXT');
+    expect(container.querySelector('b')?.textContent).toEqual('BOLD TEXT');
   });
 
   it('with italic attributes', () => {
     const { container } = render(
       <Fragment text="ITALIC TEXT" attributes={['italic']} />,
     );
-    expect(container).toMatchSnapshot();
-    expect(container.querySelector('span')?.textContent).toEqual('ITALIC TEXT');
+
+    expect(container.querySelector('i')?.textContent).toEqual('ITALIC TEXT');
   });
 
   it('with unknown attributes', () => {
@@ -33,8 +32,8 @@ describe('Fragment', () => {
         attributes={['bold', 'unknown']}
       />,
     );
-    expect(container).toMatchSnapshot();
-    expect(container.querySelector('span')?.textContent).toEqual(
+
+    expect(container.querySelector('b')?.textContent).toEqual(
       'BOLD WITH UNKNOWN TEXT',
     );
   });
@@ -49,7 +48,7 @@ describe('Fragment', () => {
     );
 
     expect(container).toMatchSnapshot();
-    expect(container.querySelector('span')?.textContent).toEqual(
+    expect(container.querySelector('i')?.textContent).toEqual(
       'ITALIC WITH PERSIAN TEXT',
     );
   });

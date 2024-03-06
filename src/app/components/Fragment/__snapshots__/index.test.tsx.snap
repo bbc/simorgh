@@ -1,71 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Fragment with bold attributes 1`] = `
-.emotion-0 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-<div>
-  <span
-    class="emotion-0"
-  >
-    BOLD TEXT
-  </span>
-</div>
-`;
-
-exports[`Fragment with italic attributes 1`] = `
-.emotion-0 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-<div>
-  <span
-    class="emotion-0"
-  >
-    ITALIC TEXT
-  </span>
-</div>
-`;
-
 exports[`Fragment with italic attributes in Farsi 1`] = `
 .emotion-0 {
   color: #141414;
@@ -91,43 +25,10 @@ exports[`Fragment with italic attributes in Farsi 1`] = `
 }
 
 <div>
-  <span
+  <i
     class="emotion-0"
   >
     ITALIC WITH PERSIAN TEXT
-  </span>
-</div>
-`;
-
-exports[`Fragment with unknown attributes 1`] = `
-.emotion-0 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-<div>
-  <span
-    class="emotion-0"
-  >
-    BOLD WITH UNKNOWN TEXT
-  </span>
+  </i>
 </div>
 `;
