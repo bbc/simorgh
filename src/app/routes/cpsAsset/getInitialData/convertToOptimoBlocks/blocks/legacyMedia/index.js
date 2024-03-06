@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const getImageUrl = block =>
   pathOr('', ['image', 'href'], block).replace('http://', 'https://');
@@ -33,7 +34,9 @@ const generateImageBlock = () => {
           type: 'rawImage',
           model: {
             copyrightHolder: '',
-            locator: `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`,
+            locator: `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${
+              getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH
+            }images/media_placeholder.png`,
             originCode: 'pips',
           },
         },
