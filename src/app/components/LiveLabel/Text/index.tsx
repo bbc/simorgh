@@ -30,11 +30,11 @@ const Text = ({
   }
   // If offscreenText has been provided as a prop to the LiveLabel component then we want to include a pause after the offscreen text (hence the addition of a comma and a space to the text)
   if (offScreenText) {
-    screenReaderText = `${offScreenText}`;
+    screenReaderText = ` ${offScreenText}`;
     ariaHidden = true;
     // If the translated phrase for "LIVE" is English (and offscreen text has not already been provided), then the screenreader text should be the word "Live" followed by a comma and a space (to tell the screenreader to pause) - "Live" will be read out correctly (i.e. rhymes with "hive" and not "give")
   } else if (liveLabelIsEnglish) {
-    screenReaderText = 'Live';
+    screenReaderText = ' Live';
   }
   // comma is added to screenReaderText in the cases of there being children, only time we do not want a comma is if live label is alone (rare)
   if (children) {
@@ -55,7 +55,7 @@ const Text = ({
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveLabel} `}
+        {`${liveLabel}`}
       </span>
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>
