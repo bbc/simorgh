@@ -70,14 +70,16 @@ CurationProps) => {
       return null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
-        <Header
-          showLiveLabel
-          title={promos[0].title}
-          description={promos[0].description}
-          imageUrl={promos[0].imageUrl}
-          imageUrlTemplate={promos[0].imageUrl}
-          imageWidth={660}
-        />
+        <a href={promos[0].link}>
+          <Header
+            showLiveLabel
+            title={promos[0].title}
+            description={promos[0].description}
+            imageUrl={promos[0].imageUrl}
+            imageUrlTemplate={promos[0].imageUrl}
+            imageWidth={660}
+          />
+        </a>
       ) : null;
     case MOST_READ:
       return (
