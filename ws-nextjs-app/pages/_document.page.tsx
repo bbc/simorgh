@@ -119,10 +119,6 @@ export default class AppDocument extends Document<DocProps> {
       return (
         <Html {...htmlAttrs}>
           <head>
-            {title}
-            {helmetLinkTags}
-            {helmetMetaTags}
-            {helmetScriptTags}
             <script
               id="simorgh-envvars"
               type="text/javascript"
@@ -133,6 +129,11 @@ export default class AppDocument extends Document<DocProps> {
                 )}`,
               }}
             />
+            {title}
+            {helmetLinkTags}
+            {helmetMetaTags}
+            {helmetScriptTags}
+
             <meta name="robots" content="noindex" />
             <style>{LITE_STYLES}</style>
           </head>
