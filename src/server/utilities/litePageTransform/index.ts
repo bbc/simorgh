@@ -68,7 +68,7 @@ export default function litePageTransform({
   // Remove embeds
   $('[data-e2e*="embed"]').parent().remove();
 
-  // Remove image, figure and picture elements
+  // Remove figure and picture elements
   $('figure, picture').remove();
 
   // Remove images except for data-type="analytics-pixel"
@@ -85,9 +85,6 @@ export default function litePageTransform({
   $('#topPage').parent().addClass('lite-header-brand-wrapper'); // Add class to header SVG wrapper for custom styling
 
   $('header').find('ul').addClass('lite-nav-list'); // Add class to nav list for custom styling
-
-  // Remove header skip to content - may want to keep this though
-  // $('header').find('a[href="#content"]').addClass('skipLink');
 
   // Add class to main content
   $('#main-wrapper > div').addClass('lite-main-content');
