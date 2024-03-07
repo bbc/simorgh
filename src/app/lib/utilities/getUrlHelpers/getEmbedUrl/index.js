@@ -1,4 +1,5 @@
 import isLive from '../../isLive';
+import { getEnvConfig } from '../../getEnvConfig';
 
 const AV_ROUTE = 'ws/av-embeds';
 
@@ -25,7 +26,7 @@ const shouldOverrideMorphEnv = (queryString, type) => {
   return isMediaType;
 };
 
-const isDev = () => process.env.SIMORGH_APP_ENV === 'local';
+const isDev = () => getEnvConfig().SIMORGH_APP_ENV === 'local';
 
 const getBaseUrl = (queryString, isAmp) => {
   // In some scenarios, we use the same base URL as the parent
