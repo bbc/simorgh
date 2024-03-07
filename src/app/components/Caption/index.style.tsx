@@ -12,6 +12,9 @@ export default {
       marginInline: `${MARGIN_BELOW_400PX} 0`,
       paddingInline: `${MARGIN_BELOW_400PX}`,
       width: `calc(100% - ${spacings.FULL}rem)`,
+      borderInlineStart: `0.0625rem solid ${
+        isDarkUi ? palette.GREY_3 : palette.METAL
+      }`,
       [mq.GROUP_2_ONLY]: {
         width: `calc(100% - ${MARGIN_ABOVE_400PX})`,
         marginInline: `${MARGIN_ABOVE_400PX} 0`,
@@ -27,17 +30,5 @@ export default {
         margin: 0,
       },
       '& > span > p:last-child': { paddingBottom: 0 },
-    }),
-  rtlStyles: ({ palette, isDarkUi }: Theme) =>
-    css({
-      borderRight: `0.0625rem solid ${
-        isDarkUi ? palette.GREY_3 : palette.METAL
-      }`,
-    }),
-  ltrStyles: ({ palette, isDarkUi }: Theme) =>
-    css({
-      borderLeft: `0.0625rem solid ${
-        isDarkUi ? palette.GREY_3 : palette.METAL
-      }`,
     }),
 };

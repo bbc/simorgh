@@ -13,7 +13,7 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
   margin-inline: 0.5rem 0;
   padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
-  border-left: 0.0625rem solid #6E6E73;
+  border-inline-start: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -99,7 +99,7 @@ exports[`Captions should render caption text with example News offscreen text 1`
   margin-inline: 0.5rem 0;
   padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
-  border-left: 0.0625rem solid #6E6E73;
+  border-inline-start: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -185,7 +185,7 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
   margin-inline: 0.5rem 0;
   padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
-  border-left: 0.0625rem solid #6E6E73;
+  border-inline-start: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -277,7 +277,7 @@ exports[`Captions should render correctly with inline block 1`] = `
   margin-inline: 0.5rem 0;
   padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
-  border-left: 0.0625rem solid #6E6E73;
+  border-inline-start: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
