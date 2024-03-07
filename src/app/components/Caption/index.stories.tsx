@@ -44,7 +44,7 @@ export default {
   parameters: {
     docs: {
       component: {
-        title: 'Byline',
+        title: 'Caption',
       },
     },
   },

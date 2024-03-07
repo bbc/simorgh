@@ -57,10 +57,7 @@ const renderCaption = (
   dir: string,
 ) => (
   <Text
-    css={[
-      styles.captionStyles,
-      dir === 'rtl' ? styles.rtlStyles : styles.ltrStyles,
-    ]}
+    css={styles.captionStyles}
     size="longPrimer"
     fontVariant="sansRegular"
     as="figcaption"
