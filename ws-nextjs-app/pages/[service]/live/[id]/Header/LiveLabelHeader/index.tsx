@@ -20,9 +20,6 @@ const LiveLabelHeader = ({
   className,
   isHeaderImage,
 }: PropsWithChildren<LiveLabelPromoProps>) => {
-  const { service } = useContext(ServiceContext);
-  const isBurmese = service === 'burmese';
-
   return (
     <div data-testid="live-label">
       <LiveLabel.Pulse
@@ -38,10 +35,7 @@ const LiveLabelHeader = ({
         css={
           isHeaderImage
             ? styles.liveLabelTextWithImage
-            : [
-                styles.liveLabelTextWithoutImage,
-                isBurmese && styles.burmeseLiveLabelTextWithoutImage,
-              ]
+            : styles.liveLabelTextWithoutImage
         }
       >
         {children}

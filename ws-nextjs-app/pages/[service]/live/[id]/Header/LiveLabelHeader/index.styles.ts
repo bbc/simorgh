@@ -46,17 +46,10 @@ const styles = {
         },
         [mq.GROUP_4_MIN_WIDTH]: {
           width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
+          fontSize: '2rem',
         },
         [mq.GROUP_5_MIN_WIDTH]: {
           width: `calc(25%  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
-        },
-      },
-    }),
-  burmeseLiveLabelTextWithoutImage: ({ mq }: Theme) =>
-    css({
-      'span:first-of-type': {
-        [mq.GROUP_4_MIN_WIDTH]: {
-          fontSize: '2rem',
         },
       },
     }),

@@ -164,6 +164,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 63rem) {
   .emotion-8 span:first-of-type {
     width: calc(100% / 3  - 2.25rem);
+    font-size: 2rem;
   }
 }
 
