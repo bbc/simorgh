@@ -116,6 +116,9 @@ exports[`Document Component should render APP version correctly 1`] = `
         App!
       </h1>
     </div>
+    <script>
+      window.SIMORGH_DATA={"test":"data"}
+    </script>
     <link
       href="modern.main.js"
       rel="modulePreload"
@@ -152,9 +155,6 @@ exports[`Document Component should render APP version correctly 1`] = `
     <div>
       <!--&lt;![endif]-->
     </div>
-    <script>
-      window.SIMORGH_DATA={"test":"data"}
-    </script>
     <script
       type="text/javascript"
     >
@@ -204,6 +204,9 @@ exports[`Document Component should render correctly 1`] = `
         App!
       </h1>
     </div>
+    <script>
+      window.SIMORGH_DATA={"test":"data"}
+    </script>
     <link
       href="modern.main.js"
       rel="modulePreload"
@@ -240,9 +243,6 @@ exports[`Document Component should render correctly 1`] = `
     <div>
       <!--&lt;![endif]-->
     </div>
-    <script>
-      window.SIMORGH_DATA={"test":"data"}
-    </script>
     <script
       type="text/javascript"
     >
