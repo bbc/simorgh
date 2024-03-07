@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaLoaderComponent from '.';
 import ThemeProvider from '../ThemeProvider';
 import md from './README.md';
-import sample from './fixture';
+import { aresMediaBlocks } from './fixture';
 
 type Props = {
   pageType: PageTypes;
@@ -24,7 +24,7 @@ const Component = ({ service, pageType }: Props) => (
       counterName="testCounterName"
     >
       <ThemeProvider service={service}>
-        <MediaLoaderComponent className="MediaLoader" blocks={sample} />
+        <MediaLoaderComponent blocks={aresMediaBlocks} />
       </ThemeProvider>
     </RequestContextProvider>
   </ServiceContextProvider>

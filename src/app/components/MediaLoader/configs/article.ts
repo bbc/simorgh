@@ -1,11 +1,11 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { MediaBlock } from '../types';
+import { AresMediaBlock } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
-  blocks: MediaBlock[];
+  blocks: AresMediaBlock[];
 };
 
 export default ({ blocks }: Props) => {

@@ -1,10 +1,40 @@
-import { MediaBlock } from '../types';
 import buildSettings from './buildSettings';
-import blocks from '../fixture';
+import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
+import { AresMediaBlock, ClipMediaBlock } from '../types';
 
 describe('buildSettings', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+  });
+
+  it('Should process a ClipMedia block into a valid playlist item.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      id: 'testID',
+      blocks: clipMediaBlocks as ClipMediaBlock[],
+      pageType: 'live',
+      counterName: null,
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      product: 'news',
+      superResponsive: true,
+      enableToucan: true,
+      playlistObject: {
+        title:
+          "BBC launch trailer for We Know Our Place women's sport campaign",
+        holdingImageURL:
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
+        items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
+      },
+    });
   });
 
   it('Should process an AresMedia block into a valid playlist item.', () => {
@@ -18,7 +48,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });
@@ -49,7 +79,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });
@@ -72,7 +102,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });
@@ -93,7 +123,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });
@@ -111,7 +141,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });
@@ -122,7 +152,7 @@ describe('buildSettings', () => {
     const sampleBlock = [
       {
         model: { blocks: [{ model: { versions: [] } }] },
-      } as unknown as MediaBlock,
+      } as unknown as AresMediaBlock,
     ];
     const result = buildSettings({
       id: 'testID',
@@ -136,7 +166,7 @@ describe('buildSettings', () => {
   it('Should return super responsive as true, to make the video expand to its parent container.', () => {
     const result = buildSettings({
       id: 'testID',
-      blocks,
+      blocks: aresMediaBlocks,
       pageType: 'article',
       counterName: null,
     });

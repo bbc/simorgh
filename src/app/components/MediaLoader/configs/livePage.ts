@@ -2,12 +2,12 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { MediaBlock } from '../types';
+import { ClipMediaBlock } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
-  blocks: MediaBlock[];
+  blocks: ClipMediaBlock[];
 };
 
 export default ({ blocks }: Props) => {

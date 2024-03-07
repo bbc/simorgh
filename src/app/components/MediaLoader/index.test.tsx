@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { act } from '@testing-library/react-hooks';
 import { Helmet } from 'react-helmet';
 import MediaPlayer from '.';
-import sampleBlocks from './fixture';
+import { aresMediaBlocks } from './fixture';
 import { render } from '../react-testing-library-with-providers';
 
 jest.mock('react', () => ({
@@ -21,7 +21,7 @@ describe('MediaLoader', () => {
 
     it('Loads requireJS and Bump4', async () => {
       await act(async () => {
-        render(<MediaPlayer blocks={sampleBlocks} className="mediaLoader" />, {
+        render(<MediaPlayer blocks={aresMediaBlocks} />, {
           id: 'testId',
         });
       });
@@ -44,7 +44,7 @@ describe('MediaLoader', () => {
       window.requirejs = mockRequire;
 
       await act(async () => {
-        render(<MediaPlayer blocks={sampleBlocks} className="mediaLoader" />, {
+        render(<MediaPlayer blocks={aresMediaBlocks} />, {
           id: 'testId',
         });
       });
@@ -62,12 +62,9 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(
-          <MediaPlayer blocks={sampleBlocks} className="mediaLoader" />,
-          {
-            id: 'testId',
-          },
-        ));
+        ({ container } = render(<MediaPlayer blocks={aresMediaBlocks} />, {
+          id: 'testId',
+        }));
       });
 
       const button = (container as unknown as HTMLElement).querySelector(
@@ -79,12 +76,9 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(
-          <MediaPlayer blocks={sampleBlocks} className="mediaLoader" />,
-          {
-            id: 'testId',
-          },
-        ));
+        ({ container } = render(<MediaPlayer blocks={aresMediaBlocks} />, {
+          id: 'testId',
+        }));
       });
 
       const caption = (container as unknown as HTMLElement).querySelector('p');

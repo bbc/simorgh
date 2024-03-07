@@ -30,13 +30,13 @@ export type BumpType = {
   player: (div: HTMLDivElement | null, config: PlayerConfig) => Player;
 };
 
-export type MediaBlock = {
+export type AresMediaBlock = {
   type: string;
   model: Partial<{
     locator: string;
     text: string;
     title: string;
-    blocks: MediaBlock[];
+    blocks: AresMediaBlock[];
     imageUrl: string;
     versions: {
       versionId: string;
@@ -47,15 +47,42 @@ export type MediaBlock = {
   }>;
 };
 
-export type Props = {
-  className: string;
-  blocks: MediaBlock[];
+export type ClipMediaBlock = {
+  type: string;
+  model: Partial<{
+    type: string;
+    images: {
+      source: string;
+      urlTemplate: string;
+    }[];
+    video: {
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: object | null;
+      };
+    };
+  }>;
+};
+
+export type CaptionsBlock = {
+  type: string;
+  model: {
+    blocks: {
+      type: string;
+      model: {
+        text: string;
+      };
+    }[];
+  };
 };
 
 export type BuildConfigProps = {
   id: string | null;
   pageType: PageTypes;
-  blocks: MediaBlock[];
+  blocks: ClipMediaBlock[] | AresMediaBlock[];
   translations?: Translations;
   counterName: string | null;
 };

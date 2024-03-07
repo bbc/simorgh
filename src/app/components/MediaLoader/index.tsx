@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import { BumpType, PlayerConfig, Props } from './types';
+import { BumpType, AresMediaBlock, PlayerConfig } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import getCaptionBlock from './utils/getCaptionBlock';
@@ -57,6 +57,11 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
       TODO: CLICK TO SEE VIDEO
     </button>
   );
+};
+
+type Props = {
+  className?: string;
+  blocks: AresMediaBlock[];
 };
 
 const MediaLoader = ({ blocks, className }: Props) => {
