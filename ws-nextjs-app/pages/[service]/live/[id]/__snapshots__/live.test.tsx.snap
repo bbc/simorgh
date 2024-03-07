@@ -161,10 +161,52 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-8 span:first-of-type {
+    font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-8 span:first-of-type {
+      font-size: 1.375rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-8 span:first-of-type {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  }
+}
+
 @media (min-width: 63rem) {
   .emotion-8 span:first-of-type {
     width: calc(100% / 3  - 2.25rem);
-    font-size: 2rem;
+    font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-8 span:first-of-type {
+      font-size: 1.375rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-8 span:first-of-type {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
   }
 }
 

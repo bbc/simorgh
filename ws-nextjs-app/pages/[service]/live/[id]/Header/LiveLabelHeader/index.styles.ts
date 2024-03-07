@@ -25,15 +25,24 @@ const styles = {
         color: 'canvasText',
       },
     }),
-  liveLabelTextWithImage: ({ palette }: Theme) =>
+  liveLabelTextWithImage: ({ palette, fontSizes, fontVariants, mq }: Theme) =>
     css({
       'span:first-of-type': {
         color: palette.LIVE_LIGHT,
         verticalAlign: 'middle',
         display: 'inline',
+        [mq.GROUP_3_MIN_WIDTH]: {
+          ...fontVariants.sansBold,
+          ...fontSizes.paragon,
+        },
       },
     }),
-  liveLabelTextWithoutImage: ({ mq, palette }: Theme) =>
+  liveLabelTextWithoutImage: ({
+    mq,
+    palette,
+    fontSizes,
+    fontVariants,
+  }: Theme) =>
     css({
       'span:first-of-type': {
         display: 'inline-flex',
@@ -44,9 +53,14 @@ const styles = {
         [mq.GROUP_0_MAX_WIDTH]: {
           display: 'inline',
         },
+        [mq.GROUP_3_MIN_WIDTH]: {
+          ...fontVariants.sansBold,
+          ...fontSizes.paragon,
+        },
         [mq.GROUP_4_MIN_WIDTH]: {
           width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
-          fontSize: '2rem',
+          ...fontVariants.sansBold,
+          ...fontSizes.paragon,
         },
         [mq.GROUP_5_MIN_WIDTH]: {
           width: `calc(25%  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
