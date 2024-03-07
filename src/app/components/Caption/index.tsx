@@ -12,7 +12,7 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.style';
 import Fragment from '../Fragment';
 import Text from '../Text';
-import InlineLink from '../InlineLink';
+import InlineLink from '../DecoratedInlineLink';
 
 const componentsToRender = {
   fragment: Fragment,
