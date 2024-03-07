@@ -11,6 +11,7 @@ import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -28,6 +29,8 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
+
   const scriptsAllowed = !isAmp;
 
   const { html, css, ids } = app;
@@ -84,6 +87,15 @@ const Document = ({
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
           </>
+        )}
+        {scriptsAllowed && (
+          <script
+            id="simorgh-envvars"
+            dangerouslySetInnerHTML={{
+              // Read env variables from the server and expose them to the client
+              __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
+            }}
+          />
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
