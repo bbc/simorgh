@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -61,17 +63,21 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { id, pageType, counterName } = useContext(RequestContext);
+  const { translations } = useContext(ServiceContext);
 
   const config = buildConfig({
     id,
     pageType,
     blocks,
+    translations,
     counterName,
   });
 
   if (config === null) return null;
 
-  const { mediaInfo, captionBlock, playerConfig } = config;
+  const { mediaType, playerConfig } = config;
+
+  const captionBlock = filterForBlockType(blocks, 'caption');
 
   return (
     <div className={className}>
@@ -81,7 +87,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       ) : (
         <MediaContainer playerConfig={playerConfig} />
       )}
-      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import onClient from '#app/lib/utilities/onClient';
-import { BuildConfigProps } from '../types';
+import { BuildConfigProps, PlayerConfig } from '../types';
+import selectConfig from '../configs';
 
 const isTestRequested = () => {
   if (onClient()) {
@@ -21,43 +21,56 @@ const buildConfig = ({
   blocks,
   pageType,
   counterName,
+  translations,
 }: BuildConfigProps) => {
   if (id === null) return null;
 
-  const playerProps = getPlayerProps({
-    assetId: id,
-    pageType,
+  const basePlayerConfig = {
+    product: 'news',
+    superResponsive: true,
+    enableToucan: true,
+    ...(counterName && { counterName }),
+    ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+  };
+
+  const configBuilder = selectConfig(pageType);
+
+  const pageConfig = configBuilder({
     blocks,
+    translations,
   });
 
-  const { mediaInfo, captionBlock } = playerProps;
-
-  if (playerProps.mediaBlock === null) {
+  if (pageConfig === null) {
     return null;
   }
 
   const {
     clipId,
-    mediaInfo: { title, rawDuration, guidanceMessage, kind },
+    guidanceMessage,
+    kind,
+    mediaType,
     placeholderSrc,
-  } = playerProps;
+    rawDuration,
+    title,
+  } = pageConfig;
 
-  const playlistItem = { versionID: clipId, kind, duration: rawDuration };
-
-  const playerConfig = {
-    product: 'news',
-    superResponsive: true,
-    ...(counterName && { counterName }),
-    ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+  const playerConfig: PlayerConfig = {
+    ...basePlayerConfig,
     playlistObject: {
       title,
       holdingImageURL: placeholderSrc,
-      items: [playlistItem],
+      items: [
+        {
+          versionID: clipId,
+          kind,
+          duration: rawDuration,
+        },
+      ],
       ...(guidanceMessage && { guidance: guidanceMessage }),
     },
   };
 
-  return { mediaInfo, captionBlock, playerConfig };
+  return { mediaType, playerConfig };
 };
 
 export default buildConfig;

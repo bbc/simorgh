@@ -1,6 +1,10 @@
+import { PageTypes } from '#app/models/types/global';
+import { Translations } from '#app/models/types/translations';
+
 export type PlayerConfig = {
   product?: string;
   superResponsive: boolean;
+  enableToucan: boolean;
   counterName?: string;
   playlistObject: {
     title: string;
@@ -49,7 +53,8 @@ export type Props = {
 
 export type BuildConfigProps = {
   id: string | null;
-  pageType: string;
+  pageType: PageTypes;
   blocks: MediaBlock[];
+  translations: Translations;
   counterName: string | null;
 };
