@@ -65,7 +65,7 @@ const Image = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
-  const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
+  const hasFixedAspectRatio = (!!aspectRatio || !!hasDimensions) && aspectRatio !== 'auto';
 
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
     (hasDimensions && [width, height]) || [null, null];
