@@ -21,7 +21,6 @@ const buildConfig = ({
   blocks,
   pageType,
   counterName,
-  translations,
 }: BuildConfigProps) => {
   if (id === null) return null;
 
@@ -33,10 +32,7 @@ const buildConfig = ({
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };
 
-  const config = configForPageType(pageType)({
-    blocks,
-    translations,
-  });
+  const config = configForPageType(pageType)({ blocks });
 
   if (config === null) {
     return null;

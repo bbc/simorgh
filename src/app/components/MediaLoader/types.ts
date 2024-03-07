@@ -55,6 +55,6 @@ export type BuildConfigProps = {
   id: string | null;
   pageType: PageTypes;
   blocks: MediaBlock[];
-  translations: Translations;
+  translations?: Translations;
   counterName: string | null;
 };
