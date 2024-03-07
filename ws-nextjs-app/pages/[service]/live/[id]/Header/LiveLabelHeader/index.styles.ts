@@ -18,8 +18,8 @@ const styles = {
         height: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${spacings.QUADRUPLE}rem`,
-        height: `${spacings.QUADRUPLE}rem`,
+        width: `${spacings.TRIPLE + spacings.HALF}rem`,
+        height: `${spacings.TRIPLE + spacings.HALF}rem`,
       },
       [mq.HIGH_CONTRAST]: {
         color: 'canvasText',
