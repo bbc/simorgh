@@ -1,6 +1,6 @@
 import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps, PlayerConfig } from '../types';
-import selectConfig from '../configs';
+import configForPageType from '../configs';
 
 const isTestRequested = () => {
   if (onClient()) {
@@ -25,7 +25,7 @@ const buildConfig = ({
 }: BuildConfigProps) => {
   if (id === null) return null;
 
-  const basePlayerConfig = {
+  const basePlayerSettings = {
     product: 'news',
     superResponsive: true,
     enableToucan: true,
@@ -33,41 +33,22 @@ const buildConfig = ({
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };
 
-  const configBuilder = selectConfig(pageType);
-
-  const pageConfig = configBuilder({
+  const config = configForPageType(pageType)({
     blocks,
     translations,
   });
 
-  if (pageConfig === null) {
+  if (config === null) {
     return null;
   }
 
-  const {
-    clipId,
-    guidanceMessage,
-    kind,
-    mediaType,
-    placeholderSrc,
-    rawDuration,
-    title,
-  } = pageConfig;
+  const { mediaType, pagePlayerSettings } = config;
 
   const playerConfig: PlayerConfig = {
-    ...basePlayerConfig,
-    playlistObject: {
-      title,
-      holdingImageURL: placeholderSrc,
-      items: [
-        {
-          versionID: clipId,
-          kind,
-          duration: rawDuration,
-        },
-      ],
-      ...(guidanceMessage && { guidance: guidanceMessage }),
-    },
+    // Base configuration that all media players should have
+    ...basePlayerSettings,
+    // Additional configuration that is specific to the page type
+    ...pagePlayerSettings,
   };
 
   return { mediaType, playerConfig };

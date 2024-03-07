@@ -52,13 +52,22 @@ export default ({ blocks, translations }: Props) => {
   });
 
   return {
-    clipId: versionId,
-    guidanceMessage: mediaInfo.guidanceMessage,
-    kind: mediaInfo.kind,
     mediaType: mediaInfo.type,
-    placeholderSrc,
-    rawDuration,
-    title: mediaInfo.title,
-    mediaBlock: clipMediaBlock,
+    pagePlayerSettings: {
+      playlistObject: {
+        title: mediaInfo.title,
+        holdingImageURL: placeholderSrc,
+        items: [
+          {
+            versionID: versionId,
+            kind: mediaInfo.kind,
+            duration: rawDuration,
+          },
+        ],
+        ...(mediaInfo.guidanceMessage && {
+          guidance: mediaInfo.guidanceMessage,
+        }),
+      },
+    },
   };
 };
