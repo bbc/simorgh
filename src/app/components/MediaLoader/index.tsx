@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import getCaptionBlock from './utils/getCaptionBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -74,7 +74,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   const { mediaType, playerConfig } = config;
 
-  const captionBlock = filterForBlockType(blocks, 'caption');
+  const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
     <div className={className}>

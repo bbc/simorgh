@@ -12,6 +12,7 @@ export type PlayerConfig = {
     items: Item[];
   };
   statsObject?: { clipPID?: string };
+  mediator?: { host: string };
 };
 
 export type Item = {

@@ -1,5 +1,5 @@
 import { MediaBlock } from '../types';
-import buildConfig from './buildSettings';
+import buildSettings from './buildSettings';
 import blocks from '../fixture';
 
 describe('buildSettings', () => {
@@ -16,15 +16,17 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',
       counterName: null,
     });
+
     expect(result?.playerConfig).toStrictEqual({
       product: 'news',
       superResponsive: true,
+      enableToucan: true,
       playlistObject: {
         title: 'Five things ants can teach us about management',
         holdingImageURL:
@@ -45,7 +47,7 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',
@@ -68,7 +70,7 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',
@@ -89,7 +91,7 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',
@@ -107,7 +109,7 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',
@@ -122,7 +124,7 @@ describe('buildSettings', () => {
         model: { blocks: [{ model: { versions: [] } }] },
       } as unknown as MediaBlock,
     ];
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks: sampleBlock,
       pageType: 'article',
@@ -132,7 +134,7 @@ describe('buildSettings', () => {
   });
 
   it('Should return super responsive as true, to make the video expand to its parent container.', () => {
-    const result = buildConfig({
+    const result = buildSettings({
       id: 'testID',
       blocks,
       pageType: 'article',

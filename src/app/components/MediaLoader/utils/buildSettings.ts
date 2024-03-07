@@ -16,7 +16,7 @@ const isTestRequested = () => {
   return false;
 };
 
-const buildConfig = ({
+const buildSettings = ({
   id,
   blocks,
   pageType,
@@ -50,4 +50,4 @@ const buildConfig = ({
   return { mediaType, playerConfig };
 };
 
-export default buildConfig;
+export default buildSettings;
