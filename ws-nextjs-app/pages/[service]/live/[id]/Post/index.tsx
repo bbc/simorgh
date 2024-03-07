@@ -150,13 +150,13 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     ),
     video: (props: ComponentToRenderProps) =>
       !isLive() ? (
-        <LegacyMediaPlayer
+        <MediaLoader
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}
         />
       ) : (
-        <MediaLoader
+        <LegacyMediaPlayer
           blocks={props.blocks}
           className="mediaStyles"
           css={styles.bodyMedia}
