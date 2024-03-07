@@ -30,15 +30,39 @@ export type BumpType = {
   player: (div: HTMLDivElement | null, config: PlayerConfig) => Player;
 };
 
+export type CaptionBlock = {
+  type: 'caption';
+  model: {
+    blocks: {
+      type: string;
+      model: {
+        blocks: {
+          type: string;
+          model: {
+            text: string;
+          };
+        }[];
+      };
+    }[];
+  };
+};
+
 export type AresMediaBlock = {
-  type: string;
+  type: 'aresMedia';
   model: Partial<{
     locator: string;
+    originCode: string;
     text: string;
     title: string;
     blocks: AresMediaBlock[];
     imageUrl: string;
+    format: string;
     versions: {
+      versionId: string;
+      duration: number;
+      warnings?: { [key: string]: string };
+    }[];
+    webcastVersions: {
       versionId: string;
       duration: number;
       warnings?: { [key: string]: string };
@@ -48,7 +72,7 @@ export type AresMediaBlock = {
 };
 
 export type ClipMediaBlock = {
-  type: string;
+  type: 'clipMedia';
   model: Partial<{
     type: string;
     images: {
@@ -61,28 +85,18 @@ export type ClipMediaBlock = {
         id: string;
         duration: string;
         kind: string;
-        guidance: object | null;
+        guidance: { warnings?: { [key: string]: string } } | null;
       };
     };
   }>;
 };
 
-export type CaptionsBlock = {
-  type: string;
-  model: {
-    blocks: {
-      type: string;
-      model: {
-        text: string;
-      };
-    }[];
-  };
-};
+export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
 
 export type BuildConfigProps = {
   id: string | null;
   pageType: PageTypes;
-  blocks: ClipMediaBlock[] | AresMediaBlock[];
+  blocks: MediaBlock[];
   translations?: Translations;
   counterName: string | null;
 };

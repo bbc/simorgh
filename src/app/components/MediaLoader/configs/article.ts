@@ -1,15 +1,18 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { AresMediaBlock } from '../types';
+import { AresMediaBlock, MediaBlock } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
-  blocks: AresMediaBlock[];
+  blocks: MediaBlock[];
 };
 
 export default ({ blocks }: Props) => {
-  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const aresMediaBlock: AresMediaBlock = filterForBlockType(
+    blocks,
+    'aresMedia',
+  );
 
   if (!aresMediaBlock) return null;
 
@@ -21,7 +24,7 @@ export default ({ blocks }: Props) => {
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
 
   const { originCode, locator } =
-    aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model;
+    aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model ?? {};
 
   const versionId =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]

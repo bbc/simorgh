@@ -1,6 +1,5 @@
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
-import { AresMediaBlock, ClipMediaBlock } from '../types';
 
 describe('buildSettings', () => {
   beforeEach(() => {
@@ -18,7 +17,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: clipMediaBlocks as ClipMediaBlock[],
+      blocks: clipMediaBlocks,
       pageType: 'live',
       counterName: null,
     });
@@ -152,10 +151,11 @@ describe('buildSettings', () => {
     const sampleBlock = [
       {
         model: { blocks: [{ model: { versions: [] } }] },
-      } as unknown as AresMediaBlock,
+      },
     ];
     const result = buildSettings({
       id: 'testID',
+      // @ts-expect-error - we are testing an invalid block
       blocks: sampleBlock,
       pageType: 'article',
       counterName: null,
