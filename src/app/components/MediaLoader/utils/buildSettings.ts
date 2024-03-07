@@ -32,11 +32,9 @@ const buildSettings = ({
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };
 
-  const config = configForPageType(pageType)({ blocks });
+  const config = configForPageType(pageType)?.({ blocks });
 
-  if (config === null) {
-    return null;
-  }
+  if (!config) return null;
 
   const { mediaType, pagePlayerSettings } = config;
 

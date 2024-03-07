@@ -10,6 +10,6 @@ export default (pageType: PageTypes) => {
     case 'mediaArticle':
       return article;
     default:
-      return article;
+      return null;
   }
 };
