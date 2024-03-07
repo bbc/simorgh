@@ -5,7 +5,6 @@ import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { LiveLabelProps } from '#app/components/LiveLabel/types';
 import LiveLabel from '#app/components/LiveLabel';
-
 import styles from './index.styles';
 
 interface LiveLabelPromoProps extends LiveLabelProps {
