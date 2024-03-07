@@ -109,4 +109,19 @@ describe('Document Component', () => {
 
     expect(head).toContainHTML('<meta name="robots" content="noindex" />');
   });
+
+  it('should render the "window.SIMORGH_DATA" object as the first script tag in the body', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" />),
+    );
+
+    const body = dom.window.document.querySelector('body');
+    const scripts = body.querySelectorAll('script');
+
+    const firstScript = scripts[0];
+
+    expect(firstScript.innerHTML).toBe(
+      `window.SIMORGH_DATA=${JSON.stringify(data)}`,
+    );
+  });
 });
