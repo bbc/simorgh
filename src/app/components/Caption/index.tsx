@@ -6,13 +6,13 @@ import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Inline from '#app/legacy/containers/InlineContainer';
-import InlineLink from '#app/legacy/containers/InlineLink';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.style';
 import Fragment from '../Fragment';
 import Text from '../Text';
+import InlineLink from '../InlineLink';
 
 const componentsToRender = {
   fragment: Fragment,
