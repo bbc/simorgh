@@ -79,6 +79,9 @@ export default {
       display: 'block',
       color: palette.GREY_1,
       marginTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        marginTop: `${spacings.FULL}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'calc(100% / 3 * 2)',
         display: 'inline-flex',
