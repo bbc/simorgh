@@ -5,16 +5,16 @@ exports[`Document Component should render AMP version correctly 1`] = `
   lang="test"
 >
   <head>
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
@@ -82,16 +82,16 @@ exports[`Document Component should render APP version correctly 1`] = `
       content="noindex"
       name="robots"
     />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
@@ -170,16 +170,16 @@ exports[`Document Component should render correctly 1`] = `
   lang="test"
 >
   <head>
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
