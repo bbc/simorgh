@@ -84,8 +84,8 @@ describe('Media Player: Placeholder', () => {
       />,
       { service: 'news' },
     );
-    fireEvent.click(container.firstChild);
-    fireEvent.click(getByText(container.firstChild, '2:30'));
+    fireEvent.click(container.firstChild as HTMLElement);
+    fireEvent.click(getByText(container.firstChild as HTMLElement, '2:30'));
     expect(mockOnClick).toHaveBeenCalledTimes(2);
   });
 
