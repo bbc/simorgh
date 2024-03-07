@@ -100,6 +100,7 @@ const Document = ({
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
+          // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           <script
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,
