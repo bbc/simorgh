@@ -1,5 +1,6 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { PageTypes } from '#app/models/types/global';
 import {
   AresMediaBlock,
   BasePlayerConfig,
@@ -10,6 +11,7 @@ import {
 const DEFAULT_WIDTH = 512;
 
 type Props = {
+  pageType: PageTypes;
   blocks: MediaBlock[];
   basePlayerConfig: BasePlayerConfig;
 };
@@ -19,7 +21,7 @@ type ReturnProps = {
   playerConfig: PlayerConfig;
 } | null;
 
-export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
+export default ({ pageType, blocks, basePlayerConfig }: Props): ReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -64,6 +66,7 @@ export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
     mediaType: format || 'video',
     playerConfig: {
       ...basePlayerConfig,
+      autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
         holdingImageURL: placeholderSrc,
@@ -76,6 +79,7 @@ export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
         ],
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
+      ...(pageType === 'mediaArticle' && { preload: 'high' }),
     },
   };
 };

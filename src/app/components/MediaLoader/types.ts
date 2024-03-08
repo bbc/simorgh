@@ -14,7 +14,10 @@ export type PlayerUiConfig = {
   fullscreen: { enabled: boolean };
 };
 
+// Settings that all media players should have
 export type BasePlayerConfig = {
+  autoplay?: boolean;
+  preload?: string;
   product?: string;
   superResponsive: boolean;
   enableToucan: boolean;
@@ -27,13 +30,13 @@ export type BasePlayerConfig = {
   ui: PlayerUiConfig;
 };
 
+// Settings that are specific to the page type
 export type PlayerConfig = BasePlayerConfig & {
   playlistObject: {
     title: string;
     holdingImageURL: string;
     items: Item[];
   };
-  ui: PlayerUiConfig;
 };
 
 export type Item = {

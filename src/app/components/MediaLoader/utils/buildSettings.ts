@@ -29,6 +29,7 @@ const buildSettings = ({
 
   // Base configuration that all media players should have
   const basePlayerConfig: BasePlayerConfig = {
+    autoplay: true,
     product: 'news',
     superResponsive: true,
     enableToucan: true,
@@ -46,7 +47,11 @@ const buildSettings = ({
   };
 
   // Additional configuration that is specific to the page type
-  const config = configForPageType(pageType)?.({ blocks, basePlayerConfig });
+  const config = configForPageType(pageType)?.({
+    pageType,
+    blocks,
+    basePlayerConfig,
+  });
 
   if (!config) return null;
 
