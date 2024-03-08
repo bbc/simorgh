@@ -17,7 +17,7 @@ describe('buildSettings', () => {
     jest.restoreAllMocks();
   });
 
-  it('Should process a ClipMedia block into a valid playlist item.', () => {
+  it('Should process a ClipMedia block into a valid playlist item for a "Live" page.', () => {
     const mockWindowObj = {
       location: {
         hostname: 'https://www.bbc.com/',
@@ -56,7 +56,7 @@ describe('buildSettings', () => {
     });
   });
 
-  it('Should process an AresMedia block into a valid playlist item.', () => {
+  it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
     const mockWindowObj = {
       location: {
         hostname: 'https://www.bbc.com/',
@@ -72,6 +72,46 @@ describe('buildSettings', () => {
 
     expect(result?.playerConfig).toStrictEqual({
       autoplay: true,
+      product: 'news',
+      superResponsive: true,
+      enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      externalEmbedUrl: '',
+      playlistObject: {
+        title: 'Five things ants can teach us about management',
+        holdingImageURL:
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
+        guidance: 'Contains strong language and adult humour.',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
+      },
+    });
+  });
+
+  it('Should process an AresMedia block into a valid playlist item for a "mediaArticle" page.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+      pageType: 'mediaArticle',
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      autoplay: false,
+      preload: 'high',
       product: 'news',
       superResponsive: true,
       enableToucan: true,
