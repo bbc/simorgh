@@ -1,6 +1,19 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 
+export type PlayerUiConfig = {
+  skin?: string;
+  colour?: string;
+  foreColour?: string;
+  baseColour?: string;
+  colourOnBaseColour?: string;
+  fallbackBackgroundColour?: string;
+  controls: { enabled: boolean };
+  locale: { lang: string };
+  subtitles: { enabled: boolean; defaultOn: boolean };
+  fullscreen: { enabled: boolean };
+};
+
 export type BasePlayerConfig = {
   product?: string;
   superResponsive: boolean;
@@ -11,18 +24,7 @@ export type BasePlayerConfig = {
   externalEmbedUrl?: string;
   statsObject?: { clipPID?: string };
   mediator?: { host: string };
-  ui: {
-    skin?: string;
-    colour?: string;
-    foreColour?: string;
-    baseColour?: string;
-    colourOnBaseColour?: string;
-    fallbackBackgroundColour?: string;
-    controls: { enabled: boolean };
-    locale: { lang: string };
-    subtitles: { enabled: boolean; defaultOn: boolean };
-    fullscreen: { enabled: boolean };
-  };
+  ui: PlayerUiConfig;
 };
 
 export type PlayerConfig = BasePlayerConfig & {
@@ -31,6 +33,7 @@ export type PlayerConfig = BasePlayerConfig & {
     holdingImageURL: string;
     items: Item[];
   };
+  ui: PlayerUiConfig;
 };
 
 export type Item = {
