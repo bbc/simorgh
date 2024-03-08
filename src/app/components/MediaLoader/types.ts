@@ -32,6 +32,7 @@ export type PlayerConfig = {
     summary?: string;
     holdingImageURL: string;
     items: Item[];
+    embedRights?: 'allowed';
   };
 };
 
@@ -88,6 +89,7 @@ export type AresMediaBlock = {
     blocks: AresMediaBlock[];
     imageUrl: string;
     format: 'audio' | 'video';
+    embedding: boolean;
     versions: {
       versionId: string;
       duration: number;
@@ -118,6 +120,7 @@ export type ClipMediaBlock = {
         kind: string;
         guidance: { warnings?: { [key: string]: string } } | null;
       };
+      isEmbeddingAllowed: boolean;
     };
   };
 };

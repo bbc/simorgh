@@ -41,6 +41,8 @@ export default ({
   const kind = video?.version?.kind || 'programme';
   const guidanceMessage = video?.version?.guidance?.warnings?.short;
 
+  const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
+
   const placeholderSrc = buildIChefURL({
     originCode,
     locator,
@@ -73,6 +75,7 @@ export default ({
           },
         ],
         ...(guidanceMessage && { guidance: guidanceMessage }),
+        ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ui: {
         ...basePlayerConfig.ui,

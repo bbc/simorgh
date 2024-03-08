@@ -59,6 +59,8 @@ export default ({
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
       ?.short;
 
+  const embeddingAllowed = aresMediaBlock?.model?.blocks?.[0]?.model?.embedding;
+
   return {
     mediaType: format || 'video',
     playerConfig: {
@@ -76,6 +78,7 @@ export default ({
           },
         ],
         ...(guidanceMessage && { guidance: guidanceMessage }),
+        ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
     },
