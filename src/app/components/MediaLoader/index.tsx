@@ -52,7 +52,7 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   return (
     <button
       type="button"
-      data-e2e="media-player__placeholder"
+      data-e2e="media-loader__placeholder"
       onClick={() => setter(false)}
     >
       TODO: CLICK TO SEE VIDEO
