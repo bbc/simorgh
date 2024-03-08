@@ -3,18 +3,12 @@
 /* @jsxFrag React.Fragment */
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
-import Text from '../Text';
+import styles from './index.style';
 
-const bold = ({ children }: PropsWithChildren) => (
-  <Text as="b" fontVariant="sansBold">
-    {children}
-  </Text>
-);
+const bold = ({ children }: PropsWithChildren) => <b>{children}</b>;
 
 const italic = ({ children }: PropsWithChildren) => (
-  <Text as="i" fontVariant="sansRegularItalic">
-    {children}
-  </Text>
+  <i css={styles.italicStyle}>{children}</i>
 );
 
 const attributeComponents = {
