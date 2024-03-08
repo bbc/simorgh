@@ -8,7 +8,7 @@ import runAmpFooterTests from './footer.amp';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlaceholderTests from './mediaPlaceholder';
-import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
+import runMediaPlayerEmbedTests from './mediaPlayerEmbedLegacy';
 import runRadioScheduleTests from './radioSchedule';
 import runRecentEpisodesTests from './recentEpisodes';
 import runCrossPlatformSEOTests from './SEO';
