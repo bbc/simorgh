@@ -5,19 +5,19 @@ import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import Inline from '#app/legacy/containers/InlineContainer';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';
+import DecoratedInline from '../DecoratedInline';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.style';
 import Fragment from '../Fragment';
 import Text from '../Text';
-import InlineLink from '../DecoratedInlineLink';
+import DecoratedInlineLink from '../DecoratedInlineLink';
 
 const componentsToRender = {
   fragment: Fragment,
-  urlLink: InlineLink,
-  inline: Inline,
+  urlLink: DecoratedInlineLink,
+  inline: DecoratedInline,
 };
 
 const chooseOffscreenText = (
