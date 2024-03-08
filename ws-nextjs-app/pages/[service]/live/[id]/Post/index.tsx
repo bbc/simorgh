@@ -149,18 +149,10 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       />
     ),
     video: (props: ComponentToRenderProps) =>
-      !isLive() ? (
-        <MediaLoader
-          blocks={props.blocks}
-          className="mediaStyles"
-          css={styles.bodyMedia}
-        />
+      isLive() ? (
+        <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
       ) : (
-        <LegacyMediaPlayer
-          blocks={props.blocks}
-          className="mediaStyles"
-          css={styles.bodyMedia}
-        />
+        <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
       ),
     social: SocialEmbedContainer,
   };
