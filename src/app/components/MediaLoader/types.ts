@@ -29,6 +29,7 @@ export type PlayerConfig = {
   ui: PlayerUiConfig;
   playlistObject?: {
     title: string;
+    summary?: string;
     holdingImageURL: string;
     items: Item[];
   };

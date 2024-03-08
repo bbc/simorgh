@@ -2,6 +2,7 @@ import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { AresMediaBlock, MediaBlock, PlayerConfig } from '../types';
+import getCaptionBlock from '../utils/getCaptionBlock';
 
 const DEFAULT_WIDTH = 512;
 
@@ -51,6 +52,11 @@ export default ({ pageType, blocks, basePlayerConfig }: Props): ReturnProps => {
   });
 
   const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
+  const captionBlock = getCaptionBlock(blocks, pageType);
+
+  const caption =
+    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
   const kind =
     aresMediaBlock?.model?.blocks?.[0]?.model?.smpKind || 'programme';
   const guidanceMessage =
@@ -64,6 +70,7 @@ export default ({ pageType, blocks, basePlayerConfig }: Props): ReturnProps => {
       autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
+        summary: caption || '',
         holdingImageURL: placeholderSrc,
         items: [
           {

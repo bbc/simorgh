@@ -3,6 +3,7 @@ import moment from 'moment-timezone';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { ClipMediaBlock, MediaBlock, PlayerConfig } from '../types';
+import getCaptionBlock from '../utils/getCaptionBlock';
 
 const DEFAULT_WIDTH = 512;
 
@@ -35,6 +36,11 @@ export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
 
   const title = video?.title;
+  const captionBlock = getCaptionBlock(blocks, 'live');
+
+  const caption =
+    captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
   const kind = video?.version?.kind || 'programme';
   const guidanceMessage = video?.version?.guidance?.warnings?.short;
 
@@ -60,6 +66,7 @@ export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
       ...basePlayerConfig,
       playlistObject: {
         title,
+        summary: caption || '',
         holdingImageURL: placeholderSrc,
         items: [
           {
