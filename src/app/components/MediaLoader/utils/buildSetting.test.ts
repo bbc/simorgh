@@ -33,7 +33,7 @@ describe('buildSettings', () => {
     });
 
     expect(result?.playerConfig).toStrictEqual({
-      autoplay: true,
+      autoplay: false,
       product: 'news',
       superResponsive: true,
       enableToucan: true,
@@ -71,7 +71,7 @@ describe('buildSettings', () => {
     });
 
     expect(result?.playerConfig).toStrictEqual({
-      autoplay: true,
+      autoplay: false,
       product: 'news',
       superResponsive: true,
       enableToucan: true,

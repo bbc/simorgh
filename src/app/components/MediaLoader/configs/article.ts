@@ -61,7 +61,7 @@ export default ({ pageType, blocks, basePlayerConfig }: Props): ReturnProps => {
     mediaType: format || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      autoplay: pageType !== 'mediaArticle',
+      // autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
         holdingImageURL: placeholderSrc,

@@ -29,7 +29,7 @@ const buildSettings = ({
 
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
-    autoplay: true,
+    autoplay: false,
     product: 'news',
     superResponsive: true,
     enableToucan: true,
