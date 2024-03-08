@@ -1,19 +1,36 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 
-export type PlayerConfig = {
+export type BasePlayerConfig = {
   product?: string;
   superResponsive: boolean;
   enableToucan: boolean;
   counterName?: string;
-  appType: string;
+  appType: 'amp' | 'responsive';
+  appName: string;
+  externalEmbedUrl?: string;
+  statsObject?: { clipPID?: string };
+  mediator?: { host: string };
+  ui: {
+    skin?: string;
+    colour?: string;
+    foreColour?: string;
+    baseColour?: string;
+    colourOnBaseColour?: string;
+    fallbackBackgroundColour?: string;
+    controls: { enabled: boolean };
+    locale: { lang: string };
+    subtitles: { enabled: boolean; defaultOn: boolean };
+    fullscreen: { enabled: boolean };
+  };
+};
+
+export type PlayerConfig = BasePlayerConfig & {
   playlistObject: {
     title: string;
     holdingImageURL: string;
     items: Item[];
   };
-  statsObject?: { clipPID?: string };
-  mediator?: { host: string };
 };
 
 export type Item = {

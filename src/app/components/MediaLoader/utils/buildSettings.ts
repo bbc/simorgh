@@ -1,5 +1,5 @@
 import onClient from '#app/lib/utilities/onClient';
-import { BuildConfigProps, PlayerConfig } from '../types';
+import { BasePlayerConfig, BuildConfigProps } from '../types';
 import configForPageType from '../configs';
 
 const isTestRequested = () => {
@@ -27,7 +27,8 @@ const buildSettings = ({
 }: BuildConfigProps) => {
   if (id === null) return null;
 
-  const basePlayerSettings = {
+  // Base configuration that all media players should have
+  const basePlayerConfig: BasePlayerConfig = {
     product: 'news',
     superResponsive: true,
     enableToucan: true,
@@ -44,20 +45,12 @@ const buildSettings = ({
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };
 
-  const config = configForPageType(pageType)?.({ blocks });
+  // Additional configuration that is specific to the page type
+  const config = configForPageType(pageType)?.({ blocks, basePlayerConfig });
 
   if (!config) return null;
 
-  const { mediaType, pagePlayerSettings } = config;
-
-  const playerConfig: PlayerConfig = {
-    // Base configuration that all media players should have
-    ...basePlayerSettings,
-    // Additional configuration that is specific to the page type
-    ...pagePlayerSettings,
-  };
-
-  return { mediaType, playerConfig };
+  return config;
 };
 
 export default buildSettings;

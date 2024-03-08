@@ -2,15 +2,26 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { ClipMediaBlock, MediaBlock } from '../types';
+import {
+  BasePlayerConfig,
+  ClipMediaBlock,
+  MediaBlock,
+  PlayerConfig,
+} from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
   blocks: MediaBlock[];
+  basePlayerConfig: BasePlayerConfig;
 };
 
-export default ({ blocks }: Props) => {
+type ReturnProps = {
+  mediaType: string;
+  playerConfig: PlayerConfig;
+} | null;
+
+export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
     'clipMedia',
@@ -38,9 +49,20 @@ export default ({ blocks }: Props) => {
     resolution: DEFAULT_WIDTH,
   });
 
+  const audioUi = {
+    skin: 'audio',
+    colour: '#b80000',
+    foreColour: '#222222',
+    baseColour: '#222222',
+    colourOnBaseColour: '#ffffff',
+    fallbackBackgroundColour: '#ffffff',
+    controls: { enabled: true, volumeSlider: true },
+  };
+
   return {
     mediaType: type || 'video',
-    pagePlayerSettings: {
+    playerConfig: {
+      ...basePlayerConfig,
       playlistObject: {
         title,
         holdingImageURL: placeholderSrc,
@@ -52,6 +74,10 @@ export default ({ blocks }: Props) => {
           },
         ],
         ...(guidanceMessage && { guidance: guidanceMessage }),
+      },
+      ui: {
+        ...basePlayerConfig.ui,
+        ...(type === 'audio' && audioUi),
       },
     },
   };

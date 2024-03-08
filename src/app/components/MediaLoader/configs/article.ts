@@ -1,14 +1,25 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { AresMediaBlock, MediaBlock } from '../types';
+import {
+  AresMediaBlock,
+  BasePlayerConfig,
+  MediaBlock,
+  PlayerConfig,
+} from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
   blocks: MediaBlock[];
+  basePlayerConfig: BasePlayerConfig;
 };
 
-export default ({ blocks }: Props) => {
+type ReturnProps = {
+  mediaType: string;
+  playerConfig: PlayerConfig;
+} | null;
+
+export default ({ blocks, basePlayerConfig }: Props): ReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -51,7 +62,8 @@ export default ({ blocks }: Props) => {
 
   return {
     mediaType: format || 'video',
-    pagePlayerSettings: {
+    playerConfig: {
+      ...basePlayerConfig,
       playlistObject: {
         title,
         holdingImageURL: placeholderSrc,
