@@ -2,18 +2,13 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
-  BasePlayerConfig,
-  ClipMediaBlock,
-  MediaBlock,
-  PlayerConfig,
-} from '../types';
+import { ClipMediaBlock, MediaBlock, PlayerConfig } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
   blocks: MediaBlock[];
-  basePlayerConfig: BasePlayerConfig;
+  basePlayerConfig: PlayerConfig;
 };
 
 type ReturnProps = {

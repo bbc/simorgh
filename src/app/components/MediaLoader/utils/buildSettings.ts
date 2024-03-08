@@ -1,5 +1,5 @@
 import onClient from '#app/lib/utilities/onClient';
-import { BasePlayerConfig, BuildConfigProps } from '../types';
+import { BuildConfigProps, PlayerConfig } from '../types';
 import configForPageType from '../configs';
 
 const isTestRequested = () => {
@@ -28,7 +28,7 @@ const buildSettings = ({
   if (id === null) return null;
 
   // Base configuration that all media players should have
-  const basePlayerConfig: BasePlayerConfig = {
+  const basePlayerConfig: PlayerConfig = {
     autoplay: true,
     product: 'news',
     superResponsive: true,
@@ -46,7 +46,7 @@ const buildSettings = ({
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };
 
-  // Additional configuration that is specific to the page type
+  // Augment base configuration with settings that are specific to the page type
   const config = configForPageType(pageType)?.({
     pageType,
     blocks,

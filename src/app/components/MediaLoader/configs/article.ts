@@ -1,19 +1,14 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
-import {
-  AresMediaBlock,
-  BasePlayerConfig,
-  MediaBlock,
-  PlayerConfig,
-} from '../types';
+import { AresMediaBlock, MediaBlock, PlayerConfig } from '../types';
 
 const DEFAULT_WIDTH = 512;
 
 type Props = {
   pageType: PageTypes;
   blocks: MediaBlock[];
-  basePlayerConfig: BasePlayerConfig;
+  basePlayerConfig: PlayerConfig;
 };
 
 type ReturnProps = {
