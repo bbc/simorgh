@@ -79,37 +79,12 @@ exports[`InlineLink internal link route should render correctly 1`] = `
   color: #B80000;
 }
 
-.emotion-1 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-1 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-1 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 <div>
   <a
     class="focusIndicatorReducedWidth emotion-0"
     href="/news"
   >
-    <b
-      class="emotion-1"
-    >
+    <b>
       This is bold text for a link
     </b>
   </a>
