@@ -49,7 +49,7 @@ export type CaptionBlock = {
 
 export type AresMediaBlock = {
   type: 'aresMedia';
-  model: Partial<{
+  model: {
     locator: string;
     originCode: string;
     text: string;
@@ -68,12 +68,12 @@ export type AresMediaBlock = {
       warnings?: { [key: string]: string };
     }[];
     smpKind: string;
-  }>;
+  };
 };
 
 export type ClipMediaBlock = {
   type: 'clipMedia';
-  model: Partial<{
+  model: {
     type: string;
     images: {
       source: string;
@@ -88,7 +88,7 @@ export type ClipMediaBlock = {
         guidance: { warnings?: { [key: string]: string } } | null;
       };
     };
-  }>;
+  };
 };
 
 export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;

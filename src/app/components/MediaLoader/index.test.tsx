@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import MediaPlayer from '.';
 import { aresMediaBlocks } from './fixture';
 import { render } from '../react-testing-library-with-providers';
+import { MediaBlock } from './types';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -21,7 +22,7 @@ describe('MediaLoader', () => {
 
     it('Loads requireJS and Bump4', async () => {
       await act(async () => {
-        render(<MediaPlayer blocks={aresMediaBlocks} />, {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
         });
       });
@@ -44,7 +45,7 @@ describe('MediaLoader', () => {
       window.requirejs = mockRequire;
 
       await act(async () => {
-        render(<MediaPlayer blocks={aresMediaBlocks} />, {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
         });
       });
@@ -62,9 +63,12 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(<MediaPlayer blocks={aresMediaBlocks} />, {
-          id: 'testId',
-        }));
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+          {
+            id: 'testId',
+          },
+        ));
       });
 
       const button = (container as unknown as HTMLElement).querySelector(
@@ -76,9 +80,12 @@ describe('MediaLoader', () => {
       let container;
 
       await act(async () => {
-        ({ container } = render(<MediaPlayer blocks={aresMediaBlocks} />, {
-          id: 'testId',
-        }));
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+          {
+            id: 'testId',
+          },
+        ));
       });
 
       const caption = (container as unknown as HTMLElement).querySelector('p');

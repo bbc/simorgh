@@ -1,5 +1,6 @@
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
+import { MediaBlock } from '../types';
 
 describe('buildSettings', () => {
   beforeEach(() => {
@@ -17,7 +18,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: clipMediaBlocks,
+      blocks: clipMediaBlocks as MediaBlock[],
       pageType: 'live',
       counterName: null,
     });
@@ -47,7 +48,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });
@@ -78,7 +79,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });
@@ -101,7 +102,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });
@@ -122,7 +123,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });
@@ -140,7 +141,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });
@@ -166,7 +167,7 @@ describe('buildSettings', () => {
   it('Should return super responsive as true, to make the video expand to its parent container.', () => {
     const result = buildSettings({
       id: 'testID',
-      blocks: aresMediaBlocks,
+      blocks: aresMediaBlocks as MediaBlock[],
       pageType: 'article',
       counterName: null,
     });

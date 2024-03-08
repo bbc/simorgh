@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import { BumpType, PlayerConfig, MediaBlocks } from './types';
+import { BumpType, PlayerConfig, MediaBlock } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import getCaptionBlock from './utils/getCaptionBlock';
@@ -61,7 +61,7 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
 
 type Props = {
   className?: string;
-  blocks: MediaBlocks;
+  blocks: MediaBlock[];
 };
 
 const MediaLoader = ({ blocks, className }: Props) => {
