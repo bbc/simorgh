@@ -8,12 +8,14 @@ import { persianLink, fragmentBlock } from './fixture';
 const Component = ({
   blocks,
   service,
+  language,
 }: {
   blocks: OptimoBlock[];
   service: Services;
+  language: string;
 }) => (
   <ThemeProvider service={service}>
-    <DecoratedInlineLink blocks={blocks} />
+    <DecoratedInlineLink blocks={blocks} language={language} />
   </ThemeProvider>
 );
 
@@ -24,6 +26,7 @@ export const DecoratedInlineTextWithLink = () => (
       persianLink,
     ]}
     service="persian"
+    language="fa"
   />
 );
 

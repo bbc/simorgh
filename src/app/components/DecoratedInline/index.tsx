@@ -9,9 +9,9 @@ import styles from './index.style';
 
 const componentsToRender = { fragment, urlLink: InlineLink };
 
-const InlineContainer = ({ blocks }: Props) => {
+const InlineContainer = ({ blocks, language }: Props) => {
   return (
-    <Text css={styles.inline}>
+    <Text css={styles.inline} lang={language}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </Text>
   );
@@ -19,6 +19,7 @@ const InlineContainer = ({ blocks }: Props) => {
 
 type Props = {
   blocks: OptimoBlock[];
+  language: string;
 };
 
 export default InlineContainer;

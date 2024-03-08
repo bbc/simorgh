@@ -416,6 +416,7 @@ exports[`Captions should render correctly with inline block 1`] = `
         </b>
         <span
           class="emotion-3"
+          lang="fa"
         >
           <a
             aria-label="چیسربرگرundefined"
