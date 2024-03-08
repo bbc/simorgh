@@ -42,6 +42,17 @@ export type Item = {
   live?: boolean;
 };
 
+export type ConfigBuilderProps = {
+  blocks: MediaBlock[];
+  basePlayerConfig: PlayerConfig;
+  pageType: PageTypes;
+};
+
+export type ConfigBuilderReturnProps = {
+  mediaType: string;
+  playerConfig: PlayerConfig;
+} | null;
+
 export type Player = {
   load: () => void;
 };
