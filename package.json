@@ -40,7 +40,7 @@
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
-    "build:preview": "cp envConfig/preview.env .env && NODE_ENV=production run-p webpack:test:client webpack:test:server",
+    "build:preview": "cp envConfig/preview.env .env && NODE_ENV=production run-p webpack:preview:client webpack:preview:server",
     "build:storybook": "yarn build && node .storybook/buildFontPreloads && build-storybook -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
