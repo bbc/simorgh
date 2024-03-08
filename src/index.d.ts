@@ -7,7 +7,12 @@ declare namespace JSX {
     'amp-access-hide'?: string;
   }
 
+  interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
+    key?: string | null;
+  }
+
   interface IntrinsicElements {
     div: DivProps;
+    p: ParagraphProps;
   }
 }
