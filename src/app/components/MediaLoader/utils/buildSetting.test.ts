@@ -1,6 +1,16 @@
+import { PageTypes, Services } from '#app/models/types/global';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { MediaBlock } from '../types';
+
+const baseSettings = {
+  id: 'testID',
+  pageType: 'article' as PageTypes,
+  counterName: null,
+  isAmp: false,
+  lang: 'es',
+  service: 'mundo' as Services,
+};
 
 describe('buildSettings', () => {
   beforeEach(() => {
@@ -17,22 +27,30 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: clipMediaBlocks as MediaBlock[],
       pageType: 'live',
-      counterName: null,
     });
 
     expect(result?.playerConfig).toStrictEqual({
       product: 'news',
       superResponsive: true,
       enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      externalEmbedUrl: '',
       playlistObject: {
         title:
           "BBC launch trailer for We Know Our Place women's sport campaign",
         holdingImageURL:
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
         items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
       },
     });
   });
@@ -47,22 +65,29 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
 
     expect(result?.playerConfig).toStrictEqual({
       product: 'news',
       superResponsive: true,
       enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
         holdingImageURL:
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
       },
     });
   });
@@ -78,11 +103,10 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result?.playerConfig).toHaveProperty('mediator', {
       host: 'open.test.bbc.co.uk',
     });
@@ -101,11 +125,10 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result?.playerConfig).toHaveProperty('mediator', {
       host: 'open.test.bbc.co.uk',
     });
@@ -122,11 +145,10 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result?.playerConfig.mediator).toBe(undefined);
   });
 
@@ -140,11 +162,10 @@ describe('buildSettings', () => {
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result?.playerConfig.mediator).toBe(undefined);
   });
 
@@ -155,22 +176,20 @@ describe('buildSettings', () => {
       },
     ];
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       // @ts-expect-error - we are testing an invalid block
       blocks: sampleBlock,
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result).toBe(null);
   });
 
   it('Should return super responsive as true, to make the video expand to its parent container.', () => {
     const result = buildSettings({
-      id: 'testID',
+      ...baseSettings,
       blocks: aresMediaBlocks as MediaBlock[],
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result?.playerConfig.superResponsive).toStrictEqual(true);
   });
 });

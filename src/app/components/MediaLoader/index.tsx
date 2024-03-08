@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { BumpType, PlayerConfig, MediaBlock } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -66,13 +67,18 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName } = useContext(RequestContext);
+  const { id, pageType, counterName, isAmp, service } =
+    useContext(RequestContext);
+  const { lang } = useContext(ServiceContext);
 
   const config = buildConfig({
     id,
     pageType,
     blocks,
     counterName,
+    isAmp,
+    service,
+    lang,
   });
 
   if (config === null) return null;

@@ -21,6 +21,9 @@ const buildSettings = ({
   blocks,
   pageType,
   counterName,
+  isAmp,
+  service,
+  lang,
 }: BuildConfigProps) => {
   if (id === null) return null;
 
@@ -28,6 +31,15 @@ const buildSettings = ({
     product: 'news',
     superResponsive: true,
     enableToucan: true,
+    appType: isAmp ? 'amp' : 'responsive',
+    appName: service !== 'news' ? `news-${service}` : 'news',
+    externalEmbedUrl: '', // TODO: Check requirements on this, will need added in future when media player has dedicated page for AMP support
+    ui: {
+      controls: { enabled: true },
+      locale: { lang: lang || 'en' },
+      subtitles: { enabled: true, defaultOn: true },
+      fullscreen: { enabled: true },
+    },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
   };

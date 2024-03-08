@@ -1,4 +1,4 @@
-import { PageTypes } from '#app/models/types/global';
+import { PageTypes, Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
@@ -6,6 +6,7 @@ export type PlayerConfig = {
   superResponsive: boolean;
   enableToucan: boolean;
   counterName?: string;
+  appType: string;
   playlistObject: {
     title: string;
     holdingImageURL: string;
@@ -99,4 +100,7 @@ export type BuildConfigProps = {
   blocks: MediaBlock[];
   translations?: Translations;
   counterName: string | null;
+  isAmp: boolean;
+  service: Services;
+  lang: string;
 };

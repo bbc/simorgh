@@ -1,11 +1,11 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
-import { MediaBlock } from '../types';
+import { CaptionBlock, MediaBlock } from '../types';
 
 export default function getCaptionBlock(
   blocks: MediaBlock[],
   pageType: PageTypes,
-) {
+): CaptionBlock {
   if (pageType === 'live') {
     return filterForBlockType(blocks, 'caption');
   }
