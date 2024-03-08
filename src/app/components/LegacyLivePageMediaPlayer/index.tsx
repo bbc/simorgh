@@ -27,7 +27,7 @@ const LegacyLivePageMediaPlayer = ({ blocks, className }: Props) => {
 
 type Props = {
   blocks: MediaBlock[];
-  className: string;
+  className?: string;
 };
 
 export default LegacyLivePageMediaPlayer;
