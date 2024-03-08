@@ -5,7 +5,7 @@ import { CaptionBlock, MediaBlock } from '../types';
 export default function getCaptionBlock(
   blocks: MediaBlock[],
   pageType: PageTypes,
-): CaptionBlock {
+): CaptionBlock | null {
   if (pageType === 'live') {
     return filterForBlockType(blocks, 'caption');
   }
