@@ -50,7 +50,7 @@ export default ({ blocks }: Props) => {
       ?.short;
 
   return {
-    mediaType: format === 'audio' ? 'audio' : 'video',
+    mediaType: format || 'video',
     pagePlayerSettings: {
       playlistObject: {
         title,

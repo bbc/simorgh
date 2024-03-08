@@ -18,20 +18,19 @@ export default ({ blocks }: Props) => {
 
   if (!clipMediaBlock) return null;
 
-  const { source, urlTemplate: locator } =
-    clipMediaBlock?.model?.images?.[1] ?? {};
+  const { images, video, type } = clipMediaBlock?.model;
+
+  const { source, urlTemplate: locator } = images?.[1] ?? {};
 
   const originCode = source?.replace('Image', '');
-  const versionId = clipMediaBlock?.model?.video?.version?.id;
-  const format = clipMediaBlock?.model?.type;
-  const clipISO8601Duration = clipMediaBlock?.model?.video?.version?.duration;
+  const versionId = video?.version?.id;
+  const clipISO8601Duration = video?.version?.duration;
 
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
 
-  const title = clipMediaBlock?.model?.video?.title;
-  const kind = clipMediaBlock?.model?.video?.version?.kind || 'programme';
-  const guidanceMessage =
-    clipMediaBlock?.model?.video?.version?.guidance?.warnings?.short;
+  const title = video?.title;
+  const kind = video?.version?.kind || 'programme';
+  const guidanceMessage = video?.version?.guidance?.warnings?.short;
 
   const placeholderSrc = buildIChefURL({
     originCode,
@@ -40,7 +39,7 @@ export default ({ blocks }: Props) => {
   });
 
   return {
-    mediaType: format === 'audio' ? 'audio' : 'video',
+    mediaType: type || 'video',
     pagePlayerSettings: {
       playlistObject: {
         title,

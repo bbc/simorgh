@@ -56,7 +56,7 @@ export type AresMediaBlock = {
     title: string;
     blocks: AresMediaBlock[];
     imageUrl: string;
-    format: string;
+    format: 'audio' | 'video';
     versions: {
       versionId: string;
       duration: number;
@@ -74,7 +74,7 @@ export type AresMediaBlock = {
 export type ClipMediaBlock = {
   type: 'clipMedia';
   model: {
-    type: string;
+    type: 'audio' | 'video';
     images: {
       source: string;
       urlTemplate: string;
