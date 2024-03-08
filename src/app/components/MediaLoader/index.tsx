@@ -27,17 +27,25 @@ const BumpLoader = () => (
 );
 
 const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
-  const playerElementRef = useRef(null);
+  const playerElementRef = useRef<HTMLDivElement>(null);
+  // Used to ensure SMP is only loaded once
+  const smpLoadedRef = useRef(false);
 
   useEffect(() => {
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef && playerElementRef.current && playerConfig) {
+        if (
+          playerElementRef?.current &&
+          !smpLoadedRef.current &&
+          playerConfig
+        ) {
           const mediaPlayer = Bump.player(
             playerElementRef.current,
             playerConfig,
           );
+
           mediaPlayer.load();
+          smpLoadedRef.current = true;
         }
       });
     } catch (error) {
