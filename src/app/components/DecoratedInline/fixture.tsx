@@ -1,6 +1,6 @@
 import { OptimoBlock } from '#app/models/types/optimo';
 
-const fragmentBlock = (text: string, attributes = []) => ({
+export const fragmentBlock = (text: string, attributes = []) => ({
   id: '113144',
   type: 'fragment',
   model: {
@@ -26,11 +26,9 @@ const inlineLinkBlock = (
 });
 
 const persianText = 'چیسربرگر';
-const persianLink = inlineLinkBlock(
+export const persianLink = inlineLinkBlock(
   persianText,
   'https://google.com',
   [fragmentBlock(persianText)],
   true,
 );
-
-export default persianLink;

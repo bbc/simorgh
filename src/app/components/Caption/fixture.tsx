@@ -93,7 +93,7 @@ export const blocksWithInline = {
               model: {
                 blocks: [
                   fragmentBlock({
-                    text: 'This is some text.',
+                    text: 'This is some text. ',
                     attributes: ['bold'],
                   }),
                   inlinePersianBlock,

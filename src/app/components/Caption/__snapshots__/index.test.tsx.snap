@@ -412,7 +412,7 @@ exports[`Captions should render correctly with inline block 1`] = `
         <b
           class="emotion-2"
         >
-          This is some text.
+          This is some text. 
         </b>
         <span
           class="emotion-3"

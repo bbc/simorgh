@@ -3,7 +3,7 @@ import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
 import ThemeProvider from '../ThemeProvider';
 import DecoratedInlineLink from '.';
-import persianLink from './fixture';
+import { persianLink, fragmentBlock } from './fixture';
 
 const Component = ({
   blocks,
@@ -17,8 +17,14 @@ const Component = ({
   </ThemeProvider>
 );
 
-export const DecoratedPersianInline = () => (
-  <Component blocks={[persianLink]} service="persian" />
+export const DecoratedInlineTextWithLink = () => (
+  <Component
+    blocks={[
+      fragmentBlock('This is a normal inline text, followed by a link: '),
+      persianLink,
+    ]}
+    service="persian"
+  />
 );
 
 export default {
