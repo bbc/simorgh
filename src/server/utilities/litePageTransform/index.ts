@@ -98,11 +98,6 @@ export default function litePageTransform({
   $('footer').find('ul').addClass('lite-nav-list'); // Add class to footer list for custom styling
   $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
 
-  // all elements
-  // $('*').each((_, el) => {
-  //   $(el).contents().unwrap();
-  // });
-
   return {
     liteHtml: $.html(),
     liteHelmetMetaTags: helmetMetaTags,
