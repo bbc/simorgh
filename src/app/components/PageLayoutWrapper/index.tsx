@@ -57,7 +57,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, variant } = useContext(RequestContext);
+  const { isLite, isAmp, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -82,7 +82,10 @@ const PageLayoutWrapper = ({
   }
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
-    isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
+    isLite ||
+    isAmp ||
+    !serviceFonts.length ||
+    process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
