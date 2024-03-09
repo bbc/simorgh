@@ -42,9 +42,6 @@ export default function litePageTransform({
     false,
   );
 
-  // Remove style tags
-  $('style').remove();
-
   // Remove inline style attributes
   $('[style]').removeAttr('style');
 
