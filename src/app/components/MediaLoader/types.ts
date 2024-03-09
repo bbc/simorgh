@@ -43,7 +43,7 @@ export type MediaBlock = {
 };
 
 export type Props = {
-  className: string;
+  className?: string;
   blocks: MediaBlock[];
 };
 

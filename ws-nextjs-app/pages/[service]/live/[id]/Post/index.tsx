@@ -11,10 +11,12 @@ import UnorderedList from '#app/legacy/containers/BulletedList';
 import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
+import MediaLoader from '#app/components/MediaLoader';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import isLive from '#app/lib/utilities/isLive';
 import styles from './styles';
 import {
   Post as PostType,
@@ -146,13 +148,12 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) => (
-      <LegacyMediaPlayer
-        blocks={props.blocks}
-        className="mediaStyles"
-        css={styles.bodyMedia}
-      />
-    ),
+    video: (props: ComponentToRenderProps) =>
+      isLive() ? (
+        <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
+      ) : (
+        <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      ),
     social: SocialEmbedContainer,
   };
 
