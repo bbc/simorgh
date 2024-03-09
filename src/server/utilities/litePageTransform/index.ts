@@ -31,10 +31,12 @@ export default function litePageTransform({
   const $ = cheerio.load(
     html,
     {
-      // Uses htmlparser2 which could be faster but less accurate
       // https://cheerio.js.org/docs/advanced/configuring-cheerio#using-htmlparser2-for-html
       xml: {
+        // Disable `xmlMode` to parse HTML with htmlparser2.
         xmlMode: false,
+        // Disable `decodeEntities` to prevent HTML entities from being decoded.
+        decodeEntities: false,
       },
     },
     false,
