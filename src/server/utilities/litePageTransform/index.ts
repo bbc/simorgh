@@ -15,7 +15,7 @@ export default function litePageTransform({
   helmetScriptTags,
   helmetLinkTags,
 }: Props) {
-  // Prevent preloading images
+  // Prevent preloading images by removing them from the head
   const cleanedHelmetLinkTags = helmetLinkTags?.filter(
     tag =>
       !tag.props.rel ||
@@ -40,26 +40,26 @@ export default function litePageTransform({
     false,
   );
 
-  // Remove style
+  // Remove style tags
   $('style').remove();
 
   // Remove inline style attributes
   $('[style]').removeAttr('style');
 
-  // Remove all class names except for visuallyHiddenText, skipLink which we want to use for accessibility
+  // Classnames to keep from being removed
+  const classNamesToKeep = ['visuallyHiddenText', 'skipLink', 'lite-switcher'];
+
+  // Remove all class names except those in 'classNamesToKeep'
   $('[class]').each((_, el) => {
-    if ($(el).attr('class')?.includes('visuallyHiddenText')) {
-      $(el).removeAttr('class').addClass('visuallyHiddenText');
+    const foundClassName = classNamesToKeep.find(className =>
+      $(el).attr('class')?.includes(className),
+    );
+    if (foundClassName) {
+      $(el).removeAttr('class').addClass(foundClassName);
       return;
     }
-    if ($(el).attr('class')?.includes('skipLink')) {
-      $(el).removeAttr('class').addClass('skipLink');
-      return;
-    }
-    if ($(el).attr('class')?.includes('lite-switcher')) {
-      $(el).removeAttr('class').addClass('lite-switcher');
-      return;
-    }
+
+    // Remove classnames from element
     $(el).removeAttr('class');
   });
 
@@ -97,6 +97,11 @@ export default function litePageTransform({
   $('footer').children().first().addClass('lite-footer'); // bit too hacky - add class to footer SVG wrapper for custom styling
   $('footer').find('ul').addClass('lite-nav-list'); // Add class to footer list for custom styling
   $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
+
+  // all elements
+  // $('*').each((_, el) => {
+  //   $(el).contents().unwrap();
+  // });
 
   return {
     liteHtml: $.html(),
