@@ -1,19 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 
-export type PlayerUiConfig = {
-  skin?: string;
-  colour?: string;
-  foreColour?: string;
-  baseColour?: string;
-  colourOnBaseColour?: string;
-  fallbackBackgroundColour?: string;
-  controls: { enabled: boolean };
-  locale: { lang: string };
-  subtitles: { enabled: boolean; defaultOn: boolean };
-  fullscreen: { enabled: boolean };
-};
-
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -31,11 +18,25 @@ export type PlayerConfig = {
     title: string;
     summary?: string;
     holdingImageURL: string;
-    items: Item[];
+    items: PlaylistItem[];
+    guidance?: string;
   };
 };
 
-export type Item = {
+export type PlayerUiConfig = {
+  skin?: string;
+  colour?: string;
+  foreColour?: string;
+  baseColour?: string;
+  colourOnBaseColour?: string;
+  fallbackBackgroundColour?: string;
+  controls: { enabled: boolean };
+  locale: { lang: string };
+  subtitles: { enabled: boolean; defaultOn: boolean };
+  fullscreen: { enabled: boolean };
+};
+
+export type PlaylistItem = {
   versionID: string;
   kind: string;
   duration: number;
