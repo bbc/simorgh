@@ -31,13 +31,13 @@ export default ({
   const { originCode, locator } =
     aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model ?? {};
 
-  const versionId =
+  const versionID =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.versionId;
 
   const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
 
-  const rawDuration =
+  const duration =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.duration;
 
@@ -68,13 +68,7 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [
-          {
-            versionID: versionId,
-            kind,
-            duration: rawDuration,
-          },
-        ],
+        items: [{ versionID, kind, duration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),

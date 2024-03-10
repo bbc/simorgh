@@ -27,10 +27,10 @@ export default ({
   const { source, urlTemplate: locator } = images?.[1] ?? {};
 
   const originCode = source?.replace('Image', '');
-  const versionId = video?.version?.id;
+  const versionID = video?.version?.id;
   const clipISO8601Duration = video?.version?.duration;
 
-  const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
+  const duration = moment.duration(clipISO8601Duration).asSeconds();
 
   const title = video?.title;
   const captionBlock = getCaptionBlock(blocks, 'live');
@@ -65,13 +65,7 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [
-          {
-            versionID: versionId,
-            kind,
-            duration: rawDuration,
-          },
-        ],
+        items: [{ versionID, kind, duration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
       ui: {
