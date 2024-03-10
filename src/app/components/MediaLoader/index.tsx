@@ -80,16 +80,16 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const { lang } = useContext(ServiceContext);
 
   const config = buildConfig({
-    id,
-    pageType,
     blocks,
     counterName,
+    id,
     isAmp,
-    service,
     lang,
+    pageType,
+    service,
   });
 
-  if (config === null) return null;
+  if (!config) return null;
 
   const { mediaType, playerConfig } = config;
 

@@ -1,5 +1,4 @@
 import { PageTypes, Services } from '#app/models/types/global';
-import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
   autoplay?: boolean;
@@ -126,12 +125,11 @@ export type ClipMediaBlock = {
 export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
 
 export type BuildConfigProps = {
-  id: string | null;
-  pageType: PageTypes;
   blocks: MediaBlock[];
-  translations?: Translations;
   counterName: string | null;
+  id: string | null;
   isAmp: boolean;
-  service: Services;
   lang: string;
+  pageType: PageTypes;
+  service: Services;
 };

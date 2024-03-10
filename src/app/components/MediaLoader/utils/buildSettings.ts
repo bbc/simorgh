@@ -17,15 +17,15 @@ const isTestRequested = () => {
 };
 
 const buildSettings = ({
-  id,
   blocks,
-  pageType,
   counterName,
+  id,
   isAmp,
-  service,
   lang,
+  pageType,
+  service,
 }: BuildConfigProps) => {
-  if (id === null) return null;
+  if (!id) return null;
 
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
