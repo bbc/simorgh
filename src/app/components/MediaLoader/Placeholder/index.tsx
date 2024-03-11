@@ -36,11 +36,11 @@ const MediaPlayerPlaceholder = ({
   const { service } = useContext(ServiceContext);
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
       css={styles.placeholder}
       data-e2e="media-player__placeholder"
-      aria-hidden="true"
     >
       <Guidance
         css={styles.guidance}

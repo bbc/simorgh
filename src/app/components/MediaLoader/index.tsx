@@ -11,6 +11,7 @@ import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getCaptionBlock from './utils/getCaptionBlock';
+import styles from './index.styles';
 
 const logger = nodeLogger(__filename);
 
@@ -88,7 +89,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <div className={className}>
+    <figure css={styles.figure} className={className}>
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
@@ -102,7 +103,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
         <MediaContainer playerConfig={playerConfig} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
-    </div>
+    </figure>
   );
 };
 
