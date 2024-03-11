@@ -206,8 +206,8 @@ server.get(
         variant,
       } = getRouteProps(urlPath);
 
-      // Check if using the .lite route or if the 'save-data' header is set
-      const isLite = isLiteRouteSuffix || headers['save-data'] === 'on';
+      // Check if using the .lite route
+      const isLite = isLiteRouteSuffix;
 
       const { page, renderer_env } = query;
 

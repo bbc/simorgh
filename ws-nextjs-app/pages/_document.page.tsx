@@ -37,9 +37,8 @@ export default class AppDocument extends Document<DocProps> {
     const initialProps = await Document.getInitialProps(ctx);
     const isApp = isAppPath(ctx.asPath || '');
     const isLiteRoute = isLitePath(ctx.asPath || '');
-    const headers = ctx.req?.headers;
 
-    const isLiteMode = isLiteRoute || headers?.['save-data'] === 'on';
+    const isLiteMode = isLiteRoute;
 
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();

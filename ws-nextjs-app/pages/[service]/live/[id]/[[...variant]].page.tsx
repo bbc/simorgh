@@ -127,8 +127,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { headers: reqHeaders } = context.req;
 
   const isApp = isAppPath(context.resolvedUrl);
-  const isLite =
-    isLitePath(context.resolvedUrl) || reqHeaders?.['save-data'] === 'on';
+  const isLite = isLitePath(context.resolvedUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
