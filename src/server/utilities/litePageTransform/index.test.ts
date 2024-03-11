@@ -106,4 +106,90 @@ describe('litePageTransform', () => {
       '<html><head></head><body><div class="visuallyHiddenText"></div><div class="skipLink"></div><div class="lite-switcher"></div><div class="analytics-pixel"></div><div></div></body></html>',
     );
   });
+
+  it('should remove button elements', () => {
+    const html =
+      '<html><head></head><body><button>Click me</button></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
+
+  it('should remove figure and picture elements', () => {
+    const html =
+      '<html><head></head><body><figure><img src="image.jpg" alt="Image" /></figure><picture><img src="image.jpg" alt="Image" /></picture></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
+
+  it('should remove all images except for "analytics-pixel"', () => {
+    const html =
+      '<html><head></head><body><img src="image.jpg" alt="Image" /><img src="image.jpg" alt="Image" class="analytics-pixel"></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual(
+      '<html><head></head><body><img src="image.jpg" alt="Image" class="analytics-pixel"></body></html>',
+    );
+  });
+
+  it('should remove "include" elements', () => {
+    const html =
+      '<html><head></head><body><div><div id="include-1"></div></div></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
+
+  it('should remove "embed" elements', () => {
+    const html =
+      '<html><head></head><body><div><div data-e2e="embed"></div></div></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
+
+  it('should remove podcast promo elements', () => {
+    const html =
+      '<html><head></head><body><div><div aria-labelledby="podcast-promo"></div></div></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
 });

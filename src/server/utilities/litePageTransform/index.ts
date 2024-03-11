@@ -74,10 +74,14 @@ export default function litePageTransform({
   $('button').remove();
 
   // Remove includes
-  $('div[id^=include-]').parent().remove();
+  if ($('div[id^=include-]').parent().is('div')) {
+    $('div[id^=include-]').parent().remove();
+  }
 
   // Remove embeds
-  $('[data-e2e*="embed"]').parent().remove();
+  if ($('[data-e2e*="embed"]').parent().is('div')) {
+    $('[data-e2e*="embed"]').parent().remove();
+  }
 
   // Remove figure and picture elements
   $('figure, picture').remove();
@@ -86,7 +90,9 @@ export default function litePageTransform({
   $('img').not('.analytics-pixel').remove();
 
   // Remove podcast promos
-  $('[aria-labelledby=podcast-promo]').parent().remove();
+  if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
+    $('[aria-labelledby=podcast-promo]').parent().remove();
+  }
 
   // Style header
   $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
