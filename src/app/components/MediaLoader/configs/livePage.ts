@@ -2,6 +2,8 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import formatDuration from '#lib/utilities/formatDuration';
+import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
@@ -14,6 +16,7 @@ const DEFAULT_WIDTH = 512;
 export default ({
   blocks,
   basePlayerConfig,
+  translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -30,7 +33,8 @@ export default ({
   const versionID = video?.version?.id;
   const clipISO8601Duration = video?.version?.duration;
 
-  const duration = moment.duration(clipISO8601Duration).asSeconds();
+  const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
+  const duration = moment.duration(rawDuration, 'seconds');
 
   const title = video?.title;
   const captionBlock = getCaptionBlock(blocks, 'live');
@@ -39,13 +43,37 @@ export default ({
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   const kind = video?.version?.kind || 'programme';
-  const guidanceMessage = video?.version?.guidance?.warnings?.short;
+
+  const guidanceMessage = video?.guidance?.warnings?.short;
+  const durationSpokenPrefix = translations?.media?.duration || 'Duration';
+
+  const mediaInfo = {
+    title,
+    kind,
+    duration: formatDuration({ duration, padMinutes: true }),
+    rawDuration,
+    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
+      duration,
+      separator: ',',
+    })}`,
+    datetime: clipISO8601Duration,
+    type: type || 'video',
+    guidanceMessage,
+  };
 
   const placeholderSrc = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
+
+  const placeholderSrcset = getPlaceholderSrcSet({
+    originCode,
+    locator,
+    isWebP: true,
+  });
+
+  const noJsMessage = `This ${type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   const audioUi = {
     skin: 'audio',
@@ -65,13 +93,19 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration }],
+        items: [{ versionID, kind, duration: rawDuration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
       ui: {
         ...basePlayerConfig.ui,
         ...(type === 'audio' && audioUi),
       },
+    },
+    placeholderConfig: {
+      mediaInfo,
+      placeholderSrc,
+      placeholderSrcset,
+      translatedNoJSMessage: noJsMessage,
     },
   };
 };

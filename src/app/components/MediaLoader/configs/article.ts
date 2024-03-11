@@ -1,5 +1,8 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
+import formatDuration from '#app/lib/utilities/formatDuration';
+import moment from 'moment';
 import {
   AresMediaBlock,
   ConfigBuilderProps,
@@ -13,6 +16,7 @@ export default ({
   pageType,
   blocks,
   basePlayerConfig,
+  translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -37,15 +41,11 @@ export default ({
 
   const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
 
-  const duration =
+  const rawDuration =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.duration;
-
-  const placeholderSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
+  const duration = moment.duration(rawDuration, 'seconds');
+  const durationSpokenPrefix = translations?.media?.duration || 'Duration';
 
   const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
   const captionBlock = getCaptionBlock(blocks, pageType);
@@ -59,6 +59,36 @@ export default ({
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
       ?.short;
 
+  const mediaInfo = {
+    title,
+    kind,
+    duration: formatDuration({ duration, padMinutes: true }),
+    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
+      duration,
+      separator: ',',
+    })}`,
+    rawDuration,
+    datetime:
+      aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
+        ?.durationISO8601,
+    type: format || 'video',
+    guidanceMessage,
+  };
+
+  const placeholderSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_WIDTH,
+  });
+
+  const placeholderSrcset = getPlaceholderSrcSet({
+    originCode,
+    locator,
+    isWebP: true,
+  });
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+
   return {
     mediaType: format || 'video',
     playerConfig: {
@@ -68,10 +98,16 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration }],
+        items: [{ versionID, kind, duration: rawDuration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
+    },
+    placeholderConfig: {
+      mediaInfo,
+      placeholderSrc,
+      placeholderSrcset,
+      translatedNoJSMessage: noJsMessage,
     },
   };
 };

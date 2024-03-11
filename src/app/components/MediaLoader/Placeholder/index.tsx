@@ -7,19 +7,13 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import Image from '../../Image';
 import styles from './index.styles';
+import { MediaInfo } from '../types';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
   src: string;
   srcSet?: string;
-  mediaInfo: {
-    title: string;
-    datetime?: string;
-    duration?: string;
-    durationSpoken?: string;
-    type?: 'audio' | 'video';
-    guidanceMessage?: string;
-  };
+  mediaInfo: MediaInfo;
   noJsMessage: string;
 }
 
