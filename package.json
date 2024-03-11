@@ -82,8 +82,6 @@
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
-    "webpack:preview:client": "NODE_ENV=production webpack --config-name='legacy' --env config='client'",
-    "webpack:preview:server": "wait-on ./build/public/legacy-loadable-stats-test.json && NODE_ENV=production webpack --env config='server'",
     "webpack:dev:client": "NODE_ENV=development webpack serve --config-name='modern' --hot --env config='client'",
     "webpack:dev:server": "wait-on ./build/public/modern-loadable-stats-local.json && NODE_ENV=development webpack --watch --progress --env config='server'"
   },
@@ -141,7 +139,6 @@
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
-    "wait-on": "6.0.1",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch",
     "xmldoc": "1.3.0"
   },
@@ -258,6 +255,7 @@
     "ts-jest": "29.1.1",
     "ts-loader": "9.4.4",
     "typescript": "4.9.5",
+    "wait-on": "6.0.1",
     "webpack": "5.82.1",
     "webpack-bundle-analyzer": "4.8.0",
     "webpack-cli": "4.10.0",
