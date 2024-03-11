@@ -48,6 +48,7 @@ export default ({
   });
 
   const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
+
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   const caption =
@@ -55,11 +56,13 @@ export default ({
 
   const kind =
     aresMediaBlock?.model?.blocks?.[0]?.model?.smpKind || 'programme';
+
   const guidanceMessage =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
       ?.short;
 
-  const embeddingAllowed = aresMediaBlock?.model?.blocks?.[0]?.model?.embedding;
+  const embeddingAllowed =
+    aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
 
   return {
     mediaType: format || 'video',

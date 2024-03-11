@@ -27,18 +27,22 @@ export default ({
   const { source, urlTemplate: locator } = images?.[1] ?? {};
 
   const originCode = source?.replace('Image', '');
+
   const versionID = video?.version?.id;
+
   const clipISO8601Duration = video?.version?.duration;
 
   const duration = moment.duration(clipISO8601Duration).asSeconds();
 
   const title = video?.title;
+
   const captionBlock = getCaptionBlock(blocks, 'live');
 
   const caption =
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   const kind = video?.version?.kind || 'programme';
+
   const guidanceMessage = video?.version?.guidance?.warnings?.short;
 
   const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
