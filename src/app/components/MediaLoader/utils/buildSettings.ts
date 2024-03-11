@@ -60,7 +60,7 @@ const buildConfig = ({
     statsObject: {
       clipPID: clipId,
       destination: statsDestination,
-      producer: producer,
+      producer,
     },
   };
 
