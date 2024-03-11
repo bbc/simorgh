@@ -48,15 +48,11 @@ const SkipLinkWrapper = ({
 }) => {
   return (
     <Wrapper>
-      <SkipLink
-        className="visuallyHiddenText"
-        service={service}
-        href={`#${endTextId}`}
-      >
+      <SkipLink className="skipLink" service={service} href={`#${endTextId}`}>
         {detokenise(text, terms)}
       </SkipLink>
       {children}
-      <EndText className="visuallyHiddenText" tabIndex="-1" id={endTextId}>
+      <EndText className="skipLink" tabIndex="-1" id={endTextId}>
         {detokenise(endTextVisuallyHidden, terms)}
       </EndText>
     </Wrapper>
