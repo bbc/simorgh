@@ -365,7 +365,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'فيديو',
-        url: '/arabic/media-54706728',
+        url: '/arabic/topics/cz9mm6r1q5et',
       },
       {
         title: 'تحقيقات',
