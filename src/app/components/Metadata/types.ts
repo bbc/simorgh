@@ -41,7 +41,7 @@ export interface MetadataProps {
   title: string;
   socialHeadline?: string;
   lang: string;
-  promoImage: LivePromoImage | null;
+  promoImage?: LivePromoImage | null;
   twitterHandle?: string;
   description: string;
   openGraphType: string;
