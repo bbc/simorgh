@@ -8,15 +8,16 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
+import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
-import MediaLoader from '#app/components/MediaLoader';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import isLive from '#app/lib/utilities/isLive';
+import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import styles from './styles';
 import {
   Post as PostType,
@@ -148,7 +149,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) =>
+    video: (props: { blocks: MediaBlock[] }) =>
       isLive() ? (
         <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
       ) : (
