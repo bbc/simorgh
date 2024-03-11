@@ -85,16 +85,14 @@ const NavigationContainer = () => {
   const Navigation = isAmp ? Amp : Canonical;
 
   return (
-    <>
-      <Navigation
-        scrollableListItems={scrollableListItems}
-        dropdownListItems={dropdownListItems}
-        menuAnnouncedText={navMenuText}
-        dir={dir}
-        script={script}
-        service={service}
-      />
-    </>
+    <Navigation
+      scrollableListItems={scrollableListItems}
+      dropdownListItems={dropdownListItems}
+      menuAnnouncedText={navMenuText}
+      dir={dir}
+      script={script}
+      service={service}
+    />
   );
 };
 
