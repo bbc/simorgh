@@ -5,7 +5,6 @@ import {
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import { RequestContext } from '#contexts/RequestContext';
-// import LiteModeSwitcher from '#app/components/LiteModeSwitcher';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -95,7 +94,6 @@ const NavigationContainer = () => {
         script={script}
         service={service}
       />
-      {/* <LiteModeSwitcher /> */}
     </>
   );
 };
