@@ -13,6 +13,7 @@ describe('litePageTransform', () => {
 
   it('should remove images with rel="preload" from the Helmet Link tags', () => {
     const html = '<html><head></head><body></body></html>';
+
     helmetLinkTags = [
       {
         key: '0',
@@ -44,6 +45,7 @@ describe('litePageTransform', () => {
 
   it('should remove script tags with src="vendor/require" from the Helmet Script tags', () => {
     const html = '<html><head></head><body></body></html>';
+
     helmetScriptTags = [
       {
         key: '0',
