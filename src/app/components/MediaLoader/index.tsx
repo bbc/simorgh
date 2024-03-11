@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import { BumpType, PlayerConfig, Props } from './types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { BumpType, PlayerConfig, MediaBlock } from './types';
+import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import getCaptionBlock from './utils/getCaptionBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -25,16 +27,17 @@ const BumpLoader = () => (
 );
 
 const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
-  const playerElementRef = useRef(null);
+  const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef && playerElementRef.current && playerConfig) {
+        if (playerElementRef?.current && playerConfig) {
           const mediaPlayer = Bump.player(
             playerElementRef.current,
             playerConfig,
           );
+
           mediaPlayer.load();
         }
       });
@@ -50,7 +53,7 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   return (
     <button
       type="button"
-      data-e2e="media-player__placeholder"
+      data-e2e="media-loader__placeholder"
       onClick={() => setter(false)}
     >
       TODO: CLICK TO SEE VIDEO
@@ -58,20 +61,32 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   );
 };
 
+type Props = {
+  className?: string;
+  blocks: MediaBlock[];
+};
+
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName } = useContext(RequestContext);
+  const { id, pageType, counterName, isAmp, service } =
+    useContext(RequestContext);
+  const { lang } = useContext(ServiceContext);
 
   const config = buildConfig({
-    id,
-    pageType,
     blocks,
     counterName,
+    id,
+    isAmp,
+    lang,
+    pageType,
+    service,
   });
 
-  if (config === null) return null;
+  if (!config) return null;
 
-  const { mediaInfo, captionBlock, playerConfig } = config;
+  const { mediaType, playerConfig } = config;
+
+  const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
     <div className={className}>
@@ -81,7 +96,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       ) : (
         <MediaContainer playerConfig={playerConfig} />
       )}
-      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </div>
   );
 };
