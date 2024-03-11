@@ -5,11 +5,8 @@ import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 const styles = {
   placeholder: ({ palette }: Theme) =>
     css({
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      width: '100%',
-      height: '100%',
+      position: 'relative',
+      aspectRatio: '16 / 9',
       cursor: 'pointer',
       [`.${NO_JS_CLASSNAME} &`]: {
         cursor: 'default',

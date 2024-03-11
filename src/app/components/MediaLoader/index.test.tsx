@@ -73,7 +73,9 @@ describe('MediaLoader', () => {
       const button = (container as unknown as HTMLElement).querySelector(
         'button',
       );
-      expect(button?.textContent).toBe('TODO: CLICK TO SEE VIDEO');
+      expect(button?.textContent).toBe(
+        'Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,1103:11',
+      );
     });
     it('Displays a caption when provided ', async () => {
       let container;
