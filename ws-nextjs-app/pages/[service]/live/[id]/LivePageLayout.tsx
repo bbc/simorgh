@@ -11,7 +11,6 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
-import { LivePromoImage } from '#app/components/Metadata/types';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -19,6 +18,15 @@ import KeyPoints from './KeyPoints';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
+
+interface LivePromoImage {
+  url: string;
+  urlTemplate?: string;
+  altText?: string;
+  width?: number;
+  height?: number;
+  copyright?: string;
+}
 
 type ComponentProps = {
   pageData: {
@@ -111,7 +119,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
       <MetadataContainer
         title={pageTitle}
         lang={lang}
-        promoImage={promoImage}
+        image={promoImage?.url}
+        imageAltText={promoImage?.altText}
+        imageWidth={promoImage?.width}
+        imageHeight={promoImage?.height}
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
