@@ -28,10 +28,20 @@ export interface Tag {
   thingSameAs: string[];
 }
 
+export interface LivePromoImage {
+  url: string;
+  urlTemplate?: string;
+  altText?: string;
+  width?: number;
+  height?: number;
+  copyright?: string;
+}
+
 export interface MetadataProps {
   title: string;
   socialHeadline?: string;
   lang: string;
+  promoImage: LivePromoImage | null;
   twitterHandle?: string;
   description: string;
   openGraphType: string;
