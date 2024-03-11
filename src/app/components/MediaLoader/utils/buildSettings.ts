@@ -1,6 +1,6 @@
-import getPlayerProps from '#app/legacy/containers/MediaPlayer/helpers/propsInference';
 import onClient from '#app/lib/utilities/onClient';
-import { BuildConfigProps } from '../types';
+import { BuildConfigProps, PlayerConfig } from '../types';
+import configForPageType from '../configs';
 
 const isTestRequested = () => {
   if (onClient()) {
@@ -16,48 +16,46 @@ const isTestRequested = () => {
   return false;
 };
 
-const buildConfig = ({
-  id,
+const buildSettings = ({
   blocks,
-  pageType,
   counterName,
+  id,
+  isAmp,
+  lang,
+  pageType,
+  service,
 }: BuildConfigProps) => {
-  if (id === null) return null;
+  if (!id) return null;
 
-  const playerProps = getPlayerProps({
-    assetId: id,
-    pageType,
-    blocks,
-  });
-
-  const { mediaInfo, captionBlock } = playerProps;
-
-  if (playerProps.mediaBlock === null) {
-    return null;
-  }
-
-  const {
-    clipId,
-    mediaInfo: { title, rawDuration, guidanceMessage, kind },
-    placeholderSrc,
-  } = playerProps;
-
-  const playlistItem = { versionID: clipId, kind, duration: rawDuration };
-
-  const playerConfig = {
+  // Base configuration that all media players should have
+  const basePlayerConfig: PlayerConfig = {
+    autoplay: true,
     product: 'news',
     superResponsive: true,
+    enableToucan: true,
+    appType: isAmp ? 'amp' : 'responsive',
+    appName: service !== 'news' ? `news-${service}` : 'news',
+    externalEmbedUrl: '', // TODO: Check requirements on this, will need added in future when media player has dedicated page for AMP support
+    ui: {
+      controls: { enabled: true },
+      locale: { lang: lang || 'en' },
+      subtitles: { enabled: true, defaultOn: true },
+      fullscreen: { enabled: true },
+    },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
-    playlistObject: {
-      title,
-      holdingImageURL: placeholderSrc,
-      items: [playlistItem],
-      ...(guidanceMessage && { guidance: guidanceMessage }),
-    },
   };
 
-  return { mediaInfo, captionBlock, playerConfig };
+  // Augment base configuration with settings that are specific to the page type
+  const config = configForPageType(pageType)?.({
+    pageType,
+    blocks,
+    basePlayerConfig,
+  });
+
+  if (!config) return null;
+
+  return config;
 };
 
-export default buildConfig;
+export default buildSettings;
