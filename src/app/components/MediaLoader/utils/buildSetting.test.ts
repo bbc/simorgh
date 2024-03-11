@@ -48,6 +48,7 @@ describe('buildSettings', () => {
         holdingImageURL:
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
         items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
@@ -87,6 +88,7 @@ describe('buildSettings', () => {
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
@@ -128,6 +130,7 @@ describe('buildSettings', () => {
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
