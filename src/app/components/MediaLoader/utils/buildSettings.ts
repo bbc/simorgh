@@ -21,6 +21,8 @@ const buildConfig = ({
   blocks,
   pageType,
   counterName,
+  statsDestination,
+  producer,
 }: BuildConfigProps) => {
   if (id === null) return null;
 
@@ -54,6 +56,11 @@ const buildConfig = ({
       holdingImageURL: placeholderSrc,
       items: [playlistItem],
       ...(guidanceMessage && { guidance: guidanceMessage }),
+    },
+    statsObject: {
+      clipPID: clipId,
+      destination: statsDestination,
+      producer: producer,
     },
   };
 

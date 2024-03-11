@@ -6,6 +6,7 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
 
 const logger = nodeLogger(__filename);
 
@@ -60,13 +61,17 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName } = useContext(RequestContext);
+  const { id, pageType, counterName, statsDestination, service } =
+    useContext(RequestContext);
+  const producer = getProducerFromServiceName(service);
 
   const config = buildConfig({
     id,
     pageType,
     blocks,
     counterName,
+    statsDestination,
+    producer,
   });
 
   if (config === null) return null;

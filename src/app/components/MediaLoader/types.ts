@@ -52,4 +52,6 @@ export type BuildConfigProps = {
   pageType: string;
   blocks: MediaBlock[];
   counterName: string | null;
+  statsDestination: string;
+  producer: string;
 };
