@@ -83,7 +83,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development START_DEV_SERVER=true webpack serve --config-name='modern' --hot --env config='client'",
-    "webpack:dev:server": "wait-on ./build/public/modern-loadable-stats-local.json && NODE_ENV=development webpack --watch --progress --env config='server'"
+    "webpack:dev:server": "wait-on ./build/public/modern-loadable-stats-local.json && NODE_ENV=development START_DEV_SERVER=true webpack --watch --progress --env config='server'"
   },
   "repository": {
     "type": "git",
