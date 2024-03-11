@@ -369,7 +369,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Shirye-shiryen rediyo',
-        url: '/hausa/media-52219055',
+        url: '/hausa/topics/c4nx34q5724t',
       },
     ],
   },
