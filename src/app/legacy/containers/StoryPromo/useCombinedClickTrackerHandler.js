@@ -3,6 +3,10 @@ import pathOr from 'ramda/src/pathOr';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
+const DEFAULT_REVERB_MAX_WAIT = 900;
+
+const waitForReverb = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
   const linkData = path(['link'], eventTrackingData);
@@ -30,8 +34,10 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     await Promise.all([
       handleBlockLevelClick(event),
       handleLinkLevelClick(event),
-    ]).then(() => {
+    ]).then(async () => {
       if (nextPageUrl) {
+        await waitForReverb(DEFAULT_REVERB_MAX_WAIT);
+
         if (optimizely) optimizely.close();
         window.location.assign(nextPageUrl);
       }
