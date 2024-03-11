@@ -1,6 +1,6 @@
 // The "producer" we report is sometimes different to the service name
 // http://bbc.github.io/echo-docs/pages/reporting-piano.html#valid-producer-values
-const getProducerFromServiceName = (serviceName: string) => {
+const getProducerFromServiceName = (serviceName: string | null) => {
   if (typeof serviceName !== 'string') return '';
 
   const replacementProducerName = {

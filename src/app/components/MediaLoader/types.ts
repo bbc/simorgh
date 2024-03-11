@@ -10,7 +10,12 @@ export type PlayerConfig = {
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
   externalEmbedUrl?: string;
-  statsObject?: { clipPID?: string };
+  statsObject: {
+    // check optionals
+    clipPID?: string;
+    destination: string;
+    producer: string | '';
+  };
   mediator?: { host: string };
   ui: PlayerUiConfig;
   playlistObject?: {
@@ -128,7 +133,7 @@ export type BuildConfigProps = {
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
-  producer: string;
+  producer: string | '';
   id: string | null;
   isAmp: boolean;
   lang: string;

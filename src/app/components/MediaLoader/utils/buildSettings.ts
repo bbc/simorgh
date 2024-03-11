@@ -47,7 +47,6 @@ const buildSettings = ({
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
     statsObject: {
-      clipPID: clipId,
       destination: statsDestination,
       producer,
     },

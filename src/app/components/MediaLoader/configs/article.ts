@@ -72,6 +72,10 @@ export default ({
         ...(guidanceMessage && { guidance: guidanceMessage }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
+      statsObject: {
+        ...basePlayerConfig.statsObject,
+        clipPID: versionID, // check
+      },
     },
   };
 };

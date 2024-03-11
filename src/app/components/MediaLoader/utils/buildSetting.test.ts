@@ -10,6 +10,8 @@ const baseSettings = {
   isAmp: false,
   lang: 'es',
   service: 'mundo' as Services,
+  statsDestination: 'WS_NEWS_LANGUAGES',
+  producer: 'MUNDO',
 };
 
 describe('buildSettings', () => {
@@ -35,6 +37,11 @@ describe('buildSettings', () => {
     expect(result?.playerConfig).toStrictEqual({
       autoplay: true,
       product: 'news',
+      statsObject: {
+        clipPID: 'p01thw22',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
@@ -75,6 +82,11 @@ describe('buildSettings', () => {
     expect(result?.playerConfig).toStrictEqual({
       autoplay: true,
       product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
@@ -116,6 +128,11 @@ describe('buildSettings', () => {
       autoplay: false,
       preload: 'high',
       product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
