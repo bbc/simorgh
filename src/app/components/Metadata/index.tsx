@@ -40,7 +40,6 @@ const MetadataContainer = ({
   title,
   socialHeadline,
   lang,
-  promoImage,
   twitterHandle,
   description,
   openGraphType,
@@ -159,26 +158,13 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={promoImage?.url || metaImage} />
-      <meta
-        property="og:image:alt"
-        content={
-          promoImage?.url && promoImage?.altText
-            ? promoImage.altText
-            : metaImageAltText
-        }
-      />
-      {!promoImage?.width && imageWidth && (
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:image:alt" content={metaImageAltText} />
+      {imageWidth && (
         <meta property="og:image:width" content={String(imageWidth)} />
       )}
-      {promoImage?.width && (
-        <meta property="og:image:width" content={String(promoImage.height)} />
-      )}
-      {!promoImage?.height && imageHeight && (
+      {imageHeight && (
         <meta property="og:image:height" content={String(imageHeight)} />
-      )}
-      {promoImage?.height && (
-        <meta property="og:image:height" content={String(promoImage.height)} />
       )}
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
@@ -188,15 +174,8 @@ const MetadataContainer = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={metaTwitterHandle} />
       <meta name="twitter:description" content={description} />
-      <meta
-        name="twitter:image:alt"
-        content={
-          promoImage?.url && promoImage?.altText
-            ? promoImage.altText
-            : metaImageAltText
-        }
-      />
-      <meta name="twitter:image:src" content={promoImage?.url || metaImage} />
+      <meta name="twitter:image:alt" content={metaImageAltText} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
       {!isAmp && (
