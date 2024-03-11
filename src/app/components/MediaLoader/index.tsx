@@ -4,11 +4,13 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
-import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
+import getCaptionBlock from './utils/getCaptionBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -28,16 +30,17 @@ const BumpLoader = () => (
 );
 
 const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
-  const playerElementRef = useRef(null);
+  const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef && playerElementRef.current && playerConfig) {
+        if (playerElementRef?.current && playerConfig) {
           const mediaPlayer = Bump.player(
             playerElementRef.current,
             playerConfig,
           );
+
           mediaPlayer.load();
         }
       });
@@ -49,27 +52,40 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   return <div ref={playerElementRef} data-e2e="media-player" />;
 };
 
+type Props = {
+  className?: string;
+  blocks: MediaBlock[];
+};
+
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName } = useContext(RequestContext);
+  const { id, pageType, counterName, isAmp, service } =
+    useContext(RequestContext);
+  const { lang, translations } = useContext(ServiceContext);
 
   const config = buildConfig({
-    id,
-    pageType,
     blocks,
     counterName,
+    id,
+    isAmp,
+    lang,
+    pageType,
+    service,
+    translations,
   });
 
-  if (config === null) return null;
+  if (!config) return null;
+
+  const { mediaType, playerConfig, placeholderConfig } = config;
 
   const {
     mediaInfo,
-    captionBlock,
-    playerConfig,
     placeholderSrc,
     placeholderSrcset,
     translatedNoJSMessage,
-  } = config;
+  } = placeholderConfig;
+
+  const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
     <div className={className}>
@@ -85,7 +101,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       ) : (
         <MediaContainer playerConfig={playerConfig} />
       )}
-      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </div>
   );
 };
