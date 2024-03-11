@@ -2,9 +2,9 @@
 import { jsx } from '@emotion/react';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Caption from '#app/legacy/containers/Caption';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import Caption from '../Caption';
 import { BumpType, PlayerConfig, Props } from './types';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -72,15 +72,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
   } = config;
 
   return (
-    <div
-      css={
-        isPlaceholder && {
-          position: 'relative',
-          paddingTop: '56.25%',
-          overflow: 'hidden',
-        }
-      }
-    >
+    <div className={className}>
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
