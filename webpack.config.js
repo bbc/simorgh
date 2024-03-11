@@ -9,7 +9,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 const IS_PROD = process.env.NODE_ENV === 'production';
-const START_DEV_SERVER = false;
+const START_DEV_SERVER = process.env.START_DEV_SERVER === 'true';
 const IS_PROD_PROFILE = process.env.IS_PROD_PROFILE === 'true';
 const stats = IS_PROD
   ? {}
