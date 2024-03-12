@@ -11,7 +11,6 @@ export type PlayerConfig = {
   appName: `news-${Services}` | 'news';
   externalEmbedUrl?: string;
   statsObject: {
-    // check optionals
     clipPID?: string;
     destination: string;
     producer: string | '';

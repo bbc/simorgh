@@ -74,7 +74,7 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID, // check
+        clipPID: versionID,
       },
     },
   };

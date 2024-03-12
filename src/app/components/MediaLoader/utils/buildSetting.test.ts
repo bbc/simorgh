@@ -255,4 +255,17 @@ describe('buildSettings', () => {
 
     expect(result?.playerConfig.superResponsive).toStrictEqual(true);
   });
+
+  it('Should return the statsObject with required values for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig.statsObject).toStrictEqual({
+      clipPID: 'p01k6msp',
+      destination: 'WS_NEWS_LANGUAGES',
+      producer: 'MUNDO',
+    });
+  });
 });

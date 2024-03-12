@@ -74,7 +74,7 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID, // check
+        clipPID: versionID,
       },
     },
   };
