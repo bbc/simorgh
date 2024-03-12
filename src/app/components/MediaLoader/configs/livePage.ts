@@ -30,13 +30,16 @@ export default ({
   const { source, urlTemplate: locator } = images?.[1] ?? {};
 
   const originCode = source?.replace('Image', '');
+
   const versionID = video?.version?.id;
+
   const clipISO8601Duration = video?.version?.duration;
 
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
   const duration = moment.duration(rawDuration, 'seconds');
 
   const title = video?.title;
+
   const captionBlock = getCaptionBlock(blocks, 'live');
 
   const caption =
@@ -60,6 +63,8 @@ export default ({
     type: type || 'video',
     guidanceMessage,
   };
+
+  const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
 
   const placeholderSrc = buildIChefURL({
     originCode,
@@ -95,6 +100,7 @@ export default ({
         holdingImageURL: placeholderSrc,
         items: [{ versionID, kind, duration: rawDuration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
+        ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ui: {
         ...basePlayerConfig.ui,

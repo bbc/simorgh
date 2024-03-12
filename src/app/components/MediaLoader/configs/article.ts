@@ -48,6 +48,7 @@ export default ({
   const durationSpokenPrefix = translations?.media?.duration || 'Duration';
 
   const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
+
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   const caption =
@@ -55,6 +56,7 @@ export default ({
 
   const kind =
     aresMediaBlock?.model?.blocks?.[0]?.model?.smpKind || 'programme';
+
   const guidanceMessage =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
       ?.short;
@@ -74,6 +76,9 @@ export default ({
     type: format || 'video',
     guidanceMessage,
   };
+
+  const embeddingAllowed =
+    aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
 
   const placeholderSrc = buildIChefURL({
     originCode,
@@ -100,6 +105,7 @@ export default ({
         holdingImageURL: placeholderSrc,
         items: [{ versionID, kind, duration: rawDuration }],
         ...(guidanceMessage && { guidance: guidanceMessage }),
+        ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
     },
