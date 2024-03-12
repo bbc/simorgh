@@ -53,6 +53,7 @@ const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
   return (
     <button
       type="button"
+      title="TO DO ADD TITLE"
       data-e2e="media-loader__placeholder"
       onClick={() => setter(false)}
     >
@@ -89,7 +90,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <div className={className}>
+    <div data-e2e="media-loader__container" className={className}>
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder setter={setIsPlaceholder} />
