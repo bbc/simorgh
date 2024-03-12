@@ -3,15 +3,15 @@ import pathOr from 'ramda/src/pathOr';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import onClient from '../../../lib/utilities/onClient';
+// import onClient from '../../../lib/utilities/onClient';
 
-const DEFAULT_REVERB_MAX_WAIT = 900;
+// const DEFAULT_REVERB_MAX_WAIT = 900;
 
-const waitForReverb = ms => new Promise(resolve => setTimeout(resolve, ms));
+// const waitForReverb = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-const imposeWaitForReverb = () =>
-  process.env.NODE_ENV === 'development' ||
-  (onClient() && window.navigator.userAgent.match(/Firefox/));
+// const imposeWaitForReverb = () =>
+//   process.env.NODE_ENV === 'development' ||
+//   (onClient() && window.navigator.userAgent.match(/Firefox/));
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
@@ -42,7 +42,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
       handleLinkLevelClick(event),
     ]).then(async () => {
       if (nextPageUrl) {
-        if (imposeWaitForReverb()) await waitForReverb(DEFAULT_REVERB_MAX_WAIT);
+        // if (imposeWaitForReverb()) await waitForReverb(DEFAULT_REVERB_MAX_WAIT);
 
         if (optimizely) optimizely.close();
         window.location.assign(nextPageUrl);
