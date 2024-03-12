@@ -7,6 +7,7 @@ import { BumpType, PlayerConfig, MediaBlock } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 
 const logger = nodeLogger(__filename);
@@ -68,13 +69,16 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName, isAmp, service } =
+  const { id, pageType, counterName, statsDestination, service, isAmp } =
     useContext(RequestContext);
+  const producer = getProducerFromServiceName(service);
   const { lang } = useContext(ServiceContext);
 
   const config = buildConfig({
     blocks,
     counterName,
+    statsDestination,
+    producer,
     id,
     isAmp,
     lang,

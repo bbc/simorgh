@@ -78,6 +78,10 @@ export default ({
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
+      statsObject: {
+        ...basePlayerConfig.statsObject,
+        clipPID: versionID,
+      },
     },
   };
 };
