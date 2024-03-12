@@ -19,6 +19,8 @@ const isTestRequested = () => {
 const buildSettings = ({
   blocks,
   counterName,
+  statsDestination,
+  producer,
   id,
   isAmp,
   lang,
@@ -45,6 +47,10 @@ const buildSettings = ({
     },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    statsObject: {
+      destination: statsDestination,
+      producer,
+    },
   };
 
   // Augment base configuration with settings that are specific to the page type

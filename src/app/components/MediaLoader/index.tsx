@@ -10,6 +10,7 @@ import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 
@@ -60,13 +61,17 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName, isAmp, service } =
+  const { id, pageType, counterName, statsDestination, service, isAmp } =
     useContext(RequestContext);
   const { lang, translations } = useContext(ServiceContext);
+
+  const producer = getProducerFromServiceName(service);
 
   const config = buildConfig({
     blocks,
     counterName,
+    statsDestination,
+    producer,
     id,
     isAmp,
     lang,

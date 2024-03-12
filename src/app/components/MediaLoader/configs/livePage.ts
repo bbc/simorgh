@@ -106,6 +106,10 @@ export default ({
         ...basePlayerConfig.ui,
         ...(type === 'audio' && audioUi),
       },
+      statsObject: {
+        ...basePlayerConfig.statsObject,
+        clipPID: versionID,
+      },
     },
     placeholderConfig: {
       mediaInfo,
