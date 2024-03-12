@@ -29,6 +29,9 @@ ol{
   justify-content:space-between;
   align-items:center;
 }
+[data-lite-class=lite-svg-wrapper] a:first-of-type{
+  display:flex;
+}
 [data-lite-class=lite-main-content]{
   padding:0 0.625rem;
 }
@@ -44,7 +47,7 @@ ol{
 [data-lite-class=lite-footer-copyright]{
   padding-inline-start:0.625rem;
 }
-[data-lite-class=lite-most-read-list-item]{
+[data-lite-class=lite-most-read-list] li > div{
   display:flex;
   flex-direction:row;
   gap:0.625rem;
