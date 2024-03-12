@@ -78,9 +78,7 @@ export const MostReadItemWrapper = React.forwardRef(
       ref={ref}
       role="listitem"
     >
-      <div css={styles.item} data-lite-class="lite-most-read-list-item">
-        {children}
-      </div>
+      <div css={styles.item}>{children}</div>
     </Grid>
   ),
 );

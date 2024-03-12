@@ -28,6 +28,10 @@ ol{
   display:flex;
   justify-content:space-between;
   align-items:center;
+
+  a{
+    display:flex;
+  }
 }
 [data-lite-class=lite-main-content]{
   padding:0 0.625rem;
@@ -44,7 +48,7 @@ ol{
 [data-lite-class=lite-footer-copyright]{
   padding-inline-start:0.625rem;
 }
-[data-lite-class=lite-most-read-list-item]{
+[data-lite-class=lite-most-read-list] > li > div{
   display:flex;
   flex-direction:row;
   gap:0.625rem;
@@ -74,14 +78,16 @@ ol{
   border:0.1875rem solid #000;
   color:#333;
   text-decoration:none;
+
+  &:focus, &:active {
+    display:block;
+    clip-path:none;
+    clip:auto;
+    height:auto;
+    width:auto;
+  }
 }
-[data-lite-class=skipLink]:focus,[data-lite-class=skipLink]:active{
-  display:block;
-  clip-path:none;
-  clip:auto;
-  height:auto;
-  width:auto;
-}`;
+`;
 
 type Props = {
   html: string;

@@ -31,6 +31,7 @@ const MostReadList = ({
       numberOfItems={numberOfItems}
       as="ol"
       role="list"
+      data-lite-class="lite-most-read-list"
     >
       {children}
     </Grid>
