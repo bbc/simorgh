@@ -69,7 +69,7 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName, statsDestination, service } =
+  const { id, pageType, counterName, statsDestination, service, isAmp } =
     useContext(RequestContext);
   const producer = getProducerFromServiceName(service);
   const { lang } = useContext(ServiceContext);
