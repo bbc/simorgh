@@ -44,6 +44,7 @@ export type PlaylistItem = {
   kind: string;
   duration: number;
   live?: boolean;
+  embedRights?: 'allowed';
 };
 
 export type ConfigBuilderProps = {
@@ -92,6 +93,7 @@ export type AresMediaBlock = {
     blocks: AresMediaBlock[];
     imageUrl: string;
     format: 'audio' | 'video';
+    embedding: boolean;
     versions: {
       versionId: string;
       duration: number;
@@ -122,6 +124,7 @@ export type ClipMediaBlock = {
         kind: string;
         guidance: { warnings?: { [key: string]: string } } | null;
       };
+      isEmbeddingAllowed: boolean;
     };
   };
 };
