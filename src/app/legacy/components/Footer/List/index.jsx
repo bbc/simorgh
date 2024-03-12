@@ -119,6 +119,7 @@ const List = ({ service, elements, trustProjectLink }) => {
 
   return (
     <StyledList
+      data-lite-class="lite-nav-list"
       role="list"
       trustProjectLink={trustProjectLink}
       itemCount={listItems.length}

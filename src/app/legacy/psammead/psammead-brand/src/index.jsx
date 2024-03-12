@@ -214,7 +214,7 @@ const Brand = forwardRef((props, ref) => {
       scriptLink={scriptLink}
       {...rest}
     >
-      <SvgWrapper ref={ref}>
+      <SvgWrapper ref={ref} data-lite-class="lite-svg-wrapper">
         {url ? (
           <StyledLink
             href={url}

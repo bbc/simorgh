@@ -123,7 +123,7 @@ const SitewideLinks = ({
           elements={elements}
           trustProjectLink={trustProjectLink}
         />
-        <StyledParagraph>
+        <StyledParagraph data-lite-class="lite-footer-copyright">
           {copyrightText}{' '}
           <Link
             service={service}

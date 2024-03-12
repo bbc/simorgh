@@ -213,7 +213,9 @@ const PageLayoutWrapper = ({
             scriptSwitchId={scriptSwitchId}
             renderScriptSwitch={renderScriptSwitch}
           />
-          <div css={styles.content}>{children}</div>
+          <div data-lite-class="lite-main-content" css={styles.content}>
+            {children}
+          </div>
           <FooterContainer />
         </div>
       </ThemeProvider>

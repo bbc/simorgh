@@ -17,24 +17,22 @@ ol{
   padding-inline-start:0.325rem;
   list-style-type:none;
 }
-.lite-header,.lite-footer{
+#brandSvgHeader,#brandSvgFooter{
+  fill:white;
+  height:1.5rem;
+}
+/* App-wide classes we want to keep */
+[data-lite-class=lite-svg-wrapper]{
   background-color:#b80000;
   padding:0.625rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-#brandSvgHeader,#brandSvgFooter{
-  fill:white;
-  height:1.5rem;
-}
-#topPage,#footer{
-  display:flex;
-}
-.lite-main-content{
+[data-lite-class=lite-main-content]{
   padding:0 0.625rem;
 }
-.lite-nav-list{
+[data-lite-class=lite-nav-list]{
   margin:0;
   padding:0.625rem;
   list-style-type:none;
@@ -43,16 +41,15 @@ ol{
   flex-wrap:wrap;
   gap:0.625rem;
 }
-.lite-footer-copyright{
+[data-lite-class=lite-footer-copyright]{
   padding-inline-start:0.625rem;
 }
-.lite-most-read-list-item{
+[data-lite-class=lite-most-read-list-item]{
   display:flex;
   flex-direction:row;
   gap:0.625rem;
   margin-bottom:0.625rem;
 }
-/* App-wide classes we want to keep */
 [data-lite-class=visuallyHiddenText]{
   clip-path:inset(100%);
   clip:rect(1px,1px,1px,1px);
@@ -159,24 +156,8 @@ export default function litePageTransform({
     $('[aria-labelledby=podcast-promo]').parent().remove();
   }
 
-  // Style header
-  $('[data-e2e=dropdown-nav]').remove(); // Remove secondary nav used for mobile dropdown
-  $('#topPage').parent().addClass('lite-header'); // Add class to header SVG wrapper for custom styling
-
-  $('header').find('ul').addClass('lite-nav-list'); // Add class to nav list for custom styling
-
-  // Add class to main content
-  $('#main-wrapper > div').addClass('lite-main-content');
-
-  // Style most-read
-  $('[data-e2e=most-read]')
-    .find('li > div')
-    .addClass('lite-most-read-list-item'); // Style most read list items
-
-  // Style footer
-  $('footer').children().first().addClass('lite-footer'); // Add class to footer SVG wrapper for custom styling
-  $('footer').find('ul').addClass('lite-nav-list'); // Add class to footer list for custom styling
-  $('footer').find('p').addClass('lite-footer-copyright'); // Add class to footer copyright for custom styling
+  // Remove secondary nav used for mobile dropdown
+  $('[data-e2e=dropdown-nav]').remove();
 
   return {
     liteHtml: $.html(),
