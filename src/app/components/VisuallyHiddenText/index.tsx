@@ -21,9 +21,7 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   const Component = as || 'span';
   return (
     <Component
-      // Hardcode 'className' value so that Emotion doesn't minify it
-      // This allows us to use reference the class name directly in CSS
-      className="visuallyHiddenText"
+      data-lite-class="visuallyHiddenText"
       css={styles.visuallyHiddenText}
       id={id}
       tabIndex={tabIndex}

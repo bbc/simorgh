@@ -34,15 +34,6 @@ ol{
 .lite-main-content{
   padding:0 0.625rem;
 }
-.visuallyHiddenText{
-  clip-path:inset(100%);
-  clip:rect(1px,1px,1px,1px);
-  height:1px;
-  overflow:hidden;
-  position:absolute;
-  width:1px;
-  margin:0;
-}
 .lite-nav-list{
   margin:0;
   padding:0.625rem;
@@ -61,10 +52,20 @@ ol{
   gap:0.625rem;
   margin-bottom:0.625rem;
 }
-.analytics-pixel{
+/* App-wide classes we want to keep */
+[data-lite-class=visuallyHiddenText]{
+  clip-path:inset(100%);
+  clip:rect(1px,1px,1px,1px);
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  width:1px;
+  margin:0;
+}
+[data-lite-class=analytics-pixel]{
   position:absolute;
 }
-.skipLink{
+[data-lite-class=skipLink]{
   position:absolute;
   clip-path:inset(100%);
   clip:rect(1px,1px,1px,1px);
@@ -77,7 +78,7 @@ ol{
   color:#333;
   text-decoration:none;
 }
-.skipLink:focus,.skipLink:active{
+[data-lite-class=skipLink]:focus,[data-lite-class=skipLink]:active{
   display:block;
   clip-path:none;
   clip:auto;
@@ -131,27 +132,8 @@ export default function litePageTransform({
   // Remove inline style attributes
   $('[style]').removeAttr('style');
 
-  // Classnames to keep from being removed
-  const classNamesToKeep = [
-    'visuallyHiddenText',
-    'skipLink',
-    'lite-switcher',
-    'analytics-pixel',
-  ];
-
-  // Remove all class names except those in 'classNamesToKeep'
-  $('[class]').each((_, el) => {
-    const foundClassName = classNamesToKeep.find(className =>
-      $(el).attr('class')?.includes(className),
-    );
-    if (foundClassName) {
-      $(el).removeAttr('class').addClass(foundClassName);
-      return;
-    }
-
-    // Remove classnames from element
-    $(el).removeAttr('class');
-  });
+  // Remove all CSS classes
+  $('[class]').removeAttr('class');
 
   // Remove all button elements
   $('button').remove();
@@ -170,7 +152,7 @@ export default function litePageTransform({
   $('figure, picture').remove();
 
   // Remove images except for "analytics-pixel"
-  $('img').not('.analytics-pixel').remove();
+  $('img').not('[data-lite-class=analytics-pixel]').remove();
 
   // Remove podcast promos
   if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {

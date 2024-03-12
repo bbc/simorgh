@@ -91,9 +91,9 @@ describe('litePageTransform', () => {
     );
   });
 
-  it('should remove all class names except those in defined in "classNamesToKeep" array', () => {
+  it('should remove all CSS classes', () => {
     const html =
-      '<html><head></head><body><div class="visuallyHiddenText"></div><div class="skipLink"></div><div class="lite-switcher"></div><div class="analytics-pixel"></div><div class="extra-class"></div></body></html>';
+      '<html><head></head><body><div class="someClass"></div><section class="another-class"></section></body></html>';
 
     const result = litePageTransform({
       html,
@@ -103,7 +103,7 @@ describe('litePageTransform', () => {
     });
 
     expect(result.liteHtml).toEqual(
-      '<html><head></head><body><div class="visuallyHiddenText"></div><div class="skipLink"></div><div class="lite-switcher"></div><div class="analytics-pixel"></div><div></div></body></html>',
+      '<html><head></head><body><div></div><section></section></body></html>',
     );
   });
 
@@ -137,7 +137,7 @@ describe('litePageTransform', () => {
 
   it('should remove all images except for "analytics-pixel"', () => {
     const html =
-      '<html><head></head><body><img src="image.jpg" alt="Image" /><img src="image.jpg" alt="Image" class="analytics-pixel"></body></html>';
+      '<html><head></head><body><img src="image.jpg" alt="Image" /><img src="image.jpg" alt="Image" data-lite-class="analytics-pixel"></body></html>';
 
     const result = litePageTransform({
       html,
@@ -147,7 +147,7 @@ describe('litePageTransform', () => {
     });
 
     expect(result.liteHtml).toEqual(
-      '<html><head></head><body><img src="image.jpg" alt="Image" class="analytics-pixel"></body></html>',
+      '<html><head></head><body><img src="image.jpg" alt="Image" data-lite-class="analytics-pixel"></body></html>',
     );
   });
 
