@@ -131,9 +131,7 @@ const Document = ({
             {AMP_ANALYTICS_JS}
           </>
         )}
-        {renderMode === 'lite' && (
-          <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
-        )}
+        {renderMode === 'lite' && <style>{LITE_STYLES}</style>}
         {(renderMode === 'canonical' || renderMode === 'lite') && (
           <script
             id="simorgh-envvars"
