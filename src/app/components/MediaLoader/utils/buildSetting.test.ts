@@ -6,7 +6,7 @@ import { MediaBlock } from '../types';
 const baseSettings = {
   id: 'testID',
   pageType: 'article' as PageTypes,
-  counterName: null,
+  counterName: 'live_coverage.testID.page',
   isAmp: false,
   lang: 'es',
   service: 'mundo' as Services,
@@ -46,6 +46,7 @@ describe('buildSettings', () => {
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title:
@@ -92,6 +93,7 @@ describe('buildSettings', () => {
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
@@ -139,6 +141,7 @@ describe('buildSettings', () => {
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
@@ -270,5 +273,23 @@ describe('buildSettings', () => {
       destination: 'WS_NEWS_LANGUAGES',
       producer: 'MUNDO',
     });
+  });
+
+  it('Should return required settings for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig).toHaveProperty(
+      'counterName',
+      'live_coverage.testID.page',
+    );
+    expect(result?.playerConfig).toHaveProperty('appName', 'news-mundo');
+    expect(result?.playerConfig).toHaveProperty('appType', 'responsive');
+    expect(result?.playerConfig.playlistObject).toHaveProperty(
+      'title',
+      'Five things ants can teach us about management',
+    );
   });
 });
