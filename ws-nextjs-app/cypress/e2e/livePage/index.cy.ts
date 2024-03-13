@@ -19,7 +19,7 @@ describe('Live Page Spec', () => {
   }
 });
 
-describe('Media Player: Canonical', () => {
+describe('Media Player', () => {
   let livePageData;
   before(() => {
     cy.getPageData({
