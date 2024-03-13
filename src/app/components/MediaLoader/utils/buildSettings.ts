@@ -26,6 +26,7 @@ const buildSettings = ({
   lang,
   pageType,
   service,
+  translations,
 }: BuildConfigProps) => {
   if (!id) return null;
 
@@ -54,9 +55,10 @@ const buildSettings = ({
 
   // Augment base configuration with settings that are specific to the page type
   const config = configForPageType(pageType)?.({
-    pageType,
-    blocks,
     basePlayerConfig,
+    blocks,
+    pageType,
+    translations,
   });
 
   if (!config) return null;
