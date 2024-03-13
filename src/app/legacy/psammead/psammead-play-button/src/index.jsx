@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { string, oneOf, func } from 'prop-types';
 import styled from '@emotion/styled';
 import {

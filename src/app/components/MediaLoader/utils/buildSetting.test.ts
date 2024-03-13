@@ -6,10 +6,12 @@ import { MediaBlock } from '../types';
 const baseSettings = {
   id: 'testID',
   pageType: 'article' as PageTypes,
-  counterName: null,
+  counterName: 'live_coverage.testID.page',
   isAmp: false,
   lang: 'es',
   service: 'mundo' as Services,
+  statsDestination: 'WS_NEWS_LANGUAGES',
+  producer: 'MUNDO',
 };
 
 describe('buildSettings', () => {
@@ -35,10 +37,16 @@ describe('buildSettings', () => {
     expect(result?.playerConfig).toStrictEqual({
       autoplay: true,
       product: 'news',
+      statsObject: {
+        clipPID: 'p01thw22',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title:
@@ -48,6 +56,7 @@ describe('buildSettings', () => {
         holdingImageURL:
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
         items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
@@ -75,10 +84,16 @@ describe('buildSettings', () => {
     expect(result?.playerConfig).toStrictEqual({
       autoplay: true,
       product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
@@ -87,6 +102,7 @@ describe('buildSettings', () => {
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
@@ -116,10 +132,16 @@ describe('buildSettings', () => {
       autoplay: false,
       preload: 'high',
       product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
       externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
@@ -128,6 +150,7 @@ describe('buildSettings', () => {
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
       },
       ui: {
         controls: { enabled: true },
@@ -237,5 +260,36 @@ describe('buildSettings', () => {
     });
 
     expect(result?.playerConfig.superResponsive).toStrictEqual(true);
+  });
+
+  it('Should return the statsObject with required values for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig.statsObject).toStrictEqual({
+      clipPID: 'p01k6msp',
+      destination: 'WS_NEWS_LANGUAGES',
+      producer: 'MUNDO',
+    });
+  });
+
+  it('Should return required settings for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig).toHaveProperty(
+      'counterName',
+      'live_coverage.testID.page',
+    );
+    expect(result?.playerConfig).toHaveProperty('appName', 'news-mundo');
+    expect(result?.playerConfig).toHaveProperty('appType', 'responsive');
+    expect(result?.playerConfig.playlistObject).toHaveProperty(
+      'title',
+      'Five things ants can teach us about management',
+    );
   });
 });
