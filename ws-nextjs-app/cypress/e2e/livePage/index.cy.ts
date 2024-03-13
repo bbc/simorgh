@@ -1,3 +1,4 @@
+import { OptimoBlock } from '../../../../src/app/models/types/optimo';
 import { getBlockData } from './helpers';
 
 describe('Live Page Spec', () => {
@@ -31,7 +32,7 @@ describe('Media Player: Canonical', () => {
       livePageData = body;
     });
 
-    cy.visit('localhost:7081/pidgin/live/c7p765ynk9qt?renderer_env=test');
+    cy.visit('/pidgin/live/c7p765ynk9qt?renderer_env=test');
   });
 
   it('should render a visible placeholder image', () => {
@@ -49,7 +50,6 @@ describe('Media Player: Canonical', () => {
   });
 
   // Guidance message - BLOCKED UNTIL PLACEHOLDER MERGED
-
   it('should render a visible guidance message', () => {
     const media = getBlockData('video', livePageData);
 
