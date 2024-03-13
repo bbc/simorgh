@@ -28,7 +28,7 @@ type DocProps = {
     helmetScriptTags: React.ReactNode;
   };
   isApp: boolean;
-  isLiteMode?: boolean;
+  isLiteMode: boolean;
   clientSideEnvVariables: EnvConfig;
 };
 
