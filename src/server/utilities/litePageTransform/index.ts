@@ -8,7 +8,8 @@ html{
   font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
-  margin:0;
+  max-width:600px;
+  margin:0 auto;
 }
 ul{
   padding-inline-start:1.25rem;
