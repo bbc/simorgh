@@ -19,11 +19,14 @@ const isTestRequested = () => {
 const buildSettings = ({
   blocks,
   counterName,
+  statsDestination,
+  producer,
   id,
   isAmp,
   lang,
   pageType,
   service,
+  translations,
 }: BuildConfigProps) => {
   if (!id) return null;
 
@@ -44,13 +47,18 @@ const buildSettings = ({
     },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    statsObject: {
+      destination: statsDestination,
+      producer,
+    },
   };
 
   // Augment base configuration with settings that are specific to the page type
   const config = configForPageType(pageType)?.({
-    pageType,
-    blocks,
     basePlayerConfig,
+    blocks,
+    pageType,
+    translations,
   });
 
   if (!config) return null;
