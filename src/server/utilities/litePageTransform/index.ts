@@ -11,6 +11,12 @@ body{
   max-width:600px;
   margin:0 auto;
 }
+@media (min-width: 600px){
+  body{
+    border-left: 1px solid #E6E8EA;
+    border-right: 1px solid #E6E8EA;
+  }
+}
 ul{
   padding-inline-start:0rem;
   list-style-type:none;
@@ -48,6 +54,8 @@ ol{
 }
 [data-lite-class=lite-footer-copyright]{
   padding-inline-start:0.625rem;
+  padding-bottom:0.625rem;
+  margin-bottom:0;
 }
 [data-lite-class=lite-most-read-list] li > div{
   display:flex;
