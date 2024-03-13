@@ -1,7 +1,7 @@
 export default () => {
   describe('Media Loader', () => {
     const mediaPlayerContainer = document.querySelector(
-      'div[data-e2e=media-loader__container]',
+      'figure[data-e2e=media-loader__container]',
     );
 
     it('renders a valid container', () => {
@@ -11,7 +11,7 @@ export default () => {
 
     it('renders a placeholder', () => {
       const mediaPlayerPlaceholder = mediaPlayerContainer.querySelector(
-        'button[data-e2e=media-loader__placeholder]',
+        'div[data-e2e=media-loader__placeholder]',
       );
       expect(mediaPlayerPlaceholder).toBeInTheDocument();
       expect(mediaPlayerPlaceholder).toMatchSnapshot();
@@ -19,7 +19,7 @@ export default () => {
 
     it('renders a figure caption', () => {
       const mediaPlayerCaption = mediaPlayerContainer.querySelector(
-        'button[data-e2e=media-loader__placeholder]',
+        'div[data-e2e=media-loader__placeholder]',
       );
       expect(mediaPlayerCaption).toBeInTheDocument();
       expect(mediaPlayerCaption).toMatchSnapshot();
@@ -28,10 +28,11 @@ export default () => {
     describe('a11y', () => {
       it('assistive technology can read the media player title', () => {
         const mediaPlayerPlaceholder = mediaPlayerContainer.querySelector(
-          'button[data-e2e=media-loader__placeholder]',
+          'div[data-e2e=media-loader__placeholder] > button > span',
         );
-        expect(mediaPlayerPlaceholder.getAttribute('title')).toBeTruthy();
-        expect(mediaPlayerPlaceholder.getAttribute('title')).toMatchSnapshot();
+
+        expect(mediaPlayerPlaceholder.innerHTML).toBeTruthy();
+        expect(mediaPlayerPlaceholder.innerHTML).toMatchSnapshot();
       });
     });
   });
