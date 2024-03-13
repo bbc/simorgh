@@ -40,7 +40,7 @@ const MediaPlayerPlaceholder = ({
     <div
       onClick={onClick}
       css={styles.placeholder}
-      data-e2e="media-player__placeholder"
+      data-e2e="media-loader__placeholder"
     >
       <Guidance
         css={styles.guidance}
