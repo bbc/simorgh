@@ -6,7 +6,7 @@ export default {
   }),
   mediaContainer: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.EBON,
+      backgroundColor: palette.BLACK,
       aspectRatio: '16 / 9',
     }),
 };
