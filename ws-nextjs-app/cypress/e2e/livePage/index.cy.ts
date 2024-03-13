@@ -1,8 +1,7 @@
-import { OptimoBlock } from '../../../../src/app/models/types/optimo';
 import { getBlockData } from './helpers';
 
 describe('Live Page Spec', () => {
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let livePageData;
   before(() => {
     cy.getPageData({
@@ -21,7 +20,6 @@ describe('Live Page Spec', () => {
 });
 
 describe('Media Player: Canonical', () => {
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   let livePageData;
   before(() => {
     cy.getPageData({
@@ -49,7 +47,6 @@ describe('Media Player: Canonical', () => {
     }
   });
 
-  // Guidance message - BLOCKED UNTIL PLACEHOLDER MERGED
   it('should render a visible guidance message', () => {
     const media = getBlockData('video', livePageData);
 
