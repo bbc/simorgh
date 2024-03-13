@@ -1,4 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
   autoplay?: boolean;
@@ -10,7 +11,11 @@ export type PlayerConfig = {
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
   externalEmbedUrl?: string;
-  statsObject?: { clipPID?: string };
+  statsObject: {
+    clipPID?: string;
+    destination: string;
+    producer: string | '';
+  };
   mediator?: { host: string };
   ui: PlayerUiConfig;
   playlistObject?: {
@@ -47,12 +52,28 @@ export type ConfigBuilderProps = {
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
+  translations?: Translations;
 };
 
 export type ConfigBuilderReturnProps = {
   mediaType: string;
   playerConfig: PlayerConfig;
+  placeholderConfig: {
+    mediaInfo: MediaInfo;
+    placeholderSrc: string;
+    placeholderSrcset: string;
+    translatedNoJSMessage: string;
+  };
 } | null;
+
+export type MediaInfo = {
+  title: string;
+  datetime?: string;
+  duration?: string;
+  durationSpoken?: string;
+  type?: 'audio' | 'video';
+  guidanceMessage?: string;
+};
 
 export type Player = {
   load: () => void;
@@ -93,11 +114,14 @@ export type AresMediaBlock = {
     versions: {
       versionId: string;
       duration: number;
+      durationISO8601?: string;
+
       warnings?: { [key: string]: string };
     }[];
     webcastVersions: {
       versionId: string;
       duration: number;
+      durationISO8601?: string;
       warnings?: { [key: string]: string };
     }[];
     smpKind: string;
@@ -118,8 +142,8 @@ export type ClipMediaBlock = {
         id: string;
         duration: string;
         kind: string;
-        guidance: { warnings?: { [key: string]: string } } | null;
       };
+      guidance: { warnings?: { [key: string]: string } } | null;
       isEmbeddingAllowed: boolean;
     };
   };
@@ -130,9 +154,12 @@ export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
 export type BuildConfigProps = {
   blocks: MediaBlock[];
   counterName: string | null;
+  statsDestination: string;
+  producer: string | '';
   id: string | null;
   isAmp: boolean;
   lang: string;
   pageType: PageTypes;
   service: Services;
+  translations?: Translations;
 };
