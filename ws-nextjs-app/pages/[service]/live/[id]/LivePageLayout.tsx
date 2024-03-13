@@ -19,6 +19,15 @@ import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
+interface LivePromoImage {
+  url: string;
+  urlTemplate?: string;
+  altText?: string;
+  width?: number;
+  height?: number;
+  copyright?: string;
+}
+
 type ComponentProps = {
   pageData: {
     title: string;
@@ -40,6 +49,7 @@ type ComponentProps = {
       datePublished: string;
       dateModified: string;
     }>;
+    promoImage: LivePromoImage | null;
     startDateTime?: string;
     endDateTime?: string;
     atiAnalytics: ATIData;
@@ -61,6 +71,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     liveTextStream,
     atiAnalytics,
     headerImage,
+    promoImage,
   } = pageData;
 
   const {
@@ -108,6 +119,10 @@ const LivePage = ({ pageData }: ComponentProps) => {
       <MetadataContainer
         title={pageTitle}
         lang={lang}
+        image={promoImage?.url}
+        imageAltText={promoImage?.altText}
+        imageWidth={promoImage?.width}
+        imageHeight={promoImage?.height}
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
@@ -117,6 +132,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
         seoTitle={pageTitle}
         headline={pageTitle}
         showAuthor
+        promoImage={promoImage?.url}
         {...(datePublished && {
           datePublished,
         })}
