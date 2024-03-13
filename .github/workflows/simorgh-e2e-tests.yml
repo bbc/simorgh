@@ -34,10 +34,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Add bbc.com hosts
-        run: sudo -- sh -c -e "echo '127.0.0.1       localhost.bbc.com' >> /etc/hosts";
-        run: sudo -- sh -c -e "echo '128.0.0.1       localhost.bbc.com' >> /etc/hosts";
-
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
         with:
