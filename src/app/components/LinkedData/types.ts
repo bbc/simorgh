@@ -25,6 +25,7 @@ export interface LinkedDataProps {
   type: string;
   seoTitle: string;
   headline?: string;
+  promoImage?: string;
   description?: string;
   datePublished?: string;
   dateModified?: string;
