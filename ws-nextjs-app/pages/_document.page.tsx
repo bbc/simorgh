@@ -38,7 +38,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(ctx.asPath || '');
     const isLiteRoute = isLitePath(ctx.asPath || '');
 
-    const isLiteMode = isLiteRoute;
+    let isLiteMode = isLiteRoute;
 
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -81,13 +81,7 @@ export default class AppDocument extends Document<DocProps> {
         helmetProps.helmetScriptTags = liteHelmetScriptTags;
       } catch (e) {
         // Bail out and return normal version on error
-        return {
-          ...initialProps,
-          helmetProps,
-          clientSideEnvVariables,
-          isApp,
-          isLiteMode: false,
-        };
+        isLiteMode = false;
       }
     }
 
