@@ -12,6 +12,7 @@ const LinkedData = ({
   type,
   seoTitle,
   headline,
+  promoImage,
   description,
   datePublished,
   dateModified,
@@ -70,6 +71,7 @@ const LinkedData = ({
   const choosePublisherLogo = () => {
     switch (service) {
       case 'news':
+      case 'ws':
         return newsPublisherLogo;
       case 'sport':
         return sportPublisherLogo;
@@ -87,7 +89,7 @@ const LinkedData = ({
     url: brandedIndexImage || defaultImage,
   };
 
-  const thumbnailUrl = brandedIndexImage || defaultImage;
+  const thumbnailUrl = promoImage || brandedIndexImage || defaultImage;
 
   const publisher = {
     '@type': ORG_TYPE,

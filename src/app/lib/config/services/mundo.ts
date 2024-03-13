@@ -334,7 +334,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
+        url: '/mundo/topics/cr50y7p7qyqt',
       },
       {
         title: 'Economía',
@@ -358,11 +358,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Centroamérica Cuenta',
-        url: '/mundo/noticias-43826245',
-      },
-      {
-        title: 'BBC Extra',
-        url: '/mundo/noticias-48908206',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },
