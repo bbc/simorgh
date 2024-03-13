@@ -94,7 +94,11 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <figure css={styles.figure} className={className}>
+    <figure
+      data-e2e="media-loader__container"
+      css={styles.figure}
+      className={className}
+    >
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
