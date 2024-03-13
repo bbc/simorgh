@@ -12,7 +12,8 @@ body{
   margin:0 auto;
 }
 ul{
-  padding-inline-start:1.25rem;
+  padding-inline-start:0rem;
+  list-style-type:none;
 }
 ol{
   padding-inline-start:0.325rem;
