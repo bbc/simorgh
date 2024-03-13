@@ -21,7 +21,7 @@ ol{
   fill:white;
   height:1.5rem;
 }
-/* App-wide classes we want to keep */
+/* Custom classes */
 [data-lite-class=lite-svg-wrapper]{
   background-color:#b80000;
   padding:0.625rem;
