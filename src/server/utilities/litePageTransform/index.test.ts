@@ -75,6 +75,32 @@ describe('litePageTransform', () => {
     ]);
   });
 
+  it('should return Helmet Meta tags unchanged', () => {
+    const html = '<html><head></head><body></body></html>';
+
+    helmetMetaTags = [
+      {
+        key: '0',
+        type: 'meta',
+        props: { name: 'og:description', content: 'Some description' },
+      },
+      {
+        key: '1',
+        type: 'meta',
+        props: { name: 'og:title', content: 'some, keywords' },
+      },
+    ];
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHelmetMetaTags).toEqual(helmetMetaTags);
+  });
+
   it('should remove all style tags and inline style attributes', () => {
     const html =
       '<html><head><style></style></head><body><div style="padding-top:10px;"></div></body></html>';
