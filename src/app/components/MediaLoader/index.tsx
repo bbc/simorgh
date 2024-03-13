@@ -1,14 +1,18 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { BumpType, PlayerConfig, MediaBlock } from './types';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
+import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
+import styles from './index.styles';
 
 const logger = nodeLogger(__filename);
 
@@ -50,18 +54,6 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   return <div ref={playerElementRef} data-e2e="media-player" />;
 };
 
-const Placeholder = ({ setter }: { setter: (value: boolean) => void }) => {
-  return (
-    <button
-      type="button"
-      data-e2e="media-loader__placeholder"
-      onClick={() => setter(false)}
-    >
-      TODO: CLICK TO SEE VIDEO
-    </button>
-  );
-};
-
 type Props = {
   className?: string;
   blocks: MediaBlock[];
@@ -71,8 +63,9 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { id, pageType, counterName, statsDestination, service, isAmp } =
     useContext(RequestContext);
+  const { lang, translations } = useContext(ServiceContext);
+
   const producer = getProducerFromServiceName(service);
-  const { lang } = useContext(ServiceContext);
 
   const config = buildConfig({
     blocks,
@@ -84,24 +77,42 @@ const MediaLoader = ({ blocks, className }: Props) => {
     lang,
     pageType,
     service,
+    translations,
   });
 
   if (!config) return null;
 
-  const { mediaType, playerConfig } = config;
+  const { mediaType, playerConfig, placeholderConfig } = config;
+
+  const {
+    mediaInfo,
+    placeholderSrc,
+    placeholderSrcset,
+    translatedNoJSMessage,
+  } = placeholderConfig;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <div className={className}>
+    <figure
+      data-e2e="media-loader__container"
+      css={styles.figure}
+      className={className}
+    >
       <BumpLoader />
       {isPlaceholder ? (
-        <Placeholder setter={setIsPlaceholder} />
+        <Placeholder
+          src={placeholderSrc}
+          srcSet={placeholderSrcset}
+          noJsMessage={translatedNoJSMessage}
+          mediaInfo={mediaInfo}
+          onClick={() => setIsPlaceholder(false)}
+        />
       ) : (
         <MediaContainer playerConfig={playerConfig} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
-    </div>
+    </figure>
   );
 };
 

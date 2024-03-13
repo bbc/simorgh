@@ -13,6 +13,7 @@ import IfAboveIE9 from '#components/IfAboveIE9Comment';
 import litePageTransform, {
   LITE_STYLES,
 } from '#server/utilities/litePageTransform';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
@@ -86,7 +87,9 @@ const Document = ({
   }
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = renderMode === 'canonical' && { className: 'no-js' };
+  const noJsHtmlAttrs = renderMode === 'canonical' && {
+    className: NO_JS_CLASSNAME,
+  };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
