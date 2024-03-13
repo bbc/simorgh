@@ -12,6 +12,7 @@ const LinkedData = ({
   type,
   seoTitle,
   headline,
+  promoImage,
   description,
   datePublished,
   dateModified,
@@ -88,7 +89,7 @@ const LinkedData = ({
     url: brandedIndexImage || defaultImage,
   };
 
-  const thumbnailUrl = brandedIndexImage || defaultImage;
+  const thumbnailUrl = promoImage || brandedIndexImage || defaultImage;
 
   const publisher = {
     '@type': ORG_TYPE,
