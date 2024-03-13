@@ -1,7 +1,7 @@
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-  CurationProps,
+  CurationData,
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
@@ -28,7 +28,7 @@ export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
-}: Partial<CurationProps>) => {
+}: Partial<CurationData>) => {
   if (radioSchedule) {
     return RADIO_SCHEDULE;
   }

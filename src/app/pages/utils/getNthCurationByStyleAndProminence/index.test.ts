@@ -11,25 +11,21 @@ describe('getNthCurationByStyleAndProminence', () => {
       visualStyle: VISUAL_STYLE.COLLECTION,
       visualProminence: VISUAL_PROMINENCE.HIGH,
       position: 0,
-      curationId: 'curationId',
     },
     {
       visualStyle: VISUAL_STYLE.BANNER,
       visualProminence: VISUAL_PROMINENCE.NORMAL,
       position: 1,
-      curationId: 'curationId',
     },
     {
       visualStyle: VISUAL_STYLE.COLLECTION,
       visualProminence: VISUAL_PROMINENCE.NORMAL,
       position: 2,
-      curationId: 'curationId',
     },
     {
       visualStyle: VISUAL_STYLE.BANNER,
       visualProminence: VISUAL_PROMINENCE.NORMAL,
       position: 3,
-      curationId: 'curationId',
     },
   ];
 

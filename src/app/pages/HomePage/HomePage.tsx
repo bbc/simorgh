@@ -107,7 +107,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
-                      promos={summaries || []}
+                      summaries={summaries || []}
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}

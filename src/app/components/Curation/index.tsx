@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import {
-  CurationProps,
+  CurationData,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
@@ -41,7 +41,7 @@ const getGridComponent = (componentName: string | null) => {
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
-  promos = [],
+  summaries = [],
   title = '',
   topStoriesTitle = '',
   link = '',
@@ -51,7 +51,7 @@ const Curation = ({
   mostRead,
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
-}: CurationProps) => {
+}: CurationData) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -68,13 +68,13 @@ const Curation = ({
     case NOT_SUPPORTED:
       return null;
     case MESSAGE_BANNER:
-      return promos.length > 0 ? (
+      return summaries.length > 0 ? (
         <MessageBanner
           heading={title}
-          description={promos[0].description}
-          link={promos[0].link}
-          linkText={promos[0].title}
-          image={promos[0].imageUrl}
+          description={summaries[0].description}
+          link={summaries[0].link}
+          linkText={summaries[0].title}
+          image={summaries[0].imageUrl}
           eventTrackingData={{
             componentName: `message-banner-${nthCurationByStyleAndProminence}`,
             detailedPlacement: `${position + 1}`,
@@ -95,7 +95,7 @@ const Curation = ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       return curationLength > 1 &&
-        promos.length > 0 &&
+        summaries.length > 0 &&
         (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
           {isFirstCuration ? (
@@ -108,14 +108,14 @@ const Curation = ({
             </Subheading>
           )}
           <GridComponent
-            promos={promos}
+            summaries={summaries}
             headingLevel={isFirstCuration ? 3 : headingLevel}
             isFirstCuration={isFirstCuration}
           />
         </section>
       ) : (
         <GridComponent
-          promos={promos}
+          summaries={summaries}
           headingLevel={headingLevel}
           isFirstCuration={isFirstCuration}
         />

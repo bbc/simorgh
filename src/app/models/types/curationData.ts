@@ -1,7 +1,8 @@
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
-export interface Summary {
+// This maps to the Summary type definition from the BFF
+interface BaseSummary {
   imageUrl?: string;
   link?: string;
   imageAlt?: string;
@@ -11,6 +12,13 @@ export interface Summary {
   type: string;
   firstPublished?: string | number;
   lastPublished?: string | number;
+  duration?: string | number;
+}
+
+export interface Summary extends BaseSummary {
+  mediaType?: 'audio' | 'video' | 'photogallery';
+  lazy?: boolean;
+  headingLevel?: number;
 }
 
 export const VISUAL_STYLE = {
@@ -33,27 +41,11 @@ export const VISUAL_PROMINENCE = {
 export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
-
-export interface CurationProps {
-  visualStyle: VisualStyle;
-  visualProminence: VisualProminence;
-  promos?: Summary[];
-  title?: string;
-  link?: string;
-  headingLevel?: number;
-  position?: number;
-  topStoriesTitle?: string;
-  curationLength?: number;
-  mostRead?: MostReadData;
-  nthCurationByStyleAndProminence?: number;
-  radioSchedule?: RadioScheduleData[];
-}
-
-export interface CurationData {
+export interface BaseCuration {
   summaries?: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
-  curationId: string;
+  curationId?: string;
   title?: string;
   link?: string;
   position: number;
@@ -62,4 +54,11 @@ export interface CurationData {
   curationType?: string;
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
+}
+
+export interface CurationData extends BaseCuration {
+  headingLevel?: number;
+  topStoriesTitle?: string;
+  curationLength?: number;
+  nthCurationByStyleAndProminence?: number;
 }
