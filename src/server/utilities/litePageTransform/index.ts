@@ -1,6 +1,7 @@
 import * as cheerio from 'cheerio';
 
 const DESKTOP_WIDTH = 1024;
+const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
 html{
@@ -34,7 +35,7 @@ ol{
 /* Custom classes */
 [data-lite-class=lite-svg-wrapper]{
   background-color:#b80000;
-  padding:0.625rem;
+  padding: ${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -43,11 +44,11 @@ ol{
   display:flex;
 }
 [data-lite-class=lite-main-content]{
-  padding:0 0.625rem;
+  padding:0 ${CONTENT_PADDING}rem;
 }
 [data-lite-class=lite-nav-list]{
   margin:0;
-  padding:0.625rem;
+  padding:${CONTENT_PADDING}rem;
   list-style-type:none;
   border-bottom:1px solid #E6E8EA;
   display:flex;
@@ -55,7 +56,7 @@ ol{
   gap:0.625rem;
 }
 [data-lite-class=lite-footer-copyright]{
-  padding-inline-start:0.625rem;
+  padding-inline-start:${CONTENT_PADDING}rem;
   padding-bottom:0.625rem;
   margin-bottom:0;
 }
