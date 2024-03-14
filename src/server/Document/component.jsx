@@ -15,6 +15,10 @@ import litePageTransform, {
 } from '#server/utilities/litePageTransform';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
+import nodeLogger from '#lib/logger.node';
+import { LITE_PAGE_TRANSFORMATION_FAILED } from '#lib/logger.const';
+
+const logger = nodeLogger(__filename);
 
 const Document = ({
   app,
@@ -26,6 +30,7 @@ const Document = ({
   modernScripts,
   legacyScripts,
   links,
+  url,
 }) => {
   // Determine render mode to ensure we don't mix up rendered elements
   let renderMode = 'canonical';
@@ -80,7 +85,9 @@ const Document = ({
       helmetProps.helmetMetaTags = liteHelmetMetaTags;
       helmetProps.helmetLinkTags = liteHelmetLinkTags;
       helmetProps.helmetScriptTags = liteHelmetScriptTags;
-    } catch (e) {
+    } catch ({ message }) {
+      logger.error(LITE_PAGE_TRANSFORMATION_FAILED, { message, url });
+
       // Bail out on error and revert to canonical
       renderMode = 'canonical';
     }

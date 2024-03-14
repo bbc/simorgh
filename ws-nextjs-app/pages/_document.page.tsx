@@ -18,6 +18,10 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
+import nodeLogger from '#lib/logger.node';
+import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
+
+const logger = nodeLogger(__filename);
 
 type DocProps = {
   helmetProps: {
@@ -79,7 +83,13 @@ export default class AppDocument extends Document<DocProps> {
         helmetProps.helmetMetaTags = liteHelmetMetaTags;
         helmetProps.helmetLinkTags = liteHelmetLinkTags;
         helmetProps.helmetScriptTags = liteHelmetScriptTags;
-      } catch (e) {
+      } catch (error: unknown) {
+        const { message } = error as Error;
+        logger.error(LITE_PAGE_TRANSFORMATION_FAILED, {
+          message,
+          url: ctx.asPath,
+        });
+
         // Bail out and return normal version on error
         isLiteMode = false;
       }
