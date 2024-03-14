@@ -46,7 +46,7 @@ export default defineConfig({
         baseUrl: 'https://www.test.bbc.com',
       },
       local: {
-        baseUrl: 'http://localhost.bbc.com:7081',
+        baseUrl: 'http://localhost:7081',
       },
     },
     testIsolation: false,
