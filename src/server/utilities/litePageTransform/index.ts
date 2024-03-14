@@ -1,8 +1,11 @@
 import * as cheerio from 'cheerio';
 import {
+  EBON,
   GREY_3,
   GREY_10,
   POSTBOX,
+  BLACK,
+  WHITE,
 } from '#app/components/ThemeProvider/palette';
 
 const DESKTOP_WIDTH = 800;
@@ -39,17 +42,17 @@ a{
   color: ${GREY_10};
 }
 #brandSvgHeader,#brandSvgFooter{
-  fill:${isAltTheme ? `${POSTBOX}` : 'white'};
+  fill:${isAltTheme ? POSTBOX : WHITE};
   height:1.5rem;
 }
 /* Custom classes */
 [data-lite-class=lite-svg-wrapper]{
-  background-color:${isAltTheme ? 'white' : `${POSTBOX}`};
+  background-color:${isAltTheme ? WHITE : POSTBOX};
   padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  ${isAltTheme && 'border-bottom: 1px solid #E6E8EA;'}
+  ${isAltTheme && `border-bottom: 1px solid ${GREY_3};`}
 }
 [data-lite-class=lite-svg-wrapper] a:first-of-type{
   display:flex;
@@ -97,9 +100,9 @@ a{
   width:1px;
   overflow:hidden;
   padding:0.75rem 0.5rem;
-  background-color:white;
-  border:0.1875rem solid black;
-  color:#333333;
+  background-color:${WHITE};
+  border:0.1875rem solid ${BLACK};
+  color:${EBON};
   text-decoration:none;
 }
 [data-lite-class=skipLink]:focus,[data-lite-class=skipLink]:active{
