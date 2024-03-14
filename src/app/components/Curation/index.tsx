@@ -11,7 +11,8 @@ import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+// import MessageBanner from '../MessageBanner';
+import Header from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
@@ -50,8 +51,8 @@ const Curation = ({
   curationLength = 0,
   mostRead,
   radioSchedule,
-  nthCurationByStyleAndProminence = 1,
-}: CurationProps) => {
+}: // nthCurationByStyleAndProminence = 1,
+CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -69,17 +70,16 @@ const Curation = ({
       return null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
-        <MessageBanner
-          heading={title}
-          description={promos[0].description}
-          link={promos[0].link}
-          linkText={promos[0].title}
-          image={promos[0].imageUrl}
-          eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-        />
+        <a href={promos[0].link}>
+          <Header
+            showLiveLabel
+            title={promos[0].title}
+            description={promos[0].description}
+            imageUrl={promos[0].imageUrl}
+            imageUrlTemplate={promos[0].imageUrl}
+            imageWidth={660}
+          />
+        </a>
       ) : null;
     case MOST_READ:
       return (
