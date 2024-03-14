@@ -38,6 +38,12 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
+      - name: Run Simorgh E2Es
+        uses: cypress-io/github-action@v6
+        with:
+          build: yarn build
+          start: yarn start
+
       - name: Run Simorgh NextJS E2Es
         uses: cypress-io/github-action@v6
         with:
