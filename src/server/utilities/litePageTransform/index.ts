@@ -18,7 +18,7 @@ html{
   line-height:1.15;
   -webkit-text-size-adjust:100%;
   font-size:16px;
-  font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
   max-width:${DESKTOP_WIDTH}px;
@@ -39,7 +39,7 @@ ol{
   list-style-type:none;
 }
 a{
-  color: ${GREY_10};
+  color:${GREY_10};
 }
 #brandSvgHeader,#brandSvgFooter{
   fill:${isAltTheme ? POSTBOX : WHITE};
