@@ -41,6 +41,8 @@ export const VISUAL_PROMINENCE = {
 export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
+
+// This maps to the Curation type definition in the BFF
 export interface BaseCuration {
   summaries?: Summary[];
   visualStyle?: VisualStyle | string;
