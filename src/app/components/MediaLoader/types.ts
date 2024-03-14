@@ -144,7 +144,6 @@ export type ClipMediaBlock = {
         kind: string;
         guidance: string | null;
       };
-      guidance: { warnings?: { [key: string]: string } } | null;
       isEmbeddingAllowed: boolean;
     };
   };
