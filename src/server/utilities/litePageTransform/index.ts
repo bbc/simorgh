@@ -1,5 +1,7 @@
 import * as cheerio from 'cheerio';
 
+const DESKTOP_WIDTH = 1024;
+
 export const LITE_STYLES = `
 html{
   line-height:1.15;
@@ -8,10 +10,10 @@ html{
   font-family:-apple-system, BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
-  max-width:600px;
+  max-width:${DESKTOP_WIDTH}px;
   margin:0 auto;
 }
-@media (min-width: 600px){
+@media (min-width: ${DESKTOP_WIDTH}px){
   body{
     border-left: 1px solid #E6E8EA;
     border-right: 1px solid #E6E8EA;
