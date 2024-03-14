@@ -1,7 +1,7 @@
 import mediaPlayerTests from './mediaPlayer';
 
 describe('Live Page Spec', () => {
-  if (Cypress.env('APP_ENV') === 'test') {
+  if (Cypress.env('APP_ENV') === 'local') {
     describe('Live page visit', () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       let livePageData;
