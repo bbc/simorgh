@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import React, { useContext, useEffect } from 'react';
@@ -7,6 +6,7 @@ import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { jsx } from '@emotion/react';
 import isLocal from '#app/lib/utilities/isLocal';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
@@ -38,7 +38,7 @@ const AmpServiceWorker = ({
 export default () => {
   const { swPath, service } = useContext(ServiceContext);
   const { isAmp, canonicalLink } = useContext(RequestContext);
-  const swSrc = `${process.env.SIMORGH_BASE_URL}/${service}${swPath}`;
+  const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {
     const shouldInstallServiceWorker =

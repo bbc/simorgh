@@ -1,6 +1,6 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
 import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
@@ -17,7 +17,7 @@ const AmpATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          baseUrl: process.env.SIMORGH_ATI_BASE_URL,
+          baseUrl: getEnvConfig().SIMORGH_ATI_BASE_URL,
           pageviewParams,
         }),
       )}
