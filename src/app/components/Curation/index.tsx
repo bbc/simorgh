@@ -17,6 +17,7 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import FlourishEmbed from '../Embeds/FlourishEmbed';
 import EmbedHtml from '../Embeds/EmbedHtml';
+import Embed from '../Embeds/OEmbed';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -25,8 +26,9 @@ const {
   NOT_SUPPORTED,
   MOST_READ,
   RADIO_SCHEDULE,
-  FLOURISH_VIS,
-  VJ_INCLUDE,
+  // FLOURISH_VIS,
+  // VJ_INCLUDE,
+  EMBED,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -53,16 +55,18 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
-  vjFetchResponse,
+  // vjFetchResponse,
   nthCurationByStyleAndProminence = 1,
   radioSchedule,
+  embed,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     link: link || promos[0].link,
-    vjFetchResponse,
+    // vjFetchResponse,
+    embed,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -70,27 +74,27 @@ const Curation = ({
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
-  const vjHTML = vjFetchResponse;
+  // const vjHTML = vjFetchResponse;
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case FLOURISH_VIS:
-      return (
-        <section aria-labelledby={id} role="region">
-          <FlourishEmbed
-            width={700}
-            height={575}
-            iFrameSrc={promos[0].link?.replace(
-              'files.bbci.com',
-              'files.bbci.co.uk',
-            )}
-            iFrameId={promos[0].id}
-            iFrameTitle={curationSubheading}
-          />
-        </section>
-      );
-    case VJ_INCLUDE:
-      return vjHTML ? <EmbedHtml embeddableContent={vjHTML} /> : null;
+    // case FLOURISH_VIS:
+    //   return (
+    //     <section aria-labelledby={id} role="region">
+    //       <FlourishEmbed
+    //         width={700}
+    //         height={575}
+    //         iFrameSrc={promos[0].link?.replace(
+    //           'files.bbci.com',
+    //           'files.bbci.co.uk',
+    //         )}
+    //         iFrameId={promos[0].id}
+    //         iFrameTitle={curationSubheading}
+    //       />
+    //     </section>
+    //   );
+    // case VJ_INCLUDE:
+    //   return vjHTML ? <EmbedHtml embeddableContent={vjHTML} /> : null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
         <MessageBanner
@@ -115,6 +119,8 @@ const Curation = ({
       );
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
+    case EMBED:
+      return <Embed oembed={embed} type="" />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
