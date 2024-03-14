@@ -87,33 +87,35 @@ const SitewideLinks = ({
   script,
   service,
 }) => {
-  const elements = links.map(({ id, text, href, lang }) => {
-    if (id === 'COOKIE_SETTINGS') {
-      if (isAmp) {
-        return (
-          <StyledAmpCookieSettingsButton lang={lang} service={service}>
-            {text}
-          </StyledAmpCookieSettingsButton>
-        );
-      }
+  const elements = links
+    .map(({ id, text, href, lang }) => {
+      if (id === 'COOKIE_SETTINGS') {
+        if (isAmp) {
+          return (
+            <StyledAmpCookieSettingsButton lang={lang} service={service}>
+              {text}
+            </StyledAmpCookieSettingsButton>
+          );
+        }
 
-      if (showAdsBasedOnLocation) {
-        return (
-          <Link
-            service={service}
-            text={text}
-            href={href}
-            lang={lang}
-            onClick={openPrivacyManagerModal}
-            onlyShowIfJSenabled
-          />
-        );
+        if (showAdsBasedOnLocation) {
+          return (
+            <Link
+              service={service}
+              text={text}
+              href={href}
+              lang={lang}
+              onClick={openPrivacyManagerModal}
+              onlyShowIfJSenabled
+            />
+          );
+        }
+      } else {
+        return <Link service={service} text={text} href={href} lang={lang} />;
       }
-    } else {
-      return <Link service={service} text={text} href={href} lang={lang} />;
-    }
-    return null;
-  });
+      return null;
+    })
+    .filter(Boolean);
 
   return (
     <SitewideLinksWrapper script={script} service={service}>

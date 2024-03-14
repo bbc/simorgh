@@ -11,8 +11,6 @@ import {
 const DESKTOP_WIDTH = 800;
 const CONTENT_PADDING = 1;
 
-const isAltTheme = false;
-
 export const LITE_STYLES = `
 html{
   line-height:1.15;
@@ -21,14 +19,7 @@ html{
   font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
-  max-width:${DESKTOP_WIDTH}px;
-  margin:0 auto;
-}
-@media (min-width: ${DESKTOP_WIDTH}px){
-  body{
-    ${!isAltTheme && `border-left: 1px solid ${GREY_3};`}
-    ${!isAltTheme && `border-right: 1px solid ${GREY_3};`}
-  }
+  margin:0;
 }
 ul{
   padding-inline-start:0rem;
@@ -45,26 +36,32 @@ p > a {
   text-decoration-color:${POSTBOX};
 }
 #brandSvgHeader,#brandSvgFooter{
-  fill:${isAltTheme ? POSTBOX : WHITE};
+  fill:${WHITE};
   height:1.5rem;
 }
 /* Custom classes */
+[data-lite-class=lite-brand-wrapper]{
+  background-color:${POSTBOX};
+}
 [data-lite-class=lite-svg-wrapper]{
-  background-color:${isAltTheme ? WHITE : POSTBOX};
+  max-width:${DESKTOP_WIDTH}px;
+  margin:0 auto;
   padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  ${isAltTheme && `border-bottom: 1px solid ${GREY_3};`}
 }
 [data-lite-class=lite-svg-wrapper] a:first-of-type{
   display:flex;
 }
 [data-lite-class=lite-main-content]{
   padding:0 ${CONTENT_PADDING}rem;
+  max-width:${DESKTOP_WIDTH}px;
+  margin:0 auto;
 }
 [data-lite-class=lite-nav-list]{
-  margin:0;
+  max-width:${DESKTOP_WIDTH}px;
+  margin:0 auto;
   padding:${CONTENT_PADDING}rem;
   list-style-type:none;
   border-bottom:1px solid ${GREY_3};
@@ -73,9 +70,9 @@ p > a {
   gap:0.625rem;
 }
 [data-lite-class=lite-footer-copyright]{
-  padding-inline-start:${CONTENT_PADDING}rem;
-  padding-bottom:0.625rem;
-  margin-bottom:0;
+  max-width:${DESKTOP_WIDTH}px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 [data-lite-class=lite-most-read-list] li > div{
   display:flex;
