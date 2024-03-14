@@ -1,12 +1,12 @@
 import {
-  CurationData,
+  Curation,
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
 import getNthCurationByStyleAndProminence from '.';
 
 describe('getNthCurationByStyleAndProminence', () => {
-  const curations: CurationData[] = [
+  const curations: Curation[] = [
     {
       visualStyle: VISUAL_STYLE.COLLECTION,
       visualProminence: VISUAL_PROMINENCE.HIGH,

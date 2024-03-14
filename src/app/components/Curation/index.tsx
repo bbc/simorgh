@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import {
-  CurationData,
+  Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
@@ -38,7 +38,7 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-const Curation = ({
+export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
   summaries = [],
@@ -50,8 +50,8 @@ const Curation = ({
   curationLength = 0,
   mostRead,
   radioSchedule,
-  nthCurationByStyleAndProminence = 1,
-}: CurationData) => {
+  key = 1,
+}: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -76,7 +76,7 @@ const Curation = ({
           linkText={summaries[0].title}
           image={summaries[0].imageUrl}
           eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+            componentName: `message-banner-${key}`,
             detailedPlacement: `${position + 1}`,
           }}
         />
@@ -122,5 +122,3 @@ const Curation = ({
       );
   }
 };
-
-export default Curation;

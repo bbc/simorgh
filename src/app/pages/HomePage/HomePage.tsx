@@ -5,12 +5,12 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
-  CurationData,
+  Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
 import { ATIData } from '../../components/ATIAnalytics/types';
-import Curation from '../../components/Curation';
+import CurationComponent from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -25,7 +25,7 @@ export interface HomePageProps {
   pageData: {
     id?: string;
     title: string;
-    curations: CurationData[];
+    curations: Curation[];
     description: string;
     metadata: {
       atiAnalytics: ATIData;
@@ -103,7 +103,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   });
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
-                    <Curation
+                    <CurationComponent
                       headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -115,9 +115,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
                       radioSchedule={radioSchedule}
-                      nthCurationByStyleAndProminence={
-                        nthCurationByStyleAndProminence
-                      }
+                      key={nthCurationByStyleAndProminence}
                     />
                     {index === 0 && <MPU />}
                   </React.Fragment>

@@ -58,9 +58,9 @@ export interface BaseCuration {
   radioSchedule?: RadioScheduleData[];
 }
 
-export interface CurationData extends BaseCuration {
+export interface Curation extends BaseCuration {
   headingLevel?: number;
   topStoriesTitle?: string;
   curationLength?: number;
-  nthCurationByStyleAndProminence?: number;
+  key?: number;
 }
