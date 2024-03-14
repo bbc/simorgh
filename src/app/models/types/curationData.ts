@@ -49,6 +49,9 @@ export interface CurationProps {
   nthCurationByStyleAndProminence?: number;
   radioSchedule?: RadioScheduleData[];
   vjFetchResponse?: string;
+  embed: {
+    html: string;
+  };
 }
 
 export interface CurationData {
@@ -65,4 +68,7 @@ export interface CurationData {
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
   vjFetchResponse?: string;
+  embed: {
+    html: string;
+  };
 }
