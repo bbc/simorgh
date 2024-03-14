@@ -98,7 +98,12 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration: rawDuration }],
+        items: [
+          {
+            kind: 'advert',
+          } as any,
+          { versionID, kind, duration: rawDuration },
+        ],
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },

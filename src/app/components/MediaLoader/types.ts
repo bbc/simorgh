@@ -77,6 +77,16 @@ export type MediaInfo = {
 
 export type Player = {
   load: () => void;
+  loadPlugin: (
+    pluginName: { [key: string]: string },
+    parameters: {
+      name: string;
+      data: {
+        adTag: string;
+        debug: boolean;
+      };
+    },
+  ) => void;
 };
 
 export type BumpType = {

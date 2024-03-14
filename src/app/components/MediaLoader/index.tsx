@@ -44,6 +44,21 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
           );
 
           mediaPlayer.load();
+
+          mediaPlayer.loadPlugin(
+            {
+              swf: 'name:dfpAds.swf',
+              html: 'name:dfpAds.js',
+            },
+            {
+              name: 'AdsPluginParameters',
+              data: {
+                adTag:
+                  'https://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/4817/bbccom.preview.site.test&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=uid%3Dpreroll_nonskip%26sample_ct%3Dlinear&correlator=',
+                debug: true,
+              },
+            },
+          );
         }
       });
     } catch (error) {

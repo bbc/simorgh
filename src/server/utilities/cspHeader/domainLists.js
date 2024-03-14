@@ -10,6 +10,7 @@ export const bbcDomains = [
 ];
 
 export const advertisingServiceCountryDomains = [
+  '*.googleapis.*',
   'https://*.google.co.ve',
   'https://*.google.ru',
   'https://*.google.co.in',
