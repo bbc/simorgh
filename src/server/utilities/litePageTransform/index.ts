@@ -114,7 +114,8 @@ p > a {
   clip:auto;
   height:auto;
   width:auto;
-}`;
+}
+`;
 
 type Props = {
   html: string;
