@@ -21,9 +21,28 @@ const initaliseReverb = async ({ pageVars, userVars }) => {
   }
 };
 
-const firePageViewEvent = async () => {
+const reverbPageViews = async () => {
   await Reverb.initialise();
   await Reverb.viewEvent();
+};
+
+const reverbLinkClick = async () => {
+  const config = {};
+
+  await Reverb.userActionEvent(
+    'click',
+    'Top Stories Link',
+    config,
+    {},
+    {},
+    true,
+  );
+};
+
+const reverbHandlers = {
+  pageView: reverbPageViews,
+  sectionView: reverbPageViews,
+  sectionClick: reverbLinkClick,
 };
 
 const sendBeacon = async (url, reverbBeaconConfig) => {
@@ -32,10 +51,12 @@ const sendBeacon = async (url, reverbBeaconConfig) => {
       if (reverbBeaconConfig) {
         const {
           params: { page, user },
+          eventName,
         } = reverbBeaconConfig;
 
         await initaliseReverb({ pageVars: page, userVars: user });
-        await firePageViewEvent();
+
+        await reverbHandlers[eventName]();
       } else {
         await fetch(url, { credentials: 'include' }).then(res => res.text());
       }
