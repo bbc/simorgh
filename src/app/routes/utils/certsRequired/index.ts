@@ -6,6 +6,7 @@ export default (pathname: string) => {
   return (
     !isLocal &&
     process.env.INTEGRATION_TEST_BUILD !== 'true' &&
-    process.env.LIGHTHOUSE_BUILD !== 'true'
+    process.env.LIGHTHOUSE_BUILD !== 'true' &&
+    process.env.CYPRESS_APP_ENV !== 'local'
   );
 };

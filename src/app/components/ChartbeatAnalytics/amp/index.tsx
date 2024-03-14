@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { AmpChartbeatProps, AmpChartbeatConfig } from '../types';
