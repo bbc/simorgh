@@ -1,7 +1,9 @@
 import * as cheerio from 'cheerio';
 
-const DESKTOP_WIDTH = 768;
+const DESKTOP_WIDTH = 800;
 const CONTENT_PADDING = 1;
+
+const isAltTheme = true;
 
 export const LITE_STYLES = `
 html{
@@ -16,8 +18,8 @@ body{
 }
 @media (min-width: ${DESKTOP_WIDTH}px){
   body{
-    border-left: 1px solid #E6E8EA;
-    border-right: 1px solid #E6E8EA;
+    ${!isAltTheme && 'border-left: 1px solid #E6E8EA;'}
+    ${!isAltTheme && 'border-right: 1px solid #E6E8EA;'}
   }
 }
 ul{
@@ -29,16 +31,17 @@ ol{
   list-style-type:none;
 }
 #brandSvgHeader,#brandSvgFooter{
-  fill:white;
+  fill:${isAltTheme ? '#b80000' : 'white'};
   height:1.5rem;
 }
 /* Custom classes */
 [data-lite-class=lite-svg-wrapper]{
-  background-color:#b80000;
-  padding: ${CONTENT_PADDING}rem;
+  background-color:${isAltTheme ? 'white' : '#b80000'};
+  padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  ${isAltTheme && 'border-bottom: 1px solid #E6E8EA;'}
 }
 [data-lite-class=lite-svg-wrapper] a:first-of-type{
   display:flex;
