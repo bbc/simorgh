@@ -236,6 +236,7 @@ export const mainTranslations = {
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Не пропустите',
+  latestMediaTitle: 'Актуальное',
   infoBannerLabel: 'Информация',
 };
 
@@ -376,19 +377,19 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Истории',
-        url: '/russian/features-50983593',
+        url: '/russian/topics/cv27xky1pppt',
       },
       {
         title: 'Видео',
-        url: '/russian/in-depth-54439028',
+        url: '/russian/topics/c44vyp57qy4t',
       },
       {
         title: 'Фильмы',
-        url: '/russian/in-depth-48104242',
+        url: '/russian/topics/cl4x0jkk3e5t',
       },
       {
         title: 'Подкасты',
-        url: '/russian/media-47937790',
+        url: '/russian/topics/c3l19z3z0p2t',
       },
     ],
   },

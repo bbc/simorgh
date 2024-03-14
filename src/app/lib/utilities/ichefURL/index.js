@@ -1,3 +1,5 @@
+import { getEnvConfig } from '../getEnvConfig';
+
 // List of originCodes that support webp on '/ace/ws/' iChef
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
@@ -26,7 +28,7 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   }
 
   const url = [
-    process.env.SIMORGH_ICHEF_BASE_URL || 'https://ichef.bbci.co.uk',
+    getEnvConfig().SIMORGH_ICHEF_BASE_URL || 'https://ichef.bbci.co.uk',
     'ace',
     'ws',
     resolution,

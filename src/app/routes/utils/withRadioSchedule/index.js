@@ -4,6 +4,7 @@ import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioS
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const logger = nodeLogger(__filename);
 
@@ -34,7 +35,7 @@ const withRadioSchedule = async ({
   path,
   radioService,
 }) => {
-  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
+  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = getEnvConfig();
 
   const radioScheduleUrl = getRadioScheduleEndpoint({
     service,

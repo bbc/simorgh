@@ -7,6 +7,8 @@ import { string } from 'prop-types';
 // Contexts
 import { UserContext } from '#contexts/UserContext';
 
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
 const WebVitals = ({ pageType }) => {
   const { personalisationEnabled } = useContext(UserContext);
 
@@ -15,7 +17,7 @@ const WebVitals = ({ pageType }) => {
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
   const sampleRate = Number(
-    toggleSampleRate || process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
+    toggleSampleRate || getEnvConfig().SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
   );
 
   const wsPageType = pageType
@@ -29,7 +31,7 @@ const WebVitals = ({ pageType }) => {
 
   const webVitalsConfig = {
     enabled: isWebVitalsEnabled,
-    reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
+    reportingEndpoint: getEnvConfig().SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
     sampleRate,
     ...(wsPageType && {
       reportParams: {
