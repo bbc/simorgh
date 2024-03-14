@@ -41,6 +41,9 @@ ol{
 a{
   color:${GREY_10};
 }
+p > a {
+  text-decoration-color:${POSTBOX};
+}
 #brandSvgHeader,#brandSvgFooter{
   fill:${isAltTheme ? POSTBOX : WHITE};
   height:1.5rem;
