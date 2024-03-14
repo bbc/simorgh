@@ -132,6 +132,7 @@ const testRenderedData =
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
+        url={url}
       />,
     );
 
@@ -1387,6 +1388,7 @@ describe('Server', () => {
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
+            url={`/${service}/foobar`}
           />,
         );
 

@@ -78,6 +78,7 @@ describe('Render Document', () => {
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
+        url: '/',
       });
 
       expect(

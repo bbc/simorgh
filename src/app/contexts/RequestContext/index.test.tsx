@@ -73,6 +73,7 @@ const expectedOutput = {
   isAmp: true,
   isNextJs: false,
   isCaf: false,
+  isLite: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,
@@ -188,6 +189,22 @@ describe('RequestContext', () => {
         isAmp: false,
         isApp: true,
         platform: 'app',
+      });
+    });
+
+    it('should be "lite" when isAmp is false and isApp is false and isLite is true', () => {
+      render(
+        <RequestContextProvider {...input} isAmp={false} isApp={false} isLite>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isAmp: false,
+        isApp: false,
+        isLite: true,
+        platform: 'canonical',
       });
     });
 
