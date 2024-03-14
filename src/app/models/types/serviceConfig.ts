@@ -36,6 +36,7 @@ export type ServiceConfig = {
   articleTimestampSuffix?: string;
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
+  atiAnalyticsProducerName: string;
   chartbeatDomain: string;
   brandName: string;
   product: string;

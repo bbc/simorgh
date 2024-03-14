@@ -12,6 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'sport',
     atiAnalyticsProducerId: '85',
+    atiAnalyticsProducerName: 'SPORT',
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Sport',
     product: 'BBC Sport',

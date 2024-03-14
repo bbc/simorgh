@@ -182,7 +182,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiAnalytics} useReverb />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -248,6 +248,7 @@ const ArticlePage = ({ pageData }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopics && topics}
+          useReverb
         />
       )}
     </div>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import {
   StoryPromoLi,
@@ -24,6 +25,7 @@ const eventTrackingData = {
   block: {
     componentName: 'features',
   },
+  useReverb: true,
 };
 
 const StoryPromoUlFeatures = styled(StoryPromoUl)`
@@ -65,7 +67,10 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
-  const viewRef = useViewTracker(eventTrackingData.block);
+  const viewRef = useViewTracker({
+    ...path(['block'], eventTrackingData),
+    useReverb: true,
+  });
 
   return (
     <StoryPromoUlFeatures>
@@ -106,7 +111,10 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewRef = useViewTracker({
+    ...path(['block'], eventTrackingData),
+    useReverb: true,
+  });
 
   return (
     <div ref={viewRef}>

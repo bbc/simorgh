@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'newsround',
     atiAnalyticsProducerId: '65',
+    atiAnalyticsProducerName: 'NEWSROUND',
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'CBBC Newsround',
     product: 'CBBC Newsround',

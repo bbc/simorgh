@@ -1,11 +1,8 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-import Url from 'url-parse';
-
-export default (pathname: string) => {
-  const url = new Url(`https://www.bbc.com${pathname}`, true);
-
-  const rendererEnv = url?.query?.renderer_env;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default (_pathname: string) => {
+  const rendererEnv = 'live' as string;
 
   switch (rendererEnv) {
     case 'test':

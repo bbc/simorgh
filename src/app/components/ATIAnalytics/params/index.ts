@@ -22,7 +22,11 @@ import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
-import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
+import {
+  buildPageATIUrl,
+  buildPageATIParams,
+  buildPageReverbParams,
+} from './genericPage/buildParams';
 import {
   buildMostWatchedATIParams,
   buildMostWatchedATIUrl,
@@ -37,6 +41,7 @@ import {
   PageData,
   ATIPageTrackingProps,
   ATIConfigurationDetailsProviders,
+  ReverbDetailsProviders,
 } from '../types';
 import { PageTypes } from '../../../models/types/global';
 
@@ -149,6 +154,14 @@ export const buildATIUrl = ({
   return null;
 };
 
+export const buildReverbParams = ({
+  requestContext,
+  serviceContext,
+  atiData,
+}: ReverbDetailsProviders) => {
+  return buildPageReverbParams({ atiData, requestContext, serviceContext });
+};
+
 export const buildATIEventTrackingParams = ({
   requestContext,
   serviceContext,
@@ -182,5 +195,3 @@ export const buildATIEventTrackingParams = ({
     return {};
   }
 };
-
-export default buildATIUrl;

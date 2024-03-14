@@ -2618,6 +2618,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/reverb@bbc/reverb#semver:3.9.0":
+  version: 3.9.0
+  resolution: "@bbc/reverb@https://github.com/bbc/reverb.git#commit=2be814251e9b4f0ea565e6dfac58e942af049cc3"
+  checksum: 3a29ab6ff98b1c76350f884a64bda750695f0948306c14f71f98c75c65f2ec8eb8b950059bab8e97c45be1a68feb19fb19ff8d3c44b852e839fa1eef4a87cffc
+  languageName: node
+  linkType: hard
+
 "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
   version: 0.0.0-use.local
   resolution: "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize"
@@ -3805,6 +3812,7 @@ __metadata:
 "@next/swc-linux-arm64-gnu@npm:14.0.1":
   version: 14.0.1
   resolution: "@next/swc-linux-arm64-gnu@npm:14.0.1"
+  checksum: b95a9253a15321f4d31706164a8d78e1127550a8f0352942864033d28eed01c9bedacf52b165d7da99cd3dc67814abcddd335a316e7f2609ba38b5e5eaeaa8fe
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -3819,6 +3827,7 @@ __metadata:
 "@next/swc-linux-x64-gnu@npm:14.0.1":
   version: 14.0.1
   resolution: "@next/swc-linux-x64-gnu@npm:14.0.1"
+  checksum: c7d2e29fd05ce752395cdf16a6bba6426761935106a7ff87e664cc28a5acd300cf7d489b7c7cb8f8fe67836b003ff188511ae2cc6b7cb20fafa946afe4fe423d
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -20884,6 +20893,7 @@ __metadata:
     "@babel/preset-react": 7.22.15
     "@babel/preset-typescript": 7.23.2
     "@babel/runtime": 7.23.2
+    "@bbc/reverb": "bbc/reverb#semver:3.9.0"
     "@bbc/web-vitals": 1.2.0
     "@cypress/webpack-preprocessor": 6.0.1
     "@emotion/babel-plugin": 11.11.0
@@ -20897,6 +20907,8 @@ __metadata:
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
+    "@next/swc-linux-arm64-gnu": "npm:14.0.1"
+    "@next/swc-linux-x64-gnu": "npm:14.0.1"
     "@optimizely/react-sdk": 2.9.2
     "@storybook/addon-a11y": 6.5.16
     "@storybook/addon-backgrounds": 6.5.16

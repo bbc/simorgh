@@ -30,6 +30,7 @@ export interface MostReadLinkProps {
   size: Size;
   eventTrackingData?: {
     componentName: string;
+    useReverb?: boolean;
   };
 }
 
