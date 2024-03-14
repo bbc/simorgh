@@ -137,7 +137,7 @@ const Document = ({
         {renderMode === 'lite' && (
           <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
         )}
-        {(renderMode === 'canonical' || renderMode === 'lite') && (
+        {renderMode === 'canonical' && (
           <script
             id="simorgh-envvars"
             dangerouslySetInnerHTML={{
