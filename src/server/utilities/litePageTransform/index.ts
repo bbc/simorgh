@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 
-const DESKTOP_WIDTH = 1024;
+const DESKTOP_WIDTH = 768;
 const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
