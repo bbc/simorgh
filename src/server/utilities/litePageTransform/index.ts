@@ -1,9 +1,14 @@
 import * as cheerio from 'cheerio';
+import {
+  GREY_3,
+  GREY_10,
+  POSTBOX,
+} from '#app/components/ThemeProvider/palette';
 
 const DESKTOP_WIDTH = 800;
 const CONTENT_PADDING = 1;
 
-const isAltTheme = true;
+const isAltTheme = false;
 
 export const LITE_STYLES = `
 html{
@@ -18,8 +23,8 @@ body{
 }
 @media (min-width: ${DESKTOP_WIDTH}px){
   body{
-    ${!isAltTheme && 'border-left: 1px solid #E6E8EA;'}
-    ${!isAltTheme && 'border-right: 1px solid #E6E8EA;'}
+    ${!isAltTheme && `border-left: 1px solid ${GREY_3};`}
+    ${!isAltTheme && `border-right: 1px solid ${GREY_3};`}
   }
 }
 ul{
@@ -30,13 +35,16 @@ ol{
   padding-inline-start:0.325rem;
   list-style-type:none;
 }
+a{
+  color: ${GREY_10};
+}
 #brandSvgHeader,#brandSvgFooter{
-  fill:${isAltTheme ? '#b80000' : 'white'};
+  fill:${isAltTheme ? `${POSTBOX}` : 'white'};
   height:1.5rem;
 }
 /* Custom classes */
 [data-lite-class=lite-svg-wrapper]{
-  background-color:${isAltTheme ? 'white' : '#b80000'};
+  background-color:${isAltTheme ? 'white' : `${POSTBOX}`};
   padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
@@ -53,7 +61,7 @@ ol{
   margin:0;
   padding:${CONTENT_PADDING}rem;
   list-style-type:none;
-  border-bottom:1px solid #E6E8EA;
+  border-bottom:1px solid ${GREY_3};
   display:flex;
   flex-wrap:wrap;
   gap:0.625rem;
@@ -89,9 +97,9 @@ ol{
   width:1px;
   overflow:hidden;
   padding:0.75rem 0.5rem;
-  background-color:#FFFFFF;
-  border:0.1875rem solid #000;
-  color:#333;
+  background-color:white;
+  border:0.1875rem solid black;
+  color:#333333;
   text-decoration:none;
 }
 [data-lite-class=skipLink]:focus,[data-lite-class=skipLink]:active{
