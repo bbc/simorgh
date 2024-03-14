@@ -90,7 +90,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualStyle,
                   mostRead,
                   radioSchedule,
-                  vjFetchResponse,
+                  // vjFetchResponse,
+                  embed,
                 },
                 index,
               ) => {
@@ -114,11 +115,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
+                      embed={embed}
                       radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      vjFetchResponse={vjFetchResponse}
+                      // vjFetchResponse={vjFetchResponse}
                     />
                     {index === 1 && <MPU />}
                   </React.Fragment>
