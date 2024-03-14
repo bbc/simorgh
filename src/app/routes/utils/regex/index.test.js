@@ -576,6 +576,7 @@ describe('frontPage -> homePage migration', () => {
     'pidgin',
     'portuguese',
     'punjabi',
+    'russian',
     'sinhala',
     'somali',
     'swahili',

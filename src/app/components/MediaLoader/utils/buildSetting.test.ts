@@ -1,13 +1,25 @@
+import { PageTypes, Services } from '#app/models/types/global';
+import buildSettings from './buildSettings';
+import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { MediaBlock } from '../types';
-import buildConfig from './buildSettings';
-import blocks from '../fixture';
+
+const baseSettings = {
+  id: 'testID',
+  pageType: 'article' as PageTypes,
+  counterName: 'live_coverage.testID.page',
+  isAmp: false,
+  lang: 'es',
+  service: 'mundo' as Services,
+  statsDestination: 'WS_NEWS_LANGUAGES',
+  producer: 'MUNDO',
+};
 
 describe('buildSettings', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
 
-  it('Should process an AresMedia block into a valid playlist item.', () => {
+  it('Should process a ClipMedia block into a valid playlist item for a "Live" page.', () => {
     const mockWindowObj = {
       location: {
         hostname: 'https://www.bbc.com/',
@@ -16,21 +28,135 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: clipMediaBlocks as MediaBlock[],
+      pageType: 'live',
     });
+
     expect(result?.playerConfig).toStrictEqual({
+      autoplay: true,
       product: 'news',
+      statsObject: {
+        clipPID: 'p01thw22',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
       superResponsive: true,
+      enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
+      externalEmbedUrl: '',
+      playlistObject: {
+        title:
+          "BBC launch trailer for We Know Our Place women's sport campaign",
+        summary:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        holdingImageURL:
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
+        items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
+        embedRights: 'allowed',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
+      },
+    });
+  });
+
+  it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      autoplay: true,
+      product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
+      superResponsive: true,
+      enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
+      externalEmbedUrl: '',
       playlistObject: {
         title: 'Five things ants can teach us about management',
+        summary: 'This is a caption!',
         holdingImageURL:
           'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
+      },
+    });
+  });
+
+  it('Should process an AresMedia block into a valid playlist item for a "mediaArticle" page.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+      pageType: 'mediaArticle',
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      autoplay: false,
+      preload: 'high',
+      product: 'news',
+      statsObject: {
+        clipPID: 'p01k6msp',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
+      superResponsive: true,
+      enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
+      externalEmbedUrl: '',
+      playlistObject: {
+        title: 'Five things ants can teach us about management',
+        summary: 'This is a caption!',
+        holdingImageURL:
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
+        guidance: 'Contains strong language and adult humour.',
+        embedRights: 'allowed',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
       },
     });
   });
@@ -45,12 +171,11 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
     });
+
     expect(result?.playerConfig).toHaveProperty('mediator', {
       host: 'open.test.bbc.co.uk',
     });
@@ -68,12 +193,11 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
     });
+
     expect(result?.playerConfig).toHaveProperty('mediator', {
       host: 'open.test.bbc.co.uk',
     });
@@ -89,12 +213,11 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
     });
+
     expect(result?.playerConfig.mediator).toBe(undefined);
   });
 
@@ -107,12 +230,11 @@ describe('buildSettings', () => {
 
     jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
     });
+
     expect(result?.playerConfig.mediator).toBe(undefined);
   });
 
@@ -120,24 +242,54 @@ describe('buildSettings', () => {
     const sampleBlock = [
       {
         model: { blocks: [{ model: { versions: [] } }] },
-      } as unknown as MediaBlock,
+      },
     ];
-    const result = buildConfig({
-      id: 'testID',
+    const result = buildSettings({
+      ...baseSettings,
+      // @ts-expect-error - we are testing an invalid block
       blocks: sampleBlock,
-      pageType: 'article',
-      counterName: null,
     });
+
     expect(result).toBe(null);
   });
 
   it('Should return super responsive as true, to make the video expand to its parent container.', () => {
-    const result = buildConfig({
-      id: 'testID',
-      blocks,
-      pageType: 'article',
-      counterName: null,
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
     });
+
     expect(result?.playerConfig.superResponsive).toStrictEqual(true);
+  });
+
+  it('Should return the statsObject with required values for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig.statsObject).toStrictEqual({
+      clipPID: 'p01k6msp',
+      destination: 'WS_NEWS_LANGUAGES',
+      producer: 'MUNDO',
+    });
+  });
+
+  it('Should return required settings for tracking.', () => {
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig).toHaveProperty(
+      'counterName',
+      'live_coverage.testID.page',
+    );
+    expect(result?.playerConfig).toHaveProperty('appName', 'news-mundo');
+    expect(result?.playerConfig).toHaveProperty('appType', 'responsive');
+    expect(result?.playerConfig.playlistObject).toHaveProperty(
+      'title',
+      'Five things ants can teach us about management',
+    );
   });
 });

@@ -256,6 +256,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
+      latestMediaTitle: 'Más videos',
     },
     mostRead: {
       header: 'Más leídas',
@@ -334,7 +335,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
+        url: '/mundo/topics/cr50y7p7qyqt',
       },
       {
         title: 'Economía',
@@ -358,7 +359,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Centroamérica Cuenta',
-        url: '/mundo/noticias-43826245',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },
