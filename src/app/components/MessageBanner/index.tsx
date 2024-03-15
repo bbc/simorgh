@@ -10,7 +10,6 @@ import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface MessageBannerProps {
   heading: string;
@@ -18,6 +17,7 @@ interface MessageBannerProps {
   link?: string;
   linkText: string;
   image?: string;
+  id?: string;
   eventTrackingData?: EventTrackingMetadata;
 }
 
@@ -30,13 +30,12 @@ const Banner = forwardRef(
       linkText,
       image,
       eventTrackingData,
+      id = 'message-banner-1',
     }: MessageBannerProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
-
-    const id = `message-banner-${idSanitiser(heading)}`;
 
     return (
       <section
@@ -92,6 +91,7 @@ const MessageBanner = ({
   linkText,
   image,
   eventTrackingData,
+  id,
 }: MessageBannerProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -104,6 +104,7 @@ const MessageBanner = ({
       image={image}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
+      id={id}
     />
   );
 };

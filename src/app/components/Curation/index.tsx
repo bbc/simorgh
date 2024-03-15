@@ -12,7 +12,6 @@ import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 
@@ -50,7 +49,7 @@ export default ({
   curationLength = 0,
   mostRead,
   radioSchedule,
-  key = 1,
+  nthCurationByStyleAndProminence = 1,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -62,12 +61,15 @@ export default ({
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
-  const id = idSanitiser(curationSubheading);
+  const id =
+    `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case MESSAGE_BANNER:
+    case MESSAGE_BANNER: {
+      const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+
       return summaries.length > 0 ? (
         <MessageBanner
           heading={title}
@@ -75,12 +77,14 @@ export default ({
           link={summaries[0].link}
           linkText={summaries[0].title}
           image={summaries[0].imageUrl}
+          id={messageBannerId}
           eventTrackingData={{
-            componentName: `message-banner-${key}`,
+            componentName: messageBannerId,
             detailedPlacement: `${position + 1}`,
           }}
         />
       ) : null;
+    }
     case MOST_READ:
       return (
         <MostRead
