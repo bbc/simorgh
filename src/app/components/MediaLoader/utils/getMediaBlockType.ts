@@ -1,16 +1,26 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { MediaBlock } from '../types';
+import {
+  ClipMediaBlock,
+  AresMediaBlock,
+  MediaBlock,
+  MediaBlockType,
+} from '../types';
 
-export default function getMediaBlockType(blocks: MediaBlock[]) {
-  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+export default function getMediaBlockType(
+  blocks: MediaBlock[],
+): MediaBlockType | null {
+  const aresMediaBlock: AresMediaBlock = filterForBlockType(
+    blocks,
+    'aresMedia',
+  );
 
-  const clipBlock = filterForBlockType(blocks, 'clipMedia');
+  const clipBlock: ClipMediaBlock = filterForBlockType(blocks, 'clipMedia');
 
   switch (true) {
     case !!aresMediaBlock:
-      return 'aresMedia';
+      return aresMediaBlock.type;
     case !!clipBlock:
-      return 'clipMedia';
+      return clipBlock.type;
     default:
       return null;
   }

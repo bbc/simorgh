@@ -1,13 +1,13 @@
-import livePage from './livePage';
-import article from './article';
+import clipMedia from './clipMedia';
+import aresMedia from './aresMedia';
 import { MediaBlockType } from '../types';
 
 export default (mediaBlockType: MediaBlockType) => {
   switch (mediaBlockType) {
     case 'clipMedia':
-      return livePage;
+      return clipMedia;
     case 'aresMedia':
-      return article;
+      return aresMedia;
     default:
       return null;
   }

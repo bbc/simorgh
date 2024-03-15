@@ -154,7 +154,6 @@ export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
 export type MediaBlockType = AresMediaBlock['type'] | ClipMediaBlock['type'];
 
 export type BuildConfigProps = {
-  mediaBlockType: MediaBlockType;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
