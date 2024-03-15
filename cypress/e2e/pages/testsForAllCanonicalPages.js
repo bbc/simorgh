@@ -25,7 +25,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
 
   const serviceName = config[service].name;
   // limit number of tests to 2 services for navigation toggling
-  const testMobileNav = serviceName === 'pidgin' || serviceName === 'persian';
+  const testMobileNav = serviceName === 'mundo' || serviceName === 'persian';
 
   if (testMobileNav) {
     describe('Header Tests', () => {
