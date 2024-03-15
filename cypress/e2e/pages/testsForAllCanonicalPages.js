@@ -8,21 +8,19 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   pageType,
 }) => {
   if (pageType !== 'errorPage404') {
-    describe(`testsThatFollowSmokeTestConfigForAllCanonicalPages for ${service} ${pageType}`, () => {
-      if (Cypress.env('SMOKE')) {
-        describe(
-          'ATI',
-          {
-            retries: 3,
-          },
-          () => {
-            it('should have a noscript img tag with the ati url', () => {
-              cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
-            });
-          },
-        );
-      }
-    });
+    if (Cypress.env('SMOKE')) {
+      describe(
+        'ATI',
+        {
+          retries: 3,
+        },
+        () => {
+          it('should have a noscript img tag with the ati url', () => {
+            cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
+          });
+        },
+      );
+    }
   }
 
   const serviceName = config[service].name;
