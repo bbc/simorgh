@@ -127,18 +127,6 @@ export default function litePageTransform({
   helmetScriptTags,
   helmetLinkTags,
 }: Props) {
-  // Prevent preloading images by removing them from the head
-  const cleanedHelmetLinkTags = helmetLinkTags?.filter(
-    tag =>
-      !tag.props.rel ||
-      (tag.props.rel !== 'preload' && tag.props.as !== 'image'),
-  );
-
-  // Strip out some Helmet injected script tags we don't want
-  const cleanedHelmetScriptTags = helmetScriptTags?.filter(
-    tag => !tag.props.src || !tag.props.src?.includes('vendor/require'),
-  );
-
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
   const $ = cheerio.load(
     html,
@@ -199,6 +187,18 @@ export default function litePageTransform({
   if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
     $('[aria-labelledby=podcast-promo]').parent().remove();
   }
+
+  // Prevent preloading images by removing them from the head
+  const cleanedHelmetLinkTags = helmetLinkTags?.filter(
+    tag =>
+      !tag.props.rel ||
+      (tag.props.rel !== 'preload' && tag.props.as !== 'image'),
+  );
+
+  // Strip out some Helmet injected script tags we don't want
+  const cleanedHelmetScriptTags = helmetScriptTags?.filter(
+    tag => !tag.props.src || !tag.props.src?.includes('vendor/require'),
+  );
 
   return {
     liteHtml: $.html(),
