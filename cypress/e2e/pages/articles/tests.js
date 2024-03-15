@@ -23,13 +23,9 @@ const serviceHasInlineLink = service =>
   service === 'news' || service === 'afaanoromoo';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  variant,
-}) => {
+export const testsThatFollowSmokeTestConfig = ({ service, variant }) => {
   let articlesData;
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig`, () => {
     before(() => {
       cy.getPageData({ service, pageType: 'article', variant }).then(
         ({ body }) => {

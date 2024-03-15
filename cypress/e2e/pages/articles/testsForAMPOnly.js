@@ -13,7 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   let articlesData;
-  describe(`testsForAMPOnly`, () => {
+  describe('testsThatFollowSmokeTestConfigForAMPOnly', () => {
     before(() => {
       cy.getPageData({ service, pageType: 'article', variant }).then(
         ({ body }) => {
