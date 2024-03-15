@@ -12,7 +12,6 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
-  mediaBlockType: 'aresMedia',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -31,7 +30,6 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       ...baseSettings,
-      mediaBlockType: 'clipMedia',
       blocks: clipMediaBlocks as MediaBlock[],
       pageType: 'live',
     });
