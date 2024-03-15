@@ -2,6 +2,8 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
+  // Consider moving 'retries' to a per-test level once we have more tests
+  retries: 3,
   e2e: {
     setupNodeEvents(on, config) {
       if (!config.env.APP_ENV) {
@@ -44,7 +46,7 @@ export default defineConfig({
         baseUrl: 'https://www.test.bbc.com',
       },
       local: {
-        baseUrl: 'http://localhost:7081',
+        baseUrl: 'http://localhost.bbc.com:7081',
       },
     },
     testIsolation: false,
