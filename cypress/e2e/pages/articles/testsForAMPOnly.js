@@ -13,58 +13,54 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   let articlesData;
-  describe('AMP Only', () => {
-    before(() => {
-      cy.getPageData({ service, pageType: 'article', variant }).then(
-        ({ body }) => {
-          articlesData = body;
-        },
-      );
-    });
-
-    if (serviceHasFigure(service)) {
-      it('should contain an amp-img', () => {
-        cy.get('figure')
-          .eq(0)
-          .should('be.visible')
-          .within(() => {
-            cy.get('amp-img').should('be.visible');
-          });
-      });
-    }
-
-    describe('Media Player: AMP', () => {
-      it('should render a placeholder image', () => {
-        const media = getBlockData('video', articlesData);
-        if (media && media.type === 'video') {
-          cy.get('[data-e2e="media-player"]').within(() => {
-            cy.get('div')
-              .should('have.attr', 'data-e2e')
-              .should('not.be.empty');
-          });
-        }
-      });
-
-      it('should render an iframe with a valid URL', () => {
-        const media = getBlockData('video', articlesData);
-        if (media && media.type === 'video') {
-          const { lang } = appConfig[service][variant];
-          const embedUrl = getVideoEmbedUrl(articlesData, lang, true);
-          cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-          cy.testResponseCodeAndTypeRetry({
-            path: embedUrl,
-            responseCode: 200,
-            type: 'text/html',
-            allowFallback: true,
-          });
-        }
-      });
-    });
-
-    /* Most Read Component
-     * These cypress tests are needed as unit tests cannot be run on the jsdom.
-     * web workers (which run on amp pages) do not run on the virtual dom.
-     */
-    mostReadAssertions({ service, variant });
+  before(() => {
+    cy.getPageData({ service, pageType: 'article', variant }).then(
+      ({ body }) => {
+        articlesData = body;
+      },
+    );
   });
+
+  if (serviceHasFigure(service)) {
+    it('should contain an amp-img', () => {
+      cy.get('figure')
+        .eq(0)
+        .should('be.visible')
+        .within(() => {
+          cy.get('amp-img').should('be.visible');
+        });
+    });
+  }
+
+  describe('Media Player: AMP', () => {
+    it('should render a placeholder image', () => {
+      const media = getBlockData('video', articlesData);
+      if (media && media.type === 'video') {
+        cy.get('[data-e2e="media-player"]').within(() => {
+          cy.get('div').should('have.attr', 'data-e2e').should('not.be.empty');
+        });
+      }
+    });
+
+    it('should render an iframe with a valid URL', () => {
+      const media = getBlockData('video', articlesData);
+      if (media && media.type === 'video') {
+        const { lang } = appConfig[service][variant];
+        const embedUrl = getVideoEmbedUrl(articlesData, lang, true);
+        cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+        cy.testResponseCodeAndTypeRetry({
+          path: embedUrl,
+          responseCode: 200,
+          type: 'text/html',
+          allowFallback: true,
+        });
+      }
+    });
+  });
+
+  /* Most Read Component
+   * These cypress tests are needed as unit tests cannot be run on the jsdom.
+   * web workers (which run on amp pages) do not run on the virtual dom.
+   */
+  mostReadAssertions({ service, variant });
 };
