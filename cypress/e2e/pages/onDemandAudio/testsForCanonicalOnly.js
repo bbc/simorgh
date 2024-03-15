@@ -17,60 +17,59 @@ export default ({ service, pageType, variant }) => {
       });
     }
   });
-  describe(`testsForCanonicalOnly for ${service} ${pageType} ${variant}`, () => {
-    beforeEach(() => {
-      cy.getToggles(service);
-    });
 
-    describe('Radio Schedule', () => {
-      it('should be displayed if there is enough schedule data', function test() {
-        const currentPath = `${Cypress.env(
-          'currentPath',
-        )}.json${overrideRendererOnTest()}`;
+  beforeEach(() => {
+    cy.getToggles(service);
+  });
 
-        cy.request(currentPath).then(({ body: jsonData }) => {
-          cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const scheduleIsEnabled = path(
-              ['onDemandRadioSchedule', 'enabled'],
-              toggles,
-            );
-            cy.log(
-              `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
-            );
+  describe('Radio Schedule', () => {
+    it('should be displayed if there is enough schedule data', () => {
+      const currentPath = `${Cypress.env(
+        'currentPath',
+      )}.json${overrideRendererOnTest()}`;
 
-            if (scheduleIsEnabled) {
-              const masterBrand = jsonData.metadata.createdBy;
+      cy.request(currentPath).then(({ body: jsonData }) => {
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const scheduleIsEnabled = path(
+            ['onDemandRadioSchedule', 'enabled'],
+            toggles,
+          );
+          cy.log(
+            `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+          );
 
-              const schedulePath =
-                `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
-                  'bbc_afaanoromoo_radio',
-                  'bbc_oromo_radio',
-                );
+          if (scheduleIsEnabled) {
+            const masterBrand = jsonData.metadata.createdBy;
 
-              cy.request(schedulePath).then(({ body: scheduleJson }) => {
-                const { schedules } = scheduleJson;
-                const isProgramValid = getIsProgramValid(() => {});
-                const validSchedules = schedules.filter(isProgramValid);
+            const schedulePath =
+              `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
+                'bbc_afaanoromoo_radio',
+                'bbc_oromo_radio',
+              );
 
-                const isRadioScheduleDataComplete = isScheduleDataComplete({
-                  schedules: validSchedules,
-                });
+            cy.request(schedulePath).then(({ body: scheduleJson }) => {
+              const { schedules } = scheduleJson;
+              const isProgramValid = getIsProgramValid(() => {});
+              const validSchedules = schedules.filter(isProgramValid);
 
-                cy.log(
-                  `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
-                );
-                if (scheduleIsEnabled && isRadioScheduleDataComplete) {
-                  cy.log('Schedule has enough data');
-                  cy.get('[data-e2e=radio-schedule]').should('exist');
-                  // cy.get('[data-e2e=live]').should('exist');
-                } else {
-                  cy.get('[data-e2e=radio-schedule]').should('not.exist');
-                }
+              const isRadioScheduleDataComplete = isScheduleDataComplete({
+                schedules: validSchedules,
               });
-            } else {
-              cy.get('[data-e2e=radio-schedule]').should('not.exist');
-            }
-          });
+
+              cy.log(
+                `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+              );
+              if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+                cy.log('Schedule has enough data');
+                cy.get('[data-e2e=radio-schedule]').should('exist');
+                // cy.get('[data-e2e=live]').should('exist');
+              } else {
+                cy.get('[data-e2e=radio-schedule]').should('not.exist');
+              }
+            });
+          } else {
+            cy.get('[data-e2e=radio-schedule]').should('not.exist');
+          }
         });
       });
     });
