@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
-import appToggles from '../../../support/helpers/useAppToggles';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -12,18 +11,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   variant,
 }) => {
-  if (appToggles.chartbeatAnalytics.enabled) {
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
-    });
-  }
+  chartbeatTests();
 
   if (serviceHasCaption(service)) {
     describe('Image with placeholder', () => {
