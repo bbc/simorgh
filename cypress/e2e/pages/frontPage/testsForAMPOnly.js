@@ -2,11 +2,8 @@
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAMPOnly = ({
-  service,
-  pageType,
-}) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({ service }) =>
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly`, () => {
     it('should contain an amp-img', () => {
       cy.get('li').should('be.visible').find('amp-img').should('be.visible');
     });
