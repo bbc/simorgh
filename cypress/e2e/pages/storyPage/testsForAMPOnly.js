@@ -1,67 +1,52 @@
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
 import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
-export const testsThatAlwaysRunForAMPOnly = ({
-  service,
-  pageType,
-  variant,
-}) => {
-  describe(`Running testsToAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
-    it('If there is a table in the json, display it on the page', () => {
-      if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table');
-          }
+export const testsThatAlwaysRunForAMPOnly = ({ service, variant }) => {
+  describe(`testsToAlwaysRunForAMPOnly for ${service}`, () => {
+    if (service === 'sport') {
+      describe('if a table exists', () => {
+        it('the correct number of rows and columns are displayed', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const tableBlock = body.content.blocks.find(
+              block => block.type === 'table',
+            );
+            if (tableBlock) {
+              const numberOfRows = tableBlock.rows.length;
+              cy.get('table')
+                .find('tr')
+                .then(row => {
+                  expect(row.length).to.equal(numberOfRows);
+                  cy.log(
+                    `Number of rows in json = ${numberOfRows}. Number of rows displayed on page = ${row.length}`,
+                  );
+                  const numberOfColumns = tableBlock.width;
+                  cy.get('table')
+                    .find('tr')
+                    .eq(0)
+                    .find('th')
+                    .then(th => {
+                      expect(th.length).to.equal(numberOfColumns);
+                      cy.log(
+                        `Number of columns in json = ${numberOfColumns}. Number of columns displayed on page = ${th.length}`,
+                      );
+                    });
+                });
+            }
+          });
         });
-      }
-    });
-    it('Table displays expected number of rows and columns', () => {
-      if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            const numberOfRows = tableBlock.rows.length;
-            cy.get('table')
-              .find('tr')
-              .then(row => {
-                expect(row.length).to.equal(numberOfRows);
-                cy.log(
-                  `Number of rows in json = ${numberOfRows}. Number of rows displayed on page = ${row.length}`,
-                );
-                const numberOfColumns = tableBlock.width;
-                cy.get('table')
-                  .find('tr')
-                  .eq(0)
-                  .find('th')
-                  .then(th => {
-                    expect(th.length).to.equal(numberOfColumns);
-                    cy.log(
-                      `Number of columns in json = ${numberOfColumns}. Number of columns displayed on page = ${th.length}`,
-                    );
-                  });
-              });
-          }
+
+        it('it has a heading', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const tableBlock = body.content.blocks.find(
+              block => block.type === 'table',
+            );
+            if (tableBlock) {
+              cy.get('table').find('thead');
+            }
+          });
         });
-      }
-    });
-    it('Table has a heading', () => {
-      if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table').find('thead');
-          }
-        });
-      }
-    });
+      });
+    }
 
     /* Most Read Component
      * These cypress tests are needed as unit tests cannot be run on the jsdom.

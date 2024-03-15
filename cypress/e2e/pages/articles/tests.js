@@ -217,7 +217,6 @@ export const testsThatFollowSmokeTestConfig = ({
                   });
                 });
               } else {
-                cy.log(`No ${socialMediaProviderName} embed on page`);
                 this.skip();
               }
             });

@@ -10,11 +10,10 @@ const serviceHasFigure = service =>
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
-  pageType,
   variant,
 }) => {
   let articlesData;
-  describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsForAMPOnly`, () => {
     before(() => {
       cy.getPageData({ service, pageType: 'article', variant }).then(
         ({ body }) => {
@@ -23,16 +22,16 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       );
     });
 
-    it('should contain an amp-img', () => {
-      if (serviceHasFigure(service)) {
+    if (serviceHasFigure(service)) {
+      it('should contain an amp-img', () => {
         cy.get('figure')
           .eq(0)
           .should('be.visible')
           .within(() => {
             cy.get('amp-img').should('be.visible');
           });
-      }
-    });
+      });
+    }
 
     describe('Media Player: AMP', () => {
       it('should render a placeholder image', () => {

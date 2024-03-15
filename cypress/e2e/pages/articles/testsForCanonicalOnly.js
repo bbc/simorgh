@@ -10,10 +10,9 @@ const serviceHasCaption = service => service === 'news';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
-  pageType,
   variant,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly`, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
