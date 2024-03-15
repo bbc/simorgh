@@ -32,7 +32,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
   }
 
-  describe('Media Player: AMP', () => {
+  describe('Media Player', () => {
     it('should render a placeholder image', () => {
       const media = getBlockData('video', articlesData);
       if (media && media.type === 'video') {
