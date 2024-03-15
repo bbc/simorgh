@@ -6,7 +6,7 @@ import {
   getIsProgramValid,
 } from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 
-export default ({ service, pageType, variant }) => {
+export default ({ service }) => {
   describe('Chartbeat', () => {
     if (envConfig.chartbeatEnabled) {
       it('should have a script with src value set to chartbeat source', () => {
