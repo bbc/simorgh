@@ -1,4 +1,5 @@
 import config from '../config/services';
+import envConfig from '../config/envs';
 import shouldSmokeTest from './shouldSmokeTest';
 import { testsThatAlwaysRunForAllPages } from '../../e2e/pages/testsForAllPages';
 import { testsThatFollowSmokeTestConfigForAllAMPPages } from '../../e2e/pages/testsForAllAMPPages';
@@ -35,7 +36,7 @@ const runTestsForPage = ({
       const paths = getPaths(service, pageType);
 
       paths.forEach(currentPath => {
-        describe(`${pageType} - ${currentPath} - Canonical`, () => {
+        describe(`Canonical: ${pageType} - ${envConfig.baseUrl}${currentPath}`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
 
@@ -97,7 +98,7 @@ const runTestsForPage = ({
         });
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
-        describe(`${pageType} - ${currentPath} - AMP`, () => {
+        describe(`AMP: ${pageType} - ${envConfig.baseUrl}${currentPath}.amp`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
 
