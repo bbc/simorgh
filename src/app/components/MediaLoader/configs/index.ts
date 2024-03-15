@@ -2,9 +2,8 @@ import clipMedia from './clipMedia';
 import aresMedia from './aresMedia';
 import { MediaBlockType } from '../types';
 
-const exhaustiveMatchGuard = (value: never) => {
-  throw new Error(`Unhandled value: ${value}`);
-};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const exhaustiveMatchGuard = (_: never) => null;
 
 export default (mediaBlockType: MediaBlockType) => {
   switch (mediaBlockType) {
