@@ -9,6 +9,7 @@ import {
   getIsProgramValid,
 } from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
@@ -49,16 +50,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     },
   );
 
-  describe('Chartbeat', () => {
-    if (envConfig.chartbeatEnabled) {
-      it('should have a script with src value set to chartbeat source', () => {
-        cy.hasScriptWithChartbeatSrc();
-      });
-      it('should have chartbeat config set to window object', () => {
-        cy.hasGlobalChartbeatConfig();
-      });
-    }
-  });
+  chartbeatTests();
+
   describe('Radio Schedule', () => {
     it('should be displayed if there is enough schedule data', function test() {
       cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {

@@ -1,4 +1,5 @@
 import runAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
@@ -6,12 +7,5 @@ export default ({ service }) => {
     runAdsTests({ service });
   }
 
-  describe(`Chartbeat`, () => {
-    it('should have a script with src value set to chartbeat source', () => {
-      cy.hasScriptWithChartbeatSrc();
-    });
-    it('should have chartbeat config set to window object', () => {
-      cy.hasGlobalChartbeatConfig();
-    });
-  });
+  chartbeatTests();
 };
