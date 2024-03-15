@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -11,8 +10,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   variant,
 }) => {
-  chartbeatTests();
-
   if (serviceHasCaption(service)) {
     describe('Image with placeholder', () => {
       it('should have a visible image that is not lazyloaded', () => {

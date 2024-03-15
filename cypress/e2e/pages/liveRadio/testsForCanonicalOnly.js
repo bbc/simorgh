@@ -2,14 +2,12 @@
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import {
   isScheduleDataComplete,
   getIsProgramValid,
 } from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
@@ -49,8 +47,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     },
   );
-
-  chartbeatTests();
 
   describe('Radio Schedule', () => {
     it('should be displayed if there is enough schedule data', function test() {
