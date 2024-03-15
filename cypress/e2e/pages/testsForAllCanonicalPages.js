@@ -8,9 +8,9 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  chartbeatTests();
-
   if (pageType !== 'errorPage404') {
+    chartbeatTests();
+
     if (Cypress.env('SMOKE')) {
       describe(
         'ATI',
