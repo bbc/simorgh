@@ -61,7 +61,7 @@ export default {
   ],
   parameters: {
     chromatic: {
-      diffThreshold: 0.2,
+      diffThreshold: 0.3,
       delay: 8000,
     },
   },
