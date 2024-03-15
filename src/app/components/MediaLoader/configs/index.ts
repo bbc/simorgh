@@ -2,6 +2,10 @@ import clipMedia from './clipMedia';
 import aresMedia from './aresMedia';
 import { MediaBlockType } from '../types';
 
+const exhaustiveMatchGuard = (value: never) => {
+  throw new Error(`Unhandled value: ${value}`);
+};
+
 export default (mediaBlockType: MediaBlockType) => {
   switch (mediaBlockType) {
     case 'clipMedia':
@@ -9,6 +13,6 @@ export default (mediaBlockType: MediaBlockType) => {
     case 'aresMedia':
       return aresMedia;
     default:
-      return null;
+      return exhaustiveMatchGuard(mediaBlockType);
   }
 };
