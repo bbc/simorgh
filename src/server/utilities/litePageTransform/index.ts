@@ -154,6 +154,8 @@ export default function litePageTransform({
     false,
   );
 
+  /* We need to remove the styles and CSS classes set by Emotion */
+
   // Remove style tags
   $('style').remove();
 
@@ -162,6 +164,14 @@ export default function litePageTransform({
 
   // Remove CSS classes
   $('[class]').removeAttr('class');
+
+  /* NOTE: 
+    We may want to just use the 'isLite' flag at the component level to not render the elements below,
+    rather than removing them here manually with Cheerio.
+
+    This is an implicit rather than explicit approach currently, but it may be more maintainable in the long 
+    run to keep the display logic in the components.
+  */
 
   // Remove button elements
   $('button').remove();
