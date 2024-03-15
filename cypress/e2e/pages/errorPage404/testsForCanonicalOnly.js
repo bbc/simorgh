@@ -6,7 +6,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {
@@ -17,7 +17,5 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           type: 'text/html',
         });
       });
-    } else {
-      describe(`No ${pageType} found for ${service}`, () => {});
     }
   });

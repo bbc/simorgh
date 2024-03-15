@@ -10,7 +10,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   variant,
 }) =>
-  describe(`Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {
@@ -133,7 +133,5 @@ export const testsThatFollowSmokeTestConfig = ({
           });
         });
       }
-    } else {
-      describe(`No ${pageType} found for ${service}`, () => {});
     }
   });

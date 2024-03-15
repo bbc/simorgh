@@ -6,7 +6,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {
@@ -17,7 +17,5 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           type: 'text/html',
         });
       });
-    } else {
-      describe(`No ${pageType} found for ${service}`, () => {});
     }
   });
