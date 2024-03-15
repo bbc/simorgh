@@ -4,6 +4,11 @@ declare global {
       bumpVersion: string[],
       callback: (Bump: BumpType) => void,
     ) => void;
+    dotcom: {
+      ads: {
+        getAdTag: () => string;
+      };
+    };
   }
 }
 
