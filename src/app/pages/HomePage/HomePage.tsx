@@ -10,7 +10,7 @@ import {
   VisualStyle,
 } from '../../models/types/curationData';
 import { ATIData } from '../../components/ATIAnalytics/types';
-import CurationComponent from '../../components/Curation';
+import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -103,7 +103,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   });
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
-                    <CurationComponent
+                    <HomeCuration
                       headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -115,7 +115,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
                       radioSchedule={radioSchedule}
-                      key={nthCurationByStyleAndProminence}
+                      nthCurationByStyleAndProminence={
+                        nthCurationByStyleAndProminence
+                      }
                     />
                     {index === 0 && <MPU />}
                   </React.Fragment>
