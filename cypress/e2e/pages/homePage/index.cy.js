@@ -5,6 +5,7 @@ import visitPage from '../../../support/helpers/visitPage';
 import crossPlatformTests from './tests';
 import ampTests from './testsForAMPOnly';
 import canonicalTests from './testsForCanonicalOnly';
+import envConfig from '../../../support/config/envs';
 
 const pageType = HOME_PAGE;
 
@@ -21,7 +22,7 @@ urls.forEach(url => {
   const currentPath = url[environment];
 
   if (currentPath) {
-    describe(`Tests for ${pageType} page - ${currentPath}`, () => {
+    describe(`${pageType} - ${envConfig.baseUrl}${currentPath}`, () => {
       before(() => {
         Cypress.env('currentPath', currentPath);
         visitPage(currentPath, pageType);
