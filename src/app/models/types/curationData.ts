@@ -62,5 +62,5 @@ export interface Curation extends BaseCuration {
   headingLevel?: number;
   topStoriesTitle?: string;
   curationLength?: number;
-  key?: number;
+  nthCurationByStyleAndProminence?: number;
 }
