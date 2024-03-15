@@ -3,7 +3,6 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
-import testsForAMPOnly from './testsForAMPOnly';
 
 const hasVariant = serviceName => {
   return config[serviceName] && config[serviceName].variant !== 'default';
@@ -32,17 +31,8 @@ Object.keys(config)
             pageType,
             path,
             variant,
-            scriptLinkVariant,
+            otherVariant: scriptLinkVariant,
           });
         });
-        paths
-          .map(path => `${path}.amp`)
-          .forEach(path => {
-            testsForAMPOnly({
-              serviceName,
-              pageType,
-              path,
-            });
-          });
       });
   });
