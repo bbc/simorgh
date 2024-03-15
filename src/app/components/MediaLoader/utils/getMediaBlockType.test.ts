@@ -15,7 +15,7 @@ describe('getMediaBlockType', () => {
     expect(result).toEqual('clipMedia');
   });
 
-  it('Should return type null when the media type cannot be determined', () => {
+  it('Should return type "null" when the media type cannot be determined', () => {
     const result = getMediaBlockType([] as MediaBlock[]);
 
     expect(result).toEqual(null);
