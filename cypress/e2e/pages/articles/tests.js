@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
@@ -80,16 +81,18 @@ export const testsThatFollowSmokeTestConfig = ({ service, variant }) => {
     });
 
     if (serviceHasFigure(service)) {
-      if (serviceHasCaption(service)) {
-        it('should have a visible image with a caption, and also not be lazyloaded', () => {
+      it('should have a visible image with a caption, and also not be lazyloaded', function () {
+        if (serviceHasCaption(service)) {
           cy.get('figure')
             .eq(0)
             .should('be.visible')
             .should('to.have.descendants', 'img')
             .should('to.have.descendants', 'figcaption')
             .within(() => cy.get('noscript').should('not.exist'));
-        });
-      }
+        } else {
+          this.skip();
+        }
+      });
 
       it('should have an image copyright label with styling', () => {
         const copyrightData = getBlockData('image', articlesData);
@@ -116,14 +119,16 @@ export const testsThatFollowSmokeTestConfig = ({ service, variant }) => {
       });
     }
 
-    it('should have an inline link', () => {
+    it('should have an inline link', function () {
       if (articlesData.data.article.metadata.language === 'en-gb') {
         cy.get('main a').should('exist');
+      } else {
+        this.skip();
       }
     });
 
-    if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') !== 'live') {
-      it('should have an inline link to an article page', () => {
+    it('should have an inline link to an article page', function () {
+      if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') !== 'live') {
         cy.get('a[href*="/articles/"]')
           .should('have.attr', 'href')
           .then(href => {
@@ -134,22 +139,26 @@ export const testsThatFollowSmokeTestConfig = ({ service, variant }) => {
               expect(resp.status).to.not.equal(404);
             });
           });
-      });
-    }
+      } else {
+        this.skip();
+      }
+    });
 
-    if (serviceHasTimestamp(service)) {
-      it('should render a timestamp', () => {
+    it('should render a timestamp', function () {
+      if (serviceHasTimestamp(service)) {
         cy.get('time')
           .eq(0)
           .should('exist')
           .should('be.visible')
           .should('have.attr', 'datetime')
           .should('not.be.empty');
-      });
-    }
+      } else {
+        this.skip();
+      }
+    });
 
     describe('Media Player', () => {
-      it('should have a visible caption beneath a mediaplayer', () => {
+      it('should have a visible caption beneath a mediaplayer', function () {
         const media = getBlockData('video', articlesData);
         if (media) {
           const captionBlock = getBlockByType(media.model.blocks, 'caption');
@@ -162,7 +171,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, variant }) => {
               .within(() => {
                 cy.get('p').eq(0).should('be.visible').should('contain', text);
               });
+          } else {
+            this.skip();
           }
+        } else {
+          this.skip();
         }
       });
     });
