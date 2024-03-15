@@ -1,7 +1,7 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
-import { MediaBlock } from '../types';
+import { BuildConfigProps, MediaBlock } from '../types';
 
 const baseSettings = {
   id: 'testID',
@@ -12,7 +12,8 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
-};
+  mediaBlockType: 'aresMedia',
+} as BuildConfigProps;
 
 describe('buildSettings', () => {
   beforeEach(() => {
@@ -30,6 +31,7 @@ describe('buildSettings', () => {
 
     const result = buildSettings({
       ...baseSettings,
+      mediaBlockType: 'clipMedia',
       blocks: clipMediaBlocks as MediaBlock[],
       pageType: 'live',
     });

@@ -1,6 +1,6 @@
 import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps, PlayerConfig } from '../types';
-import configForPageType from '../configs';
+import configForMediaBlockType from '../configs';
 
 const isTestRequested = () => {
   if (onClient()) {
@@ -17,6 +17,7 @@ const isTestRequested = () => {
 };
 
 const buildSettings = ({
+  mediaBlockType,
   blocks,
   counterName,
   statsDestination,
@@ -54,7 +55,7 @@ const buildSettings = ({
   };
 
   // Augment base configuration with settings that are specific to the page type
-  const config = configForPageType(pageType)?.({
+  const config = configForMediaBlockType(mediaBlockType)?.({
     basePlayerConfig,
     blocks,
     pageType,

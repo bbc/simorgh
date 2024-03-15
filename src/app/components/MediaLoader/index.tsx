@@ -13,6 +13,7 @@ import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
+import getMediaBlockType from './utils/getMediaBlockType';
 
 const logger = nodeLogger(__filename);
 
@@ -73,7 +74,12 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   const producer = getProducerFromServiceName(service);
 
+  const mediaBlockType = getMediaBlockType(blocks);
+
+  if (!mediaBlockType) return null;
+
   const config = buildConfig({
+    mediaBlockType,
     blocks,
     counterName,
     statsDestination,

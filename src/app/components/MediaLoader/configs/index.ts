@@ -1,13 +1,12 @@
-import { PageTypes } from '#app/models/types/global';
 import livePage from './livePage';
 import article from './article';
+import { MediaBlockType } from '../types';
 
-export default (pageType: PageTypes) => {
-  switch (pageType) {
-    case 'live':
+export default (mediaBlockType: MediaBlockType) => {
+  switch (mediaBlockType) {
+    case 'clipMedia':
       return livePage;
-    case 'article':
-    case 'mediaArticle':
+    case 'aresMedia':
       return article;
     default:
       return null;
