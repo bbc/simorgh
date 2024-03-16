@@ -59,7 +59,7 @@ const buildSettings = ({
   if (!mediaBlockType) return null;
 
   // Augment base configuration with settings that are specific to the media type
-  const config = configForMediaBlockType(mediaBlockType)?.({
+  const config = configForMediaBlockType(mediaBlockType)({
     basePlayerConfig,
     blocks,
     pageType,

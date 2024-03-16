@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
     "paths": {
       "#app/*": ["src/app/*"],
       "#contexts/*": ["src/app/contexts/*"],
