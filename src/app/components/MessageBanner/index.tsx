@@ -3,6 +3,7 @@ import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -10,7 +11,6 @@ import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface MessageBannerProps {
   heading: string;
