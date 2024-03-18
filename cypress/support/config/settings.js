@@ -4467,8 +4467,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/persian/articles/cxvxrj8tvppo'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
         smoke: true,
