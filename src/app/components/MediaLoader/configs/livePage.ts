@@ -8,6 +8,7 @@ import {
   ClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
 
@@ -17,6 +18,7 @@ export default ({
   blocks,
   basePlayerConfig,
   translations,
+  showAds,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -90,6 +92,9 @@ export default ({
     controls: { enabled: true, volumeSlider: true },
   };
 
+  const items = [{ versionID, kind, duration: rawDuration }];
+  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+
   return {
     mediaType: type || 'video',
     playerConfig: {
@@ -98,12 +103,7 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [
-          {
-            kind: 'advert',
-          } as any,
-          { versionID, kind, duration: rawDuration },
-        ],
+        items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },

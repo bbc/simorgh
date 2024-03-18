@@ -150,6 +150,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
     pageType,
     service,
     translations,
+    showAds,
   });
 
   if (!config) return null;

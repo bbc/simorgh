@@ -53,6 +53,7 @@ export type ConfigBuilderProps = {
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
+  showAds: boolean;
 };
 
 export type ConfigBuilderReturnProps = {
@@ -172,4 +173,5 @@ export type BuildConfigProps = {
   pageType: PageTypes;
   service: Services;
   translations?: Translations;
+  showAds?: boolean;
 };
