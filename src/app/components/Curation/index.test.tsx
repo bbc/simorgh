@@ -41,7 +41,7 @@ const components = {
     visualProminence: HIGH,
     summaries: mundoFixture.data.curations[0].summaries,
   },
-  'message-banner-1': {
+  'message-banner-': {
     visualStyle: BANNER,
     visualProminence: NORMAL,
     summaries: messageBannerCuration?.summaries,
