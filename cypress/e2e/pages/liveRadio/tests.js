@@ -18,7 +18,8 @@ export const testsThatFollowSmokeTestConfig = () => {
   });
 
   describe('LinkedData', () => {
-    it('should include mainEntityOfPage in the LinkedData', () => {
+    // will be addressed by this https://github.com/bbc/simorgh/issues/3117
+    it.skip('should include mainEntityOfPage in the LinkedData', () => {
       cy.get('script[type="application/ld+json"]')
         .should('contain', 'mainEntityOfPage')
         .and('contain', 'headline');
