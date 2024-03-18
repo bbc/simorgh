@@ -1,17 +1,25 @@
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import clipMedia from './clipMedia';
 import aresMedia from './aresMedia';
-import { MediaBlockType } from '../types';
+import { AresMediaBlock, ClipMediaBlock, MediaBlock } from '../types';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const exhaustiveMatchGuard = (_: never) => null;
+export default (blocks: MediaBlock[]) => {
+  const aresMediaBlock: AresMediaBlock = filterForBlockType(
+    blocks,
+    'aresMedia',
+  );
 
-export default (mediaBlockType: MediaBlockType) => {
-  switch (mediaBlockType) {
-    case 'clipMedia':
-      return clipMedia;
-    case 'aresMedia':
+  const clipMediaBlock: ClipMediaBlock = filterForBlockType(
+    blocks,
+    'clipMedia',
+  );
+
+  switch (true) {
+    case !!aresMediaBlock:
       return aresMedia;
+    case !!clipMediaBlock:
+      return clipMedia;
     default:
-      return exhaustiveMatchGuard(mediaBlockType);
+      return null;
   }
 };

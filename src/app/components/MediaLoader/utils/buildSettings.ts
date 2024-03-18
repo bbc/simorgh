@@ -1,7 +1,6 @@
 import onClient from '#app/lib/utilities/onClient';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
-import getMediaBlockType from './getMediaBlockType';
 
 const isTestRequested = () => {
   if (onClient()) {
@@ -54,12 +53,8 @@ const buildSettings = ({
     },
   };
 
-  const mediaBlockType = getMediaBlockType(blocks);
-
-  if (!mediaBlockType) return null;
-
   // Augment base configuration with settings that are specific to the media type
-  const config = configForMediaBlockType(mediaBlockType)?.({
+  const config = configForMediaBlockType(blocks)?.({
     basePlayerConfig,
     blocks,
     pageType,
