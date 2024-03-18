@@ -81,7 +81,6 @@ export default ({
           }}
         />
       ) : null;
-
     case MOST_READ:
       return (
         <MostRead
