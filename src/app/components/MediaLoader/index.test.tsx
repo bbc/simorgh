@@ -20,15 +20,25 @@ describe('MediaLoader', () => {
       (useState as jest.Mock).mockImplementation(() => [false, () => false]);
     });
 
-    it('Loads requireJS and Bump4', async () => {
+    it('Loads Ads, requireJS and Bump4 when Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
         });
       });
 
-      const requireScript = Helmet.peek().scriptTags[0];
-      const bumpScript = Helmet.peek().scriptTags[1];
+      const adScript = Helmet.peek().scriptTags[1];
+      const adScriptLegacy = Helmet.peek().scriptTags[2];
+      const requireScript = Helmet.peek().scriptTags[3];
+      const bumpScript = Helmet.peek().scriptTags[4];
+
+      expect(adScript.src).toEqual(
+        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js',
+      );
+
+      expect(adScriptLegacy.src).toEqual(
+        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js',
+      );
 
       expect(requireScript.src).toEqual(
         'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js',
@@ -38,6 +48,24 @@ describe('MediaLoader', () => {
         'https://emp.bbci.co.uk/emp/bump-4/bump-4',
       );
     });
+    // it('Loads requireJS and Bump4 when Ads are disabled', async () => {
+    //   await act(async () => {
+    //     render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+    //       id: 'testId',
+    //     });
+    //   });
+
+    //   const requireScript = Helmet.peek().scriptTags[0];
+    //   const bumpScript = Helmet.peek().scriptTags[1];
+
+    //   expect(requireScript.src).toEqual(
+    //     'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js',
+    //   );
+
+    //   expect(bumpScript.innerHTML).toContain(
+    //     'https://emp.bbci.co.uk/emp/bump-4/bump-4',
+    //   );
+    // });
 
     it('Calls Bump when the component loads', async () => {
       const mockRequire = jest.fn();

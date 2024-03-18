@@ -8,6 +8,8 @@ declare global {
       ads: {
         getAdTag: () => string;
       };
+      bootstrap: () => void;
+      cmd: { push: () => void };
     };
   }
 }

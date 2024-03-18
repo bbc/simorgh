@@ -91,7 +91,7 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
           mediaPlayer.load();
 
           const adTag = await window.dotcom.ads.getAdTag();
-          console.log('ADTAG', adTag);
+
           mediaPlayer.loadPlugin(
             {
               swf: 'name:dfpAds.swf',
@@ -100,8 +100,7 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
             {
               name: 'AdsPluginParameters',
               data: {
-                adTag:
-                  'https://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/4817/bbccom.test.site.pidgin/pidgin_live_content/video&env=vp&gdfp_req=1&impl=s&output=xml_vast3&unviewed_position_start=1&ord=242875971&ad_rule=1&ppid=a44132556c2445259e25e74e80cafccc&ad_type=audio_video&cust_params=channel%3Dpidgin%26sectn%3Dlive%26domain%3Dlocalhost.bbc.com%26story_id%3D%26ctype%3Dindex%26asset_type%3Dindex%26referrer%3Dnonbbc%26referrer_domain%3D%26gs_cat%3Dgx_blocked%252Cgx_tagged%26group%3D4%26subsect%3Dc7p765ynk9qt',
+                adTag,
                 debug: true,
               },
             },
