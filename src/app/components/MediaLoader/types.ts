@@ -72,7 +72,7 @@ export type MediaInfo = {
   duration?: string;
   durationSpoken?: string;
   type?: 'audio' | 'video';
-  guidanceMessage?: string;
+  guidanceMessage?: string | null;
 };
 
 export type Player = {
@@ -152,8 +152,8 @@ export type ClipMediaBlock = {
         id: string;
         duration: string;
         kind: string;
+        guidance: string | null;
       };
-      guidance: { warnings?: { [key: string]: string } } | null;
       isEmbeddingAllowed: boolean;
     };
   };
