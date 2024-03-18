@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import idSanitiser from '#app/lib/utilities/idSanitiser';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -62,7 +61,8 @@ export default ({
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
-  const id = idSanitiser(curationSubheading);
+  const id =
+    `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
   switch (componentName) {
     case NOT_SUPPORTED:
