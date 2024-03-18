@@ -324,11 +324,11 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati',
       },
       {
-        title: 'ગુજરાત',
+        title: 'લોકસભા ચૂંટણી 2024',
         url: '/gujarati/topics/cg843q7vgq3t',
       },
       {
-        title: 'લોકસભા ચૂંટણી 2024',
+        title: 'ગુજરાત',
         url: '/gujarati/topics/cz74kjn4j5wt',
       },
       {
