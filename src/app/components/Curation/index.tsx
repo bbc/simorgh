@@ -15,8 +15,8 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
-import FlourishEmbed from '../Embeds/FlourishEmbed';
-import EmbedHtml from '../Embeds/EmbedHtml';
+// import FlourishEmbed from '../Embeds/FlourishEmbed';
+// import EmbedHtml from '../Embeds/EmbedHtml';
 import Embed from '../Embeds/OEmbed';
 
 const {
@@ -120,7 +120,7 @@ const Curation = ({
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
     case EMBED:
-      return <Embed oembed={embed} type="" />;
+      return <Embed oembed={{ embed }} type="" />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
