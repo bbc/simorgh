@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, useContext } from 'react';

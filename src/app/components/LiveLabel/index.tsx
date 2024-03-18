@@ -1,5 +1,4 @@
 /** @jsx jsx */
-/** @jsxRuntime classic */
 /* @jsxFrag React.Fragment */
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';

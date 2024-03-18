@@ -47,7 +47,8 @@ export default ({
 
   const kind = video?.version?.kind || 'programme';
 
-  const guidanceMessage = video?.guidance?.warnings?.short;
+  const guidanceMessage = video?.version?.guidance;
+
   const durationSpokenPrefix = translations?.media?.duration || 'Duration';
 
   const mediaInfo = {
