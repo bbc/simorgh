@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -26,7 +27,7 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
-  it('should render a description for the page', () => {
+  it('should render a description for the page', function () {
     cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
       ({ body }) => {
         const descriptionBlock = body.data.article.content.blocks.find(
@@ -40,6 +41,8 @@ export const testsThatFollowSmokeTestConfig = ({
           elem.innerHTML = descriptionHtml;
           const description = elem.innerText;
           cy.get('main p').should('contain', description);
+        } else {
+          this.skip();
         }
       },
     );
@@ -60,20 +63,20 @@ export const testsThatFollowSmokeTestConfig = ({
           elem.innerHTML = descriptionHtml;
           const paragraph = elem.innerText;
           cy.get('main p').should('contain', paragraph);
+        } else {
+          this.skip();
         }
       },
     );
   });
 
-  it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
-    if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
+  if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
+    it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       const url = '/news/technology-60561162.amp?renderer_env=live';
       cy.visit(`${envConfig.baseUrl}${url}`);
       topicTagsTest();
-    } else {
-      cy.log('Test is only for /news/technology-60561162.amp');
-    }
-  });
+    });
+  }
 
   it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
     if (Cypress.env('APP_ENV') !== 'local') {
@@ -145,7 +148,7 @@ export const testsThatFollowSmokeTestConfig = ({
   mostReadAssertions({ service, variant });
 
   describe(`Recommendations on ${service} ${pageType}`, () => {
-    it('Recommendations have images', () => {
+    it('Recommendations have images', function () {
       isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
         if (runRecommendationTests) {
           cy.getToggles(service);
@@ -180,11 +183,12 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.log(
             'Only tests on live and for articles less than 2 years old due to lack of test data',
           );
+          this.skip();
         }
       });
     });
 
-    it('Recommendations have titles', () => {
+    it('Recommendations have titles', function () {
       isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
         if (runRecommendationTests) {
           cy.getToggles(service);
@@ -214,6 +218,7 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.log(
             'Only tests on live and for articles less than 2 years old due to lack of test data',
           );
+          this.skip();
         }
       });
     });

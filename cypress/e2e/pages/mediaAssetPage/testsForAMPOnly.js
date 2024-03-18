@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
@@ -11,7 +12,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   describe('Media Player', () => {
     const language = appConfig[config[service].name][variant].lang;
 
-    it('should render an iframe with a valid URL', () => {
+    it('should render an iframe with a valid URL', function () {
       if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
         cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
           ({ body }) => {
@@ -32,6 +33,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             }
           },
         );
+      } else {
+        this.skip();
       }
     });
   });

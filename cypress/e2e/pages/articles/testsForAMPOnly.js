@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
@@ -21,28 +22,32 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     );
   });
 
-  if (serviceHasFigure(service)) {
-    it('should contain an amp-img', () => {
+  it('should contain an amp-img', function () {
+    if (serviceHasFigure(service)) {
       cy.get('figure')
         .eq(0)
         .should('be.visible')
         .within(() => {
           cy.get('amp-img').should('be.visible');
         });
-    });
-  }
+    } else {
+      this.skip();
+    }
+  });
 
-  describe('Media Player: AMP', () => {
-    it('should render a placeholder image', () => {
+  describe('Media Player', () => {
+    it('should render a placeholder image', function () {
       const media = getBlockData('video', articlesData);
       if (media && media.type === 'video') {
         cy.get('[data-e2e="media-player"]').within(() => {
           cy.get('div').should('have.attr', 'data-e2e').should('not.be.empty');
         });
+      } else {
+        this.skip();
       }
     });
 
-    it('should render an iframe with a valid URL', () => {
+    it('should render an iframe with a valid URL', function () {
       const media = getBlockData('video', articlesData);
       if (media && media.type === 'video') {
         const { lang } = appConfig[service][variant];
@@ -54,6 +59,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           type: 'text/html',
           allowFallback: true,
         });
+      } else {
+        this.skip();
       }
     });
   });

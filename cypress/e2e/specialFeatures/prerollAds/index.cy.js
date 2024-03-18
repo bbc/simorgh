@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 import path from 'ramda/src/path';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import { mapsWithPreroll, mapsWithoutPreroll } from './config';
@@ -39,7 +40,7 @@ describe('Media Asset Pages - Preroll Ads', () => {
 
         if (paths.length > 0) {
           paths.forEach(url => {
-            it(url, () => {
+            it(url, function () {
               cy.getToggles(service).then(() => {
                 cy.fixture(`toggles/${service}.json`).then(toggles => {
                   const adsEnabled = path(['preroll', 'enabled'], toggles);
@@ -53,6 +54,8 @@ describe('Media Asset Pages - Preroll Ads', () => {
                         'exist',
                       );
                     });
+                  } else {
+                    this.skip();
                   }
                 });
               });
