@@ -67,7 +67,9 @@ export default ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case MESSAGE_BANNER:
+    case MESSAGE_BANNER: {
+      const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+
       return summaries.length > 0 ? (
         <MessageBanner
           heading={title}
@@ -75,12 +77,14 @@ export default ({
           link={summaries[0].link}
           linkText={summaries[0].title}
           image={summaries[0].imageUrl}
+          id={messageBannerId}
           eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+            componentName: messageBannerId,
             detailedPlacement: `${position + 1}`,
           }}
         />
       ) : null;
+    }
     case MOST_READ:
       return (
         <MostRead
