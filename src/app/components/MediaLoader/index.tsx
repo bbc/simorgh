@@ -1,10 +1,13 @@
 /** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useLocation from '#app/hooks/useLocation';
+import useToggle from '#app/hooks/useToggle';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -13,6 +16,7 @@ import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
+import { getBootstrapSrc } from '../Ad/Canonical';
 
 const logger = nodeLogger(__filename);
 
@@ -31,50 +35,45 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const AdvertTagLoader = () => (
-  <Helmet>
-    <script type="text/javascript">
-      {`window.dotcom = window.dotcom || { cmd: [] };
-        window.dotcom.ads = window.dotcom.ads || {
-            resolves: {
-                enabled: [],
-                getAdTag: []
-            },
-            enabled: function() {
-                return new Promise(function(resolve){
-                    window.dotcom.ads.resolves.enabled.push(resolve);
-                });
-            },
-            getAdTag: function() {
-                return new Promise(function(resolve){
-                    window.dotcom.ads.resolves.getAdTag.push(resolve);
-                });
-            }
-        }
-        // resolve to ads NOT enabled if dotcom-bootstrap.js doesn't load in a couple of seconds
-        setTimeout(() => {
-            if(window.dotcom.ads.resolves){
-                window.dotcom.ads.resolves.enabled.forEach(res => res(false));
-                window.dotcom.ads.resolves.getAdTag.forEach(res => res(""));
-            }
-        }, 2000)
-        window.dotcomConfig = {
-            pageAds: false,
-            playerAds: true
-        };`}
-    </script>
-    <script
-      type="module"
-      src="https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js"
-      async
-    />
-    <script
-      noModule
-      src="https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js"
-      async
-    />
-  </Helmet>
-);
+const AdvertTagLoader = ({ queryString }: { queryString: string }) => {
+  useEffect(() => {
+    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
+    setTimeout(() => {
+      if (window.dotcom.ads.resolves) {
+        window.dotcom.ads.resolves.enabled.forEach(res => res(false));
+        window.dotcom.ads.resolves.getAdTag.forEach(res => res(''));
+      }
+    }, 2000);
+
+    // Initialise the ads object if it hasn't already been loaded.
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcom.ads = window.dotcom.ads || {
+      resolves: {
+        enabled: [],
+        getAdTag: [],
+      },
+      enabled() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.enabled.push(resolve);
+        });
+      },
+      getAdTag() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.getAdTag.push(resolve);
+        });
+      },
+    };
+  }, [queryString]);
+
+  return (
+    <>
+      <Helmet>
+        <script type="module" src={getBootstrapSrc(queryString)} async />
+        <script noModule src={getBootstrapSrc(queryString, true)} async />
+      </Helmet>
+    </>
+  );
+};
 
 const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
@@ -91,7 +90,6 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
           mediaPlayer.load();
 
           const adTag = await window.dotcom.ads.getAdTag();
-
           mediaPlayer.loadPlugin(
             {
               swf: 'name:dfpAds.swf',
@@ -122,9 +120,22 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName, statsDestination, service, isAmp } =
-    useContext(RequestContext);
   const { lang, translations } = useContext(ServiceContext);
+  const { enabled: adsEnabled } = useToggle('ads');
+  const location = useLocation();
+  const {
+    id,
+    pageType,
+    counterName,
+    statsDestination,
+    service,
+    isAmp,
+    showAdsBasedOnLocation,
+  } = useContext(RequestContext);
+
+  const showAds = [adsEnabled, showAdsBasedOnLocation].every(Boolean);
+
+  const queryString = location ? location.search : '';
 
   const producer = getProducerFromServiceName(service);
 
@@ -160,7 +171,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       css={styles.figure}
       className={className}
     >
-      <AdvertTagLoader />
+      {showAds && <AdvertTagLoader queryString={queryString} />}
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder

@@ -7,6 +7,7 @@ declare global {
     dotcom: {
       ads: {
         getAdTag: () => string;
+        resolves: { enabled: Promise[]; getAdTag: Promise[] };
       };
       bootstrap: () => void;
       cmd: { push: () => void };
