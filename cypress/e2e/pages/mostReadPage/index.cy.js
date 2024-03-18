@@ -38,7 +38,7 @@ Object.values(config).forEach(
       urls
         ?.map(path => `${path}.amp`)
         .forEach(currentPath => {
-          describe(`${pageType} - ${currentPath}`, () => {
+          describe(`${pageType} - ${envs.baseUrl}${currentPath}`, () => {
             before(() => {
               Cypress.env('currentPath', currentPath);
               visitPage(currentPath, pageType);
