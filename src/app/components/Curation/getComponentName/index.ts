@@ -11,7 +11,7 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
-  EMBED: 'embed',
+  EMBED: 'vj-embed',
   // FLOURISH_VIS: 'flourish-vis',
   // VJ_INCLUDE: 'vj-include',
 } as const;
@@ -61,7 +61,6 @@ Partial<CurationProps>) => {
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${RANKED}_${NORMAL}`]: MOST_READ,
-    [`${BANNER}_${NORMAL}`]: EMBED,
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
