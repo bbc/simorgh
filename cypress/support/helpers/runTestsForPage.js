@@ -2,6 +2,7 @@ import config from '../config/services';
 import envConfig from '../config/envs';
 import shouldSmokeTest from './shouldSmokeTest';
 import { testsThatAlwaysRunForAllPages } from '../../e2e/pages/testsForAllPages';
+import { testsThatFollowSmokeTestConfigForAllAMPPages } from '../../e2e/pages/testsForAllAMPPages';
 import { testsThatFollowSmokeTestConfigForAllCanonicalPages } from '../../e2e/pages/testsForAllCanonicalPages';
 
 import getPaths from './getPaths';
@@ -119,6 +120,7 @@ const runTestsForPage = ({
 
           // This runs most tests but only on Service:PageType combinations with smoke enabled
           if (shouldSmokeTest(pageType, service)) {
+            testsThatFollowSmokeTestConfigForAllAMPPages(testArgs);
             // Page specific tests
             testsThatFollowSmokeTestConfig(testArgs);
             testsThatFollowSmokeTestConfigForAMPOnly(testArgs);
