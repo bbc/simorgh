@@ -4,7 +4,7 @@ import Url from 'url-parse';
 import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import fetch from 'node-fetch';
-import { CurationData } from '#app/models/types/curationData';
+import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
@@ -15,7 +15,7 @@ import HomePage from '.';
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
 const overrideRadioSchedule = (
-  data: { curations: CurationData[] },
+  data: { curations: Curation[] },
   service: Services,
 ) => {
   const { radioSchedule } =
