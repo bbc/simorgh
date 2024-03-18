@@ -75,6 +75,7 @@ const Curation = ({
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
   // const vjHTML = vjFetchResponse;
+  const vjEmbed = embed;
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
@@ -120,7 +121,7 @@ const Curation = ({
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
     case EMBED:
-      return <Embed oembed={{ embed }} type="" />;
+      return vjEmbed ? <Embed oembed={embed} type="" /> : null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

@@ -115,12 +115,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       link={link}
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
-                      embed={embed}
                       radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       // vjFetchResponse={vjFetchResponse}
+                      embed={embed}
                     />
                     {index === 1 && <MPU />}
                   </React.Fragment>
