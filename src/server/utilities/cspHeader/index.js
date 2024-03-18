@@ -339,10 +339,10 @@ const directives = {
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
-export const generateConnectSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.connectSrc.ampNonLive.sort();
+export const generateConnectSrc = ({ isAmp, isLow, isLive }) => {
+  if (!isLive && (isAmp | isLow)) return directives.connectSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.connectSrc.ampLive.sort();
+  if (isLive && (isAmp | isLow)) return directives.connectSrc.ampLive.sort();
   return directives.connectSrc.canonicalLive.sort();
 };
 
@@ -397,11 +397,11 @@ export const generateWorkerSrc = ({ isAmp }) =>
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
     : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
 
-const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
+const helmetCsp = ({ isAmp, isLow, isLive, reportOnlyOnLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src': generateConnectSrc({ isAmp, isLive }),
+    'connect-src': generateConnectSrc({ isAmp, isLow, isLive }),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
@@ -416,7 +416,7 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp, service } = getRouteProps(req.url);
+  const { isAmp, isLow, service } = getRouteProps(req.url);
 
   res.setHeader(
     'report-to',
@@ -436,6 +436,7 @@ const injectCspHeader = (req, res, next) => {
   const middleware = csp(
     helmetCsp({
       isAmp,
+      isLow,
       isLive: isLiveEnv(),
       reportOnlyOnLive: service === 'japanese',
     }),
