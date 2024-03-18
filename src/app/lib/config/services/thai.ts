@@ -275,10 +275,6 @@ export const service: DefaultServiceConfig = {
         url: '/thai',
       },
       {
-        title: 'เลือกตั้ง 2566',
-        url: '/thai/topics/cmlj9jxgg69t ',
-      },
-      {
         title: 'ประเทศไทย',
         url: '/thai/topics/cjgn73g98rqt',
       },
