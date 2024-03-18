@@ -34,17 +34,17 @@ const components = {
   'curation-grid-normal': {
     visualStyle: NONE,
     visualProminence: NORMAL,
-    promos: fixture.data.curations[0].summaries,
+    summaries: fixture.data.curations[0].summaries,
   },
   'hierarchical-grid': {
     visualStyle: NONE,
     visualProminence: HIGH,
-    promos: mundoFixture.data.curations[0].summaries,
+    summaries: mundoFixture.data.curations[0].summaries,
   },
   'message-banner-': {
     visualStyle: BANNER,
     visualProminence: NORMAL,
-    promos: messageBannerCuration?.summaries,
+    summaries: messageBannerCuration?.summaries,
   },
   'most-read': {
     visualStyle: RANKED,
@@ -61,7 +61,7 @@ const components = {
 interface TestProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
-  promos?: Summary[];
+  summaries?: Summary[];
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
 }
@@ -78,16 +78,17 @@ describe('Curation', () => {
       {
         visualStyle,
         visualProminence,
-        promos,
+        summaries,
         mostRead,
         radioSchedule,
       }: TestProps,
     ) => {
       const { getByTestId } = render(
         <Curation
+          position={0}
           visualStyle={visualStyle}
           visualProminence={visualProminence}
-          promos={promos || []}
+          summaries={summaries || []}
           mostRead={mostRead}
           radioSchedule={radioSchedule}
         />,
@@ -113,6 +114,7 @@ describe('Curation', () => {
     ({ visualStyle, visualProminence }) => {
       const { container } = render(
         <Curation
+          position={0}
           visualStyle={visualStyle}
           visualProminence={visualProminence}
         />,
@@ -134,10 +136,11 @@ describe('Curation', () => {
 
       const { queryByText } = render(
         <Curation
+          position={0}
           visualStyle={visualStyle}
           visualProminence={visualProminence}
           title={title}
-          promos={[]}
+          summaries={[]}
         />,
       );
 
@@ -148,7 +151,12 @@ describe('Curation', () => {
   describe('Message Banner', () => {
     it('should not be displayed if there are no promos', () => {
       render(
-        <Curation visualStyle={BANNER} visualProminence={NORMAL} promos={[]} />,
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={NORMAL}
+          summaries={[]}
+        />,
       );
 
       expect(
@@ -163,14 +171,14 @@ describe('Curation', () => {
         ({ summaries }) => summaries && summaries.length > 0,
       );
 
-      const promo = curationWithSummary.summaries?.pop();
+      const summary = curationWithSummary.summaries?.pop();
 
       render(
         <Curation
           visualProminence={NORMAL}
           visualStyle={NONE}
-          // @ts-expect-error promo will not be undefined
-          promos={[promo]}
+          // @ts-expect-error summary will not be undefined
+          summaries={[summary]}
           curationLength={2}
         />,
       );

@@ -110,7 +110,13 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
     }
   }, [playerConfig]);
 
-  return <div ref={playerElementRef} data-e2e="media-player" />;
+  return (
+    <div
+      ref={playerElementRef}
+      data-e2e="media-player"
+      css={styles.mediaContainer}
+    />
+  );
 };
 
 type Props = {
