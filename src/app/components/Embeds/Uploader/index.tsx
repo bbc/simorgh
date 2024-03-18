@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { useContext } from 'react';
 import path from 'ramda/src/path';

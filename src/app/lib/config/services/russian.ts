@@ -236,6 +236,7 @@ export const mainTranslations = {
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Не пропустите',
+  latestMediaTitle: 'Актуальное',
   infoBannerLabel: 'Информация',
 };
 
