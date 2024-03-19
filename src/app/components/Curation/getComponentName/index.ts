@@ -12,8 +12,6 @@ export const COMPONENT_NAMES = {
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
   EMBED: 'vj-embed',
-  // FLOURISH_VIS: 'flourish-vis',
-  // VJ_INCLUDE: 'vj-include',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;

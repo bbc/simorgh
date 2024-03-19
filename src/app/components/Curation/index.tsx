@@ -15,8 +15,6 @@ import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
-// import FlourishEmbed from '../Embeds/FlourishEmbed';
-// import EmbedHtml from '../Embeds/EmbedHtml';
 import Embed from '../Embeds/OEmbed';
 
 const {
@@ -26,8 +24,6 @@ const {
   NOT_SUPPORTED,
   MOST_READ,
   RADIO_SCHEDULE,
-  // FLOURISH_VIS,
-  // VJ_INCLUDE,
   EMBED,
 } = COMPONENT_NAMES;
 
