@@ -282,34 +282,6 @@ exports[`AMP On Demand T V Page Media Player a11y assistive technology can read 
 
 exports[`AMP On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"`;
 
-exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l3zkq",
-}
-`;
-
-exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۷ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l12nm",
-}
-`;
-
-exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۶ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8tbhc",
-}
-`;
-
-exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۵ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8qfl8",
-}
-`;
-
 exports[`AMP On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

@@ -284,34 +284,6 @@ exports[`AMP On Demand Audio Page Media Player a11y assistive technology can rea
 
 exports[`AMP On Demand Audio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps/amp?morph_env=live"`;
 
-exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2y7ktdkg",
-}
-`;
-
-exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt8tb",
-}
-`;
-
-exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt526",
-}
-`;
-
-exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt1b2",
-}
-`;
-
 exports[`AMP On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
