@@ -77,7 +77,12 @@ export type MediaInfo = {
 };
 
 export type Player = {
+  dispatchEvent(
+    dispatchEvent: string,
+    parameters: { updatedAdTag: string },
+  ): void;
   load: () => void;
+  bind: (event: string, callback: () => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
     parameters: {

@@ -110,6 +110,16 @@ const MediaContainer = ({
                 },
               },
             );
+
+            mediaPlayer.bind('playlistLoaded', async () => {
+              const updatedAdTag = await window.dotcom.ads.getAdTag();
+              mediaPlayer.dispatchEvent(
+                'bbc.smp.plugins.ads.event.updateAdTag',
+                {
+                  updatedAdTag,
+                },
+              );
+            });
           }
         }
       });
