@@ -75,7 +75,13 @@ const AdvertTagLoader = ({ queryString }: { queryString: string }) => {
   );
 };
 
-const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+}: {
+  playerConfig: PlayerConfig;
+  showAds: boolean;
+}) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -89,26 +95,28 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
 
           mediaPlayer.load();
 
-          const adTag = await window.dotcom.ads.getAdTag();
-          mediaPlayer.loadPlugin(
-            {
-              swf: 'name:dfpAds.swf',
-              html: 'name:dfpAds.js',
-            },
-            {
-              name: 'AdsPluginParameters',
-              data: {
-                adTag,
-                debug: true,
+          if (showAds) {
+            const adTag = await window.dotcom.ads.getAdTag();
+            mediaPlayer.loadPlugin(
+              {
+                swf: 'name:dfpAds.swf',
+                html: 'name:dfpAds.js',
               },
-            },
-          );
+              {
+                name: 'AdsPluginParameters',
+                data: {
+                  adTag,
+                  debug: true,
+                },
+              },
+            );
+          }
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig]);
+  }, [playerConfig, showAds]);
 
   return (
     <div
@@ -189,7 +197,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
           onClick={() => setIsPlaceholder(false)}
         />
       ) : (
-        <MediaContainer playerConfig={playerConfig} />
+        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </figure>
