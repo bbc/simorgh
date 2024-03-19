@@ -2,7 +2,6 @@
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import {
   isScheduleDataComplete,
@@ -49,16 +48,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     },
   );
 
-  describe('Chartbeat', () => {
-    if (envConfig.chartbeatEnabled) {
-      it('should have a script with src value set to chartbeat source', () => {
-        cy.hasScriptWithChartbeatSrc();
-      });
-      it('should have chartbeat config set to window object', () => {
-        cy.hasGlobalChartbeatConfig();
-      });
-    }
-  });
   describe('Radio Schedule', () => {
     it('should be displayed if there is enough schedule data', function test() {
       cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {

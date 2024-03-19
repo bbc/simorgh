@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
+import chartbeatTests from '../../support/helpers/chartbeatTests';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
@@ -8,6 +9,8 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   pageType,
 }) => {
   if (pageType !== 'errorPage404') {
+    chartbeatTests();
+
     if (Cypress.env('SMOKE')) {
       describe(
         'ATI',

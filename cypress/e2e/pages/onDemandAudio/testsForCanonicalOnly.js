@@ -1,26 +1,17 @@
 import path from 'ramda/src/path';
-import envConfig from '../../../support/config/envs';
 import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 import {
   isScheduleDataComplete,
   getIsProgramValid,
 } from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 
 export default ({ service }) => {
-  describe('Chartbeat', () => {
-    if (envConfig.chartbeatEnabled) {
-      it('should have a script with src value set to chartbeat source', () => {
-        cy.hasScriptWithChartbeatSrc();
-      });
-      it('should have chartbeat config set to window object', () => {
-        cy.hasGlobalChartbeatConfig();
-      });
-    }
-  });
-
   beforeEach(() => {
     cy.getToggles(service);
   });
+
+  chartbeatTests();
 
   describe('Radio Schedule', () => {
     it('should be displayed if there is enough schedule data', () => {
