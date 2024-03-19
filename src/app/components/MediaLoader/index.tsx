@@ -1,7 +1,6 @@
 /** @jsx jsx */
-/** @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -35,7 +34,10 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const AdvertTagLoader = ({ queryString }: { queryString: string }) => {
+const AdvertTagLoader = () => {
+  const location = useLocation();
+  const queryString = location ? location.search : '';
+
   useEffect(() => {
     // Set window.dotcom to disabled if it doesn't load in 2 seconds.
     setTimeout(() => {
@@ -66,12 +68,10 @@ const AdvertTagLoader = ({ queryString }: { queryString: string }) => {
   }, [queryString]);
 
   return (
-    <>
-      <Helmet>
-        <script type="module" src={getBootstrapSrc(queryString)} async />
-        <script noModule src={getBootstrapSrc(queryString, true)} async />
-      </Helmet>
-    </>
+    <Helmet>
+      <script type="module" src={getBootstrapSrc(queryString)} async />
+      <script noModule src={getBootstrapSrc(queryString, true)} async />
+    </Helmet>
   );
 };
 
@@ -146,7 +146,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
-  const location = useLocation();
+
   const {
     id,
     pageType,
@@ -158,8 +158,6 @@ const MediaLoader = ({ blocks, className }: Props) => {
   } = useContext(RequestContext);
 
   const showAds = [adsEnabled, showAdsBasedOnLocation].every(Boolean);
-
-  const queryString = location ? location.search : '';
 
   const producer = getProducerFromServiceName(service);
 
@@ -196,7 +194,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       css={styles.figure}
       className={className}
     >
-      {showAds && <AdvertTagLoader queryString={queryString} />}
+      {showAds && <AdvertTagLoader />}
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
