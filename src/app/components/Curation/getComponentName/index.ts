@@ -26,8 +26,6 @@ const {
   NOT_SUPPORTED,
   RADIO_SCHEDULE,
   EMBED,
-  // FLOURISH_VIS,
-  // VJ_INCLUDE,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -35,21 +33,13 @@ export default ({
   visualProminence,
   radioSchedule,
   embed,
-}: // link,
-// vjFetchResponse,
-Partial<CurationProps>) => {
+}: Partial<CurationProps>) => {
   if (radioSchedule) {
     return RADIO_SCHEDULE;
   }
   if (embed) {
     return EMBED;
   }
-  // if (link?.includes('flo.uri.sh')) {
-  //   return FLOURISH_VIS;
-  // }
-  // if (vjFetchResponse) {
-  //   return VJ_INCLUDE;
-  // }
 
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,

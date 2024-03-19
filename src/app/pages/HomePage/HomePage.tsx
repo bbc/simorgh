@@ -90,7 +90,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualStyle,
                   mostRead,
                   radioSchedule,
-                  // vjFetchResponse,
                   embed,
                 },
                 index,
@@ -119,7 +118,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      // vjFetchResponse={vjFetchResponse}
                       embed={embed}
                     />
                     {index === 1 && <MPU />}

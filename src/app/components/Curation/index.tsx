@@ -55,7 +55,6 @@ const Curation = ({
   position = 0,
   curationLength = 0,
   mostRead,
-  // vjFetchResponse,
   nthCurationByStyleAndProminence = 1,
   radioSchedule,
   embed,
@@ -64,8 +63,6 @@ const Curation = ({
     visualStyle,
     visualProminence,
     radioSchedule,
-    link: link || promos[0].link,
-    // vjFetchResponse,
     embed,
   });
 
@@ -74,28 +71,10 @@ const Curation = ({
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
-  // const vjHTML = vjFetchResponse;
   const vjEmbed = embed;
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    // case FLOURISH_VIS:
-    //   return (
-    //     <section aria-labelledby={id} role="region">
-    //       <FlourishEmbed
-    //         width={700}
-    //         height={575}
-    //         iFrameSrc={promos[0].link?.replace(
-    //           'files.bbci.com',
-    //           'files.bbci.co.uk',
-    //         )}
-    //         iFrameId={promos[0].id}
-    //         iFrameTitle={curationSubheading}
-    //       />
-    //     </section>
-    //   );
-    // case VJ_INCLUDE:
-    //   return vjHTML ? <EmbedHtml embeddableContent={vjHTML} /> : null;
     case MESSAGE_BANNER:
       return promos.length > 0 ? (
         <MessageBanner
