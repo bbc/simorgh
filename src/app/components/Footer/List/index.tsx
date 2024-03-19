@@ -1,60 +1,51 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { string, arrayOf, shape, element } from 'prop-types';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+import { Services } from '#app/models/types/global';
+import { TrustProjectLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
+import styles, { gridTemplateRows } from './index.styles';
 
-
-const StyledListItem = styled.li`
-  min-width: 50%;
-  column-gap: ${GEL_SPACING_DBL};
-  break-inside: avoid-column;
-`;
-
-const List = ({ service, elements, trustProjectLink }) => {
-  const listItems = elements.map((elem, index) => (
-    // eslint-disable-next-line react/no-array-index-key
-    <StyledListItem key={index} role="listitem">
-      {elem}
-    </StyledListItem>
-  ));
-
+const List = ({
+  service,
+  elements,
+  trustProjectLink,
+}: {
+  service: Services;
+  elements: string[];
+  trustProjectLink: TrustProjectLink;
+}) => {
   return (
     <ul
       role="list"
-      trustProjectLink={trustProjectLink}
-      itemCount={listItems.length}
+      css={[
+        styles.list,
+        trustProjectLink
+          ? styles.listPaddingWithTrustProjectLink
+          : styles.listPaddingWithoutTrustProjectLink,
+        gridTemplateRows({
+          itemCount: elements.length,
+          trustProjectLink,
+        }),
+      ]}
     >
       {trustProjectLink && (
-        <StyledListItem>
+        <li css={[styles.listItem, styles.trustProjectLinkListItem]}>
           <Link
             service={service}
             text={trustProjectLink.text}
             href={trustProjectLink.href}
           />
-        </StyledListItem>
+        </li>
       )}
-      {listItems}
-    </StyledList>
+      {elements.map((elem, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <li key={index} role="listitem">
+          {elem}
+        </li>
+      ))}
+    </ul>
   );
-};
-
-List.propTypes = {
-  service: string,
-  elements: arrayOf(element).isRequired,
-  trustProjectLink: shape({
-    href: string.isRequired,
-    text: string.isRequired,
-    lang: string,
-  }),
-};
-
-List.defaultProps = {
-  service: null,
-  trustProjectLink: null,
 };
 
 export default List;

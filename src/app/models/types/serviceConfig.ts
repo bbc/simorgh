@@ -156,11 +156,13 @@ export interface Recommendations {
   };
 }
 
+export interface TrustProjectLink {
+  href: string;
+  text: string;
+}
+
 export interface Footer {
-  trustProjectLink?: {
-    href: string;
-    text: string;
-  };
+  trustProjectLink?: TrustProjectLink;
   externalLink?: {
     href: string;
     text: string;

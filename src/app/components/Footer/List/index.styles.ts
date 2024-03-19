@@ -1,9 +1,24 @@
 import { css, Theme } from '@emotion/react';
 import { grid } from '#psammead/psammead-styles/src/detection';
+import { TrustProjectLink } from '#app/models/types/serviceConfig';
+import {
+  GROUP_2_MAX_WIDTH,
+  GROUP_3_ONLY,
+  GROUP_4_ONLY,
+  GROUP_5_MIN_WIDTH,
+} from '../../ThemeProvider/mediaQueries';
 
 // Gets the number of grid rows, taking into account the
 // trustProjectLink in the grid being separate, on its own row.
-const getRowCount = (itemCount, columns, trustProjectLink) =>
+const getRowCount = ({
+  itemCount,
+  columns,
+  trustProjectLink,
+}: {
+  itemCount: number;
+  columns: number;
+  trustProjectLink: TrustProjectLink;
+}) =>
   trustProjectLink
     ? Math.ceil(itemCount / columns) + 1
     : Math.ceil(itemCount / columns);
@@ -38,65 +53,73 @@ export default {
         gridTemplateColumns: 'repeat(4, 1fr)',
         columnCount: 4,
       },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        gridColumnGap: `${spacings.DOUBLE}rem`,
+        gridTemplateColumns: 'repeat(5, 1fr)',
+        columnCount: 5,
+      },
     }),
-  paddingWithTrustProjectLink: ({ spacings }: Theme) =>
+  listPaddingWithTrustProjectLink: ({ spacings }: Theme) =>
     css({
       padding: `0 0 ${spacings.FULL}rem`,
     }),
-  paddingWithoutTrustProjectLink: ({ spacings }: Theme) =>
+  listPaddingWithoutTrustProjectLink: ({ spacings }: Theme) =>
     css({
       padding: `${spacings.FULL}rem 0`,
     }),
+  trustProjectLinkListItem: ({ palette, spacings }: Theme) =>
+    css({
+      '> li:first-of-type': {
+        borderBottom: `0.0625rem solid ${palette.SHADOW}`,
+        padding: `${spacings.FULL}rem 0`,
+        marginBottom: `${spacings.FULL}rem`,
+        gridColumn: `1/-1`,
+        width: '100%',
+        columnSpan: 'all',
+      },
+    }),
+  listItem: ({ spacings }: Theme) =>
+    css({
+      minWidth: '50%',
+      columnGap: `${spacings.DOUBLE}rem`,
+      breakInside: 'avoid-column',
+    }),
 };
 
-const StyledList = styled.ul`
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-template-rows: repeat(
-      ${({ itemCount, trustProjectLink }) =>
-        getRowCount(itemCount, 2, trustProjectLink)},
-      auto
-    );
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-template-rows: repeat(
-      ${({ itemCount, trustProjectLink }) =>
-        getRowCount(itemCount, 3, trustProjectLink)},
-      auto
-    );
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column-gap: ${GEL_SPACING_DBL};
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(
-      ${({ itemCount, trustProjectLink }) =>
-        getRowCount(itemCount, 4, trustProjectLink)},
-      auto
-    );
-    column-count: 4;
-  }
-
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column-gap: ${GEL_SPACING_DBL};
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(
-      ${({ itemCount, trustProjectLink }) =>
-        getRowCount(itemCount, 5, trustProjectLink)},
-      auto
-    );
-    column-count: 5;
-  }
-
-  ${({ trustProjectLink }) =>
-    props =>
-      trustProjectLink &&
-      `> li:first-of-type {
-    border-bottom: 0.0625rem solid ${props.theme.palette.SHADOW};
-    padding: ${GEL_SPACING} 0;
-    margin-bottom: ${GEL_SPACING};
-    grid-column: 1/-1;
-    width: 100%;
-    column-span: all;
-  }`}
-`;
+export const gridTemplateRows = ({
+  itemCount,
+  trustProjectLink,
+}: {
+  itemCount: number;
+  trustProjectLink: TrustProjectLink;
+}) =>
+  css({
+    [GROUP_2_MAX_WIDTH]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 2,
+        trustProjectLink,
+      })}, auto)`,
+    },
+    [GROUP_3_ONLY]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 3,
+        trustProjectLink,
+      })}, auto)`,
+    },
+    [GROUP_4_ONLY]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 4,
+        trustProjectLink,
+      })}, auto)`,
+    },
+    [GROUP_5_MIN_WIDTH]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 5,
+        trustProjectLink,
+      })}, auto)`,
+    },
+  });
