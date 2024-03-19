@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
@@ -5,12 +6,6 @@ import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
-
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
-};
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -224,9 +219,4 @@ export const testsThatFollowSmokeTestConfig = ({
       });
     });
   });
-};
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };
