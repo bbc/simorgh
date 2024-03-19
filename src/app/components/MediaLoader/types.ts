@@ -65,7 +65,7 @@ export type ConfigBuilderReturnProps = {
     placeholderSrcset: string;
     translatedNoJSMessage: string;
   };
-} | null;
+};
 
 export type MediaInfo = {
   title: string;
