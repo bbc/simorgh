@@ -23,8 +23,6 @@ export default ({
     'aresMedia',
   );
 
-  if (!aresMediaBlock) return null;
-
   const { webcastVersions = [] } =
     aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
 
