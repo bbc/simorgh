@@ -342,6 +342,10 @@ export const service: DefaultServiceConfig = {
         url: '/tamil',
       },
       {
+        title: 'மக்களவைத் தேர்தல் 2024',
+        url: '/tamil/topics/cpw2q7jk0kwt',
+      },
+      {
         title: 'உலகம்',
         url: '/tamil/topics/c40379e2n2zt',
       },

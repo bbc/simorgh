@@ -23,8 +23,6 @@ export default ({
     'clipMedia',
   );
 
-  if (!clipMediaBlock) return null;
-
   const { images, video, type } = clipMediaBlock?.model;
 
   const { source, urlTemplate: locator } = images?.[1] ?? {};
