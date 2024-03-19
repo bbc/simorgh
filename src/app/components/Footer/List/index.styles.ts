@@ -67,7 +67,7 @@ export default {
     css({
       padding: `${spacings.FULL}rem 0`,
     }),
-  trustProjectLinkListItem: ({ palette, spacings }: Theme) =>
+  listItemWithBottomBorder: ({ palette, spacings }: Theme) =>
     css({
       '> li:first-of-type': {
         borderBottom: `0.0625rem solid ${palette.SHADOW}`,

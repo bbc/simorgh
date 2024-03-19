@@ -21,7 +21,10 @@ const List = ({
       css={[
         styles.list,
         trustProjectLink
-          ? styles.listPaddingWithTrustProjectLink
+          ? [
+              styles.listPaddingWithTrustProjectLink,
+              styles.listItemWithBottomBorder,
+            ]
           : styles.listPaddingWithoutTrustProjectLink,
         gridTemplateRows({
           itemCount: elements.length,
@@ -30,7 +33,7 @@ const List = ({
       ]}
     >
       {trustProjectLink && (
-        <li css={[styles.listItem, styles.trustProjectLinkListItem]}>
+        <li css={styles.listItem}>
           <Link
             service={service}
             text={trustProjectLink.text}
