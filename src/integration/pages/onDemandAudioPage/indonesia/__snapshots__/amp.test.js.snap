@@ -263,6 +263,34 @@ exports[`AMP On Demand Audio Page Media Player a11y assistive technology can rea
 
 exports[`AMP On Demand Audio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live"`;
 
+exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732xfp",
+}
+`;
+
+exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732spk",
+}
+`;
+
+exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw58f",
+}
+`;
+
+exports[`AMP On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw1j9",
+}
+`;
+
 exports[`AMP On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

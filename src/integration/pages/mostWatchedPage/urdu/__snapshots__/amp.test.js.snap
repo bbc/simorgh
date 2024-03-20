@@ -259,6 +259,26 @@ exports[`AMP Most Watched Page Header Navigation link should match text and url 
 }
 `;
 
+exports[`AMP Most Watched Page I can see the list items 1`] = `"ویڈیو, ایرانی خواتین کو گیمر بننے کے لیے ملک کیوں چھوڑنا پڑتا ہے؟7 جولائی 2020"`;
+
+exports[`AMP Most Watched Page I can see the list items 2`] = `"سنیں, سیربین ریڈیو پروگرام رات 8 بجے لائیو15 اکتوبر 2015"`;
+
+exports[`AMP Most Watched Page I can see the list items 3`] = `"ویڈیو, پاکستانی فری لانسنرز گھر بیٹھے ڈالر کیسے کماتے ہیں؟28 جنوری 2020"`;
+
+exports[`AMP Most Watched Page I can see the list items 4`] = `"ویڈیو, کٹوا گوشت: مٹی کا برتن، لکڑی کی آگ اور پانچ گھنٹے کے بعد لذیذ گوشت تیار12 اگست 2019"`;
+
+exports[`AMP Most Watched Page I can see the list items 5`] = `"ویڈیو, چین کا شہر ووہان لاک ڈاؤن سے کیسے نکلا؟3 جولائی 2020"`;
+
+exports[`AMP Most Watched Page I can see the list items 6`] = `"ویڈیو, ’سپائے کیم‘: جنوبی کوریا میں خفیہ کیمروں کی وبا4 دسمبر 2018"`;
+
+exports[`AMP Most Watched Page I can see the list items 7`] = `"ویڈیو, انٹرنیٹ پر سیکس کے نام پر لوگوں کو لوٹنے والے جعلسازوں سے کیسے نمٹا جائے؟10 دسمبر 2018"`;
+
+exports[`AMP Most Watched Page I can see the list items 8`] = `"ویڈیو, کورونا وائرس کی وبا آخر کب ختم ہوگی؟4 مئ 2020"`;
+
+exports[`AMP Most Watched Page I can see the list items 9`] = `"ویڈیو, 100 خواتین: آن لائن گیمر خاتون29 نومبر 2016"`;
+
+exports[`AMP Most Watched Page I can see the list items 10`] = `"ویڈیو, جان نکسن کی سی آئی اے میں شمولیت کے دن سے صدام حسین کے بارے میں تحقیق ان کی زندگی کا محور۔5 جنوری 2017"`;
+
 exports[`AMP Most Watched Page Main heading should match text 1`] = `"سب سے زیادہ دیکھی گئی"`;
 
 exports[`AMP Most Watched Page Main heading should match text 2`] = `"سب سے زیادہ دیکھی گئی"`;

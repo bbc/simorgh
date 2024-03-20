@@ -273,6 +273,18 @@ exports[`AMP Most Watched Page Header Navigation link should match text and url 
 }
 `;
 
+exports[`AMP Most Watched Page I can see the list items 1`] = `"0:16Vidéo, Test asset, Durée 0,1626 avril 2017"`;
+
+exports[`AMP Most Watched Page I can see the list items 2`] = `"Ecoutez, Gelila, miraculée des eaux 217 juin 2016"`;
+
+exports[`AMP Most Watched Page I can see the list items 3`] = `"Ecoutez, Gelila, miraculée des eaux17 juin 2016"`;
+
+exports[`AMP Most Watched Page I can see the list items 4`] = `"0:16Vidéo, Test asset, Durée 0,1626 avril 2017"`;
+
+exports[`AMP Most Watched Page I can see the list items 5`] = `"Vidéo, Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya9 août 2016"`;
+
+exports[`AMP Most Watched Page I can see the list items 6`] = `"Ecoutez, L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga short24 juin 2016"`;
+
 exports[`AMP Most Watched Page Main heading should match text 1`] = `"Les plus vus"`;
 
 exports[`AMP Most Watched Page Main heading should match text 2`] = `"Les plus vus"`;

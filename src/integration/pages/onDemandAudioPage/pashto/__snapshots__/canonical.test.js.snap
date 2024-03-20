@@ -150,6 +150,34 @@ exports[`Canonical On Demand Audio Page Media Player a11y assistive technology c
 
 exports[`Canonical On Demand Audio Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"`;
 
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "غږ, ماښامنۍ خپرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
+  "url": "/pashto/bbc_pashto_radio/w3ct155x",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "غږ, ماښامنۍ خپرونه, ۸ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
+  "url": "/pashto/bbc_pashto_radio/w3ct154s",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "غږ, ماښامنۍ خپرونه, ۷ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
+  "url": "/pashto/bbc_pashto_radio/w3ct1508",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "غږ, ماښامنۍ خپرونه, ۶ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
+  "url": "/pashto/bbc_pashto_radio/w3ct152h",
+}
+`;
+
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
