@@ -87,7 +87,7 @@ describe('Footer', () => {
 
   describe('Canonical', () => {
     it('should render the "Do not share or sell my info" link as an anchor element when outside of UK', () => {
-      render(<Footer />, { service: 'pidgin' });
+      render(<Footer />, { service: 'pidgin', showAdsBasedOnLocation: true });
       expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
         'href',
         '#',
