@@ -27,6 +27,8 @@ const buildSettings = ({
   pageType,
   service,
   translations,
+  adsEnabled = false,
+  showAdsBasedOnLocation = false,
 }: BuildConfigProps) => {
   if (!id) return null;
 
@@ -59,6 +61,8 @@ const buildSettings = ({
     blocks,
     pageType,
     translations,
+    adsEnabled,
+    showAdsBasedOnLocation,
   });
 
   if (!config) return null;
