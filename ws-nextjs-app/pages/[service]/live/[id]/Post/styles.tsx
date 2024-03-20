@@ -109,7 +109,8 @@ export default {
         paddingRight: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     }),
 };
