@@ -56,8 +56,7 @@ export const Example = ({ service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-// eslint-disable-next-line camelcase
-export const Example_AMP = ({ service, variant }) => (
+export const ExampleAMP = ({ service, variant }) => (
   <Component service={service} variant={variant} isAmp />
 );
 
