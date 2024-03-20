@@ -8,15 +8,19 @@ import {
   ClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
 
 const DEFAULT_WIDTH = 512;
+const MIN_DURATION_FOR_PREROLLS = 30;
 
 export default ({
   blocks,
   basePlayerConfig,
   translations,
+  adsEnabled = false,
+  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -63,6 +67,13 @@ export default ({
     guidanceMessage,
   };
 
+  const allowAdsForVideoDuration = rawDuration >= MIN_DURATION_FOR_PREROLLS;
+  const showAds = [
+    adsEnabled,
+    showAdsBasedOnLocation,
+    allowAdsForVideoDuration,
+  ].every(Boolean);
+
   const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
 
   const placeholderSrc = buildIChefURL({
@@ -89,6 +100,9 @@ export default ({
     controls: { enabled: true, volumeSlider: true },
   };
 
+  const items = [{ versionID, kind, duration: rawDuration }];
+  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+
   return {
     mediaType: type || 'video',
     playerConfig: {
@@ -97,7 +111,7 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration: rawDuration }],
+        items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
@@ -116,5 +130,6 @@ export default ({
       placeholderSrcset,
       translatedNoJSMessage: noJsMessage,
     },
+    showAds,
   };
 };

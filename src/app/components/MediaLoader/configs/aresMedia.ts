@@ -7,16 +7,20 @@ import {
   AresMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
 
 const DEFAULT_WIDTH = 512;
+const MIN_DURATION_FOR_PREROLLS = 30;
 
 export default ({
   pageType,
   blocks,
   basePlayerConfig,
   translations,
+  adsEnabled = false,
+  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -75,6 +79,13 @@ export default ({
     guidanceMessage,
   };
 
+  const allowAdsForVideoDuration = rawDuration >= MIN_DURATION_FOR_PREROLLS;
+  const showAds = [
+    adsEnabled,
+    showAdsBasedOnLocation,
+    allowAdsForVideoDuration,
+  ].every(Boolean);
+
   const embeddingAllowed =
     aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
 
@@ -92,6 +103,9 @@ export default ({
 
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
+  const items = [{ versionID, kind, duration: rawDuration }];
+  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+
   return {
     mediaType: format || 'video',
     playerConfig: {
@@ -101,7 +115,7 @@ export default ({
         title,
         summary: caption || '',
         holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration: rawDuration }],
+        items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
@@ -117,5 +131,6 @@ export default ({
       placeholderSrcset,
       translatedNoJSMessage: noJsMessage,
     },
+    showAds,
   };
 };
