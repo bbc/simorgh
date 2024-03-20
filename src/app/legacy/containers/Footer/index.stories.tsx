@@ -41,7 +41,7 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
-      viewports: customViewports,
+      viewports: [...Object.entries(customViewports)],
     },
   },
 };
