@@ -80,7 +80,8 @@ describe('buildSettings', () => {
       ...baseSettings,
       blocks: clipMediaBlocks as MediaBlock[],
       pageType: 'live',
-      showAds: true,
+      adsEnabled: true,
+      showAdsBasedOnLocation: true,
     });
 
     expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({

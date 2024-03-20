@@ -13,12 +13,14 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 
 const DEFAULT_WIDTH = 512;
+const MIN_DURATION_FOR_PREROLLS = 30;
 
 export default ({
   blocks,
   basePlayerConfig,
   translations,
-  showAds,
+  adsEnabled = false,
+  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -64,6 +66,13 @@ export default ({
     type: type || 'video',
     guidanceMessage,
   };
+
+  const allowAdsForVideoDuration = rawDuration >= MIN_DURATION_FOR_PREROLLS;
+  const showAds = [
+    adsEnabled,
+    showAdsBasedOnLocation,
+    allowAdsForVideoDuration,
+  ].every(Boolean);
 
   const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
 
@@ -121,5 +130,6 @@ export default ({
       placeholderSrcset,
       translatedNoJSMessage: noJsMessage,
     },
+    showAds,
   };
 };

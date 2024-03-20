@@ -53,7 +53,8 @@ export type ConfigBuilderProps = {
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
-  showAds: boolean;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };
 
 export type ConfigBuilderReturnProps = {
@@ -65,6 +66,7 @@ export type ConfigBuilderReturnProps = {
     placeholderSrcset: string;
     translatedNoJSMessage: string;
   };
+  showAds: boolean;
 };
 
 export type MediaInfo = {
@@ -178,5 +180,6 @@ export type BuildConfigProps = {
   pageType: PageTypes;
   service: Services;
   translations?: Translations;
-  showAds?: boolean;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };

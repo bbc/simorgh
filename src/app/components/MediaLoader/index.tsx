@@ -40,7 +40,7 @@ const AdvertTagLoader = () => {
 
   useEffect(() => {
     // Set window.dotcom to disabled if it doesn't load in 2 seconds.
-    setTimeout(() => {
+    const timeoutID = setTimeout(() => {
       if (window.dotcom.ads.resolves) {
         window.dotcom.ads.resolves.enabled.forEach(res => res(false));
         window.dotcom.ads.resolves.getAdTag.forEach(res => res(''));
@@ -65,6 +65,8 @@ const AdvertTagLoader = () => {
         });
       },
     };
+
+    return () => clearTimeout(timeoutID);
   }, [queryString]);
 
   return (
@@ -157,8 +159,6 @@ const MediaLoader = ({ blocks, className }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
-  const showAds = [adsEnabled, showAdsBasedOnLocation].every(Boolean);
-
   const producer = getProducerFromServiceName(service);
 
   const config = buildConfig({
@@ -172,12 +172,13 @@ const MediaLoader = ({ blocks, className }: Props) => {
     pageType,
     service,
     translations,
-    showAds,
+    adsEnabled,
+    showAdsBasedOnLocation,
   });
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig } = config;
+  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
   const {
     mediaInfo,
