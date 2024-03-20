@@ -12,7 +12,7 @@ import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 jest.mock('./ThemeProvider');
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
