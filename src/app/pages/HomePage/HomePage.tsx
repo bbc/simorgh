@@ -120,7 +120,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       embed={embed}
                     />
-                    {index === 1 && <MPU />}
+                    {index === 0 && <MPU />}
                   </React.Fragment>
                 );
               },
