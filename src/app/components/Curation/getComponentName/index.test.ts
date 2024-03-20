@@ -47,7 +47,7 @@ describe('getComponentName', () => {
     expect(getComponentName({ radioSchedule })).toBe(`${RADIO_SCHEDULE}`);
   });
 
-  it('should return a VJ embed when embed is present', () => {
+  it('should return embed when an embed is present', () => {
     const { embed } = hindiHomepage.data.curations[0];
     expect(getComponentName({ embed })).toBe(`${EMBED}`);
   });

@@ -11,7 +11,7 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
-  EMBED: 'vj-embed',
+  EMBED: 'embed',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
