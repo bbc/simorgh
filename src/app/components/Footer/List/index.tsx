@@ -3,13 +3,12 @@ import { jsx } from '@emotion/react';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
-import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 
 export default ({
-  elements,
+  elements = [],
   trustProjectLink,
 }: {
-  elements?: (AmpCookieSettingsButton | Link | null)[];
+  elements?: (jsx.JSX.Element | null)[];
   trustProjectLink?: FooterLink;
 }) => {
   return (
