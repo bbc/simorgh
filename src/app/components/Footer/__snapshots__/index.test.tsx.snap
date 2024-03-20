@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterContainer snapshots should render correctly 1`] = `
+exports[`Footer snapshots should render correctly 1`] = `
 .emotion-0 {
   content-visibility: auto;
   contain-intrinsic-size: 33.125rem;

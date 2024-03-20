@@ -5,7 +5,24 @@ import {
 } from '../ThemeProvider/spacings';
 import { GROUP_4_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
 
-const styles = {
+export default {
+  footer: ({ mq }: Theme) =>
+    css({
+      contentVisibility: 'auto',
+      containIntrinsicSize: '33.125rem',
+      [mq.GROUP_1_MIN_WIDTH]: {
+        containIntrinsicSize: '26.563rem',
+      },
+      [`@media (min-width: 20rem)`]: {
+        containIntrinsicSize: '23.438rem',
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        containIntrinsicSize: '21.875rem',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        containIntrinsicSize: '17.188rem',
+      },
+    }),
   paragraph: ({ palette, spacings }: Theme) =>
     css({
       color: palette.WHITE,
@@ -13,7 +30,7 @@ const styles = {
       padding: `${spacings.DOUBLE}rem 0`,
       a: { padding: 0 },
     }),
-  siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
+  linksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
@@ -41,69 +58,16 @@ const styles = {
         textDecoration: 'underline',
       },
     }),
-    constrainedWrapperWithTrustProjectLink: ({ spacings }: Theme) =>
+  constrainedWrapperWithTrustProjectLink: ({ spacings }: Theme) =>
     css({
       maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
       margin: '0 auto',
-      paddingTop: `${spacings.FULL}rem`
+      paddingTop: `${spacings.FULL}rem`,
     }),
 
-    constrainedWrapperWithoutTrustProjectLink: () =>
+  constrainedWrapperWithoutTrustProjectLink: () =>
     css({
       maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
-      margin: '0 auto'
+      margin: '0 auto',
     }),
 };
-// const ConstrainedWrapper = styled.div`
-//   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-//   margin: 0 auto;
-//   ${({ trustProjectLink }) =>
-//     trustProjectLink && `padding-top: ${GEL_SPACING};`}
-// `;
-
-// '&:focus, &:hover': {
-//     borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-//     color: palette.POSTBOX,
-//   },
-// const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
-//   ${({ service }) => service && getSansBold(service)}
-//   background: none;
-//   border: none;
-//   color: ${props => props.theme.palette.WHITE};
-//   cursor: pointer;
-//   display: block;
-//   padding: ${GEL_SPACING} 0 ${GEL_SPACING};
-//   text-decoration: none;
-//   text-align: left;
-//   width: 100%;
-
-//   &:hover,
-//   &:focus {
-//     text-decoration: underline;
-//   }
-// `;
-
-// const SitewideLinksWrapper = styled.div`
-//   ${({ script }) => script && getBrevier(script)}
-//   ${({ service }) => service && getSansRegular(service)}
-//   background-color: ${props => props.theme.palette.EBON};
-
-//   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-//     padding: 0 ${GEL_MARGIN_BELOW_400PX};
-//   }
-//   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-//     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
-//   }
-// `;
-// const StyledParagraph = styled.p`
-//   color: ${props => props.theme.palette.WHITE};
-//   margin: 0;
-//   padding: ${GEL_SPACING_DBL} 0;
-
-//   /* removes padding which creates touch target from the final inline link so the Focus Indicator doesn't obscure other text. */
-//   a {
-//     padding: 0;
-//   }
-// `;
-
-export default styles;

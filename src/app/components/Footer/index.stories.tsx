@@ -1,11 +1,12 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '../../psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Footer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
-import { StoryProps } from '../../../models/types/storybook';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import ThemeProvider from '../ThemeProvider';
+import { StoryProps } from '../../models/types/storybook';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 interface Props extends StoryProps {
   isAmp?: boolean;
@@ -22,7 +23,7 @@ const Component = ({
     <RequestContextProvider
       isAmp={isAmp}
       isApp={false}
-      pageType={undefined}
+      pageType={STATIC_PAGE}
       pathname=""
       service={service}
       showAdsBasedOnLocation={withAds}
@@ -52,18 +53,18 @@ export default {
   },
 };
 
-export const Example = ({ service, variant }) => (
+export const Example = ({ service, variant }: StoryProps) => (
   <Component service={service} variant={variant} />
 );
 
-export const ExampleAMP = ({ service, variant }) => (
+export const ExampleAMP = ({ service, variant }: StoryProps) => (
   <Component service={service} variant={variant} isAmp />
 );
 
-export const WithAdsEnabled = ({ service, variant }) => (
+export const WithAdsEnabled = ({ service, variant }: StoryProps) => (
   <Component service={service} variant={variant} withAds />
 );
 
-export const HindiCollectiveNewsroomPublication = ({ variant }) => (
+export const HindiCollectiveNewsroomPublication = ({ variant }: StoryProps) => (
   <Component service="hindi" variant={variant} />
 );

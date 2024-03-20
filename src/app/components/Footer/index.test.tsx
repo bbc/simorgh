@@ -2,59 +2,82 @@ import React from 'react';
 import Footer from '#app/components/Footer';
 import { render, screen } from '../react-testing-library-with-providers';
 
+const RealDate = Date;
+
 describe('Footer', () => {
-  const { trustProjectLink, externalLink, links, copyrightText } = {
-    trustProjectLink: {
-      href: 'https://www.bbc.com/mundo/institucional-51359666',
-      text: 'Por qué puedes confiar en la BBC',
-    },
-    externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-      text: 'Lee sobre nuestra postura acerca de enlaces externos.',
-    },
-    links: [
-      {
-        href: 'https://www.bbc.com/mundo/institucional-36400005',
-        text: 'Términos de uso',
-      },
-      {
-        href: 'https://www.bbc.com/mundo/institucional-36400007',
-        text: 'Sobre la BBC',
-      },
-      {
-        href: 'https://www.bbc.com/mundo/institucional-36400009',
-        text: 'Política de privacidad',
-      },
-      {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.co.uk/send/u50853489',
-        text: 'Contacta a la BBC',
-      },
-      {
-        id: 'COOKIE_SETTINGS',
-        href: '#',
-        text: 'Do not share or sell my info',
-        lang: 'en-GB',
-      },
-    ],
-    copyrightText:
-      'BBC. La BBC no se hace responsable del contenido de sitios externos.',
-  };
+  beforeEach(() => {
+    // @ts-expect-error need to override Date so that the current year is always 3000
+    global.Date = class extends RealDate {
+      constructor() {
+        super();
+        return new RealDate('3000-01-01T12:00:00');
+      }
+    };
+  });
+
+  afterEach(() => {
+    global.Date = RealDate;
+  });
+
+  describe('snapshots', () => {
+    it('should render correctly', () => {
+      const { container } = render(<Footer />);
+
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  describe('assertions', () => {
+    describe('copyright', () => {
+      it('should contain copyright text', () => {
+        const { container } = render(<Footer />);
+
+        const paragraph = container.getElementsByTagName('p')[0];
+
+        const copyrightSymbol = paragraph.getElementsByTagName('span')[0];
+        paragraph.removeChild(copyrightSymbol);
+
+        const externalLink = paragraph.getElementsByTagName('a')[0];
+        paragraph.removeChild(externalLink);
+
+        expect(paragraph.textContent).toEqual(
+          '3000 BBC. The BBC is not responsible for the content of external sites. ',
+        );
+      });
+
+      it('should contain a copyright symbol wrapped in span', () => {
+        const { container } = render(<Footer />);
+
+        const paragraph = container.getElementsByTagName('p')[0];
+        const copyrightSymbol = paragraph.getElementsByTagName('span')[0];
+
+        expect(copyrightSymbol.textContent).toEqual('© ');
+      });
+    });
+
+    it('should contain an external link', () => {
+      const { container } = render(<Footer />);
+
+      const paragraph = container.getElementsByTagName('p')[0];
+      const externalLink = paragraph.getElementsByTagName('a')[0];
+
+      expect(externalLink.textContent).toEqual(
+        'Read about our approach to external linking.',
+      );
+    });
+
+    it('should omit the footer when isApp is set to true', () => {
+      const { container } = render(<Footer />, { isApp: true });
+
+      const footer = container.querySelector("footer[role='contentinfo']");
+
+      expect(footer).toBeNull();
+    });
+  });
 
   describe('AMP', () => {
     it('should render the cookie settings link as a button element', () => {
-      render(
-        <Footer
-          isAmp
-          links={links}
-          copyrightText={copyrightText}
-          externalLink={externalLink}
-          trustProjectLink={trustProjectLink}
-        />,
-      );
+      render(<Footer />, { isAmp: true });
       expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
         'data-testid',
         'amp-cookie-settings-button',
@@ -64,15 +87,7 @@ describe('Footer', () => {
 
   describe('Canonical', () => {
     it('should render the "Do not share or sell my info" link as an anchor element when outside of UK', () => {
-      render(
-        <Footer
-          links={links}
-          copyrightText={copyrightText}
-          externalLink={externalLink}
-          trustProjectLink={trustProjectLink}
-          showAdsBasedOnLocation
-        />,
-      );
+      render(<Footer />, { service: 'pidgin' });
       expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
         'href',
         '#',
