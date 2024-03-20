@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import {
-  GROUP_2_MAX_WIDTH,
+  GROUP_1_AND_GROUP_2,
   GROUP_3_ONLY,
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
@@ -38,7 +38,7 @@ export default {
         gridAutoFlow: 'row',
         columnCount: 1,
       },
-      [mq.GROUP_2_MAX_WIDTH]: {
+      [mq.GROUP_1_AND_GROUP_2]: {
         gridColumnGap: `${spacings.FULL}rem`,
         gridTemplateColumns: 'repeat(2, 1fr)',
         columnCount: 2,
@@ -94,7 +94,7 @@ export const gridTemplateRows = ({
   trustProjectLink?: FooterLink;
 }) =>
   css({
-    [GROUP_2_MAX_WIDTH]: {
+    [GROUP_1_AND_GROUP_2]: {
       gridTemplateRows: `repeat(${getRowCount({
         itemCount,
         columns: 2,
