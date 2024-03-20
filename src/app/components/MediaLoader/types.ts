@@ -53,6 +53,8 @@ export type ConfigBuilderProps = {
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };
 
 export type ConfigBuilderReturnProps = {
@@ -64,6 +66,7 @@ export type ConfigBuilderReturnProps = {
     placeholderSrcset: string;
     translatedNoJSMessage: string;
   };
+  showAds: boolean;
 };
 
 export type MediaInfo = {
@@ -76,7 +79,22 @@ export type MediaInfo = {
 };
 
 export type Player = {
+  dispatchEvent(
+    dispatchEvent: string,
+    parameters: { updatedAdTag: string },
+  ): void;
   load: () => void;
+  bind: (event: string, callback: () => void) => void;
+  loadPlugin: (
+    pluginName: { [key: string]: string },
+    parameters: {
+      name: string;
+      data: {
+        adTag: string;
+        debug: boolean;
+      };
+    },
+  ) => void;
 };
 
 export type BumpType = {
@@ -162,4 +180,6 @@ export type BuildConfigProps = {
   pageType: PageTypes;
   service: Services;
   translations?: Translations;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };
