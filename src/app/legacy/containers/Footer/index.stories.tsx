@@ -5,7 +5,6 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Footer from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 import { StoryProps } from '../../../models/types/storybook';
-import { customViewports } from '../../../../../.storybook/preview';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 
 interface Props extends StoryProps {
@@ -39,11 +38,6 @@ export default {
   title: 'New Components/Footer',
   Component,
   decorators: [withKnobs, withServicesKnob()],
-  parameters: {
-    chromatic: {
-      viewports: customViewports,
-    },
-  },
 };
 
 export const Example = ({ service, variant }) => (
