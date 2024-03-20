@@ -558,7 +558,7 @@ addDecorator((Story, context) => {
   );
 });
 
-export const customViewports = {
+const customViewports = {
   group0: { name: "Group 0 (0 - 239px)", styles: { width: "239px", height: "900px" }, type: 'mobile' },
   group1: { name: "Group 1 (240px - 399px)", styles: { width: "399px", height: "900px" }, type: 'mobile' },
   group2: { name: "Group 2 (400px - 599px)", styles: { width: "599px", height: "900px" }, type: 'mobile' },
@@ -566,7 +566,6 @@ export const customViewports = {
   group4: { name: "Group 4 (900px - 1007px)", styles: { width: "1007px", height: "900px" }, type: 'tablet' },
   group5: { name: "Group 5 (1008px - 1279px)", styles: { width: "1279px", height: "900px" }, type: 'desktop' },
   group6: { name: "Group 6 (1280px +)", styles: { width: "1280px", height: "900px" }, type: 'desktop' },
-
 }
 
 export const parameters = {
