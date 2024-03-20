@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import { grid } from '#psammead/psammead-styles/src/detection';
-import { TrustProjectLink } from '#app/models/types/serviceConfig';
+import { FooterLink } from '#app/models/types/serviceConfig';
 import {
   GROUP_2_MAX_WIDTH,
   GROUP_3_ONLY,
@@ -17,7 +17,7 @@ const getRowCount = ({
 }: {
   itemCount: number;
   columns: number;
-  trustProjectLink: TrustProjectLink;
+  trustProjectLink?: FooterLink;
 }) =>
   trustProjectLink
     ? Math.ceil(itemCount / columns) + 1
@@ -91,7 +91,7 @@ export const gridTemplateRows = ({
   trustProjectLink,
 }: {
   itemCount: number;
-  trustProjectLink: TrustProjectLink;
+  trustProjectLink?: FooterLink;
 }) =>
   css({
     [GROUP_2_MAX_WIDTH]: {

@@ -156,22 +156,18 @@ export interface Recommendations {
   };
 }
 
-export interface TrustProjectLink {
+export interface FooterLink {
   href: string;
   text: string;
+  id?: string | null;
+  lang?: string;
 }
 
 export interface Footer {
-  trustProjectLink?: TrustProjectLink;
-  externalLink?: {
-    href: string;
-    text: string;
-  };
-  links?: {
-    href: string;
-    text: string;
-    id?: string | null;
-    lang?: string | null;
-  }[];
+  trustProjectLink?: FooterLink;
+  externalLink?: FooterLink;
+  links?: FooterLink[];
   copyrightText?: string;
 }
+
+

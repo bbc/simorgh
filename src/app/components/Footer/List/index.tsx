@@ -1,15 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { TrustProjectLink } from '#app/models/types/serviceConfig';
+import { FooterLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
+import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 
 export default ({
   elements,
   trustProjectLink,
 }: {
-  elements: string[];
-  trustProjectLink: TrustProjectLink;
+  elements?: (AmpCookieSettingsButton | Link | null)[];
+  trustProjectLink?: FooterLink;
 }) => {
   return (
     <ul

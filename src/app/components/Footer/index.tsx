@@ -1,26 +1,25 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';
 import List from './List';
 import styles from './index.styles';
+import { Footer } from '#app/models/types/serviceConfig';
 
-const ConstrainedWrapper = styled.div`
-  max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  margin: 0 auto;
-  ${({ trustProjectLink }) =>
-    trustProjectLink && `padding-top: ${GEL_SPACING};`}
-`;
 
-const openPrivacyManagerModal = e => {
+interface FooterProps extends Footer{
+  isAmp?: boolean,
+  showAdsBasedOnLocation?: boolean,
+  service?: string,
+};
+
+const openPrivacyManagerModal =  (e: Event) => {
   e.preventDefault();
+  // @ts-expect-error dotcom is required for ads
   if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
+  // @ts-expect-error dotcom is required for ads
     window.dotcom.openPrivacyManagerModal();
   }
 };
@@ -32,10 +31,8 @@ export default ({
   externalLink,
   isAmp,
   showAdsBasedOnLocation,
-  script,
-  service,
-}) => {
-  const elements = links.map(({ id, text, href, lang }) => {
+}: FooterProps) => {
+  const elements = links?.map(({ id, text, href, lang }) => {
     if (id === 'COOKIE_SETTINGS') {
       if (isAmp) {
         return (
@@ -52,7 +49,6 @@ export default ({
       if (showAdsBasedOnLocation) {
         return (
           <Link
-            service={service}
             text={text}
             href={href}
             lang={lang}
@@ -62,48 +58,29 @@ export default ({
         );
       }
     } else {
-      return <Link service={service} text={text} href={href} lang={lang} />;
+      return <Link text={text} href={href} lang={lang} />;
     }
     return null;
   });
 
   return (
     <div css={styles.siteWideLinksWrapper}>
-      <ConstrainedWrapper trustProjectLink={trustProjectLink}>
+      <div css={trustProjectLink ? styles.constrainedWrapperWithTrustProjectLink : styles.constrainedWrapperWithoutTrustProjectLink}>
         <List
-          service={service}
           elements={elements}
           trustProjectLink={trustProjectLink}
         />
         <p css={styles.paragraph}>
           {copyrightText}{' '}
-          <Link
-            service={service}
-            text={externalLink.text}
-            href={externalLink.href}
+          {externalLink && <Link
+            text={externalLink?.text}
+            href={externalLink?.href}
             inline
           />
+}
         </p>
-      </ConstrainedWrapper>
+      </div>
     </div>
   );
 };
 
-SitewideLinks.propTypes = {
-  links: arrayOf(linkPropTypes.isRequired).isRequired,
-  copyrightText: node.isRequired,
-  trustProjectLink: linkPropTypes,
-  externalLink: linkPropTypes.isRequired,
-  isAmp: bool,
-  showAdsBasedOnLocation: bool,
-  script: shape({}),
-  service: string,
-};
-
-SitewideLinks.defaultProps = {
-  script: null,
-  service: null,
-  isAmp: false,
-  trustProjectLink: null,
-  showAdsBasedOnLocation: false,
-};

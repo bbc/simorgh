@@ -3,13 +3,11 @@ import { css, jsx } from '@emotion/react';
 import { useState, useEffect } from 'react';
 import onClient from '#lib/utilities/onClient';
 import styles from './index.styles';
+import { FooterLink } from '#app/models/types/serviceConfig';
 
-interface LinkProps {
-  href: string;
-  text: string;
-  lang?: string;
+interface LinkProps extends FooterLink{
   inline?: boolean;
-  onClick?: () => void;
+  onClick?: (e: Event) => void;
   onlyShowIfJSenabled?: boolean;
 }
 
