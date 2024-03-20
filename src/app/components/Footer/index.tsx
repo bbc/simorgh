@@ -1,4 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
 import {
@@ -20,19 +22,8 @@ import {
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';
 import List from './List';
+import styles from './index.styles';
 
-const SitewideLinksWrapper = styled.div`
-  ${({ script }) => script && getBrevier(script)}
-  ${({ service }) => service && getSansRegular(service)}
-  background-color: ${props => props.theme.palette.EBON};
-
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_MARGIN_BELOW_400PX};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_MARGIN_ABOVE_400PX};
-  }
-`;
 
 const ConstrainedWrapper = styled.div`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -41,34 +32,6 @@ const ConstrainedWrapper = styled.div`
     trustProjectLink && `padding-top: ${GEL_SPACING};`}
 `;
 
-const StyledParagraph = styled.p`
-  color: ${props => props.theme.palette.WHITE};
-  margin: 0;
-  padding: ${GEL_SPACING_DBL} 0;
-
-  /* removes padding which creates touch target from the final inline link so the Focus Indicator doesn't obscure other text. */
-  a {
-    padding: 0;
-  }
-`;
-
-const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
-  ${({ service }) => service && getSansBold(service)}
-  background: none;
-  border: none;
-  color: ${props => props.theme.palette.WHITE};
-  cursor: pointer;
-  display: block;
-  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
-  text-decoration: none;
-  text-align: left;
-  width: 100%;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-`;
 
 const openPrivacyManagerModal = e => {
   e.preventDefault();
@@ -91,9 +54,10 @@ const SitewideLinks = ({
     if (id === 'COOKIE_SETTINGS') {
       if (isAmp) {
         return (
-          <StyledAmpCookieSettingsButton lang={lang} service={service}>
+          // @ts-expect-error we do not have a className
+          <AmpCookieSettingsButton lang={lang} css={styles.ampCookieSettingButton}>
             {text}
-          </StyledAmpCookieSettingsButton>
+          </AmpCookieSettingsButton>
         );
       }
 
@@ -116,14 +80,14 @@ const SitewideLinks = ({
   });
 
   return (
-    <SitewideLinksWrapper script={script} service={service}>
+    <div css={styles.siteWideLinksWrapper}>
       <ConstrainedWrapper trustProjectLink={trustProjectLink}>
         <List
           service={service}
           elements={elements}
           trustProjectLink={trustProjectLink}
         />
-        <StyledParagraph>
+        <p css={styles.paragraph}>
           {copyrightText}{' '}
           <Link
             service={service}
@@ -131,9 +95,9 @@ const SitewideLinks = ({
             href={externalLink.href}
             inline
           />
-        </StyledParagraph>
+        </p>
       </ConstrainedWrapper>
-    </SitewideLinksWrapper>
+    </div>
   );
 };
 
