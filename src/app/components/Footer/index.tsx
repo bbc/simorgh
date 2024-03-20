@@ -25,7 +25,7 @@ const openPrivacyManagerModal = e => {
   }
 };
 
-const SitewideLinks = ({
+export default ({
   links,
   trustProjectLink,
   copyrightText,
@@ -89,11 +89,6 @@ const SitewideLinks = ({
   );
 };
 
-const linkPropTypes = shape({
-  href: string.isRequired,
-  text: string.isRequired,
-});
-
 SitewideLinks.propTypes = {
   links: arrayOf(linkPropTypes.isRequired).isRequired,
   copyrightText: node.isRequired,
@@ -112,5 +107,3 @@ SitewideLinks.defaultProps = {
   trustProjectLink: null,
   showAdsBasedOnLocation: false,
 };
-
-export default SitewideLinks;
