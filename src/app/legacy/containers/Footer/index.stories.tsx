@@ -5,7 +5,6 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Footer from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 import { StoryProps } from '../../../models/types/storybook';
-import { customViewports } from '../../../../../.storybook/preview';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 
 interface Props extends StoryProps {
@@ -41,7 +40,14 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
-      viewports: [...Object.entries(customViewports)],
+      viewports: [
+        239, // Group 0
+        399, // Group 1
+        599, // Group 2
+        899, // Group 3
+        1007, // Group 4
+        1280, // Group 5
+      ],
     },
   },
 };
