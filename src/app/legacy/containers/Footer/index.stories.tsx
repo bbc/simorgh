@@ -50,12 +50,13 @@ export const Example = ({ service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const WithAdsEnabled = ({ service, variant }) => (
-  <Component service={service} variant={variant} withAds />
+// eslint-disable-next-line camelcase
+export const Example_AMP = ({ service, variant }) => (
+  <Component service={service} variant={variant} isAmp />
 );
 
-export const AMP = ({ service, variant }) => (
-  <Component service={service} variant={variant} isAmp />
+export const WithAdsEnabled = ({ service, variant }) => (
+  <Component service={service} variant={variant} withAds />
 );
 
 export const HindiCollectiveNewsroomPublication = ({ variant }) => (
