@@ -32,7 +32,6 @@ export default ({
   radioSchedule,
   embed,
 }: Partial<Curation>) => {
-
   if (radioSchedule) {
     return RADIO_SCHEDULE;
   }
