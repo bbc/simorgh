@@ -37,7 +37,7 @@ const Component = ({
 export default {
   title: 'New Components/Footer',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
+  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     chromatic: {
       viewports: [
