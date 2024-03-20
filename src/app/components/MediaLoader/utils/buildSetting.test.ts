@@ -67,6 +67,28 @@ describe('buildSettings', () => {
     });
   });
 
+  it('Should add an advert item for a "Live" page when showAds is set to true.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: clipMediaBlocks as MediaBlock[],
+      pageType: 'live',
+      adsEnabled: true,
+      showAdsBasedOnLocation: true,
+    });
+
+    expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({
+      kind: 'advert',
+    });
+  });
+
   it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
     const mockWindowObj = {
       location: {
