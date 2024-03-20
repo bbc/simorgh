@@ -558,11 +558,20 @@ addDecorator((Story, context) => {
   );
 });
 
+export const customViewports = {
+  group0: { name: "Group 0 (0 - 239px)", styles: { width: "239px", height: "900px" }, type: 'mobile' },
+  group1: { name: "Group 1 (240px - 399px)", styles: { width: "399px", height: "900px" }, type: 'mobile' },
+  group2: { name: "Group 2 (400px - 599px)", styles: { width: "599px", height: "900px" }, type: 'mobile' },
+  group3: { name: "Group 3 (600px - 899px)", styles: { width: "899px", height: "900px" }, type: 'mobile' },
+  group4: { name: "Group 4 (900px - 1007px)", styles: { width: "1007px", height: "900px" }, type: 'tablet' },
+  group5: { name: "Group 5 (1008px +)", styles: { width: "1008px", height: "900px" }, type: 'desktop' },
+}
+
 export const parameters = {
   passArgsFirst: false,
   options: {
     panelPosition: 'right',
-    sidebarAnimcations: true,
+    sidebarAnimations: true,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
@@ -582,5 +591,10 @@ export const parameters = {
   },
   chromatic: {
     delay: 5000,
+  },
+  viewport: {
+    viewports: {
+      ...customViewports
+    },
   },
 };
