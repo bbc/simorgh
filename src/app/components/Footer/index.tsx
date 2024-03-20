@@ -3,27 +3,13 @@
 import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import {
-  getSansBold,
-  getSansRegular,
-} from '#psammead/psammead-styles/src/font-styles';
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_MARGIN_ABOVE_400PX,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';
 import List from './List';
 import styles from './index.styles';
-
 
 const ConstrainedWrapper = styled.div`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -31,7 +17,6 @@ const ConstrainedWrapper = styled.div`
   ${({ trustProjectLink }) =>
     trustProjectLink && `padding-top: ${GEL_SPACING};`}
 `;
-
 
 const openPrivacyManagerModal = e => {
   e.preventDefault();
@@ -55,7 +40,10 @@ const SitewideLinks = ({
       if (isAmp) {
         return (
           // @ts-expect-error we do not have a className
-          <AmpCookieSettingsButton lang={lang} css={styles.ampCookieSettingButton}>
+          <AmpCookieSettingsButton
+            lang={lang}
+            css={styles.ampCookieSettingButton}
+          >
             {text}
           </AmpCookieSettingsButton>
         );
