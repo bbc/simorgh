@@ -564,7 +564,9 @@ export const customViewports = {
   group2: { name: "Group 2 (400px - 599px)", styles: { width: "599px", height: "900px" }, type: 'mobile' },
   group3: { name: "Group 3 (600px - 899px)", styles: { width: "899px", height: "900px" }, type: 'mobile' },
   group4: { name: "Group 4 (900px - 1007px)", styles: { width: "1007px", height: "900px" }, type: 'tablet' },
-  group5: { name: "Group 5 (1008px +)", styles: { width: "1008px", height: "900px" }, type: 'desktop' },
+  group5: { name: "Group 5 (1008px - 1279px)", styles: { width: "1279px", height: "900px" }, type: 'desktop' },
+  group6: { name: "Group 6 (1280px +)", styles: { width: "1280px", height: "900px" }, type: 'desktop' },
+
 }
 
 export const parameters = {
