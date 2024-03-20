@@ -51,8 +51,8 @@ export default ({
   position = 0,
   curationLength = 0,
   mostRead,
-  nthCurationByStyleAndProminence = 1,
   radioSchedule,
+  nthCurationByStyleAndProminence = 1,
   embed,
 }: Curation) => {
   const componentName = getComponentName({
