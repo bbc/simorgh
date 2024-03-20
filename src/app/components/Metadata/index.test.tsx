@@ -113,9 +113,26 @@ interface CanonicalNewsInternationalOriginProps {
   hasAmpPage?: boolean;
 }
 
+interface FacebookDomainVerificationProps {
+  hasAmpPage?: boolean;
+}
+
 const CanonicalNewsInternationalOrigin = (
   props: CanonicalNewsInternationalOriginProps,
 ) => (
+  <MetadataWithContext
+    service="news"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="c0000000001o"
+    pageType={ARTICLE_PAGE}
+    pathname="/news/articles/c0000000001o"
+    {...newsArticleMetadataProps}
+    {...props}
+  />
+);
+
+const FacebookDomainVerification = (props: FacebookDomainVerificationProps) => (
   <MetadataWithContext
     service="news"
     bbcOrigin={dotComOrigin}
@@ -455,7 +472,7 @@ it('should render the facebook metatags', async () => {
 });
 
 it('should render the facebook domain verification', async () => {
-  render(<CanonicalNewsInternationalOrigin />);
+  render(<FacebookDomainVerification />);
 
   await waitFor(() => {
     const fbAppId = document
