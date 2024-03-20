@@ -2,10 +2,6 @@ import 'cypress-axe';
 
 import './commands';
 
-Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
-});
-
 const KNOWN_URLS = ['https://www.bbc.com/usingthebbc'];
 
 const isKnownUrl = testLocation =>
@@ -31,6 +27,9 @@ const KNOWN_ERRORS = [
   // React 18 elevates hydration errors from 'warning' to 'error' level. So its likely this issue has
   // always been present, but was not caught before.
   'Minified React error #418',
+  // Catches an error that is elevated when tests click on some of our Topic Tags that results
+  // in a redirect to a page outside of our control throwing this error.
+  `Cannot read properties of undefined (reading 'digest')`,
 ];
 
 // eslint-disable-next-line consistent-return

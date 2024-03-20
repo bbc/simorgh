@@ -1,119 +1,51 @@
 {
   "data": {
-    "title": "Labaran Duniya - BBC News Hausa",
-    "description": "Ziyarci shafin BBC Hausa domin samun rahotannin bidiyo da hotuna kan labarun Najeriya da Nijar da ma sauran sassan duniya baki daya.",
+    "title": "BBC News Hausa",
+    "description": "",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Dalilanmu na soma zawarcin jagororin kwankwasiyya - Ganduje",
-            "firstPublished": "2024-01-26T04:25:16.029Z",
-            "lastPublished": "2024-01-26T04:25:16.029Z",
-            "link": "https://www.bbc.com/hausa/articles/ckved4e45wko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e6c5/live/b34b3b90-bbde-11ee-8685-316409d66f25.jpg",
-            "description": "Shugaban jam'iyyar APC na kasa, Abdullahi Umar Ganduje ya shaida wa BBC dalilin aike goron gayyata ga gwamnan Kano, Abba Kabir Yusuf da jagoran jam'iyyar NNPP na kasa Rabiu Musa Kwankwaso zuwa jam'iyyarsu.",
-            "imageAlt": "Shugaban jam'iyyar APC",
-            "id": "ckved4e45wko"
-          },
-          {
-            "type": "commentary",
-            "title": "Kotun Duniya za ta yanke hukunci kan zargin Isra'ila da kisan kiyashi a Gaza",
-            "firstPublished": "2024-01-26T07:00:04.000Z",
-            "lastPublished": "2024-01-26T07:00:04.000Z",
-            "link": "https://www.bbc.com/hausa/live/68103427",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/74ee/live/8e7f8370-bc24-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Wannan shafi ne da ke kawo muku bubuwan da ke faruwa a Najeriya da sauran sassan duniya.",
-            "imageAlt": "Rikicin Isra'ila da Gaza",
-            "id": "d8079aa0-9cf4-4e40-95db-f8f6961c440a"
+            "title": "Ɗanɗano: Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+            "firstPublished": "2019-08-20T12:21:00.000Z",
+            "lastPublished": "2019-08-20T12:21:00.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23246985",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1745C/test/_63542359_hi035712328.jpg",
+            "description": "French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+            "imageAlt": "hai;le",
+            "id": "142c7232-ebaf-2d4e-8e70-6b68dda2f199"
           },
           {
             "type": "article",
-            "title": "Kungiyoyi na rububin Wilson, Man Utd na son Bobbey",
-            "firstPublished": "2024-01-26T04:08:12.287Z",
-            "lastPublished": "2024-01-26T04:08:12.287Z",
-            "link": "https://www.bbc.com/hausa/articles/cg3wj4lle9go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/20b3/live/e4acab80-bbff-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Watakil Newcastle ta sayar da ɗan wasanta na gaba Callum Wilson, mai shekara 31, kan fam miliyan 18 a satin karshe na cinikin 'yan wasa a cikin watan Janairu, tuni dai ƙungiyoyi irinsu Chelsea da Arsenal da Manchester United suka shiga rububinsa.",
-            "imageAlt": "Wilson",
-            "id": "cg3wj4lle9go"
+            "title": "Facebook zai rinka watsa intanet ta jirgin sama",
+            "firstPublished": "2016-07-26T12:42:27.000Z",
+            "lastPublished": "2016-07-26T12:42:27.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23062696",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/D14B/test/_63497535_astronauta.jpg",
+            "description": "Injiniya Andy Cox, wanda ya sayar da ma'aikatar ga Facebook, shi ne jagoran wannan tsari.",
+            "imageAlt": "Astronaut",
+            "id": "f42b6bed-cca6-6e48-a889-0acb8a78a012"
           },
           {
             "type": "article",
-            "title": "Shin wa Amurka ke kai wa hare-hare a Iraqi? ",
-            "firstPublished": "2024-01-26T04:26:04.597Z",
-            "lastPublished": "2024-01-26T04:26:04.597Z",
-            "link": "https://www.bbc.com/hausa/articles/c14109q7d5no",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0de8/live/21983e80-bafa-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Amurka ta kai hare-hare ta sama kan wasu cibiyoyi mallakin mayakan da ke samun goyon bayan kasar Iran a Iraqi. Ta ce hare-haren \"martani ne kai tsaye\" ga jerin hare-hare\" kan Amurka da sojojin kasashen duniya a Iraqi da Syria. ",
-            "imageAlt": "Mayaka na filfila tutocin kasar Iraqi da na kungiyoyin Hezbollah na al-Nujaba da Kataib.",
-            "id": "c14109q7d5no"
-          },
-          {
-            "type": "video",
-            "duration": "PT9M36S",
-            "title": "Ku San Malamanku tare Sheikh Isa Ali Pantami",
-            "firstPublished": "2024-01-26T03:50:01.732Z",
-            "lastPublished": "2024-01-26T03:50:01.732Z",
-            "link": "https://www.bbc.com/hausa/articles/ce5kd4z5ej0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/efba/live/9c510190-bbc5-11ee-896d-39d9bd3cadbb.png",
-            "description": "A shekarar 2019 tsohon shugaban Najeriya Muhammadu Buhari ya naɗa shi ministan sadarwa, muƙamin da ya riƙe har lokacin da Buhari ya sauka a 2023.",
-            "imageAlt": "b",
-            "id": "ce5kd4z5ej0o"
-          },
-          {
-            "type": "link",
-            "title": "Atiku ya nemi gwamnatin Tinubu ta yi bayani kan bashin dala biliyan 3.3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://trib.al/muL0Vyl",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b504/live/9caa9dd0-bbc6-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Jagoran adawar Najeriya Atiku Abubakar ya ce ya kamata gwamnatin shugaba Tinubu ta fito ta yi wa 'yan Najeriya bayani kan bashin dala biliyan 3.3 da kamfanin mai na ƙasar NNPC ta ciyo da nufin farfaɗo da darajar kudin ƙasar.",
-            "imageAlt": "Jagoran adawar Najeriya",
-            "id": "https%3A%2F%2Ftrib.al%2FmuL0Vyl"
-          },
-          {
-            "type": "article",
-            "title": "Yadda hare-haren mayakan Houthi ke tilasta jiragen ruwa yin dogon kewaye",
-            "firstPublished": "2024-01-25T18:08:07.978Z",
-            "lastPublished": "2024-01-25T18:08:07.978Z",
-            "link": "https://www.bbc.com/hausa/articles/clj9rgpx48po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5373/live/e49339f0-baa8-11ee-ace0-c35c1b4f6d82.jpg",
-            "description": "Kamfanonin fito na duniya na fuskantar guguwa da ke tilasta musu sauya akalar jiragensu ta hanyar yin kewaye na dubban mil domin kai wa ga wurin da suka nufa.",
-            "imageAlt": "Jiragen kaya a tsakiyar igiyar ruwa",
-            "id": "clj9rgpx48po"
-          },
-          {
-            "type": "article",
-            "title": "Abin da ya sa gwamnoni ba su da karfin iko kan jami’an tsaro",
-            "firstPublished": "2024-01-25T13:52:58.794Z",
-            "lastPublished": "2024-01-25T13:52:58.794Z",
-            "link": "https://www.bbc.com/hausa/articles/cy95gn2zz23o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b0d/live/92975080-bb72-11ee-b8ef-d57b8ed3e30e.jpg",
-            "description": "\"Kasancewar dukkanin hukumomin tsaro suna ƙarƙashin gwamnatin tarayya ne babu yanda za a yi gwamna ya zamo mai bayar da umurni ga wani jami'in tsaro.\"",
-            "imageAlt": "Shugaban hafsoshin tsaron Najeriya Janar Christopher Musa",
-            "id": "cy95gn2zz23o"
-          },
-          {
-            "type": "video",
-            "duration": "PT6M16S",
-            "title": "...Daga Bakin Mai Ita tare da Zainab ta Labarina",
-            "firstPublished": "2024-01-25T04:05:54.748Z",
-            "lastPublished": "2024-01-25T04:05:54.748Z",
-            "link": "https://www.bbc.com/hausa/articles/c80nkl30ej5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f214/live/845d8470-baf1-11ee-8685-316409d66f25.png",
-            "description": "Daga Bakin Mai Ita, shiri ne da ke tattaunawa da taurarin fina-finan Hausa da wasu fitattun mutane, domin yin bayani game da rayuwarsu ta yau da kullum\n",
-            "imageAlt": "Zainab Labarina",
-            "id": "c80nkl30ej5o"
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 1",
+            "firstPublished": "2016-06-24T13:34:14.000Z",
+            "lastPublished": "2016-06-24T13:34:14.000Z",
+            "link": "https://www.bbc.com/hausa/23055776",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "description": "Zuma ya fuskanci koma baya kan cin hanci",
+            "imageAlt": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "id": "56d61904-73f4-2c41-a9c8-f0262babb5cb"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:94c73456-7ae0-4033-8e88-8e4240a65f2e",
+        "curationId": "urn:bbc:tipo:list:92edcf14-984d-4f71-820e-49af2da47431",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Babban Labari",
+        "title": "Top stories",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -121,140 +53,41 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Sakamakon wasannin Afcon 2023",
-            "firstPublished": "2024-01-15T10:05:48.165Z",
-            "lastPublished": "2024-01-15T10:05:48.165Z",
-            "link": "https://www.bbc.com/hausa/articles/czqvzyn6ezlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cd0b/live/70cb6cf0-b38b-11ee-bc2f-cb5579b90709.jpg",
-            "description": "Wannan shafi ne da ke kawo muku sakamakon wasannin gasar cin kofin ƙwallon ƙafa ta nahiyar Afirka ta 2023 da ke gudana a ƙasar Ivory Coast.",
-            "imageAlt": "AfCon 2024",
-            "id": "czqvzyn6ezlo"
+            "title": "Uhuru withdraw from Kenya election",
+            "firstPublished": "2017-06-12T11:45:53.000Z",
+            "lastPublished": "2017-06-12T11:50:55.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23131325",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/13758/test/_63540797_mediaitem63540796.jpg",
+            "description": "So this is a single sentence in present or future tense and can be as long as you like.",
+            "imageAlt": "David Beckham needed a haircut",
+            "id": "ea5f99ae-7ca8-fd4a-a297-69b7f4078008"
           },
           {
-            "type": "article",
-            "title": "Alamomin kamuwa da cutar ƙyanda",
-            "firstPublished": "2024-01-25T04:04:38.996Z",
-            "lastPublished": "2024-01-25T04:04:38.996Z",
-            "link": "https://www.bbc.com/hausa/articles/c514wnjxr4no",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9b12/live/5b5e8390-ba1e-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "WHO da cibiyar yaƙi da cutuka masu yaɗuwa a Amurka sun yi gargaɗin cewa tun bayan ƙarewar 2023, ake samun ƙaruwar ƙyanda da ke zama barazana ga ƙananan yara",
-            "imageAlt": "Measles rash on the stomach of a child who is wearing a nappy",
-            "id": "c514wnjxr4no"
+            "type": "video",
+            "title": "Ina son habaka tattalin arzikin Nigeria — Murtala",
+            "firstPublished": "2016-07-19T13:45:00.000Z",
+            "lastPublished": "2016-07-19T13:45:00.000Z",
+            "link": "https://www.bbc.com/hausa/media-23061485",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/2AD9/test/_63496901_p014p0q4.jpg",
+            "description": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis summary",
+            "imageAlt": "Amurka na binciken hadarin mota marar matuki",
+            "id": "2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911"
           },
           {
-            "type": "article",
-            "title": "Muna daf da rufe gidajen manmu - IPMAN ",
-            "firstPublished": "2024-01-25T04:11:20.793Z",
-            "lastPublished": "2024-01-25T04:11:20.793Z",
-            "link": "https://www.bbc.com/hausa/articles/clj9r46nd9wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6c84/live/e317c040-bb26-11ee-8685-316409d66f25.jpg",
-            "description": "Ƙungiyar dillalan man fetur masu zaman kansu ta Najeriya, (IPMAN), ta koka game da wasu matsaloli da dama da 'ya'yanta na yankin arewacin ƙasar ke fuskanta wajen samun man fetur daga kamfanin NNPCL ",
-            "imageAlt": "Oil and Gas",
-            "id": "clj9r46nd9wo"
-          },
-          {
-            "type": "article",
-            "title": "Saudiyya na shirin buɗe shagon sayar da giya na farko ga jami'an diflomasiyya",
-            "firstPublished": "2024-01-24T18:24:30.097Z",
-            "lastPublished": "2024-01-24T18:24:30.097Z",
-            "link": "https://www.bbc.com/hausa/articles/c04r9elj9xgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c761/live/52794ac0-bae2-11ee-ace0-c35c1b4f6d82.jpg",
-            "description": "Kwastomomi za su riƙa yin rijistar sayan barasar ta manhajar salula, sannan a ba su wasu lambobin sahalewa daga ma'aikatar harkokin wajen ƙasar, sannan ba za su wuce abin da aka ƙayyade musu za su saya a wata ba.",
-            "imageAlt": ",",
-            "id": "c04r9elj9xgo"
-          },
-          {
-            "type": "link",
-            "title": "'Mayar da birnin tarayya zuwa Legas ba gaskiya ba ne'",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://bbc.in/3HwI8rL",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fa2f/live/83bfbcd0-bafc-11ee-8685-316409d66f25.jpg",
-            "description": "Mai bai wa shugaban Najeriya Bola Tinubu shawara kan yada labarai, Bayo Onanuga ya ce shugaban kasar ba shi da aniyar ɗauke babban birnin tarayyar ƙasar daga Abuja zuwa Legas.",
-            "imageAlt": "..",
-            "id": "https%3A%2F%2Fbbc.in%2F3HwI8rL"
-          },
-          {
-            "type": "article",
-            "title": "Abu hudu da Blinken ya tattauna da Tinubu",
-            "firstPublished": "2024-01-24T16:56:57.101Z",
-            "lastPublished": "2024-01-24T16:56:57.101Z",
-            "link": "https://www.bbc.com/hausa/articles/cgl474j0xy5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3418/live/d046c9c0-baae-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "A ranar Laraba ne Sakataren Harkokin Wajen Amurka Antony Blinken ke kammala wata ziyarar aiki da ya kai Najeriya a wani bangare na rangadin da yake a kasashen Afirka hudu. ",
-            "imageAlt": "..",
-            "id": "cgl474j0xy5o"
-          },
-          {
-            "type": "link",
-            "title": "Hisbah na neman fitattun ƴan Tiktok shida a Kano",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://trib.al/NqbRG4l",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9133/live/ef5a4bb0-baa0-11ee-8685-316409d66f25.jpg",
-            "description": "A cewar Sheikh Daurawa, suna cigiyar mutanen ne bayan ɓullar wani bidiyo da a ciki suke furta kalaman da ba su dace ba wanda kuma ya ci karo da alkawarin da suka yi lokacin da aka kama su a karon farko domin yi musu wa'azi.",
-            "imageAlt": "...",
-            "id": "https%3A%2F%2Ftrib.al%2FNqbRG4l"
-          },
-          {
-            "type": "article",
-            "title": "Me zai faru idan NNPP da APC suka haɗe a Kano?",
-            "firstPublished": "2024-01-24T04:00:39.969Z",
-            "lastPublished": "2024-01-24T04:00:39.969Z",
-            "link": "https://www.bbc.com/hausa/articles/c4nvdrj304qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d649/live/f37d4ca0-ba4c-11ee-9e5c-151df6b6e503.jpg",
-            "description": "Batun dai ya soma taso ne bayan da gwamna Abba Kabir Yusuf, ya yaba wa shugaban Najeriya Bola Tinubu bayan hukuncin da kotun ƙolin Najeriyar ta yanke, da ya tabbatar da halascinsa a matsayin gwamna.",
-            "imageAlt": "Abba Kabir Yusuf",
-            "id": "c4nvdrj304qo"
-          },
-          {
-            "type": "article",
-            "title": "Ba za mu bari a zalunci arewa ba - Ali Ndume",
-            "firstPublished": "2024-01-23T04:13:47.785Z",
-            "lastPublished": "2024-01-23T04:13:47.785Z",
-            "link": "https://www.bbc.com/hausa/articles/c4nxqqj6d28o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/71ff/live/4fe3b170-b992-11ee-ace0-c35c1b4f6d82.jpg",
-            "description": "Sanata Ali Ndume ya shaida wa BBC cewa matakin da gwamnatin ta ɗauka ya saɓa wa kundin tsarin mulkin ƙasar wanda ya tanadi cewa Abuja ce birnin tarayya kuma a nan ya kamata a ce duk wata hedikwatar ma'aikatar gwamnati take",
-            "imageAlt": "Ali Ndume",
-            "id": "c4nxqqj6d28o"
-          },
-          {
-            "type": "link",
-            "title": "An kashe sojojin Isra'ila 24 a Gaza lokaci guda",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://trib.al/85NjL0H",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8dce/live/c8d2a180-b9cf-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Babban mai magana da yawun rundunar tsaron Isra'ila (IDF), Daniel Hagari ya ce ana kyautata zaton wata roka ce da aka harba ta faɗa kan wani tanki da ke kusa da wasu gine-gine biyu da sojojin ke ciki.",
-            "imageAlt": "...",
-            "id": "https%3A%2F%2Ftrib.al%2F85NjL0H"
-          },
-          {
-            "type": "article",
-            "title": "'Ana rusa wuraren haƙo abubuwan tarihi domin sace su a Afghanistan’",
-            "firstPublished": "2024-01-23T04:03:16.177Z",
-            "lastPublished": "2024-01-23T04:03:16.177Z",
-            "link": "https://www.bbc.com/hausa/articles/cmmgn911rv3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ce40/live/77667580-b626-11ee-8f07-bbfdfa890097.jpg",
-            "description": "Ana rushe gwamman wuraren da ake haƙo abubuwa masu daɗaɗɗen tarihi domin yin sata a Afghanistan, a cewar masu bincike na jami’ar Chicago ta Amurka",
-            "imageAlt": "Satellite image showing pits in Afghan archaeological site, which researchers say have been dug by looters",
-            "id": "cmmgn911rv3o"
-          },
-          {
-            "type": "article",
-            "title": "'Mu muka karɓo yaranmu daga hannun masu garkuwa da mutane, ba ƴansanda ba'",
-            "firstPublished": "2024-01-22T15:32:07.126Z",
-            "lastPublished": "2024-01-22T15:32:07.126Z",
-            "link": "https://www.bbc.com/hausa/articles/cnln2vzjwj8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f9a2/live/48d237a0-b92c-11ee-ace0-c35c1b4f6d82.jpg",
-            "description": "Lokacin da BBC ta tuntuɓi iyalan Al-Kadriyah domin jin yadda aka saki ƴanmatan, abun da suka faɗa ya saɓa da sanarwar da ƴansanda da kuma sojoji suka fitar kan lamarin.",
-            "imageAlt": "AL-KADRIYAH FAMILY",
-            "id": "cnln2vzjwj8o"
+            "type": "audio",
+            "title": "France beat England in a friendly",
+            "firstPublished": "2017-06-14T12:08:43.000Z",
+            "lastPublished": "2017-06-14T12:08:43.000Z",
+            "link": "https://www.bbc.com/hausa/23132710",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/13A28/test/_63542408_p01b7w9z.jpg",
+            "description": "hgasjkgdja jkghd hkdh gyebnawh duiagd uw qwjdgufg bdfagafms c bgfiubaggd doiabnasmbfui",
+            "imageAlt": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+            "id": "939fe657-b46c-fc44-b620-b5ff7113c17f"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:9f144cb4-ac4a-4072-b3ad-4681b4846261",
+        "curationId": "urn:bbc:tipo:list:3302e7be-c4a3-4eb4-b785-5603864c5bb1",
         "curationType": "tipo-curation",
         "position": 1,
         "title": "Labarai da Rahotanni Na Musamman",
@@ -262,832 +95,58 @@
         "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT2M11S",
-            "title": "Kalli sabon wurin bautar Hindu da aka gina kan filin masallaci",
-            "firstPublished": "2024-01-24T12:07:51.388Z",
-            "lastPublished": "2024-01-24T12:07:51.388Z",
-            "link": "https://www.bbc.com/hausa/articles/ce4en3z71w8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c802/live/db19dde0-bab0-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Wurin bautar ya maye gurbin wani masallaci da aka gina a ƙarni na 16, wanda mabiya addinin Hindu suka ƙona a 1992.",
-            "imageAlt": "...",
-            "id": "ce4en3z71w8o"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M38S",
-            "title": "'Abin da ya sa muka yi bikin aurenmu irin na Indiyawa'",
-            "firstPublished": "2024-01-22T12:53:38.841Z",
-            "lastPublished": "2024-01-22T12:53:38.841Z",
-            "link": "https://www.bbc.com/hausa/articles/cd1x5mep7gno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8acf/live/005011c0-b925-11ee-bc2f-cb5579b90709.jpg",
-            "description": "Amarya da ango sun caɓa ado da kaya irin na ƴan ƙasar Indiya, wani abu daya sa aka riƙa yaɗa bidiyo da hotunan bikin a shafukan sada zumunta.",
-            "imageAlt": "....",
-            "id": "cd1x5mep7gno"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M16S",
-            "title": "Matashin da ya ƙirƙiri manhajar ‘Unlock Arewa’",
-            "firstPublished": "2024-01-21T16:38:12.688Z",
-            "lastPublished": "2024-01-21T16:38:12.688Z",
-            "link": "https://www.bbc.com/hausa/articles/c03581ye0x6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/eb81/live/550f2c50-b87b-11ee-8f07-bbfdfa890097.png",
-            "description": "Nasir Bappi, matashin nan da ya samar da manhajar 'Unlock Arewa' a yanar gizo ya ce ya iƙiri manhajar ne don nuna wa duniya kyayawan al'adun Hausawa na gargajiya.\n",
-            "imageAlt": "b",
-            "id": "c03581ye0x6o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M36S",
-            "title": "Hira da mai ɗakin gwamnan Katsina",
-            "firstPublished": "2024-01-20T15:18:03.049Z",
-            "lastPublished": "2024-01-20T15:18:03.049Z",
-            "link": "https://www.bbc.com/hausa/articles/c842jxr22d8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ffd5/live/f0bd8370-b7a6-11ee-bc2f-cb5579b90709.png",
-            "description": "Hajiya Fatima Dikko Radda, mai ɗakin gwamnan jihar Katsina, ita ce shugabar wata gidauniya da ke yaƙi da cutar sankarar mata da ta mahaifa. \n",
-            "imageAlt": "Fatima Dikko Radda",
-            "id": "c842jxr22d8o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 26,
-        "link": "https://www.test.bbc.com/hausa/topics/cn09qmz4jryt",
-        "curationId": "urn:bbc:vivo:curation:7bf2e91a-9585-49ad-b1f7-ec52eade566b",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_hausa_radio",
+        "curationType": "available-episodes",
         "position": 2,
-        "title": "Labaran Bidiyo",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "An dakatar da kocin Union Berlin kan naushin Leroy Sane",
-            "firstPublished": "2024-01-25T18:03:20.091Z",
-            "lastPublished": "2024-01-25T18:03:20.091Z",
-            "link": "https://www.bbc.com/hausa/articles/c0jvd3g1d9vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c76c/live/d735c0d0-bbab-11ee-8685-316409d66f25.jpg",
-            "description": "Ya nuna ɗabi’ar da ba ta ‘yan wasa ba, kamar yadda hukumar kwallon kafa ta Jamus ta bayyana.",
-            "imageAlt": "gg",
-            "id": "c0jvd3g1d9vo"
-          },
-          {
-            "type": "article",
-            "title": "Man City ta sayi Claudio Echeverri daga River Plate",
-            "firstPublished": "2024-01-25T17:13:54.371Z",
-            "lastPublished": "2024-01-25T17:13:54.371Z",
-            "link": "https://www.bbc.com/hausa/articles/cv2w0xve15lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/df75/live/e27b90c0-bba9-11ee-8685-316409d66f25.jpg",
-            "description": "Ya kammala gasar da kwallo biyar, yayin da Argentina ta ƙare a matsayi na hudu bayan rashin nasarar da ta yi a wasan neman na uku.",
-            "imageAlt": "gg",
-            "id": "cv2w0xve15lo"
-          },
-          {
-            "type": "article",
-            "title": "Wani alƙali ya nemi Luis Rebiales ya bayyana gaban kotu",
-            "firstPublished": "2024-01-25T16:31:11.042Z",
-            "lastPublished": "2024-01-25T16:31:11.042Z",
-            "link": "https://www.bbc.com/hausa/articles/cv285np7wg1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/32d5/live/a7d6c080-bb9e-11ee-ace0-c35c1b4f6d82.jpg",
-            "description": "Lauyoyin da ke cikin shari’ar na da kwanaki 10 ne kacal domin su shigar da buƙatar sauraren ƙarar gaban kotu.",
-            "imageAlt": "gg",
-            "id": "cv285np7wg1o"
-          },
-          {
-            "type": "article",
-            "title": "Ƙasashen da suka sha da ƙyar zuwa zagayen ƴan 16 a gasar Afcon 2023",
-            "firstPublished": "2024-01-25T10:31:32.719Z",
-            "lastPublished": "2024-01-25T10:32:43.751Z",
-            "link": "https://www.bbc.com/hausa/articles/cevr2nlqk9vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a11e/live/7ca83fc0-bb6b-11ee-896d-39d9bd3cadbb.jpg",
-            "description": "Karawar ta matakin rukuni ta bayar da mamaki kasancewar wasu daga cikin ƙasashen da ake tunanin za su iya lashe kofin sun gaza taɓuka abin kirki.",
-            "imageAlt": "...",
-            "id": "cevr2nlqk9vo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 40,
-        "link": "https://www.test.bbc.com/hausa/topics/cz74kjgv220t",
-        "curationId": "urn:bbc:vivo:curation:8bec007e-f0cd-4a73-8768-cd7a5548ab81",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Wasanni",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Latsa nan domin sauraro",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/hausa/bbc_hausa_radio/liveradio",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f401/live/23affa20-941a-11ee-b9a7-c91b9dfa91e5.png",
-            "description": "Saurari labaran BBC Hausa Kai Tsaye Litinin zuwa Juma’a da karfe 0530, 0630, 1400 da 1930 GMT, sai kuma Asabar da Lahadi da karfe 0530, 0630 da 1930 GMT.",
-            "imageAlt": "Latsa nan domin sauraro",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fhausa%2Fbbc_hausa_radio%2Fliveradio"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:61823e2c-d9ab-40e7-bb70-9cbff365bcbc",
-        "curationType": "tipo-curation",
-        "position": 4,
-        "title": "KAI TSAYE - Labaran BBC Hausa",
+        "title": "Radio Schedule",
         "visualProminence": "NORMAL",
-        "visualStyle": "BANNER"
-      },
-      {
-        "title": "radio-schedule",
-        "curationId": "radio-schedule",
-        "curationType": "radio-schedule",
-        "position": 5,
-        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
         "radioSchedule": [
           {
-            "serviceId": "bbc_hausa_radio",
-            "publishedTimeStart": "2024-01-22T06:30:00.000Z",
-            "publishedTimeEnd": "2024-01-22T06:59:30.000Z",
-            "publishedTimeDuration": "PT29M30S",
-            "title": "Shirin Hantsi",
-            "brandPid": "p030s4mh",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w172zjpc91lymb6",
-            "broadcastPid": "p0h06c20",
-            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+            "id": "p0h6nbrn",
+            "state": "next",
+            "startTime": "2024-02-27T13:59:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct655y",
+            "brandTitle": "Shirin Rana",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           },
           {
-            "serviceId": "bbc_hausa_radio",
-            "publishedTimeStart": "2024-01-22T13:59:30.000Z",
-            "publishedTimeEnd": "2024-01-22T14:29:30.000Z",
-            "publishedTimeDuration": "PT30M",
-            "title": "Shirin Rana",
-            "brandPid": "p030s4mp",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w3ct653j",
-            "broadcastPid": "p0h09j5t",
-            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+            "id": "p0h6kmpj",
+            "state": "onDemand",
+            "startTime": "2024-02-27T06:30:00.000Z",
+            "link": "/hausa/bbc_hausa_radio/w172zjpf3d5y88h",
+            "brandTitle": "Shirin Hantsi",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT29M30S"
           },
           {
-            "serviceId": "bbc_hausa_radio",
-            "publishedTimeStart": "2024-01-22T19:29:30.000Z",
-            "publishedTimeEnd": "2024-01-22T19:59:30.000Z",
-            "publishedTimeDuration": "PT30M",
-            "title": "Shirin Yamma",
-            "brandPid": "p030s4mx",
-            "episodeTitle": "22/01/2024 GMT",
-            "episodePid": "w3ct65hy",
-            "broadcastPid": "p0h0cm5b",
-            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+            "id": "p0h6kmpg",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65fv",
+            "brandTitle": "Shirin Safe",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           },
           {
-            "serviceId": "bbc_hausa_radio",
-            "publishedTimeStart": "2024-01-23T05:29:30.000Z",
-            "publishedTimeEnd": "2024-01-23T05:59:30.000Z",
-            "publishedTimeDuration": "PT30M",
-            "title": "Shirin Safe",
-            "brandPid": "p030s4n1",
-            "episodeTitle": "23/01/2024 GMT",
-            "episodePid": "w3ct65fp",
-            "broadcastPid": "p0h0f92c",
-            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+            "id": "p0h6j50j",
+            "state": "onDemand",
+            "startTime": "2024-02-26T19:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65j3",
+            "brandTitle": "Shirin Yamma",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           }
         ]
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Shirin Hantsi",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/hausa/bbc_hausa_radio/programmes/p030s4mh",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0213/live/efbe5360-8497-11ee-913e-f1ed4de8fadb.png",
-            "description": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
-            "imageAlt": "Shirin Hantsi",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fhausa%2Fbbc_hausa_radio%2Fprogrammes%2Fp030s4mh"
-          },
-          {
-            "type": "link",
-            "title": "Shirin Rana",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/hausa/bbc_hausa_radio/programmes/p030s4mp",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7ed2/live/1032e390-8498-11ee-913e-f1ed4de8fadb.png",
-            "description": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
-            "imageAlt": "Shirin Rana",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fhausa%2Fbbc_hausa_radio%2Fprogrammes%2Fp030s4mp"
-          },
-          {
-            "type": "link",
-            "title": "Shirin Safe",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/hausa/bbc_hausa_radio/programmes/p030s4n1",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ff7e/live/215bbde0-8498-11ee-913e-f1ed4de8fadb.png",
-            "description": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
-            "imageAlt": "Shirin Safe",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fhausa%2Fbbc_hausa_radio%2Fprogrammes%2Fp030s4n1"
-          },
-          {
-            "type": "link",
-            "title": "Ra’ayi Riga",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/hausa/bbc_hausa_radio/programmes/p030s4mx",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6693/live/2f8d0310-8498-11ee-82d0-c92f0cf2b2e0.png",
-            "description": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
-            "imageAlt": "Ra’ayi Riga",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fhausa%2Fbbc_hausa_radio%2Fprogrammes%2Fp030s4mx"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:344455f3-5dd3-4dbf-ba4e-bfdc7d5f3ab4",
-        "curationType": "tipo-curation",
-        "position": 6,
-        "title": "Shirye-shiryen rediyo",
-        "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "audio",
-            "duration": "PT8M55S",
-            "title": "Hikayata 2023: Labarin Mairama",
-            "firstPublished": "2024-01-21T04:19:03.967Z",
-            "lastPublished": "2024-01-21T04:19:03.967Z",
-            "link": "https://www.bbc.com/hausa/articles/cd14r4ml30jo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d584/live/c174bde0-b7d3-11ee-bc2f-cb5579b90709.jpg",
-            "description": "Hikayata: Labarin Mairamu wanda Aisha Kabir mazauniyar birnin Kano ta rubuta na daya daga cikin labarai 12 da alkalan gasar Hikayata suka ce sun cancanci yabo.",
-            "imageAlt": "..",
-            "id": "cd14r4ml30jo"
-          },
-          {
-            "type": "article",
-            "title": "Gasar kofin Afirka da bikin ma'aurata na cikin hotuna Afirkao",
-            "firstPublished": "2024-01-20T14:53:39.554Z",
-            "lastPublished": "2024-01-20T14:53:39.554Z",
-            "link": "https://www.bbc.com/hausa/articles/cd1kjnm22kno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4366/live/075160b0-b7a3-11ee-b425-d781c2e8777f.jpg",
-            "description": "Zaɓaɓɓun ƙayatattun hotunan Afirka na wannan makon",
-            "imageAlt": "Gasar kofin kasashen Afrika",
-            "id": "cd1kjnm22kno"
-          },
-          {
-            "type": "video",
-            "duration": "PT7M33S",
-            "title": "...Daga Bakin Mai Ita tare da Deezell",
-            "firstPublished": "2024-01-18T04:24:19.899Z",
-            "lastPublished": "2024-01-18T04:24:19.899Z",
-            "link": "https://www.bbc.com/hausa/articles/cxe6eyyejv3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a5ab/live/3afe60c0-b573-11ee-beb5-e1400df560f2.jpg",
-            "description": "A wannan mako shirin...Daga Bakin Mai Ita ya tattauna da Ibrahim Rufai wadda aka fi sani da Deezell.",
-            "imageAlt": "Deezell",
-            "id": "cxe6eyyejv3o"
-          },
-          {
-            "type": "audio",
-            "duration": "PT9M23S",
-            "title": "Hikayata 2023: Labarin Ƙarshen Wahala",
-            "firstPublished": "2024-01-14T04:03:17.287Z",
-            "lastPublished": "2024-01-14T04:03:17.287Z",
-            "link": "https://www.bbc.com/hausa/articles/c2vy4jw580lo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f29b/live/132563e0-b551-11ee-bc2f-cb5579b90709.jpg",
-            "description": "Labarin Ƙarshen Wahala wanda Zainab Muhammad Chubaɗo da ke zaune a gida mai lamba 1422, Layin Murtala Sule Garo, Rijiyar Zaki, Kano ta rubuta.",
-            "imageAlt": "..",
-            "id": "c2vy4jw580lo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 2,
-        "link": "https://www.bbc.com/hausa/topics/cg726kz37wdt",
-        "curationId": "urn:bbc:vivo:curation:5cf34669-232f-4815-8833-b4fb0ee1ea69",
-        "curationType": "vivo-stream",
-        "position": 7,
-        "title": "Nishadi",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "audio",
-            "duration": "PT9M37S",
-            "title": "Amsoshin Takardunku: Tarihin Malam Isa Gusau",
-            "firstPublished": "2024-01-21T13:37:58.193Z",
-            "lastPublished": "2024-01-21T13:37:58.193Z",
-            "link": "https://www.bbc.com/hausa/articles/c6pe43m7140o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7ece/live/947f15d0-b85d-11ee-bc2f-cb5579b90709.jpg",
-            "description": "",
-            "imageAlt": "Malam Isa Gusau",
-            "id": "c6pe43m7140o"
-          },
-          {
-            "type": "audio",
-            "duration": "PT13M38S",
-            "title": "Ko gyambon ciki na janyo ciwon daji?",
-            "firstPublished": "2024-01-20T13:47:12.988Z",
-            "lastPublished": "2024-01-20T13:47:12.988Z",
-            "link": "https://www.bbc.com/hausa/articles/cx9k20d1ydwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d8eb/live/f9eb22c0-b799-11ee-bc2f-cb5579b90709.jpg",
-            "description": "",
-            "imageAlt": "B",
-            "id": "cx9k20d1ydwo"
-          },
-          {
-            "type": "audio",
-            "title": "Gane Mani Hanya kan Dakatar da shugabannin wasu bankuna da CBN ya yi ",
-            "firstPublished": "2024-01-20T13:22:57.465Z",
-            "lastPublished": "2024-01-20T13:22:57.465Z",
-            "link": "https://www.bbc.com/hausa/articles/c6p1200l41vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dbf3/live/c9a6ca80-b797-11ee-8f07-bbfdfa890097.jpg",
-            "description": "",
-            "imageAlt": "bbb",
-            "id": "c6p1200l41vo"
-          },
-          {
-            "type": "audio",
-            "duration": "PT59M28S",
-            "title": "Ra'ayi Riga: Kan ƙaruwar matsalar tsaro a Najeriya",
-            "firstPublished": "2024-01-20T17:56:41.615Z",
-            "lastPublished": "2024-01-20T17:56:41.615Z",
-            "link": "https://www.bbc.com/hausa/articles/c72y4d5382go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ce0a/live/201c94b0-b7bd-11ee-8f07-bbfdfa890097.jpg",
-            "description": "Ra'ayi Riga: Kan ƙaruwar matsalar tsaro a Najeriya\n",
-            "imageAlt": "g",
-            "id": "c72y4d5382go"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:4cafcb6b-921c-42ec-8ae4-6f0c3e7bb59e",
-        "curationType": "tipo-curation",
-        "position": 8,
-        "title": "Shirye-shirye na Musamman",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Me zai faru da shafukan sada zumuntarmu idan mun mutu?",
-            "firstPublished": "2024-01-21T04:18:31.050Z",
-            "lastPublished": "2024-01-21T04:18:31.050Z",
-            "link": "https://www.bbc.com/hausa/articles/c902exnd9x0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/73eb/live/e4b97a70-b3b4-11ee-8f07-bbfdfa890097.jpg",
-            "description": "Lokacin da wani makusancinsu ya rasu, mutane yi kewar tattaunawa, da shaƙuwa da runguma da kuma kallon juna, amma yayin da aka samu bunƙasar shafukan sada zumunta, wannan kewa da ake fuskantar bayan mutuwar makusanci ta faɗaɗa zuwa shafukan sada zumunta.\n",
-            "imageAlt": "...",
-            "id": "c902exnd9x0o"
-          },
-          {
-            "type": "article",
-            "title": "Ƙirƙirarriyar basira za ta shafi kashi 40 na ayyukan yi a duniya, cewar IMF",
-            "firstPublished": "2024-01-15T16:01:51.229Z",
-            "lastPublished": "2024-01-15T16:01:51.229Z",
-            "link": "https://www.bbc.com/hausa/articles/cgxjdky21q9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2bab/live/2dc16990-b3a5-11ee-beb5-e1400df560f2.jpg",
-            "description": "Kiristalina Georgieva ta ƙara da cewa kamata ya yi masu tsara manufofin gwamnati su yi ƙoƙarin shawo kan wannan \"lamari mai tayar da hankali\" don \"hana ƙere-ƙere ƙara rura wutar rikici tsakanin jama'a\",",
-            "imageAlt": "AI",
-            "id": "cgxjdky21q9o"
-          },
-          {
-            "type": "article",
-            "title": "Yadda za ku inganta rayuwarku a 2024 a kimiyyance",
-            "firstPublished": "2024-01-06T04:01:39.384Z",
-            "lastPublished": "2024-01-06T04:01:39.384Z",
-            "link": "https://www.bbc.com/hausa/articles/cnd79gjw46ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2bbe/live/2919ff10-a8c4-11ee-bc2f-cb5579b90709.jpg",
-            "description": "Mafi yawan mutane kan watsar da kudurorinsu a tsakiyar shekara, kamar yadda wani bincike ya nuna",
-            "imageAlt": "..",
-            "id": "cnd79gjw46ko"
-          },
-          {
-            "type": "article",
-            "title": "Mutumin da ya ƙirƙiro fitacciyar fistol Glock ya rasu",
-            "firstPublished": "2023-12-28T17:09:27.413Z",
-            "lastPublished": "2023-12-28T17:09:27.413Z",
-            "link": "https://www.bbc.com/hausa/articles/c1vyx7r4p6ro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4f9d/live/b40f06c0-a5a3-11ee-8f07-bbfdfa890097.jpg",
-            "description": "Dakarun tsaro da jami'an tsaro da fararen hula masu mallakar bindiga da ɓata-gari a faɗin duniya, duk suna amfani da makamin da ya ƙirƙiro.",
-            "imageAlt": "Glock pistol",
-            "id": "c1vyx7r4p6ro"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 7,
-        "curationId": "urn:bbc:vivo:curation:3517b320-d238-4d82-9556-9d01ca43de1d",
-        "curationType": "vivo-stream",
-        "position": 9,
-        "title": "Kimiyya da Fasaha",
-        "visualProminence": "LOW",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Hotunan yadda gobara ta lalata shaguna a kasuwar Fanteka ta Kaduna",
-            "firstPublished": "2024-01-17T14:27:01.381Z",
-            "lastPublished": "2024-01-17T14:27:01.381Z",
-            "link": "https://www.bbc.com/hausa/articles/clme3j4m3m5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aa2b/live/3af396b0-b544-11ee-8f07-bbfdfa890097.jpg",
-            "description": "",
-            "imageAlt": "...",
-            "id": "clme3j4m3m5o"
-          },
-          {
-            "type": "article",
-            "title": "Manomin strawberry da isar tawagar Ghana zuwa Abidjan don gasar Afcon cikin hotunan Afrika ",
-            "firstPublished": "2024-01-13T15:19:47.550Z",
-            "lastPublished": "2024-01-13T15:19:47.550Z",
-            "link": "https://www.bbc.com/hausa/articles/cgxj5l5lq3eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6940/live/ebc80640-b226-11ee-beb5-e1400df560f2.png",
-            "description": "",
-            "imageAlt": "b",
-            "id": "cgxj5l5lq3eo"
-          },
-          {
-            "type": "article",
-            "title": "Ziyarar Erdogan Algeriya cikin hotunan Afirka",
-            "firstPublished": "2023-11-25T12:54:53.711Z",
-            "lastPublished": "2023-11-25T12:54:53.711Z",
-            "link": "https://www.bbc.com/hausa/articles/c4n8610e3jvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e5c9/live/24ad37a0-8b8f-11ee-833d-0f8d294ddc97.jpg",
-            "description": "Ƙayatattun hotunan Afirka da na 'yan nahiyar a wasu sassan duniya ",
-            "imageAlt": ".",
-            "id": "c4n8610e3jvo"
-          },
-          {
-            "type": "article",
-            "title": "Gasar tseren mata da tsaftar Muhalli  cikin hotunan Afrika",
-            "firstPublished": "2023-11-11T14:27:49.993Z",
-            "lastPublished": "2023-11-11T14:27:49.993Z",
-            "link": "https://www.bbc.com/hausa/articles/cv2zp46dye0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fd0b/live/b5aafa60-807e-11ee-b7d2-dd851f00eaeb.jpg",
-            "description": "",
-            "imageAlt": "'Yar wasan tsere daga Kenya tare da 'yarta yayin da ta yi nasara a tseren mata da aka gudanar a birnin York City.",
-            "id": "cv2zp46dye0o"
-          },
-          {
-            "type": "article",
-            "title": "Tserewar Falasɗinawa zuwa Masar da gasar kamun Kifi cikin hotunan Afirka",
-            "firstPublished": "2023-11-04T13:51:48.406Z",
-            "lastPublished": "2023-11-04T13:51:48.406Z",
-            "link": "https://www.bbc.com/hausa/articles/cv2z5dgpg17o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f003/live/142b5b30-7b06-11ee-abb3-7d47632a33ab.jpg",
-            "description": "Ƙayatattaun hotunan Afirka da na 'yan nahiyar a wasu sassan duniya",
-            "imageAlt": ".",
-            "id": "cv2z5dgpg17o"
-          },
-          {
-            "type": "article",
-            "title": "Sarauniyar Netherlands da masu goyon bayan Falasɗinawa cikin hotunan Afika",
-            "firstPublished": "2023-10-28T14:43:56.890Z",
-            "lastPublished": "2023-10-28T14:43:56.890Z",
-            "link": "https://www.bbc.com/hausa/articles/cxe3zkn6xgeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9cfe/live/6af8e7c0-7598-11ee-8139-61b1db4c8e2f.jpg",
-            "description": "Kamar kowane mako, a yau ma tun tattaro muku wasu daga cikin ƙayatattun hotunan Afirka da na 'yan nahiyar a wasu sassan duniya",
-            "imageAlt": ",",
-            "id": "cxe3zkn6xgeo"
-          },
-          {
-            "type": "article",
-            "title": "Auren zawarawa a Kano da motocin agaji zuwa Gaza cikin hotunan Afirka",
-            "firstPublished": "2023-10-21T15:10:22.742Z",
-            "lastPublished": "2023-10-21T15:10:22.742Z",
-            "link": "https://www.bbc.com/hausa/articles/ce4wwy88qj4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/30ac/live/48259760-7003-11ee-bf79-e998d49a17c1.jpg",
-            "description": "Wasu ƙayatattun hotunan Afirka da na 'yan nahiyar a wasu sassan duniya cikin makon da ya gabata ",
-            "imageAlt": ".",
-            "id": "ce4wwy88qj4o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:a5251a66-c762-4bc5-bbcf-fdfc5f479e01",
-        "curationType": "vivo-stream",
-        "position": 10,
-        "title": "Hotuna",
-        "visualProminence": "NORMAL",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Facebook",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.facebook.com/BBCNewsHausa/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ad18/live/79e66630-5edd-11ee-93e8-5d16174eb488.png",
-            "description": "",
-            "imageAlt": "Facebook logo",
-            "id": "https%3A%2F%2Fwww.facebook.com%2FBBCnewsUkrainian"
-          },
-          {
-            "type": "link",
-            "title": "X",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://twitter.com/bbchausa",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3f38/live/242ae4e0-9048-11ee-ac7f-c97dfdb65d91.png",
-            "description": "",
-            "imageAlt": "X/Twitter",
-            "id": "https%3A%2F%2Ftwitter.com%2Fbbchausa"
-          },
-          {
-            "type": "link",
-            "title": "Instagram",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.instagram.com/bbchausa/?hl=en",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7b79/live/4f1e3990-9048-11ee-952c-5f8de97ee99b.png",
-            "description": "",
-            "imageAlt": "Instagram",
-            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbchausa%2F%3Fhl%3Den"
-          },
-          {
-            "type": "link",
-            "title": "YouTube",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.youtube.com/user/bbchausa",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b43/live/57ef7bc0-5edd-11ee-8feb-1f7179b2c49b.png",
-            "description": "",
-            "imageAlt": "YouTube logo",
-            "id": "https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCZctsW8Tpx8Tz9Ln4KUmR3g"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:08d7f55d-db57-400b-99da-110b30aaf404",
-        "curationType": "tipo-curation",
-        "position": 11,
-        "title": "Shafukan Sada Zumunta",
-        "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
-        "curationType": "most-popular",
-        "position": 12,
-        "title": "Wanda aka fi karantawa",
-        "visualProminence": "NORMAL",
-        "visualStyle": "RANKED",
-        "link": "https://www.bbc.com/hausa/popular/read",
-        "mostRead": {
-          "generated": "2024-01-26T09:54:31.46Z",
-          "lastRecordTimeStamp": "2024-01-26T09:51:00Z",
-          "firstRecordTimeStamp": "2024-01-26T09:36:00Z",
-          "items": [
-            {
-              "id": "urn:bbc:optimo:asset:ckved4e45wko",
-              "rank": 1,
-              "title": "Dalilanmu na soma zawarcin jagororin kwankwasiyya - Ganduje",
-              "href": "https://www.bbc.com/hausa/articles/ckved4e45wko",
-              "timestamp": 1706243116029
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cg3wj4lle9go",
-              "rank": 2,
-              "title": "Kungiyoyi na rububin Wilson, Man Utd na son Bobbey",
-              "href": "https://www.bbc.com/hausa/articles/cg3wj4lle9go",
-              "timestamp": 1706242092287
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c14109q7d5no",
-              "rank": 3,
-              "title": "Shin wa Amurka ke kai wa hare-hare a Iraqi? ",
-              "href": "https://www.bbc.com/hausa/articles/c14109q7d5no",
-              "timestamp": 1706243164597
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c0jvd3g1d9vo",
-              "rank": 4,
-              "title": "An dakatar da kocin Union Berlin kan naushin Leroy Sane",
-              "href": "https://www.bbc.com/hausa/articles/c0jvd3g1d9vo",
-              "timestamp": 1706205800091
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cv2w0xve15lo",
-              "rank": 5,
-              "title": "Man City ta sayi Claudio Echeverri daga River Plate",
-              "href": "https://www.bbc.com/hausa/articles/cv2w0xve15lo",
-              "timestamp": 1706202834371
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cevr2nlqk9vo",
-              "rank": 6,
-              "title": "Ƙasashen da suka sha da ƙyar zuwa zagayen ƴan 16 a gasar Afcon 2023",
-              "href": "https://www.bbc.com/hausa/articles/cevr2nlqk9vo",
-              "timestamp": 1706178763751
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cy95gn2zz23o",
-              "rank": 7,
-              "title": "Abin da ya sa gwamnoni ba su da karfin iko kan jami’an tsaro",
-              "href": "https://www.bbc.com/hausa/articles/cy95gn2zz23o",
-              "timestamp": 1706190778794
-            },
-            {
-              "id": "urn:bbc:optimo:asset:clj9rgpx48po",
-              "rank": 8,
-              "title": "Yadda hare-haren mayakan Houthi ke tilasta jiragen ruwa yin dogon kewaye",
-              "href": "https://www.bbc.com/hausa/articles/clj9rgpx48po",
-              "timestamp": 1706206087978
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cv285np7wg1o",
-              "rank": 9,
-              "title": "Wani alƙali ya nemi Luis Rebiales ya bayyana gaban kotu",
-              "href": "https://www.bbc.com/hausa/articles/cv285np7wg1o",
-              "timestamp": 1706200271042
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c4nvdrj304qo",
-              "rank": 10,
-              "title": "Me zai faru idan NNPP da APC suka haɗe a Kano?",
-              "href": "https://www.bbc.com/hausa/articles/c4nvdrj304qo",
-              "timestamp": 1706068839969
-            },
-            {
-              "id": "urn:bbc:optimo:asset:czqvzyn6ezlo",
-              "rank": 11,
-              "title": "Sakamakon wasannin Afcon 2023",
-              "href": "https://www.bbc.com/hausa/articles/czqvzyn6ezlo",
-              "timestamp": 1705313148165
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c04r9elj9xgo",
-              "rank": 12,
-              "title": "Saudiyya na shirin buɗe shagon sayar da giya na farko ga jami'an diflomasiyya",
-              "href": "https://www.bbc.com/hausa/articles/c04r9elj9xgo",
-              "timestamp": 1706120670097
-            },
-            {
-              "id": "urn:bbc:optimo:asset:clj9r46nd9wo",
-              "rank": 13,
-              "title": "Muna daf da rufe gidajen manmu - IPMAN ",
-              "href": "https://www.bbc.com/hausa/articles/clj9r46nd9wo",
-              "timestamp": 1706155880793
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cgl474j0xy5o",
-              "rank": 14,
-              "title": "Abu hudu da Blinken ya tattauna da Tinubu",
-              "href": "https://www.bbc.com/hausa/articles/cgl474j0xy5o",
-              "timestamp": 1706115417101
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cm5jk1l7gn7o",
-              "rank": 15,
-              "title": "Manyan ƙalubale huɗu da ke gaban Ganduje",
-              "href": "https://www.bbc.com/hausa/articles/cm5jk1l7gn7o",
-              "timestamp": 1691122127717
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cql9vq484d1o",
-              "rank": 16,
-              "title": "Liverpool na gogayya da Man City kan Kimmich, Arsenal na son Simons",
-              "href": "https://www.bbc.com/hausa/articles/cql9vq484d1o",
-              "timestamp": 1706155184332
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c514wnjxr4no",
-              "rank": 17,
-              "title": "Alamomin kamuwa da cutar ƙyanda",
-              "href": "https://www.bbc.com/hausa/articles/c514wnjxr4no",
-              "timestamp": 1706155478996
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c4nxqqj6d28o",
-              "rank": 18,
-              "title": "Ba za mu bari a zalunci arewa ba - Ali Ndume",
-              "href": "https://www.bbc.com/hausa/articles/c4nxqqj6d28o",
-              "timestamp": 1705983227785
-            },
-            {
-              "id": "urn:bbc:optimo:asset:c4nygxjzmgvo",
-              "rank": 19,
-              "title": "Dole a sake nazari kan masarautun Kano - Kwankwaso",
-              "href": "https://www.bbc.com/hausa/articles/c4nygxjzmgvo",
-              "timestamp": 1705677509842
-            },
-            {
-              "id": "urn:bbc:optimo:asset:cmjg8j3dex5o",
-              "rank": 20,
-              "title": "Abubuwan ban mamaki da suke faruwa a Afcon a Ivory Coast",
-              "href": "https://www.bbc.com/hausa/articles/cmjg8j3dex5o",
-              "timestamp": 1706156271086
-            }
-          ]
-        }
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Shin ƙarya, yaudara da cin amana ne manyan shika-shikan siyasa?",
-            "firstPublished": "2024-01-20T04:34:41.949Z",
-            "lastPublished": "2024-01-20T04:34:41.949Z",
-            "link": "https://www.bbc.com/hausa/articles/c842zd3z4meo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f04/live/7eb413b0-b6e9-11ee-8f07-bbfdfa890097.jpg",
-            "description": "siyasa na nufin hanyoyin da za a bi a samar da shugabanci, a kuma gudanar da shuganbanci na gari, kamar yadda dakta Sa'idu Ahmad Dukawa na Jami'ar Bayero da ke Kano ya bayyana.",
-            "imageAlt": "...",
-            "id": "c842zd3z4meo"
-          },
-          {
-            "type": "article",
-            "title": "Me ya sa Iran ta kai hare-hare kan ƙawayenta?",
-            "firstPublished": "2024-01-20T04:35:34.737Z",
-            "lastPublished": "2024-01-20T04:35:34.737Z",
-            "link": "https://www.bbc.com/hausa/articles/cg3d3m21nzro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/58e2/live/5d3c07f0-b6c2-11ee-beb5-e1400df560f2.jpg",
-            "description": "Dakarun juyin juya halin Iran sun yanke shawarar kai hare-haren ne kan ƙasashen uku bayan tuntubar da suka yi wa shugaban jagoran addini na Iran. Akwai alamun ba a tuntuɓi ministan harkokin wajen ƙasar ba gabanin kai wadannan hare-hare.",
-            "imageAlt": "bbbbbbbb",
-            "id": "cg3d3m21nzro"
-          },
-          {
-            "type": "article",
-            "title": "Kun san abin da dokar aure a jihar Kano ta ƙunsa? ",
-            "firstPublished": "2024-01-19T04:10:34.524Z",
-            "lastPublished": "2024-01-19T04:10:34.524Z",
-            "link": "https://www.bbc.com/hausa/articles/czr8rml2ze0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b896/live/32e9b3a0-b611-11ee-bc2f-cb5579b90709.jpg",
-            "description": "\"Matuƙar akwai doka, duk tsayin zamani idan ba a yi mata gyara ba tana nan a matsayin doka babu mai sauya hukuncinta,\" in ji Kwamishinan shari'a na Jihar Kano.",
-            "imageAlt": "b",
-            "id": "czr8rml2ze0o"
-          },
-          {
-            "type": "article",
-            "title": "Wace ce ƴar Kim Jong Un, wadda za ta iya gadon mulkinsa?",
-            "firstPublished": "2024-01-22T03:59:57.265Z",
-            "lastPublished": "2024-01-22T03:59:57.265Z",
-            "link": "https://www.bbc.com/hausa/articles/cx7x79xenx0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5676/live/03c77a00-b55b-11ee-8f07-bbfdfa890097.jpg",
-            "description": "Hukumar Leken Asirin Koriya ta Kudu, NIS, ta ce karamar 'yar shugaban Koriya ta Arewa, Kim Jong Un, ka iya zama mai gadon kujerar mahaifinta. Me muka sani game da rayuwar Kim Ju Ae, ta yaya kuma muke ganin za ta iya gadar mahaifin nata?\n",
-            "imageAlt": "North Korean leader Kim Jong Un talks with his daughter Kim Ju Ae at a banquet to celebrate the 75th anniversary of the Korean People's Army in Pyongyang, 7 February 2023",
-            "id": "cx7x79xenx0o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:4d6b7b24-7da6-432a-800c-79d795f1ab59",
-        "curationType": "tipo-curation",
-        "position": 13,
-        "title": "Cikakkun Rahotanni",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Mitocin da muke watsa shirye-shiryenmu",
-            "firstPublished": "2023-12-08T18:50:55.425Z",
-            "lastPublished": "2023-12-08T18:50:55.425Z",
-            "link": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fc08/live/f53400e0-95fb-11ee-b60d-058748ad2fb8.jpg",
-            "description": "Sashen Hausa na BBC na watsa shirye-shirye guda huɗu a kowace rana, na tsawon minti talatin-talatin cikin harshen Hausa.",
-            "imageAlt": "...",
-            "id": "cpvpg2e6130o"
-          },
-          {
-            "type": "article",
-            "title": "Abokan hulɗar BBC Hausa",
-            "firstPublished": "2023-12-08T18:57:22.367Z",
-            "lastPublished": "2023-12-08T18:57:22.367Z",
-            "link": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a8e4/live/834c9c30-95fb-11ee-b60d-058748ad2fb8.jpg",
-            "description": "",
-            "imageAlt": "...",
-            "id": "c2l2e8px0l3o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:ec7bfe5e-1caa-4465-9a9a-1ff411b5398c",
-        "curationType": "tipo-curation",
-        "position": 14,
-        "title": "Domin ma'abota BBC",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:cy1v5ngp4d9t",
+        "contentId": "urn:bbc:tipo:topic:cvp5j11g223t",
         "contentType": "index-home",
         "pageIdentifier": "hausa.page",
-        "pageTitle": "Labaran Duniya - BBC News Hausa"
+        "pageTitle": "BBC News Hausa"
       }
     }
   },

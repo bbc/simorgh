@@ -1,28 +1,11 @@
-describe(
-  'Live Page Spec',
-  {
-    env: {
-      optionalOvveride: 'foo',
-    },
-  },
-  // @ts-expect-error Conflicts with Jest global types describe, it etc.
-  () => {
-    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    let livePageData;
-    before(() => {
-      cy.getPageData({
-        service: 'pidgin',
-        pageType: 'live',
-        id: 'c7p765ynk9qt',
-      }).then(({ body }) => {
-        livePageData = body;
-      });
-    });
+import mediaPlayerTests from './mediaPlayer';
+import pageVisit from './pageVisit';
 
-    if (Cypress.env('APP_ENV') === 'test') {
-      it('passes', () => {
-        cy.visit('/pidgin/live/c7p765ynk9qt');
-      });
-    }
-  },
-);
+const VALID_ENV = ['test', 'local'];
+
+describe('Live Page Spec', () => {
+  if (VALID_ENV.includes(Cypress.env('APP_ENV'))) {
+    pageVisit();
+    mediaPlayerTests();
+  }
+});

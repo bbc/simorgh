@@ -193,7 +193,8 @@ describe('Error handling', () => {
         service: 'pidgin',
         toggles: defaultToggles,
       });
-    } catch ({ message }) {
+    } catch (error: unknown) {
+      const { message } = error as Error;
       errorMessage = message;
     }
 
@@ -214,7 +215,8 @@ describe('Error handling', () => {
         pageType: 'funky-page-type',
         toggles: defaultToggles,
       });
-    } catch ({ message }) {
+    } catch (error: unknown) {
+      const { message } = error as Error;
       errorMessage = message;
     }
 

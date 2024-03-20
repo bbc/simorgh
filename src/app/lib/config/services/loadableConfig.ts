@@ -47,6 +47,7 @@ const loadableConfig = {
   urdu: loadable(() => import('./urdu')),
   uzbek: loadable(() => import('./uzbek')),
   vietnamese: loadable(() => import('./vietnamese')),
+  ws: loadable(() => import('./ws')),
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
 };
