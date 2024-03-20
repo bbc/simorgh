@@ -1,17 +1,13 @@
 /** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { Services } from '#app/models/types/global';
 import { TrustProjectLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
 
-const List = ({
-  service,
+export default ({
   elements,
   trustProjectLink,
 }: {
-  service: Services;
   elements: string[];
   trustProjectLink: TrustProjectLink;
 }) => {
@@ -34,11 +30,7 @@ const List = ({
     >
       {trustProjectLink && (
         <li css={styles.listItem}>
-          <Link
-            service={service}
-            text={trustProjectLink.text}
-            href={trustProjectLink.href}
-          />
+          <Link text={trustProjectLink.text} href={trustProjectLink.href} />
         </li>
       )}
       {elements.map((elem, index) => (
@@ -50,5 +42,3 @@ const List = ({
     </ul>
   );
 };
-
-export default List;
