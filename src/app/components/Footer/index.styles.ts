@@ -1,8 +1,8 @@
 import { css, Theme } from '@emotion/react';
 import {
-    MARGIN_ABOVE_400PX,
-    MARGIN_BELOW_400PX,
-  } from '../ThemeProvider/spacings';
+  MARGIN_ABOVE_400PX,
+  MARGIN_BELOW_400PX,
+} from '../ThemeProvider/spacings';
 
 const styles = {
   paragraph: ({ palette, spacings }: Theme) =>
@@ -10,39 +10,37 @@ const styles = {
       color: palette.WHITE,
       margin: 0,
       padding: `${spacings.DOUBLE}rem 0`,
-      a: {padding: 0},
+      a: { padding: 0 },
     }),
-    siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants}: Theme) =>
+  siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
     css({
-        ...fontSizes.brevier,
-        ...fontVariants.sansRegular,
-        backgroundColor: palette.EBON,
-        [mq.GROUP_2_MAX_WIDTH]: {
-            padding: `0 ${MARGIN_ABOVE_400PX}`
-        },
-        [mq.GROUP_2_MIN_WIDTH]: {
-            padding: `0 ${MARGIN_BELOW_400PX}`
-        }
-        
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      backgroundColor: palette.EBON,
+      [mq.GROUP_2_MAX_WIDTH]: {
+        padding: `0 ${MARGIN_ABOVE_400PX}`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${MARGIN_BELOW_400PX}`,
+      },
     }),
-    ampCookieSettingButton: ({ palette, spacings, fontVariants}: Theme) =>
+  ampCookieSettingButton: ({ palette, spacings, fontVariants }: Theme) =>
     css({
-        ...fontVariants.sansBold,
-        background: 'none',
-        border: 'none',
-        color: palette.WHITE,
-        cursor: 'pointer',
-        display: 'block',
-        // padding: ${GEL_SPACING} 0 ${GEL_SPACING};
-        padding: `${spacings.FULL}rem 0 ${spacings.FULL}rem`,
-        textDecoration: 'none',
-        textAlign: 'left',
-        width: '100%',
-        '&:hover, &:focus': {
-          textDecoration: 'underline'
-        }
-
-    })
+      ...fontVariants.sansBold,
+      background: 'none',
+      border: 'none',
+      color: palette.WHITE,
+      cursor: 'pointer',
+      display: 'block',
+      // padding: ${GEL_SPACING} 0 ${GEL_SPACING};
+      padding: `${spacings.FULL}rem 0 ${spacings.FULL}rem`,
+      textDecoration: 'none',
+      textAlign: 'left',
+      width: '100%',
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 // '&:focus, &:hover': {
 //     borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
