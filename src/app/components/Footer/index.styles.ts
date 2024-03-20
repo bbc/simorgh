@@ -3,7 +3,7 @@ import {
   MARGIN_ABOVE_400PX,
   MARGIN_BELOW_400PX,
 } from '../ThemeProvider/spacings';
-import { GROUP_4_MIN_WIDTH } from '../ThemeProvider/mediaQueries';
+import { GROUP_4_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
 
 const styles = {
   paragraph: ({ palette, spacings }: Theme) =>
@@ -43,14 +43,14 @@ const styles = {
     }),
     constrainedWrapperWithTrustProjectLink: ({ spacings }: Theme) =>
     css({
-      maxWidth: `${GROUP_4_MIN_WIDTH}`,
+      maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
       margin: '0 auto',
       paddingTop: `${spacings.FULL}rem`
     }),
 
     constrainedWrapperWithoutTrustProjectLink: () =>
     css({
-      maxWidth: `${GROUP_4_MIN_WIDTH}`,
+      maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
       margin: '0 auto'
     }),
 };

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { arrayOf, shape, string, node, bool } from 'prop-types';
+import { MouseEvent} from 'react';
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import { Footer } from '#app/models/types/serviceConfig';
 import Link from './Link';
@@ -14,7 +14,7 @@ interface FooterProps extends Footer {
   service?: string;
 }
 
-const openPrivacyManagerModal = (e: Event) => {
+const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
   // @ts-expect-error dotcom is required for ads
   if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
