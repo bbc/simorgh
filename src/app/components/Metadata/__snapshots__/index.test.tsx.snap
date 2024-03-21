@@ -145,6 +145,10 @@ exports[`Snapshot should match for AMP News & UK origin 1`] = `
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -386,6 +390,10 @@ exports[`Snapshot should match for Canonical News & international origin 1`] = `
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -618,6 +626,10 @@ exports[`Snapshot should match for Persian News & UK origin 1`] = `
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -842,6 +854,10 @@ exports[`Snapshot should match for Persian News & byline twitter handle 1`] = `
     {
       "content": "1609039196070050",
       "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
     },
     {
       "content": "yes",
@@ -1079,6 +1095,10 @@ exports[`Snapshot should match for Persian News & international origin 1`] = `
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -1311,6 +1331,10 @@ exports[`Snapshot should match for Ukrainian STY with Russian lang on Amp 1`] = 
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -1528,6 +1552,10 @@ exports[`Snapshot should match for Ukrainian STY with Russian lang on canonical 
     {
       "content": "1609039196070050",
       "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
     },
     {
       "content": "yes",
@@ -1750,6 +1778,10 @@ exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on Amp 1`] 
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -1967,6 +1999,10 @@ exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on canonica
     {
       "content": "1609039196070050",
       "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
     },
     {
       "content": "yes",
@@ -2192,6 +2228,10 @@ exports[`Snapshot should match for WS Frontpages 1`] = `
       "property": "fb:app_id",
     },
     {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
       "content": "yes",
       "name": "mobile-web-app-capable",
     },
@@ -2413,6 +2453,10 @@ exports[`Snapshot should match for WS Media liveradio 1`] = `
     {
       "content": "1609039196070050",
       "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
     },
     {
       "content": "yes",
