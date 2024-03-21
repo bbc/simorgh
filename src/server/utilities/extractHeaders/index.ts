@@ -39,7 +39,7 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
   } else if (headers['x-country']) {
     isUK = headers['x-country'] === 'gb';
     showCookieBannerBasedOnCountry = COUNTRIES_WITH_COOKIE_BANNER.includes(
-      headers['x-country'],
+      headers['x-country'].toString().toLowerCase(),
     );
   }
 
