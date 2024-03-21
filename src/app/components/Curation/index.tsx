@@ -67,7 +67,7 @@ export default ({
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
-  const vjEmbed = embed;
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
@@ -96,7 +96,7 @@ export default ({
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
     case EMBED:
-      return vjEmbed ? <Embed oembed={embed} type="" /> : null;
+      return embed ? <Embed oembed={embed} type="" /> : null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
