@@ -1,3 +1,4 @@
+import { OEmbedData } from '#app/components/Embeds/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
@@ -56,9 +57,7 @@ export interface BaseCuration {
   curationType?: string;
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
-  embed?: {
-    html: string;
-  };
+  embed?: OEmbedData;
 }
 
 export interface Curation extends BaseCuration {
