@@ -234,12 +234,13 @@ server.get(
         isCaf,
       });
 
-      const { isUK } = extractHeaders(headers);
+      const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isCaf = isCaf;
 
