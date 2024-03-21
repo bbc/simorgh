@@ -458,11 +458,13 @@ it('should render the facebook domain verification', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
   await waitFor(() => {
-    const fbAppId = document
+    const FacebookDomainVerification = document
       .querySelector('head > meta[name="facebook-domain-verification"]')
       ?.getAttribute('content');
 
-    expect(fbAppId).toEqual('mydfaj4vz8t5psneihy4nm6ff52fac');
+    expect(FacebookDomainVerification).toEqual(
+      'mydfaj4vz8t5psneihy4nm6ff52fac',
+    );
   });
 });
 
