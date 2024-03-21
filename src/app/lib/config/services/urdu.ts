@@ -348,10 +348,6 @@ export const service: DefaultServiceConfig = {
         url: '/urdu/topics/cjgn7n9zzq7t',
       },
       {
-        title: 'الیکشن 2024',
-        url: '/urdu/topics/cynd7qxprq0t',
-      },
-      {
         title: 'آس پاس',
         url: '/urdu/topics/cl8l9mveql2t',
       },
