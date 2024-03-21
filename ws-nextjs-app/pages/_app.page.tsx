@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -92,13 +93,15 @@ export default function App({ Component, pageProps }: Props) {
         >
           <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>
-              <PageWrapper pageData={pageData} status={status}>
-                {status === 200 ? (
-                  <Component {...pageProps} />
-                ) : (
-                  <ErrorPage errorCode={status || 500} />
-                )}
-              </PageWrapper>
+              <ThemeProvider service={service} variant={variant}>
+                <PageWrapper pageData={pageData} status={status}>
+                  {status === 200 ? (
+                    <Component {...pageProps} />
+                  ) : (
+                    <ErrorPage errorCode={status || 500} />
+                  )}
+                </PageWrapper>
+              </ThemeProvider>
             </UserContextProvider>
           </EventTrackingContextProvider>
         </RequestContextProvider>

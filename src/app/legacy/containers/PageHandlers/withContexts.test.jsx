@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
@@ -11,7 +11,6 @@ import {
   FRONT_PAGE,
   HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import * as serviceContextImports from '../../../contexts/ServiceContext';
 import * as requestContextImports from '../../../contexts/RequestContext';
 import * as eventTrackingContextImports from '../../../contexts/EventTrackingContext';
@@ -68,10 +67,16 @@ describe('withContexts HOC', () => {
     isUK: true,
   };
 
-  shouldMatchSnapshot(
-    `should return all context providers`,
-    <ContextsHOC {...props} />,
-  );
+  it('should return all context providers', async () => {
+    let container;
+
+    await act(
+      // eslint-disable-next-line no-return-assign
+      async () => ({ container } = render(<ContextsHOC {...props} />)),
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 
   describe('assertions', () => {
     let requestContextSpy;
@@ -99,7 +104,7 @@ describe('withContexts HOC', () => {
     const pageTypes = [ARTICLE_PAGE, FRONT_PAGE, 'chicken'];
 
     pageTypes.forEach(pageType => {
-      it(`passing pageType==${pageType} should pass along`, () => {
+      it(`passing pageType==${pageType} should pass along`, async () => {
         const fixture = {
           bbcOrigin: 'https://www.bbc.com',
           id: 'c0000000000o',
@@ -117,7 +122,7 @@ describe('withContexts HOC', () => {
           },
           mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
-        render(<ContextsHOC {...fixture} />);
+        await act(async () => render(<ContextsHOC {...fixture} />));
         expect(requestContextSpy).toHaveBeenCalled();
         expect(requestContextSpy).toHaveBeenCalledWith(
           expect.objectContaining({
@@ -134,7 +139,7 @@ describe('withContexts HOC', () => {
       });
     });
 
-    it(`should pass variant to the service context provider`, () => {
+    it(`should pass variant to the service context provider`, async () => {
       const fixture = {
         bbcOrigin: 'https://www.bbc.com',
         id: 'c0000000000o',
@@ -154,7 +159,7 @@ describe('withContexts HOC', () => {
         mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
       };
 
-      render(<ContextsHOC {...fixture} />);
+      await act(async () => render(<ContextsHOC {...fixture} />));
 
       expect(serviceContextSpy).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -275,7 +280,7 @@ describe('withContexts HOC', () => {
       },
     ])(
       'should pass data and atiData to the event tracking context provider',
-      ({ pageType, pageData, componentProps }) => {
+      async ({ pageType, pageData, componentProps }) => {
         const fixture = {
           bbcOrigin: 'https://www.bbc.com',
           id: 'c0000000000o',
@@ -295,7 +300,7 @@ describe('withContexts HOC', () => {
           mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
 
-        render(<ContextsHOC {...fixture} />);
+        await act(async () => render(<ContextsHOC {...fixture} />));
 
         expect(eventTrackingContextSpy).toHaveBeenCalledWith(
           expect.objectContaining(componentProps),
