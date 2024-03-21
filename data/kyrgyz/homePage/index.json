@@ -485,29 +485,6 @@
             "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
             "imageAlt": "test",
             "id": "cr91pzee4dro"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:20425623-94ec-4a37-9401-630da2dba9de",
-        "curationType": "tipo-curation",
-        "position": 5,
-        "title": "Minimum curation test",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
-            "firstPublished": "2023-02-07T14:52:44.188Z",
-            "lastPublished": "2023-02-07T14:52:44.188Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
-            "imageAlt": "test",
-            "id": "czmnz5184jeo"
           },
           {
             "type": "article",
@@ -519,6 +496,17 @@
             "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
             "imageAlt": "test",
             "id": "cd0nevdy25vo"
+          },
+          {
+            "type": "article",
+            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
+            "firstPublished": "2023-02-07T14:52:44.188Z",
+            "lastPublished": "2023-02-07T14:52:44.188Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+            "imageAlt": "test",
+            "id": "czmnz5184jeo"
           }
         ],
         "activePage": 1,
@@ -526,10 +514,9 @@
         "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
         "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
         "curationType": "tipo-curation",
-        "position": 6,
+        "position": 5,
         "title": "Журнал",
-        "visualProminence": "HIGH",
-        "visualStyle": "NONE"
+        "visualProminence": "HIGH"
       },
       {
         "summaries": [
@@ -582,206 +569,88 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
-        "position": 7,
+        "position": 6,
         "title": "Useful links",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Би-Би-Си ТВ жаңылыктары",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/punjabi/topics/cz74k76n1jxt",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8702/test/583b0300-4039-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "Hay festival group 4",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "link": "https://www.bbc.com/punjabi/articles/cn37pkelzrpo",
         "curationId": "urn:bbc:tipo:list:95aa88fb-eb83-42bc-b3de-6c51e52b4d62",
         "curationType": "tipo-curation",
-        "position": 8,
+        "position": 7,
         "title": "Message banner 2 - hay festival_group 4.png",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "hay festival_group 0&1&2&3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=6",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ba6f/test/7ec8c0f0-40b8-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "hay festival_group 0&1&2&3",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e547697b-26f9-45d4-9146-477dd8a6ee9e",
         "curationType": "tipo-curation",
-        "position": 9,
+        "position": 8,
         "title": "hay festival_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "radio_group 4",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=7",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/75cf/test/b7344400-40b8-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "BBC microphone radio_group 4",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b42365ef-1ee6-49ff-af7e-7eff7472e315",
         "curationType": "tipo-curation",
-        "position": 10,
+        "position": 9,
         "title": "radio_group 4",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "radio_group 0&1&2&3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=8",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/374e/test/33501dc0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "BBC microphone",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f8ab8a50-0c24-411b-ba91-ac31a60e583d",
         "curationType": "tipo-curation",
-        "position": 11,
+        "position": 10,
         "title": "radio_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Call to action",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=9",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "BBC",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:0b2d4c54-954f-49cb-bde7-1cc364431287",
         "curationType": "tipo-curation",
-        "position": 12,
+        "position": 11,
         "title": "100 women_group 4",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "100 women_group 0&1&2&3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "",
-            "imageAlt": "bbc",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
         "curationType": "tipo-curation",
-        "position": 13,
+        "position": 12,
         "title": "100 women_group 0&1&2&3",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Pirâmide etária brasileira em 1940",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://flo.uri.sh/story/2070814/embed",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:f124f62b-496c-49b9-9df4-ee57a313732c",
-        "curationType": "tipo-curation",
-        "position": 14,
-        "title": "Curation with Flourish",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Jharkand Election Results",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://news.files.bbci.com/include/vjsthasia/696-maharashtra_election_results/english/tally/embed",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F696-maharashtra_election_results%2Fenglish%2Ftally%2Fembed"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:e42ffdab-652b-4c77-87c8-fbbb38b4cc2b",
-        "curationType": "tipo-curation",
-        "position": 15,
-        "title": "Curation with Include",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
-      },
-      {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 16,
+        "position": 13,
         "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/kyrgyz/popular/read",
         "mostRead": {
-          "generated": "2023-12-20T09:12:57.181Z",
+          "generated": "2023-10-24T12:12:56.678Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
           "items": [
@@ -937,7 +806,7 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
+            "description": "Pidgin test 2 - Description",
             "imageAlt": "",
             "id": "c7p765ynk9qt"
           },
@@ -979,9 +848,65 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
         "curationType": "tipo-curation",
-        "position": 17,
+        "position": 14,
         "title": "Curation with Live Promo",
         "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "commentary",
+            "title": "Live Pidgin Disco 4 Media Type None",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cemy52djeq5t"
+          },
+          {
+            "type": "article",
+            "title": "Live Pidgin Disco 5 Media Type Text",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "c65nm48pr8et"
+          },
+          {
+            "type": "audio",
+            "title": "Live Pidgin Disco 6 Media Type Audio",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cpvg17j60m7t"
+          },
+          {
+            "type": "video",
+            "title": "Live Pidgin Disco 7 Media Type Video",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "description": "",
+            "imageAlt": "",
+            "id": "cg2pr8l7j3nt"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
+        "curationType": "tipo-curation",
+        "position": 15,
+        "title": "Hierarchical Curation with Live Promos",
+        "visualProminence": "HIGH",
         "visualStyle": "NONE"
       }
     ],
