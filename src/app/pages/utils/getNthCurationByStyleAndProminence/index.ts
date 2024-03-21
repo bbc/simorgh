@@ -1,12 +1,10 @@
 import {
-  CurationData,
+  Curation,
   VisualProminence,
   VisualStyle,
 } from '#app/models/types/curationData';
 
-const getPositionsOfCurationsByStyleAndProminence = (
-  curations: CurationData[],
-) => {
+const getPositionsOfCurationsByStyleAndProminence = (curations: Curation[]) => {
   const positionsOfCurationsByStyleAndProminence = new Map();
 
   curations.forEach(({ visualStyle, visualProminence, position }) => {
@@ -22,7 +20,7 @@ const getPositionsOfCurationsByStyleAndProminence = (
 };
 
 interface NthCurationByStyleAndProminence {
-  curations: CurationData[];
+  curations: Curation[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
   position: number;

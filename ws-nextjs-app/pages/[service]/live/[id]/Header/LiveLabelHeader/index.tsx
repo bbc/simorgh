@@ -1,6 +1,4 @@
 /** @jsx jsx */
-/** @jsxRuntime classic */
-/* @jsxFrag React.Fragment */
 import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { LiveLabelProps } from '#app/components/LiveLabel/types';
