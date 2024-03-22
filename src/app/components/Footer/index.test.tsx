@@ -3,7 +3,7 @@ import Footer from '#app/components/Footer';
 import { render, screen } from '../react-testing-library-with-providers';
 
 describe('Footer', () => {
-  const { trustProjectLink, externalLink, links, copyrightText } = {
+  const { trustProjectLink, externalLink, links, copyrightText, collectiveNewsroomText } = {
     trustProjectLink: {
       href: 'https://www.bbc.com/mundo/institucional-51359666',
       text: 'Por qué puedes confiar en la BBC',
@@ -42,6 +42,7 @@ describe('Footer', () => {
     ],
     copyrightText:
       'BBC. La BBC no se hace responsable del contenido de sitios externos.',
+    collectiveNewsroomText: 'A Collective Newsroom Publication for BBC'
   };
 
   describe('AMP', () => {
@@ -77,6 +78,24 @@ describe('Footer', () => {
         'href',
         '#',
       );
+    });
+  });
+
+  describe('Collective News Text', () => {
+
+    it('should render the Collective News text when it is present', () => {
+      render(
+        <Footer
+          isAmp
+          links={links}
+          copyrightText={copyrightText}
+          externalLink={externalLink}
+          trustProjectLink={trustProjectLink}
+          collectiveNewsroomText={collectiveNewsroomText}
+        />,
+      );
+      expect(screen.getByText('A Collective Newsroom Publication for BBC')).toBeInTheDocument;
+      
     });
   });
 });
