@@ -7,6 +7,7 @@ import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isAppPath from '#app/routes/utils/isAppPath';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 
 import {
   ROUTING_INFORMATION,
@@ -126,6 +127,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { headers: reqHeaders } = context.req;
 
   const isApp = isAppPath(context.resolvedUrl);
+  const isAmp = isAmpPath(context.resolvedUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
@@ -141,6 +143,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         bbcOrigin: reqHeaders['bbc-origin'] || null,
         isApp,
+        isAmp,
         isNextJs: true,
         service,
         status: 404,
@@ -187,7 +190,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       error: data?.error || null,
       id,
       isApp,
-      isAmp: false,
+      isAmp,
       isNextJs: true,
       page: page || null,
       pageData: data?.pageData
