@@ -17,8 +17,6 @@ npm install #legacy/psammead-assets/src --save
 
 ```jsx
 import { BBC_BLOCKS, news } from '#psammead/psammead-assets/src/svgs';
-
-import { AMP_SCRIPT } from '#psammead/psammead-assets/src/amp-boilerplate';
 ```
 
 ## Service SVGs

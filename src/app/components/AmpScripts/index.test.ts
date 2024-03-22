@@ -1,5 +1,5 @@
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import * as boilerplate from './amp-boilerplate';
+import * as boilerplate from '.';
 
 describe('AMP Boilerplate', () => {
   describe('styles', () => {

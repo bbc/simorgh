@@ -5,10 +5,7 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import {
-  AMP_ACCESS_JS,
-  AMP_ADS_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
+import { AMP_ACCESS_JS, AMP_ADS_JS } from '#app/components/AmpScripts';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';

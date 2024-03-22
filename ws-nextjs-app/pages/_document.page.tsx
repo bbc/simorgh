@@ -16,14 +16,14 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
+import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
   AMP_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
-import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
+} from '#app/components/AmpScripts';
 
 type DocProps = {
   helmet: HelmetData;
