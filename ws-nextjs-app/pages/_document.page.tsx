@@ -64,16 +64,6 @@ export default class AppDocument extends Document<DocProps> {
       return (
         <Html {...htmlAttrs}>
           <head>
-            <script
-              id="simorgh-envvars"
-              type="text/javascript"
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{
-                __html: `window.SIMORGH_ENV_VARS=${JSON.stringify(
-                  clientSideEnvVariables,
-                )}`,
-              }}
-            />
             {title}
             {helmetLinkTags}
             {meta}
@@ -84,10 +74,6 @@ export default class AppDocument extends Document<DocProps> {
                 <noscript>
                   <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
                 </noscript>
-              </>
-            )}
-            {isAmp && (
-              <>
                 {AMP_JS}
                 {AMP_GEO_SCRIPT}
                 {AMP_CONSENT_JS}
