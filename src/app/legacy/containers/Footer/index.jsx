@@ -43,7 +43,7 @@ const FooterContainer = () => {
 
   if (isApp || !footer) return null;
 
-  const { externalLink, links, copyrightText, trustProjectLink } = footer;
+  const { externalLink, links, copyrightText, collectiveNewsroomText, trustProjectLink } = footer;
 
   // linkId="footer" is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
 
@@ -55,6 +55,7 @@ const FooterContainer = () => {
         showAdsBasedOnLocation={showAdsBasedOnLocation}
         links={links}
         copyrightText={getCopyrightText(copyrightText)}
+        collectiveNewsroomText={collectiveNewsroomText}
         externalLink={externalLink}
         script={script}
         service={service}

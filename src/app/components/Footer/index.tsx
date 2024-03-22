@@ -27,6 +27,7 @@ export default ({
   links,
   trustProjectLink,
   copyrightText,
+  collectiveNewsroomText,
   externalLink,
   isAmp,
   showAdsBasedOnLocation,
@@ -72,6 +73,9 @@ export default ({
         }
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
+        { collectiveNewsroomText && <p css={styles.paragraphWithBorderBottom}>
+          {collectiveNewsroomText}
+        </p>}
         <p css={styles.paragraph}>
           {copyrightText}{' '}
           {externalLink && (
