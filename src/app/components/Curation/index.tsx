@@ -96,7 +96,7 @@ export default ({
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
     case EMBED:
-      return embed ? <Embed oembed={embed} type="" /> : null;
+      return embed ? <Embed oembed={embed} /> : null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
