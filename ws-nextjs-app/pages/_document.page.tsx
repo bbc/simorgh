@@ -58,7 +58,6 @@ export default class AppDocument extends Document<DocProps> {
     const title = helmet.title.toComponent();
     const helmetLinkTags = helmet.link.toComponent();
     const headScript = helmet.script.toComponent();
-    const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
     if (isAmp) {
       return (
@@ -81,7 +80,7 @@ export default class AppDocument extends Document<DocProps> {
               </>
             )}
           </head>
-          <body {...ampGeoPendingAttrs}>
+          <body className="amp-geo-pending">
             <Main />
           </body>
         </Html>
