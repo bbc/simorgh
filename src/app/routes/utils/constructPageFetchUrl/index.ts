@@ -30,6 +30,7 @@ interface UrlConstructParams {
   service: Services;
   variant?: Variants;
   page?: string;
+  post?: string;
   isAmp?: boolean;
   isCaf?: boolean;
 }
@@ -106,6 +107,7 @@ const constructPageFetchUrl = ({
   service,
   variant,
   page,
+  post,
   isAmp,
   isCaf,
 }: UrlConstructParams) => {
@@ -127,6 +129,9 @@ const constructPageFetchUrl = ({
     }),
     ...(page && {
       page,
+    }),
+    ...(post && {
+      post,
     }),
     ...(isAmp && {
       isAmp,
