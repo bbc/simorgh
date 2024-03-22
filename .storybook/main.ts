@@ -5,18 +5,19 @@ import { webpackDirAlias } from '../dirAlias';
 const config: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
-    // '../docs/**/*.stories.mdx',
-    // '../src/**/*.stories.mdx',
-    // '../AdHocCypress/**/*.stories.mdx',
-    // '../3rdPartyCypress/**/*.stories.mdx',
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
-    // '../ws-nextjs-app/**/*.stories.tsx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
+    '../ws-nextjs-app/**/*.stories.tsx',
+
+    // '../docs/**/*.stories.mdx',
+    // '../src/**/*.stories.mdx',
+    // '../AdHocCypress/**/*.stories.mdx',
+    // '../3rdPartyCypress/**/*.stories.mdx',
   ],
   addons: [
     // '@storybook/addon-knobs',
