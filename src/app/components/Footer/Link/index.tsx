@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
-import { useState, useEffect, MouseEvent} from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import onClient from '#lib/utilities/onClient';
-import styles from './index.styles';
 import { FooterLink } from '#app/models/types/serviceConfig';
+import styles from './index.styles';
 
-interface LinkProps extends FooterLink{
+interface LinkProps extends FooterLink {
   inline?: boolean;
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
   onlyShowIfJSenabled?: boolean;
@@ -16,7 +16,7 @@ export default ({
   href,
   inline = false,
   lang,
-  onClick = () => {},
+  onClick,
   onlyShowIfJSenabled = false,
 }: LinkProps) => {
   const [isVisible, setVisible] = useState(onlyShowIfJSenabled !== true);
