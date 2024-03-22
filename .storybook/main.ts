@@ -5,10 +5,10 @@ import { webpackDirAlias } from '../dirAlias';
 const config: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
-    '../docs/**/*.stories.mdx',
-    '../src/**/*.stories.mdx',
-    '../AdHocCypress/**/*.stories.mdx',
-    '../3rdPartyCypress/**/*.stories.mdx',
+    // '../docs/**/*.stories.mdx',
+    // '../src/**/*.stories.mdx',
+    // '../AdHocCypress/**/*.stories.mdx',
+    // '../3rdPartyCypress/**/*.stories.mdx',
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
@@ -19,13 +19,13 @@ const config: StorybookConfig = {
     './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
   addons: [
-    '@storybook/addon-knobs',
+    // '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
     '@storybook/addon-toolbars',
-    'storybook-addon-designs',
+    // '@storybook/addon-designs',
     './SidebarLabel/preset.cjs',
     {
       name: '@storybook/addon-docs',
@@ -36,11 +36,12 @@ const config: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
+    '@storybook/addon-webpack5-compiler-babel',
   ],
-  babel: options => {
-    options.presets![0][1] = { runtime: 'classic' };
-    return options;
-  },
+  // babel: options => {
+  //   options.presets![0][1] = { runtime: 'classic' };
+  //   return options;
+  // },
   webpackFinal: async config => {
     config.plugins!.push(
       /*
