@@ -33,6 +33,7 @@ interface PageDataParams extends ParsedUrlQuery {
   page?: string;
   service: Services;
   variant?: Variants;
+  post?: string;
   // eslint-disable-next-line camelcase
   renderer_env?: string;
   resolvedUrl: string;
@@ -45,6 +46,7 @@ const getPageData = async ({
   page,
   service,
   variant,
+  post,
   rendererEnv,
   resolvedUrl,
 }: PageDataParams) => {
@@ -55,6 +57,7 @@ const getPageData = async ({
     pathname,
     service,
     variant,
+    post,
   });
 
   const env = getEnvironment(pathname);
@@ -121,6 +124,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     renderer_env: rendererEnv,
     page = '1',
+    post,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
@@ -165,6 +169,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
+    post,
     rendererEnv,
     resolvedUrl: context.resolvedUrl,
   });
@@ -190,6 +195,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: page || null,
+      post: post || null,
       pageData: data?.pageData
         ? {
             ...data.pageData,
