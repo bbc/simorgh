@@ -432,18 +432,13 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 .emotion-26 {
   color: #006666;
-  border-radius: 50%;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
-  position: relative;
-  -webkit-transform: translate(0, 12%);
-  -moz-transform: translate(0, 12%);
-  -ms-transform: translate(0, 12%);
-  transform: translate(0, 12%);
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -453,39 +448,21 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   }
 }
 
-.emotion-27:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .emotion-27:before {
-    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
-    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  .emotion-27 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
   }
-}
-
-.emotion-27:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-28 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-29 {
@@ -836,28 +813,40 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 id="scheduleItem-p0"
                 role="text"
               >
+                <svg
+                  aria-hidden="true"
+                  class="emotion-26"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16"
+                  viewBox="0 0 32 32"
+                  width="16"
+                >
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  />
+                  <circle
+                    class="emotion-27"
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                  />
+                </svg>
                 <span
                   role="text"
                 >
-                  <span
-                    class="emotion-26"
-                  >
-                    <span
-                      class="emotion-27"
-                    />
-                  </span>
                   <span
                     aria-hidden="true"
                     class="emotion-28"
                     dir="ltr"
                   >
-                    LIVE 
+                    LIVE
                   </span>
                   <span
                     class="emotion-29"
                     lang="en-GB"
                   >
-                    Listen Live, 
+                     Listen Live, 
                   </span>
                 </span>
                 Could a computer ever create better art than a human?
@@ -1748,18 +1737,13 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 .emotion-26 {
   color: #006666;
-  border-radius: 50%;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
-  position: relative;
-  -webkit-transform: translate(0, 12%);
-  -moz-transform: translate(0, 12%);
-  -ms-transform: translate(0, 12%);
-  transform: translate(0, 12%);
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -1769,39 +1753,21 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-.emotion-27:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .emotion-27:before {
-    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
-    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  .emotion-27 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
   }
-}
-
-.emotion-27:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-28 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-29 {
@@ -2152,28 +2118,40 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 id="scheduleItem-p0"
                 role="text"
               >
+                <svg
+                  aria-hidden="true"
+                  class="emotion-26"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16"
+                  viewBox="0 0 32 32"
+                  width="16"
+                >
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                  />
+                  <circle
+                    class="emotion-27"
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                  />
+                </svg>
                 <span
                   role="text"
                 >
-                  <span
-                    class="emotion-26"
-                  >
-                    <span
-                      class="emotion-27"
-                    />
-                  </span>
                   <span
                     aria-hidden="true"
                     class="emotion-28"
                     dir="rtl"
                   >
-                    مباشر 
+                    مباشر
                   </span>
                   <span
                     class="emotion-29"
                     lang="en-GB"
                   >
-                    استمع للبث المباشر, 
+                     استمع للبث المباشر, 
                   </span>
                 </span>
                 لماذا يخجل البعض من اسم قريته في مصر؟

@@ -9,13 +9,13 @@ export default {
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
       backgroundColor: palette.BRAND_BACKGROUND,
+      display: 'inline-block',
     }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
-      alignItems: 'flex-start',
-      display: 'flex',
-      flexWrap: 'wrap',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
+      display: 'inline-block',
+      width: '100%',
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
@@ -28,14 +28,21 @@ export default {
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
-      flex: '1 0 1',
       padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
+      display: 'inline-block',
     }),
   postHeadings: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
-      display: `block`,
+      display: `inline-block`,
+      width: '100%',
       margin: 0 /* Reset */,
+    }),
+  heading: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_1_MIN_WIDTH]: {
+        lineHeight: '0', // required to prevent the background colour appearing above red top border
+      },
     }),
   postHeadline: ({ spacings }: Theme) =>
     css({
@@ -95,14 +102,14 @@ export default {
     }),
   bodyMedia: ({ spacings, mq }: Theme) =>
     css({
-      paddingLeft: `${spacings.FULL}rem`,
-      paddingRight: `${spacings.FULL}rem`,
+      padding: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
         paddingRight: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     }),
 };

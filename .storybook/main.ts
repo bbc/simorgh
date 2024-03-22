@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import { webpackDirAlias } from '../dirAlias';
 
 const config: StorybookConfig = {
-  staticDirs: ['./static'],
+  staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
     '../docs/**/*.stories.mdx',
     '../src/**/*.stories.mdx',

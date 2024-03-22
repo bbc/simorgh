@@ -26,6 +26,7 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -34,7 +35,9 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
-const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+const staticAssetsPath = `${
+  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 

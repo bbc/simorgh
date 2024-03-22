@@ -10,6 +10,8 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { getProcessEnvAppVariables } from '#lib/utilities/getEnvConfig';
 
 const Document = ({
   app,
@@ -27,12 +29,14 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
+  const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
+
   const scriptsAllowed = !isAmp;
 
   const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
+  const noJsHtmlAttrs = !isAmp && { className: NO_JS_CLASSNAME };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
@@ -49,7 +53,6 @@ const Document = ({
       <head>
         {isApp && <meta name="robots" content="noindex" />}
         {meta}
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         {title}
         {helmetLinkTags}
         {headScript}
@@ -85,10 +88,20 @@ const Document = ({
             {AMP_ANALYTICS_JS}
           </>
         )}
+        {scriptsAllowed && (
+          <script
+            id="simorgh-envvars"
+            dangerouslySetInnerHTML={{
+              // Read env variables from the server and expose them to the client
+              __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
+            }}
+          />
+        )}
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
+          // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           <script
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,

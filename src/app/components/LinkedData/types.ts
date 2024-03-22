@@ -25,6 +25,7 @@ export interface LinkedDataProps {
   type: string;
   seoTitle: string;
   headline?: string;
+  promoImage?: string;
   description?: string;
   datePublished?: string;
   dateModified?: string;
@@ -32,4 +33,6 @@ export interface LinkedDataProps {
   entities?: object[];
   imageLocator?: string;
   bylineLinkedData?: BylineLinkedData | null;
+  coverageStartTime?: string;
+  coverageEndTime?: string;
 }

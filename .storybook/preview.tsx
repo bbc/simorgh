@@ -16,7 +16,7 @@ const REITH_SERIF_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Rg.woff") format("woff")`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -25,7 +25,7 @@ const REITH_SERIF_BOLD = {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Bd.woff") format("woff")`,
     fontWeight: 700,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -34,7 +34,7 @@ const REITH_SERIF_LIGHT = {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"), url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff")`,
     fontWeight: 300,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -43,7 +43,7 @@ const REITH_SERIF_MEDIUM = {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Md.woff") format("woff")`,
     fontWeight: 500,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -52,7 +52,7 @@ const REITH_SERIF_EXTRA_BOLD = {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_ExBd.woff") format("woff")`,
     fontWeight: 800,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -60,7 +60,7 @@ const REITH_SANS_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Rg.woff") format("woff")`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -69,7 +69,7 @@ const REITH_SANS_BOLD = {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Bd.woff") format("woff")`,
     fontWeight: 700,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -78,7 +78,7 @@ const REITH_SANS_LIGHT = {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Lt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Lt.woff") format("woff")`,
     fontWeight: 300,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -88,7 +88,7 @@ const REITH_SANS_LIGHT_ITALIC = {
     src: `url("fonts/Reith/BBCReithSans_W_LtIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_LtIt.woff") format("woff")`,
     fontWeight: 300,
     fontStyle: 'italic',
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -97,7 +97,7 @@ const REITH_SANS_MEDIUM = {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Md.woff") format("woff")`,
     fontWeight: 500,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -106,7 +106,7 @@ const REITH_SANS_EXTRA_BOLD = {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBd.woff") format("woff")`,
     fontWeight: 800,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -116,7 +116,7 @@ const REITH_SANS_EXTRA_BOLD_ITALIC = {
     src: `url("fonts/Reith/BBCReithSans_W_ExBdIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBdIt.woff") format("woff")`,
     fontWeight: 800,
     fontStyle: 'italic',
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -124,7 +124,7 @@ const REITH_SANS_CONDENSED_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSansCondensed',
     src: `url("fonts/Reith/BBCReithSansCd_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSansCd_W_Rg.woff") format("woff")`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -133,7 +133,7 @@ const REITH_SANS_CONDENSED_BOLD = {
     fontFamily: 'ReithSansCondensed',
     fontWeight: 700,
     src: `url("fonts/Reith/BBCReithSansCd_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSansCd_W_Bd.woff") format("woff")`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -233,7 +233,7 @@ const NOTO_SERIF_BENGALI_REGULAR = {
     fontWeight: 400,
     fontStyle: 'normal',
     src: `url('fonts/NotoSerifBengali/normal.woff2') format('woff2'), url('fonts/NotoSerifBengali/normal.woff') format('woff'), url('fonts/NotoSerifBengali/normal.eot') format('eot'), url('fonts/NotoSerifBengali/normal.ttf') format('ttf')`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -243,7 +243,7 @@ const NOTO_SERIF_BENGALI_BOLD = {
     fontWeight: 700,
     fontStyle: 'normal',
     src: `url('fonts/NotoSerifBengali/bold.woff2') format('woff2'), url('fonts/NotoSerifBengali/bold.woff') format('woff'), url('fonts/NotoSerifBengali/normal.eot') format('eot'), url('fonts/NotoSerifBengali/bold.ttf') format('ttf')`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -253,7 +253,7 @@ const REITH_QALAM_REGULAR = {
     fontWeight: 400,
     fontStyle: 'normal',
     src: `url('fonts/ReithQalam/normal.woff2') format('woff2'), url('fonts/ReithQalam/normal.woff') format('woff')`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 
@@ -263,7 +263,7 @@ const REITH_QALAM_BOLD = {
     fontWeight: 700,
     fontStyle: 'normal',
     src: `url('fonts/ReithQalam/bold.woff2') format('woff2'), url('fonts/ReithQalam/bold.woff') format('woff')`,
-    fontDisplay: 'optional',
+    fontDisplay: 'block',
   },
 };
 

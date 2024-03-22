@@ -279,7 +279,7 @@ export const service: DefaultServiceConfig = {
           'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
-      featuresAnalysisTitle: 'Minti Daya Da BBC',
+      featuresAnalysisTitle: 'Labarai na musamman',
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',
@@ -369,7 +369,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Shirye-shiryen rediyo',
-        url: '/hausa/media-52219055',
+        url: '/hausa/topics/c4nx34q5724t',
       },
     ],
   },

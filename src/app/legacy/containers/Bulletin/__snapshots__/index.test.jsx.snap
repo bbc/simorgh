@@ -176,18 +176,13 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 
 .emotion-12 {
   color: #006666;
-  border-radius: 50%;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
-  position: relative;
-  -webkit-transform: translate(0, 12%);
-  -moz-transform: translate(0, 12%);
-  -ms-transform: translate(0, 12%);
-  transform: translate(0, 12%);
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -197,39 +192,21 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   }
 }
 
-.emotion-13:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .emotion-13:before {
-    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
-    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  .emotion-13 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
   }
-}
-
-.emotion-13:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-14 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-15 {
@@ -386,29 +363,41 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
+          <svg
+            aria-hidden="true"
+            class="emotion-12"
+            fill="currentColor"
+            focusable="false"
+            height="16"
+            viewBox="0 0 32 32"
+            width="16"
+          >
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-13"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="bulletin-TestRadioBulletinpromonews"
             role="text"
           >
             <span
-              class="emotion-12"
-            >
-              <span
-                class="emotion-13"
-              />
-            </span>
-            <span
               aria-hidden="true"
               class="emotion-14"
               dir="ltr"
             >
-              NA EME UGBU A 
+              NA EME UGBU A
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Gee ntị Live, 
+               Gee ntị Live, 
             </span>
             Test Radio Bulletin promo
           </span>
@@ -631,18 +620,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 
 .emotion-12 {
   color: #006666;
-  border-radius: 50%;
   display: inline-block;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  background: radial-gradient(circle, transparent 53%, #006666 53.5%, #006666 54%);
+  vertical-align: -0.125rem;
+  position: relative;
   -webkit-margin-end: 0.25rem;
   margin-inline-end: 0.25rem;
-  position: relative;
-  -webkit-transform: translate(0, 12%);
-  -moz-transform: translate(0, 12%);
-  -ms-transform: translate(0, 12%);
-  transform: translate(0, 12%);
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 @media (min-width: 25rem) {
@@ -652,39 +636,21 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   }
 }
 
-.emotion-13:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, #006666 37%, #006666 37.5%,transparent 38%);
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .emotion-13:before {
-    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
-    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 3;
+  .emotion-13 {
+    -webkit-animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
+    animation: animation-0 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s 3;
   }
-}
-
-.emotion-13:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-14 {
   color: #006666;
   display: inline-block;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .emotion-15 {
@@ -841,29 +807,41 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
+          <svg
+            aria-hidden="true"
+            class="emotion-12"
+            fill="currentColor"
+            focusable="false"
+            height="16"
+            viewBox="0 0 32 32"
+            width="16"
+          >
+            <path
+              d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+            />
+            <circle
+              class="emotion-13"
+              cx="16"
+              cy="16"
+              r="8.5"
+            />
+          </svg>
           <span
             id="bulletin-TestTVBulletinpromonews"
             role="text"
           >
             <span
-              class="emotion-12"
-            >
-              <span
-                class="emotion-13"
-              />
-            </span>
-            <span
               aria-hidden="true"
               class="emotion-14"
               dir="ltr"
             >
-              NA EME UGBU A 
+              NA EME UGBU A
             </span>
             <span
               class="emotion-15"
               lang="en-GB"
             >
-              Lee Live, 
+               Lee Live, 
             </span>
             Test TV Bulletin promo
           </span>

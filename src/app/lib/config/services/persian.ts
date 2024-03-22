@@ -414,10 +414,6 @@ export const service: DefaultServiceConfig = {
         title: 'دانش',
         url: '/persian/topics/ckdxnwr4r1yt',
       },
-      {
-        title: 'رادیو',
-        url: '/persian/tv-and-radio-37434376',
-      },
     ],
   },
 };

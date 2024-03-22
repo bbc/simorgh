@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
@@ -48,7 +47,6 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
   const ariaLabel = getAdsAriaLabel({ label, dir, slotType });
 
   useEffect(() => {
-    // @ts-expect-error  dotcom is added to the window object by BBC Ads script
     if (window.dotcom && location.href != null) {
       // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       window.dotcom.cmd.push(() => {
@@ -58,7 +56,6 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
     }
 
     return () => {
-      // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       if (window.dotcom) {
         // @ts-expect-error  dotcom is added to the window object by BBC Ads script
         window.dotcom.cmd.push(() => {

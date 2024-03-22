@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLink external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
+.emotion-0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <a
+    aria-label="این لینک هست، خارجی"
+    class="focusIndicatorReducedWidth emotion-0"
+    href="https://www.example.com/"
+  >
+    این لینک هست
+  </a>
+</div>
+`;
+
+exports[`InlineLink external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
+.emotion-0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <a
+    aria-label="This is a link, external"
+    class="focusIndicatorReducedWidth emotion-0"
+    href="https://www.example.com/"
+  >
+    This is a link
+  </a>
+</div>
+`;
+
+exports[`InlineLink internal link route should render correctly 1`] = `
+.emotion-0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <a
+    class="focusIndicatorReducedWidth emotion-0"
+    href="/news"
+  >
+    <b>
+      This is bold text for a link
+    </b>
+  </a>
+</div>
+`;
