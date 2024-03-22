@@ -15,6 +15,7 @@ import portuguesePageData from './fixtureData/portuguese';
 import persianPageData from './fixtureData/persian';
 import mundoPageData from './fixtureData/mundo';
 import StoryPage from './StoryPage';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const PageWithOptimizely = withOptimizelyProvider(StoryPage);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -66,7 +67,9 @@ const Component = ({ pageData, service }) => (
             pageType={STORY_PAGE}
             bbcOrigin="https://www.test.bbc.com"
           >
-            <Page pageData={pageData} />
+            <ThemeProvider service={service}>
+              <Page pageData={pageData} />
+            </ThemeProvider>
           </RequestContextProvider>
         </UserContextProvider>
       </ServiceContextProvider>

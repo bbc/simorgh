@@ -19,6 +19,7 @@ import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -71,15 +72,17 @@ const ComponentWithContext = ({
           service={service}
         >
           <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
+            <ThemeProvider service={service}>
+              <MemoryRouter>
+                <Page
+                  pageData={{
+                    ...data.article,
+                    secondaryColumn: data.secondaryData,
+                    mostRead: data.secondaryData.mostRead,
+                  }}
+                />
+              </MemoryRouter>
+            </ThemeProvider>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -109,15 +112,17 @@ const ComponentWithServiceContext = ({
           service={service}
         >
           <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
+            <ThemeProvider service={service}>
+              <MemoryRouter>
+                <Page
+                  pageData={{
+                    ...data.article,
+                    secondaryColumn: data.secondaryData,
+                    mostRead: data.secondaryData.mostRead,
+                  }}
+                />
+              </MemoryRouter>
+            </ThemeProvider>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContext.Provider>
