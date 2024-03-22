@@ -108,7 +108,10 @@ const setUserDidDismissCookieBanner = isUK =>
     sameSite: SAME_SITE_VALUE,
   });
 
-const useConsentBanner = (isUK = false) => {
+const useConsentBanner = (
+  isUK = false,
+  showCookieBannerBasedOnCountry = true,
+) => {
   const [{ showPrivacyBanner, showCookieBanner }, dispatch] = useReducer(
     bannerReducer,
     initialState,
@@ -125,9 +128,11 @@ const useConsentBanner = (isUK = false) => {
       PRIVACY_COOKIE_LEGACY_VALUES.includes(privacyCookie);
     const userHasExplicitCookie =
       EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(explicitCookie);
-    const shouldShowCookieBanner = !userHasExplicitCookie;
+    const shouldShowCookieBanner =
+      !userHasExplicitCookie && showCookieBannerBasedOnCountry;
     const shouldShowPrivacyBanner =
-      !userHasPrivacyCookie || userHasLegacyPrivacyCookie;
+      (!userHasPrivacyCookie || userHasLegacyPrivacyCookie) &&
+      showCookieBannerBasedOnCountry;
 
     if (shouldShowPrivacyBanner) {
       dispatch(SHOW_PRIVACY_BANNER);
@@ -139,7 +144,7 @@ const useConsentBanner = (isUK = false) => {
     if (!userHasPolicyCookie) {
       setDefaultPolicy();
     }
-  }, []);
+  }, [showCookieBannerBasedOnCountry]);
 
   const handlePrivacyBannerAccepted = () => {
     dispatch(SHOW_COOKIE_BANNER);

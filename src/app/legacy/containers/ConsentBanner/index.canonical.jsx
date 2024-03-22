@@ -8,7 +8,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 
 const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
-  const { isUK } = useContext(RequestContext);
+  const { isUK, showCookieBannerBasedOnCountry } = useContext(RequestContext);
 
   const {
     showPrivacyBanner,
@@ -16,7 +16,7 @@ const Canonical = ({ onDismissFocusRef }) => {
     handlePrivacyBannerAccepted,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
-  } = useConsentBanners(isUK);
+  } = useConsentBanners(isUK, showCookieBannerBasedOnCountry);
 
   return (
     <>
