@@ -9,9 +9,9 @@ const config: StorybookConfig = {
     // '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     // '../src/app/components/**/*.stories.@(t|j)sx',
     // '../src/app/pages/**/*.stories.@(t|j)sx',
-    // './DocsDecorator/**/*.stories.@(t|j)sx',
-    // './StorybookComponents/**/*.stories.@(t|j)sx',
-    // './SidebarLabel/**/*.stories.@(t|j)sx',
+    './DocsDecorator/**/*.stories.@(t|j)sx',
+    './StorybookComponents/**/*.stories.@(t|j)sx',
+    './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
 
     '../docs/**/*.mdx',
@@ -20,13 +20,11 @@ const config: StorybookConfig = {
     '../3rdPartyCypress/**/*.mdx',
   ],
   addons: [
-    // '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
     '@storybook/addon-toolbars',
-    // '@storybook/addon-designs',
     './SidebarLabel/preset.cjs',
     {
       name: '@storybook/addon-docs',

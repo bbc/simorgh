@@ -9,12 +9,6 @@ export default {
   component: HealthFactors,
   parameters: {
     metadata,
-    docs: {
-      component: {
-        title: 'Health Factors',
-      },
-      page: md,
-    },
   },
 };
 
