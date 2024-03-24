@@ -18,7 +18,6 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
     ['meta', 'parameters', 'metadata'],
     file,
   ) as HealthFactorsMetadata;
-  console.log(metadata);
 
   return (
     <DocsContainer context={context}>
