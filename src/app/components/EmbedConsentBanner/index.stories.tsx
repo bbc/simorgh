@@ -3,7 +3,6 @@ import { PropsWithChildren } from 'react';
 import { jsx, css } from '@emotion/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import metadata from './metadata.json';
-import md from './README.md';
 
 import {
   EmbedConsentBannerCanonical,
@@ -52,12 +51,6 @@ export default {
   parameters: {
     chromatic: { disable: true },
     metadata,
-    docs: {
-      component: {
-        title: 'Consent Banner',
-      },
-      page: md,
-    },
   },
 };
 

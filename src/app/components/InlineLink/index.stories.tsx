@@ -1,8 +1,6 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { StoryProps } from '../../models/types/storybook';
 import ThemeProvider from '../ThemeProvider';
 import InlineLink from '.';
@@ -77,7 +75,6 @@ export const InlineLinkInsideText = ({
 export default {
   title: 'New Components/InlineLink',
   Component: InternalInlineLink,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
       disable: true,

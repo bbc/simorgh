@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -43,17 +42,11 @@ const Wrappers = ({
   );
 };
 
-const Component = (props: StoryProps) => {
-  const imageUrl = text(
-    'Image URL',
-    'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/189F/production/_121530360_hi071904982.jpg',
-  );
-  const mainBody = text(
-    'Main Body',
-    'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
-  );
-  const minimumContrast = number('Minimum Contrast', 8);
-  const paletteSize = number('Palette Size', 20, { min: 2, max: 99 });
+const Component = (props: StoryProps, { args }: any) => {
+  const imageUrl = args?.imageUrl;
+  const mainBody = args?.mainBody;
+  const minimumContrast = args?.minContrast;
+  const paletteSize = args?.paletteSize;
   return (
     <Wrappers {...props}>
       <Promo
@@ -96,7 +89,21 @@ const WithLinkPromoData = (props: StoryProps) => {
 export default {
   title: 'New Components/Frosted Glass Promo',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
+  argTypes: {
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/189F/production/_121530360_hi071904982.jpg',
+    mainBody:
+      'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
+    minContrast: 8,
+    paletteSize: {
+      control: {
+        type: 'range',
+        min: 2,
+        max: 99,
+        step: 1,
+      },
+    },
+  },
 };
 
 export const Standalone = Component;

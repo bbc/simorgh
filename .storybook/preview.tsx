@@ -11,6 +11,7 @@ import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
 import { Preview } from '@storybook/react';
+import { Helmet } from 'react-helmet';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -294,7 +295,7 @@ const preview: Preview = {
             title: 'amharic',
           },
           {
-            value: { service: 'arabic', variant: 'default' },
+            value: { service: 'arabic', variant: 'default', rtl: true },
             title: 'arabic',
           },
           {
@@ -378,11 +379,11 @@ const preview: Preview = {
             title: 'newsround',
           },
           {
-            value: { service: 'pashto', variant: 'default' },
+            value: { service: 'pashto', variant: 'default', rtl: true },
             title: 'pashto',
           },
           {
-            value: { service: 'persian', variant: 'default' },
+            value: { service: 'persian', variant: 'default', rtl: true },
             title: 'persian',
           },
           {
@@ -442,7 +443,7 @@ const preview: Preview = {
             title: 'turkce',
           },
           {
-            value: { service: 'urdu', variant: 'default' },
+            value: { service: 'urdu', variant: 'default', rtl: true },
             title: 'urdu',
           },
           {
@@ -566,20 +567,25 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ThemeProvider service={context.globals.service.service}>
-        <ToggleContextProvider toggles={{}}>
-          <ServiceContextProvider
-            service={context.globals.service.service}
-            variant={context.globals.service.variant}
-          >
-            <EventTrackingContextProvider pageData={pageDataFixture}>
-              <UserContextProvider>
-                <Story />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
+      <>
+        <Helmet
+          htmlAttributes={{ dir: context.globals.service.rtl ? 'rtl' : 'ltr' }}
+        />
+        <ThemeProvider service={context.globals.service.service}>
+          <ToggleContextProvider toggles={{}}>
+            <ServiceContextProvider
+              service={context.globals.service.service}
+              variant={context.globals.service.variant}
+            >
+              <EventTrackingContextProvider pageData={pageDataFixture}>
+                <UserContextProvider>
+                  <Story />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </ServiceContextProvider>
+          </ToggleContextProvider>
+        </ThemeProvider>
+      </>
     ),
   ],
 };

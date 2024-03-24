@@ -4,7 +4,6 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaLoaderComponent from '.';
 import ThemeProvider from '../ThemeProvider';
-import md from './README.md';
 import { aresMediaBlocks, clipMediaBlocks } from './fixture';
 import { MediaBlock } from './types';
 
@@ -35,14 +34,6 @@ const Component = ({ service, pageType, blocks }: Props) => (
 export default {
   title: 'Components/MediaLoader',
   Component,
-  parameters: {
-    docs: {
-      component: {
-        title: 'MediaLoader',
-      },
-      page: md,
-    },
-  },
 };
 
 export const ArticleMediaLoader = () => (

@@ -1,8 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../ThemeProvider';
 import { Services } from '../../../models/types/global';
 
@@ -44,7 +42,6 @@ export default {
       default: 'Optimo',
     },
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
 export const Example = ({ service }: Props) => {

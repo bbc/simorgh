@@ -1,23 +1,17 @@
 import React from 'react';
 import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
-import ThemeProvider from '../ThemeProvider';
 import DecoratedInlineLink from '.';
 import { persianLink, fragmentBlock } from './fixture';
 
 const Component = ({
   blocks,
-  service,
   language,
 }: {
   blocks: OptimoBlock[];
   service: Services;
   language: string;
-}) => (
-  <ThemeProvider service={service}>
-    <DecoratedInlineLink blocks={blocks} language={language} />
-  </ThemeProvider>
-);
+}) => <DecoratedInlineLink blocks={blocks} language={language} />;
 
 export const DecoratedInlineTextWithLink = () => (
   <Component

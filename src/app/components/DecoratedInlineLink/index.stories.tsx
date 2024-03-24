@@ -1,12 +1,10 @@
 import React from 'react';
 import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
-import ThemeProvider from '../ThemeProvider';
 import DecoratedInlineLink from '.';
 
 const Component = ({
   blocks,
-  service,
   locator,
   isExternal,
   onClick,
@@ -17,14 +15,12 @@ const Component = ({
   isExternal: boolean;
   onClick?: () => void;
 }) => (
-  <ThemeProvider service={service}>
-    <DecoratedInlineLink
-      blocks={blocks}
-      locator={locator}
-      isExternal={isExternal}
-      {...(onClick ? { onClick } : {})}
-    />
-  </ThemeProvider>
+  <DecoratedInlineLink
+    blocks={blocks}
+    locator={locator}
+    isExternal={isExternal}
+    {...(onClick ? { onClick } : {})}
+  />
 );
 
 export const NormalInlineLink = () => (

@@ -1,8 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Promo from '#app/legacy/components/Promo';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import LiveLabel from './index';
 import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
@@ -37,7 +35,6 @@ const Component = ({
 
 export default {
   title: 'New Components/Live Label',
-  decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     metadata,
     docs: {

@@ -44,11 +44,4 @@ export const FragmentBoldItalic = () => (
 export default {
   title: 'Components/Fragment',
   Component,
-  parameters: {
-    docs: {
-      component: {
-        title: 'Fragment',
-      },
-    },
-  },
 };

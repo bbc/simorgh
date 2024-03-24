@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { withKnobs, number } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../ThemeProvider';
 import HierarchicalGrid from './index';
 import pidginPromos from './fixtures';
@@ -16,7 +14,8 @@ const Component = ({ service, variant }: StoryProps) => {
           headingLevel={2}
           summaries={pidginPromos.slice(
             0,
-            number('Promo Count', 12, { min: 3, max: 12 }),
+            // number('Promo Count', 12, { min: 3, max: 12 }),
+            12,
           )}
         />
       </ServiceContextProvider>
@@ -27,7 +26,6 @@ const Component = ({ service, variant }: StoryProps) => {
 export default {
   title: 'New Components/Curation/Grid - Hierarchical',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
 };
 
 export const Example = Component;

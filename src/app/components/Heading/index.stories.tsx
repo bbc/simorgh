@@ -1,11 +1,6 @@
 import React from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
 
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../ThemeProvider';
 import Heading from '.';
-import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 
 interface Props extends StoryProps {
@@ -14,88 +9,81 @@ interface Props extends StoryProps {
 
 const EMPTY_OPTION = '--';
 
-const HeadingStory = ({ service, variant, text }: Props) => {
-  const selectedLevel = select(
-    'level',
-    {
-      1: 1,
-      2: 2,
-      3: 3,
-      4: 4,
-    },
-    1,
-  );
-  const selectedFontVariant = select(
-    'fontVariant',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      sansRegular: 'sansRegular',
-      sansRegularItalic: 'sansRegularItalic',
-      sansBold: 'sansBold',
-      sansBoldItalic: 'sansBoldItalic',
-      sansLight: 'sansLight',
-      serifRegular: 'serifRegular',
-      serifMedium: 'serifMedium',
-      serifMediumItalic: 'serifMediumItalic',
-      serifBold: 'serifBold',
-      serifLight: 'serifLight',
-    },
-    EMPTY_OPTION,
-  );
-  const selectedSize = select(
-    'size',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      atlas: 'atlas',
-      elephant: 'elephant',
-      imperial: 'imperial',
-      royal: 'royal',
-      foolscap: 'foolscap',
-      canon: 'canon',
-      trafalgar: 'trafalgar',
-      paragon: 'paragon',
-      doublePica: 'doublePica',
-      greatPrimer: 'greatPrimer',
-      bodyCopy: 'bodyCopy',
-      pica: 'pica',
-      longPrimer: 'longPrimer',
-      brevier: 'brevier',
-      minion: 'minion',
-    },
-    EMPTY_OPTION,
-  );
-  return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Heading
-          level={selectedLevel}
-          fontVariant={
-            selectedFontVariant !== EMPTY_OPTION
-              ? selectedFontVariant
-              : undefined
-          }
-          size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
-        >
-          {text}
-        </Heading>
-      </ServiceContextProvider>
-    </ThemeProvider>
-  );
+const HeadingStory = {
+  render: ({ text }: Props, { args }: { args: any }) => {
+    const selectedLevel = args?.level;
+
+    const selectedFontVariant = args?.fontVariant;
+    const selectedSize = args?.size;
+
+    return (
+      <Heading
+        level={selectedLevel}
+        fontVariant={
+          selectedFontVariant !== EMPTY_OPTION ? selectedFontVariant : undefined
+        }
+        size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
+      >
+        {text}
+      </Heading>
+    );
+  },
+  args: {
+    text: 'Heading',
+    level: 1,
+    fontVariant: EMPTY_OPTION,
+    size: EMPTY_OPTION,
+  },
 };
 
 export default {
   title: 'New Components/Heading',
   Component: HeadingStory,
-  decorators: [withKnobs, withServicesKnob()],
+  argTypes: {
+    level: {
+      options: [1, 2, 3, 4],
+      control: { type: 'select' },
+    },
+    fontVariant: {
+      options: [
+        'sansRegular',
+        'sansRegularItalic',
+        'sansBold',
+        'sansBoldItalic',
+        'sansLight',
+        'serifRegular',
+        'serifMedium',
+        'serifMediumItalic',
+        'serifBold',
+        'serifLight',
+      ],
+      control: { type: 'select' },
+    },
+    size: {
+      options: [
+        EMPTY_OPTION,
+        'atlas',
+        'elephant',
+        'imperial',
+        'royal',
+        'foolscap',
+        'canon',
+        'trafalgar',
+        'paragon',
+        'doublePica',
+        'greatPrimer',
+        'bodyCopy',
+        'pica',
+        'longPrimer',
+        'brevier',
+        'minion',
+      ],
+      control: { type: 'select' },
+    },
+  },
   parameters: {
     chromatic: {
       disable: true,
-    },
-    docs: {
-      component: {
-        title: 'Heading',
-      },
-      page: md,
     },
   },
 };

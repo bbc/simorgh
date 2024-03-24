@@ -3,7 +3,6 @@ import React from 'react';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../ThemeProvider';
 import Image from '.';
-import md from './README.md';
 
 const BasicImage = () => (
   <ThemeProvider service="mundo" variant="default">
@@ -19,12 +18,6 @@ export default {
   Component: BasicImage,
   parameters: {
     chromatic: { disable: true },
-    docs: {
-      component: {
-        title: 'Image',
-      },
-      page: md,
-    },
   },
 };
 

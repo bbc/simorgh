@@ -7,7 +7,6 @@ import { StoryProps } from '../../models/types/storybook';
 
 import metadata from './metadata.json';
 import DisclaimerComponent from '.';
-import md from './README.md';
 
 const Component = ({ service, variant }: StoryProps) => {
   return (
@@ -32,12 +31,6 @@ export default {
   Component,
   parameters: {
     metadata,
-    docs: {
-      component: {
-        title: 'Disclaimer',
-      },
-      page: md,
-    },
   },
 };
 

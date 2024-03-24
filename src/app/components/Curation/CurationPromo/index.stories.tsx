@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { MEDIA_TYPES } from '#components/Promo';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -50,7 +48,6 @@ const WithMediaIndicator = ({ service, variant }: StoryProps) => {
 export default {
   title: 'New Components/Curation/Promo - Normal',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
 };
 
