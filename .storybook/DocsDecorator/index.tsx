@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import HealthFactorsMetadata from './types';
-import { isExempt } from '../helpers/healthFactors';
+// import { isExempt } from '../helpers/healthFactors';
 
 interface DocsDecoratorProps {
   context: DocsContextProps;
@@ -21,7 +21,7 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
 
   return (
     <DocsContainer context={context}>
-      {!isExempt(context) && (
+      {metadata && (
         <ThemeProvider service="news" variant="default">
           <Title />
           <HealthFactors metadata={metadata} />
