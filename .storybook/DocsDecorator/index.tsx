@@ -12,21 +12,19 @@ interface DocsDecoratorProps {
 }
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
-  const title = path<string>(
-    ['attachedCSFFile', 'meta', 'parameters', 'docs', 'component', 'title'],
-    context,
-  );
-
+  // @ts-ignore
+  const [file] = context.attachedCSFFiles;
   const metadata = path(
-    ['attachedCSFFile', 'meta', 'parameters', 'metadata'],
-    context,
+    ['meta', 'parameters', 'metadata'],
+    file,
   ) as HealthFactorsMetadata;
+  console.log(metadata);
 
   return (
     <DocsContainer context={context}>
       {!isExempt(context) && (
         <ThemeProvider service="news" variant="default">
-          <Title>{title}</Title>
+          <Title />
           <HealthFactors metadata={metadata} />
         </ThemeProvider>
       )}
