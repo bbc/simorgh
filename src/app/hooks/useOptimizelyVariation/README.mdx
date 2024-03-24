@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="hooks/useOptimizelyVariation" />
 
@@ -6,10 +6,10 @@ import { Meta } from '@storybook/addon-docs';
 
 The `useOptimizelyVariation` hook handles:
 
-- Decides what variation to show a user via Optimizely
-- Automatically updates the variation value if the underlying datafile from Optimizely changes
-- Has functionality to override the Optimizely user's attributes
-- Uses the `useEffect` hook to prevent issues occuring via server side rendering
+* Decides what variation to show a user via Optimizely
+* Automatically updates the variation value if the underlying datafile from Optimizely changes
+* Has functionality to override the Optimizely user's attributes
+* Uses the `useEffect` hook to prevent issues occuring via server side rendering
 
 `useOptimizelyVariation` must be used in cojunction with the HOC [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler. This is because `useOptimizelyVariation` makes use of features found in the `optimizely` object client that needs to be provided by `withOptimizelyProvider`.
 

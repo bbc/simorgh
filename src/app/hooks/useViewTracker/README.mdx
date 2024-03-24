@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="hooks/useViewTracker" />
 
@@ -6,14 +6,14 @@ import { Meta } from '@storybook/addon-docs';
 
 The `useViewTracker` hook handles:
 
-- Tracking when an element is in view
-- Sending the event to ATI
-- Sending the event to Optimizely (If applicable)
+* Tracking when an element is in view
+* Sending the event to ATI
+* Sending the event to Optimizely (If applicable)
 
 A view event is triggered when:
 
-- 50% of the element is in the viewport for more than 1 second
-- Only once per element per page view
+* 50% of the element is in the viewport for more than 1 second
+* Only once per element per page view
 
 `useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event. When a view event is triggered then the hook will send the event data to ATI.
 

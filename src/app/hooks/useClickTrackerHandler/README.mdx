@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="hooks/useClickTracker" />
 
@@ -6,30 +6,30 @@ import { Meta } from '@storybook/addon-docs';
 
 The `useClickTracker` hook handles:
 
-- Tracking when an element has been clicked
-- Sending the event to ATI
-- Sending the event to Optimizely (If applicable)
+* Tracking when an element has been clicked
+* Sending the event to ATI
+* Sending the event to Optimizely (If applicable)
 
 `useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 
 A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked element. Specifically the following are valid clicks:
 
-- ### General
-  - Middle Click
-  - Unmodified left click
-  - Left click + shift
-  - Tap
-- ### Windows
-  - Left click + ctrl
-  - Left click + shift + ctrl
-  - Left click + shift + alt
-  - Left click + ctrl + alt
-  - Left click + shift + alt + ctrl
-- ### macOS
-  - Left click + cmd
-  - Left click + cmd + option
-  - Left click + shift + option
-  - Left click + shift + option + cmd
+* ### General
+  * Middle Click
+  * Unmodified left click
+  * Left click + shift
+  * Tap
+* ### Windows
+  * Left click + ctrl
+  * Left click + shift + ctrl
+  * Left click + shift + alt
+  * Left click + ctrl + alt
+  * Left click + shift + alt + ctrl
+* ### macOS
+  * Left click + cmd
+  * Left click + cmd + option
+  * Left click + shift + option
+  * Left click + shift + option + cmd
 
 The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
