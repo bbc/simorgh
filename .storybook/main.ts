@@ -5,13 +5,13 @@ import { webpackDirAlias } from '../dirAlias';
 const config: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
-    '../src/app/legacy/components/**/*.stories.@(t|j)sx',
-    '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
-    '../src/app/components/**/*.stories.@(t|j)sx',
-    '../src/app/pages/**/*.stories.@(t|j)sx',
-    './DocsDecorator/**/*.stories.@(t|j)sx',
-    './StorybookComponents/**/*.stories.@(t|j)sx',
-    './SidebarLabel/**/*.stories.@(t|j)sx',
+    // '../src/app/legacy/components/**/*.stories.@(t|j)sx',
+    // '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
+    // '../src/app/components/**/*.stories.@(t|j)sx',
+    // '../src/app/pages/**/*.stories.@(t|j)sx',
+    // './DocsDecorator/**/*.stories.@(t|j)sx',
+    // './StorybookComponents/**/*.stories.@(t|j)sx',
+    // './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
 
     // '../docs/**/*.stories.mdx',
@@ -39,10 +39,6 @@ const config: StorybookConfig = {
     },
     '@storybook/addon-webpack5-compiler-babel',
   ],
-  // babel: options => {
-  //   options.presets![0][1] = { runtime: 'classic' };
-  //   return options;
-  // },
   webpackFinal: async config => {
     config.plugins!.push(
       /*

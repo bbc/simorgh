@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
+// import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../../../../src/app/contexts/ServiceContext';
-import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psammead-storybook-helpers/src';
+// import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
 import KeyPoints from '.';
 import { StoryProps } from '../../../../../../src/app/models/types/storybook';
@@ -60,7 +60,7 @@ export default {
       },
     ],
   },
-  decorators: [withKnobs, withServicesKnob()],
+  // decorators: [withKnobs, withServicesKnob()],
 };
 
 export const SingleKeyPoint = ({ service, variant }: StoryProps) => (
