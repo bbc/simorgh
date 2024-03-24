@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="docs/Media-Player-Guide" />
 
@@ -8,7 +8,7 @@ This document gives a brief overview of how embedded media (audio and video) wor
 
 ## Approach
 
-Simorgh is designed to be AMP-first and all features are built to work for both AMP and canonical page users. At the time of writing the only viable method of including the BBC's Standard Media Player (SMP) on an AMP page is using the [amp-iframe](https://amp.dev/documentation/components/amp-iframe/) element and a custom _embed endpoint_ to serve the player itself.
+Simorgh is designed to be AMP-first and all features are built to work for both AMP and canonical page users. At the time of writing the only viable method of including the BBC's Standard Media Player (SMP) on an AMP page is using the [amp-iframe](https://amp.dev/documentation/components/amp-iframe/) element and a custom *embed endpoint* to serve the player itself.
 
 To minimise the duplication that would arise from having two very different media player implementations it was decided to use an iframe-based approach for both AMP and canonical pages. The responsibility for configuring and rendering the media player was therefore moved largely outside of Simorgh into `news-av-player`. This simplifies the code and helps to reduce the testing and maintenance burden of supporting media on both platforms.
 
@@ -18,7 +18,7 @@ In contexts such as article pages where there is a reasonable chance the user ma
 
 The placeholder component will typically feature a placeholder image, a media player indicator and a duration. When the user clicks this placeholder, we make a call to another endpoint that returns a playable media player component, and use that to replace the placeholder.
 
-_Note that it is possible to use this implementation without a placeholder, just don't pass anything to the `placeholder` prop, and the media player will load in a frame on page load._
+*Note that it is possible to use this implementation without a placeholder, just don't pass anything to the `placeholder` prop, and the media player will load in a frame on page load.*
 
 ## Embed Endpoints
 

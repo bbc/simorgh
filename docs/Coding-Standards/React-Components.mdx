@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/React Components" />
 
@@ -40,8 +40,8 @@ If logic or behaviour can be shared across components, then consider writing a [
 
 ### Resources
 
-- https://reactjs.org/docs/hooks-overview.html
-- https://reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components
+* https://reactjs.org/docs/hooks-overview.html
+* https://reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components
 
 ## Write function components rather than class components
 
@@ -51,9 +51,9 @@ After the introduction of [React Hooks](https://reactjs.org/docs/hooks-overview.
 
 Benefits of function components over class components include:
 
-- Less boilerplate
-- Easier to understand
-- Easier to reuse stateful logic between components with React Hooks
+* Less boilerplate
+* Easier to understand
+* Easier to reuse stateful logic between components with React Hooks
 
 ### How?
 
@@ -209,9 +209,9 @@ In our example below we have a `Byline` component used on both Article and Story
 
 At this level we take a ‘Compound Component’ and build an ‘Applied Compound Component’ that is very specific to the page’s use case. At this level we can apply specific styling and add in additional functionality completely bespoke to that page’s requirements; we are:
 
-- Reusing the functionality common across all pages from the Primitive Components
-- Reusing the functionality common to all usages of a particular user experience from the Compound Component
-- Applying customisations for the specific usage at the page level; we are free to make changes here without worrying about reuse
+* Reusing the functionality common across all pages from the Primitive Components
+* Reusing the functionality common to all usages of a particular user experience from the Compound Component
+* Applying customisations for the specific usage at the page level; we are free to make changes here without worrying about reuse
 
 In our example these are `RelatedContentPromo` and `TopStoriesPromo` respectively. Differences to the Promos on the respective page types are applied in these Components and they are co-located with the Page.
 
@@ -263,19 +263,19 @@ Since it will be not be feasible to migrate all components to the new standard, 
 
 As a rule of thumb, the following criteria could be used to help make this decision:
 
-- _The component requires modification as part of current feature delivery_
+* *The component requires modification as part of current feature delivery*
 
   If the component needs to be updated anyway to accommodate for new functionality, then we can opportunistically refactor it now to make it more understandable for future maintainers.
 
-- _The component is small and simple_
+* *The component is small and simple*
 
   The work involved in standardising the component is likely to be minimal, and so, makes it a good candidate for migration.
 
-- _The component is a visual component_
+* *The component is a visual component*
 
   Our current guidelines are largely focussed on visual rather than non-visual components, e.g. component health focuses on UX and accessibility, which is more applicable for components which are displayed in Storybook.
 
-- _The component is likely to require modification in future development work_
+* *The component is likely to require modification in future development work*
 
   When a component has a high likelihood of change as part of future feature development, we gain more value by bringing it up to standard. Time spent by engineers comprehending how a legacy component works, is time which could potentially be saved if the component was brought up to standard.
 
@@ -283,15 +283,18 @@ As a rule of thumb, the following criteria could be used to help make this decis
 
 ## Typescript for Frontend Components
 
-- Our visual components should be written in TypeScript to clearly document each component’s API and get the benefits of compile-time type checking between components.
-- Types should be co-located with the component that uses them; they should only be maintained in a shared location where they are used by multiple visual components
-  - Here is an example of shared types in our BFF application: https://github.com/bbc/fabl-modules/tree/master/modules/application/simorgh-bff/src/models
-  - We can locate any shared types in `src/app/components/models`
-- Types should be as strict as possible
-  - Avoid use of the `any` type and try and define a more specific type
-- Where a prop has a fixed set of options use a [`union type`](https://camchenry.com/blog/typescript-union-type) to restrict the prop to those fixed options
+* Our visual components should be written in TypeScript to clearly document each component’s API and get the benefits of compile-time type checking between components.
 
-- Typescript components do not use directory aliases because previously this has been used as a band-aid on poor file organisation. In theory, by relying on the principle of code colocation and not nesting files mutliple directory levels deep, then import paths should not be so difficult to maintain and not reach for code in far away places.
+* Types should be co-located with the component that uses them; they should only be maintained in a shared location where they are used by multiple visual components
+  * Here is an example of shared types in our BFF application: https://github.com/bbc/fabl-modules/tree/master/modules/application/simorgh-bff/src/models
+  * We can locate any shared types in `src/app/components/models`
+
+* Types should be as strict as possible
+  * Avoid use of the `any` type and try and define a more specific type
+
+* Where a prop has a fixed set of options use a [`union type`](https://camchenry.com/blog/typescript-union-type) to restrict the prop to those fixed options
+
+* Typescript components do not use directory aliases because previously this has been used as a band-aid on poor file organisation. In theory, by relying on the principle of code colocation and not nesting files mutliple directory levels deep, then import paths should not be so difficult to maintain and not reach for code in far away places.
 
 ## Component Health
 
@@ -301,10 +304,10 @@ All components should have a component health visualisation in Storybook similar
 
 Component Health should include:
 
-- Link to screen reader UX
-- Accessibility acceptance criteria
-- Accessibility swarm document
-- Whether the component has ‘right-to-left’ support
+* Link to screen reader UX
+* Accessibility acceptance criteria
+* Accessibility swarm document
+* Whether the component has ‘right-to-left’ support
 
 All linked docs must be secure and not publicly editable
 
@@ -312,9 +315,9 @@ All linked docs must be secure and not publicly editable
 
 All components should have a readme that includes
 
-- A plain text description of what the component does
-- API docs describing the component’s props
-- A11y notes: explaination of implmentation details specific to a11y requirements
-- Usage examples including RTL
-- List any third party dependencies in use
-- An explanation of any unusual/unintuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline
+* A plain text description of what the component does
+* API docs describing the component’s props
+* A11y notes: explaination of implmentation details specific to a11y requirements
+* Usage examples including RTL
+* List any third party dependencies in use
+* An explanation of any unusual/unintuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/Naming conventions" />
 
@@ -133,7 +133,7 @@ let pageType;
 const getPageType = () => {};
 ```
 
-#### Use SCREAMING_SNAKE_CASE when naming constants to indicate the value is a [primitive type](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and will point at the same value throughout the application.
+#### Use SCREAMING\_SNAKE\_CASE when naming constants to indicate the value is a [primitive type](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and will point at the same value throughout the application.
 
 ❌
 
@@ -149,8 +149,8 @@ const APP_ENV = 'test';
 
 #### Avoid using visually descriptive names for components. This is for 2 reasons:
 
-1.  Components can change appearance depending on CSS breakpoints and the language content is presented in. e.g. `InlinePromo` may not look inline on mobile or `RightSection` may be a section on the left in right-to-left languages.
-2.  Requirements often change which means we are likely to update the UI and the naming of the component may no longer match the appearance. For example, a component named `BlurredBg` that no longer has a blurred background image would incur an additional bit of mental thought processing every time we work on it.
+1. Components can change appearance depending on CSS breakpoints and the language content is presented in. e.g. `InlinePromo` may not look inline on mobile or `RightSection` may be a section on the left in right-to-left languages.
+2. Requirements often change which means we are likely to update the UI and the naming of the component may no longer match the appearance. For example, a component named `BlurredBg` that no longer has a blurred background image would incur an additional bit of mental thought processing every time we work on it.
 
 Instead, try using semantic naming or naming that describes what the component is, or the component’s intended purpose, rather than how it looks.
 

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/Clean code" />
 
@@ -18,7 +18,7 @@ Variables and functions should be declared close to their usage. A component’s
 
 ### Resources
 
-- https://kentcdodds.com/blog/colocation
+* https://kentcdodds.com/blog/colocation
 
 ## Code commenting
 
@@ -188,11 +188,11 @@ Try to limit the number of arguments in a function. More arguments make a functi
 
 Sometimes you can’t avoid having multiple function arguments. When this is the case it is recommended to use 1 object argument with object destructuring syntax. This has a few advantages over multiple arguments:
 
-- When someone looks at the function signature, it's immediately clear what properties are being used.
-- It can be used to simulate named parameters.
-- Destructuring also clones the specified primitive values of the argument object passed into the function. This can help prevent side effects. Note: objects and arrays that are destructured from the argument object are NOT cloned.
-- Linters can warn you about unused properties, which would be impossible without destructuring.
-- The order of object properties does not matter whereas the order of function arguments does matter. Especially useful when some parameters are optional and you can leave them out of the object rather than pass `undefined` or `null` as an argument when the optional argument is not the last argument.
+* When someone looks at the function signature, it's immediately clear what properties are being used.
+* It can be used to simulate named parameters.
+* Destructuring also clones the specified primitive values of the argument object passed into the function. This can help prevent side effects. Note: objects and arrays that are destructured from the argument object are NOT cloned.
+* Linters can warn you about unused properties, which would be impossible without destructuring.
+* The order of object properties does not matter whereas the order of function arguments does matter. Especially useful when some parameters are optional and you can leave them out of the object rather than pass `undefined` or `null` as an argument when the optional argument is not the last argument.
 
 ❌
 
@@ -313,5 +313,5 @@ The scout rule is “Always leave the campground cleaner than you found it”. T
 
 #### Resources
 
-- https://x-team.com/blog/principles-clean-code/
-- https://www.goodreads.com/book/show/8677004-the-art-of-readable-code
+* https://x-team.com/blog/principles-clean-code/
+* https://www.goodreads.com/book/show/8677004-the-art-of-readable-code

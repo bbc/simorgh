@@ -14,7 +14,7 @@ const config: StorybookConfig = {
     // './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
 
-    // '../docs/**/*.stories.mdx',
+    '../docs/**/*.mdx',
     // '../src/**/*.stories.mdx',
     // '../AdHocCypress/**/*.stories.mdx',
     // '../3rdPartyCypress/**/*.stories.mdx',

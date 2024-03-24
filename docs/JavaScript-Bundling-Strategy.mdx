@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="docs/JavaScript-Bundling-Strategy" />
 
@@ -32,39 +32,39 @@ Simorgh uses Loadable Components (a library Simorgh uses for code-splitting) to 
 
 ### Gotchas
 
-- Safari 10.1 supports modules, but does not support the `nomodule` attribute. This results in Safari downloading and executing both legacy and modern bundles. A polyfill has been included to prevent this behaviour.
-- IE11 downloads both modern and legacy bundles but only executes the legacy bundle. This worsens performance for IE11 users because they will have to download almost twice the amount of JavaScript. IE11 accounts for around 0.06% of page visits across the World Service sites. Based on this we decided the impact is not high enough to prevent us from providing a better experience to the vast majority of users.
-- The Webpack dev server run using `yarn dev` currently only uses modern JavaScript. If you are cross-browser testing locally make sure that you build Simorgh with `yarn build` and start the Express server with `yarn start`.
-- The bundle analyser script that runs after builds and displays bundle size information by default will run on the modern bundle. If you would like to see bundle size information for the legacy bundle you can run a build (`yarn build`) and then run `bundleType=legacy node scripts/bundleSize`.
+* Safari 10.1 supports modules, but does not support the `nomodule` attribute. This results in Safari downloading and executing both legacy and modern bundles. A polyfill has been included to prevent this behaviour.
+* IE11 downloads both modern and legacy bundles but only executes the legacy bundle. This worsens performance for IE11 users because they will have to download almost twice the amount of JavaScript. IE11 accounts for around 0.06% of page visits across the World Service sites. Based on this we decided the impact is not high enough to prevent us from providing a better experience to the vast majority of users.
+* The Webpack dev server run using `yarn dev` currently only uses modern JavaScript. If you are cross-browser testing locally make sure that you build Simorgh with `yarn build` and start the Express server with `yarn start`.
+* The bundle analyser script that runs after builds and displays bundle size information by default will run on the modern bundle. If you would like to see bundle size information for the legacy bundle you can run a build (`yarn build`) and then run `bundleType=legacy node scripts/bundleSize`.
 
 ### More on legacy vs modern bundles
 
-- [Publish, ship, and install modern JavaScript for faster applications](https://web.dev/publish-modern-javascript/)
-- [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
+* [Publish, ship, and install modern JavaScript for faster applications](https://web.dev/publish-modern-javascript/)
+* [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
 
 ## Code-splitting
 
-Because we make multiple releases per day with updated application and library (node_module) code we split our client-side JavaScript bundle into multiple chunks to improve cache efficiency so that the amount of cache-invalidated chunks after each deployment is kept to a minimum.
+Because we make multiple releases per day with updated application and library (node\_module) code we split our client-side JavaScript bundle into multiple chunks to improve cache efficiency so that the amount of cache-invalidated chunks after each deployment is kept to a minimum.
 
 Currently, our chunking strategy is as follows:
 
-- **A minimal chunk for each service**
+* **A minimal chunk for each service**
 
   This includes a chunk for service specific config, translations and moment locales.
 
-- **A minimal commons chunk for each page type**
+* **A minimal commons chunk for each page type**
 
   This includes only code used across all page types so our pages share a chunk that doesn't contain any unnecessary code.
 
-- **A framework chunk**
+* **A framework chunk**
 
   A chunk for `react` and `react-dom`. By isolating the framework code we ensure that it will not be cache-invalidated by irrelevant changes made to application code.
 
-- **Library chunks for any large node_module dependencies**
+* **Library chunks for any large node\_module dependencies**
 
   A chunk each for any large libraries such as `moment` to avoid potential cache invalidations made by changes made to application code.
 
-- **Shared chunks**
+* **Shared chunks**
 
   As many shared chunks (used by 2 or more pages) as possible, optimising for overall application size and initial load speed.
 

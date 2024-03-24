@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/Testing" />
 
@@ -21,17 +21,17 @@ It also encourages writing more maintainable tests because we are testing the fu
 
 ### Resources
 
-- https://testing-library.com/docs/guiding-principles
-- https://testing-library.com/docs/react-testing-library/faq
-- https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+* https://testing-library.com/docs/guiding-principles
+* https://testing-library.com/docs/react-testing-library/faq
+* https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
 
 ## Use the Arrange, Act, Assert pattern
 
 Arrange, Act, Assert is a great way to structure test cases. It prescribes an order of operations:
 
-1. **_Arrange_** \**\*\*inputs and targets. *Arrange\* steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
-2. **_Act_** \**\*\*on the target behaviour. *Act\* steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
-3. **_Assert_** \**\*\*expected outcomes. *Act* steps should elicit some sort of response. *Assert\* steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+1. ***Arrange*** \*\*\*\*inputs and targets. \*Arrange\* steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
+2. ***Act*** \*\*\*\*on the target behaviour. \*Act\* steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
+3. ***Assert*** \*\*\*\*expected outcomes. *Act* steps should elicit some sort of response. \*Assert\* steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
 
 ```js
 it('should render the cookie banner when the privacy banner is dismissed', async () => {
@@ -130,8 +130,8 @@ Test descriptions in test reports should be able to be read as full sentences so
 
 In summary:
 
-- `describe` should define the subject under test
-- `it` lays out the test case
+* `describe` should define the subject under test
+* `it` lays out the test case
 
 ❌
 
@@ -155,11 +155,11 @@ describe('Most Read component', () => {
 
 ## Consider the FIRST principle when writing tests
 
-- **Fast** - The tests have to be quick to execute. If they take a long time then we will be too lazy to execute them. We will forget and eventually stop testing or worse, they will start to fail and we will not listen to them.
-- **Independent** - The tests should not have dependencies between them. They must be able to execute in any order, execute only a group of them or only one.
-- **Repeatable** - Must be able to run in any environment. It is no excuse for the test to work locally and then fail on another developer’s computer or development environment.
-- **Self-Validating** - The test can only have two possible values. Either it has failed or it has happened. So it is very easy to know if a test has gone well or not, without having to consult logs, database if you have written a value, etc…
-- **Timely** - The tests have to be created just before the code that will make them pass. If we write the code first, then writing the test can be much more complex.
+* **Fast** - The tests have to be quick to execute. If they take a long time then we will be too lazy to execute them. We will forget and eventually stop testing or worse, they will start to fail and we will not listen to them.
+* **Independent** - The tests should not have dependencies between them. They must be able to execute in any order, execute only a group of them or only one.
+* **Repeatable** - Must be able to run in any environment. It is no excuse for the test to work locally and then fail on another developer’s computer or development environment.
+* **Self-Validating** - The test can only have two possible values. Either it has failed or it has happened. So it is very easy to know if a test has gone well or not, without having to consult logs, database if you have written a value, etc…
+* **Timely** - The tests have to be created just before the code that will make them pass. If we write the code first, then writing the test can be much more complex.
 
 ### Test Driven Development (TDD)
 
@@ -169,8 +169,8 @@ When writing a new component or adding new functionality to an existing componen
 2. Write production code that makes that test pass
 3. Clean up the code you just wrote
 
-TDD is too big a subject to discuss here but we recommend learning about it to help you write better code. There are regular TDD courses in BBC Academy. Here are more resources on TDD [TODO add resources here]
+TDD is too big a subject to discuss here but we recommend learning about it to help you write better code. There are regular TDD courses in BBC Academy. Here are more resources on TDD \[TODO add resources here]
 
 ### Resources
 
-- https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
+* https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/

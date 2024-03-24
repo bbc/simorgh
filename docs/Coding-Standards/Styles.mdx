@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/Styles" />
 
@@ -16,11 +16,11 @@ When Simorgh and Psammead components were first created, they used Styled Compon
 
 Here are some of the benefits of using the `css` prop:
 
-- The Emotion docs state that using the CSS prop is the primary way to style components. This puts us in a good position if Emotion ever decides to drop support for the `styled` API
-- With the styled API you're more likely to pollute the DOM with incorrect attributes — a common problem when passing props to styled components to achieve dynamic styles.
-- The CSS object is typechecked and provides autocompletion for the CSS property with a description of the property and all possible values e.g. you type `display` and autocomplete gives you a list to choose from `block, flex, inline-flex, grid` etc. TypeScript will also highlight an incorrect value for a property and fail a type check.
-- Naming components using the `styled` API (e.g. `StyledWrapper`, `StyledDateTime`, `StyledSpan`) can be burdensome especially when applying small custom styles, such as altering margins or padding. This results in many components which lack the obvious semantic importance you get when using the actual HTML elements. Using the `css` prop avoids having to create and name React components for every element that needs styles.
-- Style reuse is easier because you can pass in an array of style objects to the css prop
+* The Emotion docs state that using the CSS prop is the primary way to style components. This puts us in a good position if Emotion ever decides to drop support for the `styled` API
+* With the styled API you're more likely to pollute the DOM with incorrect attributes — a common problem when passing props to styled components to achieve dynamic styles.
+* The CSS object is typechecked and provides autocompletion for the CSS property with a description of the property and all possible values e.g. you type `display` and autocomplete gives you a list to choose from `block, flex, inline-flex, grid` etc. TypeScript will also highlight an incorrect value for a property and fail a type check.
+* Naming components using the `styled` API (e.g. `StyledWrapper`, `StyledDateTime`, `StyledSpan`) can be burdensome especially when applying small custom styles, such as altering margins or padding. This results in many components which lack the obvious semantic importance you get when using the actual HTML elements. Using the `css` prop avoids having to create and name React components for every element that needs styles.
+* Style reuse is easier because you can pass in an array of style objects to the css prop
 
 **NB**
 To use Emotion's css prop in TypeScript components we will need to specify the JSX factory at the top of every file. This is because Simorgh currently uses React's old JSX transform. More information can be found here https://emotion.sh/docs/typescript#with-the-old-jsx-transform.
@@ -157,8 +157,8 @@ The `dir` attribute should normally only be present on the `html` element unless
 
 ## Resources
 
-- https://css-tricks.com/css-logical-properties/
-- https://css-tricks.com/bidirectional-horizontal-rules-in-css/
+* https://css-tricks.com/css-logical-properties/
+* https://css-tricks.com/bidirectional-horizontal-rules-in-css/
 
 ## Responsive styles: Prefer a mobile-first approach to styling
 
@@ -219,7 +219,7 @@ A mobile-first approach to styling means that styles are applied first to mobile
 
 ### Resources
 
-- https://zellwk.com/blog/how-to-write-mobile-first-css/
+* https://zellwk.com/blog/how-to-write-mobile-first-css/
 
 ## Responsive styles: Use media queries provided in the `theme` object
 
@@ -308,8 +308,8 @@ With this in mind we discourage creating paralell layout implementations it is b
 
 Historically we have used the `[psammead-grid](https://github.com/bbc/simorgh/tree/latest/src/app/legacy/psammead-grid)` [component](https://github.com/bbc/simorgh/tree/latest/src/app/legacy/psammead-grid) to implement a grid-layout in Simorgh. This component supports a grid layout that works on all our supported browsers including Opera Mini. We have decided to move away from this for a few reasons:
 
-- It’s API has proved confusing for engineers to follow as opposed to using standard layout implementations such as flex and grid
-- It produces quite a lot of CSS increasing our page weight
-- It was overused for layout in places where other layouts are more appropriate
+* It’s API has proved confusing for engineers to follow as opposed to using standard layout implementations such as flex and grid
+* It produces quite a lot of CSS increasing our page weight
+* It was overused for layout in places where other layouts are more appropriate
 
 Instead of using Psammead-Grid, native layout implementations should be used.

@@ -4301,7 +4301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:8.0.4":
+"@storybook/blocks@npm:8.0.4, @storybook/blocks@npm:^8.0.4":
   version: 8.0.4
   resolution: "@storybook/blocks@npm:8.0.4"
   dependencies:
@@ -18357,6 +18357,7 @@ __metadata:
     "@storybook/addon-toolbars": ^8.0.4
     "@storybook/addon-viewport": ^8.0.4
     "@storybook/addon-webpack5-compiler-babel": ^3.0.3
+    "@storybook/blocks": ^8.0.4
     "@storybook/builder-webpack5": ^8.0.4
     "@storybook/cli": ^8.0.4
     "@storybook/react": ^8.0.4

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Coding Standards/Migrating Legacy Components" />
 
@@ -14,7 +14,7 @@ Many legacy components used the prop-types library to define props. We can use t
 
 Based on [https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/legacy/components/MediaPlayer/Placeholder/index.jsx#L96](https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/legacy/components/MediaPlayer/Placeholder/index.jsx#L96)
 
-_The `isRequired` option indicates whether a prop is mandatory or not._
+*The `isRequired` option indicates whether a prop is mandatory or not.*
 
 ```jsx
 MyComponent.propTypes = {
@@ -53,9 +53,9 @@ interface MyComponentProps {
 }
 ```
 
-- Set default prop values based on `Component.defaultProps`
-- Recreate types/interfaces for complex objects where possible
-- Avoid use of `object` as type definition where possible
+* Set default prop values based on `Component.defaultProps`
+* Recreate types/interfaces for complex objects where possible
+* Avoid use of `object` as type definition where possible
 
 ## ⚠️ Use InferProps to infer types/interfaces where it is not possible to recreate
 
@@ -168,7 +168,7 @@ Usually if it makes more sense to keep the type/interface declaration right next
 
 ### Use emotion's `css` library instead of `styled`
 
-Follow the guidelines outlined in [Emotion Docs](https://emotion.sh/docs/css-prop) about how to convert from styled &rarr; css
+Follow the guidelines outlined in [Emotion Docs](https://emotion.sh/docs/css-prop) about how to convert from styled → css
 
 ### Before
 
@@ -199,7 +199,7 @@ const styles = {
 export default styles;
 ```
 
-_Ensure that the `jsx` function is imported from the `@emotion/react` library, per the [https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact](https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact) docs._
+*Ensure that the `jsx` function is imported from the `@emotion/react` library, per the [https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact](https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact) docs.*
 
 **(index.tsx)**
 
@@ -341,7 +341,7 @@ When using the `styled` library it was possible to use any prop to return differ
 
 ### Before
 
-_It was possible to pass in props to conditonally change the css_
+*It was possible to pass in props to conditonally change the css*
 
 ```jsx
 
@@ -355,7 +355,7 @@ const Timestamp = styled.time`
 
 See [https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76](https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76) as an example.
 
-_Here, the value of color is based on the value of the `isAmp` variable, and this variation is added to the list of css functions already applied to the component._
+*Here, the value of color is based on the value of the `isAmp` variable, and this variation is added to the list of css functions already applied to the component.*
 
 ```jsx
 
@@ -377,7 +377,7 @@ Sometimes Typescript errors are unavoidable / cannot be fixed (usually in tests)
 
 ### Before
 
-_No idea why this syntax is ignored, and will remain this way until someone revisits the code and removes the comment._
+*No idea why this syntax is ignored, and will remain this way until someone revisits the code and removes the comment.*
 
 ```jsx
 // @ts-ignore
@@ -386,7 +386,7 @@ broken.typescript.syntax;
 
 ### After
 
-_A reason explaining why the syntax is ignored. Once the fix is merged in a future PR, the TS compiler should throw an error, meaning that this comment must then be removed._
+*A reason explaining why the syntax is ignored. Once the fix is merged in a future PR, the TS compiler should throw an error, meaning that this comment must then be removed.*
 
 ```jsx
 // @ts-expect-error ignoring broken TS syntax until ticket 12345 is merged

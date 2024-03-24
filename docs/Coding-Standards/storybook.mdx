@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story } from '@storybook/blocks';
 import figmaImage from './images/figma-link.png';
 import storyIcon from './images/storybook-story-icon.png';
 import groupIcon from './images/storybook-group-icon.png';
@@ -12,7 +12,7 @@ import figmaPreview from './images/figma-preview.png';
 
 ## What is storybook
 
-Storybook is a library developed and maintained by [chromatic](https://www.chromatic.com/?utm_source=storybook_website&utm_medium=link&utm_campaign=storybook). Storybook is a frontend workshop for building UI components and pages in isolation. More information about Storybook can be found [here](https://storybook.js.org/docs/react/get-started/why-storybook).
+Storybook is a library developed and maintained by [chromatic](https://www.chromatic.com/?utm_source=storybook_website\&utm_medium=link\&utm_campaign=storybook). Storybook is a frontend workshop for building UI components and pages in isolation. More information about Storybook can be found [here](https://storybook.js.org/docs/react/get-started/why-storybook).
 The World Service team adopted Storybook to share components with team members without access to Simorgh locally (e.g. UX, BA, etc...). Furthermore, we use Storybook for a11y swarm components that cannot be deployed to test/live environments.
 The latest update of our Storybook included the Docs addon which allows previewing documentation in Storybook. Thus, storybook has recently become our main entry point to Simorgh's documentation.
 
@@ -218,10 +218,7 @@ export default {
 
 To create Figma's URL pointing to specific sections of a design, select the design you want to display and copy the link showed by the browser:
 
-<img
-  src={figmaImage}
-  alt="Image showing how to get a link from figma interface. Firstly select the component from the navigation, then copy the link provided by the browser"
-/>
+<img src={figmaImage} alt="Image showing how to get a link from figma interface. Firstly select the component from the navigation, then copy the link provided by the browser" />
 
 ## Stories Standards
 
@@ -262,10 +259,10 @@ Pass english metadata to your component.
 
 The documentation should be added as following:
 
-- Screen Reader UX
-- Typography
-- States
-- Groups 0-5
+* Screen Reader UX
+* Typography
+* States
+* Groups 0-5
 
 #### Why?
 
@@ -309,14 +306,14 @@ Order the design array accordingly:
 
 Storybook provides us with a simple folder structure. Item's in this structure can be:
 
-- Root (showcased by a text label with the root's name)
-- Folders
+* Root (showcased by a text label with the root's name)
+* Folders
   <img src={folderIcon} alt="folder icon" style={{ width: '1rem' }} />
-- Groups
+* Groups
   <img src={groupIcon} alt="group icon" style={{ width: '1rem' }} />
-- Stories
+* Stories
   <img src={storyIcon} alt="story icon" style={{ width: '1rem' }} />
-- Documentation
+* Documentation
   <img src={docsIcon} alt="documentation icon" style={{ width: '1rem' }} />
 
 The folder structure can be controlled via the story title by the following pattern:
@@ -346,18 +343,18 @@ In order to enhance component organization and ensure proper functionality of th
 
 ❌
 
-- story
+* story
 
 ❌
 
-- root
-  - story
+* root
+  * story
 
 ✅
 
-- root
-  - folder
-    - story
+* root
+  * folder
+    * story
 
 ### Folders can only contain stories or groups, but not both.
 
@@ -369,27 +366,27 @@ In order to enhance component organization and ensure proper functionality of th
 
 ❌
 
-- root
-  - folder
-    - story
-    - folder
+* root
+  * folder
+    * story
+    * folder
 
 ✅
 
-- root
-  - folder
-    - story
-    - story
+* root
+  * folder
+    * story
+    * story
 
 ✅
 
-- root
-  - folder
-    - folder
-      - story
-      - story
-    - folder
-      - story
+* root
+  * folder
+    * folder
+      * story
+      * story
+    * folder
+      * story
 
 ### You must not go deeper than a two levels folder structure.
 
@@ -401,29 +398,29 @@ To prevent excessive nesting and enable correct functioning of health factors si
 
 ❌
 
-- root
-  - folder (level 1)
-    - folder (level 2)
-      - folder (level 3)
-        - story
+* root
+  * folder (level 1)
+    * folder (level 2)
+      * folder (level 3)
+        * story
 
 ✅
 
-- root
-  - folder (level 1)
-    - folder (level 2)
-      - story
+* root
+  * folder (level 1)
+    * folder (level 2)
+      * story
 
 ## Create a storybook checklist
 
-- [ ] Create the index.stories.tsx co-located with the component
-- [ ] Create the basic story
-- [ ] Add ltr/rtl and english variants
-- [ ] Add health factors component metadata
-- [ ] Add component's documentation
-- [ ] Add Figma links:
-  - [ ] Screen reader UX
-  - [ ] Typography
-  - [ ] States
-  - [ ] Groups
-- [ ] Praise yourself for the good work d(•́ω•̀)
+* \[ ] Create the index.stories.tsx co-located with the component
+* \[ ] Create the basic story
+* \[ ] Add ltr/rtl and english variants
+* \[ ] Add health factors component metadata
+* \[ ] Add component's documentation
+* \[ ] Add Figma links:
+  * \[ ] Screen reader UX
+  * \[ ] Typography
+  * \[ ] States
+  * \[ ] Groups
+* \[ ] Praise yourself for the good work d(•́ω•̀)
