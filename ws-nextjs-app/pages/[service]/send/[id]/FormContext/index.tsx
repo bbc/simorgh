@@ -19,7 +19,7 @@ import {
 type SubmissionError = {
   message: string;
   status: number;
-};
+} | null;
 
 type ContextProps = {
   formState: Record<OnChangeInputName, OnChangeInputValue | null>;
@@ -48,7 +48,7 @@ export const FormContextProvider = ({
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
-  const [submissionError, setSubmissionError] = useState<SubmissionError>();
+  const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
@@ -58,6 +58,8 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+
+    setSubmissionError(null);
 
     const validData = { surname: 'BBC TEST NAME' };
 
