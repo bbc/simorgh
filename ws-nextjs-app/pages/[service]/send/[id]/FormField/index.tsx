@@ -26,6 +26,10 @@ const Telephone = ({ id, name }: InputProps) => (
   <input id={id} name={name} type="tel" />
 );
 
+const File = ({ id, name }: InputProps) => (
+  <input id={id} name={name} type="file" />
+);
+
 const FormComponents: Record<
   string,
   ({ id, name }: InputProps) => ReactElement
@@ -35,6 +39,7 @@ const FormComponents: Record<
   checkbox: Checkbox,
   phone: Telephone,
   textarea: TextArea,
+  file: File,
 };
 
 const FormField = ({ id, htmlType, label }: FormComponentProps) => {

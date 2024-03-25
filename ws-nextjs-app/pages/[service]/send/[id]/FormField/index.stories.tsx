@@ -33,3 +33,7 @@ export const Checkbox = () => (
 export const Phone = () => (
   <Component id="examplePhone" htmlType="phone" label="Tel:" />
 );
+
+export const File = () => (
+  <Component id="examplePhone" htmlType="file" label="Upload your file:" />
+);
