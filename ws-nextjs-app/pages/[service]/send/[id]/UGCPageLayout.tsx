@@ -1,8 +1,8 @@
 /** @jsx jsx */
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Metadata from '#app/components/Metadata';
-import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import { PageProps } from './types';
