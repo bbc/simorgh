@@ -13,9 +13,17 @@ const UGCPageLayout = ({ pageData }: ComponentProps) => {
 
   const firstSection = sections[0];
 
+  const initialFormState = firstSection.fields.reduce(
+    (acc, field) => ({ ...acc, [field.id]: null }),
+    {},
+  );
+
+  const [, setFormState] = useState(initialFormState);
+
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
-    console.log(name, value);
-    return null;
+    setFormState(prevState => {
+      return { ...prevState, [name]: value };
+    });
   };
 
   const fields = firstSection.fields.map(({ id, label, htmlType }) => (
