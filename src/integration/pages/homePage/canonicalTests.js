@@ -14,10 +14,13 @@ export default ({ service, pageData, displayAds }) => {
     runCanonicalAdsTests();
   }
 
-  it('should render the correct number of curations, including most read & radio schedule', () => {
+  it('should render the correct number of curations, including most read, radio schedule & VJ embed', () => {
     const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead, radioSchedule }) =>
-        (summaries && summaries?.length > 0) || mostRead || radioSchedule,
+      ({ summaries, mostRead, radioSchedule, vjEmbed }) =>
+        (summaries && summaries?.length > 0) ||
+        mostRead ||
+        radioSchedule ||
+        vjEmbed,
     );
 
     const numberOfCurations = document.querySelectorAll('main h2').length;
@@ -34,6 +37,20 @@ export default ({ service, pageData, displayAds }) => {
     } else {
       it('should not be in the document', () => {
         expect(radioScheduleComponent).not.toBeInTheDocument();
+      });
+    }
+  });
+
+  describe('VJ Embed', () => {
+    const vjEmbedComponent = document.getElementById('VJ-Embed');
+
+    if (service === 'hindi') {
+      it('should be in the document', () => {
+        expect(vjEmbedComponent).toBeInTheDocument();
+      });
+    } else {
+      it('should not be in the document', () => {
+        expect(vjEmbedComponent).not.toBeInTheDocument();
       });
     }
   });
