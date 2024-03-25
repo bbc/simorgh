@@ -24,7 +24,6 @@ const styles = {
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${MARGIN_ABOVE_400PX}`,
       },
-      
     }),
   ampCookieSettingButton: ({ palette, spacings, fontVariants }: Theme) =>
     css({
