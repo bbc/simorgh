@@ -12,16 +12,16 @@ import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
 
 const getInitialFormState = (fields: Field[]) =>
-  fields.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
+  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
   const {
     data: { title, description, sections },
   } = pageData;
 
-  const firstSection = sections[0];
+  const { fields } = sections?.[0] ?? {};
 
-  const initialFormState = getInitialFormState(firstSection.fields);
+  const initialFormState = getInitialFormState(fields);
 
   const [, setFormState] = useState(initialFormState);
 
@@ -31,7 +31,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
     });
   };
 
-  const fields = firstSection.fields.map(({ id, label, htmlType }) => (
+  const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField
       key={id}
       id={id}
@@ -48,7 +48,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
           <h1>{title}</h1>
           <div>{description}</div>
           <form onSubmit={handleSubmit}>
-            {fields}
+            {formFields}
             <Submit />
           </form>
         </main>
