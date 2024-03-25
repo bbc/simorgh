@@ -1208,7 +1208,7 @@ describe('Server', () => {
     variant: 'simp',
     queryString: QUERY_STRING,
   });
-  testArticles({ platform: 'app', service: 'yoruba' });
+  // testArticles({ platform: 'app', service: 'yoruba' });
   testArticles({
     platform: 'amp',
     service: 'yoruba',

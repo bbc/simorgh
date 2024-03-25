@@ -17,6 +17,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getMetaDataId,
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
@@ -41,6 +42,9 @@ import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
+import Transcript from '../../components/Transcript';
+import fakeTranscript from './fakeTranscript';
+import transcriptMundo from './transcriptMundo';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -92,6 +96,23 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     pageData,
   );
 
+  // temporary code to inject a transcript into a test article.
+  const metaDataId = getMetaDataId(pageData);
+  const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
+  // Finding if the transcript is already there
+  let alreadyContainsTranscript = false;
+  // eslint-disable-next-line array-callback-return
+  blocks.map(singleBlock => {
+    if (singleBlock.type === 'transcript') {
+      alreadyContainsTranscript = true;
+    }
+  });
+  if (articleID === 'cxr0765kxlzo' && !alreadyContainsTranscript) {
+    blocks.splice(3, 0, fakeTranscript);
+  }
+  if (articleID === 'c4ym969m7w1o' && !alreadyContainsTranscript) {
+    blocks.splice(2, 0, transcriptMundo);
+  }
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
 
@@ -113,6 +134,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   );
 
   const componentsToRender = {
+    transcript: Transcript,
     fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,

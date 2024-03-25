@@ -32,6 +32,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getMetaDataId,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
@@ -50,6 +51,9 @@ import Byline from '../../components/Byline';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
 import Uploader from '../../components/Embeds/Uploader';
+import Transcript from '../../components/Transcript';
+import transcriptMundo from './transcriptMundo';
+import fakeTrancript from './fakeTranscript';
 import {
   bylineExtractor,
   categoryName,
@@ -109,7 +113,26 @@ const ArticlePage = ({ pageData }) => {
     mostRead: mostReadInitialData,
   } = pageData;
 
+  // temporary code to inject a transcript into a test article.
+  const metaDataId = getMetaDataId(pageData);
+  const articleID = metaDataId.split('urn:bbc:ares::article:').pop();
+  // Finding if the transcript is already there
+  let alreadyContainsTranscript = false;
+  // eslint-disable-next-line array-callback-return
+  blocks.map(singleBlock => {
+    if (singleBlock.type === 'transcript') {
+      alreadyContainsTranscript = true;
+    }
+  });
+  if (articleID === 'cz216x22106o' && !alreadyContainsTranscript) {
+    blocks.splice(3, 0, fakeTrancript);
+  }
+  if (articleID === 'cle16n19nd9o' && !alreadyContainsTranscript) {
+    blocks.splice(4, 0, transcriptMundo);
+  }
+
   const componentsToRender = {
+    transcript: Transcript,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
