@@ -18,12 +18,7 @@ export const Text = () => (
 );
 
 export const TextArea = () => (
-  <Component
-    id="exampleTextArea"
-    // @ts-expect-error - TODO: 'textarea' is not a type returned by config API
-    htmlType="textarea"
-    label="Comment:"
-  />
+  <Component id="exampleTextArea" htmlType="textarea" label="Comment:" />
 );
 
 export const EMail = () => (
@@ -39,10 +34,5 @@ export const Phone = () => (
 );
 
 export const File = () => (
-  <Component
-    id="examplePhone"
-    // @ts-expect-error - TODO: 'file' is not a type returned by config API
-    htmlType="file"
-    label="Upload your file:"
-  />
+  <Component id="examplePhone" htmlType="file" label="Upload your file:" />
 );

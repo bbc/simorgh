@@ -30,7 +30,6 @@ describe('FormField', () => {
       return render(
         <FormField
           id="testTextAreaID"
-          // @ts-expect-error - TODO: 'textarea' is not a type returned by config API
           htmlType="textarea"
           label="This is a text field"
         />,

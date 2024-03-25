@@ -59,8 +59,13 @@ const Telephone = ({ id, name, onChange }: InputProps) => (
   />
 );
 
-const File = ({ id, name }: InputProps) => (
-  <input id={id} name={name} type="file" />
+const File = ({ id, name, onChange }: InputProps) => (
+  <input
+    id={id}
+    name={name}
+    type="file"
+    onChange={e => onChange(e.target.name, e.target.files?.[0])}
+  />
 );
 
 const FormComponents: Record<
@@ -77,13 +82,33 @@ const FormComponents: Record<
 
 export type FormComponentProps = {
   id: string;
+  type: string;
   htmlType: HtmlType;
   label: string;
+  textArea?: boolean;
 };
 
-const FormField = ({ id, htmlType, label }: FormComponentProps) => {
+const FormField = ({
+  id,
+  type,
+  htmlType,
+  label,
+  textArea,
+}: FormComponentProps) => {
   const { handleChange } = useFormContext();
-  const Component = FormComponents[htmlType];
+
+  // TODO: Don't like this, should probably do this in back-end
+  let derivedHtmlType = htmlType;
+
+  if (textArea) {
+    derivedHtmlType = 'textarea';
+  }
+
+  if (type === 'file') {
+    derivedHtmlType = 'file';
+  }
+
+  const Component = FormComponents[derivedHtmlType];
 
   if (!Component) return null;
 

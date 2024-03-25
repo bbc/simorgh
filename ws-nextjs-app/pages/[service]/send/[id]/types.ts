@@ -6,6 +6,8 @@ export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
+  | File
+  | undefined
   | boolean;
 
 export type OnChangeHandler = (
@@ -54,6 +56,8 @@ export type HtmlType =
   | 'time'
   | 'number'
   | 'url'
+  | 'textarea'
+  | 'file'
   | '';
 
 export type Field = {

@@ -8,8 +8,15 @@ import styles from './styles';
 export default function Form({ fields }: { fields: Field[] }) {
   const { handleSubmit, submissionError } = useFormContext();
 
-  const formFields = fields?.map(({ id, label, htmlType }) => (
-    <FormField key={id} id={id} label={label} htmlType={htmlType} />
+  const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
+    <FormField
+      key={id}
+      id={id}
+      label={label}
+      type={type}
+      htmlType={htmlType}
+      textArea={textArea}
+    />
   ));
 
   return (
