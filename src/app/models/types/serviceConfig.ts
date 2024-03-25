@@ -170,5 +170,3 @@ export interface Footer {
   copyrightText?: string;
   collectiveNewsroomText?: string;
 }
-
-
