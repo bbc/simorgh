@@ -10,9 +10,13 @@ import * as SubmitFunctionality from './SubmitButton';
 
 describe('UGC Page Layout', () => {
   let container: HTMLElement;
-  const submitSpy = jest.spyOn(SubmitFunctionality, 'handleSubmit');
+  let submitSpy: jest.SpyInstance;
 
   beforeEach(async () => {
+    jest.restoreAllMocks();
+
+    submitSpy = jest.spyOn(SubmitFunctionality, 'handleSubmit');
+
     ({ container } = await act(() => {
       return render(<UGCPageLayout pageData={fixture} />);
     }));
