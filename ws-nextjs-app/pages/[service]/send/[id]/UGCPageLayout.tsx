@@ -27,7 +27,6 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">

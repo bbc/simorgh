@@ -5,18 +5,46 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   padding-bottom: 1rem;
 }
 
+.emotion-0 label {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testCheckboxID"
     >
       This is a text field
     </label>
     <input
       id="testCheckboxID"
-      name="This is a text field"
+      name="testCheckboxID"
       type="checkbox"
     />
   </div>
@@ -28,18 +56,46 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   padding-bottom: 1rem;
 }
 
+.emotion-0 label {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testTelID"
     >
       This is a text field
     </label>
     <input
       id="testTelID"
-      name="This is a text field"
+      name="testTelID"
       type="tel"
     />
   </div>
@@ -51,18 +107,46 @@ exports[`FormField should render a text input with an associated label 1`] = `
   padding-bottom: 1rem;
 }
 
+.emotion-0 label {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testTextID"
     >
       This is a text field
     </label>
     <input
       id="testTextID"
-      name="This is a text field"
+      name="testTextID"
       type="text"
     />
   </div>
@@ -74,18 +158,46 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   padding-bottom: 1rem;
 }
 
+.emotion-0 label {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testTextAreaID"
     >
       This is a text field
     </label>
     <textarea
       id="testTextAreaID"
-      name="This is a text field"
+      name="testTextAreaID"
     />
   </div>
 </div>
@@ -96,18 +208,46 @@ exports[`FormField should render an email input with an associated label 1`] = `
   padding-bottom: 1rem;
 }
 
+.emotion-0 label {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testEmailID"
     >
       This is a text field
     </label>
     <input
       id="testEmailID"
-      name="This is a text field"
+      name="testEmailID"
       type="email"
     />
   </div>
