@@ -6,7 +6,10 @@ import { HtmlType, InputProps } from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
 
-const Label = ({ id, children }: PropsWithChildren<{ id: string }>) => (
+const Label = ({
+  id,
+  children,
+}: PropsWithChildren<{ id: InputProps['id'] }>) => (
   <Text as="label" htmlFor={id}>
     {children}
   </Text>
@@ -72,7 +75,7 @@ const FormComponents: Record<
   file: File,
 };
 
-type FormComponentProps = {
+export type FormComponentProps = {
   id: string;
   htmlType: HtmlType;
   label: string;

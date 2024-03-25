@@ -1,7 +1,6 @@
 import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
-import FormField from '.';
-import { FormComponentProps } from '../types';
+import FormField, { FormComponentProps } from '.';
 
 const Component = ({ id, label, htmlType }: FormComponentProps) => (
   <ThemeProvider service="pidgin">
@@ -19,7 +18,12 @@ export const Text = () => (
 );
 
 export const TextArea = () => (
-  <Component id="exampleTextArea" htmlType="textarea" label="Comment:" />
+  <Component
+    id="exampleTextArea"
+    // @ts-expect-error - TODO: 'textarea' is not a type returned by config API
+    htmlType="textarea"
+    label="Comment:"
+  />
 );
 
 export const EMail = () => (
@@ -35,5 +39,10 @@ export const Phone = () => (
 );
 
 export const File = () => (
-  <Component id="examplePhone" htmlType="file" label="Upload your file:" />
+  <Component
+    id="examplePhone"
+    // @ts-expect-error - TODO: 'file' is not a type returned by config API
+    htmlType="file"
+    label="Upload your file:"
+  />
 );

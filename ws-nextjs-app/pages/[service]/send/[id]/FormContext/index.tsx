@@ -35,14 +35,10 @@ const getInitialFormState = (
 ): Record<OnChangeInputName, OnChangeInputValue | null> =>
   fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
 
-type ProviderProps = {
-  fields: Field[];
-};
-
 export const FormContextProvider = ({
   fields,
   children,
-}: PropsWithChildren<ProviderProps>) => {
+}: PropsWithChildren<{ fields: Field[] }>) => {
   const {
     query: { id },
   } = useRouter();
@@ -62,6 +58,7 @@ export const FormContextProvider = ({
     // Reset error state
     setSubmissionError(null);
 
+    // TODO: This is a mock data, we should use the formState instead
     const validData = { surname: 'BBC TEST NAME' };
 
     const formData = new FormData();
