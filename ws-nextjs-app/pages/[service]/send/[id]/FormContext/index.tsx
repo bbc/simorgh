@@ -59,6 +59,7 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
+    // Reset error state
     setSubmissionError(null);
 
     const validData = { surname: 'BBC TEST NAME' };
