@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { useState } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './styles';
 import {
@@ -8,8 +7,8 @@ import {
   OnChangeInputValue,
   Field,
 } from './types';
-import FormField from './FormField';
-import Submit, { handleSubmit } from './SubmitButton';
+import { FormContextProvider } from './FormContext';
+import Form from './Form';
 
 const getInitialFormState = (
   fields: Field[],
@@ -23,36 +22,15 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
 
   const { fields } = sections?.[0] ?? {};
 
-  const initialFormState = getInitialFormState(fields);
-
-  const [, setFormState] = useState(initialFormState);
-
-  const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
-    setFormState(prevState => {
-      return { ...prevState, [name]: value };
-    });
-  };
-
-  const formFields = fields?.map(({ id, label, htmlType }) => (
-    <FormField
-      key={id}
-      id={id}
-      label={label}
-      htmlType={htmlType}
-      onChange={handleChange}
-    />
-  ));
-
   return (
     <div css={styles.grid}>
       <div css={styles.primaryColumn}>
         <main css={styles.mainContent} role="main">
           <h1>{title}</h1>
           <div>{description}</div>
-          <form onSubmit={handleSubmit}>
-            {formFields}
-            <Submit />
-          </form>
+          <FormContextProvider initialFormState={getInitialFormState(fields)}>
+            <Form fields={fields} />
+          </FormContextProvider>
         </main>
       </div>
     </div>

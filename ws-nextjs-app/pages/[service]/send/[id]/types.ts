@@ -16,7 +16,6 @@ export type OnChangeHandler = (
 export type InputProps = {
   id: string;
   name: string;
-  onChange: OnChangeHandler;
 };
 
 export interface PageDataParams extends ParsedUrlQuery {
