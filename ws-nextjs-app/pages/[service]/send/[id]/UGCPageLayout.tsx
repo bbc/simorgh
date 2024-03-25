@@ -11,7 +11,9 @@ import {
 import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
 
-const getInitialFormState = (fields: Field[]) =>
+const getInitialFormState = (
+  fields: Field[],
+): Record<OnChangeInputName, OnChangeInputValue | null> =>
   fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
