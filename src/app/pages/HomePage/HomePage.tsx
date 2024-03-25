@@ -50,7 +50,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
-
   const itemList = getItemList({ curations, name: brandName });
   return (
     <>
@@ -91,6 +90,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualStyle,
                   mostRead,
                   radioSchedule,
+                  embed,
                 },
                 index,
               ) => {
@@ -118,6 +118,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
+                      embed={embed}
                     />
                     {index === 0 && <MPU />}
                   </React.Fragment>
