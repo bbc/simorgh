@@ -1,9 +1,22 @@
+import { ChangeEvent } from 'react';
 import { Services, Variants } from '#app/models/types/global';
 import { ParsedUrlQuery } from 'querystring';
+
+export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
+
+export type OnChangeInputValue =
+  | ChangeEvent<HTMLInputElement>['target']['value']
+  | boolean;
+
+export type OnChangeHandler = (
+  name: OnChangeInputName,
+  value: OnChangeInputValue,
+) => void;
 
 export type InputProps = {
   id: string;
   name: string;
+  onChange: OnChangeHandler;
 };
 
 export interface PageDataParams extends ParsedUrlQuery {
@@ -29,22 +42,33 @@ type section = {
   fields: FormField[];
 };
 
+export type HtmlType =
+  | 'checkbox'
+  | 'radiobutton'
+  | 'select'
+  | 'email'
+  | 'text'
+  | 'tel'
+  | 'phone'
+  | 'date'
+  | 'time'
+  | 'number'
+  | 'url'
+  | '';
+
 type FormField = {
   id: string;
   type: string;
   validation: {
-    mandatory: boolean;
+    min?: number;
+    max?: number;
+    fileTypes?: string[];
+    mandatory?: boolean;
   };
-  htmlType: string;
+  htmlType: HtmlType;
   label: string;
   description: string;
   textArea?: boolean;
-};
-
-export type FormComponentProps = {
-  id: string;
-  htmlType: string;
-  label: string;
 };
 
 export type ComponentProps = {

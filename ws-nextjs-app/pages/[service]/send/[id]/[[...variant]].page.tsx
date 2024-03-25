@@ -18,7 +18,12 @@ const fetchData = ({ id, service, variant }: FetchParameters) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { id, service, variant } = context.query as PageDataParams;
+  const {
+    id,
+    service,
+    variant,
+    // renderer_env: rendererEnv,
+  } = context.query as PageDataParams;
 
   let pageData = null;
 

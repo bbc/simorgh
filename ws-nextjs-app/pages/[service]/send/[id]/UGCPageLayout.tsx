@@ -1,7 +1,8 @@
 /** @jsx jsx */
+import { useState } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './styles';
-import { ComponentProps } from './types';
+import { ComponentProps, OnChangeInputName, OnChangeInputValue } from './types';
 import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
 
@@ -11,7 +12,21 @@ const UGCPageLayout = ({ pageData }: ComponentProps) => {
   } = pageData;
 
   const firstSection = sections[0];
-  const fields = firstSection.fields.map(props => <FormField {...props} />);
+
+  const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
+    console.log(name, value);
+    return null;
+  };
+
+  const fields = firstSection.fields.map(({ id, label, htmlType }) => (
+    <FormField
+      key={id}
+      id={id}
+      label={label}
+      htmlType={htmlType}
+      onChange={handleChange}
+    />
+  ));
 
   return (
     <div css={styles.grid}>

@@ -1,29 +1,55 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, ReactElement } from 'react';
-import { FormComponentProps, InputProps } from '../types';
+import { HtmlType, InputProps, OnChangeHandler } from '../types';
 import styles from '../styles';
 
 const Label = ({ id, children }: PropsWithChildren<{ id: string }>) => (
   <label htmlFor={id}>{children}</label>
 );
 
-const TextInput = ({ id, name }: InputProps) => (
-  <input id={id} name={name} type="text" />
+const TextInput = ({ id, name, onChange }: InputProps) => (
+  <input
+    id={id}
+    name={name}
+    type="text"
+    onChange={e => onChange(e.target.name, e.target.value)}
+  />
 );
 
-const TextArea = ({ id, name }: InputProps) => <textarea id={id} name={name} />;
-
-const EmailInput = ({ id, name }: InputProps) => (
-  <input id={id} name={name} type="email" />
+const TextArea = ({ id, name, onChange }: InputProps) => (
+  <textarea
+    id={id}
+    name={name}
+    onChange={e => onChange(e.target.name, e.target.value)}
+  />
 );
 
-const Checkbox = ({ id, name }: InputProps) => (
-  <input id={id} name={name} type="checkbox" />
+const EmailInput = ({ id, name, onChange }: InputProps) => (
+  <input
+    id={id}
+    name={name}
+    type="email"
+    onChange={e => onChange(e.target.name, e.target.value)}
+  />
 );
 
-const Telephone = ({ id, name }: InputProps) => (
-  <input id={id} name={name} type="tel" />
+const Checkbox = ({ id, name, onChange }: InputProps) => (
+  <input
+    id={id}
+    name={name}
+    type="checkbox"
+    onChange={e => onChange(e.target.name, e.target.checked)}
+  />
+);
+
+const Telephone = ({ id, name, onChange }: InputProps) => (
+  <input
+    id={id}
+    name={name}
+    type="tel"
+    onChange={e => onChange(e.target.name, e.target.value)}
+  />
 );
 
 const File = ({ id, name }: InputProps) => (
@@ -32,7 +58,7 @@ const File = ({ id, name }: InputProps) => (
 
 const FormComponents: Record<
   string,
-  ({ id, name }: InputProps) => ReactElement
+  ({ id, name, onChange }: InputProps) => ReactElement
 > = {
   text: TextInput,
   email: EmailInput,
@@ -42,7 +68,14 @@ const FormComponents: Record<
   file: File,
 };
 
-const FormField = ({ id, htmlType, label }: FormComponentProps) => {
+type FormComponentProps = {
+  id: string;
+  htmlType: HtmlType;
+  label: string;
+  onChange: OnChangeHandler;
+};
+
+const FormField = ({ id, htmlType, label, onChange }: FormComponentProps) => {
   const Component = FormComponents[htmlType];
 
   if (!Component) return null;
@@ -50,7 +83,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
   return (
     <div css={styles.formField}>
       <Label id={id}>{label}</Label>
-      <Component id={id} name={label} />
+      <Component id={id} name={id} onChange={onChange} />
     </div>
   );
 };
