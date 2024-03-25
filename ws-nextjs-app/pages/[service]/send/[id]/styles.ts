@@ -10,7 +10,7 @@ export default {
       gridTemplateColumns: 'repeat(12, 1fr)',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: '0 1rem',
+        padding: '1rem',
         columnGap: '1rem',
       },
     }),

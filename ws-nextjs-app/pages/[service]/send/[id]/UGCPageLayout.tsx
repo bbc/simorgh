@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import Heading from '#app/components/Heading';
 import styles from './styles';
 import { PageProps } from './types';
 import { FormContextProvider } from './FormContext';
@@ -16,7 +17,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
     <div css={styles.grid}>
       <div css={styles.primaryColumn}>
         <main css={styles.mainContent} role="main">
-          <h1>{title}</h1>
+          <Heading level={1}>{title}</Heading>
           <div>{description}</div>
           <FormContextProvider fields={fields}>
             <Form fields={fields} />

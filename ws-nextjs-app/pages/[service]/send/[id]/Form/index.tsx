@@ -14,15 +14,15 @@ export default function Form({ fields }: { fields: Field[] }) {
 
   return (
     <>
+      <form onSubmit={handleSubmit}>
+        {formFields}
+        <input type="submit" />
+      </form>{' '}
       {submissionError && (
         <div
           css={styles.submissionError}
         >{`${submissionError.message} - ${submissionError.status}`}</div>
       )}
-      <form onSubmit={handleSubmit}>
-        {formFields}
-        <input type="submit" />
-      </form>
     </>
   );
 }
