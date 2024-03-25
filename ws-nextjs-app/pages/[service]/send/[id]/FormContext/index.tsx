@@ -38,6 +38,8 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
+    console.log(formState);
+
     const validData = { surname: 'BBC TEST NAME' };
     const fetchRequest = await fetch('myUrl.com', {
       method: 'POST',
