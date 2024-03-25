@@ -169,5 +169,3 @@ export interface Footer {
   links?: FooterLink[];
   copyrightText?: string;
 }
-
-
