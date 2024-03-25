@@ -1,4 +1,8 @@
 import React, { FormEvent } from 'react';
+import nodeLogger from '#lib/logger.node';
+import { DATA_REQUEST_RECEIVED } from '#app/lib/logger.const';
+
+const logger = nodeLogger(__filename);
 
 export const handleSubmit = async (event: FormEvent) => {
   event.preventDefault();
@@ -10,8 +14,13 @@ export const handleSubmit = async (event: FormEvent) => {
     body: JSON.stringify(validData),
   });
 
-  const response = fetchRequest.json();
+  const response = fetchRequest.status;
+
   // handle response
+  logger.info(
+    DATA_REQUEST_RECEIVED,
+    `HANDLE RESPONSE HERE RESPONSE ${response}`,
+  );
 };
 
 const Submit = () => {
