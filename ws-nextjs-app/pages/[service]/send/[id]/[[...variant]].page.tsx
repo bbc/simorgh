@@ -18,13 +18,7 @@ const fetchData = ({ id, service, variant }: FetchParameters) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const {
-    id,
-    service,
-    variant,
-    renderer_env: rendererEnv,
-    page = '1',
-  } = context.query as PageDataParams;
+  const { id, service, variant } = context.query as PageDataParams;
 
   let pageData = null;
 
@@ -46,7 +40,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       id,
       isAmp: false,
       isNextJs: true,
-      page: page || null,
       pageData,
       pageType: 'ugc',
       pathname: null,
