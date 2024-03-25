@@ -1,19 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import styles from './styles';
-import {
-  PageProps,
-  OnChangeInputName,
-  OnChangeInputValue,
-  Field,
-} from './types';
+import { PageProps } from './types';
 import { FormContextProvider } from './FormContext';
 import Form from './Form';
-
-const getInitialFormState = (
-  fields: Field[],
-): Record<OnChangeInputName, OnChangeInputValue | null> =>
-  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
   const {
@@ -28,7 +18,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         <main css={styles.mainContent} role="main">
           <h1>{title}</h1>
           <div>{description}</div>
-          <FormContextProvider initialFormState={getInitialFormState(fields)}>
+          <FormContextProvider fields={fields}>
             <Form fields={fields} />
           </FormContextProvider>
         </main>

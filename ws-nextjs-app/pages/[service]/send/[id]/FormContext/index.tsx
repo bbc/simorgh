@@ -10,6 +10,7 @@ import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import {
+  Field,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
@@ -29,19 +30,24 @@ type ContextProps = {
 
 const FormContext = createContext({} as ContextProps);
 
+const getInitialFormState = (
+  fields: Field[],
+): Record<OnChangeInputName, OnChangeInputValue | null> =>
+  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
+
 type ProviderProps = {
-  initialFormState: Record<OnChangeInputName, OnChangeInputValue | null>;
+  fields: Field[];
 };
 
 export const FormContextProvider = ({
-  initialFormState,
+  fields,
   children,
 }: PropsWithChildren<ProviderProps>) => {
   const {
     query: { id },
   } = useRouter();
 
-  const [formState, setFormState] = useState(initialFormState);
+  const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submissionError, setSubmissionError] = useState<SubmissionError>();
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
@@ -55,19 +61,28 @@ export const FormContextProvider = ({
 
     const validData = { surname: 'BBC TEST NAME' };
 
+    const formData = new FormData();
+
+    Object.entries(validData).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
     try {
       const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const fetchRequest = await fetch(url, {
         method: 'POST',
-        body: JSON.stringify(validData),
+        body: formData,
       });
       const response = await fetchRequest.json();
-      console.log(fetchRequest, response);
 
-      // handle response
+      if (!fetchRequest.ok) {
+        setSubmissionError({
+          message: response.message,
+          status: fetchRequest.status,
+        });
+      }
     } catch (error: unknown) {
-      console.log(error);
       const { message, status } = error as FetchError;
       setSubmissionError({ message, status });
     }
