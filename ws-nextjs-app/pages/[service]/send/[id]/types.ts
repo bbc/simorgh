@@ -71,7 +71,7 @@ type FormField = {
   textArea?: boolean;
 };
 
-export type ComponentProps = {
+export type PageProps = {
   pageData: {
     data: { title: string; description: string; sections: section[] };
   };

@@ -8,6 +8,7 @@ import fetchMock from 'fetch-mock';
 import UGCPageLayout from './UGCPageLayout';
 import fixture from './fixture';
 import * as SubmitFunctionality from './SubmitButton';
+import { PageProps } from './types';
 
 describe('UGC Page Layout', () => {
   let container: HTMLElement;
@@ -19,7 +20,9 @@ describe('UGC Page Layout', () => {
     submitSpy = jest.spyOn(SubmitFunctionality, 'handleSubmit');
 
     ({ container } = await act(() => {
-      return render(<UGCPageLayout pageData={fixture} />);
+      return render(
+        <UGCPageLayout pageData={fixture as PageProps['pageData']} />,
+      );
     }));
   });
 

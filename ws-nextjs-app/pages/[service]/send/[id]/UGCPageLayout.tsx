@@ -2,11 +2,11 @@
 import { useState } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './styles';
-import { ComponentProps, OnChangeInputName, OnChangeInputValue } from './types';
+import { PageProps, OnChangeInputName, OnChangeInputValue } from './types';
 import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
 
-const UGCPageLayout = ({ pageData }: ComponentProps) => {
+const UGCPageLayout = ({ pageData }: PageProps) => {
   const {
     data: { title, description, sections },
   } = pageData;
