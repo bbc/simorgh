@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, ReactElement } from 'react';
 import { HtmlType, InputProps } from '../types';
-import styles from '../styles';
+import styles from './styles';
 import { useFormContext } from '../FormContext';
 
 const Label = ({ id, children }: PropsWithChildren<{ id: string }>) => (

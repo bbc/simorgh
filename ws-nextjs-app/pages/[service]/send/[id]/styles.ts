@@ -27,8 +27,4 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  formField: ({ spacings }: Theme) =>
-    css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
-    }),
 };
