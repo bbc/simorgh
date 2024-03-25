@@ -19,11 +19,12 @@ const styles = {
       ...fontVariants.sansRegular,
       backgroundColor: palette.EBON,
       [mq.GROUP_2_MAX_WIDTH]: {
-        padding: `0 ${MARGIN_ABOVE_400PX}`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${MARGIN_BELOW_400PX}`,
       },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${MARGIN_ABOVE_400PX}`,
+      },
+      
     }),
   ampCookieSettingButton: ({ palette, spacings, fontVariants }: Theme) =>
     css({
