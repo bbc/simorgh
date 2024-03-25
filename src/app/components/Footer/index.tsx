@@ -1,17 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { MouseEvent } from 'react';
+import { MouseEvent, useContext } from 'react';
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
-import { Footer } from '#app/models/types/serviceConfig';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';
 import List from './List';
 import styles from './index.styles';
-
-interface FooterProps extends Footer {
-  isAmp?: boolean;
-  showAdsBasedOnLocation?: boolean;
-  service?: string;
-}
 
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
@@ -22,14 +17,12 @@ const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   }
 };
 
-export default ({
-  links,
-  trustProjectLink,
-  copyrightText,
-  externalLink,
-  isAmp,
-  showAdsBasedOnLocation,
-}: FooterProps) => {
+export default () => {
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { footer } = useContext(ServiceContext);
+
+  const { externalLink, links, copyrightText, trustProjectLink } = footer;
+
   const elements = links?.map(({ id, text, href, lang }) => {
     if (id === 'COOKIE_SETTINGS') {
       if (isAmp) {
@@ -72,7 +65,8 @@ export default ({
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
         <p css={styles.paragraph}>
-          {copyrightText}{' '}
+          <span lang="en-GB">{`\u00A9`} </span>
+          {`${new Date().getFullYear()} ${copyrightText}`}{' '}
           {externalLink && (
             <Link text={externalLink?.text} href={externalLink?.href} inline />
           )}
@@ -81,3 +75,8 @@ export default ({
     </div>
   );
 };
+
+// <>
+//   <span lang="en-GB">{`\u00A9`} </span>
+//   {`${currentYear()} ${text}`}
+// </>;
