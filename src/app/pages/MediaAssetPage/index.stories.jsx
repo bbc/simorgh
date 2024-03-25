@@ -24,6 +24,11 @@ export default {
   Component,
   title: 'Pages/Media Asset Page',
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  parameters: {
+    chromatic: {
+      delay: 15000,
+    },
+  },
 };
 
 export const Canonical = Component;
