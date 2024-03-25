@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { FooterLink } from '#app/models/types/serviceConfig';
+import { ReactElement } from 'react';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
 
@@ -8,7 +9,7 @@ export default ({
   elements = [],
   trustProjectLink,
 }: {
-  elements?: (jsx.JSX.Element | null)[];
+  elements?: (ReactElement | null)[];
   trustProjectLink?: FooterLink;
 }) => {
   return (
