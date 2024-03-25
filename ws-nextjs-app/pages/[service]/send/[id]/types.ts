@@ -35,11 +35,11 @@ export type FetchParameters = {
   variant?: Variants;
 };
 
-type section = {
+type Section = {
   sectionText: {
     title: string;
   };
-  fields: FormField[];
+  fields: Field[];
 };
 
 export type HtmlType =
@@ -56,7 +56,7 @@ export type HtmlType =
   | 'url'
   | '';
 
-type FormField = {
+export type Field = {
   id: string;
   type: string;
   validation: {
@@ -73,6 +73,6 @@ type FormField = {
 
 export type PageProps = {
   pageData: {
-    data: { title: string; description: string; sections: section[] };
+    data: { title: string; description: string; sections: Section[] };
   };
 };

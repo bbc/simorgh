@@ -2,9 +2,17 @@
 import { useState } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './styles';
-import { PageProps, OnChangeInputName, OnChangeInputValue } from './types';
+import {
+  PageProps,
+  OnChangeInputName,
+  OnChangeInputValue,
+  Field,
+} from './types';
 import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
+
+const getInitialFormState = (fields: Field[]) =>
+  fields.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
   const {
@@ -13,10 +21,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
 
   const firstSection = sections[0];
 
-  const initialFormState = firstSection.fields.reduce(
-    (acc, field) => ({ ...acc, [field.id]: null }),
-    {},
-  );
+  const initialFormState = getInitialFormState(firstSection.fields);
 
   const [, setFormState] = useState(initialFormState);
 
