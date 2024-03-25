@@ -18,7 +18,11 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
       <div css={styles.primaryColumn}>
         <main css={styles.mainContent} role="main">
           <Heading level={1}>{title}</Heading>
-          <div>{description}</div>
+          <div
+            // TODO: This is a security risk, we should sanitize the HTML
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <FormContextProvider fields={fields}>
             <Form fields={fields} />
           </FormContextProvider>

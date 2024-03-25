@@ -17,7 +17,7 @@ export default function Form({ fields }: { fields: Field[] }) {
       <form onSubmit={handleSubmit}>
         {formFields}
         <input type="submit" />
-      </form>{' '}
+      </form>
       {submissionError && (
         <div
           css={styles.submissionError}
