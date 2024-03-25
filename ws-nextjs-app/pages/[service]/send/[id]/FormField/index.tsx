@@ -82,9 +82,9 @@ const FormComponents: Record<
 
 export type FormComponentProps = {
   id: string;
-  type: string;
   htmlType: HtmlType;
   label: string;
+  type?: string;
   textArea?: boolean;
 };
 
