@@ -16,7 +16,7 @@ export default ({
   href,
   inline = false,
   lang,
-  onClick = () => {},
+  onClick,
   onlyShowIfJSenabled = false,
 }: LinkProps) => {
   const [isVisible, setVisible] = useState(onlyShowIfJSenabled !== true);
