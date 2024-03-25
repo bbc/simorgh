@@ -1,12 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, ReactElement } from 'react';
+import Text from '#app/components/Text';
 import { HtmlType, InputProps } from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
 
 const Label = ({ id, children }: PropsWithChildren<{ id: string }>) => (
-  <label htmlFor={id}>{children}</label>
+  <Text as="label" htmlFor={id}>
+    {children}
+  </Text>
 );
 
 const TextInput = ({ id, name, onChange }: InputProps) => (
