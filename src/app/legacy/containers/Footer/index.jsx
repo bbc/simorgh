@@ -41,7 +41,6 @@ const FooterContainer = () => {
     <StyledFooter role="contentinfo" lang={serviceLang}>
       <BrandContainer linkId="footer" borderTop />
       <Footer />
-      <Footer />
     </StyledFooter>
   );
 };

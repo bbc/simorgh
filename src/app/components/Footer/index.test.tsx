@@ -32,5 +32,12 @@ describe('Footer', () => {
         screen.getByText('बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित'),
       ).toBeInTheDocument();
     });
+
+    it('should not render the Collective Newsroom text within a <p> tag when it is not present', () => {
+      const { container } = render(<Footer />);
+      const paragraphs = container.getElementsByTagName('p').length;
+
+      expect(paragraphs).toEqual(1);
+    });
   });
 });
