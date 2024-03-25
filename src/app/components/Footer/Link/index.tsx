@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
 import { useState, useEffect, MouseEvent } from 'react';
-import onClient from '#lib/utilities/onClient';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import styles from './index.styles';
 
@@ -22,7 +21,7 @@ export default ({
   const [isVisible, setVisible] = useState(onlyShowIfJSenabled !== true);
 
   useEffect(() => {
-    if (onlyShowIfJSenabled && onClient()) {
+    if (onlyShowIfJSenabled) {
       setVisible(true);
     }
   }, [onlyShowIfJSenabled]);

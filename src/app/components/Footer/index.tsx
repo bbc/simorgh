@@ -75,8 +75,3 @@ export default () => {
     </div>
   );
 };
-
-// <>
-//   <span lang="en-GB">{`\u00A9`} </span>
-//   {`${currentYear()} ${text}`}
-// </>;
