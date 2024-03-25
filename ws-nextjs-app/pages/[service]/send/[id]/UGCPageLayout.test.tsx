@@ -4,6 +4,7 @@ import {
   fireEvent,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import fetchMock from 'fetch-mock';
 import UGCPageLayout from './UGCPageLayout';
 import fixture from './fixture';
 import * as SubmitFunctionality from './SubmitButton';
@@ -46,6 +47,9 @@ describe('UGC Page Layout', () => {
   });
 
   it('Triggers the appropriate request function on submit', () => {
+    const postURL = '/myUrl.com';
+    fetchMock.post(postURL, 200);
+
     const submitButton = container.querySelector('form input[type=submit]');
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
