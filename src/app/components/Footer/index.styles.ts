@@ -41,69 +41,18 @@ const styles = {
         textDecoration: 'underline',
       },
     }),
-    constrainedWrapperWithTrustProjectLink: ({ spacings }: Theme) =>
+  constrainedWrapperWithTrustProjectLink: ({ spacings }: Theme) =>
     css({
       maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
       margin: '0 auto',
-      paddingTop: `${spacings.FULL}rem`
+      paddingTop: `${spacings.FULL}rem`,
     }),
 
-    constrainedWrapperWithoutTrustProjectLink: () =>
+  constrainedWrapperWithoutTrustProjectLink: () =>
     css({
       maxWidth: `${GROUP_4_MIN_WIDTH_BP}rem`,
-      margin: '0 auto'
+      margin: '0 auto',
     }),
 };
-// const ConstrainedWrapper = styled.div`
-//   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-//   margin: 0 auto;
-//   ${({ trustProjectLink }) =>
-//     trustProjectLink && `padding-top: ${GEL_SPACING};`}
-// `;
-
-// '&:focus, &:hover': {
-//     borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-//     color: palette.POSTBOX,
-//   },
-// const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
-//   ${({ service }) => service && getSansBold(service)}
-//   background: none;
-//   border: none;
-//   color: ${props => props.theme.palette.WHITE};
-//   cursor: pointer;
-//   display: block;
-//   padding: ${GEL_SPACING} 0 ${GEL_SPACING};
-//   text-decoration: none;
-//   text-align: left;
-//   width: 100%;
-
-//   &:hover,
-//   &:focus {
-//     text-decoration: underline;
-//   }
-// `;
-
-// const SitewideLinksWrapper = styled.div`
-//   ${({ script }) => script && getBrevier(script)}
-//   ${({ service }) => service && getSansRegular(service)}
-//   background-color: ${props => props.theme.palette.EBON};
-
-//   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-//     padding: 0 ${GEL_MARGIN_BELOW_400PX};
-//   }
-//   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-//     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
-//   }
-// `;
-// const StyledParagraph = styled.p`
-//   color: ${props => props.theme.palette.WHITE};
-//   margin: 0;
-//   padding: ${GEL_SPACING_DBL} 0;
-
-//   /* removes padding which creates touch target from the final inline link so the Focus Indicator doesn't obscure other text. */
-//   a {
-//     padding: 0;
-//   }
-// `;
 
 export default styles;

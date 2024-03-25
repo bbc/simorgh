@@ -1,7 +1,6 @@
 /** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import { MouseEvent} from 'react';
+import { MouseEvent } from 'react';
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import { Footer } from '#app/models/types/serviceConfig';
 import Link from './Link';
