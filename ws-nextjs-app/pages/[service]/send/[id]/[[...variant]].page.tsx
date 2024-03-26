@@ -2,9 +2,10 @@ import { GetServerSideProps } from 'next';
 import nodeLogger from '#lib/logger.node';
 import { BFF_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#app/lib/logger.const';
 import { FetchError } from '#app/models/types/fetch';
+import PageDataParams from '#models/types/pageDataParams';
 import UGCPageLayout from './UGCPageLayout';
 import fixture from './fixture';
-import { FetchParameters, PageDataParams } from './types';
+import { FetchParameters } from './types';
 
 const logger = nodeLogger(__filename);
 

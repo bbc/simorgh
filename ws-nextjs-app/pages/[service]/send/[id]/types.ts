@@ -1,6 +1,5 @@
 import { ChangeEvent } from 'react';
 import { Services, Variants } from '#app/models/types/global';
-import { ParsedUrlQuery } from 'querystring';
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
@@ -20,16 +19,6 @@ export type InputProps = {
   name: string;
   onChange: OnChangeHandler;
 };
-
-export interface PageDataParams extends ParsedUrlQuery {
-  id: string;
-  page?: string;
-  service: Services;
-  variant?: Variants;
-  // eslint-disable-next-line camelcase
-  renderer_env?: string;
-  resolvedUrl: string;
-}
 
 export type FetchParameters = {
   id: string;

@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
-import postFixture from './fixture';
+import formFixture from './fixture';
 import UGCPage from './UGCPageLayout';
 import { PageProps } from './types';
 
@@ -18,10 +18,10 @@ const Component = () => (
   <NextRouterWrapper>
     <PageLayoutWrapper
       // @ts-expect-error partial data required for storybook
-      pageData={postFixture}
+      pageData={formFixture}
       status={200}
     >
-      <UGCPage pageData={postFixture as PageProps['pageData']} />
+      <UGCPage pageData={formFixture as PageProps['pageData']} />
     </PageLayoutWrapper>
   </NextRouterWrapper>
 );
