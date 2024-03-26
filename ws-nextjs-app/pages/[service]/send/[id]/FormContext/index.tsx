@@ -58,31 +58,32 @@ export const FormContextProvider = ({
     // Reset error state
     setSubmissionError(null);
 
-    // TODO: This is a mock data, we should use the formState instead
-    const validData = { surname: 'BBC TEST NAME' };
-
     const formData = new FormData();
 
-    Object.entries(validData).forEach(([key, value]) => {
+    // TODO: This is a mock data, we should use the formState instead
+    Object.entries({ surname: 'BBC TEST NAME' }).forEach(([key, value]) => {
       formData.append(key, value);
     });
 
     try {
       const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
-      const fetchRequest = await fetch(url, {
-        method: 'POST',
-        body: formData,
-      });
-      const response = await fetchRequest.json();
+      const req = new XMLHttpRequest();
+      req.open('POST', url, true);
 
-      if (!fetchRequest.ok) {
-        setSubmissionError({
-          message: response.message,
-          status: fetchRequest.status,
-        });
-      }
-    } catch (error: unknown) {
+      req.onreadystatechange = () => {
+        if (req.readyState === XMLHttpRequest.DONE) {
+          if (req.status !== 200) {
+            setSubmissionError({
+              message: req.responseText,
+              status: req.status,
+            });
+          }
+        }
+      };
+
+      req.send(formData);
+    } catch (error) {
       const { message, status } = error as FetchError;
       setSubmissionError({ message, status });
     }
