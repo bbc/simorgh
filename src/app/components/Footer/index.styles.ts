@@ -19,7 +19,6 @@ const styles = {
       color: palette.WHITE,
       margin: 0,
       padding: `${spacings.DOUBLE}rem 0`,
-      a: { padding: 0 },
     }),
   siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
     css({
