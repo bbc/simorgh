@@ -24,7 +24,7 @@ type SubmissionError = {
 type ContextProps = {
   formState: Record<OnChangeInputName, OnChangeInputValue | null>;
   handleChange: OnChangeHandler;
-  handleSubmit: (event: FormEvent) => void;
+  handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
 };
 
