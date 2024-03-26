@@ -7,7 +7,6 @@ import React, {
 } from 'react';
 import { FetchError } from '#app/models/types/fetch';
 import { v4 as uuid } from 'uuid';
-import Url from 'url-parse';
 
 import { useRouter } from 'next/router';
 import {
@@ -67,10 +66,10 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = Url(`https://www.bbc.com/ugc/send/${id}?said=${uuid()}`);
+      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
-      req.open('POST', url.toString(), true);
+      req.open('POST', url, true);
 
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
