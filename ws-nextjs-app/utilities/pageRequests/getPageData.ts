@@ -1,0 +1,84 @@
+import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
+import getToggles from '#app/lib/utilities/getToggles';
+import { FetchError } from '#app/models/types/fetch';
+import PageDataParams from '#app/models/types/pageDataParams';
+import constructPageFetchUrl, {
+  UrlConstructParams,
+} from '#app/routes/utils/constructPageFetchUrl';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import { PageTypes } from '#app/models/types/global';
+import fetchPageData from '#app/routes/utils/fetchPageData';
+import getAgent from '../undiciAgent';
+
+type LoggerType = {
+  error: (id: string, params: { [key: string]: string | number }) => void;
+};
+
+const getPageData = async (
+  { id, service, rendererEnv, resolvedUrl }: PageDataParams,
+  constructUrlParams: UrlConstructParams,
+  logger: LoggerType,
+  pageType: PageTypes,
+) => {
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  const livePageUrl = constructPageFetchUrl(constructUrlParams);
+
+  // UNCOMMENT ONCE A TEST ASSET IS ON BFF PRODUCTION
+  // import certsRequired from '#app/routes/utils/certsRequired';
+  // import getEnvironment from '#app/routes/utils/getEnvironment';
+  //
+  // const env = getEnvironment(pathname);
+  // const optHeaders = { 'ctx-service-env': env };
+  // const agent = certsRequired(pathname) ? await getAgent() : null;
+
+  // FOR NOW USE THIS:
+  // MAKE SURE BFF_PATH IS SET TO https://fabl.api.bbci.co.uk/preview/module/simorgh-bff
+  const optHeaders = { 'ctx-service-env': 'live' };
+  const agent = await getAgent();
+
+  let pageStatus;
+  let pageJson;
+  let errorMessage;
+
+  const path = livePageUrl.toString();
+
+  try {
+    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
+    const { status, json } = await fetchPageData({
+      path,
+      agent,
+      optHeaders,
+    });
+    pageStatus = status;
+    pageJson = json;
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: status,
+      pageType,
+      requestUrl: resolvedUrl,
+    });
+
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status,
+      pathname,
+      message,
+    });
+    pageStatus = status;
+    errorMessage = message;
+  }
+
+  const data = pageJson
+    ? { pageData: pageJson.data, status: pageStatus }
+    : { error: errorMessage, status: pageStatus };
+
+  const toggles = await getToggles(service);
+
+  return { data, toggles };
+};
+
+export default getPageData;

@@ -25,7 +25,7 @@ import {
   UGC_PAGE,
 } from '../pageTypes';
 
-interface UrlConstructParams {
+export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service: Services;

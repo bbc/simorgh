@@ -38,6 +38,8 @@ export type FormComponentProps = {
 
 export type ComponentProps = {
   pageData: {
-    data: { title: string; description: string; sections: section[] };
+    title: string;
+    description: string;
+    sections: section[];
   };
 };

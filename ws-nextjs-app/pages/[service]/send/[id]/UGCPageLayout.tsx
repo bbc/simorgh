@@ -6,9 +6,7 @@ import FormField from './FormField';
 import Submit, { handleSubmit } from './SubmitButton';
 
 const UGCPageLayout = ({ pageData }: ComponentProps) => {
-  const {
-    data: { title, description, sections },
-  } = pageData;
+  const { title, description, sections } = pageData;
 
   const firstSection = sections[0];
   const fields = firstSection.fields.map(props => <FormField {...props} />);

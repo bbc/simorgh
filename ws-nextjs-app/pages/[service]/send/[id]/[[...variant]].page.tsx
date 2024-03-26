@@ -1,40 +1,48 @@
 import { GetServerSideProps } from 'next';
 import nodeLogger from '#lib/logger.node';
-import { BFF_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#app/lib/logger.const';
-import { FetchError } from '#app/models/types/fetch';
 import PageDataParams from '#models/types/pageDataParams';
-import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
+import { UGC_PAGE } from '#app/routes/utils/pageTypes';
+import getPageData from '../../../../utilities/pageRequests/getPageData';
 import UGCPageLayout from './UGCPageLayout';
-import { FetchParameters } from './types';
 
 const logger = nodeLogger(__filename);
 
-const fetchData = ({ id, service, variant }: FetchParameters) => {
-  logger.info(
-    DATA_REQUEST_RECEIVED,
-    `MAKE REQUEST HERE ${id} ${service} ${variant}`,
+const fetchData = async ({
+  id,
+  service,
+  variant,
+  rendererEnv,
+  resolvedUrl,
+}: PageDataParams) => {
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+
+  const { data, toggles } = await getPageData(
+    { id, service, rendererEnv, resolvedUrl },
+    { pageType: 'ugcForm', pathname, service, variant },
+    logger,
+    UGC_PAGE,
   );
 
-  return mundoFixture;
+  return { data, toggles };
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { id, service, variant } = context.query as PageDataParams;
+  const {
+    id,
+    service,
+    variant,
+    renderer_env: rendererEnv,
+  } = context.query as PageDataParams;
 
-  let pageData = null;
+  const { data, toggles } = await fetchData({
+    id,
+    service,
+    variant,
+    rendererEnv,
+    resolvedUrl: context.resolvedUrl,
+  });
 
-  try {
-    const data = fetchData({ id, service, variant });
-    pageData = data;
-  } catch (error) {
-    const { message, status } = error as FetchError;
-    logger.error(BFF_FETCH_ERROR, {
-      service,
-      status,
-      id,
-      message,
-    });
-  }
+  const { pageData = null, status } = data;
 
   return {
     props: {
@@ -45,7 +53,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: 'ugc',
       pathname: null,
       service,
-      status: 200,
+      status: status ?? 500,
+      toggles,
       timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
