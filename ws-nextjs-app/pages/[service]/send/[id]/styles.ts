@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  grid: ({ mq, gridWidths }: Theme) =>
+  grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
       margin: '0 auto',
@@ -11,7 +11,7 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
-        columnGap: '1rem',
+        columnGap: `${spacings.FULL}rem`,
       },
     }),
   primaryColumn: ({ mq }: Theme) =>

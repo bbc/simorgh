@@ -52,9 +52,7 @@ describe('UGC Page Layout', () => {
 
     const submitButton = container.querySelector('form input[type=submit]');
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    fireEvent.click(submitButton);
+    fireEvent.click(submitButton as Element);
 
     expect(submitSpy).toHaveBeenCalledTimes(1);
   });
