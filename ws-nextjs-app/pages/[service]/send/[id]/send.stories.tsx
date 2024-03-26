@@ -1,12 +1,12 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import postFixture from './fixture';
+import formFixture from './fixture';
 import UGCPage from './UGCPageLayout';
 
 const Component = () => (
   // @ts-expect-error partial data required for storybook
-  <PageLayoutWrapper pageData={postFixture} status={200}>
-    <UGCPage pageData={postFixture} />
+  <PageLayoutWrapper pageData={formFixture} status={200}>
+    <UGCPage pageData={formFixture} />
   </PageLayoutWrapper>
 );
 
