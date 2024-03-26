@@ -5,8 +5,8 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import fetchMock from 'fetch-mock';
+import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPageLayout from './UGCPageLayout';
-import fixture from './fixture';
 import * as SubmitFunctionality from './SubmitButton';
 import { PageProps } from './types';
 
@@ -27,7 +27,7 @@ describe('UGC Page Layout', () => {
 
     ({ container } = await act(() => {
       return render(
-        <UGCPageLayout pageData={fixture as PageProps['pageData']} />,
+        <UGCPageLayout pageData={mundoFixture as PageProps['pageData']} />,
       );
     }));
   });
