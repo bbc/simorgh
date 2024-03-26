@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -12,7 +11,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
-import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
@@ -20,20 +18,11 @@ import getAgent from '#server/utilities/getAgent';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import PageDataParams from '#app/models/types/pageDataParams';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
-
-interface PageDataParams extends ParsedUrlQuery {
-  id: string;
-  page?: string;
-  service: Services;
-  variant?: Variants;
-  // eslint-disable-next-line camelcase
-  renderer_env?: string;
-  resolvedUrl: string;
-}
 
 const logger = nodeLogger(__filename);
 
