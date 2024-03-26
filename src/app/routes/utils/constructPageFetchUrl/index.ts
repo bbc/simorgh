@@ -22,7 +22,6 @@ import {
   LIVE_PAGE,
   MOST_READ_PAGE,
   TOPIC_PAGE,
-  UGC_PAGE,
 } from '../pageTypes';
 
 interface UrlConstructParams {
@@ -40,7 +39,6 @@ const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => path;
 const getFrontPageId = (path: string) => `${path}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
-const getUgoId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 
 const isFrontPage = ({
   path,
@@ -94,9 +92,6 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
           TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
         );
       };
-      break;
-    case UGC_PAGE:
-      getIdFunction = getUgoId;
       break;
     default:
       getIdFunction = () => null;
