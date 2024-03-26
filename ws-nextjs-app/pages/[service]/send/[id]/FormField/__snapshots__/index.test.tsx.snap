@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField should render a checkbox input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      for="testCheckboxID"
+    >
+      This is a text field
+    </label>
+    <input
+      id="testCheckboxID"
+      name="This is a text field"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a tel input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      for="testTelID"
+    >
+      This is a text field
+    </label>
+    <input
+      id="testTelID"
+      name="This is a text field"
+      type="tel"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a text input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      for="testTextID"
+    >
+      This is a text field
+    </label>
+    <input
+      id="testTextID"
+      name="This is a text field"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a textarea input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      for="testTextAreaID"
+    >
+      This is a text field
+    </label>
+    <textarea
+      id="testTextAreaID"
+      name="This is a text field"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render an email input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      for="testEmailID"
+    >
+      This is a text field
+    </label>
+    <input
+      id="testEmailID"
+      name="This is a text field"
+      type="email"
+    />
+  </div>
+</div>
+`;
