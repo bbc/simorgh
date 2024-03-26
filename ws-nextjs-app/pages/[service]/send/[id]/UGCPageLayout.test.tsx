@@ -5,8 +5,8 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import fetchMock from 'fetch-mock';
+import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPageLayout from './UGCPageLayout';
-import fixture from './fixture';
 import * as SubmitFunctionality from './SubmitButton';
 
 describe('UGC Page Layout', () => {
@@ -19,7 +19,7 @@ describe('UGC Page Layout', () => {
     submitSpy = jest.spyOn(SubmitFunctionality, 'handleSubmit');
 
     ({ container } = await act(() => {
-      return render(<UGCPageLayout pageData={fixture} />);
+      return render(<UGCPageLayout pageData={mundoFixture} />);
     }));
   });
 
