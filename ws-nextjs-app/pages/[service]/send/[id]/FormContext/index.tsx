@@ -9,6 +9,7 @@ import { FetchError } from '#app/models/types/fetch';
 import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
+import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   OnChangeHandler,
@@ -73,7 +74,7 @@ export const FormContextProvider = ({
 
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
-          if (req.status !== 200) {
+          if (req.status !== OK) {
             setSubmissionError({
               message: req.responseText,
               status: req.status,

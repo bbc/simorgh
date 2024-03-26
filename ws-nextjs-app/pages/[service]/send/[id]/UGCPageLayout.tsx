@@ -29,7 +29,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
       />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
-          <main css={styles.mainContent} role="main">
+          <main css={styles.mainContent}>
             <Heading level={1}>{title}</Heading>
             <div
               // TODO: This is a security risk, we should sanitize the HTML
