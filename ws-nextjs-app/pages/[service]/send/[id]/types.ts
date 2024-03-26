@@ -1,20 +1,9 @@
 import { Services, Variants } from '#app/models/types/global';
-import { ParsedUrlQuery } from 'querystring';
 
 export type InputProps = {
   id: string;
   name: string;
 };
-
-export interface PageDataParams extends ParsedUrlQuery {
-  id: string;
-  page?: string;
-  service: Services;
-  variant?: Variants;
-  // eslint-disable-next-line camelcase
-  renderer_env?: string;
-  resolvedUrl: string;
-}
 
 export type FetchParameters = {
   id: string;
