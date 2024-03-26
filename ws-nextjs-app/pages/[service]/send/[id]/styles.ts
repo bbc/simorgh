@@ -8,9 +8,9 @@ export default {
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
+      padding: '1rem',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: '0 1rem',
         columnGap: `${spacings.FULL}rem`,
       },
     }),

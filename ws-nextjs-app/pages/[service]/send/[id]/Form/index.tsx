@@ -5,6 +5,7 @@ import { useFormContext } from '../FormContext';
 import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
+import Submit from '../SubmitButton';
 
 export default function Form({ fields }: { fields: Field[] }) {
   const { handleSubmit, submissionError } = useFormContext();
@@ -24,7 +25,7 @@ export default function Form({ fields }: { fields: Field[] }) {
     <>
       <form onSubmit={handleSubmit}>
         {formFields}
-        <input type="submit" />
+        <Submit />
       </form>
       {submissionError && (
         <div css={styles.submissionError}>
