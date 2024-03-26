@@ -296,44 +296,47 @@ export default styles;
 
 ### Media Query / Breakpoint Mappings
 
-| Before                                                                                                   | After                       |
-| -------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **Min Widths**                                                                                           |                             |
-| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_1_MIN_WIDTH]: {` |
-| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_2_MIN_WIDTH]: {` |
-| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_3_MIN_WIDTH]: {` |
-| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_4_MIN_WIDTH]: {` |
-| `@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_5_MIN_WIDTH]: {` |
-|                                                                                                          |                             |
-| **Max Widths**                                                                                           |                             |
-| `@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_0_MAX_WIDTH]: {` |
-| `@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_1_MAX_WIDTH]: {` |
-| `@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_2_MAX_WIDTH]: {` |
-| `@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_3_MAX_WIDTH]: {` |
-| `@media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_4_MAX_WIDTH]: {` |
-|                                                                                                          |                             |
-| **Min and Max Widths**                                                                                   |                             |
-| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_ONLY]: {`      |
-| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_2_ONLY]: {`      |
-| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_3_ONLY]: {`      |
-| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_4_ONLY]: {`      |
-|                                                                                                          |                             |
-| **High Contrast**                                                                                        |                             |
-| `@media screen and (forced-colors: active)`                                                              | `[mq.HIGH_CONTRAST]: {`     |
+| Before                                                                                                   | After                         |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **Min Widths**                                                                                           |                               |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_1_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_2_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_3_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_4_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_5_MIN_WIDTH]: {`   |
+| **Max Widths**                                                                                           |                               |
+| `@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_0_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_1_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_2_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_3_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_4_MAX_WIDTH]: {`   |
+| **Min and Max Widths**                                                                                   |                               |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_2_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_AND_GROUP_2]: {` |
+| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_3_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_4_ONLY]: {`        |
+| **High Contrast**                                                                                        |                               |
+| `@media screen and (forced-colors: active)`                                                              | `[mq.HIGH_CONTRAST]: {`       |
 
 ### Migrating GEL Breakpoints (Spacing)
 
-| Rems (Pixels)  | GEL Spacing            | New Theme Spacing |
-| -------------- | ---------------------- | ----------------- |
-| 0.25rem (4px)  | `GEL_SPACING_HLF`      | `${HALF}rem`      |
-| 0.5rem (8px)   | `GEL_SPACING`          | `${FULL}rem`      |
-| 0.75rem (12px) | `GEL_SPACING_HLF_TRPL` | `0.75rem`         |
-| 1rem (16px)    | `GEL_SPACING_DBL`      | `${DOUBLE}rem`    |
-| 1.5rem (24px)  | `GEL_SPACING_TRPL`     | `${TRIPLE}rem`    |
-| 2rem (32px)    | `GEL_SPACING_QUAD`     | `${QUADRUPLE}rem` |
-| 2.5rem (40px)  | `GEL_SPACING_QUIN`     | `${QUINTUPLE}rem` |
-| 3rem (48px)    | `GEL_SPACING_SEXT`     | `${SEXTUPLE}rem`  |
-| 3.5rem (56px)  | `GEL_SPACING_SEPT`     | `3.5rem`          |
+| Rems (Pixels)  | GEL Spacing              | New Theme Spacing          |
+| -------------- | ------------------------ | -------------------------- |
+| 0.25rem (4px)  | `GEL_SPACING_HLF`        | `${spacings.HALF}rem`      |
+| 0.5rem (8px)   | `GEL_SPACING`            | `${spacings.FULL}rem`      |
+| 0.75rem (12px) | `GEL_SPACING_HLF_TRPL`   | `0.75rem`                  |
+| 1rem (16px)    | `GEL_SPACING_DBL`        | `${spacings.DOUBLE}rem`    |
+| 1.5rem (24px)  | `GEL_SPACING_TRPL`       | `${spacings.TRIPLE}rem`    |
+| 2rem (32px)    | `GEL_SPACING_QUAD`       | `${spacings.QUADRUPLE}rem` |
+| 2.5rem (40px)  | `GEL_SPACING_QUIN`       | `${spacings.QUINTUPLE}rem` |
+| 3rem (48px)    | `GEL_SPACING_SEXT`       | `${spacings.SEXTUPLE}rem`  |
+| 3.5rem (56px)  | `GEL_SPACING_SEPT`       | `3.5rem`                   |
+| **Other**      |                          |                            |
+| 0.5rem (8px)   | `GEL_MARGIN_BELOW_400PX` | `${MARGIN_BELOW_400PX}`    |
+| 1rem (16px)    | `GEL_MARGIN_ABOVE_400PX` | `${MARGIN_ABOVE_400PX}`    |
+| 0.5rem (8px)   | `GEL_GUTTER_BELOW_600PX` | `${GUTTER_BELOW_600PX}`    |
+| 1rem (16px)    | `GEL_GUTTER_ABOVE_600PX` | `${GUTTER_ABOVE_600PX}`    |
 
 ## Using `CSS` library with values driven by props
 
@@ -341,7 +344,7 @@ When using the `styled` library it was possible to use any prop to return differ
 
 ### Before
 
-_It was possible to pass in props to conditonally change the css_
+_It was possible to pass in props to conditionally change the css_
 
 ```jsx
 
@@ -364,6 +367,71 @@ css={theme => [
   {
     color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,
   },
+]}
+```
+
+## Using `CSS` library with values driven by props within media queries
+
+When using the `styled` library it was possible to use any prop to return different css within a media query.
+
+### Before
+
+e.g. https://github.com/bbc/simorgh/blob/3dd7ead41db069ce638da887fbfe47d13e63d119/src/app/legacy/components/Footer/List/index.jsx#L49-L58
+
+In this example, `itemCount` and `trustProjectLink` are used to calculate the number of rows in `grid-template-rows`
+
+```jsx
+
+styled.ul`
+...
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-column-gap: ${GEL_SPACING};
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 2, trustProjectLink)},
+      auto
+    );
+    column-count: 2;
+  }
+`
+```
+
+### After
+
+In this example, we have created a function which can take `itemCount` and `trustProjectLink` as a prop, and return the correct `gridTemplateRows` for the respective breakpoints. 
+
+```ts
+const gridTemplateRows = ({
+  itemCount,
+  trustProjectLink,
+}: {
+  itemCount: number;
+  trustProjectLink?: FooterLink;
+}) =>
+  css({
+    [GROUP_1_AND_GROUP_2]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 2,
+        trustProjectLink,
+      })}, auto)`,
+    },
+    ...
+  })
+
+```
+
+This function is then called from the component which requires it: https://github.com/bbc/simorgh/blob/2972055de18e470667be6a58b9c796f79eaa0e07/src/app/components/Footer/List/index.tsx#L18-L30
+
+```tsx
+css={[
+...
+  gridTemplateRows({
+    itemCount: elements.length,
+    trustProjectLink,
+  }),
 ]}
 ```
 
