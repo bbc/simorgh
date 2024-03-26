@@ -64,7 +64,7 @@ const File = ({ id, name, onChange }: InputProps) => (
     id={id}
     name={name}
     type="file"
-    onChange={e => onChange(e.target.name, e.target.files?.[0])}
+    onChange={e => e.target.files && onChange(e.target.name, e.target.files)}
   />
 );
 
