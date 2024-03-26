@@ -22,13 +22,20 @@ describe('mostReadRecordIsFresh', () => {
 });
 
 describe('shouldRenderLastUpdated', () => {
-  it('should return lastUpdated time if older than 60 days', () => {
-    expect(shouldRenderLastUpdated(calcTimestampDaysAgo(61))).toEqual(true);
-    expect(shouldRenderLastUpdated(calcTimestampDaysAgo(100))).toEqual(true);
-  });
-
-  it('should return null if less than 60 days old', () => {
-    expect(shouldRenderLastUpdated(currentTime)).toEqual(false);
-    expect(shouldRenderLastUpdated(calcTimestampDaysAgo(59))).toEqual(false);
-  });
+  it.each`
+    timestamp                                            | scenario                                               | shouldRender
+    ${calcTimestampDaysAgo(61).getTime()}                | ${'date is 61 days ago and timestamp format is unix'}  | ${true}
+    ${new Date(calcTimestampDaysAgo(61)).toISOString()}  | ${'date is 61 days ago and timestamp format is ISO'}   | ${true}
+    ${calcTimestampDaysAgo(100).getTime()}               | ${'date is 100 days ago and timestamp format is unix'} | ${true}
+    ${new Date(calcTimestampDaysAgo(100)).toISOString()} | ${'date is 100 days ago and timestamp format is ISO'}  | ${true}
+    ${currentTime.getTime()}                             | ${'date is now and timestamp format is unix'}          | ${false}
+    ${currentTime.toISOString()}                         | ${'date is now and timestamp format is ISO'}           | ${false}
+    ${calcTimestampDaysAgo(59).getTime()}                | ${'date is 59 days ago and timestamp format is unix'}  | ${false}
+    ${new Date(calcTimestampDaysAgo(59)).toISOString()}  | ${'date is 59 days ago and timestamp format is ISO'}   | ${false}
+  `(
+    'should return $shouldRender for $timestamp because $scenario',
+    ({ timestamp, shouldRender }) => {
+      expect(shouldRenderLastUpdated(timestamp)).toEqual(shouldRender);
+    },
+  );
 });
