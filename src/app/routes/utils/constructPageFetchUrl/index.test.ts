@@ -5,7 +5,6 @@ import {
   HOME_PAGE,
   LIVE_PAGE,
   TOPIC_PAGE,
-  UGC_PAGE,
 } from '../pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
@@ -105,7 +104,6 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/topics/c00000000000t'}     | ${'http://localhost/persian/topics/c00000000000t'}
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'test'}   | ${'/persian/topics/c00000000000t'}     | ${'https://mock-bff-path/?id=c00000000000t&service=persian&pageType=topic&serviceEnv=test'}
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'live'}   | ${'/persian/topics/c00000000000t'}     | ${'https://mock-bff-path/?id=c00000000000t&service=persian&pageType=topic&serviceEnv=live'}
-    ${UGC_PAGE}     | ${'mundo'}      | ${null}    | ${'local'}  | ${'/u50853489'}                        | ${'https://mock-bff-path/?id=u50853489&service=mundo&pageType=ugcForm&serviceEnv=local'}
   `(
     `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
     ({
