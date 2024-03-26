@@ -5,7 +5,7 @@ export default {
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
 
-      label: {
+      'textarea, input': {
         display: 'block',
       },
     }),

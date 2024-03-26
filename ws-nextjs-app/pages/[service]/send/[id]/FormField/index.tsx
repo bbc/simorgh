@@ -23,7 +23,7 @@ const TextInput = ({ id, name }: InputProps) => {
       id={id}
       name={name}
       type="text"
-      value={(formState[name] as string) ?? ''}
+      value={(formState?.[name] as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
@@ -36,7 +36,7 @@ const TextArea = ({ id, name }: InputProps) => {
     <textarea
       id={id}
       name={name}
-      value={(formState[name] as string) ?? ''}
+      value={(formState?.[name] as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
@@ -50,7 +50,7 @@ const EmailInput = ({ id, name }: InputProps) => {
       id={id}
       name={name}
       type="email"
-      value={(formState[name] as string) ?? ''}
+      value={(formState?.[name] as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
@@ -64,7 +64,7 @@ const Checkbox = ({ id, name }: InputProps) => {
       id={id}
       name={name}
       type="checkbox"
-      checked={(formState[name] as boolean) ?? false}
+      checked={(formState?.[name] as boolean) ?? false}
       onChange={e => handleChange(e.target.name, e.target.checked)}
     />
   );
@@ -78,7 +78,7 @@ const Telephone = ({ id, name }: InputProps) => {
       id={id}
       name={name}
       type="tel"
-      value={(formState[name] as string) ?? ''}
+      value={(formState?.[name] as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );

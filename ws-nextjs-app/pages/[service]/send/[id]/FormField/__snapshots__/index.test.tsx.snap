@@ -51,20 +51,52 @@ exports[`FormField should render a text input with an associated label 1`] = `
   padding-bottom: 1rem;
 }
 
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
   >
     <label
+      class="emotion-1"
       for="testTextID"
     >
       This is a text field
+      <input
+        id="testTextID"
+        name="testTextID"
+        type="text"
+        value=""
+      />
     </label>
-    <input
-      id="testTextID"
-      name="testTextID"
-      name="This is a text field"
   </div>
+</div>
 `;
 
 exports[`FormField should render a textarea input with an associated label 1`] = `
