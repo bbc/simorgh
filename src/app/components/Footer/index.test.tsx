@@ -24,7 +24,7 @@ describe('Footer', () => {
   });
 
   describe('Collective News Text', () => {
-    it('should render the Collective News text when it is present', () => {
+    it('should render the Collective Newsroom text when it is present', () => {
       render(<Footer />, {
         service: 'hindi',
       });
