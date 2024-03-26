@@ -97,7 +97,8 @@ const FormField = ({
 }: FormComponentProps) => {
   const { handleChange } = useFormContext();
 
-  // TODO: Don't like this, should probably do this in back-end
+  // TODO: Don't like this but needed atm since 'file' and 'textarea' aren't returned as 'htmlType' from the API
+  // should probably do this in back-end
   let derivedHtmlType = htmlType;
 
   if (textArea) {

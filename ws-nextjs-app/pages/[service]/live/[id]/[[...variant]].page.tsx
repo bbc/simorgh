@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -13,7 +12,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
-import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
 import getEnvironment from '#app/routes/utils/getEnvironment';
