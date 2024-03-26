@@ -3,8 +3,8 @@ import nodeLogger from '#lib/logger.node';
 import { BFF_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#app/lib/logger.const';
 import { FetchError } from '#app/models/types/fetch';
 import PageDataParams from '#models/types/pageDataParams';
+import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPageLayout from './UGCPageLayout';
-import fixture from './fixture';
 import { FetchParameters } from './types';
 
 const logger = nodeLogger(__filename);
@@ -15,7 +15,7 @@ const fetchData = ({ id, service, variant }: FetchParameters) => {
     `MAKE REQUEST HERE ${id} ${service} ${variant}`,
   );
 
-  return fixture;
+  return mundoFixture;
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import formFixture from './fixture';
+import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPage from './UGCPageLayout';
 
 const Component = () => (
   // @ts-expect-error partial data required for storybook
-  <PageLayoutWrapper pageData={formFixture} status={200}>
-    <UGCPage pageData={formFixture} />
+  <PageLayoutWrapper pageData={mundoFormFixture} status={200}>
+    <UGCPage pageData={mundoFormFixture} />
   </PageLayoutWrapper>
 );
 
