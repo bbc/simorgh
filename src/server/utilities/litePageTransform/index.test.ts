@@ -205,6 +205,20 @@ describe('litePageTransform', () => {
     expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
   });
 
+  it('should remove "VJ embed" elements', () => {
+    const html =
+      '<html><head></head><body><div><div id="responsive-embed"></div></div></body></html>';
+
+    const result = litePageTransform({
+      html,
+      helmetMetaTags,
+      helmetScriptTags,
+      helmetLinkTags,
+    });
+
+    expect(result.liteHtml).toEqual('<html><head></head><body></body></html>');
+  });
+
   it('should remove podcast promo elements', () => {
     const html =
       '<html><head></head><body><div><div aria-labelledby="podcast-promo"></div></div></body></html>';

@@ -183,6 +183,11 @@ export default function litePageTransform({
     $('[data-e2e*="embed"]').parent().remove();
   }
 
+  // Remove VJ embeds
+  if ($('div[id^=responsive-embed]').parent().is('div')) {
+    $('div[id^=responsive-embed]').parent().remove();
+  }
+
   // Remove podcast promos
   if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
     $('[aria-labelledby=podcast-promo]').parent().remove();
