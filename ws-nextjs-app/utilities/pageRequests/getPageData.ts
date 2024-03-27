@@ -10,6 +10,7 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import { PageTypes } from '#app/models/types/global';
 import fetchPageData from '#app/routes/utils/fetchPageData';
+import certsRequired from '#app/routes/utils/certsRequired';
 import getAgent from '../undiciAgent';
 
 type LoggerType = {
@@ -25,13 +26,9 @@ const getPageData = async (
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const pageUrl = constructPageFetchUrl(constructUrlParams);
 
-  // UNCOMMENT ONCE A TEST ASSET IS ON BFF PRODUCTION
-  // import certsRequired from '#app/routes/utils/certsRequired';
-  // const agent = certsRequired(pathname) ? await getAgent() : null;
-
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
-  const agent = await getAgent();
+  const agent = certsRequired(pathname) ? await getAgent() : null;
 
   let pageStatus;
   let pageJson;
