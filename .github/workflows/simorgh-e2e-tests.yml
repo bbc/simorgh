@@ -43,7 +43,6 @@ jobs:
         with:
           build: yarn build
           start: yarn start
-          record: true
           parallel: true
 
       - name: Run Simorgh NextJS E2Es
