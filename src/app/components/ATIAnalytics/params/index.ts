@@ -17,6 +17,7 @@ import {
   LIVE_PAGE,
   CPS_ASSET,
   STATIC_PAGE,
+  UGC_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildTvRadioATIParams,
@@ -79,6 +80,7 @@ const pageTypeUrlBuilders = {
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
   [STATIC_PAGE]: noOp,
+  [UGC_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -100,6 +102,7 @@ const pageTypeParamBuilders = {
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
   [STATIC_PAGE]: noOp,
+  [UGC_PAGE]: noOp,
 };
 
 type BuilderFunction = {

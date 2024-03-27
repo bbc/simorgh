@@ -65,6 +65,8 @@ export type Field = {
 
 export type PageProps = {
   pageData: {
-    data: { title: string; description: string; sections: Section[] };
+    title: string;
+    description: string;
+    sections: Section[];
   };
 };
