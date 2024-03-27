@@ -22,7 +22,7 @@ const getPageData = async (
   pageType: PageTypes,
 ) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const livePageUrl = constructPageFetchUrl(constructUrlParams);
+  const pageUrl = constructPageFetchUrl(constructUrlParams);
 
   // UNCOMMENT ONCE A TEST ASSET IS ON BFF PRODUCTION
   // import certsRequired from '#app/routes/utils/certsRequired';
@@ -32,8 +32,6 @@ const getPageData = async (
   // const optHeaders = { 'ctx-service-env': env };
   // const agent = certsRequired(pathname) ? await getAgent() : null;
 
-  // FOR NOW USE THIS:
-  // MAKE SURE BFF_PATH IS SET TO https://fabl.api.bbci.co.uk/preview/module/simorgh-bff
   const optHeaders = { 'ctx-service-env': 'live' };
   const agent = await getAgent();
 
@@ -41,7 +39,7 @@ const getPageData = async (
   let pageJson;
   let errorMessage;
 
-  const path = livePageUrl.toString();
+  const path = pageUrl.toString();
 
   try {
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
