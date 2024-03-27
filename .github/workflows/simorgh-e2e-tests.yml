@@ -13,8 +13,29 @@ permissions:
   contents: read
 
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v6
+        with:
+          # Disable running of tests within install job
+          runTests: false
+          build: yarn build
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
+
   cypress-run:
     runs-on: ubuntu-latest
+    needs: install
     strategy:
       matrix:
         node-version: [18.x]
@@ -28,7 +49,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -41,8 +62,9 @@ jobs:
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
         with:
-          build: yarn build
           start: yarn start
+          record: true
+          parallel: true
 
       - name: Run Simorgh NextJS E2Es
         uses: cypress-io/github-action@v6
