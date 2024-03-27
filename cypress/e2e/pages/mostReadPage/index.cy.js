@@ -3,6 +3,7 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
 import getAppEnv from '../../../support/helpers/getAppEnv';
+import envs from '../../../support/config/envs';
 
 const pageType = 'mostReadPage';
 
@@ -16,7 +17,7 @@ Object.values(config).forEach(
         mostReadPage.environments[getAppEnv()]?.paths;
 
       urls?.forEach(currentPath => {
-        describe(`${pageType} - ${currentPath}`, () => {
+        describe(`${pageType} - ${envs.baseUrl}${currentPath}`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
@@ -37,7 +38,7 @@ Object.values(config).forEach(
       urls
         ?.map(path => `${path}.amp`)
         .forEach(currentPath => {
-          describe(`${pageType} - ${currentPath}`, () => {
+          describe(`${pageType} - ${envs.baseUrl}${currentPath}`, () => {
             before(() => {
               Cypress.env('currentPath', currentPath);
               visitPage(currentPath, pageType);

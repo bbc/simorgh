@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import envs from '../../../support/config/envs';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 
@@ -14,7 +15,7 @@ Object.keys(config)
 
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
-      describe(`${pageType} - ${currentPath}`, () => {
+      describe(`${pageType} - ${envs.baseUrl}${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
           visitPage(getTopicPagePath(currentPath), pageType);

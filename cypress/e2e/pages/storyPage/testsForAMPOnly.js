@@ -1,26 +1,10 @@
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
 import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
-export const testsThatAlwaysRunForAMPOnly = ({
-  service,
-  pageType,
-  variant,
-}) => {
-  describe(`Running testsToAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
-    it('If there is a table in the json, display it on the page', () => {
-      if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table');
-          }
-        });
-      }
-    });
-    it('Table displays expected number of rows and columns', () => {
-      if (service === 'sport') {
+export const testsThatAlwaysRunForAMPOnly = ({ service, variant }) => {
+  if (service === 'sport') {
+    describe('if a table exists', () => {
+      it('the correct number of rows and columns are displayed', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
           const tableBlock = body.content.blocks.find(
             block => block.type === 'table',
@@ -48,10 +32,9 @@ export const testsThatAlwaysRunForAMPOnly = ({
               });
           }
         });
-      }
-    });
-    it('Table has a heading', () => {
-      if (service === 'sport') {
+      });
+
+      it('it has a heading', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
           const tableBlock = body.content.blocks.find(
             block => block.type === 'table',
@@ -60,16 +43,16 @@ export const testsThatAlwaysRunForAMPOnly = ({
             cy.get('table').find('thead');
           }
         });
-      }
+      });
     });
+  }
 
-    /* Most Read Component
-     * These cypress tests are needed as unit tests cannot be run on the jsdom.
-     *
-     * web workers (which run on amp pages) do not run on the virtual dom.
-     */
-    mostReadAssertions({ service, variant });
-  });
+  /* Most Read Component
+   * These cypress tests are needed as unit tests cannot be run on the jsdom.
+   *
+   * web workers (which run on amp pages) do not run on the virtual dom.
+   */
+  mostReadAssertions({ service, variant });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.

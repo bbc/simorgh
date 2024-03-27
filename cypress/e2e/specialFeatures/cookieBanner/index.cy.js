@@ -1,5 +1,6 @@
 import ramdaPath from 'ramda/src/path';
 import config from '../../../support/config/services';
+import envs from '../../../support/config/envs';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 import visitPage from '../../../support/helpers/visitPage';
 import environment from '../../../support/helpers/getAppEnv';
@@ -47,17 +48,20 @@ Object.keys(config)
 
     const paths = getPaths(service);
     paths.forEach(path => {
-      describeForEuOnly(`${path} - Canonical Cookie Banner`, () => {
-        if (service !== 'news') {
-          runCanonicalTests({ service, variant, pageType, path });
-        }
-      });
+      describeForEuOnly(
+        `Canonical: Cookie Banner - ${envs.baseUrl}${path}`,
+        () => {
+          if (service !== 'news') {
+            runCanonicalTests({ service, variant, pageType, path });
+          }
+        },
+      );
     });
 
     paths
       .map(path => `${path}.amp`)
       .forEach(path => {
-        describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
+        describeForEuOnly(`AMP: Cookie Banner - ${envs.baseUrl}${path}`, () => {
           beforeEach(() => {
             visitPage(path, pageType);
           });
