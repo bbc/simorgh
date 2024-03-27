@@ -67,6 +67,7 @@ jobs:
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
         with:
+          build: yarn build
           start: yarn start
           record: true
           parallel: true
