@@ -22,7 +22,6 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
       </>
     );
   }
-
   return null;
 };
 
