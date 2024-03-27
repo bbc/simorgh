@@ -22,7 +22,6 @@ const getPageData = async (
   logger: LoggerType,
 ) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const pageUrl = constructPageFetchUrl({ ...constructUrlParams, pathname });
 
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
@@ -32,16 +31,15 @@ const getPageData = async (
   let pageJson;
   let errorMessage;
 
-  const path = pageUrl.toString();
-
   try {
+    const pageUrl = constructPageFetchUrl({ ...constructUrlParams, pathname });
+    const path = pageUrl.toString();
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
       path,
       agent,
       optHeaders,
     });
-
     pageStatus = status;
     pageJson = json;
   } catch (error: unknown) {
