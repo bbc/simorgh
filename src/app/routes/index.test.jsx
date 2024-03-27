@@ -27,6 +27,7 @@ import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
+import topicPageJson from '#data/persian/topics/crezq2dg9zwt.json';
 
 import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
@@ -91,6 +92,28 @@ describe('Routes', () => {
     fetchMock.restore();
     fetch.resetMocks();
     window.dotcom = undefined;
+  });
+
+  describe('Route Matching', () => {
+    it.each`
+      pathname                  | environment | expectedPageType
+      ${'/persian/afghanistan'} | ${'local'}  | ${'topic'}
+      ${'/persian/afghanistan'} | ${'test'}   | ${'topic'}
+      ${'/persian/afghanistan'} | ${'live'}   | ${'IDX'}
+    `(
+      'should return $expectedPageType for $pathname in $environment environment',
+      async ({ pathname, environment, expectedPageType }) => {
+        process.env.SIMORGH_APP_ENV = environment;
+
+        const { default: allRoutes } = await import('.');
+        console.log({ environment });
+        allRoutes.map(console.log);
+        const allMatchingRoutes = matchRoutes(allRoutes, pathname) || [];
+        const route = allMatchingRoutes?.[0]?.route;
+
+        expect(route.pageType).toBe(expectedPageType);
+      },
+    );
   });
 
   describe('Main page', () => {
@@ -636,6 +659,51 @@ describe('Routes', () => {
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
       ).toBeInTheDocument();
     });
+
+    it.each`
+      pathname                          | environment
+      ${'/persian/afghanistan'}         | ${'local'}
+      ${'/persian/afghanistan'}         | ${'test'}
+      ${'/persian/afghanistan'}         | ${'live'}
+      ${'/persian/topics/crezq2dg9zwt'} | ${'local'}
+      ${'/persian/topics/crezq2dg9zwt'} | ${'test'}
+      ${'/persian/topics/crezq2dg9zwt'} | ${'live'}
+    `(
+      'should route to and render a topic page on $pathname for environment $environment',
+      async ({ pathname, environment }) => {
+        suppressPropWarnings(['children', 'string', 'MediaIcon']);
+        suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+        suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
+        process.env.SIMORGH_APP_ENV = environment;
+
+        fetch.mockResponse(JSON.stringify({ ...topicPageJson }));
+
+        const { getInitialData, pageType } = getMatchingRoute(pathname);
+
+        const { pageData } = await getInitialData({
+          path: pathname,
+          service: 'persian',
+          pageType,
+        });
+
+        await renderRouter({
+          pathname,
+          pageData,
+          pageType,
+          service: 'persian',
+        });
+
+        expect(pageType).toBe('topic');
+
+        const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+          'بحران مهاجران افغان در پاکستان؛ جلسه طالبان همزمان با ورود حدود دو هزار نفر در یک روز به افغانستان';
+
+        expect(
+          await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+        ).toBeInTheDocument();
+      },
+    );
   });
 
   describe('Article page', () => {
