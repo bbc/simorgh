@@ -24,7 +24,7 @@ jobs:
         with:
           # Disable running of tests within install job
           runTests: false
-          build: yarn build
+          build: yarn build:local
 
       - name: Save build folder
         uses: actions/upload-artifact@v4
