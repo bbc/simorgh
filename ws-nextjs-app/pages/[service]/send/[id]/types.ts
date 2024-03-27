@@ -1,4 +1,18 @@
+import { ChangeEvent } from 'react';
 import { Services, Variants } from '#app/models/types/global';
+
+export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
+
+export type OnChangeInputValue =
+  | ChangeEvent<HTMLInputElement>['target']['value']
+  | FileList
+  | File
+  | boolean;
+
+export type OnChangeHandler = (
+  name: OnChangeInputName,
+  value: OnChangeInputValue,
+) => void;
 
 export type InputProps = {
   id: string;
@@ -11,35 +25,48 @@ export type FetchParameters = {
   variant?: Variants;
 };
 
-type section = {
+type Section = {
   sectionText: {
     title: string;
   };
-  fields: FormField[];
+  fields: Field[];
 };
 
-type FormField = {
+export type HtmlType =
+  | 'checkbox'
+  | 'radiobutton'
+  | 'select'
+  | 'email'
+  | 'text'
+  | 'tel'
+  | 'phone'
+  | 'date'
+  | 'time'
+  | 'number'
+  | 'url'
+  | 'textarea'
+  | 'file'
+  | '';
+
+export type Field = {
   id: string;
   type: string;
   validation: {
-    mandatory: boolean;
+    min?: number;
+    max?: number;
+    fileTypes?: string[];
+    mandatory?: boolean;
   };
-  htmlType: string;
+  htmlType: HtmlType;
   label: string;
   description: string;
   textArea?: boolean;
 };
 
-export type FormComponentProps = {
-  id: string;
-  htmlType: string;
-  label: string;
-};
-
-export type ComponentProps = {
+export type PageProps = {
   pageData: {
     title: string;
     description: string;
-    sections: section[];
+    sections: Section[];
   };
 };
