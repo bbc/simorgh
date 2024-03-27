@@ -316,6 +316,7 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+      collectiveNewsroomText: 'બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન',
     },
     timezone: 'Asia/Kolkata',
     navigation: [

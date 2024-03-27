@@ -334,6 +334,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
+      collectiveNewsroomText: 'இது, பிபிசிக்காக கலெக்டிவ் நியூஸ்ரூம் வெளியீடு',
     },
     timezone: 'GMT',
     navigation: [

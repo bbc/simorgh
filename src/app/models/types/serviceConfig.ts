@@ -168,4 +168,5 @@ export interface Footer {
   externalLink?: FooterLink;
   links?: FooterLink[];
   copyrightText?: string;
+  collectiveNewsroomText?: string;
 }

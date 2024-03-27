@@ -21,7 +21,13 @@ export default () => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { footer } = useContext(ServiceContext);
 
-  const { externalLink, links, copyrightText, trustProjectLink } = footer;
+  const {
+    externalLink,
+    links,
+    copyrightText,
+    trustProjectLink,
+    collectiveNewsroomText,
+  } = footer;
 
   const elements = links?.map(({ id, text, href, lang }) => {
     if (id === 'COOKIE_SETTINGS') {
@@ -64,6 +70,9 @@ export default () => {
         }
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
+        {collectiveNewsroomText && (
+          <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
+        )}
         <p css={styles.paragraph}>
           <span lang="en-GB">{`\u00A9`} </span>
           {`${new Date().getFullYear()} ${copyrightText}`}{' '}
