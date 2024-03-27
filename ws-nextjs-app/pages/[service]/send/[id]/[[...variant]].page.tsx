@@ -7,25 +7,6 @@ import UGCPageLayout from './UGCPageLayout';
 
 const logger = nodeLogger(__filename);
 
-const fetchData = async ({
-  id,
-  service,
-  variant,
-  rendererEnv,
-  resolvedUrl,
-}: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-
-  const { data, toggles } = await getPageData(
-    { id, service, rendererEnv, resolvedUrl },
-    { pageType: 'ugcForm', pathname, service, variant },
-    logger,
-    UGC_PAGE,
-  );
-
-  return { data, toggles };
-};
-
 export const getServerSideProps: GetServerSideProps = async context => {
   const {
     id,
@@ -34,13 +15,24 @@ export const getServerSideProps: GetServerSideProps = async context => {
     renderer_env: rendererEnv,
   } = context.query as PageDataParams;
 
-  const { data, toggles } = await fetchData({
+  const fetchPageDataParams = {
     id,
     service,
-    variant,
     rendererEnv,
     resolvedUrl: context.resolvedUrl,
-  });
+  };
+
+  const constructUrlParams = {
+    pageType: UGC_PAGE,
+    service,
+    variant,
+  };
+
+  const { data, toggles } = await getPageData(
+    fetchPageDataParams,
+    constructUrlParams,
+    logger,
+  );
 
   const { pageData = null, status } = data;
 

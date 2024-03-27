@@ -1,5 +1,4 @@
 import loggerMock from '#testHelpers/loggerMock';
-import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as getToggles from '#app/lib/utilities/getToggles';
 import getPageData from './getPageData';
@@ -36,12 +35,10 @@ describe('getPageData', () => {
         },
         {
           pageType: 'ugcForm',
-          pathname: 'u50853489',
           service: 'mundo',
           variant: undefined,
         },
         loggerMock,
-        UGC_PAGE,
       );
 
       expect(actualData).toStrictEqual({
@@ -73,12 +70,10 @@ describe('getPageData', () => {
         },
         {
           pageType: 'ugcForm',
-          pathname: 'u50853489',
           service: 'mundo',
           variant: undefined,
         },
         loggerMock,
-        UGC_PAGE,
       );
 
       expect(actualData).toStrictEqual({

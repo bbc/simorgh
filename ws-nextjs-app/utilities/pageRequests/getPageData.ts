@@ -8,7 +8,6 @@ import constructPageFetchUrl, {
 import sendCustomMetric from '#server/utilities/customMetrics';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import { PageTypes } from '#app/models/types/global';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
 import getAgent from '../undiciAgent';
@@ -19,12 +18,11 @@ type LoggerType = {
 
 const getPageData = async (
   { id, service, rendererEnv, resolvedUrl }: PageDataParams,
-  constructUrlParams: UrlConstructParams,
+  constructUrlParams: Omit<UrlConstructParams, 'pathname'>,
   logger: LoggerType,
-  pageType: PageTypes,
 ) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const pageUrl = constructPageFetchUrl(constructUrlParams);
+  const pageUrl = constructPageFetchUrl({ ...constructUrlParams, pathname });
 
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
@@ -43,6 +41,7 @@ const getPageData = async (
       agent,
       optHeaders,
     });
+
     pageStatus = status;
     pageJson = json;
   } catch (error: unknown) {
@@ -51,7 +50,7 @@ const getPageData = async (
     sendCustomMetric({
       metricName: NON_200_RESPONSE,
       statusCode: status,
-      pageType,
+      pageType: constructUrlParams.pageType,
       requestUrl: resolvedUrl,
     });
 
