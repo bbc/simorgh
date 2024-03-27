@@ -6,6 +6,7 @@ import constructPageFetchUrl, {
   UrlConstructParams,
 } from '#app/routes/utils/constructPageFetchUrl';
 import sendCustomMetric from '#server/utilities/customMetrics';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import { PageTypes } from '#app/models/types/global';
 import fetchPageData from '#app/routes/utils/fetchPageData';
@@ -26,13 +27,10 @@ const getPageData = async (
 
   // UNCOMMENT ONCE A TEST ASSET IS ON BFF PRODUCTION
   // import certsRequired from '#app/routes/utils/certsRequired';
-  // import getEnvironment from '#app/routes/utils/getEnvironment';
-  //
-  // const env = getEnvironment(pathname);
-  // const optHeaders = { 'ctx-service-env': env };
   // const agent = certsRequired(pathname) ? await getAgent() : null;
 
-  const optHeaders = { 'ctx-service-env': 'live' };
+  const env = getEnvironment(pathname);
+  const optHeaders = { 'ctx-service-env': env };
   const agent = await getAgent();
 
   let pageStatus;
