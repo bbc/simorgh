@@ -1,3 +1,4 @@
+import { Agent } from 'undici';
 import KyrgyzHomeFixture from '#data/kyrgyz/homePage/index.json';
 import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
@@ -5,10 +6,13 @@ import { HOME_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
-const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(agent)),
-);
+const agent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
+
+const mockGetAgent = jest.fn(() => Promise.resolve(agent));
+
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 describe('Home Page - BFF Fetching', () => {
   const originalEnvironment = process.env.SIMORGH_APP_ENV;
@@ -33,6 +37,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -57,6 +62,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -84,6 +90,7 @@ describe('Home Page - BFF Fetching', () => {
       path: '/kyrgyz/tipohome',
       service: 'kyrgyz',
       pageType: 'home',
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({

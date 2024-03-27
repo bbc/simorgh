@@ -1,6 +1,7 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
+import { ReadableStream } from 'node:stream/web';
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -24,6 +25,11 @@ window.matchMedia = jest.fn().mockImplementation(query => {
 });
 
 global.fetch = fetch;
+global.AbortSignal = {
+  timeout: jest.fn(),
+};
+global.ReadableStream = ReadableStream;
+
 global.document.domain = 'www.bbc.com';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
