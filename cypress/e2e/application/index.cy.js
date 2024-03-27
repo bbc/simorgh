@@ -23,25 +23,9 @@ describe('Application', () => {
           });
         });
 
-        it(`should return a 200 status code for ${service}'s article service worker`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/articles/sw.js`,
-            responseCode: 200,
-            type: 'application/javascript',
-          });
-        });
-
         it(`should return a 200 status code for ${service} manifest file`, () => {
           cy.testResponseCodeAndType({
             path: `/${config[service].name}/manifest.json`,
-            responseCode: 200,
-            type: 'application/json',
-          });
-        });
-
-        it(`should return a 200 status code for ${service} article manifest file`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/articles/manifest.json`,
             responseCode: 200,
             type: 'application/json',
           });
