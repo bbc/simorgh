@@ -8,7 +8,7 @@ interface LastUpdatedProps {
   prefix: string;
   script: TypographyScript;
   service: Services;
-  timestamp: number;
+  timestamp: number | string;
   timezone: string;
 }
 
