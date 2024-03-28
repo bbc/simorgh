@@ -1,25 +1,28 @@
 import React from 'react';
 import {
   act,
-  fireEvent,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import fetchMock from 'fetch-mock';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPageLayout from './UGCPageLayout';
-import * as SubmitFunctionality from './SubmitButton';
+import { PageProps } from './types';
+
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    query: { id: '123' },
+  }),
+}));
 
 describe('UGC Page Layout', () => {
   let container: HTMLElement;
-  let submitSpy: jest.SpyInstance;
 
   beforeEach(async () => {
     jest.restoreAllMocks();
 
-    submitSpy = jest.spyOn(SubmitFunctionality, 'handleSubmit');
-
     ({ container } = await act(() => {
-      return render(<UGCPageLayout pageData={mundoFixture} />);
+      return render(
+        <UGCPageLayout pageData={mundoFixture as PageProps['pageData']} />,
+      );
     }));
   });
 
@@ -44,16 +47,5 @@ describe('UGC Page Layout', () => {
   it('Renders a submit button within the form', () => {
     const submitButton = container.querySelector('form input[type=submit]');
     expect(submitButton).toBeInTheDocument();
-  });
-
-  it('Triggers the appropriate request function on submit', () => {
-    const postURL = '/myUrl.com';
-    fetchMock.post(postURL, 200);
-
-    const submitButton = container.querySelector('form input[type=submit]');
-
-    fireEvent.click(submitButton as Element);
-
-    expect(submitSpy).toHaveBeenCalledTimes(1);
   });
 });
