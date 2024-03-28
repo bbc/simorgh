@@ -15,78 +15,66 @@ const Label = ({
   </Text>
 );
 
-const TextInput = ({ id, name }: InputProps) => {
-  const { handleChange, formState } = useFormContext();
-
+const TextInput = ({ id, name, handleChange, inputState }: InputProps) => {
   return (
     <input
       id={id}
       name={name}
       type="text"
-      value={(formState?.[name] as string) ?? ''}
+      value={(inputState.value as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
 };
 
-const TextArea = ({ id, name }: InputProps) => {
-  const { handleChange, formState } = useFormContext();
-
+const TextArea = ({ id, name, handleChange, inputState }: InputProps) => {
   return (
     <textarea
       id={id}
       name={name}
-      value={(formState?.[name] as string) ?? ''}
+      value={(inputState.value as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
 };
 
-const EmailInput = ({ id, name }: InputProps) => {
-  const { handleChange, formState } = useFormContext();
-
+const EmailInput = ({ id, name, handleChange, inputState }: InputProps) => {
   return (
     <input
       id={id}
       name={name}
       type="email"
-      value={(formState?.[name] as string) ?? ''}
+      value={(inputState.value as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
 };
 
-const Checkbox = ({ id, name }: InputProps) => {
-  const { handleChange, formState } = useFormContext();
-
+const Checkbox = ({ id, name, handleChange, inputState }: InputProps) => {
   return (
     <input
       id={id}
       name={name}
       type="checkbox"
-      checked={(formState?.[name] as boolean) ?? false}
+      checked={(inputState.value as boolean) ?? false}
       onChange={e => handleChange(e.target.name, e.target.checked)}
     />
   );
 };
 
-const Telephone = ({ id, name }: InputProps) => {
-  const { handleChange, formState } = useFormContext();
-
+const Telephone = ({ id, name, handleChange, inputState }: InputProps) => {
   return (
     <input
       id={id}
       name={name}
       type="tel"
-      value={(formState?.[name] as string) ?? ''}
+      value={(inputState.value as string) ?? ''}
       onChange={e => handleChange(e.target.name, e.target.value)}
     />
   );
 };
 
-const File = ({ id, name }: InputProps) => {
-  const { handleChange } = useFormContext();
-
+const File = ({ id, name, handleChange }: InputProps) => {
   return (
     <input
       id={id}
@@ -129,6 +117,7 @@ const FormField = ({
   // TODO: Don't like this but needed atm since 'file' and 'textarea' aren't returned as 'htmlType' from the API
   // should probably do this in back-end
   let derivedHtmlType = htmlType;
+  const { handleChange, formState } = useFormContext();
 
   if (textArea) {
     derivedHtmlType = 'textarea';
@@ -144,10 +133,14 @@ const FormField = ({
 
   return (
     <div css={styles.formField}>
-      <Label id={id}>
-        {label}
-        <Component id={id} name={id} />
-      </Label>
+      <Label id={id}>{label}</Label>
+      <Component
+        id={id}
+        name={id}
+        handleChange={handleChange}
+        inputState={formState?.[id]}
+      />
+      <p>YOU`&apos;`VE MISSED THIS FIELD</p>
     </div>
   );
 };

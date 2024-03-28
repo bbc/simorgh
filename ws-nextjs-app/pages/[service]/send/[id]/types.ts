@@ -17,6 +17,8 @@ export type OnChangeHandler = (
 export type InputProps = {
   id: string;
   name: string;
+  handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
+  inputState: FieldData;
 };
 
 export type FetchParameters = {
@@ -61,6 +63,12 @@ export type Field = {
   label: string;
   description: string;
   textArea?: boolean;
+};
+
+export type FieldData = {
+  invalid: boolean;
+  required: boolean;
+  value: OnChangeInputValue;
 };
 
 export type PageProps = {

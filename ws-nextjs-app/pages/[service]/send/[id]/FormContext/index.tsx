@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
+  FieldData,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
@@ -23,7 +24,7 @@ type SubmissionError = {
 } | null;
 
 type ContextProps = {
-  formState: Record<OnChangeInputName, OnChangeInputValue | null>;
+  formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
@@ -33,8 +34,18 @@ const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
-): Record<OnChangeInputName, OnChangeInputValue | null> =>
-  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
+): Record<OnChangeInputName, FieldData> =>
+  fields?.reduce(
+    (acc, field) => ({
+      ...acc,
+      [field.id]: {
+        invalid: false,
+        required: field.validation.mandatory ?? false,
+        value: null,
+      },
+    }),
+    {},
+  );
 
 export const FormContextProvider = ({
   fields,
@@ -49,7 +60,7 @@ export const FormContextProvider = ({
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      return { ...prevState, [name]: value };
+      return { ...prevState, [name]: { ...prevState.name, value } };
     });
   };
 
