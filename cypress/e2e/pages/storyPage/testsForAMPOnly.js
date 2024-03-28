@@ -78,11 +78,3 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({ service }) => {
     runAMPAdsTests({ service });
   }
 };
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
-};
