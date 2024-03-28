@@ -16,7 +16,7 @@ export default ({ service, pageData, displayAds }) => {
 
   it('should render the correct number of curations, including most read, radio schedule & VJ embed', () => {
     const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead, radioSchedule, vjEmbed }) =>
+      ({ summaries, mostRead, radioSchedule, embed }) =>
         (summaries && summaries?.length > 0) ||
         mostRead ||
         radioSchedule ||
