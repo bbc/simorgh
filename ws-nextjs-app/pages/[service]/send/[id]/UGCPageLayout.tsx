@@ -11,10 +11,7 @@ import Form from './Form';
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
-
-  const {
-    data: { title, description, sections },
-  } = pageData;
+  const { title, description, sections } = pageData;
 
   const { fields } = sections?.[0] ?? {};
 
