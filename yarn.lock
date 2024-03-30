@@ -6125,7 +6125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:*, @testing-library/react@npm:14.0.0":
+"@testing-library/react@npm:*":
   version: 14.0.0
   resolution: "@testing-library/react@npm:14.0.0"
   dependencies:
@@ -6139,9 +6139,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:14.1.2":
-  version: 14.1.2
-  resolution: "@testing-library/react@npm:14.1.2"
+"@testing-library/react@npm:14.2.2":
+  version: 14.2.2
+  resolution: "@testing-library/react@npm:14.2.2"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^9.0.0
@@ -6149,7 +6149,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 0269903e53412cf96fddb55c8a97a9987a89c3308d71fa1418fe61c47d275445e7044c5387f57cf39b8cda319a41623dbad2cce7a17016aed3a9e85185aac75a
+  checksum: cb73df588592d9101429f057eaa6f320fc12524d5eb2acc8a16002c1ee2d9422a49e44841003bba42974c9ae1ced6b134f0d647826eca42ab8f19e4592971b16
   languageName: node
   linkType: hard
 
@@ -6913,6 +6913,13 @@ __metadata:
   version: 1.4.11
   resolution: "@types/url-parse@npm:1.4.11"
   checksum: 3e289d184b03d0b0203bccdff00efc1388db2ad8bba4af094201bf3ea5d001f36674ce1ee1764b8906b786a2de625dbc5d76b63ac68e2a3383a93acfe49e01b8
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.8":
+  version: 9.0.8
+  resolution: "@types/uuid@npm:9.0.8"
+  checksum: b8c60b7ba8250356b5088302583d1704a4e1a13558d143c549c408bf8920535602ffc12394ede77f8a8083511b023704bc66d1345792714002bfa261b17c5275
   languageName: node
   linkType: hard
 
@@ -22192,7 +22199,7 @@ __metadata:
     "@emotion/babel-plugin": 11.11.0
     "@emotion/jest": ^11.11.0
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 14.1.2
+    "@testing-library/react": 14.2.2
     babel-plugin-transform-rename-import: 2.3.0
     cypress: 13.6.3
     cypress-terminal-report: 5.3.12
@@ -22248,7 +22255,7 @@ __metadata:
     "@storybook/theming": 6.5.16
     "@testing-library/dom": 9.3.4
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 14.0.0
+    "@testing-library/react": 14.2.2
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.4.3
     "@types/jest": 29.5.12
@@ -22263,6 +22270,7 @@ __metadata:
     "@types/react-router-dom": 5.3.3
     "@types/testing-library__react": 10.2.0
     "@types/url-parse": ^1.4.8
+    "@types/uuid": ^9.0.8
     "@typescript-eslint/eslint-plugin": 5.59.6
     "@typescript-eslint/parser": 5.59.6
     amphtml-validator: 1.0.35
