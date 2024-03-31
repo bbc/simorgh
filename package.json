@@ -20,7 +20,8 @@
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "ramda@0.28.0": "patch:ramda@npm:0.28.0#.yarn/patches/ramda-npm-0.28.0-6a5fe8f6cc.patch",
     "postcss": "8.4.36",
-    "ip": "2.0.1"
+    "ip": "2.0.1",
+    "express": "4.19.2"
   },
   "workspaces": {
     "packages": [
@@ -110,9 +111,9 @@
     "@optimizely/react-sdk": "2.9.2",
     "aws-embedded-metrics": "2.0.7",
     "compression": "1.7.4",
-    "core-js": "3.30.2",
+    "core-js": "3.36.1",
     "dotenv": "16.0.3",
-    "express": "4.18.3",
+    "express": "4.19.2",
     "express-static-gzip": "2.1.7",
     "helmet": "7.1.0",
     "helmet-csp": "3.4.0",
@@ -172,8 +173,8 @@
     "@storybook/react-webpack5": "^8.0.4",
     "@storybook/theming": "^8.0.4",
     "@testing-library/dom": "9.3.4",
-    "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "14.2.2",
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "14.4.3",
     "@types/jest": "29.5.12",
@@ -188,6 +189,7 @@
     "@types/react-router-dom": "5.3.3",
     "@types/testing-library__react": "10.2.0",
     "@types/url-parse": "^1.4.8",
+    "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "5.59.6",
     "@typescript-eslint/parser": "5.59.6",
     "amphtml-validator": "1.0.35",

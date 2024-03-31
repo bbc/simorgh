@@ -165,8 +165,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #222222;
 }
 
@@ -184,7 +184,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 37.4375rem) {
   .emotion-12 {
     padding: 0 0.5rem;
   }
@@ -196,13 +196,13 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -212,14 +212,14 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
+  .emotion-14 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-16 {
+  .emotion-14 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -227,58 +227,42 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-14 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(
-          5,
-          auto
-        );
     -webkit-column-count: 2;
     column-count: 2;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(
-          4,
-          auto
-        );
     -webkit-column-count: 3;
     column-count: 3;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-16 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(
-          3,
-          auto
-        );
     -webkit-column-count: 4;
     column-count: 4;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-16 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(
-          3,
-          auto
-        );
     -webkit-column-count: 5;
     column-count: 5;
   }
 }
 
-.emotion-16>li:first-of-type {
+.emotion-14>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -288,53 +272,77 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   column-span: all;
 }
 
-.emotion-18 {
+@media (min-width: 15rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-14 {
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-14 {
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.emotion-15 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-20 {
+.emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #FFFFFF;
-  display: block;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: block;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-16:hover,
+.emotion-16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-48 {
+.emotion-23 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-48 a {
+.emotion-23 a {
   padding: 0;
 }
 
-.emotion-50 {
+.emotion-24 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #FFFFFF;
-  display: inline;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline;
 }
 
-.emotion-50:hover,
-.emotion-50:focus {
+.emotion-24:hover,
+.emotion-24:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -386,98 +394,91 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-12"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-13"
       >
         <ul
-          class="emotion-16 emotion-17"
+          class="emotion-14"
           role="list"
         >
           <li
-            class="emotion-18 emotion-19"
+            class="emotion-15"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/news/help-41670342"
             >
               Why you can trust the BBC
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/terms"
             >
               Terms of Use
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               About the BBC
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/privacy/"
             >
               Privacy Policy
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               Cookies
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/accessibility/"
             >
               Accessibility Help
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           >
             <a
-              class="focusIndicatorInvert emotion-20 emotion-21"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/contact/"
             >
               Contact the BBC
             </a>
           </li>
           <li
-            class="emotion-18 emotion-19"
             role="listitem"
           />
         </ul>
         <p
-          class="emotion-48 emotion-49"
+          class="emotion-23"
         >
           <span
             lang="en-GB"
@@ -488,7 +489,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="focusIndicatorInvert emotion-50 emotion-21"
+            class="focusIndicatorInvert emotion-24"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

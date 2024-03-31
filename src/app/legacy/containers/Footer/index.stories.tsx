@@ -67,3 +67,7 @@ export const WithAdsEnabled = ({ service, variant }) => (
 export const HindiCollectiveNewsroomPublication = ({ variant }) => (
   <Component service="hindi" variant={variant} />
 );
+
+export const SportWithoutTrustProjectLink = ({ variant }) => (
+  <Component service="sport" variant={variant} />
+);
