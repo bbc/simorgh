@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
@@ -6,14 +6,13 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { UserContextProvider } from '#contexts/UserContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import portuguesePageData from './fixtureData/portuguese';
 import persianPageData from './fixtureData/persian';
 import mundoPageData from './fixtureData/mundo';
 import StoryPage from './StoryPage';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 const PageWithOptimizely = withOptimizelyProvider(StoryPage);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -54,24 +53,24 @@ const toggleState = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ pageData, service }) => (
-  <BrowserRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
-      <ServiceContextProvider service={service}>
-        <UserContextProvider>
-          <RequestContextProvider
-            isAmp={false}
-            service={service}
-            pageType={STORY_PAGE}
-            bbcOrigin="https://www.test.bbc.com"
-          >
-            <Page pageData={pageData} />
-          </RequestContextProvider>
-        </UserContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
-  </BrowserRouter>
-);
+const Component = ({ pageData }) => {
+  const { service } = useContext(ServiceContext);
+
+  return (
+    <BrowserRouter>
+      <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
+        <RequestContextProvider
+          isAmp={false}
+          service={service}
+          pageType={STORY_PAGE}
+          bbcOrigin="https://www.test.bbc.com"
+        >
+          <Page pageData={pageData} />
+        </RequestContextProvider>
+      </ToggleContext.Provider>
+    </BrowserRouter>
+  );
+};
 
 export default {
   Component,

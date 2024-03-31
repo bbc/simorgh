@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
 // import md from './README.md';
 import MostRead from '.';
 import { StoryProps } from '../../models/types/storybook';
-import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
@@ -14,11 +15,11 @@ interface Props extends StoryProps {
 }
 
 const Component = ({
-  service = 'news',
-  variant = 'default',
   columnLayout = 'multiColumn',
   size = 'default',
 }: Props) => {
+  const { service } = useContext(ServiceContext);
+  const { variant = 'default' } = useContext(RequestContext);
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -43,21 +44,13 @@ const Component = ({
   }
 
   return (
-    <RequestContextProvider
-      isAmp={false}
-      isApp={false}
-      pageType={MOST_READ_PAGE}
-      service={service}
-      statusCode={200}
-      pathname={`/${service}/popular`}
-      variant={variant}
-    >
+    <ToggleContextProvider>
       <MostRead
         data={pageData as MostReadData}
         size={size}
         columnLayout={columnLayout}
       />
-    </RequestContextProvider>
+    </ToggleContextProvider>
   );
 };
 
