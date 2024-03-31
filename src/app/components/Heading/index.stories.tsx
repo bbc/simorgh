@@ -1,32 +1,57 @@
 import React from 'react';
 
+import { FontVariant, GelFontSize } from '#app/models/types/theming';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../ThemeProvider';
 import Heading from '.';
+// import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 
 interface Props extends StoryProps {
   text: string;
+  level: 1 | 2 | 3 | 4;
+  fontVariant: FontVariant | '--';
+  size: GelFontSize | '--';
 }
 
 const EMPTY_OPTION = '--';
 
-const HeadingStory = {
-  render: ({ text }: Props, { args }: { args: any }) => {
-    const selectedLevel = args?.level;
+const HeadingStory = ({
+  service = 'news',
+  variant = 'default',
+  text,
+  level,
+  fontVariant,
+  size,
+}: Props) => {
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Heading
+          level={level}
+          fontVariant={fontVariant !== EMPTY_OPTION ? fontVariant : undefined}
+          size={size !== EMPTY_OPTION ? size : undefined}
+        >
+          {text}
+        </Heading>
+      </ServiceContextProvider>
+    </ThemeProvider>
+  );
+};
 
-    const selectedFontVariant = args?.fontVariant;
-    const selectedSize = args?.size;
-
-    return (
-      <Heading
-        level={selectedLevel}
-        fontVariant={
-          selectedFontVariant !== EMPTY_OPTION ? selectedFontVariant : undefined
-        }
-        size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
-      >
-        {text}
-      </Heading>
-    );
+export default {
+  title: 'New Components/Heading',
+  Component: HeadingStory,
+  parameters: {
+    chromatic: {
+      disable: true,
+    },
+    docs: {
+      component: {
+        title: 'Heading',
+      },
+      // page: md,
+    },
   },
   args: {
     text: 'Heading',
@@ -34,18 +59,19 @@ const HeadingStory = {
     fontVariant: EMPTY_OPTION,
     size: EMPTY_OPTION,
   },
-};
-
-export default {
-  title: 'New Components/Heading',
-  Component: HeadingStory,
   argTypes: {
     level: {
+      control: {
+        type: 'select',
+      },
       options: [1, 2, 3, 4],
-      control: { type: 'select' },
     },
     fontVariant: {
+      control: {
+        type: 'select',
+      },
       options: [
+        EMPTY_OPTION,
         'sansRegular',
         'sansRegularItalic',
         'sansBold',
@@ -57,9 +83,11 @@ export default {
         'serifBold',
         'serifLight',
       ],
-      control: { type: 'select' },
     },
     size: {
+      control: {
+        type: 'select',
+      },
       options: [
         EMPTY_OPTION,
         'atlas',
@@ -78,12 +106,6 @@ export default {
         'brevier',
         'minion',
       ],
-      control: { type: 'select' },
-    },
-  },
-  parameters: {
-    chromatic: {
-      disable: true,
     },
   },
 };
