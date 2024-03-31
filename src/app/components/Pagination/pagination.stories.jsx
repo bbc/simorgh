@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Pager from '.';
 import ThemeProvider from '../ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({
   service = 'news',
   variant = 'default',
