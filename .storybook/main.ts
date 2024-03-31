@@ -59,15 +59,15 @@ const config: StorybookConfig = {
       }),
     );
 
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
+    config.resolve!.fallback = {
+      ...config.resolve!.fallback,
       fs: false,
       stream: false,
       zlib: false,
     };
 
-    config.resolve.alias = {
-      ...config.resolve?.alias,
+    config.resolve!.alias = {
+      ...config.resolve!.alias,
       ...webpackDirAlias,
     };
     return config;
