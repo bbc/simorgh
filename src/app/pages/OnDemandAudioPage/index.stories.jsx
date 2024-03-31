@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandAudioPage } from '..';
@@ -42,14 +40,7 @@ const Component = ({ service }) => (
 export default {
   Component,
   title: 'Pages/OnDemand Radio Page',
-  decorators: [
-    withKnobs,
-    withServicesKnob({
-      defaultService: 'indonesia',
-      services: Object.keys(onDemandRadioFixtures),
-    }),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,

@@ -1,6 +1,5 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
@@ -18,7 +17,6 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
-import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -128,7 +126,6 @@ const ComponentWithServiceContext = ({
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
-  decorators: [withKnobs, withServicesKnob()],
   parameters: { layout: 'fullscreen' },
 };
 

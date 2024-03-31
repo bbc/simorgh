@@ -1,6 +1,4 @@
 import React from 'react';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import { MemoryRouter } from 'react-router-dom';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -68,7 +66,6 @@ const Component = ({
 export default {
   title: 'Topic/Page',
   Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'mundo' })],
   parameters: { chromatic: { disable: true }, layout: 'fullscreen' },
 };
 

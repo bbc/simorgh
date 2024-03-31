@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
@@ -20,8 +19,8 @@ const PageWithOptimizely = withOptimizelyProvider(StoryPage);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
-  const showTopStories = boolean('Show Top Stories', true);
-  const showFeaturedStories = boolean('Show Featured Stories', true);
+  const showTopStories = Boolean('Show Top Stories', true);
+  const showFeaturedStories = Boolean('Show Featured Stories', true);
 
   const secondaryColumn = {
     ...(showTopStories && {
@@ -77,10 +76,7 @@ const Component = ({ pageData, service }) => (
 export default {
   Component,
   title: 'Pages/Story Page',
-  decorators: [
-    withKnobs,
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
 };
 
 export const Mundo = props => (

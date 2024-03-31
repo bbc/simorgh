@@ -1,11 +1,9 @@
 import React, { PropsWithChildren } from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { Services } from '../../../../models/types/global';
 
@@ -79,7 +77,6 @@ export default {
       },
     ],
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
 export const MultipleLatestMediaWithCustomAltText = ({ service }: Props) => {

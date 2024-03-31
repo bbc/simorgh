@@ -7,8 +7,8 @@ const config: StorybookConfig = {
   stories: [
     // '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     // '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
-    '../src/app/components/Heading/*.stories.@(t|j)sx',
-    // '../src/app/pages/**/*.stories.@(t|j)sx',
+    '../src/app/components/**/*.stories.@(t|j)sx',
+    '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
