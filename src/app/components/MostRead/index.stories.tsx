@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { withKnobs, select } from '@storybook/addon-knobs';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import metadata from './metadata.json';
-import md from './README.md';
+// import md from './README.md';
 import MostRead from '.';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { StoryProps } from '../../models/types/storybook';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ColumnLayout, MostReadData, Size } from './types';
@@ -19,8 +17,8 @@ interface Props extends StoryProps {
 }
 
 const Component = ({
-  service,
-  variant,
+  service = 'news',
+  variant = 'default',
   columnLayout = 'multiColumn',
   size = 'default',
 }: Props) => {
@@ -47,22 +45,6 @@ const Component = ({
     return <>Unable to render Most Read Component for {service}</>;
   }
 
-  const selectedColumnLayout = select(
-    'Columns',
-    {
-      1: 'oneColumn',
-      2: 'twoColumn',
-      5: 'multiColumn',
-    },
-    columnLayout,
-  );
-
-  const selectedSize = select(
-    'Size',
-    { Small: 'small', Default: 'default' },
-    size,
-  );
-
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider>
@@ -78,8 +60,8 @@ const Component = ({
           <ServiceContextProvider service={service} variant={variant}>
             <MostRead
               data={pageData as MostReadData}
-              size={selectedSize}
-              columnLayout={selectedColumnLayout}
+              size={size}
+              columnLayout={columnLayout}
             />
           </ServiceContextProvider>
         </RequestContextProvider>
@@ -90,21 +72,39 @@ const Component = ({
 
 export default {
   title: 'New Components/Most Read',
-  Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  component: Component,
   parameters: {
     chromatic: {
       viewports: [1280],
     },
     metadata,
     docs: {
-      page: md,
+      // page: md,
+    },
+  },
+  args: {
+    columnLayout: 'multiColumn',
+    size: 'default',
+  },
+  argTypes: {
+    columnLayout: {
+      control: { type: 'select' },
+      options: ['oneColumn', 'twoColumn', 'multiColumn'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'default'],
     },
   },
 };
 
-export const Example = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} />
+export const Example = ({ service, variant, columnLayout, size }: Props) => (
+  <Component
+    service={service}
+    variant={variant}
+    columnLayout={columnLayout}
+    size={size}
+  />
 );
 
 export const TwoColumns = ({ service, variant }: Props) => (

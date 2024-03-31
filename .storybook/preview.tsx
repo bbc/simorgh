@@ -577,7 +577,10 @@ const preview: Preview = {
               service={context.globals.service.service}
               variant={context.globals.service.variant}
             >
-              <EventTrackingContextProvider pageData={pageDataFixture}>
+              <EventTrackingContextProvider
+                // @ts-expect-error - mock data for Storybook
+                pageData={pageDataFixture}
+              >
                 <UserContextProvider>
                   <Story />
                 </UserContextProvider>
