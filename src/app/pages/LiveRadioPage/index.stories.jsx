@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
@@ -8,6 +8,7 @@ import korean from './fixtureData/korean';
 import tigrinya from './fixtureData/tigrinya';
 import afaanoromoo from './fixtureData/afaanoromoo';
 import amharic from './fixtureData/amharic';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 const liveRadioFixtures = {
   indonesia,
@@ -31,20 +32,23 @@ const matchFixtures = service => ({
 });
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service }) => (
-  <BrowserRouter>
-    <LiveRadioPage
-      match={matchFixtures(service)}
-      pageData={liveRadioFixtures[service]}
-      status={200}
-      service={service}
-      isAmp={false}
-      loading={false}
-      error=""
-      pageType={MEDIA_PAGE}
-    />
-  </BrowserRouter>
-);
+const Component = () => {
+  const { service } = useContext(ServiceContext);
+  return (
+    <BrowserRouter>
+      <LiveRadioPage
+        match={matchFixtures(service)}
+        pageData={liveRadioFixtures[service]}
+        status={200}
+        service={service}
+        isAmp={false}
+        loading={false}
+        error=""
+        pageType={MEDIA_PAGE}
+      />
+    </BrowserRouter>
+  );
+};
 
 export default {
   Component,
