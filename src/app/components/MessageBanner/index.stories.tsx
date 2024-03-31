@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../ThemeProvider';
 import MessageBanner from '.';
 import { StoryProps } from '../../models/types/storybook';
 
@@ -10,19 +8,15 @@ interface Props extends StoryProps {
   longText?: string;
 }
 
-const Component = ({ service, variant, text = '', longText = '' }: Props) => {
+const Component = ({ text = '', longText = '' }: Props) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <MessageBanner
-          heading={text}
-          description={longText}
-          link="https://www.bbc.co.uk/ws/languages"
-          linkText={text}
-          image="https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/e329/live/0a700dd0-7cb3-11ee-a503-4588075e3427.png"
-        />
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <MessageBanner
+      heading={text}
+      description={longText}
+      link="https://www.bbc.co.uk/ws/languages"
+      linkText={text}
+      image="https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/e329/live/0a700dd0-7cb3-11ee-a503-4588075e3427.png"
+    />
   );
 };
 

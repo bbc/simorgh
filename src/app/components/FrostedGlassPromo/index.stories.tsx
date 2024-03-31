@@ -2,9 +2,7 @@ import React, { PropsWithChildren } from 'react';
 
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { StoryProps } from '../../models/types/storybook';
-import ThemeProvider from '../ThemeProvider';
 
 import Promo from '.';
 import {
@@ -22,29 +20,24 @@ interface Props extends StoryProps {
 
 const Wrappers = ({
   service = 'news',
-  variant = 'default',
   children,
 }: PropsWithChildren<StoryProps>) => {
   return (
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <RequestContextProvider
-          pageType="article"
-          pathname="/news/articles/c000000000o"
-          isAmp={false}
-          isApp={false}
-          service={service}
-        >
-          <ToggleContextProvider
-            toggles={{
-              eventTracking: { enabled: false },
-            }}
-          >
-            {children}
-          </ToggleContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <RequestContextProvider
+      pageType="article"
+      pathname="/news/articles/c000000000o"
+      isAmp={false}
+      isApp={false}
+      service={service}
+    >
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
+      >
+        {children}
+      </ToggleContextProvider>
+    </RequestContextProvider>
   );
 };
 

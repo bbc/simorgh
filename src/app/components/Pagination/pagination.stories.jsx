@@ -1,22 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Pager from '.';
-import ThemeProvider from '../ThemeProvider';
 
-const Component = ({
-  service = 'news',
-  variant = 'default',
-  activePage,
-  pageCount,
-}) => {
-  return (
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Pager activePage={activePage} pageCount={pageCount} />
-      </ServiceContextProvider>
-    </ThemeProvider>
-  );
+const Component = ({ activePage, pageCount }) => {
+  return <Pager activePage={activePage} pageCount={pageCount} />;
 };
 
 export default {

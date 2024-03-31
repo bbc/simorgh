@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { FontVariant, GelFontSize } from '#app/models/types/theming';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../ThemeProvider';
 import Heading from '.';
 // import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
@@ -16,26 +14,15 @@ interface Props extends StoryProps {
 
 const EMPTY_OPTION = '--';
 
-const HeadingStory = ({
-  service = 'news',
-  variant = 'default',
-  text,
-  level,
-  fontVariant,
-  size,
-}: Props) => {
+const HeadingStory = ({ text, level, fontVariant, size }: Props) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Heading
-          level={level}
-          fontVariant={fontVariant !== EMPTY_OPTION ? fontVariant : undefined}
-          size={size !== EMPTY_OPTION ? size : undefined}
-        >
-          {text}
-        </Heading>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <Heading
+      level={level}
+      fontVariant={fontVariant !== EMPTY_OPTION ? fontVariant : undefined}
+      size={size !== EMPTY_OPTION ? size : undefined}
+    >
+      {text}
+    </Heading>
   );
 };
 

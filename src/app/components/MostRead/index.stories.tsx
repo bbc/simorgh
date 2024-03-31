@@ -4,10 +4,7 @@ import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import metadata from './metadata.json';
 // import md from './README.md';
 import MostRead from '.';
-import ThemeProvider from '../ThemeProvider';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { StoryProps } from '../../models/types/storybook';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ColumnLayout, MostReadData, Size } from './types';
 
@@ -46,27 +43,21 @@ const Component = ({
   }
 
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider>
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={MOST_READ_PAGE}
-          service={service}
-          statusCode={200}
-          pathname={`/${service}/popular`}
-          variant={variant}
-        >
-          <ServiceContextProvider service={service} variant={variant}>
-            <MostRead
-              data={pageData as MostReadData}
-              size={size}
-              columnLayout={columnLayout}
-            />
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+    <RequestContextProvider
+      isAmp={false}
+      isApp={false}
+      pageType={MOST_READ_PAGE}
+      service={service}
+      statusCode={200}
+      pathname={`/${service}/popular`}
+      variant={variant}
+    >
+      <MostRead
+        data={pageData as MostReadData}
+        size={size}
+        columnLayout={columnLayout}
+      />
+    </RequestContextProvider>
   );
 };
 

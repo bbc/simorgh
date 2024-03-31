@@ -1,10 +1,5 @@
 import React from 'react';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../ThemeProvider';
 import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -15,7 +10,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
-import md from './README.md';
+// import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -30,25 +25,18 @@ type Props = {
 };
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
-  <ThemeProvider service={service} variant="default">
-    <ToggleContextProvider>
-      <BackGround>
-        <ServiceContextProvider service={service}>
-          <RelatedContentSection content={content} />
-        </ServiceContextProvider>
-      </BackGround>
-    </ToggleContextProvider>
-  </ThemeProvider>
+const RelatedContentComponent = ({ content }: Props) => (
+  <BackGround>
+    <RelatedContentSection content={content} />
+  </BackGround>
 );
 
 export default {
   title: 'components/OptimoPromos/OptimoRelatedContentArticlePage',
   RelatedContentComponent,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: {
     docs: {
-      page: md,
+      // page: md,
     },
   },
 };
@@ -58,7 +46,7 @@ export const ListRelatedContent = () => (
 );
 
 export const ListRelatedContentRtl = () => (
-  <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
+  <RelatedContentComponent content={RelatedContentListRtl} />
 );
 
 export const SingleRelatedContent = () => (
@@ -66,8 +54,5 @@ export const SingleRelatedContent = () => (
 );
 
 export const SingleRelatedContentRtl = () => (
-  <RelatedContentComponent
-    content={RelatedContentSingleItemRtl}
-    service="arabic"
-  />
+  <RelatedContentComponent content={RelatedContentSingleItemRtl} />
 );

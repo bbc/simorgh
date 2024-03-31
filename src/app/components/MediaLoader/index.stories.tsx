@@ -1,9 +1,7 @@
 import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaLoaderComponent from '.';
-import ThemeProvider from '../ThemeProvider';
 import { aresMediaBlocks, clipMediaBlocks } from './fixture';
 import { MediaBlock } from './types';
 
@@ -14,21 +12,17 @@ type Props = {
 };
 
 const Component = ({ service, pageType, blocks }: Props) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      id="testID"
-      isAmp={false}
-      isApp={false}
-      pageType={pageType}
-      pathname=""
-      service={service}
-      counterName="testCounterName"
-    >
-      <ThemeProvider service={service}>
-        <MediaLoaderComponent blocks={blocks} />
-      </ThemeProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <RequestContextProvider
+    id="testID"
+    isAmp={false}
+    isApp={false}
+    pageType={pageType}
+    pathname=""
+    service={service}
+    counterName="testCounterName"
+  >
+    <MediaLoaderComponent blocks={blocks} />
+  </RequestContextProvider>
 );
 
 export default {

@@ -1,14 +1,11 @@
 import React, { PropsWithChildren } from 'react';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Promo from '#app/legacy/components/Promo';
 import LiveLabel from './index';
-import md from './README.md';
-import { StoryProps } from '../../models/types/storybook';
+// import md from './README.md';
 import Heading from '../Heading';
-import ThemeProvider from '../ThemeProvider';
 import metadata from './metadata.json';
 
-interface Props extends StoryProps {
+interface Props {
   ariaHidden?: boolean;
   offScreenText?: string;
   text?: string;
@@ -16,20 +13,14 @@ interface Props extends StoryProps {
 }
 
 const Component = ({
-  service,
-  variant,
   offScreenText,
   children,
   className,
 }: PropsWithChildren<Props>) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <LiveLabel offScreenText={offScreenText} className={className}>
-          {children}
-        </LiveLabel>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <LiveLabel offScreenText={offScreenText} className={className}>
+      {children}
+    </LiveLabel>
   );
 };
 
@@ -38,7 +29,7 @@ export default {
   parameters: {
     metadata,
     docs: {
-      page: md,
+      // page: md,
     },
     design: [
       {
@@ -75,20 +66,16 @@ export default {
   },
 };
 
-export const Localised = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} />
+export const Localised = () => <Component />;
+
+export const WithCustomOffscreenText = () => (
+  <Component offScreenText="Watch Live" />
 );
 
-export const WithCustomOffscreenText = ({ service, variant }: Props) => (
-  <Component offScreenText="Watch Live" service={service} variant={variant} />
-);
-
-export const WithChildren = ({ text: headline, service, variant }: Props) => (
+export const WithChildren = ({ text: headline }: Props) => (
   <Heading level={3}>
     <Promo.A href="https://www.bbc.co.uk/ws/languages">
-      <Component service={service} variant={variant} className="first-promo">
-        {headline}
-      </Component>
+      <Component className="first-promo">{headline}</Component>
     </Promo.A>
   </Heading>
 );
