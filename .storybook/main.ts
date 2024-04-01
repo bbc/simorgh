@@ -107,9 +107,7 @@ const config: StorybookConfig = {
   },
   framework: {
     name: '@storybook/react-webpack5',
-    options: {
-      // builder: { lazyCompilation: false },
-    },
+    options: {},
   },
   docs: {
     defaultName: 'README',
