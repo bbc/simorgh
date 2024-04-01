@@ -10,7 +10,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
-// import md from './README.md';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -36,7 +36,7 @@ export default {
   RelatedContentComponent,
   parameters: {
     docs: {
-      // page: md,
+      readme: md,
     },
   },
 };

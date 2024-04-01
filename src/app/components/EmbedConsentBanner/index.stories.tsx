@@ -1,6 +1,7 @@
 import React from 'react';
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
+import md from './README.md';
 
 import {
   EmbedConsentBannerCanonical,
@@ -26,23 +27,20 @@ const Component = ({ isAmp, provider = 'youtube' }: Props) => {
 };
 
 export default {
-  title: 'Containers/Social Embed/Consent Banner',
+  title: 'Components/Social Embed Consent Banner',
   Component,
   parameters: {
     chromatic: { disable: true },
     metadata,
+    docs: {
+      readme: md,
+    },
   },
   decorators: [withServicesDecorator],
 };
 
 export const CanonicalYoutube = () => <Component provider="youtube" />;
 
-export const AmpYoutube = (props: Props) => (
-  <Component isAmp provider="youtube" />
-);
-export const CanonicalTikTok = (props: Props) => (
-  <Component provider="tiktok" />
-);
-export const AmpTikTok = (props: Props) => (
-  <Component isAmp provider="tiktok" />
-);
+export const AmpYoutube = () => <Component isAmp provider="youtube" />;
+export const CanonicalTikTok = () => <Component provider="tiktok" />;
+export const AmpTikTok = () => <Component isAmp provider="tiktok" />;

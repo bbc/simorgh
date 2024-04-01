@@ -3,6 +3,7 @@ import React from 'react';
 import withServicesKnob from '#app/utilities/withServicesDecorator';
 import MessageBanner from '.';
 import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
+import md from './README.md';
 
 interface Props extends StoryProps {
   text?: string;
@@ -25,6 +26,11 @@ export default {
   title: 'Components/MessageBanner',
   Component,
   decorators: [withServicesKnob],
+  parameters: {
+    docs: {
+      readme: md,
+    },
+  },
 };
 
 export const Example = Component;

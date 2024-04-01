@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import Promo from '#app/legacy/components/Promo';
 import LiveLabel from './index';
-// import md from './README.md';
+import md from './README.md';
 import Heading from '../Heading';
 import metadata from './metadata.json';
 
@@ -29,7 +29,7 @@ export default {
   parameters: {
     metadata,
     docs: {
-      // page: md,
+      readme: md,
     },
     design: [
       {

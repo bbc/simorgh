@@ -4,7 +4,7 @@ import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';
-// import md from './README.md';
+import md from './README.md';
 
 interface Props extends StoryProps {
   children: React.ReactNode;
@@ -53,10 +53,7 @@ export default {
       disable: true,
     },
     docs: {
-      component: {
-        title: 'InlineLink',
-      },
-      // page: md,
+      readme: md,
     },
   },
   decorators: [withServicesDecorator],

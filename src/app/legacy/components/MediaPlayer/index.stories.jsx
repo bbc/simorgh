@@ -2,7 +2,6 @@
 import React from 'react';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import notes from './README.mdx';
 import ThemeProvider from '../../../components/ThemeProvider';
 
 const withDuration = {
@@ -18,7 +17,6 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
     },
-    docs: { page: notes },
   },
 };
 

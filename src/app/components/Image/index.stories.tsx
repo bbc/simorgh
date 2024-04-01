@@ -2,6 +2,7 @@ import React from 'react';
 
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import Image from '.';
+import md from './README.md';
 
 const BasicImage = () => (
   <Image
@@ -15,6 +16,9 @@ export default {
   Component: BasicImage,
   parameters: {
     chromatic: { disable: true },
+    docs: {
+      readme: md,
+    },
   },
 };
 

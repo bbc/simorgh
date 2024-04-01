@@ -1,10 +1,9 @@
 import React from 'react';
 import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
-import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
-import HealthFactorsMetadata from './types';
-// import { isExempt } from '../helpers/healthFactors';
+import { HealthFactorsProps } from './types';
+import { Markdown } from '@storybook/blocks';
 
 interface DocsDecoratorProps {
   context: DocsContextProps;
@@ -14,19 +13,15 @@ interface DocsDecoratorProps {
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   // @ts-ignore
   const [file] = context.attachedCSFFiles;
-  const metadata = path(
-    ['meta', 'parameters', 'metadata'],
-    file,
-  ) as HealthFactorsMetadata;
+  const { metadata, docs } = file?.meta?.parameters as HealthFactorsProps;
 
   return (
     <DocsContainer context={context}>
-      {metadata && (
-        <ThemeProvider service="news" variant="default">
-          <Title />
-          <HealthFactors metadata={metadata} />
-        </ThemeProvider>
-      )}
+      <ThemeProvider service="news" variant="default">
+        <Title />
+        {metadata && <HealthFactors metadata={metadata} />}
+        {docs?.readme && <Markdown>{docs.readme}</Markdown>}
+      </ThemeProvider>
       {children}
     </DocsContainer>
   );

@@ -2,13 +2,13 @@ import React from 'react';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import ThemeProvider from '../ThemeProvider';
 import { StoryProps } from '../../models/types/storybook';
 
 import metadata from './metadata.json';
 import DisclaimerComponent from '.';
+import md from './README.md';
 
-const Component = ({ service, variant }: StoryProps) => {
+const Component = ({ service }: StoryProps) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -18,9 +18,7 @@ const Component = ({ service, variant }: StoryProps) => {
       }}
     >
       <ServiceContextProvider service={service}>
-        <ThemeProvider service={service} variant={variant}>
-          <DisclaimerComponent />
-        </ThemeProvider>
+        <DisclaimerComponent />
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
@@ -31,6 +29,9 @@ export default {
   Component,
   parameters: {
     metadata,
+    docs: {
+      readme: md,
+    },
   },
 };
 

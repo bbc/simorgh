@@ -3,7 +3,7 @@ import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
-// import md from './README.md';
+import md from './README.md';
 import MostRead from '.';
 import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
@@ -63,7 +63,7 @@ export default {
     },
     metadata,
     docs: {
-      // page: md,
+      readme: md,
     },
   },
   args: {

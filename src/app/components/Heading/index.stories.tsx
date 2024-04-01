@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FontVariant, GelFontSize } from '#app/models/types/theming';
 import Heading from '.';
-// import md from './README.md';
+import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 
 interface Props extends StoryProps {
@@ -34,10 +34,7 @@ export default {
       disable: true,
     },
     docs: {
-      component: {
-        title: 'Heading',
-      },
-      // page: md,
+      readme: md,
     },
   },
   args: {

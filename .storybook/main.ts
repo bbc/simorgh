@@ -79,8 +79,8 @@ const config: StorybookConfig = {
     },
   },
   docs: {
+    defaultName: 'README',
     autodocs: true,
-    defaultName: 'Docs',
   },
 };
 
