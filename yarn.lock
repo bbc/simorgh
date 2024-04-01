@@ -5436,6 +5436,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-fetch@npm:^2.6.11":
+  version: 2.6.11
+  resolution: "@types/node-fetch@npm:2.6.11"
+  dependencies:
+    "@types/node": "*"
+    form-data: ^4.0.0
+  checksum: 180e4d44c432839bdf8a25251ef8c47d51e37355ddd78c64695225de8bc5dc2b50b7bb855956d471c026bb84bd7295688a0960085e7158cbbba803053492568b
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 20.2.5
   resolution: "@types/node@npm:20.2.5"
@@ -18015,6 +18025,7 @@ __metadata:
     "@types/js-cookie": ^3.0.3
     "@types/jsdom": ^21.0.0
     "@types/loadable__component": 5.13.9
+    "@types/node-fetch": ^2.6.11
     "@types/ramda": 0.28.15
     "@types/react": 18.2.67
     "@types/react-dom": 18.2.22

@@ -13,7 +13,7 @@ import noAscendersOrDescenders from '../../components/ThemeProvider/fontScripts/
 import sinhalese from '../../components/ThemeProvider/fontScripts/sinhalese';
 import tamil from '../../components/ThemeProvider/fontScripts/tamil';
 import thai from '../../components/ThemeProvider/fontScripts/thai';
-import { Services, Variants } from '../../models/types/global';
+import { Services } from '../../models/types/global';
 
 const DEFAULT_SERVICE = 'news';
 const getVariant = (selectedService: Services) =>
@@ -42,7 +42,7 @@ const scripts = {
 };
 
 export default (
-  story: (props: typeof storyProps) => JSX.Element,
+  story: (props: any) => JSX.Element,
   {
     globals: {
       service: { service: selectedService },
