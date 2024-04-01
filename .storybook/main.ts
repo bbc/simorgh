@@ -1,6 +1,10 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
 import { webpackDirAlias } from '../dirAlias';
+import {
+  getProjectRoot,
+  resolvePathInStorybookCache,
+} from '@storybook/core-common';
 
 const config: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
@@ -35,9 +39,38 @@ const config: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
-    '@storybook/addon-webpack5-compiler-babel',
   ],
-  webpackFinal: async config => {
+  webpackFinal: async (config, options) => {
+    const babelOptions = await options.presets.apply('babel', {}, options);
+    const typescriptOptions = await options.presets.apply(
+      'typescript',
+      {},
+      options,
+    );
+
+    config.module = {
+      ...(config.module || {}),
+      rules: [
+        ...(config.module?.rules || []),
+        {
+          test: typescriptOptions.skipCompiler
+            ? /\.((c|m)?jsx?)$/
+            : /\.((c|m)?(j|t)sx?)$/,
+          use: [
+            {
+              loader: require.resolve('babel-loader'),
+              options: {
+                cacheDirectory: resolvePathInStorybookCache('babel'),
+                ...babelOptions,
+              },
+            },
+          ],
+          include: [getProjectRoot()],
+          exclude: [/node_modules/],
+        },
+      ],
+    };
+
     config.plugins!.push(
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client

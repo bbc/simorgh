@@ -173,7 +173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.18.9, @babel/core@npm:^7.23.0, @babel/core@npm:^7.23.2, @babel/core@npm:^7.23.7, @babel/core@npm:^7.23.9":
+"@babel/core@npm:^7.18.9, @babel/core@npm:^7.23.0, @babel/core@npm:^7.23.2, @babel/core@npm:^7.23.9":
   version: 7.24.3
   resolution: "@babel/core@npm:7.24.3"
   dependencies:
@@ -4171,16 +4171,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-webpack5-compiler-babel@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@storybook/addon-webpack5-compiler-babel@npm:3.0.3"
-  dependencies:
-    "@babel/core": ^7.23.7
-    babel-loader: ^9.1.3
-  checksum: 47260d8257bf45bc495e823f605382858e7e98a3bc9b05f222bf18b8834b7949248279451b24a10ceb6e3268140a482afabb9d3e0e1b926f690a1381bbb43251
-  languageName: node
-  linkType: hard
-
 "@storybook/blocks@npm:8.0.5":
   version: 8.0.5
   resolution: "@storybook/blocks@npm:8.0.5"
@@ -6987,7 +6977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:9.1.3, babel-loader@npm:^9.1.3":
+"babel-loader@npm:9.1.3":
   version: 9.1.3
   resolution: "babel-loader@npm:9.1.3"
   dependencies:
@@ -18010,7 +18000,6 @@ __metadata:
     "@storybook/addon-docs": 8.0.5
     "@storybook/addon-toolbars": 8.0.5
     "@storybook/addon-viewport": 8.0.5
-    "@storybook/addon-webpack5-compiler-babel": 3.0.3
     "@storybook/blocks": 8.0.5
     "@storybook/builder-webpack5": 8.0.5
     "@storybook/cli": 8.0.5

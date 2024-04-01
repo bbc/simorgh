@@ -165,7 +165,6 @@
     "@storybook/addon-docs": "8.0.5",
     "@storybook/addon-toolbars": "8.0.5",
     "@storybook/addon-viewport": "8.0.5",
-    "@storybook/addon-webpack5-compiler-babel": "3.0.3",
     "@storybook/blocks": "8.0.5",
     "@storybook/builder-webpack5": "8.0.5",
     "@storybook/cli": "8.0.5",
