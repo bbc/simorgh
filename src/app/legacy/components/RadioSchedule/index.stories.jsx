@@ -1,23 +1,18 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { renderRadioSchedule as Component } from './testHelpers/helper';
-import ThemeProvider from '../../../components/ThemeProvider';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 export default {
   title: 'Components/Radio Schedule',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
+  decorators: [withServicesDecorator],
 };
 
-export const RadioSchedule =  props => (
-  <ThemeProvider service="news">
-    <Component {...props} />
-  </ThemeProvider>
-);
+export const RadioSchedule = (_, globalArgs) => {
+  console.log(globalArgs);
+  return <Component {...globalArgs} />;
+};
 
-export const ScheduleDifferentHeights = props => (
-  <ThemeProvider service="news">
-    <Component {...props} withLongSummary />
-  </ThemeProvider>
+export const ScheduleDifferentHeights = (_, globalArgs) => (
+  <Component {...globalArgs} withLongSummary />
 );

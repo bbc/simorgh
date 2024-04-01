@@ -1,6 +1,5 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import notes from './README.mdx';
@@ -21,7 +20,6 @@ export default {
     },
     docs: { page: notes },
   },
-  decorators: [withKnobs({ escapeHTML: false })],
 };
 
 export const ArticlesCanonical = () => (
@@ -47,8 +45,8 @@ export const MAPCanonical = () => (
         type: 'video',
         ...withDuration,
       }}
-      showLoadingImage={boolean('Show loading image', true)}
-      darkPlaceholder={boolean('Dark placeholder', false)}
+      showLoadingImage
+      darkPlaceholder
       title="Media player"
       noJsMessage="Dem no support media player for your device"
       noJsClassName="no-js"

@@ -5,7 +5,7 @@ import { webpackDirAlias } from '../dirAlias';
 const config: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
-    // '../src/app/legacy/components/**/*.stories.@(t|j)sx',
+    '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     // '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
@@ -75,7 +75,7 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/react-webpack5',
     options: {
-      builder: { lazyCompilation: false },
+      // builder: { lazyCompilation: false },
     },
   },
   docs: {
