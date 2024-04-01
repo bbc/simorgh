@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaLoaderComponent from '.';
 import { aresMediaBlocks, clipMediaBlocks } from './fixture';
 import { MediaBlock } from './types';
-import md from './README.md';
+import readme from './README.md';
 
 type Props = {
   pageType: PageTypes;
@@ -30,9 +30,7 @@ export default {
   title: 'Components/MediaLoader',
   Component,
   parameters: {
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
   },
 };
 

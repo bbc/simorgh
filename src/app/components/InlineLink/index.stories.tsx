@@ -4,7 +4,7 @@ import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';
-import md from './README.md';
+import readme from './README.md';
 
 interface Props extends StoryProps {
   children: React.ReactNode;
@@ -52,9 +52,7 @@ export default {
     chromatic: {
       disable: true,
     },
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
   },
   decorators: [withServicesDecorator],
 };

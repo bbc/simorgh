@@ -1,7 +1,7 @@
 import React from 'react';
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
-import md from './README.md';
+import readme from './README.md';
 
 import {
   EmbedConsentBannerCanonical,
@@ -32,9 +32,7 @@ export default {
   parameters: {
     chromatic: { disable: true },
     metadata,
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
   },
   decorators: [withServicesDecorator],
 };

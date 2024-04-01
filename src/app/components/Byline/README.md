@@ -1,9 +1,3 @@
-import { Meta } from '@storybook/blocks';
-
-<Meta title="Components/Byline" />
-
-# Byline
-
 ## Description
 
 A Byline component with all relevant article's author information.

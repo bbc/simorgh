@@ -10,7 +10,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
-import md from './README.md';
+import readme from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -35,9 +35,7 @@ export default {
   title: 'components/OptimoPromos/OptimoRelatedContentArticlePage',
   RelatedContentComponent,
   parameters: {
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
   },
 };
 

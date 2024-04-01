@@ -8,6 +8,7 @@ import {
   bylineWithPngPhoto,
 } from '../../pages/ArticlePage/fixtureData';
 import Byline from '.';
+import readme from './README.md';
 
 interface ComponentProps {
   fixture: object[];
@@ -23,6 +24,9 @@ const Component = ({
 export default {
   title: 'Components/Byline',
   Component,
+  parameters: {
+    docs: { readme },
+  },
 };
 
 export const AuthorRoleByline = () => (

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import Promo from '#app/legacy/components/Promo';
 import LiveLabel from './index';
-import md from './README.md';
+import readme from './README.md';
 import Heading from '../Heading';
 import metadata from './metadata.json';
 
@@ -28,9 +28,8 @@ export default {
   title: 'Components/Live Label',
   parameters: {
     metadata,
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
+
     design: [
       {
         name: 'Group 0',

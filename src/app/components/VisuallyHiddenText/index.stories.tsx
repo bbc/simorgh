@@ -2,7 +2,7 @@ import React from 'react';
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import { UnusedFirstArg } from '#app/models/types/storybook';
 import { Services } from '../../models/types/global';
-import md from './README.md';
+import readme from './README.md';
 import VisuallyHiddenText from './index';
 import metadata from './metadata.json';
 
@@ -22,9 +22,7 @@ export default {
   Component,
   parameters: {
     metadata,
-    docs: {
-      readme: md,
-    },
+    docs: { readme },
   },
   decorators: [withServicesDecorator],
 };

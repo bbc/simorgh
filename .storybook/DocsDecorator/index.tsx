@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
+import { DocsContainer, DocsContextProps } from '@storybook/addon-docs';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import { HealthFactorsProps } from './types';
@@ -18,7 +18,6 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   return (
     <DocsContainer context={context}>
       <ThemeProvider service="news" variant="default">
-        <Title />
         {metadata && <HealthFactors metadata={metadata} />}
         {docs?.readme && <Markdown>{docs.readme}</Markdown>}
       </ThemeProvider>

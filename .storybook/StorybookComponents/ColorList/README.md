@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/blocks';
-
-<Meta title="components/ColorList" />
-
 ## Description
 
 A List of Colour Cards used in storybook's colours palette documentation. At the moment of writing, this component is dev only and should not be used in live environements.
