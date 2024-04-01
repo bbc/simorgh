@@ -1,9 +1,9 @@
 import React from 'react';
 import { DocsContainer, DocsContextProps } from '@storybook/addon-docs';
+import { Markdown } from '@storybook/blocks';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import { HealthFactorsProps } from './types';
-import { Markdown } from '@storybook/blocks';
 
 interface DocsDecoratorProps {
   context: DocsContextProps;
@@ -11,7 +11,7 @@ interface DocsDecoratorProps {
 }
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
-  // @ts-ignore
+  // @ts-expect-error - CSF files are not typed
   const [file] = context.attachedCSFFiles;
   const { metadata, docs } = file?.meta?.parameters as HealthFactorsProps;
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { render, screen, act } from '@testing-library/react';
-import * as api from '@storybook/api';
+import * as api from '@storybook/manager-api';
 import SidebarLabel from '.';
 
 describe('Storybook Sidebar Labels', () => {
   beforeEach(() => {
+    //@ts-expect-error -  Mocking the useStorybookApi function
     api.useStorybookApi = jest.fn().mockImplementation(() => {
       return {
         getData: () => {

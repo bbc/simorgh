@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
+import { Preview } from '@storybook/react';
+import { Helmet } from 'react-helmet';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
@@ -10,8 +12,6 @@ import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
-import { Preview } from '@storybook/react';
-import { Helmet } from 'react-helmet';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {

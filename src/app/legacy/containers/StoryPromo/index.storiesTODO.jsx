@@ -1,11 +1,11 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import ThemeProvider from '../../../components/ThemeProvider';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import ThemeProvider from '../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
