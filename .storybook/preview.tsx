@@ -3,7 +3,6 @@ import { Global } from '@emotion/react';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import { Preview } from '@storybook/react';
-import { Helmet } from 'react-helmet';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
