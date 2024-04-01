@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
 
 import {
@@ -7,32 +7,21 @@ import {
   EmbedConsentBannerAmp,
   ConsentBannerProviders,
 } from '.';
-import ThemeProvider from '../ThemeProvider';
-import { StoryProps } from '../../models/types/storybook';
 
-interface Props extends StoryProps {
+interface Props {
   isAmp?: boolean;
   provider: ConsentBannerProviders;
 }
 
-const Component = ({
-  service = 'news',
-  variant,
-  isAmp,
-  provider = 'youtube',
-}: Props) => {
+const Component = ({ isAmp, provider = 'youtube' }: Props) => {
   const EmbedBanner = !isAmp
     ? EmbedConsentBannerCanonical
     : EmbedConsentBannerAmp;
 
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <EmbedBanner provider={provider}>
-          <div>Embed goes here</div>
-        </EmbedBanner>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <EmbedBanner provider={provider}>
+      <div>Embed goes here</div>
+    </EmbedBanner>
   );
 };
 
@@ -43,23 +32,17 @@ export default {
     chromatic: { disable: true },
     metadata,
   },
+  decorators: [withServicesDecorator],
 };
 
-export const CanonicalYoutube = (props: Props) => (
-  <Component {...props} provider="youtube" />
-);
-export const CanonicalYoutubeMundo = (props: Props) => (
-  <Component {...props} isAmp provider="youtube" service="mundo" />
-);
+export const CanonicalYoutube = () => <Component provider="youtube" />;
+
 export const AmpYoutube = (props: Props) => (
-  <Component {...props} isAmp provider="youtube" />
+  <Component isAmp provider="youtube" />
 );
 export const CanonicalTikTok = (props: Props) => (
-  <Component {...props} provider="tiktok" />
-);
-export const CanonicalTikTokMundo = (props: Props) => (
-  <Component {...props} isAmp provider="tiktok" service="mundo" />
+  <Component provider="tiktok" />
 );
 export const AmpTikTok = (props: Props) => (
-  <Component {...props} isAmp provider="tiktok" />
+  <Component isAmp provider="tiktok" />
 );

@@ -1,9 +1,6 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '../../psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import withServicesDecorator from '../../../utilities/withServicesDecorator';
 import Footer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
 import { StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 
@@ -12,32 +9,23 @@ interface Props extends StoryProps {
   withAds?: boolean;
 }
 
-const Component = ({
-  service,
-  variant,
-  isAmp = false,
-  withAds = false,
-}: Props) => (
-  <ThemeProvider service={service} variant={variant}>
-    <RequestContextProvider
-      isAmp={isAmp}
-      isApp={false}
-      pageType={undefined}
-      pathname=""
-      service={service}
-      showAdsBasedOnLocation={withAds}
-    >
-      <ServiceContextProvider service={service} variant={variant}>
-        <Footer />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ThemeProvider>
+const Component = ({ service, isAmp = false, withAds = false }: Props) => (
+  <RequestContextProvider
+    isAmp={isAmp}
+    isApp={false}
+    pageType={undefined}
+    pathname=""
+    service={service}
+    showAdsBasedOnLocation={withAds}
+  >
+    <Footer />
+  </RequestContextProvider>
 );
 
 export default {
   title: 'New Components/Footer',
   Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  decorators: [withServicesDecorator],
   parameters: {
     chromatic: {
       viewports: [
@@ -52,22 +40,22 @@ export default {
   },
 };
 
-export const Example = ({ service, variant }) => (
+export const Example = (_, { service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const ExampleAMP = ({ service, variant }) => (
+export const ExampleAMP = (_, { service, variant }) => (
   <Component service={service} variant={variant} isAmp />
 );
 
-export const WithAdsEnabled = ({ service, variant }) => (
+export const WithAdsEnabled = (_, { service, variant }) => (
   <Component service={service} variant={variant} withAds />
 );
 
-export const HindiCollectiveNewsroomPublication = ({ variant }) => (
+export const HindiCollectiveNewsroomPublication = (_, { variant }) => (
   <Component service="hindi" variant={variant} />
 );
 
-export const SportWithoutTrustProjectLink = ({ variant }) => (
+export const SportWithoutTrustProjectLink = (_, { variant }) => (
   <Component service="sport" variant={variant} />
 );

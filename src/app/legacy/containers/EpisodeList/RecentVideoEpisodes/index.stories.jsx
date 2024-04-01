@@ -1,30 +1,21 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import {
-  withServicesKnob,
-  themes,
-} from '#psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { themes } from '#psammead/psammead-storybook-helpers/src';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, episodes, service }) => (
-  <ThemeProvider service={service}>
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        service={service}
-        pageType="media"
-        pathname={`/${service}`}
-        isAmp={false}
-        // should amp come from context?
-      >
-        <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ThemeProvider>
+  <RequestContextProvider
+    service={service}
+    pageType="media"
+    pathname={`/${service}`}
+    isAmp={false}
+    // should amp come from context?
+  >
+    <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
+  </RequestContextProvider>
 );
 
 const fixtures = { afrique, pashto };
@@ -32,13 +23,7 @@ const fixtures = { afrique, pashto };
 export default {
   title: 'Containers/Episode List/Video',
   Component,
-  decorators: [
-    withKnobs,
-    withServicesKnob({
-      defaultService: 'afrique',
-      services: Object.keys(fixtures),
-    }),
-  ],
+  decorators: [withServicesDecorator],
   parameters: {
     options: {
       theme: themes.dark,
@@ -46,7 +31,7 @@ export default {
   },
 };
 
-export const MultipleItems = ({ service }) => (
+export const MultipleItems = (_, { service }) => (
   <Component
     episodes={fixtures[service]}
     masterBrand={`bbc_${service}_tv`}
@@ -54,7 +39,7 @@ export const MultipleItems = ({ service }) => (
   />
 );
 
-export const SingleItem = ({ service }) => (
+export const SingleItem = (_, { service }) => (
   <Component
     episodes={[fixtures[service][0]]}
     masterBrand={`bbc_${service}_tv`}

@@ -1,40 +1,33 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
-  <ThemeProvider service={service}>
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        service={service}
-        pageType="media"
-        pathname={`/${service}`}
-        isAmp={false}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: {
-              enabled: false,
-            },
-          }}
-        >
-          <RecentAudioEpisodes
-            masterBrand={masterBrand}
-            episodes={episodes}
-            brandId={brandId}
-            pageType={pageType}
-          />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ThemeProvider>
+  <RequestContextProvider
+    service={service}
+    pageType="media"
+    pathname={`/${service}`}
+    isAmp={false}
+  >
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: {
+          enabled: false,
+        },
+      }}
+    >
+      <RecentAudioEpisodes
+        masterBrand={masterBrand}
+        episodes={episodes}
+        brandId={brandId}
+        pageType={pageType}
+      />
+    </ToggleContextProvider>
+  </RequestContextProvider>
 );
 
 const fixtures = { indonesia: indonesian, arabic };
@@ -46,16 +39,10 @@ const masterBrands = {
 export default {
   title: 'Containers/Episode List/Audio',
   Component,
-  decorators: [
-    withKnobs,
-    withServicesKnob({
-      defaultService: 'indonesia',
-      services: Object.keys(fixtures),
-    }),
-  ],
+  decorators: [withServicesDecorator],
 };
 
-export const MultipleItems = ({ service }) => (
+export const MultipleItems = (_, { service }) => (
   <Component
     episodes={fixtures[service]}
     pageType="Podcast"
@@ -64,7 +51,7 @@ export const MultipleItems = ({ service }) => (
   />
 );
 
-export const SingleItem = ({ service }) => (
+export const SingleItem = (_, { service }) => (
   <Component
     episodes={[fixtures[service][0]]}
     pageType="Podcast"
