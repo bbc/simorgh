@@ -1,6 +1,5 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
@@ -9,7 +8,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import { guideLinkItem } from './helpers/fixtureData';
+// import { guideLinkItem } from './helpers/fixtureData';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -20,23 +19,23 @@ const mediaFixture = type =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
-const promoFixture = type =>
-  pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
-    .find(
-      item =>
-        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
-        pathOr(null, ['contentType'], item) === type,
-    );
+// const promoFixture = type =>
+//   pathOr(null, ['content', 'groups'], fixture)
+//     .flatMap(group => pathOr(null, ['items'], group))
+//     .find(
+//       item =>
+//         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
+//         pathOr(null, ['contentType'], item) === type,
+//     );
 
 const audioFixture = mediaFixture('audio');
-const videoFixture = mediaFixture('video');
-const standardPromo = promoFixture('Text');
-const videoPromo = promoFixture('Video');
-const featurePromo = promoFixture('Feature');
-const audioPromo = promoFixture('Audio');
-const galleryPromo = promoFixture('Gallery');
-const podcastPromo = promoFixture('Podcast');
+// const videoFixture = mediaFixture('video');
+// const standardPromo = promoFixture('Text');
+// const videoPromo = promoFixture('Video');
+// const featurePromo = promoFixture('Feature');
+// const audioPromo = promoFixture('Audio');
+// const galleryPromo = promoFixture('Gallery');
+// const podcastPromo = promoFixture('Podcast');
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -83,68 +82,67 @@ export default {
 export const Promo = () => {
   return (
     <Component
-      item={select(
-        'type',
-        {
-          audioFixture,
-          videoFixture,
-          standardPromo,
-          featurePromo,
-          videoPromo,
-          audioPromo,
-          galleryPromo,
-          podcastPromo,
-          guideLinkItem,
-        },
-        audioFixture,
-      )}
-      promoType={select(
-        'Promo Type',
-        {
-          regular: 'regular',
-          leading: 'leading',
-          top: 'top',
-        },
-        'regular',
-      )}
-      isAmp={false}
-      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+    // item={select(
+    //   'type',
+    //   {
+    //     audioFixture,
+    //     videoFixture,
+    //     standardPromo,
+    //     featurePromo,
+    //     videoPromo,
+    //     audioPromo,
+    //     galleryPromo,
+    //     podcastPromo,
+    //     guideLinkItem,
+    //   },
+    //   audioFixture,
+    // )}
+    // promoType={select(
+    //   'Promo Type',
+    //   {
+    //     regular: 'regular',
+    //     leading: 'leading',
+    //     top: 'top',
+    //   },
+    //   'regular',
+    // )}
+    // isAmp={false}
+    // isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
     />
   );
 };
-Promo.decorators = [withKnobs];
 
 // Amp
 export const PromoAmp = () => {
   return (
     <Component
-      item={select(
-        'type',
-        {
-          audioFixture,
-          videoFixture,
-          standardPromo,
-          featurePromo,
-          videoPromo,
-          audioPromo,
-          galleryPromo,
-          podcastPromo,
-          guideLinkItem,
-        },
-        audioFixture,
-      )}
-      promoType={select(
-        'Promo Type',
-        {
-          regular: 'regular',
-          leading: 'leading',
-          top: 'top',
-        },
-        'regular',
-      )}
-      isAmp
-      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+    // item={select(
+    //   'type',
+    //   {
+    //     audioFixture,
+    //     videoFixture,
+    //     standardPromo,
+    //     featurePromo,
+    //     videoPromo,
+    //     audioPromo,
+    //     galleryPromo,
+    //     podcastPromo,
+    //     guideLinkItem,
+    //   },
+    //   audioFixture,
+    // )}
+    // promoType={select(
+    //   'Promo Type',
+    //   {
+    //     regular: 'regular',
+    //     leading: 'leading',
+    //     top: 'top',
+    //   },
+    //   'regular',
+    // )}
+    // isAmp
+    // isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
     />
   );
 };
-PromoAmp.decorators = [withKnobs, AmpDecorator];
+PromoAmp.decorators = [AmpDecorator];

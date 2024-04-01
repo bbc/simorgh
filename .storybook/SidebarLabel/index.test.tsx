@@ -5,7 +5,7 @@ import SidebarLabel from '.';
 
 describe('Storybook Sidebar Labels', () => {
   beforeEach(() => {
-    //@ts-expect-error -  Mocking the useStorybookApi function
+    // @ts-expect-error -  Mocking the useStorybookApi function
     api.useStorybookApi = jest.fn().mockImplementation(() => {
       return {
         getData: () => {

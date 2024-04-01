@@ -159,6 +159,7 @@
     "@storybook/blocks": "8.0.5",
     "@storybook/builder-webpack5": "8.0.5",
     "@storybook/cli": "8.0.5",
+    "@storybook/core-common": "^8.0.5",
     "@storybook/react": "8.0.5",
     "@storybook/react-webpack5": "8.0.5",
     "@storybook/theming": "8.0.5",

@@ -1,12 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
-import { webpackDirAlias } from '../dirAlias';
 import {
   getProjectRoot,
   resolvePathInStorybookCache,
 } from '@storybook/core-common';
+import { webpackDirAlias } from '../dirAlias';
 
-const config: StorybookConfig = {
+const storybookConfig: StorybookConfig = {
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
@@ -77,7 +77,7 @@ const config: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
-      // @ts-ignore
+      // @ts-expect-error -  webpack plugin not typed
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
@@ -115,4 +115,4 @@ const config: StorybookConfig = {
   },
 };
 
-export default config;
+export default storybookConfig;
