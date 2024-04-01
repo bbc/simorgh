@@ -25,7 +25,7 @@ const ParagraphStory = ({ text, fontVariant, size }: Props) => {
 };
 
 export default {
-  title: 'New Components/Paragraph',
+  title: 'Components/Paragraph',
   Component: ParagraphStory,
   parameters: {
     chromatic: {

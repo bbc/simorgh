@@ -17,7 +17,7 @@ const Component = ({ keyPointsContent }: ComponentProps) => {
 };
 
 export default {
-  title: 'New Components/Live Page Key Points',
+  title: 'Components/Live Page Key Points',
   Component,
   parameters: {
     metadata,

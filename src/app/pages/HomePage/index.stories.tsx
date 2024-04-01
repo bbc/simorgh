@@ -1,15 +1,11 @@
 /* eslint-disable no-shadow */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import fetch from 'node-fetch';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { RequestContext } from '#app/contexts/RequestContext';
-import {
-  ServiceContext,
-  ServiceContextProvider,
-} from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import { StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
@@ -43,9 +39,7 @@ const overrideRadioSchedule = (
   }
 };
 
-const Component = () => {
-  const { service } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+const Component = ({ service, variant }: StoryProps) => {
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -89,6 +83,6 @@ export default {
   title: 'Pages/Home Page',
 };
 
-export const Example = ({ service, variant }: StoryProps) => (
+export const Example = (_, { service, variant }: StoryProps) => (
   <Component service={service} variant={variant} />
 );

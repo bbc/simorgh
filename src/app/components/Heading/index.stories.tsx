@@ -27,7 +27,7 @@ const HeadingStory = ({ text, level, fontVariant, size }: Props) => {
 };
 
 export default {
-  title: 'New Components/Heading',
+  title: 'Components/Heading',
   Component: HeadingStory,
   parameters: {
     chromatic: {

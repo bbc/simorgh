@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { StoryProps } from '../../models/types/storybook';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';
 // import md from './README.md';
@@ -10,21 +11,25 @@ interface Props extends StoryProps {
   text: string;
 }
 
-export const InternalInlineLink = ({ text }: Omit<Props, 'children'>) => (
-  <InlineLink to="https://www.bbc.com/mundo" text={text} />
-);
+export const InternalInlineLink = (
+  _: UnusedFirstArg,
+  { text }: Omit<Props, 'children'>,
+) => <InlineLink to="https://www.bbc.com/mundo" text={text} />;
 
-export const ExternalInlineLink = ({ text }: Omit<Props, 'children'>) => (
-  <InlineLink to="https://google.com" text={text} />
-);
+export const ExternalInlineLink = (
+  _: UnusedFirstArg,
+  { text }: Omit<Props, 'children'>,
+) => <InlineLink to="https://google.com" text={text} />;
 
-export const InlineLinkWithTypographyStyles = ({
-  text,
-}: Omit<Props, 'children'>) => (
-  <InlineLink to="/" text={text} fontVariant="serifBold" size="elephant" />
-);
+export const InlineLinkWithTypographyStyles = (
+  _: UnusedFirstArg,
+  { text }: Omit<Props, 'children'>,
+) => <InlineLink to="/" text={text} fontVariant="serifBold" size="elephant" />;
 
-export const InlineLinkInsideText = ({ text }: Omit<Props, 'children'>) => {
+export const InlineLinkInsideText = (
+  _: UnusedFirstArg,
+  { text }: Omit<Props, 'children'>,
+) => {
   const words = text.split(' ');
   const middleIndex = Math.ceil(words.length / 2) - 1;
   const middleWord = words[middleIndex];
@@ -41,7 +46,7 @@ export const InlineLinkInsideText = ({ text }: Omit<Props, 'children'>) => {
 };
 
 export default {
-  title: 'New Components/InlineLink',
+  title: 'Components/InlineLink',
   Component: InternalInlineLink,
   parameters: {
     chromatic: {
@@ -54,4 +59,5 @@ export default {
       // page: md,
     },
   },
+  decorators: [withServicesDecorator],
 };

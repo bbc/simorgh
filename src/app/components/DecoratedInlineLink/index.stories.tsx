@@ -1,5 +1,4 @@
 import React from 'react';
-import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInlineLink from '.';
 
@@ -10,7 +9,6 @@ const Component = ({
   onClick,
 }: {
   blocks: OptimoBlock[];
-  service: Services;
   locator: string;
   isExternal: boolean;
   onClick?: () => void;
@@ -35,7 +33,6 @@ export const NormalInlineLink = () => (
         },
       },
     ]}
-    service="news"
     locator="google.com"
     isExternal
   />
@@ -53,7 +50,6 @@ export const BoldInlineLink = () => (
         },
       },
     ]}
-    service="news"
     locator="google.com"
     isExternal
   />
@@ -71,7 +67,6 @@ export const BoldItalicInlineLink = () => (
         },
       },
     ]}
-    service="news"
     locator="google.com"
     isExternal
   />
@@ -89,7 +84,6 @@ export const InlineLinkWithOnClick = () => (
         },
       },
     ]}
-    service="news"
     locator=""
     isExternal
     // eslint-disable-next-line no-alert

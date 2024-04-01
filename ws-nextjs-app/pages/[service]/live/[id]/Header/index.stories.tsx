@@ -32,7 +32,7 @@ const Component = ({
 };
 
 export default {
-  title: 'New Components/LivePageHeader',
+  title: 'Components/LivePageHeader',
   Component,
   parameters: {
     metadata,

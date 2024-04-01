@@ -27,7 +27,7 @@ const Component = ({ service, variant }: StoryProps) => {
 };
 
 export default {
-  title: 'New Components/Disclaimer',
+  title: 'Components/Disclaimer',
   Component,
   parameters: {
     metadata,

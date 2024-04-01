@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 
 const onDemandRadioFixtures = {
   indonesia,
@@ -22,10 +21,7 @@ const matchFixtures = service => ({
   },
 });
 
-// eslint-disable-next-line react/prop-types
-const Component = () => {
-  const { service } = useContext(ServiceContext);
-
+const Component = (_, { service }) => {
   return (
     <BrowserRouter>
       <OnDemandAudioPage
@@ -45,7 +41,7 @@ const Component = () => {
 export default {
   Component,
   title: 'Pages/OnDemand Radio Page',
-  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  // decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,

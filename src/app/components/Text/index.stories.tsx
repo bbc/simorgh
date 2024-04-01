@@ -24,7 +24,7 @@ const TextStory = ({ text, fontVariant, size }: Props) => {
 };
 
 export default {
-  title: 'New Components/Text',
+  title: 'Components/Text',
   Component: TextStory,
   parameters: {
     chromatic: {

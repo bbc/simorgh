@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import Pager from '.';
 
 const Component = ({ activePage, pageCount }) => {
@@ -7,7 +8,7 @@ const Component = ({ activePage, pageCount }) => {
 };
 
 export default {
-  title: 'Topic/Pager',
+  title: 'Components/Pagination',
   Component,
   parameters: { chromatic: { disable: true } },
   args: {
@@ -30,6 +31,7 @@ export default {
       },
     },
   },
+  decorators: [withServicesDecorator],
 };
 
 export const Pagination = Component;

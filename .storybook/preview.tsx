@@ -295,7 +295,7 @@ const preview: Preview = {
             title: 'amharic',
           },
           {
-            value: { service: 'arabic', variant: 'default', rtl: true },
+            value: { service: 'arabic', variant: 'default' },
             title: 'arabic',
           },
           {
@@ -379,11 +379,11 @@ const preview: Preview = {
             title: 'newsround',
           },
           {
-            value: { service: 'pashto', variant: 'default', rtl: true },
+            value: { service: 'pashto', variant: 'default' },
             title: 'pashto',
           },
           {
-            value: { service: 'persian', variant: 'default', rtl: true },
+            value: { service: 'persian', variant: 'default' },
             title: 'persian',
           },
           {
@@ -443,7 +443,7 @@ const preview: Preview = {
             title: 'turkce',
           },
           {
-            value: { service: 'urdu', variant: 'default', rtl: true },
+            value: { service: 'urdu', variant: 'default' },
             title: 'urdu',
           },
           {
@@ -568,9 +568,6 @@ const preview: Preview = {
     },
     (Story, context) => (
       <>
-        <Helmet
-          htmlAttributes={{ dir: context.globals.service.rtl ? 'rtl' : 'ltr' }}
-        />
         <ThemeProvider service={context.globals.service.service}>
           <ToggleContextProvider toggles={{}}>
             <ServiceContextProvider

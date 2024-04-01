@@ -1,7 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
-import { select } from '@storybook/addon-knobs';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import bengali from '../../../../components/ThemeProvider/fontScripts/bengali';
@@ -16,10 +15,9 @@ import tamil from '../../../../components/ThemeProvider/fontScripts/tamil';
 import thai from '../../../../components/ThemeProvider/fontScripts/thai';
 
 const DEFAULT_SERVICE = 'news';
-const SERVICES_LIST = Object.keys(TEXT_VARIANTS);
 const getVariant = selectedService => path([selectedService, 'variant']);
 const getService = selectedService => path([selectedService, 'service']);
-const includesService = services => service => services.includes(service);
+
 const scripts = {
   arabic,
   bengali,
@@ -40,50 +38,47 @@ const scripts = {
   thai,
 };
 
-export default ({
-    defaultService = DEFAULT_SERVICE,
-    services = SERVICES_LIST,
-  } = {}) =>
-  storyFn => {
-    const selectedService = select(
-      'Select a service',
-      services.filter(includesService(services)),
-      defaultService,
-    );
+export default (
+  story,
+  {
+    globals: {
+      service: { service: selectedService },
+    },
+  } = { globals: { service: { service: DEFAULT_SERVICE } } },
+) => {
+  const variant = getVariant(selectedService)(TEXT_VARIANTS);
 
-    const variant = getVariant(selectedService)(TEXT_VARIANTS);
+  const service = variant
+    ? getService(selectedService)(TEXT_VARIANTS)
+    : selectedService;
 
-    const service = variant
-      ? getService(selectedService)(TEXT_VARIANTS)
-      : selectedService;
+  const {
+    text,
+    articlePath,
+    longText,
+    script,
+    locale,
+    dir = 'ltr',
+    timezone = 'GMT',
+  } = TEXT_VARIANTS[selectedService];
 
-    const {
-      text,
-      articlePath,
-      longText,
-      script,
-      locale,
-      dir = 'ltr',
-      timezone = 'GMT',
-    } = TEXT_VARIANTS[selectedService];
-
-    const storyProps = {
-      text,
-      articlePath,
-      longText,
-      script: scripts[script],
-      locale,
-      dir,
-      service,
-      variant: variant || 'default',
-      selectedService,
-      timezone,
-    };
-
-    return (
-      <>
-        <Helmet htmlAttributes={{ dir }} />
-        {storyFn(storyProps)}
-      </>
-    );
+  const storyProps = {
+    text,
+    articlePath,
+    longText,
+    script: scripts[script],
+    locale,
+    dir,
+    service,
+    variant: variant || 'default',
+    selectedService,
+    timezone,
   };
+
+  return (
+    <>
+      <Helmet htmlAttributes={{ dir }} />
+      {story(storyProps)}
+    </>
+  );
+};

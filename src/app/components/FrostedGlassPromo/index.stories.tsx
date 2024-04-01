@@ -83,7 +83,7 @@ const WithLinkPromoData = (props: StoryProps) => {
 };
 
 export default {
-  title: 'New Components/Frosted Glass Promo',
+  title: 'Components/Frosted Glass Promo',
   Component,
   args: {
     imageUrl:

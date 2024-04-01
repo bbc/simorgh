@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { PropsWithChildren } from 'react';
-import { jsx, css } from '@emotion/react';
+import React from 'react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import metadata from './metadata.json';
 
@@ -10,12 +8,7 @@ import {
   ConsentBannerProviders,
 } from '.';
 import ThemeProvider from '../ThemeProvider';
-import { GREY_2 } from '../ThemeProvider/palette';
 import { StoryProps } from '../../models/types/storybook';
-
-const BackgroundColorWrapper = ({ children }: PropsWithChildren) => (
-  <div css={css({ backgroundColor: GREY_2, padding: 20 })}>{children}</div>
-);
 
 interface Props extends StoryProps {
   isAmp?: boolean;
@@ -35,11 +28,9 @@ const Component = ({
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <BackgroundColorWrapper>
-          <EmbedBanner provider={provider}>
-            <div>Embed goes here</div>
-          </EmbedBanner>
-        </BackgroundColorWrapper>
+        <EmbedBanner provider={provider}>
+          <div>Embed goes here</div>
+        </EmbedBanner>
       </ServiceContextProvider>
     </ThemeProvider>
   );

@@ -1,15 +1,12 @@
 import React from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
 import FormField, { FormComponentProps } from '.';
 
 const Component = ({ id, label, htmlType }: FormComponentProps) => (
-  <ThemeProvider service="pidgin">
-    <FormField id={id} htmlType={htmlType} label={label} />
-  </ThemeProvider>
+  <FormField id={id} htmlType={htmlType} label={label} />
 );
 
 export default {
-  title: 'New Components/FormFields',
+  title: 'Components/FormFields',
   Component,
 };
 

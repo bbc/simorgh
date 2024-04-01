@@ -1,13 +1,14 @@
 import React from 'react';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StoryProps } from '../../../models/types/storybook';
+import { StoryProps, UnusedFirstArg } from '../../../models/types/storybook';
 
-const Component = ({ service, variant }: StoryProps) => {
+const Component = (_: UnusedFirstArg, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -19,7 +20,7 @@ const Component = ({ service, variant }: StoryProps) => {
   );
 };
 
-const WithLink = ({ service, variant }: StoryProps) => {
+const WithLink = (_: UnusedFirstArg, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -32,9 +33,10 @@ const WithLink = ({ service, variant }: StoryProps) => {
 };
 
 export default {
-  title: 'New Components/Curation/Subheading',
+  title: 'Components/Curation/Subheading',
   Component,
   parameters: { chromatic: { disable: true } },
+  decorators: [withServicesDecorator],
 };
 
 export const Example = Component;

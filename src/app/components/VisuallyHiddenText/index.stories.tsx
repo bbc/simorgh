@@ -1,4 +1,6 @@
 import React from 'react';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import { UnusedFirstArg } from '#app/models/types/storybook';
 import { Services } from '../../models/types/global';
 // import notes from './README.md';
 import VisuallyHiddenText from './index';
@@ -16,7 +18,7 @@ const Component = ({ service, text }: Props) => (
 );
 
 export default {
-  title: 'New Components/VisuallyHiddenText',
+  title: 'Components/VisuallyHiddenText',
   Component,
   parameters: {
     metadata,
@@ -24,8 +26,9 @@ export default {
       // page: notes,
     },
   },
+  decorators: [withServicesDecorator],
 };
 
-export const Example = ({ service, text }: Props) => (
+export const Example = (_: UnusedFirstArg, { service, text }: Props) => (
   <Component service={service} text={text} />
 );

@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { RequestContext } from '#app/contexts/RequestContext';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
 // import md from './README.md';
 import MostRead from '.';
-import { StoryProps } from '../../models/types/storybook';
+import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
@@ -15,11 +14,11 @@ interface Props extends StoryProps {
 }
 
 const Component = ({
+  service,
+  variant,
   columnLayout = 'multiColumn',
   size = 'default',
 }: Props) => {
-  const { service } = useContext(ServiceContext);
-  const { variant = 'default' } = useContext(RequestContext);
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -55,8 +54,9 @@ const Component = ({
 };
 
 export default {
-  title: 'New Components/Most Read',
+  title: 'Components/Most Read',
   component: Component,
+  decorators: [withServicesDecorator],
   parameters: {
     chromatic: {
       viewports: [1280],
@@ -82,7 +82,10 @@ export default {
   },
 };
 
-export const Example = ({ service, variant, columnLayout, size }: Props) => (
+export const Example = (
+  { columnLayout, size }: Props,
+  { service, variant }: StoryProps,
+) => (
   <Component
     service={service}
     variant={variant}
@@ -91,11 +94,14 @@ export const Example = ({ service, variant, columnLayout, size }: Props) => (
   />
 );
 
-export const TwoColumns = ({ service, variant }: Props) => (
+export const TwoColumns = (_: UnusedFirstArg, { service, variant }: Props) => (
   <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
-export const SmallOneColumn = ({ service, variant }: Props) => (
+export const SmallOneColumn = (
+  _: UnusedFirstArg,
+  { service, variant }: Props,
+) => (
   <Component
     service={service}
     variant={variant}
@@ -104,10 +110,10 @@ export const SmallOneColumn = ({ service, variant }: Props) => (
   />
 );
 
-export const Japanese1Column = ({ variant }: Props) => (
+export const Japanese1Column = (_: UnusedFirstArg, { variant }: Props) => (
   <Component service="japanese" variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = ({ variant }: Props) => (
+export const Persian1Column = (_: UnusedFirstArg, { variant }: Props) => (
   <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );

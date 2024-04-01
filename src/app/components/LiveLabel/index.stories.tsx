@@ -25,7 +25,7 @@ const Component = ({
 };
 
 export default {
-  title: 'New Components/Live Label',
+  title: 'Components/Live Label',
   parameters: {
     metadata,
     docs: {
