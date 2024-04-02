@@ -21,7 +21,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 
-import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   getArticleId,
   getHeadline,

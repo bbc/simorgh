@@ -3,7 +3,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
+import InlinePodcastPromo from './Inline';
+import SecondaryColumnPodcastPromo from './SecondaryColumn';
 
 const serviceContextMock = {
   service: 'news',

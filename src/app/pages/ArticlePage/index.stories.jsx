@@ -99,23 +99,25 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <RequestContextProvider
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service={service}
-      >
-        <UserContextProvider>
-          <MemoryRouter>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
-          </MemoryRouter>
-        </UserContextProvider>
-      </RequestContextProvider>
+      <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
+        <RequestContextProvider
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          service={service}
+        >
+          <UserContextProvider>
+            <MemoryRouter>
+              <Page
+                pageData={{
+                  ...data.article,
+                  secondaryColumn: data.secondaryData,
+                  mostRead: data.secondaryData.mostRead,
+                }}
+              />
+            </MemoryRouter>
+          </UserContextProvider>
+        </RequestContextProvider>
+      </ServiceContext.Provider>
     </ToggleContextProvider>
   );
 };
