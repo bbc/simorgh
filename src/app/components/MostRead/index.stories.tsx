@@ -59,7 +59,7 @@ const Component = ({
 export default {
   title: 'Components/Most Read',
   component: Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: {
       viewports: [1280],

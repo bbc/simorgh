@@ -25,7 +25,7 @@ const Component = (_: StoryArgs, { text = '', longText = '' }: Props) => {
 export default {
   title: 'Components/MessageBanner',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: {
     docs: { readme },
   },

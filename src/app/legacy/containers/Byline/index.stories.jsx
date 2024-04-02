@@ -24,7 +24,7 @@ const Component = (_, { service }) => {
 export default {
   Component,
   title: 'Containers/Byline',
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: { disable: true },
   },

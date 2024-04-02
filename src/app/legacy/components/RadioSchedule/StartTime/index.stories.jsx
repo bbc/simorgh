@@ -21,7 +21,7 @@ const Component = ({ service, locale, script, dir, timezone }) => (
 export default {
   title: 'Components/Radio Schedule/Start Time',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Default = (_, globalArgs) => <Component {...globalArgs} />;

@@ -32,7 +32,7 @@ const WithContexts = ({ children, variant, service = 'mundo' }) => {
 export default {
   component: RelatedTopics,
   title: 'Containers/Related Topics',
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const RelatedTopicsSingle = (_, { service, variant, text }) => (

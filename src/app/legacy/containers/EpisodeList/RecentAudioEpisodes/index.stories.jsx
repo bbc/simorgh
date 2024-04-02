@@ -39,7 +39,7 @@ const masterBrands = {
 export default {
   title: 'Containers/Episode List/Audio',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const MultipleItems = (_, { service }) => (

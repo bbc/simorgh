@@ -27,7 +27,7 @@ export default {
   Component: WrappedArticleTimestamp,
   title: 'Containers/Article/Article Timestamp',
   decorators: [
-    withServicesDecorator,
+    withServicesDecorator(),
     story => <WithTimeMachine>{story()}</WithTimeMachine>,
   ],
   parameters: { chromatic: { disable: true } },

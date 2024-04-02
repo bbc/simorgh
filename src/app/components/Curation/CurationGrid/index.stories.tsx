@@ -11,7 +11,7 @@ export default {
   title: 'Components/Curation/Grid - Normal',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Example = Component;

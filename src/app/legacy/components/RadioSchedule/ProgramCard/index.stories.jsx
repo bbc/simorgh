@@ -5,7 +5,7 @@ import withServicesDecorator from '#storybook/withServicesDecorator';
 export default {
   title: 'Components/Radio Schedule/Program Card',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const OnDemand = (_, globalArgs) => (

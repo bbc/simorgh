@@ -26,7 +26,7 @@ export default {
   title: 'Components/Copyright',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Copyright = Component;

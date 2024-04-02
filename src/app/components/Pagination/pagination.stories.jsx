@@ -31,7 +31,7 @@ export default {
       },
     },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Pagination = Component;

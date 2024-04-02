@@ -24,7 +24,7 @@ export default {
     metadata,
     docs: { readme },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Example = (_: StoryArgs, { service, text }: Props) => (

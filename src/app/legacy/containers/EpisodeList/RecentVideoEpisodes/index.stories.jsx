@@ -22,7 +22,7 @@ const fixtures = { afrique, pashto };
 export default {
   title: 'Containers/Episode List/Video',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: {
     backgrounds: {
       default: 'Dark',

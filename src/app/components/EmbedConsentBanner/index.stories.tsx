@@ -34,7 +34,7 @@ export default {
     metadata,
     docs: { readme },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const CanonicalYoutube = () => <Component provider="youtube" />;

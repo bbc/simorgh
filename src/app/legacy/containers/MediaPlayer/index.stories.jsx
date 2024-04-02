@@ -46,7 +46,7 @@ export default {
   title: 'Containers/Media Player',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Amp = (_, globalArgs) => <Component isAmp {...globalArgs} />;

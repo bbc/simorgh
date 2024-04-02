@@ -27,7 +27,7 @@ export default {
   parameters: {
     chromatic: { disable: true },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Header = props => <Component {...props} />;

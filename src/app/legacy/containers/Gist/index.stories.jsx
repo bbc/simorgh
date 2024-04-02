@@ -22,7 +22,7 @@ const Component = () => {
 export default {
   title: 'Containers/Gist',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: { chromatic: { disable: true } },
 };
 

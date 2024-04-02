@@ -48,7 +48,7 @@ export default {
   title: 'Containers/Podcast External Links',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const PodcastExternalLinks = Component;

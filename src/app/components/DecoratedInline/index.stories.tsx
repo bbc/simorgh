@@ -32,5 +32,5 @@ export default {
       },
     },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };

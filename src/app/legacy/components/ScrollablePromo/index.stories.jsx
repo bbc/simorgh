@@ -33,7 +33,7 @@ const ScrollablePromoComponent = ({ data, service, script, dir }) => (
 export default {
   title: 'Components/Scrollable Promo',
   ScrollablePromoComponent,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const ThreeLinks = (_, globalArgs) => (

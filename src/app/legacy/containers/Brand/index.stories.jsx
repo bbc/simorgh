@@ -9,7 +9,7 @@ const Component = () => {
 export default {
   title: 'Containers/Brand',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: { chromatic: { disable: true } },
 };
 

@@ -62,7 +62,7 @@ export default {
   parameters: {
     metadata, // attach the metadata to the default export parameters.
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 ```
 
@@ -87,7 +87,7 @@ export default {
       page: md, // and pass it down into parameters.docs as showned.
     },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 ```
 

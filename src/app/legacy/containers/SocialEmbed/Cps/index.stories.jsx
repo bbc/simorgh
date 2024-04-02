@@ -17,7 +17,7 @@ export default {
   title: 'Containers/Social Embed/CPS',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const CanonicalExample = (_, globalArgs) => (

@@ -32,7 +32,7 @@ const Component = ({ service, isAmp = false, withAds = false }: Props) => (
 export default {
   title: 'Components/Footer',
   Component,
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: {
       viewports: [

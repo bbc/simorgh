@@ -18,7 +18,7 @@ export default {
       diffThreshold: 0.2,
     },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 // eslint-disable-next-line react/prop-types

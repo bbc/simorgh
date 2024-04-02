@@ -48,7 +48,7 @@ const Component = (_, { service, variant }) => {
 export default {
   Component,
   title: 'Pages/Most Read Page',
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Example = Component;

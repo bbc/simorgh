@@ -68,31 +68,31 @@ export default {
   title: 'Pages/Topic Page',
   Component,
   parameters: { chromatic: { disable: true }, layout: 'fullscreen' },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator({ defaultService: 'mundo' })],
 };
 
-export const Example = () => <Component service="mundo" />;
+export const Example = (_, globalArgs) => <Component {...globalArgs} />;
 
-export const MundoWithBannerVariations = props => (
+export const MundoWithBannerVariations = () => (
   <Component service="mundo" fixture={mundoTopicWithMessageBannerVariations} />
 );
 
-export const KyrgyzWithMessageBanners = props => (
+export const KyrgyzWithMessageBanners = () => (
   <Component service="kyrgyz" fixture={kyrgyzTopicWithMessageBanners} />
 );
 
-export const PersianWithMessageBanners = props => (
+export const PersianWithMessageBanners = () => (
   <Component service="persian" fixture={persianTopicWithMessageBanners} />
 );
 
-export const PersianAfghanistan = props => (
+export const PersianAfghanistan = () => (
   <Component service="persian" fixture={persianAfghanistan} />
 );
 
-export const ArabicWithMessageBanners = props => (
+export const ArabicWithMessageBanners = () => (
   <Component service="arabic" fixture={arabicTopicWithMessageBanners} />
 );
 
-export const TamilWithMessageBanners = props => (
+export const TamilWithMessageBanners = () => (
   <Component service="tamil" fixture={tamilTopicWithMessageBanners} />
 );

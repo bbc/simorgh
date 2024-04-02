@@ -76,7 +76,7 @@ export default {
       },
     ],
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const MultipleLatestMediaWithCustomAltText = (

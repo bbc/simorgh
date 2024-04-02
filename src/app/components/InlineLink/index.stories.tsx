@@ -54,5 +54,5 @@ export default {
     },
     docs: { readme },
   },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };

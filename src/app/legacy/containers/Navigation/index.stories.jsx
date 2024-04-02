@@ -21,7 +21,7 @@ export default {
   title: 'Containers/Navigation',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const Canonical = (_, globalArgs) => <Component {...globalArgs} />;

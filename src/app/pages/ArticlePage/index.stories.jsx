@@ -126,7 +126,7 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   parameters: { layout: 'fullscreen' },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const ArticlePage = props => (

@@ -41,7 +41,7 @@ export default {
   title: 'Containers/Social Embed/Optimo',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
 };
 
 export const TwitterCanonicalExample = (_, globalArgs) => (

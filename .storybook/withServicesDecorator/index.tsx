@@ -41,48 +41,52 @@ const scripts = {
   thai,
 };
 
-export default (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  story: (props: any) => JSX.Element,
-  {
-    globals: {
-      service: { service: selectedService },
-    },
-  } = { globals: { service: { service: DEFAULT_SERVICE } } },
-) => {
-  const variant = getVariant(selectedService as Services)(TEXT_VARIANTS);
+export default (props?: { defaultService?: Services }) =>
+  (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    story: (props: any) => JSX.Element,
+    {
+      globals: {
+        service: { service: selectedService },
+      },
+    } = { globals: { service: { service: DEFAULT_SERVICE } } },
+  ) => {
+    const defaultServiceOverride = props?.defaultService;
+    const serviceToUse = defaultServiceOverride || selectedService;
 
-  const service = variant
-    ? getService(selectedService as Services)(TEXT_VARIANTS)
-    : selectedService;
+    const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
 
-  const {
-    text,
-    articlePath,
-    longText,
-    script,
-    locale,
-    dir = 'ltr',
-    timezone = 'GMT',
-  } = TEXT_VARIANTS[selectedService];
+    const service = variant
+      ? getService(serviceToUse as Services)(TEXT_VARIANTS)
+      : serviceToUse;
 
-  const storyProps: any = {
-    text,
-    articlePath,
-    longText,
-    script: scripts[script as keyof typeof scripts],
-    locale,
-    dir,
-    service,
-    variant: variant || 'default',
-    selectedService,
-    timezone,
+    const {
+      text,
+      articlePath,
+      longText,
+      script,
+      locale,
+      dir = 'ltr',
+      timezone = 'GMT',
+    } = TEXT_VARIANTS[serviceToUse];
+
+    const storyProps: any = {
+      text,
+      articlePath,
+      longText,
+      script: scripts[script as keyof typeof scripts],
+      locale,
+      dir,
+      service,
+      variant: variant || 'default',
+      selectedService: serviceToUse,
+      timezone,
+    };
+
+    return (
+      <>
+        <Helmet htmlAttributes={{ dir }} />
+        {story(storyProps)}
+      </>
+    );
   };
-
-  return (
-    <>
-      <Helmet htmlAttributes={{ dir }} />
-      {story(storyProps)}
-    </>
-  );
-};

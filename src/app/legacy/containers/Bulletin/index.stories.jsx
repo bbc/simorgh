@@ -35,7 +35,7 @@ const Component = ({ isAmp = false, service, item }) => (
 export default {
   Component,
   title: 'Containers/Bulletin',
-  decorators: [withServicesDecorator],
+  decorators: [withServicesDecorator()],
   parameters: { chromatic: { disable: true } },
 };
 
