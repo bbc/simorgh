@@ -33,7 +33,7 @@ export default {
 
 export const MultipleItems = (_, { service }) => (
   <Component
-    episodes={fixtures[service]}
+    episodes={fixtures?.[service] ?? fixtures.afrique}
     masterBrand={`bbc_${service}_tv`}
     service={service}
   />
@@ -41,7 +41,7 @@ export const MultipleItems = (_, { service }) => (
 
 export const SingleItem = (_, { service }) => (
   <Component
-    episodes={[fixtures[service][0]]}
+    episodes={[fixtures?.[service]?.[0]] ?? fixtures.afrique[0]}
     masterBrand={`bbc_${service}_tv`}
     service={service}
   />
