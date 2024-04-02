@@ -13,7 +13,8 @@ interface DocsDecoratorProps {
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   // @ts-expect-error - CSF files are not typed
   const [file] = context.attachedCSFFiles;
-  const { metadata, docs } = file?.meta?.parameters as HealthFactorsProps;
+  const { metadata, docs } =
+    (file?.meta?.parameters as HealthFactorsProps) ?? {};
 
   return (
     <DocsContainer context={context}>
