@@ -1,15 +1,12 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fetch from 'node-fetch';
 import Url from 'url-parse';
 import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import { RequestContext } from '#app/contexts/RequestContext';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import MostReadPage from '.';
 
-const Component = () => {
-  const { service } = useContext(ServiceContext);
-  const { variant = 'default' } = useContext(RequestContext);
+const Component = (_, { service, variant }) => {
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -51,6 +48,7 @@ const Component = () => {
 export default {
   Component,
   title: 'Pages/Most Read Page',
+  decorators: [withServicesDecorator],
 };
 
-export const Example = () => <Component />;
+export const Example = Component;

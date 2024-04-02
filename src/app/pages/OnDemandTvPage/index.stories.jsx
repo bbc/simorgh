@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandTvPage } from '..';
 import afrique from './fixtureData/afrique';
 import pashto from './fixtureData/pashto';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 
 const onDemandTvFixtures = {
   pashto,
@@ -22,9 +22,7 @@ const matchFixtures = service => ({
 });
 
 // eslint-disable-next-line react/prop-types
-const Component = () => {
-  const { service } = useContext(ServiceContext);
-
+const Component = (_, { service }) => {
   return (
     <BrowserRouter>
       <OnDemandTvPage
@@ -44,7 +42,10 @@ const Component = () => {
 export default {
   Component,
   title: 'Pages/OnDemand TV Page',
-  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  decorators: [
+    withServicesDecorator,
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+  ],
 };
 
 export const Page = Component;

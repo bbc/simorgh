@@ -5,8 +5,7 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import fetch from 'node-fetch';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../../components/ThemeProvider';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
@@ -62,25 +61,22 @@ const Component = ({ service, variant }: StoryProps) => {
   }
 
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <HomePage
-          service={service}
-          variant={variant}
-          pageType={HOME_PAGE}
-          status={200}
-          isAmp={false}
-          pathname={`/${service}`}
-          pageData={pageData}
-        />
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <HomePage
+      service={service}
+      variant={variant}
+      pageType={HOME_PAGE}
+      status={200}
+      isAmp={false}
+      pathname={`/${service}`}
+      pageData={pageData}
+    />
   );
 };
 
 export default {
   Component,
   title: 'Pages/Home Page',
+  decorators: [withServicesDecorator],
 };
 
 export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (

@@ -17,6 +17,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -61,26 +62,24 @@ const ComponentWithContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/news/articles/c0000000001o"
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
+      <RequestContextProvider
+        isAmp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/news/articles/c0000000001o"
+        service={service}
+      >
+        <UserContextProvider>
+          <MemoryRouter>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </MemoryRouter>
+        </UserContextProvider>
+      </RequestContextProvider>
     </ToggleContextProvider>
   );
 };
@@ -100,25 +99,23 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
-      </ServiceContext.Provider>
+      <RequestContextProvider
+        isAmp={false}
+        pageType={ARTICLE_PAGE}
+        service={service}
+      >
+        <UserContextProvider>
+          <MemoryRouter>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </MemoryRouter>
+        </UserContextProvider>
+      </RequestContextProvider>
     </ToggleContextProvider>
   );
 };
@@ -127,6 +124,7 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   parameters: { layout: 'fullscreen' },
+  decorators: [withServicesDecorator],
 };
 
 export const ArticlePage = props => (

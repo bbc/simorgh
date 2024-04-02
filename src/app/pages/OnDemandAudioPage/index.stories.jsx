@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
@@ -41,7 +42,7 @@ const Component = (_, { service }) => {
 export default {
   Component,
   title: 'Pages/OnDemand Radio Page',
-  // decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  decorators: [withServicesDecorator],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
