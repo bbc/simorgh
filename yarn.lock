@@ -4011,12 +4011,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:14.4.3":
-  version: 14.4.3
-  resolution: "@testing-library/user-event@npm:14.4.3"
+"@testing-library/user-event@npm:14.5.2":
+  version: 14.5.2
+  resolution: "@testing-library/user-event@npm:14.5.2"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 852c48ea6db1c9471b18276617c84fec4320771e466cd58339a732ca3fd73ad35e5a43ae14f51af51a8d0a150dcf60fcaab049ef367871207bea8f92c4b8195e
+  checksum: d76937dffcf0082fbf3bb89eb2b81a31bf5448048dd61c33928c5f10e33a58e035321d39145cefd469bb5a499c68a5b4086b22f1a44e3e7c7e817dc5f6782867
   languageName: node
   linkType: hard
 
@@ -16037,7 +16037,7 @@ __metadata:
     "@testing-library/jest-dom": 6.4.2
     "@testing-library/react": 14.2.2
     "@testing-library/react-hooks": 8.0.1
-    "@testing-library/user-event": 14.4.3
+    "@testing-library/user-event": 14.5.2
     "@types/jest": 29.5.12
     "@types/js-cookie": ^3.0.3
     "@types/jsdom": ^21.0.0
