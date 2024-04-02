@@ -6,7 +6,6 @@ import CopyrightContainer from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import { ServiceConfig } from '../../models/types/serviceConfig';
 
-// eslint-disable-next-line react/prop-types
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   const imageCaptionText =
     services[service][variant].imageCopyrightOffscreenText;

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { MEDIA_TYPES } from '#components/Promo';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import Promo from '.';
 
 const Wrapper = styled.div`
@@ -39,7 +38,6 @@ export default {
   title: 'Components/Curation/Promo - Normal',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator],
 };
 
 export const Example = Component;
