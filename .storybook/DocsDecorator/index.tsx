@@ -15,13 +15,21 @@ interface DocsDecoratorProps {
 }
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
-  // @ts-expect-error - CSF files are not typed
   const [file] = context.attachedCSFFiles;
   const { metadata, docs } =
     (file?.meta?.parameters as HealthFactorsProps) ?? {};
 
   const hasReadmeFile = docs?.readme;
   const hasHealthFactors = metadata;
+
+  console.log({type: children.type?.name});
+
+  let content = children;
+
+  if (children?.type?.name === 'DocsPage') {
+    // @ts-expect-error do not display stories on docs page
+    content = null;
+  }
 
   return (
     <DocsContainer context={context}>
@@ -30,7 +38,7 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
         {hasHealthFactors && <HealthFactors metadata={metadata} />}
         {hasReadmeFile && <Markdown>{docs.readme!}</Markdown>}
       </ThemeProvider>
-      {children}
+      {content}
     </DocsContainer>
   );
 };
