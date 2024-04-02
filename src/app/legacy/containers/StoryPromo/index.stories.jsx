@@ -27,19 +27,22 @@ const promoFixture = type =>
         pathOr(null, ['contentType'], item) === type,
     );
 
-const audioFixture = mediaFixture('audio');
-const videoFixture = mediaFixture('video');
-const standardPromo = promoFixture('Text');
-const videoPromo = promoFixture('Video');
-const featurePromo = promoFixture('Feature');
-const audioPromo = promoFixture('Audio');
-const galleryPromo = promoFixture('Gallery');
-const podcastPromo = promoFixture('Podcast');
+const promoTypes = {
+  audioFixture: mediaFixture('audio'),
+  videoFixture: mediaFixture('video'),
+  standardPromo: promoFixture('Text'),
+  featurePromo: promoFixture('Feature'),
+  videoPromo: promoFixture('Video'),
+  audioPromo: promoFixture('Audio'),
+  galleryPromo: promoFixture('Gallery'),
+  podcastPromo: promoFixture('Podcast'),
+  guideLinkItem,
+};
 
 /* eslint-disable react/prop-types */
 const Component = ({
   isAmp = false,
-  item = audioFixture,
+  item = promoTypes.audioFixture,
   promoType = 'regular',
   isSingleColumnLayout = false,
 }) => {
@@ -74,22 +77,22 @@ export default {
   Component,
   parameters: { chromatic: { disable: true } },
   args: {
-    type: audioFixture,
+    type: 'audioFixture',
     promoType: 'regular',
     isSingleColumnLayout: false,
   },
   argTypes: {
     type: {
       options: [
-        audioFixture,
-        videoFixture,
-        standardPromo,
-        featurePromo,
-        videoPromo,
-        audioPromo,
-        galleryPromo,
-        podcastPromo,
-        guideLinkItem,
+        'audioFixture',
+        'videoFixture',
+        'standardPromo',
+        'featurePromo',
+        'videoPromo',
+        'audioPromo',
+        'galleryPromo',
+        'podcastPromo',
+        'guideLinkItem',
       ],
       control: { type: 'select' },
     },
@@ -107,7 +110,7 @@ export default {
 export const Promo = ({ type, promoType, isSingleColumnLayout }) => {
   return (
     <Component
-      item={type}
+      item={promoTypes[type]}
       promoType={promoType}
       isAmp={false}
       isSingleColumnLayout={isSingleColumnLayout}
@@ -119,7 +122,7 @@ export const Promo = ({ type, promoType, isSingleColumnLayout }) => {
 export const PromoAmp = ({ type, promoType, isSingleColumnLayout }) => {
   return (
     <Component
-      item={type}
+      item={promoTypes[type]}
       promoType={promoType}
       isAmp
       isSingleColumnLayout={isSingleColumnLayout}
