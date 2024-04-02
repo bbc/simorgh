@@ -42,7 +42,7 @@ const Component = (_, { service }) => {
 export default {
   Component,
   title: 'Pages/OnDemand Radio Page',
-  decorators: [withServicesDecorator()],
+  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
