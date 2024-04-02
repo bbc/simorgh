@@ -7765,7 +7765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^4.0.0, ansi-styles@npm:^4.1.0":
+"ansi-styles@npm:^4.0.0, ansi-styles@npm:^4.1.0, ansi-styles@npm:^4.2.1":
   version: 4.3.0
   resolution: "ansi-styles@npm:4.3.0"
   dependencies:
@@ -10404,7 +10404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^6.0.0, cross-spawn@npm:^6.0.5":
+"cross-spawn@npm:^6.0.0":
   version: 6.0.5
   resolution: "cross-spawn@npm:6.0.5"
   dependencies:
@@ -16871,7 +16871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-parse-better-errors@npm:^1.0.1, json-parse-better-errors@npm:^1.0.2":
+"json-parse-better-errors@npm:^1.0.2":
   version: 1.0.2
   resolution: "json-parse-better-errors@npm:1.0.2"
   checksum: ff2b5ba2a70e88fd97a3cb28c1840144c5ce8fae9cbeeddba15afa333a5c407cf0e42300cd0a2885dbb055227fe68d405070faad941beeffbfde9cf3b2c78c5d
@@ -17191,18 +17191,6 @@ __metadata:
     pinkie-promise: ^2.0.0
     strip-bom: ^2.0.0
   checksum: 0e4e4f380d897e13aa236246a917527ea5a14e4fc34d49e01ce4e7e2a1e08e2740ee463a03fb021c04f594f29a178f4adb994087549d7c1c5315fcd29bf9934b
-  languageName: node
-  linkType: hard
-
-"load-json-file@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "load-json-file@npm:4.0.0"
-  dependencies:
-    graceful-fs: ^4.1.2
-    parse-json: ^4.0.0
-    pify: ^3.0.0
-    strip-bom: ^3.0.0
-  checksum: 8f5d6d93ba64a9620445ee9bde4d98b1eac32cf6c8c2d20d44abfa41a6945e7969456ab5f1ca2fb06ee32e206c9769a20eec7002fe290de462e8c884b6b8b356
   languageName: node
   linkType: hard
 
@@ -18706,24 +18694,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all@npm:4.1.5, npm-run-all@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "npm-run-all@npm:4.1.5"
+"npm-run-all2@npm:5.0.0":
+  version: 5.0.0
+  resolution: "npm-run-all2@npm:5.0.0"
   dependencies:
-    ansi-styles: ^3.2.1
-    chalk: ^2.4.1
-    cross-spawn: ^6.0.5
+    ansi-styles: ^4.2.1
+    cross-spawn: ^7.0.3
     memorystream: ^0.3.1
     minimatch: ^3.0.4
-    pidtree: ^0.3.0
-    read-pkg: ^3.0.0
+    pidtree: ^0.5.0
+    read-pkg: ^5.2.0
     shell-quote: ^1.6.1
-    string.prototype.padend: ^3.0.0
   bin:
     npm-run-all: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 373b72c6a36564da13c1642c1fd9bb4dcc756bce7a3648f883772f02661095319820834ff813762d2fee403e9b40c1cd27c8685807c107440f10eb19c006d4a0
+  checksum: 0e91f513cde3f24fad718baa3341e90d536fafffa89d48dd9c5d1ca99b4ae02762919c97419df23cf7dc714cf01c3782c0d1f4348a32e3425287d073e0e8c846
+  languageName: node
+  linkType: hard
+
+"npm-run-all2@npm:^5.0.0":
+  version: 5.0.2
+  resolution: "npm-run-all2@npm:5.0.2"
+  dependencies:
+    ansi-styles: ^5.0.0
+    cross-spawn: ^7.0.3
+    memorystream: ^0.3.1
+    minimatch: ^3.0.4
+    pidtree: ^0.5.0
+    read-pkg: ^5.2.0
+    shell-quote: ^1.6.1
+  bin:
+    npm-run-all: bin/npm-run-all/index.js
+    run-p: bin/run-p/index.js
+    run-s: bin/run-s/index.js
+  checksum: c52091478d5873a9f65132983459cc7f0869bbef0fd015e72f1ee1a78d50570e80c2239a8ba9a6c68c0c4898d749e3e8478df51abd9807b01c4ba461ee90aa2f
   languageName: node
   linkType: hard
 
@@ -19384,16 +19389,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-json@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "parse-json@npm:4.0.0"
-  dependencies:
-    error-ex: ^1.3.1
-    json-parse-better-errors: ^1.0.1
-  checksum: 0fe227d410a61090c247e34fa210552b834613c006c2c64d9a05cfe9e89cf8b4246d1246b1a99524b53b313e9ac024438d0680f67e33eaed7e6f38db64cfe7b5
-  languageName: node
-  linkType: hard
-
 "parse-json@npm:^5.0.0, parse-json@npm:^5.2.0":
   version: 5.2.0
   resolution: "parse-json@npm:5.2.0"
@@ -19640,12 +19635,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pidtree@npm:^0.3.0":
-  version: 0.3.1
-  resolution: "pidtree@npm:0.3.1"
+"pidtree@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "pidtree@npm:0.5.0"
   bin:
     pidtree: bin/pidtree.js
-  checksum: eb49025099f1af89a4696f7673351421f13420f3397b963c901fe23a1c9c2ff50f4750321970d4472c0ffbb065e4a6c3c27f75e226cc62284b19e21d32ce7012
+  checksum: 371cd14bbc9bdee2a6a44596dd521dd3565e223481e0b1afffdca3f1c29831850bfa7784114dc30d245d37e7d186cec035e036256b39f75d878d19498fe0df6a
   languageName: node
   linkType: hard
 
@@ -20766,17 +20761,6 @@ __metadata:
     normalize-package-data: ^2.3.2
     path-type: ^1.0.0
   checksum: a0f5d5e32227ec8e6a028dd5c5134eab229768dcb7a5d9a41a284ed28ad4b9284fecc47383dc1593b5694f4de603a7ffaee84b738956b9b77e0999567485a366
-  languageName: node
-  linkType: hard
-
-"read-pkg@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "read-pkg@npm:3.0.0"
-  dependencies:
-    load-json-file: ^4.0.0
-    normalize-package-data: ^2.3.2
-    path-type: ^3.0.0
-  checksum: 398903ebae6c7e9965419a1062924436cc0b6f516c42c4679a90290d2f87448ed8f977e7aa2dbba4aa1ac09248628c43e493ac25b2bc76640e946035200e34c6
   languageName: node
   linkType: hard
 
@@ -21967,7 +21951,7 @@ __metadata:
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
     next: 14.1.4
-    npm-run-all: ^4.1.5
+    npm-run-all2: ^5.0.0
     ts-node: ^10.9.2
     undici: 6.9.0
   languageName: unknown
@@ -22097,7 +22081,7 @@ __metadata:
     moment-timezone: 0.5.45
     morgan: 1.10.0
     node-fetch: 2.6.12
-    npm-run-all: 4.1.5
+    npm-run-all2: 5.0.0
     ora: 5.4.1
     path-to-regexp: 6.2.1
     polyfill-crypto.getrandomvalues: 1.0.0
