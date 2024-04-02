@@ -44,16 +44,20 @@ Storybook will automatically detect these stories and render them in the Storybo
 You can pass `props` to your component by adding them to the story function, for example:
 
 ```tsx
-export const MyFourthStory = (_, { service }) => (
-  <Component service={service} />
+export const MyFourthStory = ({ color }, { service }) => (
+  <Component color={color} service={service} />
 );
 ```
 
 You can then reference these props as you would in a normal React component, for example:
 
 ```tsx
-const MyFirstStory = ({ service }) => {
-  return <div service={service}>Hello World</div>;
+const MyFirstStory = ({ color, service }) => {
+  return (
+    <div style={color} service={service}>
+      Hello World
+    </div>
+  );
 };
 ```
 
@@ -65,7 +69,7 @@ The first argument in Storybook story components is the `args` object:
 export const MyFirstStory = args => <Component {...args} />;
 ```
 
-This is optional, but is useful if you want to add 'controls' to dynamically change the props in the Storybook UI. To use it, you define the `args` and `argTypes` objects in your default export for the story. For example:
+This is does not need to be used, but is always the first argument. `args` are useful if you want to add 'controls' to dynamically change the props in the Storybook UI. To use it, you define the `args` and `argTypes` objects in your default export for the story. For example:
 
 ```tsx
 export default {
@@ -76,9 +80,9 @@ export default {
   }
   argTypes: {
     backgroundColor: {
-      control: 'select',
+      control: { type: 'select' },
       options: ['red', 'blue', 'green'],
-     },
+    },
   },
 };
 ```
