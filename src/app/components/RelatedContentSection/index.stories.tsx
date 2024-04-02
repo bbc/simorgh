@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -25,9 +27,11 @@ type Props = {
 };
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentComponent = ({ content }: Props) => (
+const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
   <BackGround>
-    <RelatedContentSection content={content} />
+    <ServiceContextProvider service={service}>
+      <RelatedContentSection content={content} />
+    </ServiceContextProvider>
   </BackGround>
 );
 
@@ -37,6 +41,7 @@ export default {
   parameters: {
     docs: { readme },
   },
+  decorators: [withServicesDecorator()],
 };
 
 export const ListRelatedContent = () => (
@@ -44,7 +49,7 @@ export const ListRelatedContent = () => (
 );
 
 export const ListRelatedContentRtl = () => (
-  <RelatedContentComponent content={RelatedContentListRtl} />
+  <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
 );
 
 export const SingleRelatedContent = () => (
@@ -52,5 +57,8 @@ export const SingleRelatedContent = () => (
 );
 
 export const SingleRelatedContentRtl = () => (
-  <RelatedContentComponent content={RelatedContentSingleItemRtl} />
+  <RelatedContentComponent
+    content={RelatedContentSingleItemRtl}
+    service="arabic"
+  />
 );

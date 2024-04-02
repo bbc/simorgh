@@ -141,16 +141,15 @@ export const Burmese = props => (
 );
 
 export const ArticlePageWithRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
+  <ComponentWithContext data={articleDataWithRelatedContent} />
 );
 
 export const ArticlePageWithSingleRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
+  <ComponentWithContext data={articleDataWithSingleRelatedContent} />
 );
 
 export const ArticlePageWithPodcastPromo = props => (
   <ComponentWithContext
-    {...props}
     data={articleDataWithPodcastPromo}
     service="russian"
     podcastEnabled
@@ -159,7 +158,6 @@ export const ArticlePageWithPodcastPromo = props => (
 
 export const ArticlePageWithPodcastPromoRightToLeft = props => (
   <ComponentWithContext
-    {...props}
     data={articleDataWithPodcastPromo}
     service="arabic"
     podcastEnabled
@@ -168,7 +166,6 @@ export const ArticlePageWithPodcastPromoRightToLeft = props => (
 
 export const ArticlePageWithPodcastNews = props => (
   <ComponentWithServiceContext
-    {...props}
     data={articleNewsWithPodcastPromo}
     service="news"
     podcastEnabled

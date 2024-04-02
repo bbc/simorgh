@@ -60,8 +60,8 @@ export const TruncatedTextInSingleLink = (_, globalArgs) => (
   <ScrollablePromoComponent data={truncatedTextInSingleLink} {...globalArgs} />
 );
 
-export const ArabicText = (_, globalArgs) => (
-  <ScrollablePromoComponent data={arabicText} {...globalArgs} />
+export const ArabicText = () => (
+  <ScrollablePromoComponent data={arabicText} service="arabic" />
 );
 
 export const WithTimestamp = (_, globalArgs) => (

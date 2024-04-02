@@ -48,7 +48,7 @@ const Component = (_, { service, variant }) => {
 export default {
   Component,
   title: 'Pages/Most Read Page',
-  decorators: [withServicesDecorator()],
+  decorators: [withServicesDecorator({ defaultService: 'pidgin' })],
 };
 
 export const Example = Component;
