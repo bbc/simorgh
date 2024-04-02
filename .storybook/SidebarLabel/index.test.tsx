@@ -1,34 +1,33 @@
 import React from 'react';
 import { render, screen, act } from '@testing-library/react';
-import * as api from '@storybook/manager-api';
 import SidebarLabel from '.';
 
-describe('Storybook Sidebar Labels', () => {
-  beforeEach(() => {
-    // @ts-expect-error -  Mocking the useStorybookApi function
-    api.useStorybookApi = jest.fn().mockImplementation(() => {
-      return {
-        getData: () => {
-          return {
-            parameters: {
-              metadata: {
-                uxAccessibilityDoc: {
-                  done: false,
-                },
-                acceptanceCriteria: {
-                  done: true,
-                },
-                swarm: {
-                  done: true,
-                },
+// mock useStorybookApi
+jest.mock('@storybook/manager-api', () => ({
+  useStorybookApi: jest.fn(() => {
+    return {
+      getData: () => {
+        return {
+          parameters: {
+            metadata: {
+              uxAccessibilityDoc: {
+                done: false,
+              },
+              acceptanceCriteria: {
+                done: true,
+              },
+              swarm: {
+                done: true,
               },
             },
-          };
-        },
-      };
-    });
-  });
+          },
+        };
+      },
+    };
+  }),
+}));
 
+describe('Storybook Sidebar Labels', () => {
   it('should return name when type is root', async () => {
     await act(async () => {
       render(
