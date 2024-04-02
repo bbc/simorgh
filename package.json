@@ -240,7 +240,7 @@
     "start-server-nestjs-webpack-plugin": "2.2.5",
     "storybook": "8.0.5",
     "stream-browserify": "3.0.0",
-    "strip-ansi": "6.0.1",
+    "strip-ansi": "7.1.0",
     "supertest": "6.3.4",
     "terser-webpack-plugin": "5.3.9",
     "timemachine": "0.3.2",
