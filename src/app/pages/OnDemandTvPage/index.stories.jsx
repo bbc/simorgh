@@ -43,7 +43,7 @@ export default {
   Component,
   title: 'Pages/OnDemand TV Page',
   decorators: [
-    withServicesDecorator({ defaultService: 'afrique' }),
+    withServicesDecorator({ defaultService: 'pashto' }),
     story => <WithTimeMachine>{story()}</WithTimeMachine>,
   ],
 };

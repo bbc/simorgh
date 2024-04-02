@@ -1,6 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
@@ -20,12 +21,14 @@ const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
         },
       }}
     >
-      <RecentAudioEpisodes
-        masterBrand={masterBrand}
-        episodes={episodes}
-        brandId={brandId}
-        pageType={pageType}
-      />
+      <ServiceContextProvider service={service}>
+        <RecentAudioEpisodes
+          masterBrand={masterBrand}
+          episodes={episodes}
+          brandId={brandId}
+          pageType={pageType}
+        />
+      </ServiceContextProvider>
     </ToggleContextProvider>
   </RequestContextProvider>
 );
@@ -39,7 +42,7 @@ const masterBrands = {
 export default {
   title: 'Containers/Episode List/Audio',
   Component,
-  decorators: [withServicesDecorator()],
+  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
 };
 
 export const MultipleItems = (_, { service }) => (

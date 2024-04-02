@@ -1,5 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
@@ -13,7 +14,9 @@ const Component = ({ masterBrand, episodes, service }) => (
     isAmp={false}
     // should amp come from context?
   >
-    <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
+    <ServiceContextProvider service={service}>
+      <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 
@@ -22,7 +25,7 @@ const fixtures = { afrique, pashto };
 export default {
   title: 'Containers/Episode List/Video',
   Component,
-  decorators: [withServicesDecorator()],
+  decorators: [withServicesDecorator({ defaultService: 'afrique' })],
   parameters: {
     backgrounds: {
       default: 'Dark',
