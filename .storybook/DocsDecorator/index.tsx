@@ -22,21 +22,16 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   const hasReadmeFile = docs?.readme;
   const hasHealthFactors = metadata;
 
-  let content = children;
-
-  if (children?.type?.name === 'DocsPage') {
-    // @ts-expect-error do not display stories on docs page
-    content = null;
-  }
+  const isDocsPage = children?.type?.name === 'DocsPage';
 
   return (
     <DocsContainer context={context}>
       <ThemeProvider service="news" variant="default">
-        {hasReadmeFile && <Title />}
+        {isDocsPage && <Title />}
         {hasHealthFactors && <HealthFactors metadata={metadata} />}
         {hasReadmeFile && <Markdown>{docs.readme!}</Markdown>}
       </ThemeProvider>
-      {content}
+      {!isDocsPage && children}
     </DocsContainer>
   );
 };
