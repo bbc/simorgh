@@ -22,8 +22,6 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   const hasReadmeFile = docs?.readme;
   const hasHealthFactors = metadata;
 
-  console.log({type: children.type?.name});
-
   let content = children;
 
   if (children?.type?.name === 'DocsPage') {
