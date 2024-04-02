@@ -320,6 +320,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+      collectiveNewsroomText: 'బీబీసి కోసం కలెక్టివ్ న్యూస్‌రూమ్ ప్రచురణ',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
