@@ -62,24 +62,26 @@ const ComponentWithContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <RequestContextProvider
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/news/articles/c0000000001o"
-        service={service}
-      >
-        <UserContextProvider>
-          <MemoryRouter>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
-          </MemoryRouter>
-        </UserContextProvider>
-      </RequestContextProvider>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/news/articles/c0000000001o"
+          service={service}
+        >
+          <UserContextProvider>
+            <MemoryRouter>
+              <Page
+                pageData={{
+                  ...data.article,
+                  secondaryColumn: data.secondaryData,
+                  mostRead: data.secondaryData.mostRead,
+                }}
+              />
+            </MemoryRouter>
+          </UserContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
     </ToggleContextProvider>
   );
 };

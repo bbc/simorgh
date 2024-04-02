@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
@@ -8,7 +8,7 @@ import korean from './fixtureData/korean';
 import tigrinya from './fixtureData/tigrinya';
 import afaanoromoo from './fixtureData/afaanoromoo';
 import amharic from './fixtureData/amharic';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const liveRadioFixtures = {
   indonesia,
@@ -32,8 +32,7 @@ const matchFixtures = service => ({
 });
 
 // eslint-disable-next-line react/prop-types
-const Component = () => {
-  const { service } = useContext(ServiceContext);
+const Component = (_, { service }) => {
   return (
     <BrowserRouter>
       <LiveRadioPage
@@ -60,6 +59,7 @@ export default {
       delay: 8000,
     },
   },
+  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
 };
 
 export const Page = Component;

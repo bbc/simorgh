@@ -12,7 +12,8 @@ import portuguesePageData from './fixtureData/portuguese';
 import persianPageData from './fixtureData/persian';
 import mundoPageData from './fixtureData/mundo';
 import StoryPage from './StoryPage';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const PageWithOptimizely = withOptimizelyProvider(StoryPage);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -53,9 +54,7 @@ const toggleState = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ pageData }) => {
-  const { service } = useContext(ServiceContext);
-
+const Component = ({ pageData, service }) => {
   return (
     <BrowserRouter>
       <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
@@ -65,7 +64,9 @@ const Component = ({ pageData }) => {
           pageType={STORY_PAGE}
           bbcOrigin="https://www.test.bbc.com"
         >
-          <Page pageData={pageData} />
+          <ServiceContextProvider service={service}>
+            <Page pageData={pageData} />
+          </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContext.Provider>
     </BrowserRouter>
@@ -75,7 +76,10 @@ const Component = ({ pageData }) => {
 export default {
   Component,
   title: 'Pages/Story Page',
-  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  decorators: [
+    withServicesDecorator(),
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+  ],
 };
 
 export const Mundo = props => (
