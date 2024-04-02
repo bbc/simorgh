@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import withServicesDecorator from '#storybook/withServicesDecorator';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
 import readme from './README.md';
 import MostRead from '.';
@@ -44,11 +45,13 @@ const Component = ({
 
   return (
     <ToggleContextProvider>
-      <MostRead
-        data={pageData as MostReadData}
-        size={size}
-        columnLayout={columnLayout}
-      />
+      <ServiceContextProvider service={service} variant={variant}>
+        <MostRead
+          data={pageData as MostReadData}
+          size={size}
+          columnLayout={columnLayout}
+        />
+      </ServiceContextProvider>
     </ToggleContextProvider>
   );
 };
