@@ -44,13 +44,12 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
       This is a text field
     </label>
     <input
+      aria-invalid="false"
+      aria-required="false"
       id="testCheckboxID"
       name="testCheckboxID"
       type="checkbox"
     />
-    <p>
-      YOU\`'\`VE MISSED THIS FIELD
-    </p>
   </div>
 </div>
 `;
@@ -99,14 +98,13 @@ exports[`FormField should render a tel input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-invalid="false"
+      aria-required="false"
       id="testTelID"
       name="testTelID"
       type="tel"
       value=""
     />
-    <p>
-      YOU\`'\`VE MISSED THIS FIELD
-    </p>
   </div>
 </div>
 `;
@@ -155,14 +153,13 @@ exports[`FormField should render a text input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-invalid="false"
+      aria-required="false"
       id="testTextID"
       name="testTextID"
       type="text"
       value=""
     />
-    <p>
-      YOU\`'\`VE MISSED THIS FIELD
-    </p>
   </div>
 </div>
 `;
@@ -211,12 +208,11 @@ exports[`FormField should render a textarea input with an associated label 1`] =
       This is a text field
     </label>
     <textarea
+      aria-invalid="false"
+      aria-required="false"
       id="testTextAreaID"
       name="testTextAreaID"
     />
-    <p>
-      YOU\`'\`VE MISSED THIS FIELD
-    </p>
   </div>
 </div>
 `;
@@ -265,14 +261,14 @@ exports[`FormField should render an email input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-invalid="false"
+      aria-required="false"
+      formnovalidate=""
       id="testEmailID"
       name="testEmailID"
       type="email"
       value=""
     />
-    <p>
-      YOU\`'\`VE MISSED THIS FIELD
-    </p>
   </div>
 </div>
 `;
