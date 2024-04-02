@@ -9334,7 +9334,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.5.0, buffer@npm:^5.6.0":
+"buffer@npm:^5.5.0, buffer@npm:^5.7.1":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -10834,9 +10834,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.6.3":
-  version: 13.6.3
-  resolution: "cypress@npm:13.6.3"
+"cypress@npm:13.7.1":
+  version: 13.7.1
+  resolution: "cypress@npm:13.7.1"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
@@ -10845,7 +10845,7 @@ __metadata:
     arch: ^2.2.0
     blob-util: ^2.0.2
     bluebird: ^3.7.2
-    buffer: ^5.6.0
+    buffer: ^5.7.1
     cachedir: ^2.3.0
     chalk: ^4.1.0
     check-more-types: ^2.24.0
@@ -10863,7 +10863,7 @@ __metadata:
     figures: ^3.2.0
     fs-extra: ^9.1.0
     getos: ^3.2.1
-    is-ci: ^3.0.0
+    is-ci: ^3.0.1
     is-installed-globally: ~0.4.0
     lazy-ass: ^1.6.0
     listr2: ^3.8.3
@@ -10882,7 +10882,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 1c8a23f56cf26b3273379046240f3c0739fb6ca5f297c84ffa13c3911475ff77d107a3bca3790b854dc2d2b24a892fd522c5724cbf0d9eded9f3de45f5b9846b
+  checksum: f6c3cafdc53f5737d3b981c9e8ace574398bc999c47e87bb8c8855052b6aa53c140d8361484b573f600acbcbcc113aad4c97a6953878e8c82f0a43864b58e17c
   languageName: node
   linkType: hard
 
@@ -14957,7 +14957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
+"is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
@@ -22106,7 +22106,7 @@ __metadata:
     "@testing-library/jest-dom": 6.4.2
     "@testing-library/react": 14.2.2
     babel-plugin-transform-rename-import: 2.3.0
-    cypress: 13.6.3
+    cypress: 13.7.1
     cypress-terminal-report: 5.3.12
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
@@ -22193,7 +22193,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     core-js: 3.36.1
     crypto: 1.0.1
-    cypress: 13.6.3
+    cypress: 13.7.1
     cypress-axe: 1.5.0
     cypress-multi-reporters: 1.6.4
     cypress-terminal-report: 5.3.12
