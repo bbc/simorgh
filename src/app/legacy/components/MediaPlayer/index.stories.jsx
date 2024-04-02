@@ -3,6 +3,7 @@ import React from 'react';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../../../components/ThemeProvider';
+import readme from './README.md';
 
 const withDuration = {
   duration: '2:30',
@@ -17,6 +18,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
     },
+    docs: { readme },
   },
 };
 
