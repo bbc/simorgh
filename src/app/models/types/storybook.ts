@@ -1,6 +1,6 @@
 import { Services, Variants } from './global';
 
-export type UnusedFirstArg = never;
+export type StoryArgs = Record<string, string | number | boolean>;
 
 export interface StoryProps {
   service: Services;

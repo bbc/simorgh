@@ -5,7 +5,7 @@ import withServicesDecorator from '#app/utilities/withServicesDecorator';
 import metadata from './metadata.json';
 import readme from './README.md';
 import MostRead from '.';
-import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
+import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
@@ -92,14 +92,11 @@ export const Example = (
   />
 );
 
-export const TwoColumns = (_: UnusedFirstArg, { service, variant }: Props) => (
+export const TwoColumns = (_: StoryArgs, { service, variant }: Props) => (
   <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
-export const SmallOneColumn = (
-  _: UnusedFirstArg,
-  { service, variant }: Props,
-) => (
+export const SmallOneColumn = (_: StoryArgs, { service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
@@ -108,10 +105,10 @@ export const SmallOneColumn = (
   />
 );
 
-export const Japanese1Column = (_: UnusedFirstArg, { variant }: Props) => (
+export const Japanese1Column = (_: StoryArgs, { variant }: Props) => (
   <Component service="japanese" variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = (_: UnusedFirstArg, { variant }: Props) => (
+export const Persian1Column = (_: StoryArgs, { variant }: Props) => (
   <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );

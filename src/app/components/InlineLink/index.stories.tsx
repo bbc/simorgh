@@ -1,7 +1,7 @@
 import React from 'react';
 
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
-import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
+import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';
 import readme from './README.md';
@@ -12,22 +12,22 @@ interface Props extends StoryProps {
 }
 
 export const InternalInlineLink = (
-  _: UnusedFirstArg,
+  _: StoryArgs,
   { text }: Omit<Props, 'children'>,
 ) => <InlineLink to="https://www.bbc.com/mundo" text={text} />;
 
 export const ExternalInlineLink = (
-  _: UnusedFirstArg,
+  _: StoryArgs,
   { text }: Omit<Props, 'children'>,
 ) => <InlineLink to="https://google.com" text={text} />;
 
 export const InlineLinkWithTypographyStyles = (
-  _: UnusedFirstArg,
+  _: StoryArgs,
   { text }: Omit<Props, 'children'>,
 ) => <InlineLink to="/" text={text} fontVariant="serifBold" size="elephant" />;
 
 export const InlineLinkInsideText = (
-  _: UnusedFirstArg,
+  _: StoryArgs,
   { text }: Omit<Props, 'children'>,
 ) => {
   const words = text.split(' ');

@@ -7,7 +7,7 @@ import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
-import { UnusedFirstArg, StoryProps } from '../../models/types/storybook';
+import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
@@ -83,7 +83,6 @@ export default {
   title: 'Pages/Home Page',
 };
 
-export const Example = (
-  _: UnusedFirstArg,
-  { service, variant }: StoryProps,
-) => <Component service={service} variant={variant} />;
+export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
+  <Component service={service} variant={variant} />
+);

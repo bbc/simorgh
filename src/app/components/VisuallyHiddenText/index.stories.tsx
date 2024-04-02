@@ -1,6 +1,6 @@
 import React from 'react';
 import withServicesDecorator from '#app/utilities/withServicesDecorator';
-import { UnusedFirstArg } from '#app/models/types/storybook';
+import { StoryArgs } from '#app/models/types/storybook';
 import { Services } from '../../models/types/global';
 import readme from './README.md';
 import VisuallyHiddenText from './index';
@@ -27,6 +27,6 @@ export default {
   decorators: [withServicesDecorator],
 };
 
-export const Example = (_: UnusedFirstArg, { service, text }: Props) => (
+export const Example = (_: StoryArgs, { service, text }: Props) => (
   <Component service={service} text={text} />
 );

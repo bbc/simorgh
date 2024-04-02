@@ -2,7 +2,7 @@ import React from 'react';
 
 import withServicesKnob from '#app/utilities/withServicesDecorator';
 import MessageBanner from '.';
-import { StoryProps, UnusedFirstArg } from '../../models/types/storybook';
+import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';
 
 interface Props extends StoryProps {
@@ -10,7 +10,7 @@ interface Props extends StoryProps {
   longText?: string;
 }
 
-const Component = (_: UnusedFirstArg, { text = '', longText = '' }: Props) => {
+const Component = (_: StoryArgs, { text = '', longText = '' }: Props) => {
   return (
     <MessageBanner
       heading={text}

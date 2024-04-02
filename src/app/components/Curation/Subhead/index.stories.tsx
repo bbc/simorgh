@@ -6,9 +6,9 @@ import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StoryProps, UnusedFirstArg } from '../../../models/types/storybook';
+import { StoryProps, StoryArgs } from '../../../models/types/storybook';
 
-const Component = (_: UnusedFirstArg, { service, variant }: StoryProps) => {
+const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -20,7 +20,7 @@ const Component = (_: UnusedFirstArg, { service, variant }: StoryProps) => {
   );
 };
 
-const WithLink = (_: UnusedFirstArg, { service, variant }: StoryProps) => {
+const WithLink = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
