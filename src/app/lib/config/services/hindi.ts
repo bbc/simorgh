@@ -353,12 +353,18 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
+      collectiveNewsroomText:
+        'बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'होम पेज',
         url: '/hindi',
+      },
+      {
+        title: 'लोकसभा चुनाव 2024',
+        url: '/hindi/topics/cm5m26q8qxpt',
       },
       {
         title: 'भारत',

@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
@@ -151,6 +150,10 @@ const MetadataContainer = ({
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
       <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
+      <meta
+        name="facebook-domain-verification"
+        content="mydfaj4vz8t5psneihy4nm6ff52fac"
+      />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-TileColor" content={BRAND_BACKGROUND} />
       <meta

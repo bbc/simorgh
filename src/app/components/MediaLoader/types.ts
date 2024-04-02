@@ -53,6 +53,8 @@ export type ConfigBuilderProps = {
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };
 
 export type ConfigBuilderReturnProps = {
@@ -64,7 +66,8 @@ export type ConfigBuilderReturnProps = {
     placeholderSrcset: string;
     translatedNoJSMessage: string;
   };
-} | null;
+  showAds: boolean;
+};
 
 export type MediaInfo = {
   title: string;
@@ -72,11 +75,26 @@ export type MediaInfo = {
   duration?: string;
   durationSpoken?: string;
   type?: 'audio' | 'video';
-  guidanceMessage?: string;
+  guidanceMessage?: string | null;
 };
 
 export type Player = {
+  dispatchEvent(
+    dispatchEvent: string,
+    parameters: { updatedAdTag: string },
+  ): void;
   load: () => void;
+  bind: (event: string, callback: () => void) => void;
+  loadPlugin: (
+    pluginName: { [key: string]: string },
+    parameters: {
+      name: string;
+      data: {
+        adTag: string;
+        debug: boolean;
+      };
+    },
+  ) => void;
 };
 
 export type BumpType = {
@@ -142,8 +160,8 @@ export type ClipMediaBlock = {
         id: string;
         duration: string;
         kind: string;
+        guidance: string | null;
       };
-      guidance: { warnings?: { [key: string]: string } } | null;
       isEmbeddingAllowed: boolean;
     };
   };
@@ -162,4 +180,6 @@ export type BuildConfigProps = {
   pageType: PageTypes;
   service: Services;
   translations?: Translations;
+  adsEnabled?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };

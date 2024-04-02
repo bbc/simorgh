@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';

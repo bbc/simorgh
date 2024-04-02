@@ -58,7 +58,7 @@ exports[`Canonical Live Header Navigation link should match text and url 8`] = `
 }
 `;
 
-exports[`Canonical Live Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, "Lionel Messi Skills", Duration 0,34"`;
+exports[`Canonical Live Media Loader a11y assistive technology can read the media player title 1`] = `"Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34"`;
 
 exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 <div
@@ -71,14 +71,25 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     .css-r6z5ec{z-index:1;}
   </style>
   <style
-    data-emotion="css hdjghg"
+    data-emotion="css w22u5j"
   >
-    .css-hdjghg{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;z-index:1;}@media (min-width: 37.5rem){.css-hdjghg{font-size:0.875rem;}}.no-js .css-hdjghg{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-hdjghg{background-color:transparent;}}.no-js .css-hdjghg .guidance-message{display:none;}
+    .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
   </style>
   <div
-    class="css-hdjghg edwq9ck2"
+    class="css-w22u5j edwq9ck2"
     data-e2e="media-player__guidance"
   >
+    <style
+      data-emotion="css 1l7spgt"
+    >
+      .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
+    </style>
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-1l7spgt edwq9ck1"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
     <style
       data-emotion="css 17whsh0"
     >
@@ -87,7 +98,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     <noscript
       class="css-17whsh0 edwq9ck0"
     >
-      &lt;style data-emotion="css 1l7spgt"&gt;.css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}&lt;/style&gt;&lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <style
@@ -106,7 +117,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     <span
       class="css-m04vo2"
     >
-      Play video, "Lionel Messi Skills", Duration 0,34
+      Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <style
       data-emotion="css 1apn3of"
@@ -194,14 +205,25 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     .css-r6z5ec{z-index:1;}
   </style>
   <style
-    data-emotion="css hdjghg"
+    data-emotion="css w22u5j"
   >
-    .css-hdjghg{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;z-index:1;}@media (min-width: 37.5rem){.css-hdjghg{font-size:0.875rem;}}.no-js .css-hdjghg{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-hdjghg{background-color:transparent;}}.no-js .css-hdjghg .guidance-message{display:none;}
+    .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
   </style>
   <div
-    class="css-hdjghg edwq9ck2"
+    class="css-w22u5j edwq9ck2"
     data-e2e="media-player__guidance"
   >
+    <style
+      data-emotion="css 1l7spgt"
+    >
+      .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
+    </style>
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-1l7spgt edwq9ck1"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
     <style
       data-emotion="css 17whsh0"
     >
@@ -210,7 +232,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     <noscript
       class="css-17whsh0 edwq9ck0"
     >
-      &lt;style data-emotion="css 1l7spgt"&gt;.css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}&lt;/style&gt;&lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <style
@@ -229,7 +251,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     <span
       class="css-m04vo2"
     >
-      Play video, "Lionel Messi Skills", Duration 0,34
+      Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <style
       data-emotion="css 1apn3of"
@@ -308,7 +330,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="css-19ecbo0"
+  class="css-17euut"
   data-e2e="media-loader__container"
 >
   <style
@@ -326,14 +348,25 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       .css-r6z5ec{z-index:1;}
     </style>
     <style
-      data-emotion="css hdjghg"
+      data-emotion="css w22u5j"
     >
-      .css-hdjghg{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;z-index:1;}@media (min-width: 37.5rem){.css-hdjghg{font-size:0.875rem;}}.no-js .css-hdjghg{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-hdjghg{background-color:transparent;}}.no-js .css-hdjghg .guidance-message{display:none;}
+      .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
     </style>
     <div
-      class="css-hdjghg edwq9ck2"
+      class="css-w22u5j edwq9ck2"
       data-e2e="media-player__guidance"
     >
+      <style
+        data-emotion="css 1l7spgt"
+      >
+        .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
+      </style>
+      <strong
+        aria-hidden="true"
+        class="guidance-message css-1l7spgt edwq9ck1"
+      >
+        Contains strong language and some upsetting scenes.
+      </strong>
       <style
         data-emotion="css 17whsh0"
       >
@@ -342,7 +375,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       <noscript
         class="css-17whsh0 edwq9ck0"
       >
-        &lt;style data-emotion="css 1l7spgt"&gt;.css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}&lt;/style&gt;&lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
       </noscript>
     </div>
     <style
@@ -361,7 +394,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       <span
         class="css-m04vo2"
       >
-        Play video, "Lionel Messi Skills", Duration 0,34
+        Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
       </span>
       <style
         data-emotion="css 1apn3of"

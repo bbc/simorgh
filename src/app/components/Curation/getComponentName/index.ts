@@ -1,7 +1,7 @@
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-  CurationProps,
+  Curation,
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
@@ -11,6 +11,7 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
+  EMBED: 'embed',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -22,15 +23,20 @@ const {
   MOST_READ,
   NOT_SUPPORTED,
   RADIO_SCHEDULE,
+  EMBED,
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
-}: Partial<CurationProps>) => {
+  embed,
+}: Partial<Curation>) => {
   if (radioSchedule) {
     return RADIO_SCHEDULE;
+  }
+  if (embed) {
+    return EMBED;
   }
 
   const componentsByVisualStyleAndProminence = {

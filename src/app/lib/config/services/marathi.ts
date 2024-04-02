@@ -329,12 +329,17 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         'BBC. बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
+      collectiveNewsroomText: 'बीबीसीसाठी कलेक्टिव्ह न्यूजरूमचं प्रकाशन',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'बातम्या',
         url: '/marathi',
+      },
+      {
+        title: 'लोकसभा निवडणूक 2024',
+        url: '/marathi/topics/c1wmk63rjkvt',
       },
       {
         title: 'महाराष्ट्र',
