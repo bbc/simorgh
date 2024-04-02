@@ -502,6 +502,16 @@ const preview: Preview = {
       sidebarAnimations: true,
       storySort: {
         method: 'alphabetical',
+        order: [
+          'Components',
+          'Containers',
+          'Pages',
+          'Coding Standards',
+          'docs',
+          'hooks',
+          'Simorgh structure',
+          'cypress',
+        ],
       },
     },
     docs: {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import DecoratedInlineLink from '.';
 import { persianLink, fragmentBlock } from './fixture';
 
@@ -9,7 +9,6 @@ const Component = ({
   language,
 }: {
   blocks: OptimoBlock[];
-  service: Services;
   language: string;
 }) => <DecoratedInlineLink blocks={blocks} language={language} />;
 
@@ -19,7 +18,6 @@ export const DecoratedInlineTextWithLink = () => (
       fragmentBlock('This is a normal inline text, followed by a link: '),
       persianLink,
     ]}
-    service="persian"
     language="fa"
   />
 );
@@ -34,4 +32,5 @@ export default {
       },
     },
   },
+  decorators: [withServicesDecorator],
 };

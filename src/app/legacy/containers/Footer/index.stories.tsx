@@ -1,7 +1,7 @@
 import React from 'react';
 import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 import Footer from '.';
-import { StoryProps } from '../../../models/types/storybook';
+import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 
 interface Props extends StoryProps {
@@ -23,7 +23,7 @@ const Component = ({ service, isAmp = false, withAds = false }: Props) => (
 );
 
 export default {
-  title: 'New Components/Footer',
+  title: 'Components/Footer',
   Component,
   decorators: [withServicesDecorator],
   parameters: {
@@ -40,22 +40,23 @@ export default {
   },
 };
 
-export const Example = (_, { service, variant }) => (
+export const Example = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const ExampleAMP = (_, { service, variant }) => (
+export const ExampleAMP = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} isAmp />
 );
 
-export const WithAdsEnabled = (_, { service, variant }) => (
+export const WithAdsEnabled = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} withAds />
 );
 
-export const HindiCollectiveNewsroomPublication = (_, { variant }) => (
-  <Component service="hindi" variant={variant} />
-);
+export const HindiCollectiveNewsroomPublication = (
+  _: StoryArgs,
+  { variant },
+) => <Component service="hindi" variant={variant} />;
 
-export const SportWithoutTrustProjectLink = (_, { variant }) => (
+export const SportWithoutTrustProjectLink = (_: StoryArgs, { variant }) => (
   <Component service="sport" variant={variant} />
 );
