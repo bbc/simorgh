@@ -34,7 +34,8 @@
       "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
       "#server/*": ["src/server/*"],
-      "#storybook/*": [".storybook/*"]
+      "#storybook/*": [".storybook/*"],
+      "react": ["./node_modules/@types/react"]
     }
   },
   "include": ["src/**/*"],
