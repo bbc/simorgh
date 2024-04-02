@@ -8,6 +8,7 @@ import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { service as ukrainianConfig } from '../../../lib/config/services/ukrainian';
 import { service as persianConfig } from '../../../lib/config/services/persian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ThemeProvider } from '../../../components/ThemeProvider';
 
 const radioServiceOverride = 'dari';
 
@@ -30,10 +31,12 @@ const IdxPageWithContext = ({ service = 'persian', pageData }) => {
         >
           <ServiceContext.Provider value={serviceContext[service]}>
             <UserContextProvider>
-              <IdxPage
-                pageData={pageData}
-                radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
-              />
+              <ThemeProvider service={service}>
+                <IdxPage
+                  pageData={pageData}
+                  radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
+                />
+              </ThemeProvider>
             </UserContextProvider>
           </ServiceContext.Provider>
         </RequestContextProvider>

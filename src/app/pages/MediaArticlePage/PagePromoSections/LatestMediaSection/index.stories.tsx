@@ -3,7 +3,8 @@ import React, { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { StoryArgs } from '#app/models/types/storybook';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { Services } from '../../../../models/types/global';
 
@@ -30,13 +31,11 @@ const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
     pathname=""
     isUK
   >
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service}>
-        <ToggleContextProvider>
-          <LatestMediaSection content={content} />
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <ToggleContextProvider>
+      <ThemeProvider service={service}>
+        <LatestMediaSection content={content} />
+      </ThemeProvider>
+    </ToggleContextProvider>
   </RequestContextProvider>
 );
 
@@ -45,10 +44,10 @@ export default {
   Component,
   parameters: {
     metadata,
-    backgrounds: {
-      default: 'Dark',
-      values: [{ name: 'Dark', value: '#141414' }],
-    },
+    // backgrounds: {
+    //   default: 'Dark',
+    //   values: [{ name: 'Dark', value: '#141414' }],
+    // },
     design: [
       {
         name: 'Group 0',
@@ -77,21 +76,28 @@ export default {
       },
     ],
   },
+  decorators: [withServicesDecorator],
 };
 
-export const MultipleLatestMediaWithCustomAltText = ({ service }: Props) => {
+export const MultipleLatestMediaWithCustomAltText = (
+  _: StoryArgs,
+  { service }: Props,
+) => {
   const pidginLatestMediaList = pidginArticle.data.secondaryData
     .latestMedia as LatestMedia[];
   return <Component content={pidginLatestMediaList} service={service} />;
 };
 
-export const MultipleLatestMediawithFallbackAltText = ({ service }: Props) => {
+export const MultipleLatestMediawithFallbackAltText = (
+  _: StoryArgs,
+  { service }: Props,
+) => {
   const hausaLatestMediaList = hausaArticle.data.secondaryData
     .latestMedia as LatestMedia[];
   return <Component content={hausaLatestMediaList} service={service} />;
 };
 
-export const SingleLatestMedia = ({ service }: Props) => {
+export const SingleLatestMedia = (_: StoryArgs, { service }: Props) => {
   const tamilLatestMediaList = tamilArticle.data.secondaryData
     .latestMedia as LatestMedia[];
   return <Component content={tamilLatestMediaList} service={service} />;
