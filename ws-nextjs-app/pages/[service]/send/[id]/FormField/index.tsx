@@ -1,10 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement, useContext } from 'react';
 import Text from '#app/components/Text';
-import { HtmlType, InputProps, TooltipProps } from '../types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import {
+  HtmlType,
+  InputProps,
+  InvalidMessageCodes,
+  InvalidMessageBoxProps,
+} from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
+import formTranslations from '../FormContext/utils/formTranslations';
 
 const Label = ({
   id,
@@ -15,7 +22,11 @@ const Label = ({
   </Text>
 );
 
-const InvalidToolTip = ({ id, message }: TooltipProps) => {
+const InvalidMessageBox = ({ id, messageCode }: InvalidMessageBoxProps) => {
+  const { lang } = useContext(ServiceContext);
+  const message =
+    formTranslations[lang][messageCode ?? InvalidMessageCodes.FieldRequired];
+
   return (
     <div>
       <p id={id}>
@@ -158,7 +169,7 @@ const FormField = ({
   }
 
   const Component = FormComponents[derivedHtmlType];
-  const { invalid, invalidMessage } = formState[id];
+  const { invalid, messageCode } = formState[id];
   const ariaErrorDesccribedById = `${id}-error`;
 
   if (!Component) return null;
@@ -173,7 +184,10 @@ const FormField = ({
         inputState={formState[id]}
       />
       {invalid && (
-        <InvalidToolTip id={ariaErrorDesccribedById} message={invalidMessage} />
+        <InvalidMessageBox
+          id={ariaErrorDesccribedById}
+          messageCode={messageCode}
+        />
       )}
     </div>
   );

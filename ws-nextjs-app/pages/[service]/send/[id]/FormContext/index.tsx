@@ -44,6 +44,7 @@ const getInitialFormState = (
         required: field.validation.mandatory ?? false,
         value: null,
         type: field.htmlType,
+        messageCode: null,
       },
     }),
     {},

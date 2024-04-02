@@ -1,6 +1,14 @@
 import { ChangeEvent } from 'react';
 import { Services, Variants } from '#app/models/types/global';
 
+// Disabled due to known bug in ts-lint: https://github.com/typescript-eslint/tslint-to-eslint-config/issues/856
+// eslint-disable-next-line no-shadow
+export enum InvalidMessageCodes {
+  FieldRequired = 'validationRequired',
+  WrongEmailFormat = 'validationInvalidEmail',
+  WrongTelFormat = 'validationInvalidTelephone',
+}
+
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
 export type OnChangeInputValue =
@@ -21,9 +29,9 @@ export type InputProps = {
   inputState: FieldData;
 };
 
-export type TooltipProps = {
+export type InvalidMessageBoxProps = {
   id: string;
-  message: string;
+  messageCode: InvalidMessageCodes | null;
 };
 
 export type FetchParameters = {
@@ -75,7 +83,7 @@ export type FieldData = {
   required: boolean;
   value: OnChangeInputValue;
   type: string;
-  invalidMessage: string;
+  messageCode: InvalidMessageCodes | null;
 };
 
 export type PageProps = {
