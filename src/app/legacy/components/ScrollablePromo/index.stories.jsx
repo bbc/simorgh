@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ScrollablePromo from '.';
 import {
@@ -13,7 +14,6 @@ import {
   truncatedTextInSingleLink,
   arabicText,
 } from './helpers/fixtureData';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;

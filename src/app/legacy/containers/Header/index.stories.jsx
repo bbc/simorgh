@@ -2,8 +2,8 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import HeaderContainer from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = (_, { service }) => {

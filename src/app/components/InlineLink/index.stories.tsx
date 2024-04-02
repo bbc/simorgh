@@ -1,6 +1,6 @@
 import React from 'react';
 
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (

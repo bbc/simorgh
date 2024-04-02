@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { MEDIA_TYPES } from '#components/Promo';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import Promo from '.';
 
 const Wrapper = styled.div`

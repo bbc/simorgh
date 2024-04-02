@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import PodcastExternalLinkComponent from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = () => (

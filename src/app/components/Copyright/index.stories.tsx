@@ -1,6 +1,6 @@
 import React from 'react';
 import services from '#server/utilities/serviceConfigs';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CopyrightContainer from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';

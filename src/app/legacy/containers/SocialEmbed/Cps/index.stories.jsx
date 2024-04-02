@@ -1,10 +1,10 @@
 import React from 'react';
 
 import AmpDecorator from '../../../../../../.storybook/helpers/ampDecorator';
+import withServicesDecorator from '../../../../../../.storybook/withServicesDecorator';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';
-import withServicesDecorator from '../../../../utilities/withServicesDecorator';
 
 const Component = props =>
   withContexts(CpsSocialEmbedContainer, {

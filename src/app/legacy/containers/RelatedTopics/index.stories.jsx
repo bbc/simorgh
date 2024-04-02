@@ -4,8 +4,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import RelatedTopics from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 const WithContexts = ({ children, variant, service = 'mundo' }) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import withServicesDecorator from '../../../utilities/withServicesDecorator';
+import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 import Footer from '.';
 import { StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';

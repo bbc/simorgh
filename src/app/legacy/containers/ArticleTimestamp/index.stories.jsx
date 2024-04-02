@@ -1,9 +1,9 @@
 import React from 'react';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });

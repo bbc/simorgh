@@ -1,5 +1,5 @@
 import React from 'react';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import services from '../../../../server/utilities/serviceConfigs';

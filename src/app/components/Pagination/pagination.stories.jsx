@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import Pager from '.';
 
 const Component = ({ activePage, pageCount }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import BrandContainer from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 const Component = () => {
   return <BrandContainer />;

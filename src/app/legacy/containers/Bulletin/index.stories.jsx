@@ -1,6 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {
@@ -10,7 +11,6 @@ import {
   liveRadioBulletinItem,
 } from './fixtureData';
 import { dissocPath } from 'ramda';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 const tvFixture = tvBulletinItem;
 const audioFixture = radioBulletinItem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import metadata from './metadata.json';
 import readme from './README.md';
 

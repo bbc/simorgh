@@ -6,7 +6,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import withServicesDecorator from '../../../utilities/withServicesDecorator';
+import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, isAmp = false }) => {

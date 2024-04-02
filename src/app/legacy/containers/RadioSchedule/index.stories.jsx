@@ -6,7 +6,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import RadioScheduleContainer from '.';
-import withServicesDecorator from '../../../utilities/withServicesDecorator';
+import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 
 // Currently, only these services have radio schedule data
 const radioServices = {

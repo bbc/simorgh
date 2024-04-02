@@ -1,6 +1,6 @@
 import React from 'react';
 
-import withServicesKnob from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import MessageBanner from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';
@@ -25,7 +25,7 @@ const Component = (_: StoryArgs, { text = '', longText = '' }: Props) => {
 export default {
   title: 'Components/MessageBanner',
   Component,
-  decorators: [withServicesKnob],
+  decorators: [withServicesDecorator],
   parameters: {
     docs: { readme },
   },

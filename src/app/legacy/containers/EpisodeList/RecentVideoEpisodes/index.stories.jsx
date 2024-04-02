@@ -1,9 +1,9 @@
 import React from 'react';
 import { themes } from '#psammead/psammead-storybook-helpers/src';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, episodes, service }) => (

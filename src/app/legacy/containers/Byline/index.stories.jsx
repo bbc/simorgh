@@ -1,8 +1,8 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import BylineContainer from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = (_, { service }) => {

@@ -4,6 +4,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { GREY_2 } from '../../../components/ThemeProvider/palette';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 import {
   twitterBlock,
   twitterBlockNoEmbed,
@@ -16,7 +17,6 @@ import {
 } from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
-import withServicesDecorator from '../../../utilities/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const BackgroundColorWrapper = ({ children }) => (

@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import MediaMessageComponent from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const StyledMessageContainer = styled.div`
   padding-top: 56.25%;

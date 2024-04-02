@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import StartTime from '.';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const storiesUnixTimestamp = 1566914061212;
 

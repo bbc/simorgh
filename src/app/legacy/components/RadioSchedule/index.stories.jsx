@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderRadioSchedule as Component } from './testHelpers/helper';
-import withServicesDecorator from '#app/utilities/withServicesDecorator';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 export default {
   title: 'Components/Radio Schedule',
