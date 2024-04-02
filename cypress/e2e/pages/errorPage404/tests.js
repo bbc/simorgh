@@ -1,13 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getErrorPath from './getErrorPath';
-
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
-};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({
@@ -142,8 +137,3 @@ export const testsThatFollowSmokeTestConfig = ({
       describe(`No ${pageType} found for ${service}`, () => {});
     }
   });
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
-};

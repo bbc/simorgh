@@ -334,6 +334,10 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
+        title: 'Présidentielle Sénégal 2024',
+        url: '/afrique/topics/c0vj3r1jjd2t',
+      },
+      {
         title: 'Afrique',
         url: '/afrique/topics/cvqxn2k7kv7t',
       },
