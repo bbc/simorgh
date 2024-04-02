@@ -64,6 +64,13 @@ module.exports = {
       }),
     );
 
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      stream: false,
+      zlib: false,
+    };
+
     config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
     config.resolve.alias = {
       ...config.resolve.alias,

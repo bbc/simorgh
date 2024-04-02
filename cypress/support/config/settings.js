@@ -656,23 +656,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/arabic'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
