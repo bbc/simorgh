@@ -17,6 +17,7 @@ import {
   OnChangeInputName,
   OnChangeInputValue,
 } from '../types';
+import validateFunctions from './utils/validateFunctions';
 
 type SubmissionError = {
   message: string;
@@ -42,10 +43,29 @@ const getInitialFormState = (
         invalid: false,
         required: field.validation.mandatory ?? false,
         value: null,
+        type: field.htmlType,
       },
     }),
     {},
   );
+
+const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+  const validatedFormState: Record<OnChangeInputName, FieldData> = {};
+  const formEntries = Object.entries(state);
+
+  for (let i = 0; i < formEntries.length; i += 1) {
+    const [key, data] = formEntries[i];
+    const validateFunction = validateFunctions[data.type];
+
+    if (validateFunction) {
+      validatedFormState[key] = validateFunction(data);
+    } else {
+      validatedFormState[key] = data;
+    }
+  }
+
+  return validatedFormState;
+};
 
 export const FormContextProvider = ({
   fields,
@@ -60,7 +80,8 @@ export const FormContextProvider = ({
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      return { ...prevState, [name]: { ...prevState.name, value } };
+      const updatedState = { [name]: { ...prevState[name], value } };
+      return { ...prevState, ...updatedState };
     });
   };
 
@@ -69,6 +90,9 @@ export const FormContextProvider = ({
 
     // Reset error state
     setSubmissionError(null);
+
+    // Validate
+    setFormState(state => validateFormState(state));
 
     const formData = new FormData();
 

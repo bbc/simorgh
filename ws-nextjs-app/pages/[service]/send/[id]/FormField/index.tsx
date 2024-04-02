@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, ReactElement } from 'react';
 import Text from '#app/components/Text';
-import { HtmlType, InputProps } from '../types';
+import { HtmlType, InputProps, TooltipProps } from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
 
@@ -15,66 +15,94 @@ const Label = ({
   </Text>
 );
 
+const InvalidToolTip = ({ id, message }: TooltipProps) => {
+  return (
+    <div>
+      <p id={id}>
+        <span>❗</span>
+        {message}
+      </p>
+    </div>
+  );
+};
+
 const TextInput = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, value = '', required } = inputState;
   return (
     <input
       id={id}
       name={name}
       type="text"
-      value={(inputState.value as string) ?? ''}
+      value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
+      aria-invalid={invalid}
+      aria-required={required}
     />
   );
 };
 
 const TextArea = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, value = '', required } = inputState;
   return (
     <textarea
       id={id}
       name={name}
-      value={(inputState.value as string) ?? ''}
+      value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
+      aria-invalid={invalid}
+      aria-required={required}
     />
   );
 };
 
 const EmailInput = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, value = '', required } = inputState;
   return (
     <input
       id={id}
       name={name}
       type="email"
-      value={(inputState.value as string) ?? ''}
+      value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
+      aria-invalid={invalid}
+      aria-required={required}
+      formNoValidate
     />
   );
 };
 
 const Checkbox = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, value = false, required } = inputState;
   return (
     <input
       id={id}
       name={name}
       type="checkbox"
-      checked={(inputState.value as boolean) ?? false}
+      checked={value as boolean}
       onChange={e => handleChange(e.target.name, e.target.checked)}
+      aria-invalid={invalid}
+      aria-required={required}
     />
   );
 };
 
 const Telephone = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, value = '', required } = inputState;
   return (
     <input
       id={id}
       name={name}
       type="tel"
-      value={(inputState.value as string) ?? ''}
+      value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
+      aria-invalid={invalid}
+      aria-required={required}
     />
   );
 };
 
-const File = ({ id, name, handleChange }: InputProps) => {
+const File = ({ id, name, handleChange, inputState }: InputProps) => {
+  const { invalid, required } = inputState;
   return (
     <input
       id={id}
@@ -83,6 +111,8 @@ const File = ({ id, name, handleChange }: InputProps) => {
       onChange={e =>
         e.target.files && handleChange(e.target.name, e.target.files)
       }
+      aria-invalid={invalid}
+      aria-required={required}
     />
   );
 };
@@ -128,6 +158,8 @@ const FormField = ({
   }
 
   const Component = FormComponents[derivedHtmlType];
+  const { invalid, invalidMessage } = formState[id];
+  const ariaErrorDesccribedById = `${id}-error`;
 
   if (!Component) return null;
 
@@ -138,9 +170,11 @@ const FormField = ({
         id={id}
         name={id}
         handleChange={handleChange}
-        inputState={formState?.[id]}
+        inputState={formState[id]}
       />
-      <p>YOU`&apos;`VE MISSED THIS FIELD</p>
+      {invalid && (
+        <InvalidToolTip id={ariaErrorDesccribedById} message={invalidMessage} />
+      )}
     </div>
   );
 };

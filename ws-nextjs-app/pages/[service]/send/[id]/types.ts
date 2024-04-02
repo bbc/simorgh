@@ -21,6 +21,11 @@ export type InputProps = {
   inputState: FieldData;
 };
 
+export type TooltipProps = {
+  id: string;
+  message: string;
+};
+
 export type FetchParameters = {
   id: string;
   service: Services;
@@ -69,6 +74,8 @@ export type FieldData = {
   invalid: boolean;
   required: boolean;
   value: OnChangeInputValue;
+  type: string;
+  invalidMessage: string;
 };
 
 export type PageProps = {
