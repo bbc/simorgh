@@ -83,6 +83,6 @@ export interface MostReadData {
     rank: number;
     href: string;
     title: string;
-    timestamp: number;
+    timestamp: number | string;
   }[];
 }
