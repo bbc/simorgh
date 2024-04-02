@@ -42,6 +42,7 @@ const scripts = {
 };
 
 export default (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   story: (props: any) => JSX.Element,
   {
     globals: {

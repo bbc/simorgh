@@ -1,3 +1,6 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
 import {
