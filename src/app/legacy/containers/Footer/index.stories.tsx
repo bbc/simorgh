@@ -3,6 +3,7 @@ import withServicesDecorator from '../../../../../.storybook/withServicesDecorat
 import Footer from '.';
 import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
+import metadata from './metadata.json';
 
 interface Props extends StoryProps {
   isAmp?: boolean;
@@ -37,6 +38,7 @@ export default {
         1280, // Group 5
       ],
     },
+    metadata,
   },
 };
 
