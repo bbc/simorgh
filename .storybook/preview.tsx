@@ -515,8 +515,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      container: ({ context, children }) =>
-        DocsDecorator({ context, children }),
+      container: DocsDecorator,
     },
     backgrounds: {
       default: 'CPS',

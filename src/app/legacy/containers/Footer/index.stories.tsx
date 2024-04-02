@@ -4,6 +4,8 @@ import Footer from '.';
 import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import metadata from './metadata.json';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 interface Props extends StoryProps {
   isAmp?: boolean;
@@ -19,7 +21,11 @@ const Component = ({ service, isAmp = false, withAds = false }: Props) => (
     service={service}
     showAdsBasedOnLocation={withAds}
   >
-    <Footer />
+    <ServiceContextProvider service={service}>
+      <ThemeProvider service={service}>
+        <Footer />
+      </ThemeProvider>
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 
