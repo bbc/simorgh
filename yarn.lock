@@ -13795,17 +13795,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-styled-syntax@npm:^0.6.4":
-  version: 0.6.4
-  resolution: "postcss-styled-syntax@npm:0.6.4"
-  dependencies:
-    typescript: ^5.3.3
-  peerDependencies:
-    postcss: ^8.4.21
-  checksum: efb176d5e8e840e76600a9138203541e083dcd2f57b7aaba5e8a888f3928c0e33e4eb63ddac781ce57611462dd12b70384a94fc4cb9a3088a77fae78d8bfa397
-  languageName: node
-  linkType: hard
-
 "postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -15348,7 +15337,6 @@ __metadata:
     ora: 5.4.1
     path-to-regexp: 6.2.1
     polyfill-crypto.getrandomvalues: 1.0.0
-    postcss-styled-syntax: ^0.6.4
     prettier: 2.8.8
     prop-types: 15.8.1
     ramda: "patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch"
@@ -16664,16 +16652,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.3.3":
-  version: 5.4.3
-  resolution: "typescript@npm:5.4.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: d74d731527e35e64d8d2dcf2f897cf8cfbc3428be0ad7c48434218ba4ae41239f53be7c90714089db1068c05cae22436af2ecba71fd36ecc5e7a9118af060198
-  languageName: node
-  linkType: hard
-
 "typescript@patch:typescript@4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
@@ -16681,16 +16659,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 1f8f3b6aaea19f0f67cba79057674ba580438a7db55057eb89cc06950483c5d632115c14077f6663ea76fd09fce3c190e6414bb98582ec80aa5a4eaf345d5b68
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^5.3.3#~builtin<compat/typescript>":
-  version: 5.4.3
-  resolution: "typescript@patch:typescript@npm%3A5.4.3#~builtin<compat/typescript>::version=5.4.3&hash=29ae49"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 3a62fe90aa79d68c9ce38ea5edb2957e62801c733b99f0e5a2b8b50922761f68f7d9a40d28c544b449866e81185cddb93cba2496d0ff3fa52ef5b1f8bcace38c
   languageName: node
   linkType: hard
 
