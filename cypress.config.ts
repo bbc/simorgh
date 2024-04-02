@@ -158,4 +158,5 @@ export default defineConfig({
   pageLoadTimeout: 100000,
   responseTimeout: 50000,
   chromeWebSecurity: false,
+  experimentalMemoryManagement: true,
 });

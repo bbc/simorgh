@@ -4,7 +4,7 @@ import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 import envConfig from '../../support/config/envs';
 import getPaths from '../../support/helpers/getPaths';
-import { getTopicPagePath } from '../pages/topicPage/helpers';
+import { getTopicPagePath } from '../pages/index/topicPage/helpers';
 
 describe('Application', () => {
   Object.keys(config)
