@@ -15,6 +15,7 @@ import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
 import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
 
@@ -64,53 +65,34 @@ const Component = ({
 };
 
 export default {
-  title: 'Topic/Page',
+  title: 'Pages/Topic Page',
   Component,
   parameters: { chromatic: { disable: true }, layout: 'fullscreen' },
+  decorators: [withServicesDecorator],
 };
 
-export const Example = Component;
+export const Example = () => <Component service="mundo" />;
 
 export const MundoWithBannerVariations = props => (
-  <Component
-    service={'mundo'}
-    {...props}
-    fixture={mundoTopicWithMessageBannerVariations}
-  />
+  <Component service="mundo" fixture={mundoTopicWithMessageBannerVariations} />
 );
 
 export const KyrgyzWithMessageBanners = props => (
-  <Component
-    service={'kyrgyz'}
-    {...props}
-    fixture={kyrgyzTopicWithMessageBanners}
-  />
+  <Component service="kyrgyz" fixture={kyrgyzTopicWithMessageBanners} />
 );
 
 export const PersianWithMessageBanners = props => (
-  <Component
-    service={'persian'}
-    {...props}
-    fixture={persianTopicWithMessageBanners}
-  />
+  <Component service="persian" fixture={persianTopicWithMessageBanners} />
 );
 
 export const PersianAfghanistan = props => (
-  <Component service={'persian'} {...props} fixture={persianAfghanistan} />
+  <Component service="persian" fixture={persianAfghanistan} />
 );
 
 export const ArabicWithMessageBanners = props => (
-  <Component
-    service={'arabic'}
-    {...props}
-    fixture={arabicTopicWithMessageBanners}
-  />
+  <Component service="arabic" fixture={arabicTopicWithMessageBanners} />
 );
 
 export const TamilWithMessageBanners = props => (
-  <Component
-    service={'tamil'}
-    {...props}
-    fixture={tamilTopicWithMessageBanners}
-  />
+  <Component service="tamil" fixture={tamilTopicWithMessageBanners} />
 );

@@ -46,16 +46,19 @@ export const MultipleItems = (_, { service }) => (
   <Component
     episodes={fixtures?.[service] ?? fixtures.indonesia}
     pageType="Podcast"
-    masterBrand={masterBrands[service]}
+    masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
     service={service}
   />
 );
 
-export const SingleItem = (_, { service }) => (
-  <Component
-    episodes={[fixtures?.[service]?.[0]] ?? fixtures.indonesia[0]}
-    pageType="Podcast"
-    masterBrand={masterBrands[service]}
-    service={service}
-  />
-);
+export const SingleItem = (_, { service }) => {
+  const fixture = fixtures?.[service]?.[0] ?? fixtures.indonesia[0];
+  return (
+    <Component
+      episodes={[fixture]}
+      pageType="Podcast"
+      masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
+      service={service}
+    />
+  );
+};

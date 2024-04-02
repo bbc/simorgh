@@ -39,10 +39,13 @@ export const MultipleItems = (_, { service }) => (
   />
 );
 
-export const SingleItem = (_, { service }) => (
-  <Component
-    episodes={[fixtures?.[service]?.[0]] ?? fixtures.afrique[0]}
-    masterBrand={`bbc_${service}_tv`}
-    service={service}
-  />
-);
+export const SingleItem = (_, { service }) => {
+  const fixture = fixtures?.[service]?.[0] ?? fixtures.afrique[0];
+  return (
+    <Component
+      episodes={[fixture]}
+      masterBrand={`bbc_${service}_tv`}
+      service={service}
+    />
+  );
+};
