@@ -41,17 +41,17 @@ const scripts = {
   thai,
 };
 
-export default (props?: { defaultService?: Services }) =>
+export default (overrideProps?: { defaultService?: Services }) =>
   (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    story: (props: any) => JSX.Element,
+    story: (storyProps: any) => JSX.Element,
     {
       globals: {
         service: { service: selectedService },
       },
     } = { globals: { service: { service: DEFAULT_SERVICE } } },
   ) => {
-    const defaultServiceOverride = props?.defaultService;
+    const defaultServiceOverride = overrideProps?.defaultService;
     const serviceToUse = defaultServiceOverride || selectedService;
 
     const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
