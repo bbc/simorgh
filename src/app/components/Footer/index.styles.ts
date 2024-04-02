@@ -13,6 +13,13 @@ const styles = {
       padding: `${spacings.DOUBLE}rem 0`,
       a: { padding: 0 },
     }),
+  paragraphWithBorderBottom: ({ palette, spacings }: Theme) =>
+    css({
+      borderBottom: `0.0625rem solid ${palette.SHADOW}`,
+      color: palette.WHITE,
+      margin: 0,
+      padding: `${spacings.DOUBLE}rem 0`,
+    }),
   siteWideLinksWrapper: ({ palette, mq, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.brevier,
