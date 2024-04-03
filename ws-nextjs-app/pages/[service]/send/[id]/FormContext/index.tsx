@@ -27,6 +27,8 @@ type ContextProps = {
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
+  submitted: boolean;
+  progress: string;
 };
 
 const FormContext = createContext({} as ContextProps);
@@ -45,6 +47,8 @@ export const FormContextProvider = ({
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
+  const [submitted, setSubmitted] = useState(false);
+  const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
@@ -55,14 +59,26 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    setSubmitted(true);
 
     // Reset error state
     setSubmissionError(null);
 
     const formData = new FormData();
 
-    // TODO: This is a mock data, we should use the formState instead
-    Object.entries({ surname: 'BBC TEST NAME' }).forEach(([key, value]) => {
+    Object.entries(formState).forEach(([key, value]) => {
+      if (value === null) return;
+      if (value instanceof FileList) {
+        const fileList = value;
+        const fileListLength = fileList.length;
+
+        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
+          const file = fileList.item(fileIndex);
+          if (file) formData.append(key, file);
+        }
+
+        return;
+      }
       formData.append(key, value);
     });
 
@@ -72,8 +88,13 @@ export const FormContextProvider = ({
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
 
+      req.upload.onprogress = e => {
+        setProgress(((e.loaded / e.total) * 100).toFixed(0));
+      };
+
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
+          setSubmitted(false);
           if (req.status !== OK) {
             setSubmissionError({
               message: req.responseText,
@@ -85,6 +106,7 @@ export const FormContextProvider = ({
 
       req.send(formData);
     } catch (error) {
+      console.log(error);
       const { message, status } = error as FetchError;
       setSubmissionError({ message, status });
     }
@@ -92,7 +114,14 @@ export const FormContextProvider = ({
 
   return (
     <FormContext.Provider
-      value={{ formState, handleChange, handleSubmit, submissionError }}
+      value={{
+        formState,
+        handleChange,
+        handleSubmit,
+        submissionError,
+        submitted,
+        progress,
+      }}
     >
       {children}
     </FormContext.Provider>
