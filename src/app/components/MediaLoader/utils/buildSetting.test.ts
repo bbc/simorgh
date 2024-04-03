@@ -1,7 +1,7 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
-import { MediaBlock } from '../types';
+import { BuildConfigProps, MediaBlock } from '../types';
 
 const baseSettings = {
   id: 'testID',
@@ -12,7 +12,7 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
-};
+} as BuildConfigProps;
 
 describe('buildSettings', () => {
   beforeEach(() => {
@@ -64,6 +64,28 @@ describe('buildSettings', () => {
         subtitles: { enabled: true, defaultOn: true },
         fullscreen: { enabled: true },
       },
+    });
+  });
+
+  it('Should add an advert item for a "Live" page when showAds is set to true.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: clipMediaBlocks as MediaBlock[],
+      pageType: 'live',
+      adsEnabled: true,
+      showAdsBasedOnLocation: true,
+    });
+
+    expect(result?.playerConfig.playlistObject?.items[0]).toStrictEqual({
+      kind: 'advert',
     });
   });
 
