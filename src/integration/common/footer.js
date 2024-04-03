@@ -46,5 +46,27 @@ export default () => {
         });
       });
     });
+
+    describe('Collective Newsroom Publication Text', () => {
+      if (service === 'hindi') {
+        it('I can see the collective newsroom publication text', () => {
+          const newsroomPublicationText =
+            document.querySelector('footer div p');
+          expect(newsroomPublicationText).toMatchSnapshot();
+        });
+      }
+    });
+
+    // describe('Collective Newsroom Publication', () => {
+    //   const services = ['hindi', 'marathi', 'tamil', 'telugu'];
+
+    //   if (services.includes(service)) {
+    //     it('I can see the collective newsroom publication text', () => {
+    //       const footerPublicationText = document.querySelector('footer div p');
+
+    //       expect(footerPublicationText).toMatchSnapshot();
+    //     });
+    //   }
+    // });
   });
 };
