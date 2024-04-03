@@ -95,6 +95,7 @@ const File = ({ id, name }: InputProps) => {
       onChange={e =>
         e.target.files && handleChange(e.target.name, e.target.files)
       }
+      multiple
     />
   );
 };
