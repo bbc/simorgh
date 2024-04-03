@@ -23,7 +23,7 @@ const Label = ({
 
 const InvalidMessageBox = ({ id, messageCode }: InvalidMessageBoxProps) => {
   const {
-    translations: { ugc },
+    translations: { ugc = {} },
   } = useContext(ServiceContext);
 
   const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
