@@ -47,15 +47,39 @@ export default () => {
       });
     });
 
-    describe('Collective Newsroom Publication Text', () => {
-      if (service === 'hindi') {
-        it('I can see the collective newsroom publication text', () => {
-          const newsroomPublicationText =
-            document.querySelector('footer div p');
-          expect(newsroomPublicationText).toMatchSnapshot();
+    describe('Paragraphs', () => {
+      const footerParagraphs = document.querySelectorAll('footer div p');
+
+      footerParagraphs.forEach(footerParagraph => {
+        const paragraphText = footerParagraph.textContent;
+        const paragraphUrl = footerParagraph.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(footerParagraph).toBeInTheDocument();
         });
-      }
+
+        it('should contain text', () => {
+          expect(paragraphText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect({
+            text: paragraphText,
+            url: paragraphUrl,
+          }).toMatchSnapshot();
+        });
+      });
     });
+
+    // describe('Collective Newsroom Publication Text', () => {
+    //   if (service === 'hindi') {
+    //     it('I can see the collective newsroom publication text', () => {
+    //       const newsroomPublicationText =
+    //         document.querySelector('footer div p');
+    //       expect(newsroomPublicationText).toMatchSnapshot();
+    //     });
+    //   }
+    // });
 
     // describe('Collective Newsroom Publication', () => {
     //   const services = ['hindi', 'marathi', 'tamil', 'telugu'];
