@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
+import TEXT_VARIANTS from '../../../../../../.storybook/withServicesDecorator/text-variants';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
