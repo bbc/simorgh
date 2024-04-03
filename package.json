@@ -238,7 +238,7 @@
     "node-fetch": "2.6.12",
     "npm-run-all2": "5.0.2",
     "ora": "5.4.1",
-    "prettier": "2.8.8",
+    "prettier": "3.2.5",
     "prop-types": "15.8.1",
     "react-test-renderer": "18.2.0",
     "retry": "0.13.1",
