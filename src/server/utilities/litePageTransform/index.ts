@@ -35,6 +35,9 @@ a{
 p > a {
   text-decoration-color:${POSTBOX};
 }
+input, textarea {
+  display:block;
+}
 #brandSvgHeader,#brandSvgFooter{
   fill:${WHITE};
   height:1.5rem;
