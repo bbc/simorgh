@@ -44,6 +44,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
       This is a text field
     </label>
     <input
+      aria-describedby="testCheckboxID-error"
       aria-invalid="false"
       aria-required="false"
       id="testCheckboxID"
@@ -98,6 +99,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-describedby="testTelID-error"
       aria-invalid="false"
       aria-required="false"
       id="testTelID"
@@ -153,6 +155,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-describedby="testTextID-error"
       aria-invalid="false"
       aria-required="false"
       id="testTextID"
@@ -208,6 +211,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
       This is a text field
     </label>
     <textarea
+      aria-describedby="testTextAreaID-error"
       aria-invalid="false"
       aria-required="false"
       id="testTextAreaID"
@@ -261,6 +265,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
       This is a text field
     </label>
     <input
+      aria-describedby="testEmailID-error"
       aria-invalid="false"
       aria-required="false"
       formnovalidate=""

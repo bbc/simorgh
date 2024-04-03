@@ -11,7 +11,6 @@ import {
 } from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
-import formTranslations from '../FormContext/utils/formTranslations';
 
 const Label = ({
   id,
@@ -23,9 +22,11 @@ const Label = ({
 );
 
 const InvalidMessageBox = ({ id, messageCode }: InvalidMessageBoxProps) => {
-  const { lang } = useContext(ServiceContext);
-  const message =
-    formTranslations[lang][messageCode ?? InvalidMessageCodes.FieldRequired];
+  const {
+    translations: { ugc },
+  } = useContext(ServiceContext);
+
+  const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
 
   return (
     <div>
@@ -37,8 +38,14 @@ const InvalidMessageBox = ({ id, messageCode }: InvalidMessageBoxProps) => {
   );
 };
 
-const TextInput = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, value = '', required } = inputState;
+const TextInput = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, value = '', required } = inputState;
   return (
     <input
       id={id}
@@ -46,28 +53,43 @@ const TextInput = ({ id, name, handleChange, inputState }: InputProps) => {
       type="text"
       value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
+      aria-describedby={describedBy}
     />
   );
 };
 
-const TextArea = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, value = '', required } = inputState;
+const TextArea = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, value = '', required } = inputState;
+
   return (
     <textarea
       id={id}
       name={name}
       value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
+      aria-describedby={describedBy}
     />
   );
 };
 
-const EmailInput = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, value = '', required } = inputState;
+const EmailInput = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, value = '', required } = inputState;
   return (
     <input
       id={id}
@@ -75,15 +97,21 @@ const EmailInput = ({ id, name, handleChange, inputState }: InputProps) => {
       type="email"
       value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
-      formNoValidate
+      aria-describedby={describedBy}
     />
   );
 };
 
-const Checkbox = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, value = false, required } = inputState;
+const Checkbox = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, value = false, required } = inputState;
   return (
     <input
       id={id}
@@ -91,14 +119,21 @@ const Checkbox = ({ id, name, handleChange, inputState }: InputProps) => {
       type="checkbox"
       checked={value as boolean}
       onChange={e => handleChange(e.target.name, e.target.checked)}
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
+      aria-describedby={describedBy}
     />
   );
 };
 
-const Telephone = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, value = '', required } = inputState;
+const Telephone = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, value = '', required } = inputState;
   return (
     <input
       id={id}
@@ -106,14 +141,21 @@ const Telephone = ({ id, name, handleChange, inputState }: InputProps) => {
       type="tel"
       value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
+      aria-describedby={describedBy}
     />
   );
 };
 
-const File = ({ id, name, handleChange, inputState }: InputProps) => {
-  const { invalid, required } = inputState;
+const File = ({
+  id,
+  name,
+  handleChange,
+  inputState,
+  describedBy,
+}: InputProps) => {
+  const { isValid, required } = inputState;
   return (
     <input
       id={id}
@@ -122,8 +164,9 @@ const File = ({ id, name, handleChange, inputState }: InputProps) => {
       onChange={e =>
         e.target.files && handleChange(e.target.name, e.target.files)
       }
-      aria-invalid={invalid}
+      aria-invalid={!isValid}
       aria-required={required}
+      aria-describedby={describedBy}
     />
   );
 };
@@ -169,8 +212,8 @@ const FormField = ({
   }
 
   const Component = FormComponents[derivedHtmlType];
-  const { invalid, messageCode } = formState[id];
-  const ariaErrorDesccribedById = `${id}-error`;
+  const { isValid, messageCode } = formState[id];
+  const ariaErrorDescribedById = `${id}-error`;
 
   if (!Component) return null;
 
@@ -182,10 +225,11 @@ const FormField = ({
         name={id}
         handleChange={handleChange}
         inputState={formState[id]}
+        describedBy={ariaErrorDescribedById}
       />
-      {invalid && (
+      {!isValid && (
         <InvalidMessageBox
-          id={ariaErrorDesccribedById}
+          id={ariaErrorDescribedById}
           messageCode={messageCode}
         />
       )}

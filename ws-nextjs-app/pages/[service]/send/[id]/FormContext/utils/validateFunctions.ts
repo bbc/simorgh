@@ -3,96 +3,91 @@ import { FieldData, InvalidMessageCodes } from '../../types';
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;
 
-const isInvalidText: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value } = data;
 
   let messageCode = null;
-  let isInvalid = false;
+  let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
 
   if (required && isInputEmpty) {
     messageCode = InvalidMessageCodes.FieldRequired;
-    isInvalid = true;
+    isValid = false;
   }
 
-  return { ...data, invalid: isInvalid, messageCode };
+  return { ...data, isValid, messageCode };
 };
 
-const isInvalidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value } = data;
 
   let messageCode = null;
-  let isInvalid = false;
+  let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
-  const isInvalidEmailFormat =
+  const isValidEmailFormat =
     !isInputEmpty &&
-    !(value as string).match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]+$/g);
+    !!(value as string).match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]+$/g);
 
   if (required && isInputEmpty) {
     messageCode = InvalidMessageCodes.FieldRequired;
-    isInvalid = true;
+    isValid = false;
   }
 
-  if (
-    (required && isInvalidEmailFormat) ||
-    (!isInputEmpty && isInvalidEmailFormat)
-  ) {
+  if (!isInputEmpty && !isValidEmailFormat) {
     messageCode = InvalidMessageCodes.WrongEmailFormat;
-    isInvalid = true;
+    isValid = false;
   }
 
-  return { ...data, invalid: isInvalid, messageCode };
+  return { ...data, isValid, messageCode };
 };
 
-const isInvalidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = false } = data;
   let messageCode = null;
 
-  const isInvalid = required && (value as boolean);
-  if (isInvalid) {
+  let isValid = true;
+  if (required && !(value as boolean)) {
     messageCode = InvalidMessageCodes.FieldRequired;
+    isValid = false;
   }
 
-  return { ...data, invalid: isInvalid, messageCode };
+  return { ...data, isValid, messageCode };
 };
 
-const isInvalidTel: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = '' } = data;
 
   let messageCode = null;
-  let isInvalid = false;
+  let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
-  const isInvalidTelFormat =
-    !isInputEmpty && !(value as string).match(/^\+?[0-9]+$/g);
+  const isValidTelFormat =
+    !isInputEmpty && !!(value as string).match(/^\+?[0-9]+$/g);
 
   if (required && isInputEmpty) {
     messageCode = InvalidMessageCodes.FieldRequired;
-    isInvalid = true;
+    isValid = false;
   }
 
-  if (
-    (required && isInvalidTelFormat) ||
-    (!isInputEmpty && isInvalidTelFormat)
-  ) {
+  if (!isInputEmpty && !isValidTelFormat) {
     messageCode = InvalidMessageCodes.WrongTelFormat;
-    isInvalid = true;
+    isValid = false;
   }
 
-  return { ...data, invalid: isInvalid, messageCode };
+  return { ...data, isValid, messageCode };
 };
 
-const isInvalidFile: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
   const isValid = true;
-  return { ...data, invalid: !isValid };
+  return { ...data, isValid };
 };
 
 const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
-  text: isInvalidText,
-  email: isInvalidEmail,
-  checkbox: isInvalidCheck,
-  phone: isInvalidTel,
-  textarea: isInvalidText,
-  file: isInvalidFile,
+  text: isValidText,
+  email: isValidEmail,
+  checkbox: isValidCheck,
+  phone: isValidTel,
+  textarea: isValidText,
+  file: isValidFile,
 };
 
 export default validateFunctions;

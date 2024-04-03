@@ -40,7 +40,7 @@ const getInitialFormState = (
     (acc, field) => ({
       ...acc,
       [field.id]: {
-        invalid: false,
+        isValid: true,
         required: field.validation.mandatory ?? false,
         value: null,
         type: field.htmlType,
@@ -51,21 +51,15 @@ const getInitialFormState = (
   );
 
 const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
-  const validatedFormState: Record<OnChangeInputName, FieldData> = {};
-  const formEntries = Object.entries(state);
+  const formEntries = new Map(Object.entries(state));
 
-  for (let i = 0; i < formEntries.length; i += 1) {
-    const [key, data] = formEntries[i];
+  formEntries.forEach((data, key, map) => {
     const validateFunction = validateFunctions[data.type];
+    const validatedData = validateFunction ? validateFunction(data) : data;
+    map.set(key, validatedData);
+  });
 
-    if (validateFunction) {
-      validatedFormState[key] = validateFunction(data);
-    } else {
-      validatedFormState[key] = data;
-    }
-  }
-
-  return validatedFormState;
+  return Object.fromEntries(formEntries);
 };
 
 export const FormContextProvider = ({

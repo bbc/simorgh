@@ -6,124 +6,130 @@ describe('validateFunctions', () => {
     {
       inputRequired: false,
       inputValue: null,
-      expectedInvalid: false,
+      expectedValid: true,
     },
     {
       inputRequired: true,
       inputValue: null,
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: '    ',
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: ' HEllo world!   ',
-      expectedInvalid: false,
+      expectedValid: true,
     },
-  ])('text', ({ inputRequired, inputValue, expectedInvalid }) => {
-    it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
-      const textData = {
-        invalid: false,
-        required: inputRequired,
-        value: inputValue,
-        type: 'text',
-      } as unknown as FieldData;
+  ])(
+    'text',
+    ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
+      it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
+        const textData = {
+          isValid: false,
+          required: inputRequired,
+          value: inputValue,
+          type: 'text',
+        } as unknown as FieldData;
 
-      const result = validateFunctions.text(textData);
-      expect(result.invalid).toBe(expectedInvalid);
-    });
-  });
+        const result = validateFunctions.text(textData);
+        expect(result.isValid).toBe(expectedInvalid);
+      });
+    },
+  );
 
   describe.each([
     {
       inputRequired: false,
       inputValue: null,
-      expectedInvalid: false,
+      expectedValid: true,
     },
     {
       inputRequired: true,
       inputValue: null,
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: 'helloworld',
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: '       ',
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: 'hello@googe.com',
-      expectedInvalid: false,
+      expectedValid: true,
     },
     {
       inputRequired: false,
       inputValue: 'helloworld',
-      expectedInvalid: true,
+      expectedValid: false,
     },
-  ])('email', ({ inputRequired, inputValue, expectedInvalid }) => {
-    it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
-      const textData = {
-        invalid: false,
-        required: inputRequired,
-        value: inputValue,
-        type: 'email',
-      } as unknown as FieldData;
+  ])(
+    'email',
+    ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
+      it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
+        const textData = {
+          isValid: false,
+          required: inputRequired,
+          value: inputValue,
+          type: 'email',
+        } as unknown as FieldData;
 
-      const result = validateFunctions.email(textData);
-      expect(result.invalid).toBe(expectedInvalid);
-    });
-  });
+        const result = validateFunctions.email(textData);
+        expect(result.isValid).toBe(expectedInvalid);
+      });
+    },
+  );
 
   describe.each([
     {
       inputRequired: false,
       inputValue: null,
-      expectedInvalid: false,
+      expectedValid: true,
     },
     {
       inputRequired: true,
       inputValue: null,
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: 'hello',
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: '     ',
-      expectedInvalid: true,
+      expectedValid: false,
     },
     {
       inputRequired: true,
       inputValue: '+4480975',
-      expectedInvalid: false,
+      expectedValid: true,
     },
     {
       inputRequired: false,
       inputValue: 'helloworld',
-      expectedInvalid: true,
+      expectedValid: false,
     },
-  ])('tel', ({ inputRequired, inputValue, expectedInvalid }) => {
+  ])('tel', ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
     it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
       const textData = {
-        invalid: false,
+        isValid: false,
         required: inputRequired,
         value: inputValue,
         type: 'phone',
       } as unknown as FieldData;
 
       const result = validateFunctions.phone(textData);
-      expect(result.invalid).toBe(expectedInvalid);
+      expect(result.isValid).toBe(expectedInvalid);
     });
   });
 });

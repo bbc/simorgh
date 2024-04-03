@@ -27,6 +27,7 @@ export type InputProps = {
   name: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
+  describedBy: string;
 };
 
 export type InvalidMessageBoxProps = {
@@ -79,7 +80,7 @@ export type Field = {
 };
 
 export type FieldData = {
-  invalid: boolean;
+  isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;
   type: string;
