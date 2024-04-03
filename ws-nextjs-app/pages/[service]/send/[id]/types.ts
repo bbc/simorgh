@@ -83,7 +83,7 @@ export type FieldData = {
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;
-  type: string;
+  htmlType: string;
   messageCode: InvalidMessageCodes | null;
 };
 

@@ -43,7 +43,7 @@ const getInitialFormState = (
         isValid: true,
         required: field.validation.mandatory ?? false,
         value: null,
-        type: field.htmlType,
+        htmlType: field.htmlType,
         messageCode: null,
       },
     }),
@@ -54,7 +54,7 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
   const formEntries = new Map(Object.entries(state));
 
   formEntries.forEach((data, key, map) => {
-    const validateFunction = validateFunctions[data.type];
+    const validateFunction = validateFunctions[data.htmlType];
     const validatedData = validateFunction ? validateFunction(data) : data;
     map.set(key, validatedData);
   });
