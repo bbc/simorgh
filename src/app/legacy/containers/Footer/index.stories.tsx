@@ -1,5 +1,4 @@
 import React from 'react';
-import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 import Footer from '.';
 import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
@@ -32,7 +31,6 @@ const Component = ({ service, isAmp = false, withAds = false }: Props) => (
 export default {
   title: 'Components/Footer',
   Component,
-  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: {
       viewports: [

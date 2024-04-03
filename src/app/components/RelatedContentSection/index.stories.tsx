@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -36,12 +35,11 @@ const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
 );
 
 export default {
-  title: 'components/OptimoPromos/OptimoRelatedContentArticlePage',
+  title: 'components/OptimoPromos/OptimoRelatedContent',
   RelatedContentComponent,
   parameters: {
     docs: { readme },
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const ListRelatedContent = () => (

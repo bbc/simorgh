@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
 import readme from './README.md';
@@ -59,7 +58,6 @@ const Component = ({
 export default {
   title: 'Components/Most Read',
   component: Component,
-  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: {
       viewports: [1280],

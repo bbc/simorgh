@@ -11,7 +11,7 @@ import {
 } from './fixture';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import metadata from './metadata.json';
-import md from './README.md';
+import readme from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -38,9 +38,7 @@ export default {
   component: TopStoriesSection,
   parameters: {
     metadata,
-    docs: {
-      // page: md,
-    },
+    docs: { readme },
   },
 };
 

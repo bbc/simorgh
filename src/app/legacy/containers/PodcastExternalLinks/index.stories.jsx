@@ -1,6 +1,5 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import PodcastExternalLinkComponent from '.';
 
 // eslint-disable-next-line react/prop-types
@@ -48,7 +47,6 @@ export default {
   title: 'Containers/Podcast External Links',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const PodcastExternalLinks = Component;

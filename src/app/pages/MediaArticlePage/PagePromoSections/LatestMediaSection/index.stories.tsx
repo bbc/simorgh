@@ -4,7 +4,6 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { StoryArgs } from '#app/models/types/storybook';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { Services } from '../../../../models/types/global';
 
@@ -44,10 +43,10 @@ export default {
   Component,
   parameters: {
     metadata,
-    // backgrounds: {
-    //   default: 'Dark',
-    //   values: [{ name: 'Dark', value: '#141414' }],
-    // },
+    backgrounds: {
+      default: 'Dark',
+      values: [{ name: 'Dark', value: '#141414' }],
+    },
     design: [
       {
         name: 'Group 0',
@@ -76,7 +75,6 @@ export default {
       },
     ],
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const MultipleLatestMediaWithCustomAltText = (

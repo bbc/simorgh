@@ -17,7 +17,6 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -128,7 +127,6 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   parameters: { layout: 'fullscreen' },
-  decorators: [withServicesDecorator()],
 };
 
 export const ArticlePage = props => (

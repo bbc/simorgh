@@ -4,7 +4,6 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { GREY_2 } from '../../../components/ThemeProvider/palette';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 import {
   twitterBlock,
   twitterBlockNoEmbed,
@@ -41,7 +40,6 @@ export default {
   title: 'Containers/Social Embed/Optimo',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const TwitterCanonicalExample = (_, globalArgs) => (

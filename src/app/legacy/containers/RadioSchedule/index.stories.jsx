@@ -6,7 +6,6 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import RadioScheduleContainer from '.';
-import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
@@ -55,7 +54,6 @@ export default {
   title: 'Containers/Radio Schedule',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const RadioSchedule = Component;

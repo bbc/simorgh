@@ -16,7 +16,6 @@ const defaultToggles = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp }) => {
-  console.log(isAmp);
   return (
     <ToggleContextProvider toggles={defaultToggles}>
       <RequestContextProvider

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AmpDecorator from '../../../../../../.storybook/helpers/ampDecorator';
-import withServicesDecorator from '../../../../../../.storybook/withServicesDecorator';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';
@@ -17,7 +16,6 @@ export default {
   title: 'Containers/Social Embed/CPS',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const CanonicalExample = (_, globalArgs) => (

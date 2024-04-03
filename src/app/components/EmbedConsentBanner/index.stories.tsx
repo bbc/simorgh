@@ -1,5 +1,4 @@
 import React from 'react';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import metadata from './metadata.json';
 import readme from './README.md';
 
@@ -34,7 +33,6 @@ export default {
     metadata,
     docs: { readme },
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const CanonicalYoutube = () => <Component provider="youtube" />;

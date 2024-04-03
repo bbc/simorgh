@@ -12,7 +12,6 @@ import portuguesePageData from './fixtureData/portuguese';
 import persianPageData from './fixtureData/persian';
 import mundoPageData from './fixtureData/mundo';
 import StoryPage from './StoryPage';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const PageWithOptimizely = withOptimizelyProvider(StoryPage);
@@ -76,10 +75,7 @@ const Component = ({ pageData, service }) => {
 export default {
   Component,
   title: 'Pages/Story Page',
-  decorators: [
-    withServicesDecorator(),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
 };
 
 export const Mundo = props => (

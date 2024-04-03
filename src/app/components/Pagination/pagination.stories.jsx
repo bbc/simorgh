@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import Pager from '.';
 
 const Component = ({ activePage, pageCount }) => {
@@ -20,18 +19,17 @@ export default {
       control: {
         type: 'number',
         min: 1,
-        max: 100,
+        max: 40,
       },
     },
     pageCount: {
       control: {
         type: 'number',
         min: 2,
-        max: 100,
+        max: 40,
       },
     },
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const Pagination = Component;

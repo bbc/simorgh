@@ -89,7 +89,7 @@ export default {
 
 This will render a select dropdown for all the stories for this story and allow you to change it using the Storybook UI.
 
-(Check the Storybook website for a full list of `argTypes` controls.)
+([Check the Storybook website](https://storybook.js.org/docs/api/arg-types) for a full list of `argTypes` controls.)
 
 To make use of the `args` object in your story, you can destructure it in the **first** argument of the story function:
 
@@ -122,17 +122,7 @@ As you can see above, you need to define a `render` function that returns the co
 
 ## Decorated args in stories
 
-Typically, you'll want access to the `service` and `variant` values for use in your story. To access these values from the global context, you must include the `withServicesDecorator` and add it to the `decorators` array in your default export. For example:
-
-```tsx
-export default {
-  title: 'MyFirstStory',
-  component: Component,
-  decorators: [withServicesDecorator()],
-};
-```
-
-This allows you to access the `service` and `variant` values in the **second** argument of your story function:
+Typically, you'll want access to the `service` and `variant` values for use in your story. To access these values from the global context, you can destructure them in the **second** argument of your story function:
 
 ```tsx
 export const MyFirstStory = ({ backgroundColor }, { service, variant }) => (
@@ -158,7 +148,7 @@ This 'hard-codes' the `service` value to `mundo` for this story.
 
 **NOTE** if you change the `service` using the global toggle in the toolbar at the top of the Storybook UI, then the story may not display as expected. For example, setting the `service` to `mundo` at the component level and changing the `service` to `arabic` using the toolbar toggle could result in the story rendering in the `mundo` language, but rendered visually right-to-left.
 
-Its very story dependent how you use and set the `service`, so choose which fits best; having it dynamic using the toolbar toggle, or hard-coded.
+It's very story dependent how you use and set the `service`, so choose which fits best; having it dynamic using the toolbar toggle, or hard-coded.
 
 ## Using Contexts / Providers
 
@@ -194,3 +184,17 @@ const Component = () => (
 ```
 
 This will ensure that the service being rendered is `mundo`, in this example. This is useful for creating stories to demonstrate layout for left-to-right and right-to-left languages.
+
+## Overriding the default service
+
+You can automatically set the `service` for a story by using the `withServicesDecorator` function. To do this, import the function and add it to the `decorators` array in the default export for the story. For example:
+
+```tsx
+import { withServicesDecorator } from '#storybook/withServicesDecorator';
+
+export default {
+  title: 'MyFirstStory',
+  component: Component,
+  decorators: [withServicesDecorator({ defaultService: 'mundo' })],
+};
+```

@@ -4,7 +4,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import RelatedTopics from '.';
 
 const WithContexts = ({ children, variant, service = 'mundo' }) => {
@@ -32,7 +31,6 @@ const WithContexts = ({ children, variant, service = 'mundo' }) => {
 export default {
   component: RelatedTopics,
   title: 'Containers/Related Topics',
-  decorators: [withServicesDecorator()],
 };
 
 export const RelatedTopicsSingle = (_, { service, variant, text }) => (

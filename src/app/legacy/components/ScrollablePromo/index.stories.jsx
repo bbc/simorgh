@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ScrollablePromo from '.';
 import {
@@ -33,7 +32,6 @@ const ScrollablePromoComponent = ({ data, service, script, dir }) => (
 export default {
   title: 'Components/Scrollable Promo',
   ScrollablePromoComponent,
-  decorators: [withServicesDecorator()],
 };
 
 export const ThreeLinks = (_, globalArgs) => (

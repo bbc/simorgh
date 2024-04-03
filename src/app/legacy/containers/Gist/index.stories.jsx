@@ -1,6 +1,5 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import Gist from '.';
 import blocks from './fixtures';
 
@@ -22,7 +21,6 @@ const Component = () => {
 export default {
   title: 'Containers/Gist',
   Component,
-  decorators: [withServicesDecorator()],
   parameters: { chromatic: { disable: true } },
 };
 

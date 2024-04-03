@@ -1,5 +1,4 @@
 import React from 'react';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import services from '../../../../server/utilities/serviceConfigs';
@@ -36,7 +35,6 @@ export default {
   title: 'Components/Curation/Subheading',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const Example = Component;

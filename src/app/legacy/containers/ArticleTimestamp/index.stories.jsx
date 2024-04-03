@@ -1,5 +1,4 @@
 import React from 'react';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
@@ -26,10 +25,7 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 export default {
   Component: WrappedArticleTimestamp,
   title: 'Containers/Article/Article Timestamp',
-  decorators: [
-    withServicesDecorator(),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
   parameters: { chromatic: { disable: true } },
 };
 

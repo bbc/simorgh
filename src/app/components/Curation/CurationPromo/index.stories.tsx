@@ -16,7 +16,6 @@ const Component = () => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
 const WithMediaIndicator = () => {
   return (
     <Wrapper>

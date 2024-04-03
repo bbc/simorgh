@@ -2,7 +2,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import MediaMessageComponent from '.';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const StyledMessageContainer = styled.div`
   padding-top: 56.25%;
@@ -18,7 +17,6 @@ export default {
       diffThreshold: 0.2,
     },
   },
-  decorators: [withServicesDecorator()],
 };
 
 // eslint-disable-next-line react/prop-types

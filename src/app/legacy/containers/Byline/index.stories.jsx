@@ -1,6 +1,5 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import BylineContainer from '.';
 
@@ -24,7 +23,6 @@ const Component = (_, { service }) => {
 export default {
   Component,
   title: 'Containers/Byline',
-  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: { disable: true },
   },

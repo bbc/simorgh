@@ -1,7 +1,6 @@
 import React from 'react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import StartTime from '.';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const storiesUnixTimestamp = 1566914061212;
 
@@ -21,7 +20,6 @@ const Component = ({ service, locale, script, dir, timezone }) => (
 export default {
   title: 'Components/Radio Schedule/Start Time',
   Component,
-  decorators: [withServicesDecorator()],
 };
 
 export const Default = (_, globalArgs) => <Component {...globalArgs} />;

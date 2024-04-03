@@ -1,5 +1,4 @@
 import React from 'react';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { StoryArgs } from '#app/models/types/storybook';
 import { Services } from '../../models/types/global';
 import readme from './README.md';
@@ -24,7 +23,6 @@ export default {
     metadata,
     docs: { readme },
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const Example = (_: StoryArgs, { service, text }: Props) => (

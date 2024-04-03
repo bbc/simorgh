@@ -2,7 +2,6 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import HeaderContainer from '.';
 
 // eslint-disable-next-line react/prop-types
@@ -27,7 +26,6 @@ export default {
   parameters: {
     chromatic: { disable: true },
   },
-  decorators: [withServicesDecorator()],
 };
 
 export const Header = props => <Component {...props} />;

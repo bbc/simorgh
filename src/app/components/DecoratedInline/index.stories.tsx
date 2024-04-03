@@ -1,6 +1,5 @@
 import React from 'react';
 import { OptimoBlock } from '#app/models/types/optimo';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import DecoratedInlineLink from '.';
 import { persianLink, fragmentBlock } from './fixture';
 
@@ -32,5 +31,4 @@ export default {
       },
     },
   },
-  decorators: [withServicesDecorator()],
 };

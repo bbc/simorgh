@@ -10,6 +10,7 @@ import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
 import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
+import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
 
 const REITH_SERIF_REGULAR = {
@@ -574,6 +575,7 @@ const preview: Preview = {
     },
   },
   decorators: [
+    withServicesDecorator(),
     story => {
       useEffect(() => {
         if (isChromatic()) {

@@ -5,13 +5,13 @@ import Paragraph from '.';
 import readme from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 
+const EMPTY_OPTION = '--';
+
 interface Props extends StoryProps {
   text: string;
-  fontVariant: FontVariant | '--';
-  size: GelFontSize | '--';
+  fontVariant: FontVariant | typeof EMPTY_OPTION;
+  size: GelFontSize | typeof EMPTY_OPTION;
 }
-
-const EMPTY_OPTION = '--';
 
 const ParagraphStory = ({ text, fontVariant, size }: Props) => {
   return (

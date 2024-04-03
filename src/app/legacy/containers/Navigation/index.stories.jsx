@@ -3,7 +3,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
-import withServicesDecorator from '../../../../../.storybook/withServicesDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service }) => (
@@ -21,7 +20,6 @@ export default {
   title: 'Containers/Navigation',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withServicesDecorator()],
 };
 
 export const Canonical = (_, globalArgs) => <Component {...globalArgs} />;

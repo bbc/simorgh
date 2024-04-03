@@ -1,11 +1,9 @@
 import React from 'react';
 import { renderProgramCard as Component } from '../testHelpers/helper';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 
 export default {
   title: 'Components/Radio Schedule/Program Card',
   Component,
-  decorators: [withServicesDecorator()],
 };
 
 export const OnDemand = (_, globalArgs) => (

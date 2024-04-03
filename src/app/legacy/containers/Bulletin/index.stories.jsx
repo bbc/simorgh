@@ -1,7 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {
@@ -35,7 +34,6 @@ const Component = ({ isAmp = false, service, item }) => (
 export default {
   Component,
   title: 'Containers/Bulletin',
-  decorators: [withServicesDecorator()],
   parameters: { chromatic: { disable: true } },
 };
 
