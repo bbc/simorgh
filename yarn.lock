@@ -4566,7 +4566,7 @@ __metadata:
 "@next/swc-linux-x64-gnu@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/swc-linux-x64-gnu@npm:14.1.4"
-  checksum: 08e611f649ba03e9f34274e33f852d17f4fb2db039a6d8c545e799596f1012539128f7a2ca2a8ef3e96c0265d7426c429f46ef2bced9998403c942095989b512
+  checksum: f6e866ca1437b6a82f666e25b7f43549cb42b379a90bac9718e320b6fd70c4a2a283981dfc00663c873f0404180645114f8889f95a0f96b0d772ee6485fcfe84
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
