@@ -4551,6 +4551,7 @@ __metadata:
 "@next/swc-linux-arm64-gnu@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/swc-linux-arm64-gnu@npm:14.1.4"
+  checksum: 4341d6fee067da3ffb26ee03713f6661d98cdf23323a84fd62c61271924a42def5520735e895fb073f7c10a26f8ae1dbadca9a53d982b502835b40a2f91a5bbf
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -4565,6 +4566,7 @@ __metadata:
 "@next/swc-linux-x64-gnu@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/swc-linux-x64-gnu@npm:14.1.4"
+  checksum: 08e611f649ba03e9f34274e33f852d17f4fb2db039a6d8c545e799596f1012539128f7a2ca2a8ef3e96c0265d7426c429f46ef2bced9998403c942095989b512
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -22187,6 +22189,8 @@ __metadata:
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
+    "@next/swc-linux-arm64-gnu": "npm:14.1.4"
+    "@next/swc-linux-x64-gnu": "npm:14.1.4"
     "@optimizely/react-sdk": 2.9.2
     "@storybook/addon-a11y": 6.5.16
     "@storybook/addon-backgrounds": 6.5.16
