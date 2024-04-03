@@ -138,3 +138,38 @@ This 'hard-codes' the `service` value to `mundo` for this story.
 **NOTE** if you change the `service` using the global toggle in the toolbar at the top of the Storybook UI, then the story may not display as expected. For example, setting the `service` to `mundo` at the component level and changing the `service` to `arabic` using the toolbar toggle could result in the story rendering in the `mundo` language, but rendered visually right-to-left.
 
 Its very story dependent how you use and set the `service`, so choose which fits best; having it dynamic using the toolbar toggle, or hard-coded.
+
+## Using Contexts / Providers
+
+The `preview.tsx` file for rendering Storybook stories contains most of our React contexts/providers to correctly render components:
+
+```tsx
+<ThemeProvider service={context.globals.service.service}>
+  <ToggleContextProvider toggles={{}}>
+    <ServiceContextProvider
+      service={context.globals.service.service}
+      variant={context.globals.service.variant}
+    >
+      <EventTrackingContextProvider pageData={pageDataFixture}>
+        <UserContextProvider>
+          <Story />
+        </UserContextProvider>
+      </EventTrackingContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+</ThemeProvider>
+```
+
+This is a very basic usage of the contexts, and sets mainly just the `service` and `variant` values from the global context (the service toolbar toggle at the top of the Storybook UI).
+
+If you want to override these per story, you can do so by including the context you want and wrapping it around your component in the story. For example:
+
+```tsx
+const Component = () => (
+  <ServiceContextProvider service="mundo" variant="default">
+    <MyFirstStory />
+  </ServiceContextProvider>
+);
+```
+
+This will ensure that the service being rendered is `mundo`, in this example. This is useful for creating stories to demonstrate layout for left-to-right and right-to-left languages.

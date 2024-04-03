@@ -620,25 +620,23 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <>
-        <ThemeProvider service={context.globals.service.service}>
-          <ToggleContextProvider toggles={{}}>
-            <ServiceContextProvider
-              service={context.globals.service.service}
-              variant={context.globals.service.variant}
+      <ThemeProvider service={context.globals.service.service}>
+        <ToggleContextProvider toggles={{}}>
+          <ServiceContextProvider
+            service={context.globals.service.service}
+            variant={context.globals.service.variant}
+          >
+            <EventTrackingContextProvider
+              // @ts-expect-error - mock data for Storybook
+              pageData={pageDataFixture}
             >
-              <EventTrackingContextProvider
-                // @ts-expect-error - mock data for Storybook
-                pageData={pageDataFixture}
-              >
-                <UserContextProvider>
-                  <Story />
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            </ServiceContextProvider>
-          </ToggleContextProvider>
-        </ThemeProvider>
-      </>
+              <UserContextProvider>
+                <Story />
+              </UserContextProvider>
+            </EventTrackingContextProvider>
+          </ServiceContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
     ),
   ],
 };
