@@ -10,7 +10,7 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
-import getAgent from '../undiciAgent';
+import getAgent from '#server/utilities/getAgent';
 
 type LoggerType = {
   error: (id: string, params: { [key: string]: string | number }) => void;
