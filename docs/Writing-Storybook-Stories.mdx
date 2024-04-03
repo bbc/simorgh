@@ -87,7 +87,7 @@ export default {
 };
 ```
 
-This will render a select dropdown for the story and allow you to change it using the Storybook UI.
+This will render a select dropdown for all the stories for this story and allow you to change it using the Storybook UI.
 
 (Check the Storybook website for a full list of `argTypes` controls.)
 
@@ -98,6 +98,27 @@ export const MyFirstStory = ({ backgroundColor }) => (
   <Component backgroundColor={backgroundColor} />
 );
 ```
+
+If you want to only have `args` for a single story out of a group of stories, you can define the `args` object in the story itself. This requires you to structure the story function differently:
+
+```tsx
+export const MyFirstStoryWithCustomArgs = {
+  render: ({ backgroundColor, color }) => (
+    <Component backgroundColor={backgroundColor} color={color} />
+  ),
+  args: {
+    color: 'red',
+  },
+  argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['red', 'blue'],
+    },
+  },
+};
+```
+
+As you can see above, you need to define a `render` function that returns the component with the `args` object destructured and then the `args` and `argTypes` below. This allows you to define `args` and `argTypes` for this specific story.
 
 ## Decorated args in stories
 
