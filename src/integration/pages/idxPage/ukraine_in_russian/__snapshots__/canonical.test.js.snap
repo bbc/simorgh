@@ -57,6 +57,13 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on t
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Paragraphs should match text and url 1`] = `
+{
+  "text": "© 2024 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань.",
+  "url": null,
+}
+`;
+
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;

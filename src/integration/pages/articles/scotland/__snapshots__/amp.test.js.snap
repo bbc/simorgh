@@ -161,6 +161,13 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 
 exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
+exports[`AMP Articles Footer Paragraphs should match text and url 1`] = `
+{
+  "text": "© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking.",
+  "url": null,
+}
+`;
+
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
 exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;

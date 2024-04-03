@@ -64,6 +64,13 @@ exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and
 
 exports[`Canonical On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
+exports[`Canonical On Demand T V Page Footer Paragraphs should match text and url 1`] = `
+{
+  "text": "© 2024 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
+  "url": null,
+}
+`;
+
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `

@@ -205,6 +205,13 @@ exports[`AMP Front Page Footer I can click on the BBC branding and it would take
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
+exports[`AMP Front Page Footer Paragraphs should match text and url 1`] = `
+{
+  "text": "© 2024 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova.",
+  "url": null,
+}
+`;
+
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, na srpskom"`;
 
 exports[`AMP Front Page Header Navigation link should match text and url 1`] = `

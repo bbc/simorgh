@@ -205,6 +205,13 @@ exports[`AMP Most Read Page Footer I can click on the BBC branding and it would 
 
 exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
+exports[`AMP Most Read Page Footer Paragraphs should match text and url 1`] = `
+{
+  "text": "© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos.",
+  "url": null,
+}
+`;
+
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`AMP Most Read Page Header Navigation link should match text and url 1`] = `
