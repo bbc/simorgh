@@ -22,10 +22,7 @@ export default ({ service, pageData, displayAds }) => {
         radioSchedule ||
         embed,
     );
-    // I have edited the hindi embed html fixture data so that the embed heading is an h2 as this is what we want
-    // Do we need a discussion with VJ to talk about making the headings all h2?
-    // Otherwise if they are going to keep making them h1s, then this test doesn't apply to
-    // all real embeds
+
     const numberOfCurations = document.querySelectorAll('main h2').length;
     expect(numberOfCurations).toEqual(curationsWithSummaries.length);
   });
