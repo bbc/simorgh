@@ -19,7 +19,8 @@ html{
   font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
-  margin:0;
+  max-width:${DESKTOP_WIDTH}px;
+  margin:0 auto;
 }
 ul{
   padding-inline-start:0rem;
@@ -47,8 +48,6 @@ input, textarea {
   background-color:${POSTBOX};
 }
 [data-lite-class=lite-svg-wrapper]{
-  max-width:${DESKTOP_WIDTH}px;
-  margin:0 auto;
   padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
@@ -59,13 +58,10 @@ input, textarea {
 }
 [data-lite-class=lite-main-content]{
   padding:0 ${CONTENT_PADDING}rem;
-  max-width:${DESKTOP_WIDTH}px;
-  margin:0 auto;
 }
 [data-lite-class=lite-nav-list]{
-  max-width:${DESKTOP_WIDTH}px;
-  margin:0 auto;
   padding:${CONTENT_PADDING}rem;
+  margin:0;
   list-style-type:none;
   border-bottom:1px solid ${GREY_3};
   display:flex;
@@ -73,8 +69,7 @@ input, textarea {
   gap:0.625rem;
 }
 [data-lite-class=lite-footer-copyright]{
-  max-width:${DESKTOP_WIDTH}px;
-  margin: 0 auto;
+  margin:0;
   padding: 1rem;
 }
 [data-lite-class=lite-most-read-list] li > div{
