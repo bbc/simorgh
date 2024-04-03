@@ -575,6 +575,7 @@ const preview: Preview = {
     },
   },
   decorators: [
+    // @ts-expect-error - global context doesn't have types for custom properties like service
     withServicesDecorator(),
     story => {
       useEffect(() => {
