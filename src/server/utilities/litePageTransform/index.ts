@@ -57,7 +57,7 @@ input, textarea {
   display:flex;
 }
 [data-lite-class=lite-main-content]{
-  padding:0 ${CONTENT_PADDING}rem;
+  padding:${CONTENT_PADDING}rem;
 }
 [data-lite-class=lite-nav-list]{
   padding:${CONTENT_PADDING}rem;
