@@ -6,10 +6,7 @@ export default {
   Component,
 };
 
-export const RadioSchedule = (_, globalArgs) => {
-  console.log(globalArgs);
-  return <Component {...globalArgs} />;
-};
+export const RadioSchedule = (_, globalArgs) => <Component {...globalArgs} />;
 
 export const ScheduleDifferentHeights = (_, globalArgs) => (
   <Component {...globalArgs} withLongSummary />

@@ -1,8 +1,4 @@
-import React, { PropsWithChildren } from 'react';
-
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { StoryProps } from '../../models/types/storybook';
+import React from 'react';
 
 import Promo from '.';
 import {
@@ -11,76 +7,33 @@ import {
   cpsNewsPromoFixture,
 } from './fixtures';
 
-interface Props extends StoryProps {
+interface Props {
   imageUrl: string;
   mainBody: string;
   minimumContrast: number;
   paletteSize: number;
 }
 
-const Wrappers = ({
-  service = 'news',
-  children,
-}: PropsWithChildren<StoryProps>) => {
-  return (
-    <RequestContextProvider
-      pageType="article"
-      pathname="/news/articles/c000000000o"
-      isAmp={false}
-      isApp={false}
-      service={service}
-    >
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: { enabled: false },
-        }}
-      >
-        {children}
-      </ToggleContextProvider>
-    </RequestContextProvider>
-  );
-};
-
 const Component = (props: Props) => {
   const { imageUrl, mainBody, minimumContrast, paletteSize } = props;
   return (
-    <Wrappers {...props}>
-      <Promo
-        // @ts-expect-error - passing in partial data
-        image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
-        url="#"
-        minimumContrast={minimumContrast}
-        paletteSize={paletteSize}
-      >
-        {mainBody}
-      </Promo>
-    </Wrappers>
+    <Promo
+      // @ts-expect-error - passing in partial data
+      image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
+      url="#"
+      minimumContrast={minimumContrast}
+      paletteSize={paletteSize}
+    >
+      {mainBody}
+    </Promo>
   );
 };
 
-const WithCPSPromoData = (props: StoryProps) => {
-  return (
-    <Wrappers {...props}>
-      <Promo {...cpsPromoFixture} />
-    </Wrappers>
-  );
-};
+const WithCPSPromoData = () => <Promo {...cpsPromoFixture} />;
 
-const WithNewsCPSPromoData = (props: StoryProps) => {
-  return (
-    <Wrappers {...props}>
-      <Promo {...cpsNewsPromoFixture} />
-    </Wrappers>
-  );
-};
+const WithNewsCPSPromoData = () => <Promo {...cpsNewsPromoFixture} />;
 
-const WithLinkPromoData = (props: StoryProps) => {
-  return (
-    <Wrappers {...props}>
-      <Promo {...linkPromoFixture} />
-    </Wrappers>
-  );
-};
+const WithLinkPromoData = () => <Promo {...linkPromoFixture} />;
 
 export default {
   title: 'Components/Frosted Glass Promo',

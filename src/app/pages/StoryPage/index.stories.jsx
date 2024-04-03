@@ -78,20 +78,20 @@ export default {
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
 };
 
-export const Mundo = props => (
-  <Component service="mundo" pageData={mundoPageData} {...props} />
+export const Mundo = () => (
+  <Component service="mundo" pageData={mundoPageData} />
 );
 
 Mundo.decorators = [withSecondaryColumnsKnob(mundoPageData)];
 
-export const Persian = props => (
-  <Component service="persian" pageData={persianPageData} {...props} />
+export const Persian = () => (
+  <Component service="persian" pageData={persianPageData} />
 );
 
 Persian.decorators = [withSecondaryColumnsKnob(persianPageData)];
 
-export const Portuguese = props => (
-  <Component service="portuguese" pageData={portuguesePageData} {...props} />
+export const Portuguese = () => (
+  <Component service="portuguese" pageData={portuguesePageData} />
 );
 
 Portuguese.decorators = [withSecondaryColumnsKnob(portuguesePageData)];
