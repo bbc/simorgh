@@ -154,7 +154,7 @@ export const providers = (provider, isLive) =>
       enrich: () => {},
       onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
     },
-  }[provider]);
+  })[provider];
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
   const { pageType } = useContext(RequestContext);
