@@ -64,6 +64,8 @@ exports[`Canonical Podcast Page Footer I can click on the BBC branding and it wo
 
 exports[`Canonical Podcast Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
 
+exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+
 exports[`Canonical Podcast Page Footer Paragraphs should match text and url 1`] = `
 {
   "text": "© 2024 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos.",

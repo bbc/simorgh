@@ -57,6 +57,8 @@ exports[`Canonical Sinhala Live Radio Page Footer I can click on the BBC brandin
 
 exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
+exports[`Canonical Sinhala Live Radio Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+
 exports[`Canonical Sinhala Live Radio Page Footer Paragraphs should match text and url 1`] = `
 {
   "text": "© 2024 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",

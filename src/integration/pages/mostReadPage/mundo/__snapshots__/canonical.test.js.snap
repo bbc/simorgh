@@ -64,6 +64,8 @@ exports[`Canonical Most Read Page Footer I can click on the BBC branding and it 
 
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
+exports[`Canonical Most Read Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
 exports[`Canonical Most Read Page Footer Paragraphs should match text and url 1`] = `
 {
   "text": "© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos.",

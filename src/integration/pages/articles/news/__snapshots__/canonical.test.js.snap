@@ -71,6 +71,8 @@ exports[`Canonical Articles Footer I can click on the BBC branding and it would 
 
 exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+
 exports[`Canonical Articles Footer Paragraphs should match text and url 1`] = `
 {
   "text": "© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking.",

@@ -62,6 +62,8 @@ exports[`Canonical Home Page Footer I can click on the BBC branding and it would
 
 exports[`Canonical Home Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
 exports[`Canonical Home Page Footer Paragraphs should match text and url 1`] = `
 {
   "text": "© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция.",
