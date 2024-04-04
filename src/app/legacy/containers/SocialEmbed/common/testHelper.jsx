@@ -14,26 +14,25 @@ import ThemeProvider from '../../../../components/ThemeProvider';
  */
 const withContexts =
   (Component, { isAmp, service = 'news', pageType = STORY_PAGE }) =>
-  props =>
-    (
-      <RequestContextProvider
-        isAmp={isAmp}
-        pageType={pageType}
-        service={service}
-        pathname="/pathname"
-      >
-        <ThemeProvider service={service}>
-          <ServiceContextProvider service={service}>
-            <ToggleContextProvider
-              toggles={{
-                eventTracking: { enabled: false },
-              }}
-            >
-              <Component {...props} />
-            </ToggleContextProvider>
-          </ServiceContextProvider>
-        </ThemeProvider>
-      </RequestContextProvider>
-    );
+  props => (
+    <RequestContextProvider
+      isAmp={isAmp}
+      pageType={pageType}
+      service={service}
+      pathname="/pathname"
+    >
+      <ThemeProvider service={service}>
+        <ServiceContextProvider service={service}>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <Component {...props} />
+          </ToggleContextProvider>
+        </ServiceContextProvider>
+      </ThemeProvider>
+    </RequestContextProvider>
+  );
 
 export default withContexts;
