@@ -14,12 +14,11 @@ import A from './a';
 import Timestamp from './timestamp';
 
 const PromoContext = React.createContext({});
-const withPromoContext = Component => props =>
-  (
-    <PromoContext.Consumer>
-      {context => <Component {...context} {...props} />}
-    </PromoContext.Consumer>
-  );
+const withPromoContext = Component => props => (
+  <PromoContext.Consumer>
+    {context => <Component {...context} {...props} />}
+  </PromoContext.Consumer>
+);
 
 const Wrapper = styled.div`
   position: relative;
