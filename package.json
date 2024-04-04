@@ -108,7 +108,7 @@
     "@emotion/styled": "11.11.5",
     "@loadable/component": "5.15.3",
     "@loadable/server": "5.15.3",
-    "@optimizely/react-sdk": "2.9.2",
+    "@optimizely/react-sdk": "3.0.1",
     "aws-embedded-metrics": "2.0.7",
     "compression": "1.7.4",
     "core-js": "3.36.1",
