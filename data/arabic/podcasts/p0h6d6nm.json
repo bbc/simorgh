@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_arabic_radio/p0h6d6nm",
+    "locators": {
+      "pid": "p0h80tck",
+      "brandPid": "p0h6d6nm"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_arabic_radio",
+    "language": "ar",
+    "lastUpdated": 1706705565000,
+    "firstPublished": 1706635205000,
+    "lastPublished": 1706635205000,
+    "timestamp": 1706635205000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "يستحق الانتباه - BBC News Arabic",
+      "pageIdentifier": "arabic.bbc_arabic_radio.podcasts.programmes.p0h6d6nm.page",
+      "producerId": "5",
+      "contentType": "player-episode",
+      "producer": "ARABIC"
+    },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.39",
+    "blockTypes": ["media"],
+    "title": "يستحق الانتباه",
+    "releaseDateTimeStamp": 1706572800000,
+    "useSensitiveOnwardJourneys": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0h80tck",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة",
+          "medium": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة يوم السابع من أكتوبر، يرويها الصحفي محمد همدر من مكتب بي بي سي نيوز عربي في بيروت",
+          "long": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة يوم السابع من أكتوبر/ تشرين الأول يرويها الصحفي محمد همدر من مكتب بي بي سي نيوز عربي في بيروت. \n\nجمّع همدر شهادات الناجيتن الوحيدتين وشهادات عائلات من قُتلوا يومها، إلى جانب تقارير إعلامية تناولت ما حدث، بحثا عن سرد شامل قدر الإمكان لما جرى لهؤلاء الأشخاص في ذلك اليوم.\n\nوكان كيبوتس بئيري - أكبر وأقدم الكيوتسات المجاورة لقطاع غزة – محط اهتمام وسائل الإعلام والسياسيين المتضامنين مع إسرائيل منذ الهجوم المباغت الذي شنه مسلحو حماس على غلاف غزة يوم السابع من أكتوبر/تشرين الأول بسبب العدد الكبير للقتلى والمختطفين بين سكانه وحجم الأضرار التي وقعت فيه.\n\nتفيد التقارير بسقوط 120 قتيلاً واختطاف العشرات من بئيري، فضلاً عن تدمير عدد كبير من المنازل بشكل كامل.\n\nتنويه: اعتمد التحقيق على شهادات لأشخاص لم تجرِ معهم بي بي سي مقابلات مباشرة، والذاكرة البشرية غير معصومة من الخطأ."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0h80lq5",
+            "types": ["Podcast"],
+            "duration": 1927,
+            "durationISO8601": "PT32M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1706634000000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "حرب غزّة: قصة 15 رهينة احتجزهم مقاتلو القسام  في كيبوتس بئيري",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "يستحق الانتباه"
+    },
+    "locators": {
+      "pid": "p0h80tck",
+      "brandPid": "p0h6d6nm"
+    },
+    "media": {
+      "id": "p0h80tck",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة",
+        "medium": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة يوم السابع من أكتوبر، يرويها الصحفي محمد همدر من مكتب بي بي سي نيوز عربي في بيروت",
+        "long": "قصة 15 رهينة احتجزهم مسلحو حماس في كيبوتس بئيري خلال هجوم على بلدات محاذية لقطاع غزة يوم السابع من أكتوبر/ تشرين الأول يرويها الصحفي محمد همدر من مكتب بي بي سي نيوز عربي في بيروت. \n\nجمّع همدر شهادات الناجيتن الوحيدتين وشهادات عائلات من قُتلوا يومها، إلى جانب تقارير إعلامية تناولت ما حدث، بحثا عن سرد شامل قدر الإمكان لما جرى لهؤلاء الأشخاص في ذلك اليوم.\n\nوكان كيبوتس بئيري - أكبر وأقدم الكيوتسات المجاورة لقطاع غزة – محط اهتمام وسائل الإعلام والسياسيين المتضامنين مع إسرائيل منذ الهجوم المباغت الذي شنه مسلحو حماس على غلاف غزة يوم السابع من أكتوبر/تشرين الأول بسبب العدد الكبير للقتلى والمختطفين بين سكانه وحجم الأضرار التي وقعت فيه.\n\nتفيد التقارير بسقوط 120 قتيلاً واختطاف العشرات من بئيري، فضلاً عن تدمير عدد كبير من المنازل بشكل كامل.\n\nتنويه: اعتمد التحقيق على شهادات لأشخاص لم تجرِ معهم بي بي سي مقابلات مباشرة، والذاكرة البشرية غير معصومة من الخطأ."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0h80lq5",
+          "types": ["Podcast"],
+          "duration": 1927,
+          "durationISO8601": "PT32M7S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1706634000000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "حرب غزّة: قصة 15 رهينة احتجزهم مقاتلو القسام  في كيبوتس بئيري",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "p0h6dt4s",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+      "height": 1080,
+      "width": 1920,
+      "altText": "يستحق الانتباه",
+      "caption": "شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك",
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1706572800000,
+    "brand": {
+      "pid": "p0h6d6nm",
+      "title": "يستحق الانتباه"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p0h80tck",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "يستحق الانتباه"
+            },
+            "locators": {
+              "pid": "p0h7tm22",
+              "brandPid": "p0h6d6nm"
+            },
+            "media": {
+              "id": "p0h7tm22",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "اثنان من سكان غزة يرويان كيف تأثرت حياتهما بتدمير مساجد وكنائس في القطاع",
+                "medium": "اثنان من سكان غزة يرويان كيف تأثرت حياتهما بتدمير مساجد وكنائس في القطاع.\n\nكما نتحدث إلى أحمد نور من فريق المتابعة الإعلامية في بي بي سي الذي تابع الموضوع عن كثب.",
+                "long": "اثنان من سكان غزة يرويان كيف تأثرت حياتهما بتدمير مساجد وكنائس في القطاع.\n\nرامز الصوري متطوع في كنيسة القديس بورفيريوس، تحدث إلينا من داخل الكنيسة التي لجأ إليها مع عائلته ومئات السكان المسيحيين في القطاع للاحتماء داخلها منذ الأيام الأولى للحرب، اعتقادا منهم أنها ستكون آمنة.\n\nأما أحمد الآغا، الذي نزح بداية العام من خان يونس إلى رفح، فشاركنا شهادته على تعرض أربعة مساجد قرب منزله في خان يونس للقصف.\n\nنتحدث أيضا إلى أحمد نور من فريق المتابعة الإعلامية في بي بي سي الذي تابع الموضوع عن كثب.\n\nوكانت بي بي سي قد تحققت من تدمير - أو إلحاق أضرار جزئية - بـ72 مسجداً، وكنيستين في غزة منذ هجمات السابع من أكتوبر/تشرين الأول.\n\nبودكاست \"يستحق الانتباه\" يقدم شرحا معمقا لقصة بارزة من أخبار اليوم، لمساعدتك على فهم أهم الأحداث وأثرها على حياتك.\n\nابحثوا عن \"يستحق الانتباه\" على منصات البودكاست المفضلة لديكم؛ اضغطوا زر الاشتراك وشاركوا الحلقات مع أصدقائكم.\n\nوأخبرونا عمّا ترونه \"يستحق الانتباه\".\n\nهذه الحلقة من إخراج ميس باقي وعباس سرور، تقدمها إيناس عبد الوهاب، وفي رئاسة التحرير كريمة كوّاح."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0h7tks0",
+                  "types": ["Podcast"],
+                  "duration": 1549,
+                  "durationISO8601": "PT25M49S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1706550060000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "كيف تأثر سكان غزة بتدمير مساجد وكنائس؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0h6dt4s",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "يستحق الانتباه",
+              "caption": "شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1706486400000,
+            "brand": {
+              "pid": "p0h6d6nm",
+              "title": "يستحق الانتباه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p0h7tm22",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "يستحق الانتباه"
+            },
+            "locators": {
+              "pid": "p0h6f110",
+              "brandPid": "p0h6d6nm"
+            },
+            "media": {
+              "id": "p0h6f110",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك",
+                "long": ".فريق بي بي سي نيوز عربي بودكاست  يعرفكم على  \" يستحق الانتباه \"  بودكاست جديد  قريبا على  موقعنا و على منصات البودكاست مع حلقات مصورة  خاصة على يوتيوب \n\n.من الاثنين إلى الجمعة ، استمع  إلى قصة تستحق الانتباه من أخبار يومك. حمل البودكاست الذي يصحبك على طريقك إلى العمل أو خلال أداء  أشغالك اليومية\n\n .في أقل من نصف ساعة ، نشرح لك قصة من أخبار يومك تستحق الانتباه و تبقيك على إطلاع دائم بأبرز الأحداث حولك"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "embedding": true,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0h6dwgs",
+                  "types": ["Podcast"],
+                  "duration": 152,
+                  "durationISO8601": "PT2M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1705921980000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "لماذا  يستحق الانتباه؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0h6dt4s",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "يستحق الانتباه",
+              "caption": "شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1705881600000,
+            "brand": {
+              "pid": "p0h6d6nm",
+              "title": "يستحق الانتباه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p0h6f110",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

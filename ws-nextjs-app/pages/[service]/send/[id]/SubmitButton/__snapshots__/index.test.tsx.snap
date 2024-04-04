@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitButton should render a submit button with an associated label 1`] = `
+<input
+  type="submit"
+  value="Submit"
+/>
+`;

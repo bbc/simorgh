@@ -256,6 +256,14 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
+      latestMediaTitle: 'Más videos',
+      ugc: {
+        submitButtonText: 'Enviar',
+        validationRequired: 'Algo está faltando.',
+        validationInvalidEmail:
+          'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',
+        validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+      },
     },
     mostRead: {
       header: 'Más leídas',
@@ -334,7 +342,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
+        url: '/mundo/topics/cr50y7p7qyqt',
       },
       {
         title: 'Economía',
@@ -358,11 +366,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Centroamérica Cuenta',
-        url: '/mundo/noticias-43826245',
-      },
-      {
-        title: 'BBC Extra',
-        url: '/mundo/noticias-48908206',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

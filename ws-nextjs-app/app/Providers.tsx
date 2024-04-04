@@ -23,7 +23,12 @@ interface Props extends AppProps {
     isApp?: boolean;
     isNextJs: boolean;
     mvtExperiments: MvtExperiment[] | null;
-    pageData: object;
+    pageData: {
+      metadata: {
+        type: PageTypes;
+      };
+      atiAnalytics?: { pageIdentifier: string };
+    };
     pageLang?: string;
     pageType: PageTypes;
     pathname: string;
@@ -34,6 +39,7 @@ interface Props extends AppProps {
     timeOnServer?: number;
     toggles: Toggles;
     variant?: Variants;
+    isUK?: boolean;
   };
 }
 
@@ -59,6 +65,7 @@ export default function Providers({
     timeOnServer,
     toggles,
     variant,
+    isUK,
   } = pageProps;
 
   return (
@@ -83,10 +90,11 @@ export default function Providers({
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
+          isUK={isUK ?? false}
+          counterName={pageData?.atiAnalytics?.pageIdentifier ?? null}
         >
           <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>
-              {/* @ts-expect-error pageData requires metadata.type to be set to page type i.e. LIVE, but pageData is currently declared as an object */}
               <PageWrapper pageData={pageData} status={status}>
                 {children}
                 {/* {status === 200 ? (

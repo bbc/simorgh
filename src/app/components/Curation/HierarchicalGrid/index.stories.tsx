@@ -14,7 +14,7 @@ const Component = ({ service, variant }: StoryProps) => {
       <ServiceContextProvider service={service} variant={variant}>
         <HierarchicalGrid
           headingLevel={2}
-          promos={pidginPromos.slice(
+          summaries={pidginPromos.slice(
             0,
             number('Promo Count', 12, { min: 3, max: 12 }),
           )}

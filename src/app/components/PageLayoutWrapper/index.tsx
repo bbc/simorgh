@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
@@ -15,7 +14,7 @@ import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
 import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorkerContainer from '../../legacy/containers/ServiceWorker';
+import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import ThemeProvider from '../ThemeProvider';
@@ -59,7 +58,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, isNextJs, variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -203,7 +202,7 @@ const PageLayoutWrapper = ({
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && <ServiceWorkerContainer />}
+        <ServiceWorker />
         <ManifestContainer />
         {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />

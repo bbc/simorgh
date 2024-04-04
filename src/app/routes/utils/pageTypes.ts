@@ -15,3 +15,5 @@ export const TOPIC_PAGE = 'topic' as const;
 export const LIVE_PAGE = 'live' as const;
 export const HOME_PAGE = 'home' as const;
 export const CPS_ASSET = 'cpsAsset' as const;
+export const STATIC_PAGE = 'static' as const;
+export const UGC_PAGE = 'ugcForm' as const;

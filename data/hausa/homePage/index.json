@@ -8,490 +8,137 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Zaɓuka kusan 100 INEC za ta ƙarasa a watan gobe",
-            "firstPublished": "2023-03-27T14:51:06.555Z",
-            "link": "https://www.bbc.com/hausa/articles/cevny200752o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ca4e/live/a3a13b40-ccab-11ed-9b0a-6f4a90e45a6a.jpg",
-            "description": "A wani saƙo da ta wallafa a shafinta na Twitter ranar Litinin, INEC  ta ce ta yanke wannan shawara ce bayan wata ganawa tsakanin manyan jami'anta.",
-            "imageAlt": "INEC Chair",
-            "id": "cevny200752o"
+            "title": "Ɗanɗano: Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+            "firstPublished": "2019-08-20T12:21:00.000Z",
+            "lastPublished": "2019-08-20T12:21:00.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23246985",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1745C/test/_63542359_hi035712328.jpg",
+            "description": "French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+            "imageAlt": "hai;le",
+            "id": "142c7232-ebaf-2d4e-8e70-6b68dda2f199"
           },
           {
             "type": "article",
-            "title": "Ƴan Najeriya za su yi kewar Buhari idan ya gama mulki – Garba Shehu",
-            "firstPublished": "2023-03-27T07:26:37.000Z",
-            "link": "https://www.bbc.com/hausa/live/labarai-65086040",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4FA2/production/_129168302__114295251_40161767_2152852741595472_3271934952567996416_n.jpg",
-            "description": "Wannan shafi ne da yake kawo muku abubuwan da ke faruwa a Najeriya da sauran sassan duniya.",
-            "imageAlt": "Garba Shehu",
-            "id": "f0db6ef0-3a0d-41a8-8868-a8c40c0ff2e0"
+            "title": "Facebook zai rinka watsa intanet ta jirgin sama",
+            "firstPublished": "2016-07-26T12:42:27.000Z",
+            "lastPublished": "2016-07-26T12:42:27.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23062696",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/D14B/test/_63497535_astronauta.jpg",
+            "description": "Injiniya Andy Cox, wanda ya sayar da ma'aikatar ga Facebook, shi ne jagoran wannan tsari.",
+            "imageAlt": "Astronaut",
+            "id": "f42b6bed-cca6-6e48-a889-0acb8a78a012"
           },
           {
             "type": "article",
-            "title": "Abin da ya sa muka dakatar da Iyorchia Ayu - PDP",
-            "firstPublished": "2023-03-27T09:53:54.835Z",
-            "link": "https://www.bbc.com/hausa/articles/cqvj351npexo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3962/live/eb1881a0-cc82-11ed-be2e-754a65c11505.png",
-            "description": "Jam'iyyar PDP ta ce ta dakatar da shugabanta na ƙasa, Iyorchia Ayu bisa zargin sa da wasu ayyuka na cin amanar jam'iyyar.",
-            "imageAlt": "...",
-            "id": "cqvj351npexo"
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 1",
+            "firstPublished": "2016-06-24T13:34:14.000Z",
+            "lastPublished": "2016-06-24T13:34:14.000Z",
+            "link": "https://www.bbc.com/hausa/23055776",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "description": "Zuma ya fuskanci koma baya kan cin hanci",
+            "imageAlt": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "id": "56d61904-73f4-2c41-a9c8-f0262babb5cb"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:94c73456-7ae0-4033-8e88-8e4240a65f2e",
+        "curationId": "urn:bbc:tipo:list:92edcf14-984d-4f71-820e-49af2da47431",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
-        "visualProminence": "HIGH"
+        "title": "Top stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "'Yadda surukata ta ɓata cikin laka bayan mahaukaciyar guguwa'",
-            "firstPublished": "2023-03-26T11:26:10.076Z",
-            "link": "https://www.bbc.com/hausa/articles/c51e5wwge9yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1bbd/live/0f60c450-c88c-11ed-8985-09a61927b152.png",
-            "description": "Jikokin Violet Frank guda biyu suna tuna mata surukarta da ta ɓata, bayan afkuwar mummunar guguwar da ta yi sanadin rugujewar ɗaruruwan gidaje. ",
-            "imageAlt": "Violet Frank",
-            "id": "c51e5wwge9yo"
+            "title": "Uhuru withdraw from Kenya election",
+            "firstPublished": "2017-06-12T11:45:53.000Z",
+            "lastPublished": "2017-06-12T11:50:55.000Z",
+            "link": "https://www.bbc.com/hausa/labarai-23131325",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/13758/test/_63540797_mediaitem63540796.jpg",
+            "description": "So this is a single sentence in present or future tense and can be as long as you like.",
+            "imageAlt": "David Beckham needed a haircut",
+            "id": "ea5f99ae-7ca8-fd4a-a297-69b7f4078008"
           },
           {
-            "type": "commentary",
-            "title": "Rundunar sojin Najeriya ta ƙaryata zargin kisan ƙananan yara",
-            "firstPublished": "2023-03-26T07:38:59.000Z",
-            "link": "https://www.bbc.com/hausa/live/labarai-65079802",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/13AC8/production/_129148508_mediaitem129148507.jpg",
-            "description": "Wannan shafi ne da yake kawo muku abubuwan da ke faruwa a Najeriya da sauran sassan duniya.",
-            "imageAlt": "ds",
-            "id": "c1e7fd59-8aa6-4e94-91fa-899b8a02324d"
+            "type": "video",
+            "title": "Ina son habaka tattalin arzikin Nigeria — Murtala",
+            "firstPublished": "2016-07-19T13:45:00.000Z",
+            "lastPublished": "2016-07-19T13:45:00.000Z",
+            "link": "https://www.bbc.com/hausa/media-23061485",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/2AD9/test/_63496901_p014p0q4.jpg",
+            "description": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis summary",
+            "imageAlt": "Amurka na binciken hadarin mota marar matuki",
+            "id": "2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911"
           },
           {
-            "type": "article",
-            "title": "Yadda matan Indiya suke amfani da allura domin kariya daga cin zarafi",
-            "firstPublished": "2023-03-26T16:52:16.036Z",
-            "link": "https://www.bbc.com/hausa/articles/crg5jzrljk8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f04a/live/56e132e0-ca5a-11ed-be2e-754a65c11505.jpg",
-            "description": "Kusan kowace mace a Indiya tana da labarin da za ta bayar na cin zarafin da ya faru a wajen taron mutane-Ko dai wani ya taba mata mama ko taba mata duwawunta, ko ya zunguri mamanta ko ya mata goge.",
-            "imageAlt": "...",
-            "id": "crg5jzrljk8o"
+            "type": "audio",
+            "title": "France beat England in a friendly",
+            "firstPublished": "2017-06-14T12:08:43.000Z",
+            "lastPublished": "2017-06-14T12:08:43.000Z",
+            "link": "https://www.bbc.com/hausa/23132710",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/13A28/test/_63542408_p01b7w9z.jpg",
+            "description": "hgasjkgdja jkghd hkdh gyebnawh duiagd uw qwjdgufg bdfagafms c bgfiubaggd doiabnasmbfui",
+            "imageAlt": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+            "id": "939fe657-b46c-fc44-b620-b5ff7113c17f"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:9f144cb4-ac4a-4072-b3ad-4681b4846261",
+        "curationId": "urn:bbc:tipo:list:3302e7be-c4a3-4eb4-b785-5603864c5bb1",
         "curationType": "tipo-curation",
         "position": 1,
         "title": "Labarai da Rahotanni Na Musamman",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT6M46S",
-            "title": "Daga Bakin Mai Ita tare da Bintu ta Dadin Kowa",
-            "firstPublished": "2023-05-11T03:59:29.221Z",
-            "link": "https://www.bbc.com/hausa/articles/c04mm49evveo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "A wannan mako, mun tattauna da Fatima Sa'id Abdullahi wadda aka fi sani da Bintu a shirin fim mai dogon zango, Dadin Kowa.",
-            "imageAlt": "",
-            "id": "c04mm49evveo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M28S",
-            "title": "'Abin da ya sa muke so a zaɓi Akpabio shugaban Majalisar Dattijai'",
-            "firstPublished": "2023-05-10T10:32:25.834Z",
-            "link": "https://www.bbc.com/hausa/articles/cm5llk53355o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Dalilan da suka sanya tsofaffin sanatoci ke son Sanata Godswill Akpabio ya zama shugaban Majalisar Dattijan Najeriya.",
-            "imageAlt": "",
-            "id": "cm5llk53355o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M39S",
-            "title": "Yadda Turkiyya ta canza a ƙarƙashin mulkin Erdogan",
-            "firstPublished": "2023-05-09T20:48:36.722Z",
-            "link": "https://www.bbc.com/hausa/articles/cyree52dg6jo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Zaɓen jin ra'ayin jama'a ya nuna cewa shugaban na fuskantar gagarumar adawa daga wajen babban abokin karawarsa, Kemal Kilicdaroglu.",
-            "imageAlt": "",
-            "id": "cyree52dg6jo"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M31S",
-            "title": "Sana'ar gargajiyar da har yanzu ke fid da matasan zamani kunya ",
-            "firstPublished": "2023-05-09T03:52:02.750Z",
-            "link": "https://www.bbc.com/hausa/articles/ckdy20v2241o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "A bidiyon, matashi Mukhtar Muhammad ya yi bayani game da sana'ar ta bugu da yadda ake yin ta. Ya ce sana'ar ta bugu ta yi masa rana don kuwa, da ita ya samu ya kammala karatunsa, ya gina gida sannan ya yi aure, kuma yake riƙe iyalinsa.",
-            "imageAlt": "",
-            "id": "ckdy20v2241o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M58S",
-            "title": "Matashin da ke burin ƙera wa sojojin Najeriya jiragen yaƙi",
-            "firstPublished": "2023-05-08T04:08:16.456Z",
-            "link": "https://www.bbc.com/hausa/articles/cyjpr734gkzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Wani matashi mai fasahar ƙere-ƙere a Najeriya ya ce ya fara tunanin ƙera wa sojojin Najeriya jirgin yaƙi na sama maras matuƙi ne a lokacin da aka sace ɗaliban sakandiren Kankara su fiye da 300.",
-            "imageAlt": "",
-            "id": "cyjpr734gkzo"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M50S",
-            "title": "Abin da ya sa nake bin ra’ayi ƴaƴana game da rayuwarsu – Ali Nuhu",
-            "firstPublished": "2023-05-07T03:44:14.803Z",
-            "link": "https://www.bbc.com/hausa/articles/cev40vvqxw2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Fitaccen jarumin fina-finan Hausa na Kannywood Ali Nuhu ya ce inda don ta shi ne ya fi so ɗansa ya gaje shi a harkar fim.",
-            "imageAlt": "",
-            "id": "cev40vvqxw2o"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M1S",
-            "title": "Muna fata sarki Charles lll ya yi koyi  da mahaifiyarsa wajen riƙe ƙasashen Afirka - Bazoum",
-            "firstPublished": "2023-05-06T15:50:40.711Z",
-            "link": "https://www.bbc.com/hausa/articles/c06pzp87x1xo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Shugaban ƙasar Nijar Mohamed Bazoum ya ce ƙasarsa da Birtaniya na da babbar alaƙa, kasancewa a shekarun baya-bayan na Birtaniya ta buɗe ofishin jakadanci a ƙasar domin ƙarfafa zumunci tsakanin ƙasashen biyu.",
-            "imageAlt": "",
-            "id": "c06pzp87x1xo"
-          },
-          {
-            "type": "video",
-            "duration": "PT8M50S",
-            "title": "Na sha suka ne kawai saboda a cusguna wa mijina - Turai 'Yar'adua",
-            "firstPublished": "2023-05-05T20:15:37.072Z",
-            "link": "https://www.bbc.com/hausa/articles/c6p9n47q583o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Uwargidan tsohon shugaban Najeriya, ta ce a kullum tana tuna rayuwarsu da Umaru 'Yar'adua, \"kawai dai bambancin yau (ranar cikarsa shekara 13 da rasuwa) ina jin daɗi saboda mutane suna taruwa ana karatu(n Alƙur'ani), ana yi masa addu'a\".  ",
-            "imageAlt": "",
-            "id": "c6p9n47q583o"
-          },
-          {
-            "type": "video",
-            "duration": "PT8M3S",
-            "title": "Ku San Malamanku  tare da Sheik Imam Mansur",
-            "firstPublished": "2023-05-05T04:40:33.903Z",
-            "link": "https://www.bbc.com/hausa/articles/c4n7dj99r83o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Sheik Mansur ɗaya ne daga cikin fitattun malaman Ɗariƙar Tijjaniya a jihar Kano",
-            "imageAlt": "",
-            "id": "c4n7dj99r83o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M38S",
-            "title": "Lokacin da ƴan Najeriya daga Sudan suka haɗu da ƴan’uwansu a Abuja",
-            "firstPublished": "2023-05-04T15:11:44.115Z",
-            "link": "https://www.bbc.com/hausa/articles/c8vr6gd22evo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Rukuni na farko na daliban na Najeriya daga Sudan waɗanda ke guje wa yaki sun isa gida ne da talatainin dare, ranar Laraba.",
-            "imageAlt": "",
-            "id": "c8vr6gd22evo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M24S",
-            "title": "Wane ne Charles, sabon sarkin Birtaniya?",
-            "firstPublished": "2023-05-04T11:16:43.751Z",
-            "link": "https://www.bbc.com/hausa/articles/cekdv5r84pgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "A ranar Asabar 6 ga watan Mayu ne za a rantsar da Sarki Charles a matsayin sarkin Birtaniya.",
-            "imageAlt": "",
-            "id": "cekdv5r84pgo"
-          },
-          {
-            "type": "video",
-            "duration": "PT4M55S",
-            "title": "Daga Bakin Mai Ita tare da Saude ta Daɗin Kowa",
-            "firstPublished": "2023-05-04T04:12:52.504Z",
-            "link": "https://www.bbc.com/hausa/articles/cv2kdy8ldk0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cv2kdy8ldk0o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 14,
-        "curationId": "urn:bbc:vivo:curation:7bf2e91a-9585-49ad-b1f7-ec52eade566b",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_hausa_radio",
+        "curationType": "available-episodes",
         "position": 2,
-        "title": "Labaran Bidiyo",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
           {
-            "type": "article",
-            "title": "Sergio Busquets zai bar Barcelona a karshen kakar bana",
-            "firstPublished": "2023-05-10T15:05:28.795Z",
-            "link": "https://www.bbc.com/hausa/articles/cpedd071gq4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4d8a/live/c8185030-ef42-11ed-876b-9b5ed953ac30.jpg",
-            "description": "Kyaftin Sergio Busquets ya tabbatar da zai bar Barcelona a karshen kakar nan, bayan shekara 18 yana Camp Nou.",
-            "imageAlt": "Sergio Busquets",
-            "id": "cpedd071gq4o"
+            "id": "p0h6nbrn",
+            "state": "next",
+            "startTime": "2024-02-27T13:59:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct655y",
+            "brandTitle": "Shirin Rana",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           },
           {
-            "type": "article",
-            "title": "Inter ta ci Milan a Champions League a wasan hamayya ",
-            "firstPublished": "2023-05-10T14:52:19.947Z",
-            "link": "https://www.bbc.com/hausa/articles/c51ll2d46pxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/41d1/live/b23d2f40-ef80-11ed-a835-b7ada014e694.jpg",
-            "description": "Inter Milan ta doke AC Milan da cin 2-0 a wasan farko a daf da karshe a Champions League ranar Laraba a Sansiro.",
-            "imageAlt": "Champions League",
-            "id": "c51ll2d46pxo"
+            "id": "p0h6kmpj",
+            "state": "onDemand",
+            "startTime": "2024-02-27T06:30:00.000Z",
+            "link": "/hausa/bbc_hausa_radio/w172zjpf3d5y88h",
+            "brandTitle": "Shirin Hantsi",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT29M30S"
           },
           {
-            "type": "article",
-            "title": "Man Utd za ta sayi Ramos, Chelsea na son riƙe Felix",
-            "firstPublished": "2023-05-10T03:44:22.869Z",
-            "link": "https://www.bbc.com/hausa/articles/c2ellrlj98eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a299/live/37553c80-eece-11ed-8656-6fd4be3d6b36.jpg",
-            "description": "Man Utd ta tattauna da Benfica domin sayen Goncalo Ramos, yayin da Chelsea za ta bayar da 'yan wasa biyu da kuɗi don riƙe Felix.",
-            "imageAlt": "Goncalo Ramos",
-            "id": "c2ellrlj98eo"
+            "id": "p0h6kmpg",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65fv",
+            "brandTitle": "Shirin Safe",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           },
           {
-            "type": "article",
-            "title": "Saka na daf da saka hannu kan ci gaba da taka leda a Arsenal",
-            "firstPublished": "2023-05-09T21:50:35.978Z",
-            "link": "https://www.bbc.com/hausa/articles/cqv0j7pwgexo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d62e/live/4feeaa60-eea1-11ed-afbc-135d5f64367b.jpg",
-            "description": "Arsenal na sa ran sanar da kulla yarjejeniya kafin karshen Premier League ta bana da cewar Bukayo Saka ya amince zai ci gaba da wasa a Gunners.",
-            "imageAlt": "Bukayo Saka",
-            "id": "cqv0j7pwgexo"
-          },
-          {
-            "type": "article",
-            "title": "Inaki Pena zai ci gaba da golan Barca zuwa 2026",
-            "firstPublished": "2023-05-09T15:46:58.029Z",
-            "link": "https://www.bbc.com/hausa/articles/c1900j721pko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/536c/live/e7313d80-ee7d-11ed-95f4-432d69491e22.jpg",
-            "description": "Barcelona ta cimma yarjejeniya da Inaki Pena, domin ya ci gaba da wasa a kungiyar zuwa karshen kakar Yunin 2026.",
-            "imageAlt": "Inaki Pena",
-            "id": "c1900j721pko"
-          },
-          {
-            "type": "article",
-            "title": "Real Madrid da Man City sun tashi 1-1 a Champions League",
-            "firstPublished": "2023-05-09T14:04:39.138Z",
-            "link": "https://www.bbc.com/hausa/articles/c2q1zl2drklo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/aae1/live/ea8715b0-ee71-11ed-b77c-232898381cd2.jpg",
-            "description": "Real Madrid da Manchester City sun tashi 1-1 a wasan farko a daf da karshe a Champions League ranar Talata a Santiago Bernabeu.",
-            "imageAlt": "Chamiopns League",
-            "id": "c2q1zl2drklo"
-          },
-          {
-            "type": "article",
-            "title": "PSG na zawarcin Mourinho, Messi da Al Hilal sun kasa cimma matsaya",
-            "firstPublished": "2023-05-09T03:50:37.664Z",
-            "link": "https://www.bbc.com/hausa/articles/c3g95jxw31qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5fac/live/3f314e40-ee00-11ed-b387-ebf7ae18b0fb.jpg",
-            "description": "Mai bayar da shawara kan harkokin ƙwallon ƙafa na PSG, Luis Campos ya yi magana da wakilin Jose Mourinho a kan zama kociyan ƙungiyar.",
-            "imageAlt": "Jose Mourinho",
-            "id": "c3g95jxw31qo"
-          },
-          {
-            "type": "article",
-            "title": "Messi da Argentina sun lashe bikin kyautukan Laureus na wasanni ",
-            "firstPublished": "2023-05-08T19:06:22.792Z",
-            "link": "https://www.bbc.com/hausa/articles/cz51p2xn78do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b5f5/live/87f0e560-edd2-11ed-997e-fb58a0712bf1.jpg",
-            "description": "Lionel Messi ya lashe kyautar fitatcen dan wasa, yayin da Argentina ta zama gwarzuwar tawaga ta shekara a bikin Laureus World Sports Awards.",
-            "imageAlt": "Lionel Messi",
-            "id": "cz51p2xn78do"
-          },
-          {
-            "type": "article",
-            "title": "Fulham ta kara yin kasa da Leicester a teburin Premier",
-            "firstPublished": "2023-05-08T17:15:21.406Z",
-            "link": "https://www.bbc.com/hausa/articles/c894ywwx9p9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da12/live/7240e500-edc1-11ed-9b87-5dd5b5540288.jpg",
-            "description": "Fulham ta kara sa Leicester City cikin matsi, bayan cin 5-3 ranar Litinin a wasan mako na 35 a Premier League a Craven Cottage.",
-            "imageAlt": "Premier League",
-            "id": "c894ywwx9p9o"
-          },
-          {
-            "type": "article",
-            "title": "Artur Dias ne zai busa wasan Real da City a Champions League",
-            "firstPublished": "2023-05-08T15:08:55.671Z",
-            "link": "https://www.bbc.com/hausa/articles/c6p5zgw77rzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2a95/live/ebd84680-edb0-11ed-9720-4d91333e4ae1.jpg",
-            "description": " Artur Dias ne zai busa wasan Real Madrid da Manchester City a Champions League ranar Talata.",
-            "imageAlt": "Artur Dias",
-            "id": "c6p5zgw77rzo"
-          },
-          {
-            "type": "article",
-            "title": "Za mu kare cikin 'yan hudun farko a Premier League - Ten Hag",
-            "firstPublished": "2023-05-08T14:26:26.826Z",
-            "link": "https://www.bbc.com/hausa/articles/cz9rj8pg8jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12bb/live/6eac6080-eda9-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Erik ten Hag ya ce har yanzu Manchester United tana da damar kammala gasar Premier League ta bana a cikin 'yan hudun farko.",
-            "imageAlt": "Erik ten Hag",
-            "id": "cz9rj8pg8jeo"
-          },
-          {
-            "type": "article",
-            "title": "Barcelona na son Gundogan, Napoli za ta rike Osimhen",
-            "firstPublished": "2023-05-08T04:07:48.524Z",
-            "link": "https://www.bbc.com/hausa/articles/cx8p5wnr42eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/28d1/live/8a99bb80-ed54-11ed-b4db-359123bad414.jpg",
-            "description": "Barcelona na da kwarin gwiwar kammala cinikin dan wasan tsakiya na Manchester City da Jamus Ilkay Gundogan.",
-            "imageAlt": "Ilkay Gundogan",
-            "id": "cx8p5wnr42eo"
+            "id": "p0h6j50j",
+            "state": "onDemand",
+            "startTime": "2024-02-26T19:29:30.000Z",
+            "link": "/hausa/bbc_hausa_radio/w3ct65j3",
+            "brandTitle": "Shirin Yamma",
+            "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+            "duration": "PT30M"
           }
-        ],
-        "activePage": 1,
-        "pageCount": 40,
-        "curationId": "urn:bbc:vivo:curation:8bec007e-f0cd-4a73-8768-cd7a5548ab81",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Wasanni",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Da wuya a samu maganin cutar kansa a nan kusa – Bincike",
-            "firstPublished": "2023-04-13T11:42:39.389Z",
-            "link": "https://www.bbc.com/hausa/articles/clkl8kegyxpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/52a7/live/06714830-d9ec-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Sakamakon nazarin da aka gudanar ta hanyar bibiyar cutukan kansa na tsawon shekara tara, ya bai wa masu bincike mamaki da tsoro kan irin jan aikin da ke gabansu.",
-            "imageAlt": "...",
-            "id": "clkl8kegyxpo"
-          },
-          {
-            "type": "article",
-            "title": "An yi gwajin ƙwayar hana haihuwa ga maza",
-            "firstPublished": "2023-02-18T04:12:03.727Z",
-            "link": "https://www.bbc.com/hausa/articles/c3g3391gp75o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e294/live/ebfdf9c0-adf0-11ed-8f65-71bfa0525ce3.png",
-            "description": "Masana kimiyya sun ce akwai yiwuwar a ci nasara wajen tabbatar da wata ƙwayar hana haihuwa, bayan gano wani sanadari da ke iya hana maniyyi tafiya zuwa wurin da ƙwayaye suke.",
-            "imageAlt": "Maniyyi lokacin da yake shiga cikin ƙwai",
-            "id": "c3g3391gp75o"
-          },
-          {
-            "type": "article",
-            "title": "Saudiyya za ta tura mace ta farko zuwa sararin samaniya a 2023",
-            "firstPublished": "2023-02-14T04:25:34.302Z",
-            "link": "https://www.bbc.com/hausa/articles/c89ejr5l1j8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c6a0/live/49467190-abbf-11ed-8f65-71bfa0525ce3.jpg",
-            "description": "Ƙasar Saudiyya ta bayyana cewa za ta aika mace ta farko cikin 'yan sama jannatin da za ta tura zuwa sararin samaniya a cikin wannan shekarar.",
-            "imageAlt": "Tashar sararin samaniya ta ƙasa da ƙasa",
-            "id": "c89ejr5l1j8o"
-          },
-          {
-            "type": "article",
-            "title": "Ƙasashen da za su yi rige-rigen zuwa duniyar wata a 2023",
-            "firstPublished": "2023-01-02T03:48:09.547Z",
-            "link": "https://www.bbc.com/hausa/articles/c88gwwev6p7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/74bb/live/eaaf6b70-86b9-11ed-90a7-556e529f9f89.png",
-            "description": "A shekarar 2023, Rasha da Indiya da Hukumar Kula da Sararin Samaniyar Tarayyar Turai za su ƙdaamar da shirin zuwa duniyar wata da kuma kutsawa can cikin sararin samaniya.will be launching missions to the Moon, and further into deep space.",
-            "imageAlt": "Picture of nose cone of Artemis-i SLS rocket and Orion capsule on launch gantry with moon above ",
-            "id": "c88gwwev6p7o"
-          },
-          {
-            "type": "article",
-            "title": "Masana kimiyya sun gano sirrin kwaɗi masu jikin tangaran da kamewar jini ",
-            "firstPublished": "2022-12-24T04:01:24.973Z",
-            "link": "https://www.bbc.com/hausa/articles/c2jgl1n25xjo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3353/live/4abe5cf0-832d-11ed-90a7-556e529f9f89.jpg",
-            "description": "Tun da daɗewa masana kimiyya suna da masaniya game da kwaɗo mai jikin tangaran amma ba su iya fahimtar yadda yake rikiɗa har ake iya ganin cikin cikinsa ba.",
-            "imageAlt": "glass frog",
-            "id": "c2jgl1n25xjo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M25S",
-            "title": "Za a fara duba yawan ruwan da ke doron duniya daga sararin samaniya",
-            "firstPublished": "2022-12-21T16:13:51.492Z",
-            "link": "https://www.bbc.com/hausa/articles/c3gpg73370do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Hukumar sararin samaniya ta Amurka ta ƙaddamar da wani tauraron ɗan adam za ta yi bincike na farko kan yawan ruwan da ke kwarara a doron duniya.",
-            "imageAlt": "",
-            "id": "c3gpg73370do"
-          },
-          {
-            "type": "article",
-            "title": "Abin da ya kamata ku sani kan ƙirƙirar kazar da za ta dinga haifar kaza zalla ",
-            "firstPublished": "2022-12-17T03:51:00.999Z",
-            "link": "https://www.bbc.com/hausa/articles/c99g0njk5rgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a642/live/629af250-7c90-11ed-90a7-556e529f9f89.png",
-            "description": "Masu bincike a Isra'ila sun ce sun ƙirƙiri kazar da aka yi wa ƙwayoyin halittarta kwaskwarima don su dinga haifar kaji mata zalla. ",
-            "imageAlt": "'Yan tsakin da aka jirkita wa ƙwayoyin halitta za su dinga haihuwar kaji ne kawai ban da zakaru ",
-            "id": "c99g0njk5rgo"
-          },
-          {
-            "type": "article",
-            "title": "Jirgin da Nasa ta aika duniyar wata ya komo duniyarmu ta Earth lafiya",
-            "firstPublished": "2022-12-12T16:59:15.832Z",
-            "link": "https://www.bbc.com/hausa/articles/cp47plv18dko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a9d9/live/6071fc30-7a3d-11ed-90a7-556e529f9f89.jpg",
-            "description": "Kan rokar mai suna Orion capsule, ya fado kasa cikin Tekun Pacific, bayan ya yi wa duniyar wata shigar burtu, tare da dawowa doron kasa.",
-            "imageAlt": "apollo ",
-            "id": "cp47plv18dko"
-          },
-          {
-            "type": "video",
-            "duration": "PT50S",
-            "title": "Yadda ƴan sama jannatin Nasa suka fita tattaki a sararin samaniya ",
-            "firstPublished": "2022-12-05T18:10:45.547Z",
-            "link": "https://www.bbc.com/hausa/articles/c16594r5epzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "A﻿ wannan bidiyon za ku ga yadda ƴan sama jannatin Nasa suka fita tattaki daga cikin tashar ƙasa da ƙasa da ke shawagi a sararin samaniya don kafa faifan solar a kan tashar ta ISS.",
-            "imageAlt": "",
-            "id": "c16594r5epzo"
-          },
-          {
-            "type": "article",
-            "title": "M﻿e ke faruwa a cikin dutse mafi girma mai aman wuta?",
-            "firstPublished": "2022-12-01T03:51:22.286Z",
-            "link": "https://www.bbc.com/hausa/articles/crg72v2p4rdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/88f6/live/e9ad6f50-70c1-11ed-94b2-efbc7109d3dd.png",
-            "description": "T﻿algen wutan yana ta kwarara ta gefen dutsen a zafin da ya kai digiri 1,000 a ma'aunin celcius, sai dai masana na cewa wannan ba zai kasance wata barazana ba ga mazauna wurin.",
-            "imageAlt": "..",
-            "id": "crg72v2p4rdo"
-          },
-          {
-            "type": "article",
-            "title": "An haife tagwayen da aka daskarar da 'yan tayinsu shekara 30 da suka wuce",
-            "firstPublished": "2022-11-23T10:40:44.908Z",
-            "link": "https://www.bbc.com/hausa/articles/cv271ke60yeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/98dd/live/af074a20-6b11-11ed-94b2-efbc7109d3dd.jpg",
-            "description": "\"﻿Shekarata biyar a lokacin da Ubangiji ya wanzar da rayuwar Lydia da Timothy, ya kuma ta adana rayuwar tasu sun lokacin har sai yanzu da suka zama mutane,\" kamar yadda Philip Ridgeway ya shaida wa CNN.",
-            "imageAlt": "Yan biyu",
-            "id": "cv271ke60yeo"
-          },
-          {
-            "type": "article",
-            "title": "Yadda k﻿umbon Artemis ya isa duniyar wata lami lafiya",
-            "firstPublished": "2022-11-23T09:22:20.398Z",
-            "link": "https://www.bbc.com/hausa/articles/c25kjg4w9g0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3685/live/580f2300-6b0c-11ed-94b2-efbc7109d3dd.png",
-            "description": "Nasa ta ce zuwa yanzu dai shirin \"ya wuce yadda aka tsammace shi\" tun bayan ƙaddamar da shi a makon da ya gabata.",
-            "imageAlt": "Orion da Wata",
-            "id": "c25kjg4w9g0o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 5,
-        "curationId": "urn:bbc:vivo:curation:3517b320-d238-4d82-9556-9d01ca43de1d",
-        "curationType": "vivo-stream",
-        "position": 4,
-        "title": "Kimiyya da Fasaha",
-        "visualProminence": "NORMAL"
+        ]
       }
     ],
     "metadata": {
@@ -503,6 +150,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from Live TIPO page"
+  "contentType": "application/json; charset=utf-8"
 }

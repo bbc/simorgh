@@ -103,6 +103,7 @@ export type ServiceConfig = {
       [key: string]: string;
     };
   };
+  googleSiteVerification?: string;
 };
 
 export type PodcastPromo = {
@@ -155,20 +156,17 @@ export interface Recommendations {
   };
 }
 
+export interface FooterLink {
+  href: string;
+  text: string;
+  id?: string | null;
+  lang?: string;
+}
+
 export interface Footer {
-  trustProjectLink?: {
-    href: string;
-    text: string;
-  };
-  externalLink?: {
-    href: string;
-    text: string;
-  };
-  links?: {
-    href: string;
-    text: string;
-    id?: string | null;
-    lang?: string | null;
-  }[];
+  trustProjectLink?: FooterLink;
+  externalLink?: FooterLink;
+  links?: FooterLink[];
   copyrightText?: string;
+  collectiveNewsroomText?: string;
 }

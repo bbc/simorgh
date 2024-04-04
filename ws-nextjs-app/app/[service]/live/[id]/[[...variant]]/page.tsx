@@ -1,39 +1,31 @@
 import React from 'react';
 import { headers } from 'next/headers';
-import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
+import isAppPath from '#app/routes/utils/isAppPath';
+
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
-import { Services, Variants } from '#models/types/global';
 import { FetchError } from '#models/types/fetch';
 
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
-import logResponseTime from '#server/utilities/logResponseTime';
-import extractHeaders from '#server/utilities/extractHeaders';
-import { IncomingHttpHeaders } from 'http';
 import { OK } from '#app/lib/statusCodes.const';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import PageDataParams from '#app/models/types/pageDataParams';
 import getAgent from '../../../../../utilities/undiciAgent';
+
 import LivePageLayout from './LivePageLayout';
 import Providers from '../../../../Providers';
 import isValidPageNumber from '../../../../../utilities/pageQueryValidator';
-
-interface PageDataParams extends ParsedUrlQuery {
-  id: string;
-  page?: string;
-  service: Services;
-  variant?: Variants;
-  // eslint-disable-next-line camelcase
-  renderer_env?: string;
-}
 
 const logger = nodeLogger(__filename);
 
@@ -43,6 +35,7 @@ const fetchData = async ({
   service,
   variant,
   rendererEnv = 'test',
+  resolvedUrl,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const livePageUrl = constructPageFetchUrl({
@@ -75,6 +68,13 @@ const fetchData = async ({
     pageJson = json;
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
+
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: status,
+      pageType: LIVE_PAGE,
+      requestUrl: resolvedUrl,
+    });
 
     logger.error(BFF_FETCH_ERROR, {
       service,

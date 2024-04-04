@@ -1,234 +1,98 @@
 {
   "data": {
     "title": "BBC News Amharic",
-    "description": "",
+    "description": "this is testing the description!",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "መነኩሴዋ ፒያኒስት፡ እማሆይ ጽጌ ማርያም ገብሩ አረፉ",
-            "firstPublished": "2022-03-15T04:07:52.000Z",
-            "link": "https://www.bbc.com/amharic/news-60741168",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9F90/production/_123684804_emahoy1.jpg",
-            "description": "በድንቅ የፒያኖ የሙዚቃ ሥራዎቻቸው የሚታወቁት እማሆይ ጽጌማርያም ገብሩ ማረፋቸውን በቅርብ የሚያውቋቸው ሰዎች ገለጹ። እማሆይ ጽጌማርያም በምንኩስና ወደ መንፈሳዊው ሕይወት ከመግባታቸው በፊት ቤተሰቦቻቸው የውብዳር የሚል ስም ነበር የሰጧቸው። በ1916 ዓ.ም. በአዲስ አበባ ውስጥ የተወለዱ እማሆይ ጽጌማርያም ገብሩ በኢትዮጵያ በቫዮሊን እና በፒያኖ ሙዚቃዎችን በማቀናበር በቀዳሚነት የሚጠቀሱ ናቸው። እማሆይ ጽጌማርያም በ99 ዓመታቸው ነው ከዚህ ዓለም በሞት የተለዩት።",
-            "imageAlt": "እማሆይ ጽጌ ማሪያም ገብሩ",
-            "id": "3e4fac31-4dc8-408f-af18-9f634d4fa4eb"
+            "title": "Rugby World Cup: New Zealand Wins",
+            "firstPublished": "2019-01-31T12:25:39.000Z",
+            "lastPublished": "2019-01-31T12:25:39.000Z",
+            "link": "https://www.bbc.com/amharic/23229261",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/14C6B/test/_63699058_051933947-1.jpg",
+            "description": "Pomp and colour at the Rugby World Cup as New Zealand emerge as winners",
+            "imageAlt": "New Zealand Rugby Player takes picture with fans",
+            "id": "e096c511-44e0-e94d-8ef0-4bafba8ca05d"
           },
           {
             "type": "article",
-            "title": "ሕጻናት በቤት ሠራተኞች ማደጋቸው ችግሩ ምንድን ነው?",
-            "firstPublished": "2023-03-27T04:21:55.787Z",
-            "link": "https://www.bbc.com/amharic/articles/cglndmlkr2eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f789/live/eaca39e0-cb2a-11ed-be2e-754a65c11505.jpg",
-            "description": "ከቅርብ ጊዜ ወዲህ የሚሰሙት የጨቅላ ሕጻናት ደብዛ ከመጥፋት ጀምሮ እስከ ሚፈጸሙባቸው አሰቃቂ ወንጀሎች ድረስ ወላጆችን በተለይ እናቶችን እንቅልፍ የሚነሳ ጉዳይ ሆኗል። ከዚህ ባሻገር ግን ጨቅላ ልጆችን ቤት ውስጥ ትቶ መሄድ ብዙም ልብ ያልተባሉ ከአካላዊ ባሻገር ሥነ ልቦናዊ ፈተናዎችን እንዲጋፈጡ ያደርጋቸዋል። ታዲያ የኑሮ ግዴታን ለመወጣት ነፍስ ያላወቁ እና ለትምህርት ያልደረሱ ልጆችን ቤት ውስጥ ከሠራተኛ ጋር ትቶ ከመሄድ ውጪ ምን አማራጭ አለ?",
-            "imageAlt": "በእናቷ እቅፍ ውስጥ ሆና የምታለቅስ ሕጻን",
-            "id": "cglndmlkr2eo"
+            "title": "Royal Wedding Picture Collections",
+            "firstPublished": "2019-01-31T12:13:13.000Z",
+            "lastPublished": "2019-01-31T12:13:13.000Z",
+            "link": "https://www.bbc.com/amharic/23229137",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/E66D/test/_63698985_53969591-7ee0-483a-b4c5-1ac33e66894a.jpg",
+            "description": "Royal Weddings: world's lavish weddings",
+            "imageAlt": "Wedding of Prince Harry and Ms. Meghan Markle",
+            "id": "71e8229f-1f16-5e4e-b104-2bf7ef3dfba6"
           },
           {
-            "type": "article",
-            "title": "በአርባ ምንጭ ጫሞ ሐይቅ ላይ ከሰጠሙት ሰዎች መካከል የሰባቱ አስከሬን ተገኘ",
-            "firstPublished": "2023-03-27T10:05:21.524Z",
-            "link": "https://www.bbc.com/amharic/articles/cpd80931m27o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1187/live/12357290-cc86-11ed-8826-bd7de7756a42.jpg",
-            "description": "ቅዳሜ መጋቢት 16/2015 ዓ.ም. በደቡብ ክልል ጋሞ ዞን በምትገኘው አርባ ምንጭ ውስጥ ጫሞ ሐይቅ ላይ በጀልባ ሲጓዙ ሰጥመው የደረሱበት ካልታወቀ ሰዎች መካከል የሰባቱ ሰዎች አስክሬን መገኘቱ ፖሊስ አስታውቋል።",
-            "imageAlt": "ቱሪስቶች በጫሞ ሐይቅ ላይ",
-            "id": "cpd80931m27o"
+            "type": "video",
+            "title": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+            "firstPublished": "2017-04-26T10:31:31.000Z",
+            "lastPublished": "2017-04-26T10:31:31.000Z",
+            "link": "https://www.bbc.com/amharic/23118972",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/E1DA/test/_63581875_p01cj70g.jpg",
+            "description": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+            "imageAlt": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+            "id": "55f39340-5469-9d47-8466-61b16bed755a"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:0879a9bf-9051-4e70-8932-d438ce39aa8a",
+        "curationId": "urn:bbc:tipo:list:dd19838b-6e3d-40d1-9b68-084c7535021c",
         "curationType": "tipo-curation",
         "position": 0,
         "title": "BBC News Amharic Top Stories",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "ድብቁ የወሲብ ንግድ በሶማሊያ ",
-            "firstPublished": "2023-03-25T05:06:04.228Z",
-            "link": "https://www.bbc.com/amharic/articles/cl46gv53m6xo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/907f/live/d23af420-ca65-11ed-be2e-754a65c11505.jpg",
-            "description": "በሶማሊያ ዋና ከተማ ሞቃዲሾ ነዋሪ የሆኑ ሁለት ሴቶች እንዴት ምስጢራዊ ወደሆነው የወሲብ ንግድ እንደተሳቡ ለቢቢሲ ተናግረዋል። ለዓመታት በእርስ በርስ ጦርነት ስትናወጥ በነበረችው ሶማሊያ ውስጥ ጦርነቱ ጋብ ቢልም፣ አሁንም ሁከቶችን ማስተናገዷ አልቀረም።",
-            "imageAlt": "በጨለማ ውስጥ ከጀርባ የምትታይ ሴት ",
-            "id": "cl46gv53m6xo"
+            "title": "ዓለምን የቀየረው የሁለቱ ተማሪዎች ፕሮጀክት!",
+            "firstPublished": "2017-08-21T09:01:45.000Z",
+            "lastPublished": "2017-08-21T09:01:45.000Z",
+            "link": "https://www.bbc.com/amharic/news-23149061",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/400E/test/_63589361__95031565_gettyimages-630609020.jpg",
+            "description": "ጉግል-ዓለምን የቀየረው የሁለቱ ተማሪዎች ፕሮጀክት!",
+            "imageAlt": "ጉግል",
+            "id": "2e281fd5-18e9-9f4b-bfcf-694f45c66a31"
           },
           {
             "type": "article",
-            "title": "የአሜሪካዋ ግዛት በልጆች የቲክቶክ እና ኢኒስታግራም አጠቃቀም ላይ ገደብ ጣለች",
-            "firstPublished": "2023-03-24T07:44:02.634Z",
-            "link": "https://www.bbc.com/amharic/articles/cpr5el75rl2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/210e/live/f9504f20-ca14-11ed-be2e-754a65c11505.jpg",
-            "description": "የአሜሪካዋ ዩታህ ግዛት አዳጊዎች ፌስቡክን፣ ቲክቶክ እና ኢነስታግራምን የመሰሉ ማኅበራዊ ሚዲያ አጠቃቀማቸው ላይ ገደብ በመጣል የመጀመሪያዋ ግዛት ሆነች።",
-            "imageAlt": "ለልጆች የአእምሮ ጤና ስጋት የሆነው ማኅበራዊ ሚዲያ ለወላጆችም አሳሳቢ ሆኗል",
-            "id": "cpr5el75rl2o"
+            "title": "በቀን አንድ ስኒ ተጨማሪ ቡና መጠጣት አድሜን በሶት ወር ያስረዝማል",
+            "firstPublished": "2017-08-22T08:40:30.000Z",
+            "lastPublished": "2017-08-22T08:40:30.000Z",
+            "link": "https://www.bbc.com/amharic/news-23140545",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B480/test/_63580264__96887457_gettyimages-629111916.jpg",
+            "description": "በአስር አውሮፓ ሃገሮች ውስጥ በግማሸ ሚሊየን ሰዎች ላይ በተሰራው ጥናት መሰረት ከሆነ በቀን ሶስት ስኒ ቡና የሚጠጡ ሰዎች ረጅም እድሜ እንደሚኖሩ አረጋገጠ።",
+            "imageAlt": "ቡና ለጤና የሚሰጠው ጥቅም",
+            "id": "6486e4a7-26e0-a04c-9b10-8305848c1a82"
           },
           {
             "type": "article",
-            "title": "በረመዳን ወር ጤናችንን ለመጠበቅ የሚጠቅሙ አምስት ምክሮች",
-            "firstPublished": "2023-03-23T04:14:23.725Z",
-            "link": "https://www.bbc.com/amharic/articles/c19w4n30jdpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8127/live/ab46bfa0-c89b-11ed-95f8-0154daa64c44.jpg",
-            "description": "በዓለም ላይ ወደ 2 ቢሊዮን የሚጠጉ ሙስሊሞች ዓመታዊውን የረምዳን ጾም ጀምረዋል። በጾም ወቅት አማኞች ከንጋት እስከ ምሽት ራሳቸውን ከምግብ እና ከመጠጥ ያርቃሉ። በዚህ ወቅት ስፖርት ማዘውተር ችግር አለው? የትኞቹን ምግቦች በይበልጥ መመገብ ይመከራል? የሰውነት እንቅስቃሴ ባለሙያው ቢላል ሐፊዝ፣ የሥነ ምግብ ባለሙያዋ ናዚማ ቁረሺ ለዚህ ጽሑፍ ተማክረዋል።",
-            "imageAlt": "ቴምር",
-            "id": "c19w4n30jdpo"
+            "title": "ፕሮፋይል-ፕሬዝደንት ኢሳያስ አፈወርቂ",
+            "firstPublished": "2017-08-22T09:06:18.000Z",
+            "lastPublished": "2017-08-22T09:06:18.000Z",
+            "link": "https://www.bbc.com/amharic/23143844",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/77A4/test/_63582603_c7cdb71b-e25d-4b4a-9288-db1ae8029302.jpg",
+            "description": "ኤርትራ ነጻነቷን ካገኘችበት ከ1983 ዓ.ም አንስቶ ኤርትራን በፕሬዝደነትነት ሲመሯት ቆይተዋል። ኢሳያስ አፈወርቂ የሚመሩት ፓርቲ በሃገሪቷ የሚገኘው ብቸኛው የፖለቲካ ፓርቲ ነው",
+            "imageAlt": "የኤርትራው ፕሬዝደንት ኢሳያስ አፍወርቂን የሚያሳይ ምስል",
+            "id": "036997cd-4fee-5b4a-beae-aea3fa979bf9"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:a84415ed-8305-4d6d-875c-dda5c7d7a686",
+        "curationId": "urn:bbc:tipo:list:0290d038-7a90-4b2a-ab76-5b5fc22f68a5",
         "curationType": "tipo-curation",
         "position": 1,
-        "title": "ከየፈርጁ",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT1M24S",
-            "title": "በ35 ሺህ የወዳደቁ ፕላስቲኮች የተሰራው ቅልብጭ ያለ ቤት",
-            "firstPublished": "2023-05-11T03:45:19.181Z",
-            "link": "https://www.bbc.com/amharic/articles/cekddm21533o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በዓለም ላይ እጅግ የተበከለ ወንዝ ካላቸው አገራት መካከል ኢንዶኔዥያ አንዷ ናት። የአካባቢ ተቆርቋሪው ጋሪ ቤንችጊብ ይህንን ብክለት ለመከላከል ሥራ ጀምሯል። ወደ ወንዞች እና የባሕር ዳርቻዎች የተጣሉ ፕላስቲኮችን በማሰባሰብ ከ35 ሺህ በላይ በሚሆኑ ፕላስቲኮች የራሱን መኖሪያ ቤት ሰርቷል። ይህ ቤት ውስጡ ምን ይመስላል? በውስጡስ ምን ምን አካቷል?",
-            "imageAlt": "",
-            "id": "cekddm21533o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M39S",
-            "title": "በቱርክ ላይ ጉልህ ለውጥ ማምጣት የቻሉት ፕሬዝዳንት ኤርዶዋን እና ተጽእኗቸው",
-            "firstPublished": "2023-05-10T04:06:46.201Z",
-            "link": "https://www.bbc.com/amharic/articles/c1v00gwv6vro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ባለፉት ሁለት አስርት ዓመታት ቱርክን የመሩት ረሲፕ ታይፕ ኤርዶዋን በአገራቸው ውስጥ ታላቅ እመርታን ማስመዝገባቸው እና በዓለም ዙሪያም ተደማጭነቷን ማጉላታቸው ይነገርላቸዋል። በተለይ በምጣኔ ሃብት፣ በሴቶች መብት፣ በዓለም አቀፍ ግንኙነት እና በሐይማኖት ረገድ የሚጠቀሱ ለውጦችን ማስመዝገብ እንደቻሉ ይነገርላቸዋል። በቱርክ ላይ ጉልህ ለውጥ ማምጣት የቻሉት ፕሬዝዳንት ኤርዶዋን በሥልጣን ላይ ለመቆየት በምርጫ ይወዳደራሉ።",
-            "imageAlt": "",
-            "id": "c1v00gwv6vro"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M35S",
-            "title": "ለ35 ዓመታት ከወንዝ ውስጥ ብረታ ብረት በመሰብሰብ የኖሩት ‘ማግኔቱ’ አዛውንት",
-            "firstPublished": "2023-05-09T03:39:07.589Z",
-            "link": "https://www.bbc.com/amharic/articles/c037nxg3ylyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "እኚህ ግለሰብ ጋንጉሊ ሳርካር ይባላል። ነዋሪነቱ በባንግላዲሽ መዲና ዳካ ነው። ላለፉት 35 ዓመታት ኑሯቸውን የመሩት ከሌሎች ሰዎች ለየት ባለ መልኩ ነው። ከተማዋቸውን የሚያልፍ ቡሪጋንጋ የሚባል ወንዝ አለ። ሰው ሁሉ ከእዚህ ወንዝ ዓሳ በማጥመድ ኑሮውን ይደጉማል። ጋንጉሊ ግን ላለፉት 35 ዓመታት ዓሳ አጥምደው አያውቁም። መተዳደሪያቸው ወንዙ ውስጥ የተጣሉ ብረታ ብረቶችን በማግኔት በመሰብሰብ ነው። በቀን ከ10 እስከ 15 ኪሎ ግራም ብረት እየሰበሰቡ በመሸጥ ዘመናትን አሳልፈዋል፤ አሁን ግን ችግር ገጥሟቸዋል።",
-            "imageAlt": "",
-            "id": "c037nxg3ylyo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M45S",
-            "title": "የንጉሥ ቻርለስ ሦስተኛ የንግሥና ሥነ ሥርዓት ገጽታዎች",
-            "firstPublished": "2023-05-08T08:30:44.529Z",
-            "link": "https://www.bbc.com/amharic/articles/czqn995y9n4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ንጉሥ ቻርለስ ሦስተኛ እና ንግሥት ካሚላ የንግሥና ሥነ ሥርዓት በደማቅ ሁኔታ ቅዳሜ ዕለት አከናውነዋል። በሥነ ሥርዓቱ ላይ ከ2 ሺህ በላይ ሰው ታድሟል። ሌሎች በ10 ሺህ የሚቆጠሩ ሰዎች ደግሞ ጥንዶቹን ለማየት በለንደን ጎዳናዎች ላይ ተሰልፈው ውለዋል። በአንጻሩ የዘውዳዊ ሥርዓቱን የሚቃወሙ ሰዎችም ድምጻቸውን ያሰሙበት ዕለት ነበር። የንግሥና ሥነ ሥርዓቱ በአመዛኙ ይህንን ይመስል ነበር።",
-            "imageAlt": "",
-            "id": "czqn995y9n4o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M46S",
-            "title": "የውሃ ሃብቷ ተሟጦ ያለውሃ ልትቀር ትችላለች የተባለችው አገር የገጠማት ፈተና",
-            "firstPublished": "2023-05-08T04:04:36.780Z",
-            "link": "https://www.bbc.com/amharic/articles/c2e91d4nv8zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በ﻿አየር ንብረት ለውጥ ምክንያት በ2050 ከፊሉ የመካከለኛው ምሥራቅ አካባቢ ለመኖሪያነት አይሆንም ተብሎ ተሰግቷል። በከፍተኛ ሁኔታ በአየር ንብረት ለውጥ ምክንያት ለፈተና ይጋለጣሉ ከተባሉ የአካባቢው አገራት መካከል ዮርዳኖስ አንዷ ነች። በዚህም ሳቢያ የወደፊት ዕጣ ፈንታዋ የከፋ እንደሚሆን የተተነበየባት ዮርዳኖስ፣ ከወዲሁ ለውጦችን እና ምልክቶችን እየተጋፈጠች ነው። በአሁኑ ወቅት የሙት ባሕር መጠን እየቀነሰ ሲሆን ብዙ ቤቶችም ውሃ የሚያገኙት በሳምንት አንድ ቀን ብቻ ነው። ስለዚህ ዮርዳኖስ በአጭር ጊዜ ውስጥ ካለ ውሃ ልትቀር ይሆን?",
-            "imageAlt": "",
-            "id": "c2e91d4nv8zo"
-          },
-          {
-            "type": "video",
-            "duration": "PT7M8S",
-            "title": "ሽመልስ አራርሶ እና ታዋቂው የኬንያ ዘም መሽሩምስ ባንድ ሲታወሱ",
-            "firstPublished": "2023-05-07T04:57:09.476Z",
-            "link": "https://www.bbc.com/amharic/articles/c0wgdyddx53o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ታዋቂው ሙዚቀኛ ሽመልስ አራርሶ እና የኬንያው ዘም መሽሩምስ ባንድ በኢትዮጵያ አቆጣጠር ከ1980ዎቹ መጀመሪያ አንስቶ አስከ ሽመልስ ህልፈት ድረስ ኬንያን እና ኢትዮጵያን በሙዚቃ ያስተሳሰረ የጋራ ታሪኮች አሏቸው። ሽመልስ ከዘም መሽሩምስ ባንድ ጋር ሁለት አልበሞችን ሰርቷል። በሽመልስ ምክንያት ዘም መሽሩምስ ባንድ ወደ ኢትዮጵያ እየተመላለሰ ብዙ የሙዚቃ ድግሶችን አቅርቧል። አምስት አስርት ዓመታት ያስቆጠረ ዕድሜ ያለው ከዘም መሽሩምስ ባንድ አባላት ከሆኑት አምስት ወንድማማቾች መካከል ሁለቱ ከቢቢሲ ጋር ቆይታ አድርገዋል። በዚህ ቆይታቸው ስለሽመልስ አራርሶ እና ከሦስት አስርት ዓመታት በፊት ኢትዮጵያ ውስጥ ስላቀረቧቸው የሙዚቃዎች ድግሶች አውግተውናል።",
-            "imageAlt": "",
-            "id": "c0wgdyddx53o"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M17S",
-            "title": "ሦስት ሳምንታትን ያስቆጠረው የሱዳን ግጭት ያስከተለው ቀውስ",
-            "firstPublished": "2023-05-06T05:08:11.761Z",
-            "link": "https://www.bbc.com/amharic/articles/cd1r8p01gp2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "በሱዳን ጦር እና በፈጥኖ ደራሽ ኃይሉ መካከል የተቀሰቀሰው ጦርነት ሦስት ሳምንታትን አስቆጥሯል። ሦስት ጊዜ የተኩስ አቁም ስምምነት ተደርጎ ነገር ግን በተደጋጋሚ ተጥሷል። ከ100 ሺህ በላይ ሰዎች አገራቸውን ለቀው ሲሰደዱ ሌሎች በመቶ ሺህ የሚቆጠሩ ደግሞ ከመኖሪያቸው ተፈናቅለዋል። በ10 ሚሊዮን የሚቆጠሩ ሱዳናውያን የአስቸኳይ ሰብዓዊ ድጋፍ ጠባቂ ሆነዋል። አሁንም ለሰባት ቀናት የሚቆይ ተኩስ አቁም ተደርጓል ቢባልም በካርቱም እና በሌሎች ከተሞች ከባድ ውጊያ እየተካሄደ ነው። ሁለቱም ኃይሎች ግጭቱን በቅርብ ጊዜ ያቆማሉ ተብሎ አይጠበቅም።\n",
-            "imageAlt": "",
-            "id": "cd1r8p01gp2o"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M48S",
-            "title": "ለንጉሥ ቻርለስ የንግሥና ሥነ ሥርዓት የተዘጋጁት ወርቃማ ሰረገላዎች",
-            "firstPublished": "2023-05-05T03:58:05.569Z",
-            "link": "https://www.bbc.com/amharic/articles/cp6yjzdnpp4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "የንጉሥ ቻርለስ ሦሰተኛ የንግሥና ሥነ ሥርዓት ነገ ቅዳሜ ሚያዚያ 28/2015 ዓ.ም. በታላቅ ዝግጅት ለንደን ውስጥ ይከናወናራል። ንጉሡ እና ባለቤታቸው በዓለም ዕድሜ ጠገብ በሆኑ ወርቃማ ሰረገላዎች ላይ ሆነው ሥነ ሥርዓቱ ወደሚካሄድበት ቦታ ይሄዳሉ። በይፋ ንግሥናቸውን ከተቀበሉ በኋላም ወደ ባኪንግሃም ቤተ መንግሥት በልዩ ሥነ ሥርዓት ሲመለሱም ሰረገላዎቹ ተሳፍረው ይሆናል። እነዚህ ልዩ ሰረገላዎች ከአውሮፓውያኑ 1830ዎቹ ጀምሮ በተከናወኑ በእያንዳንዱ የንግሥና ሥነ ሥርዓቶች ላይ ያገለገሉ እጅግ የተዋቡ ሰረገላዎች ናቸው።",
-            "imageAlt": "",
-            "id": "cp6yjzdnpp4o"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M37S",
-            "title": "እርጅናን ለማሸነፍ በየዓመቱ ሚሊዮን ዶላሮችን የሚያፈሰው ባለሃብት",
-            "firstPublished": "2023-05-03T05:10:59.867Z",
-            "link": "https://www.bbc.com/amharic/articles/ce7gn3rkxw7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ሚሊየነሩ ብሪያን ጆንሰን እርጅናውን ለመቀልበስ በየዓመቱ በሚሊዮኖች የሚቆጠር ዶላር በማውጣት ጥረት እያደረገ ነው። ብሪያን አሁን ዕድሜው 45 ነው። በስፖርት እና በሕክምና ግን ወደ 18 ዓመት መመለስ ይፈልጋል። ይህንንም ለማሳካት ሂደቱን የሚከታተሉ 30 አባላት ያሉት የሐኪሞች እና ሳይንቲስቶች ቡድን ቀጥሯል።",
-            "imageAlt": "",
-            "id": "ce7gn3rkxw7o"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "‘እየሱስን ለማግኘት’ ጾም ላይ የቆዩ 100 የሚጠጉ ሰዎች አስከሬን የተገኘበት ስፍራ",
-            "firstPublished": "2023-04-29T05:13:46.030Z",
-            "link": "https://www.bbc.com/amharic/articles/cpvxwz7d1x5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "እየሱስን ለማግኘት እራሳቸውን በጾም አድክመው እንዲሞቱ በሚያበረታታ የእምነት ቡድን ስብከት የተነሳ የሞቱ ወደ 100 የሚደርሱ ሰዎች አስከሬን በምሥራቅ ኬንያ ተገኝቷል። አሁንም በዚሁ ስፍራ ከሃይማኖታዊው ትዕዛዝ አናፈነግጥም ብለው በርካታ ሰዎች በጾም ላይ እንደሚገኙ ፖሊስ አስታውቋል። በዚህም ሳቢያ የሟቾች ቁጥር ሊያሻቅብ ይችላል ተብሏል። የኬንያ መንግሥትም በእንዲህ አይነቱ ሃይማኖታዊ አስተምህሮ ዙሪያ እርምጃ እንዲወስድ ግፊት እየተደረገበት ነው።",
-            "imageAlt": "",
-            "id": "cpvxwz7d1x5o"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M29S",
-            "title": "ሱዳንን እያመሰ ያለው ግጭት የተቀሰቀሰበት ምክንያት ምንድን ነው?",
-            "firstPublished": "2023-04-28T04:10:15.219Z",
-            "link": "https://www.bbc.com/amharic/articles/cxxypw3zwdzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "ሁለት ሳምንት ሊሞላው የተቃረበው በሱዳን በተፈጠረው ወታደራዊ ግጭት በመቶዎች የሚቆጠሩ ሰዎች ተገድለዋል። ግጭቱ የሥልጣን ሽኩቻ ውስጥ በገቡት በአገሪቱ ሁለት ኃያላን የጦር ጄኔራሎች መካከል የሚደረግ ሲሆን የሌሎች አገራት እጅ እንዳለበትም ይነገራል። ለመሆኑ ይህ ግጭት መቀስቀስ ምክንያቱ ምንድን ነው?",
-            "imageAlt": "",
-            "id": "cxxypw3zwdzo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M27S",
-            "title": "የሱዳንን ግጭት በተመለከተ ከሚሰራጩ ቪዲዮዎች ምን ያህሎቹ እውነተኛ ናቸው?",
-            "firstPublished": "2023-04-26T04:13:57.766Z",
-            "link": "https://www.bbc.com/amharic/articles/c2lp0l7qvjzo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "የሱዳንን ግጭት ተከትሎ እውነተኛ ያልሆኑ እና አሳሳች ቪዲዮዎች በማኅበራዊ ሚዲያ ላይ እየተሰራጩ ነው። ቢቢሲ አንዳንዶቹን ቪዲዮዎች በመመርመር ሐሰተኛነታቸውን እና ምንጫቸውን ለማወቅ ችሏል። ይህ ቪዲዮም ተጠቃሽ የሆኑትን ዳሷል። ",
-            "imageAlt": "",
-            "id": "c2lp0l7qvjzo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 7,
-        "link": "https://www.bbc.com/amharic/topics/c917ezk2pmvt",
-        "curationId": "urn:bbc:vivo:curation:a899f5cd-ad96-4585-8ed8-07b22070dc2d",
-        "curationType": "vivo-stream",
-        "position": 2,
-        "title": "ቪዲዮ",
-        "visualProminence": "NORMAL"
+        "title": "የኛ ምርጫ",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
@@ -240,6 +104,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live home page"
+  "contentType": "application/json; charset=utf-8"
 }
