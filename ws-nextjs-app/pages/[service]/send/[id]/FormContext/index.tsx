@@ -5,7 +5,6 @@ import React, {
   useContext,
   useState,
 } from 'react';
-import { FetchError } from '#app/models/types/fetch';
 import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
@@ -15,7 +14,9 @@ import {
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
+  UGCSendResponse,
 } from '../types';
+import UGCSendError from '../UGCSendError';
 
 type SubmissionError = {
   message: string;
@@ -83,7 +84,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
@@ -96,18 +97,27 @@ export const FormContextProvider = ({
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status !== OK) {
-            setSubmissionError({
-              message: req.responseText,
-              status: req.status,
-            });
+            // const { response, status } = req;
+            // const { message, code } = JSON.parse(response);
+
+            // const err = new UGCSendError({ message, code, status });
+
+            // console.log(err);
+            // console.log(err.status);
+
+            // Productionizzation invokation
+            // sendCustomMetric();
+            // logger.error();
+
+            const err = new Error('Errrrrrrr');
+            throw err;
           }
         }
       };
 
       req.send(formData);
     } catch (error) {
-      console.log(error);
-      const { message, status } = error as FetchError;
+      const { message, status } = error as UGCSendResponse;
       setSubmissionError({ message, status });
     }
   };

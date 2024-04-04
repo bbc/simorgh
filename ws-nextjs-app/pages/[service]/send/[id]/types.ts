@@ -70,3 +70,9 @@ export type PageProps = {
     sections: Section[];
   };
 };
+
+export type UGCSendResponse = {
+  message: string;
+  code: string;
+  status: number;
+};
