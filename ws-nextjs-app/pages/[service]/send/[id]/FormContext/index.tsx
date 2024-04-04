@@ -82,6 +82,7 @@ export const FormContextProvider = ({
       const updatedState = { [name]: { ...prevState[name], value } };
       return { ...prevState, ...updatedState };
     });
+    console.log(formState);
   };
 
   const handleSubmit = async (event: FormEvent) => {
@@ -96,10 +97,12 @@ export const FormContextProvider = ({
 
     const formData = new FormData();
 
-    Object.entries(formState).forEach(([key, value]) => {
-      if (value === null) return;
-      if (value instanceof FileList) {
-        const fileList = value;
+    Object.entries(formState).forEach(([key, item]) => {
+      const fieldValue = item.value;
+
+      if (fieldValue === null) return;
+      if (fieldValue instanceof FileList) {
+        const fileList = fieldValue;
         const fileListLength = fileList.length;
 
         for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
@@ -108,11 +111,11 @@ export const FormContextProvider = ({
         }
         return;
       }
-      if (typeof value === 'boolean') {
-        if (value) formData.append(key, 'true');
+      if (typeof fieldValue === 'boolean') {
+        if (fieldValue) formData.append(key, 'true');
         return;
       }
-      formData.append(key, value);
+      formData.append(key, fieldValue);
     });
 
     try {
