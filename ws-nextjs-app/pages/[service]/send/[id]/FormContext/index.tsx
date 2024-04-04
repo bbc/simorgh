@@ -44,7 +44,7 @@ const getInitialFormState = (
       [field.id]: {
         isValid: true,
         required: field.validation.mandatory ?? false,
-        value: null,
+        value: '',
         htmlType: field.htmlType,
         messageCode: null,
       },
@@ -82,7 +82,6 @@ export const FormContextProvider = ({
       const updatedState = { [name]: { ...prevState[name], value } };
       return { ...prevState, ...updatedState };
     });
-    console.log(formState);
   };
 
   const handleSubmit = async (event: FormEvent) => {
@@ -100,7 +99,7 @@ export const FormContextProvider = ({
     Object.entries(formState).forEach(([key, item]) => {
       const fieldValue = item.value;
 
-      if (fieldValue === null) return;
+      if (fieldValue === '') return;
       if (fieldValue instanceof FileList) {
         const fileList = fieldValue;
         const fileListLength = fileList.length;
@@ -119,7 +118,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
