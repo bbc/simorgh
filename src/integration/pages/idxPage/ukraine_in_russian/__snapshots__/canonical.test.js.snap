@@ -55,7 +55,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should m
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
