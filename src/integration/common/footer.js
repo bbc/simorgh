@@ -49,7 +49,7 @@ export default () => {
         });
 
         it('should contain text', () => {
-          expect(footerParagraph).toBeTruthy();
+          expect(footerParagraph.textContent).toBeTruthy();
         });
 
         it('should match text', () => {
