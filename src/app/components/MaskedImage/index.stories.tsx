@@ -3,6 +3,7 @@ import { StoryProps } from '#app/models/types/storybook';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '../ThemeProvider';
 import MaskedImage from '.';
+import metadata from './metadata.json';
 
 interface Props extends StoryProps {
   imageUrl: string;
@@ -15,6 +16,7 @@ export default {
   Component: MaskedImage,
   parameters: {
     chromatic: { disable: true },
+    metadata,
   },
 };
 
