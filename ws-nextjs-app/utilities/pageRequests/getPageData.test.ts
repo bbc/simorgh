@@ -4,7 +4,9 @@ import * as getToggles from '#app/lib/utilities/getToggles';
 import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../undiciAgent', () => jest.fn(() => Promise.resolve(agent)));
+jest.mock('#server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
 
 describe('getPageData', () => {
   beforeEach(() => {
