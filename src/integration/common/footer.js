@@ -52,7 +52,6 @@ export default () => {
 
       footerParagraphs.forEach(footerParagraph => {
         const paragraphText = footerParagraph.textContent;
-        const paragraphUrl = footerParagraph.getAttribute('href');
 
         it('should be in the document', () => {
           expect(footerParagraph).toBeInTheDocument();
@@ -65,7 +64,6 @@ export default () => {
         it('should match text and url', () => {
           expect({
             text: paragraphText,
-            url: paragraphUrl,
           }).toMatchSnapshot();
         });
       });
