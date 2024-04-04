@@ -15,8 +15,9 @@ const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const withClickHandler = (Component, clickHandler) => props =>
-  <Component {...props} onClick={clickHandler} />;
+const withClickHandler = (Component, clickHandler) => props => (
+  <Component {...props} onClick={clickHandler} />
+);
 
 const BulletedListContainer = ({
   blocks,
