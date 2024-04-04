@@ -76,7 +76,10 @@ export const FormContextProvider = ({
           const file = fileList.item(fileIndex);
           if (file) formData.append(key, file);
         }
-
+        return;
+      }
+      if (typeof value === 'boolean') {
+        if (value) formData.append(key, 'true');
         return;
       }
       formData.append(key, value);
