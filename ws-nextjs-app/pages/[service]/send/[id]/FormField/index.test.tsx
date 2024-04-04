@@ -3,16 +3,42 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import FormField from '.';
+import FormField, { FormComponentProps } from '.';
+import { FormContextProvider } from '../FormContext';
+import { Field } from '../types';
+
+jest.mock('next/router', () => ({
+  useRouter: () => ({ query: { id: 'u1234' } }),
+}));
+
+const ComponentWithContext = ({
+  props,
+  fields,
+}: {
+  props: FormComponentProps;
+  fields: Field[];
+}) => (
+  <FormContextProvider fields={fields}>
+    <FormField {...props} />
+  </FormContextProvider>
+);
 
 describe('FormField', () => {
   it('should render a text input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
-        <FormField
-          id="testTextID"
-          htmlType="text"
-          label="This is a text field"
+        <ComponentWithContext
+          props={{
+            id: 'testTextID',
+            htmlType: 'text',
+            label: 'This is a text field',
+          }}
+          fields={[
+            {
+              id: 'testTextID',
+              validation: {},
+            } as unknown as Field,
+          ]}
         />,
       );
     });
@@ -28,10 +54,18 @@ describe('FormField', () => {
   it('should render a textarea input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
-        <FormField
-          id="testTextAreaID"
-          htmlType="textarea"
-          label="This is a text field"
+        <ComponentWithContext
+          props={{
+            id: 'testTextAreaID',
+            htmlType: 'textarea',
+            label: 'This is a text field',
+          }}
+          fields={[
+            {
+              id: 'testTextAreaID',
+              validation: {},
+            } as unknown as Field,
+          ]}
         />,
       );
     });
@@ -47,10 +81,18 @@ describe('FormField', () => {
   it('should render an email input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
-        <FormField
-          id="testEmailID"
-          htmlType="email"
-          label="This is a text field"
+        <ComponentWithContext
+          props={{
+            id: 'testEmailID',
+            htmlType: 'email',
+            label: 'This is a text field',
+          }}
+          fields={[
+            {
+              id: 'testEmailID',
+              validation: {},
+            } as unknown as Field,
+          ]}
         />,
       );
     });
@@ -66,10 +108,18 @@ describe('FormField', () => {
   it('should render a checkbox input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
-        <FormField
-          id="testCheckboxID"
-          htmlType="checkbox"
-          label="This is a text field"
+        <ComponentWithContext
+          props={{
+            id: 'testCheckboxID',
+            htmlType: 'checkbox',
+            label: 'This is a text field',
+          }}
+          fields={[
+            {
+              id: 'testCheckboxID',
+              validation: {},
+            } as unknown as Field,
+          ]}
         />,
       );
     });
@@ -87,10 +137,18 @@ describe('FormField', () => {
   it('should render a tel input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
-        <FormField
-          id="testTelID"
-          htmlType="phone"
-          label="This is a text field"
+        <ComponentWithContext
+          props={{
+            id: 'testTelID',
+            htmlType: 'phone',
+            label: 'This is a text field',
+          }}
+          fields={[
+            {
+              id: 'testTelID',
+              validation: {},
+            } as unknown as Field,
+          ]}
         />,
       );
     });
