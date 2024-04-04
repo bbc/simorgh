@@ -1,11 +1,24 @@
 import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
+import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
+import { NextRouter } from 'next/router';
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import FormField, { FormComponentProps } from '.';
+import { FormContextProvider } from '../FormContext';
+import { Field } from '../types';
+
+const fieldsData = mundoFormFixture.sections[0].fields as Field[];
 
 const Component = ({ id, label, htmlType }: FormComponentProps) => (
-  <ThemeProvider service="pidgin">
-    <FormField id={id} htmlType={htmlType} label={label} />
-  </ThemeProvider>
+  <RouterContext.Provider
+    value={{ query: { id: '123' } } as unknown as NextRouter}
+  >
+    <ThemeProvider service="pidgin">
+      <FormContextProvider fields={fieldsData}>
+        <FormField id={id} htmlType={htmlType} label={label} />
+      </FormContextProvider>
+    </ThemeProvider>
+  </RouterContext.Provider>
 );
 
 export default {
@@ -14,25 +27,21 @@ export default {
 };
 
 export const Text = () => (
-  <Component id="exampleText" htmlType="text" label="Full Name:" />
+  <Component id={fieldsData[0].id} htmlType="text" label="Full Name:" />
 );
 
 export const TextArea = () => (
-  <Component id="exampleTextArea" htmlType="textarea" label="Comment:" />
+  <Component id={fieldsData[4].id} htmlType="textarea" label="Comment:" />
 );
 
 export const EMail = () => (
-  <Component id="exampleEmail" htmlType="email" label="Email:" />
+  <Component id={fieldsData[1].id} htmlType="email" label="Email:" />
 );
 
 export const Checkbox = () => (
-  <Component id="exampleCheckbox" htmlType="checkbox" label="Consent:" />
+  <Component id={fieldsData[5].id} htmlType="checkbox" label="Consent:" />
 );
 
 export const Phone = () => (
-  <Component id="examplePhone" htmlType="phone" label="Tel:" />
-);
-
-export const File = () => (
-  <Component id="examplePhone" htmlType="file" label="Upload your file:" />
+  <Component id={fieldsData[3].id} htmlType="phone" label="Tel:" />
 );
