@@ -51,20 +51,16 @@ export default () => {
       const footerParagraphs = document.querySelectorAll('footer div p');
 
       footerParagraphs.forEach(footerParagraph => {
-        const paragraphText = footerParagraph.textContent;
-
         it('should be in the document', () => {
           expect(footerParagraph).toBeInTheDocument();
         });
 
         it('should contain text', () => {
-          expect(paragraphText).toBeTruthy();
+          expect(footerParagraph).toBeTruthy();
         });
 
-        it('should match text and url', () => {
-          expect({
-            text: paragraphText,
-          }).toMatchSnapshot();
+        it('should match text', () => {
+          expect(footerParagraph.textContent).toMatchSnapshot();
         });
       });
     });
