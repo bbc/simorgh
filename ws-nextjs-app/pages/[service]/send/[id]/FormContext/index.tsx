@@ -12,10 +12,12 @@ import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
+  FieldData,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
 } from '../types';
+import validateFunctions from './utils/validateFunctions';
 
 type SubmissionError = {
   message: string;
@@ -23,7 +25,7 @@ type SubmissionError = {
 } | null;
 
 type ContextProps = {
-  formState: Record<OnChangeInputName, OnChangeInputValue | null>;
+  formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
@@ -33,8 +35,32 @@ const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
-): Record<OnChangeInputName, OnChangeInputValue | null> =>
-  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
+): Record<OnChangeInputName, FieldData> =>
+  fields?.reduce(
+    (acc, field) => ({
+      ...acc,
+      [field.id]: {
+        isValid: true,
+        required: field.validation.mandatory ?? false,
+        value: null,
+        htmlType: field.htmlType,
+        messageCode: null,
+      },
+    }),
+    {},
+  );
+
+const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+  const formEntries = new Map(Object.entries(state));
+
+  formEntries.forEach((data, key, map) => {
+    const validateFunction = validateFunctions[data.htmlType];
+    const validatedData = validateFunction ? validateFunction(data) : data;
+    map.set(key, validatedData);
+  });
+
+  return Object.fromEntries(formEntries);
+};
 
 export const FormContextProvider = ({
   fields,
@@ -49,7 +75,8 @@ export const FormContextProvider = ({
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      return { ...prevState, [name]: value };
+      const updatedState = { [name]: { ...prevState[name], value } };
+      return { ...prevState, ...updatedState };
     });
   };
 
@@ -58,6 +85,9 @@ export const FormContextProvider = ({
 
     // Reset error state
     setSubmissionError(null);
+
+    // Validate
+    setFormState(state => validateFormState(state));
 
     const formData = new FormData();
 

@@ -251,7 +251,7 @@
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "7.0.0",
     "supertest": "6.3.4",
-    "terser-webpack-plugin": "5.3.9",
+    "terser-webpack-plugin": "5.3.10",
     "timemachine": "0.3.2",
     "ts-jest": "29.1.2",
     "ts-loader": "9.4.4",
