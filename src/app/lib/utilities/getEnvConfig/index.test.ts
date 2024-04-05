@@ -39,7 +39,7 @@ describe('getEnvConfig', () => {
             SIMORGH_APP_ENV: 'test',
             SIMORGH_BASE_URL: 'https://test.com',
           },
-        } as Window),
+        }) as Window,
     );
 
     const results = getEnvConfig();

@@ -11,9 +11,9 @@ import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import CpsRelatedContent from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-const newsRelatedContentData = newsData.relatedContent.groups[0].promos;
-const pidginRelatedContentData = pidginData.relatedContent.groups[0].promos;
-const arabicRelatedContentData = arabicData.relatedContent.groups[0].promos;
+const newsRelatedContentData = newsData.relatedContent?.groups?.[0].promos;
+const pidginRelatedContentData = pidginData.relatedContent?.groups?.[0].promos;
+const arabicRelatedContentData = arabicData.relatedContent?.groups?.[0].promos;
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp, service, dir, data }) => (
@@ -60,10 +60,18 @@ export const Arabic = () => (
   <Component service="arabic" dir="rtl" data={arabicRelatedContentData} />
 );
 export const PidginOneItem = () => (
-  <Component service="pidgin" dir="ltr" data={[pidginRelatedContentData[0]]} />
+  <Component
+    service="pidgin"
+    dir="ltr"
+    data={[pidginRelatedContentData?.[0]]}
+  />
 );
 export const ArabicOneItem = () => (
-  <Component service="arabic" dir="rtl" data={[arabicRelatedContentData[0]]} />
+  <Component
+    service="arabic"
+    dir="rtl"
+    data={[arabicRelatedContentData?.[0]]}
+  />
 );
 
 // Amp
@@ -82,7 +90,7 @@ export const PidginOneItemAmp = () => (
     isAmp
     service="pidgin"
     dir="ltr"
-    data={[pidginRelatedContentData[0]]}
+    data={[pidginRelatedContentData?.[0]]}
   />
 );
 PidginOneItemAmp.decorators = [AmpDecorator];
@@ -92,7 +100,7 @@ export const ArabicOneItemAmp = () => (
     isAmp
     service="arabic"
     dir="rtl"
-    data={[arabicRelatedContentData[0]]}
+    data={[arabicRelatedContentData?.[0]]}
   />
 );
 ArabicOneItemAmp.decorators = [AmpDecorator];

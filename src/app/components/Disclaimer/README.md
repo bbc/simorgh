@@ -1,5 +1,3 @@
-# Disclaimer
-
 ## Description
 
 A Disclaimer component that is controlled by toggles and renders the diclaimer information provided in the service config.

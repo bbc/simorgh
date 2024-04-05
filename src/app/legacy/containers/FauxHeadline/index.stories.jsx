@@ -13,7 +13,7 @@ const Component = () => (
 );
 
 export default {
-  title: 'Containers/Faux Headline/Faux Headline',
+  title: 'Containers/Faux Headline',
   Component,
   parameters: { chromatic: { disable: true } },
 };

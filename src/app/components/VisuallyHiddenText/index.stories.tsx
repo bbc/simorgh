@@ -1,8 +1,7 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
+import { StoryArgs } from '#app/models/types/storybook';
 import { Services } from '../../models/types/global';
-import notes from './README.md';
+import readme from './README.md';
 import VisuallyHiddenText from './index';
 import metadata from './metadata.json';
 
@@ -18,12 +17,14 @@ const Component = ({ service, text }: Props) => (
 );
 
 export default {
-  title: 'New Components/VisuallyHiddenText',
+  title: 'Components/VisuallyHiddenText',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
-  parameters: { metadata, docs: { page: notes } },
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
 };
 
-export const Example = ({ service, text }: Props) => (
+export const Example = (_: StoryArgs, { service, text }: Props) => (
   <Component service={service} text={text} />
 );

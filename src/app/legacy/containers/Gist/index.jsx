@@ -66,7 +66,6 @@ const GistList = styled(UnorderedList)`
     }
   }
 
-  /* stylelint-disable-next-line no-descending-specificity */
   li {
     ${({ service }) => getSansRegular(service)}
     ${({ script }) => getGreatPrimer(script)}
