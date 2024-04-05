@@ -177,7 +177,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const {
     metadata: { atiAnalytics },
   } = pageData;
-
+  atiAnalytics.contentType = 'article-media-asset';
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -207,7 +207,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          isCaf
+            ? 'Article'
+            : categoryName(isTrustProjectParticipant, taggings, formats)
+        }
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
