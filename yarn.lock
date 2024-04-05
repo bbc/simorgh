@@ -15876,15 +15876,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-junit@npm:13.2.0":
-  version: 13.2.0
-  resolution: "jest-junit@npm:13.2.0"
+"jest-junit@npm:16.0.0":
+  version: 16.0.0
+  resolution: "jest-junit@npm:16.0.0"
   dependencies:
     mkdirp: ^1.0.4
     strip-ansi: ^6.0.1
     uuid: ^8.3.2
     xml: ^1.0.1
-  checksum: 0a42447e0c9ae689ae43275944a72587216cb028d45f2bd54bfc9e7e38f90bb03caa571e58ac16fba44c121c7c5f6ae766c50833851f23153f7430b1b3b317c2
+  checksum: 412aa4bfeec4254a9b34f417fda79107c7cbd295e56ffeb299ac9c977545910fbabe57c91c6cd1f12b700d4a1f60f79872b0075003f02da87d463e30fc2d9d78
   languageName: node
   linkType: hard
 
@@ -21646,7 +21646,7 @@ __metadata:
     jest: 29.7.0
     jest-environment-jsdom: 29.7.0
     jest-fetch-mock: 3.0.3
-    jest-junit: 13.2.0
+    jest-junit: 16.0.0
     jest-serializer-html: 7.1.0
     jest-silent-reporter: 0.5.0
     js-cookie: 3.0.5
@@ -23979,12 +23979,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:3.3.2":
-  version: 3.3.2
-  resolution: "uuid@npm:3.3.2"
+"uuid@npm:3.4.0":
+  version: 3.4.0
+  resolution: "uuid@npm:3.4.0"
   bin:
     uuid: ./bin/uuid
-  checksum: 8793629d2799f500aeea9fcd0aec6c4e9fbcc4d62ed42159ad96be345c3fffac1bbf61a23e18e2782600884fee05e6d4012ce4b70d0037c8e987533ae6a77870
+  checksum: 58de2feed61c59060b40f8203c0e4ed7fd6f99d42534a499f1741218a1dd0c129f4aa1de797bcf822c8ea5da7e4137aa3673431a96dae729047f7aca7b27866f
   languageName: node
   linkType: hard
 
