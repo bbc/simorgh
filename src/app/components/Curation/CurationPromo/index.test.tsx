@@ -19,7 +19,7 @@ const Fixture = ({
   type = 'article',
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
-  isLive
+  isLive,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
