@@ -5,15 +5,16 @@ export default {
     css({
       gridColumn: 'span 12',
       backgroundColor: theme.palette.GHOST,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     }),
   electionBannerIframe: () =>
     css({
-      display: 'block',
       border: 'none',
       width: '100%',
       maxWidth: '63rem',
       height: '100%',
-      minHeight: '460px',
-      margin: '0 auto',
+      minHeight: '475px',
     }),
 };
