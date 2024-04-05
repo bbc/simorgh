@@ -6,9 +6,10 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
+import Loader from '../Loader';
 
 export default function Form({ fields }: { fields: Field[] }) {
-  const { handleSubmit, submissionError } = useFormContext();
+  const { handleSubmit, submissionError, submitted } = useFormContext();
 
   const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
     <FormField
@@ -25,7 +26,7 @@ export default function Form({ fields }: { fields: Field[] }) {
     <>
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
-        <Submit />
+        {!submitted ? <Submit /> : <Loader />}
       </form>
       {submissionError && (
         <div css={styles.submissionError}>
