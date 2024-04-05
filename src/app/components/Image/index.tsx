@@ -60,8 +60,11 @@ const Image = ({
   children,
   fetchpriority,
 }: PropsWithChildren<Props>) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  if (isLite) return null;
+
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
