@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageContainer from '.';
 import { custom, imageData, landscape, portrait, square } from './fixtureData';
-import ThemeProvider from '../ThemeProvider';
 
 type Props = {
   blocks: object[];
@@ -10,11 +9,7 @@ type Props = {
   shouldPreload?: boolean;
 };
 
-const Component = (props: Props) => (
-  <ThemeProvider service="news">
-    <ImageContainer {...props} />
-  </ThemeProvider>
-);
+const Component = (props: Props) => <ImageContainer {...props} />;
 
 export default {
   title: 'Components/Image with caption',

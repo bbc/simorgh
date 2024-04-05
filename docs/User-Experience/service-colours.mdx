@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/blocks';
+import { SERVICE } from './colours.tsx';
+import ColorList from '../../.storybook/StorybookComponents/ColorList/index.tsx';
+import ThemeProvider from '../../src/app/components/ThemeProvider';
+
+<Meta title="docs/ux/colors/service" />
+
+# Simorgh's Service Colours
+
+Each BBC service, inclusing World Service, has a core colour and two supporting colours.
+
+* **Core colour:** The most recognisable expression of that service’s colour and is used in the service lockup and graphical elements throughout the experience (e.g. icons, progress bars etc.) to signal to users which service they are using.
+* **Bright colour:** A brighter shade of the core colour for services with a particularly light or dark core colour (e.g. News and Weather) to aid legibility and expression. News and Weather Bright is used in place of Core in dark modes.
+* **Light & Dark colours:** These exist to aid the legibility of text in each service. Light colours should be used for text in dark mode, and dark colours should be used for text in light mode.
+
+The following is a roster of service colors employed in Simorgh:
+
+<ThemeProvider service="news">
+  <ColorList Colors={SERVICE} />
+</ThemeProvider>

@@ -5,12 +5,12 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
-  CurationData,
+  Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
 import { ATIData } from '../../components/ATIAnalytics/types';
-import Curation from '../../components/Curation';
+import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -25,7 +25,7 @@ export interface HomePageProps {
   pageData: {
     id?: string;
     title: string;
-    curations: CurationData[];
+    curations: Curation[];
     description: string;
     metadata: {
       atiAnalytics: ATIData;
@@ -50,7 +50,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
-
   const itemList = getItemList({ curations, name: brandName });
   return (
     <>
@@ -91,6 +90,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualStyle,
                   mostRead,
                   radioSchedule,
+                  embed,
                 },
                 index,
               ) => {
@@ -103,11 +103,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   });
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
-                    <Curation
+                    <HomeCuration
                       headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
-                      promos={summaries || []}
+                      summaries={summaries || []}
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
@@ -118,6 +118,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
+                      embed={embed}
                     />
                     {index === 0 && <MPU />}
                   </React.Fragment>
