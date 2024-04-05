@@ -32,7 +32,7 @@ export default {
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
-    chromatic: { disable: true },
+    chromatic: { disable: false },
     metadata,
   },
 };
