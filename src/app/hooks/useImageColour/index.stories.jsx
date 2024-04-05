@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { withKnobs, text, color, number } from '@storybook/addon-knobs';
 
 import useImageColour from '.';
 
@@ -22,16 +21,14 @@ const Typo = styled.div`
 `;
 
 const Component = () => {
-  const url = text(
-    'URL',
-    'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/12555/production/_121339057_scallopedhammerheadsimonpierce-gct.jpg',
-  );
-  const contrastColour = color('Contrast Colour', '#fff');
+  const url =
+    'https://ichef.bbci.co.uk/ace/ws/976/cpsprodpb/12555/production/_121339057_scallopedhammerheadsimonpierce-gct.jpg';
+  const contrastColour = '#fff';
 
   const { colour } = useImageColour(url, {
     contrastColour,
-    fallbackColour: color('Fallback Colour', '#000'),
-    minimumContrast: number('Minimum Contrast', 7),
+    fallbackColour: '#000',
+    minimumContrast: 7,
   });
   return (
     <>
@@ -49,7 +46,6 @@ const Component = () => {
 export default {
   title: 'Hooks/useImageColour',
   Component,
-  decorators: [withKnobs],
   parameters: { chromatic: { disable: true } },
 };
 

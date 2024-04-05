@@ -1,9 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import ThemeProvider from '../../../components/ThemeProvider';
 import { GREY_2 } from '../../../components/ThemeProvider/palette';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
@@ -26,11 +23,9 @@ const BackgroundColorWrapper = ({ children }) => (
 );
 
 const SocialEmbedComponentWithTheme = props => (
-  <ThemeProvider service={props.service}>
-    <BackgroundColorWrapper>
-      <OptimoSocialEmbedContainer {...props} />
-    </BackgroundColorWrapper>
-  </ThemeProvider>
+  <BackgroundColorWrapper>
+    <OptimoSocialEmbedContainer {...props} />
+  </BackgroundColorWrapper>
 );
 
 const Component = props =>
@@ -45,119 +40,118 @@ export default {
   title: 'Containers/Social Embed/Optimo',
   Component,
   parameters: { chromatic: { disable: true } },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const TwitterCanonicalExample = props => (
+export const TwitterCanonicalExample = (_, globalArgs) => (
   <Component
     blocks={[twitterBlock]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const TwitterAmpExample = props => (
+export const TwitterAmpExample = (_, globalArgs) => (
   <Component
     isAmp
     blocks={[twitterBlock]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...props}
+    {...globalArgs}
   />
 );
 TwitterAmpExample.decorators = [AmpDecorator];
 
-export const TwitterNoEmbed = props => (
+export const TwitterNoEmbed = (_, globalArgs) => (
   <Component
     blocks={[twitterBlockNoEmbed]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const InstagramCanonicalExample = props => (
+export const InstagramCanonicalExample = (_, globalArgs) => (
   <Component
     blocks={[instagramBlock]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const InstagramNoEmbed = props => (
+export const InstagramNoEmbed = (_, globalArgs) => (
   <Component
     blocks={[instagramBlockNoEmbed]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const TikTokWithConsentBanner = props => (
+export const TikTokWithConsentBanner = (_, globalArgs) => (
   <Component
     blocks={[tiktokBlockEmbed]}
     source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const TikTokWithConsentBannerAmp = props => (
+export const TikTokWithConsentBannerAmp = (_, globalArgs) => (
   <Component
     isAmp
     blocks={[tiktokBlockEmbed]}
     source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
-    {...props}
+    {...globalArgs}
   />
 );
 TikTokWithConsentBannerAmp.decorators = [AmpDecorator];
 
-export const YoutubeWithConsentBanner = props => (
+export const YoutubeWithConsentBanner = (_, globalArgs) => (
   <Component
     blocks={[youtubeBlockEmbed]}
     source="https://www.youtube.com/watch?v=1e05_rwHvOM"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const YoutubeWithConsentBannerAmp = props => (
+export const YoutubeWithConsentBannerAmp = (_, globalArgs) => (
   <Component
     isAmp
     blocks={[youtubeBlockEmbed]}
     source="https://www.youtube.com/watch?v=1e05_rwHvOM"
-    {...props}
+    {...globalArgs}
   />
 );
 YoutubeWithConsentBannerAmp.decorators = [AmpDecorator];
 
-export const FacebookPostCanonicalExample = props => (
+export const FacebookPostCanonicalExample = (_, globalArgs) => (
   <Component
     blocks={[facebookPostBlockEmbed]}
     source="https://www.facebook.com/RickAstley/posts/545713756920775"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const FacebookPostAmpExample = props => (
+export const FacebookPostAmpExample = (_, globalArgs) => (
   <Component
     isAmp
     blocks={[facebookPostBlockEmbed]}
     source="https://www.facebook.com/RickAstley/posts/545713756920775"
-    {...props}
+    {...globalArgs}
   />
 );
 FacebookPostAmpExample.decorators = [AmpDecorator];
 
-export const FacebookVideoCanonicalExample = props => (
+export const FacebookVideoCanonicalExample = (_, globalArgs) => (
   <Component
     blocks={[facebookVideoBlockEmbed]}
     source="https://www.facebook.com/RickAstley/videos/1378590239249667"
-    {...props}
+    {...globalArgs}
   />
 );
 
-export const FacebookVideoAmpExample = props => (
+export const FacebookVideoAmpExample = (_, globalArgs) => (
   <Component
     isAmp
     blocks={[facebookVideoBlockEmbed]}
     source="https://www.facebook.com/RickAstley/videos/1378590239249667"
-    {...props}
+    {...globalArgs}
   />
 );
 FacebookVideoAmpExample.decorators = [AmpDecorator];

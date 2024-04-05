@@ -4,7 +4,7 @@ import pixelsToRem from '../../../src/app/utilities/pixelsToRem';
 const styles = {
   componentHealthContainer: (theme: Theme) =>
     css({
-      margin: `${theme.spacings.FULL}rem 0`,
+      margin: `${theme.spacings.TRIPLE}rem 0`,
       border: `0.0625rem solid ${theme.palette.SHADOW}`,
     }),
 

@@ -23,7 +23,7 @@ const HealthFactors = ({ metadata }: HealthFactorsProps) => {
     ),
   );
 
-  const formatDate = moment(date).format('Do MMMM YYYY');
+  const formatDate = moment(date).locale('en').format('Do MMMM YYYY');
 
   const getLabel = path(['reference', 'label']);
   const getUrl = path(['reference', 'url']);

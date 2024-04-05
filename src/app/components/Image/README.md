@@ -1,5 +1,3 @@
-# Image
-
 ## Description
 
 The `Image` component is used to render an image. It supports responsive images, fallback images (e.g. jpeg when webp is not supported), preloading, lazy loading, placeholder images and AMP images.

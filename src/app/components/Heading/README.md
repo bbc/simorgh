@@ -1,5 +1,3 @@
-# Heading
-
 ## Description
 
 The `Heading` component is used to render headings using the correct typography for the service. It extends the [`Text`](../Text/README.md) component.
