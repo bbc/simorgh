@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
-
+import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -120,12 +120,22 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     headline: headings,
     subheadline: headings,
     audio: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={[
+          `padding-top:${GEL_SPACING_TRPL}rem`,
+          isCaf ?? styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={[
+          `padding-top:${GEL_SPACING_TRPL}rem`,
+          isCaf && styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
@@ -220,7 +230,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isCaf ? styles.CafPrimaryColumn : styles.primaryColumn}>
+        <div css={isCaf ? styles.cafPrimaryColumn : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>

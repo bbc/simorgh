@@ -27,7 +27,7 @@ export default {
         gridColumn: '1 / span 8',
       },
     }),
-  CafPrimaryColumn: ({ mq }: Theme) =>
+  cafPrimaryColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
@@ -48,9 +48,11 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  mediaPlayer: ({ spacings }: Theme) =>
+  cafMediaPlayer: ({ mq, spacings }: Theme) =>
     css({
-      paddingTop: `${spacings.TRIPLE}rem`,
+      [mq.GROUP_3_ONLY]: {
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+      },
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
