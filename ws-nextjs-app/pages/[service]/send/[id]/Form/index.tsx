@@ -23,7 +23,7 @@ export default function Form({ fields }: { fields: Field[] }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         {formFields}
         <Submit />
       </form>
