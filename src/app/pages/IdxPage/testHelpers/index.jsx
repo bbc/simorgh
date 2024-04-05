@@ -8,9 +8,7 @@ import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { service as ukrainianConfig } from '../../../lib/config/services/ukrainian';
 import { service as persianConfig } from '../../../lib/config/services/persian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
-
-jest.mock('../../../components/ThemeProvider');
+import { ThemeProvider } from '../../../components/ThemeProvider';
 
 const radioServiceOverride = 'dari';
 
@@ -23,26 +21,26 @@ const serviceContext = {
 const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
-      <ThemeProvider service={service} variant="default">
-        <ToggleContextProvider>
-          <RequestContextProvider
-            pageType={INDEX_PAGE}
-            service={service}
-            pathname="/pathname"
-            data={{ status: 200 }}
-            isAmp={false}
-          >
-            <ServiceContext.Provider value={serviceContext[service]}>
-              <UserContextProvider>
+      <ToggleContextProvider>
+        <RequestContextProvider
+          pageType={INDEX_PAGE}
+          service={service}
+          pathname="/pathname"
+          data={{ status: 200 }}
+          isAmp={false}
+        >
+          <ServiceContext.Provider value={serviceContext[service]}>
+            <UserContextProvider>
+              <ThemeProvider service={service}>
                 <IdxPage
                   pageData={pageData}
                   radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
                 />
-              </UserContextProvider>
-            </ServiceContext.Provider>
-          </RequestContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
+              </ThemeProvider>
+            </UserContextProvider>
+          </ServiceContext.Provider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
     </BrowserRouter>
   );
 };

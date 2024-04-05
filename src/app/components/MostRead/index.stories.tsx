@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { withKnobs, select } from '@storybook/addon-knobs';
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
-import md from './README.md';
+import readme from './README.md';
 import MostRead from '.';
-import ThemeProvider from '../ThemeProvider';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { StoryProps } from '../../models/types/storybook';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
@@ -47,71 +42,62 @@ const Component = ({
     return <>Unable to render Most Read Component for {service}</>;
   }
 
-  const selectedColumnLayout = select(
-    'Columns',
-    {
-      1: 'oneColumn',
-      2: 'twoColumn',
-      5: 'multiColumn',
-    },
-    columnLayout,
-  );
-
-  const selectedSize = select(
-    'Size',
-    { Small: 'small', Default: 'default' },
-    size,
-  );
-
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider>
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={MOST_READ_PAGE}
-          service={service}
-          statusCode={200}
-          pathname={`/${service}/popular`}
-          variant={variant}
-        >
-          <ServiceContextProvider service={service} variant={variant}>
-            <MostRead
-              data={pageData as MostReadData}
-              size={selectedSize}
-              columnLayout={selectedColumnLayout}
-            />
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+    <ToggleContextProvider>
+      <ServiceContextProvider service={service} variant={variant}>
+        <MostRead
+          data={pageData as MostReadData}
+          size={size}
+          columnLayout={columnLayout}
+        />
+      </ServiceContextProvider>
+    </ToggleContextProvider>
   );
 };
 
 export default {
-  title: 'New Components/Most Read',
-  Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  title: 'Components/Most Read',
+  component: Component,
   parameters: {
     chromatic: {
       viewports: [1280],
     },
     metadata,
-    docs: {
-      page: md,
+    docs: { readme },
+  },
+  args: {
+    columnLayout: 'multiColumn',
+    size: 'default',
+  },
+  argTypes: {
+    columnLayout: {
+      control: { type: 'select' },
+      options: ['oneColumn', 'twoColumn', 'multiColumn'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'default'],
     },
   },
 };
 
-export const Example = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} />
+export const Example = (
+  { columnLayout, size }: Props,
+  { service, variant }: StoryProps,
+) => (
+  <Component
+    service={service}
+    variant={variant}
+    columnLayout={columnLayout}
+    size={size}
+  />
 );
 
-export const TwoColumns = ({ service, variant }: Props) => (
+export const TwoColumns = (_: StoryArgs, { service, variant }: Props) => (
   <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
-export const SmallOneColumn = ({ service, variant }: Props) => (
+export const SmallOneColumn = (_: StoryArgs, { service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
@@ -120,10 +106,10 @@ export const SmallOneColumn = ({ service, variant }: Props) => (
   />
 );
 
-export const Japanese1Column = ({ variant }: Props) => (
+export const Japanese1Column = (_: StoryArgs, { variant }: Props) => (
   <Component service="japanese" variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = ({ variant }: Props) => (
+export const Persian1Column = (_: StoryArgs, { variant }: Props) => (
   <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );
