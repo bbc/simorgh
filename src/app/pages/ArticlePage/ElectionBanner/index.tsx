@@ -17,9 +17,9 @@ export default function ElectionBanner() {
   const { isAmp } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
-  if (!SERVICES_WITH_ELECTION_BANNER.includes(service)) {
-    return null;
-  }
+  const showElectionBanner = SERVICES_WITH_ELECTION_BANNER.includes(service);
+
+  if (!showElectionBanner) return null;
 
   if (isAmp) {
     return (
