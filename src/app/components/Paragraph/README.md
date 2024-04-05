@@ -1,5 +1,3 @@
-# Paragraph
-
 ## Description
 
 The `Paragraph` component is used to render paragraph text using the correct typography for the service. It extends the [`Text`](../Text/README.md) component.

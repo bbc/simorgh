@@ -163,7 +163,6 @@ const Pagination = ({
   const blocks = buildBlocks(activePage, pageCount);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
-
   const tokenMapper = (token: string, key: number) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,

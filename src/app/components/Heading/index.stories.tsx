@@ -1,101 +1,93 @@
 import React from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
 
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../ThemeProvider';
+import { FontVariant, GelFontSize } from '#app/models/types/theming';
 import Heading from '.';
-import md from './README.md';
+import readme from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 
 interface Props extends StoryProps {
   text: string;
+  level: 1 | 2 | 3 | 4;
+  fontVariant: FontVariant | '--';
+  size: GelFontSize | '--';
 }
 
 const EMPTY_OPTION = '--';
 
-const HeadingStory = ({ service, variant, text }: Props) => {
-  const selectedLevel = select(
-    'level',
-    {
-      1: 1,
-      2: 2,
-      3: 3,
-      4: 4,
-    },
-    1,
-  );
-  const selectedFontVariant = select(
-    'fontVariant',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      sansRegular: 'sansRegular',
-      sansRegularItalic: 'sansRegularItalic',
-      sansBold: 'sansBold',
-      sansBoldItalic: 'sansBoldItalic',
-      sansLight: 'sansLight',
-      serifRegular: 'serifRegular',
-      serifMedium: 'serifMedium',
-      serifMediumItalic: 'serifMediumItalic',
-      serifBold: 'serifBold',
-      serifLight: 'serifLight',
-    },
-    EMPTY_OPTION,
-  );
-  const selectedSize = select(
-    'size',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      atlas: 'atlas',
-      elephant: 'elephant',
-      imperial: 'imperial',
-      royal: 'royal',
-      foolscap: 'foolscap',
-      canon: 'canon',
-      trafalgar: 'trafalgar',
-      paragon: 'paragon',
-      doublePica: 'doublePica',
-      greatPrimer: 'greatPrimer',
-      bodyCopy: 'bodyCopy',
-      pica: 'pica',
-      longPrimer: 'longPrimer',
-      brevier: 'brevier',
-      minion: 'minion',
-    },
-    EMPTY_OPTION,
-  );
+const HeadingStory = ({ text, level, fontVariant, size }: Props) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Heading
-          level={selectedLevel}
-          fontVariant={
-            selectedFontVariant !== EMPTY_OPTION
-              ? selectedFontVariant
-              : undefined
-          }
-          size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
-        >
-          {text}
-        </Heading>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <Heading
+      level={level}
+      fontVariant={fontVariant !== EMPTY_OPTION ? fontVariant : undefined}
+      size={size !== EMPTY_OPTION ? size : undefined}
+    >
+      {text}
+    </Heading>
   );
 };
 
 export default {
-  title: 'New Components/Heading',
+  title: 'Components/Heading',
   Component: HeadingStory,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
       disable: true,
     },
-    docs: {
-      component: {
-        title: 'Heading',
+    docs: { readme },
+  },
+  args: {
+    text: 'Heading',
+    level: 1,
+    fontVariant: EMPTY_OPTION,
+    size: EMPTY_OPTION,
+  },
+  argTypes: {
+    level: {
+      control: {
+        type: 'select',
       },
-      page: md,
+      options: [1, 2, 3, 4],
+    },
+    fontVariant: {
+      control: {
+        type: 'select',
+      },
+      options: [
+        EMPTY_OPTION,
+        'sansRegular',
+        'sansRegularItalic',
+        'sansBold',
+        'sansBoldItalic',
+        'sansLight',
+        'serifRegular',
+        'serifMedium',
+        'serifMediumItalic',
+        'serifBold',
+        'serifLight',
+      ],
+    },
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: [
+        EMPTY_OPTION,
+        'atlas',
+        'elephant',
+        'imperial',
+        'royal',
+        'foolscap',
+        'canon',
+        'trafalgar',
+        'paragon',
+        'doublePica',
+        'greatPrimer',
+        'bodyCopy',
+        'pica',
+        'longPrimer',
+        'brevier',
+        'minion',
+      ],
     },
   },
 };
