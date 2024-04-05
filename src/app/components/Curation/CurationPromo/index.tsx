@@ -21,6 +21,7 @@ const CurationPromo = ({
   type,
   duration: mediaDuration,
   headingLevel = 2,
+  isLive,
 }: Summary) => {
   const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
@@ -43,7 +44,7 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const isLive = link?.includes('/live/');
+  // const isLive = link?.includes('/live/');
 
   return (
     <Promo>
