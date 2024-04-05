@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
 
 import { OEmbedProps } from '#app/components/Embeds/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -72,6 +73,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
+  const { isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -214,7 +216,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={isCaf ? styles.CafPrimaryColumn : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -222,7 +224,6 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
-              mobileDivider={false}
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}
             />

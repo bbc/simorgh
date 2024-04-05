@@ -27,6 +27,12 @@ export default {
         gridColumn: '1 / span 8',
       },
     }),
+  CafPrimaryColumn: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridColumn: '3 / span 8',
+      },
+    }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
