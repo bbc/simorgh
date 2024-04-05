@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export const BANNER_HEIGHT = 475;
 
@@ -17,11 +18,11 @@ export default {
       width: '100%',
       maxWidth: '63rem',
       height: '100%',
-      minHeight: BANNER_HEIGHT,
+      minHeight: `${pixelsToRem(BANNER_HEIGHT)}rem`,
     }),
   electionBannerWrapperAmp: (theme: Theme) =>
     css({
-      maxHeight: BANNER_HEIGHT,
+      maxHeight: `${pixelsToRem(BANNER_HEIGHT)}rem`,
       overflow: 'hidden',
       backgroundColor: theme.palette.GHOST,
 
