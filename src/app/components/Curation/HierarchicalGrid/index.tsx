@@ -74,7 +74,8 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-          const isLive = promo.link?.includes('/live/');
+          // const isLive = promo.link?.includes('/live/');
+          const promoisLive = promo.isLive;
 
           return (
             <li
@@ -129,7 +130,7 @@ const HiearchicalGrid = ({
                       href={promo.link}
                       className="focusIndicatorDisplayBlock"
                     >
-                      {isLive ? (
+                      {promoisLive ? (
                         <LiveLabel
                           {...(isFirstPromo && {
                             className: 'first-promo',
@@ -146,7 +147,7 @@ const HiearchicalGrid = ({
                 <Promo.Body className="promo-paragraph" css={styles.body}>
                   {promo.description}
                 </Promo.Body>
-                {!isLive ? (
+                {!promoisLive ? (
                   <Promo.Timestamp className="promo-timestamp">
                     {promo.lastPublished}
                   </Promo.Timestamp>
