@@ -141,7 +141,6 @@ export const FormContextProvider = ({
 
       req.send(formData);
     } catch (error) {
-      console.log(error);
       const { message, status } = error as FetchError;
       setSubmissionError({ message, status });
     }
