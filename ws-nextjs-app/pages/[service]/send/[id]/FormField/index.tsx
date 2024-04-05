@@ -164,6 +164,7 @@ const File = ({
       onChange={e =>
         e.target.files && handleChange(e.target.name, e.target.files)
       }
+      multiple
       aria-invalid={!isValid}
       aria-required={required}
       aria-describedby={describedBy}
