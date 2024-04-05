@@ -203,7 +203,7 @@ exports[`AMP Media Asset Page Footer Cookie Settings Button should match text an
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 

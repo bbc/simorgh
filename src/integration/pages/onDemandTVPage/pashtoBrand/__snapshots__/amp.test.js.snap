@@ -196,7 +196,7 @@ exports[`AMP On Demand T V Page Footer Anchors should match text and url 8`] = `
 
 exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`AMP On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
