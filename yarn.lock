@@ -9664,13 +9664,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"has@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "has@npm:1.0.4"
-  checksum: 8a11ba062e0627c9578a1d08285401e39f1d071a9692ddf793199070edb5648b21c774dd733e2a181edd635bf6862731885f476f4ccf67c998d7a5ff7cef2550
-  languageName: node
-  linkType: hard
-
 "hasown@npm:^2.0.0, hasown@npm:^2.0.1, hasown@npm:^2.0.2":
   version: 2.0.2
   resolution: "hasown@npm:2.0.2"
@@ -15119,7 +15112,6 @@ __metadata:
     express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
     glob: 10.3.12
-    has: ^1.0.4
     helmet: 7.1.0
     helmet-csp: 3.4.0
     history: 4.10.1
