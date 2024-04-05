@@ -19,6 +19,7 @@ module.exports = {
     '#pages': resolvePath('src/app/pages/'),
     '#testHelpers': resolvePath('src/testHelpers/'),
     '#server': resolvePath('src/server/'),
+    '#storybook': resolvePath('.storybook/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
@@ -33,6 +34,7 @@ module.exports = {
     '^#pages(.*)$': '<rootDir>/src/app/pages$1',
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^#server(.*)$': '<rootDir>/src/server$1',
+    '^#storybook(.*)$': '<rootDir>/.storybook$1',
   },
   eslintDirAlias: {
     map: [
@@ -48,6 +50,7 @@ module.exports = {
       ['#pages', './src/app/pages'],
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
+      ['#storybook', './.storybook'],
     ],
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },

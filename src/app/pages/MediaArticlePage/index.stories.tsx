@@ -1,6 +1,5 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -53,7 +52,6 @@ const ComponentWithContext = ({ data: { data } }) => {
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Media Article Page',
-  decorators: [withKnobs],
   parameters: { layout: 'fullscreen' },
 };
 

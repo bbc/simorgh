@@ -22,7 +22,7 @@ const Component = ({ id, label, htmlType }: FormComponentProps) => (
 );
 
 export default {
-  title: 'New Components/FormFields',
+  title: 'Components/FormFields',
   Component,
 };
 
