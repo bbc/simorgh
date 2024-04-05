@@ -11,6 +11,7 @@ interface FixtureProps {
   type?: string;
   duration?: number;
   link?: string;
+  isLive?: boolean;
 }
 
 const Fixture = ({
@@ -18,6 +19,7 @@ const Fixture = ({
   type = 'article',
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
+  isLive
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -29,6 +31,7 @@ const Fixture = ({
     link={link}
     type={type}
     duration={duration}
+    isLive={isLive}
   />
 );
 
@@ -95,7 +98,7 @@ describe('Curation Promo', () => {
   describe('Live Promo', () => {
     it('should display LiveLabel on a Live Promo', () => {
       const container = render(
-        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" isLive={true} />,
         { service: 'mundo' },
       );
       expect(container.queryByText('EN VIVO')).toBeInTheDocument();
@@ -103,7 +106,7 @@ describe('Curation Promo', () => {
 
     it('should display a Live Promo without a timestamp present', () => {
       const container = render(
-        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" isLive={true} />,
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
