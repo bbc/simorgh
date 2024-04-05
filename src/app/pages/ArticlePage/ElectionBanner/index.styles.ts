@@ -4,10 +4,9 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 export const BANNER_HEIGHT = 475;
 
 export default {
-  electionBannerWrapper: (theme: Theme) =>
+  electionBannerWrapper: ({ palette }: Theme) =>
     css({
-      gridColumn: 'span 12',
-      backgroundColor: theme.palette.GHOST,
+      backgroundColor: palette.GHOST,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -17,14 +16,13 @@ export default {
       border: 'none',
       width: '100%',
       maxWidth: '63rem',
-      height: '100%',
-      minHeight: `${pixelsToRem(BANNER_HEIGHT)}rem`,
+      height: `${pixelsToRem(BANNER_HEIGHT)}rem`,
     }),
-  electionBannerWrapperAmp: (theme: Theme) =>
+  electionBannerWrapperAmp: ({ palette }: Theme) =>
     css({
-      maxHeight: `${pixelsToRem(BANNER_HEIGHT)}rem`,
+      height: `${pixelsToRem(BANNER_HEIGHT)}rem`,
       overflow: 'hidden',
-      backgroundColor: theme.palette.GHOST,
+      backgroundColor: palette.GHOST,
 
       '& amp-iframe': {
         border: 'none',
