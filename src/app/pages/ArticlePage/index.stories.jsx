@@ -129,17 +129,25 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = () => <ComponentWithContext data={articleData} />;
+export const ArticlePage = (_, { service }) => (
+  <ComponentWithContext data={articleData} service={service} />
+);
 export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
 
-export const ArticlePageWithRelatedContent = () => (
-  <ComponentWithContext data={articleDataWithRelatedContent} />
+export const ArticlePageWithRelatedContent = (_, { service }) => (
+  <ComponentWithContext
+    data={articleDataWithRelatedContent}
+    service={service}
+  />
 );
 
-export const ArticlePageWithSingleRelatedContent = () => (
-  <ComponentWithContext data={articleDataWithSingleRelatedContent} />
+export const ArticlePageWithSingleRelatedContent = (_, { service }) => (
+  <ComponentWithContext
+    data={articleDataWithSingleRelatedContent}
+    service={service}
+  />
 );
 
 export const ArticlePageWithPodcastPromo = () => (
