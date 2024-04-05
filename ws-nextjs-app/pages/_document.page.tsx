@@ -7,6 +7,10 @@ import Document, {
 } from 'next/document';
 import Script from 'next/script';
 
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer from '@emotion/server/create-instance';
+import createCache from '@emotion/cache';
+
 import * as React from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
@@ -38,11 +42,26 @@ type DocProps = {
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
     const isApp = isAppPath(ctx.asPath || '');
     const isLiteRoute = isLitePath(ctx.asPath || '');
-
     let isLiteMode = isLiteRoute;
+
+    // Expose Emotion CSS string and IDs
+    const originalRenderPage = ctx.renderPage;
+    const cache = createCache({ key: 'bbc' });
+    const { extractCritical } = createEmotionServer(cache);
+
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: App => props => (
+          <CacheProvider value={cache}>
+            <App {...props} />
+          </CacheProvider>
+        ),
+      });
+
+    const initialProps = await Document.getInitialProps(ctx);
+    const { css, ids } = extractCritical(initialProps.html);
 
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -97,6 +116,11 @@ export default class AppDocument extends Document<DocProps> {
 
     return {
       ...initialProps,
+      styles: (
+        <>
+          <style data-emotion-css={ids.join(' ')}>{css}</style>
+        </>
+      ),
       helmetProps,
       clientSideEnvVariables,
       isApp,
@@ -116,29 +140,20 @@ export default class AppDocument extends Document<DocProps> {
       isApp,
       isLiteMode,
       clientSideEnvVariables,
+      // styles,
     } = this.props;
 
     if (isLiteMode) {
       return (
         <Html {...htmlAttrs}>
           <head>
-            <script
-              id="simorgh-envvars"
-              type="text/javascript"
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{
-                __html: `window.SIMORGH_ENV_VARS=${JSON.stringify(
-                  clientSideEnvVariables,
-                )}`,
-              }}
-            />
+            <meta name="robots" content="noindex" />
             {title}
             {helmetLinkTags}
             {helmetMetaTags}
             {helmetScriptTags}
-
-            <meta name="robots" content="noindex" />
             <style>{LITE_STYLES}</style>
+            {/* {styles} */}
           </head>
           <body>
             <Main />

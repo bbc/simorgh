@@ -142,6 +142,7 @@ const Document = ({
           </>
         )}
         {renderMode === 'lite' && (
+          // <style>{css}</style>
           <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
         )}
         {renderMode === 'canonical' && (
