@@ -29,6 +29,8 @@ type ContextProps = {
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
+  submitted: boolean;
+  progress: string;
 };
 
 const FormContext = createContext({} as ContextProps);
@@ -42,7 +44,7 @@ const getInitialFormState = (
       [field.id]: {
         isValid: true,
         required: field.validation.mandatory ?? false,
-        value: null,
+        value: '',
         htmlType: field.htmlType,
         messageCode: null,
       },
@@ -71,6 +73,8 @@ export const FormContextProvider = ({
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
+  const [submitted, setSubmitted] = useState(false);
+  const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
@@ -82,6 +86,7 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    setSubmitted(true);
 
     // Reset error state
     setSubmissionError(null);
@@ -91,19 +96,40 @@ export const FormContextProvider = ({
 
     const formData = new FormData();
 
-    // TODO: This is a mock data, we should use the formState instead
-    Object.entries({ surname: 'BBC TEST NAME' }).forEach(([key, value]) => {
-      formData.append(key, value);
+    Object.entries(formState).forEach(([key, item]) => {
+      const fieldValue = item.value;
+
+      if (fieldValue === '') return;
+      if (fieldValue instanceof FileList) {
+        const fileList = fieldValue;
+        const fileListLength = fileList.length;
+
+        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
+          const file = fileList.item(fileIndex);
+          if (file) formData.append(key, file);
+        }
+        return;
+      }
+      if (typeof fieldValue === 'boolean') {
+        if (fieldValue) formData.append(key, 'true');
+        return;
+      }
+      formData.append(key, fieldValue);
     });
 
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
 
+      req.upload.onprogress = e => {
+        setProgress(((e.loaded / e.total) * 100).toFixed(0));
+      };
+
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
+          setSubmitted(false);
           if (req.status !== OK) {
             setSubmissionError({
               message: req.responseText,
@@ -122,7 +148,14 @@ export const FormContextProvider = ({
 
   return (
     <FormContext.Provider
-      value={{ formState, handleChange, handleSubmit, submissionError }}
+      value={{
+        formState,
+        handleChange,
+        handleSubmit,
+        submissionError,
+        submitted,
+        progress,
+      }}
     >
       {children}
     </FormContext.Provider>

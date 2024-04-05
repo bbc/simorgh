@@ -62,7 +62,6 @@ export default {
   parameters: {
     metadata, // attach the metadata to the default export parameters.
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 ```
 
@@ -87,7 +86,6 @@ export default {
       page: md, // and pass it down into parameters.docs as showned.
     },
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 ```
 

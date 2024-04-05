@@ -1,5 +1,3 @@
-# Related Content Section
-
 ## Description
 
 A component constructing the Related Content section for Article pages. The sections can hold a list of RelatedContentItem or a single RelatedContentItem. The section can have a max of 6 items.

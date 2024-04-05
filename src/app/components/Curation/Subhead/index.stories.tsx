@@ -1,15 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 
 import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StoryProps } from '../../../models/types/storybook';
+import { StoryProps, StoryArgs } from '../../../models/types/storybook';
 
-const Component = ({ service, variant }: StoryProps) => {
+const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -21,7 +19,7 @@ const Component = ({ service, variant }: StoryProps) => {
   );
 };
 
-const WithLink = ({ service, variant }: StoryProps) => {
+const WithLink = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -34,9 +32,8 @@ const WithLink = ({ service, variant }: StoryProps) => {
 };
 
 export default {
-  title: 'New Components/Curation/Subheading',
+  title: 'Components/Curation/Subheading',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
 };
 
