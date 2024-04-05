@@ -122,7 +122,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     audio: (props: ComponentToRenderProps) => (
       <div
         css={[
-          `padding-top:${GEL_SPACING_TRPL}rem`,
+          `padding-top:${GEL_SPACING_TRPL}`,
           isCaf ?? styles.cafMediaPlayer,
         ]}
       >
@@ -132,7 +132,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     video: (props: ComponentToRenderProps) => (
       <div
         css={[
-          `padding-top:${GEL_SPACING_TRPL}rem`,
+          `padding-top:${GEL_SPACING_TRPL}`,
           isCaf && styles.cafMediaPlayer,
         ]}
       >
