@@ -235,8 +235,7 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
-          {!isCaf && <RelatedContentSection content={blocks} />}
+          <RelatedContentSection content={blocks} />
         </div>
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
