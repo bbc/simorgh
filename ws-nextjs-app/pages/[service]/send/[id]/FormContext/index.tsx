@@ -20,6 +20,7 @@ import UGCSendError from '../UGCSendError';
 
 type SubmissionError = {
   message: string;
+  code?: string;
   status: number;
 } | null;
 
@@ -51,6 +52,15 @@ export const FormContextProvider = ({
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
+
+  const handleError = (req: XMLHttpRequest) => {
+    const { response, status } = req;
+    const { message, code = '' } = response
+      ? JSON.parse(response)
+      : { message: 'Unable to reach the pertinent service to submit data' };
+
+    return new UGCSendError({ message, code, status });
+  };
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
@@ -84,7 +94,8 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const x = uuid();
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${x}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
@@ -97,20 +108,17 @@ export const FormContextProvider = ({
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status !== OK) {
-            // const { response, status } = req;
-            // const { message, code } = JSON.parse(response);
+            const { message, code, status } = handleError(req);
 
-            // const err = new UGCSendError({ message, code, status });
-
-            // console.log(err);
-            // console.log(err.status);
-
-            // Productionizzation invokation
+            // Future logging invokation if feasible client-side
             // sendCustomMetric();
             // logger.error();
 
-            const err = new Error('Errrrrrrr');
-            throw err;
+            setSubmissionError({
+              message,
+              code,
+              status,
+            });
           }
         }
       };
