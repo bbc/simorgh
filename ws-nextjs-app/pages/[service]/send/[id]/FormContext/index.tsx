@@ -103,7 +103,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
