@@ -14,7 +14,6 @@ import {
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
-  UGCSendResponse,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 
@@ -22,6 +21,7 @@ type SubmissionError = {
   message: string;
   code?: string;
   status: number;
+  isRecoverable?: boolean;
 } | null;
 
 type ContextProps = {
@@ -53,11 +53,20 @@ export const FormContextProvider = ({
   const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
 
+  const isHTML = (req: XMLHttpRequest) => {
+    const contentType = req.getResponseHeader('Content-Type');
+    return contentType?.match(/text\/html/);
+  };
+
   const handleError = (req: XMLHttpRequest) => {
     const { response, status } = req;
-    const { message, code = '' } = response
-      ? JSON.parse(response)
-      : { message: 'Unable to reach the pertinent service to submit data' };
+    const { message, code } =
+      response && !isHTML(req)
+        ? JSON.parse(response)
+        : {
+            message: 'Unable to reach the pertinent service to submit data',
+            code: 'UNKNOWN_SUBMISSION_ERROR',
+          };
 
     return new UGCSendError({ message, code, status });
   };
@@ -94,8 +103,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const x = uuid();
-      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${x}`;
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
@@ -108,7 +116,7 @@ export const FormContextProvider = ({
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status !== OK) {
-            const { message, code, status } = handleError(req);
+            const { message, code, status, isRecoverable } = handleError(req);
 
             // Future logging invokation if feasible client-side
             // sendCustomMetric();
@@ -118,6 +126,7 @@ export const FormContextProvider = ({
               message,
               code,
               status,
+              isRecoverable,
             });
           }
         }
@@ -125,7 +134,7 @@ export const FormContextProvider = ({
 
       req.send(formData);
     } catch (error) {
-      const { message, status } = error as UGCSendResponse;
+      const { message, status } = error as UGCSendError;
       setSubmissionError({ message, status });
     }
   };
