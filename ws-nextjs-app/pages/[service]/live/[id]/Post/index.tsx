@@ -96,8 +96,6 @@ const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const headingText =
     headerBlock?.model?.blocks[0]?.model?.blocks[0]?.model?.text;
 
-  console.log(isHeadline, headingText);
-
   return (
     <>
       {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
