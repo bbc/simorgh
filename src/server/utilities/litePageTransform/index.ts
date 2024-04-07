@@ -13,7 +13,6 @@ const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
 html{
-  line-height:1.15;
   -webkit-text-size-adjust:100%;
   font-size:16px;
   font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
@@ -57,7 +56,7 @@ input, textarea {
   display:flex;
 }
 [data-lite-class=lite-main-content]{
-  padding:${CONTENT_PADDING}rem;
+  padding:0 ${CONTENT_PADDING}rem;
 }
 [data-lite-class=lite-nav-list]{
   padding:${CONTENT_PADDING}rem;
