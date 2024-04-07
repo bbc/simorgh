@@ -13,7 +13,7 @@ const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
 html{
-  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
   font-size:16px;
   font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
