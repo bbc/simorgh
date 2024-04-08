@@ -96,7 +96,7 @@ describe('Curation Promo', () => {
   });
 
   describe('Live Promo', () => {
-    it('should display LiveLabel on a Live Promo', () => {
+    it('should display LiveLabel on a Live Promo when isLive is true', () => {
       const container = render(
         <Fixture
           link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
@@ -105,6 +105,16 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('EN VIVO')).toBeInTheDocument();
+    });
+    it('should not display LiveLabel on a promo when isLive is false', () => {
+      const container = render(
+        <Fixture
+          link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
+          isLive={false}
+        />,
+        { service: 'mundo' },
+      );
+      expect(container.queryByText('EN VIVO')).not.toBeInTheDocument();
     });
 
     it('should display a Live Promo without a timestamp present', () => {
