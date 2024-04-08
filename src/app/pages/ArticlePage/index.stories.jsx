@@ -12,6 +12,7 @@ import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.j
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
+import articleDataHindiWithElectionTag from '#data/hindi/articles/c03rl9735klo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ArticlePageComponent from './ArticlePage';
@@ -50,6 +51,7 @@ const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
+  electionBannerEnabled = false,
 }) => {
   return (
     <ToggleContextProvider
@@ -58,6 +60,7 @@ const ComponentWithContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
+        electionBanner: { enabled: electionBannerEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -89,6 +92,7 @@ const ComponentWithServiceContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
+  electionBannerEnabled = false,
 }) => {
   return (
     <ToggleContextProvider
@@ -97,6 +101,7 @@ const ComponentWithServiceContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
+        electionBanner: { enabled: electionBannerEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -171,5 +176,13 @@ export const ArticlePageWithPodcastNews = () => (
     data={articleNewsWithPodcastPromo}
     service="news"
     podcastEnabled
+  />
+);
+
+export const HindiWithElectionBanner = () => (
+  <ComponentWithServiceContext
+    data={articleDataHindiWithElectionTag}
+    service="hindi"
+    electionBannerEnabled
   />
 );

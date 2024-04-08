@@ -20,10 +20,11 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { iFrameSrc, height, thingLabel } =
     BANNER_CONFIG[service as ElectionBannerServices] ?? {};
 
-  const validAboutTag = aboutTags.some(tag => tag.thingLabel === thingLabel);
+  const validAboutTag = aboutTags?.some(tag => tag.thingLabel === thingLabel);
 
   // TODO: ensure toggle is working
-  const showBanner = !electionBannerEnabled && !!iFrameSrc && validAboutTag;
+  const showBanner =
+    electionBannerEnabled && Boolean(iFrameSrc) && validAboutTag;
 
   if (!showBanner) return null;
 
