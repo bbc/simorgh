@@ -17,13 +17,13 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('electionBanner');
 
-  const { iFrameSrc, height, thingLabel } =
+  const { iframeSrc, height, thingLabel } =
     BANNER_CONFIG[service as ElectionBannerServices] ?? {};
 
   const validAboutTag = aboutTags?.some(tag => tag.thingLabel === thingLabel);
 
   const showBanner =
-    electionBannerEnabled && Boolean(iFrameSrc) && validAboutTag;
+    !electionBannerEnabled && Boolean(iframeSrc) && validAboutTag;
 
   if (!showBanner) return null;
 
@@ -39,7 +39,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
           ampMetadata={{
             imageWidth: 1,
             imageHeight: 1,
-            src: iFrameSrc,
+            src: iframeSrc,
             image: '',
           }}
         />
@@ -56,7 +56,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
     >
       <iframe
         title="Election Banner"
-        src={iFrameSrc}
+        src={iframeSrc}
         scrolling="no"
         css={styles.electionBannerIframe}
       />
