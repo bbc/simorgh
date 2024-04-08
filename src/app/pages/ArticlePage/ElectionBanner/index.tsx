@@ -24,7 +24,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   const validAboutTag = aboutTags?.some(tag => tag.thingLabel === thingLabel);
 
-  const showBanner = Boolean(iframeSrc) && validAboutTag;
+  const showBanner = service in BANNER_CONFIG && validAboutTag;
 
   if (!showBanner) return null;
 
