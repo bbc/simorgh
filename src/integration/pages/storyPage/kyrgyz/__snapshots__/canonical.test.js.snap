@@ -113,7 +113,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөт
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="bbc-139onq"
+  class="bbc-108zspp-image-imageFixedAspectRatio"
   height="351"
   sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"

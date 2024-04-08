@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles Flourish Embed Story should match snapshot 1`] = `
 <iframe
-  class="bbc-axsk9o"
+  class="bbc-4vl91g-iframe"
   frameborder="0"
   height="575"
   id="flourish-id-b74fce73"
@@ -15,7 +15,7 @@ exports[`Canonical Articles Flourish Embed Story should match snapshot 1`] = `
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 1`] = `
 <iframe
-  class="bbc-axsk9o"
+  class="bbc-4vl91g-iframe"
   frameborder="0"
   height="575"
   id="flourish-id-fa6c571f"
@@ -28,7 +28,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 2`] = `
 <iframe
-  class="bbc-axsk9o"
+  class="bbc-4vl91g-iframe"
   frameborder="0"
   height="575"
   id="flourish-id-d6c28b92"
@@ -41,7 +41,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 3`] = `
 <iframe
-  class="bbc-axsk9o"
+  class="bbc-4vl91g-iframe"
   frameborder="0"
   height="575"
   id="flourish-id-cbc84ae7"
@@ -54,7 +54,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 4`] = `
 <iframe
-  class="bbc-axsk9o"
+  class="bbc-4vl91g-iframe"
   frameborder="0"
   height="575"
   id="flourish-id-51a5a7f8"

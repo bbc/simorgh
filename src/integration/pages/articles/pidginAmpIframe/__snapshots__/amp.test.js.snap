@@ -10,11 +10,11 @@ exports[`AMP Articles Amp Iframe should match snapshot 1`] = `
   width="640"
 >
   <div
-    class="bbc-zdnlm2"
+    class="bbc-1wdxdqu-overflow"
     overflow=""
   >
     <button
-      class="bbc-eiv153"
+      class="bbc-1wohxxl-button"
       type="button"
     >
       Show more

@@ -155,7 +155,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="bbc-139onq"
+  class="bbc-108zspp-image-imageFixedAspectRatio"
   height="549"
   sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
