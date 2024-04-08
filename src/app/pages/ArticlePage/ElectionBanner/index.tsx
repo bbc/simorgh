@@ -6,7 +6,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
-import styles, { BANNER_HEIGHT } from './index.styles';
+import styles from './index.styles';
 
 const IFRAME_SRC =
   'https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed';
@@ -27,7 +27,7 @@ export default function ElectionBanner() {
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
-            imageHeight: BANNER_HEIGHT,
+            imageHeight: 1,
             src: IFRAME_SRC,
             image: '',
           }}
