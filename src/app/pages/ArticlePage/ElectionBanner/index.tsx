@@ -5,25 +5,11 @@ import { useContext } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { Services } from '#app/models/types/global';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import styles from './index.styles';
-
-type ElectionBannerServices = Extract<Services, 'hindi'>;
-
-const BANNER_CONFIG: Record<
-  ElectionBannerServices,
-  { iFrameSrc: string; height: number; thingLabel: Tag['thingLabel'] }
-> = {
-  hindi: {
-    iFrameSrc:
-      'https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed',
-    height: 475,
-    thingLabel: 'लोकसभा चुनाव 2024',
-  },
-};
+import { BANNER_CONFIG, ElectionBannerServices } from './config';
 
 export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { isAmp } = useContext(RequestContext);
