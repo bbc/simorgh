@@ -25,12 +25,15 @@ const Fragment = ({ text, attributes = [] }: FragmentProps) => {
     These components are nested inside each other as children as the array is iterated through.
     The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
-  return attributes.reduce((previousAttribute, attribute) => {
-    const Attribute =
-      attributeComponents[attribute as keyof typeof attributeComponents] ||
-      fallbackAttributeComponent; // If attribute is unknown, will use a fallback component that just returns the passed children
-    return <Attribute>{previousAttribute}</Attribute>;
-  }, <>{text}</>);
+  return attributes.reduce(
+    (previousAttribute, attribute) => {
+      const Attribute =
+        attributeComponents[attribute as keyof typeof attributeComponents] ||
+        fallbackAttributeComponent; // If attribute is unknown, will use a fallback component that just returns the passed children
+      return <Attribute>{previousAttribute}</Attribute>;
+    },
+    <>{text}</>,
+  );
 };
 
 type FragmentProps = {

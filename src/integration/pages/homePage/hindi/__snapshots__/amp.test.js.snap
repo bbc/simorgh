@@ -192,7 +192,9 @@ exports[`AMP Home Page Footer Cookie Settings Button should match text and on ha
 
 exports[`AMP Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
 
-exports[`AMP Home Page Footer I can see the footer copyright and external linking text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
+exports[`AMP Home Page Footer Paragraphs should match text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
+
+exports[`AMP Home Page Footer Paragraphs should match text 2`] = `"© 2024 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
 
 exports[`AMP Home Page Header I can see the branding 1`] = `"BBC News, हिंदी"`;
 
