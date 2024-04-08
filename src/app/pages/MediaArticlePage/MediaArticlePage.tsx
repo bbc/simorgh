@@ -3,8 +3,7 @@
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { jsx, useTheme } from '@emotion/react';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
+import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -126,9 +125,9 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     subheadline: headings,
     audio: (props: ComponentToRenderProps) => (
       <div
-        css={[
-          `padding-top:${GEL_SPACING_TRPL}`,
-          isMap ?? styles.cafMediaPlayer,
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isMap && styles.cafMediaPlayer,
         ]}
       >
         <ArticleMediaPlayer {...props} />
@@ -136,8 +135,8 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     ),
     video: (props: ComponentToRenderProps) => (
       <div
-        css={[
-          `padding-top:${GEL_SPACING_TRPL}`,
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
           isMap && styles.cafMediaPlayer,
         ]}
       >
