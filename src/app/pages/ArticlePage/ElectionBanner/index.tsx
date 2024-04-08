@@ -17,13 +17,14 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('electionBanner');
 
+  if (!electionBannerEnabled) return null;
+
   const { iframeSrc, height, thingLabel } =
     BANNER_CONFIG[service as ElectionBannerServices] ?? {};
 
   const validAboutTag = aboutTags?.some(tag => tag.thingLabel === thingLabel);
 
-  const showBanner =
-    !electionBannerEnabled && Boolean(iframeSrc) && validAboutTag;
+  const showBanner = Boolean(iframeSrc) && validAboutTag;
 
   if (!showBanner) return null;
 
