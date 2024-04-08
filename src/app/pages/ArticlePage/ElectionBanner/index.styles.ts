@@ -1,7 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '#app/utilities/pixelsToRem';
-
-const BANNER_CONTAINER_HEIGHT = 475;
 
 export default {
   electionBannerWrapper: ({ palette }: Theme) =>
@@ -10,7 +7,6 @@ export default {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: `${pixelsToRem(BANNER_CONTAINER_HEIGHT)}rem`,
     }),
   electionBannerIframe: () =>
     css({
@@ -21,7 +17,6 @@ export default {
     }),
   electionBannerWrapperAmp: ({ palette }: Theme) =>
     css({
-      height: `${pixelsToRem(BANNER_CONTAINER_HEIGHT)}rem`,
       overflow: 'hidden',
       backgroundColor: palette.GHOST,
 
