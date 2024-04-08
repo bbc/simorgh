@@ -10,6 +10,7 @@ const options = {
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
+    '@storybook/addon-knobs',
   ],
 };
 

@@ -11,11 +11,16 @@ import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
+  FieldData,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
 } from '../types';
+<<<<<<< HEAD
 import UGCSendError from '../UGCSendError';
+=======
+import validateFunctions from './utils/validateFunctions';
+>>>>>>> latest
 
 type SubmissionError = {
   message: string;
@@ -25,7 +30,7 @@ type SubmissionError = {
 } | null;
 
 type ContextProps = {
-  formState: Record<OnChangeInputName, OnChangeInputValue | null>;
+  formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
@@ -37,8 +42,32 @@ const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
-): Record<OnChangeInputName, OnChangeInputValue | null> =>
-  fields?.reduce((acc, field) => ({ ...acc, [field.id]: null }), {});
+): Record<OnChangeInputName, FieldData> =>
+  fields?.reduce(
+    (acc, field) => ({
+      ...acc,
+      [field.id]: {
+        isValid: true,
+        required: field.validation.mandatory ?? false,
+        value: '',
+        htmlType: field.htmlType,
+        messageCode: null,
+      },
+    }),
+    {},
+  );
+
+const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+  const formEntries = new Map(Object.entries(state));
+
+  formEntries.forEach((data, key, map) => {
+    const validateFunction = validateFunctions[data.htmlType];
+    const validatedData = validateFunction ? validateFunction(data) : data;
+    map.set(key, validatedData);
+  });
+
+  return Object.fromEntries(formEntries);
+};
 
 export const FormContextProvider = ({
   fields,
@@ -73,7 +102,8 @@ export const FormContextProvider = ({
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      return { ...prevState, [name]: value };
+      const updatedState = { [name]: { ...prevState[name], value } };
+      return { ...prevState, ...updatedState };
     });
   };
 
@@ -84,26 +114,34 @@ export const FormContextProvider = ({
     // Reset error state
     setSubmissionError(null);
 
+    // Validate
+    setFormState(state => validateFormState(state));
+
     const formData = new FormData();
 
-    Object.entries(formState).forEach(([key, value]) => {
-      if (value === null) return;
-      if (value instanceof FileList) {
-        const fileList = value;
+    Object.entries(formState).forEach(([key, item]) => {
+      const fieldValue = item.value;
+
+      if (fieldValue === '') return;
+      if (fieldValue instanceof FileList) {
+        const fileList = fieldValue;
         const fileListLength = fileList.length;
 
         for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
           const file = fileList.item(fileIndex);
           if (file) formData.append(key, file);
         }
-
         return;
       }
-      formData.append(key, value);
+      if (typeof fieldValue === 'boolean') {
+        if (fieldValue) formData.append(key, 'true');
+        return;
+      }
+      formData.append(key, fieldValue);
     });
 
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);

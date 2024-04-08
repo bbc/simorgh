@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { TEXT_VARIANTS } from '../../../legacy/psammead/psammead-storybook-helpers/src';
+import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import latin from '../../ThemeProvider/fontScripts/latin';
@@ -48,7 +48,6 @@ export const getItem = ({
   withTimestamp?: boolean;
 }) => {
   const baseUrl = 'https://www.bbc.com';
-  // @ts-expect-error Text variants not required for non world service languages
   const { text, articlePath } = TEXT_VARIANTS[service];
   const timestamp = withTimestamp
     ? lastUpdated({ script: latin, service })

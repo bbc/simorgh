@@ -192,7 +192,7 @@ exports[`AMP Most Watched Page Footer Cookie Settings Button should match text a
 
 exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`AMP Most Watched Page Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 

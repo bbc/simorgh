@@ -59,7 +59,7 @@ const visibilityToMediaQuery = (visibility: string) =>
       display: inline-block;
     }`,
     [VISIBILITY.ALL]: `display: inline-block;`,
-  }[visibility] || 'display: none;');
+  })[visibility] || 'display: none;';
 
 const LinkComponent = ({
   children,
@@ -163,12 +163,11 @@ const Pagination = ({
   const blocks = buildBlocks(activePage, pageCount);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
-
   const tokenMapper = (token: string, key: number) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,
       '{y}': <b key={key}>{pageCount}</b>,
-    }[token] || <span key={key}>{token}</span>);
+    })[token] || <span key={key}>{token}</span>;
 
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
