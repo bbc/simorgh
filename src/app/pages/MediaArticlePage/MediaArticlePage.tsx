@@ -6,7 +6,6 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
