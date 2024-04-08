@@ -73,7 +73,6 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const { isCaf } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -114,6 +113,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     pageData,
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics, type },
+  } = pageData;
+
+  const isMap = type === 'MAP';
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -123,7 +129,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <div
         css={[
           `padding-top:${GEL_SPACING_TRPL}`,
-          isCaf ?? styles.cafMediaPlayer,
+          isMap ?? styles.cafMediaPlayer,
         ]}
       >
         <ArticleMediaPlayer {...props} />
@@ -133,7 +139,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <div
         css={[
           `padding-top:${GEL_SPACING_TRPL}`,
-          isCaf && styles.cafMediaPlayer,
+          isMap && styles.cafMediaPlayer,
         ]}
       >
         <ArticleMediaPlayer {...props} />
@@ -183,12 +189,6 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  // ATI
-  const {
-    metadata: { atiAnalytics },
-  } = pageData;
-
-  if (atiAnalytics) atiAnalytics.contentType = 'article-media-asset';
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -219,7 +219,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
-          isCaf
+          isMap
             ? 'Article'
             : categoryName(isTrustProjectParticipant, taggings, formats)
         }
@@ -231,7 +231,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isCaf ? styles.cafPrimaryColumn : styles.primaryColumn}>
+        <div css={isMap ? styles.cafPrimaryColumn : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -245,7 +245,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );
