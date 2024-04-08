@@ -103,6 +103,7 @@ const ArticlePage = ({ pageData }) => {
     ['metadata', 'passport', 'predicates', 'formats'],
     pageData,
   );
+
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
   const {
@@ -219,7 +220,7 @@ const ArticlePage = ({ pageData }) => {
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      <ElectionBanner />
+      <ElectionBanner aboutTags={aboutTags} />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
