@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 558497376,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
       brandTitle: 'يستحق الانتباه',
