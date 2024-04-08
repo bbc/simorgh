@@ -30,7 +30,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
-import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
