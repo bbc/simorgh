@@ -71,7 +71,7 @@ export default () => {
         }
       >
         <List elements={elements} trustProjectLink={trustProjectLink} />
-        {collectiveNewsroomText && !isLive() && (
+        {collectiveNewsroomText && isLive() && (
           <p css={styles.paragraphWithBorderBottom}>{collectiveNewsroomText}</p>
         )}
         <p css={styles.paragraph}>
