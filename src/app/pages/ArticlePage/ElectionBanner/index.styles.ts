@@ -16,8 +16,8 @@ export default {
     css({
       border: 'none',
       width: '100%',
-      height: '100%',
       maxWidth: '63rem',
+      height: '100%',
     }),
   electionBannerWrapperAmp: ({ palette }: Theme) =>
     css({
