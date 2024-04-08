@@ -187,7 +187,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const {
     metadata: { atiAnalytics },
   } = pageData;
-  atiAnalytics.contentType = 'article-media-asset';
+  atiAnalytics.contentType = atiAnalytics.contentType && 'article-media-asset';
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
