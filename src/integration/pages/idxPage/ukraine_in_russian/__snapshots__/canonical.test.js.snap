@@ -280,7 +280,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чугуїв"
-  class="bbc-108zspp-image-imageFixedAspectRatio"
+  class="bbc-139onq"
   height="576"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg"

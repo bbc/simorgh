@@ -313,7 +313,7 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="bbc-108zspp-image-imageFixedAspectRatio"
+  class="bbc-139onq"
   height="549"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"

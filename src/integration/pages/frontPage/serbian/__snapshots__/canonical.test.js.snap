@@ -368,7 +368,7 @@ exports[`Story Promo Headline should match text 1`] = `"Promo test for cookie se
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="test"
-  class="bbc-108zspp-image-imageFixedAspectRatio"
+  class="bbc-139onq"
   height="1152"
   src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
   style="aspect-ratio:2048 / 1152"

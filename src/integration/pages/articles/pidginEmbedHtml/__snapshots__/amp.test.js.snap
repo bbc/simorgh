@@ -2,19 +2,19 @@
 
 exports[`AMP Articles Embed HTML should match snapshot 1`] = `
 <div
-  class="bbc-koled1-embedDiv"
+  class="bbc-z6vcvl"
   data-e2e="embed-error"
 >
   <strong
-    class="bbc-pgllns-Text"
+    class="bbc-ayvsvz"
   >
     Sorry, we can’t display this part of the story on this lightweight mobile page.
   </strong>
   <div
-    class="bbc-l03aby-errorLinkWrapper"
+    class="bbc-yzszhh"
   >
     <a
-      class="bbc-1gbmkx-self-inlineLink"
+      class="bbc-gu9ena"
       href="http://localhost:7080/pidgin/articles/c39rjygpmv1o"
     >
       View the full version of the page to see all the content.
