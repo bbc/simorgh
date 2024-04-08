@@ -16,11 +16,8 @@ import {
   OnChangeInputName,
   OnChangeInputValue,
 } from '../types';
-<<<<<<< HEAD
 import UGCSendError from '../UGCSendError';
-=======
 import validateFunctions from './utils/validateFunctions';
->>>>>>> latest
 
 type SubmissionError = {
   message: string;
