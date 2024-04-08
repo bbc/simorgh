@@ -4,7 +4,6 @@ import { MouseEvent, useContext } from 'react';
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import isLive from '#app/lib/utilities/isLive';
 import Link from './Link';
 import List from './List';
 import styles from './index.styles';
