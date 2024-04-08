@@ -17,7 +17,6 @@ export default {
     }),
   electionBannerWrapperAmp: ({ palette }: Theme) =>
     css({
-      overflow: 'hidden',
       backgroundColor: palette.GHOST,
 
       '& amp-iframe': {
