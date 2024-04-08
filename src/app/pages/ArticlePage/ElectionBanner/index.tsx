@@ -26,14 +26,15 @@ const BANNER_CONFIG: Record<
 export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { isAmp } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
-  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
+  const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
+    useToggle('electionBanner');
 
   const { iFrameSrc, thingLabel } =
     BANNER_CONFIG[service as ElectionBannerServices] ?? {};
 
   const validAboutTag = aboutTags.some(tag => tag.thingLabel === thingLabel);
 
-  const showBanner = electionBannerEnabled && iFrameSrc && validAboutTag;
+  const showBanner = electionBannerEnabled && !!iFrameSrc && validAboutTag;
 
   if (!showBanner) return null;
 
