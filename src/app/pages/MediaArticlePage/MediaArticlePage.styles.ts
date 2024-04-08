@@ -27,14 +27,6 @@ export default {
         gridColumn: '1 / span 8',
       },
     }),
-  cafPrimaryColumn: ({ mq }: Theme) =>
-    css({
-      gridColumn: '1 / span 12',
-      paddingBottom: '2rem',
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '3 / span 8',
-      },
-    }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
@@ -43,6 +35,11 @@ export default {
         gridColumn: '9 / span 4',
         marginTop: '2rem',
       },
+    }),
+  fullWidthContainer: () =>
+    css({
+      gridColumn: '1 / span 12',
+      paddingBottom: '2rem',
     }),
   mainContent: ({ spacings }: Theme) =>
     css({

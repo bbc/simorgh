@@ -229,7 +229,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isMap ? styles.cafPrimaryColumn : styles.primaryColumn}>
+        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
