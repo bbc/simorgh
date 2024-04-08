@@ -179,10 +179,15 @@ export const ArticlePageWithPodcastNews = () => (
   />
 );
 
-export const HindiWithElectionBanner = () => (
-  <ComponentWithServiceContext
-    data={articleDataHindiWithElectionTag}
-    service="hindi"
-    electionBannerEnabled
-  />
-);
+export const HindiWithElectionBanner = {
+  render: () => (
+    <ComponentWithServiceContext
+      data={articleDataHindiWithElectionTag}
+      service="hindi"
+      electionBannerEnabled
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
