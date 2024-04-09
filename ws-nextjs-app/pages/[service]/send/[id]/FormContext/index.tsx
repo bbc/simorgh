@@ -79,24 +79,6 @@ export const FormContextProvider = ({
   const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
 
-  const isHTML = (req: XMLHttpRequest) => {
-    const contentType = req.getResponseHeader('Content-Type');
-    return contentType?.match(/text\/html/);
-  };
-
-  const handleError = (req: XMLHttpRequest) => {
-    const { response, status } = req;
-    const { message, code } =
-      response && !isHTML(req)
-        ? JSON.parse(response)
-        : {
-            message: 'Unable to reach the pertinent service to submit data',
-            code: 'UNKNOWN_SUBMISSION_ERROR',
-          };
-
-    return new UGCSendError({ message, code, status });
-  };
-
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
       const updatedState = { [name]: { ...prevState[name], value } };
@@ -138,7 +120,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
@@ -151,7 +133,9 @@ export const FormContextProvider = ({
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status !== OK) {
-            const { message, code, status, isRecoverable } = handleError(req);
+            const { message, code, status, isRecoverable } = new UGCSendError(
+              req,
+            );
 
             // Future logging invokation if feasible client-side
             // sendCustomMetric();

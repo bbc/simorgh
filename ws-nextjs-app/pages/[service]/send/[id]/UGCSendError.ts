@@ -1,4 +1,4 @@
-import { UGCSendResponse } from './types';
+import UGCErrorPayload from './UGCErrorPayload';
 
 export default class UGCSendError extends Error {
   readonly UNRECOVERABLE_UGC_SEND_ERROR_CODES = [
@@ -8,14 +8,19 @@ export default class UGCSendError extends Error {
     'ERR_PROFILES_NOT_SUPPORTED',
   ];
 
+  req: XMLHttpRequest;
+
   code: string;
 
   status: number;
 
   isRecoverable: boolean;
 
-  constructor({ message, code, status }: UGCSendResponse) {
+  constructor(req: XMLHttpRequest) {
+    const { code, message, status } = UGCErrorPayload.parseErrorPayload(req);
+
     super(message);
+    this.req = req;
     this.code = code;
     this.name = 'UGSSendError';
     this.status = status;

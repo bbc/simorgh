@@ -95,7 +95,7 @@ export type PageProps = {
   };
 };
 
-export type UGCSendResponse = {
+export type UGCSendErrorResponse = {
   message: string;
   code: string;
   status: number;
