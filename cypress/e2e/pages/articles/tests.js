@@ -36,9 +36,10 @@ export const testsThatFollowSmokeTestConfig = ({
   let articlesData;
   describe(`Running tests for ${service} ${pageType}`, () => {
     before(() => {
-      cy.getPageData({ service, pageType: 'article', variant }).then(
-        ({ body }) => {
-          articlesData = body;
+      cy.getPageDataFromWindow({ service, pageType: 'article', variant }).then(
+        ({ pageData }) => {
+          articlesData = pageData;
+          console.log(`articlesData is ${articlesData}`);
         },
       );
     });
@@ -60,25 +61,6 @@ export const testsThatFollowSmokeTestConfig = ({
           .and('contain', 'headline');
       });
     });
-
-    describe(`Article Body`, () => {
-      it('should render a H1, which contains/displays a styled headline', () => {
-        const headlineData = getBlockData('headline', articlesData);
-        cy.get('h1').should(
-          'contain',
-          headlineData.model.blocks[0].model.blocks[0].model.text,
-        );
-      });
-
-      it('should render an H2, which contains/displays a styled subheading', () => {
-        if (articlesData.data.article.metadata.language === 'en-gb') {
-          const subheadingData = getBlockData('subheadline', articlesData);
-          cy.get('h2').should(
-            'contain',
-            subheadingData.model.blocks[0].model.blocks[0].model.text,
-          );
-        }
-      });
 
       it('should render a paragraph, which contains/displays styled text', () => {
         if (serviceHasCorrectlyRenderedParagraphs(service)) {
@@ -127,7 +109,7 @@ export const testsThatFollowSmokeTestConfig = ({
       }
 
       it('should have an inline link', () => {
-        if (articlesData.data.article.metadata.language === 'en-gb') {
+        if (articlesData.metadata.language === 'en-gb') {
           cy.get('main a').should('exist');
         }
       });

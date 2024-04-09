@@ -135,6 +135,15 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
   return cy.request(`${Cypress.env('currentPath')}.json`);
 };
 
+export const getPageDataFromWindow = () => {
+  cy.window().then(win => {
+    const pageData = win.SIMORGH_DATA;
+    console.log(`pageData is ${JSON.stringify(pageData)}`);
+    return pageData;
+  });
+};
+
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 Cypress.Commands.add('testResponseCodeAndTypeRetry', testResponseCodeAndType);
 Cypress.Commands.add('getPageData', getPageData);
+Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
