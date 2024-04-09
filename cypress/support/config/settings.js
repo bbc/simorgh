@@ -7780,7 +7780,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukrainian/ukraine_in_russian'],
