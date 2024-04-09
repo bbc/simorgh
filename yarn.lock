@@ -3725,7 +3725,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:9.3.4, @testing-library/dom@npm:^9.0.0":
+"@testing-library/dom@npm:10.0.0":
+  version: 10.0.0
+  resolution: "@testing-library/dom@npm:10.0.0"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/runtime": ^7.12.5
+    "@types/aria-query": ^5.0.1
+    aria-query: 5.3.0
+    chalk: ^4.1.0
+    dom-accessibility-api: ^0.5.9
+    lz-string: ^1.5.0
+    pretty-format: ^27.0.2
+  checksum: 682cc22cb3414ffbcf5d9bac777907167c5523f2dcbe5d96cd2e99386009acd879640c7fe5b1c66b199c2d2679f97057410557b3848b871f59c547b1dc8fc28a
+  languageName: node
+  linkType: hard
+
+"@testing-library/dom@npm:^9.0.0":
   version: 9.3.4
   resolution: "@testing-library/dom@npm:9.3.4"
   dependencies:
@@ -3796,7 +3812,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:*, @testing-library/react@npm:14.2.2":
+"@testing-library/react@npm:*":
   version: 14.2.2
   resolution: "@testing-library/react@npm:14.2.2"
   dependencies:
@@ -3807,6 +3823,20 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   checksum: cb73df588592d9101429f057eaa6f320fc12524d5eb2acc8a16002c1ee2d9422a49e44841003bba42974c9ae1ced6b134f0d647826eca42ab8f19e4592971b16
+  languageName: node
+  linkType: hard
+
+"@testing-library/react@npm:14.3.0":
+  version: 14.3.0
+  resolution: "@testing-library/react@npm:14.3.0"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    "@testing-library/dom": ^9.0.0
+    "@types/react-dom": ^18.0.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 4aa7e583feac7e9bd93ff981d1dc5113329181bf01ad955af2f748f263dc52cdbff6ead6664a8762481e30b70d7f402aaac7a497d9d1a1747ad6906dfb0eabad
   languageName: node
   linkType: hard
 
@@ -5291,7 +5321,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aria-query@npm:^5.0.0, aria-query@npm:^5.3.0":
+"aria-query@npm:5.3.0, aria-query@npm:^5.0.0, aria-query@npm:^5.3.0":
   version: 5.3.0
   resolution: "aria-query@npm:5.3.0"
   dependencies:
@@ -15042,7 +15072,7 @@ __metadata:
     "@emotion/babel-plugin": 11.11.0
     "@emotion/jest": ^11.11.0
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 14.2.2
+    "@testing-library/react": 14.3.0
     babel-plugin-transform-rename-import: 2.3.0
     cypress: 13.7.2
     cypress-terminal-report: 5.3.12
@@ -15100,9 +15130,9 @@ __metadata:
     "@storybook/react": 8.0.6
     "@storybook/react-webpack5": 8.0.6
     "@storybook/theming": 8.0.6
-    "@testing-library/dom": 9.3.4
+    "@testing-library/dom": 10.0.0
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 14.2.2
+    "@testing-library/react": 14.3.0
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.5.2
     "@types/jest": 29.5.12
