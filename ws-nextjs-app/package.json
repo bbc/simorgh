@@ -28,7 +28,7 @@
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
     "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "14.2.2",
+    "@testing-library/react": "14.3.0",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "13.7.2",
     "cypress-terminal-report": "5.3.12",

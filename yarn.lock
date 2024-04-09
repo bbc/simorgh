@@ -3796,7 +3796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:*, @testing-library/react@npm:14.2.2":
+"@testing-library/react@npm:*":
   version: 14.2.2
   resolution: "@testing-library/react@npm:14.2.2"
   dependencies:
@@ -3807,6 +3807,20 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   checksum: 10/3605577fda8d5e27b8919f390f749af91494d03e7ba5ccaf6480ed1184248372c5a4e8fe1c8c3ad4c1a7b3536f37144ba4b4626900ed46dc9811312f280eee31
+  languageName: node
+  linkType: hard
+
+"@testing-library/react@npm:14.3.0":
+  version: 14.3.0
+  resolution: "@testing-library/react@npm:14.3.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+    "@testing-library/dom": "npm:^9.0.0"
+    "@types/react-dom": "npm:^18.0.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10/3e0c109916d6ce961e223b2beb6fce7045f72207770a3412de0a02a5e33356d38a2f2938bb1d106fb0009db2ac9ea1ee759614323194c34d8a6d7c3333d16f2e
   languageName: node
   linkType: hard
 
@@ -15042,7 +15056,7 @@ __metadata:
     "@emotion/babel-plugin": "npm:11.11.0"
     "@emotion/jest": "npm:^11.11.0"
     "@testing-library/jest-dom": "npm:6.4.2"
-    "@testing-library/react": "npm:14.2.2"
+    "@testing-library/react": "npm:14.3.0"
     babel-plugin-transform-rename-import: "npm:2.3.0"
     cypress: "npm:13.7.2"
     cypress-terminal-report: "npm:5.3.12"
@@ -15102,7 +15116,7 @@ __metadata:
     "@storybook/theming": "npm:8.0.6"
     "@testing-library/dom": "npm:9.3.4"
     "@testing-library/jest-dom": "npm:6.4.2"
-    "@testing-library/react": "npm:14.2.2"
+    "@testing-library/react": "npm:14.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.5.2"
     "@types/jest": "npm:29.5.12"
