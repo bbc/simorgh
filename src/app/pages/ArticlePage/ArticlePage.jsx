@@ -239,19 +239,18 @@ const ArticlePage = ({ pageData }) => {
           {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
           <RelatedContentSection content={blocks} />
         </div>
-        {!isApp || (!isPGL && <SecondaryColumn pageData={pageData} />)}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-      {!isApp ||
-        (!isPGL && (
-          <MostRead
-            css={styles.mostReadSection}
-            data={mostReadInitialData}
-            columnLayout="multiColumn"
-            size="default"
-            headingBackgroundColour={GREY_2}
-            mobileDivider={showRelatedTopics && topics}
-          />
-        ))}
+      {!isApp && !isPGL && (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopics && topics}
+        />
+      )}
     </div>
   );
 };
