@@ -37,9 +37,9 @@ const chooseOffscreenText = (
 const renderParagraph = block => {
   const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
   return (
-    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
+    <span key={pathOr(null, ['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
-    </p>
+    </span>
   );
 };
 const renderCaption = (
