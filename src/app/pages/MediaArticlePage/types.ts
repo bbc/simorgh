@@ -22,6 +22,7 @@ export type MediaArticlePageProps = {
         producer: string;
       };
       atiAnalytics: ATIData;
+      type: string;
     };
     promo: object;
   };
