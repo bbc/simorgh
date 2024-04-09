@@ -103,7 +103,7 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-  const isPGL = path(['metadata', 'type'], pageData) === 'PGL';
+  const isPGL = pageData?.metadata?.type === 'PGL';
 
   const {
     metadata: { atiAnalytics },
