@@ -16,11 +16,10 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { isAmp } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
-    useToggle('electionBanner');
+    useToggle('indianElectionBanner');
 
   // TODO: Remove once going Live
   if (isLive()) return null;
-
   if (!electionBannerEnabled) return null;
 
   const { iframeSrc, height, thingLabel } =

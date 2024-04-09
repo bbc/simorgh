@@ -30,7 +30,7 @@ describe('ElectionBanner', () => {
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
           service: 'hindi',
-          toggles: { electionBanner: { enabled: true } },
+          toggles: { indianElectionBanner: { enabled: true } },
           isAmp,
         },
       );
@@ -43,7 +43,7 @@ describe('ElectionBanner', () => {
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
           service: 'hindi',
-          toggles: { electionBanner: { enabled: false } },
+          toggles: { indianElectionBanner: { enabled: false } },
           isAmp,
         },
       );
