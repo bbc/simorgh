@@ -9,7 +9,7 @@ const Component = () => (
 );
 
 export default {
-title: 'New Components/FormFields/SubmitButton',
+  title: 'Components/FormFields',
   Component,
 };
 

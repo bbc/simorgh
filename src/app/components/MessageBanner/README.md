@@ -1,5 +1,3 @@
-# MessageBanner
-
 ## Description
 
 This component renders a message banner which comprises an H2 heading, a link (styled as a CTA), an image and a description as a paragraph. These elements sit within a region landmark. The banner can be rendered anywhere on a page and uses the curation `visualStyle` of `BANNER`. The banner background is generated programmatically with CSS radial and linear colour gradients at each breakpoint.

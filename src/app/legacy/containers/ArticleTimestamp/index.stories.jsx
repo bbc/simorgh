@@ -1,6 +1,4 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
@@ -27,89 +25,85 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 export default {
   Component: WrappedArticleTimestamp,
   title: 'Containers/Article/Article Timestamp',
-  decorators: [
-    withKnobs,
-    withServicesKnob(),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
   parameters: { chromatic: { disable: true } },
 };
 
-export const A = props => (
+export const A = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={threeHoursAgo}
     lastPublished={threeHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 A.storyName =
   'lastPublished === firstPublished and firstPublished < 10 hours ago';
 
-export const B = props => (
+export const B = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={elevenHoursAgo}
     lastPublished={elevenHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 B.storyName =
   'lastPublished === firstPublished and firstPublished today and > 10 hours ago';
 
-export const C = props => (
+export const C = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={twentyFourHoursAgo}
     lastPublished={twentyFourHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 C.storyName =
   'lastPublished === firstPublished and firstPublished before today';
 
-export const D = props => (
+export const D = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={fiveHoursAgo}
     lastPublished={threeHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 D.storyName =
   'lastPublished today < 10 hours ago and firstPublished today < 10 hours ago';
 
-export const E = props => (
+export const E = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={twelveHoursAgo}
     lastPublished={elevenHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 E.storyName =
   'lastPublished today more than 10 hours ago and firstPublished today more than 10 hours ago';
 
-export const F = props => (
+export const F = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={threeDaysAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 F.storyName =
   'lastPublished before today and firstPublished same day as lastPublished';
 
-export const G = props => (
+export const G = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={twoDaysAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 G.storyName =
   'lastPublished before today, !==firstPublished day and firstPublished before today';
 
-export const H = props => (
+export const H = (_, globalArgs) => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={elevenHoursAgo}
-    {...props}
+    {...globalArgs}
   />
 );
 H.storyName =
