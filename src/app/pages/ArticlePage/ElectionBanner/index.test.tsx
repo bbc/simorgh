@@ -21,62 +21,34 @@ const mockAboutTags = [
 ] as Tag[];
 
 describe('ElectionBanner', () => {
-  describe('Canonical', () => {
-    it('should render ElectionBanner for Hindi service when aboutTags contain ther correct thingLabel', () => {
-      const { getByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} />,
-        {
-          service: 'hindi',
-        },
-      );
+  describe.each(['canonical', 'amp'])('%s', platform => {
+    const isAmp = platform === 'amp';
+    const bannerElement = isAmp ? 'election-banner-amp' : 'election-banner';
 
-      expect(getByTestId('election-banner')).toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner for Hindi service when aboutTags do not contain the correct thingLabel', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={[{ thingLabel: 'thing1' }] as Tag[]} />,
-        {
-          service: 'hindi',
-        },
-      );
-
-      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner when aboutTags is empty', () => {
-      const { queryByTestId } = render(<ElectionBanner aboutTags={[]} />, {
-        service: 'hindi',
-      });
-
-      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner when isLive is true', () => {
-      (isLive as jest.Mock).mockImplementationOnce(() => true);
-
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} />,
-        {
-          service: 'hindi',
-        },
-      );
-
-      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
-    });
-  });
-
-  describe('AMP', () => {
     it('should render ElectionBanner for Hindi service when aboutTags contain the correct thingLabel', () => {
       const { getByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
           service: 'hindi',
-          isAmp: true,
+          toggles: { electionBanner: { enabled: true } },
+          isAmp,
         },
       );
 
-      expect(getByTestId('election-banner-amp')).toBeInTheDocument();
+      expect(getByTestId(bannerElement)).toBeInTheDocument();
+    });
+
+    it('should not render ElectionBanner when toggle is disabled', () => {
+      const { queryByTestId } = render(
+        <ElectionBanner aboutTags={mockAboutTags} />,
+        {
+          service: 'hindi',
+          toggles: { electionBanner: { enabled: false } },
+          isAmp,
+        },
+      );
+
+      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner for Hindi service when aboutTags do not contain the correct thingLabel', () => {
@@ -84,20 +56,20 @@ describe('ElectionBanner', () => {
         <ElectionBanner aboutTags={[{ thingLabel: 'thing1' }] as Tag[]} />,
         {
           service: 'hindi',
-          isAmp: true,
+          isAmp,
         },
       );
 
-      expect(queryByTestId('election-banner-amp')).not.toBeInTheDocument();
+      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner when aboutTags is empty', () => {
       const { queryByTestId } = render(<ElectionBanner aboutTags={[]} />, {
         service: 'hindi',
-        isAmp: true,
+        isAmp,
       });
 
-      expect(queryByTestId('election-banner-amp')).not.toBeInTheDocument();
+      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner when isLive is true', () => {
@@ -107,11 +79,11 @@ describe('ElectionBanner', () => {
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
           service: 'hindi',
-          isAmp: true,
+          isAmp,
         },
       );
 
-      expect(queryByTestId('election-banner-amp')).not.toBeInTheDocument();
+      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
   });
 });
