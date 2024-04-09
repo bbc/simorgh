@@ -210,6 +210,7 @@ const ArticlePage = ({ pageData }) => {
         type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
+        description={description}
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
