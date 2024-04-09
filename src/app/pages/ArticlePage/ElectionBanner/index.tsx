@@ -18,8 +18,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('indianElectionBanner');
 
-  // TODO: Remove once going Live
-  if (isLive()) return null;
+  if (isLive()) return null; // TODO: Remove once going Live
   if (!electionBannerEnabled) return null;
 
   const { iframeSrc, height, thingLabel } =
