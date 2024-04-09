@@ -337,7 +337,7 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
-      collectiveNewsroomText: 'ਬੀਬੀਸੀ ਲਈ ਕੂਲੈਕਟਿਵ ਨਿਊਜ਼ਰੂਮ ਪ੍ਰਕਾਸ਼ਨ',
+      collectiveNewsroomText: 'ਬੀਬੀਸੀ ਲਈ ਕਲੈਕਟਿਵ ਨਿਊਜ਼ਰੂਮ ਪ੍ਰਕਾਸ਼ਨ',
     },
     timezone: 'Asia/Kolkata',
   },
