@@ -51,7 +51,7 @@ const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-  electionBannerEnabled = false,
+  indianElectionBanner = false,
 }) => {
   return (
     <ToggleContextProvider
@@ -60,7 +60,7 @@ const ComponentWithContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
-        electionBanner: { enabled: electionBannerEnabled },
+        indianElectionBanner: { enabled: indianElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -92,7 +92,7 @@ const ComponentWithServiceContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-  electionBannerEnabled = false,
+  indianElectionBanner = false,
 }) => {
   return (
     <ToggleContextProvider
@@ -101,7 +101,7 @@ const ComponentWithServiceContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
-        electionBanner: { enabled: electionBannerEnabled },
+        indianElectionBanner: { enabled: indianElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -184,7 +184,7 @@ export const HindiWithElectionBanner = {
     <ComponentWithServiceContext
       data={articleDataHindiWithElectionTag}
       service="hindi"
-      electionBannerEnabled
+      indianElectionBanner
     />
   ),
   parameters: {
