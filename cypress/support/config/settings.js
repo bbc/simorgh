@@ -7772,23 +7772,7 @@ module.exports = () => ({
     isWorldService: true,
     variant: 'default',
     pageTypes: {
-      idxPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
+      idxPage: { environments: undefined, smoke: false },
       articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
