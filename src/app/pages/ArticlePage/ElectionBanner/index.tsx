@@ -8,6 +8,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import isLive from '#app/lib/utilities/isLive';
 import styles from './index.styles';
 import { BANNER_CONFIG, ElectionBannerServices } from './config';
 
@@ -16,6 +17,9 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { service } = useContext(ServiceContext);
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('electionBanner');
+
+  // TODO: Remove once going Live
+  if (isLive()) return null;
 
   if (!electionBannerEnabled) return null;
 
@@ -31,6 +35,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   if (isAmp) {
     return (
       <div
+        data-testid="election-banner-amp"
         css={[
           styles.electionBannerWrapperAmp,
           { height: `${pixelsToRem(height)}rem` },
@@ -50,6 +55,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   return (
     <div
+      data-testid="election-banner"
       css={[
         styles.electionBannerWrapper,
         { height: `${pixelsToRem(height)}rem` },
