@@ -7,7 +7,7 @@ export const testsThatFollowSmokeTestConfig = ({
 }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType}`, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+      cy.getPageData({ service, pageType: 'article', variant }).then(
         ({ body }) => {
           const description =
             body.data.article.promo.summary.blocks[0].model.blocks[0].model
