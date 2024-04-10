@@ -103,6 +103,7 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
+  const isPGL = pageData?.metadata?.type === 'PGL';
 
   const {
     metadata: { atiAnalytics },
@@ -220,7 +221,7 @@ const ArticlePage = ({ pageData }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
@@ -238,9 +239,9 @@ const ArticlePage = ({ pageData }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-      {!isApp && (
+      {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
