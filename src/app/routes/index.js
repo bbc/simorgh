@@ -9,7 +9,6 @@ import podcast from './podcast';
 import onDemandRadio from './onDemandRadio';
 import onDemandTV from './onDemandTV';
 import topic from './topic';
-import idx from './idx';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
 
@@ -24,7 +23,6 @@ export default [
   onDemandRadio,
   onDemandTV,
   topic,
-  idx,
   cpsAsset,
   error,
   errorNoRouteMatch, // When none of the above routes match, it will fall to this.
