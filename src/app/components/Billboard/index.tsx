@@ -14,7 +14,7 @@ interface BillboardProps {
   heading: string;
   description?: string;
   link?: string;
-  image?: string;
+  image: string;
   eventTrackingData?: EventTrackingMetadata;
 }
 
