@@ -230,7 +230,7 @@
     "jsdom": "24.0.0",
     "minimist": "1.2.8",
     "mkdirp": "3.0.1",
-    "mocha": "9.2.2",
+    "mocha": "10.4.0",
     "mocha-junit-reporter": "2.2.1",
     "node-fetch": "2.6.12",
     "npm-run-all2": "5.0.2",
