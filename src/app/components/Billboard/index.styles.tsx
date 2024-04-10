@@ -1,33 +1,39 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../../src/app/utilities/pixelsToRem';
 
-const styles = {
-  container: () =>
+export default {
+  headerContainer: ({ mq }: Theme) =>
     css({
-      paddingTop: '2rem',
-      paddingBottom: '2rem',
-    }),
-  card: ({ mq }: Theme) =>
-    css({
-      height: 'auto',
-      background:
-        'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
-      paddingLeft: '1rem',
-      paddingRight: '1rem',
-      [mq.GROUP_3_MIN_WIDTH]: {
-        background:
-          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
-      },
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
       [mq.HIGH_CONTRAST]: {
-        border: '0.1875rem solid transparent',
+        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  textWrap: ({ mq }: Theme) =>
+  backgroundContainer: () =>
     css({
-      [mq.GROUP_3_ONLY]: {
-        width: '66%',
-      },
+      position: 'absolute',
+      top: '0',
+      bottom: '0',
+      width: '100%',
+      overflow: 'hidden',
+    }),
+  backgroundColor: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_10,
+      width: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+    }),
+  contentContainer: ({ mq, gridWidths }: Theme) =>
+    css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        width: '75%',
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        margin: '0 auto',
+        position: 'relative',
+        width: '100%',
       },
     }),
   heading: ({ palette }: Theme) =>
@@ -36,75 +42,43 @@ const styles = {
       paddingBottom: '0.5rem',
       color: palette.WHITE,
     }),
-  paragraph: ({ palette }: Theme) =>
+  textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
-      paddingBottom: '1rem',
-      color: palette.WHITE,
-    }),
-  imageLtr: ({ mq }: Theme) =>
-    css({
-      maxWidth: '184px',
-      [mq.GROUP_3_MIN_WIDTH]: {
-        maxWidth: '224px',
-        bottom: 0,
-        right: 0,
-        position: 'absolute',
+      position: 'relative',
+      padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       },
-
-      img: { objectPosition: 'top' },
-    }),
-  imageRtl: ({ mq }: Theme) =>
-    css({
-      maxWidth: '184px',
-      [mq.GROUP_3_MIN_WIDTH]: {
-        maxWidth: '224px',
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-      },
-      img: { objectPosition: 'top' },
-    }),
-  callToActionLink: ({ mq, palette }: Theme) =>
-    css({
-      padding: '1rem',
-      backgroundColor: palette.WHITE,
-      margin: '0 1rem 1rem 1rem',
-      width: '100%',
-      color: palette.BLACK,
-      '&:hover, &:focus': {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: 'auto',
-        maxWidth: 'calc(100% - 240px)',
-        margin: '0 0 1.5rem 0',
-        paddingBottom: '1rem',
-      },
-      '& span': {
-        paddingInlineStart: '0.5rem',
-      },
-    }),
-  chevron: () =>
-    css({
-      marginInlineStart: '0.5rem',
-      width: '1rem',
-      height: '1rem',
-      verticalAlign: 'middle',
-      fill: 'currentcolor',
-    }),
-  flex: ({ mq }: Theme) =>
-    css({
-      display: 'flex',
-      flexDirection: 'column-reverse',
-      alignItems: 'center',
-      [mq.GROUP_3_MIN_WIDTH]: {
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem`,
+        minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
+        height: '100%',
         display: 'flex',
-        flexDirection: 'row-reverse',
-        justifyContent: 'start',
-        alignItems: 'flex-end',
-        position: 'relative',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        maxWidth: '50%', // determines width of text overlay.
+      },
+    }),
+  titleWithImage: ({ palette }: Theme) =>
+    css({
+      display: 'block',
+      color: palette.GREY_1,
+      width: '100%',
+    }),
+
+  description: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.GREY_2,
+      margin: 0,
+      marginTop: `${spacings.DOUBLE}rem`,
+    }),
+  layoutWithLiveLabelNoImage: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInlineStart: 'calc(100% / 3)',
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        marginInlineStart: 'calc(100% / 4)',
       },
     }),
 };
-export default styles;
