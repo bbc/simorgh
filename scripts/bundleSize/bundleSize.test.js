@@ -2,17 +2,19 @@ import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
-jest.unstable_mockModule('./pageTypeBundleExtractor', () => (pageTypeBundleExtractor));
+jest.unstable_mockModule(
+  './pageTypeBundleExtractor',
+  () => pageTypeBundleExtractor,
+);
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
   MAX_SIZE: 728,
 }));
 
-jest.unstable_mockModule(
-  './serviceList.js',
-  () => ({ default: ["service1", "service2"] }),
-);
+jest.unstable_mockModule('./serviceList.js', () => ({
+  default: ['service1', 'service2'],
+}));
 
 jest.unstable_mockModule('fs', () => ({
   default: {
