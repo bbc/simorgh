@@ -5,6 +5,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
+import LiveLabelHeader from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header';
 import MaskedImage from '../MaskedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
