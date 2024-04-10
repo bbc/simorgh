@@ -4,33 +4,23 @@ import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
-import Paragraph from '../Paragraph';
 import Heading from '../Heading';
-import Image from '../Image';
-import { LeftChevron, RightChevron } from '../icons';
+import MaskedImage from '../MaskedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import CallToActionLink from '../CallToActionLink';
 import styles from './index.styles';
+import Text from '../Text';
 
 interface BillboardProps {
   heading: string;
   description?: string;
   link?: string;
-  linkText: string;
   image?: string;
   eventTrackingData?: EventTrackingMetadata;
 }
 
 const Banner = forwardRef(
   (
-    {
-      heading,
-      description,
-      link,
-      linkText,
-      image,
-      eventTrackingData,
-    }: BillboardProps,
+    { heading, description, link, image, eventTrackingData }: BillboardProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
@@ -39,45 +29,33 @@ const Banner = forwardRef(
     const id = `billboard-${idSanitiser(heading)}`;
 
     return (
-      <section
-        css={styles.container}
-        role="region"
-        aria-labelledby={id}
-        data-testid={id}
-      >
-        <div ref={viewRef} css={styles.card}>
-          <div css={styles.textWrap}>
-            <Heading level={2} size="paragon" css={styles.heading} id={id}>
-              {heading}
-            </Heading>
-            <Paragraph size="longPrimer" css={styles.paragraph}>
-              {description}
-            </Paragraph>
+      <section role="region" aria-labelledby={id} data-testid={id}>
+        <div css={styles.headerContainer}>
+          <div css={styles.backgroundContainer}>
+            <div css={styles.backgroundColor} />
           </div>
-          <div css={styles.flex}>
-            <CallToActionLink
-              href={link}
-              css={styles.callToActionLink}
-              className="focusIndicatorInvert"
-              eventTrackingData={eventTrackingData}
-            >
-              {linkText}
-              {isRtl ? (
-                <LeftChevron css={styles.chevron} />
-              ) : (
-                <RightChevron css={styles.chevron} />
+          <div css={styles.contentContainer}>
+            <MaskedImage
+              imageUrl={image}
+              imageUrlTemplate={image}
+              imageWidth={660}
+            />
+            <div css={styles.textContainerWithImage}>
+              <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                {/* {showLiveLabel ? (
+                  <LiveLabelHeader isHeaderImage={isHeaderImage}>
+                     {heading}
+                  </LiveLabelHeader>
+                ) : ( */}
+                {heading}
+                {/* )} */}
+              </Heading>
+              {description && (
+                <Text as="p" css={[styles.description]}>
+                  {description}
+                </Text>
               )}
-            </CallToActionLink>
-            {image && (
-              <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
-                <Image
-                  alt=""
-                  src={image.replace('{width}', 'raw')}
-                  placeholder={false}
-                  aspectRatio={[16, 9]}
-                />
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </section>
