@@ -5,7 +5,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
-import LiveLabelHeader from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header';
+import LiveLabelHeader from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header/LiveLabelHeader';
 import MaskedImage from '../MaskedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -17,15 +17,20 @@ interface BillboardProps {
   link?: string;
   image: string;
   eventTrackingData?: EventTrackingMetadata;
+  showLiveLabel: boolean;
+  imageUrl?: string;
+  imageUrlTemplate?: string;
+  imageWidth?: number;
 }
 
 const Banner = forwardRef(
   (
-    { heading, description, link, image, eventTrackingData }: BillboardProps,
+    { heading, description, link, image, imageUrl, imageUrlTemplate, imageWidth, eventTrackingData, showLiveLabel }: BillboardProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
+    const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
 
     const id = `billboard-${idSanitiser(heading)}`;
 
@@ -43,16 +48,18 @@ const Banner = forwardRef(
             />
             <div css={styles.textContainerWithImage}>
               <Heading level={2} size="paragon" css={styles.heading} id={id}>
-                {/* {showLiveLabel ? (
-                  <LiveLabelHeader isHeaderImage={isHeaderImage}>
-                     {heading}
-                  </LiveLabelHeader>
-                ) : ( */}
+              {showLiveLabel ? (
+              <LiveLabelHeader isHeaderImage={isHeaderImage}>
                 {heading}
-                {/* )} */}
+              </LiveLabelHeader>
+            ) : (
+              heading
+            )}
               </Heading>
               {description && (
-                <Text as="p" css={[styles.description]}>
+                <Text as="p" css={[styles.description, showLiveLabel &&
+                  !isHeaderImage &&
+                  styles.layoutWithLiveLabelNoImage,]}>
                   {description}
                 </Text>
               )}
@@ -70,6 +77,7 @@ const Billboard = ({
   link,
   image,
   eventTrackingData,
+  showLiveLabel,
 }: BillboardProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -81,6 +89,7 @@ const Billboard = ({
       image={image}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
+      showLiveLabel={showLiveLabel}
     />
   );
 };

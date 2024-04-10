@@ -15,6 +15,7 @@ const Component = (_: StoryArgs, { text = '', longText = '' }: Props) => {
       heading={text}
       description={longText}
       image="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+      showLiveLabel
     />
   );
 };
