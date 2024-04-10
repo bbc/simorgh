@@ -55,12 +55,16 @@ const startApp = () => {
 };
 
 const runExpressTests = () =>
-  spawn('jest', [filesToTest, '--runInBand', '--colors', ...getJestArgs()], {
-    stdio: 'inherit',
-  });
+  spawn(
+    'jest',
+    [filesToTest, '--runInBand', '--colors', '--verbose', ...getJestArgs()],
+    {
+      stdio: 'inherit',
+    },
+  );
 
 const runNextJSTests = () =>
-  spawn('yarn', ['test:integration', ...getJestArgs()], {
+  spawn('yarn', ['test:integration', '--verbose', ...getJestArgs()], {
     stdio: 'inherit',
   });
 
