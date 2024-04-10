@@ -9,7 +9,9 @@ export const testsThatFollowSmokeTestConfig = ({
     it('should render a description for the page', () => {
       cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
         ({ body }) => {
-          const description = body.data.article.promo.summary;
+          const description =
+            body.data.article.promo.summary.blocks[0].model.blocks[0].model
+              .text;
           cy.get('main p').first().should('contain', description);
         },
       );
