@@ -145,9 +145,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         >
           Image caption, 
         </span>
-        <p>
+        <span>
           Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-        </p>
+        </span>
       </span>
     </figcaption>
   </figure>
