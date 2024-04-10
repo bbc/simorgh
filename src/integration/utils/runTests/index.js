@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 
-const { exec, spawn } = require('child_process');
-const argv = require('minimist')(process.argv.slice(2));
-const ora = require('ora');
-const path = require('path');
+import { exec, spawn } from 'child_process';
+import minimist from 'minimist';
+import ora from 'ora';
+import { join, resolve as _resolve } from 'path';
 
+const argv = minimist(process.argv.slice(2));
 const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
 process.env.DEV_MODE = isDev;
@@ -88,7 +89,7 @@ if (onlyRunTests) {
 } else {
   const spinner = ora().start();
   if (argv.nextJS) {
-    const nextAppDir = path.join(path.resolve(), 'ws-nextjs-app');
+    const nextAppDir = join(_resolve(), 'ws-nextjs-app');
     process.chdir(nextAppDir);
   }
 
