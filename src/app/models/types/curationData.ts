@@ -14,6 +14,7 @@ interface BaseSummary {
   firstPublished?: string | number;
   lastPublished?: string | number;
   duration?: string | number;
+  isLive?: boolean;
 }
 
 export interface Summary extends BaseSummary {

@@ -66,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf } = useContext(RequestContext);
+  const { isApp } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -105,6 +105,7 @@ const ArticlePage = ({ pageData }) => {
   );
 
   const recommendationsData = pathOr([], ['recommendations'], pageData);
+  const isPGL = pageData?.metadata?.type === 'PGL';
 
   const {
     metadata: { atiAnalytics },
@@ -212,6 +213,7 @@ const ArticlePage = ({ pageData }) => {
         type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
+        description={description}
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
@@ -222,7 +224,7 @@ const ArticlePage = ({ pageData }) => {
       )}
       <ElectionBanner aboutTags={aboutTags} />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
@@ -238,12 +240,11 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
-          {!isCaf && <RelatedContentSection content={blocks} />}
+          <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-      {!isApp && (
+      {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
