@@ -73,20 +73,6 @@ export default ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case BILLBOARD:
-      return summaries.length > 0 ? (
-        <Billboard
-          heading={'holly'}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          linkText={summaries[0].title}
-          image={summaries[0].imageUrl}
-          eventTrackingData={{
-            componentName: `billboard${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-        />
-      ) : null;
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
         <MessageBanner
