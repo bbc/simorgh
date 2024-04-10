@@ -74,7 +74,7 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-          const isLive = promo.link?.includes('/live/');
+          const { isLive } = promo;
 
           return (
             <li
