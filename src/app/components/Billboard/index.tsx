@@ -68,7 +68,6 @@ const Billboard = ({
   heading,
   description,
   link,
-  linkText,
   image,
   eventTrackingData,
 }: BillboardProps) => {
@@ -77,7 +76,6 @@ const Billboard = ({
   return (
     <Banner
       heading={heading}
-      linkText={linkText}
       description={description}
       link={link}
       image={image}
