@@ -78,7 +78,9 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
       >
          ، عنوان
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         Some caption text...
       </span>
     </span>
@@ -164,7 +166,9 @@ exports[`Captions should render caption text with example News offscreen text 1`
       >
         Caption, 
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         Some caption text...
       </span>
     </span>
@@ -250,13 +254,19 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
       >
         Caption, 
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         This is paragraph 1
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         This is paragraph 2
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         Paragraph 3
       </span>
     </span>
@@ -385,7 +395,9 @@ exports[`Captions should render correctly with inline block 1`] = `
       >
         Caption, 
       </span>
-      <span>
+      <span
+        data-testid="caption-paragraph"
+      >
         <b>
           This is some text. 
         </b>

@@ -786,7 +786,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                     >
                       Video caption, 
                     </span>
-                    <span>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       BBC launch trailer for We Know Our Place women's sport campaign"
                     </span>
                   </span>

@@ -2114,7 +2114,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         Wetin we call dis foto, 
                       </span>
-                      <span>
+                      <span
+                        data-testid="caption-paragraph"
+                      >
                         Some people went to the NTA awards recently. This has "quotes" in it.
                       </span>
                     </span>
@@ -2491,7 +2493,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                         >
                           Wetin we call dis Audio, 
                         </span>
-                        <span>
+                        <span
+                          data-testid="caption-paragraph"
+                        >
                           A caption for a test asset
                         </span>
                       </span>
@@ -5597,7 +5601,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         Wetin we call dis foto, 
                       </span>
-                      <span>
+                      <span
+                        data-testid="caption-paragraph"
+                      >
                         Some people went to the NTA awards recently. This has "quotes" in it.
                       </span>
                     </span>
@@ -5974,7 +5980,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         >
                           Wetin we call dis Audio, 
                         </span>
-                        <span>
+                        <span
+                          data-testid="caption-paragraph"
+                        >
                           A caption for a test asset
                         </span>
                       </span>
