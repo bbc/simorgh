@@ -10,6 +10,7 @@ import Image from '../Image';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
+import styles from './index.styles';
 
 interface BillboardProps {
   heading: string;
@@ -35,7 +36,7 @@ const Banner = forwardRef(
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
 
-    const id = `message-banner-${idSanitiser(heading)}`;
+    const id = `billboard-${idSanitiser(heading)}`;
 
     return (
       <section
