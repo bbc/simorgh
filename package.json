@@ -126,7 +126,7 @@
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
     "react-router-config": "5.1.1",
-    "react-router-dom": "5.3.4",
+    "react-router-dom": "6.22.3",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch",
