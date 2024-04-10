@@ -365,6 +365,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-07-23T15:47:11.893Z",
       "datePublished": "2019-05-28T13:42:44.996Z",
+      "description": "پهپادی که برایتان قهوه می‌آورد",
       "headline": "پهپادی که برایتان قهوه می‌آورد",
       "image": {
         "@type": "ImageObject",

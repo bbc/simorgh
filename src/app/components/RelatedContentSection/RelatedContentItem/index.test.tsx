@@ -4,7 +4,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../ThemeProvider';
 import RelatedContentItem from '.';
-import { RelatedContentData } from '../fixture';
+import { RelatedContentData, RelatedContentItemWithCaption } from '../fixture';
 import { Services } from '../../../models/types/global';
 
 jest.mock('../../ThemeProvider');
@@ -44,6 +44,20 @@ describe('Optimo Related Content Promo Item', () => {
     expect(altText).toBeInTheDocument();
     expect(heading).toBeInTheDocument();
     expect(timestamp).toBeInTheDocument();
+  });
+
+  it('should render an image when a caption is present', () => {
+    render(
+      <RelatedContentItemFixture
+        fixtureData={RelatedContentItemWithCaption[0]}
+      />,
+    );
+    const image = screen.getByRole('img');
+    const altText = screen.getByAltText(
+      'A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.',
+    );
+    expect(altText).toBeInTheDocument();
+    expect(image).toBeInTheDocument();
   });
 
   it('should return null if no data is passed', () => {
