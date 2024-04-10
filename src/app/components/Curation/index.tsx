@@ -74,7 +74,7 @@ export default ({
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD:
-      return (
+      return summaries.length > 0 ? (
         <Billboard
           heading={'holly'}
           description={summaries[0].description}
@@ -86,8 +86,7 @@ export default ({
             detailedPlacement: `${position + 1}`,
           }}
         />
-      );
-      null;
+      ) : null;
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
         <MessageBanner
