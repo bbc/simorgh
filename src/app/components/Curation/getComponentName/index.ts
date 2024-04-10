@@ -12,7 +12,6 @@ export const COMPONENT_NAMES = {
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
   EMBED: 'embed',
-  BILLBOARD: 'billboard',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -25,7 +24,6 @@ const {
   NOT_SUPPORTED,
   RADIO_SCHEDULE,
   EMBED,
-  BILLBOARD,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -45,7 +43,6 @@ export default ({
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${MAXIMUM}`]: BILLBOARD,
     [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
