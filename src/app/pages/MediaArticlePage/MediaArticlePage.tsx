@@ -3,8 +3,7 @@
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { jsx, useTheme } from '@emotion/react';
-
+import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -112,18 +111,35 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     pageData,
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics, type },
+  } = pageData;
+
+  const isMap = type === 'MAP';
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
     audio: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isMap && styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isMap && styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
@@ -171,11 +187,6 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  // ATI
-  const {
-    metadata: { atiAnalytics },
-  } = pageData;
-
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -205,7 +216,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          isMap
+            ? 'Article'
+            : categoryName(isTrustProjectParticipant, taggings, formats)
+        }
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -214,7 +229,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -222,14 +237,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
-              mobileDivider={false}
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );
