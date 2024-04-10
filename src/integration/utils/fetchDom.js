@@ -1,16 +1,15 @@
 /* eslint-disable no-console */
-
-const fetch = require('isomorphic-fetch');
+import fetch from 'isomorphic-fetch';
 
 // https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1407717012
-const dns = require('node:dns');
+import dns from 'node:dns';
+
+import { JSDOM } from 'jsdom';
+import retry from 'retry';
 
 dns.setDefaultResultOrder('ipv4first');
 
-const { JSDOM } = require('jsdom');
-const retry = require('retry');
-
-const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
+export default ({ url, runScripts, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -52,5 +51,3 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
       }
     });
   });
-
-module.exports = faultTolerantDomFetch;

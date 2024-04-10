@@ -2,5 +2,8 @@
   "globals": {
     "pageType": true,
     "service": true
+  },
+  "rules": {
+    "import/extensions": "off"
   }
 }
