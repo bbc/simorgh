@@ -81,7 +81,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      relatedTopics: 'مواضيع ذات صلة',
+      relatedTopics: 'كلمات مفتاحية',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
