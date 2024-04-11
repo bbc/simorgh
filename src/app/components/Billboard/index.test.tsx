@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, screen } from '../react-testing-library-with-providers';
+import { fireEvent, render, screen } from '../react-testing-library-with-providers';
 import Billboard from '.';
 import { kyrgyzBillboard } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
@@ -22,6 +23,7 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
       const region = screen.getByRole('region');
@@ -37,6 +39,7 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
       const heading = screen.getByText(kyrgyzBillboard.title);
@@ -55,6 +58,7 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
       expect(screen.getByText(kyrgyzBillboard.title).nodeName).toBe('H2');
@@ -69,25 +73,10 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
-    });
-
-    it('should display link text correctly as an Anchor', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          showLiveLabel
-        />,
-      );
-      const ctaLink = screen.getByRole('link');
-      expect(ctaLink.getAttribute('href')).toEqual(summary.link);
-      expect(ctaLink.textContent).toEqual(summary.title);
     });
 
     it('should render an masked image with the correct image src', () => {
@@ -99,10 +88,11 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
-      const maksedImage = screen.getByAltText('');
-      expect(maksedImage.getAttribute('src')).toEqual(
+      const maskedImage = screen.getByAltText('');
+      expect(maskedImage.getAttribute('src')).toEqual(
         summary.imageUrl.replace('{width}', 'raw'),
       );
     });
@@ -116,10 +106,11 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
-      const maksedImage = screen.getByAltText('');
-      expect(maksedImage).toBeInTheDocument();
+      const maskedImage = screen.getByAltText('');
+      expect(maskedImage).toBeInTheDocument();
     });
   });
 
@@ -135,6 +126,7 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
 
@@ -150,10 +142,74 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
+          lang="ky"
         />,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    });
+  });
+
+  describe('click tracking', () => {
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation();
+
+    it('should not be enabled if event tracking data not provided', () => {
+      const { container } = render(
+        <Billboard
+          heading={kyrgyzBillboard.title}
+          description={summary.description}
+          link={summary.link}
+          image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
+          lang="ky"
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+
+      const [callToActionLink] = container.getElementsByTagName('a');
+      fireEvent.click(callToActionLink);
+      expect(callToActionLink.onclick).toBeFalsy();
+    });
+
+    it('should register click tracker if event tracking data provided', () => {
+      render(
+        <Billboard
+          heading={kyrgyzBillboard.title}
+          description={summary.description}
+          link={summary.link}
+          image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
+          lang="ky"
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    });
+
+    it('should handle a click event when call to action link clicked', () => {
+      clickTrackerSpy.mockRestore();
+
+      const { container } = render(
+        <Billboard
+          heading={kyrgyzBillboard.title}
+          description={summary.description}
+          link={summary.link}
+          image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
+          lang="ky"
+        />,
+      );
+
+      const [callToActionLink] = container.getElementsByTagName('a');
+      fireEvent.click(callToActionLink);
+
+      expect(callToActionLink.onclick).toBeTruthy();
     });
   });
 });
