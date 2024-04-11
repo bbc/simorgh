@@ -2,17 +2,19 @@ import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
-jest.unstable_mockModule('./pageTypeBundleExtractor', () => (pageTypeBundleExtractor));
+jest.unstable_mockModule(
+  './pageTypeBundleExtractor',
+  () => pageTypeBundleExtractor,
+);
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
   MAX_SIZE: 728,
 }));
 
-jest.unstable_mockModule(
-  './serviceList.js',
-  () => ({ default: ["service1", "service2"] }),
-);
+jest.unstable_mockModule('./serviceList.js', () => ({
+  default: ['service1', 'service2'],
+}));
 
 jest.unstable_mockModule('fs', () => ({
   default: {
@@ -20,22 +22,6 @@ jest.unstable_mockModule('fs', () => ({
     statSync: jest.fn(),
   },
 }));
-
-const start = jest.fn();
-const succeed = jest.fn();
-const fail = jest.fn();
-
-jest.unstable_mockModule('ora', () => {
-  const mock = jest.fn();
-  mock.mockReturnValue({
-    start,
-    succeed,
-    fail,
-  });
-  return {
-    default: mock,
-  };
-});
 
 jest.unstable_mockModule('chalk', () => ({
   default: {
@@ -87,8 +73,6 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
   });
 };
 
-const { default: ora } = await import('ora');
-
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
   const originalConsoleError = global.console.error;
@@ -122,20 +106,6 @@ describe('bundleSize', () => {
         didThrow = true;
       }
       expect(didThrow).toBe(false);
-    });
-
-    it('should use ora to show loading and success states', async () => {
-      try {
-        const { default: bundleSize } = await import('./index.js');
-        bundleSize();
-      } catch (e) {
-        // silence error
-      }
-      expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ text: 'Analysing bundles...' }),
-      );
-      expect(start).toHaveBeenCalled();
-      expect(succeed).toHaveBeenCalledWith('All bundle sizes are good!');
     });
 
     it('should log a summary of bundle sizes', async () => {
@@ -273,20 +243,6 @@ describe('bundleSize', () => {
       expect(didThrow).toBe(true);
     });
 
-    it('should use ora to show loading and failure states', async () => {
-      try {
-        const { default: bundleSize } = await import('./index.js');
-        bundleSize();
-      } catch (e) {
-        // silence error
-      }
-      expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ text: 'Analysing bundles...' }),
-      );
-      expect(start).toHaveBeenCalled();
-      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
-    });
-
     it('should log an error telling dev how to update thresholds', async () => {
       try {
         const { default: bundleSize } = await import('./index.js');
@@ -312,20 +268,6 @@ describe('bundleSize', () => {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
-    });
-
-    it('should use ora to show loading and failure states', async () => {
-      try {
-        const { default: bundleSize } = await import('./index.js');
-        bundleSize();
-      } catch (e) {
-        // silence error
-      }
-      expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ text: 'Analysing bundles...' }),
-      );
-      expect(start).toHaveBeenCalled();
-      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
     });
 
     it('should log an error telling dev how to update thresholds', async () => {
