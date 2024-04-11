@@ -79,11 +79,11 @@ describe('constructPageFetchUrl', () => {
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                        | ${'http://localhost/ukrainian'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=ukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=ukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'/serbian/cyr'}                      | ${'http://localhost/serbian/cyr'}
-    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'test'}   | ${'/serbian/cyr'}                      | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=test'}
-    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'/serbian/cyr'}                      | ${'https://mock-bff-path/?id=%2Fserbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=live'}
+    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'test'}   | ${'/serbian/cyr'}                      | ${'https://mock-bff-path/?id=serbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=test'}
+    ${CPS_ASSET}    | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'/serbian/cyr'}                      | ${'https://mock-bff-path/?id=serbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=live'}
     ${HOME_PAGE}    | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                      | ${'http://localhost/ukrainian/tipohome'}
     ${HOME_PAGE}    | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                      | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home&serviceEnv=test'}
     ${HOME_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                      | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home&serviceEnv=live'}
