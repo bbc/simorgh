@@ -48,7 +48,7 @@ describe('Billboard', () => {
 
     it('should display the banner heading correctly as an H2', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -60,7 +60,7 @@ describe('Billboard', () => {
 
     it('should display the banner subtext correctly as a Paragraph', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -72,7 +72,7 @@ describe('Billboard', () => {
 
     it('should display link text correctly as an Anchor', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -86,7 +86,7 @@ describe('Billboard', () => {
 
     it('should render an masked image with the correct image src', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -101,7 +101,7 @@ describe('Billboard', () => {
 
     it('should have an masked image with an empty alt text', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -118,7 +118,7 @@ describe('Billboard', () => {
 
     it('should not be enabled if event tracking data not provided', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
@@ -131,7 +131,7 @@ describe('Billboard', () => {
 
     it('should register view tracker if event tracking data provided', () => {
       render(
-        <Billbaord
+        <Billboard
           heading={kyrgyzBillboard.title}
           description={summary.description}
           link={summary.link}
