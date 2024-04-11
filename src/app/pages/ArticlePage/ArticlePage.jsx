@@ -211,6 +211,7 @@ const ArticlePage = ({ pageData }) => {
         type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
+        description={description}
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
@@ -236,7 +237,6 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
           <RelatedContentSection content={blocks} />
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}

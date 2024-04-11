@@ -2114,9 +2114,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         Wetin we call dis foto, 
                       </span>
-                      <p>
+                      <span
+                        data-testid="caption-paragraph"
+                      >
                         Some people went to the NTA awards recently. This has "quotes" in it.
-                      </p>
+                      </span>
                     </span>
                   </figcaption>
                 </figure>
@@ -2491,9 +2493,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                         >
                           Wetin we call dis Audio, 
                         </span>
-                        <p>
+                        <span
+                          data-testid="caption-paragraph"
+                        >
                           A caption for a test asset
-                        </p>
+                        </span>
                       </span>
                     </figcaption>
                   </figure>
@@ -5597,9 +5601,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         Wetin we call dis foto, 
                       </span>
-                      <p>
+                      <span
+                        data-testid="caption-paragraph"
+                      >
                         Some people went to the NTA awards recently. This has "quotes" in it.
-                      </p>
+                      </span>
                     </span>
                   </figcaption>
                 </figure>
@@ -5974,9 +5980,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         >
                           Wetin we call dis Audio, 
                         </span>
-                        <p>
+                        <span
+                          data-testid="caption-paragraph"
+                        >
                           A caption for a test asset
-                        </p>
+                        </span>
                       </span>
                     </figcaption>
                   </figure>
