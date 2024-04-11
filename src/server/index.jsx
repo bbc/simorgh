@@ -208,8 +208,7 @@ server.get(
 
       const { page, renderer_env } = query;
 
-      const cafEnabledService =
-        ['thai', 'pidgin', 'hausa'].includes(service) && pageType === CPS_ASSET;
+      const cafEnabledService = ['thai', 'pidgin', 'hausa'].includes(service);
 
       const isCaf =
         cafEnabledService ||
