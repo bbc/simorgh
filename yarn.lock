@@ -13167,7 +13167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:5.4.1, ora@npm:^5.4.1":
+"ora@npm:^5.4.1":
   version: 5.4.1
   resolution: "ora@npm:5.4.1"
   dependencies:
@@ -15196,7 +15196,6 @@ __metadata:
     morgan: 1.10.0
     node-fetch: 2.6.12
     npm-run-all2: 6.1.2
-    ora: 5.4.1
     path-to-regexp: 6.2.2
     polyfill-crypto.getrandomvalues: 1.0.0
     prettier: 3.2.5
