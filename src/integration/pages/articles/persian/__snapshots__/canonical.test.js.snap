@@ -237,6 +237,8 @@ exports[`Canonical Articles Most Read has item with rank 10`] = `
 }
 `;
 
+exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"منبع تصویر، Getty Images"`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
