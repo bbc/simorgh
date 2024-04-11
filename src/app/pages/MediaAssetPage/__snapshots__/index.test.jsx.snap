@@ -3513,9 +3513,11 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       A pretty little butterfly & &lt; &gt;
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -3570,9 +3572,11 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Psammead was named after the mythical sand creature
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>

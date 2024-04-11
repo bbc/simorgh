@@ -87,9 +87,11 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
       >
          ، عنوان
       </span>
-      <p>
+      <span
+        data-testid="caption-paragraph"
+      >
         Some caption text...
-      </p>
+      </span>
     </span>
   </figcaption>
 </div>
@@ -182,9 +184,11 @@ exports[`should render caption text with example News offscreen text 1`] = `
       >
         Caption, 
       </span>
-      <p>
+      <span
+        data-testid="caption-paragraph"
+      >
         Some caption text...
-      </p>
+      </span>
     </span>
   </figcaption>
 </div>
@@ -277,15 +281,21 @@ exports[`should render caption with multiple paragraphs 1`] = `
       >
         Caption, 
       </span>
-      <p>
+      <span
+        data-testid="caption-paragraph"
+      >
         This is paragraph 1
-      </p>
-      <p>
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
         This is paragraph 2
-      </p>
-      <p>
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
         Paragraph 3
-      </p>
+      </span>
     </span>
   </figcaption>
 </div>
@@ -401,7 +411,9 @@ exports[`should render correctly with inline block 1`] = `
       >
         Caption, 
       </span>
-      <p>
+      <span
+        data-testid="caption-paragraph"
+      >
         <b>
           This is some text.
         </b>
@@ -417,7 +429,7 @@ exports[`should render correctly with inline block 1`] = `
             چیسربرگر
           </a>
         </span>
-      </p>
+      </span>
     </span>
   </figcaption>
 </div>
