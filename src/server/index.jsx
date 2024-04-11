@@ -206,7 +206,9 @@ server.get(
       } = getRouteProps(urlPath);
 
       const { page, renderer_env } = query;
-      const cafEnabledService = ['thai', 'pidgin', 'hausa'].includes(service);
+      const isOptimo = path => path.match(/(c[a-zA-Z0-9]{10,}o)/) > 0;
+      const cafEnabledService =
+        ['thai', 'pidgin', 'hausa'].includes(service) && !isOptimo;
 
       const isCaf = !!(
         cafEnabledService ||
