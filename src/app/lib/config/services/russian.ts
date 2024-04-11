@@ -282,6 +282,7 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 504278066,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',

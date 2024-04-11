@@ -12,6 +12,7 @@
   "plugins": [
     "@emotion/babel-plugin",
     "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-private-methods",
     [
       "transform-rename-import",
       { "original": "@loadable/component", "replacement": "next/dynamic" }
