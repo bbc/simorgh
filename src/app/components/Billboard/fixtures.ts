@@ -1,4 +1,4 @@
-const kyrgyzMessageBannerOnePromo = {
+const kyrgyzLiveBillboard = {
   summaries: [
     {
       type: 'url',
@@ -23,7 +23,7 @@ const kyrgyzMessageBannerOnePromo = {
   visualStyle: 'BANNER',
 };
 
-const kyrgyzMessageBannerTwoPromos = {
+const kyrgyzBillboard = {
   summaries: [
     {
       type: 'article',
@@ -61,4 +61,4 @@ const kyrgyzMessageBannerTwoPromos = {
   visualStyle: 'BANNER',
 };
 
-export { kyrgyzMessageBannerOnePromo, kyrgyzMessageBannerTwoPromos };
+export { kyrgyzLiveBillboard, kyrgyzBillboard };
