@@ -20,8 +20,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={}
-          showLiveLabel={}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       const region = screen.getByRole('region');
@@ -35,8 +35,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={}
-          showLiveLabel={}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       const heading = screen.getByText(kyrgyzBillboard.title);
@@ -53,6 +53,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       expect(screen.getByText(kyrgyzBillboard.title).nodeName).toBe('H2');
@@ -65,6 +67,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
@@ -77,6 +81,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       const ctaLink = screen.getByRole('link');
@@ -91,6 +97,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       const maksedImage = screen.getByAltText('');
@@ -106,6 +114,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
       const maksedImage = screen.getByAltText('');
@@ -123,6 +133,8 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
+          eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
 
@@ -137,6 +149,7 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
+          showLiveLabel
         />,
       );
 

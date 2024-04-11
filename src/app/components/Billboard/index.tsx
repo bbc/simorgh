@@ -2,6 +2,7 @@
 import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
@@ -31,13 +32,14 @@ const Banner = forwardRef(
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
     const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+    const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
     const id = `billboard-${idSanitiser(heading)}`;
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
-        <a href={link} css={styles.clickAreaContainer}>
-          <div css={styles.headerContainer}>
+        <a href={link} css={styles.clickAreaContainer} onClick={clickTrackerHandler}>
+          <div css={styles.headerContainer} ref={viewRef}>
             <div css={styles.backgroundContainer}>
               <div css={styles.backgroundColor} />
             </div>
