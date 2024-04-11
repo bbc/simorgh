@@ -152,7 +152,7 @@ const constructPageFetchUrl = ({
         );
         break;
       case CPS_ASSET:
-        fetchUrl = Url(id);
+        fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE:
         fetchUrl = Url(`/${service}/${id}`);
