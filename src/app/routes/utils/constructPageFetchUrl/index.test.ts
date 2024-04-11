@@ -76,8 +76,8 @@ describe('constructPageFetchUrl', () => {
     ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/articles/c00000000000o'} | ${'https://mock-bff-path/?id=c00000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=test'}
     ${ARTICLE_PAGE} | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/articles/c00000000000o'} | ${'https://mock-bff-path/?id=c00000000000o&service=ukrainian&pageType=article&variant=ru-UA&serviceEnv=live'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/23263889'}               | ${'http://localhost/ukrainian/23263889'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
-    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=%2Fukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
+    ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}               | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                        | ${'http://localhost/ukrainian'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
     ${CPS_ASSET}    | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                        | ${'https://mock-bff-path/?id=%2Fukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
