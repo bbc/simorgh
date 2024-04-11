@@ -18,6 +18,7 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
+import { CPS_ASSET } from '#app/routes/utils/pageTypes';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -206,14 +207,13 @@ server.get(
       } = getRouteProps(urlPath);
 
       const { page, renderer_env } = query;
-      const isOptimo = urlPath.match(/(c[a-zA-Z0-9]{10,}o)/) > 0;
+
       const cafEnabledService =
-        ['thai', 'pidgin', 'hausa'].includes(service) && !isOptimo;
-      const isCaf = !!(
+        ['thai', 'pidgin', 'hausa'].includes(service) && pageType === CPS_ASSET;
+
+      const isCaf =
         cafEnabledService ||
-        renderer_env === 'caftest' ||
-        renderer_env === 'caflive'
-      );
+        Boolean(renderer_env === 'caftest' || renderer_env === 'caflive');
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
