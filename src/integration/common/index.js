@@ -21,6 +21,7 @@ import runStoryPromoTests from './storyPromo';
 import runSectionTests from './sections';
 import runMostReadTests from './mostReadTests';
 import runParagraphTests from './paragraph';
+import runInlineLinkTests from './inlineLink';
 import runAmpAdsTests from './ads.amp';
 import runCanonicalAdsTests from './ads.canonical';
 import runFlourishCanonicalEmbedTests from './flourishEmbed.canonical';
@@ -60,6 +61,7 @@ export {
   runSeoAmpTests,
   runTimestampTests,
   runImageTests,
+  runInlineLinkTests,
   runAppleItunesAppBannerTests,
   runStoryPromoTests,
   runSectionTests,
