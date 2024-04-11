@@ -5,6 +5,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
+import LiveLabelHeader from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Header/LiveLabelHeader';
 import MaskedImage from '../MaskedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -14,50 +15,59 @@ interface BillboardProps {
   heading: string;
   description?: string;
   link?: string;
-  image?: string;
+  image: string;
   eventTrackingData?: EventTrackingMetadata;
+  showLiveLabel: boolean;
+  imageUrl?: string;
+  imageUrlTemplate?: string;
+  imageWidth?: number;
 }
 
 const Banner = forwardRef(
   (
-    { heading, description, link, image, eventTrackingData }: BillboardProps,
+    { heading, description, link, image, imageUrl, imageUrlTemplate, imageWidth, eventTrackingData, showLiveLabel }: BillboardProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
+    const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
 
     const id = `billboard-${idSanitiser(heading)}`;
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
-        <div css={styles.headerContainer}>
-          <div css={styles.backgroundContainer}>
-            <div css={styles.backgroundColor} />
-          </div>
-          <div css={styles.contentContainer}>
-            <MaskedImage
-              imageUrl={image}
-              imageUrlTemplate={image}
-              imageWidth={660}
-            />
-            <div css={styles.textContainerWithImage}>
-              <Heading level={2} size="paragon" css={styles.heading} id={id}>
-                {/* {showLiveLabel ? (
-                  <LiveLabelHeader isHeaderImage={isHeaderImage}>
-                     {heading}
-                  </LiveLabelHeader>
-                ) : ( */}
-                {heading}
-                {/* )} */}
-              </Heading>
-              {description && (
-                <Text as="p" css={[styles.description]}>
-                  {description}
-                </Text>
+        <a href={link} css={styles.clickAreaContainer}>
+          <div css={styles.headerContainer}>
+            <div css={styles.backgroundContainer}>
+              <div css={styles.backgroundColor} />
+            </div>
+            <div css={styles.contentContainer}>
+              <MaskedImage
+                imageUrl={image}
+                imageUrlTemplate={image}
+                imageWidth={660}
+              />
+              <div css={styles.textContainerWithImage}>
+                <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                {showLiveLabel ? (
+                <LiveLabelHeader isHeaderImage={isHeaderImage}>
+                  {heading}
+                </LiveLabelHeader>
+              ) : (
+                heading
               )}
+                </Heading>
+                {description && (
+                  <Text as="p" css={[styles.description, showLiveLabel &&
+                    !isHeaderImage &&
+                    styles.layoutWithLiveLabelNoImage,]}>
+                    {description}
+                  </Text>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+          </a>
       </section>
     );
   },
@@ -67,21 +77,21 @@ const Billboard = ({
   heading,
   description,
   link,
-  linkText,
   image,
   eventTrackingData,
+  showLiveLabel,
 }: BillboardProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
     <Banner
       heading={heading}
-      linkText={linkText}
       description={description}
       link={link}
       image={image}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
+      showLiveLabel={showLiveLabel}
     />
   );
 };
