@@ -2,6 +2,10 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../src/app/utilities/pixelsToRem';
 
 export default {
+  clickAreaContainer: () =>
+    css({
+        cursor: 'pointer',
+    }),
   headerContainer: ({ mq }: Theme) =>
     css({
       display: 'flex',

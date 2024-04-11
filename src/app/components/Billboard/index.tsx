@@ -36,36 +36,38 @@ const Banner = forwardRef(
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
-        <div css={styles.headerContainer}>
-          <div css={styles.backgroundContainer}>
-            <div css={styles.backgroundColor} />
-          </div>
-          <div css={styles.contentContainer}>
-            <MaskedImage
-              imageUrl={image}
-              imageUrlTemplate={image}
-              imageWidth={660}
-            />
-            <div css={styles.textContainerWithImage}>
-              <Heading level={2} size="paragon" css={styles.heading} id={id}>
-              {showLiveLabel ? (
-              <LiveLabelHeader isHeaderImage={isHeaderImage}>
-                {heading}
-              </LiveLabelHeader>
-            ) : (
-              heading
-            )}
-              </Heading>
-              {description && (
-                <Text as="p" css={[styles.description, showLiveLabel &&
-                  !isHeaderImage &&
-                  styles.layoutWithLiveLabelNoImage,]}>
-                  {description}
-                </Text>
+        <a href={link} css={styles.clickAreaContainer}>
+          <div css={styles.headerContainer}>
+            <div css={styles.backgroundContainer}>
+              <div css={styles.backgroundColor} />
+            </div>
+            <div css={styles.contentContainer}>
+              <MaskedImage
+                imageUrl={image}
+                imageUrlTemplate={image}
+                imageWidth={660}
+              />
+              <div css={styles.textContainerWithImage}>
+                <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                {showLiveLabel ? (
+                <LiveLabelHeader isHeaderImage={isHeaderImage}>
+                  {heading}
+                </LiveLabelHeader>
+              ) : (
+                heading
               )}
+                </Heading>
+                {description && (
+                  <Text as="p" css={[styles.description, showLiveLabel &&
+                    !isHeaderImage &&
+                    styles.layoutWithLiveLabelNoImage,]}>
+                    {description}
+                  </Text>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+          </a>
       </section>
     );
   },
