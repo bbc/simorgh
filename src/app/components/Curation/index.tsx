@@ -16,7 +16,6 @@ import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
-import Billboard from '../Billboard';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -26,7 +25,6 @@ const {
   MOST_READ,
   RADIO_SCHEDULE,
   EMBED,
-  BILLBOARD,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;

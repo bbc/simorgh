@@ -31,6 +31,11 @@ const Banner = forwardRef(
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
+
+    // temporarily invoked to resolve GH errors - remove this when we start using
+    // the service context properly 
+    isRtl;
+
     const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
