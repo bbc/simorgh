@@ -8,7 +8,13 @@ const unitTests = {
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: './.babelrc',
+        presets: ['next/babel'],
+      },
+    ],
   },
   displayName: 'Unit Tests',
   collectCoverageFrom: [
