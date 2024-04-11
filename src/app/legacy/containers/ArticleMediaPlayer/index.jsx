@@ -10,6 +10,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
@@ -25,6 +26,7 @@ const pageTypeMap = {
   [ARTICLE_PAGE]: 'articles',
   [MEDIA_ARTICLE_PAGE]: 'articles',
   [STORY_PAGE]: 'cps',
+  [MEDIA_ASSET_PAGE]: 'cps',
   [CORRESPONDENT_STORY_PAGE]: 'cps',
 };
 

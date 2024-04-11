@@ -206,9 +206,12 @@ server.get(
       } = getRouteProps(urlPath);
 
       const { page, renderer_env } = query;
+      const cafEnabledService = ['thai', 'pidgin', 'hausa'].includes(service);
 
       const isCaf = !!(
-        renderer_env === 'caftest' || renderer_env === 'caflive'
+        cafEnabledService ||
+        renderer_env === 'caftest' ||
+        renderer_env === 'caflive'
       );
 
       // Set derivedPageType based on matched route
