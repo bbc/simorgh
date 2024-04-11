@@ -171,7 +171,7 @@ export const testsThatFollowSmokeTestConfig = ({
               cy.get('figcaption')
                 .eq(1)
                 .within(() => {
-                  cy.get('p')
+                  cy.get('[data-testid="caption-paragraph"]')
                     .eq(0)
                     .should('be.visible')
                     .should('contain', text);
