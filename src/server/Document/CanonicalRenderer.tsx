@@ -1,16 +1,12 @@
 /* eslint-disable react/no-danger */
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
+import { BaseRendererProps } from './types';
 
-type Props = {
-  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  title: React.ReactElement;
-  helmetMetaTags: React.ReactElement[];
-  helmetLinkTags: React.ReactElement[];
-  helmetScriptTags: React.ReactElement[];
+interface Props extends BaseRendererProps {
   isApp: boolean;
   ids: string[];
   styles: string;
@@ -19,7 +15,7 @@ type Props = {
   links: React.ReactElement[];
   modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
-};
+}
 
 export default function CanonicalRenderer({
   htmlAttrs,

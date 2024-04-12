@@ -1,20 +1,16 @@
 /* eslint-disable react/no-danger */
 import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import nodeLogger from '#lib/logger.node';
 import litePageTransform, { LITE_STYLES } from '../utilities/litePageTransform';
+import { BaseRendererProps } from './types';
 
 const logger = nodeLogger(__filename);
 
-type Props = {
-  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  title: React.ReactElement;
-  helmetMetaTags: React.ReactElement[];
-  helmetLinkTags: React.ReactElement[];
-  helmetScriptTags: React.ReactElement[];
+interface Props extends BaseRendererProps {
   html: string;
   url: string;
-};
+}
 
 export default function LitePageRenderer({
   htmlAttrs,
@@ -64,7 +60,7 @@ export default function LitePageRenderer({
         {helmetProps.helmetMetaTags}
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
-        <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
+        <style>{LITE_STYLES}</style>
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />

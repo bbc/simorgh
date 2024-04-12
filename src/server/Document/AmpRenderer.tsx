@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -8,17 +8,13 @@ import {
   AMP_ANALYTICS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
+import { BaseRendererProps } from './types';
 
-type Props = {
-  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  title: React.ReactElement;
-  helmetMetaTags: React.ReactElement[];
-  helmetLinkTags: React.ReactElement[];
-  helmetScriptTags: React.ReactElement[];
+interface Props extends BaseRendererProps {
   ids: string[];
   styles: string;
   html: string;
-};
+}
 
 export default function AmpRenderer({
   htmlAttrs,
