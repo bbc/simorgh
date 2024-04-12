@@ -35,10 +35,12 @@ export interface UrlConstructParams {
   isCaf?: boolean;
 }
 
+const removeLeadingSlash = (path: string) => path.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
-const getCpsId = (path: string) => path;
-const getFrontPageId = (path: string) => `${path}/front_page`;
+const getCpsId = (path: string) => removeLeadingSlash(path);
+const getFrontPageId = (path: string) =>
+  `${removeLeadingSlash(path)}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 
@@ -152,7 +154,7 @@ const constructPageFetchUrl = ({
         );
         break;
       case CPS_ASSET:
-        fetchUrl = Url(id);
+        fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE:
         fetchUrl = Url(`/${service}/${id}`);
