@@ -16,6 +16,7 @@ const storybookConfig: StorybookConfig = {
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
+    '../src/server/Document/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
@@ -80,7 +81,6 @@ const storybookConfig: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
-      // @ts-expect-error -  webpack plugin not typed
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
