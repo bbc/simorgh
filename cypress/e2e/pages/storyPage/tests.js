@@ -26,45 +26,52 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
+  /** 
+   * 
+   * As an approach, to make the tests deterministic without relying on BFF, I ran against BFF and console logged the intros we're comparing against
+   * - then hardcoded these here (todo: maybe we have a better place to store fixtures)
+   * - then used the url matching to find the expected intro and assert it
+   * 
+   * I think this is OK given we ran the tests on these specific pages, I also noticed that the same content exist on other environments.
+   * The draw back is that if we add new pages with intro then we have to update this mapping manually (but I think that's ok because this is a "smoke" test for a subset anyhow so no need to add to the subset)
+   * 
+   * Note also that for this AMP page, there is no window.SIMORGH_DATA
+   * 
+   * Without getting hold of the data, the alternative would to just check an intro exists regardless of its content but that's not great
+   * and also the intros seems to not have any special selector (like data-intro or something) .. they're just a paragraph within main styled as bold
+   * 
+   * I removed the second test because it was asserting the same thing as the first one (the values for intro and paragraph are the same)
+   * 
+   * todo: remove todos, comments and consoles before final PR
+   * todo: if we decide this approach is acceptable, then should move the harcoded list of intros to somewhere more suitable (fixtures, support?)
+  */
+  const introductions = [{
+    page: '/mundo/23263889.amp',
+    intro: 'The first paragraph is manually marked up as an "introduction", which renders it in bold.'
+  }, {
+    page: '/mundo/noticias-internacional-51266689.amp',
+    intro:  'El controvertido Brexit llega finalmente con la salida oficial de Reino Unido de la Unión Europea (UE) este 31 de enero, aunque la incertidumbre respecto a sus efectos prácticos todavía está lejos de ser despejada.'
+  }, {
+    page: '/russian/features-54391793.amp',
+    intro: 'Уже во второй раз в этом году британскую писательницу и автора серии книг о Гарри Поттере обвинили в трансфобии. Сначала это произошло после ее заявления о том, что половая принадлежность - неотъемлемая часть женской личности. Новая волна обвинений идет сейчас, после выхода ее новой книги, где главный персонаж совершает злодейства, переодеваясь в женскую одежду.',
+  },
+  {
+    page: '/russian/news-55041160.amp',
+    intro: 'Тысячи жителей Владивостока, где на прошлой неделе прошел ледяной шторм, до сих пор остаются без света, тепла и воды. В регионе продолжает действовать режим чрезвычайной ситуации. Пока экстренные службы разбирают завалы и восстанавливают энергоснабжение, простые владивостокцы тоже не остаются в стороне.'
+  }
+  ]
+
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
-        ({ body }) => {
-          const descriptionBlock = body.data.article.content.blocks.find(
-            block => block.role === 'introduction',
-          );
-          // Condition added because introduction is non-mandatory
-          if (descriptionBlock) {
-            const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
-            // strip html from the description, so we get description as plain text
-            const elem = document.createElement('div');
-            elem.innerHTML = descriptionHtml;
-            const description = elem.innerText;
-            cy.get('main p').should('contain', description);
-          }
-        },
-      );
+
+      cy.url().then(url => {
+        const match = introductions.find(introInfo => url.match(introInfo.page))
+        if (match) {
+          cy.get('main p').contains(match.intro)
+        }
+      })
     });
 
-    it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
-        ({ body }) => {
-          const paragraphBlock = body.data.article.content.blocks.find(
-            block => block.type === 'paragraph',
-          );
-          // Conditional because in test assets the data model structure is sometimes variable and unusual
-          // so cannot be accessed in the same way across assets
-          if (paragraphBlock) {
-            const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
-            // strip html from the description, so we get description as plain text
-            const elem = document.createElement('div');
-            elem.innerHTML = descriptionHtml;
-            const paragraph = elem.innerText;
-            cy.get('main p').should('contain', paragraph);
-          }
-        },
-      );
-    });
     it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
         const url = '/news/technology-60561162.amp?renderer_env=live';
