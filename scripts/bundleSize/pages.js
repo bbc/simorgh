@@ -3,7 +3,6 @@ export const pages = [
   'ErrorPage',
   'FrontPage',
   'HomePage',
-  'IdxPage',
   'MostReadPage',
   'LiveRadioPage',
   'MediaAssetPage',

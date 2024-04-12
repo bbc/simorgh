@@ -38,7 +38,6 @@ describe('Local Server', () => {
     ${'Secondary Column'}              | ${'/igbo/sty-secondary-column.json'}                             | ${'/igbo/secondaryColumn/index.json'}
     ${'Secondary Column with variant'} | ${'/ukchina/sty-secondary-column/trad.json'}                     | ${'/ukchina/secondaryColumn/trad.json'}
     ${'Recommendations'}               | ${'/hindi/vert-fut-53035307/recommendations.json'}               | ${'/hindi/recommendations/index.json'}
-    ${'IDX'}                           | ${'/ukrainian/ukraine_in_russian.json'}                          | ${'/ukrainian/ukraine_in_russian/index.json'}
     ${'Africa Eye TV Brand'}           | ${'/worldservice/tv/africa_eye/w13xttpn.json'}                   | ${'/worldservice/tv/africa_eye/w13xttpn.json'}
     ${'Africa Eye TV Episode'}         | ${'/worldservice/tv/africa_eye/p08jbbg.json'}                    | ${'/worldservice/tv/africa_eye/p08jbbg.json'}
     ${'Live Radio'}                    | ${'/korean/bbc_korean_radio/liveradio.json'}                     | ${'/korean/bbc_korean_radio/liveradio.json'}
