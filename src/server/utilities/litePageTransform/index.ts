@@ -197,10 +197,7 @@ export default function litePageTransform({
 
   // Strip out some Helmet injected script tags we don't want
   const cleanedHelmetScriptTags = helmetScriptTags?.filter(
-    tag =>
-      !tag.props.src ||
-      !tag.props.src?.includes('vendor/require') ||
-      !tag.props.src?.includes('requirejs'),
+    tag => !tag.props.src || !tag.props.src?.includes('vendor/require'),
   );
 
   return {
