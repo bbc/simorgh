@@ -13,12 +13,12 @@ interface Props extends BaseRendererProps {
 }
 
 export default function LitePageRenderer({
-  htmlAttrs,
-  title,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
+  htmlAttrs,
   html,
+  title,
   url,
 }: Props) {
   const helmetProps = {

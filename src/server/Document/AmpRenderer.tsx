@@ -12,19 +12,19 @@ import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   ids: string[];
-  styles: string;
   html: string;
+  styles: string;
 }
 
 export default function AmpRenderer({
-  htmlAttrs,
-  title,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
+  htmlAttrs,
+  html,
   ids,
   styles,
-  html,
+  title,
 }: Props) {
   return (
     <html lang="en-GB" {...htmlAttrs}>

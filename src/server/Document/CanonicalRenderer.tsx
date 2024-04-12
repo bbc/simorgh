@@ -18,19 +18,19 @@ interface Props extends BaseRendererProps {
 }
 
 export default function CanonicalRenderer({
-  htmlAttrs,
-  title,
+  data,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
+  htmlAttrs,
+  html,
   isApp,
   ids,
-  styles,
-  html,
-  data,
   links,
-  modernScripts,
   legacyScripts,
+  modernScripts,
+  styles,
+  title,
 }: Props) {
   const serialisedData = serialiseForScript(data);
   const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());

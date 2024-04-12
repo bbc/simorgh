@@ -23,12 +23,14 @@ interface DocProps extends BaseRendererProps {
   isApp: boolean;
   isLite: boolean;
   clientSideEnvVariables: EnvConfig;
+  path: string;
 }
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
-    const isApp = isAppPath(ctx.asPath || '');
-    const isLite = isLitePath(ctx.asPath || '');
+    const path = ctx.asPath || '';
+    const isApp = isAppPath(path);
+    const isLite = isLitePath(path);
 
     const initialProps = await Document.getInitialProps(ctx);
 
@@ -48,27 +50,29 @@ export default class AppDocument extends Document<DocProps> {
     return {
       ...initialProps,
       clientSideEnvVariables,
-      htmlAttrs,
-      title,
       helmetMetaTags,
       helmetLinkTags,
       helmetScriptTags,
+      htmlAttrs,
       isApp,
       isLite,
+      path,
+      title,
     };
   }
 
   render() {
     const {
-      html,
-      htmlAttrs,
-      title,
+      clientSideEnvVariables,
       helmetLinkTags,
       helmetMetaTags,
       helmetScriptTags,
+      htmlAttrs,
+      html,
       isApp,
       isLite,
-      clientSideEnvVariables,
+      path,
+      title,
     } = this.props;
 
     switch (true) {
@@ -81,7 +85,7 @@ export default class AppDocument extends Document<DocProps> {
             html={html}
             htmlAttrs={htmlAttrs}
             title={title}
-            url=""
+            url={path}
           />
         );
       default:
