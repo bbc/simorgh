@@ -25,7 +25,6 @@ const Document = ({
 
   const { html, css, ids } = app;
 
-  // Decide which renderer to use
   switch (true) {
     case isLite:
       return (
