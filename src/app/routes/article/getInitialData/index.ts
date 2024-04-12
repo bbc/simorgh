@@ -28,7 +28,6 @@ export default async ({
   path: pathname,
   variant,
   toggles,
-  isCaf,
   isAmp,
   getAgent,
 }: Props) => {
@@ -38,7 +37,6 @@ export default async ({
       pageType,
       service,
       variant,
-      isCaf,
       isAmp,
       getAgent,
     });

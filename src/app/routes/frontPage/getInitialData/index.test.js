@@ -93,7 +93,7 @@ describe('Front Page - Get Initial Data', () => {
       });
 
       expect(fetchDataSpy).toHaveBeenCalledWith({
-        path: `https://mock-bff-path/?id=%2Fserbian%2Flat%2Ffront_page&service=serbian&pageType=cpsAsset&variant=lat&serviceEnv=${environment}`,
+        path: `https://mock-bff-path/?id=serbian%2Flat%2Ffront_page&service=serbian&pageType=cpsAsset&variant=lat&serviceEnv=${environment}`,
         agent,
         optHeaders: {
           'ctx-service-env': environment,
@@ -124,7 +124,7 @@ describe('Front Page - Get Initial Data', () => {
       });
 
       expect(fetchDataSpy).toHaveBeenCalledWith({
-        path: `https://mock-bff-path/?id=%2Fserbian%2Flat%2Ffront_page&service=serbian&pageType=cpsAsset&variant=lat&serviceEnv=${environment}`,
+        path: `https://mock-bff-path/?id=serbian%2Flat%2Ffront_page&service=serbian&pageType=cpsAsset&variant=lat&serviceEnv=${environment}`,
         agent,
         optHeaders: {
           'ctx-service-env': environment,

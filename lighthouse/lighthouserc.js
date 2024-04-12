@@ -3,14 +3,6 @@ const AUDIT_URLS = {
     live: ['https://www.bbc.com/serbian/cyr'],
     test: ['https://www.test.bbc.com/serbian/cyr?renderer_env=live'],
   },
-
-  IDX: {
-    live: ['https://www.bbc.com/ukrainian/ukraine_in_russian'],
-    test: [
-      'https://www.test.bbc.com/ukrainian/ukraine_in_russian?renderer_env=live',
-    ],
-  },
-
   FIX: {
     live: ['https://www.bbc.com/persian/science-52004647'],
     test: [

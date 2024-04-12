@@ -19,7 +19,6 @@ interface FetchDataFromBffParams {
   service: Services;
   variant?: Variants;
   isAmp?: boolean;
-  isCaf?: boolean;
   page?: string;
   getAgent: GetAgent;
 }
@@ -37,7 +36,6 @@ export default async ({
   service,
   variant,
   isAmp,
-  isCaf,
   page,
   getAgent,
 }: FetchDataFromBffParams) => {
@@ -51,7 +49,6 @@ export default async ({
     service,
     variant,
     isAmp,
-    isCaf,
     page,
   });
 
