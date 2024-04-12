@@ -15,7 +15,6 @@ const pageTypes = [
   'onDemandTV',
   'mediaAssetPage',
   'storyPage',
-  'idxPage',
   'featureIndexPage',
 ];
 
