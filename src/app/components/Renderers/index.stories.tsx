@@ -8,6 +8,9 @@ import articleData from '#data/news/articles/c0g992jmmkko.json';
 import FrontPageComponent from '#app/pages/FrontPage/FrontPage';
 import { data as newsData } from '#data/news/frontpage/index.json';
 
+import TopicPageComponent from '#app/pages/TopicPage/TopicPage';
+import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
+
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -52,7 +55,7 @@ const Component = ({
 };
 
 export default {
-  title: 'Renderers/Lite',
+  title: 'Lite Renderer/Pages',
   Component,
   parameters: {
     layout: 'fullscreen',
@@ -75,6 +78,15 @@ export const FrontPage = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <Component service={service} variant={variant}>
       <Page pageData={{ ...newsData.article }} />
+    </Component>
+  );
+};
+
+export const TopicPage = (_: StoryArgs, { service, variant }: StoryProps) => {
+  const Page = withPageWrapper(TopicPageComponent);
+  return (
+    <Component service={service} variant={variant}>
+      <Page pageData={{ ...defaultTopic.data }} />
     </Component>
   );
 };
