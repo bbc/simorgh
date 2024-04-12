@@ -507,6 +507,7 @@ const preview: Preview = {
           'Components',
           'Containers',
           'Pages',
+          'Renderers',
           'Coding Standards',
           'docs',
           'hooks',
@@ -623,7 +624,10 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ThemeProvider service={context.globals.service.service}>
+      <ThemeProvider
+        service={context.globals.service.service}
+        variant={context.globals.service.variant}
+      >
         <ToggleContextProvider toggles={{}}>
           <ServiceContextProvider
             service={context.globals.service.service}
