@@ -1,5 +1,9 @@
 import React from 'react';
-import { fireEvent, render, screen } from '../react-testing-library-with-providers';
+import {
+  fireEvent,
+  render,
+  screen,
+} from '../react-testing-library-with-providers';
 import Billboard from '.';
 import { kyrgyzBillboard } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';

@@ -15,7 +15,7 @@ import Text from '../Text';
 interface BillboardProps {
   heading: string;
   description?: string;
-  lang: string;
+  lang?: string;
   link?: string;
   image: string;
   eventTrackingData?: EventTrackingMetadata;
@@ -27,25 +27,36 @@ interface BillboardProps {
 
 const Banner = forwardRef(
   (
-    { heading, description, link, image, imageUrl, imageUrlTemplate, imageWidth, eventTrackingData, showLiveLabel, lang }: BillboardProps,
+    {
+      heading,
+      description,
+      link,
+      image,
+      imageUrl,
+      imageUrlTemplate,
+      imageWidth,
+      eventTrackingData,
+      showLiveLabel,
+      lang,
+    }: BillboardProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const isRtl = dir === 'rtl';
-
-    // temporarily invoked to resolve GH errors - remove this when we start using
-    // the service context properly 
-    isRtl;
 
     const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
 
     const id = `billboard-${idSanitiser(heading)}`;
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
-        <a href={link} css={styles.clickAreaContainer} onClick={clickTrackerHandler}>
+        <a
+          href={link}
+          css={styles.clickAreaContainer}
+          onClick={clickTrackerHandler}
+        >
           <div css={styles.headerContainer} ref={viewRef}>
             <div css={styles.backgroundContainer}>
               <div css={styles.backgroundColor} />
@@ -58,25 +69,31 @@ const Banner = forwardRef(
               />
               <div css={styles.textContainerWithImage}>
                 <Heading level={2} size="paragon" css={styles.heading} id={id}>
-                {showLiveLabel ? (
-                  <LiveLabel lang={lang} id={id}>
-                    {heading}
-                  </LiveLabel>
-                ) : (
-                  heading
-                )}
+                  {showLiveLabel ? (
+                    <LiveLabel lang={lang} id={id}>
+                      {heading}
+                    </LiveLabel>
+                  ) : (
+                    heading
+                  )}
                 </Heading>
                 {description && (
-                  <Text as="p" css={[styles.description, showLiveLabel &&
-                    !isHeaderImage &&
-                    styles.layoutWithLiveLabelNoImage,]}>
+                  <Text
+                    as="p"
+                    css={[
+                      styles.description,
+                      showLiveLabel &&
+                        !isHeaderImage &&
+                        styles.layoutWithLiveLabelNoImage,
+                    ]}
+                  >
                     {description}
                   </Text>
                 )}
               </div>
             </div>
           </div>
-          </a>
+        </a>
       </section>
     );
   },
