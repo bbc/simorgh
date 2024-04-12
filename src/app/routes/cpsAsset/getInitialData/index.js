@@ -119,7 +119,6 @@ export default async ({
       service: derivedService,
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
-      isCaf,
     });
 
     if (status !== 200) {
