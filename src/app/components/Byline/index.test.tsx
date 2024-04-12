@@ -75,9 +75,9 @@ describe('Byline', () => {
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {
-    const { container } = render(<Byline blocks={bylineWithPngPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = container.querySelectorAll('img');
+    const imageSrc = screen.getAllByRole('presentation');
 
     expect(imageSrc[0]).toHaveAttribute(
       'src',
@@ -86,9 +86,9 @@ describe('Byline', () => {
   });
 
   it('should render one image in the byline', () => {
-    const { container } = render(<Byline blocks={bylineWithPngPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const image = container.querySelectorAll('img');
+    const image = screen.getAllByRole('presentation');
 
     expect(image.length).toBe(1);
   });
@@ -134,13 +134,13 @@ describe('Byline', () => {
   });
 
   it('should render the Byline correctly with location, image and links', () => {
-    const { container } = render(<Byline blocks={bylineWithPngPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
     const AuthorLink = screen.getByText('Mayeni Jones');
     const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = container.querySelector('img');
+    const Image = screen.getByRole('presentation');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
