@@ -8,7 +8,6 @@ import {
   WHITE,
 } from '#app/components/ThemeProvider/palette';
 
-const DESKTOP_WIDTH = 800;
 const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
@@ -18,8 +17,7 @@ html{
   font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 }
 body{
-  max-width:${DESKTOP_WIDTH}px;
-  margin:0 auto;
+  margin:0;
 }
 ul{
   padding-inline-start:0rem;
@@ -32,7 +30,7 @@ ol{
 a{
   color:${GREY_10};
 }
-p > a {
+p:not([data-lite-class=lite-footer-copyright]) > a {
   text-decoration-color:${POSTBOX};
 }
 input, textarea {
