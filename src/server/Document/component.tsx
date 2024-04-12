@@ -1,9 +1,27 @@
 /* eslint-disable react/no-danger, react/prop-types */
 import React from 'react';
 
+import { HelmetData } from 'react-helmet';
 import LiteRenderer from './LiteRenderer';
 import CanonicalRenderer from './CanonicalRenderer';
 import AmpRenderer from './AmpRenderer';
+
+type Props = {
+  app: {
+    html: string;
+    css: string;
+    ids: string[];
+  };
+  data: Record<string, unknown>;
+  helmet: HelmetData;
+  isAmp: boolean;
+  isApp: boolean;
+  isLite: boolean;
+  modernScripts: React.ReactElement;
+  legacyScripts: React.ReactElement;
+  links: React.ReactElement[];
+  url: string;
+};
 
 const Document = ({
   app,
@@ -16,12 +34,16 @@ const Document = ({
   legacyScripts,
   links,
   url,
-}) => {
-  const htmlAttrs = helmet.htmlAttributes.toComponent();
+}: Props) => {
   const title = helmet.title.toComponent();
-  const helmetMetaTags = helmet.meta.toComponent();
-  const helmetLinkTags = helmet.link.toComponent();
-  const helmetScriptTags = helmet.script.toComponent();
+
+  const htmlAttrs = helmet.htmlAttributes.toComponent();
+  const helmetMetaTags =
+    helmet.meta.toComponent() as unknown as React.ReactElement[];
+  const helmetLinkTags =
+    helmet.link.toComponent() as unknown as React.ReactElement[];
+  const helmetScriptTags =
+    helmet.script.toComponent() as unknown as React.ReactElement[];
 
   const { html, css, ids } = app;
 

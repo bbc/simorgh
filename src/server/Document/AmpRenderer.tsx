@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -10,7 +10,7 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 
 type Props = {
-  htmlAttrs: Record<string, string>;
+  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   title: React.ReactElement;
   helmetMetaTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];

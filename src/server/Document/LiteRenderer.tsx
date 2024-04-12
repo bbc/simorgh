@@ -1,13 +1,13 @@
 /* eslint-disable react/no-danger */
 import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import nodeLogger from '#lib/logger.node';
 import litePageTransform, { LITE_STYLES } from '../utilities/litePageTransform';
 
 const logger = nodeLogger(__filename);
 
 type Props = {
-  htmlAttrs: Record<string, string>;
+  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   title: React.ReactElement;
   helmetMetaTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];

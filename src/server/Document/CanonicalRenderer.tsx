@@ -1,12 +1,12 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 
 type Props = {
-  htmlAttrs: Record<string, string>;
+  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   title: React.ReactElement;
   helmetMetaTags: React.ReactElement[];
   helmetLinkTags: React.ReactElement[];
