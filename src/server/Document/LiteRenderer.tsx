@@ -60,7 +60,7 @@ export default function LitePageRenderer({
         {helmetProps.helmetMetaTags}
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
-        <style>{LITE_STYLES}</style>
+        <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />

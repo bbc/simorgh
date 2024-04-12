@@ -43,7 +43,10 @@ export default function CanonicalRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style data-emotion-css={ids.join(' ')}>{styles}</style>
+        <style
+          data-emotion-css={ids.join(' ')}
+          dangerouslySetInnerHTML={{ __html: styles }}
+        />
         <script
           id="simorgh-envvars"
           dangerouslySetInnerHTML={{

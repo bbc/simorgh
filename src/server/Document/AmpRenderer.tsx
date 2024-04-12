@@ -33,9 +33,11 @@ export default function AmpRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style amp-custom="" data-emotion-css={ids.join(' ')}>
-          {styles}
-        </style>
+        <style
+          amp-custom=""
+          data-emotion-css={ids.join(' ')}
+          dangerouslySetInnerHTML={{ __html: styles }}
+        />
         <style amp-boilerplate="">{AMP_SCRIPT}</style>
         <noscript>
           <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
