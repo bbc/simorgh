@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger, react/prop-types */
 import React from 'react';
+import { EmotionCritical } from '@emotion/server/create-instance';
 
 import { HelmetData } from 'react-helmet';
 import LiteRenderer from './LiteRenderer';
@@ -7,11 +8,7 @@ import CanonicalRenderer from './CanonicalRenderer';
 import AmpRenderer from './AmpRenderer';
 
 type Props = {
-  app: {
-    html: string;
-    css: string;
-    ids: string[];
-  };
+  app: EmotionCritical;
   data: Record<string, unknown>;
   helmet: HelmetData;
   isAmp: boolean;
