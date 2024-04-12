@@ -16,7 +16,7 @@ type Props = {
   isLite: boolean;
   modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
-  links: React.ReactElement[];
+  links: React.ReactElement;
   url: string;
 };
 
@@ -35,12 +35,9 @@ const Document = ({
   const title = helmet.title.toComponent();
 
   const htmlAttrs = helmet.htmlAttributes.toComponent();
-  const helmetMetaTags =
-    helmet.meta.toComponent() as unknown as React.ReactElement[];
-  const helmetLinkTags =
-    helmet.link.toComponent() as unknown as React.ReactElement[];
-  const helmetScriptTags =
-    helmet.script.toComponent() as unknown as React.ReactElement[];
+  const helmetMetaTags = helmet.meta.toComponent();
+  const helmetLinkTags = helmet.link.toComponent();
+  const helmetScriptTags = helmet.script.toComponent();
 
   const { html, css, ids } = app;
 

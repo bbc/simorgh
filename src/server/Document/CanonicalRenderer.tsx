@@ -12,7 +12,7 @@ interface Props extends BaseRendererProps {
   styles: string;
   html: string;
   data: Record<string, unknown>;
-  links: React.ReactElement[];
+  links: React.ReactElement;
   modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
 }

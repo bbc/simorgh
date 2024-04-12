@@ -1,14 +1,14 @@
 import litePageTransform from '.';
 
-let helmetMetaTags: React.ReactElement[] = [];
-let helmetScriptTags: React.ReactElement[] = [];
-let helmetLinkTags: React.ReactElement[] = [];
+let helmetMetaTags = [] as unknown as React.ReactElement;
+let helmetScriptTags = [] as unknown as React.ReactElement;
+let helmetLinkTags = [] as unknown as React.ReactElement;
 
 describe('litePageTransform', () => {
   beforeEach(() => {
-    helmetMetaTags = [];
-    helmetScriptTags = [];
-    helmetLinkTags = [];
+    helmetMetaTags = [] as unknown as React.ReactElement;
+    helmetScriptTags = [] as unknown as React.ReactElement;
+    helmetLinkTags = [] as unknown as React.ReactElement;
   });
 
   it('should remove images with rel="preload" from the Helmet Link tags', () => {
@@ -25,7 +25,7 @@ describe('litePageTransform', () => {
         type: 'link',
         props: { rel: 'manifest', href: '/manifest.json' },
       },
-    ];
+    ] as unknown as React.ReactElement;
 
     const result = litePageTransform({
       html,
@@ -57,7 +57,7 @@ describe('litePageTransform', () => {
         type: 'script',
         props: { src: '/analytics.js' },
       },
-    ];
+    ] as unknown as React.ReactElement;
 
     const result = litePageTransform({
       html,
@@ -89,7 +89,7 @@ describe('litePageTransform', () => {
         type: 'meta',
         props: { name: 'og:title', content: 'some, keywords' },
       },
-    ];
+    ] as unknown as React.ReactElement;
 
     const result = litePageTransform({
       html,

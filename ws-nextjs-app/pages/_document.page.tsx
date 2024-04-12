@@ -37,12 +37,9 @@ export default class AppDocument extends Document<DocProps> {
     const helmet = Helmet.renderStatic();
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
-    const helmetMetaTags =
-      helmet.meta.toComponent() as unknown as React.ReactElement[];
-    const helmetLinkTags =
-      helmet.link.toComponent() as unknown as React.ReactElement[];
-    const helmetScriptTags =
-      helmet.script.toComponent() as unknown as React.ReactElement[];
+    const helmetMetaTags = helmet.meta.toComponent();
+    const helmetLinkTags = helmet.link.toComponent();
+    const helmetScriptTags = helmet.script.toComponent();
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();

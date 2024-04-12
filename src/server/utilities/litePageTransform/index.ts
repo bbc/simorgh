@@ -111,9 +111,9 @@ input, textarea {
 
 type Props = {
   html: string;
-  helmetMetaTags: React.ReactElement[];
-  helmetScriptTags: React.ReactElement[];
-  helmetLinkTags: React.ReactElement[];
+  helmetMetaTags: React.ReactElement;
+  helmetScriptTags: React.ReactElement;
+  helmetLinkTags: React.ReactElement;
 };
 
 export default function litePageTransform({
@@ -189,15 +189,18 @@ export default function litePageTransform({
   }
 
   // Prevent preloading images by removing them from the head
+  // @ts-expect-error - React-helmet types are incorrect
   const cleanedHelmetLinkTags = helmetLinkTags?.filter(
-    tag =>
+    (tag: React.ReactElement) =>
       !tag.props.rel ||
       (tag.props.rel !== 'preload' && tag.props.as !== 'image'),
   );
 
   // Strip out some Helmet injected script tags we don't want
+  // @ts-expect-error - React-helmet types are incorrect
   const cleanedHelmetScriptTags = helmetScriptTags?.filter(
-    tag => !tag.props.src || !tag.props.src?.includes('vendor/require'),
+    (tag: React.ReactElement) =>
+      !tag.props.src || !tag.props.src?.includes('vendor/require'),
   );
 
   return {
