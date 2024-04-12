@@ -129,7 +129,6 @@ export interface MostRead {
   lastUpdated: string;
   numberOfItems: number;
   hasMostRead: boolean;
-  onIdxPage?: boolean;
 }
 
 export interface MostWatched {
@@ -144,8 +143,6 @@ export interface RadioSchedule {
   frequenciesPageLabel?: string;
   header?: string;
   durationLabel?: string;
-  onIdxPage?: boolean;
-  idxPagePosition?: string;
 }
 
 export interface Recommendations {
