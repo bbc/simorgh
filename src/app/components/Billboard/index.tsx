@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -8,7 +8,6 @@ import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
 import LiveLabel from '../LiveLabel';
 import MaskedImage from '../MaskedImage';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import Text from '../Text';
 
@@ -32,20 +31,13 @@ const Banner = forwardRef(
       description,
       link,
       image,
-      imageUrl,
-      imageUrlTemplate,
-      imageWidth,
       eventTrackingData,
       showLiveLabel,
       lang,
     }: BillboardProps,
     viewRef,
   ) => {
-    const { dir } = useContext(ServiceContext);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const isRtl = dir === 'rtl';
 
-    const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
     const id = `billboard-${idSanitiser(heading)}`;
@@ -82,9 +74,7 @@ const Banner = forwardRef(
                     as="p"
                     css={[
                       styles.description,
-                      showLiveLabel &&
-                        !isHeaderImage &&
-                        styles.layoutWithLiveLabelNoImage,
+                      showLiveLabel
                     ]}
                   >
                     {description}
