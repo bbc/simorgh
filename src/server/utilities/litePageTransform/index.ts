@@ -30,7 +30,7 @@ ol{
 a{
   color:${GREY_10};
 }
-p:not([data-lite-class=lite-footer-copyright]) > a {
+p:not([data-lite-class=footer-copyright]) > a {
   text-decoration-color:${POSTBOX};
 }
 input, textarea {
@@ -41,22 +41,22 @@ input, textarea {
   height:1.5rem;
 }
 /* Custom classes */
-[data-lite-class=lite-brand-wrapper]{
+[data-lite-class=brand-wrapper]{
   background-color:${POSTBOX};
 }
-[data-lite-class=lite-svg-wrapper]{
+[data-lite-class=svg-wrapper]{
   padding:${CONTENT_PADDING}rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-[data-lite-class=lite-svg-wrapper] a:first-of-type{
+[data-lite-class=svg-wrapper] a:first-of-type{
   display:flex;
 }
-[data-lite-class=lite-main-content]{
+[data-lite-class=main-content]{
   padding:0 ${CONTENT_PADDING}rem;
 }
-[data-lite-class=lite-nav-list]{
+[data-lite-class=nav-list]{
   padding:${CONTENT_PADDING}rem;
   margin:0;
   list-style-type:none;
@@ -65,11 +65,11 @@ input, textarea {
   flex-wrap:wrap;
   gap:0.625rem;
 }
-[data-lite-class=lite-footer-copyright]{
+[data-lite-class=footer-copyright]{
   margin:0;
   padding: 1rem;
 }
-[data-lite-class=lite-most-read-list] li > div{
+[data-lite-class=most-read-list] li > div{
   display:flex;
   flex-direction:row;
   gap:0.625rem;

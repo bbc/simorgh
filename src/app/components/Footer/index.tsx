@@ -72,13 +72,13 @@ export default () => {
         <List elements={elements} trustProjectLink={trustProjectLink} />
         {collectiveNewsroomText && (
           <p
-            data-lite-class="lite-footer-copyright"
+            data-lite-class="footer-copyright"
             css={styles.paragraphWithBorderBottom}
           >
             {collectiveNewsroomText}
           </p>
         )}
-        <p data-lite-class="lite-footer-copyright" css={styles.paragraph}>
+        <p data-lite-class="footer-copyright" css={styles.paragraph}>
           <span lang="en-GB">{`\u00A9`} </span>
           {`${new Date().getFullYear()} ${copyrightText}`}{' '}
           {externalLink && (
