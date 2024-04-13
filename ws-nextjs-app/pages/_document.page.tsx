@@ -81,6 +81,8 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             html={html}
             htmlAttrs={htmlAttrs}
+            ids={[]} // TODO: Extract ids from Emotion if we choose to use them
+            styles="" // TODO:Extract css from Emotion if we choose to use it
             title={title}
             url={path}
           />
