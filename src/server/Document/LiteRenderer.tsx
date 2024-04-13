@@ -10,6 +10,8 @@ const logger = nodeLogger(__filename);
 interface Props extends BaseRendererProps {
   html: string;
   url: string;
+  ids?: string[];
+  styles?: string;
 }
 
 export default function LitePageRenderer({
@@ -20,6 +22,8 @@ export default function LitePageRenderer({
   html,
   title,
   url,
+  ids,
+  styles,
 }: Props) {
   const helmetProps = {
     helmetMetaTags,
@@ -28,6 +32,8 @@ export default function LitePageRenderer({
   };
 
   let renderedHtml = html;
+
+  const shouldUseEmotionStyles = false && Boolean(ids && styles);
 
   try {
     const {
@@ -40,6 +46,7 @@ export default function LitePageRenderer({
       helmetLinkTags,
       helmetMetaTags,
       helmetScriptTags,
+      shouldUseEmotionStyles,
     });
 
     renderedHtml = liteHtml;
@@ -60,7 +67,14 @@ export default function LitePageRenderer({
         {helmetProps.helmetMetaTags}
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
-        <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
+        {shouldUseEmotionStyles ? (
+          <style
+            data-emotion-css={ids?.join(' ')}
+            dangerouslySetInnerHTML={{ __html: styles || '' }}
+          />
+        ) : (
+          <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
+        )}
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />

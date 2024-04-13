@@ -52,6 +52,8 @@ const Document = ({
           htmlAttrs={htmlAttrs}
           title={title}
           url={url}
+          ids={ids}
+          styles={css}
         />
       );
     case isAmp:

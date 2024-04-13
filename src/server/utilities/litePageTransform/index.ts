@@ -116,6 +116,7 @@ type Props = {
   helmetMetaTags: React.ReactElement;
   helmetScriptTags: React.ReactElement;
   helmetLinkTags: React.ReactElement;
+  shouldUseEmotionStyles?: boolean;
 };
 
 export default function litePageTransform({
@@ -123,6 +124,7 @@ export default function litePageTransform({
   helmetMetaTags,
   helmetScriptTags,
   helmetLinkTags,
+  shouldUseEmotionStyles = false,
 }: Props) {
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
   const $ = cheerio.load(
@@ -140,15 +142,16 @@ export default function litePageTransform({
   );
 
   /* We need to remove the styles and CSS classes set by Emotion */
+  if (!shouldUseEmotionStyles) {
+    // Remove style tags
+    $('style').remove();
 
-  // Remove style tags
-  $('style').remove();
+    // Remove inline style attributes
+    $('[style]').removeAttr('style');
 
-  // Remove inline style attributes
-  $('[style]').removeAttr('style');
-
-  // Remove CSS classes
-  $('[class]').removeAttr('class');
+    // Remove CSS classes
+    $('[class]').removeAttr('class');
+  }
 
   /* NOTE: 
     We may want to just use the 'isLite' flag at the component level to not render the elements below,
