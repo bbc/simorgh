@@ -8,6 +8,8 @@ import {
   WHITE,
 } from '#app/components/ThemeProvider/palette';
 
+const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
+
 const CONTENT_PADDING = 1;
 
 export const LITE_STYLES = `
@@ -187,6 +189,18 @@ export default function litePageTransform({
   if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
     $('[aria-labelledby=podcast-promo]').parent().remove();
   }
+
+  // Add .lite to all anchor tags URLs on valid domains
+  $('a').each((_, element) => {
+    const href = $(element).attr('href');
+    if (
+      href &&
+      (href.startsWith('/') ||
+        BBC_DOMAINS.some(domain => href.includes(domain)))
+    ) {
+      $(element).attr('href', `${href}.lite`);
+    }
+  });
 
   // Prevent preloading images by removing them from the head
   // @ts-expect-error - React-helmet types are incorrect
