@@ -8,10 +8,7 @@ import { BaseRendererProps } from './types';
 const logger = nodeLogger(__filename);
 
 interface Props extends BaseRendererProps {
-  html: string;
   url: string;
-  ids?: string[];
-  styles?: string;
 }
 
 export default function LitePageRenderer({
@@ -33,7 +30,8 @@ export default function LitePageRenderer({
 
   let renderedHtml = html;
 
-  const shouldUseEmotionStyles = false && Boolean(ids && styles);
+  // Set to 'true' to use Emotion styles in the lite page
+  const shouldUseEmotionStyles = false;
 
   try {
     const {
@@ -69,8 +67,8 @@ export default function LitePageRenderer({
         {helmetProps.helmetScriptTags}
         {shouldUseEmotionStyles ? (
           <style
-            data-emotion-css={ids?.join(' ')}
-            dangerouslySetInnerHTML={{ __html: styles || '' }}
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: styles }}
           />
         ) : (
           <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />

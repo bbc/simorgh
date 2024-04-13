@@ -50,10 +50,10 @@ const Document = ({
           helmetScriptTags={helmetScriptTags}
           html={html}
           htmlAttrs={htmlAttrs}
-          title={title}
-          url={url}
           ids={ids}
           styles={css}
+          title={title}
+          url={url}
         />
       );
     case isAmp:

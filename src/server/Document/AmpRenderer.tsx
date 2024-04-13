@@ -10,12 +10,6 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
-interface Props extends BaseRendererProps {
-  ids: string[];
-  html: string;
-  styles: string;
-}
-
 export default function AmpRenderer({
   helmetMetaTags,
   helmetLinkTags,
@@ -25,7 +19,7 @@ export default function AmpRenderer({
   ids,
   styles,
   title,
-}: Props) {
+}: BaseRendererProps) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>

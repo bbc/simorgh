@@ -7,14 +7,13 @@ import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
+  data: Record<string, unknown>;
   isApp: boolean;
   ids: string[];
-  styles: string;
-  html: string;
-  data: Record<string, unknown>;
   links: React.ReactElement;
-  modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
+  modernScripts: React.ReactElement;
+  styles: string;
 }
 
 export default function CanonicalRenderer({
