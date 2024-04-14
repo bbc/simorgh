@@ -9,11 +9,9 @@ import { BaseRendererProps } from './types';
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;
   isApp: boolean;
-  ids: string[];
   links: React.ReactElement;
   legacyScripts: React.ReactElement;
   modernScripts: React.ReactElement;
-  styles: string;
 }
 
 export default function CanonicalRenderer({
@@ -43,8 +41,8 @@ export default function CanonicalRenderer({
         {helmetLinkTags}
         {helmetScriptTags}
         <style
-          data-emotion-css={ids.join(' ')}
-          dangerouslySetInnerHTML={{ __html: styles }}
+          data-emotion-css={ids?.join(' ')}
+          dangerouslySetInnerHTML={{ __html: styles || '' }}
         />
         <script
           id="simorgh-envvars"

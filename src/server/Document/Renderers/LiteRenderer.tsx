@@ -2,7 +2,9 @@
 import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
 import React from 'react';
 import nodeLogger from '#lib/logger.node';
-import litePageTransform, { LITE_STYLES } from '../utilities/litePageTransform';
+import litePageTransform, {
+  LITE_STYLES,
+} from '../../utilities/litePageTransform';
 import { BaseRendererProps } from './types';
 
 const logger = nodeLogger(__filename);
@@ -67,8 +69,8 @@ export default function LitePageRenderer({
         {helmetProps.helmetScriptTags}
         {shouldUseEmotionStyles ? (
           <style
-            data-emotion-css={ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: styles }}
+            data-emotion-css={ids?.join(' ')}
+            dangerouslySetInnerHTML={{ __html: styles || '' }}
           />
         ) : (
           <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />

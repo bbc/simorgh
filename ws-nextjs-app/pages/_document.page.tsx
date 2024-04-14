@@ -1,36 +1,38 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document';
-import Script from 'next/script';
+import Document, { DocumentContext } from 'next/document';
 
-import React from 'react';
+import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import isAppPath from '#app/routes/utils/isAppPath';
 import isLitePath from '#app/routes/utils/isLitePath';
-
+import litePageTransform from '#server/utilities/litePageTransform';
 import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
-import LiteRenderer from '#server/Document/LiteRenderer';
-import { BaseRendererProps } from '#server/Document/types';
+import nodeLogger from '#lib/logger.node';
+import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
+import CanonicalRenderer from '../Renderers/CanonicalRenderer';
+import LiteRenderer from '../Renderers/LiteRenderer';
 
-interface DocProps extends BaseRendererProps {
+const logger = nodeLogger(__filename);
+
+type DocProps = {
+  clientSideEnvVariables: EnvConfig;
+  helmetProps: {
+    htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
+    title: ReactElement;
+    helmetMetaTags: ReactElement;
+    helmetLinkTags: ReactElement;
+    helmetScriptTags: ReactElement;
+  };
   isApp: boolean;
   isLite: boolean;
-  clientSideEnvVariables: EnvConfig;
-  path: string;
-}
+};
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
-    const path = ctx.asPath || '';
-    const isApp = isAppPath(path);
-    const isLite = isLitePath(path);
+    const isApp = isAppPath(ctx.asPath || '');
+    const isLite = isLitePath(ctx.asPath || '');
 
     const initialProps = await Document.getInitialProps(ctx);
 
@@ -44,32 +46,63 @@ export default class AppDocument extends Document<DocProps> {
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
-    return {
-      ...initialProps,
-      clientSideEnvVariables,
+    const helmetProps = {
+      htmlAttrs,
+      title,
       helmetMetaTags,
       helmetLinkTags,
       helmetScriptTags,
-      htmlAttrs,
+    };
+
+    if (isLite) {
+      try {
+        const {
+          liteHtml,
+          liteHelmetLinkTags,
+          liteHelmetMetaTags,
+          liteHelmetScriptTags,
+        } = litePageTransform({
+          html: initialProps.html,
+          helmetLinkTags,
+          helmetMetaTags,
+          helmetScriptTags,
+        });
+
+        initialProps.html = liteHtml;
+        helmetProps.helmetMetaTags = liteHelmetMetaTags;
+        helmetProps.helmetLinkTags = liteHelmetLinkTags;
+        helmetProps.helmetScriptTags = liteHelmetScriptTags;
+      } catch (error: unknown) {
+        const { message } = error as Error;
+        logger.error(LITE_PAGE_TRANSFORMATION_FAILED, {
+          message,
+          url: ctx.asPath,
+        });
+      }
+    }
+
+    return {
+      ...initialProps,
+      helmetProps,
+      clientSideEnvVariables,
       isApp,
       isLite,
-      path,
-      title,
     };
   }
 
   render() {
     const {
       clientSideEnvVariables,
-      helmetLinkTags,
-      helmetMetaTags,
-      helmetScriptTags,
-      htmlAttrs,
+      helmetProps: {
+        htmlAttrs,
+        title,
+        helmetLinkTags,
+        helmetMetaTags,
+        helmetScriptTags,
+      },
       html,
       isApp,
       isLite,
-      path,
-      title,
     } = this.props;
 
     switch (true) {
@@ -79,40 +112,23 @@ export default class AppDocument extends Document<DocProps> {
             helmetLinkTags={helmetLinkTags}
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
-            html={html}
             htmlAttrs={htmlAttrs}
-            ids={[]} // TODO: Extract ids from Emotion if we choose to use them
-            styles="" // TODO:Extract css from Emotion if we choose to use it
             title={title}
-            url={path}
+            html={html}
           />
         );
       default:
         return (
-          <Html {...htmlAttrs} className="no-js">
-            <Head>
-              <script
-                type="text/javascript"
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{
-                  __html: `document.documentElement.classList.remove("no-js");`,
-                }}
-              />
-              <Script id="simorgh-envvars" strategy="beforeInteractive">
-                {`window.SIMORGH_ENV_VARS=${JSON.stringify(
-                  clientSideEnvVariables,
-                )}`}
-              </Script>
-              {isApp && <meta name="robots" content="noindex" />}
-              {helmetMetaTags}
-              {helmetLinkTags}
-              {helmetScriptTags}
-            </Head>
-            <body>
-              <Main />
-              <NextScript />
-            </body>
-          </Html>
+          <CanonicalRenderer
+            clientSideEnvVariables={clientSideEnvVariables}
+            helmetLinkTags={helmetLinkTags}
+            helmetMetaTags={helmetMetaTags}
+            helmetScriptTags={helmetScriptTags}
+            htmlAttrs={htmlAttrs}
+            isApp={isApp}
+            title={title}
+            html={html}
+          />
         );
     }
   }

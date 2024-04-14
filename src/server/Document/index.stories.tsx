@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { renderToString } from 'react-dom/server';
-import LitePageRenderer from '#server/Document/LiteRenderer';
+import LitePageRenderer from '#server/Document/Renderers/LiteRenderer';
 
 import ArticlePageComponent from '#app/pages/ArticlePage/ArticlePage';
 import articleData from '#data/news/articles/c0g992jmmkko.json';

@@ -7,6 +7,7 @@ import {
   BLACK,
   WHITE,
 } from '#app/components/ThemeProvider/palette';
+import { ReactElement } from 'react';
 
 const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
 
@@ -113,9 +114,9 @@ input, textarea {
 
 type Props = {
   html: string;
-  helmetMetaTags: React.ReactElement;
-  helmetScriptTags: React.ReactElement;
-  helmetLinkTags: React.ReactElement;
+  helmetMetaTags: ReactElement;
+  helmetScriptTags: ReactElement;
+  helmetLinkTags: ReactElement;
   shouldUseEmotionStyles?: boolean;
 };
 
@@ -223,7 +224,7 @@ export default function litePageTransform({
   return {
     liteHtml: $.html(),
     liteHelmetMetaTags: helmetMetaTags,
-    liteHelmetScriptTags: cleanedHelmetScriptTags,
-    liteHelmetLinkTags: cleanedHelmetLinkTags,
+    liteHelmetScriptTags: cleanedHelmetScriptTags as ReactElement,
+    liteHelmetLinkTags: cleanedHelmetLinkTags as ReactElement,
   };
 }

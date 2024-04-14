@@ -1,14 +1,15 @@
+import { ReactElement } from 'react';
 import litePageTransform from '.';
 
-let helmetMetaTags = [] as unknown as React.ReactElement;
-let helmetScriptTags = [] as unknown as React.ReactElement;
-let helmetLinkTags = [] as unknown as React.ReactElement;
+let helmetMetaTags = [] as unknown as ReactElement;
+let helmetScriptTags = [] as unknown as ReactElement;
+let helmetLinkTags = [] as unknown as ReactElement;
 
 describe('litePageTransform', () => {
   beforeEach(() => {
-    helmetMetaTags = [] as unknown as React.ReactElement;
-    helmetScriptTags = [] as unknown as React.ReactElement;
-    helmetLinkTags = [] as unknown as React.ReactElement;
+    helmetMetaTags = [] as unknown as ReactElement;
+    helmetScriptTags = [] as unknown as ReactElement;
+    helmetLinkTags = [] as unknown as ReactElement;
   });
 
   it('should remove images with rel="preload" from the Helmet Link tags', () => {

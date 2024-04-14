@@ -3,9 +3,9 @@ import React from 'react';
 import { EmotionCritical } from '@emotion/server/create-instance';
 
 import { HelmetData } from 'react-helmet';
-import LiteRenderer from './LiteRenderer';
-import CanonicalRenderer from './CanonicalRenderer';
-import AmpRenderer from './AmpRenderer';
+import LiteRenderer from './Renderers/LiteRenderer';
+import CanonicalRenderer from './Renderers/CanonicalRenderer';
+import AmpRenderer from './Renderers/AmpRenderer';
 
 type Props = {
   app: EmotionCritical;
