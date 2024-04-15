@@ -66,7 +66,7 @@ export default {
         color: palette.LIVE_LIGHT,
       },
     }),
-  textContainerWithImage: ({ mq, spacings }: Theme) =>
+  textContainer: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
@@ -83,13 +83,6 @@ export default {
         maxWidth: '50%', // determines width of text overlay.
       },
     }),
-  titleWithImage: ({ palette }: Theme) =>
-    css({
-      display: 'block',
-      color: palette.GREY_1,
-      width: '100%',
-    }),
-
   description: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_2,

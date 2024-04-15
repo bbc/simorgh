@@ -13,6 +13,7 @@ This component renders a Billboard which comprises an H2 heading, a link contain
 | eventTrackingData    | eventTrackingMetadata  | Contains click and view tracking data for Piano|
 | showLiveLabel        | boolean                | Displays the live label for live promos        |
 | lang                 | string                 | The services language code                     |
+
 ## How to use
 
 ```tsx

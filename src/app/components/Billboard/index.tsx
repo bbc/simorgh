@@ -16,7 +16,6 @@ import React from 'react';
 interface BillboardProps {
   heading: string;
   description?: string;
-  lang?: string;
   link?: string;
   image: string;
   eventTrackingData?: EventTrackingMetadata;
@@ -41,21 +40,21 @@ const Banner = forwardRef(
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
-        <a
-          href={link}
-          css={styles.link}
-          className="focusIndicatorDisplayBlock"
-          onClick={clickTrackerHandler}
-        >
-          <div css={styles.headerContainer} ref={viewRef}>
-            <div css={styles.backgroundContainer} />
-            <div css={styles.contentContainer}>
-              <MaskedImage
-                imageUrl={image}
-                imageUrlTemplate={image}
-                imageWidth={660}
-              />
-              <div css={styles.textContainerWithImage}>
+        <div css={styles.headerContainer} ref={viewRef}>
+          <div css={styles.backgroundContainer} />
+          <div css={styles.contentContainer}>
+            <MaskedImage
+              imageUrl={image}
+              imageUrlTemplate={image}
+              imageWidth={660}
+            />
+            <div css={styles.textContainer}>
+              <a
+                href={link}
+                css={styles.link}
+                className="focusIndicatorDisplayBlock"
+                onClick={clickTrackerHandler}
+              >
                 <Heading level={2} size="paragon" css={styles.heading} id={id}>
                   {showLiveLabel ? (
                     <>
@@ -72,15 +71,15 @@ const Banner = forwardRef(
                     heading
                   )}
                 </Heading>
-                {description && (
-                  <Text as="p" css={styles.description}>
-                    {description}
-                  </Text>
-                )}
-              </div>
+              </a>
+              {description && (
+                <Text as="p" css={styles.description}>
+                  {description}
+                </Text>
+              )}
             </div>
           </div>
-        </a>
+        </div>
       </section>
     );
   },
@@ -89,7 +88,6 @@ const Banner = forwardRef(
 const Billboard = ({
   heading,
   description,
-  lang,
   link,
   image,
   eventTrackingData,
@@ -101,7 +99,6 @@ const Billboard = ({
     <Banner
       heading={heading}
       description={description}
-      lang={lang}
       link={link}
       image={image}
       eventTrackingData={eventTrackingData}

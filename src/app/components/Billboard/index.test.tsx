@@ -26,7 +26,6 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           showLiveLabel
-          lang="ky"
         />,
       );
       const region = screen.getByRole('region');
@@ -41,7 +40,6 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           showLiveLabel
-          lang="ky"
         />,
       );
       const heading = screen.getByText(kyrgyzBillboard.title);
@@ -60,7 +58,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
       expect(screen.getByText(kyrgyzBillboard.title).nodeName).toBe('H2');
@@ -74,7 +71,6 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           showLiveLabel
-          lang="ky"
         />,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
@@ -88,7 +84,6 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           showLiveLabel
-          lang="ky"
         />,
       );
       const maskedImage = screen.getByAltText('');
@@ -105,7 +100,6 @@ describe('Billboard', () => {
           link={summary.link}
           image={summary.imageUrl}
           showLiveLabel
-          lang="ky"
         />,
       );
       const maskedImage = screen.getByAltText('');
@@ -125,7 +119,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
 
@@ -141,7 +134,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
 
@@ -163,7 +155,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
 
@@ -183,7 +174,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
 
@@ -201,7 +191,6 @@ describe('Billboard', () => {
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
           showLiveLabel
-          lang="ky"
         />,
       );
 
