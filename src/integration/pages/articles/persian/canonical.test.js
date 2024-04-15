@@ -4,9 +4,11 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
+import runImpageCopyrightNonBBC from '../imageCopyrightNonBBC';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
+    runImpageCopyrightNonBBC();
   });
 });

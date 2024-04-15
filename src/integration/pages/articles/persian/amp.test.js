@@ -4,9 +4,11 @@
  */
 
 import runAmpTests from '../ampTests';
+import runImpageCopyrightNonBBC from '../imageCopyrightNonBBC';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runAmpTests(service);
+    runImpageCopyrightNonBBC();
   });
 });

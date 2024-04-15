@@ -1,9 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import {
-  getAllBlocksDataByType,
-  getAllSocialBlocksByProviderName,
-} from './helpers';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -24,22 +20,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  variant,
-}) => {
-  let articlesData;
+export const testsThatFollowSmokeTestConfig = ({ service, pageType, variant }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
-    before(() => {
-      cy.getPageDataFromWindow({ service, pageType: 'article', variant }).then(
-        ({ pageData }) => {
-          articlesData = pageData;
-          console.log(`articlesData is ${articlesData}`);
-        },
-      );
-    });
-
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
@@ -69,36 +51,6 @@ export const testsThatFollowSmokeTestConfig = ({
             .within(() => cy.get('noscript').should('not.exist'));
         });
       }
-
-      // eslint-disable-next-line no-only-tests/no-only-tests
-      it('should have an image copyright label with styling', () => {
-        let testAssetId;
-        cy.url().then(url => {
-          // eslint-disable-next-line prefer-destructuring
-          testAssetId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
-          cy.get('figure')
-            .eq(0)
-            .within(() => {
-              // THERE IS NO TEST ASSET WITH A BBC COPYRIGHT
-              // FIND ONE?
-              // if (copyrightHolder === 'BBC') {
-              //   // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
-              //   // This is why we're asserting the value. If the copyright does not appear and is not
-              //   // 'BBC' then it is clear there is an error with this component.
-              //   cy.get('p[role="text"]').should('not.exist');
-              // }
-              if (testAssetId === 'crgxnrdl1xvo') {
-                cy.get('p[role="text"]')
-                  .should('be.visible')
-                  .and('contain', '@molanaabdolhamid');
-              } else if (testAssetId === 'cld9872jgyjo') {
-                cy.get('p[role="text"]')
-                  .should('be.visible')
-                  .and('contain', 'proofpoint');
-              }
-            });
-        });
-      });
     }
 
     if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') !== 'live') {
@@ -134,7 +86,6 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.url().then(url => {
           // eslint-disable-next-line prefer-destructuring
           testAssetId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
-          console.log(testAssetId);
         });
       });
       // If we can find assets with other social media embed types, we can add more

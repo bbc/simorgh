@@ -152,6 +152,22 @@ exports[`Canonical Articles Header Navigation link should match text and url 12`
 
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
+exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = `
+<span
+  lang="en-GB"
+>
+  Getty Images
+</span>
+`;
+
+exports[`Canonical Articles Image Copyright should match snapshot 1`] = `
+<span
+  lang="en-GB"
+>
+  Getty Images
+</span>
+`;
+
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
