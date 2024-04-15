@@ -1910,22 +1910,16 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: [
-              '/hausa/labarai-51622389',
-              '/hausa/multimedia/2012/07/120712_click',
-            ],
-            enabled: true,
+            paths: ['/hausa/articles/c41rj1z261zo'],
+            enabled: false,
           },
           test: {
-            paths: [
-              '/hausa/23269030', // CPS MAP with video clip
-              '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
-            ],
-            enabled: true,
+            paths: ['/hausa/articles/c2nr6xqmnewo'],
+            enabled: false,
           },
           local: {
-            paths: ['/hausa/23269030'],
-            enabled: true,
+            paths: ['/hausa/articles/c2nr6xqmnewo'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2029,23 +2023,23 @@ module.exports = () => ({
               '/hausa/labarai-51622389', // CPS MAP with video clip
               '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
               '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
-              '/hausa/23269030', // CPS MAP with video clip
+              '/hausa/23269031', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
@@ -4711,23 +4705,18 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o', '/pidgin/50913502'],
+            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
             enabled: true,
           },
           test: {
             paths: [
               '/pidgin/articles/cwl08rd38l6o',
               '/pidgin/articles/crrrkxz2k0ko',
-              '/pidgin/sport-23252855',
             ],
             enabled: true,
           },
           local: {
-            paths: [
-              '/pidgin/articles/cwl08rd38l6o',
-              '/pidgin/sport-23252855',
-              '/pidgin/23248703',
-            ],
+            paths: ['/pidgin/articles/cwl08rd38l6o'],
             enabled: true,
           },
         },
@@ -4782,29 +4771,29 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: false,
+            paths: ['/pidgin/23248704'], // CPS MAP with video clip
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
             paths: ['/pidgin/50913502'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            paths: ['/pidgin/sport-23252856'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       storyPage: {
         environments: {
@@ -6929,8 +6918,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/23122810', '/thai/thailand-49950038'],
-            enabled: true,
+            paths: ['/thai/articles/c442rl3md0eo'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -6972,11 +6961,11 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/23122810'], // CPS MAP with video clip
-            enabled: false,
+            paths: ['/thai/23122811'], // CPS MAP with video clip
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
@@ -6990,11 +6979,11 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/thailand-49950038'],
-            enabled: false,
+            paths: ['/thai/thailand-49950039'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       storyPage: {
         environments: {

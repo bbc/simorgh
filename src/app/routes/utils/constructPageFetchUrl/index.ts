@@ -154,11 +154,13 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case ARTICLE_PAGE:
-        fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
-        );
-        break;
+      case ARTICLE_PAGE: {
+        const isCpsId = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(id);
+        if (isCpsId) {
+          return Url(`/${id}`);
+        }
+        return Url(`/${service}/articles/${id}${variant ? `/${variant}` : ''}`);
+      }
       case CPS_ASSET:
         fetchUrl = Url(`/${id}`);
         break;
