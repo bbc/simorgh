@@ -19,9 +19,6 @@ interface BillboardProps {
   image: string;
   eventTrackingData?: EventTrackingMetadata;
   showLiveLabel: boolean;
-  imageUrl?: string;
-  imageUrlTemplate?: string;
-  imageWidth?: number;
 }
 
 const Banner = forwardRef(
@@ -50,9 +47,7 @@ const Banner = forwardRef(
           onClick={clickTrackerHandler}
         >
           <div css={styles.headerContainer} ref={viewRef}>
-            <div css={styles.backgroundContainer}>
-              <div css={styles.backgroundColor} />
-            </div>
+            <div css={styles.backgroundContainer} />
             <div css={styles.contentContainer}>
               <MaskedImage
                 imageUrl={image}
@@ -70,13 +65,7 @@ const Banner = forwardRef(
                   )}
                 </Heading>
                 {description && (
-                  <Text
-                    as="p"
-                    css={[
-                      styles.description,
-                      showLiveLabel
-                    ]}
-                  >
+                  <Text as="p" css={[styles.description, showLiveLabel]}>
                     {description}
                   </Text>
                 )}

@@ -15,21 +15,14 @@ export default {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  backgroundContainer: () =>
+  backgroundContainer: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       top: '0',
+      backgroundColor: palette.GREY_10,
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
-    }),
-  backgroundColor: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_10,
-      width: '100%',
-      top: 0,
-      bottom: 0,
-      position: 'absolute',
     }),
   contentContainer: ({ mq, gridWidths }: Theme) =>
     css({

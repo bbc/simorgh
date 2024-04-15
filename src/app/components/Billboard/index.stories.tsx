@@ -2,6 +2,7 @@ import React from 'react';
 
 import Billboard from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import metadata from './metadata.json';
 import readme from './README.md';
 
 interface Props extends StoryProps {
@@ -31,6 +32,7 @@ export default {
   Component,
   parameters: {
     docs: { readme },
+    metadata,
   },
 };
 

@@ -25,7 +25,6 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
           showLiveLabel
           lang="ky"
         />,
@@ -41,7 +40,6 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
           showLiveLabel
           lang="ky"
         />,
@@ -75,7 +73,6 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
           showLiveLabel
           lang="ky"
         />,
@@ -90,7 +87,6 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
           showLiveLabel
           lang="ky"
         />,
@@ -108,7 +104,6 @@ describe('Billboard', () => {
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
           showLiveLabel
           lang="ky"
         />,
