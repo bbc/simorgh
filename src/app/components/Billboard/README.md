@@ -1,6 +1,6 @@
 ## Description
 
-This component renders a Billboard which comprises an H2 heading, a link contained within an anchor that provides a tap area the component, an image and a description as a paragraph. These elements sit within a region landmark. The banner can be rendered anywhere on a page and uses the curation `visualStyle` of `BANNER`. The banner background is generated with a `MaskedImage` using a CSS radial and linear colour generated gradient at each breakpoint.
+This component renders a Billboard which comprises an H2 heading, a link contained within an anchor that provides a tap area the component, an image and a description as a paragraph. These elements sit within a region landmark. The banner can be rendered anywhere on a page and uses the curation `visualStyle` of `BANNER` and `visualProminence` of `MAXIMUM`. The banner background is generated with a `MaskedImage` using a CSS radial and linear colour generated gradient at each breakpoint.
 
 ## Props
 
@@ -12,20 +12,18 @@ This component renders a Billboard which comprises an H2 heading, a link contain
 | image                | string                 | The URL of the chosen image                    |
 | eventTrackingData    | eventTrackingMetadata  | Contains click and view tracking data for Piano|
 | showLiveLabel        | boolean                | Displays the live label for live promos        |
-| lang                 | string                 | The services language code                     |
 
 ## How to use
 
 ```tsx
 {
     <Billboard
-        heading={kyrgyzBillboard.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        eventTrackingData={eventTrackingData}
+        heading="Billboard Heading"
+        description="Description"
+        link="https://www.bbc.com/ws/languages"
+        image="https://ichef.bbci.co.uk/ace/ws/raw/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png"
+        eventTrackingData={{ componentName: 'billboard' }}
         showLiveLabel
-        lang="ky"
     />,
 }
 ```
