@@ -1,11 +1,6 @@
 import React from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../../../../src/app/contexts/ServiceContext';
-import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
 import KeyPoints from '.';
-import { StoryProps } from '../../../../../../src/app/models/types/storybook';
 import { KeyPointsContent } from './types';
 import { singleKeyPoint, multipleKeyPoints } from './fixture';
 import metadata from './metadata.json';
@@ -13,22 +8,16 @@ import metadata from './metadata.json';
 const singleKeyPointBlocks = singleKeyPoint.model.blocks;
 const multipleKeyPointsBlocks = multipleKeyPoints.model.blocks;
 
-interface ComponentProps extends StoryProps {
+interface ComponentProps {
   keyPointsContent: KeyPointsContent[] | [];
 }
 
-const Component = ({ service, variant, keyPointsContent }: ComponentProps) => {
-  return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <KeyPoints keyPointsContent={keyPointsContent} />
-      </ServiceContextProvider>
-    </ThemeProvider>
-  );
+const Component = ({ keyPointsContent }: ComponentProps) => {
+  return <KeyPoints keyPointsContent={keyPointsContent} />;
 };
 
 export default {
-  title: 'New Components/Live Page Key Points',
+  title: 'Components/Live Page Key Points',
   Component,
   parameters: {
     metadata,
@@ -60,21 +49,12 @@ export default {
       },
     ],
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const SingleKeyPoint = ({ service, variant }: StoryProps) => (
-  <Component
-    keyPointsContent={singleKeyPointBlocks}
-    service={service}
-    variant={variant}
-  />
+export const SingleKeyPoint = () => (
+  <Component keyPointsContent={singleKeyPointBlocks} />
 );
 
-export const MultipleKeyPoints = ({ service, variant }: StoryProps) => (
-  <Component
-    keyPointsContent={multipleKeyPointsBlocks}
-    service={service}
-    variant={variant}
-  />
+export const MultipleKeyPoints = () => (
+  <Component keyPointsContent={multipleKeyPointsBlocks} />
 );

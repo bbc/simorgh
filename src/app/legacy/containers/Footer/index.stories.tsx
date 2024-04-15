@@ -1,43 +1,36 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '../../psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Footer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
-import { StoryProps } from '../../../models/types/storybook';
+import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
+import metadata from './metadata.json';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 interface Props extends StoryProps {
   isAmp?: boolean;
   withAds?: boolean;
 }
 
-const Component = ({
-  service,
-  variant,
-  isAmp = false,
-  withAds = false,
-}: Props) => (
-  <ThemeProvider service={service} variant={variant}>
-    <RequestContextProvider
-      isAmp={isAmp}
-      isApp={false}
-      pageType={undefined}
-      pathname=""
-      service={service}
-      showAdsBasedOnLocation={withAds}
-    >
-      <ServiceContextProvider service={service} variant={variant}>
+const Component = ({ service, isAmp = false, withAds = false }: Props) => (
+  <RequestContextProvider
+    isAmp={isAmp}
+    isApp={false}
+    pageType={undefined}
+    pathname=""
+    service={service}
+    showAdsBasedOnLocation={withAds}
+  >
+    <ServiceContextProvider service={service}>
+      <ThemeProvider service={service}>
         <Footer />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ThemeProvider>
+      </ThemeProvider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 export default {
-  title: 'New Components/Footer',
+  title: 'Components/Footer',
   Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     chromatic: {
       viewports: [
@@ -49,21 +42,27 @@ export default {
         1280, // Group 5
       ],
     },
+    metadata,
   },
 };
 
-export const Example = ({ service, variant }) => (
+export const Example = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const ExampleAMP = ({ service, variant }) => (
+export const ExampleAMP = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} isAmp />
 );
 
-export const WithAdsEnabled = ({ service, variant }) => (
+export const WithAdsEnabled = (_: StoryArgs, { service, variant }) => (
   <Component service={service} variant={variant} withAds />
 );
 
-export const HindiCollectiveNewsroomPublication = ({ variant }) => (
-  <Component service="hindi" variant={variant} />
+export const HindiCollectiveNewsroomPublication = (
+  _: StoryArgs,
+  { variant },
+) => <Component service="hindi" variant={variant} />;
+
+export const SportWithoutTrustProjectLink = (_: StoryArgs, { variant }) => (
+  <Component service="sport" variant={variant} />
 );

@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, हिंदी",
+  "url": "/hindi",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "आप बीबीसी पर क्यों भरोसा कर सकते हैं",
+  "url": "https://www.bbc.com/hindi/institutional-50223932",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "इस्तेमाल की शर्तें",
+  "url": "https://www.bbc.com/hindi/institutional-37342293",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "बीबीसी के बारे में",
+  "url": "https://www.bbc.com/hindi/institutional-37343168",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "निजता की नीति",
+  "url": "https://www.bbc.com/hindi/institutional-37342614",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "कुकीज़",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "बीबीसी से संपर्क",
+  "url": "https://www.bbc.co.uk/hindi/send/u50853357",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2024 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, हिंदी"`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "मौजूदा पन्ना, होम पेज",
+  "url": "/hindi",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "लोकसभा चुनाव 2024",
+  "url": "/hindi/topics/cm5m26q8qxpt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "भारत",
+  "url": "/hindi/topics/ckdxnkz7607t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "विदेश",
+  "url": "/hindi/topics/c9wpm0en87xt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "मनोरंजन",
+  "url": "/hindi/topics/c06gq3n0pp7t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "खेल",
+  "url": "/hindi/topics/cwr9j8g1kj9t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "विज्ञान-टेक्नॉलॉजी",
+  "url": "/hindi/topics/c2lej0594knt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "सोशल",
+  "url": "/hindi/topics/c2e4q0z9qznt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "वीडियो",
+  "url": "/hindi/topics/cw9kv0kpxydt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "पॉडकास्ट",
+  "url": "/hindi/institutional-61824775",
+}
+`;
+
+exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, हिंदी - होम पेज"`;
+
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 13",
+  "url": "/hindi/23068672",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "grdfjfzxczn",
+  "url": "/hindi/india-23185273",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 30",
+  "url": "/hindi/23068699",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Brexit bill passed in parliament সা্ব",
+  "url": "/news/uk-politics-23164548",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Flights axed as Monarch ceases trading",
+  "url": "/gujarati/india-23155321",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 6`] = `
+{
+  "text": "क्या आपको भी समुद्र में उबकाई आती है? 2",
+  "url": "/hindi/international-23069805",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 7`] = `
+{
+  "text": "फ़्लोरिडा शहर में खेले गए पहले टी-20 मैच",
+  "url": "/hindi/live/sport-23070449",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 8`] = `
+{
+  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 10",
+  "url": "/hindi/23068669",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 9`] = `
+{
+  "text": "बिजनौर में तीन हत्याओं के बाद तनाव",
+  "url": "/hindi/india-23075154",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 10`] = `
+{
+  "text": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23",
+  "url": "/hindi/23068682",
+}
+`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23"`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/hindi/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7080/hindi"`;
+
+exports[`Canonical Home Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Home Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, हिंदी - होम पेज"`;
+
+exports[`Canonical Home Page SEO Lang attribute 1`] = `"hi"`;
+
+exports[`Canonical Home Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "BBC News हिंदी",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "hi",
+        "name": "Hindi",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/hindi",
+        "@type": "WebPage",
+        "name": "BBC News हिंदी",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+          "width": 1024,
+        },
+        "name": "BBC News हिंदी",
+        "publishingPrinciples": "https://www.bbc.com/hindi/institutional-50223932",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "url": "http://localhost:7080/hindi",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/hindi/23068682",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.bbc.com/hindi/india-23075154",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/hindi/international-23069805",
+        },
+      ],
+      "name": "BBC News हिंदी",
+      "numberOfItems": 3,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Home Page SEO OG description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
+
+exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical Home Page SEO OG locale 1`] = `"hi-IN"`;
+
+exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical Home Page SEO OG title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+
+exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/hindi"`;
+
+exports[`Canonical Home Page SEO Page title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+
+exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Home Page SEO Twitter creator 1`] = `"@bbchindi"`;
+
+exports[`Canonical Home Page SEO Twitter description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
+
+exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbchindi"`;
+
+exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+
+exports[`Canonical Home Page Timestamp should match text and date 1`] = `
+{
+  "date": "2016-08-22",
+  "text": "22 अगस्त 2016",
+}
+`;

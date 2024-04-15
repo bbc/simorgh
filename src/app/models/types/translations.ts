@@ -183,6 +183,7 @@ export interface Translations {
     errorMessage: string;
     linkText: string;
   };
+  ugc?: Record<string, string>;
   topStoriesTitle?: string;
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;

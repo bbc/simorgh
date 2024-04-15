@@ -159,7 +159,7 @@ exports[`AMP Articles Footer Cookie Settings Button should match text and on han
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
@@ -279,6 +279,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-09-13T12:36:29.124Z",
       "datePublished": "2019-09-13T12:36:29.124Z",
+      "description": "This is the SEO headline of this test article",
       "headline": "This is the SEO headline of this test article",
       "image": {
         "@type": "ImageObject",

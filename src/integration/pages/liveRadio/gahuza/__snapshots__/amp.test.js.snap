@@ -203,7 +203,7 @@ exports[`AMP Live Radio Footer Cookie Settings Button should match text and on h
 
 exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`AMP Live Radio Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 

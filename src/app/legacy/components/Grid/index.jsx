@@ -83,7 +83,7 @@ export const GelPageGrid = styled(Grid)`
 `;
 
 /* The following components relate to Grid configuration and Grid styles used on the following page types:
- * STY,MAP,PGL,Front Page,IDX page
+ * STY,MAP,PGL,Front Page
  */
 const StyledCPSPageGrid = styled(Grid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
