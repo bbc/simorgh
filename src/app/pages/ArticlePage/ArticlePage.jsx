@@ -66,8 +66,12 @@ import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp } = useContext(RequestContext);
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -109,6 +113,11 @@ const ArticlePage = ({ pageData }) => {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isPGL && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -183,7 +192,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -208,7 +217,11 @@ const ArticlePage = ({ pageData }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          !isPGL
+            ? categoryName(isTrustProjectParticipant, taggings, formats)
+            : 'Article'
+        }
         seoTitle={headline}
         headline={headline}
         description={description}
