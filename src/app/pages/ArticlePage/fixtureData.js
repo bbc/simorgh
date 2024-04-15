@@ -38,6 +38,7 @@ const articleDataBuilder = (
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
+  type = 'article',
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -48,7 +49,7 @@ const articleDataBuilder = (
     analyticsLabels: {
       contentId: 'urn:bbc:optimo:c0000000001o',
     },
-    type: 'article',
+    type,
     createdBy,
     created: 1514808060000,
     firstPublished: 1514808060000,
@@ -672,6 +673,33 @@ export const articleDataPidginWithByline = articleDataBuilder(
   emptyThings,
   undefined,
   blocksWithHeadlineTexAndByline,
+);
+
+export const articlePglDataPidgin = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  'Article PGL Headline for SEO in Pidgin',
+  'Article PGL Headline for Promo in Pidgin',
+  'Article PGL summary in Pidgin',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'pcm',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+    pageTitle: 'Article Headline for SEO in Pidgin',
+  },
+  'PGL',
 );
 
 export const bylineWithNoRole = [
