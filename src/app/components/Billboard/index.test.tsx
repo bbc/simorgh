@@ -11,7 +11,6 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
-  const eventTrackingData = { componentName: 'billboard' };
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -55,7 +54,6 @@ describe('Billboard', () => {
         description={summary.description}
         link={summary.link}
         image={summary.imageUrl}
-        eventTrackingData={eventTrackingData}
         altText={summary.imageAlt}
       />,
     );
@@ -103,95 +101,99 @@ describe('Billboard', () => {
     expect(maskedImage).toBeInTheDocument();
   });
 
-  describe('view tracking', () => {
-    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  describe('Event Tracking', () => {
+    const eventTrackingData = { componentName: 'billboard' };
 
-    it('should not be enabled if event tracking data not provided', () => {
-      render(
-        <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          altText={summary.imageAlt}
-        />,
-      );
+    describe('View tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
+      it('should not be enabled if event tracking data not provided', () => {
+        render(
+          <Billboard
+            heading={summary.title}
+            description={summary.description}
+            link={summary.link}
+            image={summary.imageUrl}
+            altText={summary.imageAlt}
+          />,
+        );
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
+      });
+
+      it('should register view tracker if event tracking data provided', () => {
+        render(
+          <Billboard
+            heading={summary.title}
+            description={summary.description}
+            link={summary.link}
+            image={summary.imageUrl}
+            eventTrackingData={eventTrackingData}
+            altText={summary.imageAlt}
+          />,
+        );
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
     });
 
-    it('should register view tracker if event tracking data provided', () => {
-      render(
-        <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          altText={summary.imageAlt}
-        />,
-      );
+    describe('Click tracking', () => {
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation();
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
-    });
-  });
+      it('should not be enabled if event tracking data not provided', () => {
+        const { container } = render(
+          <Billboard
+            heading={summary.title}
+            description={summary.description}
+            link={summary.link}
+            image={summary.imageUrl}
+            altText={summary.imageAlt}
+          />,
+        );
 
-  describe('click tracking', () => {
-    const clickTrackerSpy = jest
-      .spyOn(clickTracking, 'default')
-      .mockImplementation();
+        expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
 
-    it('should not be enabled if event tracking data not provided', () => {
-      const { container } = render(
-        <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          altText={summary.imageAlt}
-        />,
-      );
+        const [callToActionLink] = container.getElementsByTagName('a');
+        fireEvent.click(callToActionLink);
+        expect(callToActionLink.onclick).toBeFalsy();
+      });
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
+      it('should register click tracker if event tracking data provided', () => {
+        render(
+          <Billboard
+            heading={summary.title}
+            description={summary.description}
+            link={summary.link}
+            image={summary.imageUrl}
+            eventTrackingData={eventTrackingData}
+            altText={summary.imageAlt}
+          />,
+        );
 
-      const [callToActionLink] = container.getElementsByTagName('a');
-      fireEvent.click(callToActionLink);
-      expect(callToActionLink.onclick).toBeFalsy();
-    });
+        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
 
-    it('should register click tracker if event tracking data provided', () => {
-      render(
-        <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          altText={summary.imageAlt}
-        />,
-      );
+      it('should handle a click event when link clicked', () => {
+        clickTrackerSpy.mockRestore();
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
-    });
+        const { container } = render(
+          <Billboard
+            heading={summary.title}
+            description={summary.description}
+            link={summary.link}
+            image={summary.imageUrl}
+            eventTrackingData={eventTrackingData}
+            altText={summary.imageAlt}
+          />,
+        );
 
-    it('should handle a click event when link clicked', () => {
-      clickTrackerSpy.mockRestore();
+        const [link] = container.getElementsByTagName('a');
+        fireEvent.click(link);
 
-      const { container } = render(
-        <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          altText={summary.imageAlt}
-        />,
-      );
-
-      const [link] = container.getElementsByTagName('a');
-      fireEvent.click(link);
-
-      expect(link.onclick).toBeTruthy();
+        expect(link.onclick).toBeTruthy();
+      });
     });
   });
 
