@@ -19,7 +19,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://docs.google.com/spreadsheets/d/1AHQwSy8N6A1415PYeBmQ39ajQy-gE0iUpdZWnRwXIMM/edit#gid=1748460042",
       "label": "Accessibility swarm results"

@@ -60,7 +60,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Home Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
@@ -491,19 +491,19 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 38,
-          "url": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 39,
           "url": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 40,
+          "position": 39,
           "url": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 40,
+          "url": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
         },
         {
           "@context": "http://schema.org",
@@ -533,89 +533,53 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 45,
-          "url": "https://www.bbc.com/punjabi/topics/cz74k76n1jxt",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 46,
-          "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=6",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 47,
-          "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=7",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 48,
-          "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=8",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 49,
-          "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=9",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 50,
-          "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 51,
           "url": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 52,
+          "position": 46,
           "url": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 53,
+          "position": 47,
           "url": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 54,
+          "position": 48,
           "url": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 55,
+          "position": 49,
           "url": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 56,
+          "position": 50,
           "url": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 57,
+          "position": 51,
           "url": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
-          "position": 58,
+          "position": 52,
           "url": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
         },
       ],
       "name": "BBC News Кыргыз Кызматы",
-      "numberOfItems": 58,
+      "numberOfItems": 52,
     },
   ],
 }

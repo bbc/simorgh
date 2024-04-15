@@ -330,7 +330,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="css-19ecbo0"
+  class="css-17euut"
   data-e2e="media-loader__container"
 >
   <style
@@ -491,9 +491,11 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       >
         Wetin we call dis Video, 
       </span>
-      <p>
+      <span
+        data-testid="caption-paragraph"
+      >
         Gary Lineker talks Messi
-      </p>
+      </span>
     </span>
   </figcaption>
 </figure>

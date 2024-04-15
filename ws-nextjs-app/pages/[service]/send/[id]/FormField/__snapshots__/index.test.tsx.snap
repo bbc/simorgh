@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField should render a checkbox input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testCheckboxID"
+    >
+      This is a text field
+    </label>
+    <input
+      aria-describedby="testCheckboxID-error"
+      aria-invalid="false"
+      aria-required="false"
+      id="testCheckboxID"
+      name="testCheckboxID"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a tel input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testTelID"
+    >
+      This is a text field
+    </label>
+    <input
+      aria-describedby="testTelID-error"
+      aria-invalid="false"
+      aria-required="false"
+      id="testTelID"
+      name="testTelID"
+      type="tel"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a text input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testTextID"
+    >
+      This is a text field
+    </label>
+    <input
+      aria-describedby="testTextID-error"
+      aria-invalid="false"
+      aria-required="false"
+      id="testTextID"
+      name="testTextID"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render a textarea input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testTextAreaID"
+    >
+      This is a text field
+    </label>
+    <textarea
+      aria-describedby="testTextAreaID-error"
+      aria-invalid="false"
+      aria-required="false"
+      id="testTextAreaID"
+      name="testTextAreaID"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormField should render an email input with an associated label 1`] = `
+.emotion-0 {
+  padding-bottom: 1rem;
+}
+
+.emotion-0 textarea,
+.emotion-0 input {
+  display: block;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testEmailID"
+    >
+      This is a text field
+    </label>
+    <input
+      aria-describedby="testEmailID-error"
+      aria-invalid="false"
+      aria-required="false"
+      id="testEmailID"
+      name="testEmailID"
+      type="email"
+      value=""
+    />
+  </div>
+</div>
+`;

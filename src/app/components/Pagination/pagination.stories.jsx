@@ -1,29 +1,35 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { withKnobs, number } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Pager from '.';
-import ThemeProvider from '../ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
-const Component = ({ service, variant }) => {
-  return (
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <Pager
-          activePage={number('Active Page', 5, { min: 1, max: 100 })}
-          pageCount={number('PageCount', 10, { min: 2, max: 100 })}
-        />
-      </ServiceContextProvider>
-    </ThemeProvider>
-  );
+const Component = ({ activePage, pageCount }) => {
+  return <Pager activePage={activePage} pageCount={pageCount} />;
 };
 
 export default {
-  title: 'Topic/Pager',
+  title: 'Components/Pagination',
   Component,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
+  args: {
+    activePage: 5,
+    pageCount: 10,
+  },
+  argTypes: {
+    activePage: {
+      control: {
+        type: 'number',
+        min: 1,
+        max: 40,
+      },
+    },
+    pageCount: {
+      control: {
+        type: 'number',
+        min: 2,
+        max: 40,
+      },
+    },
+  },
 };
 
 export const Pagination = Component;

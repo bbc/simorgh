@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useLocation from '#app/hooks/useLocation';
+import useToggle from '#app/hooks/useToggle';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -13,6 +15,7 @@ import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
+import { getBootstrapSrc } from '../Ad/Canonical';
 
 const logger = nodeLogger(__filename);
 
@@ -31,12 +34,61 @@ const BumpLoader = () => (
   </Helmet>
 );
 
-const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
+const AdvertTagLoader = () => {
+  const location = useLocation();
+  const queryString = location ? location.search : '';
+
+  useEffect(() => {
+    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
+    const timeoutID = setTimeout(() => {
+      if (window.dotcom.ads.resolves) {
+        window.dotcom.ads.resolves.enabled.forEach(res => res(false));
+        window.dotcom.ads.resolves.getAdTag.forEach(res => res(''));
+      }
+    }, 2000);
+
+    // Initialise the ads object if it hasn't already been loaded.
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcom.ads = window.dotcom.ads || {
+      resolves: {
+        enabled: [],
+        getAdTag: [],
+      },
+      enabled() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.enabled.push(resolve);
+        });
+      },
+      getAdTag() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.getAdTag.push(resolve);
+        });
+      },
+    };
+
+    return () => clearTimeout(timeoutID);
+  }, [queryString]);
+
+  return (
+    <Helmet>
+      <script type="module" src={getBootstrapSrc(queryString)} async />
+      <script noModule src={getBootstrapSrc(queryString, true)} async />
+    </Helmet>
+  );
+};
+
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+}: {
+  playerConfig: PlayerConfig;
+  showAds: boolean;
+}) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], (Bump: BumpType) => {
+      window.requirejs(['bump-4'], async (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
           const mediaPlayer = Bump.player(
             playerElementRef.current,
@@ -44,12 +96,39 @@ const MediaContainer = ({ playerConfig }: { playerConfig: PlayerConfig }) => {
           );
 
           mediaPlayer.load();
+
+          if (showAds) {
+            const adTag = await window.dotcom.ads.getAdTag();
+            mediaPlayer.loadPlugin(
+              {
+                swf: 'name:dfpAds.swf',
+                html: 'name:dfpAds.js',
+              },
+              {
+                name: 'AdsPluginParameters',
+                data: {
+                  adTag,
+                  debug: true,
+                },
+              },
+            );
+
+            mediaPlayer.bind('playlistLoaded', async () => {
+              const updatedAdTag = await window.dotcom.ads.getAdTag();
+              mediaPlayer.dispatchEvent(
+                'bbc.smp.plugins.ads.event.updateAdTag',
+                {
+                  updatedAdTag,
+                },
+              );
+            });
+          }
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig]);
+  }, [playerConfig, showAds]);
 
   return (
     <div
@@ -67,9 +146,18 @@ type Props = {
 
 const MediaLoader = ({ blocks, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
-  const { id, pageType, counterName, statsDestination, service, isAmp } =
-    useContext(RequestContext);
   const { lang, translations } = useContext(ServiceContext);
+  const { enabled: adsEnabled } = useToggle('ads');
+
+  const {
+    id,
+    pageType,
+    counterName,
+    statsDestination,
+    service,
+    isAmp,
+    showAdsBasedOnLocation,
+  } = useContext(RequestContext);
 
   const producer = getProducerFromServiceName(service);
 
@@ -84,11 +172,13 @@ const MediaLoader = ({ blocks, className }: Props) => {
     pageType,
     service,
     translations,
+    adsEnabled,
+    showAdsBasedOnLocation,
   });
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig } = config;
+  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
   const {
     mediaInfo,
@@ -105,6 +195,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       css={styles.figure}
       className={className}
     >
+      {showAds && <AdvertTagLoader />}
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
@@ -115,7 +206,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
           onClick={() => setIsPlaceholder(false)}
         />
       ) : (
-        <MediaContainer playerConfig={playerConfig} />
+        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </figure>

@@ -83,6 +83,7 @@ const TopicPage = ({ pageData }) => {
               link,
               position,
               visualStyle,
+              embed,
             }) => {
               const nthCurationByStyleAndProminence =
                 getNthCurationByStyleAndProminence({
@@ -107,6 +108,7 @@ const TopicPage = ({ pageData }) => {
                     nthCurationByStyleAndProminence={
                       nthCurationByStyleAndProminence
                     }
+                    embed={embed}
                   />
                 </React.Fragment>
               );

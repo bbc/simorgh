@@ -38,14 +38,13 @@ const SingleDoc = ({ label, status, url, urlLabel }: SingleDocProps) => {
             styles.iconContainer,
             styles.statusIconContainer,
             typeof status === 'boolean' ? iconStatusStyle : styles.missing,
-            styles.sidebarColumn,
           ]}
         >
           {statusIcon}
         </span>
 
         <Text
-          css={[styles.sidebarColumn, styles.sidebarText]}
+          css={styles.sidebarText}
           size="bodyCopy"
           fontVariant="sansRegular"
           aria-labelledby={ariaLabelId}

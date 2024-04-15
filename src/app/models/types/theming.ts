@@ -68,6 +68,7 @@ interface MediaQueries {
   GROUP_2_MAX_WIDTH: string;
   GROUP_2_MIN_WIDTH: string;
   GROUP_2_ONLY: string;
+  GROUP_1_AND_GROUP_2: string;
   GROUP_3_MAX_WIDTH: string;
   GROUP_3_MIN_WIDTH: string;
   GROUP_3_ONLY: string;

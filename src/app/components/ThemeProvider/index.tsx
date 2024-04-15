@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { Services, Variants } from '../../models/types/global';
 import defaultServiceVariants from './defaultServiceVariants';
 import themes from './themes/loadableConfig';
+import fallBackTheme from './themes/news';
 
 interface Props {
   service: Services;
@@ -13,7 +14,8 @@ export const ThemeProvider = ({
   service,
   variant,
 }: PropsWithChildren<Props>) => {
-  let LoadableContextProvider;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let LoadableContextProvider: any = fallBackTheme;
 
   const serviceVariant: Variants = variant || defaultServiceVariants[service];
 

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 
-import MaskedImage from './MaskedImage';
+import MaskedImage from '#app/components/MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
 

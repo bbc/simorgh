@@ -14,6 +14,7 @@ import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
+import Embed from '../Embeds/OEmbed';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -22,6 +23,7 @@ const {
   NOT_SUPPORTED,
   MOST_READ,
   RADIO_SCHEDULE,
+  EMBED,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -50,11 +52,13 @@ export default ({
   mostRead,
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
+  embed,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
+    embed,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -95,6 +99,8 @@ export default ({
       );
     case RADIO_SCHEDULE:
       return <RadioSchedule initialData={radioSchedule} />;
+    case EMBED:
+      return embed ? <Embed oembed={embed} /> : null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

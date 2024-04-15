@@ -1,5 +1,3 @@
-# Text
-
 ## Description
 
 The `Text` component is used to render the correct typography for the service. For example text in `mundo` would have different `font-family`, `font-size`, `line-height`, `font-weight` values from text in `arabic`.

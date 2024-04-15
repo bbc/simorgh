@@ -454,6 +454,20 @@ it('should render the facebook metatags', async () => {
   });
 });
 
+it('should render the facebook domain verification', async () => {
+  render(<CanonicalNewsInternationalOrigin />);
+
+  await waitFor(() => {
+    const FacebookDomainVerification = document
+      .querySelector('head > meta[name="facebook-domain-verification"]')
+      ?.getAttribute('content');
+
+    expect(FacebookDomainVerification).toEqual(
+      'mydfaj4vz8t5psneihy4nm6ff52fac',
+    );
+  });
+});
+
 it('should render the mobile-web-app-capable meta tag', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 

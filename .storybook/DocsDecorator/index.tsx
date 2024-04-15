@@ -1,10 +1,13 @@
 import React from 'react';
-import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
-import path from 'ramda/src/path';
+import {
+  DocsContainer,
+  DocsContextProps,
+  Title,
+  Markdown,
+} from '@storybook/addon-docs';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
-import HealthFactorsMetadata from './types';
-import { isExempt } from '../helpers/healthFactors';
+import { HealthFactorsProps } from './types';
 
 interface DocsDecoratorProps {
   context: DocsContextProps;
@@ -12,27 +15,23 @@ interface DocsDecoratorProps {
 }
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
-  const title = path(
-    ['parameters', 'docs', 'component', 'title'],
-    context,
-  ) as string;
+  const [file] = context.attachedCSFFiles;
+  const { metadata, docs } =
+    (file?.meta?.parameters as HealthFactorsProps) ?? {};
 
-  const metadata = path(
-    ['parameters', 'metadata'],
-    context,
-  ) as HealthFactorsMetadata;
+  const hasReadmeFile = docs?.readme;
+  const hasHealthFactors = metadata;
+
+  const isDocsPage = children?.type?.name === 'DocsPage';
 
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore: type children not assignable.
     <DocsContainer context={context}>
-      {!isExempt(context) && (
-        <ThemeProvider service="news" variant="default">
-          <Title>{title}</Title>
-          <HealthFactors metadata={metadata} />
-        </ThemeProvider>
-      )}
-      {children}
+      <ThemeProvider service="news" variant="default">
+        {isDocsPage && <Title />}
+        {hasHealthFactors && <HealthFactors metadata={metadata} />}
+        {hasReadmeFile && <Markdown>{docs.readme!}</Markdown>}
+      </ThemeProvider>
+      {!isDocsPage && children}
     </DocsContainer>
   );
 };

@@ -58,4 +58,13 @@ describe('getIchefURL', () => {
     const originCode = 'pips';
     expect(getIChefURL({ locator, originCode })).toEqual(locator);
   });
+
+  it.each(['mpv', 'pips'])(
+    'returns a placeholder image if no image src provided and origin code is %s',
+    originCode => {
+      expect(getIChefURL({ resolution: 512, originCode })).toEqual(
+        'https://ichef.bbci.co.uk/images/ic/512xn/p0b36kgx.png',
+      );
+    },
+  );
 });

@@ -397,17 +397,23 @@ export const generateWorkerSrc = ({ isAmp }) =>
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
     : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
 
-const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
+const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive, service }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src': generateConnectSrc({ isAmp, isLive }),
+    'connect-src':
+      service === 'mundo'
+        ? "'self' https:"
+        : generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
-    'media-src': generateMediaSrc({ isAmp, isLive }),
+    'media-src':
+      service === 'mundo'
+        ? "'self' blob: https:"
+        : generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
@@ -438,6 +444,7 @@ const injectCspHeader = (req, res, next) => {
       isAmp,
       isLive: isLiveEnv(),
       reportOnlyOnLive: service === 'japanese',
+      service,
     }),
   );
   middleware(req, res, next);

@@ -8,7 +8,6 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
-  INDEX_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
@@ -20,6 +19,7 @@ import {
   HOME_PAGE,
   CPS_ASSET,
   STATIC_PAGE,
+  UGC_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -54,7 +54,6 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [MEDIA_PAGE]: 'player-episode-tv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
     [MOST_WATCHED_PAGE]: 'list-datadriven-watched',
-    [INDEX_PAGE]: 'index-section',
     [FEATURE_INDEX_PAGE]: 'index-section-fix',
     [MEDIA_ASSET_PAGE]: 'article-media-asset',
     [STORY_PAGE]: 'article-sty',
@@ -65,6 +64,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [HOME_PAGE]: 'index-home',
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
+    [UGC_PAGE]: '',
   }[pageType];
 
   if (!campaignID) {

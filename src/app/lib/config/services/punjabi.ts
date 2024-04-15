@@ -279,6 +279,10 @@ export const service: DefaultServiceConfig = {
         url: '/punjabi',
       },
       {
+        title: 'ਲੋਕ ਸਭਾ ਚੋਣਾਂ 2024',
+        url: '/punjabi/topics/cz4xp0dw200t',
+      },
+      {
         title: 'ਵੀਡੀਓ',
         url: '/punjabi/topics/cx12qmz6jm4t',
       },
@@ -333,6 +337,7 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
+      collectiveNewsroomText: 'ਬੀਬੀਸੀ ਲਈ ਕਲੈਕਟਿਵ ਨਿਊਜ਼ਰੂਮ ਪ੍ਰਕਾਸ਼ਨ',
     },
     timezone: 'Asia/Kolkata',
   },

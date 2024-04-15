@@ -1,5 +1,3 @@
-# Media Loader
-
 ## Description
 
 This component loads a media player into our webpage. It uses the BBC Universal Media Player module (BUMP) to choose the correct Embedded Media Player (EMP) for the user's device. Using BUMP removes the concerns involved in serving different devices and web-browsers as BUMP automatically provides the best fitting EMP for the client. For example, BUMP can cater for differences between mobiles, laptops and desktops, but also factors such as whether the user is using network data (3G) or a WIFI.

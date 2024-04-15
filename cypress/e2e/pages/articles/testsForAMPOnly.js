@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
 import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
@@ -5,12 +6,6 @@ import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertion
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
-
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
-};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
@@ -73,11 +68,4 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
      */
     mostReadAssertions({ service, variant });
   });
-};
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };

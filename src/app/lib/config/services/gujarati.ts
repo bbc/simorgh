@@ -316,12 +316,17 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+      collectiveNewsroomText: 'બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'સમાચાર',
         url: '/gujarati',
+      },
+      {
+        title: 'લોકસભા ચૂંટણી 2024',
+        url: '/gujarati/topics/cg843q7vgq3t',
       },
       {
         title: 'ગુજરાત',

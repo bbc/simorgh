@@ -2629,6 +2629,7 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
           <div
             class="emotion-12"
+            data-testid="embed"
           >
             <div
               class="riddle2-wrapper"

@@ -1,5 +1,3 @@
-# InlineLink
-
 ## Description
 
 The `InlineLink` component is used to render link elements containting text. It intentionally does not render content using the `children` prop and instead uses a prop called `text` so that only a string of text can be passed in. This is to ensure that, for any external links, an `aria-label` can be rendered containing the text content with a localised "external" message to indicate to assistive technology users that the link they are reading will navigate away from a BBC domain.

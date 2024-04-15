@@ -3,11 +3,10 @@ import fetch from 'node-fetch';
 import Url from 'url-parse';
 import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 import MostReadPage from '.';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 
-const Component = ({ service, variant } = {}) => {
+const Component = (_, { service, variant }) => {
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -49,9 +48,7 @@ const Component = ({ service, variant } = {}) => {
 export default {
   Component,
   title: 'Pages/Most Read Page',
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  decorators: [withServicesDecorator({ defaultService: 'pidgin' })],
 };
 
-export const Example = ({ service, variant }) => (
-  <Component service={service} variant={variant} />
-);
+export const Example = Component;

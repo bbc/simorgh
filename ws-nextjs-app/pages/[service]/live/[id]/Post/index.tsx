@@ -93,7 +93,8 @@ const PostHeaderBanner = ({
 
 const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const isHeadline = headerBlock.type === 'headline';
-  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
+  const headingText =
+    headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   return (
     <>

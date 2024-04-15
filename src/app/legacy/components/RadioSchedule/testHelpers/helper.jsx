@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
-import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
+import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
@@ -45,7 +44,7 @@ export const renderProgramCard = ({
   duration = 'PT30M',
   durationLabel = 'Duration %duration%',
   startTime = 1566914061212,
-  displaySummary = boolean('show summary', true),
+  displaySummary = true,
   linkComponent = 'a',
   linkComponentAttr = 'href',
   id,
@@ -84,15 +83,15 @@ export const renderProgramCard = ({
 };
 
 export const renderRadioSchedule = ({
-  service = 'news',
+  withLongSummary = false,
+  linkComponent = 'a',
+  linkComponentAttr = 'href',
+  service,
   locale = 'en-gb',
   timezone = 'Europe/London',
   script = latin,
   dir = 'ltr',
-  withLongSummary = false,
   selectedService = 'news',
-  linkComponent = 'a',
-  linkComponentAttr = 'href',
 }) => {
   const nextLabel = dir === 'rtl' ? 'مباشر' : 'NEXT';
   const liveLabel = dir === 'rtl' ? 'مباشر' : 'LIVE';
@@ -100,21 +99,19 @@ export const renderRadioSchedule = ({
     dir === 'rtl' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
 
   return (
-    <ServiceContextProvider service={service} dir={dir} pageLang="ar">
-      <RadioSchedule
-        schedule={getSchedule(selectedService, withLongSummary)}
-        locale={locale}
-        timezone={timezone}
-        script={script}
-        service={service}
-        nextLabel={nextLabel}
-        liveLabel={liveLabel}
-        listenLabelTranslations={listenLabelTranslations}
-        durationLabel={durationLabel}
-        dir={dir}
-        linkComponent={linkComponent}
-        linkComponentAttr={linkComponentAttr}
-      />
-    </ServiceContextProvider>
+    <RadioSchedule
+      schedule={getSchedule(selectedService, withLongSummary)}
+      locale={locale}
+      timezone={timezone}
+      script={script}
+      service={service}
+      nextLabel={nextLabel}
+      liveLabel={liveLabel}
+      listenLabelTranslations={listenLabelTranslations}
+      durationLabel={durationLabel}
+      dir={dir}
+      linkComponent={linkComponent}
+      linkComponentAttr={linkComponentAttr}
+    />
   );
 };
