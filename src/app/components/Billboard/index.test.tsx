@@ -17,94 +17,90 @@ describe('Billboard', () => {
     jest.clearAllMocks();
   });
 
-  describe('for a curation with 1 summary', () => {
-    it('should render a section with role region', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          showLiveLabel
-        />,
-      );
-      const region = screen.getByRole('region');
-      expect(region).toBeInTheDocument();
-    });
+  it('should render a section with role region', () => {
+    render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        altText={summary.imageAlt}
+      />,
+    );
+    const region = screen.getByRole('region');
+    expect(region).toBeInTheDocument();
+  });
 
-    it('should have a heading with an id which matches the aria-labelledby attribute', () => {
-      const { getByRole } = render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          showLiveLabel
-        />,
-      );
-      const heading = screen.getByText(kyrgyzBillboard.title);
-      const messageBannerEl = getByRole('region');
-      expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
-        heading.getAttribute('id'),
-      );
-    });
+  it('should have a heading with an id which matches the aria-labelledby attribute', () => {
+    const { getByRole } = render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        altText={summary.imageAlt}
+      />,
+    );
+    const heading = screen.getByText(summary.title);
+    const messageBannerEl = getByRole('region');
+    expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
+      heading.getAttribute('id'),
+    );
+  });
 
-    it('should display the banner heading correctly as an H2', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          showLiveLabel
-        />,
-      );
-      expect(screen.getByText(kyrgyzBillboard.title).nodeName).toBe('H2');
-    });
+  it('should display the banner heading correctly as an H2', () => {
+    render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        eventTrackingData={eventTrackingData}
+        altText={summary.imageAlt}
+      />,
+    );
+    expect(screen.getByText(summary.title).nodeName).toBe('H2');
+  });
 
-    it('should display the banner subtext correctly as a Paragraph', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          showLiveLabel
-        />,
-      );
-      expect(screen.getByText(summary.description).nodeName).toBe('P');
-    });
+  it('should display the banner subtext correctly as a Paragraph', () => {
+    render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        altText={summary.imageAlt}
+      />,
+    );
+    expect(screen.getByText(summary.description).nodeName).toBe('P');
+  });
 
-    it('should render an masked image with the correct image src', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          showLiveLabel
-        />,
-      );
-      const maskedImage = screen.getByAltText('');
-      expect(maskedImage.getAttribute('src')).toEqual(
-        summary.imageUrl.replace('{width}', 'raw'),
-      );
-    });
+  it('should render an masked image with the correct image src', () => {
+    const { getByRole } = render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        altText={summary.imageAlt}
+      />,
+    );
+    const maskedImage = getByRole('img');
+    expect(maskedImage.getAttribute('src')).toEqual(summary.imageUrl);
+  });
 
-    it('should have an masked image with an empty alt text', () => {
-      render(
-        <Billboard
-          heading={kyrgyzBillboard.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          showLiveLabel
-        />,
-      );
-      const maskedImage = screen.getByAltText('');
-      expect(maskedImage).toBeInTheDocument();
-    });
+  it('should have an masked image with the correct alt text', () => {
+    const { getByAltText } = render(
+      <Billboard
+        heading={summary.title}
+        description={summary.description}
+        link={summary.link}
+        image={summary.imageUrl}
+        altText={summary.imageAlt}
+      />,
+    );
+    const maskedImage = getByAltText(summary.imageAlt);
+    expect(maskedImage).toBeInTheDocument();
   });
 
   describe('view tracking', () => {
@@ -113,12 +109,11 @@ describe('Billboard', () => {
     it('should not be enabled if event tracking data not provided', () => {
       render(
         <Billboard
-          heading={kyrgyzBillboard.title}
+          heading={summary.title}
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          showLiveLabel
+          altText={summary.imageAlt}
         />,
       );
 
@@ -128,12 +123,12 @@ describe('Billboard', () => {
     it('should register view tracker if event tracking data provided', () => {
       render(
         <Billboard
-          heading={kyrgyzBillboard.title}
+          heading={summary.title}
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
-          showLiveLabel
+          altText={summary.imageAlt}
         />,
       );
 
@@ -149,12 +144,11 @@ describe('Billboard', () => {
     it('should not be enabled if event tracking data not provided', () => {
       const { container } = render(
         <Billboard
-          heading={kyrgyzBillboard.title}
+          heading={summary.title}
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
-          eventTrackingData={eventTrackingData}
-          showLiveLabel
+          altText={summary.imageAlt}
         />,
       );
 
@@ -168,36 +162,80 @@ describe('Billboard', () => {
     it('should register click tracker if event tracking data provided', () => {
       render(
         <Billboard
-          heading={kyrgyzBillboard.title}
+          heading={summary.title}
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
-          showLiveLabel
+          altText={summary.imageAlt}
         />,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
     });
 
-    it('should handle a click event when call to action link clicked', () => {
+    it('should handle a click event when link clicked', () => {
       clickTrackerSpy.mockRestore();
 
       const { container } = render(
         <Billboard
-          heading={kyrgyzBillboard.title}
+          heading={summary.title}
           description={summary.description}
           link={summary.link}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
+          altText={summary.imageAlt}
+        />,
+      );
+
+      const [link] = container.getElementsByTagName('a');
+      fireEvent.click(link);
+
+      expect(link.onclick).toBeTruthy();
+    });
+  });
+
+  describe('With Live Label', () => {
+    it('should display a live pulse', () => {
+      const { getByTestId } = render(
+        <Billboard
+          heading={summary.title}
+          description={summary.description}
+          link={summary.link}
+          image={summary.imageUrl}
+          altText={summary.imageAlt}
           showLiveLabel
         />,
       );
 
-      const [callToActionLink] = container.getElementsByTagName('a');
-      fireEvent.click(callToActionLink);
+      const liveLabel = getByTestId('billboard-live-label');
+      expect(liveLabel).toBeInTheDocument();
 
-      expect(callToActionLink.onclick).toBeTruthy();
+      const [livePulse] = liveLabel.getElementsByTagName('svg');
+      expect(livePulse).toBeInTheDocument();
+    });
+
+    it('should display live text', () => {
+      const { getByTestId } = render(
+        <Billboard
+          heading={summary.title}
+          description={summary.description}
+          link={summary.link}
+          image={summary.imageUrl}
+          altText={summary.imageAlt}
+          showLiveLabel
+        />,
+        {
+          service: 'kyrgyz',
+        },
+      );
+
+      const liveLabel = getByTestId('billboard-live-label');
+      expect(liveLabel).toBeInTheDocument();
+
+      expect(liveLabel.textContent).toEqual(
+        expect.stringContaining(summary.title),
+      );
     });
   });
 });
