@@ -36,6 +36,14 @@ export default {
         position: 'relative',
         width: '100%',
       },
+      '::before': {
+        position: 'absolute',
+        // bottom: 0,
+        // top: 0,
+        // left: 0,
+        // right: 0,
+        content: '""',
+      },
     }),
   heading: ({ palette }: Theme) =>
     css({
