@@ -583,6 +583,40 @@ describe('Article Page', () => {
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
   });
   describe('when rendering a PGL page', () => {
+    it('should not render secondary column', async () => {
+      const pageDataWithSecondaryColumn = {
+        ...articlePglDataPidgin,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+
+      expect(queryByTestId('top-stories')).not.toBeInTheDocument();
+      expect(queryByTestId('features')).not.toBeInTheDocument();
+    });
+
+    it('should not render most read', async () => {
+      const pageDataWithMostRead = {
+        ...articlePglDataPidgin,
+        mostRead: newsMostReadData,
+      };
+
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={pageDataWithMostRead} />
+        </Context>,
+      );
+
+      expect(queryByTestId('most-read')).not.toBeInTheDocument();
+    });
+
     it('should add brandname to page title in atiAnalytics', async () => {
       ATIAnalytics.mockImplementation(() => <div />);
 
@@ -610,6 +644,7 @@ describe('Article Page', () => {
         {},
       );
     });
+
     it('should have schema metadata @type as Article', async () => {
       render(
         <Context service="pidgin">
