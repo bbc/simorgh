@@ -5,11 +5,18 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import KeyPoints from '.';
-import { singleKeyPoint, multipleKeyPoints, emptyKeyPoints } from './fixture';
+import {
+  singleKeyPoint,
+  multipleKeyPoints,
+  emptyKeyPoints,
+  multipleKeyPointsWithEmptyParagraph,
+} from './fixture';
 
 const singleKeyPointBlocks = singleKeyPoint.model.blocks;
 const multipleKeyPointsBlocks = multipleKeyPoints.model.blocks;
 const emptyKeyPointsBlocks = emptyKeyPoints.model.blocks;
+const multipleKeyPointsWithEmptyParagraphBlocks =
+  multipleKeyPointsWithEmptyParagraph.model.blocks;
 
 describe('Key Points', () => {
   it('should render a section with data-e2e, role and aria-label attributes', async () => {
@@ -66,5 +73,23 @@ describe('Key Points', () => {
     });
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
+  });
+
+  it('should render other key points if given a malformed block', async () => {
+    await act(async () => {
+      render(
+        <KeyPoints
+          // @ts-expect-error - we are testing the component with a malformed block
+          keyPointsContent={multipleKeyPointsWithEmptyParagraphBlocks}
+        />,
+      );
+    });
+
+    expect(screen.getByText('I am the summary box')).toBeInTheDocument();
+    expect(
+      screen.getByText('I need to include bulletpoints'),
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('list')).toBeInTheDocument();
+    expect(screen.getAllByRole('listitem')).toHaveLength(3);
   });
 });

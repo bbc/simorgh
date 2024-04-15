@@ -27,8 +27,11 @@ const KeyPoints = ({
   } = useContext(ServiceContext);
 
   const listItems = keyPointsContent?.[0]?.model?.blocks?.[0]?.model?.blocks;
+
   if (!listItems || listItems.length === 0) return null;
-  const hasSingleKeyPoint = listItems.length === 1;
+
+  const hasSingleKeyPoint =
+    listItems.length === 1 && listItems?.[0]?.model?.blocks;
   const singleKeyPointComponentsToRender = { paragraph: LegacyParagraph };
 
   const componentsToRender = () => ({
@@ -57,7 +60,7 @@ const KeyPoints = ({
       <div css={styles.bodyStyles}>
         {hasSingleKeyPoint ? (
           <Blocks
-            blocks={listItems[0].model.blocks}
+            blocks={listItems[0].model.blocks ?? []}
             componentsToRender={singleKeyPointComponentsToRender}
           />
         ) : (
