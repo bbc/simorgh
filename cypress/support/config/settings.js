@@ -1910,16 +1910,22 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/hausa/articles/c41rj1z261zo'],
-            enabled: false,
+            paths: [
+              '/hausa/labarai-51622389',
+              '/hausa/multimedia/2012/07/120712_click',
+            ],
+            enabled: true,
           },
           test: {
-            paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: false,
+            paths: [
+              '/hausa/23269030', // CPS MAP with video clip
+              '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: false,
+            paths: ['/hausa/23269030'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2023,20 +2029,20 @@ module.exports = () => ({
               '/hausa/labarai-51622389', // CPS MAP with video clip
               '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
               '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4705,24 +4711,22 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: [
-              '/pidgin/articles/cgwk9w4zlg8o',
-              '/pidgin/50913502?renderer_env=caflive',
-            ],
+            paths: ['/pidgin/articles/cgwk9w4zlg8o', '/pidgin/50913502'],
             enabled: true,
           },
           test: {
             paths: [
               '/pidgin/articles/cwl08rd38l6o',
               '/pidgin/articles/crrrkxz2k0ko',
-              '/pidgin/sport-23252855?renderer_env=caftest',
+              '/pidgin/sport-23252855',
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/pidgin/articles/cwl08rd38l6o',
-              '/pidgin/sport-23252855?renderer_env=caftest',
+              '/pidgin/sport-23252855',
+              '/pidgin/23248703',
             ],
             enabled: true,
           },
@@ -4779,7 +4783,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4788,15 +4792,15 @@ module.exports = () => ({
       photoGalleryPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/pidgin/50913502'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/pidgin/sport-23252855'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/pidgin/sport-23252855'],
             enabled: false,
           },
         },
@@ -6925,8 +6929,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/articles/c442rl3md0eo'],
-            enabled: false,
+            paths: ['/thai/23122810', '/thai/thailand-49950038'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -6969,7 +6973,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/23122810'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6987,7 +6991,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/thailand-49950038'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
