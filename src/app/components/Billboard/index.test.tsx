@@ -155,9 +155,9 @@ describe('Billboard', () => {
 
         expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
 
-        const [callToActionLink] = container.getElementsByTagName('a');
-        fireEvent.click(callToActionLink);
-        expect(callToActionLink.onclick).toBeFalsy();
+        const [link] = container.getElementsByTagName('a');
+        fireEvent.click(link);
+        expect(link.onclick).toBeFalsy();
       });
 
       it('should register click tracker if event tracking data provided', () => {
