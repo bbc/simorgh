@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -10,6 +11,7 @@ import LiveLabel from '../LiveLabel';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
 import Text from '../Text';
+import React from 'react';
 
 interface BillboardProps {
   heading: string;
@@ -30,11 +32,9 @@ const Banner = forwardRef(
       image,
       eventTrackingData,
       showLiveLabel,
-      lang,
     }: BillboardProps,
     viewRef,
   ) => {
-
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
     const id = `billboard-${idSanitiser(heading)}`;
@@ -43,7 +43,8 @@ const Banner = forwardRef(
       <section role="region" aria-labelledby={id} data-testid={id}>
         <a
           href={link}
-          css={styles.clickAreaContainer}
+          css={styles.link}
+          className="focusIndicatorDisplayBlock"
           onClick={clickTrackerHandler}
         >
           <div css={styles.headerContainer} ref={viewRef}>
@@ -57,15 +58,22 @@ const Banner = forwardRef(
               <div css={styles.textContainerWithImage}>
                 <Heading level={2} size="paragon" css={styles.heading} id={id}>
                   {showLiveLabel ? (
-                    <LiveLabel lang={lang} id={id}>
-                      {heading}
-                    </LiveLabel>
+                    <>
+                      <LiveLabel.Pulse
+                        width="24"
+                        height="24"
+                        css={styles.liveLabelPulse}
+                      />
+                      <LiveLabel.Text css={styles.liveLabelText}>
+                        {heading}
+                      </LiveLabel.Text>
+                    </>
                   ) : (
                     heading
                   )}
                 </Heading>
                 {description && (
-                  <Text as="p" css={[styles.description, showLiveLabel]}>
+                  <Text as="p" css={styles.description}>
                     {description}
                   </Text>
                 )}

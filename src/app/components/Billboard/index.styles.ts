@@ -2,9 +2,13 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  clickAreaContainer: () =>
+  link: ({ palette }: Theme) =>
     css({
-      cursor: 'pointer',
+      textDecoration: 'none',
+      '&:hover, &:focus': {
+        color: palette.WHITE,
+        textDecoration: 'underline',
+      },
     }),
   headerContainer: ({ mq }: Theme) =>
     css({
@@ -38,6 +42,29 @@ export default {
       paddingTop: '1.5rem',
       paddingBottom: '0.5rem',
       color: palette.WHITE,
+    }),
+  liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
+    css({
+      width: `${spacings.HALF + spacings.DOUBLE}rem`,
+      height: `${spacings.HALF + spacings.DOUBLE}rem`,
+      color: palette.LIVE_LIGHT,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        width: `${spacings.TRIPLE}rem`,
+        height: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: `${spacings.TRIPLE + spacings.HALF}rem`,
+        height: `${spacings.TRIPLE + spacings.HALF}rem`,
+      },
+      [mq.HIGH_CONTRAST]: {
+        color: 'canvasText',
+      },
+    }),
+  liveLabelText: ({ palette }: Theme) =>
+    css({
+      'span:first-of-type': {
+        color: palette.LIVE_LIGHT,
+      },
     }),
   textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
