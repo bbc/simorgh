@@ -10,6 +10,7 @@ This component renders a Billboard which comprises an H2 heading, a link contain
 | description          | string                 | A subtext description as a paragraph           |
 | link                 | string                 | An href link to the CTA link destination       |
 | image                | string                 | The URL of the chosen image                    |
+| altText              | string                 | The alt text of the chosen image               |
 | eventTrackingData    | eventTrackingMetadata  | Contains click and view tracking data for Piano|
 | showLiveLabel        | boolean                | Displays the live label for live promos        |
 
@@ -22,6 +23,7 @@ This component renders a Billboard which comprises an H2 heading, a link contain
         description="Description"
         link="https://www.bbc.com/ws/languages"
         image="https://ichef.bbci.co.uk/ace/ws/raw/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png"
+        altText="alt text"
         eventTrackingData={{ componentName: 'billboard' }}
         showLiveLabel
     />,
