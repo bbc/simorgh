@@ -127,28 +127,6 @@ export const testsThatFollowSmokeTestConfig = ({
       });
     }
 
-    describe('Media Player', () => {
-      it('should have a visible caption beneath a mediaplayer', () => {
-        // The news and pidgin test assets have media players and the others do not
-        if (service === 'news' || service === 'pidgin') {
-          const text =
-            service === 'news'
-              ? 'This is a video block containing a video about ants'
-              : 'They may be tiny, but us humans could learn a thing or two from ants.';
-          cy.get('figcaption')
-            .eq(1)
-            .within(() => {
-              cy.get('[data-testid="caption-paragraph"]')
-                .eq(0)
-                .should('be.visible')
-                .should('contain', text);
-            });
-        } else {
-          cy.log('No media player on this test asset');
-        }
-      });
-    });
-
     describe('Social Embeds', () => {
       const availableSocialMediaOnPage = [];
       const socialIsOnPage = social =>

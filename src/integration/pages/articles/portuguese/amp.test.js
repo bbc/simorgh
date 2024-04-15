@@ -4,9 +4,11 @@
  */
 
 import { runFlourishAmpEmbedTests } from '../../../common';
+import runInlineLinkTests from '../inlineLink';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runFlourishAmpEmbedTests();
+    runInlineLinkTests();
   });
 });

@@ -4,9 +4,11 @@
  */
 
 import runGistTests from '../gistTests';
+import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runGistTests();
+    runMediaPlayerCaptionTests();
   });
 });

@@ -4,7 +4,6 @@ import {
   runImageTests,
   runMostReadTests,
   runParagraphTests,
-  runInlineLinkTests,
 } from '../../common';
 
 export default service => {
@@ -12,7 +11,6 @@ export default service => {
   runTimestampTests();
   runImageTests();
   runParagraphTests();
-  runInlineLinkTests();
 
   if (service !== 'scotland') {
     runMostReadTests();
