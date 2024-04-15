@@ -18,7 +18,8 @@ const getMediaId = jsonData => {
 };
 
 export const getEmbedUrl = (jsonData, language, isAmp = false) => {
-  const prefix = jsonData.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
+  const prefix =
+    jsonData.promo.media?.type === 'legacyMedia' ? 'legacy' : 'cps';
 
   const embedUrl = [
     isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,

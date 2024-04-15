@@ -33,4 +33,10 @@ export const getArticleSection = path(['metadata', 'passport', 'genre']);
 
 export const getMentions = path(['metadata', 'tags', 'mentions']);
 
-export const getLang = path(['metadata', 'passport', 'language']);
+const getPassportLang = pageData =>
+  path(['metadata', 'passport', 'language'], pageData);
+
+const getMetadataLang = pageData => path(['metadata', 'language'], pageData);
+
+export const getLang = pageData =>
+  getPassportLang(pageData) || getMetadataLang(pageData);
