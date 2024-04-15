@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
@@ -26,22 +25,17 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
-  /** 
-   * 
+  /**
    * As an approach, to make the tests deterministic without relying on BFF, I ran against BFF and console logged the intros we're comparing against
    * - then hardcoded these here (todo: maybe we have a better place to store fixtures)
    * - then used the url matching to find the expected intro and assert it
-   * 
    * I think this is OK given we ran the tests on these specific pages, I also noticed that the same content exist on other environments.
    * The draw back is that if we add new pages with intro then we have to update this mapping manually (but I think that's ok because this is a "smoke" test for a subset anyhow so no need to add to the subset)
-   * 
    * Note also that for this AMP page, there is no window.SIMORGH_DATA
    * 
    * Without getting hold of the data, the alternative would to just check an intro exists regardless of its content but that's not great
    * and also the intros seems to not have any special selector (like data-intro or something) .. they're just a paragraph within main styled as bold
-   * 
    * I removed the second test because it was asserting the same thing as the first one (the values for intro and paragraph are the same)
-   * 
    * todo: remove todos, comments and consoles before final PR
    * todo: if we decide this approach is acceptable, then should move the harcoded list of intros to somewhere more suitable (fixtures, support?)
   */
@@ -58,8 +52,7 @@ export const testsThatFollowSmokeTestConfig = ({
   {
     page: '/russian/news-55041160.amp',
     intro: 'Тысячи жителей Владивостока, где на прошлой неделе прошел ледяной шторм, до сих пор остаются без света, тепла и воды. В регионе продолжает действовать режим чрезвычайной ситуации. Пока экстренные службы разбирают завалы и восстанавливают энергоснабжение, простые владивостокцы тоже не остаются в стороне.'
-  }
-  ]
+  }]
 
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
