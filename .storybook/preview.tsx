@@ -543,27 +543,32 @@ const preview: Preview = {
         },
         group1: {
           name: 'Group 1 (240px - 399px)',
-          styles: { width: '399px', height: '900px' },
+          styles: { width: '240px', height: '900px' },
+          type: 'mobile',
+        },
+        group1_320: {
+          name: 'Group 1 - 320px (240px - 399px)',
+          styles: { width: '320px', height: '900px' },
           type: 'mobile',
         },
         group2: {
           name: 'Group 2 (400px - 599px)',
-          styles: { width: '599px', height: '900px' },
+          styles: { width: '400px', height: '900px' },
           type: 'mobile',
         },
         group3: {
           name: 'Group 3 (600px - 899px)',
-          styles: { width: '899px', height: '900px' },
+          styles: { width: '600px', height: '900px' },
           type: 'mobile',
         },
         group4: {
           name: 'Group 4 (900px - 1007px)',
-          styles: { width: '1007px', height: '900px' },
+          styles: { width: '900px', height: '900px' },
           type: 'tablet',
         },
         group5: {
           name: 'Group 5 (1008px - 1279px)',
-          styles: { width: '1279px', height: '900px' },
+          styles: { width: '1008px', height: '900px' },
           type: 'desktop',
         },
         group6: {
