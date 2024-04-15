@@ -547,7 +547,7 @@ const preview: Preview = {
           type: 'mobile',
         },
         group1_320: {
-          name: 'Group 1 - 320px (240px - 399px)',
+          name: 'Group 1 - 320px (320px - 399px)',
           styles: { width: '320px', height: '900px' },
           type: 'mobile',
         },
