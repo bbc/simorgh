@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -13,6 +14,7 @@ import {
   articleDataPidginWithByline,
   promoSample,
   sampleRecommendations,
+  articlePglDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -31,6 +33,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
+import ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -38,6 +41,8 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
+
+jest.mock('../../components/ATIAnalytics');
 
 const recommendationSettings = {
   hasStoryRecommendations: true,
@@ -105,6 +110,9 @@ const Context = ({
 
 beforeEach(() => {
   fetch.resetMocks();
+  ATIAnalytics.mockImplementation(
+    jest.requireActual('../../components/ATIAnalytics').default,
+  );
 });
 
 describe('Article Page', () => {
@@ -573,5 +581,48 @@ describe('Article Page', () => {
     );
     expect(getByText('Get involved')).toBeInTheDocument();
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
+  });
+  describe('when rendering a PGL page', () => {
+    it('should add brandname to page title in atiAnalytics', async () => {
+      ATIAnalytics.mockImplementation(() => <div />);
+
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={articlePglDataPidgin} />
+        </Context>,
+      );
+
+      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+        {
+          atiData: {
+            categoryName: null,
+            contentId: 'urn:bbc:optimo:c0000000001o',
+            language: 'pcm',
+            ldpThingIds: null,
+            ldpThingLabels: null,
+            nationsProducer: null,
+            pageIdentifier: null,
+            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
+            timePublished: '2018-01-01T12:01:00.000Z',
+            timeUpdated: '2018-01-01T14:00:00.000Z',
+          },
+        },
+        {},
+      );
+    });
+    it('should have schema metadata @type as Article', async () => {
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={articlePglDataPidgin} />
+        </Context>,
+      );
+
+      const helmetContent = Helmet.peek();
+      const schemaType = JSON.parse(helmetContent.scriptTags[0].innerHTML)[
+        '@graph'
+      ][0]['@type'];
+
+      expect(schemaType).toEqual('Article');
+    });
   });
 });
