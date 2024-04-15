@@ -11,6 +11,7 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
+  const { title, description, link, imageUrl, imageAlt } = summary;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -19,11 +20,11 @@ describe('Billboard', () => {
   it('should render a section with role region', () => {
     render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
     const region = screen.getByRole('region');
@@ -33,14 +34,14 @@ describe('Billboard', () => {
   it('should have a heading with an id which matches the aria-labelledby attribute', () => {
     const { getByRole } = render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
-    const heading = screen.getByText(summary.title);
+    const heading = screen.getByText(title);
     const messageBannerEl = getByRole('region');
     expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
@@ -50,54 +51,54 @@ describe('Billboard', () => {
   it('should display the banner heading correctly as an H2', () => {
     render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
-    expect(screen.getByText(summary.title).nodeName).toBe('H2');
+    expect(screen.getByText(title).nodeName).toBe('H2');
   });
 
   it('should display the banner subtext correctly as a Paragraph', () => {
     render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
-    expect(screen.getByText(summary.description).nodeName).toBe('P');
+    expect(screen.getByText(description).nodeName).toBe('P');
   });
 
   it('should render an masked image with the correct image src', () => {
     const { getByRole } = render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(summary.imageUrl);
+    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
   });
 
   it('should have an masked image with the correct alt text', () => {
     const { getByAltText } = render(
       <Billboard
-        heading={summary.title}
-        description={summary.description}
-        link={summary.link}
-        image={summary.imageUrl}
-        altText={summary.imageAlt}
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
       />,
     );
-    const maskedImage = getByAltText(summary.imageAlt);
+    const maskedImage = getByAltText(imageAlt);
     expect(maskedImage).toBeInTheDocument();
   });
 
@@ -110,11 +111,11 @@ describe('Billboard', () => {
       it('should not be enabled if event tracking data not provided', () => {
         render(
           <Billboard
-            heading={summary.title}
-            description={summary.description}
-            link={summary.link}
-            image={summary.imageUrl}
-            altText={summary.imageAlt}
+            heading={title}
+            description={description}
+            link={link}
+            image={imageUrl}
+            altText={imageAlt}
           />,
         );
 
@@ -124,12 +125,12 @@ describe('Billboard', () => {
       it('should register view tracker if event tracking data provided', () => {
         render(
           <Billboard
-            heading={summary.title}
-            description={summary.description}
-            link={summary.link}
-            image={summary.imageUrl}
+            heading={title}
+            description={description}
+            link={link}
+            image={imageUrl}
             eventTrackingData={eventTrackingData}
-            altText={summary.imageAlt}
+            altText={imageAlt}
           />,
         );
 
@@ -145,30 +146,30 @@ describe('Billboard', () => {
       it('should not be enabled if event tracking data not provided', () => {
         const { container } = render(
           <Billboard
-            heading={summary.title}
-            description={summary.description}
-            link={summary.link}
-            image={summary.imageUrl}
-            altText={summary.imageAlt}
+            heading={title}
+            description={description}
+            link={link}
+            image={imageUrl}
+            altText={imageAlt}
           />,
         );
 
         expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
 
-        const [link] = container.getElementsByTagName('a');
-        fireEvent.click(link);
-        expect(link.onclick).toBeFalsy();
+        const [anchorTag] = container.getElementsByTagName('a');
+        fireEvent.click(anchorTag);
+        expect(anchorTag.onclick).toBeFalsy();
       });
 
       it('should register click tracker if event tracking data provided', () => {
         render(
           <Billboard
-            heading={summary.title}
-            description={summary.description}
-            link={summary.link}
-            image={summary.imageUrl}
+            heading={title}
+            description={description}
+            link={link}
+            image={imageUrl}
             eventTrackingData={eventTrackingData}
-            altText={summary.imageAlt}
+            altText={imageAlt}
           />,
         );
 
@@ -180,19 +181,19 @@ describe('Billboard', () => {
 
         const { container } = render(
           <Billboard
-            heading={summary.title}
-            description={summary.description}
-            link={summary.link}
-            image={summary.imageUrl}
+            heading={title}
+            description={description}
+            link={link}
+            image={imageUrl}
             eventTrackingData={eventTrackingData}
-            altText={summary.imageAlt}
+            altText={imageAlt}
           />,
         );
 
-        const [link] = container.getElementsByTagName('a');
-        fireEvent.click(link);
+        const [anchorTag] = container.getElementsByTagName('a');
+        fireEvent.click(anchorTag);
 
-        expect(link.onclick).toBeTruthy();
+        expect(anchorTag.onclick).toBeTruthy();
       });
     });
   });
@@ -201,11 +202,11 @@ describe('Billboard', () => {
     it('should display a live pulse', () => {
       const { getByTestId } = render(
         <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          altText={summary.imageAlt}
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
           showLiveLabel
         />,
       );
@@ -220,11 +221,11 @@ describe('Billboard', () => {
     it('should display live text', () => {
       const { getByTestId } = render(
         <Billboard
-          heading={summary.title}
-          description={summary.description}
-          link={summary.link}
-          image={summary.imageUrl}
-          altText={summary.imageAlt}
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
           showLiveLabel
         />,
         {
@@ -235,9 +236,7 @@ describe('Billboard', () => {
       const liveLabel = getByTestId('billboard-live-label');
       expect(liveLabel).toBeInTheDocument();
 
-      expect(liveLabel.textContent).toEqual(
-        expect.stringContaining(summary.title),
-      );
+      expect(liveLabel.textContent).toEqual(expect.stringContaining(title));
     });
   });
 });
