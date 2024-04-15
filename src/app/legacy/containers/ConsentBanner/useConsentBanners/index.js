@@ -60,7 +60,7 @@ const isChromatic = () =>
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
 const SAME_SITE_VALUE = 'None';
 
-const setPolicyCookie = ({ policy, explicit }) => {
+const setPolicyCookie = ({ policy, explicit, expires = null }) => {
   if (explicit) {
     // Use cookie oven to set cookie via http so Safari does not delete in 7 days
     setCookieOven(policy);
@@ -72,17 +72,19 @@ const setPolicyCookie = ({ policy, explicit }) => {
       name: POLICY_COOKIE,
       value: policy,
       sameSite: SAME_SITE_VALUE,
+      expires
     });
   }
 };
 
-const setUserDidSeePrivacyBanner = () => {
+const setUserDidSeePrivacyBanner = ( expires = null ) => {
   // prevent setting cookies on Chromatic so that snapshots are consistent
   if (!isChromatic()) {
     setCookie({
       name: PRIVACY_COOKIE,
       value: PRIVACY_COOKIE_CURRENT_VALUE,
       sameSite: SAME_SITE_VALUE,
+      expires,
     });
   }
 };
@@ -99,13 +101,14 @@ const setUserDidAcceptPolicy = () =>
     explicit: true,
   });
 
-const setUserDidDismissCookieBanner = isUK =>
+const setUserDidDismissCookieBanner = (isUK, expires = null) =>
   setCookie({
     name: EXPLICIT_COOKIE,
     value: isUK
       ? COOKIE_BANNER_EXPLICIT_CHOICE_MADE
       : COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK,
     sameSite: SAME_SITE_VALUE,
+    expires
   });
 
 const useConsentBanner = (
@@ -140,8 +143,9 @@ const useConsentBanner = (
     } else if (shouldShowCookieBanner) {
       dispatch(SHOW_COOKIE_BANNER);
     } else if (!showCookieBannerBasedOnCountry) {
-        setUserDidDismissCookieBanner(isUK);
+        setUserDidDismissCookieBanner(isUK, 1);
         setUserDidAcceptPolicy();
+        setUserDidSeePrivacyBanner(1);
     }
 
     if (!userHasPolicyCookie) {
