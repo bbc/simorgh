@@ -1,0 +1,1118 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
+          "contentType": "article-photo-gallery",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": null,
+          "timePublished": "2019-10-23T13:19:44.000Z",
+          "timeUpdated": "2019-10-23T13:19:44.000Z",
+          "producerName": "PIDGIN",
+          "producerId": "70"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/sport-23252855",
+        "locators": {
+          "assetUri": "/pidgin/sport-23252855",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
+          "assetId": "23252855",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23252855",
+          "curie": "http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"
+        },
+        "type": "PGL",
+        "createdBy": "pidgin-v6",
+        "language": "pcm",
+        "firstPublished": 1571836784000,
+        "lastPublished": 1571836784000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "pgl",
+          "counterName": "pidgin.sport.photo_gallery.23252855.page",
+          "cps_asset_id": "23252855",
+          "contentId": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "taggings": []
+        },
+        "blockTypes": ["image"],
+        "includeComments": false,
+        "siteUri": "/pidgin",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "e4c5d7b3",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1571836784000,
+                "lastPublished": 1571836784000
+              },
+              "position": [1]
+            },
+            {
+              "id": "f2b08b42",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ae549c5f",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7db7a1c8",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cf37d875",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Bill Clinton",
+                                  "blocks": [
+                                    {
+                                      "id": "f1752cbd",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Bill Clinton",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "bfe3ee72",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/1840E/test/_63724399_clinton.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Someone"
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "6d85ad2a",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "79c40c80",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "871d75bf",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "23f634a7",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Holy and Phil at NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "86982256",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Holy and Phil at NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "43b4ba2b",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Stuart C. Wilson"
+                    },
+                    "position": [3, 2]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "70ca6739",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b65044e8",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1eb5b9c1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "bfdd5c87",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "The guy from the bodyguard at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "e43e0e38",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "The guy from the bodyguard at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "34d2a083",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Joe Maher"
+                    },
+                    "position": [4, 2]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "051695d4",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "95c4754b",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d4abd859",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "600ed9d1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "6af90c8c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "ad9ce3ab",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Joe Maher"
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "5b37cd34",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "75858ecc",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "20dc0ee5",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0ea5c709",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ant and Dec at the NTA Awards",
+                                  "blocks": [
+                                    {
+                                      "id": "ea2fb8a0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ant and Dec at the NTA Awards",
+                                        "attributes": []
+                                      },
+                                      "position": [6, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  },
+                  {
+                    "id": "8528a537",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [6, 2]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "6b9b2f7e",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b1fa7181",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cf50c6ad",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "22346f54",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Someone at the NTA Awards",
+                                  "blocks": [
+                                    {
+                                      "id": "87f333bd",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Someone at the NTA Awards",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "eb85c423",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "af4ee6c4",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "dac80e6d",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1d193de6",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8fe0e7e7",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "c1d38a81",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "3155f466",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [8, 2]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            { "id": "aa643133", "type": "mpu", "model": {}, "position": [9] }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "PGL - Blood pressure drugs dey work better",
+          "headline": "PGL - Blood pressure drugs dey work better"
+        },
+        "locators": {
+          "assetUri": "/pidgin/sport-23252855",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
+          "assetId": "23252855",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23252855",
+          "curie": "http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"
+        },
+        "summary": "This is a test asset used in Simorgh, please do not edit it without asking."
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "shortHeadline": "ATMs across the country",
+            "headline": "ATMs across the country"
+          },
+          "locators": {
+            "assetUri": "/pidgin/23248287",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248287",
+            "curie": "http://www.bbc.co.uk/asset/cda3bf00-2939-1a46-b6c1-f4376b944663",
+            "assetId": "23248287"
+          },
+          "summary": "Here we have an article about a particular topic",
+          "timestamp": 1568109680000,
+          "language": "pcm",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "campaigns": [
+              {
+                "campaignId": "5ad8624cc93a9f000eecb252",
+                "campaignName": "DigiHub"
+              }
+            ],
+            "language": "pcm",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "locator": "urn:bbc:cps:curie:asset:cda3bf00-2939-1a46-b6c1-f4376b944663",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              }
+            ],
+            "schemaVersion": "1.2.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "pcm",
+                  "type": "formats"
+                }
+              ],
+              "contributor": [
+                {
+                  "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                  "type": "contributor"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ]
+            }
+          },
+          "indexImage": {
+            "id": "63721223",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+            "path": "/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "-",
+            "copyrightHolder": "-",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23248287",
+          "type": "cps"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c0ny73k281vo",
+            "canonicalUrl": "https://www.bbc.com/mundo/articles/c0ny73k281vo"
+          },
+          "timestamp": 1692108721110,
+          "suitableForSyndication": true,
+          "language": "es",
+          "headlines": {
+            "seoHeadline": "Template article headline",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Template article 4",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Template article 4",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Bird",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Bird",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 819,
+                    "height": 461,
+                    "locator": "4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "es",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "locator": "urn:bbc:optimo:asset:c0ny73k281vo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c0ny73k281vo",
+          "type": "optimo"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "headline": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78"
+          },
+          "locators": {
+            "assetUri": "/pidgin/23267825",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:877b3c91-b210-a84c-bf03-ab64f54bff8a",
+            "assetId": "23267825",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267825",
+            "curie": "http://www.bbc.co.uk/asset/877b3c91-b210-a84c-bf03-ab64f54bff8a"
+          },
+          "summary": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+          "timestamp": 1581940630000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "indexImage": {
+            "id": "63731484",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "path": "/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Joseph shabalala",
+            "caption": "Joseph shabalala",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23267825",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cvl1jnp2nrqo",
+            "canonicalUrl": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo"
+          },
+          "timestamp": 1666888370346,
+          "suitableForSyndication": true,
+          "language": "pcm",
+          "headlines": {
+            "seoHeadline": "Video",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Video Test",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Video Test",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {},
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pcm",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "locator": "urn:bbc:optimo:asset:cvl1jnp2nrqo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                  "type": "primaryMediaType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:cvl1jnp2nrqo",
+          "type": "optimo"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "How Lagos Dey Fight Lassa Fever",
+            "headline": "Lassa Fever: 100 LUTH Workers Dey Under Observation"
+          },
+          "locators": {
+            "assetUri": "/pidgin/tori-23146625",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
+            "curie": "http://www.bbc.co.uk/asset/fd1307eb-2887-1b40-b64c-d95841bdfebd",
+            "assetId": "23146625"
+          },
+          "summary": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+          "timestamp": 1502300525000,
+          "language": "pcm",
+          "indexImage": {
+            "id": "63586234",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A904/test/_63586234_lassalagos.jpg",
+            "path": "/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Nurses for LUTH isolation Center",
+            "caption": "Lassa Fever don show again for Nigeria",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
+            "headline": "Voters take to the polls in the Canadian election"
+          },
+          "locators": {
+            "assetUri": "/pidgin/media-23267821",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
+            "assetId": "23267821",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23267821",
+            "curie": "http://www.bbc.co.uk/asset/0f35c912-afc7-1a4b-9518-7853401c1149"
+          },
+          "summary": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+          "timestamp": 1581940273000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "media": {
+            "id": "p01p5qfc",
+            "subType": "clip",
+            "format": "video",
+            "title": "Justin Trudeau wins Canadian election with minority government",
+            "synopses": {
+              "short": "Voters take to the polls in the Canadian election",
+              "long": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+              "medium": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Canada's general election took place on Monday 22 October",
+            "versions": [
+              {
+                "versionId": "p01p5qff",
+                "types": ["Original"],
+                "duration": 67,
+                "durationISO8601": "PT1M7S",
+                "warnings": {},
+                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableFrom": 1571751302000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63731474",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/B935/test/_63731474_p01p5ql9.jpg",
+            "path": "/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Keyframe #2",
+            "copyrightHolder": "AFP",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/media-23267821",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Kojey Radical: Why gigs feel like football matches",
+            "headline": "Kojey Radical and guests discuss how to write about something you’ve not experienced."
+          },
+          "locators": {
+            "assetUri": "/pidgin/23267823",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:5649a73b-773b-5b45-9f3e-cb0ed14efb5b",
+            "assetId": "23267823",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267823",
+            "curie": "http://www.bbc.co.uk/asset/5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
+          },
+          "summary": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+          "timestamp": 1581940421000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "media": {
+            "id": "23267824",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "w3csz54v",
+            "entityType": "Episode",
+            "caption": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+            "statusCode": 410,
+            "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+            "type": "external_vpid"
+          },
+          "indexImage": {
+            "id": "63721223",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+            "path": "/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "-",
+            "copyrightHolder": "-",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23267823",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-04-15T10:19:58.538Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "items": [
+          {
+            "id": "8fd89a41-e39d-754b-aaa1-062f4d6595a0",
+            "rank": 1,
+            "title": "Fin - the secret Facebook group of Nigerian women 4",
+            "href": "/pidgin/tori-23135359",
+            "timestamp": "2017-06-21T13:47:09.000Z"
+          },
+          {
+            "id": "bcd1e840-1734-8e4c-a191-94a759296fa2",
+            "rank": 2,
+            "title": "Live Update: Voting Day for Kenya",
+            "href": "/pidgin/tori-23146452",
+            "timestamp": "2017-08-08T18:32:36.000Z"
+          },
+          {
+            "id": "b582d74a-439a-1741-befd-c7af2c57b9b2",
+            "rank": 3,
+            "title": "South Africa no Get Money for Army",
+            "href": "/pidgin/tori-23139944",
+            "timestamp": "2017-08-08T19:17:33.000Z"
+          },
+          {
+            "id": "a0d223d4-4142-a74e-941d-5821ca4a0330",
+            "rank": 4,
+            "title": "Kenya: Raila Odinga Don Reject Result",
+            "href": "/pidgin/tori-23146754",
+            "timestamp": "2017-08-09T12:08:56.000Z"
+          },
+          {
+            "id": "9f2e9c73-d22b-b14c-a557-bfdca715dd51",
+            "rank": 5,
+            "title": "Kaduna: Government Order More Police",
+            "href": "/pidgin/23141241",
+            "timestamp": "2017-08-08T20:08:29.000Z"
+          },
+          {
+            "id": "81faf17c-88dd-4047-801f-f218bc24d504",
+            "rank": 6,
+            "title": "Holi festival photos",
+            "href": "/pidgin/23203390",
+            "timestamp": "2018-06-07T13:30:44.000Z"
+          },
+          {
+            "id": "5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
+            "rank": 7,
+            "title": "Fin - the secret Facebook group of Nigerian women 18",
+            "href": "/pidgin/sport-23135581",
+            "timestamp": "2017-06-22T08:20:52.000Z"
+          },
+          {
+            "id": "4b211768-f9da-6b49-8677-5a5236153afe",
+            "rank": 8,
+            "title": "Water Solutions for traffic gridlock in Lagos",
+            "href": "/igbo/23170719",
+            "timestamp": "2017-12-08T08:39:21.000Z"
+          },
+          {
+            "id": "fbef465c-35ef-1c42-9286-39c895315d74",
+            "rank": 9,
+            "title": "Fin - the secret Facebook group of Nigerian women 17",
+            "href": "/pidgin/sport-23135580",
+            "timestamp": "2017-06-22T08:20:46.000Z"
+          },
+          {
+            "id": "bb173109-f21a-ee4f-a783-64b04cca43f7",
+            "rank": 10,
+            "title": "Fin - the secret Facebook group of Nigerian women 3",
+            "href": "/pidgin/tori-23135358",
+            "timestamp": "2017-06-21T13:47:03.000Z"
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
