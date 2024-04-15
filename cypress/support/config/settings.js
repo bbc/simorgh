@@ -4705,18 +4705,25 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
+            paths: [
+              '/pidgin/articles/cgwk9w4zlg8o',
+              '/pidgin/50913502?renderer_env=caflive',
+            ],
             enabled: true,
           },
           test: {
             paths: [
               '/pidgin/articles/cwl08rd38l6o',
               '/pidgin/articles/crrrkxz2k0ko',
+              '/pidgin/sport-23252855?renderer_env=caftest',
             ],
             enabled: true,
           },
           local: {
-            paths: ['/pidgin/articles/cwl08rd38l6o'],
+            paths: [
+              '/pidgin/articles/cwl08rd38l6o',
+              '/pidgin/sport-23252855?renderer_env=caftest',
+            ],
             enabled: true,
           },
         },
@@ -4781,19 +4788,19 @@ module.exports = () => ({
       photoGalleryPage: {
         environments: {
           live: {
-            paths: ['/pidgin/50913502'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           test: {
-            paths: ['/pidgin/sport-23252855'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
-            paths: ['/pidgin/sport-23252855'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       storyPage: {
         environments: {
