@@ -23,6 +23,7 @@ const Component = ({
       link="https://www.bbc.co.uk/ws/languages"
       image="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
       showLiveLabel={showLiveLabel}
+      altText="alt text"
     />
   );
 };
