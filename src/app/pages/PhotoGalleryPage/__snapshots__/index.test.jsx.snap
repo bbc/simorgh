@@ -561,9 +561,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -603,9 +605,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -645,9 +649,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -687,9 +693,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -729,9 +737,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -771,9 +781,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -813,9 +825,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -855,9 +869,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -897,9 +913,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -939,9 +957,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -981,9 +1001,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1023,9 +1045,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1065,9 +1089,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1107,9 +1133,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1149,9 +1177,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1877,9 +1907,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1919,9 +1951,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -1961,9 +1995,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2003,9 +2039,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2045,9 +2083,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2087,9 +2127,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2129,9 +2171,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2171,9 +2215,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2213,9 +2259,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2255,9 +2303,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2297,9 +2347,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2339,9 +2391,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2381,9 +2435,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2423,9 +2479,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -2465,9 +2523,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       Ibsa waa'ee suuraa, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -3927,9 +3987,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Dis year Bole festival title na Our taste, Our Culture and e hold on 3rd of August inside Port-Harcourt
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -3969,9 +4031,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Bole festival na di biggest food festival for di southern part of Nigeria wey dey attract many pipo from all ova di kontri
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4011,9 +4075,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       For Pitakwa, na must for Bole dish to get fish with pepper sauce plus also garnish am with vegetable and oda tins
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4053,9 +4119,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Different food exhibitors na im dey come di festival to showcase di many kind of Bole and fish delicacy
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4095,9 +4163,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Family, friends and odas dey get time to bond and enjoy dia selve during dis festival
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4137,9 +4207,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Di Bole festival dey celebrate one popular street food wey pitakwa pipo dey call Bole. Bole na mixture of roasted plantain and yam with fish and sauce.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4179,9 +4251,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Di Bole festival dey provide time for families to bond and jolly as pipo fit enjoy games, better music and dance
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4221,9 +4295,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Di theme for dis year Bole festival na “our taste, our culture”
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4263,9 +4339,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Di 2019 edition na di fourth time wey di festival dey hold
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4305,9 +4383,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Di Bole festival dey also celebrate foods and provide opportunity for pipo to Network
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -4347,9 +4427,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Different kind of games na part of di activities wey dey also take place during di Bole festival
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5365,9 +5447,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5422,9 +5506,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Holy and Phil at NTAs holding an award
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5479,9 +5565,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5536,9 +5624,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5593,9 +5683,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5650,9 +5742,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -5707,9 +5801,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       Wetin we call dis foto, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7183,9 +7279,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7240,9 +7338,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7297,9 +7397,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7354,9 +7456,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7411,9 +7515,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7468,9 +7574,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7525,9 +7633,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7582,9 +7692,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7639,9 +7751,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7696,9 +7810,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7753,9 +7869,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7810,9 +7928,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC ordusunun zabit və əsgərləri.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7867,9 +7987,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Gəncə yunkerlər məktəbinin zabit və kursantları.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7924,9 +8046,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -7981,9 +8105,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -8038,9 +8164,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -8095,9 +8223,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -8152,9 +8282,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>
@@ -8209,9 +8341,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       Şəklin alt yazısı, 
                     </span>
-                    <p>
+                    <span
+                      data-testid="caption-paragraph"
+                    >
                       Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.
-                    </p>
+                    </span>
                   </span>
                 </figcaption>
               </figure>

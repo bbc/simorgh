@@ -25,7 +25,6 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
-import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
 import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
@@ -455,34 +454,6 @@ describe('Routes', () => {
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
       ).toBeInTheDocument();
     }, 15000);
-
-    it('should route to and render an index page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/ukrainian/ukraine_in_russian';
-      fetch.mockResponse(
-        JSON.stringify({
-          ...indexPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'ukrainian',
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'ukrainian',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'В Украине введено военное положение, во многих городах, в том числе Киеве, слышны взрывы.';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
 
     it('should route to and render a feature index page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';

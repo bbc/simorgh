@@ -278,7 +278,6 @@ const baseServiceConfig = {
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
-    onIdxPage: false,
   },
   mostWatched: {
     header: 'Найпопулярніше',
@@ -287,7 +286,6 @@ const baseServiceConfig = {
   },
   radioSchedule: {
     hasRadioSchedule: false,
-    onIdxPage: false,
   },
   recommendations: {
     hasStoryRecommendations: false,
