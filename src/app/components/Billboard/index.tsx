@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -11,24 +11,25 @@ import LiveLabel from '../LiveLabel';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
 import Text from '../Text';
-import React from 'react';
 
 interface BillboardProps {
   heading: string;
-  description?: string;
-  link?: string;
+  description: string;
+  link: string;
   image: string;
+  altText: string;
   eventTrackingData?: EventTrackingMetadata;
-  showLiveLabel: boolean;
+  showLiveLabel?: boolean;
 }
 
-const Banner = forwardRef(
+const Billboard = forwardRef(
   (
     {
       heading,
       description,
       link,
       image,
+      altText,
       eventTrackingData,
       showLiveLabel,
     }: BillboardProps,
@@ -46,6 +47,7 @@ const Banner = forwardRef(
             <MaskedImage
               imageUrl={image}
               imageUrlTemplate={image}
+              altText={altText}
               imageWidth={660}
             />
             <div css={styles.textContainer}>
@@ -57,7 +59,7 @@ const Banner = forwardRef(
               >
                 <Heading level={2} size="paragon" css={styles.heading} id={id}>
                   {showLiveLabel ? (
-                    <>
+                    <div data-testid="billboard-live-label">
                       <LiveLabel.Pulse
                         width="24"
                         height="24"
@@ -66,7 +68,7 @@ const Banner = forwardRef(
                       <LiveLabel.Text css={styles.liveLabelText}>
                         {heading}
                       </LiveLabel.Text>
-                    </>
+                    </div>
                   ) : (
                     heading
                   )}
@@ -85,27 +87,27 @@ const Banner = forwardRef(
   },
 );
 
-const Billboard = ({
+export default ({
   heading,
   description,
   link,
   image,
+  altText,
   eventTrackingData,
   showLiveLabel,
 }: BillboardProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
-    <Banner
+    <Billboard
       heading={heading}
       description={description}
       link={link}
       image={image}
+      altText={altText}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
       showLiveLabel={showLiveLabel}
     />
   );
 };
-
-export default Billboard;
