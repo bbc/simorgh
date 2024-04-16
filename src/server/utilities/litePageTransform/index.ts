@@ -40,9 +40,16 @@ a{
   color:${GREY_10};
   position:relative;
   display:inline-flex;
+  align-items:center;
 
   svg {
-    padding-inline-end:0.25rem;
+    margin-inline-end:0.25rem;
+
+    + span {
+      > span {
+        margin-inline-end:0.5rem;
+      }
+    }
   }
 
   &:focus-visible{
