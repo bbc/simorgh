@@ -54,7 +54,7 @@ export const imageData = (image: ImageProps) =>
         height: image.height,
         locator: image.locator,
         originCode: 'cpsprodpb',
-        copyrightHolder: image.attribution,
+        copyrightHolder: 'source',
       },
     },
     blockContainingText('altText', image.alt),
