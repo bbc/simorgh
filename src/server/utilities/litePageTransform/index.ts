@@ -81,6 +81,9 @@ time{
   color:${GREY_6};
   font-size:0.875rem;
 }
+a + time {
+  display:block;
+}
 /* Custom classes */
 [data-lite-class=brand-wrapper]{
   background-color:${POSTBOX};
@@ -96,6 +99,9 @@ time{
 
     &:focus-visible{
       outline: 0.25rem solid ${WHITE};
+    }
+    &:focus-visible::after{
+      display:none;
     }
   }
 }
