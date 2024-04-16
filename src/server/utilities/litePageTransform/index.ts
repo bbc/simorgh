@@ -38,12 +38,21 @@ ol{
 }
 a{
   color:${GREY_10};
+  position:relative;
+  display:inline-flex;
 
   svg {
     padding-inline-end:0.25rem;
   }
 
   &:focus-visible{
+    outline:none;
+  }
+
+  &:focus-visible::after{
+    content:'';
+    position:absolute;
+    inset:0;
     outline: 0.25rem solid ${BLACK};
     box-shadow: none;
     outline-offset: 0.25rem;
@@ -156,7 +165,7 @@ a[data-lite-class=skipLink]{
   background-color:${WHITE};
   color:${EBON};
   text-decoration:none;
-  outline-offset:0;
+  border:0.1875rem solid ${BLACK};
 
   &:focus, &:active{
     display:block;
