@@ -39,6 +39,10 @@ ol{
 a{
   color:${GREY_10};
 
+  svg {
+    padding-inline-end:0.25rem;
+  }
+
   &:focus-visible{
     outline: 0.25rem solid ${BLACK};
     box-shadow: none;
@@ -53,7 +57,7 @@ button{
   }
 }
 p{
- > a{
+  a{
    text-decoration-color:${POSTBOX};
  } 
 }
