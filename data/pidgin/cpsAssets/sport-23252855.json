@@ -10,8 +10,8 @@
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
-          "pageIdentifier": null,
-          "pageTitle": null,
+          "pageIdentifier": "pidgin.sport.photo_gallery.23252855.page",
+          "pageTitle": "PGL - Blood pressure drugs dey work better",
           "timePublished": "2019-10-23T13:19:44.000Z",
           "timeUpdated": "2019-10-23T13:19:44.000Z",
           "producerName": "PIDGIN",
@@ -23,6 +23,7 @@
           "curieCpsUrn": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
           "assetId": "23252855",
           "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23252855",
+          "canonicalUrl": "https://www.bbc.com/pidgin/sport-23252855",
           "curie": "http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"
         },
         "type": "PGL",
@@ -47,16 +48,25 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
-          "cps_asset_type": "pgl",
-          "counterName": "pidgin.sport.photo_gallery.23252855.page",
           "cps_asset_id": "23252855",
-          "contentId": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1"
+          "page": "pidgin.sport.photo_gallery.23252855.page",
+          "contentId": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
+          "cps_asset_type": "pgl"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
           "taggings": []
         },
-        "blockTypes": ["image"],
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage"
+        ],
         "includeComments": false,
         "siteUri": "/pidgin",
         "allowAdvertising": true,
@@ -68,156 +78,105 @@
         "model": {
           "blocks": [
             {
-              "id": "d3081290",
+              "id": "4f4d3c26",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6be061a6",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "070119bf",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "PGL - Blood pressure drugs dey work better",
+                            "blocks": [
+                              {
+                                "id": "d88bba04",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "PGL - Blood pressure drugs dey work better",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "6afd6511",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1571836784000,
                 "lastPublished": 1571836784000
               },
-              "position": [1]
-            },
-            {
-              "id": "76a867ad",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "6ccd5988",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "51483fc9",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "c8201fc7",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Bill Clinton",
-                                  "blocks": [
-                                    {
-                                      "id": "349875ca",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Bill Clinton",
-                                        "attributes": []
-                                      },
-                                      "position": [2, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [2, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [2, 1]
-                  },
-                  {
-                    "id": "4112a0ef",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 549,
-                      "width": 976,
-                      "locator": "/cpsdevpb/1840E/test/_63724399_clinton.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "Someone"
-                    },
-                    "position": [2, 2]
-                  }
-                ]
-              },
               "position": [2]
             },
             {
-              "id": "5215910a",
-              "type": "image",
+              "id": "01fadb98",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b4a73bdc",
-                    "type": "altText",
+                    "id": "1af1bd32",
+                    "type": "paragraph",
                     "model": {
+                      "text": "This is a test asset used in Simorgh, please do not edit it without asking.",
                       "blocks": [
                         {
-                          "id": "46cecfd2",
-                          "type": "text",
+                          "id": "5214265d",
+                          "type": "fragment",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "58ed7e7f",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Holy and Phil at NTAs",
-                                  "blocks": [
-                                    {
-                                      "id": "85ad2d5b",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Holy and Phil at NTAs",
-                                        "attributes": []
-                                      },
-                                      "position": [3, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [3, 1, 1, 1]
-                              }
-                            ]
+                            "text": "This is a test asset used in Simorgh, please do not edit it without asking.",
+                            "attributes": []
                           },
                           "position": [3, 1, 1]
                         }
                       ]
                     },
                     "position": [3, 1]
-                  },
-                  {
-                    "id": "68cc8826",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 549,
-                      "width": 976,
-                      "locator": "/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "Stuart C. Wilson"
-                    },
-                    "position": [3, 2]
                   }
                 ]
               },
               "position": [3]
             },
             {
-              "id": "65a79c3d",
+              "id": "37746f05",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "69b27c20",
-                    "type": "altText",
+                    "id": "ec1e89e3",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "26e86d6e",
+                          "id": "4065c758",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "35f7e4af",
+                                "id": "dee98408",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "The guy from the bodyguard at the NTAs",
+                                  "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
                                   "blocks": [
                                     {
-                                      "id": "6837cbab",
+                                      "id": "0c3460e5",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "The guy from the bodyguard at the NTAs",
+                                        "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
                                         "attributes": []
                                       },
                                       "position": [4, 1, 1, 1, 1]
@@ -235,47 +194,86 @@
                     "position": [4, 1]
                   },
                   {
-                    "id": "d2955e00",
+                    "id": "06c2da5a",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "dea1a21f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1daa7646",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Bill Clinton",
+                                  "blocks": [
+                                    {
+                                      "id": "a9f2bc11",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Bill Clinton",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  },
+                  {
+                    "id": "80befaa8",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
                       "width": 976,
-                      "locator": "/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg",
+                      "locator": "1840E/test/_63724399_clinton.jpg",
+                      "href": "http://b.files.bbci.co.uk/1840E/test/_63724399_clinton.jpg",
                       "originCode": "cpsdevpb",
-                      "copyrightHolder": "Joe Maher"
+                      "copyrightHolder": "Someone",
+                      "suitableForSyndication": true
                     },
-                    "position": [4, 2]
+                    "position": [4, 3]
                   }
                 ]
               },
               "position": [4]
             },
             {
-              "id": "7dfa808a",
+              "id": "039b9681",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "93545b6a",
-                    "type": "altText",
+                    "id": "d2e59869",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9edd88e5",
+                          "id": "4a330712",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "01a0206c",
+                                "id": "858541fb",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "Some people at the NTAs",
+                                  "text": "Holy and Phil at NTAs holding an award",
                                   "blocks": [
                                     {
-                                      "id": "514ccf27",
+                                      "id": "63b147b5",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "Some people at the NTAs",
+                                        "text": "Holy and Phil at NTAs holding an award",
                                         "attributes": []
                                       },
                                       "position": [5, 1, 1, 1, 1]
@@ -293,47 +291,86 @@
                     "position": [5, 1]
                   },
                   {
-                    "id": "d5936bfc",
+                    "id": "6e7c40e0",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "554e0855",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c5287b2f",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Holy and Phil at NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "4535444d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Holy and Phil at NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "cffe854d",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
                       "width": 976,
-                      "locator": "/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg",
+                      "locator": "1552E/test/_63724378_gettyimages-1098040380.jpg",
+                      "href": "http://b.files.bbci.co.uk/1552E/test/_63724378_gettyimages-1098040380.jpg",
                       "originCode": "cpsdevpb",
-                      "copyrightHolder": "Joe Maher"
+                      "copyrightHolder": "Stuart C. Wilson",
+                      "suitableForSyndication": false
                     },
-                    "position": [5, 2]
+                    "position": [5, 3]
                   }
                 ]
               },
               "position": [5]
             },
             {
-              "id": "fb9f980e",
+              "id": "76871112",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "0584ec20",
-                    "type": "altText",
+                    "id": "5ab7e166",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3731526c",
+                          "id": "edf3e9bb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f63aa1ae",
+                                "id": "a97df6d7",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "Ant and Dec at the NTA Awards",
+                                  "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                   "blocks": [
                                     {
-                                      "id": "64110cae",
+                                      "id": "6ee1ed28",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "Ant and Dec at the NTA Awards",
+                                        "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                         "attributes": []
                                       },
                                       "position": [6, 1, 1, 1, 1]
@@ -351,47 +388,86 @@
                     "position": [6, 1]
                   },
                   {
-                    "id": "094964f1",
+                    "id": "69a0bdcb",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d9cb3329",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2ba21c05",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "The guy from the bodyguard at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "9b63dd0c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "The guy from the bodyguard at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [6, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 2]
+                  },
+                  {
+                    "id": "c95ff6fa",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
                       "width": 976,
-                      "locator": "/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg",
+                      "locator": "2096/test/_63724380_gettyimages-1098050396.jpg",
+                      "href": "http://b.files.bbci.co.uk/2096/test/_63724380_gettyimages-1098050396.jpg",
                       "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
+                      "copyrightHolder": "Joe Maher",
+                      "suitableForSyndication": false
                     },
-                    "position": [6, 2]
+                    "position": [6, 3]
                   }
                 ]
               },
               "position": [6]
             },
             {
-              "id": "833db389",
+              "id": "a9bd39fa",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "cac5362c",
-                    "type": "altText",
+                    "id": "56b90059",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1a2c77c9",
+                          "id": "652a9445",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "063a2794",
+                                "id": "6395955c",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "Someone at the NTA Awards",
+                                  "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                   "blocks": [
                                     {
-                                      "id": "8c3c28d9",
+                                      "id": "05f25988",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "Someone at the NTA Awards",
+                                        "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                         "attributes": []
                                       },
                                       "position": [7, 1, 1, 1, 1]
@@ -409,47 +485,86 @@
                     "position": [7, 1]
                   },
                   {
-                    "id": "13a8f6ca",
+                    "id": "9122c5da",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "335927b4",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4ca0fabb",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "cfe24d52",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 2]
+                  },
+                  {
+                    "id": "0dc8b0dc",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
                       "width": 976,
-                      "locator": "/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg",
+                      "locator": "729E/test/_63724392_gettyimages-1098075358.jpg",
+                      "href": "http://b.files.bbci.co.uk/729E/test/_63724392_gettyimages-1098075358.jpg",
                       "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
+                      "copyrightHolder": "Joe Maher",
+                      "suitableForSyndication": false
                     },
-                    "position": [7, 2]
+                    "position": [7, 3]
                   }
                 ]
               },
               "position": [7]
             },
             {
-              "id": "000be2e4",
+              "id": "e6ac0da9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "864dab08",
-                    "type": "altText",
+                    "id": "4aaf5f72",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "608a563d",
+                          "id": "366b6d88",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1057caed",
+                                "id": "b02de886",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "Some people at the NTAs",
+                                  "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                   "blocks": [
                                     {
-                                      "id": "68e56228",
+                                      "id": "7ccaf53c",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "Some people at the NTAs",
+                                        "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
                                         "attributes": []
                                       },
                                       "position": [8, 1, 1, 1, 1]
@@ -467,30 +582,259 @@
                     "position": [8, 1]
                   },
                   {
-                    "id": "07294a29",
+                    "id": "c5eb0054",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "051c47c0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4281a7ba",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ant and Dec at the NTA Awards",
+                                  "blocks": [
+                                    {
+                                      "id": "8f6817e9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ant and Dec at the NTA Awards",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 2]
+                  },
+                  {
+                    "id": "8bfffc5a",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
                       "width": 976,
-                      "locator": "/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg",
+                      "locator": "C0BE/test/_63724394_pa-34614410.jpg",
+                      "href": "http://b.files.bbci.co.uk/C0BE/test/_63724394_pa-34614410.jpg",
                       "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
                     },
-                    "position": [8, 2]
+                    "position": [8, 3]
                   }
                 ]
               },
               "position": [8]
             },
-            { "id": "ee6efd84", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "863e069b",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1ea4fceb",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0873cf2d",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5adf773c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
+                                  "blocks": [
+                                    {
+                                      "id": "d9291293",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "68681877",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "59330d4a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "05d586ca",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Someone at the NTA Awards",
+                                  "blocks": [
+                                    {
+                                      "id": "e5a3b10f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Someone at the NTA Awards",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
+                  },
+                  {
+                    "id": "93a9913c",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "10EDE/test/_63724396_pa-40773536.jpg",
+                      "href": "http://b.files.bbci.co.uk/10EDE/test/_63724396_pa-40773536.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [9, 3]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "f7ff5607",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d627a234",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1465156c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cf3a0b99",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
+                                  "blocks": [
+                                    {
+                                      "id": "1bbfebe5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "10ea62bd",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "44fb5bbe",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a5aee3f2",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "id": "63523479",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people at the NTAs",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  },
+                  {
+                    "id": "e2a8ef0f",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "15CFE/test/_63724398_pa-40775105.jpg",
+                      "href": "http://b.files.bbci.co.uk/15CFE/test/_63724398_pa-40775105.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [10, 3]
+                  }
+                ]
+              },
+              "position": [10]
+            },
+            { "id": "eb65a8f3", "type": "mpu", "model": {}, "position": [11] }
           ]
         }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "PGL - Blood pressure drugs dey work better",
-          "headline": "PGL - Blood pressure drugs dey work better"
-        },
         "locators": {
           "assetUri": "/pidgin/sport-23252855",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
@@ -498,7 +842,69 @@
           "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23252855",
           "curie": "http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"
         },
-        "summary": "This is a test asset used in Simorgh, please do not edit it without asking."
+        "headlines": {
+          "seoHeadline": "PGL - Blood pressure drugs dey work better",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "PGL - Blood pressure drugs dey work better",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "PGL - Blood pressure drugs dey work better",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is a test asset used in Simorgh, please do not edit it without asking.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is a test asset used in Simorgh, please do not edit it without asking.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Pidgin-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "PGL - Blood pressure drugs dey work better"
+          },
+          "assetType": "PGL",
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
@@ -1035,7 +1441,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2024-04-15T15:04:59.145Z",
+        "generated": "2024-04-16T12:49:56.787Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "items": [

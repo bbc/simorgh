@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import paths from 'ramda/src/paths';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -33,10 +34,14 @@ export const getArticleSection = path(['metadata', 'passport', 'genre']);
 
 export const getMentions = path(['metadata', 'tags', 'mentions']);
 
-const getPassportLang = pageData =>
-  path(['metadata', 'passport', 'language'], pageData);
+export const getLang = pageData => {
+  const [getPassportLang, getMetadataLang] = paths(
+    [
+      ['metadata', 'passport', 'language'],
+      ['metadata', 'language'],
+    ],
+    pageData,
+  );
 
-const getMetadataLang = pageData => path(['metadata', 'language'], pageData);
-
-export const getLang = pageData =>
-  getPassportLang(pageData) || getMetadataLang(pageData);
+  return getPassportLang || getMetadataLang;
+};

@@ -4789,7 +4789,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/pidgin/sport-23252856'],
+            paths: ['/pidgin/sport-23252855'],
             enabled: true,
           },
         },
@@ -6979,7 +6979,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/thailand-49950039'],
+            paths: ['/thai/thailand-49950038'],
             enabled: true,
           },
         },
