@@ -2049,16 +2049,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:0.20.2":
+"@esbuild/darwin-arm64@npm:0.20.2, @esbuild/darwin-arm64@npm:@esbuild/darwin-arm64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/darwin-arm64@npm:0.20.2"
+  checksum: 514b6c6c4ccd3f07fa13f1707c119dec70d027e14cb318c6b4f1768f3d9dbede4ff1d2421e720537f80d9d00a499b0bfa48c323db0c02ace048d0dc98b7ecfed
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.20.2":
+"@esbuild/darwin-x64@npm:0.20.2, @esbuild/darwin-x64@npm:@esbuild/darwin-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/darwin-x64@npm:0.20.2"
+  checksum: 9644b7bb7266a033ff16041b8066e6fcdabdf7d897b7f8163c3ff5cf531be3c2d41cee31789aab028af2217b1fb4f77f963136cc4d35a896954c0e1fc4e84204
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -2133,9 +2135,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.20.2":
+"@esbuild/linux-x64@npm:0.20.2, @esbuild/linux-x64@npm:@esbuild/linux-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-x64@npm:0.20.2"
+  checksum: 2f1357bac9a5156f9828a077ef96b36c41b501056de69ad95312dbcfa381d0fd071139b41d258b686c9d228f57e30b6fa216c00f8972dcf887cdfb82d823ab22
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -2684,6 +2687,7 @@ __metadata:
 "@next/swc-darwin-arm64@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/swc-darwin-arm64@npm:14.1.4"
+  checksum: 8924f3eed65943de541e44f7341ab65b5e90a554d72f99e112f124e33af67aac5ad16473f746bccc25192e0c893400de6ec76d31fd27fd43c177cb2bfc1d64a2
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -2691,6 +2695,7 @@ __metadata:
 "@next/swc-darwin-x64@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/swc-darwin-x64@npm:14.1.4"
+  checksum: f6e866ca1437b6a82f666e25b7f43549cb42b379a90bac9718e320b6fd70c4a2a283981dfc00663c873f0404180645114f8889f95a0f96b0d772ee6485fcfe84
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -15116,10 +15121,15 @@ __metadata:
     "@emotion/react": 11.11.4
     "@emotion/server": 11.11.0
     "@emotion/styled": 11.11.5
+    "@esbuild/darwin-arm64": "npm:@esbuild/darwin-arm64@npm:0.20.2"
+    "@esbuild/darwin-x64": "npm:@esbuild/darwin-x64@npm:0.20.2"
+    "@esbuild/linux-x64": "npm:@esbuild/linux-x64@npm:0.20.2"
     "@loadable/babel-plugin": 5.16.1
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
+    "@next/swc-darwin-arm64": "npm:14.1.4"
+    "@next/swc-darwin-x64": "npm:14.1.4"
     "@next/swc-linux-arm64-gnu": "npm:14.1.4"
     "@next/swc-linux-x64-gnu": "npm:14.1.4"
     "@optimizely/react-sdk": 2.9.2
