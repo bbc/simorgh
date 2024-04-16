@@ -14,6 +14,13 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
+import nodeLogger from '#lib/logger.node';
+import { SERVER_SIDE_REQUEST_FAILED } from '#lib/logger.const';
+import { INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
+import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
+import derivePageType from '../utilities/derivePageType';
+
+const logger = nodeLogger(__filename);
 
 type DocProps = {
   helmet: HelmetData;
@@ -24,10 +31,21 @@ type DocProps = {
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    const isApp = isAppPath(ctx.asPath || '');
+    const path = ctx.asPath || '';
+    const isApp = isAppPath(path);
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
+
+    if (ctx.res?.statusCode === INTERNAL_SERVER_ERROR) {
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status: INTERNAL_SERVER_ERROR,
+        message: ctx.res?.statusMessage,
+        url: path,
+        headers: removeSensitiveHeaders(ctx.req?.headers),
+        pageType: derivePageType(path),
+      });
+    }
 
     return {
       ...initialProps,
