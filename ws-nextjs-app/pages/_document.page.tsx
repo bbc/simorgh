@@ -32,6 +32,7 @@ const handleServerLogging = (ctx: DocumentContext) => {
   const headers = removeSensitiveHeaders(ctx.req?.headers);
   const pageType = derivePageType(url);
   const { statusCode } = ctx.res || {};
+  const { cause, message, name, stack } = ctx.err || {};
 
   switch (statusCode) {
     case OK:
@@ -50,13 +51,7 @@ const handleServerLogging = (ctx: DocumentContext) => {
       });
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: INTERNAL_SERVER_ERROR,
-        message: {
-          cause: ctx.err?.cause,
-          message: ctx.err?.message,
-          name: ctx.err?.name,
-          stack: ctx.err?.stack,
-          url,
-        },
+        message: { cause, message, name, stack, url },
         url,
         headers,
         pageType,
