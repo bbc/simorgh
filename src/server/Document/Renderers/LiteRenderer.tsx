@@ -68,10 +68,7 @@ export default function LitePageRenderer({
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
         {shouldUseEmotionStyles ? (
-          <style
-            data-emotion-css={ids?.join(' ')}
-            dangerouslySetInnerHTML={{ __html: styles || '' }}
-          />
+          <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
         ) : (
           <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
         )}
