@@ -15,8 +15,11 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 import nodeLogger from '#lib/logger.node';
-import { SERVER_SIDE_REQUEST_FAILED } from '#lib/logger.const';
-import { INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
+import {
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#lib/logger.const';
+import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -36,6 +39,14 @@ export default class AppDocument extends Document<DocProps> {
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
+
+    if (ctx.res?.statusCode === OK) {
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url: path,
+        headers: removeSensitiveHeaders(ctx.req?.headers),
+        pageType: derivePageType(path),
+      });
+    }
 
     if (ctx.res?.statusCode === INTERNAL_SERVER_ERROR) {
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
