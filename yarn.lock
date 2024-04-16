@@ -3831,9 +3831,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:15.0.1":
-  version: 15.0.1
-  resolution: "@testing-library/react@npm:15.0.1"
+"@testing-library/react@npm:15.0.2":
+  version: 15.0.2
+  resolution: "@testing-library/react@npm:15.0.2"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^10.0.0
@@ -3841,7 +3841,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 9992087563279bc975e5be69c0d380ecee84eb9e5c5e474b8b01b95804477ecae0978c61ded15821335d926fec058ab6c23442150584b0f19bee72c561ad19b7
+  checksum: 32be030a5540164403f3cd8d6f46ad907119b2bc0a0df43ce6b925cdd520d5003298d06af1ee94d7bd764f294d74e802b6509caf2cf10afc77e67407baa9c1fb
   languageName: node
   linkType: hard
 
@@ -4402,13 +4402,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.77":
-  version: 18.2.77
-  resolution: "@types/react@npm:18.2.77"
+"@types/react@npm:18.2.79":
+  version: 18.2.79
+  resolution: "@types/react@npm:18.2.79"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
-  checksum: 7014b06565228ffb24740e3b2cad168a52c1befa78f52f421c7eb61f86dcf599b494b8220c7bfc77882e19cb52440a1ed713d4a483dc8941c4ce824bd9729755
+  checksum: 85aa96e0e88725c84d8fc5f04f10a4da6a1f507dde33557ac9cc211414756867721264bfefd9e02bae1288ce2905351d949b652b931e734ea24519ee5c625138
   languageName: node
   linkType: hard
 
@@ -8285,14 +8285,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:2.15.1":
-  version: 2.15.1
-  resolution: "eslint-plugin-cypress@npm:2.15.1"
+"eslint-plugin-cypress@npm:2.15.2":
+  version: 2.15.2
+  resolution: "eslint-plugin-cypress@npm:2.15.2"
   dependencies:
     globals: ^13.20.0
   peerDependencies:
     eslint: ">= 3.2.1"
-  checksum: 3e66fa9a943fff52eaf3758250a63c2a0f8ffd60c50572beaf3688b33a55fbf0060d18ef32bc26abb57aef070517db827c22fd3d607582861d464970f95e550e
+  checksum: 0ffd8b9b39a22543917e2d9ae0cb7545ce5ea0eea171d947b6e015062f462bf66a208b7e711923d5ad1525f3fb03a3f35c7d978ab88352343302ea885ee98c1b
   languageName: node
   linkType: hard
 
@@ -15192,7 +15192,7 @@ __metadata:
     "@emotion/babel-plugin": 11.11.0
     "@emotion/jest": ^11.11.0
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 15.0.1
+    "@testing-library/react": 15.0.2
     babel-plugin-transform-rename-import: 2.3.0
     cypress: 13.7.3
     cypress-terminal-report: 6.0.1
@@ -15257,7 +15257,7 @@ __metadata:
     "@storybook/theming": 8.0.8
     "@testing-library/dom": 10.0.0
     "@testing-library/jest-dom": 6.4.2
-    "@testing-library/react": 15.0.1
+    "@testing-library/react": 15.0.2
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.5.2
     "@types/jest": 29.5.12
@@ -15266,7 +15266,7 @@ __metadata:
     "@types/loadable__component": 5.13.9
     "@types/node-fetch": ^2.6.11
     "@types/ramda": 0.28.15
-    "@types/react": 18.2.77
+    "@types/react": 18.2.79
     "@types/react-dom": 18.2.25
     "@types/react-helmet": 6.1.11
     "@types/react-lazyload": ^3.2.0
@@ -15301,7 +15301,7 @@ __metadata:
     eslint-config-airbnb: 18.2.1
     eslint-config-prettier: 9.1.0
     eslint-import-resolver-alias: 1.1.2
-    eslint-plugin-cypress: 2.15.1
+    eslint-plugin-cypress: 2.15.2
     eslint-plugin-import: 2.29.1
     eslint-plugin-json: 3.1.0
     eslint-plugin-jsx-a11y: 6.8.0
