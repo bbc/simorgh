@@ -6961,7 +6961,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/thai/23122811'], // CPS MAP with video clip
+            paths: ['/thai/23122810'], // CPS MAP with video clip
             enabled: true,
           },
         },
