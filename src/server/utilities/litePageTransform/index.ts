@@ -78,6 +78,21 @@ input, textarea {
   gap:0.625rem;
   margin-bottom:0.625rem;
 }
+[data-lite-class=pagination]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+[data-lite-class=pagination] > div{
+  display:none;
+}
+[data-lite-class=pagination] > ul{
+  display:flex;
+}
+[data-lite-class=pagination] > ul > li{
+  margin:0 0.625rem;
+}
 [data-lite-class=visuallyHiddenText]{
   clip-path:inset(100%);
   clip:rect(1px,1px,1px,1px);
