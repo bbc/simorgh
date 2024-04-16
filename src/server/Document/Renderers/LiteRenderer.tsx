@@ -21,7 +21,6 @@ export default function LitePageRenderer({
   html,
   title,
   url,
-  ids,
   styles,
 }: Props) {
   const helmetProps = {
