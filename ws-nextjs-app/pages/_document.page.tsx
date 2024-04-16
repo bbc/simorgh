@@ -25,6 +25,34 @@ import derivePageType from '../utilities/derivePageType';
 
 const logger = nodeLogger(__filename);
 
+const handleServerLogging = (ctx: DocumentContext) => {
+  const url = ctx.asPath || '';
+  const headers = removeSensitiveHeaders(ctx.req?.headers);
+  const pageType = derivePageType(url);
+  const { statusCode } = ctx.res || {};
+
+  switch (statusCode) {
+    case OK:
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url,
+        headers,
+        pageType,
+      });
+      break;
+    case INTERNAL_SERVER_ERROR:
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status: INTERNAL_SERVER_ERROR,
+        message: ctx.res?.statusMessage,
+        url,
+        headers,
+        pageType,
+      });
+      break;
+    default:
+      break;
+  }
+};
+
 type DocProps = {
   helmet: HelmetData;
   isApp: boolean;
@@ -40,26 +68,7 @@ export default class AppDocument extends Document<DocProps> {
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
-    const headers = removeSensitiveHeaders(ctx.req?.headers);
-    const pageType = derivePageType(url);
-
-    if (ctx.res?.statusCode === OK) {
-      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-        url,
-        headers,
-        pageType,
-      });
-    }
-
-    if (ctx.res?.statusCode === INTERNAL_SERVER_ERROR) {
-      logger.error(SERVER_SIDE_REQUEST_FAILED, {
-        status: INTERNAL_SERVER_ERROR,
-        message: ctx.res?.statusMessage,
-        url,
-        headers,
-        pageType,
-      });
-    }
+    handleServerLogging(ctx);
 
     return {
       ...initialProps,
