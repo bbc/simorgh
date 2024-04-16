@@ -944,6 +944,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2341,6 +2342,7 @@ exports[`Media Asset Page should render component 1`] = `
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

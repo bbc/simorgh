@@ -212,6 +212,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -334,6 +335,7 @@ exports[`Image with data should render an image with other originCode - this wou
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

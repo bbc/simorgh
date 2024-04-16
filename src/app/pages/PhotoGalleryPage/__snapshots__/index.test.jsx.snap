@@ -5246,6 +5246,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -6381,6 +6382,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
