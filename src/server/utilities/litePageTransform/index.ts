@@ -7,6 +7,7 @@ import {
   POSTBOX,
   BLACK,
   WHITE,
+  LIVE_DARK,
 } from '#app/components/ThemeProvider/palette';
 import { ReactElement } from 'react';
 
@@ -39,18 +40,7 @@ ol{
 a{
   color:${GREY_10};
   position:relative;
-  display:inline-flex;
-  align-items:center;
-
-  svg {
-    margin-inline-end:0.25rem;
-
-    + span {
-      > span {
-        margin-inline-end:0.5rem;
-      }
-    }
-  }
+  display:inline-block;
 
   &:focus-visible{
     outline:none;
@@ -70,6 +60,21 @@ p{
    text-decoration-color:${POSTBOX};
  } 
 }
+h3{
+  a{
+    svg {
+      fill:${LIVE_DARK};
+      margin-inline-end:0.25rem;
+  
+      + span {
+        > span {
+          margin-inline-end:0.5rem;
+          color:${LIVE_DARK};
+        }
+      }
+    }
+  }
+}
 input, textarea {
   display:block;
 }
@@ -83,6 +88,9 @@ time{
 }
 a + time {
   display:block;
+}
+svg + time {
+  margin-inline-start:0.5rem;
 }
 /* Custom classes */
 [data-lite-class=brand-wrapper]{
