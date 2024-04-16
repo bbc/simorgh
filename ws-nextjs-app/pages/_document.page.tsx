@@ -20,6 +20,8 @@ import {
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
 import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -40,6 +42,12 @@ const handleServerLogging = (ctx: DocumentContext) => {
       });
       break;
     case INTERNAL_SERVER_ERROR:
+      sendCustomMetric({
+        metricName: NON_200_RESPONSE,
+        statusCode,
+        pageType,
+        requestUrl: url,
+      });
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: INTERNAL_SERVER_ERROR,
         message: ctx.res?.statusMessage,
