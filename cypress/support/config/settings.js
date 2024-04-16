@@ -2034,7 +2034,7 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/hausa/23269031', // CPS MAP with video clip
+              '/hausa/23269030', // CPS MAP with video clip
             ],
             enabled: true,
           },
@@ -4771,7 +4771,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/pidgin/23248704'], // CPS MAP with video clip
+            paths: ['/pidgin/23248703'], // CPS MAP with video clip
             enabled: true,
           },
         },
@@ -4789,7 +4789,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/pidgin/sport-23252856'],
+            paths: ['/pidgin/sport-23252855'],
             enabled: true,
           },
         },
@@ -6961,7 +6961,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['thai/international-55160422'],
+            paths: ['/thai/23122811'], // CPS MAP with video clip
             enabled: true,
           },
         },
