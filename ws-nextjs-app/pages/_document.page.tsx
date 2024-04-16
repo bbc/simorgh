@@ -50,7 +50,13 @@ const handleServerLogging = (ctx: DocumentContext) => {
       });
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: INTERNAL_SERVER_ERROR,
-        message: ctx.res?.statusMessage,
+        message: {
+          cause: ctx.err?.cause,
+          message: ctx.err?.message,
+          name: ctx.err?.name,
+          stack: ctx.err?.stack,
+          url,
+        },
         url,
         headers,
         pageType,
