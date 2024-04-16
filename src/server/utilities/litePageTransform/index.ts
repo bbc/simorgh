@@ -2,6 +2,7 @@ import * as cheerio from 'cheerio';
 import {
   EBON,
   GREY_3,
+  GREY_6,
   GREY_10,
   POSTBOX,
   BLACK,
@@ -26,6 +27,9 @@ ul{
   padding-inline-start:0rem;
   list-style-type:none;
 }
+ul:not([data-lite-class=nav-list]) > li, ol > li {
+  margin:1rem 0;
+}
 ol{
   padding-inline-start:0.325rem;
   list-style-type:none;
@@ -33,7 +37,7 @@ ol{
 a{
   color:${GREY_10};
 }
-p:not([data-lite-class=footer-copyright]) > a {
+p > a {
   text-decoration-color:${POSTBOX};
 }
 input, textarea {
@@ -42,6 +46,10 @@ input, textarea {
 #brandSvgHeader,#brandSvgFooter{
   fill:${WHITE};
   height:1.5rem;
+}
+time{
+  color:${GREY_6};
+  font-size:0.875rem;
 }
 /* Custom classes */
 [data-lite-class=brand-wrapper]{
