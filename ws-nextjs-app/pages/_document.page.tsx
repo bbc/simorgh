@@ -40,26 +40,26 @@ export default class AppDocument extends Document<DocProps> {
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
-   const headers = removeSensitiveHeaders(ctx.req?.headers);
-   const pageType = derivePageType(path);
+    const headers = removeSensitiveHeaders(ctx.req?.headers);
+    const pageType = derivePageType(path);
 
-   if (ctx.res?.statusCode === OK) {
-     logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-       url: path,
-       headers,
-       pageType,
-     });
-   }
+    if (ctx.res?.statusCode === OK) {
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url: path,
+        headers,
+        pageType,
+      });
+    }
 
-   if (ctx.res?.statusCode === INTERNAL_SERVER_ERROR) {
-     logger.error(SERVER_SIDE_REQUEST_FAILED, {
-       status: INTERNAL_SERVER_ERROR,
-       message: ctx.res?.statusMessage,
-       url: path,
-       headers,
-       pageType,
-     });
-   }
+    if (ctx.res?.statusCode === INTERNAL_SERVER_ERROR) {
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status: INTERNAL_SERVER_ERROR,
+        message: ctx.res?.statusMessage,
+        url: path,
+        headers,
+        pageType,
+      });
+    }
 
     return {
       ...initialProps,
