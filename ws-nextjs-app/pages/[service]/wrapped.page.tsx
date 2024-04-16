@@ -1,5 +1,8 @@
+/** @jsx jsx */
+
 import { GetServerSideProps } from 'next';
 import { useEffect } from "react"
+import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
@@ -7,6 +10,7 @@ import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 
+import styles from './wrappedStyles';
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
@@ -22,7 +26,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import getAgent from '../../../utilities/undiciAgent';
 
 import extractHeaders from '../../../src/server/utilities/extractHeaders';
-
+console.log('styles', styles)
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
   page?: string;
@@ -112,7 +116,7 @@ const pageLayout = () => {
       average.innerText = new Intl.NumberFormat().format(totalWords / pageTypeCounts);
       const topics = Object.keys(wsWrapped[thisYear].topicCounts).sort((a, b) => {
         return wsWrapped[thisYear].topicCounts[a] < wsWrapped[thisYear].topicCounts[b];
-      }).slice(0, 3);
+      }).slice(0, 5);
       const topiclist = document.getElementById('topiclist'); 
       topiclist.innerHTML = '';
       topics.forEach(topic => {
@@ -120,16 +124,51 @@ const pageLayout = () => {
         listitem.innerText = topic;
         topiclist.appendChild(listitem);
       });
+      const graph = document.getElementById('graph'); 
+      graph.innerHTML = '';
+      graph.style.height = "200px";
+      graph.style.position = "relative";
+      graph.style.margin = "20px 0";
+      const monthValues = [];
+      const graphMonths = wsWrapped[thisYear].byMonth;
+      for(let i = 1; i <= 12; i++) {
+        monthValues[i] = 0;
+        if (graphMonths[i]) {
+            monthValues[i] = graphMonths[i];
+        }
+      }
+      const graphMax = Math.max(...Object.values(monthValues));
+      monthValues.forEach((month, index) => {
+        const div = document.createElement('div');
+        div.style.height = `${200 * (month / graphMax)}px`;
+        div.style.width = "8%";
+        div.style.float = "left";
+        div.style.marginRight = "2px";
+        div.style.backgroundColor = "#B80000";
+        div.style.position = "absolute";
+        div.style.bottom = "0";
+        div.style.left = `calc(${(index - 1) * 8}% + ${(index - 1) * 2}px)`;
+        graph.appendChild(div);
+      });
     }, [])
     return (
       <>
         <main>
-          <h1>WS Wrapped</h1>
-          <div>
-            <h2>Time on BBC</h2>
-            <p>So far this year you have spent <span id="timespent"></span> on the BBC.com site and read <span id="words"></span> words on <span id="article"></span> articles, at an average of <span id="average"></span> words per article.</p>
-            <p>Your most popular article topics were: </p>
-            <ol id="topiclist"></ol>
+          <div css={styles.outerGrid}>
+            <div css={styles.wideSection}>
+              <h1>WS Wrapped</h1>
+              <div>
+                <h2>Time on BBC</h2>
+                <p>So far this year you have spent <span id="timespent"></span> on the BBC.com site and read <span id="words"></span> words on <span id="article"></span> articles, at an average of <span id="average"></span> words per article.</p>
+                <p>Your most popular article topics were: </p>
+                <ol id="topiclist"></ol>
+                <h2>Over time</h2>
+                <p>This is how many articles you read per month</p>
+                <div id="graph" style={{ width: "100%" }}>
+            
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </>
