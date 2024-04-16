@@ -20,7 +20,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType, variant }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
@@ -80,7 +84,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType, variant }) =
     }
 
     // eslint-disable-next-line no-only-tests/no-only-tests
-    describe.only('Social Embeds', () => {
+    describe('Social Embeds', () => {
       let testAssetId;
       before(() => {
         cy.url().then(url => {
