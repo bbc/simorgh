@@ -34,18 +34,18 @@ type DocProps = {
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    const path = ctx.asPath || '';
-    const isApp = isAppPath(path);
+    const url = ctx.asPath || '';
+    const isApp = isAppPath(url);
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
     const headers = removeSensitiveHeaders(ctx.req?.headers);
-    const pageType = derivePageType(path);
+    const pageType = derivePageType(url);
 
     if (ctx.res?.statusCode === OK) {
       logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-        url: path,
+        url,
         headers,
         pageType,
       });
@@ -55,7 +55,7 @@ export default class AppDocument extends Document<DocProps> {
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: INTERNAL_SERVER_ERROR,
         message: ctx.res?.statusMessage,
-        url: path,
+        url,
         headers,
         pageType,
       });
