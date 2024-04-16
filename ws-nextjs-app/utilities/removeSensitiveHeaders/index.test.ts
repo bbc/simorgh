@@ -1,6 +1,10 @@
 import removeSensitiveHeaders from '.';
 
 describe('removeSensitiveHeaders', () => {
+  beforeEach(() => {
+    process.env.SENSITIVE_HTTP_HEADERS = '';
+  });
+
   it('should return an empty object if headers is undefined', () => {
     const headers = undefined;
     const result = removeSensitiveHeaders(headers);
@@ -18,8 +22,6 @@ describe('removeSensitiveHeaders', () => {
 
     const result = removeSensitiveHeaders(headers);
 
-    expect(result).toEqual({
-      'X-Forwarded-For': '',
-    });
+    expect(result).toEqual({ 'X-Forwarded-For': '' });
   });
 });

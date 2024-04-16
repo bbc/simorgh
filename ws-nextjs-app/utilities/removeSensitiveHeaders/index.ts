@@ -11,9 +11,7 @@ export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
   const headersCopy = { ...headers };
 
   sensitiveHeadersArray?.forEach(header => {
-    if (headersCopy[header]) {
-      delete headersCopy[header];
-    }
+    if (headersCopy[header]) delete headersCopy[header];
   });
 
   return headersCopy;
