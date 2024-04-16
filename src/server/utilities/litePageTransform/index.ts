@@ -27,8 +27,10 @@ ul{
   padding-inline-start:0rem;
   list-style-type:none;
 }
-ul:not([data-lite-class=nav-list]) > li, ol > li {
-  margin:1rem 0;
+ul:not([data-lite-class=nav-list]), ol {
+  > li{
+    margin:1rem 0;
+  }
 }
 ol{
   padding-inline-start:0.325rem;
@@ -36,9 +38,24 @@ ol{
 }
 a{
   color:${GREY_10};
+
+  &:focus-visible{
+    outline: 0.25rem solid ${BLACK};
+    box-shadow: none;
+    outline-offset: 0.25rem;
+  }
 }
-p > a {
-  text-decoration-color:${POSTBOX};
+button{
+  &:focus-visible{
+    outline: 0.25rem solid ${BLACK};
+    box-shadow: none;
+    outline-offset: 0.25rem;
+  }
+}
+p{
+ > a{
+   text-decoration-color:${POSTBOX};
+ } 
 }
 input, textarea {
   display:block;
@@ -60,9 +77,14 @@ time{
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-[data-lite-class=svg-wrapper] a:first-of-type{
-  display:flex;
+
+  a:first-of-type{
+    display:flex; 
+
+    &:focus-visible{
+      outline: 0.25rem solid ${WHITE};
+    }
+  }
 }
 [data-lite-class=main-content]{
   padding:0 ${CONTENT_PADDING}rem;
@@ -80,25 +102,32 @@ time{
   margin:0;
   padding: 1rem;
 }
-[data-lite-class=most-read-list] li > div{
-  display:flex;
-  flex-direction:row;
-  gap:0.625rem;
-  margin-bottom:0.625rem;
+[data-lite-class=most-read-list]{
+  > li{
+    > div {
+      display:flex;
+      flex-direction:row;
+      gap:0.625rem;
+      margin-bottom:0.625rem;
+    }
+  }
 }
 [data-lite-class=pagination]{
   display: flex;
   align-items: center;
   margin: 1rem 0;
-}
-[data-lite-class=pagination] > div{
-  display:none;
-}
-[data-lite-class=pagination] > ul{
-  display:flex;
-}
-[data-lite-class=pagination] > ul > li{
-  margin:0 0.625rem;
+
+  > div {
+    display:none;
+  }
+
+  > ul {
+    display:flex;
+
+    > li {
+      margin:0 0.625rem;
+    }
+  }
 }
 [data-lite-class=visuallyHiddenText]{
   clip-path:inset(100%);
@@ -112,7 +141,7 @@ time{
 [data-lite-class=analytics-pixel]{
   position:absolute;
 }
-[data-lite-class=skipLink]{
+a[data-lite-class=skipLink]{
   position:absolute;
   clip-path:inset(100%);
   clip:rect(1px,1px,1px,1px);
@@ -121,16 +150,17 @@ time{
   overflow:hidden;
   padding:0.75rem 0.5rem;
   background-color:${WHITE};
-  border:0.1875rem solid ${BLACK};
   color:${EBON};
   text-decoration:none;
-}
-[data-lite-class=skipLink]:focus,[data-lite-class=skipLink]:active{
-  display:block;
-  clip-path:none;
-  clip:auto;
-  height:auto;
-  width:auto;
+  outline-offset:0;
+
+  &:focus, &:active{
+    display:block;
+    clip-path:none;
+    clip:auto;
+    height:auto;
+    width:auto;
+  }
 }
 `;
 
