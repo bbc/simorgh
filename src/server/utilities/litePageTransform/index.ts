@@ -80,7 +80,6 @@ input, textarea {
 }
 [data-lite-class=pagination]{
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 1rem 0;
 }
