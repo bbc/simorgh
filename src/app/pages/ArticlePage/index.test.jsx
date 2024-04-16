@@ -15,6 +15,7 @@ import {
   promoSample,
   sampleRecommendations,
   articlePglDataPidgin,
+  articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -658,6 +659,35 @@ describe('Article Page', () => {
       ][0]['@type'];
 
       expect(schemaType).toEqual('Article');
+    });
+  });
+  describe('when rendering an STY page', () => {
+    it('should add brandname to page title in atiAnalytics', async () => {
+      ATIAnalytics.mockImplementation(() => <div />);
+
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={articleStyDataPidgin} />
+        </Context>,
+      );
+
+      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+        {
+          atiData: {
+            categoryName: null,
+            contentId: 'urn:bbc:optimo:c0000000001o',
+            language: 'pcm',
+            ldpThingIds: null,
+            ldpThingLabels: null,
+            nationsProducer: null,
+            pageIdentifier: null,
+            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
+            timePublished: '2018-01-01T12:01:00.000Z',
+            timeUpdated: '2018-01-01T14:00:00.000Z',
+          },
+        },
+        {},
+      );
     });
   });
 });

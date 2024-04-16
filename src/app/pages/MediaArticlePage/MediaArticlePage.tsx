@@ -71,8 +71,12 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -117,6 +121,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   } = pageData;
 
   const isMap = type === 'MAP';
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -189,7 +198,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}

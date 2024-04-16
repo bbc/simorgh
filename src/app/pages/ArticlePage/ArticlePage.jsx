@@ -108,6 +108,8 @@ const ArticlePage = ({ pageData }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
   const isPGL = pageData?.metadata?.type === 'PGL';
+  const isSTY = pageData?.metadata?.type === 'STY';
+  const isCPS = isPGL || isSTY;
 
   const {
     metadata: { atiAnalytics },
@@ -116,7 +118,7 @@ const ArticlePage = ({ pageData }) => {
 
   const atiData = {
     ...atiAnalytics,
-    ...(isPGL && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
   const componentsToRender = {
