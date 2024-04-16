@@ -58,13 +58,6 @@ a{
     outline-offset: 0.25rem;
   }
 }
-button{
-  &:focus-visible{
-    outline: 0.25rem solid ${BLACK};
-    box-shadow: none;
-    outline-offset: 0.25rem;
-  }
-}
 p{
   a{
    text-decoration-color:${POSTBOX};
