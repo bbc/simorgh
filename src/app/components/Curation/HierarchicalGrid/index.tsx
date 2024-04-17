@@ -36,7 +36,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
 }: CurationGridProps) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
@@ -48,7 +48,11 @@ const HiearchicalGrid = ({
   const promoItems = summaries.slice(0, 12);
   return (
     <div data-testid="hierarchical-grid">
-      <ul role="list" css={styles.list} data-testid="topic-promos">
+      <ul
+        role="list"
+        css={[styles.list, isLite && styles.singleColumnList]}
+        data-testid="topic-promos"
+      >
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';

@@ -47,6 +47,32 @@ const styles = {
         gridTemplateColumns: 'repeat(4, 1fr)',
       },
     }),
+  singleColumnList: ({ mq, spacings }: Theme) =>
+    css({
+      gridTemplateColumns: 'unset',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gridTemplateColumns: 'unset',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'unset',
+      },
+
+      li: {
+        gridColumn: 'unset',
+        gridRow: 'unset',
+        paddingTop: 0,
+
+        '.promo-paragraph': {
+          display: 'block',
+          marginBottom: `${spacings.FULL}rem`,
+        },
+
+        '&::before': {
+          display: 'none',
+        },
+      },
+    }),
 };
 
 const DesktopBigPromo = css({
