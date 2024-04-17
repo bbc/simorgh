@@ -181,6 +181,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-09-13T12:36:29.124Z",
       "datePublished": "2019-09-13T12:36:29.124Z",
+      "description": "This is the SEO headline of this test article",
       "headline": "This is the SEO headline of this test article",
       "image": {
         "@type": "ImageObject",

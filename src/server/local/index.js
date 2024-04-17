@@ -7,7 +7,6 @@ import {
   frontPageDataPath,
   homePageDataPath,
   tipoHomeDataPath,
-  IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
@@ -222,11 +221,6 @@ export default server => {
         variant,
       });
 
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(IdxDataPath, async ({ params }, res, next) => {
-      const { idx } = params;
-      const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
     .get(africaEyeTVDataPath, async ({ params }, res, next) => {
