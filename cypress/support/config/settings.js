@@ -2063,18 +2063,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/labarai-54292969'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/hausa/labarai-23190660'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/hausa/labarai-23190660'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -6989,18 +6989,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai/international-53381389'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/thai/23124008'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/thai/international-23252825'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
