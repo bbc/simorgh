@@ -102,7 +102,6 @@
     "@loadable/server": "5.15.3",
     "@optimizely/react-sdk": "2.9.2",
     "aws-embedded-metrics": "4.1.1",
-    "cheerio": "^1.0.0-rc.12",
     "compression": "1.7.4",
     "core-js": "3.36.1",
     "dotenv": "16.4.5",
