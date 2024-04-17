@@ -5,6 +5,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -120,7 +121,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     metadata: { atiAnalytics, type },
   } = pageData;
 
-  const isMap = type === 'MAP';
+  const isMap = type === MEDIA_ASSET_PAGE;
 
   const atiData = {
     ...atiAnalytics,

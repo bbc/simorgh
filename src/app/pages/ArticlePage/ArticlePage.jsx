@@ -38,6 +38,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -107,8 +108,8 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-  const isPGL = pageData?.metadata?.type === 'PGL';
-  const isSTY = pageData?.metadata?.type === 'STY';
+  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
+  const isSTY = pageData?.metadata?.type === STORY_PAGE;
   const isCPS = isPGL || isSTY;
 
   const {
