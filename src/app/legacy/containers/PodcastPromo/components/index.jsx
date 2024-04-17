@@ -14,12 +14,11 @@ import CardDescription from './card-description';
 import CardEpisodesText from './card-episodes-text';
 
 const PodcastContext = React.createContext({});
-const withPodcastContext = Component => props =>
-  (
-    <PodcastContext.Consumer>
-      {context => <Component {...context} {...props} />}
-    </PodcastContext.Consumer>
-  );
+const withPodcastContext = Component => props => (
+  <PodcastContext.Consumer>
+    {context => <Component {...context} {...props} />}
+  </PodcastContext.Consumer>
+);
 
 const Wrapper = styled.section`
   background-color: ${props => props.theme.palette.LUNAR};

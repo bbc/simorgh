@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 
 import { useContext } from 'react';
@@ -22,7 +21,6 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 
-import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
   getHeadline,
@@ -39,6 +37,8 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -66,9 +66,13 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, isCaf } = useContext(RequestContext);
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+  const { isApp } = useContext(RequestContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -104,11 +108,19 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
+  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
+  const isSTY = pageData?.metadata?.type === STORY_PAGE;
+  const isCPS = isPGL || isSTY;
 
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -183,7 +195,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -208,9 +220,14 @@ const ArticlePage = ({ pageData }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          !isPGL
+            ? categoryName(isTrustProjectParticipant, taggings, formats)
+            : 'Article'
+        }
         seoTitle={headline}
         headline={headline}
+        description={description}
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
@@ -220,7 +237,7 @@ const ArticlePage = ({ pageData }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
@@ -236,12 +253,11 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
-          {!isCaf && <RelatedContentSection content={blocks} />}
+          <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-      {!isApp && (
+      {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}

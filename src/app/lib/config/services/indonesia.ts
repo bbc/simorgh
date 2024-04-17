@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Berita',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'Podcast',
       brandTitle: 'Investigasi: Skandal Adopsi',
@@ -368,11 +369,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Liputan Mendalam',
-        url: '/indonesia/laporan-khusus-51267199',
+        url: '/indonesia/topics/cw9qgeqd18zt',
       },
       {
         title: 'Majalah',
-        url: '/indonesia/majalah-51456120',
+        url: '/indonesia/topics/cpxrqmrkeg8t',
       },
     ],
     timezone: 'Asia/Jakarta',

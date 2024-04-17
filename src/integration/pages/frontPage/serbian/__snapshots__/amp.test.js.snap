@@ -203,7 +203,7 @@ exports[`AMP Front Page Footer Cookie Settings Button should match text and on h
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian"`;
 
-exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+exports[`AMP Front Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, na srpskom"`;
 
@@ -442,7 +442,7 @@ exports[`Story Promo Image should match image 1`] = `
   fallback=""
   height="1152"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
   width="2048"
 />
 `;

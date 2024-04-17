@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
 import CpsSocialEmbedContainer from '.';
@@ -8,13 +7,6 @@ import {
   screen,
   fireEvent,
 } from '../../../../components/react-testing-library-with-providers';
-
-/* eslint-disable react/prop-types */
-jest.mock('react-lazyload', () => {
-  return function MockedLazyload({ children }) {
-    return <>{children}</>;
-  };
-});
 
 describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {

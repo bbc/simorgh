@@ -31,6 +31,8 @@ export const GROUP_2_MAX_WIDTH = `@media (max-width: ${GROUP_2_MAX_WIDTH_BP}rem)
 export const GROUP_2_MIN_WIDTH = `@media (min-width: ${GROUP_2_MIN_WIDTH_BP}rem)`;
 export const GROUP_2_ONLY = `@media (min-width: ${GROUP_2_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
 
+export const GROUP_1_AND_GROUP_2 = `@media (min-width: ${GROUP_1_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
+
 export const GROUP_3_MAX_WIDTH = `@media (max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`;
 export const GROUP_3_MIN_WIDTH = `@media (min-width: ${GROUP_3_MIN_WIDTH_BP}rem)`;
 export const GROUP_3_ONLY = `@media (min-width: ${GROUP_3_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`;

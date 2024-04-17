@@ -69,7 +69,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
@@ -155,11 +155,11 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
   style="aspect-ratio:640 / 360"
   width="640"
 />
@@ -357,6 +357,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
+      "description": "Royal wedding flowers given to Hackney hospice",
       "headline": "Royal wedding flowers given to Hackney hospice",
       "image": {
         "@type": "ImageObject",

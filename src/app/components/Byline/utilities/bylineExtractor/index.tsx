@@ -55,7 +55,6 @@ const bylineExtractor = (blocks: object[]) => {
     originCode,
     locator,
     resolution: 160,
-    isPng: true,
   });
 
   if (!authorImage.endsWith('.png')) authorImage = '';

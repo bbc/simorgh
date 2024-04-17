@@ -151,7 +151,7 @@ ScheduleItemHeader.propTypes = {
   brandTitle: string.isRequired,
   link: string.isRequired,
   state: string.isRequired,
-  startTime: number.isRequired,
+  startTime: oneOfType([number, string]).isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
   id: string,

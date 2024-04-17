@@ -1,0 +1,105 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="hooks/useImageColour" />
+
+# `useImageColour` Hook
+
+This is a hook that returns colour information for an image provided by a URL. This is primarily designed for dynamically selecting a colour for use in styling some other element. For example, the colour behind the text in this component was chosen based on the photo above it:
+
+![Screenshot](./screenshot.png)
+
+This hook is primarily a wrapper around colorthief: https://lokeshdhakar.com/projects/color-thief/
+
+It brings it into the react ecosystem, and changes the behaviour to better fit our requirements. The main differences between this and the base colorthief are:
+
+* This hook will only return a single colour, rather than a full palette.
+* This hook is able to choose that colour based on contrast ratio calculations
+* This hook will return the most "vibrant" colour that meets the minimum contrast ratio
+* This hook has some fallback behaviour to more gracefully deal with loading and error states
+
+## Client Side Only
+
+This hook currently only runs on the client side.
+
+This does mean the colour will not be available on first page load - instead, the colour will initially use a customisable fallback colour. The hook also returns a `loading: true` boolean in this scenario, for more options on how to deal with the delay.
+
+## Basic Usage
+
+```javascript
+import useImageColour from './';
+
+const MyComponent = () => {
+  const output = useImageColour('http://placekitten.com/200/300');
+
+  return JSON.stringify(output);
+};
+```
+
+## Input
+
+The first argument to the hook is a link to the image to be used.
+
+* For us to be able to download the image, the server must respond with appropriate CORS headers. BBC services, including iChef, do include the required headers.
+* Any image size beyond approximately 20 x 20 pixels is unnecessary. Unless a larger version of the image is being downloaded anyway for some other use, generally using a very small image will conserve bandwidth
+
+`options`
+
+The hook accepts a second, optional argument. This argument can contain various configuration options:
+
+* `contrastColour` - A hexidecimal colour string, eg `"#ff0005"`. If provided, this colour will be used in the assessment of contrast requirements, as described below.
+* `minimumContrast` - An integer that filters the returned colours to only those that meet this minimum contrast ratio value. Colours will be compared against the `constrastColour` above. If `contrastColour` is not provided, white (`#fff`) will be used.
+* `fallbackColour` - A hexidecimal colour string, eg `"#ff0005"` or RGB array, eg `[255, 0, 5]`. This will be returned when the hook is first loading, when it has encountered an error, when `disabled` is set to true, or when it was unable to find any colours that match the `minimumContrast` value.
+
+## Output
+
+The hook returns an object with the following keys:
+
+`colour`
+
+An object containing the selected colour. This object has the following keys:
+
+* `hex` - A string representing the colours hexadecimal value, eg `"#ff0005"`
+* `rgb` - An array representing the colour's red, green and blue components, eg `[255, 0, 5]`
+* `isFallback` - A boolean representing whether this colour was the `fallbackColour` passed in the input options
+
+`isLoading`
+
+A boolean that will be true if the hook is currently analysing an image. Note that changing the URL passed to the hook when this value is `true` will have no effect.
+
+`error`
+
+Will be null if no error has occurred, or an error string if something has gone wrong. See the section on Error Handling below.
+
+## Advanced Usage
+
+```javascript
+import styled from '@emotion/styled';
+import useImageAnalyser from './';
+
+const MyElement = styled.div`
+  color: ${props => props.theme.palette.EBON};
+  background: ${props => props.background.hex};
+`;
+
+const MyComponent = () => {
+  const options = {
+    minimumContrast: 7,
+    contrastColour: ${props => props.theme.palette.EBON},
+    fallbackColour: ${props => props.theme.palette.GHOST},
+  };
+  const { colour } = useImageAnalyser(
+    'http://placekitten.com/200/300',
+    options,
+  );
+
+  return <MyElement background={colour}>Hello World</MyElement>;
+};
+```
+
+## Graceful Fallbacks and Error Handling
+
+This technique is not possible on every browser we support, therefore we need to be mindful of error handling and graceful fallbacks.
+
+When we encounter issues, it will still return an object as described above. The differences are that `colour` will contain the `fallbackColour`, or black if `fallbackColour` was not provided. The `colour` object will also have the entry: `isFallback: true`
+
+Additionally, the object will have an `error: true` entry.

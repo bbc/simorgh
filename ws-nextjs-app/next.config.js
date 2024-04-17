@@ -4,14 +4,13 @@ const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezon
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
-const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 const isLocal =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -24,7 +23,11 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
-  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
+  env: {
+    ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
+    LOG_TO_CONSOLE: 'true',
+    NEXTJS: 'true',
+  },
   compiler: {
     emotion: true,
   },

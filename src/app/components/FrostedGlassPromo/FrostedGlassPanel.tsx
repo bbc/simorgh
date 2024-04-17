@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import { PropsWithChildren } from 'react';

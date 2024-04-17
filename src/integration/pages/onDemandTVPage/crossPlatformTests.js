@@ -1,6 +1,6 @@
 import {
   runCommonCrossPlatformTests,
-  runMediaPlayerEmbedTests,
+  runMediaPlayerEmbedLegacyTests,
   runRecentEpisodesTests,
 } from '../../common';
 import runCommonEpisodeTests from './commonEpisodeTests';
@@ -8,6 +8,6 @@ import runCommonEpisodeTests from './commonEpisodeTests';
 export default service => {
   runCommonCrossPlatformTests(service);
   runCommonEpisodeTests();
-  runMediaPlayerEmbedTests();
+  runMediaPlayerEmbedLegacyTests();
   runRecentEpisodesTests();
 };

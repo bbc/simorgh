@@ -12,7 +12,7 @@ const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
-      src="https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3502/test/0c533a40-770b-10ed-bd83-8f15ba358e41.jpg"
+      src="https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg"
       alt="Test image alt text"
       loading="lazy"
     />

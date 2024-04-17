@@ -203,7 +203,7 @@ exports[`AMP Feature Index page Footer Cookie Settings Button should match text 
 
 exports[`AMP Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`AMP Feature Index page Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -223,47 +223,40 @@ exports[`AMP Feature Index page Header Navigation link should match text and url
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 3`] = `
 {
-  "text": "الیکشن 2024",
-  "url": "/urdu/topics/cynd7qxprq0t",
-}
-`;
-
-exports[`AMP Feature Index page Header Navigation link should match text and url 4`] = `
-{
   "text": "آس پاس",
   "url": "/urdu/topics/cl8l9mveql2t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 5`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 4`] = `
 {
   "text": "ورلڈ",
   "url": "/urdu/topics/cw57v2pmll9t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 6`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 5`] = `
 {
   "text": "کھیل",
   "url": "/urdu/topics/c340q0p2585t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 7`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 6`] = `
 {
   "text": "فن فنکار",
   "url": "/urdu/topics/ckdxnx900n5t",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 7`] = `
 {
   "text": "سائنس",
   "url": "/urdu/topics/c40379e2ymxt",
 }
 `;
 
-exports[`AMP Feature Index page Header Navigation link should match text and url 9`] = `
+exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "ویڈیو",
   "url": "/urdu/topics/c1e0mzr3r2yt",
@@ -445,8 +438,8 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   height="576"
   layout="responsive"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
   width="1024"
 />
 `;

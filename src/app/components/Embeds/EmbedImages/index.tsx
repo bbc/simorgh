@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import styles from './index.styles';
 import Image from '../../Image';
 
@@ -23,7 +24,9 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   const sanitizedLocator = locator?.replace(/^\//, '');
 
-  const src = `${process.env.SIMORGH_ICHEF_BASE_URL}/news/${width}/${idt2EnvUrlSubPath}/${sanitizedLocator}`;
+  const src = `${
+    getEnvConfig().SIMORGH_ICHEF_BASE_URL
+  }/news/${width}/${idt2EnvUrlSubPath}/${sanitizedLocator}`;
   const alt =
     image?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
       ?.model?.text;

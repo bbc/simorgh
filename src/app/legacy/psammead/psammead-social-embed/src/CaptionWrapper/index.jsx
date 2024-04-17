@@ -9,17 +9,18 @@ import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 import { GREY_6, WHITE } from '../../../../../components/ThemeProvider/palette';
 
-const Figure = styled.figure`
+const Container = styled.div`
   margin: 0;
   background-color: ${({ isTransparentPage }) =>
     props =>
       isTransparentPage ? 'transparent' : props.theme.palette.BLACK};
 `;
 
-const FigCaption = styled.figcaption`
+const WarningText = styled.small`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
-  
+  display: block;
+
   ${({ isTransparentPage, isLive }) => `
     color: ${isTransparentPage ? GREY_6 : WHITE};
     padding: ${isTransparentPage ? `${GEL_SPACING} 0` : GEL_SPACING};
@@ -34,40 +35,40 @@ const FigCaption = styled.figcaption`
 const CaptionWrapper = ({
   children,
   service,
-  textPrefixVisuallyHidden,
   text,
   additionalText,
+  describedById,
 }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
   const isTransparentPage = pageType === ARTICLE_PAGE || isLive;
 
   return (
-    <Figure isTransparentPage={isTransparentPage}>
+    <Container isTransparentPage={isTransparentPage}>
       {children}
-      <FigCaption
+      <WarningText
+        {...(describedById && { id: describedById })}
         isTransparentPage={isTransparentPage}
         isLive={isLive}
         service={service}
       >
-        {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
-      </FigCaption>
-    </Figure>
+      </WarningText>
+    </Container>
   );
 };
 
 CaptionWrapper.defaultProps = {
-  textPrefixVisuallyHidden: null,
   additionalText: null,
+  describedById: null,
 };
 
 CaptionWrapper.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
-  textPrefixVisuallyHidden: string,
   text: string.isRequired,
   additionalText: string,
+  describedById: string,
 };
 
 export default CaptionWrapper;

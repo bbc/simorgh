@@ -8,359 +8,137 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Kwa nini makombora ya urani iliyorutubishwa hutumiwa na yana madhara gani?",
-            "firstPublished": "2023-03-28T11:44:37.230Z",
-            "link": "https://www.bbc.com/swahili/articles/ceq5vwqv5d7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf18/live/15cdbe00-cd56-11ed-be2e-754a65c11505.jpg",
-            "description": "Madini ya Urani yaliyorutubishwa hufanya silaha kuwa na nguvu zaidi, lakini kuna wasiwasi kwamba silaha hizi ni tishio kwa watu wanaoishi katika maeneo ambayo hutumiwa.",
-            "imageAlt": ".",
-            "id": "ceq5vwqv5d7o"
+            "title": "Waziri mkuu wa Ethiopia akiri vikosi vya Eritrea vipo Tigray",
+            "firstPublished": "2021-03-24T10:30:07.000Z",
+            "lastPublished": "2021-03-24T10:51:44.000Z",
+            "link": "https://www.bbc.com/swahili/habari-23391955",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/15059/test/_63750168_24febmbezi.jpg",
+            "description": "Abiy, ambaye ni mshindi wa zamani wa Tuzo ya Amani ya Nobel, hakukiri kwamba wanajeshi wa Eritrea walipelekwa katika miji ya Ethiopia.",
+            "imageAlt": "Magufuli",
+            "id": "7766fc81-fc33-486d-9f36-c860b3ae2cc8"
           },
           {
             "type": "article",
-            "title": "Tume ya Umoja wa Afrika yaomba utulivu Kenya baada ya maandamano dhidi ya serikali",
-            "firstPublished": "2023-03-28T03:49:26.000Z",
-            "link": "https://www.bbc.com/swahili/live/habari-65096091",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/11A37/production/_129174227_maandamano-getty.jpg",
-            "description": "Mwenyekiti wa tume ya Umoja wa Afrika AU Moussa faki Mahamat ameonesha wasiwasi wake kuhusu ghasia zilizotokea na kusababisha kifo cha mtu mmoja huku mali ya thamani isiojulikana ikiharibiwa kufuatia maandamano dhidi ya serikali",
-            "imageAlt": ".",
-            "id": "b59c3240-dbb0-4b67-9053-ac0e97b6a83f"
+            "title": "Kenya's new banknotes and the battle against corruption",
+            "firstPublished": "2021-03-24T11:54:11.000Z",
+            "lastPublished": "2021-03-24T11:54:11.000Z",
+            "link": "https://www.bbc.com/swahili/habari-23392024",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/46B9/test/_63750181_image1.jpg",
+            "description": "A shake-up of the Kenyan currency has provoked controversy, including several court challenges",
+            "imageAlt": "Kenyans withdrawing cash from an ATM",
+            "id": "30885acd-01e7-4e85-a07e-52b0b0daa63f"
           },
           {
             "type": "article",
-            "title": "Maandamano ya Azimio: Odinga alaani uvamizi wa shamba la rais mstaafu Uhuru Kenyatta ",
-            "firstPublished": "2023-03-28T02:56:27.116Z",
-            "link": "https://www.bbc.com/swahili/articles/cxxr77rn584o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9fc2/live/8627e340-cd67-11ed-be2e-754a65c11505.jpg",
-            "description": "",
-            "imageAlt": ".",
-            "id": "cxxr77rn584o"
+            "title": "China releases largest study on Covid-19 outbreak",
+            "firstPublished": "2020-02-18T08:29:03.000Z",
+            "lastPublished": "2020-02-18T08:29:03.000Z",
+            "link": "https://www.bbc.com/swahili/habari-23267902",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0DB9/test/_63731530_mediaitem63731529.jpg",
+            "description": "Data shows that more than 80% of the cases have been mild, with the sick and elderly most at risk.",
+            "imageAlt": "Two people walkinh",
+            "id": "7d54728f-fac9-6c49-8942-e5d9e7d4422c"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:fac42fdd-6486-481c-9ee4-d9e2d40647a2",
+        "curationId": "urn:bbc:tipo:list:91a7eac2-3391-4858-811f-28181682634d",
         "curationType": "tipo-curation",
         "position": 0,
         "title": "BBC News Swahili Top Stories",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Ramadhan: Nchi gani zina mfungo mrefu au mfupi zaidi duniani?",
-            "firstPublished": "2023-03-27T03:33:55.791Z",
-            "link": "https://www.bbc.com/swahili/articles/cyx0wzn31e2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f484/live/cfb34b30-cc4f-11ed-be2e-754a65c11505.jpg",
-            "description": "Ramadhan: Nchi gani zina mfungo mrefu au mfupi zaidi duniani?",
-            "imageAlt": "Ramadhan",
-            "id": "cyx0wzn31e2o"
+            "title": "headlines as usual",
+            "firstPublished": "2017-06-14T14:04:13.000Z",
+            "lastPublished": "2017-06-14T14:04:13.000Z",
+            "link": "https://www.bbc.com/hausa/23132403",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/5A54/test/_63542132_mediaitem63542131.jpg",
+            "description": "This is what appears ABOVE the images",
+            "imageAlt": "as",
+            "id": "a07dc85d-221d-3549-bf70-21327d0ffc0a"
           },
           {
             "type": "article",
-            "title": "'Ninapowaona wavulana wakienda shule, ninaumia'",
-            "firstPublished": "2023-03-27T04:50:42.040Z",
-            "link": "https://www.bbc.com/swahili/articles/c4nz8jw5e8jo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/00eb/live/31bead70-cc3b-11ed-be2e-754a65c11505.png",
-            "description": "Mwaka mmoja na nusu tangu maisha yao kielimu yasitishwe, huzuni yao bado mbichi.",
-            "imageAlt": "Tamana ",
-            "id": "c4nz8jw5e8jo"
+            "title": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 10",
+            "firstPublished": "2016-07-01T14:41:15.000Z",
+            "lastPublished": "2016-07-01T14:41:15.000Z",
+            "link": "https://www.bbc.com/swahili/23057190",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "description": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+            "imageAlt": "Mahujaji",
+            "id": "9c4ddd78-8a72-3c43-b593-34357a477708"
           },
           {
             "type": "article",
-            "title": "Faida 5 Kuu za Kiafya za Kufunga",
-            "firstPublished": "2023-03-26T14:35:56.645Z",
-            "link": "https://www.bbc.com/swahili/articles/c2xez5ynpk6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/737d/live/22916430-c94a-11ed-be2e-754a65c11505.jpg",
-            "description": "Faida 5 Kuu za Kiafya za Kufunga",
-            "imageAlt": ".",
-            "id": "c2xez5ynpk6o"
+            "title": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 11",
+            "firstPublished": "2016-07-01T14:41:25.000Z",
+            "lastPublished": "2016-07-01T14:41:25.000Z",
+            "link": "https://www.bbc.com/swahili/23057191",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "description": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+            "imageAlt": "Mahujaji",
+            "id": "457464d4-526e-c644-ade9-60e6e549dfe3"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:16e0bbb4-dad0-43b2-a6af-3a76f8d5c7dc",
+        "curationId": "urn:bbc:tipo:list:b91b6660-c9d1-4878-ab2b-b61ea2480e1b",
         "curationType": "tipo-curation",
         "position": 1,
         "title": "Gumzo mitandaoni",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT1M24S",
-            "title": "'Nilijenga nyumba yangu ndogo kwa kutumia plastiki 35,000… ",
-            "firstPublished": "2023-05-10T11:32:14.612Z",
-            "link": "https://www.bbc.com/swahili/articles/c51pper4nzvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/20cb/live/965f06d0-ef22-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Mwanaharakati ajenga nyumba ya plastiki kuokoa mazingira Indonesia",
-            "imageAlt": ".",
-            "id": "c51pper4nzvo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M58S",
-            "title": "Dereva 'bodaboda' mwenye ulemavu wa kusikia Tanzania ",
-            "firstPublished": "2023-05-02T10:43:50.676Z",
-            "link": "https://www.bbc.com/swahili/articles/cjm7e9mdd04o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ef27/live/7e022780-e8d2-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Licha ya ulemavu wake wa kutosikia, Ally Jumanne amekuwa dereva wa 'bodaboda' kwa miaka 11",
-            "imageAlt": "w",
-            "id": "cjm7e9mdd04o"
-          },
-          {
-            "type": "audio",
-            "duration": "PT29M12S",
-            "title": "Unafanyaje kuhakikisha shughuli za kiuchumi hazimkwamishi mtoto kupata elimu?",
-            "firstPublished": "2023-04-30T12:25:38.291Z",
-            "link": "https://www.bbc.com/swahili/articles/cj70e83vm9po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/28b4/live/fb3e7660-e5a6-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Mifugo",
-            "id": "cj70e83vm9po"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "Katika eneo la tukio la vifo vya dhehebu tata la Kenya  ",
-            "firstPublished": "2023-04-27T09:59:48.137Z",
-            "link": "https://www.bbc.com/swahili/articles/ce40l414gw8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/821e/live/58db2c60-e4ac-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Miili ya watu zaidi ya 90 imepatikana katika msitu wa  Shakahola  mashariki mwa Kenya. Wahanga wanadhaniwa kuwa ni wafuasi wa  dhehebu tata la kidini walioshawishiwa kufunga hadi kufa, ili kukutana na Yesu.",
-            "imageAlt": "g",
-            "id": "ce40l414gw8o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M36S",
-            "title": "Unajua mtama unaweza kupunguza kasi ya uzee na magonjwa?",
-            "firstPublished": "2023-04-27T05:47:39.128Z",
-            "link": "https://www.bbc.com/swahili/articles/cd1gk4wx538o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0592/live/7e0dd4c0-e447-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "w",
-            "id": "cd1gk4wx538o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M7S",
-            "title": "Paul Makenzie: '' Alisema yeye na familia yake watakua wa mwisho kuaga Dunia na kwenda mbinguni''",
-            "firstPublished": "2023-04-26T13:20:06.682Z",
-            "link": "https://www.bbc.com/swahili/articles/cw5k3rg42dwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a651/live/da27b0e0-e434-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Titus Katana ambaye aliwahi kushiriki katika kundi hilo na baadae kujitoa aliiambia BBC kuwa Mchungaji Makenzie aliwataka waumini waanze kufunga hadi kufa kisha yeye na familia watakua wa mwisho.",
-            "imageAlt": "w",
-            "id": "cw5k3rg42dwo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M23S",
-            "title": "Waislamu wa madhehebu ya Answar Sunnah washeherekea Eid Tanzania",
-            "firstPublished": "2023-04-21T12:48:58.914Z",
-            "link": "https://www.bbc.com/swahili/articles/c6p9453n87do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Nchini Tanzania, wakati Waislamu wengi bado wanatazamia kusheherekea siku kuu ya Eid Ul-Fitr kesho, madhehebu ya Answar Sunnah leo wameendelea na sherehe hizo. ",
-            "imageAlt": "",
-            "id": "c6p9453n87do"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M27S",
-            "title": "Wanafunzi waliokwama walazimika kumzika rafiki yao Sudan  ",
-            "firstPublished": "2023-04-19T12:25:26.829Z",
-            "link": "https://www.bbc.com/swahili/articles/c2lnknz8ze0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6a1f/live/15f18a20-dea3-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "Wanafunzi na wafanyakazi  katika Chuo Kikuu cha Khartoum wanasema wamekwama katika makabiliano ya silaha kwa siku nne, bila chakula na maji . ",
-            "imageAlt": "g",
-            "id": "c2lnknz8ze0o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M14S",
-            "title": "Kwanini binadamu tunaipenda dhahabu?",
-            "firstPublished": "2023-04-08T13:02:52.310Z",
-            "link": "https://www.bbc.com/swahili/articles/crgqp4jg638o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Kwa nini tunaona dhahabu inapendeza sana?",
-            "imageAlt": "",
-            "id": "crgqp4jg638o"
-          },
-          {
-            "type": "video",
-            "duration": "PT3M56S",
-            "title": "“Sufuria ya ugali iliniangukia nikiwa mtoto, niliungua mwili mzima”",
-            "firstPublished": "2023-04-08T10:19:58.840Z",
-            "link": "https://www.bbc.com/swahili/articles/c2ln2jgkwqxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": " Dkt Ipyana Kibona anawahamasisha Wakristo kwamba moyo wa kushukuru kwa matendo mema waliyotendewa na Mungu ni jambo la msingi ",
-            "imageAlt": "",
-            "id": "c2ln2jgkwqxo"
-          },
-          {
-            "type": "video",
-            "duration": "PT44S",
-            "title": "Video: Paka amrukia imamu anayeongoza sala wakati wa ibada ya Ramadhan",
-            "firstPublished": "2023-04-06T03:25:54.000Z",
-            "link": "https://www.bbc.com/swahili/habari-65198205",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5F4E/production/_129289342_p0ff5445.jpg",
-            "description": "Video yamuonyesha paka akiruka juu ya mabega ya imamu wakati wa sala ya Tarawehe ndani ya msikiti.",
-            "imageAlt": "Walid Mehsas na paka katika mabega yake",
-            "id": "3d347202-ae91-47d2-9033-22f9fee4585e"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M2S",
-            "title": "Viboko wa Pablo Escobar kuhamishwa kwa dola milioni 3.5",
-            "firstPublished": "2023-03-31T13:29:23.247Z",
-            "link": "https://www.bbc.com/swahili/articles/cq5ewd0w7p0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b816/live/60665ce0-cf83-11ed-be2e-754a65c11505.jpg",
-            "description": "",
-            "imageAlt": "viboko",
-            "id": "cq5ewd0w7p0o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 5,
-        "link": "https://www.bbc.com/swahili/topics/cz40xlzvj6kt",
-        "curationId": "urn:bbc:vivo:curation:d6d0b811-beda-4ab9-9794-e98bbfca3306",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_swahili_radio",
+        "curationType": "available-episodes",
         "position": 2,
-        "title": "Video",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
           {
-            "type": "article",
-            "title": "Baada ya utafiti wa miaka mitatu mnyama huyu atajwa kuwa chanzo cha Corona ",
-            "firstPublished": "2023-03-25T09:36:03.756Z",
-            "link": "https://www.bbc.com/swahili/articles/clw1g5qp9zvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fa18/live/cede8bd0-caeb-11ed-be2e-754a65c11505.jpg",
-            "description": "Baada ya utafiti wa miaka mitatu mnyama huyu atajwa kuwa chanzo cha Corona ",
-            "imageAlt": "CORONA",
-            "id": "clw1g5qp9zvo"
+            "id": "p0h6p3dc",
+            "state": "next",
+            "startTime": "2024-02-27T15:29:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkbkk1v5v7s",
+            "brandTitle": "Dira Ya Dunia",
+            "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "duration": "PT1H"
           },
           {
-            "type": "article",
-            "title": "Asili ya Covid: Kwa nini nadharia ya uvujaji wa maabara ya Wuhan inabishaniwa sana?",
-            "firstPublished": "2023-03-02T05:45:21.972Z",
-            "link": "https://www.bbc.com/swahili/articles/cqv81wg5373o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f93b/live/e0625f70-b8b8-11ed-93f1-01f57b5ba1ca.jpg",
-            "description": "Zaidi ya miaka mitatu baada ya Covid-19 kugunduliwa katika jiji la Wuhan, China swali la jinsi virusi hivyo viliibuka kwa mara ya kwanza bado ni kitendawili.",
-            "imageAlt": "Nadharia ya kuvuja kwa maabara imekataliwa vikali na China",
-            "id": "cqv81wg5373o"
+            "id": "p0h6kmvt",
+            "state": "onDemand",
+            "startTime": "2024-02-27T03:59:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkb4tpjssyn",
+            "brandTitle": "Amka Na BBC",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "duration": "PT29M30S"
           },
           {
-            "type": "article",
-            "title": "Kwa nini Covid-19 itaendelea kuwepo sana?",
-            "firstPublished": "2023-01-13T05:59:07.859Z",
-            "link": "https://www.bbc.com/swahili/articles/cxrndw50xdvo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/96b8/live/ba861e10-9264-11ed-9a1a-f3662015ae8e.jpg",
-            "description": "Kwa nini Covid-19 itaendelea kuwepo sana?",
-            "imageAlt": "w",
-            "id": "cxrndw50xdvo"
+            "id": "p0h6js7j",
+            "state": "onDemand",
+            "startTime": "2024-02-27T02:59:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkb4tpjsp6j",
+            "brandTitle": "Amka Na BBC",
+            "summary": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+            "duration": "PT29M30S"
           },
           {
-            "type": "article",
-            "title": "Ni nini kinachojulikana kuhusu aina mpya ya Covid XBB.1.5? ",
-            "firstPublished": "2023-01-11T02:18:09.654Z",
-            "link": "https://www.bbc.com/swahili/articles/cxx4ygrlxlno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d9c4/live/c8869db0-9150-11ed-9a1a-f3662015ae8e.jpg",
-            "description": "Aina mpya ya Covid inasababisha wasiwasi huko Marekani ambapo inaenea haraka.",
-            "imageAlt": "w",
-            "id": "cxx4ygrlxlno"
-          },
-          {
-            "type": "article",
-            "title": "Jinsi Covid inavyoathiri uwezo wa kuzaa kwa wanaume",
-            "firstPublished": "2023-01-02T10:22:17.000Z",
-            "link": "https://www.bbc.com/swahili/habari-64144356",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/C491/production/_122612305_gettyimages-824853668.jpg",
-            "description": "Ni miaka miwili sasa tangu virusi vya Covid vigundulike duniani na baadaye kuwa janga, lakini ni sasa ambapo uwezekano wa athari za ugonjwa huu kwa uzazi wa wanaume zimefichuliwa.",
-            "imageAlt": "පිරිමින්ගේ සරුභාවයට කොවිඩ්වලින් බලපෑමක්",
-            "id": "ca8a7024-2184-4d70-b4c3-7b40fec4cb3d"
-          },
-          {
-            "type": "article",
-            "title": "Mambo matano makubwa zaidi ya mwaka 2022 tuliyojifunza kuhusu mapenzi na ngono",
-            "firstPublished": "2022-12-24T10:56:46.790Z",
-            "link": "https://www.bbc.com/swahili/articles/c9e19739z2yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fe75/live/bf378b30-81dc-11ed-90a7-556e529f9f89.jpg",
-            "description": "Jinsi tunavyofikiri kuhusu ngono na upendo daima zinabadilika, zimeathiriwa mara kwa mara na matukio ya kitamaduni, kisiasa na kimataifa.",
-            "imageAlt": "Kuachana ilikuwa rahisi na ngumu zaidi mnamo 2022",
-            "id": "c9e19739z2yo"
-          },
-          {
-            "type": "article",
-            "title": "Kwanini kuna misururu ya kuchoma miili ya wafu China?",
-            "firstPublished": "2022-12-22T10:43:03.880Z",
-            "link": "https://www.bbc.com/swahili/articles/cd1518xlyy0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/28cb/live/42328d00-80f7-11ed-90a7-556e529f9f89.jpg",
-            "description": "Huku China ikipambana na wimbi la visa vya Covid, wafanyakazi katika maeneo ya uchomaji wa miili ya wafu  kote nchini Uchina wanasema wanahangaika kushughulikia miili ya wafu inayoletwa  kwa ajili ya kuchomwa.   ",
-            "imageAlt": "g",
-            "id": "cd1518xlyy0o"
-          },
-          {
-            "type": "article",
-            "title": "Miji ghali zaidi duniani kuishi 2022",
-            "firstPublished": "2022-12-02T06:38:16.798Z",
-            "link": "https://www.bbc.com/swahili/articles/ck54e6858dgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/79d1/live/e8795aa0-720a-11ed-94b2-efbc7109d3dd.jpg",
-            "description": "Miji ghali zaidi duniani ni New York na Singapore, kulingana na utafiti wa kila mwaka wa Kitengo cha Ujasusi cha Economist (EIU).",
-            "imageAlt": ".",
-            "id": "ck54e6858dgo"
-          },
-          {
-            "type": "article",
-            "title": "Jinsi uwepo wa Covid unavyo wakosesha China shamrashamra za Kombe la Dunia ",
-            "firstPublished": "2022-11-24T10:44:47.933Z",
-            "link": "https://www.bbc.com/swahili/articles/cmm654vgj0zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5732/live/6cabc710-6bab-11ed-94b2-efbc7109d3dd.jpg",
-            "description": "Vyombo vya habari vimeangazia pakubwa Kombe la Dunia wiki hii , lakini mechi zimechochea hasira kwamba watu nchini humo wamezuiwa kusherehekea.  ",
-            "imageAlt": "g",
-            "id": "cmm654vgj0zo"
-          },
-          {
-            "type": "article",
-            "title": "Utafiti wabaini sababu za homa ya ini kwa watoto",
-            "firstPublished": "2022-07-27T04:52:13.816Z",
-            "link": "https://www.bbc.com/swahili/articles/c8488v7jrk9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/605c/live/e47e36e0-0cee-11ed-93ba-314ede9cd985.jpg",
-            "description": "Watafiti wanaamini kuwa nyuma ya mlipuko huo mpya kuna virusi viwili vya kawaida ambavyo vimerudi baada ya kumalizika kwa marufuku ya kutoka nje kufuatia mlipuko wa corona",
-            "imageAlt": "ggg",
-            "id": "c8488v7jrk9o"
-          },
-          {
-            "type": "article",
-            "title": "Urusi inavyotumia pesa nyingi kumlinda Putin dhidi ya Covid",
-            "firstPublished": "2022-07-19T03:29:23.964Z",
-            "link": "https://www.bbc.com/swahili/articles/c19m3vkn02zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4765/live/b8a39f10-0712-11ed-93ba-314ede9cd985.jpg",
-            "description": "Vipimo vya matibabu, ikiwa ni pamoja na katika baadhi ya visa  sampuli za kinyesi vinafanywa. Je, mfumo unaolinda afya ya Vladimir Putin unafanya kazi vipi?",
-            "imageAlt": "th",
-            "id": "c19m3vkn02zo"
-          },
-          {
-            "type": "article",
-            "title": "Korea Kaskazini yapambana na Covid kwa maji ya chumvi na tangawizi",
-            "firstPublished": "2022-05-20T11:09:02.000Z",
-            "link": "https://www.bbc.com/swahili/habari-61524344",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2335/production/_124831090_978d7935-cd85-4cd0-903c-e98a54d10b1c.jpg",
-            "description": "Korea Kaskazini inapambana kupunguza maambukizi ya Covid kwa raia wake ambao hawajachanjwa.",
-            "imageAlt": "ggg",
-            "id": "ffd4c465-6d23-4b4a-b308-6f9fc7d6e137"
+            "id": "p0h6h4d2",
+            "state": "onDemand",
+            "startTime": "2024-02-26T15:29:30.000Z",
+            "link": "/swahili/bbc_swahili_radio/w172zkbkk1v2ybp",
+            "brandTitle": "Dira Ya Dunia",
+            "summary": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+            "duration": "PT1H"
           }
-        ],
-        "activePage": 1,
-        "pageCount": 12,
-        "link": "https://www.bbc.com/swahili/topics/c8jvpjklx1dt",
-        "curationId": "urn:bbc:vivo:curation:5fb3375d-f7ba-41c4-bf92-67e379be83fe",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Taarifa kuhusu Coronavirus",
-        "visualProminence": "NORMAL"
+        ]
       }
     ],
     "metadata": {
@@ -372,6 +150,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

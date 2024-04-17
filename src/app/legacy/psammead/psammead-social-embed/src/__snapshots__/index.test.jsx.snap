@@ -5,6 +5,10 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -165,6 +169,10 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -437,6 +445,10 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -712,6 +724,10 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -984,6 +1000,10 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1175,6 +1195,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1225,7 +1246,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
         Skip YouTube content
       </span>
     </a>
-    <figure
+    <div
       class="emotion-4 emotion-5"
     >
       <div
@@ -1281,12 +1302,12 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
           width="16"
         />
       </div>
-      <figcaption
+      <small
         class="emotion-10 emotion-11"
       >
         undefined
-      </figcaption>
-    </figure>
+      </small>
+    </div>
     <p
       class="emotion-12 emotion-13"
       id="skip-youtube-content"
@@ -1303,6 +1324,10 @@ exports[`AmpSocialEmbed should render null when no social embed ID is provided 1
 exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -1583,6 +1608,10 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1714,6 +1743,10 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   position: relative;
 }
 
+.no-js .emotion-0 {
+  display: none;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1800,6 +1833,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1842,6 +1876,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
+    aria-describedby=":r9:"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1849,7 +1884,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
       Skip YouTube content
     </span>
   </a>
-  <figure
+  <div
     class="emotion-4 emotion-5"
   >
     <div
@@ -1864,15 +1899,13 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
         width="480"
       />
     </div>
-    <figcaption
+    <small
       class="emotion-8 emotion-9"
+      id=":r9:"
     >
-      <span>
-        Video caption, 
-      </span>
       undefined
-    </figcaption>
-  </figure>
+    </small>
+  </div>
   <p
     class="emotion-10 emotion-11"
     id="skip-youtube-content"
@@ -1886,6 +1919,10 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 exports[`CanonicalSocialEmbed should render a notice when the provider is unsupported 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -2043,12 +2080,17 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
       End of unknown content
     </p>
   </div>
+  <noscript />
 </div>
 `;
 
 exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed response 1`] = `
 .emotion-0 {
   position: relative;
+}
+
+.no-js .emotion-0 {
+  display: none;
 }
 
 .emotion-2 {
@@ -2206,5 +2248,6 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       End of Twitter content
     </p>
   </div>
+  <noscript />
 </div>
 `;

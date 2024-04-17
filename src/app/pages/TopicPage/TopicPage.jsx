@@ -14,6 +14,7 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
+import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName } = useContext(ServiceContext);
@@ -82,19 +83,32 @@ const TopicPage = ({ pageData }) => {
               link,
               position,
               visualStyle,
+              embed,
             }) => {
+              const nthCurationByStyleAndProminence =
+                getNthCurationByStyleAndProminence({
+                  curations,
+                  position,
+                  visualStyle,
+                  visualProminence,
+                });
+
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
                     headingLevel={curationTitle && 3}
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
-                    promos={summaries}
+                    summaries={summaries}
                     title={curationTitle}
                     topStoriesTitle={topStoriesTitle}
                     position={position}
                     link={link}
                     curationLength={curations && curations.length}
+                    nthCurationByStyleAndProminence={
+                      nthCurationByStyleAndProminence
+                    }
+                    embed={embed}
                   />
                 </React.Fragment>
               );

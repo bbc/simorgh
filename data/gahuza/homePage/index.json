@@ -8,355 +8,137 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Rusesabagina: Uko Qatar iza mu irekurwa rye",
-            "firstPublished": "2023-03-27T08:16:58.910Z",
-            "link": "https://www.bbc.com/gahuza/articles/c72vq9w7701o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a80b/live/ed086130-cc76-11ed-a249-7bbdfc224c64.jpg",
-            "description": "Byitezwe ko igihe icyo aricyo cyose Rusesabagina ashobora kuva mu Rwanda, ariko ntabwo ahita ajya mu rugo rwe muri Amerika, arabanza muri Qatar.",
-            "imageAlt": "Kuwa kabiri Perezida Kagame yari i Doha aho yaganiriye n'umutegetsi w'ikirenga w'iki gihugu Tamim bin Hamad Al-Thani.",
-            "id": "c72vq9w7701o"
+            "title": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen",
+            "firstPublished": "2018-06-13T11:18:02.000Z",
+            "lastPublished": "2018-06-13T11:18:02.000Z",
+            "link": "https://www.bbc.com/gahuza/23204135",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8226/test/_63681333_002564611-1.jpg",
+            "description": "Urunani rurongowe na Arabia Saudite rwatanguye ibitero ku kivuko gifise akamaro kanini muri Yemen ca Hudaydah, kiri mu minwe y'abagwani.",
+            "imageAlt": "ikivuko ca Hudaydah",
+            "id": "9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0"
           },
           {
             "type": "article",
-            "title": "Uganda: Umuhungu wa Museveni avuga ko azasezera mu gisirikare 'uyu mwaka' ",
-            "firstPublished": "2023-03-27T13:29:15.533Z",
-            "link": "https://www.bbc.com/gahuza/articles/clw1r3x75elo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d7d8/live/7dfc5a70-cc9f-11ed-a0f2-f391991bf052.jpg",
-            "description": "Abitangaje hashize iminsi asibye ubutumwa bwo kuri Twitter, yavugagamo ko aziyamamaza mu matora ya perezida yo mu mwaka wa 2026. ",
-            "imageAlt": "Muhoozi Kainerugaba",
-            "id": "clw1r3x75elo"
+            "title": "Inama y’umuryango wa Afrika y’ubuseruko yibanda ku ndyane hagati y’Uburundi n’Urwanda",
+            "firstPublished": "2019-02-01T11:17:48.000Z",
+            "lastPublished": "2019-02-01T11:17:48.000Z",
+            "link": "https://www.bbc.com/gahuza/23229461",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/33F3/test/_63699231_arusha.jpg",
+            "description": "Inama y’umuryango wa Afrika y’ubuseruko yibanda ku ndyane hagati y’Uburundi n’Urwanda",
+            "imageAlt": "EAC",
+            "id": "d616d9fc-6106-684b-99a0-a244f1cd8681"
           },
           {
             "type": "article",
-            "title": "Jack Ma washinze Alibaba yabonetse nyuma y'igihe kinini atagaragara ",
-            "firstPublished": "2023-03-27T11:04:51.948Z",
-            "link": "https://www.bbc.com/gahuza/articles/cp6wzn054xdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a7b5/live/e337a310-cc8e-11ed-be2e-754a65c11505.jpg",
-            "description": "Jack Ma w'imyaka 58 yabonetse gacye kuva yanenga abashinzwe kugenzura ubukungu bw'Ubushinwa mu 2020.  ",
-            "imageAlt": "Kuva mu mpera za 2020 Jack Ma yabonetse gacye cyane mu bantu",
-            "id": "cp6wzn054xdo"
+            "title": "Rwanda, indwara yibasiye uturere dutatu",
+            "firstPublished": "2018-06-13T10:43:48.000Z",
+            "lastPublished": "2018-06-13T10:43:48.000Z",
+            "link": "https://www.bbc.com/gahuza/23204126",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/D816/test/_63681355_4cb93475-2464-47d3-9f39-10c6c8a49991.jpg",
+            "description": "Ministeri y'ubuhinzi irabuza ingendo z'amatungo ku mpavu iyo ari yo yose mu rwego rwo kurinda ko iyi ndwara yakwadukira n'uduce itarageramo.",
+            "imageAlt": "mu rwanda juin",
+            "id": "536e5787-f7a4-5e4a-af3e-fef5870052ce"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:cf1b146e-c9de-4b47-b345-f85f32d2a80b",
+        "curationId": "urn:bbc:tipo:list:b55960e8-c62b-4717-bdfb-995f598e7ec7",
         "curationType": "tipo-curation",
         "position": 0,
         "title": "BBC News Gahuza Top Stories",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "Rusesabagina na ‘Sankara’ bararekurwa, 'si ku gitutu cya Amerika' - Umuvugizi",
-            "firstPublished": "2023-03-24T16:58:52.049Z",
-            "link": "https://www.bbc.com/gahuza/articles/ce92v5gvv1vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7c9b/live/6f5b05d0-ca64-11ed-be2e-754a65c11505.jpg",
-            "description": "Paul Rusesabagina mu ibaruwa isaba imbabazi yatangajwe na leta, avuga ko “ibibazo bijyanye na politiki y’u Rwanda nzabisiga inyuma yanjye”.",
-            "imageAlt": "Rusesabagina yerekanywe afungiye mu Rwanda muri Kanama(8) 2020 mu buryo bwavuzweho cyane",
-            "id": "ce92v5gvv1vo"
+            "title": "gfggghfghdghd",
+            "firstPublished": "2016-03-14T11:55:54.000Z",
+            "lastPublished": "2016-03-14T11:55:54.000Z",
+            "link": "https://www.bbc.com/gahuza/amakuru-23029740",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/145B1/test/_63477338_63477331.jpg",
+            "description": "ffdgdghfhfhfghdfgdfgdgdhdfg",
+            "imageAlt": "vcgfghfgh",
+            "id": "d39ed048-9ec0-c946-adbe-4d92f698f14a"
           },
           {
             "type": "article",
-            "title": "Uyu munsi mu rubanza rwa Kabuga: Inzobere yavuze ko atashobora gusubiza ku byo aregwa",
-            "firstPublished": "2023-03-23T14:09:25.844Z",
-            "link": "https://www.bbc.com/gahuza/articles/crg5qp7nx32o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a56c/live/969dc160-c96e-11ed-bb75-4187a06ea88d.jpg",
-            "description": "Inzobere mu buzima bwo mu mutwe Profeseri Gillian Mezey, umwe muri eshatu zigenga zakoze raporo ku buzima bwa Kabuga, ni we wumviswe uyu munsi. ",
-            "imageAlt": "Félicien Kabuga ubwo yari akurikiye iburanisha kuri uyu wa kane",
-            "id": "crg5qp7nx32o"
+            "title": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe",
+            "firstPublished": "2016-02-11T12:10:28.000Z",
+            "lastPublished": "2016-02-11T12:10:28.000Z",
+            "link": "https://www.bbc.com/gahuza/amakuru-23022558",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "description": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+            "imageAlt": "Prezida w'Urwanda Paul Kagame",
+            "id": "cbe19d17-dbda-fa48-9f27-37752e0752ac"
           },
           {
             "type": "article",
-            "title": "Impinduka muri leta DR Congo - Vital Kamerhe na Jean Pierre Bemba binjiye muri guverinoma",
-            "firstPublished": "2023-03-24T06:11:51.208Z",
-            "link": "https://www.bbc.com/gahuza/articles/c4n7ez33qpqo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/356d/live/602c67c0-ca0a-11ed-ba93-a55a7032c318.jpg",
-            "description": "Vital Kamerhe na Jean Pierre Bemba ni bamwe mu bigugu muri politiki ya DR Congo bashobora gukomeza uruhande rwa Tshisekedi mbere y’amatora. ",
-            "imageAlt": "Vital Kamerhe (ibumoso) na Jean Pierre Bemba",
-            "id": "c4n7ez33qpqo"
+            "title": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe 1",
+            "firstPublished": "2016-02-11T12:10:46.000Z",
+            "lastPublished": "2016-02-11T12:10:46.000Z",
+            "link": "https://www.bbc.com/gahuza/amakuru-23022559",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "description": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+            "imageAlt": "Prezida w'Urwanda Paul Kagame",
+            "id": "7f823991-068a-3d4c-bfb6-1e0338defff9"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:de476937-7ca0-4a72-8ab7-5c2c3817271f",
+        "curationId": "urn:bbc:tipo:list:34ccccca-9497-4d39-b6e1-39c10d327070",
         "curationType": "tipo-curation",
         "position": 1,
         "title": "Ivyo BBC Gahuza ibahitiramwo",
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT4M46S",
-            "title": "DR Congo – Rwanda: Abahitanywe n'imyuzure bari gushobora gukingirwa?",
-            "firstPublished": "2023-05-10T20:42:53.549Z",
-            "link": "https://www.bbc.com/gahuza/articles/c28mm84jznwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/84c6/live/c802d2f0-ef6f-11ed-a142-ab0e42bfd9c3.png",
-            "description": "Abantu amajana bapfiriye nka rimwe, mu burengero bushira uburaruko mu Rwanda, na Kalehe muri DR Congo, ibihumbi baracaronderwa. Umuhinga Ir. Anne-Marie Bihirabake agabisha ibi bihugu ko ata kwijajara.",
-            "imageAlt": "Abishwe n'imyuzure baharurwa mu majana, ibihumbi baracaronderwa",
-            "id": "c28mm84jznwo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M39S",
-            "title": "Turkey: igihe co gusuzuma intwaro ya Erdogan kirageze",
-            "firstPublished": "2023-05-10T15:01:38.735Z",
-            "link": "https://www.bbc.com/gahuza/articles/cw5kk4p6wzpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f84a/live/778d1c90-ef42-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Erdogan yiyamamaza inyuma y'imyaka 20 ari k'ubutegeetsi",
-            "id": "cw5kk4p6wzpo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M45S",
-            "title": "Umwami Charles III: ibimenyetso bikomeye vy’ubwami, mw’iyimikwa ",
-            "firstPublished": "2023-05-08T13:27:20.272Z",
-            "link": "https://www.bbc.com/gahuza/articles/cn0x32pjv8po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3b09/live/5420c7c0-eda3-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "",
-            "imageAlt": "Umwami Charles III n'umwamikazi Camilla",
-            "id": "cn0x32pjv8po"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M43S",
-            "title": "Charles III: Iyimikwa nk’Umwami rivuze iki kuri bamwe, muri Africa?",
-            "firstPublished": "2023-05-03T22:16:29.284Z",
-            "link": "https://www.bbc.com/gahuza/articles/cy90kx7l5ywo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1abe/live/17aa6a50-e9ff-11ed-a142-ab0e42bfd9c3.png",
-            "description": "",
-            "imageAlt": "Uko bamwe muri Africa babona iyimikwa rya Charles III",
-            "id": "cy90kx7l5ywo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M25S",
-            "title": "Uko ibihugu biri mu ngorane z’ubutunzi bitabarwa",
-            "firstPublished": "2023-04-29T03:27:01.567Z",
-            "link": "https://www.bbc.com/gahuza/articles/c2q1464739vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d59d/live/4c346890-e63d-11ed-a142-ab0e42bfd9c3.png",
-            "description": "",
-            "imageAlt": "Ku cicaro c'ikigega c'isi muri USA",
-            "id": "c2q1464739vo"
-          },
-          {
-            "type": "article",
-            "title": "Kenya: ahabereye ivyaha burimwo impfu zifatiye kw’idini",
-            "firstPublished": "2023-04-27T15:05:22.524Z",
-            "link": "https://www.bbc.com/gahuza/articles/c4np33gx0pdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b7e7/live/8eb57ba0-e50c-11ed-8df1-d74cbf1089d7.png",
-            "description": "",
-            "imageAlt": "Abapfuye bisonzesha bashoboye gutorwa barahambwe n'iteka",
-            "id": "c4np33gx0pdo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M38S",
-            "title": "Isi yibuka ko umubu ari kamwe m’udukoko twica: gute?",
-            "firstPublished": "2023-04-26T20:31:50.175Z",
-            "link": "https://www.bbc.com/gahuza/articles/c3gvny19ldmo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6aac/live/25156570-e471-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "Uko hamwe muri Afrika batuza imibu itera malaria",
-            "id": "c3gvny19ldmo"
-          },
-          {
-            "type": "video",
-            "duration": "PT1M37S",
-            "title": "“Ninasubira kuba muto nshaka kuzomera nk’umuhungu wanje”",
-            "firstPublished": "2023-04-26T19:28:50.972Z",
-            "link": "https://www.bbc.com/gahuza/articles/cv276m5l755o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/08c5/live/52751550-e468-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "Bryan Johnson w’imyaka 45, avuga ko afise imyaka 18. ",
-            "id": "cv276m5l755o"
-          },
-          {
-            "type": "article",
-            "title": "Sudan: Tahura imvo y’izi ntambara",
-            "firstPublished": "2023-04-25T16:29:34.350Z",
-            "link": "https://www.bbc.com/gahuza/articles/cd1r5xqq517o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e2d2/live/d824a870-e385-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "Intambara zasize igisagara Khartoum ari umusaka",
-            "id": "cd1r5xqq517o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M45S",
-            "title": "Video: Emery Ngarambe aravuga ingaruka zo gufata 'booster' n'uko yayihevye",
-            "firstPublished": "2023-04-25T16:12:21.773Z",
-            "link": "https://www.bbc.com/gahuza/articles/c3gvnlyd6r7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Kubera kunywa ibiyayuramutwe, Emery Ngarambe yama mu gasho no mu bitaro. Yariba ico abonye cose muhira, akavuga ko yagiye kubiheba amaze kwiba mu muryango nk'ibintu vyoba biciye nk'imodoka.",
-            "imageAlt": "",
-            "id": "c3gvnlyd6r7o"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M1S",
-            "title": "Afghanistan: uko abigisha babaye mu mirimo yabo",
-            "firstPublished": "2023-04-24T14:48:06.282Z",
-            "link": "https://www.bbc.com/gahuza/articles/c4npvwezj9eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f801/live/f88133f0-e2ad-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "Afghanistan, ubuzima bwa bamwe mu bigisha",
-            "id": "c4npvwezj9eo"
-          },
-          {
-            "type": "video",
-            "duration": "PT2M27S",
-            "title": "Sudan: uko amasanamu y’ibinyoma ku ntambara akwiragizwa",
-            "firstPublished": "2023-04-22T21:30:40.799Z",
-            "link": "https://www.bbc.com/gahuza/articles/c72zxd64ydno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f47d/live/a6c3b6a0-e154-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "Sudan: Itohoza ku masanamu y’ibinyoma mu ntambara",
-            "id": "c72zxd64ydno"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 5,
-        "curationId": "urn:bbc:vivo:curation:187eb2c6-a4f0-4a31-adf1-5941beaf849d",
-        "curationType": "vivo-stream",
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_gahuza_radio",
+        "curationType": "available-episodes",
         "position": 2,
-        "title": "Videos",
-        "visualProminence": "NORMAL"
-      },
-      {
-        "summaries": [
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
           {
-            "type": "article",
-            "title": "Barcelona: Kizigenza Sergio Busquets agiye gusezera inyuma y’imyaka 18",
-            "firstPublished": "2023-05-10T11:31:27.519Z",
-            "link": "https://www.bbc.com/gahuza/articles/c72119q6p4zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1688/live/43073e50-ef25-11ed-a188-1b6d50771321.jpg",
-            "description": "Kizigenza Sergio Busquets yemeje ko azova muri Barcelona mu mpera z’uno mwaka w’inkino inyuma y’imyaka 18 akinira uno murwi. ",
-            "imageAlt": "Sergio Busquets yinjiye muri Barcelona mu 2005 akaba yatanguye gukina mu murwi mukuru mu 2008",
-            "id": "c72119q6p4zo"
+            "id": "p0h6phdp",
+            "state": "next",
+            "startTime": "2024-02-27T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg8dlvdp5w",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
           },
           {
-            "type": "article",
-            "title": "West Ham 1 - 0 Man U: David de Gea arabaye uruvugo inyuma y’ikosa ryaraye rihumiye umurwi wiwe ",
-            "firstPublished": "2023-05-08T11:23:48.846Z",
-            "link": "https://www.bbc.com/gahuza/articles/cyd86g7nv66o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8351/live/42429410-ed8b-11ed-bb92-65f9d49396ea.jpg",
-            "description": "Ikosa ryakozwe n’umunyegori David de Gea ryatumye Saïd Benrahma wa West Ham  yinjiza igitsindo kimwe rudende c’urwo rukino ku munota wa 27.",
-            "imageAlt": "De Gea",
-            "id": "cyd86g7nv66o"
+            "id": "p0h6hg1k",
+            "state": "onDemand",
+            "startTime": "2024-02-26T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg8dlv9s8s",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
           },
           {
-            "type": "article",
-            "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Neymar, Messi, Fati, Amrabat, Rashford, Kane",
-            "firstPublished": "2023-05-05T10:23:38.248Z",
-            "link": "https://www.bbc.com/gahuza/articles/c72jryjn8jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b6ea/live/89364630-eb2b-11ed-b4d7-a9cb08bb71d4.jpg",
-            "description": "Newcastle United irarondera Neymar, nayo Wolves ikaba irondera guha Barcelona imiriyoni 30 z’ama-euro yongere ishireko n’umukinyi wayo wo hagati Ruben Neves, kugira ngo irabe ko aba ba-Catalans boyiha  Ansu Fati w’imyaka 20.",
-            "imageAlt": "Neymar",
-            "id": "c72jryjn8jeo"
+            "id": "p0h64qm6",
+            "state": "onDemand",
+            "startTime": "2024-02-24T05:00:00.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w3ct6750",
+            "brandTitle": "Imvo n'Imvano",
+            "summary": "Ikiganiro gicukumbuye ku bibazo bitandukanye.",
+            "duration": "PT59M"
           },
           {
-            "type": "article",
-            "title": "'Haaland akwiye icyubahiro yahawe' – Guardiola",
-            "firstPublished": "2023-05-04T04:21:02.506Z",
-            "link": "https://www.bbc.com/gahuza/articles/c720zj0pvpgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b386/live/ce18f250-ea2e-11ed-a40f-310b757365da.jpg",
-            "description": "Umutoza wa Manchester City Pep Guardiola avuga ko Erling Haaland yari akwiye icyubahiro yahawe na bagenzi be bamuhagurukira, nyuma yo guca umuhigo wo gutsinda ibitego byinshi muri Premier League mu mwaka w'imikino. ",
-            "imageAlt": "Haaland yishimira intsinzi",
-            "id": "c720zj0pvpgo"
-          },
-          {
-            "type": "article",
-            "title": "Lionel Messi: Uyu musatirizi wa Argentine azova muri PSG uyu mwaka w'inkino uheze",
-            "firstPublished": "2023-05-03T17:00:17.485Z",
-            "link": "https://www.bbc.com/gahuza/articles/cldknr7ylx5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7f1f/live/ea7646d0-e9d1-11ed-9ff0-1714980264ca.jpg",
-            "description": "Lionel Messi azova muri Paris St-Germain mu ci umwaka w’inkino uheze igihe amasezerano yasinye azoba arangiye",
-            "imageAlt": "Lionel Messi",
-            "id": "cldknr7ylx5o"
-          },
-          {
-            "type": "article",
-            "title": "Lionel Messi: PSG yamuhagaritse indwi zibiri kubera urugendo yakoze muri Saudi Arabia ",
-            "firstPublished": "2023-05-03T05:47:16.972Z",
-            "link": "https://www.bbc.com/gahuza/articles/c80y6y746x8o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e6e/live/e27d8b30-e974-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Kizigenza w’umurwi nserukiragihugu wa Argentina Lionel Messi yahagaritswe na Paris St-Germain mu kiringo c’indwi zibiri inyuma y’urugendo yagize muri Arabie Saoudite muri ino ndwi ata ruhusha yahawe n’umurwi wiwe. ",
-            "imageAlt": "Lionel Messi yatsindiye igikombe c'isi yose mu murwi nserukiragihugu wa Argentina muri Kigarama (12) ",
-            "id": "c80y6y746x8o"
-          },
-          {
-            "type": "article",
-            "title": "Uko umutoza Florent Ibenge wa Al-Hilal SC yahunze Sudan ",
-            "firstPublished": "2023-05-01T08:12:59.847Z",
-            "link": "https://www.bbc.com/gahuza/articles/cev4gdz9ndlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1622/live/585e7380-e7e7-11ed-9dec-01bddd554611.jpg",
-            "description": "Florent Ibenge, umutoza w'Umunye-Congo w'ikipe iri ku mwanya wa mbere muri Sudan, avuga ko yizeye kongera guhura n'abakinnyi be mu gihe cya vuba. ",
-            "imageAlt": "Umutoza Florent Ibenge wa Al-Hilal mu mukino wa CAF Champions League hagati ya Al Ahly yo mu Misiri na Al-Hilal Omdurman yo muri Sudan",
-            "id": "cev4gdz9ndlo"
-          },
-          {
-            "type": "article",
-            "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Haaland, Zaha, Mount, Maddison, Abraham, Dybala, Mané ",
-            "firstPublished": "2023-05-01T07:43:57.849Z",
-            "link": "https://www.bbc.com/gahuza/articles/cgln252jy2go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1882/live/1e183170-e7f1-11ed-a142-ab0e42bfd9c3.jpg",
-            "description": "Manchester City iriko iritegurira ibiganiro na Erling Haaland kugira imuhe amasezerano mashasha, naho Wilfried Zaha  akaba ariko atera amero Arsenal, Juventus, Chelsea na Barcelona, aya n'ayandi ni mu yavugwa kuri uno wa mbere.",
-            "imageAlt": "Erling Haaland",
-            "id": "cgln252jy2go"
-          },
-          {
-            "type": "article",
-            "title": "Rurangiranwa mu mupira w'amaguru Pelé yashizwe  muri kazinduzi nk'icitiranwa ca 'mbonekarimwe'",
-            "firstPublished": "2023-04-27T15:54:09.786Z",
-            "link": "https://www.bbc.com/gahuza/articles/cp352vxzx32o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/06be/live/028cb020-e512-11ed-95b5-3fc903c2600a.jpg",
-            "description": "Pelé, iritazirano rya rurangiranwa mu mupira w'amaguru aherutse gupfa, ryabaye icitiranwa ca \"kidasanzwe, ntagereranywa, mbonekarimwe\". ",
-            "imageAlt": "Pelé",
-            "id": "cp352vxzx32o"
-          },
-          {
-            "type": "article",
-            "title": "Igikombe kiri mu biganza byacu kandi tugomba kubibyaza umusaruro – Guardiola",
-            "firstPublished": "2023-04-27T03:53:52.727Z",
-            "link": "https://www.bbc.com/gahuza/articles/c51pd159rk2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c014/live/2bbcba50-e4ac-11ed-82f6-5be9c54f2d36.jpg",
-            "description": "Umutoza Pep Guardiola avuga ko ikipe ye ya Manchester City yerekanye ko ishoboye iyo \"nta yandi mahitamo ahari uretse gutsinda\", nyuma yuko inyagiye Arsenal bigatuma iba mu mwanya mwiza mu nkundura yo guhatanira igikombe. ",
-            "imageAlt": "Bumwe mu buryo Pep Guardiola yifashemo mu mukino Man City yatsinzemo Arsenal",
-            "id": "c51pd159rk2o"
-          },
-          {
-            "type": "article",
-            "title": "Ayavugwa mu mupira w’amaguru: Kane, Rashford, Zaha, Neymar, Firmino, Mac Allister, Gavi, Laporte",
-            "firstPublished": "2023-04-25T10:40:14.712Z",
-            "link": "https://www.bbc.com/gahuza/articles/czkxmknxggxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e6a/live/097eb410-e354-11ed-8d37-35f29b0896ac.jpg",
-            "description": "Manchester United iriko irarondera hasi hejuru umusatirizi wa Tottenham Harry Kane, yongera ikurikiranira hagufi Neymar, nayo Arsenal, Chelsea na Paris St-Germain ikanuriye amaso umusatirizi wa Crystal Palace Wilfried Zaha ...aya n'ayandi ni mu yavugwa kuri uno wa kabiri.",
-            "imageAlt": "Neymar",
-            "id": "czkxmknxggxo"
-          },
-          {
-            "type": "article",
-            "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Messi, Raphinha, Osimhen, Mac Allister, Watkins",
-            "firstPublished": "2023-04-23T06:36:38.068Z",
-            "link": "https://www.bbc.com/gahuza/articles/c5145x47l20o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a8d2/live/9b563040-e19f-11ed-8df1-d74cbf1089d7.png",
-            "description": "Paris St-Germain izorekura Lionel Messi amasezerano ifitaniye nawe arangiye mu ci riza, Barcelona iramaze kuneka abakinyi bashika 13 mu gikorwa co kurondera umukinyi w’inyuma ku ruhande rw’i buryo mu ci riza, aya n'ayandi ni mu yavugwa kuri uno wa Mungu.",
-            "imageAlt": "Lionel Messi yakoze ibidasanzwe mu myaka itari mike yamaze akinira umurwi Barcelona wamureze kuva mu bwana, muri kino gihe akaba akinira PSG wo mu Bufaransa",
-            "id": "c5145x47l20o"
+            "id": "p0h62dm0",
+            "state": "onDemand",
+            "startTime": "2024-02-23T16:29:30.000Z",
+            "link": "/gahuza/bbc_gahuza_radio/w172zkg81bjx79b",
+            "brandTitle": "Amakuru ya Gahuzamiryango",
+            "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+            "duration": "PT30M"
           }
-        ],
-        "activePage": 1,
-        "pageCount": 14,
-        "curationId": "urn:bbc:vivo:curation:622a5a2a-9b1b-44d8-b37c-13771d75897b",
-        "curationType": "vivo-stream",
-        "position": 3,
-        "title": "Imikino",
-        "visualProminence": "NORMAL"
+        ]
       }
     ],
     "metadata": {
@@ -368,6 +150,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO page"
+  "contentType": "application/json; charset=utf-8"
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number, string, shape, oneOf } from 'prop-types';
+import { number, string, shape, oneOf, oneOfType } from 'prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
@@ -96,7 +96,7 @@ export const StartTimestamp = ({
 };
 
 StartTimestamp.propTypes = {
-  timestamp: number.isRequired,
+  timestamp: oneOfType([number, string]).isRequired,
   timezone: string,
   locale: string,
   script: shape(scriptPropType).isRequired,
@@ -128,7 +128,7 @@ const StartTime = ({ timestamp }) => {
 };
 
 StartTime.propTypes = {
-  timestamp: number.isRequired,
+  timestamp: oneOfType([number, string]).isRequired,
 };
 
 export default StartTime;

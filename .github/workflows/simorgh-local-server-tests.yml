@@ -21,6 +21,8 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
+      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
+      LIGHTHOUSE_BUILD: true
 
     steps:
       - uses: actions/checkout@v3
@@ -54,7 +56,7 @@ jobs:
 
       - name: Start Simorgh Server - Next.JS App
         working-directory: ./ws-nextjs-app
-        run: nohup node build/standalone/server.js > /dev/null 2>&1 &
+        run: PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
 
       - name: Run AMP Validator
         run: yarn amp:validate

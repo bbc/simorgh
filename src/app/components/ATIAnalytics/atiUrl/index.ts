@@ -1,3 +1,4 @@
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getDestination,
   getAppType,
@@ -250,6 +251,7 @@ export const buildATIEventTrackUrl = ({
   type,
   advertiserID,
   url,
+  detailedPlacement,
 }: ATIEventTrackingProps) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -320,13 +322,14 @@ export const buildATIEventTrackUrl = ({
         pageIdentifier,
         advertiserID,
         url,
+        detailedPlacement,
       }),
       wrap: false,
       disableEncoding: true,
     },
   ];
 
-  return `${process.env.SIMORGH_ATI_BASE_URL}${getAtiUrl(
+  return `${getEnvConfig().SIMORGH_ATI_BASE_URL}${getAtiUrl(
     eventTrackingBeaconValues,
   )}&type=AT`;
 };

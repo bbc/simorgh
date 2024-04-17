@@ -1,6 +1,7 @@
 import Url from 'url-parse';
 
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default (href, type, pathname) => {
   const mutator = {
@@ -11,7 +12,9 @@ export default (href, type, pathname) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${mutator[type]}`;
+  const includeUrl = `${
+    getEnvConfig().SIMORGH_INCLUDES_BASE_URL
+  }${withTrailingHref}${mutator[type]}`;
 
   const currentRendererEnv = new Url(pathname, true).query.renderer_env;
 

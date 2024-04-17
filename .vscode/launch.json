@@ -6,14 +6,17 @@
   "configurations": [
     {
       "type": "node",
-      "runtimeVersion": "16",
+      "runtimeVersion": "18",
       "request": "launch",
       "name": "Debug Express App",
       "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
       "args": [
         "--watch", "--progress", "--env" , "config='server'"
       ],
-      "env" : { "NODE_ENV" : "development" }
+      "env" : { "NODE_ENV" : "development" },
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*",
+      ]
     }
   ]
 }

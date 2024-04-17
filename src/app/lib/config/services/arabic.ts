@@ -45,18 +45,19 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 558497376,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'البودكاست',
-      brandTitle: 'بي بي سي إكسترا',
+      title: 'يستحق الانتباه',
+      brandTitle: 'يستحق الانتباه',
       brandDescription:
-        'بودكاست أسبوعي يقدم  قصصا إنسانية عن العالم العربي وشبابه.',
+        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg',
-        alt: 'بي بي سي إكسترا',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -80,7 +81,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      relatedTopics: 'مواضيع ذات صلة',
+      relatedTopics: 'كلمات مفتاحية',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
@@ -348,32 +349,24 @@ export const service: DefaultServiceConfig = {
         url: '/arabic',
       },
       {
-        title: 'شرق أوسط',
-        url: '/arabic/topics/ckdxnj6g4znt',
+        title: 'أخبار',
+        url: '/arabic/topics/cv2xyrnr8dnt',
       },
       {
-        title: 'عالم',
-        url: '/arabic/topics/c719d2el19nt',
+        title: 'اقتصاد',
+        url: '/arabic/topics/cqywj97d487t',
       },
       {
-        title: 'علوم وتكنولوجيا',
-        url: '/arabic/topics/c719d2ely7xt',
+        title: 'صحة وعلوم',
+        url: '/arabic/topics/clmj3d7282gt',
       },
       {
-        title: 'صحة',
-        url: '/arabic/topics/c95y3q70znjt',
+        title: 'رياضة',
+        url: '/arabic/topics/cyx5kw7g1j2t',
       },
       {
         title: 'فيديو',
-        url: '/arabic/media-54706728',
-      },
-      {
-        title: 'صحافة',
-        url: '/arabic/topics/c08gmd9rp97t',
-      },
-      {
-        title: 'ترند',
-        url: '/arabic/topics/c404vr23x4dt',
+        url: '/arabic/topics/cz9mm6r1q5et',
       },
       {
         title: 'تحقيقات',

@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -66,12 +67,19 @@ const StyledNoScript = styled.noscript`
     `}
 `;
 
-const Guidance = ({ guidanceMessage, service, noJsMessage, noJsClassName }) => (
+const Guidance = ({
+  guidanceMessage,
+  service,
+  noJsMessage,
+  noJsClassName,
+  className,
+}) => (
   <GuidanceWrapper
     service={service}
     guidanceMessage={guidanceMessage}
     noJsClassName={noJsClassName}
     data-e2e="media-player__guidance"
+    className={className}
   >
     {guidanceMessage && (
       <GuidanceMessage className="guidance-message" aria-hidden="true">
@@ -89,11 +97,13 @@ Guidance.propTypes = {
   service: string.isRequired,
   noJsMessage: string.isRequired,
   noJsClassName: string,
+  className: string,
 };
 
 Guidance.defaultProps = {
   guidanceMessage: null,
   noJsClassName: null,
+  className: null,
 };
 
 export default Guidance;

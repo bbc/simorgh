@@ -107,8 +107,16 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -302,6 +310,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -352,6 +361,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r8:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
@@ -359,13 +369,13 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
           Skip Twitter content, 1
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-1384138850478346243"
         >
           <strong
             class="emotion-11"
@@ -403,15 +413,13 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
             Accept and continue
           </button>
         </div>
-        <figcaption
+        <small
           class="emotion-14 emotion-15"
+          id=":r8:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-16 emotion-17"
         id="end-of-twitter-content-1"
@@ -420,6 +428,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -531,8 +540,16 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -628,6 +645,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -678,6 +696,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r4:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
@@ -685,7 +704,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
           Skip Facebook content
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
@@ -730,15 +749,13 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
             </blockquote>
           </div>
         </div>
-        <figcaption
+        <small
           class="emotion-12 emotion-13"
+          id=":r4:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-14 emotion-15"
         id="end-of-facebook-content"
@@ -747,6 +764,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
         End of Facebook content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -855,11 +873,18 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 55.5rem;
+}
+
+min-height:55.5rem .no-js .emotion-2 {
+  min-height: 0;
 }
 
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -955,6 +980,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1005,6 +1031,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r5:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
@@ -1012,7 +1039,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
           Skip Facebook content
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
@@ -1054,15 +1081,13 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
             </blockquote>
           </div>
         </div>
-        <figcaption
+        <small
           class="emotion-12 emotion-13"
+          id=":r5:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-14 emotion-15"
         id="end-of-facebook-content"
@@ -1071,6 +1096,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
         End of Facebook content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1182,8 +1208,16 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -1377,6 +1411,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1427,6 +1462,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r3:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-tiktok-content"
       >
@@ -1434,13 +1470,13 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
           Skip TikTok content
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-7086167423639997701"
         >
           <strong
             class="emotion-11"
@@ -1478,15 +1514,13 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
             Accept and continue
           </button>
         </div>
-        <figcaption
+        <small
           class="emotion-14 emotion-15"
+          id=":r3:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites. TikTok content may contain adverts
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-16 emotion-17"
         id="end-of-tiktok-content"
@@ -1495,6 +1529,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
         End of TikTok content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1606,8 +1641,16 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -1693,6 +1736,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -1743,6 +1787,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r0:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
@@ -1750,7 +1795,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
           Skip Twitter content, 1
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
@@ -1780,15 +1825,13 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
           
 
         </div>
-        <figcaption
+        <small
           class="emotion-12 emotion-13"
+          id=":r0:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-14 emotion-15"
         id="end-of-twitter-content-1"
@@ -1797,6 +1840,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -1905,11 +1949,18 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 7.0625rem;
+}
+
+min-height:7.0625rem .no-js .emotion-2 {
+  min-height: 0;
 }
 
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -2103,6 +2154,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -2153,6 +2205,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r2:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-youtube-content"
       >
@@ -2160,13 +2213,13 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
           Skip YouTube content
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
           class="emotion-10"
           data-testid="consentBanner"
-          id="consentBanner"
+          id="consentBanner-oembed"
         >
           <strong
             class="emotion-11"
@@ -2204,15 +2257,13 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
             Accept and continue
           </button>
         </div>
-        <figcaption
+        <small
           class="emotion-14 emotion-15"
+          id=":r2:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites. YouTube content may contain adverts
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-16 emotion-17"
         id="end-of-youtube-content"
@@ -2221,6 +2272,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
         End of YouTube content
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -2332,8 +2384,16 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -2416,6 +2476,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  display: block;
   color: #545658;
   padding: 0.5rem 0;
 }
@@ -2466,6 +2527,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
       class="emotion-4 emotion-5"
     >
       <a
+        aria-describedby=":r1:"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-instagram-content-1"
       >
@@ -2473,7 +2535,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
           Skip Instagram content, 1
         </span>
       </a>
-      <figure
+      <div
         class="emotion-8 emotion-9"
       >
         <div
@@ -2499,15 +2561,13 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
             src="https://www.instagram.com/embed.js"
           />
         </div>
-        <figcaption
+        <small
           class="emotion-12 emotion-13"
+          id=":r1:"
         >
-          <span>
-            Video caption, 
-          </span>
           Warning: The BBC is not responsible for the content of external sites.
-        </figcaption>
-      </figure>
+        </small>
+      </div>
       <p
         class="emotion-14 emotion-15"
         id="end-of-instagram-content-1"
@@ -2516,6 +2576,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
         End of Instagram content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;

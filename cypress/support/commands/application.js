@@ -4,6 +4,8 @@
 // NB:
 // - Default timeout for cy.request is 50s
 // - Certain types of network error are retried automatically (retryOnNetworkFailure)
+import config from '../config/services';
+
 export const testResponseCodeAndType = ({
   path,
   responseCode,
@@ -92,6 +94,9 @@ export const testResponseCodeAndTypeRetry = ({
 };
 
 export const getPageData = ({ service, pageType, variant = 'default', id }) => {
+  // eslint-disable-next-line no-param-reassign
+  service = config[service]?.name || service;
+
   const env = Cypress.env('APP_ENV');
   const isNextJs = Cypress.env('isNextJs');
   if (isNextJs) {

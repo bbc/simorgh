@@ -28,6 +28,7 @@ describe('beacon', () => {
         service: 'news',
         componentName: 'component',
         pageIdentifier: 'pageIdentifier',
+        detailedPlacement: 'detailedPlacement',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
@@ -43,7 +44,7 @@ describe('beacon', () => {
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
-        atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]',
+        atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[detailedPlacement]-[]-[]',
         type: 'AT',
       });
     });

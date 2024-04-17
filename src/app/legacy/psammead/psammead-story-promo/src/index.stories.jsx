@@ -17,7 +17,7 @@ import notes from '../README.md';
 const buildImg = () => {
   const imageSizes = [300, 450, 600, 1024];
   const imageSrc =
-    'https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
+    'https://ichef.bbci.co.uk/ace/ws/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
 
   return (
     <Image

@@ -76,7 +76,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -104,7 +104,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 3
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Hay Festival",
-  "url": "/mundo/noticias-36795069",
+  "url": "/mundo/topics/cr50y7p7qyqt",
 }
 `;
 
@@ -146,14 +146,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 9
 exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Centroamérica Cuenta",
-  "url": "/mundo/noticias-43826245",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
-{
-  "text": "BBC Extra",
-  "url": "/mundo/noticias-48908206",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 
@@ -162,11 +155,11 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="549"
   sizes="(min-width: 1008px) 645px, 100vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
   style="aspect-ratio:976 / 549"
   width="976"
 />

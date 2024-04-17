@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
@@ -12,33 +13,36 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 });
 
 const homePageData = {
-  title: kyrgyzHomePageData.title,
-  description: kyrgyzHomePageData.description,
-  curations: kyrgyzHomePageData.curations,
+  ...kyrgyzHomePageData,
   metadata: {
     ...kyrgyzHomePageData.metadata,
     type: 'home',
   },
 };
 
+const afriqueHomePageData = {
+  ...afriqueHomePageDataFixture,
+  metadata: {
+    ...afriqueHomePageDataFixture.metadata,
+    type: 'home',
+  },
+};
+
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
-  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
-  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
 
   it('should render a section for each curation with summaries', () => {
-    const { container } = render(<HomePage pageData={homePageData} />, {
-      service: 'kyrgyz',
+    const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
+      service: 'afrique',
       toggles: {
         mostRead: { enabled: true },
+        radioSchedule: { enabled: true },
       },
     });
-
-    const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
-      ({ summaries, mostRead }) =>
-        (summaries && summaries?.length > 0) || mostRead,
+    const curationsWithSummaries = afriqueHomePageDataFixture.curations.filter(
+      ({ summaries, mostRead, radioSchedule }) =>
+        (summaries && summaries?.length > 0) || mostRead || radioSchedule,
     );
-
     expect(container).not.toBeEmptyDOMElement();
     expect(container.getElementsByTagName('section').length).toEqual(
       curationsWithSummaries.length,

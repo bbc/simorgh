@@ -189,6 +189,7 @@ export default (service: string) => {
     case 'russian':
     case 'sport':
     case 'turkce':
+    case 'ws':
       return [
         REITH_SANS_BOLD,
         REITH_SANS_REGULAR,

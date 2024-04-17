@@ -27,6 +27,15 @@ const mockPageData = {
     },
     contributors: 'Not a random dude',
   },
+  headerImage: {
+    url: 'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    urlTemplate:
+      'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Man',
+    copyright: 'BBC',
+  },
 };
 
 const mockPageDataWithPosts = {
@@ -62,9 +71,13 @@ const mockPageDataWithMetadata = ({
   seoDescription,
   datePublished,
   dateModified,
+  startDateTime,
+  endDateTime,
 }: {
   title: string;
   description?: string;
+  startDateTime?: string;
+  endDateTime?: string;
   seoTitle?: string;
   seoDescription?: string;
   datePublished?: string;
@@ -74,6 +87,8 @@ const mockPageDataWithMetadata = ({
     ...mockPageData,
     title,
     description,
+    startDateTime,
+    endDateTime,
     seo: {
       seoTitle,
       seoDescription,
@@ -151,6 +166,7 @@ describe('Live Page', () => {
       expect(schemaHeadline).toBeTruthy();
     },
   );
+
   it('SEO should use datePublished and dateModified when present', async () => {
     const datePublished = '2018-09-28T22:59:02.448804522Z';
     const dateModified = '2020-09-28T22:59:02.448804522Z';
@@ -202,6 +218,57 @@ describe('Live Page', () => {
     expect(SEODateModified).toBeFalsy();
   });
 
+  it('SEO should use coverageStartTime and coverageEndTime when present', async () => {
+    const startDateTime = '2023-04-05T10:22:00.000Z';
+    const endDateTime = '2024-04-05T10:21:00.000Z';
+
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+            startDateTime,
+            endDateTime,
+          })}
+        />,
+      );
+    });
+
+    const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageStartTime":"${startDateTime}"`),
+    );
+
+    const CoverageEndTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageEndTime":"${endDateTime}"`),
+    );
+
+    expect(CoverageStartTime).toBeTruthy();
+    expect(CoverageEndTime).toBeTruthy();
+  });
+
+  it('SEO should NOT contain coverageStartTime and coverageEndTime when absent', async () => {
+    await act(async () => {
+      render(
+        <Live
+          pageData={mockPageDataWithMetadata({
+            title: 'Title',
+          })}
+        />,
+      );
+    });
+
+    const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageStartTime":null`),
+    );
+
+    const CoverageEndTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+      innerHTML?.includes(`"coverageEndTime":null`),
+    );
+
+    expect(CoverageStartTime).toBeFalsy();
+    expect(CoverageEndTime).toBeFalsy();
+  });
+
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
       ...mockPageData,
@@ -246,6 +313,18 @@ describe('Live Page', () => {
     expect(
       screen.getByText('Pidgin test 2 - the description'),
     ).toBeInTheDocument();
+  });
+
+  it('should render the live page header image if provided', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    const headerImage = screen.getByRole('presentation');
+    expect(headerImage).toHaveAttribute(
+      'src',
+      'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+    );
   });
 
   it('should render the key points section', async () => {

@@ -1,4 +1,5 @@
 import htmlUnescape from '#app/routes/utils/htmlUnescape';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const getImageBlock = (type, blockData, isAmp) => {
   const supportedImageTypes = ['idt2'];
@@ -8,7 +9,7 @@ const getImageBlock = (type, blockData, isAmp) => {
   if (!supportedImageTypes.includes(type) || !imageData) return null;
 
   const getSrc = href => {
-    return `${process.env.SIMORGH_INCLUDES_BASE_URL}${href}`;
+    return `${getEnvConfig().SIMORGH_INCLUDES_BASE_URL}${href}`;
   };
 
   const getSize = href => href.split('/').pop();

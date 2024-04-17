@@ -107,8 +107,16 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -493,8 +501,16 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
   min-height: 14rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -629,6 +645,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
         End of Twitter content, 2
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;
@@ -739,8 +756,16 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   max-width: 31.25rem;
 }
 
+.no-js .emotion-2 {
+  min-height: 0;
+}
+
 .emotion-4 {
   position: relative;
+}
+
+.no-js .emotion-4 {
+  display: none;
 }
 
 .emotion-6 {
@@ -902,6 +927,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
         End of Twitter content, 1
       </p>
     </div>
+    <noscript />
   </div>
 </div>
 `;

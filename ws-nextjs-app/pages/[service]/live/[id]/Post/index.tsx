@@ -8,13 +8,16 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
+import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import isLive from '#app/lib/utilities/isLive';
+import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import styles from './styles';
 import {
   Post as PostType,
@@ -65,7 +68,7 @@ const PostHeaderBanner = ({
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
@@ -80,18 +83,18 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
-      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </div>
+    </span>
   );
 };
 
 const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const isHeadline = headerBlock.type === 'headline';
-  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
+  const headingText =
+    headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   return (
     <>
@@ -144,15 +147,15 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         sizes="(min-width: 1008px) 760px, 100vw"
         className="mediaStyles"
         css={styles.bodyMedia}
+        position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) => (
-      <LivePageMediaPlayer
-        blocks={props.blocks}
-        className="mediaStyles"
-        css={styles.bodyMedia}
-      />
-    ),
+    video: (props: { blocks: MediaBlock[] }) =>
+      isLive() ? (
+        <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
+      ) : (
+        <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+      ),
     social: SocialEmbedContainer,
   };
 
@@ -179,7 +182,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <article css={styles.postContainer}>
-      <Heading level={3}>
+      <Heading level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
@@ -187,7 +190,7 @@ const Post = ({ post }: { post: PostType }) => {
             timestamp={timestamp}
           />
           {headerBlocks.map(headerBlock => (
-            <PostHeadings headerBlock={headerBlock} />
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
         </span>
       </Heading>

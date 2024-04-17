@@ -6,8 +6,9 @@ import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import inline from '../InlineContainer';
 
-const withClickHandler = (Component, clickHandler) => props =>
-  <Component {...props} onClick={clickHandler} />;
+const withClickHandler = (Component, clickHandler) => props => (
+  <Component {...props} onClick={clickHandler} />
+);
 
 const BulletedListItemContainer = ({ blocks, onClick }) => {
   const contentBlocks = blocks.map(block => block.model.blocks || block).flat();

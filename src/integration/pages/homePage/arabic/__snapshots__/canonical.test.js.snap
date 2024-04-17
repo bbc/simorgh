@@ -81,7 +81,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Home Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -94,68 +94,54 @@ exports[`Canonical Home Page Header Navigation link should match text and url 1`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "شرق أوسط",
-  "url": "/arabic/topics/ckdxnj6g4znt",
+  "text": "أخبار",
+  "url": "/arabic/topics/cv2xyrnr8dnt",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "عالم",
-  "url": "/arabic/topics/c719d2el19nt",
+  "text": "اقتصاد",
+  "url": "/arabic/topics/cqywj97d487t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "علوم وتكنولوجيا",
-  "url": "/arabic/topics/c719d2ely7xt",
+  "text": "صحة وعلوم",
+  "url": "/arabic/topics/clmj3d7282gt",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
-  "text": "صحة",
-  "url": "/arabic/topics/c95y3q70znjt",
+  "text": "رياضة",
+  "url": "/arabic/topics/cyx5kw7g1j2t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "فيديو",
-  "url": "/arabic/media-54706728",
+  "url": "/arabic/topics/cz9mm6r1q5et",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "صحافة",
-  "url": "/arabic/topics/c08gmd9rp97t",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "ترند",
-  "url": "/arabic/topics/c404vr23x4dt",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "تحقيقات",
   "url": "/arabic/tv-and-radio-42414864",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "بودكاست",
   "url": "/arabic/tv-and-radio-52067221",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",

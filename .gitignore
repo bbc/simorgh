@@ -27,3 +27,4 @@ yarn-error.log
 secret.env
 src/app/legacy/moment-timezone-include/tz
 tsconfig.tsbuildinfo
+src/service-worker-test.js

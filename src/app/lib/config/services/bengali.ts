@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
         page: 'পৃষ্ঠা',
@@ -327,8 +328,8 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'সংসদ নির্বাচন ২০২৪',
-        url: '/bengali/topics/c90xlq1n7llt',
+        title: 'রাজনীতি',
+        url: '/bengali/topics/cqywj91rkg6t',
       },
       {
         title: 'সর্বাধিক পঠিত',
@@ -353,10 +354,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'প্রযুক্তি',
         url: '/bengali/topics/c8y94k95v52t',
-      },
-      {
-        title: 'রাজনীতি',
-        url: '/bengali/topics/cqywj91rkg6t',
       },
       {
         title: 'ভিডিও',

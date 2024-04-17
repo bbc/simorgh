@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="hooks/useOptimizelyScrollDepth" />
+
+# useOptimizelyScrollDepth
+
+This hook is used to track scroll depth of a page and send an event to Optimizely when the page view has reached a threshold. The current thresholds are set to 25%, 50%, 75% and 100% of the page. An event is only sent once for each threshold.
+
+The `useOptimizelyScrollDepth` tracker handles:
+
+* Tracking vertical scroll depth when scroll is activated.
+* Sending an event to Optimizely when scroll reaches threshold.
+
+This hook is currently only being used in conjunction with `OptimizelyPageViewTracking`.
+
+## Optimizely Event
+
+The following table shows the thresholds with the corresponding event name (set up in Optimizely). When sending an events to Optimizely, we need to send the event name in order for Optimizely to process the event received.
+
+| Threshold | Event name |
+| :-------: | :--------: |
+|    25%    |  scroll25  |
+|    50%    |  scroll50  |
+|    75%    |  scroll75  |
+|   100%    | scroll100  |
+
+## Usage
+
+```jsx
+import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
+const ExamplePage = () => {
+  useOptimizelyScrollDepth();
+};
+```

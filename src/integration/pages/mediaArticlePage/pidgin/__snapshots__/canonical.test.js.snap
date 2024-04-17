@@ -62,7 +62,7 @@ exports[`Canonical Media Article Page Footer Anchors should match text and url 8
 
 exports[`Canonical Media Article Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Media Article Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Media Article Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Media Article Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -383,7 +383,7 @@ exports[`Canonical Media Article Page SEO Twitter title 1`] = `"Nigeria 2023 ele
 
 exports[`Canonical Media Article Page Timestamp should match text and date 1`] = `
 {
-  "date": "PT6M17S",
-  "text": "06:17",
+  "date": "2023-01-20",
+  "text": "20 January 2023",
 }
 `;

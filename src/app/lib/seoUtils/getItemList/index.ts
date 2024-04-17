@@ -1,10 +1,10 @@
-import { CurationData } from '../../../models/types/curationData';
+import { Curation } from '../../../models/types/curationData';
 
 export default ({
   curations,
   name,
 }: {
-  curations: CurationData[];
+  curations: Curation[];
   name: string;
 }) => {
   const itemListElement = curations

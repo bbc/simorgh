@@ -44,6 +44,8 @@ describe('propsInference', () => {
         duration: '03:11',
         durationSpoken: 'Duration 3,11',
         guidanceMessage: 'Contains strong language and adult humour.',
+        kind: 'programme',
+        rawDuration: 191,
         title: 'Five things ants can teach us about management',
         type: 'video',
       },
@@ -93,6 +95,8 @@ describe('propsInference', () => {
         duration: '32:41',
         durationSpoken: 'Duration 32,41',
         guidanceMessage: undefined,
+        kind: 'programme',
+        rawDuration: 1961,
         title: 'Подкаст "Разговоры с арбитром": чемпионский парад "Ливерпуля"',
         type: 'audio',
       },
@@ -128,7 +132,7 @@ describe('propsInference', () => {
 
     expect(getPlayerProps(props)).toEqual({
       captionBlock: validLivePageVideoWithCaptionBlock[0],
-      clipId: 'p01thw20',
+      clipId: 'p01thw22',
       embedUrlParams: {
         isAmp: false,
         mediaId: 'c7p765ynk9qt/p01thw20/pcm',
@@ -144,6 +148,8 @@ describe('propsInference', () => {
         datetime: 'PT54S',
         type: 'video',
         guidanceMessage: undefined,
+        kind: 'programme',
+        rawDuration: 54,
       },
       placeholderSrc:
         'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',

@@ -1,8 +1,19 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { fireEvent } from '@testing-library/react';
+import { useState } from 'react';
 import useLocation, * as useLocationObj from '.';
 
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useState: jest.fn(),
+}));
+
 describe('useLocation', () => {
+  beforeEach(() => {
+    (useState as jest.Mock).mockImplementation(
+      jest.requireActual('react').useState,
+    );
+  });
   it('should set location to the current window location', () => {
     const { result } = renderHook(() => useLocation());
 
@@ -31,8 +42,10 @@ describe('useLocation', () => {
     expect(removeEventListenerSpy).toHaveBeenCalled();
   });
 
-  it('should update itself on user popstate interaction ', () => {
-    const spy = jest.spyOn(useLocationObj, 'default');
+  it('should update itself on user popstate interaction', () => {
+    const spy = jest.fn();
+
+    (useState as jest.Mock).mockImplementation(() => ['location', spy]);
 
     renderHook(() => useLocationObj.default());
 
@@ -40,6 +53,6 @@ describe('useLocation', () => {
     fireEvent(window, new window.PopStateEvent('popstate'));
     fireEvent(window, new window.PopStateEvent('popstate'));
 
-    expect(spy).toBeCalledTimes(3);
+    expect(spy).toBeCalledTimes(4);
   });
 });

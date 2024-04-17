@@ -30,13 +30,14 @@ const LinkContents = ({ item, isInline, id }) => {
       return 'photogallery';
     }
 
-    const mediaType = pathOr(null, ['media', 'format'], item);
-
+    const mediaType = (
+      pathOr(null, ['media', 'format'], item) ||
+      pathOr(null, ['contentType'], item)
+    )?.toLowerCase();
     return mediaType === 'audio' ? 'listen' : mediaType;
   };
 
   const type = getAnnouncedType();
-
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
   let offScreenDuration;
@@ -54,7 +55,6 @@ const LinkContents = ({ item, isInline, id }) => {
     );
   }
   const mediaType = mediaTranslations[type];
-
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652

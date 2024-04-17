@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Simorgh - Next.JS",
   "scripts": {
-    "setupDevEnv": "cp ../envConfig/local.env .env",
+    "setupDevEnv": "cp ../envConfig/local.env .env && mkdir -p public && cp -r ../public/. public",
     "moveStaticAssets": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static",
-    "build:local": "cp ../envConfig/local.env .env && NODE_ENV=production && next build && yarn moveStaticAssets",
+    "build:local": "yarn setupDevEnv && NODE_ENV=production && next build && yarn moveStaticAssets",
     "build:preview": "cp ../envConfig/preview.env .env && NODE_ENV=production && next build",
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
@@ -22,22 +22,23 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.23.2",
-    "@babel/plugin-proposal-export-default-from": "7.22.17",
-    "@babel/preset-react": "7.22.15",
+    "@babel/core": "7.24.4",
+    "@babel/plugin-proposal-export-default-from": "7.24.1",
+    "@babel/preset-react": "7.24.1",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
-    "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "15.0.2",
     "babel-plugin-transform-rename-import": "2.3.0",
-    "cypress": "^13.1.0",
-    "jest": "^29.6.4",
-    "jest-environment-jsdom": "^29.6.4",
-    "npm-run-all": "^4.1.5",
-    "ts-node": "^10.9.1"
+    "cypress": "13.7.3",
+    "cypress-terminal-report": "6.0.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "npm-run-all2": "^6.0.0",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.0.1",
-    "undici": "5.27.0"
+    "next": "14.1.4",
+    "undici": "6.11.1"
   }
 }

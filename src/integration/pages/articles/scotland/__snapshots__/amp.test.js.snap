@@ -159,7 +159,7 @@ exports[`AMP Articles Footer Cookie Settings Button should match text and on han
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
@@ -173,8 +173,8 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   fallback=""
   height="351"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
   width="624"
 />
 `;
@@ -279,6 +279,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-09-13T12:36:29.124Z",
       "datePublished": "2019-09-13T12:36:29.124Z",
+      "description": "This is the SEO headline of this test article",
       "headline": "This is the SEO headline of this test article",
       "image": {
         "@type": "ImageObject",

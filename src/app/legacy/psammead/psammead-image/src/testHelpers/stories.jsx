@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean } from '@storybook/addon-knobs';
 import notes from '../../README.md';
 import {
   custom,
@@ -20,7 +19,7 @@ export function getProps(image, includeHeight, type) {
     primaryMimeType: image.primaryMimeType,
     fallbackMimeType: image.fallbackMimeType,
     width: image.width,
-    fade: type === 'Img' ? boolean('Fade', false) : null,
+    fade: type === 'Img' ? false : null,
   };
   props.height = includeHeight ? image.height : null;
 

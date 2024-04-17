@@ -144,6 +144,14 @@
         "href": "/nepali/news-46824299",
         "timestamp": 1673261784000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "nepali.popular.read.page",
+        "timePublished": "2023-06-19T14:58:00Z",
+        "timeUpdated": "2023-06-19T14:43:00Z"
+      }
+    }
   }
 }

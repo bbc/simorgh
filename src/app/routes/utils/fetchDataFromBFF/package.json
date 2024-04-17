@@ -1,0 +1,6 @@
+{
+  "browser": "client.js",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "name": "@bbc/simorgh-fetchDataFromBFF"
+}

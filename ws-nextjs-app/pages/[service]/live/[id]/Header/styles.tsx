@@ -2,80 +2,109 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  backgroundColor: ({ palette, mq }: Theme) =>
+  headerContainer: ({ mq }: Theme) =>
     css({
-      backgroundColor: palette.GREY_10,
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
       [mq.HIGH_CONTRAST]: {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  outerGrid: ({ mq, gridWidths }: Theme) =>
+  backgroundContainer: () =>
     css({
+      position: 'absolute',
+      top: '0',
+      bottom: '0',
+      width: '100%',
+      overflow: 'hidden',
+    }),
+  backgroundColor: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_10,
+      width: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+    }),
+  contentContainer: ({ mq, gridWidths }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        margin: '0 auto',
+        position: 'relative',
+        width: '100%',
+      },
+    }),
+  textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
+    css({
+      position: 'relative',
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(12, 1fr)',
-      padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
-
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${pixelsToRem(16)}rem`,
+        padding: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        paddingInlineEnd: `${pixelsToRem(16)}rem`,
-        paddingTop: `${pixelsToRem(24)}rem`,
-        paddingBottom: `${pixelsToRem(32)}rem`,
-        columnGap: '1rem',
+        paddingTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  innerGrid: ({ mq }: Theme) =>
+  textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
-      display: 'grid',
-      gridTemplateColumns: 'repeat(12, 1fr)',
+      position: 'relative',
+      padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
-        columnGap: '1rem',
+        padding: `${spacings.DOUBLE}rem`,
+        minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        maxWidth: '50%', // determines width of text overlay.
       },
     }),
-  heading: () =>
+  titleWithImage: ({ palette }: Theme) =>
     css({
-      gridColumn: '1 / span 12',
+      display: 'block',
+      color: palette.GREY_1,
+      width: '100%',
     }),
-  label: ({ palette, mq }: Theme) =>
+  titleWithoutImage: ({ mq, palette, spacings }: Theme) =>
     css({
-      color: palette.LIVE_LIGHT,
-      gridColumn: '1 / span 12',
-      marginBottom: `${pixelsToRem(16)}rem`,
-      textTransform: 'uppercase',
-
+      display: 'block',
+      color: palette.GREY_1,
+      marginTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        marginTop: `${spacings.FULL}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        gridColumn: '1 / span 4',
-        marginBottom: 0,
+        width: 'calc(100% / 3 * 2)',
+        display: 'inline-flex',
+        marginTop: '0',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        gridColumn: '1 / span 3',
+        display: 'inline-flex',
+        width: '75%',
       },
     }),
-  title: ({ palette }: Theme) =>
-    css({
-      color: palette.GREY_1,
-      gridColumn: '1 / span 12',
-    }),
-  description: ({ palette }: Theme) =>
+  description: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_2,
-      gridColumn: '1 / span 12',
       margin: 0,
-      marginTop: `${pixelsToRem(16)}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
     }),
-  layoutWithLiveLabel: ({ mq }: Theme) =>
+  layoutWithLiveLabelNoImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '5 / span 8',
+        marginInlineStart: 'calc(100% / 3)',
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        gridColumn: '4 / span 9',
+        marginInlineStart: 'calc(100% / 4)',
       },
     }),
 };

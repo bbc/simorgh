@@ -192,7 +192,7 @@ exports[`AMP Most Watched Page Footer Cookie Settings Button should match text a
 
 exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`AMP Most Watched Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -205,68 +205,75 @@ exports[`AMP Most Watched Page Header Navigation link should match text and url 
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "Présidentielle Sénégal 2024",
+  "url": "/afrique/topics/c0vj3r1jjd2t",
+}
+`;
+
+exports[`AMP Most Watched Page Header Navigation link should match text and url 3`] = `
+{
   "text": "Afrique",
   "url": "/afrique/topics/cvqxn2k7kv7t",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 3`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Monde",
   "url": "/afrique/topics/cvqxn21vx11t",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Santé",
   "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Bien-être",
   "url": "/afrique/topics/c0vmyy90q8zt",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Science et technologie",
   "url": "/afrique/topics/crezq2zk0q4t",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Economie",
   "url": "/afrique/topics/cnq687nr9v1t",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Culture",
   "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Vidéos",
   "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 11`] = `
 {
   "text": "Nos émissions",
   "url": "/afrique/media-54074891",
 }
 `;
 
-exports[`AMP Most Watched Page Header Navigation link should match text and url 11`] = `
+exports[`AMP Most Watched Page Header Navigation link should match text and url 12`] = `
 {
   "text": "Ecoutez en direct",
   "url": "/afrique/bbc_afrique_radio/liveradio",

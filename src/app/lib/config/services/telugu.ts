@@ -320,12 +320,17 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+      collectiveNewsroomText: 'బీబీసి కోసం కలెక్టివ్ న్యూస్‌రూమ్ ప్రచురణ',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'వార్తలు',
         url: '/telugu',
+      },
+      {
+        title: 'ఆంధ్ర ప్రదేశ్ అసెంబ్లీ ఎన్నికలు 2024',
+        url: '/telugu/topics/c442kv3851yt',
       },
       {
         title: 'వీడియో',

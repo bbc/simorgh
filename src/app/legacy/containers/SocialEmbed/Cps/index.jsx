@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -10,7 +9,7 @@ import { GridItemMedium } from '#components/Grid';
 import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import createTranslations from '../common/translations';
-import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
+import Wrapper from '../common/styles';
 
 const CpsSocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
@@ -63,16 +62,15 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
-            <CanonicalSocialEmbed
-              provider={provider}
-              service={service}
-              oEmbed={oEmbed}
-              fallback={fallback}
-              skipLink={skipLink}
-              caption={caption}
-            />
-          </Lazyload>
+          <CanonicalSocialEmbed
+            provider={provider}
+            service={service}
+            id={id}
+            oEmbed={oEmbed}
+            fallback={fallback}
+            skipLink={skipLink}
+            caption={caption}
+          />
         )}
       </Wrapper>
     </GridItemMedium>

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { Services } from '#app/models/types/global';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
 
 export const getIconAssetUrl = (service: Services, size: string) =>
@@ -49,8 +50,8 @@ export const getIconLinks = (service: Services, iconSizes: IconSizes) => {
 
 export const getAppleTouchUrl = (service: Services) => {
   return [
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+    getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
     service,
     '/images/icons/icon-192x192.png',
   ].join('');

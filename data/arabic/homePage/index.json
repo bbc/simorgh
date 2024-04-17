@@ -93,6 +93,52 @@
         "title": "اخترنا لكم",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_arabic_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6nsbc",
+            "state": "next",
+            "startTime": "2024-02-27T14:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zm1vwcvc55y",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6kmn3",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zkzmfvfh83j",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6grgz",
+            "state": "onDemand",
+            "startTime": "2024-02-26T14:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zm1vwcv888v",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6csjx",
+            "state": "onDemand",
+            "startTime": "2024-02-26T05:59:30.000Z",
+            "link": "/arabic/bbc_arabic_radio/w172zkzmfvfdc6f",
+            "brandTitle": "غزة اليوم ",
+            "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+            "duration": "PT30M"
+          }
+        ]
       }
     ],
     "metadata": {

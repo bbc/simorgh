@@ -271,7 +271,9 @@ describe('StoryPromo Container', () => {
       expect(container.getElementsByTagName('amp-img').length).toEqual(0);
       expect(
         container.getElementsByTagName('img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
+      ).toEqual(
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}`,
+      );
       expect(
         container.getElementsByTagName('img')[0].getAttribute('alt'),
       ).toEqual(cpsItem.indexImage.altText);
@@ -286,7 +288,9 @@ describe('StoryPromo Container', () => {
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
+      ).toEqual(
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}`,
+      );
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('alt'),
       ).toEqual(cpsItem.indexImage.altText);

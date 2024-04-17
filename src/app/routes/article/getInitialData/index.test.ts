@@ -61,6 +61,7 @@ describe('Articles - BFF Fetching', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/kyrgyz/articles/c0000000000o',
       pageType: ARTICLE_PAGE,
+      timeout: 60000,
     });
   });
 
