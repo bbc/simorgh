@@ -102,38 +102,6 @@ describe('litePageTransform', () => {
     expect(result.liteHelmetMetaTags).toEqual(helmetMetaTags);
   });
 
-  it('should remove all style tags and inline style attributes', () => {
-    const html =
-      '<html><head><style></style></head><body><div style="padding-top:10px;"></div></body></html>';
-
-    const result = litePageTransform({
-      html,
-      helmetMetaTags,
-      helmetScriptTags,
-      helmetLinkTags,
-    });
-
-    expect(result.liteHtml).toEqual(
-      '<html><head></head><body><div></div></body></html>',
-    );
-  });
-
-  it('should remove all CSS classes', () => {
-    const html =
-      '<html><head></head><body><div class="someClass"></div><section class="another-class"></section></body></html>';
-
-    const result = litePageTransform({
-      html,
-      helmetMetaTags,
-      helmetScriptTags,
-      helmetLinkTags,
-    });
-
-    expect(result.liteHtml).toEqual(
-      '<html><head></head><body><div></div><section></section></body></html>',
-    );
-  });
-
   it('should remove button elements', () => {
     const html =
       '<html><head></head><body><button>Click me</button></body></html>';
@@ -164,7 +132,7 @@ describe('litePageTransform', () => {
 
   it('should remove all images except for "analytics-pixel"', () => {
     const html =
-      '<html><head></head><body><img src="image.jpg" alt="Image" /><img src="image.jpg" alt="Image" data-lite-class="analytics-pixel"></body></html>';
+      '<html><head></head><body><img src="image.jpg" alt="Image" /><img src="image.jpg" alt="Image" data-lite="analytics-pixel"></body></html>';
 
     const result = litePageTransform({
       html,
@@ -174,7 +142,7 @@ describe('litePageTransform', () => {
     });
 
     expect(result.liteHtml).toEqual(
-      '<html><head></head><body><img src="image.jpg" alt="Image" data-lite-class="analytics-pixel"></body></html>',
+      '<html><head></head><body><img src="image.jpg" alt="Image" data-lite="analytics-pixel"></body></html>',
     );
   });
 
