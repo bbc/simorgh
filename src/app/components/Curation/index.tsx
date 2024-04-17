@@ -17,6 +17,7 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
+import isLive from '#app/lib/utilities/isLive';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -65,6 +66,7 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+  const environmentIsLive = isLive();
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
@@ -74,7 +76,7 @@ export default ({
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD:
-      return summaries.length > 0 ? (
+      return !environmentIsLive && summaries.length > 0 ? (
         <Billboard
           heading={title}
           description={summaries[0].description}
@@ -88,7 +90,7 @@ export default ({
         />
       ) : null;
     case MESSAGE_BANNER:
-      return summaries.length > 0 ? (
+      return environmentIsLive && summaries.length > 0 ? (
         <MessageBanner
           heading={title}
           description={summaries[0].description}
