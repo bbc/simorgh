@@ -160,9 +160,13 @@ const constructPageFetchUrl = ({
       case ARTICLE_PAGE: {
         const isCpsId = isCpsIdCheck(id);
         if (isCpsId) {
-          return Url(`/${id}`);
+          fetchUrl = Url(`/${id}`);
+          break;
         }
-        return Url(`/${service}/articles/${id}${variant ? `/${variant}` : ''}`);
+        fetchUrl = Url(
+          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+        );
+        break;
       }
       case CPS_ASSET:
         fetchUrl = Url(`/${id}`);
