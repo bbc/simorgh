@@ -5,7 +5,6 @@ import React, {
   useContext,
   useState,
 } from 'react';
-import { FetchError } from '#app/models/types/fetch';
 import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
@@ -17,11 +16,14 @@ import {
   OnChangeInputName,
   OnChangeInputValue,
 } from '../types';
+import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
 
 type SubmissionError = {
   message: string;
+  code?: string;
   status: number;
+  isRecoverable?: boolean;
 } | null;
 
 type ContextProps = {
@@ -118,7 +120,7 @@ export const FormContextProvider = ({
     });
 
     try {
-      const url = `https://www.test.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.open('POST', url, true);
@@ -131,9 +133,19 @@ export const FormContextProvider = ({
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status !== OK) {
+            const { message, code, status, isRecoverable } = new UGCSendError(
+              req,
+            );
+
+            // Future logging invokation if feasible client-side
+            // sendCustomMetric();
+            // logger.error();
+
             setSubmissionError({
-              message: req.responseText,
-              status: req.status,
+              message,
+              code,
+              status,
+              isRecoverable,
             });
           }
         }
@@ -141,7 +153,7 @@ export const FormContextProvider = ({
 
       req.send(formData);
     } catch (error) {
-      const { message, status } = error as FetchError;
+      const { message, status } = error as UGCSendError;
       setSubmissionError({ message, status });
     }
   };
