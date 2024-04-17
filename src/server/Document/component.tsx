@@ -41,10 +41,16 @@ const Document = ({
     case isLite:
       return (
         <LiteRenderer
+          bodyContent={
+            <div
+              id="root"
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: html || '' }}
+            />
+          }
           helmetLinkTags={helmetLinkTags}
           helmetMetaTags={helmetMetaTags}
           helmetScriptTags={helmetScriptTags}
-          html={html}
           htmlAttrs={htmlAttrs}
           styles={css}
           title={title}

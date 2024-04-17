@@ -60,6 +60,7 @@ export default class AppDocument extends Document<DocProps> {
       case isLite:
         return (
           <LiteRenderer
+            bodyContent={<Main />}
             helmetLinkTags={helmetLinkTags}
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}

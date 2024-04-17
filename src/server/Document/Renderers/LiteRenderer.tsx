@@ -1,22 +1,21 @@
-/* eslint-disable react/no-danger */
-import React from 'react';
-import { Main } from 'next/document';
+import React, { ReactElement, PropsWithChildren } from 'react';
 import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
+  bodyContent: ReactElement;
   isNextJs?: boolean;
 }
 
 export default function LitePageRenderer({
+  bodyContent,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
   htmlAttrs,
-  html,
   title,
   styles,
   isNextJs = false,
-}: Props) {
+}: PropsWithChildren<Props>) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -26,16 +25,13 @@ export default function LitePageRenderer({
         {helmetLinkTags}
         {helmetScriptTags}
         {!isNextJs && (
-          <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
+          <style
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: styles || '' }}
+          />
         )}
       </head>
-      <body>
-        {!isNextJs ? (
-          <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
-        ) : (
-          <Main />
-        )}
-      </body>
+      <body>{bodyContent}</body>
     </html>
   );
 }
