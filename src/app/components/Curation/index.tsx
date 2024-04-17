@@ -16,6 +16,7 @@ import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
+import Billboard from '../Billboard';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -25,6 +26,7 @@ const {
   MOST_READ,
   RADIO_SCHEDULE,
   EMBED,
+  BILLBOARD,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -71,6 +73,20 @@ export default ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
+    case BILLBOARD:
+      return summaries.length > 0 ? (
+        <Billboard
+          heading={title}
+          description={summaries[0].description}
+          link={summaries[0].link}
+          image={summaries[0].imageUrl}
+          eventTrackingData={{
+            componentName: `billboard-${nthCurationByStyleAndProminence}`,
+            detailedPlacement: `${position + 1}`,
+          }}
+          showLiveLabel
+        />
+      ) : null;
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
         <MessageBanner
