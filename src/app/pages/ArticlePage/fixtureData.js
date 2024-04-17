@@ -702,6 +702,33 @@ export const articlePglDataPidgin = articleDataBuilder(
   'PGL',
 );
 
+export const articleStyDataPidgin = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  'Article PGL Headline for SEO in Pidgin',
+  'Article PGL Headline for Promo in Pidgin',
+  'Article PGL summary in Pidgin',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'pcm',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+    pageTitle: 'Article Headline for SEO in Pidgin',
+  },
+  'STY',
+);
+
 export const bylineWithNoRole = [
   {
     type: 'contributor',
