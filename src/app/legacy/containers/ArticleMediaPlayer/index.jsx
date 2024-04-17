@@ -29,8 +29,10 @@ const pageTypeMap = {
 };
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id, pageType } = useContext(RequestContext);
+  const { id, isLite, pageType } = useContext(RequestContext);
   const hasPlaceholder = pageType !== MEDIA_ARTICLE_PAGE;
+
+  if (isLite) return null;
 
   return (
     <GridItemMediumNoMargin>

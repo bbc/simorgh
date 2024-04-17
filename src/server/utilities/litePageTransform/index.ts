@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import { ReactElement } from 'react';
 
-const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
+// const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
 
 type Props = {
   html?: string;
@@ -40,48 +40,48 @@ export default function litePageTransform({
   */
 
   // Remove button elements
-  $('button').remove();
+  // $('button').remove();
 
-  // Remove figure and picture elements
-  $('figure, picture').remove();
+  // // Remove figure and picture elements
+  // $('figure, picture').remove();
 
-  // Remove images except for "analytics-pixel"
-  $('img').not('[data-lite=analytics-pixel]').remove();
+  // // Remove images except for "analytics-pixel"
+  // $('img').not('[data-lite=analytics-pixel]').remove();
 
   // Remove secondary nav used for mobile dropdown
-  $('[data-e2e=dropdown-nav]').remove();
+  // $('[data-e2e=dropdown-nav]').remove();
 
   // Remove includes
-  if ($('div[id^=include-]').parent().is('div')) {
-    $('div[id^=include-]').parent().remove();
-  }
+  // if ($('div[id^=include-]').parent().is('div')) {
+  //   $('div[id^=include-]').parent().remove();
+  // }
 
-  // Remove embeds
-  if ($('[data-e2e*="embed"]').parent().is('div')) {
-    $('[data-e2e*="embed"]').parent().remove();
-  }
+  // // Remove embeds
+  // if ($('[data-e2e*="embed"]').parent().is('div')) {
+  //   $('[data-e2e*="embed"]').parent().remove();
+  // }
 
-  // Remove VJ embeds
-  if ($('div[id^=responsive-embed]').parent().is('div')) {
-    $('div[id^=responsive-embed]').parent().remove();
-  }
+  // // Remove VJ embeds
+  // if ($('div[id^=responsive-embed]').parent().is('div')) {
+  //   $('div[id^=responsive-embed]').parent().remove();
+  // }
 
-  // Remove podcast promos
-  if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
-    $('[aria-labelledby=podcast-promo]').parent().remove();
-  }
+  // // Remove podcast promos
+  // if ($('[aria-labelledby=podcast-promo]').parent().is('div')) {
+  //   $('[aria-labelledby=podcast-promo]').parent().remove();
+  // }
 
   // Add .lite to all anchor tags URLs on valid domains
-  $('a').each((_, element) => {
-    const href = $(element).attr('href');
-    if (
-      href &&
-      (href.startsWith('/') ||
-        BBC_DOMAINS.some(domain => href.includes(domain)))
-    ) {
-      $(element).attr('href', `${href}.lite`);
-    }
-  });
+  // $('a').each((_, element) => {
+  //   const href = $(element).attr('href');
+  //   if (
+  //     href &&
+  //     (href.startsWith('/') ||
+  //       BBC_DOMAINS.some(domain => href.includes(domain)))
+  //   ) {
+  //     $(element).attr('href', `${href}.lite`);
+  //   }
+  // });
 
   // Prevent preloading images by removing them from the head
   // @ts-expect-error - React-helmet types are incorrect

@@ -129,6 +129,7 @@ import gridWidths from './gridWidths';
 import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 import { PageTypes } from '../../models/types/global';
+import liteStyles from './liteStyles';
 
 const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
   pageType === MEDIA_ARTICLE_PAGE ||
@@ -284,7 +285,8 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
+    const { isAmp, isLite, pageType, derivedPageType } =
+      useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
@@ -295,6 +297,7 @@ const withThemeProvider = ({
       <EmotionThemeProvider theme={theme}>
         {children}
         {isAmp && <Global styles={fontFaces} />}
+        {isLite && <Global styles={liteStyles} />}
         <Global styles={focusIndicator} />
       </EmotionThemeProvider>
     );

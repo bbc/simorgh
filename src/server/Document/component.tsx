@@ -17,7 +17,6 @@ type Props = {
   modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
   links: React.ReactElement;
-  url: string;
 };
 
 const Document = ({
@@ -30,10 +29,8 @@ const Document = ({
   modernScripts,
   legacyScripts,
   links,
-  url,
 }: Props) => {
   const title = helmet.title.toComponent();
-
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const helmetMetaTags = helmet.meta.toComponent();
   const helmetLinkTags = helmet.link.toComponent();
@@ -53,7 +50,6 @@ const Document = ({
           ids={ids}
           styles={css}
           title={title}
-          url={url}
         />
       );
     case isAmp:
