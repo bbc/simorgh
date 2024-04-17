@@ -13,6 +13,10 @@ const liteStyles = () => css`
   }
   [class*='StoryPromoWrapper' i] {
     display: block;
+
+    [class*='ImageGridItem' i] {
+      display: none;
+    }
   }
   [class*='ChildWrapper' i] {
     position: relative;
