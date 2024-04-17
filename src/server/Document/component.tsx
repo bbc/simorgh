@@ -47,7 +47,6 @@ const Document = ({
           helmetScriptTags={helmetScriptTags}
           html={html}
           htmlAttrs={htmlAttrs}
-          ids={ids}
           styles={css}
           title={title}
         />
