@@ -32,6 +32,7 @@ export interface UrlConstructParams {
   variant?: Variants;
   page?: string;
   isAmp?: boolean;
+  isCaf?: boolean;
 }
 
 const removeLeadingSlash = (path: string) => path.replace(/^\/+/g, '');
@@ -53,6 +54,9 @@ const isFrontPage = ({
   variant?: Variants;
 }) => (variant ? path === `/${service}/${variant}` : path === `/${service}`);
 
+const isCpsId = (path: string) =>
+  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
+
 interface GetIdProps {
   pageType: PageTypes;
   service: Services;
@@ -67,10 +71,9 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case ARTICLE_PAGE:
       getIdFunction = (path: string) => {
         const isOptimoId = /(c[a-zA-Z0-9]{10,}o)/.test(path);
-        const isCpsId = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
         if (isOptimoId) return getArticleId(path);
-        if (isCpsId) return getCpsId(path);
+        if (isCpsId(path)) return getCpsId(path);
 
         return null;
       };
@@ -156,7 +159,9 @@ const constructPageFetchUrl = ({
     switch (pageType) {
       case ARTICLE_PAGE:
         fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isCpsId(id)
+            ? `/${id}`
+            : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
       case CPS_ASSET:
