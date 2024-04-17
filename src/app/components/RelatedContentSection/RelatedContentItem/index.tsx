@@ -74,30 +74,15 @@ const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
 
     const DEFAULT_IMAGE_RES = 660;
     const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-    const locatorDefault = path(
+    const locator = path(
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'locator'],
       item,
     );
 
-    const locatorWithCaption = path(
-      ['model', 'blocks', 0, 'model', 'blocks', 2, 'model', 'locator'],
-      item,
-    );
-
-    const locator = locatorDefault || locatorWithCaption;
-
-    const originCodeDefault = path(
+    const originCode = path(
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'originCode'],
       item,
     );
-
-    const originCodeWithCaption = path(
-      ['model', 'blocks', 0, 'model', 'blocks', 2, 'model', 'originCode'],
-      item,
-    );
-
-    const originCode = originCodeDefault || originCodeWithCaption;
-
     const altText = pathOr<string>(
       '',
       [

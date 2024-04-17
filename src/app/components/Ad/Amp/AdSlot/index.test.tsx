@@ -9,6 +9,13 @@ describe('getAssetType', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it('should return an asset type of index given a pageType of IDX', () => {
+    const actual = getAssetType('IDX');
+    const expected = 'index';
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 describe('Amp AdSlot', () => {
@@ -23,7 +30,7 @@ describe('Amp AdSlot', () => {
 
     it('should correctly render a mpu AdSlot', () => {
       const { container } = render(
-        <AdSlot service="mundo" slotType="mpu" pageType="FIX" />,
+        <AdSlot service="mundo" slotType="mpu" pageType="IDX" />,
         { service: 'mundo' },
       );
       expect(container).toMatchSnapshot();

@@ -45,12 +45,9 @@ const renderParagraph = (block: OptimoBlock) => {
   if (!paragraphBlock) return null;
 
   return (
-    <span
-      data-testid="caption-paragraph"
-      key={pathOr(null, ['0', 'id'], paragraphBlock)}
-    >
+    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
-    </span>
+    </p>
   );
 };
 

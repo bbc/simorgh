@@ -30,9 +30,7 @@ export default function Form({ fields }: { fields: Field[] }) {
       </form>
       {submissionError && (
         <div css={styles.submissionError}>
-          {`Error: ${submissionError.status} - ${submissionError.code} - ${submissionError.message}`}
-          <br />
-          {`Recoverable: ${submissionError.isRecoverable}`}
+          {`${submissionError.message} - ${submissionError.status}`}
         </div>
       )}
     </>

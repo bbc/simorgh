@@ -77,7 +77,7 @@ describe('Byline', () => {
   it('should correctly use the buildIChefURL function to create the image url', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = screen.getAllByRole('presentation');
+    const imageSrc = screen.getAllByRole('img');
 
     expect(imageSrc[0]).toHaveAttribute(
       'src',
@@ -88,7 +88,7 @@ describe('Byline', () => {
   it('should render one image in the byline', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const image = screen.getAllByRole('presentation');
+    const image = screen.getAllByRole('img');
 
     expect(image.length).toBe(1);
   });
@@ -140,7 +140,7 @@ describe('Byline', () => {
     const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = screen.getByRole('presentation');
+    const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();

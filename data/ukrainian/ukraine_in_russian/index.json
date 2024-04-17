@@ -1,0 +1,1968 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:ukrainian/ukraine_in_russian/mobile/domestic",
+        "locators": {
+          "assetUri": "/ukrainian/ukraine_in_russian",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/ukraine_in_russian",
+          "curie": "http://www.bbc.co.uk/asset/40c7c53a-ba2e-8679-e050-380a4e807947/desktop/domestic",
+          "assetId": "37908303"
+        },
+        "type": "IDX",
+        "createdBy": "ukrainian-v6",
+        "language": "ru",
+        "lastUpdated": 1645709129807,
+        "firstPublished": 1479799016000,
+        "lastPublished": 1645709082000,
+        "timestamp": 1645709081000,
+        "options": { "allowAdvertising": true },
+        "analyticsLabels": {
+          "cps_asset_type": "idx",
+          "counterName": "ukrainian.ukraine_in_russian.page",
+          "cps_asset_id": "37908303",
+          "contentId": "urn:bbc:cps:curie:asset:40c7c53a-ba2e-8679-e050-380a4e807947"
+        },
+        "tags": {},
+        "version": "v1.4.0",
+        "blockTypes": [
+          "top-story",
+          "secondary-top-story",
+          "special-reports",
+          "section-digest",
+          "also-in-news",
+          "feature-main"
+        ],
+        "title": "РУС",
+        "summary": "Новости BBC News Україна на русском",
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:40c7c53a-ba2e-8679-e050-380a4e807947",
+          "contentType": "index-section",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "ukrainian.ukraine_in_russian.page",
+          "pageTitle": "РУС",
+          "producerId": null,
+          "timePublished": "2016-11-22T07:16:56.000Z",
+          "timeUpdated": "2022-02-24T13:24:42.000Z",
+          "producerName": "UKRAINIAN"
+        }
+      },
+      "content": {
+        "groups": [
+          {
+            "type": "top-story",
+            "title": "Top story",
+            "maxRelatedLinks": 2,
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Россия напала на Украину. Москва наносит удары по целям в Киеве, Харькове и других городах"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60504344",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60504344",
+                  "curie": "http://www.bbc.co.uk/asset/37b7a034-a219-409c-9ce4-688f65e3da68",
+                  "assetId": "60504344"
+                },
+                "summary": "В Украине введено военное положение, во многих городах, в том числе Киеве, слышны взрывы.",
+                "timestamp": 1645685054000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123399441",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/38A3/production/_123399441_gettyimages-1238719408.jpg",
+                  "path": "/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Чугуїв",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "prominence": "special",
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "relatedItems": [
+                  {
+                    "headlines": {
+                      "headline": "Атака на границы Украины со стороны России, Беларуси и Крыма - госпогранслужба"
+                    },
+                    "locators": {
+                      "assetUri": "/ukrainian/news-russian-60504351",
+                      "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/news-russian-60504351"
+                    },
+                    "summary": "Пограничная служба Украины заявила, что границу обстреливают из артиллерии, тяжелой техники и стрелкового оружия.",
+                    "timestamp": 1645689044000,
+                    "language": "ru",
+                    "cpsType": "STY",
+                    "id": "urn:bbc:ares::asset:ukrainian/news-russian-60504351",
+                    "type": "cps"
+                  }
+                ],
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60504344",
+                "type": "cps"
+              }
+            ],
+            "strapline": { "name": "Главное" },
+            "semanticGroupName": "Top story"
+          },
+          {
+            "type": "secondary-top-story",
+            "title": "More top stories",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Украина отсоединилась от энергосистем России и Беларуси"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60507975",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60507975",
+                  "curie": "http://www.bbc.co.uk/asset/c9d99d49-756f-415c-9512-d27e2c333070",
+                  "assetId": "60507975"
+                },
+                "summary": "В полночь 24 февраля энергетическая система Украины была отсоединена от энергосистем России и Беларуси. Это отсоединение было плановым – и от этих планов не стали отказываться даже на фоне последних событий.",
+                "timestamp": 1645708702000,
+                "language": "ru",
+                "byline": {
+                  "name": "Анастасия Зануда",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Анастасія Зануда", "function": "ВВС Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123400020",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/07D0/production/_123400020_gettyimages-1231367951-594x594.jpg",
+                  "path": "/cpsprodpb/07D0/production/_123400020_gettyimages-1231367951-594x594.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ЛЕП",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60507975",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Украина разорвала дипломатические отношения с Россией"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60505887",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60505887",
+                  "curie": "http://www.bbc.co.uk/asset/f625c6d8-b0d8-413f-9a16-e56cd2c88fbe",
+                  "assetId": "60505887"
+                },
+                "summary": "Президент Украины Владимир Зеленский объявил о разрыве дипломатических отношений с Россией, которая сегодня начала военную операцию на территории Украины.",
+                "timestamp": 1645696941000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123399099",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1831B/production/_123399099_hi074085666.jpg",
+                  "path": "/cpsprodpb/1831B/production/_123399099_hi074085666.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Консульство в Харькове",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60505887",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Украина под ударом: Россия атаковала аэропорты, базы, склады"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60507971",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60507971",
+                  "curie": "http://www.bbc.co.uk/asset/3d11b246-2ded-4757-a946-08a6a21caf7f",
+                  "assetId": "60507971"
+                },
+                "summary": "Очевидцы со всей Украины сообщают об обстрелах Россией ключевых объектов инфраструктуры.",
+                "timestamp": 1645697571000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123399108",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/13947/production/_123399108_p0bqy3sb.jpg",
+                  "path": "/cpsprodpb/13947/production/_123399108_p0bqy3sb.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "аеропорт Франківська",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "123399110",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/04AF/production/_123399110_p0bqy3sb.jpg",
+                  "path": "/cpsprodpb/04AF/production/_123399110_p0bqy3sb.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "аеропорт Франківська",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60507971",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Атака на границы Украины со стороны России, Беларуси и Крыма - госпогранслужба"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60504351",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60504351",
+                  "curie": "http://www.bbc.co.uk/asset/b1a65da2-472b-4f37-af3b-26df16c668a9",
+                  "assetId": "60504351"
+                },
+                "summary": "Пограничная служба Украины заявила, что границу обстреливают из артиллерии, тяжелой техники и стрелкового оружия.",
+                "timestamp": 1645689044000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123397513",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7B5B/production/_123397513_hi074098689.jpg",
+                  "path": "/cpsprodpb/7B5B/production/_123397513_hi074098689.jpg",
+                  "height": 945,
+                  "width": 1680,
+                  "altText": "Танки, Мариуполь",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60504351",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "More top stories"
+          },
+          {
+            "type": "special-reports",
+            "title": "Спецпроект",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Военное положение в Украине. Как это работает"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60505883",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60505883",
+                  "curie": "http://www.bbc.co.uk/asset/fa04d2b1-29c5-47c0-886f-145b60e6cdb2",
+                  "assetId": "60505883"
+                },
+                "summary": "В Украине после нападения России и обстрелов всех регионов было введено военное положение. Какие ограничения предусмотрены для граждан?",
+                "timestamp": 1645696594000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "104514131",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3355/production/_104514131_ea7ffe6b-e257-44b6-9f6a-12e0f52e799e.jpg",
+                  "path": "/cpsprodpb/3355/production/_104514131_ea7ffe6b-e257-44b6-9f6a-12e0f52e799e.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Військові",
+                  "caption": "Воєнний стан передбачає обмеження прав і свобод громадян на певній території",
+                  "copyrightHolder": "UNIAN",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60505883",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Что делать, если в Украине исчезнет связь и интернет. Это вообще возможно?"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60460459",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60460459",
+                  "curie": "http://www.bbc.co.uk/asset/99cfc83a-ba34-4772-9934-03e17ff0bd80",
+                  "assetId": "60460459"
+                },
+                "summary": "Один из важнейших вопросов в экстремальной ситуации – что делать, если исчезнет мобильная связь и интернет, к которым все мы привыкли и от которых так зависим.",
+                "timestamp": 1645437351000,
+                "language": "ru",
+                "byline": {
+                  "name": "Галина Корба",
+                  "title": "ВВС News Украина",
+                  "persons": [
+                    { "name": "Галина Корба", "function": "ВВС News Україна" }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123307790",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/262A/production/_123307790_gettyimages-149518718.jpg",
+                  "path": "/cpsprodpb/262A/production/_123307790_gettyimages-149518718.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "телефони",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60460459",
+                "type": "cps"
+              }
+            ],
+            "strapline": { "name": "Спецпроект" },
+            "semanticGroupName": "Special reports 1"
+          },
+          {
+            "type": "section-digest",
+            "title": "Verticals",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Что ждет Украину. Три сценария после признания Россией \"ЛНР\" и \"ДНР\""
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60485051",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60485051",
+                  "curie": "http://www.bbc.co.uk/asset/62ea7bce-0358-4454-91a1-5af03eec6934",
+                  "assetId": "60485051"
+                },
+                "summary": "Признание Россией \"республик\" - шаг, дающий больше вопросов, чем ответов. С одной стороны, в политическом смысле это почти подарок Украине, считают эксперты, с другой – риск очередной эскалации вплоть до кровавых военных действий между Украиной и РФ.",
+                "timestamp": 1645613727000,
+                "language": "ru",
+                "byline": {
+                  "name": "Галина Корба",
+                  "title": "ВВС News Украина",
+                  "persons": [
+                    { "name": "Галина Корба", "function": "ВВС News Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123307890",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/268E/production/_123307890_gettyimages-1371754093.jpg",
+                  "path": "/cpsprodpb/268E/production/_123307890_gettyimages-1371754093.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "путін",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60485051",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "\"Россия напала на Украину\". Что западная пресса пишет о военных действиях в Европе"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60507751",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60507751",
+                  "curie": "http://www.bbc.co.uk/asset/a964e8a1-bc6f-4625-b127-43ae58115f0a",
+                  "assetId": "60507751"
+                },
+                "summary": "Многие издания обращают внимание на тон, которым Путин сделал предупреждение Западу не вмешиваться в ситуацию. Аналитики подчеркивают, что когда глава крупного государства грозит «крупнейшими в истории последствиями», это пеперстает быть делом только Украины или только Европы.",
+                "timestamp": 1645699285000,
+                "language": "ru",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123350850",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/16AD/production/_123350850_156d4932-6b0f-4cd1-b2cb-4353bcd10001.jpg",
+                  "path": "/cpsprodpb/16AD/production/_123350850_156d4932-6b0f-4cd1-b2cb-4353bcd10001.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Передовица New York Times в четверг 24.02.2022",
+                  "copyrightHolder": "New York Times",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60507751",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "BBC Журнал",
+              "type": "LINK",
+              "links": {
+                "highweb": "http://www.bbc.com/ukrainian/magazine_russian",
+                "desktop": "http://www.bbc.com/ukrainian/magazine_russian",
+                "mobile": "http://www.bbc.com/ukrainian/magazine_russian",
+                "enhancedmobile": "http://www.bbc.com/ukrainian/magazine_russian"
+              }
+            },
+            "semanticGroupName": "Verticals"
+          },
+          {
+            "type": "also-in-news",
+            "title": "Also in the news",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Минские соглашения летят в бездну. Что это означает для Украины"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60477158",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60477158",
+                  "curie": "http://www.bbc.co.uk/asset/31fc5460-9449-4e7e-8d86-bdc3c1ef2b44",
+                  "assetId": "60477158"
+                },
+                "summary": "Президент России подписал указ о признании независимости \"ДНР\" и \"ЛНР\", что фактически означает выход из минского процесса. Что будет дальше с Минскими соглашениями и что предпримет Украина?",
+                "timestamp": 1645527274000,
+                "language": "ru",
+                "byline": {
+                  "name": "Светлана Дорош",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Світлана Дорош", "function": "ВВС Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123337166",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1027D/production/_123337166_unian_776161.jpg",
+                  "path": "/cpsprodpb/1027D/production/_123337166_unian_776161.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Військовий",
+                  "copyrightHolder": "UNIAN",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60477158",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Как получить тысячу гривен за вакцинацию. Детальная инструкция"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59594144",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59594144",
+                  "curie": "http://www.bbc.co.uk/asset/52549ca8-b82d-4a86-b8c7-9d4179f48cee",
+                  "assetId": "59594144"
+                },
+                "summary": "Деньги за прививку нельзя будет снять в банкомате или переслать. На то, чтобы их потратить, дают четыре месяца.",
+                "timestamp": 1640186298000,
+                "language": "ru",
+                "byline": {
+                  "name": "Диана Курышко",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Діана Куришко", "function": "BBC Україна" }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122027848",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14B88/production/_122027848_33536bff-36e3-4559-b84a-f6cfe8b01545.jpg",
+                  "path": "/cpsprodpb/14B88/production/_122027848_33536bff-36e3-4559-b84a-f6cfe8b01545.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Дія",
+                  "copyrightHolder": "Мінцифри",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59594144",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Питание в советской школе: мифы и реальность"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60188223",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60188223",
+                  "curie": "http://www.bbc.co.uk/asset/a389556f-374c-4f96-bdf2-8291b9ade136",
+                  "assetId": "60188223"
+                },
+                "summary": "Обсуждение нового школьного меню подняло на поверхность ряд важных и серьезных проблем. Хотим напомнить историю формирования школьного меню в Украине и развенчать распространенные мифы об обеде в школе.",
+                "timestamp": 1643619692000,
+                "language": "ru",
+                "byline": {
+                  "name": "Елена Брайченко",
+                  "title": "Исследовательница гастрономической культуры, основательница їzhakultura",
+                  "persons": [
+                    {
+                      "name": "Олена Брайченко, дослідниця гастрономічної культури,",
+                      "function": "засновниця їzhakultura"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123012825",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/CE55/production/_123012825_gettyimages-635965607.jpg",
+                  "path": "/cpsprodpb/CE55/production/_123012825_gettyimages-635965607.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "школярки, їдальня, срср",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60188223",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "\"Как прошла ночь в Луганске\". Рассказ местной жительницы"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/blog-from-lugansk-russian-60444846",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/blog-from-lugansk-russian-60444846",
+                  "curie": "http://www.bbc.co.uk/asset/84b64ad0-f86b-4264-9617-4257a5323f89",
+                  "assetId": "60444846"
+                },
+                "summary": "\"Часть понимает, что все слухи о наступлении Украины носят фейковый характер, часть просто не готова на отъезд или не имеет на это средств\".",
+                "timestamp": 1645279213000,
+                "language": "ru",
+                "byline": {
+                  "name": "Яна Викторова",
+                  "title": "ВВС News Украина, Луганск",
+                  "persons": [
+                    { "name": "Яна Вікторова", "function": "Для ВВС Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123311119",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/163E7/production/_123311119_hi073967175.jpg",
+                  "path": "/cpsprodpb/163E7/production/_123311119_hi073967175.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Автобусы для \"эвакуации\" мирного населения из Донецка, 18 февраля 2022 года",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/blog-from-lugansk-russian-60444846",
+                "type": "cps"
+              },
+              {
+                "headlines": { "headline": "Когда после ковида делать бустер" },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60388727",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60388727",
+                  "curie": "http://www.bbc.co.uk/asset/e6177135-0e21-4b5f-bfa7-516b8b090e2d",
+                  "assetId": "60388727"
+                },
+                "summary": "Украина переживает очередную волну Covid-19. Большинство случаев заражения приходятся на вариант \"Омикрон\", ежедневно медики фиксируют по 40 тысяч новых больных. Нужно ли делать бустер тем, кто уже переболел?",
+                "timestamp": 1644947945000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123227366",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10344/production/_123227366_tv073700304.jpg",
+                  "path": "/cpsprodpb/10344/production/_123227366_tv073700304.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ковід",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60388727",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Станица Луганская. На Донбассе боевики обстреляли детский сад, есть раненые. Что известно"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60414437",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60414437",
+                  "curie": "http://www.bbc.co.uk/asset/dc0fd2ac-dea5-4183-87bd-fa95aa8cf525",
+                  "assetId": "60414437"
+                },
+                "summary": "Пророссийские боевики обстреляли поселок Станица Луганская в Луганской области, заявили в штабе Операции объединенных сил.",
+                "timestamp": 1645106888000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123288187",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1316C/production/_123288187_178bbb34-165d-43e8-a230-9d303ce1ed2a.jpg",
+                  "path": "/cpsprodpb/1316C/production/_123288187_178bbb34-165d-43e8-a230-9d303ce1ed2a.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "обстріл на Донбасі",
+                  "copyrightHolder": "Facebook ООС",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60414437",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Нужна ли прививка переболевшим Covid-19? Объяснение иммунолога"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59416770",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59416770",
+                  "curie": "http://www.bbc.co.uk/asset/3d0f374a-5be3-4b5e-b958-20d0c602321d",
+                  "assetId": "59416770"
+                },
+                "summary": "Некоторые врачи отговаривают от вакцинации переболевших ковидом или отправляют перед прививкой на анализы. Правы ли они? На эти вопросы отвечает иммунолог Федор Лапий.",
+                "timestamp": 1637846533000,
+                "language": "ru",
+                "byline": {
+                  "name": "Диана Курышко",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Діана Куришко", "function": "BBC Україна" }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121778875",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/E21F/production/_121778875_1073383.jpg",
+                  "path": "/cpsprodpb/E21F/production/_121778875_1073383.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "щеплення",
+                  "copyrightHolder": "unian",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59416770",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Как получить Covid-сертификат о выздоровлении"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60317637",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60317637",
+                  "curie": "http://www.bbc.co.uk/asset/4bd9a9df-50db-436f-9458-dab66dd226ca",
+                  "assetId": "60317637"
+                },
+                "summary": "Есть три способа. Для этого в любом случае нужно обратиться к врачу, сдать тест и зафиксировать, что вы болели.",
+                "timestamp": 1644405823000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123179653",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/8B71/production/_123179653_1093417.jpg",
+                  "path": "/cpsprodpb/8B71/production/_123179653_1093417.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "сертифікат",
+                  "copyrightHolder": "unian",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60317637",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Карантин из-за ковида в Украине сократили до пяти дней"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60301447",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60301447",
+                  "curie": "http://www.bbc.co.uk/asset/84815c09-675b-43cb-9874-de9f371f6fcf",
+                  "assetId": "60301447"
+                },
+                "summary": "Министерство здравоохранения Украины сократило сроки лечения пациентов с COVID-19 до 5 дней из-за более короткого инкубационного периода омикрона.",
+                "timestamp": 1644321891000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123163356",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/FF38/production/_123163356_gettyimages-1238018635.jpg",
+                  "path": "/cpsprodpb/FF38/production/_123163356_gettyimages-1238018635.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "самоізоляція, ковід",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60301447",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Омикрон-2 . Что известно о новом подштамме"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60241775",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60241775",
+                  "curie": "http://www.bbc.co.uk/asset/99b2ac36-fa38-49e7-bb5f-4faba294f56c",
+                  "assetId": "60241775"
+                },
+                "summary": "Все больше стран, особенно в Азии и Европе, сообщают о росте заболеваемости коронавирусом, вызванного штаммом Омикрона – BA.2. Стоит ли волноваться?",
+                "timestamp": 1643878897000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123079841",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3A31/production/_123079841_whatsubject.jpg",
+                  "path": "/cpsprodpb/3A31/production/_123079841_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "The SARS-CoV-2 coronavirus",
+                  "caption": "The SARS-CoV-2 coronavirus",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "123080377",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/12DFC/production/_123080377_whatsubject.jpg",
+                  "path": "/cpsprodpb/12DFC/production/_123080377_whatsubject.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "The SARS-CoV-2 coronavirus",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60241775",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Бустерная доза уже в Дии. Как подтянуть сертификат и почему это важно для путешествий"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60216125",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60216125",
+                  "curie": "http://www.bbc.co.uk/asset/adf1a16d-8e04-4553-8f93-b8aeb6567c85",
+                  "assetId": "60216125"
+                },
+                "summary": "Две дозы вакцин от коронавируса не обеспечивают защиту от штамма \"Омикрон\", а скоро на бустер будут все больше обращать внимание в аэропортах и ЕС.",
+                "timestamp": 1643716753000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123061798",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15E74/production/_123061798_1093417-1.jpg",
+                  "path": "/cpsprodpb/15E74/production/_123061798_1093417-1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "covid",
+                  "copyrightHolder": "Уніан",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60216125",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Омикрон: большинство зараженных говорят, что уже болели ковидом раньше. Что это значит"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-60202332",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-60202332",
+                  "curie": "http://www.bbc.co.uk/asset/2a012a61-7cd2-461c-9a00-5043329ca070",
+                  "assetId": "60202332"
+                },
+                "summary": "Две трети людей, недавно заразившихся штамом коронавируса Омикрон, говорят, что они уже болели ковидом раньше.",
+                "timestamp": 1643637459000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123005596",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10FAE/production/_123005596_gettyimages-1237878478.jpg",
+                  "path": "/cpsprodpb/10FAE/production/_123005596_gettyimages-1237878478.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "woman with mask on street",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-60202332",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Секс на работе и роман с боссом. Как пособие для студентов возмутило соцсети и педагогов"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59324048",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59324048",
+                  "curie": "http://www.bbc.co.uk/asset/ebb053df-6339-4cf2-82b7-781658b7a07b",
+                  "assetId": "59324048"
+                },
+                "summary": "В списках рекомендованной литературы для студентов-менеджеров оказался учебник \"Деловая карьера\". Книга содержит множество сексистских высказываний, а в одном случае автор даже ссылается на цитату Гитлера.",
+                "timestamp": 1637167614000,
+                "language": "ru",
+                "byline": {
+                  "name": "Илона Громлюк",
+                  "title": "ВВС News Украина",
+                  "persons": [
+                    { "name": "Ілона Громлюк", "function": "ВВС News Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121570244",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/ACAF/production/_121570244_415432.jpg",
+                  "path": "/cpsprodpb/ACAF/production/_121570244_415432.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "ноги",
+                  "copyrightHolder": "УНІАН",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59324048",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Харьков – столица аварий? Почему там так много смертельных ДТП"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59488612",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59488612",
+                  "curie": "http://www.bbc.co.uk/asset/6934013c-789a-495d-b2de-20f46f8021f6",
+                  "assetId": "59488612"
+                },
+                "summary": "Лидер по количеству резонансных дорожных происшествий - Харьков - чаще других регионов попадает в новостные ленты с сообщениями об очередной головокружительной аварии.",
+                "timestamp": 1638354543000,
+                "language": "ru",
+                "byline": {
+                  "name": "Анна Силаева",
+                  "title": "Харьков, для BBC News Украина",
+                  "persons": [
+                    { "name": "Ілона Громлюк", "function": "ВВС News Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121892216",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/EF2D/production/_121892216_855761.jpg",
+                  "path": "/cpsprodpb/EF2D/production/_121892216_855761.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "похорон",
+                  "caption": "Панихида за загиблими у ДТП за участі Зайцевої",
+                  "copyrightHolder": "Unian",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59488612",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Санкции против России: что о них нужно знать"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60167342",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60167342",
+                  "curie": "http://www.bbc.co.uk/asset/01271af2-b185-453c-b19d-13ce43786bb7",
+                  "assetId": "60167342"
+                },
+                "summary": "Запад угрожает России \"невиданными санкциями\", если она вторгнется в Украину. О каких именно санкциях идет речь и сработают ли они?",
+                "timestamp": 1643363544000,
+                "language": "ru",
+                "byline": {
+                  "name": "Анастасия Зануда",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Анастасія Зануда", "function": "ВВС Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123024037",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11D52/production/_123024037_gettyimages-846522740-170667a.jpg",
+                  "path": "/cpsprodpb/11D52/production/_123024037_gettyimages-846522740-170667a.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "санкції",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60167342",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "В Украине изменили ковид-сертификаты. Почему сократили срок действия и при чем здесь бустер"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60081091",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60081091",
+                  "curie": "http://www.bbc.co.uk/asset/6463530f-f03e-4c77-8959-1c2ba93d7604",
+                  "assetId": "60081091"
+                },
+                "summary": "Срок действия украинских ковид-сертификатов сократили с одного года до девяти месяцев.",
+                "timestamp": 1642757625000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122664406",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/EC1E/production/_122664406_1093423.jpg",
+                  "path": "/cpsprodpb/EC1E/production/_122664406_1093423.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "сертифікат",
+                  "copyrightHolder": " unian",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60081091",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Как понять, что это омикрон? В Минздраве рассказали о самых частых симптомах"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-60051866",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-60051866",
+                  "curie": "http://www.bbc.co.uk/asset/180dd49a-1620-4e7e-af38-f741f266f098",
+                  "assetId": "60051866"
+                },
+                "summary": "У больных Омикроном реже бывает лихорадка и кашель, но этот штамм заразнее",
+                "timestamp": 1642582960000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122853965",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/DE67/production/_122853965_986663.jpg",
+                  "path": "/cpsprodpb/DE67/production/_122853965_986663.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "коронавірус",
+                  "copyrightHolder": "Уніан",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-60051866",
+                "type": "cps"
+              }
+            ],
+            "strapline": { "name": "Статьи" },
+            "semanticGroupName": "Also in the news"
+          },
+          {
+            "type": "feature-main",
+            "title": "Features",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Украинские школы перешли на новое питание: почему не все довольны"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59983399",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59983399",
+                  "curie": "http://www.bbc.co.uk/asset/9ab8087d-b639-46dc-85f0-bf7342f73cbb",
+                  "assetId": "59983399"
+                },
+                "summary": "С 1 января украинские школы и детские сады перешли на обновленное меню, которое разрабатывал популярный шеф-повар Евгений Клопотенко. Но не всем детям и родителям понравилось такое питание. Что не нравится современным детям?",
+                "timestamp": 1642083116000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122675275",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/DFA9/production/_122675275_365814.jpg",
+                  "path": "/cpsprodpb/DFA9/production/_122675275_365814.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "школярі, їдальня, харчування, їжа",
+                  "copyrightHolder": "УНІАН",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59983399",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Омикрон: почему бустер работает, а две дозы вакцины – не очень"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59993754",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59993754",
+                  "curie": "http://www.bbc.co.uk/asset/0d17b5df-227c-47da-a6c5-7c52c98f90ce",
+                  "assetId": "59993754"
+                },
+                "summary": "Новый штамм коронавируса нанес довольно чувствительный удар по достижениям ученых и производителей вакцин. Считается, что Омикрон не так опасен, как его предшественники, но он быстрее распространяется. А главное - он более устойчив к созданным вакцинам.",
+                "timestamp": 1642153619000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122697648",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14AC7/production/_122697648_gettyimages-1233728488.jpg",
+                  "path": "/cpsprodpb/14AC7/production/_122697648_gettyimages-1233728488.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "вакцинація",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59993754",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "РРО для предпринимателей: полный коллапс или все работает"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59953161",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59953161",
+                  "curie": "http://www.bbc.co.uk/asset/6d5e2982-a117-4428-86f5-0aac5dd8831d",
+                  "assetId": "59953161"
+                },
+                "summary": "Все \"зависло\", ничего не открывается, техподдержка не отвечает – так в первые дни нового года предприниматели описывают работу с РРО (программными кассовыми аппаратами), которые с 1 января являются обязательными для ФЛП. Глава налогового комитета Рады Гетманцев говорит, что все заработало и предполагает, что предпринимателей не будут штрафовать, если они установят кассу до начала февраля.",
+                "timestamp": 1641906161000,
+                "language": "ru",
+                "byline": {
+                  "name": "Анастасия Зануда",
+                  "title": "ВВС News Украина",
+                  "persons": [
+                    { "name": "Анастасія Зануда", "function": "ВВС Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122645291",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4B36/production/_122645291_1101358.jpg",
+                  "path": "/cpsprodpb/4B36/production/_122645291_1101358.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "В останні тижні 2021 року представники малого бізнесу намагалися змусити Раду вкотре відтермінувати обов'язковість фіскалізації. Але не вийшло",
+                  "caption": "В останні тижні 2021 року представники малого бізнесу намагалися змусити Раду вкотре відтермінувати обов'язковість фіскалізації продажів. Але не вийшло",
+                  "copyrightHolder": "UNIAN",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59953161",
+                "type": "cps"
+              },
+              {
+                "headlines": { "headline": "Какой вакциной делать бустер" },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-59922089",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-59922089",
+                  "curie": "http://www.bbc.co.uk/asset/89b67be0-b572-47ed-9b5c-fa6a1f2cba76",
+                  "assetId": "59922089"
+                },
+                "summary": "Последние исследования показывают, что бустерная доза вакцины может обеспечить защиту от тяжелого течения болезни и смерти при заражении Омикрон-штаммом.",
+                "timestamp": 1641647900000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121925759",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/17608/production/_121925759_gettyimages-1236943268.jpg",
+                  "path": "/cpsprodpb/17608/production/_121925759_gettyimages-1236943268.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "A woman being vaccinated with a booster jab in November in the UK",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-59922089",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Воинский учет для женщин. Как это сделать и когда будут штрафовать"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59779881",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59779881",
+                  "curie": "http://www.bbc.co.uk/asset/14c8a3d8-f4be-4194-8e53-3e8a1ebbc207",
+                  "assetId": "59779881"
+                },
+                "summary": "Женщин могут призвать на службу во время военного положения, мобилизации, но только с их согласия.",
+                "timestamp": 1640337523000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122367701",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2A18/production/_122367701_army_girls.jpg",
+                  "path": "/cpsprodpb/2A18/production/_122367701_army_girls.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Жінки-військові беруть участь у параді вперше",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59779881",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Симптомы другие, привитые болеют легче: новое об Омикроне"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-59680727",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-59680727",
+                  "curie": "http://www.bbc.co.uk/asset/85d4c741-6720-4e23-bbdb-3664247d0f21",
+                  "assetId": "59680727"
+                },
+                "summary": "Симптомы Омикрона, стремительно распространяющегося по миру, существенно отличаются от симптомов предыдущих штаммов Covid-19, сообщает британская газета Daily Telegraph.",
+                "timestamp": 1639644530000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "122229448",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14A0C/production/_122229448_gettyimages-455448155.jpg",
+                  "path": "/cpsprodpb/14A0C/production/_122229448_gettyimages-455448155.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "чхання",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-59680727",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Как и почему арабские туристы полюбили Украину"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-58184428",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-58184428",
+                  "curie": "http://www.bbc.co.uk/asset/1527ec22-6fa0-4fd9-98f6-33d3d6810ca5",
+                  "assetId": "58184428"
+                },
+                "summary": "За первое полугодие 2021 года Украину посетило свыше 17 тысяч арабских туристов. В Карпатах рекламу и меню теперь переводят на арабский, а туристический бизнес оживает.",
+                "timestamp": 1628755836000,
+                "language": "ru",
+                "byline": {
+                  "name": "Диана Курышко, Георгий Эрман",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Діана Куришко", "function": "BBC Україна" }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "119814743",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/87B5/production/_119814743_00105259.jpg",
+                  "path": "/cpsprodpb/87B5/production/_119814743_00105259.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Буковель",
+                  "caption": "Багато арабських туристів обирають Буковель",
+                  "copyrightHolder": "ресслужба Буковелю, Павло Заровецький",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-58184428",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "\"CoronaVac переносится легче\". Вопросы и ответы о прививках от ковида"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59450221",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59450221",
+                  "curie": "http://www.bbc.co.uk/asset/e79b34c2-5919-4884-b86c-6ff346282bc5",
+                  "assetId": "59450221"
+                },
+                "summary": "\"Садит\" ли вакцина иммунитет и у каких больше побочных эффектов - рассказывает иммунолог Федор Лапий.",
+                "timestamp": 1638091683000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121800657",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/12750/production/_121800657_tv072184840.jpg",
+                  "path": "/cpsprodpb/12750/production/_121800657_tv072184840.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "щеплення",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59450221",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Голодомор в Украине. Почему историки снова спорят и как будет выглядеть новый музей"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59442467",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59442467",
+                  "curie": "http://www.bbc.co.uk/asset/95d770b1-93bc-4d0f-8c0b-22978257a1e0",
+                  "assetId": "59442467"
+                },
+                "summary": "Музей откроют в 2023 году, и там будут не только выставки, архив, библиотека, но и пекарня с забытыми рецептами, кинотеатр и крыша в футуристическом стиле.",
+                "timestamp": 1638007887000,
+                "language": "ru",
+                "byline": {
+                  "name": "Илона Громлюк",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    { "name": "Ілона Громлюк", "function": "ВВС News Україна" }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121831125",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/CB91/production/_121831125__114064513_451396.jpg",
+                  "path": "/cpsprodpb/CB91/production/_121831125__114064513_451396.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "голодомор",
+                  "copyrightHolder": "Unian",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59442467",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Козак Путина. Украинское село и детство кремлевского куратора Украины"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-57524483",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-57524483",
+                  "curie": "http://www.bbc.co.uk/asset/ddc47f5f-666e-4ef2-b631-93753a32d6f8",
+                  "assetId": "57524483"
+                },
+                "summary": "В живописном украинском селе Бандурово виднеется лозунг \"Слава Украине\", ходят куры и пасутся коровы. А местные следят за своим Митей - некоторые поражены его последними заявлениями.",
+                "timestamp": 1624023163000,
+                "language": "ru",
+                "byline": {
+                  "name": "Виталий Червоненко, Олег Карпьяк",
+                  "title": "BBC News Украина",
+                  "persons": [
+                    {
+                      "name": "Віталій Червоненко",
+                      "function": "BBC News Україна"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "118954528",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14271/production/_118954528_976-kozak.jpg",
+                  "path": "/cpsprodpb/14271/production/_118954528_976-kozak.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "козак",
+                  "caption": "Колаж - Олеся Волкова",
+                  "copyrightHolder": "ВВС/Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "118954530",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/0DD9/production/_118954530_976-kozak.jpg",
+                  "path": "/cpsprodpb/0DD9/production/_118954530_976-kozak.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "козак",
+                  "caption": "Колаж - Олеся Волкова",
+                  "copyrightHolder": "ВВС/Getty Images",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-57524483",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Зеленский: каждый вакцинированный получит тысячу гривен"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/news-russian-59304311",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-59304311",
+                  "curie": "http://www.bbc.co.uk/asset/995a4222-f1d8-42b8-92bc-79c79a503796",
+                  "assetId": "59304311"
+                },
+                "summary": "Украинцы, прошедшие полный курс вакцинации, то есть каждый, кто получил две прививки от коронавируса, сможет получить тысячу гривен. Об этом заявил президент Владимир Зеленский.",
+                "timestamp": 1637055279000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121569986",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10D84/production/_121569986_a9da7082-c2b6-451a-bcc9-a9211002dca6.jpg",
+                  "path": "/cpsprodpb/10D84/production/_121569986_a9da7082-c2b6-451a-bcc9-a9211002dca6.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Володимир Зеленський",
+                  "copyrightHolder": "УНІАН",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "РУС",
+                  "uri": "/ukrainian/ukraine_in_russian",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/news-russian-59304311",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Однодозная вакцина Janssen (Johnson & Johnson): что о ней известно и доступна ли она украинцам"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/features-russian-59175189",
+                  "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-russian-59175189",
+                  "curie": "http://www.bbc.co.uk/asset/1d35e10c-af8d-4d55-bb35-a93688b2f159",
+                  "assetId": "59175189"
+                },
+                "summary": "Необходимость оперативно привиться заставила некоторых людей искать однодозовые вакцины, таких как Janssen от компании Johnson & Johnson. Рассказываем, что это за вакцина, эффективно ли она защищает от Covid-19 и можно ли ее получить в Украине.",
+                "timestamp": 1636120785000,
+                "language": "ru",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "121403674",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BA0E/production/_121403674_gettyimages-1325527875.jpg",
+                  "path": "/cpsprodpb/BA0E/production/_121403674_gettyimages-1325527875.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Дівчина щеплення",
+                  "copyrightHolder": "BSR Agency",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "id": "urn:bbc:ares::asset:ukrainian/features-russian-59175189",
+                "type": "cps"
+              }
+            ],
+            "strapline": { "name": "Подробно" },
+            "semanticGroupName": "Features"
+          }
+        ]
+      },
+      "promo": {
+        "subType": "IDX",
+        "name": "РУС",
+        "uri": "/ukrainian/ukraine_in_russian",
+        "id": "urn:bbc:ares::index:ukrainian/ukraine_in_russian/desktop/domestic",
+        "type": "simple"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "РУС",
+          "uri": "/ukrainian/ukraine_in_russian",
+          "urlIdentifier": "/ukrainian/ukraine_in_russian",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Україна",
+          "uri": "/ukrainian",
+          "urlIdentifier": "/ukrainian",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": {
+        "generated": "2023-07-24T11:11:38.389Z",
+        "lastRecordTimeStamp": "2023-07-24T11:08:00Z",
+        "firstRecordTimeStamp": "2023-07-24T10:53:00Z",
+        "items": [
+          {
+            "id": "5019cf82-e8ad-4d0f-9d35-a99b6e8e6dba",
+            "rank": 1,
+            "title": "Атака безпілотників на Москву і вибухи у Криму: що відомо",
+            "href": "/ukrainian/news-66286934",
+            "timestamp": 1690175514000
+          },
+          {
+            "id": "96ff605e-0518-4a29-8e9c-c1b21771a453",
+            "rank": 2,
+            "title": "Захід припустився помилок у підготовці та оснащенні ЗСУ - Observer",
+            "href": "/ukrainian/news-66286942",
+            "timestamp": 1690188671000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cj7j2zndjryo",
+            "rank": 3,
+            "title": "\"Вичищайте всіх\". Що не так зі справами про зрадників в СБУ, яким закидають допомогу Росії",
+            "href": "https://www.bbc.com/ukrainian/articles/cj7j2zndjryo",
+            "timestamp": 1690179172498
+          },
+          {
+            "id": "3be06f86-8430-4c4c-85f8-a3a3273f58ce",
+            "rank": 4,
+            "title": "10 найкращих телесеріалів першої половини 2023 року",
+            "href": "/ukrainian/features-66235750",
+            "timestamp": 1690108458000
+          },
+          {
+            "id": "25d3adeb-412a-4e31-baa4-2430918b772a",
+            "rank": 5,
+            "title": "ДБР затримало скандального одеського воєнкома. Звинувачення \"тягнуть\" на 10 років",
+            "href": "/ukrainian/news-66283445",
+            "timestamp": 1690191782000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0457nlj902o",
+            "rank": 6,
+            "title": "Чому деякі частини нашого тіла не мають сенсу, а пряма хода шкідлива",
+            "href": "https://www.bbc.com/ukrainian/articles/c0457nlj902o",
+            "timestamp": 1690120600209
+          },
+          {
+            "id": "5f9ed318-2105-4bdb-93cb-7d7cb04bb4ec",
+            "rank": 7,
+            "title": "\"Діти на повний робочий день\". Чому молоді китайці кидають роботу, щоб працювати вдома на батьків",
+            "href": "/ukrainian/features-66226717",
+            "timestamp": 1689778439000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c19l4lnp83ko",
+            "rank": 8,
+            "title": "Віталій Портников: \"Якщо не буде політичного рішення, ЗСУ не зможуть добитися закінчення війни\"",
+            "href": "https://www.bbc.com/ukrainian/articles/c19l4lnp83ko",
+            "timestamp": 1689915291621
+          },
+          {
+            "id": "e474b86e-4754-4e15-8cec-df02fe8de7c5",
+            "rank": 9,
+            "title": "Ризик безвиході: брак зброї та підготовки може завести український наступ у глухий кут - WSJ",
+            "href": "/ukrainian/news-66283437",
+            "timestamp": 1690113772000
+          },
+          {
+            "id": "3fd714b8-b53c-4ac5-8d19-386f6f4428d0",
+            "rank": 10,
+            "title": "\"Онікс\": що це за ракети, якими Росія обстрілює Одещину, та чи можна їх збити",
+            "href": "/ukrainian/features-66268634",
+            "timestamp": 1689950992000
+          },
+          {
+            "id": "723c7f69-1dff-4ea2-a196-4d86bd048410",
+            "rank": 11,
+            "title": "Росія зруйнувала головний храм Одеси - Преображенський собор, є загиблий та поранені",
+            "href": "/ukrainian/news-66269809",
+            "timestamp": 1690083838000
+          },
+          {
+            "id": "702c91bf-9992-42e6-a247-17dfdad64529",
+            "rank": 12,
+            "title": "Греція у вогні: тисячі туристів та місцевих евакуйовані",
+            "href": "/ukrainian/news-66268215",
+            "timestamp": 1690100697000
+          },
+          {
+            "id": "20874cf3-04bc-436c-a85d-a5f3fac2ce5e",
+            "rank": 13,
+            "title": "Україна без портів. Чим обернеться нова морська блокада від Путіна",
+            "href": "/ukrainian/features-66268211",
+            "timestamp": 1690005900000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c4n0r3dkl22o",
+            "rank": 14,
+            "title": "\"Добре виконане завдання - те, про яке ніхто не дізнається\". Інтерв'ю зі спецпризначенцем ГУР",
+            "href": "https://www.bbc.com/ukrainian/articles/c4n0r3dkl22o",
+            "timestamp": 1690092575558
+          },
+          {
+            "id": "135c8f7f-d15f-4e6e-809f-3fd91b9ec9bd",
+            "rank": 15,
+            "title": "\"На екскурсію до Варшави\" - Лукашенко розповів Путіну про плани вагнерівців",
+            "href": "/ukrainian/news-66283442",
+            "timestamp": 1690120328000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0w1dd35vg1o",
+            "rank": 16,
+            "title": "Чорноморська морська блокада. Хто більше програє: Україна чи Росія?",
+            "href": "https://www.bbc.com/ukrainian/articles/c0w1dd35vg1o",
+            "timestamp": 1690034947871
+          },
+          {
+            "id": "07679d0f-0688-4dc5-92a2-701fbd6dfdde",
+            "rank": 17,
+            "title": "\"Мандели з Ігорка не вийде\". Як Ігор Стрєлков ненавидів Україну, критикував Путіна і потрапив у СІЗО",
+            "href": "/ukrainian/features-66277497",
+            "timestamp": 1690020562000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c5126p1q1dgo",
+            "rank": 18,
+            "title": "Оппенгеймер - \"батько\" атомної бомби. Ким був насправді герой фільму",
+            "href": "https://www.bbc.com/ukrainian/articles/c5126p1q1dgo",
+            "timestamp": 1690026365236
+          },
+          {
+            "id": "3978001a-20ce-427c-941f-471e83f61fc6",
+            "rank": 19,
+            "title": "Чому Україна пропустила армію РФ з Криму в лютому 2022 року",
+            "href": "/ukrainian/features-64692874",
+            "timestamp": 1677072249000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:clwzg781lgyo",
+            "rank": 20,
+            "title": "Чому Зеленський несподівано звільнив посла у Британії Пристайка?",
+            "href": "https://www.bbc.com/ukrainian/articles/clwzg781lgyo",
+            "timestamp": 1689937520485
+          }
+        ]
+      },
+      "mostWatched": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

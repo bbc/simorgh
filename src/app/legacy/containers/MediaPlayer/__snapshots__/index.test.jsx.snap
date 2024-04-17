@@ -542,11 +542,9 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         >
           Video caption, 
         </span>
-        <span
-          data-testid="caption-paragraph"
-        >
+        <p>
           BBC launch trailer for We Know Our Place women's sport campaign"
-        </span>
+        </p>
       </span>
     </figcaption>
   </figure>

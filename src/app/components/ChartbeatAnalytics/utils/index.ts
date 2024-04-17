@@ -10,6 +10,7 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
+  INDEX_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -49,8 +50,9 @@ export const getSylphidCookie = () =>
 export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
   switch (pageType) {
     case FRONT_PAGE:
+    case INDEX_PAGE:
     case 'index':
-      return shorthand ? 'IDX' : 'Index';
+      return shorthand ? INDEX_PAGE : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case MEDIA_ARTICLE_PAGE:
@@ -178,6 +180,7 @@ interface GetTitleProps {
 export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
   switch (pageType) {
     case FRONT_PAGE:
+    case INDEX_PAGE:
     case FEATURE_INDEX_PAGE:
     case MOST_READ_PAGE:
     case MOST_WATCHED_PAGE:

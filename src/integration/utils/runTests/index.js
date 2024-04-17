@@ -2,6 +2,7 @@
 
 const { exec, spawn } = require('child_process');
 const argv = require('minimist')(process.argv.slice(2));
+const ora = require('ora');
 const path = require('path');
 
 const onlyRunTests = Boolean(argv.onlyRunTests);
@@ -54,16 +55,12 @@ const startApp = () => {
 };
 
 const runExpressTests = () =>
-  spawn(
-    'jest',
-    [filesToTest, '--runInBand', '--colors', '--verbose', ...getJestArgs()],
-    {
-      stdio: 'inherit',
-    },
-  );
+  spawn('jest', [filesToTest, '--runInBand', '--colors', ...getJestArgs()], {
+    stdio: 'inherit',
+  });
 
 const runNextJSTests = () =>
-  spawn('yarn', ['test:integration', '--verbose', ...getJestArgs()], {
+  spawn('yarn', ['test:integration', ...getJestArgs()], {
     stdio: 'inherit',
   });
 
@@ -85,6 +82,7 @@ if (onlyRunTests) {
     process.exit(1);
   });
 } else {
+  const spinner = ora().start();
   if (argv.nextJS) {
     const nextAppDir = path.join(path.resolve(), 'ws-nextjs-app');
     process.chdir(nextAppDir);
@@ -94,22 +92,21 @@ if (onlyRunTests) {
     .then(() => {
       if (isDev) return Promise.resolve();
 
-      console.log('Building app...');
+      spinner.text = 'Building app...';
       return buildApp();
     })
     .then(() => {
-      const text = isDev
+      spinner.text = isDev
         ? 'Starting app in developer mode...'
         : 'Starting app...';
-
-      console.log(text);
       return startApp();
     })
     .then(
       () =>
         new Promise(resolve => {
-          console.log('Running tests...');
+          spinner.text = 'Running tests...';
           setTimeout(() => {
+            spinner.stop();
             resolve();
           }, 2000);
         }),

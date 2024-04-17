@@ -5,7 +5,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -72,12 +71,8 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = useContext(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -121,12 +116,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     metadata: { atiAnalytics, type },
   } = pageData;
 
-  const isMap = type === MEDIA_ASSET_PAGE;
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  };
+  const isMap = type === 'MAP';
 
   const componentsToRender = {
     fauxHeadline,
@@ -199,7 +189,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}

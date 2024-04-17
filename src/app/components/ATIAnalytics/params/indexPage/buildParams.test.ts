@@ -1,5 +1,9 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { FRONT_PAGE, FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  FRONT_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
@@ -57,6 +61,20 @@ const frontPage = {
   },
 };
 
+const idxPage = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'service.page.idxpage',
+    },
+    locators: {
+      curie:
+        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
+    },
+    language: 'language',
+    title: 'title',
+  },
+};
+
 const fixPage = {
   metadata: {
     analyticsLabels: {
@@ -74,6 +92,57 @@ const fixPage = {
 describe('indexPage buildParams', () => {
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  describe('IDX Page', () => {
+    describe('build IDX Page ATI params', () => {
+      it('should return the right object', () => {
+        const result = buildIndexPageATIParams(
+          idxPage,
+          { ...requestContext, pageType: INDEX_PAGE },
+          serviceContext,
+        );
+        const validIdxPageURLParams = {
+          ...validURLParams,
+          contentType: 'index-section',
+          pageIdentifier: 'service.page.idxpage',
+        };
+
+        expect(result).toEqual(validIdxPageURLParams);
+      });
+    });
+
+    describe('build IDX Page ATI url', () => {
+      it('should return the right url', () => {
+        const result = buildIndexPageATIUrl(
+          idxPage,
+          { ...requestContext, pageType: INDEX_PAGE },
+          serviceContext,
+        ) as string;
+
+        const params = Object.fromEntries(new URLSearchParams(result));
+
+        expect(params).toEqual({
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          p: 'service.page.idxpage',
+          r: '0x0x24x24',
+          re: '1024x768',
+          hl: '00-00-00',
+          lng: 'en-US',
+          x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[language]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[index-section]',
+          x8: '[simorgh]',
+          x9: '[title%20-%20brandName]',
+          x11: '[1970-01-01T00:00:00.000Z]',
+          x12: '[1970-01-01T00:00:00.000Z]',
+        });
+      });
+    });
   });
 
   describe('Frontpage', () => {
