@@ -507,7 +507,6 @@ const preview: Preview = {
           'Components',
           'Containers',
           'Pages',
-          'Lite Renderer',
           'Coding Standards',
           'docs',
           'hooks',

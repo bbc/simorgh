@@ -1,7 +1,7 @@
 import Document, { DocumentContext } from 'next/document';
 
 import React, { HTMLAttributes, ReactElement } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetData } from 'react-helmet';
 
 import isAppPath from '#app/routes/utils/isAppPath';
 import isLitePath from '#app/routes/utils/isLitePath';
@@ -16,9 +16,7 @@ type DocProps = {
   clientSideEnvVariables: EnvConfig;
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   title: ReactElement;
-  helmetMetaTags: ReactElement;
-  helmetLinkTags: ReactElement;
-  helmetScriptTags: ReactElement;
+  helmet: HelmetData;
   isApp: boolean;
   isLite: boolean;
 };
@@ -31,40 +29,26 @@ export default class AppDocument extends Document<DocProps> {
 
     const initialProps = await Document.getInitialProps(ctx);
 
-    const helmet = Helmet.renderStatic();
-    const htmlAttrs = helmet.htmlAttributes.toComponent();
-    const title = helmet.title.toComponent();
-    const helmetMetaTags = helmet.meta.toComponent();
-    const helmetLinkTags = helmet.link.toComponent();
-    const helmetScriptTags = helmet.script.toComponent();
-
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
     return {
       ...initialProps,
       clientSideEnvVariables,
-      htmlAttrs,
-      title,
-      helmetMetaTags,
-      helmetLinkTags,
-      helmetScriptTags,
+      helmet: Helmet.renderStatic(),
       isApp,
       isLite,
     };
   }
 
   render() {
-    const {
-      clientSideEnvVariables,
-      htmlAttrs,
-      title,
-      helmetLinkTags,
-      helmetMetaTags,
-      helmetScriptTags,
-      isApp,
-      isLite,
-    } = this.props;
+    const { clientSideEnvVariables, helmet, isApp, isLite } = this.props;
+
+    const htmlAttrs = helmet.htmlAttributes.toComponent();
+    const title = helmet.title.toComponent();
+    const helmetMetaTags = helmet.meta.toComponent();
+    const helmetLinkTags = helmet.link.toComponent();
+    const helmetScriptTags = helmet.script.toComponent();
 
     switch (true) {
       case isLite:

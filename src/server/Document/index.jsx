@@ -108,7 +108,6 @@ const renderDocument = async ({
       isAmp={isAmp}
       isApp={isApp}
       isLite={isLite}
-      url={url}
     />,
   );
 
