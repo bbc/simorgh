@@ -180,7 +180,6 @@ const Pagination = ({
       role="navigation"
       aria-label={page}
       data-testid="topic-pagination"
-      data-lite-class="pagination"
     >
       {showPreviousArrow && (
         <PreviousArrow activePage={activePage} dir={dir}>

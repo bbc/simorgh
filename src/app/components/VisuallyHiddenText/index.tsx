@@ -20,7 +20,6 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   const Component = as || 'span';
   return (
     <Component
-      data-lite-class="visuallyHiddenText"
       css={styles.visuallyHiddenText}
       id={id}
       tabIndex={tabIndex}

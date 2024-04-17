@@ -160,7 +160,7 @@ CurrentLink.defaultProps = {
 };
 
 export const NavigationUl = ({ children, ...props }) => (
-  <StyledUnorderedList data-lite-class="nav-list" role="list" {...props}>
+  <StyledUnorderedList role="list" {...props}>
     {children}
   </StyledUnorderedList>
 );

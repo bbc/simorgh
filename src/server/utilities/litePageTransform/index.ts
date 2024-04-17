@@ -1,202 +1,13 @@
 import * as cheerio from 'cheerio';
-import {
-  EBON,
-  GREY_3,
-  GREY_6,
-  GREY_10,
-  POSTBOX,
-  BLACK,
-  WHITE,
-  LIVE_DARK,
-} from '#app/components/ThemeProvider/palette';
 import { ReactElement } from 'react';
 
 const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
-
-const CONTENT_PADDING = 1;
-
-export const LITE_STYLES = `
-html{
-  text-size-adjust:100%;
-  font-size:16px;
-  font-family:-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
-}
-body{
-  margin:0;
-}
-ul{
-  padding-inline-start:0rem;
-  list-style-type:none;
-}
-ul:not([data-lite-class=nav-list]), ol {
-  > li{
-    margin:1rem 0;
-  }
-}
-ol{
-  padding-inline-start:0.325rem;
-  list-style-type:none;
-}
-a{
-  color:${GREY_10};
-  position:relative;
-  display:inline-block;
-
-  &:focus-visible{
-    outline:none;
-  }
-
-  &:focus-visible::after{
-    content:'';
-    position:absolute;
-    inset:0;
-    outline: 0.25rem solid ${BLACK};
-    box-shadow: none;
-    outline-offset: 0.25rem;
-  }
-}
-p{
-  a{
-   text-decoration-color:${POSTBOX};
- } 
-}
-h3{
-  a{
-    svg {
-      fill:${LIVE_DARK};
-      margin-inline-end:0.25rem;
-  
-      + span {
-        > span {
-          margin-inline-end:0.5rem;
-          color:${LIVE_DARK};
-        }
-      }
-    }
-  }
-}
-input, textarea {
-  display:block;
-}
-#brandSvgHeader,#brandSvgFooter{
-  fill:${WHITE};
-  height:1.5rem;
-}
-time{
-  color:${GREY_6};
-  font-size:0.875rem;
-}
-a + time {
-  display:block;
-}
-svg + time {
-  margin-inline-start:0.5rem;
-}
-/* Custom classes */
-[data-lite-class=brand-wrapper]{
-  background-color:${POSTBOX};
-}
-[data-lite-class=svg-wrapper]{
-  padding:${CONTENT_PADDING}rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  a:first-of-type{
-    display:flex; 
-
-    &:focus-visible{
-      outline: 0.25rem solid ${WHITE};
-    }
-    &:focus-visible::after{
-      display:none;
-    }
-  }
-}
-[data-lite-class=main-content]{
-  padding:0 ${CONTENT_PADDING}rem;
-}
-[data-lite-class=nav-list]{
-  padding:${CONTENT_PADDING}rem;
-  margin:0;
-  list-style-type:none;
-  border-bottom:1px solid ${GREY_3};
-  display:flex;
-  flex-wrap:wrap;
-  gap:0.625rem;
-}
-[data-lite-class=footer-copyright]{
-  margin:0;
-  padding: 1rem;
-}
-[data-lite-class=most-read-list]{
-  > li{
-    > div {
-      display:flex;
-      flex-direction:row;
-      gap:0.625rem;
-      margin-bottom:0.625rem;
-    }
-  }
-}
-[data-lite-class=pagination]{
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-
-  > div {
-    display:none;
-  }
-
-  > ul {
-    display:flex;
-
-    > li {
-      margin:0 0.625rem;
-    }
-  }
-}
-[data-lite-class=visuallyHiddenText]{
-  clip-path:inset(100%);
-  clip:rect(1px,1px,1px,1px);
-  height:1px;
-  overflow:hidden;
-  position:absolute;
-  width:1px;
-  margin:0;
-}
-[data-lite-class=analytics-pixel]{
-  position:absolute;
-}
-a[data-lite-class=skipLink]{
-  position:absolute;
-  clip-path:inset(100%);
-  clip:rect(1px,1px,1px,1px);
-  height:1px;
-  width:1px;
-  overflow:hidden;
-  padding:0.75rem 0.5rem;
-  background-color:${WHITE};
-  color:${EBON};
-  text-decoration:none;
-  border:0.1875rem solid ${BLACK};
-
-  &:focus, &:active{
-    display:block;
-    clip-path:none;
-    clip:auto;
-    height:auto;
-    width:auto;
-  }
-}
-`;
 
 type Props = {
   html: string;
   helmetMetaTags: ReactElement;
   helmetScriptTags: ReactElement;
   helmetLinkTags: ReactElement;
-  shouldUseEmotionStyles?: boolean;
 };
 
 export default function litePageTransform({
@@ -204,7 +15,6 @@ export default function litePageTransform({
   helmetMetaTags,
   helmetScriptTags,
   helmetLinkTags,
-  shouldUseEmotionStyles = false,
 }: Props) {
   // https://cheerio.js.org/docs/advanced/configuring-cheerio#fragment-mode
   const $ = cheerio.load(
@@ -221,18 +31,6 @@ export default function litePageTransform({
     false,
   );
 
-  /* We need to remove the styles and CSS classes set by Emotion */
-  if (!shouldUseEmotionStyles) {
-    // Remove style tags
-    $('style').remove();
-
-    // Remove inline style attributes
-    $('[style]').removeAttr('style');
-
-    // Remove CSS classes
-    $('[class]').removeAttr('class');
-  }
-
   /* NOTE: 
     We may want to just use the 'isLite' flag at the component level to not render the elements below,
     rather than removing them here manually with Cheerio.
@@ -248,7 +46,7 @@ export default function litePageTransform({
   $('figure, picture').remove();
 
   // Remove images except for "analytics-pixel"
-  $('img').not('[data-lite-class=analytics-pixel]').remove();
+  $('img').not('[data-lite=analytics-pixel]').remove();
 
   // Remove secondary nav used for mobile dropdown
   $('[data-e2e=dropdown-nav]').remove();

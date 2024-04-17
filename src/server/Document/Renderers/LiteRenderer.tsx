@@ -2,9 +2,7 @@
 import { LITE_PAGE_TRANSFORMATION_FAILED } from '#app/lib/logger.const';
 import React from 'react';
 import nodeLogger from '#lib/logger.node';
-import litePageTransform, {
-  LITE_STYLES,
-} from '../../utilities/litePageTransform';
+import litePageTransform from '../../utilities/litePageTransform';
 import { BaseRendererProps } from './types';
 
 const logger = nodeLogger(__filename);
@@ -31,9 +29,6 @@ export default function LitePageRenderer({
 
   let renderedHtml = html;
 
-  // Set to 'true' to use Emotion styles in the lite page
-  const shouldUseEmotionStyles = false;
-
   try {
     const {
       liteHtml,
@@ -45,7 +40,6 @@ export default function LitePageRenderer({
       helmetLinkTags,
       helmetMetaTags,
       helmetScriptTags,
-      shouldUseEmotionStyles,
     });
 
     renderedHtml = liteHtml;
@@ -66,11 +60,7 @@ export default function LitePageRenderer({
         {helmetProps.helmetMetaTags}
         {helmetProps.helmetLinkTags}
         {helmetProps.helmetScriptTags}
-        {shouldUseEmotionStyles ? (
-          <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
-        ) : (
-          <style dangerouslySetInnerHTML={{ __html: LITE_STYLES }} />
-        )}
+        <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />

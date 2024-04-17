@@ -14,7 +14,6 @@ export default ({
 }) => {
   return (
     <ul
-      data-lite-class="nav-list"
       role="list"
       css={[
         styles.list,
