@@ -47,7 +47,7 @@ const styles = {
         gridTemplateColumns: 'repeat(4, 1fr)',
       },
     }),
-  singleColumnList: ({ mq, spacings }: Theme) =>
+  singleColumnList: ({ mq }: Theme) =>
     css({
       gridTemplateColumns: 'unset',
 
@@ -62,11 +62,6 @@ const styles = {
         gridColumn: 'unset',
         gridRow: 'unset',
         paddingTop: 0,
-
-        '.promo-paragraph': {
-          display: 'block',
-          marginBottom: `${spacings.FULL}rem`,
-        },
 
         '&::before': {
           display: 'none',
