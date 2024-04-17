@@ -6,7 +6,6 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
-  INDEX_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -72,11 +71,6 @@ describe('Chartbeat utilities', () => {
         pageType: MEDIA_ARTICLE_PAGE,
         expectedDefaultType: 'article-sfv',
         expectedShortType: 'article-sfv',
-      },
-      {
-        pageType: 'index',
-        expectedDefaultType: 'Index',
-        expectedShortType: INDEX_PAGE,
       },
       {
         pageType: FEATURE_INDEX_PAGE,
@@ -298,7 +292,6 @@ describe('Chartbeat utilities', () => {
     test.each`
       pageType              | title                         | brandName            | expected
       ${FRONT_PAGE}         | ${'Front Page Title'}         | ${'BBC News Pidgin'} | ${'Front Page Title - BBC News Pidgin'}
-      ${INDEX_PAGE}         | ${'Index Page Title'}         | ${'BBC News Pidgin'} | ${'Index Page Title - BBC News Pidgin'}
       ${FEATURE_INDEX_PAGE} | ${'Feature Index Page Title'} | ${'BBC News Pidgin'} | ${'Feature Index Page Title - BBC News Pidgin'}
       ${MOST_READ_PAGE}     | ${'Most Read Page Title'}     | ${'BBC News Pidgin'} | ${'Most Read Page Title - BBC News Pidgin'}
       ${MOST_WATCHED_PAGE}  | ${'Most Watched Page Title'}  | ${'BBC News Pidgin'} | ${'Most Watched Page Title - BBC News Pidgin'}
@@ -943,42 +936,6 @@ describe('Chartbeat utilities', () => {
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
 
-    it('should return config for canonical pages when page type is IDX and env is not live', () => {
-      const fixtureData: GetConfigProps = {
-        isAmp: false,
-        platform: 'canonical',
-        pageType: INDEX_PAGE,
-        brandName: 'BBC-Persian',
-        chartbeatDomain: 'bbc.co.uk',
-        env: 'test',
-        service: 'persian',
-        origin: 'test.bbc.com',
-        previousPath: '/previous-path',
-        title: 'This is an index page title',
-      };
-
-      const expectedConfig = {
-        domain: 'test.bbc.co.uk',
-        idSync: {
-          bbc_hid: 'foobar',
-        },
-        path: '/',
-        sections: 'Persian, Persian - IDX',
-        title: 'This is an index page title - BBC-Persian',
-        type: 'Index',
-        uid: 50924,
-        useCanonical: true,
-        virtualReferrer: 'test.bbc.com/previous-path',
-      };
-
-      const expectedCookieValue = 'foobar';
-      (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
-        () => expectedCookieValue,
-      );
-
-      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
-    });
-
     it('should return config for canonical pages when page type is FIX and env is not live', () => {
       const fixtureData: GetConfigProps = {
         isAmp: false,
@@ -1002,42 +959,6 @@ describe('Chartbeat utilities', () => {
         sections: 'Afrique, Afrique - FIX',
         title: 'This is a Feature Index page title - BBC-Afique',
         type: 'FIX',
-        uid: 50924,
-        useCanonical: true,
-        virtualReferrer: 'test.bbc.com/previous-path',
-      };
-
-      const expectedCookieValue = 'foobar';
-      (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
-        () => expectedCookieValue,
-      );
-
-      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
-    });
-
-    it('should return config for canonical pages when page type is IDX and env is not live', () => {
-      const fixtureData: GetConfigProps = {
-        isAmp: false,
-        platform: 'canonical',
-        pageType: INDEX_PAGE,
-        title: 'This is an index page title',
-        brandName: 'BBC-Persian',
-        chartbeatDomain: 'bbc.co.uk',
-        env: 'test',
-        service: 'persian',
-        origin: 'test.bbc.com',
-        previousPath: '/previous-path',
-      };
-
-      const expectedConfig = {
-        domain: 'test.bbc.co.uk',
-        idSync: {
-          bbc_hid: 'foobar',
-        },
-        path: '/',
-        sections: 'Persian, Persian - IDX',
-        title: 'This is an index page title - BBC-Persian',
-        type: 'Index',
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
