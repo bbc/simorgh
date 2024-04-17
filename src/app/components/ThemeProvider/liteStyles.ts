@@ -14,6 +14,9 @@ const liteStyles = () => css`
   [class*='StoryPromoWrapper' i] {
     display: block;
   }
+  [class*='ChildWrapper' i] {
+    position: relative;
+  }
 `;
 
 export default liteStyles;
