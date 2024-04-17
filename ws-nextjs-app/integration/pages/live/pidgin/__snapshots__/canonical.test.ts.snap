@@ -491,11 +491,9 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       >
         Wetin we call dis Video, 
       </span>
-      <span
-        data-testid="caption-paragraph"
-      >
+      <p>
         Gary Lineker talks Messi
-      </span>
+      </p>
     </span>
   </figcaption>
 </figure>

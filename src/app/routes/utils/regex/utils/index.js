@@ -14,6 +14,7 @@ const topicIdRegex = '[a-z0-9]+';
 const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
 const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
+const idxRegex = 'ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
 const sportDisciplineRegex = '/[a-z0-9-_]{1,}';
 
@@ -187,6 +188,10 @@ export const getMostWatchedPageRegex = services => {
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
+};
+
+export const getIdxPageRegex = () => {
+  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
 
 export const getRecommendationsDataRegex = services => {

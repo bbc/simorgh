@@ -38,7 +38,6 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -66,13 +65,9 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = useContext(ServiceContext);
+  const { isApp, isCaf } = useContext(RequestContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -108,19 +103,11 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  const isCPS = isPGL || isSTY;
 
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -195,7 +182,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -220,14 +207,9 @@ const ArticlePage = ({ pageData }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={
-          !isPGL
-            ? categoryName(isTrustProjectParticipant, taggings, formats)
-            : 'Article'
-        }
+        type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
-        description={description}
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
@@ -237,7 +219,7 @@ const ArticlePage = ({ pageData }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+        <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
@@ -253,11 +235,12 @@ const ArticlePage = ({ pageData }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {/* TODO: Related Content section needs special formatting of CPS assets when using CAF endpoint */}
+          {!isCaf && <RelatedContentSection content={blocks} />}
         </div>
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
-      {!isApp && !isPGL && (
+      {!isApp && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}

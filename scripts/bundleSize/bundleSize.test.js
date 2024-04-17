@@ -2,19 +2,17 @@ import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
-jest.unstable_mockModule(
-  './pageTypeBundleExtractor',
-  () => pageTypeBundleExtractor,
-);
+jest.unstable_mockModule('./pageTypeBundleExtractor', () => (pageTypeBundleExtractor));
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
   MAX_SIZE: 728,
 }));
 
-jest.unstable_mockModule('./serviceList.js', () => ({
-  default: ['service1', 'service2'],
-}));
+jest.unstable_mockModule(
+  './serviceList.js',
+  () => ({ default: ["service1", "service2"] }),
+);
 
 jest.unstable_mockModule('fs', () => ({
   default: {
@@ -22,6 +20,22 @@ jest.unstable_mockModule('fs', () => ({
     statSync: jest.fn(),
   },
 }));
+
+const start = jest.fn();
+const succeed = jest.fn();
+const fail = jest.fn();
+
+jest.unstable_mockModule('ora', () => {
+  const mock = jest.fn();
+  mock.mockReturnValue({
+    start,
+    succeed,
+    fail,
+  });
+  return {
+    default: mock,
+  };
+});
 
 jest.unstable_mockModule('chalk', () => ({
   default: {
@@ -73,6 +87,8 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
   });
 };
 
+const { default: ora } = await import('ora');
+
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
   const originalConsoleError = global.console.error;
@@ -106,6 +122,20 @@ describe('bundleSize', () => {
         didThrow = true;
       }
       expect(didThrow).toBe(false);
+    });
+
+    it('should use ora to show loading and success states', async () => {
+      try {
+        const { default: bundleSize } = await import('./index.js');
+        bundleSize();
+      } catch (e) {
+        // silence error
+      }
+      expect(ora).toHaveBeenCalledWith(
+        expect.objectContaining({ text: 'Analysing bundles...' }),
+      );
+      expect(start).toHaveBeenCalled();
+      expect(succeed).toHaveBeenCalledWith('All bundle sizes are good!');
     });
 
     it('should log a summary of bundle sizes', async () => {
@@ -191,6 +221,10 @@ describe('bundleSize', () => {
           │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                    │                 │
           │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                    │                 │
           ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼─────────────────┤
+          │ IdxPage           │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ IdxPage-31…555.js (20kB) │ 440000             │ 431             │
+          │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                    │                 │
+          │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                    │                 │
+          ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼─────────────────┤
           │ MostReadPage      │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ MostReadPa…f05.js (20kB) │ 440000             │ 431             │
           │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                    │                 │
           │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                    │                 │
@@ -239,6 +273,20 @@ describe('bundleSize', () => {
       expect(didThrow).toBe(true);
     });
 
+    it('should use ora to show loading and failure states', async () => {
+      try {
+        const { default: bundleSize } = await import('./index.js');
+        bundleSize();
+      } catch (e) {
+        // silence error
+      }
+      expect(ora).toHaveBeenCalledWith(
+        expect.objectContaining({ text: 'Analysing bundles...' }),
+      );
+      expect(start).toHaveBeenCalled();
+      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
+    });
+
     it('should log an error telling dev how to update thresholds', async () => {
       try {
         const { default: bundleSize } = await import('./index.js');
@@ -264,6 +312,20 @@ describe('bundleSize', () => {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
+    });
+
+    it('should use ora to show loading and failure states', async () => {
+      try {
+        const { default: bundleSize } = await import('./index.js');
+        bundleSize();
+      } catch (e) {
+        // silence error
+      }
+      expect(ora).toHaveBeenCalledWith(
+        expect.objectContaining({ text: 'Analysing bundles...' }),
+      );
+      expect(start).toHaveBeenCalled();
+      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
     });
 
     it('should log an error telling dev how to update thresholds', async () => {

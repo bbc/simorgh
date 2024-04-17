@@ -2,6 +2,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable no-console */
 
+import ora from 'ora';
 import chalk from 'chalk';
 import Table from 'cli-table';
 import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
@@ -13,7 +14,6 @@ import {
   getServiceThemeBundleData,
 } from './getBundleData.js';
 import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
-
 export default () => {
   const bundleType = process.env.bundleType || 'modern';
   const serviceConfigBundleData = sortByBundlesTotalAscending(
@@ -176,7 +176,11 @@ export default () => {
   );
 
   const styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
-  console.log(chalk.magenta('Analysing bundles...'));
+  const spinner = ora({
+    text: 'Analysing bundles...',
+    color: 'magenta',
+  });
+  spinner.start();
   console.log(chalk.bold('\n\nResults'));
 
   console.log(
@@ -251,10 +255,10 @@ export default () => {
   }
 
   if (errors.length) {
-    console.error('Issues with service bundles: ');
+    spinner.fail('Issues with service bundles: ');
     errors.forEach(err => console.error(err));
     throw new Error();
   } else {
-    console.log('All bundle sizes are good!');
+    spinner.succeed('All bundle sizes are good!');
   }
 };

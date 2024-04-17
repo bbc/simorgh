@@ -248,11 +248,9 @@ exports[`LegacyLiveMediaPlayer Calls the amp media player 1`] = `
           >
             Wetin we call dis Video, 
           </span>
-          <span
-            data-testid="caption-paragraph"
-          >
+          <p>
             BBC launch trailer for We Know Our Place women's sport campaign"
-          </span>
+          </p>
         </span>
       </figcaption>
     </figure>
@@ -646,11 +644,9 @@ exports[`LegacyLiveMediaPlayer Calls the canonical media player, with a placehol
           >
             Wetin we call dis Video, 
           </span>
-          <span
-            data-testid="caption-paragraph"
-          >
+          <p>
             BBC launch trailer for We Know Our Place women's sport campaign"
-          </span>
+          </p>
         </span>
       </figcaption>
     </figure>
