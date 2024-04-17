@@ -8,6 +8,7 @@ export default function LiteRenderer({
   helmetScriptTags,
   htmlAttrs,
   title,
+  styles,
 }: BaseRendererProps) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
@@ -17,6 +18,7 @@ export default function LiteRenderer({
         {helmetLinkTags}
         {helmetMetaTags}
         {helmetScriptTags}
+        {styles}
       </head>
       <body>
         <Main />

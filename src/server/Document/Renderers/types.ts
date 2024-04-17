@@ -7,6 +7,6 @@ export type BaseRendererProps = {
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   html: string;
   ids?: string[];
-  styles: string;
+  styles?: string | ReactElement;
   title: ReactElement;
 };

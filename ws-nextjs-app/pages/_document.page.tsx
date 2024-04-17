@@ -2,6 +2,10 @@ import Document, { DocumentContext } from 'next/document';
 
 import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer from '@emotion/server/create-instance';
+import createCache from '@emotion/cache';
+
 import isAppPath from '#app/routes/utils/isAppPath';
 import isLitePath from '#app/routes/utils/isLitePath';
 import litePageTransform from '#server/utilities/litePageTransform';
@@ -27,12 +31,28 @@ type DocProps = {
   };
   isApp: boolean;
   isLite: boolean;
+  liteStyleTag: ReactElement;
 };
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
-    const isApp = isAppPath(ctx.asPath || '');
-    const isLite = isLitePath(ctx.asPath || '');
+    const url = ctx.asPath || '';
+    const isApp = isAppPath(url);
+    const isLite = isLitePath(url);
+    const cache = createCache({ key: 'bbc' });
+    const { extractCritical } = createEmotionServer(cache);
+
+    if (isLite) {
+      const originalRenderPage = ctx.renderPage;
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => (
+            <CacheProvider value={cache}>
+              <App {...props} />
+            </CacheProvider>
+          ),
+        });
+    }
 
     const initialProps = await Document.getInitialProps(ctx);
 
@@ -54,6 +74,8 @@ export default class AppDocument extends Document<DocProps> {
       helmetScriptTags,
     };
 
+    let liteStyleTag;
+
     if (isLite) {
       try {
         const {
@@ -69,6 +91,11 @@ export default class AppDocument extends Document<DocProps> {
         });
 
         initialProps.html = liteHtml;
+
+        const { css } = extractCritical(initialProps.html);
+
+        liteStyleTag = <style>{css}</style>;
+
         helmetProps.helmetMetaTags = liteHelmetMetaTags;
         helmetProps.helmetLinkTags = liteHelmetLinkTags;
         helmetProps.helmetScriptTags = liteHelmetScriptTags;
@@ -83,10 +110,11 @@ export default class AppDocument extends Document<DocProps> {
 
     return {
       ...initialProps,
-      helmetProps,
       clientSideEnvVariables,
+      helmetProps,
       isApp,
       isLite,
+      liteStyleTag,
     };
   }
 
@@ -103,6 +131,7 @@ export default class AppDocument extends Document<DocProps> {
       html,
       isApp,
       isLite,
+      liteStyleTag,
     } = this.props;
 
     switch (true) {
@@ -115,6 +144,7 @@ export default class AppDocument extends Document<DocProps> {
             htmlAttrs={htmlAttrs}
             title={title}
             html={html}
+            styles={liteStyleTag}
           />
         );
       default:
