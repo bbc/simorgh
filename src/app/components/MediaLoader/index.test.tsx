@@ -125,10 +125,8 @@ describe('MediaLoader', () => {
         ));
       });
 
-      const caption = (container as unknown as HTMLElement).querySelectorAll(
-        'span',
-      );
-      expect(caption[3]?.textContent).toBe('This is a caption!');
+      const caption = (container as unknown as HTMLElement).querySelector('p');
+      expect(caption?.textContent).toBe('This is a caption!');
     });
   });
 });

@@ -145,11 +145,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         >
           Image caption, 
         </span>
-        <span
-          data-testid="caption-paragraph"
-        >
+        <p>
           Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-        </span>
+        </p>
       </span>
     </figcaption>
   </figure>

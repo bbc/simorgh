@@ -83,6 +83,7 @@ const pageTypes = {
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
     '/iframe',
   ],
+  idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   onDemandTV: ['/iframe'],
   mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
   featureIndexPage: [],

@@ -94,9 +94,3 @@ export type PageProps = {
     sections: Section[];
   };
 };
-
-export type UGCSendErrorResponse = {
-  message: string;
-  code: string;
-  status: number;
-};

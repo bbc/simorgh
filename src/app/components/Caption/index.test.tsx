@@ -152,17 +152,17 @@ describe('Captions', () => {
     });
 
     it('should render figcaption with multiple paragraphs', () => {
-      const { getAllByTestId } = render(
+      const { container } = render(
         CaptionWithContext({
           block: captionBlock3Paragraphs,
           contextStub: newsServiceContextStub as ServiceConfig,
           type: 'caption',
         }),
       );
-      const elementsWithTestId = getAllByTestId('caption-paragraph');
-
-      expect(elementsWithTestId.length).toEqual(3);
-      expect(elementsWithTestId[0].textContent).toEqual('This is paragraph 1');
+      expect(container.querySelectorAll('figcaption p').length).toEqual(3);
+      expect(container.querySelector('figcaption p')?.textContent).toEqual(
+        'This is paragraph 1',
+      );
     });
   });
 });

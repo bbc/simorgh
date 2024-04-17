@@ -11,7 +11,6 @@ const livePromo = [
       'Trump dey face one single charge of "incitement of insurrection" for di speech wey im make to im supporters ahead of di deadly riot for US Capitol for January.',
     imageAlt: 'Former US President Donald Trump',
     id: '7ca69c90-2ccb-42bf-85de-9db681119f73',
-    isLive: true,
   },
   {
     title: 'Wetin happun for January 6 one year ago?',
@@ -25,7 +24,6 @@ const livePromo = [
       'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
     imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
     id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
-    isLive: true,
   },
   {
     title: 'Why Donald Trump say Bitcoin na scam',
@@ -39,7 +37,6 @@ const livePromo = [
       'Former US President Donald Trump don tell Fox Business say im see Bitcoin as \'scam" wey dey affect di value of di US dollar.',
     imageAlt: 'Donald Trump',
     id: '11cd8a9d-0d67-4b92-b20b-df71740a4fdd',
-    isLive: true,
   },
 ];
 
