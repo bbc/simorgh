@@ -1,10 +1,11 @@
 /** @jsx jsx */
 
 import { GetServerSideProps } from 'next';
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
+import { ServiceContext } from '#contexts/ServiceContext';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -26,7 +27,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import getAgent from '../../../utilities/undiciAgent';
 
 import extractHeaders from '../../../src/server/utilities/extractHeaders';
-console.log('styles', styles)
+
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
   page?: string;
@@ -94,8 +95,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
 
 const pageLayout = () => {
+    const { locale } = useContext(ServiceContext);
+
     useEffect(() => {
-      let wsWrapped
+      let wsWrapped;
+      const MINUTES_IN_HOURS = 60;
+      const HOURS_IN_DAYS = 24;
       // Get the value from local storage if it exists
       wsWrapped = localStorage.getItem("ws_bbc_wrapped") || "{}";
       wsWrapped = JSON.parse(wsWrapped);
@@ -103,17 +108,27 @@ const pageLayout = () => {
       console.log('wsWrapped', wsWrapped);
       const totalTime = wsWrapped[thisYear].duration;
       const timespent = document.getElementById('timespent');
-      timespent.innerText = `${totalTime / (1000 * 60)} minutes`;
+      const timespentMinutes = Math.round(totalTime / (1000 * 60));
+      const timespentMinutesText = new Intl.NumberFormat(locale).format(timespentMinutes);
+      let timespentText = `${timespentMinutesText} minutes`;
+      if (timespentMinutes > MINUTES_IN_HOURS) {
+        const timespentHours = Math.round(timespentMinutes / MINUTES_IN_HOURS);
+        timespentText = `${timespentText}. That is ${timespentHours.toLocaleString()} hours`;
+        if (timespentHours > HOURS_IN_DAYS) {
+            timespentText = `${timespentText} or ${Math.round(timespentMinutes / (MINUTES_IN_HOURS * HOURS_IN_DAYS))} days`;
+          }
+      }
+      timespent.innerText = timespentText;
       const totalWords = wsWrapped[thisYear].wordCount;
       const words = document.getElementById('words');
-      words.innerText = new Intl.NumberFormat().format(totalWords);
+      words.innerText = new Intl.NumberFormat(locale).format(totalWords);
       const pageTypeCounts = Object.keys(wsWrapped[thisYear].pageTypeCounts).filter(key => ['STY', 'article'].includes(key)).reduce((sum, key) => {
         return sum + wsWrapped[thisYear].pageTypeCounts[key];
       }, 0);
       const article = document.getElementById('article');
-      article.innerText = new Intl.NumberFormat().format(pageTypeCounts);
+      article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
       const average = document.getElementById('average');
-      average.innerText = new Intl.NumberFormat().format(totalWords / pageTypeCounts);
+      average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
       const topics = Object.keys(wsWrapped[thisYear].topicCounts).sort((a, b) => {
         return wsWrapped[thisYear].topicCounts[a] < wsWrapped[thisYear].topicCounts[b];
       }).slice(0, 5);
