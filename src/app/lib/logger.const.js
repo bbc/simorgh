@@ -54,7 +54,6 @@ const logCodes = {
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
   SERVER_STATUS_ENDPOINT_ERROR: 'server_status_endpoint_error',
   SLOW_SERVER_RESPONSE_TIME: 'slow_server_response_time',
-  LITE_PAGE_TRANSFORMATION_FAILED: 'lite_page_transformation_failed',
 
   // Config
   CONFIG_REQUEST_RECEIVED: 'config_request_received',
