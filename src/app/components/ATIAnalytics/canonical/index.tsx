@@ -18,7 +18,6 @@ const renderNoScriptTrackingPixel = (
   return (
     <ImgPixelWrapper>
       <img
-        data-lite="analytics-pixel"
         height="1px"
         width="1px"
         alt=""
