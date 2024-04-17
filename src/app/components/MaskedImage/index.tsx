@@ -12,10 +12,12 @@ const MaskedImage = ({
   imageUrl,
   imageUrlTemplate,
   imageWidth,
+  altText = '',
 }: {
   imageUrl: string;
   imageUrlTemplate: string;
   imageWidth: number;
+  altText?: string;
 }) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -40,7 +42,7 @@ const MaskedImage = ({
       ]}
     >
       <Image
-        alt=""
+        alt={altText}
         src={imageUrl}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}

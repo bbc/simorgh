@@ -23,6 +23,7 @@ const mundoPromos = [
     description: 'Testing image gallery for Tipo',
     imageAlt: 'test',
     id: '5256bb09-a257-455a-a5c3-622702785bff',
+    isLive: true,
   },
   {
     type: 'video',
