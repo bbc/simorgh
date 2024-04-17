@@ -1,6 +1,9 @@
 import { css } from '@emotion/react';
 
 const liteStyles = () => css`
+  .promo-image {
+    display: none;
+  }
   .promo-text {
     width: 100% !important;
     padding-inline-start: 0 !important;
