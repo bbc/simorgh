@@ -1,4 +1,11 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
+import Script from 'next/script';
 
 import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
@@ -9,8 +16,7 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
-import CanonicalRenderer from '../Renderers/CanonicalRenderer';
-import LiteRenderer from '../Renderers/LiteRenderer';
+import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
@@ -59,19 +65,34 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             title={title}
+            isNextJs
           />
         );
       default:
         return (
-          <CanonicalRenderer
-            clientSideEnvVariables={clientSideEnvVariables}
-            helmetLinkTags={helmetLinkTags}
-            helmetMetaTags={helmetMetaTags}
-            helmetScriptTags={helmetScriptTags}
-            htmlAttrs={htmlAttrs}
-            isApp={isApp}
-            title={title}
-          />
+          <Html {...htmlAttrs} className="no-js">
+            <Head>
+              <script
+                type="text/javascript"
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: `document.documentElement.classList.remove("no-js");`,
+                }}
+              />
+              <Script id="simorgh-envvars" strategy="beforeInteractive">
+                {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
+              </Script>
+              {isApp && <meta name="robots" content="noindex" />}
+              {title}
+              {helmetMetaTags}
+              {helmetLinkTags}
+              {helmetScriptTags}
+            </Head>
+            <body>
+              <Main />
+              <NextScript />
+            </body>
+          </Html>
         );
     }
   }

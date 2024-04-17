@@ -1,6 +1,11 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import { Main } from 'next/document';
 import { BaseRendererProps } from './types';
+
+interface Props extends BaseRendererProps {
+  isNextJs?: boolean;
+}
 
 export default function LitePageRenderer({
   helmetMetaTags,
@@ -10,7 +15,8 @@ export default function LitePageRenderer({
   html,
   title,
   styles,
-}: BaseRendererProps) {
+  isNextJs = false,
+}: Props) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -19,10 +25,16 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
+        {!isNextJs && (
+          <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
+        )}
       </head>
       <body>
-        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+        {!isNextJs ? (
+          <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+        ) : (
+          <Main />
+        )}
       </body>
     </html>
   );
