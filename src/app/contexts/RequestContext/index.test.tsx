@@ -72,6 +72,7 @@ const expectedOutput = {
   derivedPageType: null,
   isAmp: true,
   isNextJs: false,
+  isApp: false,
   isCaf: false,
   isLite: false,
   platform: 'amp',
