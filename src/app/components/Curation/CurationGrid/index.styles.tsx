@@ -6,6 +6,14 @@ const styles = {
     padding: 0,
     margin: 0,
   }),
+  singleColumnList: css({
+    li: {
+      '.promo-text': {
+        width: '100%',
+        paddingInlineStart: 0,
+      },
+    },
+  }),
   item: ({ spacings, mq, palette }: Theme) =>
     css({
       '.promo-image': {

@@ -66,6 +66,13 @@ const styles = {
         '&::before': {
           display: 'none',
         },
+        '.promo-image': {
+          display: 'none',
+        },
+        '.promo-text': {
+          width: '100%',
+          paddingInlineStart: 0,
+        },
       },
     }),
 };
