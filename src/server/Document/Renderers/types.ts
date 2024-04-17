@@ -5,7 +5,7 @@ export type BaseRendererProps = {
   helmetLinkTags: ReactElement;
   helmetScriptTags: ReactElement;
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  html: string;
+  html?: string;
   ids?: string[];
   styles?: string | ReactElement;
   title: ReactElement;

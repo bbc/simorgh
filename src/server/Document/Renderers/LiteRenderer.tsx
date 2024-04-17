@@ -63,7 +63,10 @@ export default function LitePageRenderer({
         <style dangerouslySetInnerHTML={{ __html: styles || '' }} />
       </head>
       <body>
-        <div id="root" dangerouslySetInnerHTML={{ __html: renderedHtml }} />
+        <div
+          id="root"
+          dangerouslySetInnerHTML={{ __html: renderedHtml || '' }}
+        />
       </body>
     </html>
   );

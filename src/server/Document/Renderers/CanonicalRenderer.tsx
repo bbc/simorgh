@@ -53,7 +53,7 @@ export default function CanonicalRenderer({
         />
       </head>
       <body>
-        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
         <script
           // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
           dangerouslySetInnerHTML={{

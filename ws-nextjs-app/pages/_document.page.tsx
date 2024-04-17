@@ -103,7 +103,6 @@ export default class AppDocument extends Document<DocProps> {
         helmetMetaTags,
         helmetScriptTags,
       },
-      html,
       isApp,
       isLite,
     } = this.props;
@@ -117,7 +116,6 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             title={title}
-            html={html}
           />
         );
       default:
@@ -130,7 +128,6 @@ export default class AppDocument extends Document<DocProps> {
             htmlAttrs={htmlAttrs}
             isApp={isApp}
             title={title}
-            html={html}
           />
         );
     }

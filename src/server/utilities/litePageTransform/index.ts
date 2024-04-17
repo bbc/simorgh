@@ -4,14 +4,14 @@ import { ReactElement } from 'react';
 const BBC_DOMAINS = ['localhost', 'www.bbc.com', 'bbc.com'];
 
 type Props = {
-  html: string;
+  html?: string;
   helmetMetaTags: ReactElement;
   helmetScriptTags: ReactElement;
   helmetLinkTags: ReactElement;
 };
 
 export default function litePageTransform({
-  html,
+  html = '',
   helmetMetaTags,
   helmetScriptTags,
   helmetLinkTags,

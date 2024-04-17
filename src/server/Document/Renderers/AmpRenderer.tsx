@@ -42,7 +42,7 @@ export default function AmpRenderer({
         {AMP_ANALYTICS_JS}
       </head>
       <body className="amp-geo-pending">
-        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
       </body>
     </html>
   );
