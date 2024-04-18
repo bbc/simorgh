@@ -15,6 +15,7 @@ import {
   topStoriesItem,
   tipoFormattedTopStoriesItem,
   tipoLivePageTopStoriesItem,
+  topStoriesLiveLabelItem,
 } from './fixture';
 
 // eslint-disable-next-line react/prop-types
@@ -49,6 +50,7 @@ describe('Optimo Top Stories Promo', () => {
       topStoriesItem,
       tipoFormattedTopStoriesItem,
       tipoLivePageTopStoriesItem,
+      topStoriesLiveLabelItem,
     ];
 
     render(
@@ -64,13 +66,18 @@ describe('Optimo Top Stories Promo', () => {
     const tipoLiveHeading = screen.getByText(
       'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
     );
-    const liveLabel = screen.getByText('लाइव');
+    const cpsLiveHeading = screen.getByText(
+      "Covid death toll in UK 'now close to 96,000'",
+    );
+
+    const liveLabel = screen.getAllByText('लाइव');
 
     expect(cpsHeading).toBeInTheDocument();
     expect(optimoHeading).toBeInTheDocument();
     expect(tipoLiveHeading).toBeInTheDocument();
+    expect(cpsLiveHeading).toBeInTheDocument();
 
-    expect(liveLabel).toBeInTheDocument();
+    expect(liveLabel).toHaveLength(2);
   });
 
   it('should render a default title if translations are not available', () => {
