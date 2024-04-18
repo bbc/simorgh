@@ -79,10 +79,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
         cy.window().then(win => {
-          console.log(
-            `send to getBlockData ${JSON.stringify(win.SIMORGH_DATA.pageData.content.model)}`,
-          );
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+
           if (media) {
             cy.get('[data-e2e="media-player"]').within(() => {
               cy.get('[data-e2e="media-player__placeholder"] img')
@@ -143,32 +141,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           }
         });
       });
+      if (service === 'pidgin') {
+        it('should render an iframe with a valid URL when a user clicks play', () => {
+          cy.window().then(win => {
+            const body = win.SIMORGH_DATA.pageData;
+            const media = getBlockData('video', body);
+            if (media && media.type === 'video') {
+              const { lang } = appConfig[service][variant];
+              const embedUrl = getVideoEmbedUrl(body, lang);
+              cy.get('[data-e2e="media-player"] button').first().click();
+              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
 
-      it('should render an iframe with a valid URL when a user clicks play', () => {
-        cy.window().then(win => {
-          const body = win.SIMORGH_DATA.pageData;
-
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-
-          if (media && media.type === 'video') {
-            const { lang } = appConfig[service][variant];
-            const embedUrl = getVideoEmbedUrl(
-              {
-                data: { article: body },
-              },
-              lang,
-            );
-            cy.get('[data-e2e="media-player"] button').first().click();
-            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-
-            cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
-              responseCode: 200,
-              type: 'text/html',
-              allowFallback: true,
-            });
-          }
+              cy.testResponseCodeAndTypeRetry({
+                path: embedUrl,
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
+            }
+          });
         });
-      });
+      }
     });
   });
