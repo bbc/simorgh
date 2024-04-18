@@ -158,13 +158,10 @@ const constructPageFetchUrl = ({
   if (isLocal) {
     switch (pageType) {
       case ARTICLE_PAGE: {
-        const isCpsId = isCpsIdCheck(id);
-        if (isCpsId) {
-          fetchUrl = Url(`/${id}`);
-          break;
-        }
         fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isCpsIdCheck(id)
+            ? `/${id}`
+            : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
       }
