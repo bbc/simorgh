@@ -357,6 +357,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
+      "description": "Royal wedding flowers given to Hackney hospice",
       "headline": "Royal wedding flowers given to Hackney hospice",
       "image": {
         "@type": "ImageObject",

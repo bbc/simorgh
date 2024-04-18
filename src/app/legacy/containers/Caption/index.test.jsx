@@ -249,16 +249,16 @@ describe('with offscreen text', () => {
   });
 
   it('should render figcaption with multiple paragraphs', () => {
-    const { container } = render(
+    const { getAllByTestId } = render(
       CaptionWithContext(
         captionBlock3Paragraphs,
         newsServiceContextStub,
         'caption',
       ),
     );
-    expect(container.querySelectorAll('figcaption p').length).toEqual(3);
-    expect(container.querySelector('figcaption p').textContent).toEqual(
-      'This is paragraph 1',
-    );
+    const elementsWithTestId = getAllByTestId('caption-paragraph');
+
+    expect(elementsWithTestId.length).toEqual(3);
+    expect(elementsWithTestId[0].textContent).toEqual('This is paragraph 1');
   });
 });

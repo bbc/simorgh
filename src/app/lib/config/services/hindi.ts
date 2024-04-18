@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
       brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
