@@ -1,4 +1,4 @@
-import { shape, string, number, arrayOf } from 'prop-types';
+import { shape, string, bool, number, arrayOf } from 'prop-types';
 
 export const storyItemImage = {
   path: string,
@@ -21,6 +21,12 @@ export const storyItem = {
   summary: string,
   timestamp: number,
   indexImage: shape(storyItemImage),
+};
+
+export const tipoLiveStoryItem = {
+  headline: string,
+  destinationUrl: string,
+  isLive: bool,
 };
 
 export const optimoStoryItem = {
