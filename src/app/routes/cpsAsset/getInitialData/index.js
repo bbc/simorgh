@@ -4,6 +4,7 @@ import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 import handleError from '../../utils/handleError';
 import {
@@ -118,7 +119,6 @@ export default async ({
       service: derivedService,
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
-      isCaf,
     });
 
     if (status !== 200) {
@@ -136,10 +136,16 @@ export default async ({
     const { topStories, features } = secondaryColumn;
     const { mostRead } = article;
 
+    // Skip transforming JSON when CAF is enabled and the pageType is not FIX
+    const skipTransformJson =
+      isCaf && article?.metadata?.type !== FEATURE_INDEX_PAGE;
+
     const response = {
       status,
       pageData: {
-        ...(isCaf ? article : await transformJson(article, pathname, toggles)),
+        ...(skipTransformJson
+          ? article
+          : await transformJson(article, pathname, toggles)),
         secondaryColumn: {
           topStories,
           features,
