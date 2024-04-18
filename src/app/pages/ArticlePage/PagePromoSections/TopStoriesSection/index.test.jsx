@@ -9,7 +9,13 @@ import {
 } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import TopStoriesSection from '.';
-import { topStoriesList, topStoriesSingleItem } from './fixture';
+import {
+  topStoriesList,
+  topStoriesSingleItem,
+  topStoriesItem,
+  tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
+} from './fixture';
 
 // eslint-disable-next-line react/prop-types
 const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
@@ -36,6 +42,26 @@ describe('Optimo Top Stories Promo', () => {
     const list = container.querySelector('ul');
     expect(listItems.length).toBe(3);
     expect(list).toBeInTheDocument();
+  });
+
+  it('should render a mixture of Top Stories items for CPS, Optimo and Tipo data', () => {
+    const mixtureFixture = [
+      topStoriesItem,
+      tipoFormattedTopStoriesItem,
+      tipoLivePageTopStoriesItem,
+    ];
+
+    render(
+      <TopStoriesSectionFixture service="hindi" fixtureData={mixtureFixture} />,
+    );
+
+    const heading = screen.getByText(
+      'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
+    );
+    const liveLabel = screen.getByText('लाइव');
+
+    expect(heading).toBeInTheDocument();
+    expect(liveLabel).toBeInTheDocument();
   });
 
   it('should render a default title if translations are not available', () => {
