@@ -14,49 +14,89 @@ import {
   StyledTopStoriesWrapper,
 } from './index.styles';
 
+const getArticleTopStoryItem = item => {
+  const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+  const headline =
+    overtypedHeadline ||
+    pathOr('', ['headlines', 'headline'], item) ||
+    pathOr(
+      '',
+      [
+        'headlines',
+        'promoHeadline',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'text',
+      ],
+      item,
+    ) ||
+    pathOr('', ['name'], item);
+
+  const mediaType = pathOr(null, ['media', 'format'], item);
+  const mediaDuration = pathOr(null, ['media', 'duration'], item);
+  const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
+
+  const timestamp = pathOr(null, ['timestamp'], item);
+
+  const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
+  const uri = pathOr('', ['uri'], item);
+
+  const isLive = getIsLive(item);
+
+  return {
+    assetUri,
+    canonicalUrl,
+    headline,
+    isLive,
+    isPhotoGallery,
+    mediaType,
+    mediaDuration,
+    timestamp,
+    uri,
+  };
+};
+
+const getLiveTopStoryItem = item => {
+  const headline = item?.headline || '';
+  const uri = item?.destinationUrl || '';
+  const isLive = item?.isLive || false;
+
+  return { headline, isLive, uri };
+};
+
 const TopStoriesItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
     const { script } = useContext(ServiceContext);
 
     if (!item || isEmpty(item)) return null;
 
-    const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
-    const headline =
-      overtypedHeadline ||
-      pathOr('', ['headlines', 'headline'], item) ||
-      pathOr(
-        '',
-        [
-          'headlines',
-          'promoHeadline',
-          'blocks',
-          0,
-          'model',
-          'blocks',
-          0,
-          'model',
-          'text',
-        ],
-        item,
-      ) ||
-      pathOr('', ['name'], item);
+    const itemExtractor = {
+      optimo: getArticleTopStoryItem,
+      cps: getArticleTopStoryItem,
+      'tipo-live': getLiveTopStoryItem,
+    }[item?.type];
 
-    const mediaType = pathOr(null, ['media', 'format'], item);
-    const mediaDuration = pathOr(null, ['media', 'duration'], item);
-    const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
+    if (!itemExtractor) return null;
 
-    const timestamp = pathOr(null, ['timestamp'], item);
-
-    const assetUri = pathOr('', ['locators', 'assetUri'], item);
-    const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
-    const uri = pathOr('', ['uri'], item);
-
-    const isLive = getIsLive(item);
+    const {
+      assetUri,
+      canonicalUrl,
+      headline,
+      isLive = false,
+      isPhotoGallery = false,
+      mediaType = null,
+      mediaDuration = null,
+      timestamp = null,
+      uri,
+    } = itemExtractor(item);
 
     const titleTag = timestamp || isLive ? 'h3' : 'div';
-
     const titleHasContent = titleTag === 'h3';
-
     const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
     return (
@@ -89,7 +129,7 @@ const TopStoriesItem = forwardRef(
                 )}
               </Promo.Link>
             </Title>
-            <StyledTimestamp>{timestamp}</StyledTimestamp>
+            {timestamp && <StyledTimestamp>{timestamp}</StyledTimestamp>}
           </Promo.ContentWrapper>
         </Promo>
       </StyledTopStoriesWrapper>
