@@ -66,7 +66,7 @@ const Billboard = forwardRef(
                         css={styles.liveLabelPulse}
                       />
                       <LiveLabel.Text css={styles.liveLabelText}>
-                        {heading}
+                        <div>{heading}</div>
                       </LiveLabel.Text>
                     </div>
                   ) : (
