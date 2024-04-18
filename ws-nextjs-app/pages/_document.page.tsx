@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Document, {
   DocumentContext,
   Head,
@@ -9,6 +10,9 @@ import Script from 'next/script';
 
 import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer from '@emotion/server/create-instance';
+import createCache from '@emotion/cache';
 
 import isAppPath from '#app/routes/utils/isAppPath';
 import isLitePath from '#app/routes/utils/isLitePath';
@@ -20,11 +24,13 @@ import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
-  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
-  title: ReactElement;
+  css: string;
   helmet: HelmetData;
+  htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
+  ids: string[];
   isApp: boolean;
   isLite: boolean;
+  title: ReactElement;
 };
 
 export default class AppDocument extends Document<DocProps> {
@@ -33,7 +39,22 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(url);
     const isLite = isLitePath(url);
 
+    const cache = createCache({ key: 'bbc' });
+    const { extractCritical } = createEmotionServer(cache);
+
+    const originalRenderPage = ctx.renderPage;
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: App => props => (
+          <CacheProvider value={cache}>
+            <App {...props} />
+          </CacheProvider>
+        ),
+      });
+
     const initialProps = await Document.getInitialProps(ctx);
+
+    const { css, ids } = extractCritical(initialProps.html);
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
@@ -41,14 +62,17 @@ export default class AppDocument extends Document<DocProps> {
     return {
       ...initialProps,
       clientSideEnvVariables,
+      css,
       helmet: Helmet.renderStatic(),
+      ids,
       isApp,
       isLite,
     };
   }
 
   render() {
-    const { clientSideEnvVariables, helmet, isApp, isLite } = this.props;
+    const { clientSideEnvVariables, css, helmet, ids, isApp, isLite } =
+      this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
     const title = helmet.title.toComponent();
@@ -65,8 +89,8 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
+            styles={css}
             title={title}
-            isNextJs
           />
         );
       default:
@@ -75,7 +99,6 @@ export default class AppDocument extends Document<DocProps> {
             <Head>
               <script
                 type="text/javascript"
-                // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
                   __html: `document.documentElement.classList.remove("no-js");`,
                 }}
@@ -88,6 +111,10 @@ export default class AppDocument extends Document<DocProps> {
               {helmetMetaTags}
               {helmetLinkTags}
               {helmetScriptTags}
+              <style
+                data-emotion-css={ids?.join(' ')}
+                dangerouslySetInnerHTML={{ __html: css }}
+              />
             </Head>
             <body>
               <Main />

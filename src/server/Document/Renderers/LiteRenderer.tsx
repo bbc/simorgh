@@ -3,7 +3,6 @@ import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;
-  isNextJs?: boolean;
 }
 
 export default function LitePageRenderer({
@@ -14,7 +13,6 @@ export default function LitePageRenderer({
   htmlAttrs,
   title,
   styles,
-  isNextJs = false,
 }: PropsWithChildren<Props>) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
@@ -24,12 +22,10 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        {!isNextJs && (
-          <style
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: styles || '' }}
-          />
-        )}
+        <style
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: styles || '' }}
+        />
       </head>
       <body>{bodyContent}</body>
     </html>
