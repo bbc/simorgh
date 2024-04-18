@@ -16,13 +16,14 @@ export const testsThatFollowSmokeTestConfig = ({
             cy.get('main p').first().should('contain', description);
           },
         );
+      } else {
+        cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+          ({ body }) => {
+            const description = body.data.article.promo.summary;
+            cy.get('main p').first().should('contain', description);
+          },
+        );
       }
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
-        ({ body }) => {
-          const description = body.data.article.promo.summary;
-          cy.get('main p').first().should('contain', description);
-        },
-      );
     });
   });
 };
