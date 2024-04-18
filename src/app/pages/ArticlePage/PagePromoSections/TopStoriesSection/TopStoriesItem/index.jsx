@@ -78,6 +78,7 @@ const TopStoriesItem = forwardRef(
     const itemExtractor = {
       optimo: getArticleTopStoryItem,
       cps: getArticleTopStoryItem,
+      link: getArticleTopStoryItem,
       'tipo-live': getLiveTopStoryItem,
     }[item?.type];
 
