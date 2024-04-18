@@ -86,8 +86,6 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(url);
     const isLite = isLitePath(url);
 
-    handleServerLogging(ctx);
-
     const cache = createCache({ key: 'bbc' });
     const { extractCritical } = createEmotionServer(cache);
 
@@ -107,6 +105,8 @@ export default class AppDocument extends Document<DocProps> {
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
+
+    handleServerLogging(ctx);
 
     return {
       ...initialProps,
