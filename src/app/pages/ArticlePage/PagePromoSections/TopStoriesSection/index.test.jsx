@@ -55,12 +55,21 @@ describe('Optimo Top Stories Promo', () => {
       <TopStoriesSectionFixture service="hindi" fixtureData={mixtureFixture} />,
     );
 
-    const heading = screen.getByText(
+    const cpsHeading = screen.getByText(
+      'Covid antibodies in 1 in 10 people in December',
+    );
+    const optimoHeading = screen.getByText(
+      'Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды',
+    );
+    const tipoLiveHeading = screen.getByText(
       'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
     );
     const liveLabel = screen.getByText('लाइव');
 
-    expect(heading).toBeInTheDocument();
+    expect(cpsHeading).toBeInTheDocument();
+    expect(optimoHeading).toBeInTheDocument();
+    expect(tipoLiveHeading).toBeInTheDocument();
+
     expect(liveLabel).toBeInTheDocument();
   });
 
