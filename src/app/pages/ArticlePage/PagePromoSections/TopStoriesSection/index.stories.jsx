@@ -7,6 +7,9 @@ import {
   topStoriesSingleItem,
   topStoriesListRtl,
   topStoriesSingleItemRtl,
+  topStoriesItem,
+  tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
 } from './fixture';
 import metadata from './metadata.json';
 import readme from './README.md';
@@ -49,4 +52,15 @@ export const SingleTopStories = () => (
 
 export const SingleTopStoriesRtl = () => (
   <RelatedContentComponent content={topStoriesSingleItemRtl} service="arabic" />
+);
+
+export const ListTopStoriesMixedDataSources = () => (
+  <RelatedContentComponent
+    content={[
+      topStoriesItem,
+      tipoFormattedTopStoriesItem,
+      tipoLivePageTopStoriesItem,
+    ]}
+    service="news"
+  />
 );
