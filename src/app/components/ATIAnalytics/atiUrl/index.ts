@@ -361,6 +361,8 @@ export const buildReverbAnalyticsModel = ({
     .map(({ campaignName }) => campaignName)
     .join('~');
 
+  const hashedId = getAtUserId();
+
   const reverbVariables = {
     params: {
       page: {
@@ -390,8 +392,8 @@ export const buildReverbAnalyticsModel = ({
         },
       },
       user: {
-        hashedId: getAtUserId(),
-        isSignedIn: false,
+        hashedId,
+        isSignedIn: !!hashedId,
       },
     },
     eventName: 'pageView',
