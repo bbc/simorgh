@@ -8,11 +8,9 @@ export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
     ?.split(',')
     ?.map(el => el.trim());
 
-  const headersCopy = { ...headers };
-
-  sensitiveHeadersArray?.forEach(header => {
-    if (headersCopy[header]) delete headersCopy[header];
-  });
-
-  return headersCopy;
+  return Object.keys(headers)
+    .filter(objKey => !sensitiveHeadersArray?.includes(objKey))
+    .reduce<IncomingHttpHeaders>((newObj, key) => {
+      return { ...newObj, [key]: headers[key] };
+    }, {});
 }
