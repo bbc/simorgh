@@ -144,7 +144,7 @@ export default class AppDocument extends Document<DocProps> {
         );
       default:
         return (
-          <Html {...htmlAttrs} className="no-js">
+          <Html lang="en-GB" {...htmlAttrs} className="no-js">
             <Head>
               <script
                 type="text/javascript"
