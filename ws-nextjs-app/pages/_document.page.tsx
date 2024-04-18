@@ -29,6 +29,7 @@ import {
 import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -144,7 +145,7 @@ export default class AppDocument extends Document<DocProps> {
         );
       default:
         return (
-          <Html lang="en-GB" {...htmlAttrs} className="no-js">
+          <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
               <script
                 type="text/javascript"
@@ -152,7 +153,7 @@ export default class AppDocument extends Document<DocProps> {
                   __html: `document.documentElement.classList.remove("no-js");`,
                 }}
               />
-              <Script id="simorgh-envvars" strategy="beforeInteractive">
+              <Script strategy="beforeInteractive">
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>
               {isApp && <meta name="robots" content="noindex" />}

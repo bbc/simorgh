@@ -45,7 +45,6 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{ __html: styles || '' }}
         />
         <script
-          id="simorgh-envvars"
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,

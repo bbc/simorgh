@@ -102,9 +102,7 @@ exports[`Document Component should render APP version correctly 1`] = `
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
-    <script
-      id="simorgh-envvars"
-    >
+    <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/"}
     </script>
   </head>
@@ -230,9 +228,7 @@ exports[`Document Component should render correctly 1`] = `
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
-    <script
-      id="simorgh-envvars"
-    >
+    <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/"}
     </script>
   </head>
