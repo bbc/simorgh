@@ -10,6 +10,7 @@ import {
   topStoriesItem,
   tipoFormattedTopStoriesItem,
   tipoLivePageTopStoriesItem,
+  topStoriesLiveLabelItem,
 } from './fixture';
 import metadata from './metadata.json';
 import readme from './README.md';
@@ -60,6 +61,7 @@ export const ListTopStoriesMixedDataSources = () => (
       topStoriesItem,
       tipoFormattedTopStoriesItem,
       tipoLivePageTopStoriesItem,
+      topStoriesLiveLabelItem,
     ]}
     service="news"
   />
