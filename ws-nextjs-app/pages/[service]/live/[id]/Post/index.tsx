@@ -150,12 +150,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) =>
-      isLive() ? (
-        <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
-      ) : (
-        <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
-      ),
+    video: (props: { blocks: MediaBlock[] }) => (
+      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+    ),
     social: SocialEmbedContainer,
   };
 
