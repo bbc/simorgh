@@ -42,6 +42,8 @@ const CaptionWrapper = ({
 }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
+
+  // TODO: Remove isTransparentPage flag once all services have been moved to CAF and default to transparent styling
   const isTransparentPage =
     [ARTICLE_PAGE, LIVE_PAGE].includes(pageType) ||
     CafServices.includes(service);
