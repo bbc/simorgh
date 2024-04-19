@@ -28,7 +28,6 @@ export default async ({
   path: pathname,
   variant,
   toggles,
-  isCaf,
   isAmp,
 }: Props) => {
   try {
@@ -37,7 +36,6 @@ export default async ({
       pageType,
       service,
       variant,
-      isCaf,
       isAmp,
     });
 
