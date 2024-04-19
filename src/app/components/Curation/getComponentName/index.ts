@@ -45,7 +45,6 @@ export default ({
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${MAXIMUM}`]: MESSAGE_BANNER,
     [`${BANNER}_${MAXIMUM}`]: BILLBOARD,
     [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,

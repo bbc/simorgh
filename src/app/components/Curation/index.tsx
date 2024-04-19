@@ -67,6 +67,7 @@ export default ({
 
   const GridComponent = getGridComponent(componentName);
   const environmentIsLive = isLive();
+  console.log("the environment is", environmentIsLive);
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
@@ -76,21 +77,31 @@ export default ({
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD:
-      return !environmentIsLive && summaries.length > 0 ? (
-        <Billboard
-          heading={title}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          image={summaries[0].imageUrl}
-          eventTrackingData={{
-            componentName: `billboard-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-          showLiveLabel={summaries[0].isLive}
-        />
-      ) : null;
-    case MESSAGE_BANNER:
       return environmentIsLive && summaries.length > 0 ? (
+      <MessageBanner
+      heading={title}
+      description={summaries[0].description}
+      link={summaries[0].link}
+      linkText={summaries[0].title}
+      image={summaries[0].imageUrl}
+      eventTrackingData={{
+        componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+        detailedPlacement: `${position + 1}`,
+      }}
+    />
+      ) :     (<Billboard
+      heading={title}
+      description={summaries[0].description}
+      link={summaries[0].link}
+      image={summaries[0].imageUrl}
+      eventTrackingData={{
+        componentName: `billboard-${nthCurationByStyleAndProminence}`,
+        detailedPlacement: `${position + 1}`,
+      }}
+      showLiveLabel={summaries[0].isLive}
+    />)
+    case MESSAGE_BANNER:
+      return summaries.length > 0 ? (
         <MessageBanner
           heading={title}
           description={summaries[0].description}
