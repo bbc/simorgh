@@ -6,12 +6,10 @@
 
 import runCanonicalTests from '../canonicalTests';
 import runInlineLinkTests from '../inlineLink';
-import runImageCopyrightBBC from '../imageCopyrightBBC';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
     runInlineLinkTests();
-    runImageCopyrightBBC();
   });
 });

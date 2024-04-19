@@ -83,7 +83,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
 
-exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
+exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"This is a text block, which contains a url link to the BBC Weather homepage."`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
