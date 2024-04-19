@@ -67,7 +67,6 @@ export default ({
 
   const GridComponent = getGridComponent(componentName);
   const environmentIsLive = isLive();
-  console.log('the environment is', environmentIsLive);
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
