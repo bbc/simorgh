@@ -86,7 +86,7 @@ export default ({
             componentName: `billboard-${nthCurationByStyleAndProminence}`,
             detailedPlacement: `${position + 1}`,
           }}
-          showLiveLabel
+          showLiveLabel={summaries[0].isLive}
         />
       ) : null;
     case MESSAGE_BANNER:
