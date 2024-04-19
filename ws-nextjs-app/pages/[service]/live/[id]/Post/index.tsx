@@ -16,8 +16,6 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import isLive from '#app/lib/utilities/isLive';
-import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import styles from './styles';
 import {
   Post as PostType,
