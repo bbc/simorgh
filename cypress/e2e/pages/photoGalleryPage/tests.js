@@ -1,21 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-import paths from 'ramda/src/paths';
-
-const getDescription = body => {
-  const promoBlock = body.data.article.promo;
-
-  const [topLevelDescription, nestedDescription] = paths(
-    [
-      ['summary'],
-      ['summary', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    ],
-    promoBlock,
-  );
-
-  return nestedDescription || topLevelDescription;
-};
-
 export const testsThatFollowSmokeTestConfig = ({
   service,
   pageType,
@@ -26,14 +10,16 @@ export const testsThatFollowSmokeTestConfig = ({
       if (['thai', 'pidgin', 'hausa'].includes(service)) {
         cy.getPageData({ service, pageType: 'article', variant }).then(
           ({ body }) => {
-          const description = getDescription(body);
+            const description =
+              body.data.article.promo.summary.blocks[0].model.blocks[0].model
+                .text;
             cy.get('main p').first().should('contain', description);
           },
         );
       } else {
         cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
           ({ body }) => {
-          const description = getDescription(body);
+            const description = body.data.article.promo.summary;
             cy.get('main p').first().should('contain', description);
           },
         );
