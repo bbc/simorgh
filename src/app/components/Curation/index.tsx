@@ -7,6 +7,7 @@ import {
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -17,7 +18,6 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
-import isLive from '#app/lib/utilities/isLive';
 
 const {
   SIMPLE_CURATION_GRID,

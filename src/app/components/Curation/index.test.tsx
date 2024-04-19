@@ -56,6 +56,11 @@ const components = {
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
+  'billboard-': {
+    visualStyle: BANNER,
+    visualProminence: MAXIMUM,
+    summaries: messageBannerCuration?.summaries,
+  },
 };
 
 interface TestProps {
