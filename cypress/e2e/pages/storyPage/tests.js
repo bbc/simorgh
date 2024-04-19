@@ -7,6 +7,7 @@ import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
+import settings from '../../../support/config/settings';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -37,9 +38,11 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
+  const pageTypeForFetch = settings[service]?.isCaf ? 'article' : 'cpsAsset';
+
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
           const contentBlocks = getContentBlocks(body);
           const descriptionBlock = contentBlocks.find(
@@ -59,7 +62,7 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
           const contentBlocks = getContentBlocks(body);
           const paragraphBlock = contentBlocks.find(
