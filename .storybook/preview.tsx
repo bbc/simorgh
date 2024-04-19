@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
-import isChromatic from 'chromatic';
+import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
 import { Preview } from '@storybook/react';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
@@ -12,6 +12,7 @@ import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
+import { RequestContextProvider } from '../src/app/contexts/RequestContext';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -491,7 +492,18 @@ const preview: Preview = {
             title: 'ukrainian-ru-UA',
           },
         ],
-        // Should "Container size" be shown, or just the "circlehollow" icon
+        dynamicTitle: true,
+      },
+    },
+    isLite: {
+      description: 'Toggle Lite mode',
+      defaultValue: false,
+      toolbar: {
+        icon: 'lightning',
+        items: [
+          { value: false, title: 'Lite mode OFF' },
+          { value: true, title: 'Lite mode ON' },
+        ],
         dynamicTitle: true,
       },
     },
@@ -637,14 +649,16 @@ const preview: Preview = {
             service={context.globals.service.service}
             variant={context.globals.service.variant}
           >
-            <EventTrackingContextProvider
-              // @ts-expect-error - mock data for Storybook
-              pageData={pageDataFixture}
-            >
-              <UserContextProvider>
-                <Story />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
+            <RequestContextProvider isLite={context.globals.isLite}>
+              <EventTrackingContextProvider
+                // @ts-expect-error - mock data for Storybook
+                pageData={pageDataFixture}
+              >
+                <UserContextProvider>
+                  <Story />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </RequestContextProvider>
           </ServiceContextProvider>
         </ToggleContextProvider>
       </ThemeProvider>
