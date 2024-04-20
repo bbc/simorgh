@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { EmotionCritical } from '@emotion/server/create-instance';
 
@@ -41,13 +42,7 @@ const Document = ({
     case isLite:
       return (
         <LiteRenderer
-          bodyContent={
-            <div
-              id="root"
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          }
+          bodyContent={<div dangerouslySetInnerHTML={{ __html: html }} />}
           helmetLinkTags={helmetLinkTags}
           helmetMetaTags={helmetMetaTags}
           helmetScriptTags={helmetScriptTags}
