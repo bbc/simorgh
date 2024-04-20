@@ -45,7 +45,7 @@ const Document = ({
             <div
               id="root"
               // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: html || '' }}
+              dangerouslySetInnerHTML={{ __html: html }}
             />
           }
           helmetLinkTags={helmetLinkTags}

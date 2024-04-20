@@ -22,10 +22,7 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: styles || '' }}
-        />
+        <style>{styles}</style>
       </head>
       <body>{bodyContent}</body>
     </html>

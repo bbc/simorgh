@@ -42,7 +42,7 @@ export default function CanonicalRenderer({
         {helmetScriptTags}
         <style
           data-emotion-css={ids?.join(' ')}
-          dangerouslySetInnerHTML={{ __html: styles || '' }}
+          dangerouslySetInnerHTML={{ __html: styles }}
         />
         <script
           dangerouslySetInnerHTML={{

@@ -30,7 +30,7 @@ export default function AmpRenderer({
         <style
           amp-custom=""
           data-emotion-css={ids?.join(' ')}
-          dangerouslySetInnerHTML={{ __html: styles || '' }}
+          dangerouslySetInnerHTML={{ __html: styles }}
         />
         <style amp-boilerplate="">{AMP_SCRIPT}</style>
         <noscript>
