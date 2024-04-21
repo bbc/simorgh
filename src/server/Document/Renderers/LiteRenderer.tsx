@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { ReactElement, PropsWithChildren } from 'react';
 import { BaseRendererProps } from './types';
 
@@ -22,7 +23,7 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style>{styles}</style>
+        <style dangerouslySetInnerHTML={{ __html: styles }} />
       </head>
       <body>{bodyContent}</body>
     </html>
