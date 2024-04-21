@@ -87,7 +87,7 @@ export default class AppDocument extends Document<DocProps> {
     const isApp = isAppPath(url);
     const isLite = isLitePath(url);
 
-    const cache = createCache({ key: 'bbc' });
+    const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
 
     const originalRenderPage = ctx.renderPage;
@@ -101,7 +101,6 @@ export default class AppDocument extends Document<DocProps> {
       });
 
     const initialProps = await Document.getInitialProps(ctx);
-
     const { css, ids } = extractCritical(initialProps.html);
 
     // Read env variables from the server and expose them to the client
@@ -162,7 +161,7 @@ export default class AppDocument extends Document<DocProps> {
               {helmetLinkTags}
               {helmetScriptTags}
               <style
-                data-emotion-css={ids?.join(' ')}
+                data-emotion={ids.join(' ')}
                 dangerouslySetInnerHTML={{ __html: css }}
               />
             </Head>
