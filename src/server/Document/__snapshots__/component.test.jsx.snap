@@ -191,9 +191,7 @@ exports[`Document Component should render LITE version correctly 1`] = `
     </style>
   </head>
   <body>
-    <div
-      id="root"
-    >
+    <div>
       <h1>
         App!
       </h1>
