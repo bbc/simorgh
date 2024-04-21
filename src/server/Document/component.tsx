@@ -14,9 +14,9 @@ type Props = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  modernScripts: React.ReactElement;
   legacyScripts: React.ReactElement;
   links: React.ReactElement;
+  modernScripts: React.ReactElement;
 };
 
 const Document = ({
@@ -26,9 +26,9 @@ const Document = ({
   isAmp,
   isApp,
   isLite,
-  modernScripts,
   legacyScripts,
   links,
+  modernScripts,
 }: Props) => {
   const title = helmet.title.toComponent();
   const htmlAttrs = helmet.htmlAttributes.toComponent();
