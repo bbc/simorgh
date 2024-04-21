@@ -6,6 +6,7 @@ import { HelmetData } from 'react-helmet';
 import LiteRenderer from './Renderers/LiteRenderer';
 import CanonicalRenderer from './Renderers/CanonicalRenderer';
 import AmpRenderer from './Renderers/AmpRenderer';
+import litePageTransforms from './Renderers/litePageTransforms';
 
 type Props = {
   app: EmotionCritical;
@@ -42,7 +43,11 @@ const Document = ({
     case isLite:
       return (
         <LiteRenderer
-          bodyContent={<div dangerouslySetInnerHTML={{ __html: html }} />}
+          bodyContent={
+            <div
+              dangerouslySetInnerHTML={{ __html: litePageTransforms(html) }}
+            />
+          }
           helmetLinkTags={helmetLinkTags}
           helmetMetaTags={helmetMetaTags}
           helmetScriptTags={helmetScriptTags}

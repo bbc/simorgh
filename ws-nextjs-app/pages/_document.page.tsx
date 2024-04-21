@@ -20,16 +20,20 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
+
 import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
+import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+
 import nodeLogger from '#lib/logger.node';
 import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
 import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -101,6 +105,11 @@ export default class AppDocument extends Document<DocProps> {
       });
 
     const initialProps = await Document.getInitialProps(ctx);
+
+    if (isLite) {
+      initialProps.html = litePageTransforms(initialProps.html);
+    }
+
     const { css, ids } = extractCritical(initialProps.html);
 
     // Read env variables from the server and expose them to the client

@@ -13,6 +13,7 @@ const isValidDomain = (href: string) => {
 };
 
 export default (html: string) => {
+  let modifiedHtml = html;
 
   const anchorTags = modifiedHtml.match(/<a[^>]*>/g) || [];
 
