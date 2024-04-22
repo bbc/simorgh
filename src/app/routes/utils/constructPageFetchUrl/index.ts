@@ -32,7 +32,6 @@ export interface UrlConstructParams {
   variant?: Variants;
   page?: string;
   isAmp?: boolean;
-  isCaf?: boolean;
 }
 
 const removeLeadingSlash = (path: string) => path.replace(/^\/+/g, '');
