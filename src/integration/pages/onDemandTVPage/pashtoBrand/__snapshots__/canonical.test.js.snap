@@ -136,6 +136,13 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 }
 `;
 
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "راډیویې خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
+}
+`;
+
 exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"نړۍ دا وخت"`;
 
 exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
