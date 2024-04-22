@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
 import { getEmbedUrl, hasMedia } from './helpers';
-import settings from '../../../support/config/settings';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
@@ -13,7 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
-      const pageTypeForFetch = settings[service]?.isCaf
+      const pageTypeForFetch = CafEnabledServices.includes(service)
         ? 'article'
         : 'cpsAsset';
 

@@ -7,7 +7,7 @@ import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
-import settings from '../../../support/config/settings';
+import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -38,7 +38,9 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
-  const pageTypeForFetch = settings[service]?.isCaf ? 'article' : 'cpsAsset';
+  const pageTypeForFetch = CafEnabledServices.includes(service)
+    ? 'article'
+    : 'cpsAsset';
 
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {

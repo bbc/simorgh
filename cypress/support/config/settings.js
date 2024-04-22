@@ -1906,7 +1906,6 @@ module.exports = () => ({
     font: undefined,
     isWorldService: true,
     variant: 'default',
-    isCaf: true,
     pageTypes: {
       articles: {
         environments: {
@@ -4702,7 +4701,6 @@ module.exports = () => ({
     font: undefined,
     isWorldService: true,
     variant: 'default',
-    isCaf: true,
     pageTypes: {
       articles: {
         environments: {
@@ -6908,7 +6906,6 @@ module.exports = () => ({
     font: undefined,
     isWorldService: true,
     variant: 'default',
-    isCaf: true,
     pageTypes: {
       articles: {
         environments: {
