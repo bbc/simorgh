@@ -7,9 +7,14 @@ const VALID_DOMAINS = [
   'bbcrussian.com',
 ];
 
-const isValidDomain = (href: string) => {
+const isValidHref = (href: string) => {
   const url = new URL(href, 'http://localhost');
-  return !href.startsWith('#') && VALID_DOMAINS.includes(url.hostname);
+
+  return (
+    VALID_DOMAINS.includes(url.hostname) &&
+    !href.startsWith('#') &&
+    !href.includes('.lite')
+  );
 };
 
 export default (html: string) => {
@@ -19,7 +24,7 @@ export default (html: string) => {
 
   anchorTags.forEach(tag => {
     const href = tag?.match(/href="([^"]*)"/)?.[1];
-    if (href && isValidDomain(href)) {
+    if (href && isValidHref(href)) {
       modifiedHtml = modifiedHtml.replace(
         tag,
         tag.replace(href, `${href}.lite`),
