@@ -12,6 +12,7 @@ import {
   topStoriesLiveLabelItem,
   topStoriesMediaContentItem,
   tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
 } from '../fixture';
 
 // eslint-disable-next-line react/prop-types
@@ -63,6 +64,23 @@ describe('Optimo Top Stories Promo Item', () => {
 
     expect(heading).toBeInTheDocument();
     expect(timestamp).toBeInTheDocument();
+  });
+
+  it('should render Top Stories item when data is from Tipo Live page', () => {
+    render(
+      <TopStoriesItemFixture
+        service="hindi"
+        fixtureData={tipoLivePageTopStoriesItem}
+      />,
+    );
+
+    const heading = screen.getByText(
+      'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
+    );
+    const liveLabel = screen.getByText('लाइव');
+
+    expect(heading).toBeInTheDocument();
+    expect(liveLabel).toBeInTheDocument();
   });
 
   it('should return null if no data is passed', () => {

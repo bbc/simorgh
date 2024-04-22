@@ -150,6 +150,13 @@ exports[`Canonical Articles Header Navigation link should match text and url 12`
 }
 `;
 
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `

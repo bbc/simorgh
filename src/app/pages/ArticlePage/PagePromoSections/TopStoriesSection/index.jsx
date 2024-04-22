@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import { arrayOf, shape } from 'prop-types';
-import { storyItem } from '#models/propTypes/storyItem';
+import { arrayOf, shape, oneOfType } from 'prop-types';
+import { storyItem, tipoLiveStoryItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
@@ -107,7 +107,12 @@ const TopStoriesSection = ({ content }) => {
   );
 };
 
-TopStoriesSection.propTypes = { content: arrayOf(shape(storyItem)) };
+TopStoriesSection.propTypes = {
+  content: oneOfType([
+    arrayOf(shape(storyItem)),
+    arrayOf(shape(tipoLiveStoryItem)),
+  ]),
+};
 
 TopStoriesSection.defaultProps = { content: [] };
 
