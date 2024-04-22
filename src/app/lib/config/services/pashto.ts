@@ -371,6 +371,10 @@ export const service: DefaultServiceConfig = {
         title: 'پر سټلایت خپرونې',
         url: '/pashto/articles/c4n55eygdn0o',
       },
+      {
+        title: 'راډیویې خپرونې',
+        url: '/pashto/topics/c9xz1ekw79nt',
+      },
     ],
   },
 };
