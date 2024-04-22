@@ -2,6 +2,7 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
+import settings from '../../../support/config/settings';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
@@ -12,10 +13,13 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
+      const pageTypeForFetch = settings[service]?.isCaf
+        ? 'article'
+        : 'cpsAsset';
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+          cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
             ({ body }) => {
               const {
                 data: { article: jsonData },
