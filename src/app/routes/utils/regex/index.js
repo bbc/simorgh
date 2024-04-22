@@ -21,7 +21,6 @@ import {
   getMostReadDataRegex,
   getMostWatchedDataRegex,
   getMostWatchedPageRegex,
-  getIdxPageRegex,
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
   getAfricaEyeTVPageRegex,
@@ -84,9 +83,6 @@ export const secondaryColumnDataRegexPath =
 
 export const recommendationsDataRegex =
   getRecommendationsDataRegex(allServices);
-
-export const IdxPagePath = getIdxPageRegex();
-export const IdxDataPath = `${IdxPagePath}.json`;
 
 export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
 export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;
