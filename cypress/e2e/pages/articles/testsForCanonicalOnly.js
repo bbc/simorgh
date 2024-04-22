@@ -14,6 +14,22 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
+    let pageData;
+    before(() => {
+      cy.getPageDataFromWindow().then(data => {
+        pageData = data;
+
+        const currentPath = Cypress.env('currentPath');
+        const currentPathNoSlashes = currentPath.replace(/\//g, '');
+        const filename = `cypress/fixtures/tempFixtures/pageData_${currentPathNoSlashes}.json`;
+        console.log(`filename is ${filename}`);
+        console.log(
+          `page data in canonical before ${JSON.stringify(pageData)}`,
+        );
+        cy.writeFile(filename, pageData);
+      });
+    });
+
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
@@ -50,116 +66,106 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have an image with a caption', () => {
-          cy.window().then(win => {
-            const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
-            const {
-              model: { blocks },
-            } =
-              model && model.blocks && getBlockByType(model.blocks, 'caption');
-            const { text: captionText } =
-              blocks && blocks[0].model.blocks[0].model;
-            if (captionText) {
-              cy.get('figcaption')
-                .eq(0)
-                .should('be.visible')
-                .and('contain', captionText);
-            } else {
-              // check for image with no caption
-              cy.get('figure')
-                .eq(0)
-                .within(() => {
-                  cy.get('figcaption').should('not.exist');
-                });
-            }
-          });
+          const { model } = getBlockData('image', pageData);
+          const {
+            model: { blocks },
+          } = model && model.blocks && getBlockByType(model.blocks, 'caption');
+          const { text: captionText } =
+            blocks && blocks[0].model.blocks[0].model;
+          if (captionText) {
+            cy.get('figcaption')
+              .eq(0)
+              .should('be.visible')
+              .and('contain', captionText);
+          } else {
+            // check for image with no caption
+            cy.get('figure')
+              .eq(0)
+              .within(() => {
+                cy.get('figcaption').should('not.exist');
+              });
+          }
         });
       });
     }
 
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
-        cy.window().then(win => {
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+        console.log(`page data in canonical test ${JSON.stringify(pageData)}`);
 
-          if (media) {
-            cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('[data-e2e="media-player__placeholder"] img')
-                .should('be.visible')
-                .should('have.attr', 'src')
-                .should('not.be.empty');
-            });
-          }
-        });
+        const media = getBlockData('video', pageData);
+
+        if (media) {
+          cy.get('[data-e2e="media-player"]').within(() => {
+            cy.get('[data-e2e="media-player__placeholder"] img')
+              .should('be.visible')
+              .should('have.attr', 'src')
+              .should('not.be.empty');
+          });
+        }
       });
 
       it('should render a visible guidance message', () => {
-        cy.window().then(win => {
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+        const media = getBlockData('video', pageData);
 
-          if (media) {
-            const longGuidanceWarning =
-              media.model.blocks[1].model.blocks[0].model.versions[0].warnings
-                .long;
+        if (media) {
+          const longGuidanceWarning =
+            media.model.blocks[1].model.blocks[0].model.versions[0].warnings
+              .long;
 
-            cy.get('[data-e2e="media-player"]')
-              .eq(0)
-              .within(() => {
-                // Check for video with guidance message
-                if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__placeholder"] strong')
-                    .should('be.visible')
-                    .and('contain', longGuidanceWarning);
-                  // Check for video with no guidance message
-                } else {
-                  cy.get('[data-e2e="media-player__guidance"] strong').should(
-                    'not.exist',
-                  );
-                }
-              });
-          }
-        });
+          cy.get('[data-e2e="media-player"]')
+            .eq(0)
+            .within(() => {
+              // Check for video with guidance message
+              if (longGuidanceWarning) {
+                cy.get('[data-e2e="media-player__placeholder"] strong')
+                  .should('be.visible')
+                  .and('contain', longGuidanceWarning);
+                // Check for video with no guidance message
+              } else {
+                cy.get('[data-e2e="media-player__guidance"] strong').should(
+                  'not.exist',
+                );
+              }
+            });
+        }
       });
 
       it('should have a visible play button and valid duration', () => {
-        cy.window().then(win => {
-          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-          if (media && media.type === 'video') {
-            const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
-            const { durationISO8601 } = aresMediaBlocks.model.versions[0];
+        const media = getBlockData('video', pageData);
+        if (media && media.type === 'video') {
+          const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
+          const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-            cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('button')
-                .should('be.visible')
-                .within(() => {
-                  cy.get('svg').should('be.visible');
-                  cy.get('time')
-                    .should('be.visible')
-                    .should('have.attr', 'datetime')
-                    .and('eq', durationISO8601);
-                });
-            });
-          }
-        });
+          cy.get('[data-e2e="media-player"]').within(() => {
+            cy.get('button')
+              .should('be.visible')
+              .within(() => {
+                cy.get('svg').should('be.visible');
+                cy.get('time')
+                  .should('be.visible')
+                  .should('have.attr', 'datetime')
+                  .and('eq', durationISO8601);
+              });
+          });
+        }
       });
       if (service === 'pidgin') {
         it('should render an iframe with a valid URL when a user clicks play', () => {
-          cy.window().then(win => {
-            const body = win.SIMORGH_DATA.pageData;
-            const media = getBlockData('video', body);
-            if (media && media.type === 'video') {
-              const { lang } = appConfig[service][variant];
-              const embedUrl = getVideoEmbedUrl(body, lang);
-              cy.get('[data-e2e="media-player"] button').first().click();
-              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+          const media = getBlockData('video', pageData);
+          if (media && media.type === 'video') {
+            const { lang } = appConfig[service][variant];
+            const embedUrl = getVideoEmbedUrl(pageData, lang);
+            cy.get('[data-e2e="media-player"] button').first().click();
+            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
 
-              cy.testResponseCodeAndTypeRetry({
-                path: embedUrl,
-                responseCode: 200,
-                type: 'text/html',
-                allowFallback: true,
-              });
-            }
-          });
+            cy.testResponseCodeAndTypeRetry({
+              path: embedUrl,
+              responseCode: 200,
+              type: 'text/html',
+              allowFallback: true,
+            });
+          }
         });
       }
     });

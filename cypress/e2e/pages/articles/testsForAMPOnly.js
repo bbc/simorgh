@@ -16,10 +16,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 }) => {
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     let testAssetId;
+    let canonicalPageData;
     before(() => {
       cy.url().then(url => {
         // eslint-disable-next-line prefer-destructuring
         testAssetId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
+      });
+      const currentPath = Cypress.env('currentPath');
+      const currentPathNoSlashes = currentPath.replace(/\//g, '');
+      const filename = `tempFixtures/pageData_${currentPathNoSlashes}.json`;
+      cy.fixture(filename).then(fixtureData => {
+        canonicalPageData = fixtureData;
       });
     });
     it('should contain an amp-img', () => {
@@ -35,6 +42,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
     describe('Media Player: AMP', () => {
       it('should render an iframe with a valid URL', () => {
+        console.log(`data from fixture in amp test ${canonicalPageData}`);
         if (articleHasPlayer(testAssetId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
           cy.get('[data-e2e="media-player"]')

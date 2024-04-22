@@ -114,6 +114,31 @@ export default defineConfig({
         },
       });
 
+      on('after:spec', (spec, results) => {
+        const directory = 'cypress/fixtures/tempFixtures';
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        cy.readFile(directory, (err: any, files: any[]) => {
+          if (err) {
+            console.error('Error reading directory:', err);
+            return;
+          }
+
+          const filesToDelete = files.filter(file =>
+            file.startsWith('pageData_'),
+          );
+          filesToDelete.forEach(file => {
+            fs.unlink(path.join(directory, file), unlinkErr => {
+              if (err) {
+                console.error(`Error deleting ${file}:`, unlinkErr);
+                return;
+              }
+              console.log(`${file} has been deleted`);
+            });
+          });
+        });
+      });
+
       return config;
     },
     env: {

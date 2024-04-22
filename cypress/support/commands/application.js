@@ -137,10 +137,22 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
 
 export const getPageDataFromWindow = () => {
   cy.window().then(win => {
-    const pageData = win.SIMORGH_DATA;
-    console.log(`pageData is ${JSON.stringify(pageData)}`);
+    const { pageData } = win.SIMORGH_DATA;
+    console.log(
+      `this is the page data inside the function ${JSON.stringify(pageData)}`,
+    );
     return pageData;
   });
+};
+
+export const writePageDataToFile = (fileName, data) => {
+  cy.writeFile(fileName, JSON.stringify(data))
+    .then(() => {
+      console.log(`${fileName} has been saved`);
+    })
+    .catch(err => {
+      console.error(`Error writing ${fileName} to file:`, err);
+    });
 };
 
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);

@@ -8,13 +8,10 @@ export const getBlockByType = (blocks, blockType) => {
       blockData = block;
     }
   });
-  console.log(`in get block by type ${JSON.stringify(blockData)}`);
   return blockData;
 };
 
 export const getBlockData = (blockType, body) => {
-  console.log(`in get block data ${JSON.stringify(body.content.model)}`);
-  console.log('why');
   const { blocks } = body.content.model;
 
   return getBlockByType(blocks, blockType);
