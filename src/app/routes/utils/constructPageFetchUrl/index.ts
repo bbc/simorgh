@@ -43,6 +43,9 @@ const getFrontPageId = (path: string) =>
   `${removeLeadingSlash(path)}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
+const isOptimoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}o)/.test(path);
+const isCpsIdCheck = (path: string) =>
+  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
 const isFrontPage = ({
   path,
@@ -53,9 +56,6 @@ const isFrontPage = ({
   service: Services;
   variant?: Variants;
 }) => (variant ? path === `/${service}/${variant}` : path === `/${service}`);
-
-const isCpsId = (path: string) =>
-  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
 interface GetIdProps {
   pageType: PageTypes;
@@ -70,10 +70,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   switch (pageType) {
     case ARTICLE_PAGE:
       getIdFunction = (path: string) => {
-        const isOptimoId = /(c[a-zA-Z0-9]{10,}o)/.test(path);
+        const isOptimoId = isOptimoIdCheck(path);
+        const isCpsId = isCpsIdCheck(path);
 
         if (isOptimoId) return getArticleId(path);
-        if (isCpsId(path)) return getCpsId(path);
+        if (isCpsId) return getCpsId(path);
 
         return null;
       };
@@ -157,13 +158,14 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case ARTICLE_PAGE:
+      case ARTICLE_PAGE: {
         fetchUrl = Url(
-          isCpsId(id)
+          isCpsIdCheck(id)
             ? `/${id}`
             : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
+      }
       case CPS_ASSET:
         fetchUrl = Url(`/${id}`);
         break;
