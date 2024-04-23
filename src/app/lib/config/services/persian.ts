@@ -411,6 +411,10 @@ export const service: DefaultServiceConfig = {
         title: 'دانش',
         url: '/persian/topics/ckdxnwr4r1yt',
       },
+      {
+        title: 'فراتر از خبر',
+        url: '/persian/topics/cxr3ex12k6et',
+      },
     ],
   },
 };
