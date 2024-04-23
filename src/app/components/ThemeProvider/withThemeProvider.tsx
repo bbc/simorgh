@@ -281,14 +281,17 @@ const withThemeProvider = ({
     brandSVG,
     gridWidths,
     isDarkUi: false,
+    isLite: false,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
+    const { isAmp, isLite, pageType, derivedPageType } =
+      useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
       isDarkUi: isDarkUiPage(pageType, derivedPageType),
+      isLite,
     };
 
     return (

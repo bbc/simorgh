@@ -49,7 +49,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
   display: inline-block;
-  width: ${({ isLite }) => (isLite ? '100%' : 'calc(100% - 7.5rem)')};
+  width: ${props => (props.theme.isLite ? '100%' : 'calc(100% - 7.5rem)')};
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
   height: 100%;
@@ -131,7 +131,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
             <RecommendationsImage indexImage={indexImage} lazyLoad />
           </ImageWrapper>
         )}
-        <TextWrapper isLite={isLite}>
+        <TextWrapper>
           <StyledHeadline script={script} service={service}>
             <Link
               href={url}
