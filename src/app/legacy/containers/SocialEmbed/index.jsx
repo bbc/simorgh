@@ -14,9 +14,12 @@ import Wrapper from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp, pageType } = useContext(RequestContext);
+  const { isAmp, isLite, pageType } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
+
+  if (isLite) return null;
   if (!blocks || !source) return null;
+
   const { model, id: blockId } = blocks[0];
   const provider = getProviderFromSource(source);
 
