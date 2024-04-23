@@ -16,7 +16,7 @@ import MediaArticlePageComponent from './MediaArticlePage';
 const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
-// @ts-expect-error - passing in artial data
+// @ts-expect-error - passing in partial data
 const ComponentWithContext = ({ data: { data }, isLite }) => {
   return (
     <ToggleContextProvider
