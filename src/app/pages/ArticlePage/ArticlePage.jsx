@@ -38,6 +38,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -67,8 +68,12 @@ import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp } = useContext(RequestContext);
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -105,12 +110,19 @@ const ArticlePage = ({ pageData }) => {
   );
 
   const recommendationsData = pathOr([], ['recommendations'], pageData);
-  const isPGL = pageData?.metadata?.type === 'PGL';
+  const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
+  const isSTY = pageData?.metadata?.type === STORY_PAGE;
+  const isCPS = isPGL || isSTY;
 
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -185,7 +197,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -210,7 +222,11 @@ const ArticlePage = ({ pageData }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          !isPGL
+            ? categoryName(isTrustProjectParticipant, taggings, formats)
+            : 'Article'
+        }
         seoTitle={headline}
         headline={headline}
         description={description}

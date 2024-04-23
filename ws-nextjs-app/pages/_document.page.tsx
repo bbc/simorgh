@@ -14,6 +14,53 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
+import nodeLogger from '#lib/logger.node';
+import {
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#lib/logger.const';
+import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
+import derivePageType from '../utilities/derivePageType';
+
+const logger = nodeLogger(__filename);
+
+const handleServerLogging = (ctx: DocumentContext) => {
+  const url = ctx.asPath || '';
+  const headers = removeSensitiveHeaders(ctx.req?.headers);
+  const pageType = derivePageType(url);
+  const { statusCode } = ctx.res || {};
+  const { cause, message, name, stack } = ctx.err || {};
+
+  switch (statusCode) {
+    case OK:
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url,
+        headers,
+        pageType,
+      });
+      break;
+    case INTERNAL_SERVER_ERROR:
+      sendCustomMetric({
+        metricName: NON_200_RESPONSE,
+        statusCode,
+        pageType,
+        requestUrl: url,
+      });
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status: INTERNAL_SERVER_ERROR,
+        message: { cause, message, name, stack, url },
+        url,
+        headers,
+        pageType,
+      });
+      break;
+    default:
+      break;
+  }
+};
 
 type DocProps = {
   helmet: HelmetData;
@@ -24,10 +71,13 @@ type DocProps = {
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    const isApp = isAppPath(ctx.asPath || '');
+    const url = ctx.asPath || '';
+    const isApp = isAppPath(url);
 
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
+
+    handleServerLogging(ctx);
 
     return {
       ...initialProps,

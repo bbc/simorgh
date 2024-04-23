@@ -150,6 +150,13 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 }
 `;
 
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;

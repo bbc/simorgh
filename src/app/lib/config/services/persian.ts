@@ -304,7 +304,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
-      onIdxPage: true,
     },
     mostWatched: {
       header: 'پربیننده ترین',
@@ -313,8 +312,6 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onIdxPage: true,
-      idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
       durationLabel: '%duration% المدة الزمنية',
     },
@@ -413,6 +410,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'دانش',
         url: '/persian/topics/ckdxnwr4r1yt',
+      },
+      {
+        title: 'فراتر از خبر',
+        url: '/persian/topics/cxr3ex12k6et',
       },
     ],
   },
