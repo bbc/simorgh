@@ -1,8 +1,8 @@
-const serviceUsingCAF = ['pidgin'];
+import CafEnabledServices from '../../app/lib/cafServices.const';
 
 export default () => {
   describe('Media Placeholder', () => {
-    if (!serviceUsingCAF.includes(service)) {
+    if (!CafEnabledServices.includes(service)) {
       it('outer iframe has z-index of 1', () => {
         const iframe = document.querySelector('iframe');
         expect(iframe).toBeInTheDocument();
