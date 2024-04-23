@@ -344,7 +344,7 @@ exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Story Page SEO Heading level 1 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;
 
-exports[`AMP Story Page SEO Lang attribute 1`] = `null`;
+exports[`AMP Story Page SEO Lang attribute 1`] = `"ha"`;
 
 exports[`AMP Story Page SEO Linked data should match text 1`] = `
 {

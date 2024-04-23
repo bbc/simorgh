@@ -249,7 +249,7 @@ exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Story Page SEO Heading level 1 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;
 
-exports[`Canonical Story Page SEO Lang attribute 1`] = `null`;
+exports[`Canonical Story Page SEO Lang attribute 1`] = `"ha"`;
 
 exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 {
