@@ -18,6 +18,7 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
+import CafEnabledServices from '#app/lib/cafServices.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -207,10 +208,8 @@ server.get(
 
       const { page, renderer_env } = query;
 
-      const cafEnabledService = ['thai', 'pidgin', 'hausa'].includes(service);
-
       const isCaf =
-        cafEnabledService ||
+        CafEnabledServices.includes(service) ||
         Boolean(renderer_env === 'caftest' || renderer_env === 'caflive');
 
       // Set derivedPageType based on matched route
