@@ -270,6 +270,13 @@ exports[`AMP On Demand Audio Page Header Navigation link should match text and u
 }
 `;
 
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "راډیویې خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
+}
+`;
+
 exports[`AMP On Demand Audio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
 exports[`AMP On Demand Audio Page I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;

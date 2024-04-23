@@ -3,7 +3,13 @@
     "article": {
       "metadata": {
         "atiAnalytics": {
-          "categoryName": null,
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "categoryName": "News",
           "contentId": "urn:bbc:cps:curie:asset:5858e31f-36a4-ac44-ab69-9c340b45dd49",
           "contentType": "article-photo-gallery",
           "language": null,
@@ -92,23 +98,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b83acc6e",
+              "id": "d44de3a2",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "dde3fb32",
+                    "id": "518519ca",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "325dbb43",
+                          "id": "21442847",
                           "type": "paragraph",
                           "model": {
                             "text": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
                             "blocks": [
                               {
-                                "id": "f7b427e3",
+                                "id": "5eede7ae",
                                 "type": "fragment",
                                 "model": {
                                   "text": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
@@ -129,7 +135,7 @@
               "position": [1]
             },
             {
-              "id": "762aef37",
+              "id": "3431bc2d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570338893000,
@@ -138,18 +144,18 @@
               "position": [2]
             },
             {
-              "id": "2874bb90",
+              "id": "adba4d0c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "e5b2be5b",
+                    "id": "6e7b193d",
                     "type": "paragraph",
                     "model": {
                       "text": "มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย",
                       "blocks": [
                         {
-                          "id": "8b8c2a8f",
+                          "id": "edc1e60a",
                           "type": "fragment",
                           "model": {
                             "text": "มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย",
@@ -166,28 +172,28 @@
               "position": [3]
             },
             {
-              "id": "e1a2231b",
+              "id": "d3b0e98f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "db369c85",
+                    "id": "5b154a6a",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c37e60f0",
+                          "id": "1f4de400",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d1e3cee2",
+                                "id": "fe9cf6e6",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519",
                                   "blocks": [
                                     {
-                                      "id": "24392d0d",
+                                      "id": "64fcd88b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519",
@@ -208,23 +214,23 @@
                     "position": [4, 1]
                   },
                   {
-                    "id": "420742c1",
+                    "id": "1738dc85",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4cf5c8f6",
+                          "id": "6ee0e89d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c873bcde",
+                                "id": "23d5077a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์",
                                   "blocks": [
                                     {
-                                      "id": "f9d45709",
+                                      "id": "bb2a23d8",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์",
@@ -245,7 +251,7 @@
                     "position": [4, 2]
                   },
                   {
-                    "id": "0000b5f6",
+                    "id": "15ae1261",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -263,28 +269,28 @@
               "position": [4]
             },
             {
-              "id": "08ac46e6",
+              "id": "101e1ca4",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c4e5f36a",
+                    "id": "c528bf0e",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b2ca9d53",
+                          "id": "74e00016",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "19901aee",
+                                "id": "20dd226a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์",
                                   "blocks": [
                                     {
-                                      "id": "1b4d2aac",
+                                      "id": "9edeb393",
                                       "type": "fragment",
                                       "model": {
                                         "text": "สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์",
@@ -305,23 +311,23 @@
                     "position": [5, 1]
                   },
                   {
-                    "id": "748945c5",
+                    "id": "12668129",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cbc4bfef",
+                          "id": "8e613f1b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b003035c",
+                                "id": "1bce499a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "สุธรรม",
                                   "blocks": [
                                     {
-                                      "id": "18752180",
+                                      "id": "9d66dcb1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "สุธรรม",
@@ -342,7 +348,7 @@
                     "position": [5, 2]
                   },
                   {
-                    "id": "627639ac",
+                    "id": "4a6166a5",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -360,28 +366,28 @@
               "position": [5]
             },
             {
-              "id": "58027a59",
+              "id": "f5344622",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1d28b352",
+                    "id": "a3f5b9eb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "feda60a8",
+                          "id": "c6fc66a2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5d8532d2",
+                                "id": "26cefe6e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า \"ไม่ใช่คนไทย\" และ \"ฆ่าคอมมิวนิสต์ไม่บาป\"",
                                   "blocks": [
                                     {
-                                      "id": "78eccbc7",
+                                      "id": "6ff5bd75",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า \"ไม่ใช่คนไทย\" และ \"ฆ่าคอมมิวนิสต์ไม่บาป\"",
@@ -402,23 +408,23 @@
                     "position": [6, 1]
                   },
                   {
-                    "id": "eb0b107f",
+                    "id": "6c597c5a",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7cf3e373",
+                          "id": "465013d5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3f7b7a74",
+                                "id": "944a3035",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "แขวนคอ",
                                   "blocks": [
                                     {
-                                      "id": "1d7e401f",
+                                      "id": "c2dd1034",
                                       "type": "fragment",
                                       "model": {
                                         "text": "แขวนคอ",
@@ -439,7 +445,7 @@
                     "position": [6, 2]
                   },
                   {
-                    "id": "d7191e03",
+                    "id": "691f027e",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -457,28 +463,28 @@
               "position": [6]
             },
             {
-              "id": "5cd435f8",
+              "id": "cfa947cf",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5ba4c456",
+                    "id": "356eb595",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8fe78f68",
+                          "id": "954e9fd2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "223d338c",
+                                "id": "4ed894d6",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า \"ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน\"",
                                   "blocks": [
                                     {
-                                      "id": "e1923eb1",
+                                      "id": "9e7ea593",
                                       "type": "fragment",
                                       "model": {
                                         "text": "นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า \"ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน\"",
@@ -499,23 +505,23 @@
                     "position": [7, 1]
                   },
                   {
-                    "id": "0f64f9fd",
+                    "id": "53147314",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5a654aea",
+                          "id": "586bf336",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8d74d163",
+                                "id": "ca1077db",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "หมอสุรพงษ์",
                                   "blocks": [
                                     {
-                                      "id": "1ec3ae29",
+                                      "id": "566b7051",
                                       "type": "fragment",
                                       "model": {
                                         "text": "หมอสุรพงษ์",
@@ -536,7 +542,7 @@
                     "position": [7, 2]
                   },
                   {
-                    "id": "4f5ea232",
+                    "id": "427a78e8",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -554,28 +560,28 @@
               "position": [7]
             },
             {
-              "id": "8026777b",
+              "id": "da6eefcb",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "85fc07e3",
+                    "id": "691715ee",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "147d3f52",
+                          "id": "e355410f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4c52a757",
+                                "id": "e559dd9b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล \"จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม \"กลุ่มคนอยากเลือกตั้ง\" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา",
                                   "blocks": [
                                     {
-                                      "id": "d871aac0",
+                                      "id": "24441cbc",
                                       "type": "fragment",
                                       "model": {
                                         "text": "สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล \"จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม \"กลุ่มคนอยากเลือกตั้ง\" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา",
@@ -596,23 +602,23 @@
                     "position": [8, 1]
                   },
                   {
-                    "id": "01dfd3d5",
+                    "id": "a619f45c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cd1334d1",
+                          "id": "87454633",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "79d84d34",
+                                "id": "f5a150f1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "จ่านิว",
                                   "blocks": [
                                     {
-                                      "id": "b0c99dcb",
+                                      "id": "97ddc2f4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "จ่านิว",
@@ -633,7 +639,7 @@
                     "position": [8, 2]
                   },
                   {
-                    "id": "0f32db6b",
+                    "id": "eb61a2a4",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -651,28 +657,28 @@
               "position": [8]
             },
             {
-              "id": "f4703013",
+              "id": "3f7e5bf6",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1546a199",
+                    "id": "76185452",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "123b1597",
+                          "id": "8940d593",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dbb4b1b6",
+                                "id": "a5dfe583",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519",
                                   "blocks": [
                                     {
-                                      "id": "45099a76",
+                                      "id": "102c240a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519",
@@ -693,23 +699,23 @@
                     "position": [9, 1]
                   },
                   {
-                    "id": "6a6160db",
+                    "id": "36cdcc3d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e46248d7",
+                          "id": "8b712f60",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "017d95cb",
+                                "id": "19e9884b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "วางดอกไม้",
                                   "blocks": [
                                     {
-                                      "id": "fea14d83",
+                                      "id": "9a037be0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "วางดอกไม้",
@@ -730,7 +736,7 @@
                     "position": [9, 2]
                   },
                   {
-                    "id": "89982862",
+                    "id": "fa8ce68b",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -748,28 +754,28 @@
               "position": [9]
             },
             {
-              "id": "5ed87ef3",
+              "id": "5685c9da",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "419d1405",
+                    "id": "bf49b0cb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "060a1ac9",
+                          "id": "dc09d0bb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ba574cee",
+                                "id": "1e37bc47",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ \"เณรถนอม\" แล้วนำร่างไปแขวนไว้ที่ \"ประตูแดง\" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน",
                                   "blocks": [
                                     {
-                                      "id": "79011432",
+                                      "id": "7388bed1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ \"เณรถนอม\" แล้วนำร่างไปแขวนไว้ที่ \"ประตูแดง\" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน",
@@ -790,23 +796,23 @@
                     "position": [10, 1]
                   },
                   {
-                    "id": "7bb8ee3e",
+                    "id": "5c8a1c65",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a6ec627b",
+                          "id": "37afc28f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c4b84419",
+                                "id": "e094c605",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ประตูแดง",
                                   "blocks": [
                                     {
-                                      "id": "c13d5e1c",
+                                      "id": "82901e6f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ประตูแดง",
@@ -827,7 +833,7 @@
                     "position": [10, 2]
                   },
                   {
-                    "id": "14b380ee",
+                    "id": "5d026207",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -845,28 +851,28 @@
               "position": [10]
             },
             {
-              "id": "71db77ab",
+              "id": "e0c1f425",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6aa212b3",
+                    "id": "aa03ea35",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "72e16ae5",
+                          "id": "06c63a95",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "fdfa1d1a",
+                                "id": "ed1bbd97",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน",
                                   "blocks": [
                                     {
-                                      "id": "c5e9fbfe",
+                                      "id": "87972aa2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน",
@@ -887,23 +893,23 @@
                     "position": [11, 1]
                   },
                   {
-                    "id": "636590a3",
+                    "id": "75c9ed3c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "41c391e7",
+                          "id": "03a83762",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "49b775a8",
+                                "id": "0c474464",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ประตูแดง",
                                   "blocks": [
                                     {
-                                      "id": "60bd7b91",
+                                      "id": "315c6397",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ประตูแดง",
@@ -924,7 +930,7 @@
                     "position": [11, 2]
                   },
                   {
-                    "id": "40ec0b4e",
+                    "id": "de543e29",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -942,28 +948,28 @@
               "position": [11]
             },
             {
-              "id": "1a17a9c7",
+              "id": "3d3b0ae3",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b88d17a6",
+                    "id": "2bb869d1",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e3ca9ffb",
+                          "id": "8a367906",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a5b49b5c",
+                                "id": "6524f759",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ \"ถูกปิดปากด้วยความรุนแรง\"",
                                   "blocks": [
                                     {
-                                      "id": "ea8727f4",
+                                      "id": "22eb3c2b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ \"ถูกปิดปากด้วยความรุนแรง\"",
@@ -984,23 +990,23 @@
                     "position": [12, 1]
                   },
                   {
-                    "id": "d6feb077",
+                    "id": "afc8b9fd",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6617e872",
+                          "id": "45214a69",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "089c0ce3",
+                                "id": "e2cffafc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ลำโพง",
                                   "blocks": [
                                     {
-                                      "id": "ee45501b",
+                                      "id": "f155255c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ลำโพง",
@@ -1021,7 +1027,7 @@
                     "position": [12, 2]
                   },
                   {
-                    "id": "361d12e1",
+                    "id": "2bd0f039",
                     "type": "rawImage",
                     "model": {
                       "height": 801,
@@ -1039,28 +1045,28 @@
               "position": [12]
             },
             {
-              "id": "49ec92c8",
+              "id": "aad47c6a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c284e2c3",
+                    "id": "5b4d0f35",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "eb121450",
+                          "id": "675cedc7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8edfd3f4",
+                                "id": "6600cb1a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา",
                                   "blocks": [
                                     {
-                                      "id": "3a2f88ba",
+                                      "id": "16859bc0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา",
@@ -1081,23 +1087,23 @@
                     "position": [13, 1]
                   },
                   {
-                    "id": "75961d51",
+                    "id": "b38721a4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e142c6f8",
+                          "id": "2a1c5ad7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4e04a011",
+                                "id": "65602552",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "กางเกง",
                                   "blocks": [
                                     {
-                                      "id": "0ae37c51",
+                                      "id": "cb6a0f79",
                                       "type": "fragment",
                                       "model": {
                                         "text": "กางเกง",
@@ -1118,7 +1124,7 @@
                     "position": [13, 2]
                   },
                   {
-                    "id": "6324a675",
+                    "id": "4b113713",
                     "type": "rawImage",
                     "model": {
                       "height": 800,
@@ -1136,28 +1142,28 @@
               "position": [13]
             },
             {
-              "id": "d881fc5a",
+              "id": "dd5bded9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8f8f4c51",
+                    "id": "cbc44a1e",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b7cd02b8",
+                          "id": "8707707d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6e989a28",
+                                "id": "fbed03e8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ \"4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร\" จัดทำโดยทีมข่าวบีบีซีไทย",
                                   "blocks": [
                                     {
-                                      "id": "0c1013ed",
+                                      "id": "d1a3bc75",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ \"4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร\" จัดทำโดยทีมข่าวบีบีซีไทย",
@@ -1178,23 +1184,23 @@
                     "position": [14, 1]
                   },
                   {
-                    "id": "8bc15e92",
+                    "id": "2b43fb47",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9088416c",
+                          "id": "f1e4c91b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7ed0c66c",
+                                "id": "6c68468d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "วิดีโอ",
                                   "blocks": [
                                     {
-                                      "id": "78a249a0",
+                                      "id": "8c80660b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "วิดีโอ",
@@ -1215,7 +1221,7 @@
                     "position": [14, 2]
                   },
                   {
-                    "id": "c40eee6b",
+                    "id": "f7b86961",
                     "type": "rawImage",
                     "model": {
                       "height": 549,
@@ -1233,39 +1239,39 @@
               "position": [14]
             },
             {
-              "id": "522f50f6",
+              "id": "2b46b6b2",
               "type": "relatedContent",
               "model": {
                 "blocks": [
                   {
-                    "id": "f4b9471a",
+                    "id": "b6f050fa",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:64b9e635-32a0-9241-be6b-dc9cdd438025",
                       "blocks": [
                         {
-                          "id": "3934685e",
+                          "id": "7d816987",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4c85a5c9",
+                                "id": "858c64f2",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "09074c68",
+                                      "id": "da90aad8",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "c59352f3",
+                                            "id": "e51f8335",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "เหตุการณ์ 6 ตุลา",
                                               "blocks": [
                                                 {
-                                                  "id": "42411ded",
+                                                  "id": "b4016766",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "เหตุการณ์ 6 ตุลา",
@@ -1288,7 +1294,7 @@
                                 "position": [15, 1, 1, 1]
                               },
                               {
-                                "id": "b6505541",
+                                "id": "3cf7f1f0",
                                 "type": "rawImage",
                                 "model": {
                                   "height": 720,
@@ -1306,25 +1312,25 @@
                           "position": [15, 1, 1]
                         },
                         {
-                          "id": "34306e4e",
+                          "id": "9dd7243e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "375cebe9",
+                                "id": "c80e6f72",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ภารกิจที่ยังไม่จบในวัยเกษียณของ เกษียร-ธงชัย หลังผ่านความตาย 6 ตุลา 2519",
                                   "blocks": [
                                     {
-                                      "id": "62e46ea2",
+                                      "id": "c3456b44",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "ภารกิจที่ยังไม่จบในวัยเกษียณของ เกษียร-ธงชัย หลังผ่านความตาย 6 ตุลา 2519",
                                         "locator": "https://www.bbc.com/thai/thailand-49902201",
                                         "blocks": [
                                           {
-                                            "id": "45fb2b88",
+                                            "id": "c2ca3ae4",
                                             "type": "fragment",
                                             "model": {
                                               "text": "ภารกิจที่ยังไม่จบในวัยเกษียณของ เกษียร-ธงชัย หลังผ่านความตาย 6 ตุลา 2519",
@@ -1345,12 +1351,12 @@
                           "position": [15, 1, 2]
                         },
                         {
-                          "id": "1db40dff",
+                          "id": "337bf029",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "316c46cb",
+                                "id": "3b05cabd",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "STY",
@@ -1370,7 +1376,7 @@
               },
               "position": [15]
             },
-            { "id": "07d3793c", "type": "mpu", "model": {}, "position": [16] }
+            { "id": "e2fb19ed", "type": "mpu", "model": {}, "position": [16] }
           ]
         }
       },
@@ -1537,14 +1543,14 @@
       "topStories": [
         {
           "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:crgy0wl8dlgo",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/crgy0wl8dlgo"
+            "optimoUrn": "urn:bbc:optimo:asset:c88zgg4jlp6o",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/c88zgg4jlp6o"
           },
-          "timestamp": 1713241365707,
+          "timestamp": 1713871102904,
           "suitableForSyndication": true,
           "language": "th",
           "headlines": {
-            "seoHeadline": "อิหร่าน-อิสราเอล: ทำไมอิหร่านโจมตีอิสราเอล ?",
+            "seoHeadline": "แม่สอด-เมียวดี: อนาคตสแกมเมอร์ทุนจีนในเมียวดี ล่มสลายไหมท่ามกลางสงคราม",
             "promoHeadline": {
               "blocks": [
                 {
@@ -1554,13 +1560,13 @@
                       {
                         "type": "paragraph",
                         "model": {
-                          "text": "ทำไมอิหร่านโจมตีอิสราเอล ?",
+                          "text": "วิเคราะห์อนาคตเมืองสแกมเมอร์ทุนจีนในเมียวดี ทำไมยังอาจรอดปลอดภัยท่ามกลางไฟสงคราม ",
                           "blocks": [
                             {
                               "type": "fragment",
                               "model": {
-                                "text": "ทำไมอิหร่านโจมตีอิสราเอล ?",
-                                "attributes": []
+                                "text": "วิเคราะห์อนาคตเมืองสแกมเมอร์ทุนจีนในเมียวดี ทำไมยังอาจรอดปลอดภัยท่ามกลางไฟสงคราม ",
+                                "attributes": ["bold"]
                               }
                             }
                           ]
@@ -1576,6 +1582,35 @@
             "defaultPromoImage": {
               "blocks": [
                 {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "เมืองชเวโก๊กโก่",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "เมืองชเวโก๊กโก่",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
                   "type": "altText",
                   "model": {
                     "blocks": [
@@ -1586,12 +1621,12 @@
                             {
                               "type": "paragraph",
                               "model": {
-                                "text": "missiles",
+                                "text": "เมืองชเวโก๊กโก่",
                                 "blocks": [
                                   {
                                     "type": "fragment",
                                     "model": {
-                                      "text": "missiles",
+                                      "text": "เมืองชเวโก๊กโก่",
                                       "attributes": []
                                     }
                                   }
@@ -1607,11 +1642,11 @@
                 {
                   "type": "rawImage",
                   "model": {
-                    "width": 4230,
-                    "height": 2379,
-                    "locator": "baff/live/b88837c0-fba3-11ee-a679-b9f225da478a.jpg",
+                    "width": 3444,
+                    "height": 2217,
+                    "locator": "07a7/live/75e85e40-0157-11ef-8369-47dc4454b972.jpg",
                     "originCode": "cpsprodpb",
-                    "copyrightHolder": "EPA-EFE/REX/SHUTTERSTOCK",
+                    "copyrightHolder": "THAI NEWS PIX",
                     "suitableForSyndication": false
                   }
                 }
@@ -1627,12 +1662,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "อิสราเอลและอิหร่านพันธมิตรกันจนกระทั่งเกิดการปฏิวัติอิสลามในปี 1979 ซึ่งนำมาสู่การต่อต้านอิสราเอล เหตุการณ์โจมตีของกลุ่มฮามาสมาจนถึงการโจมตีสถานกงศุลในซีเรีย ล้วนเป็นส่วนหนึ่งของชนวนเกิดเหตุ",
+                        "text": "ผลประโยชน์จำนวนมหาศาลของเมืองเหล่านี้กำลังเป็นอีกเกราะป้องกันหนึ่งที่ช่วยคุ้มกันกิจกรรมอาชญากรรมต่าง ๆ ในเมียวดีไว้",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "อิสราเอลและอิหร่านพันธมิตรกันจนกระทั่งเกิดการปฏิวัติอิสลามในปี 1979 ซึ่งนำมาสู่การต่อต้านอิสราเอล เหตุการณ์โจมตีของกลุ่มฮามาสมาจนถึงการโจมตีสถานกงศุลในซีเรีย ล้วนเป็นส่วนหนึ่งของชนวนเกิดเหตุ",
+                              "text": "ผลประโยชน์จำนวนมหาศาลของเมืองเหล่านี้กำลังเป็นอีกเกราะป้องกันหนึ่งที่ช่วยคุ้มกันกิจกรรมอาชญากรรมต่าง ๆ ในเมียวดีไว้",
                               "attributes": []
                             }
                           }
@@ -1647,12 +1682,28 @@
           "passport": {
             "language": "th",
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:crgy0wl8dlgo",
+            "locator": "urn:bbc:optimo:asset:c88zgg4jlp6o",
             "availability": "AVAILABLE",
             "taggings": [
               {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c5176c77-5433-4049-8ce3-6ee361fe1c8a#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
@@ -1672,23 +1723,15 @@
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
                 "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+                "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
@@ -1719,34 +1762,52 @@
               ],
               "about": [
                 {
-                  "value": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
-                  "thingLabel": "อาวุธนิวเคลียร์",
-                  "thingUri": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
-                  "thingId": "16161b86-757f-4539-80a4-05e76681bcc0",
+                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingLabel": "ประเทศไทย",
+                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
                   "thingType": [
-                    "core:Theme",
+                    "core:Place",
                     "tagging:TagConcept",
                     "core:Thing"
                   ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q12802",
-                    "http://dbpedia.org/resource/Nuclear_weapon"
-                  ],
-                  "thingEnglishLabel": "Nuclear weapons",
+                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                  "thingEnglishLabel": "Thailand",
                   "type": "about"
                 },
                 {
-                  "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
-                  "thingLabel": "อิหร่าน",
-                  "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
-                  "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+                  "value": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id",
+                  "thingLabel": "อาชญากรรมไซเบอร์",
+                  "thingUri": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id",
+                  "thingId": "6105fd8d-33f4-4de4-9525-abf33697324a",
                   "thingType": [
-                    "tagging:TagConcept",
-                    "core:Place",
-                    "core:Thing"
+                    "core:Theme",
+                    "core:Thing",
+                    "tagging:TagConcept"
                   ],
-                  "thingSameAs": ["http://sws.geonames.org/130758/"],
-                  "thingEnglishLabel": "Iran",
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q29137",
+                    "http://dbpedia.org/resource/Cybercrime"
+                  ],
+                  "thingEnglishLabel": "Cyber-crime",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                  "thingLabel": "ประเทศจีน",
+                  "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                  "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/1814991/",
+                    "http://dbpedia.org/resource/China",
+                    "http://www.wikidata.org/entity/Q148"
+                  ],
+                  "thingEnglishLabel": "China",
                   "type": "about"
                 },
                 {
@@ -1766,21 +1827,67 @@
                   "type": "about"
                 },
                 {
-                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
-                  "thingLabel": "อิสราเอล",
-                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
-                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingLabel": "สหรัฐอเมริกา",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
                   "thingType": [
-                    "core:Thing",
                     "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                  "thingEnglishLabel": "United States",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                  "thingLabel": "เมียนมา",
+                  "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                  "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
                     "core:Place"
                   ],
-                  "thingSameAs": [
-                    "http://sws.geonames.org/294640/",
-                    "http://dbpedia.org/resource/Israel",
-                    "http://www.wikidata.org/entity/Q801"
+                  "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                  "thingEnglishLabel": "Myanmar",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+                  "thingLabel": "อาชญากรรม",
+                  "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+                  "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
+                  "thingType": [
+                    "tagging:Genre",
+                    "core:Thing",
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm"
                   ],
-                  "thingEnglishLabel": "Israel",
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q83267",
+                    "http://dbpedia.org/resource/Crime"
+                  ],
+                  "thingEnglishLabel": "Crime",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c5176c77-5433-4049-8ce3-6ee361fe1c8a#id",
+                  "thingLabel": "เอเชียตะวันออกเฉียงใต้",
+                  "thingUri": "http://www.bbc.co.uk/things/c5176c77-5433-4049-8ce3-6ee361fe1c8a#id",
+                  "thingId": "c5176c77-5433-4049-8ce3-6ee361fe1c8a",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/7729896/",
+                    "http://dbpedia.org/resource/Southeast_Asia"
+                  ],
+                  "thingEnglishLabel": "Southeast Asia",
                   "type": "about"
                 },
                 {
@@ -1796,20 +1903,6 @@
                   "thingSameAs": ["http://dbpedia.org/resource/Military"],
                   "thingEnglishLabel": "Military",
                   "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
-                  "thingLabel": "ตะวันออกกลาง",
-                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
-                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
-                  "thingType": [
-                    "core:Place",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [],
-                  "thingEnglishLabel": "Middle East",
-                  "type": "about"
                 }
               ]
             }
@@ -1831,12 +1924,12 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "ราฟฟี เบิร์ก, ทอม สเปนเดอร์ และ โจนาธาน บีล",
+                                    "text": "จิราภรณ์ ศรีแจ่ม",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "ราฟฟี เบิร์ก, ทอม สเปนเดอร์ และ โจนาธาน บีล",
+                                          "text": "จิราภรณ์ ศรีแจ่ม",
                                           "attributes": []
                                         }
                                       }
@@ -1860,12 +1953,12 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "ผู้สื่อข่าวสายความมั่นคง",
+                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "ผู้สื่อข่าวสายความมั่นคง",
+                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
                                           "attributes": []
                                         }
                                       }
@@ -1886,19 +1979,19 @@
           "serviceIdentifier": "Thai",
           "breakingNews": { "isBreaking": false },
           "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:crgy0wl8dlgo",
+          "id": "urn:bbc:ares::article:c88zgg4jlp6o",
           "type": "optimo"
         },
         {
           "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cv279pjx19jo",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/cv279pjx19jo"
+            "optimoUrn": "urn:bbc:optimo:asset:cqvn34l5d87o",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/cqvn34l5d87o"
           },
-          "timestamp": 1713171172883,
+          "timestamp": 1713857978285,
           "suitableForSyndication": true,
           "language": "th",
           "headlines": {
-            "seoHeadline": "อิหร่าน-อิสราเอล: ความรู้สึกของผู้คนในอิหร่าน หลังประเทศเปิดฉากโจมตีอิสราเอล",
+            "seoHeadline": "ครม. “คิกออฟ” แก้รัฐธรรมนูญ เคาะทำประชามติ 3 รอบ เข้าคูหายกแรกภายใน ส.ค. 67",
             "promoHeadline": {
               "blocks": [
                 {
@@ -1908,12 +2001,12 @@
                       {
                         "type": "paragraph",
                         "model": {
-                          "text": "อารมณ์ของผู้คนในอิหร่านหลังการโจมตีในอิสราเอลเป็นเช่นไร ?",
+                          "text": "ครม. “คิกออฟ” แก้รัฐธรรมนูญ เคาะทำประชามติ 3 รอบ เข้าคูหายกแรกภายใน ส.ค. 67",
                           "blocks": [
                             {
                               "type": "fragment",
                               "model": {
-                                "text": "อารมณ์ของผู้คนในอิหร่านหลังการโจมตีในอิสราเอลเป็นเช่นไร ?",
+                                "text": "ครม. “คิกออฟ” แก้รัฐธรรมนูญ เคาะทำประชามติ 3 รอบ เข้าคูหายกแรกภายใน ส.ค. 67",
                                 "attributes": []
                               }
                             }
@@ -1940,12 +2033,12 @@
                             {
                               "type": "paragraph",
                               "model": {
-                                "text": "ผู้สนับสนุนสาธารณรัฐอิสลามหลายคน พากันออกไปตามท้องถนนเพื่อเฉลิมฉลอง",
+                                "text": "แกนนำพรรคร่วมฯ ยืนเคียงนายกฯ ในระหว่างแถลงข่าวภายหลังการประชุม ครม. 23 เม.ย.",
                                 "blocks": [
                                   {
                                     "type": "fragment",
                                     "model": {
-                                      "text": "ผู้สนับสนุนสาธารณรัฐอิสลามหลายคน พากันออกไปตามท้องถนนเพื่อเฉลิมฉลอง",
+                                      "text": "แกนนำพรรคร่วมฯ ยืนเคียงนายกฯ ในระหว่างแถลงข่าวภายหลังการประชุม ครม. 23 เม.ย.",
                                       "attributes": []
                                     }
                                   }
@@ -1969,12 +2062,12 @@
                             {
                               "type": "paragraph",
                               "model": {
-                                "text": "Many supporters of the Islamic republic took to the streets in celebration",
+                                "text": "แกนนำพรรคร่วมฯ",
                                 "blocks": [
                                   {
                                     "type": "fragment",
                                     "model": {
-                                      "text": "Many supporters of the Islamic republic took to the streets in celebration",
+                                      "text": "แกนนำพรรคร่วมฯ",
                                       "attributes": []
                                     }
                                   }
@@ -1990,11 +2083,11 @@
                 {
                   "type": "rawImage",
                   "model": {
-                    "width": 1024,
-                    "height": 744,
-                    "locator": "5bc6/live/a6112ce0-fa82-11ee-97f7-e98b193ef1b8.jpg",
+                    "width": 624,
+                    "height": 468,
+                    "locator": "0eb9/live/36fe15c0-0144-11ef-a9f7-4d961743aa47.jpg",
                     "originCode": "cpsprodpb",
-                    "copyrightHolder": "Morteza Nikoubazl/NurPhoto via Getty Images",
+                    "copyrightHolder": "Thai News Pix",
                     "suitableForSyndication": true
                   }
                 }
@@ -2010,12 +2103,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "หลังจากที่อิหร่านพุ่งเป้าไปที่อิสราเอลโดยตรงจากดินแดนของตนเองเป็นครั้งแรก ประเทศก็ดูเหมือนจะมุ่งสู่การลดระดับความรุนแรง ท่ามกลางความกังวลเกี่ยวกับการตอบโต้ของอิสราเอลที่อาจเกิดขึ้น",
+                        "text": "“ท่านเห็นชอบหรือไม่ ที่จะมีการจัดทำรัฐธรรมนูญฉบับใหม่ โดยไม่แก้ไขหมวด 1 บททั่วไป และหมวด 2 พระมหากษัตริย์” ",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "หลังจากที่อิหร่านพุ่งเป้าไปที่อิสราเอลโดยตรงจากดินแดนของตนเองเป็นครั้งแรก ประเทศก็ดูเหมือนจะมุ่งสู่การลดระดับความรุนแรง ท่ามกลางความกังวลเกี่ยวกับการตอบโต้ของอิสราเอลที่อาจเกิดขึ้น",
+                              "text": "“ท่านเห็นชอบหรือไม่ ที่จะมีการจัดทำรัฐธรรมนูญฉบับใหม่ โดยไม่แก้ไขหมวด 1 บททั่วไป และหมวด 2 พระมหากษัตริย์” ",
                               "attributes": []
                             }
                           }
@@ -2030,12 +2123,12 @@
           "passport": {
             "language": "th",
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:cv279pjx19jo",
+            "locator": "urn:bbc:optimo:asset:cqvn34l5d87o",
             "availability": "AVAILABLE",
             "taggings": [
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+                "value": "http://www.bbc.co.uk/things/b6a0c427-7921-4fbd-b1c0-5f644b4a7086#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
@@ -2043,23 +2136,342 @@
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
-                "value": "http://www.bbc.co.uk/things/d6f9e1cd-1ac7-41f1-8850-03da4f9ae876#id"
+                "value": "http://www.bbc.co.uk/things/9e940ffb-0ada-429e-9132-483ad18c56ef#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
                 "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b2acbd8a-69f8-4d19-a72f-627aa4fb6fc7#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/43c062a7-7271-440f-9a52-96f5f8db6191#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "th",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingLabel": "ประเทศไทย",
+                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                  "thingEnglishLabel": "Thailand",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/43c062a7-7271-440f-9a52-96f5f8db6191#id",
+                  "thingLabel": "รัฐธรรมนูญ",
+                  "thingUri": "http://www.bbc.co.uk/things/43c062a7-7271-440f-9a52-96f5f8db6191#id",
+                  "thingId": "43c062a7-7271-440f-9a52-96f5f8db6191",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q4921854",
+                    "http://dbpedia.org/resource/Constitution_of_Thailand"
+                  ],
+                  "thingEnglishLabel": "Constitution of Thailand",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id",
+                  "thingLabel": "เศรษฐา ทวีสิน",
+                  "thingUri": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id",
+                  "thingId": "6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2",
+                  "thingType": [
+                    "core:Person",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "tagging:AmbiguousTerm",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Srettha Thavisin",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/9e940ffb-0ada-429e-9132-483ad18c56ef#id",
+                  "thingLabel": "ประชาธิปไตย",
+                  "thingUri": "http://www.bbc.co.uk/things/9e940ffb-0ada-429e-9132-483ad18c56ef#id",
+                  "thingId": "9e940ffb-0ada-429e-9132-483ad18c56ef",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Democracy",
+                    "http://www.wikidata.org/entity/Q7174"
+                  ],
+                  "thingEnglishLabel": "Democracy",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b2acbd8a-69f8-4d19-a72f-627aa4fb6fc7#id",
+                  "thingLabel": "การเมืองในประเทศ",
+                  "thingUri": "http://www.bbc.co.uk/things/b2acbd8a-69f8-4d19-a72f-627aa4fb6fc7#id",
+                  "thingId": "b2acbd8a-69f8-4d19-a72f-627aa4fb6fc7",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q1154151",
+                    "http://dbpedia.org/resource/Politics_of_Thailand"
+                  ],
+                  "thingEnglishLabel": "Thai politics",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b6a0c427-7921-4fbd-b1c0-5f644b4a7086#id",
+                  "thingLabel": "แก้รัฐธรรมนูญ ",
+                  "thingUri": "http://www.bbc.co.uk/things/b6a0c427-7921-4fbd-b1c0-5f644b4a7086#id",
+                  "thingId": "b6a0c427-7921-4fbd-b1c0-5f644b4a7086",
+                  "thingType": [
+                    "core:Theme",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Amendments to the constitution of Thailand",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Thai",
+          "breakingNews": { "isBreaking": false },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cqvn34l5d87o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c4n180d434wo",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/c4n180d434wo"
+          },
+          "timestamp": 1713855541711,
+          "suitableForSyndication": true,
+          "language": "th",
+          "headlines": {
+            "seoHeadline": "ไขปริศนาการระเบิดครั้งสว่างจ้าที่สุดในจักรวาลได้แล้ว แต่พบความลึกลับชุดใหม่",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "ไขปริศนาการระเบิดครั้งสว่างจ้าที่สุดในจักรวาลได้แล้ว แต่พบความลึกลับชุดใหม่",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "ไขปริศนาการระเบิดครั้งสว่างจ้าที่สุดในจักรวาลได้แล้ว แต่พบความลึกลับชุดใหม่",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "ภาพวาดจำลองของการระเบิดที่สว่างจ้าที่สุดในจักรวาล",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "ภาพวาดจำลองของการระเบิดที่สว่างจ้าที่สุดในจักรวาล",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": ".",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": ".", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1024,
+                    "height": 576,
+                    "locator": "203e/live/f9dd3810-012f-11ef-a9f7-4d961743aa47.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Aaron M. Geller",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ทีมนักวิจัยต้องเผชิญกับความลึกลับครั้งใหญ่ 2 ประการ หนึ่งในนั้นคือ ข้อสังสัยเกี่ยวกับที่มาของธาตุหนัก อย่างทองคำ ว่ามาจากไหน ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ทีมนักวิจัยต้องเผชิญกับความลึกลับครั้งใหญ่ 2 ประการ หนึ่งในนั้นคือ ข้อสังสัยเกี่ยวกับที่มาของธาตุหนัก อย่างทองคำ ว่ามาจากไหน ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "th",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+            "locator": "urn:bbc:optimo:asset:c4n180d434wo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/85620591-e38d-4f26-8484-0cf7c5a2198f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
@@ -2067,11 +2479,19 @@
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+                "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
                 "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
               }
             ],
             "schemaVersion": "1.4.0",
@@ -2089,12 +2509,6 @@
                   "type": "primaryMediaType"
                 }
               ],
-              "campaign": [
-                {
-                  "value": "http://www.bbc.co.uk/things/d6f9e1cd-1ac7-41f1-8850-03da4f9ae876#id",
-                  "type": "campaign"
-                }
-              ],
               "motivation": [],
               "infoClass": [
                 {
@@ -2102,153 +2516,116 @@
                   "type": "infoClass"
                 }
               ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "th",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
               "about": [
                 {
-                  "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
-                  "thingLabel": "อิหร่าน",
-                  "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
-                  "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+                  "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                  "thingLabel": "วิทยาศาสตร์",
+                  "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                  "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
                   "thingType": [
+                    "core:Thing",
                     "tagging:TagConcept",
-                    "core:Place",
-                    "core:Thing"
+                    "core:Theme"
                   ],
-                  "thingSameAs": ["http://sws.geonames.org/130758/"],
-                  "thingEnglishLabel": "Iran",
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q336",
+                    "http://dbpedia.org/resource/Science"
+                  ],
+                  "thingEnglishLabel": "Science",
                   "type": "about"
                 },
                 {
-                  "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                  "thingLabel": "การเมือง",
-                  "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                  "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                  "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                  "thingLabel": "ดาราศาสตร์",
+                  "thingUri": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                  "thingId": "4fdf1711-6845-4344-98cc-1a382ed91b65",
                   "thingType": [
-                    "tagging:Genre",
                     "tagging:TagConcept",
-                    "tagging:AmbiguousTerm",
                     "core:Theme",
                     "core:Thing"
                   ],
-                  "thingSameAs": ["http://dbpedia.org/resource/Politics"],
-                  "thingEnglishLabel": "Politics",
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q333",
+                    "http://dbpedia.org/resource/Astronomy"
+                  ],
+                  "thingEnglishLabel": "Astronomy",
                   "type": "about"
                 },
                 {
-                  "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-                  "thingLabel": "เศรษฐกิจ",
-                  "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-                  "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                  "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                  "thingLabel": "อวกาศ",
+                  "thingUri": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                  "thingId": "58d96fa3-becf-4fb9-8d1d-3a772bf88f59",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Outer_space",
+                    "http://www.wikidata.org/entity/Q4169"
+                  ],
+                  "thingEnglishLabel": "Outer space",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/85620591-e38d-4f26-8484-0cf7c5a2198f#id",
+                  "thingLabel": "กล้องโทรทรรศน์อวกาศเจมส์เว็บบ์",
+                  "thingUri": "http://www.bbc.co.uk/things/85620591-e38d-4f26-8484-0cf7c5a2198f#id",
+                  "thingId": "85620591-e38d-4f26-8484-0cf7c5a2198f",
                   "thingType": [
                     "core:Theme",
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": ["http://dbpedia.org/resource/Economy"],
-                  "thingEnglishLabel": "Economics",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
-                  "thingLabel": "ตะวันออกกลาง",
-                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
-                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
-                  "thingType": [
-                    "core:Place",
-                    "tagging:TagConcept",
-                    "core:Thing"
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/James_Webb_Space_Telescope",
+                    "http://www.wikidata.org/entity/Q186447"
                   ],
-                  "thingSameAs": [],
-                  "thingEnglishLabel": "Middle East",
+                  "thingEnglishLabel": "James Webb Space Telescope",
                   "type": "about"
                 }
               ]
             }
           },
-          "byline": {
-            "blocks": [
-              {
-                "type": "contributor",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "name",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "จิยาร์ โกล์",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "จิยาร์ โกล์",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "role",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "ผู้สื่อข่าวบีบีซีแผนกภาษาเปอร์เซีย",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "ผู้สื่อข่าวบีบีซีแผนกภาษาเปอร์เซีย",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
           "serviceIdentifier": "Thai",
           "breakingNews": { "isBreaking": false },
           "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:cv279pjx19jo",
+          "id": "urn:bbc:ares::article:c4n180d434wo",
           "type": "optimo"
-        },
+        }
+      ],
+      "features": [
         {
           "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:c163r8rx1ddo",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/c163r8rx1ddo"
+            "optimoUrn": "urn:bbc:optimo:asset:c1vwg10p201o",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/c1vwg10p201o"
           },
-          "timestamp": 1713233232713,
+          "timestamp": 1713346288888,
           "suitableForSyndication": true,
           "language": "th",
           "headlines": {
-            "seoHeadline": "นักวิทยาศาสตร์กำลังเรียนรู้ที่จะพูดภาษาวาฬ",
+            "seoHeadline": "มะเร็งปอด: การตายจากฝุ่น PM 2.5 ที่ “ไม่ยุติธรรม” ของคณบดี ม.เชียงใหม่",
             "promoHeadline": {
               "blocks": [
                 {
@@ -2258,12 +2635,12 @@
                       {
                         "type": "paragraph",
                         "model": {
-                          "text": "นักวิทยาศาสตร์กำลังเรียนรู้ที่จะพูดภาษาวาฬ",
+                          "text": "การตายจากมะเร็งปอดที่ “ไม่ยุติธรรม” ของคณบดี ม.เชียงใหม่ ผ่านการต่อสู้ของครอบครัว",
                           "blocks": [
                             {
                               "type": "fragment",
                               "model": {
-                                "text": "นักวิทยาศาสตร์กำลังเรียนรู้ที่จะพูดภาษาวาฬ",
+                                "text": "การตายจากมะเร็งปอดที่ “ไม่ยุติธรรม” ของคณบดี ม.เชียงใหม่ ผ่านการต่อสู้ของครอบครัว",
                                 "attributes": []
                               }
                             }
@@ -2290,12 +2667,12 @@
                             {
                               "type": "paragraph",
                               "model": {
-                                "text": "วาฬหลังค่อมและลูกของมัน",
+                                "text": "ศ.ดร.ระวิวรรณ โอฬารรัตน์มณี (คนที่สองจากขวา) เพิ่งผ่านการทำคีโมครั้งแรก กำลังถ่ายรูปพร้อมหน้ากับครอบครัว จากนั้นไม่นาน เธอต้องแอดมิดเข้าโรงพยาบาล และเสียชีวิต เมื่อ 3 เม.ย. 2567",
                                 "blocks": [
                                   {
                                     "type": "fragment",
                                     "model": {
-                                      "text": "วาฬหลังค่อมและลูกของมัน",
+                                      "text": "ศ.ดร.ระวิวรรณ โอฬารรัตน์มณี (คนที่สองจากขวา) เพิ่งผ่านการทำคีโมครั้งแรก กำลังถ่ายรูปพร้อมหน้ากับครอบครัว จากนั้นไม่นาน เธอต้องแอดมิดเข้าโรงพยาบาล และเสียชีวิต เมื่อ 3 เม.ย. 2567",
                                       "attributes": []
                                     }
                                   }
@@ -2319,12 +2696,12 @@
                             {
                               "type": "paragraph",
                               "model": {
-                                "text": "Jodi Frediani",
+                                "text": "Handout / ครอบครัวโอฬารรัตน์มณี",
                                 "blocks": [
                                   {
                                     "type": "fragment",
                                     "model": {
-                                      "text": "Jodi Frediani",
+                                      "text": "Handout / ครอบครัวโอฬารรัตน์มณี",
                                       "attributes": []
                                     }
                                   }
@@ -2340,12 +2717,12 @@
                 {
                   "type": "rawImage",
                   "model": {
-                    "width": 1024,
-                    "height": 576,
-                    "locator": "9fed/live/5d0a4db0-f96a-11ee-8369-47dc4454b972.jpg",
+                    "width": 808,
+                    "height": 454,
+                    "locator": "543a/live/79f99ec0-fc8b-11ee-8369-47dc4454b972.jpg",
                     "originCode": "cpsprodpb",
-                    "copyrightHolder": "Jodi Frediani",
-                    "suitableForSyndication": false
+                    "copyrightHolder": "Handout / ครอบครัวโอฬารรัตน์มณี",
+                    "suitableForSyndication": true
                   }
                 }
               ]
@@ -2360,12 +2737,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "นักวิทยาศาสตร์หลากหลายกลุ่มกำลังศึกษาวิธีการสื่อสารกับวาฬ บ้างเชื่อว่าความฉลาดของสัตว์ชนิดนี้ อาจทำให้มนุษย์สามารถคุยกับมนุษย์ต่างดาวได้ ",
+                        "text": "“คำว่าเหมือนมีดกรีดไปที่หัวใจ ใครไม่เคยเจอ จะไม่เข้าใจ... การสูญเสียนี้มันโหด[ร้าย]มาก” สามีของคณบดีคณะสถาปัตยกรรมศาสตร์ ม.เชียงใหม่ กล่าวกับบีบีซีไทยทั้งน้ำตา พร้อมนิยามการเสียชีวิตจากมะเร็งปอด ที่เป็นผลจากฝุ่น PM 2.5 ว่า “เหมือนการตายที่ไร้ค่า” ",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "นักวิทยาศาสตร์หลากหลายกลุ่มกำลังศึกษาวิธีการสื่อสารกับวาฬ บ้างเชื่อว่าความฉลาดของสัตว์ชนิดนี้ อาจทำให้มนุษย์สามารถคุยกับมนุษย์ต่างดาวได้ ",
+                              "text": "“คำว่าเหมือนมีดกรีดไปที่หัวใจ ใครไม่เคยเจอ จะไม่เข้าใจ... การสูญเสียนี้มันโหด[ร้าย]มาก” สามีของคณบดีคณะสถาปัตยกรรมศาสตร์ ม.เชียงใหม่ กล่าวกับบีบีซีไทยทั้งน้ำตา พร้อมนิยามการเสียชีวิตจากมะเร็งปอด ที่เป็นผลจากฝุ่น PM 2.5 ว่า “เหมือนการตายที่ไร้ค่า” ",
                               "attributes": []
                             }
                           }
@@ -2380,16 +2757,20 @@
           "passport": {
             "language": "th",
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:c163r8rx1ddo",
+            "locator": "urn:bbc:optimo:asset:c1vwg10p201o",
             "availability": "AVAILABLE",
             "taggings": [
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id"
+                "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/0458f0e2-3f8c-44d4-8830-f8c0074f694c#id"
+                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
@@ -2401,56 +2782,91 @@
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
                 "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/e6628cd5-c2d2-421f-a04d-7de92a105ba1#id"
+                "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
               },
               {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
               },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
                 "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
               },
               {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
               }
             ],
             "schemaVersion": "1.4.0",
             "publishedState": "PUBLISHED",
             "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
               "about": [
                 {
-                  "value": "http://www.bbc.co.uk/things/0458f0e2-3f8c-44d4-8830-f8c0074f694c#id",
-                  "thingLabel": "วิวัฒนาการ",
-                  "thingUri": "http://www.bbc.co.uk/things/0458f0e2-3f8c-44d4-8830-f8c0074f694c#id",
-                  "thingId": "0458f0e2-3f8c-44d4-8830-f8c0074f694c",
+                  "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingLabel": "การดำเนินชีวิต",
+                  "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
                   "thingType": [
                     "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Life",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                  "thingLabel": "อากาศเป็นพิษ",
+                  "thingUri": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                  "thingId": "0e6837e4-b06b-4574-96da-ebf5957d8a6d",
+                  "thingType": [
+                    "core:Theme",
                     "core:Thing",
-                    "core:Theme"
+                    "tagging:TagConcept"
                   ],
                   "thingSameAs": [
-                    "http://dbpedia.org/resource/Evolution",
-                    "http://www.wikidata.org/entity/Q1063"
+                    "http://www.wikidata.org/entity/Q131123",
+                    "http://dbpedia.org/resource/Air_pollution"
                   ],
-                  "thingEnglishLabel": "Evolution",
+                  "thingEnglishLabel": "Air pollution",
                   "type": "about"
                 },
                 {
@@ -2490,84 +2906,37 @@
                   "type": "about"
                 },
                 {
-                  "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
-                  "thingLabel": "ธรรมชาติ",
-                  "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
-                  "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingLabel": "ประเทศไทย",
+                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
                   "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                  "thingEnglishLabel": "Thailand",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                  "thingLabel": "สุขภาพ",
+                  "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                  "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Theme",
                     "tagging:AmbiguousTerm",
-                    "core:Theme",
-                    "tagging:Genre",
-                    "core:Thing",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": ["http://dbpedia.org/resource/Nature"],
-                  "thingEnglishLabel": "Nature",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
-                  "thingLabel": "สัตว์",
-                  "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
-                  "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
-                  "thingType": [
                     "tagging:TagConcept",
-                    "core:Theme",
-                    "core:Thing"
+                    "tagging:Genre"
                   ],
                   "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q729",
-                    "http://dbpedia.org/resource/Animal"
+                    "http://dbpedia.org/resource/Health",
+                    "http://www.wikidata.org/entity/Q12147"
                   ],
-                  "thingEnglishLabel": "Animals",
+                  "thingEnglishLabel": "Health",
                   "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
-                  "thingLabel": "การอนุรักษ์",
-                  "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
-                  "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
-                  "thingType": [
-                    "core:Thing",
-                    "core:Theme",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/Conservation_(ethic)",
-                    "http://www.wikidata.org/entity/Q628403"
-                  ],
-                  "thingEnglishLabel": "Conservation",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/e6628cd5-c2d2-421f-a04d-7de92a105ba1#id",
-                  "thingLabel": "ชีววิทยา",
-                  "thingUri": "http://www.bbc.co.uk/things/e6628cd5-c2d2-421f-a04d-7de92a105ba1#id",
-                  "thingId": "e6628cd5-c2d2-421f-a04d-7de92a105ba1",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "core:Theme",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/Biology",
-                    "http://www.wikidata.org/entity/Q420"
-                  ],
-                  "thingEnglishLabel": "Biology",
-                  "type": "about"
-                }
-              ],
-              "motivation": [],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "assetType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
-                  "type": "assetType"
                 }
               ]
             }
@@ -2589,12 +2958,12 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "แคเธอรีน ลาแธม",
+                                    "text": "ทศพล ชัยสัมฤทธิ์ผล",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "แคเธอรีน ลาแธม",
+                                          "text": "ทศพล ชัยสัมฤทธิ์ผล",
                                           "attributes": []
                                         }
                                       }
@@ -2618,12 +2987,12 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "ผู้สื่อข่าวฟีเจอร์",
+                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "ผู้สื่อข่าวฟีเจอร์",
+                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
                                           "attributes": []
                                         }
                                       }
@@ -2644,11 +3013,782 @@
           "serviceIdentifier": "Thai",
           "breakingNews": { "isBreaking": false },
           "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:c163r8rx1ddo",
+          "id": "urn:bbc:ares::article:c1vwg10p201o",
           "type": "optimo"
-        }
-      ],
-      "features": [
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c8vzjgdl54ro",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/c8vzjgdl54ro"
+          },
+          "timestamp": 1712840998699,
+          "suitableForSyndication": true,
+          "language": "th",
+          "headlines": {
+            "seoHeadline": "\"ลำพูน\" จังหวัดที่นายกฯ ฝันให้เป็น \"เมืองท่องเที่ยวหลัก\" แต่ไม่มีกระทั่งสถานีขนส่ง",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "ผู้สูงวัยในลำพูนต้องใช้ชีวิตอย่างไร หลังสถานีขนส่งปิดตัวลง-ระบบขนส่งสาธารณะไม่ตอบโจทย์",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "ผู้สูงวัยในลำพูนต้องใช้ชีวิตอย่างไร หลังสถานีขนส่งปิดตัวลง-ระบบขนส่งสาธารณะไม่ตอบโจทย์",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Bus station in Lampoom",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Bus station in Lampoom",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 5896,
+                    "height": 3923,
+                    "locator": "8ab4/live/2ff41620-f803-11ee-8369-47dc4454b972.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Thai News Pix",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "แม้นายกรัฐมนตรีเศรษฐา ทวีสิน ประกาศว่า ลำพูนมีศักยภาพเป็น “เมืองท่องเที่ยวหลัก” ได้ ไม่แพ้เชียงใหม่ ทว่า ในบางพื้นที่ของจังหวัดแห่งนี้ต้องพึ่งพาคนชราในการรับส่งผู้คน ขณะที่ระบบขนส่งสาธารณะไม่ครอบคลุม จนบางคนต้องกู้หนี้ยืมสินเพื่อซื้อรถยนต์ส่วนตัว ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "แม้นายกรัฐมนตรีเศรษฐา ทวีสิน ประกาศว่า ลำพูนมีศักยภาพเป็น “เมืองท่องเที่ยวหลัก” ได้ ไม่แพ้เชียงใหม่ ทว่า ในบางพื้นที่ของจังหวัดแห่งนี้ต้องพึ่งพาคนชราในการรับส่งผู้คน ขณะที่ระบบขนส่งสาธารณะไม่ครอบคลุม จนบางคนต้องกู้หนี้ยืมสินเพื่อซื้อรถยนต์ส่วนตัว ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "th",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+            "locator": "urn:bbc:optimo:asset:c8vzjgdl54ro",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/f8adfd6b-201f-4502-93bb-bb8400ecb090#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/d5d64ac6-fffe-4ae1-9491-38bcadac2563#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingLabel": "การดำเนินชีวิต",
+                  "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                  "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Life",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingLabel": "ประเทศไทย",
+                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                  "thingEnglishLabel": "Thailand",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+                  "thingLabel": "ธุรกิจ",
+                  "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+                  "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+                  "thingType": [
+                    "tagging:Genre",
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q21857788",
+                    "http://dbpedia.org/resource/Business"
+                  ],
+                  "thingEnglishLabel": "Business",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                  "thingLabel": "การเป็นเจ้าของกิจการ",
+                  "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                  "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Entrepreneurship"
+                  ],
+                  "thingEnglishLabel": "Entrepreneurship",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/d5d64ac6-fffe-4ae1-9491-38bcadac2563#id",
+                  "thingLabel": "การคมนาคมขนส่ง",
+                  "thingUri": "http://www.bbc.co.uk/things/d5d64ac6-fffe-4ae1-9491-38bcadac2563#id",
+                  "thingId": "d5d64ac6-fffe-4ae1-9491-38bcadac2563",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Transport"],
+                  "thingEnglishLabel": "Transport",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/f8adfd6b-201f-4502-93bb-bb8400ecb090#id",
+                  "thingLabel": "ประชากรศาสตร์",
+                  "thingUri": "http://www.bbc.co.uk/things/f8adfd6b-201f-4502-93bb-bb8400ecb090#id",
+                  "thingId": "f8adfd6b-201f-4502-93bb-bb8400ecb090",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Theme",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Demography",
+                    "http://www.wikidata.org/entity/Q37732"
+                  ],
+                  "thingEnglishLabel": "Demography",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "ทศพล ชัยสัมฤทธิ์ผล",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "ทศพล ชัยสัมฤทธิ์ผล",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Thai",
+          "breakingNews": { "isBreaking": false },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c8vzjgdl54ro",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cd1v8p89vlmo",
+            "canonicalUrl": "https://www.bbc.com/thai/articles/cd1v8p89vlmo"
+          },
+          "timestamp": 1712308410838,
+          "suitableForSyndication": true,
+          "language": "th",
+          "headlines": {
+            "seoHeadline": "ภาวะโลกเดือด: ทำไมคนจนได้รับผลกระทบในหน้าร้อนนี้มากที่สุด",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "“กว่าจะได้หลับก็ตี 2- ตี 4” สำรวจชีวิตจริงที่ “ร้อนแบบอยู่ไม่ได้” ของคนจนไทยในยุคโลกเดือด",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "“กว่าจะได้หลับก็ตี 2- ตี 4” สำรวจชีวิตจริงที่ “ร้อนแบบอยู่ไม่ได้” ของคนจนไทยในยุคโลกเดือด",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "นายนิยม แดงสำอาง วัย 67 ปี มีอาชีพเก็บของเก่าขาย บอกกับบีบีซีไทยว่า ช่วงหน้าร้อนนี้ ตนเองรู้สึกเหนื่อยง่ายขึ้นเมื่อขับซาเล้งออกไปหาเก็บของเก่าช่วงเวลากลางวัน",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "นายนิยม แดงสำอาง วัย 67 ปี มีอาชีพเก็บของเก่าขาย บอกกับบีบีซีไทยว่า ช่วงหน้าร้อนนี้ ตนเองรู้สึกเหนื่อยง่ายขึ้นเมื่อขับซาเล้งออกไปหาเก็บของเก่าช่วงเวลากลางวัน",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "นายนิยม แดงสำอาง",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "นายนิยม แดงสำอาง",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2500,
+                    "height": 1667,
+                    "locator": "3dd3/live/a661e190-f306-11ee-8369-47dc4454b972.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "WASAWAT LUKHARANG/BBC THAI",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ผู้ทำงานอาชีพรับจ้างทั่วไปและเก็บของเก่า บอกกับบีบีซีไทยว่า อากาศที่ร้อนมากขึ้นกำลังส่งผลกระทบต่อสุขภาพ และทำให้พวกเขาต้องจ่ายค่าน้ำค่าไฟเพิ่มขึ้นเป็นเท่าตัว",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ผู้ทำงานอาชีพรับจ้างทั่วไปและเก็บของเก่า บอกกับบีบีซีไทยว่า อากาศที่ร้อนมากขึ้นกำลังส่งผลกระทบต่อสุขภาพ และทำให้พวกเขาต้องจ่ายค่าน้ำค่าไฟเพิ่มขึ้นเป็นเท่าตัว",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "th",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+            "locator": "urn:bbc:optimo:asset:cd1v8p89vlmo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                  "thingLabel": "สิ่งแวดล้อม",
+                  "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                  "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "tagging:Genre"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q43619",
+                    "http://dbpedia.org/resource/Natural_environment"
+                  ],
+                  "thingEnglishLabel": "Environment",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                  "thingLabel": "ธรรมชาติ",
+                  "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                  "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "tagging:Genre",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Nature"],
+                  "thingEnglishLabel": "Nature",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingLabel": "ประเทศไทย",
+                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                  "thingEnglishLabel": "Thailand",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                  "thingLabel": "สภาพอากาศรุนแรง",
+                  "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                  "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Extreme_weather"
+                  ],
+                  "thingEnglishLabel": "Severe weather",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                  "thingLabel": "เศรษฐกิจ",
+                  "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                  "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                  "thingType": [
+                    "core:Theme",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                  "thingEnglishLabel": "Economics",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                  "thingLabel": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+                  "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                  "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Event"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q125928",
+                    "http://dbpedia.org/resource/Climate_change"
+                  ],
+                  "thingEnglishLabel": "Climate change",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "จิราภรณ์ ศรีแจ่ม",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "จิราภรณ์ ศรีแจ่ม",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Thai",
+          "breakingNews": { "isBreaking": false },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cd1v8p89vlmo",
+          "type": "optimo"
+        },
         {
           "locators": {
             "optimoUrn": "urn:bbc:optimo:asset:czkv4v1r115o",
@@ -3576,1161 +4716,61 @@
           "consumableAsSFV": false,
           "id": "urn:bbc:ares::article:c51dq6ny5yeo",
           "type": "optimo"
-        },
-        {
-          "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cy9zjd73pdeo",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/cy9zjd73pdeo"
-          },
-          "timestamp": 1710835277445,
-          "suitableForSyndication": true,
-          "language": "th",
-          "headlines": {
-            "seoHeadline": "ปิดเทอมนี้ สามเณรภาคฤดูร้อนจะปลอดภัยจากการล่วงละเมิดทางเพศเพียงใด",
-            "promoHeadline": {
-              "blocks": [
-                {
-                  "type": "text",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "paragraph",
-                        "model": {
-                          "text": "ปิดเทอมนี้ สามเณรภาคฤดูร้อนจะปลอดภัยจากการล่วงละเมิดทางเพศเพียงใด",
-                          "blocks": [
-                            {
-                              "type": "fragment",
-                              "model": {
-                                "text": "ปิดเทอมนี้ สามเณรภาคฤดูร้อนจะปลอดภัยจากการล่วงละเมิดทางเพศเพียงใด",
-                                "attributes": []
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "caption",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "มูลนิธิหญิงชายก้าวไกลพบว่า เณรที่ถูกพระล่วงละเมิดทางเพศไม่กล้าร้องเรียนหรือแจ้งความ เพราะรู้สึกไม่ปลอดภัยพอ",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "มูลนิธิหญิงชายก้าวไกลพบว่า เณรที่ถูกพระล่วงละเมิดทางเพศไม่กล้าร้องเรียนหรือแจ้งความ เพราะรู้สึกไม่ปลอดภัยพอ",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "Novice",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "Novice",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 2121,
-                    "height": 1414,
-                    "locator": "36d2/live/79aac420-e521-11ee-8bf3-195418ba9285.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images",
-                    "suitableForSyndication": true
-                  }
-                }
-              ]
-            }
-          },
-          "summary": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "จากข่าวเณรถูกพระล่วงละเมิดทางเพศที่เกิดขึ้นในทุกปี แล้วนักบวชวัยเยาว์ยังมีความปลอดภัยอยู่หรือไม่ในร่มกาสาวพัสตร์ ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "จากข่าวเณรถูกพระล่วงละเมิดทางเพศที่เกิดขึ้นในทุกปี แล้วนักบวชวัยเยาว์ยังมีความปลอดภัยอยู่หรือไม่ในร่มกาสาวพัสตร์ ",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "passport": {
-            "language": "th",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:cy9zjd73pdeo",
-            "availability": "AVAILABLE",
-            "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/f136e248-f116-489e-af28-e28b7aea4ab7#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/21326f61-60ff-41cd-9ede-1c057ce4da8a#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
-                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
-              }
-            ],
-            "schemaVersion": "1.4.0",
-            "publishedState": "PUBLISHED",
-            "predicates": {
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingLabel": "ประเทศไทย",
-                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
-                  "thingType": [
-                    "core:Place",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
-                  "thingEnglishLabel": "Thailand",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/21326f61-60ff-41cd-9ede-1c057ce4da8a#id",
-                  "thingLabel": "พุทธศาสนาในประเทศไทย",
-                  "thingUri": "http://www.bbc.co.uk/things/21326f61-60ff-41cd-9ede-1c057ce4da8a#id",
-                  "thingId": "21326f61-60ff-41cd-9ede-1c057ce4da8a",
-                  "thingType": [
-                    "core:Theme",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/Buddhism_in_Thailand",
-                    "http://www.wikidata.org/entity/Q1209722"
-                  ],
-                  "thingEnglishLabel": "Buddhism in Thailand",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
-                  "thingLabel": "ความรุนแรงทางเพศ",
-                  "thingUri": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
-                  "thingId": "46179660-2af3-49c7-a80b-b483412fbfb6",
-                  "thingType": [
-                    "core:Thing",
-                    "core:Theme",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q558075",
-                    "http://dbpedia.org/resource/Sexual_violence"
-                  ],
-                  "thingEnglishLabel": "Sexual violence",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
-                  "thingLabel": "การบังคับใช้กฎหมาย",
-                  "thingUri": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
-                  "thingId": "8470b75a-3b8c-42cb-9921-5953515d07cc",
-                  "thingType": [
-                    "core:Thing",
-                    "core:Theme",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": ["http://dbpedia.org/resource/Police"],
-                  "thingEnglishLabel": "Policing",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
-                  "thingLabel": "เด็ก",
-                  "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
-                  "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
-                  "thingType": [
-                    "core:Theme",
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "tagging:AmbiguousTerm",
-                    "tagging:Genre"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q7569",
-                    "http://dbpedia.org/resource/Child"
-                  ],
-                  "thingEnglishLabel": "Children",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/f136e248-f116-489e-af28-e28b7aea4ab7#id",
-                  "thingLabel": "ทารุณเด็ก",
-                  "thingUri": "http://www.bbc.co.uk/things/f136e248-f116-489e-af28-e28b7aea4ab7#id",
-                  "thingId": "f136e248-f116-489e-af28-e28b7aea4ab7",
-                  "thingType": [
-                    "core:Thing",
-                    "core:Theme",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q167191",
-                    "http://dbpedia.org/resource/Child_abuse"
-                  ],
-                  "thingEnglishLabel": "Child abuse",
-                  "type": "about"
-                }
-              ],
-              "motivation": [],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "assetType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
-                  "type": "assetType"
-                }
-              ]
-            }
-          },
-          "byline": {
-            "blocks": [
-              {
-                "type": "contributor",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "name",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "จิราภรณ์ ศรีแจ่ม",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "จิราภรณ์ ศรีแจ่ม",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "role",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "serviceIdentifier": "Thai",
-          "breakingNews": { "isBreaking": false },
-          "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:cy9zjd73pdeo",
-          "type": "optimo"
-        },
-        {
-          "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cd1090z9j84o",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/cd1090z9j84o"
-          },
-          "timestamp": 1710307771683,
-          "suitableForSyndication": true,
-          "language": "th",
-          "headlines": {
-            "seoHeadline": "เหมืองโปแตช: “ความพินาศ” และ “คราบน้ำตาบนผืนดิน” คนโคราช จากเหมืองแร่ที่เศรษฐาต้องการ",
-            "promoHeadline": {
-              "blocks": [
-                {
-                  "type": "text",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "paragraph",
-                        "model": {
-                          "text": "“ความพินาศ” และ “คราบน้ำตาบนผืนดิน” คนโคราช จากเหมืองแร่โปแตชที่เศรษฐาต้องการ",
-                          "blocks": [
-                            {
-                              "type": "fragment",
-                              "model": {
-                                "text": "“ความพินาศ” และ “คราบน้ำตาบนผืนดิน” คนโคราช จากเหมืองแร่โปแตชที่เศรษฐาต้องการ",
-                                "attributes": []
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "caption",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "\"หนองไทรกำลังพินาศ” จงดี มินขุนทด ตัวแทนกลุ่มฅนรักษ์บ้านเกิดด่านขุนทด",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "\"หนองไทรกำลังพินาศ” จงดี มินขุนทด ตัวแทนกลุ่มฅนรักษ์บ้านเกิดด่านขุนทด",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "PANUMAS SANGUANWONG/BBC THAI",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "PANUMAS SANGUANWONG/BBC THAI",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 2048,
-                    "height": 1152,
-                    "locator": "c4af/live/3006caf0-dc50-11ee-879f-e38bb9e8a0b7.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "PANUMAS SANGUANWONG/BBC THAI",
-                    "suitableForSyndication": false
-                  }
-                }
-              ]
-            }
-          },
-          "summary": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "“อยากได้แร่โปแตช จากผืนแผ่นดินที่มีแต่คราบน้ำตาประชาชน” และ “นายกฯ อยู่เต็มที่แค่ 4 ปี คุณจะมาสั่งทำลายบ้านเราในพริบตาไม่ได้” นี่คือเสียงของเกษตรกรโคราช ที่ต้องสูญเสียวิถีชีวิตและพื้นที่ทำกิน จากเหมืองแร่โปแตช ที่นายกฯ เศรษฐา ทวีสิน ต้องการ เพื่อสร้างความเจริญต่อประเทศไทย",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "“อยากได้แร่โปแตช จากผืนแผ่นดินที่มีแต่คราบน้ำตาประชาชน” และ “นายกฯ อยู่เต็มที่แค่ 4 ปี คุณจะมาสั่งทำลายบ้านเราในพริบตาไม่ได้” นี่คือเสียงของเกษตรกรโคราช ที่ต้องสูญเสียวิถีชีวิตและพื้นที่ทำกิน จากเหมืองแร่โปแตช ที่นายกฯ เศรษฐา ทวีสิน ต้องการ เพื่อสร้างความเจริญต่อประเทศไทย",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "passport": {
-            "language": "th",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:cd1090z9j84o",
-            "availability": "AVAILABLE",
-            "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
-                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-              }
-            ],
-            "schemaVersion": "1.4.0",
-            "publishedState": "PUBLISHED",
-            "predicates": {
-              "assetType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
-                  "type": "assetType"
-                }
-              ],
-              "primaryMediaType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                  "type": "primaryMediaType"
-                }
-              ],
-              "motivation": [],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "editorialSensitivity": [
-                {
-                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
-                  "type": "editorialSensitivity"
-                }
-              ],
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
-                  "thingLabel": "สิ่งแวดล้อม",
-                  "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
-                  "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
-                  "thingType": [
-                    "tagging:AmbiguousTerm",
-                    "core:Theme",
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "tagging:Genre"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q43619",
-                    "http://dbpedia.org/resource/Natural_environment"
-                  ],
-                  "thingEnglishLabel": "Environment",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingLabel": "ประเทศไทย",
-                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
-                  "thingType": [
-                    "core:Place",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
-                  "thingEnglishLabel": "Thailand",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-                  "thingLabel": "ธุรกิจ",
-                  "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-                  "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
-                  "thingType": [
-                    "tagging:Genre",
-                    "tagging:AmbiguousTerm",
-                    "core:Theme",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q21857788",
-                    "http://dbpedia.org/resource/Business"
-                  ],
-                  "thingEnglishLabel": "Business",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id",
-                  "thingLabel": "เศรษฐา ทวีสิน",
-                  "thingUri": "http://www.bbc.co.uk/things/6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2#id",
-                  "thingId": "6819678d-bf6b-4dc0-9ec8-6f8da4daf3d2",
-                  "thingType": [
-                    "core:Person",
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "tagging:AmbiguousTerm",
-                    "tagging:Agent"
-                  ],
-                  "thingSameAs": [],
-                  "thingEnglishLabel": "Srettha Thavisin",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
-                  "thingLabel": "สิทธิมนุษยชน",
-                  "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
-                  "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "core:Theme"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q8458",
-                    "http://dbpedia.org/resource/Human_rights"
-                  ],
-                  "thingEnglishLabel": "Human rights",
-                  "type": "about"
-                }
-              ]
-            }
-          },
-          "byline": {
-            "blocks": [
-              {
-                "type": "contributor",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "name",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "ทศพล ชัยสัมฤทธิ์ผล ",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "ทศพล ชัยสัมฤทธิ์ผล ",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "role",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "serviceIdentifier": "Thai",
-          "breakingNews": { "isBreaking": false },
-          "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:cd1090z9j84o",
-          "type": "optimo"
-        },
-        {
-          "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cpd3x0v9lkjo",
-            "canonicalUrl": "https://www.bbc.com/thai/articles/cpd3x0v9lkjo"
-          },
-          "timestamp": 1710039882979,
-          "suitableForSyndication": true,
-          "language": "th",
-          "headlines": {
-            "seoHeadline": "จีนเทา: ชะตากรรมเมืองสแกมเมอร์ทุนจีนติด อ.แม่สอด หลัง \"กะเหรี่ยงบีจีเอฟ\" แปรพักตร์จากรัฐบาลเมียนมา",
-            "promoHeadline": {
-              "blocks": [
-                {
-                  "type": "text",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "paragraph",
-                        "model": {
-                          "text": "ชะตากรรมเมืองสแกมเมอร์ทุนจีนติด อ.แม่สอด หลัง \"กะเหรี่ยงบีจีเอฟ\" แปรพักตร์จากรัฐบาลเมียนมา ",
-                          "blocks": [
-                            {
-                              "type": "fragment",
-                              "model": {
-                                "text": "ชะตากรรมเมืองสแกมเมอร์ทุนจีนติด อ.แม่สอด หลัง \"กะเหรี่ยงบีจีเอฟ\" แปรพักตร์จากรัฐบาลเมียนมา ",
-                                "attributes": []
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "caption",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "พันเอกชิต ตุ ผู้นำกองกำลังกะเหรี่ยงบีจีเอฟ ซึ่งกำลังจะเปลี่ยนชื่อเป็น เคเอ็นเอ (KNA)",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "พันเอกชิต ตุ ผู้นำกองกำลังกะเหรี่ยงบีจีเอฟ ซึ่งกำลังจะเปลี่ยนชื่อเป็น เคเอ็นเอ (KNA)",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "ชิตตุ",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "ชิตตุ",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 800,
-                    "height": 450,
-                    "locator": "9959/live/48a86bc0-dd0b-11ee-b83b-0f87a864f372.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "KIC",
-                    "suitableForSyndication": false
-                  }
-                }
-              ]
-            }
-          },
-          "summary": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "2 เมืองใหม่ศูนย์กลางอาชญากรรมไซเบอร์ติดชายแดน อ.แม่สอด จะเป็นเช่นไร หลังกองกำลังพิทักษ์ชายแดนกะเหรี่ยงหรือกะเหรี่ยงบีจีเอฟ (Karen BGF) จะเปลี่ยนชื่อเป็นกองทัพกะเหรี่ยงหรือเคเอ็นเอ (Karen National Army - KNA) และถอยห่างจากการเป็นพันธมิตรกับทหารเมียนมา",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "2 เมืองใหม่ศูนย์กลางอาชญากรรมไซเบอร์ติดชายแดน อ.แม่สอด จะเป็นเช่นไร หลังกองกำลังพิทักษ์ชายแดนกะเหรี่ยงหรือกะเหรี่ยงบีจีเอฟ (Karen BGF) จะเปลี่ยนชื่อเป็นกองทัพกะเหรี่ยงหรือเคเอ็นเอ (Karen National Army - KNA) และถอยห่างจากการเป็นพันธมิตรกับทหารเมียนมา",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "passport": {
-            "language": "th",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-            "locator": "urn:bbc:optimo:asset:cpd3x0v9lkjo",
-            "availability": "AVAILABLE",
-            "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/10038450-e9c0-41b2-9992-81a05129978a#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
-                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
-              }
-            ],
-            "schemaVersion": "1.4.0",
-            "publishedState": "PUBLISHED",
-            "predicates": {
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/10038450-e9c0-41b2-9992-81a05129978a#id",
-                  "thingLabel": "รัฐประหารเมียนมา",
-                  "thingUri": "http://www.bbc.co.uk/things/10038450-e9c0-41b2-9992-81a05129978a#id",
-                  "thingId": "10038450-e9c0-41b2-9992-81a05129978a",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "core:Event",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": ["http://www.wikidata.org/entity/Q105180889"],
-                  "thingEnglishLabel": "Myanmar coup ",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingLabel": "ประเทศไทย",
-                  "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-                  "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
-                  "thingType": [
-                    "core:Place",
-                    "tagging:TagConcept",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": ["http://sws.geonames.org/1605651/"],
-                  "thingEnglishLabel": "Thailand",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id",
-                  "thingLabel": "อาชญากรรมไซเบอร์",
-                  "thingUri": "http://www.bbc.co.uk/things/6105fd8d-33f4-4de4-9525-abf33697324a#id",
-                  "thingId": "6105fd8d-33f4-4de4-9525-abf33697324a",
-                  "thingType": [
-                    "core:Theme",
-                    "core:Thing",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q29137",
-                    "http://dbpedia.org/resource/Cybercrime"
-                  ],
-                  "thingEnglishLabel": "Cyber-crime",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-                  "thingLabel": "ประเทศจีน",
-                  "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-                  "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-                  "thingType": [
-                    "core:Thing",
-                    "tagging:TagConcept",
-                    "core:Place"
-                  ],
-                  "thingSameAs": [
-                    "http://sws.geonames.org/1814991/",
-                    "http://dbpedia.org/resource/China",
-                    "http://www.wikidata.org/entity/Q148"
-                  ],
-                  "thingEnglishLabel": "China",
-                  "type": "about"
-                },
-                {
-                  "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
-                  "thingLabel": "เมียนมา",
-                  "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
-                  "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "core:Place"
-                  ],
-                  "thingSameAs": ["http://sws.geonames.org/1327865/"],
-                  "thingEnglishLabel": "Myanmar",
-                  "type": "about"
-                }
-              ],
-              "motivation": [],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "assetType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
-                  "type": "assetType"
-                }
-              ]
-            }
-          },
-          "byline": {
-            "blocks": [
-              {
-                "type": "contributor",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "name",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "จิราภรณ์ ศรีแจ่ม",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "จิราภรณ์ ศรีแจ่ม",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "role",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "ผู้สื่อข่าวบีบีซีไทย",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "serviceIdentifier": "Thai",
-          "breakingNews": { "isBreaking": false },
-          "consumableAsSFV": false,
-          "id": "urn:bbc:ares::article:cpd3x0v9lkjo",
-          "type": "optimo"
         }
       ],
       "mostRead": {
-        "generated": "2024-04-16T10:40:13.351Z",
-        "lastRecordTimeStamp": "2024-04-16T10:40:00Z",
-        "firstRecordTimeStamp": "2024-04-15T22:37:00Z",
+        "generated": "2024-04-23T12:40:30.619Z",
+        "lastRecordTimeStamp": "2024-04-23T12:38:00Z",
+        "firstRecordTimeStamp": "2024-04-23T00:38:00Z",
         "items": [
           {
-            "id": "urn:bbc:optimo:asset:ckdqx7lrxgko",
+            "id": "urn:bbc:optimo:asset:cv2xvqklxxqo",
             "rank": 1,
-            "title": "อิหร่านโจมตีอิสราเอล: เรารู้อะไรบ้าง ?",
-            "href": "https://www.bbc.com/thai/articles/ckdqx7lrxgko",
-            "timestamp": "2024-04-15T02:17:25.684Z"
+            "title": "ปฏิบัติการ \"ออง เซยะ\" ที่ KNU อ้างว่ากองทัพเมียนมาใช้เพื่อยึดคืนเมียวดี คืออะไร",
+            "href": "https://www.bbc.com/thai/articles/cv2xvqklxxqo",
+            "timestamp": "2024-04-22T10:14:31.437Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:c51nxjpw2q5o",
+            "id": "urn:bbc:optimo:asset:cx8qxvnxj5eo",
             "rank": 2,
-            "title": "ทำไมการตามหารักแท้ถึงเป็นเรื่องยากขึ้น ? ",
-            "href": "https://www.bbc.com/thai/articles/c51nxjpw2q5o",
-            "timestamp": "2024-04-14T11:10:15.059Z"
+            "title": "เปิดเหตุผล พล.ต.อ.สุรเชษฐ์ ทำไมต้องยื่นเรื่องร้องเรียนนายกฯ เศรษฐา และกรรมการ ป.ป.ช.",
+            "href": "https://www.bbc.com/thai/articles/cx8qxvnxj5eo",
+            "timestamp": "2024-04-22T09:07:31.200Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:crgy0wl8dlgo",
+            "id": "urn:bbc:optimo:asset:c51005zpylgo",
             "rank": 3,
-            "title": "ทำไมอิหร่านโจมตีอิสราเอล ?",
-            "href": "https://www.bbc.com/thai/articles/crgy0wl8dlgo",
-            "timestamp": "2024-04-16T04:22:45.707Z"
+            "title": "ทำไมคนเราอายุไม่ยืนถึง 200 ปี ? คำตอบอาจอยู่ที่ไดโนเสาร์",
+            "href": "https://www.bbc.com/thai/articles/c51005zpylgo",
+            "timestamp": "2023-12-02T07:58:28.282Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:cljdkzlr9geo",
+            "id": "urn:bbc:optimo:asset:clm385zvzy2o",
             "rank": 4,
-            "title": "วีซ่าและหนังสือเดินทางสีทองคืออะไร ทำไมกำลังเป็นที่นิยมในหมู่คนรวย ?",
-            "href": "https://www.bbc.com/thai/articles/cljdkzlr9geo",
-            "timestamp": "2024-04-15T02:35:45.519Z"
+            "title": "ทำไมเมืองใหญ่เกือบครึ่งหนึ่งของจีนกำลังจม ? ",
+            "href": "https://www.bbc.com/thai/articles/clm385zvzy2o",
+            "timestamp": "2024-04-21T04:19:39.203Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:cp6g7279358o",
+            "id": "urn:bbc:optimo:asset:c03ymvpev74o",
             "rank": 5,
-            "title": "ทหารเมียนมาส่งมิก-29 ถล่มฝ่ายต่อต้าน หลังพบขึ้นธงชาติกะเหรี่ยงในเมียวดี",
-            "href": "https://www.bbc.com/thai/articles/cp6g7279358o",
-            "timestamp": "2024-04-16T09:06:57.508Z"
+            "title": "ย่านจีนใหม่บางเขน-รามอินทรา กับการรุกคืบเข้ามาของทุนจีนในมหาวิทยาลัยไทย",
+            "href": "https://www.bbc.com/thai/articles/c03ymvpev74o",
+            "timestamp": "2023-12-23T03:28:42.836Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:cn03lp1dyk4o",
+            "id": "urn:bbc:optimo:asset:cw0vevlrykvo",
             "rank": 6,
-            "title": "ทำไม \"แรงงานวัยทอง\" กำลังพาเหรดลาออก ?",
-            "href": "https://www.bbc.com/thai/articles/cn03lp1dyk4o",
-            "timestamp": "2024-04-14T05:04:12.189Z"
+            "title": "สุนัขจิ้งจอกที่สูญพันธุ์ไปแล้วอาจเคยเป็นเพื่อนที่ดีที่สุดของมนุษย์",
+            "href": "https://www.bbc.com/thai/articles/cw0vevlrykvo",
+            "timestamp": "2024-04-12T17:01:26.629Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:cljdk4weeryo",
+            "id": "536b5ad8-af97-41a1-87c9-bd0708e52c1f",
             "rank": 7,
-            "title": "นักวิจัยขีปนาวุธชาวเกาหลีเหนือ คว้าเก้าอี้ สส. ในเกาหลีใต้",
-            "href": "https://www.bbc.com/thai/articles/cljdk4weeryo",
-            "timestamp": "2024-04-15T05:31:57.895Z"
+            "title": "พล.อ.อ. สถิตย์พงษ์ สุขวิมล ผู้ถวายงานด้วยความซื่อสัตย์",
+            "href": "/thai/thailand-55505134",
+            "timestamp": "2022-01-01T16:39:01.000Z"
           },
           {
             "id": "urn:bbc:optimo:asset:c2ly1q4j335o",
@@ -4740,18 +4780,18 @@
             "timestamp": "2024-01-21T08:32:03.696Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:c043ekyn2jdo",
+            "id": "urn:bbc:optimo:asset:ce9rvrq112ro",
             "rank": 9,
-            "title": "นักวาดภาพไทยปรับตัวอย่างไร เมื่อ \"เอไอ\" กำลังมาแย่งงาน",
-            "href": "https://www.bbc.com/thai/articles/c043ekyn2jdo",
-            "timestamp": "2024-04-10T09:17:20.572Z"
+            "title": "เทียบกำลังทางทหาร อิหร่าน-อิสราเอล ใครมีมากกว่าใคร",
+            "href": "https://www.bbc.com/thai/articles/ce9rvrq112ro",
+            "timestamp": "2024-04-19T12:21:55.966Z"
           },
           {
-            "id": "urn:bbc:optimo:asset:cv279pjx19jo",
+            "id": "urn:bbc:optimo:asset:c6pyjzd35x4o",
             "rank": 10,
-            "title": "อารมณ์ของผู้คนในอิหร่านหลังการโจมตีในอิสราเอลเป็นเช่นไร ?",
-            "href": "https://www.bbc.com/thai/articles/cv279pjx19jo",
-            "timestamp": "2024-04-15T08:52:52.883Z"
+            "title": "เหตุใดอิสราเอลกับอิหร่านถึงโจมตีกัน",
+            "href": "https://www.bbc.com/thai/articles/c6pyjzd35x4o",
+            "timestamp": "2024-04-20T08:08:13.716Z"
           }
         ]
       },
