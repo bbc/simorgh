@@ -136,6 +136,13 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 }
 `;
 
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "راډیویې خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
+}
+`;
+
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"وروستي خبرونه"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
