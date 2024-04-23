@@ -45,6 +45,19 @@ export default {
         content: '""',
       },
     }),
+  // This is an unfocusable element, hidden from screenreaders
+  // This is to allow mouse users to click anywhere on the promo
+  // But for keyboard and AT users, and scenarios where there is no CSS,
+  // only the link inside the H3 should be interactive
+  clickableArea: () =>
+    css({
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      zIndex: 5,
+    }),
   heading: ({ palette }: Theme) =>
     css({
       paddingTop: '1.5rem',

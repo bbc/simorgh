@@ -39,9 +39,21 @@ const Billboard = forwardRef(
 
     const id = `billboard-${idSanitiser(heading)}`;
 
+    // The ClickableArea component is an anchor ("a") element
+    // Anchors cannot be self-closing under the HTML spec
+    /* eslint-disable react/self-closing-comp */
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
         <div css={styles.headerContainer} ref={viewRef}>
+          {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+          <a
+            href={link}
+            className="focusIndicatorDisplayBlock"
+            onClick={clickTrackerHandler}
+            aria-hidden="true"
+            tabIndex={-1}
+            css={styles.clickableArea}
+          />
           <div css={styles.backgroundContainer} />
           <div css={styles.contentContainer}>
             <MaskedImage
@@ -51,29 +63,22 @@ const Billboard = forwardRef(
               imageWidth={660}
             />
             <div css={styles.textContainer}>
-              <a
-                href={link}
-                css={styles.link}
-                className="focusIndicatorDisplayBlock"
-                onClick={clickTrackerHandler}
-              >
-                <Heading level={2} size="paragon" css={styles.heading} id={id}>
-                  {showLiveLabel ? (
-                    <div data-testid="billboard-live-label">
-                      <LiveLabel.Pulse
-                        width="24"
-                        height="24"
-                        css={styles.liveLabelPulse}
-                      />
-                      <LiveLabel.Text css={styles.liveLabelText}>
-                        <div>{heading}</div>
-                      </LiveLabel.Text>
-                    </div>
-                  ) : (
-                    heading
-                  )}
-                </Heading>
-              </a>
+              <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                {showLiveLabel ? (
+                  <div data-testid="billboard-live-label">
+                    <LiveLabel.Pulse
+                      width="24"
+                      height="24"
+                      css={styles.liveLabelPulse}
+                    />
+                    <LiveLabel.Text css={styles.liveLabelText}>
+                      <div>{heading}</div>
+                    </LiveLabel.Text>
+                  </div>
+                ) : (
+                  heading
+                )}
+              </Heading>
               {description && (
                 <Text as="p" css={styles.description}>
                   {description}
