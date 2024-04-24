@@ -121,9 +121,9 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
     const ctxServEnv = ctxEnv || env;
 
     const assetId =
-      id ||
-      getOptimoOrTipoId(Cypress.env('currentPath')) ||
-      `${Cypress.env('currentPath')}`;
+      id || // passed in as an argument
+      getOptimoOrTipoId(Cypress.env('currentPath')) || // Extract Optimo or Tipo ID from the current path
+      `${Cypress.env('currentPath')}`; // Extract the current path as the asset ID (typically CPS pages)
 
     const bffUrl = `https://web-cdn.${
       env === 'live' ? '' : `${env}.`
