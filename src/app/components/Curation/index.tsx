@@ -115,7 +115,7 @@ export default ({
           />
         ) : null;
       }
-      return null; // return null if no summaries available
+      return null;
     }
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
