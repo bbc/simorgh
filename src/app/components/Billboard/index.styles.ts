@@ -79,7 +79,6 @@ export default {
   textContainer: ({ mq, spacings }: Theme) =>
     css({
       zIndex: 1,
-      // position: 'relative',
       padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
