@@ -1,3 +1,443 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.cej3lzd5e0go.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acej3lzd5e0go]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%A7%DB%8C%D9%86%2520%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%2520%D8%A2%D8%B2%D9%85%D8%A7%DB%8C%D8%B4%DB%8C%2520%D8%8C%2520%DA%A9%D9%BE%DB%8C%2520%D8%B1%D8%A7%DB%8C%D8%AA%2520%D8%A8%DB%8C%2520%D8%A8%DB%8C%2520%D8%B3%DB%8C%2520%D8%8C%2520%D9%86%D9%82%D8%B4%D9%87%2520%D8%A7%DB%8C%2520%D8%A7%D8%B2%2520%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87%2520%D8%B1%D8%A7%2520%D9%86%D8%B4%D8%A7%D9%86%2520%D9%85%DB%8C%2520%D8%AF%D9%87%D8%AF.%2520%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%2520%D8%AF%D8%B1%2520%D8%B3%D9%87%2520%D8%A8%D9%84%D9%88%DA%A9%2520%D8%A7%D9%88%D9%84%2520%D8%A7%D8%B3%D8%AA%2520%D9%88%2520%D8%A7%DB%8C%D9%86%2520%D8%B9%D9%86%D9%88%D8%A7%D9%86%2520%D8%B1%D8%A7%2520%D8%AF%D8%A7%D8%B1%D8%AF.]&amp;x11=[2019-10-04T10%3A36%3A45.464Z]&amp;x12=[2019-10-04T10%3A36%3A45.464Z]"/>"`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "کوکی ها",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "صفحه اول",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "جنگ اسرائیل-غزه",
+  "url": "/persian/topics/clm0z4jgj3xt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "پخش زنده",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "ویدیو",
+  "url": "/persian/topics/c6z7mnr559gt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "تلویزیون",
+  "url": "/persian/tv-and-radio-37434377",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "ايران",
+  "url": "/persian/topics/ckdxnwvwwjnt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "افغانستان",
+  "url": "/persian/afghanistan",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+{
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+{
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+{
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+{
+  "text": "دانش",
+  "url": "/persian/topics/ckdxnwr4r1yt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
+exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+  class="bbc-139onq"
+  height="549"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 800w"
+  style="aspect-ratio:976 / 549"
+  width="976"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"این عنوان این مقاله آزمایشی است"`;
+
 exports[`Canonical Articles Media Player Caption should have a caption under the media player 1`] = `"توضیح ویدئو، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
+  "url": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
+  "url": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
+  "url": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
+  "url": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
+  "url": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "سگم سرطان پستان مرا تشخیص داد",
+  "url": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
+  "url": "https://www.bbc.com/persian/articles/cydg800g89yo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+  "url": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
+  "url": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
+  "url": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+
+exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Articles SEO Heading level 1 1`] = `"این عنوان این مقاله آزمایشی است"`;
+
+exports[`Canonical Articles SEO Lang attribute 1`] = `"fa"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+      },
+      "dateModified": "2019-10-04T10:36:45.464Z",
+      "datePublished": "2019-10-04T10:36:45.464Z",
+      "description": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      "headline": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+        "@type": "WebPage",
+        "name": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
+      "url": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù",
+  "duration": "PT16S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cej3lzd5e0go/p01kf9q6/fa",
+  "name": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kf9s0.jpg",
+  "uploadDate": "2018-11-12T15:00:22.000Z",
+}
+`;
+
+exports[`Canonical Articles SEO OG description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Canonical Articles SEO OG image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
+
+exports[`Canonical Articles SEO OG locale 1`] = `"fa"`;
+
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Articles SEO OG title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+
+exports[`Canonical Articles SEO Page title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Articles SEO Twitter description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`Canonical Articles SEO Twitter image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
+
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Articles SEO Twitter title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+{
+  "date": "2019-10-04",
+  "text": "۱۲ مهر ۱۳۹۸ - ۴ اکتبر ۲۰۱۹",
+}
+`;

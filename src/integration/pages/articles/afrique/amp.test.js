@@ -6,7 +6,7 @@
 import runGistTests from '../gistTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
 import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
-import runImageCopyrightBBC from '../imageCopyrightNonBBC';
+import runImageCopyrightBBC from '../imageCopyrightBBC';
 
 describe('AMP', () => {
   describe(pageType, () => {
