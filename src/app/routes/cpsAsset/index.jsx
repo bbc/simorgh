@@ -9,6 +9,7 @@ import {
   ArticlePage,
   MediaArticlePage,
 } from '#pages';
+import CafServices from '#app/lib/cafServices.const';
 import getInitialData from './getInitialData';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
@@ -23,7 +24,8 @@ import {
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
-  const isCaf = path(['isCaf'], props);
+  const service = path(['service'], props);
+  const isCaf = CafServices.includes(service);
 
   const PageType = {
     [STORY_PAGE]: isCaf ? ArticlePage : StoryPage,

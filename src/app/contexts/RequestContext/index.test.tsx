@@ -72,7 +72,6 @@ const expectedOutput = {
   derivedPageType: null,
   isAmp: true,
   isNextJs: false,
-  isCaf: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,

@@ -14,7 +14,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
       routeProps,
     ),
     pick(
-      ['pageData', 'status', 'error', 'timeOnServer', 'errorCode', 'isCaf'],
+      ['pageData', 'status', 'error', 'timeOnServer', 'errorCode'],
       initialData,
     ),
     {

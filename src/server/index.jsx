@@ -18,7 +18,6 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
-import CafEnabledServices from '#app/lib/cafServices.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -206,11 +205,7 @@ server.get(
         variant,
       } = getRouteProps(urlPath);
 
-      const { page, renderer_env } = query;
-
-      const isCaf =
-        CafEnabledServices.includes(service) ||
-        Boolean(renderer_env === 'caftest' || renderer_env === 'caflive');
+      const { page } = query;
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
@@ -232,7 +227,6 @@ server.get(
         toggles,
         getAgent,
         isAmp,
-        isCaf,
       });
 
       const { isUK } = extractHeaders(headers);
@@ -242,7 +236,6 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.isUK = isUK;
-      data.isCaf = isCaf;
 
       let { status } = data;
       // Set derivedPageType based on returned page data

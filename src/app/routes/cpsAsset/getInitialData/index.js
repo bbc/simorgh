@@ -6,6 +6,7 @@ import {
   PHOTO_GALLERY_PAGE,
   FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
+import CafServices from '#app/lib/cafServices.const';
 import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
@@ -29,7 +30,6 @@ import processMostWatched from '../../utils/processMostWatched';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-
 import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
@@ -105,10 +105,11 @@ export default async ({
   variant,
   pageType,
   toggles,
-  isCaf,
   isAmp,
 }) => {
   try {
+    const isCaf = CafServices.includes(service);
+
     const { service: derivedService, path: derivedPath } =
       getDerivedServiceAndPath(service, pathname);
 
