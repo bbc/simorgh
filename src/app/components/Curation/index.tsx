@@ -4,6 +4,7 @@ import {
   Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  BillboardSummary,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
@@ -75,32 +76,50 @@ export default ({
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case BILLBOARD:
-      return environmentIsLive && summaries.length > 0 ? (
-        <MessageBanner
-          heading={title}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          linkText={summaries[0].title}
-          image={summaries[0].imageUrl}
-          eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-        />
-      ) : (
-        <Billboard
-          heading={title}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          image={summaries[0].imageUrl}
-          eventTrackingData={{
-            componentName: `billboard-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-          showLiveLabel={summaries[0].isLive}
-        />
-      );
+    case BILLBOARD: {
+      // block scope for new billboard summaries type
+      const billboardSummaries = summaries as BillboardSummary[];
+
+      if (billboardSummaries.length > 0 && billboardSummaries[0]) {
+        const {
+          imageUrl,
+          link: billboardLink,
+          description,
+          title: billboardTitle,
+          imageAlt,
+          isLive: billboardIsLive,
+        } = billboardSummaries[0];
+
+        return environmentIsLive ? (
+          <MessageBanner
+            heading={billboardTitle}
+            description={description}
+            link={billboardLink}
+            linkText={billboardTitle}
+            image={imageUrl}
+            eventTrackingData={{
+              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+              detailedPlacement: `${position + 1}`,
+            }}
+          />
+        ) : (
+          <Billboard
+            heading={billboardTitle}
+            description={description}
+            link={billboardLink}
+            image={imageUrl}
+            altText={imageAlt || 'Default Alt Text'}
+            eventTrackingData={{
+              componentName: `billboard-${nthCurationByStyleAndProminence}`,
+              detailedPlacement: `${position + 1}`,
+            }}
+            showLiveLabel={billboardIsLive}
+          />
+        );
+      }
+      return null; // return null if no summaries available
+    }
+
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
         <MessageBanner

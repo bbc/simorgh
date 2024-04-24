@@ -67,3 +67,13 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
 }
+
+interface BillboardSummary extends BaseSummary {
+  imageUrl: string;
+  link: string;
+  description: string;
+}
+
+export interface BillboardCuration extends BaseCuration {
+  summaries: BillboardSummary[];
+}
