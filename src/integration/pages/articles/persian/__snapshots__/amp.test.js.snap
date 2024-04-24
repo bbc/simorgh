@@ -247,6 +247,13 @@ exports[`AMP Articles Header Navigation link should match text and url 12`] = `
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`AMP Articles Image Copyright Non BBC should match snapshot 1`] = `
