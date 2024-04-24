@@ -6,7 +6,7 @@
 // - Certain types of network error are retried automatically (retryOnNetworkFailure)
 import config from '../config/services';
 
-const getOptimoId = path => path.match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1];
+const getOptimoOrTipoId = path => path.match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1];
 
 export const testResponseCodeAndType = ({
   path,
@@ -120,17 +120,14 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
     }
     const ctxServEnv = ctxEnv || env;
 
-    const articleAssetId =
-      getOptimoId(Cypress.env('currentPath')) ||
-      `${Cypress.env('currentPath')}`;
-
-    const pageTypeId =
+    const assetId =
       id ||
-      (pageType === 'cpsAsset' ? Cypress.env('currentPath') : articleAssetId);
+      getOptimoOrTipoId(Cypress.env('currentPath')) ||
+      `${Cypress.env('currentPath')}`;
 
     const bffUrl = `https://web-cdn.${
       env === 'live' ? '' : `${env}.`
-    }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${pageTypeId}&service=${service}${
+    }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${assetId}&service=${service}${
       variant !== 'default' ? `&variant=${variant}` : ''
     }`;
     return cy.request({
