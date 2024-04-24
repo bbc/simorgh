@@ -6,7 +6,7 @@ import {
   PHOTO_GALLERY_PAGE,
   FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
-import CafServices from '#app/lib/cafServices.const';
+import CafEnabledServices from '#app/lib/cafServices.const';
 import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,
@@ -108,7 +108,7 @@ export default async ({
   isAmp,
 }) => {
   try {
-    const isCaf = CafServices.includes(service);
+    const isCaf = CafEnabledServices.includes(service);
 
     const { service: derivedService, path: derivedPath } =
       getDerivedServiceAndPath(service, pathname);
