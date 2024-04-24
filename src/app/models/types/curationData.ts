@@ -68,12 +68,14 @@ export interface Curation extends BaseCuration {
   nthCurationByStyleAndProminence?: number;
 }
 
-interface BillboardSummary extends BaseSummary {
+export interface BillboardSummary extends BaseSummary {
   imageUrl: string;
   link: string;
   description: string;
 }
 
-export interface BillboardCuration extends BaseCuration {
-  summaries: BillboardSummary[];
-}
+// export interface BillboardCuration extends BaseCuration {
+//   summaries: BillboardSummary[];
+// }
+
+// ^ not used so delete
