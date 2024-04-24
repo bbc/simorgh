@@ -73,40 +73,47 @@ export default ({
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
 
+  const summaryHasRequiredValues = (summary: BillboardSummary) =>
+    summary.description && summary.link && summary.imageUrl && summary.imageAlt;
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      // block scope for new billboard summaries type
-      const billboardSummaries = summaries as BillboardSummary[];
+      if (summaries.length > 0) {
+        // block scope for new billboard summaries type
+        const billboardSummaries = summaries as BillboardSummary[];
 
-      if (billboardSummaries.length > 0) {
-        return environmentIsLive ? (
-          <MessageBanner
-            heading={title}
-            description={billboardSummaries[0].description}
-            link={billboardSummaries[0].link}
-            linkText={billboardSummaries[0].title}
-            image={billboardSummaries[0].imageUrl}
-            eventTrackingData={{
-              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-              detailedPlacement: `${position + 1}`,
-            }}
-          />
-        ) : (
+        if (environmentIsLive) {
+          return (
+            <MessageBanner
+              heading={title}
+              description={billboardSummaries[0].description}
+              link={billboardSummaries[0].link}
+              linkText={billboardSummaries[0].title}
+              image={billboardSummaries[0].imageUrl}
+              eventTrackingData={{
+                componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+                detailedPlacement: `${position + 1}`,
+              }}
+            />
+          );
+        }
+
+        return summaryHasRequiredValues(billboardSummaries[0]) ? (
           <Billboard
             heading={title}
             description={billboardSummaries[0].description}
             link={billboardSummaries[0].link}
             image={billboardSummaries[0].imageUrl}
-            altText={billboardSummaries[0].imageAlt}
             eventTrackingData={{
               componentName: `billboard-${nthCurationByStyleAndProminence}`,
               detailedPlacement: `${position + 1}`,
             }}
             showLiveLabel={billboardSummaries[0].isLive}
+            altText={billboardSummaries[0].imageAlt}
           />
-        );
+        ) : null;
       }
       return null; // return null if no summaries available
     }
