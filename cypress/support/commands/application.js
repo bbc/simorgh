@@ -138,7 +138,6 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
 export const getPageDataFromWindow = () => {
   cy.window().then(win => {
     const pageData = win.SIMORGH_DATA;
-    console.log(`pageData is ${JSON.stringify(pageData)}`);
     return pageData;
   });
 };
