@@ -122,13 +122,13 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
     }
     const ctxServEnv = ctxEnv || env;
 
-    const optimoAssetId = getCpsId(Cypress.env('currentPath'))
+    const articleAssetId = getCpsId(Cypress.env('currentPath'))
       ? `${service}/${getCpsId(Cypress.env('currentPath'))}`
       : getOptimoId(Cypress.env('currentPath'));
 
     const pageTypeId =
       id ||
-      (pageType === 'cpsAsset' ? Cypress.env('currentPath') : optimoAssetId);
+      (pageType === 'cpsAsset' ? Cypress.env('currentPath') : articleAssetId);
 
     const bffUrl = `https://web-cdn.${
       env === 'live' ? '' : `${env}.`
