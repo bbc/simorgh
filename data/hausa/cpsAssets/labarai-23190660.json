@@ -4,53 +4,60 @@
       "metadata": {
         "atiAnalytics": {
           "categoryName": null,
-          "contentId": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-          "contentType": "article-media-asset",
+          "contentId": "urn:bbc:cps:curie:asset:af6b3cd9-3872-e04d-a75c-acbde8e46a3e",
+          "contentType": "article",
           "language": null,
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
-          "pageIdentifier": "hausa.media_asset.23269030.page",
-          "pageTitle": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
-          "timePublished": "2020-03-02T16:25:03.000Z",
-          "timeUpdated": "2020-03-02T16:25:03.000Z",
+          "pageIdentifier": "hausa.news.story.23190660.page",
+          "pageTitle": "An daure mace saboda bude gashinta a Iran, mijinta zai biya tara",
+          "timePublished": "2018-03-09T15:18:43.000Z",
+          "timeUpdated": "2018-03-09T15:18:43.000Z",
           "producerName": "HAUSA",
           "producerId": "51"
         },
-        "id": "urn:bbc:ares::asset:hausa/23269030",
+        "id": "urn:bbc:ares::asset:hausa/labarai-23190660",
         "locators": {
-          "assetUri": "/hausa/23269030",
-          "curieCpsUrn": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-          "assetId": "23269030",
-          "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
-          "canonicalUrl": "https://www.bbc.com/hausa/23269030",
-          "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+          "assetUri": "/hausa/labarai-23190660",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:af6b3cd9-3872-e04d-a75c-acbde8e46a3e",
+          "assetId": "23190660",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-23190660",
+          "canonicalUrl": "https://www.bbc.com/hausa/labarai-23190660",
+          "curie": "http://www.bbc.co.uk/asset/af6b3cd9-3872-e04d-a75c-acbde8e46a3e"
         },
-        "type": "MAP",
+        "type": "STY",
         "createdBy": "hausa-v6",
         "language": "ha",
-        "firstPublished": 1583166303000,
-        "lastPublished": 1583166303000,
+        "firstPublished": 1520608723000,
+        "lastPublished": 1520608723000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
           "allowRightHandSide": true,
           "isFactCheck": false,
           "allowDateStamp": true,
+          "suitableForSyndication": true,
           "hasNewsTracker": false,
           "allowRelatedStoriesBox": true,
           "isKeyContent": false,
           "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
           "isBreakingNews": false,
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
-          "cps_asset_id": "23269030",
-          "page": "hausa.media_asset.23269030.page",
-          "contentId": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-          "cps_asset_type": "map"
+          "cps_asset_id": "23190660",
+          "page": "hausa.news.story.23190660.page",
+          "contentId": "urn:bbc:cps:curie:asset:af6b3cd9-3872-e04d-a75c-acbde8e46a3e",
+          "cps_asset_type": "sty"
         },
         "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
           "taggings": []
         },
@@ -59,21 +66,24 @@
           "text",
           "paragraph",
           "fragment",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "image",
+          "altText",
+          "rawImage",
+          "unorderedList",
+          "listItem",
+          "urlLink",
           "video",
           "caption",
           "subheadline",
-          "urlLink",
-          "unorderedList",
-          "listItem",
           "aresMedia",
-          "aresMediaMetadata",
-          "image",
-          "rawImage",
-          "altText"
+          "aresMediaMetadata"
         ],
         "includeComments": false,
         "siteUri": "/hausa",
-        "mediaType": "video",
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
@@ -83,26 +93,26 @@
         "model": {
           "blocks": [
             {
-              "id": "390c8564",
+              "id": "24d84210",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "88997ea0",
+                    "id": "d4f05f5e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2d7af4f6",
+                          "id": "2d77e179",
                           "type": "paragraph",
                           "model": {
-                            "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                            "text": "An daure mace saboda bude gashinta a Iran, mijinta zai biya tara",
                             "blocks": [
                               {
-                                "id": "0237b65f",
+                                "id": "73dd8ffa",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                                  "text": "An daure mace saboda bude gashinta a Iran, mijinta zai biya tara",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -120,187 +130,158 @@
               "position": [1]
             },
             {
-              "id": "c3fb99ca",
-              "type": "video",
+              "id": "8d57ba0c",
+              "type": "timestamp",
               "model": {
-                "locator": "urn:bbc:pips:pid:p01k6msm",
-                "blocks": [
-                  {
-                    "id": "c2231c1a",
-                    "type": "caption",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "812e02ac",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "f302b0da",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "They may be tiny, but us humans could learn a thing or two from ants.",
-                                  "blocks": [
-                                    {
-                                      "id": "33588e0f",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "They may be tiny, but us humans could learn a thing or two from ants.",
-                                        "attributes": []
-                                      },
-                                      "position": [2, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [2, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [2, 1]
-                  },
-                  {
-                    "id": "2ce3da8a",
-                    "type": "aresMedia",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "66c978bc",
-                          "blockId": "urn:bbc:ares::clip:p01k6msm",
-                          "type": "aresMediaMetadata",
-                          "model": {
-                            "id": "p01k6msm",
-                            "subType": "clip",
-                            "format": "video",
-                            "title": "Five things ants can teach us about management",
-                            "synopses": {
-                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                            },
-                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                            "imageCopyright": "BBC",
-                            "embedding": true,
-                            "advertising": true,
-                            "versions": [
-                              {
-                                "versionId": "p01k6msp",
-                                "types": ["Original"],
-                                "duration": 191,
-                                "durationISO8601": "PT3M11S",
-                                "warnings": {
-                                  "short": "Contains strong language and adult humour.",
-                                  "long": "Contains strong language and adult humour."
-                                },
-                                "availableTerritories": {
-                                  "uk": true,
-                                  "nonUk": true
-                                },
-                                "availableFrom": 1540218932000
-                              }
-                            ],
-                            "syndication": { "destinations": [] },
-                            "smpKind": "programme"
-                          },
-                          "position": [2, 2, 1]
-                        },
-                        {
-                          "id": "341aee39",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "54516ed6",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 1920,
-                                  "height": 1080,
-                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                                  "originCode": "mpv",
-                                  "copyrightHolder": "BBC"
-                                },
-                                "position": [2, 2, 2, 1]
-                              },
-                              {
-                                "id": "8e0324a5",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "4d0b22b6",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "a739d4fc",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "Ants",
-                                              "blocks": [
-                                                {
-                                                  "id": "effeff86",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "Ants",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    2, 2, 2, 2, 1, 1, 1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [2, 2, 2, 2, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [2, 2, 2, 2, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 2, 2, 2]
-                              }
-                            ]
-                          },
-                          "position": [2, 2, 2]
-                        }
-                      ]
-                    },
-                    "position": [2, 2]
-                  }
-                ]
+                "firstPublished": 1520608723000,
+                "lastPublished": 1520608723000
               },
               "position": [2]
             },
             {
-              "id": "eaf7cb04",
-              "type": "timestamp",
+              "id": "5c47a977",
+              "type": "image",
               "model": {
-                "firstPublished": 1583166303000,
-                "lastPublished": 1583166303000
+                "emphasiseImage": true,
+                "blocks": [
+                  {
+                    "id": "6b2d5523",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "56649649",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "995f4255",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Iranian woman with her face covered in Niqab",
+                                  "blocks": [
+                                    {
+                                      "id": "906b9b7b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Iranian woman with her face covered in Niqab",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "ac0fd3e0",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "12BB/test/_63659740_ab638d2b-e272-4abc-935a-ea7379a7265b.jpg",
+                      "href": "http://b.files.bbci.co.uk/12BB/test/_63659740_ab638d2b-e272-4abc-935a-ea7379a7265b.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "AFP/Getty",
+                      "suitableForSyndication": false
+                    },
+                    "position": [3, 2]
+                  }
+                ]
               },
               "position": [3]
             },
             {
-              "id": "b95b87e2",
-              "type": "text",
+              "id": "d71cef84",
+              "type": "byline",
               "model": {
                 "blocks": [
                   {
-                    "id": "7af1380e",
-                    "type": "paragraph",
+                    "id": "fdf9e531",
+                    "type": "contributor",
                     "model": {
-                      "text": "Latsa hoton da ke sama don jin cikakken shirin:",
                       "blocks": [
                         {
-                          "id": "3e553c14",
-                          "type": "fragment",
+                          "id": "4b27d87a",
+                          "type": "name",
                           "model": {
-                            "text": "Latsa hoton da ke sama don jin cikakken shirin:",
-                            "attributes": ["bold"]
+                            "blocks": [
+                              {
+                                "id": "b7d55f34",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "11b8d7c2",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Haruna Kakangi",
+                                        "blocks": [
+                                          {
+                                            "id": "fdd3b882",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Haruna Kakangi",
+                                              "attributes": []
+                                            },
+                                            "position": [4, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
                           },
                           "position": [4, 1, 1]
+                        },
+                        {
+                          "id": "1dbca4d0",
+                          "type": "role",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d72e6a4d",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "e1054c4d",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Journalist",
+                                        "blocks": [
+                                          {
+                                            "id": "fca77563",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Journalist",
+                                              "attributes": []
+                                            },
+                                            "position": [4, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [4, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 2]
                         }
                       ]
                     },
@@ -311,157 +292,287 @@
               "position": [4]
             },
             {
-              "id": "62c9e08f",
-              "type": "subheadline",
+              "id": "f511f3cd",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "d858a1fb",
-                    "type": "text",
+                    "id": "8e1a1382",
+                    "type": "paragraph",
                     "model": {
+                      "text": "Masu shigar da kara a Iran sun ce an yankewa wata mata hukunci daurin shekara biyu, saboda cire mayafinta da ta yi a bainar jama'a don nuna adawa da tsauraran dokokin sanya sutura na kasar.",
                       "blocks": [
                         {
-                          "id": "f0dfb8b9",
-                          "type": "paragraph",
+                          "id": "9567ac8a",
+                          "type": "fragment",
                           "model": {
-                            "text": "Latsa hoton da ke sama don jin cikakken shirin",
-                            "blocks": [
-                              {
-                                "id": "5e58ae6f",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Latsa hoton da ke sama don jin cikakken shirin",
-                                  "attributes": []
-                                },
-                                "position": [5, 1, 1, 1]
-                              }
-                            ]
+                            "text": "Masu shigar da kara a Iran sun ce an yankewa wata mata hukunci daurin shekara biyu, saboda cire mayafinta da ta yi a bainar jama'a don nuna adawa da tsauraran dokokin sanya sutura na kasar.",
+                            "attributes": ["bold"]
                           },
                           "position": [5, 1, 1]
                         }
                       ]
                     },
                     "position": [5, 1]
+                  },
+                  {
+                    "id": "f81918aa",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "An samu matar ce, wadda ba a bayyana sunanta ba a hukumance, da laifin \"gurbata tarbiyyar al'umma\", a cewar babban mai shigar da kara na Iran Abbas Jafari-Dolatabadi.",
+                      "blocks": [
+                        {
+                          "id": "dc8cb853",
+                          "type": "fragment",
+                          "model": {
+                            "text": "An samu matar ce, wadda ba a bayyana sunanta ba a hukumance, da laifin \"gurbata tarbiyyar al'umma\", a cewar babban mai shigar da kara na Iran Abbas Jafari-Dolatabadi.",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "519b5c8b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Sai dai ya ce an dakatar da hukuncin daurin nata, domin tana batu na rashin lafiya.",
+                      "blocks": [
+                        {
+                          "id": "1259c93a",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Sai dai ya ce an dakatar da hukuncin daurin nata, domin tana batu na rashin lafiya.",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "dd2b01ff",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Wannan na zuwa bayan an kame wasu mata da dama a Iran a makwannin da suka gabata.",
+                      "blocks": [
+                        {
+                          "id": "a62b9927",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Wannan na zuwa bayan an kame wasu mata da dama a Iran a makwannin da suka gabata.",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
                   }
                 ]
               },
               "position": [5]
             },
+            { "id": "aa6bf6fc", "type": "mpu", "model": {}, "position": [6] },
             {
-              "id": "f72de155",
+              "id": "5bef71f9",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f6b11e50",
+                    "id": "38e5deda",
                     "type": "paragraph",
                     "model": {
-                      "text": "text here 1",
+                      "text": "Amma an saki yawancin wadanda aka kame saboda sun saba dokokin kasar na rashin sanya hijabi a bainar jama'a.",
                       "blocks": [
                         {
-                          "id": "755bc53c",
+                          "id": "563e4ad0",
                           "type": "fragment",
-                          "model": { "text": "text here 1", "attributes": [] },
-                          "position": [6, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [6, 1]
-                  }
-                ]
-              },
-              "position": [6]
-            },
-            {
-              "id": "edb9cc4d",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "6db22ae4",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "e6aa21da",
-                          "type": "paragraph",
                           "model": {
-                            "text": "Subheading italics",
-                            "blocks": [
-                              {
-                                "id": "e5af0b3f",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Subheading italics",
-                                  "attributes": []
-                                },
-                                "position": [7, 1, 1, 1]
-                              }
-                            ]
+                            "text": "Amma an saki yawancin wadanda aka kame saboda sun saba dokokin kasar na rashin sanya hijabi a bainar jama'a.",
+                            "attributes": []
                           },
                           "position": [7, 1, 1]
                         }
                       ]
                     },
                     "position": [7, 1]
+                  },
+                  {
+                    "id": "c2d3b255",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Kuma an sake su ne ba tare da an caje su ba.",
+                      "blocks": [
+                        {
+                          "id": "35fdfd4b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Kuma an sake su ne ba tare da an caje su ba.",
+                            "attributes": []
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 2]
                   }
                 ]
               },
               "position": [7]
             },
             {
-              "id": "38930220",
-              "type": "text",
+              "id": "0bc7679b",
+              "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b7e452ff",
-                    "type": "paragraph",
+                    "id": "7f2dafd5",
+                    "type": "altText",
                     "model": {
-                      "text": "text here 2",
                       "blocks": [
                         {
-                          "id": "98b11873",
-                          "type": "fragment",
-                          "model": { "text": "text here 2", "attributes": [] },
+                          "id": "a23e7492",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "bac93fcc",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "grey line",
+                                  "blocks": [
+                                    {
+                                      "id": "d25aa8c4",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "grey line",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
                           "position": [8, 1, 1]
                         }
                       ]
                     },
                     "position": [8, 1]
+                  },
+                  {
+                    "id": "63efe5d7",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 2,
+                      "width": 464,
+                      "locator": "C074/test/_63486294_line976.jpg",
+                      "href": "http://b.files.bbci.co.uk/C074/test/_63486294_line976.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [8, 2]
                   }
                 ]
               },
               "position": [8]
             },
             {
-              "id": "fabf2963",
-              "type": "subheadline",
+              "id": "a33a6a5f",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5b91eca4",
-                    "type": "text",
+                    "id": "5e8e754a",
+                    "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "aaafaf8d",
-                          "type": "paragraph",
+                          "id": "d80e8af0",
+                          "type": "listItem",
                           "model": {
-                            "text": "Subheading bold",
                             "blocks": [
                               {
-                                "id": "1f56de2f",
-                                "type": "fragment",
+                                "id": "d7a17808",
+                                "type": "paragraph",
                                 "model": {
-                                  "text": "Subheading bold",
-                                  "attributes": []
+                                  "text": "Ranar Mata: Ra'ayoyin mata kan yadda za a samu ci gaba",
+                                  "blocks": [
+                                    {
+                                      "id": "00564d79",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Ranar Mata: Ra'ayoyin mata kan yadda za a samu ci gaba",
+                                        "locator": "http://www.bbc.com/hausa/labarai-43329556",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "75e70be2",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Ranar Mata: Ra'ayoyin mata kan yadda za a samu ci gaba",
+                                              "attributes": []
+                                            },
+                                            "position": [9, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [9, 1, 1, 1, 1]
+                                    }
+                                  ]
                                 },
                                 "position": [9, 1, 1, 1]
                               }
                             ]
                           },
                           "position": [9, 1, 1]
+                        },
+                        {
+                          "id": "3ac46d51",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e47aeb78",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Rayuwar mata: An ci gaba ko da sauran rina a kaba?",
+                                  "blocks": [
+                                    {
+                                      "id": "af5af9eb",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Rayuwar mata: An ci gaba ko da sauran rina a kaba?",
+                                        "locator": "http://www.bbc.com/hausa/labarai-43287182",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "6a379a20",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Rayuwar mata: An ci gaba ko da sauran rina a kaba?",
+                                              "attributes": []
+                                            },
+                                            "position": [9, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [9, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 2]
                         }
                       ]
                     },
@@ -469,309 +580,388 @@
                   }
                 ]
               },
-              "position": [9]
+              "position": [9],
+              "blockGroupType": "edOjLinks",
+              "blockGroupIndex": 1
             },
             {
-              "id": "8a6004f8",
-              "type": "text",
+              "id": "a65ded7b",
+              "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b3a07476",
-                    "type": "paragraph",
+                    "id": "f9d635e1",
+                    "type": "altText",
                     "model": {
-                      "text": "Latsa hoton da ke sama don jin cikakken shirin",
                       "blocks": [
                         {
-                          "id": "880fabc2",
-                          "type": "fragment",
+                          "id": "cc90a6ab",
+                          "type": "text",
                           "model": {
-                            "text": "Latsa hoton da ke sama don jin cikakken shirin",
-                            "attributes": []
+                            "blocks": [
+                              {
+                                "id": "d746fdbd",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "grey line",
+                                  "blocks": [
+                                    {
+                                      "id": "3ca1d587",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "grey line",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
                           },
                           "position": [10, 1, 1]
                         }
                       ]
                     },
                     "position": [10, 1]
+                  },
+                  {
+                    "id": "b6b009ec",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 2,
+                      "width": 464,
+                      "locator": "C074/test/_63486294_line976.jpg",
+                      "href": "http://b.files.bbci.co.uk/C074/test/_63486294_line976.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [10, 2]
                   }
                 ]
               },
               "position": [10]
             },
-            { "id": "dd43af96", "type": "mpu", "model": {}, "position": [11] },
             {
-              "id": "92ef8168",
-              "type": "text",
+              "id": "1c4e7850",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01gtnpz",
+                "blocks": [
+                  {
+                    "id": "f0cc6a32",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "06cbef06",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9db86ffa",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Animals race",
+                                  "blocks": [
+                                    {
+                                      "id": "3f143211",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Animals race",
+                                        "attributes": []
+                                      },
+                                      "position": [11, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  },
+                  {
+                    "id": "bdf994f5",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cf790589",
+                          "blockId": "urn:bbc:ares::clip:p01gtnpz",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01gtnpz",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Wildlife",
+                            "synopses": { "short": "Animals race" },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01gtnvj.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01gtnq2",
+                                "types": ["Original"],
+                                "duration": 30,
+                                "durationISO8601": "PT30S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1520610176000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme"
+                          },
+                          "position": [11, 2, 1]
+                        },
+                        {
+                          "id": "4923a010",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "55f71d51",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01gtnvj.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [11, 2, 2, 1]
+                              },
+                              {
+                                "id": "563598f5",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "5430e449",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "1261029c",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #2",
+                                              "blocks": [
+                                                {
+                                                  "id": "6225de6c",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #2",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    11, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [11, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [11, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [11, 2]
+                  }
+                ]
+              },
+              "position": [11]
+            },
+            {
+              "id": "0ca28576",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "eea9bc3f",
-                    "type": "paragraph",
+                    "id": "384e11e2",
+                    "type": "text",
                     "model": {
-                      "text": "Mata, musamman wadanda suka fito daga gidajen marasa galihu na fuskantar barazanar kamuwa da wasu cututtuka, saboda rashin samun abubuwan da suka dace su yi amfani da su wajen kula da kansu a yayin da suke jinin al'ada.",
                       "blocks": [
                         {
-                          "id": "79455a4d",
-                          "type": "fragment",
+                          "id": "921155fb",
+                          "type": "paragraph",
                           "model": {
-                            "text": "Mata, musamman wadanda suka fito daga gidajen marasa galihu na fuskantar barazanar kamuwa da wasu cututtuka, saboda rashin samun abubuwan da suka dace su yi amfani da su wajen kula da kansu a yayin da suke jinin al'ada.",
-                            "attributes": []
+                            "text": "Za a yanke mata hukunci",
+                            "blocks": [
+                              {
+                                "id": "28b8020d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Za a yanke mata hukunci",
+                                  "attributes": []
+                                },
+                                "position": [12, 1, 1, 1]
+                              }
+                            ]
                           },
                           "position": [12, 1, 1]
                         }
                       ]
                     },
                     "position": [12, 1]
-                  },
-                  {
-                    "id": "a40c901a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "A wasu lokutan 'yan mata kan yi amfani da takarda ko tsumma har ma da safa don tare jinin da ke zuba daga jikinsu. ",
-                      "blocks": [
-                        {
-                          "id": "5c898de7",
-                          "type": "fragment",
-                          "model": {
-                            "text": "A wasu lokutan 'yan mata kan yi amfani da takarda ko tsumma har ma da safa don tare jinin da ke zuba daga jikinsu. ",
-                            "attributes": []
-                          },
-                          "position": [12, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [12, 2]
-                  },
-                  {
-                    "id": "5605c36a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Lamarin da likitoci ke gargadin cewa rashin tsaftar wadannan abubuwa ka iya shafar lafiyar iyayen gobe.",
-                      "blocks": [
-                        {
-                          "id": "c8fe5137",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Lamarin da likitoci ke gargadin cewa rashin tsaftar wadannan abubuwa ka iya shafar lafiyar iyayen gobe.",
-                            "attributes": []
-                          },
-                          "position": [12, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [12, 3]
-                  },
-                  {
-                    "id": "972b60dd",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara Lafiya Zinariya: Me ke ",
-                      "blocks": [
-                        {
-                          "id": "16e7612b",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara ",
-                            "attributes": []
-                          },
-                          "position": [12, 4, 1]
-                        },
-                        {
-                          "id": "39d88f88",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "Lafiya Zinariya: Me ke ",
-                            "locator": "https://www.bbc.com/hausa/media-23269029",
-                            "isExternal": false,
-                            "blocks": [
-                              {
-                                "id": "14f4db10",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Lafiya Zinariya: Me ke ",
-                                  "attributes": []
-                                },
-                                "position": [12, 4, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [12, 4, 2]
-                        }
-                      ]
-                    },
-                    "position": [12, 4]
-                  },
-                  {
-                    "id": "ab903537",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara",
-                      "blocks": [
-                        {
-                          "id": "b8371cdc",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara",
-                            "attributes": []
-                          },
-                          "position": [12, 5, 1]
-                        }
-                      ]
-                    },
-                    "position": [12, 5]
                   }
                 ]
               },
               "position": [12]
             },
             {
-              "id": "618e6d46",
+              "id": "484b67b3",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ef966a21",
-                    "type": "unorderedList",
+                    "id": "51525eb7",
+                    "type": "paragraph",
                     "model": {
+                      "text": "A ranar Laraba ne a birnin Tehran aka yanke wa matan hukuncin daurin watanni uku. ",
                       "blocks": [
                         {
-                          "id": "6ee758c7",
-                          "type": "listItem",
+                          "id": "25c2da0a",
+                          "type": "fragment",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "ded4d53e",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Lafiya Zinariya: Jinin haila a tsakanin 'yan mata",
-                                  "blocks": [
-                                    {
-                                      "id": "7333890f",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Lafiya Zinariya: Jinin haila a tsakanin 'yan mata",
-                                        "attributes": ["bold"]
-                                      },
-                                      "position": [13, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [13, 1, 1, 1]
-                              }
-                            ]
+                            "text": "A ranar Laraba ne a birnin Tehran aka yanke wa matan hukuncin daurin watanni uku. ",
+                            "attributes": []
                           },
                           "position": [13, 1, 1]
-                        },
-                        {
-                          "id": "12e2ac16",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "c2cddb46",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Lafiya Zinariya: Dalilan da ke sa wasu masu jego yunkurin raunata kansu ko jariransu",
-                                  "attributes": []
-                                },
-                                "position": [13, 1, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [13, 1, 2]
-                        },
-                        {
-                          "id": "9ad70c1b",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "2672806f",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Lafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?",
-                                  "blocks": [
-                                    {
-                                      "id": "a47ac616",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Lafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?",
-                                        "attributes": ["italic"]
-                                      },
-                                      "position": [13, 1, 3, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [13, 1, 3, 1]
-                              }
-                            ]
-                          },
-                          "position": [13, 1, 3]
-                        },
-                        {
-                          "id": "90f97c9f",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "0d12b84d",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Lafiya Zinariya: Me ke ",
-                                  "blocks": [
-                                    {
-                                      "id": "354959bc",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Lafiya Zinariya: Me ke ",
-                                        "locator": "https://www.bbc.com/hausa/media-23269029",
-                                        "isExternal": false,
-                                        "blocks": [
-                                          {
-                                            "id": "5c27604b",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Lafiya Zinariya: Me ke ",
-                                              "attributes": []
-                                            },
-                                            "position": [13, 1, 4, 1, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [13, 1, 4, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [13, 1, 4, 1]
-                              }
-                            ]
-                          },
-                          "position": [13, 1, 4]
                         }
                       ]
                     },
                     "position": [13, 1]
+                  },
+                  {
+                    "id": "8a232897",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Amma tana matukar bukatar kula da lafiyarta, dalilin da ya tilasta aka ba likitar damar diba ta, a cewar Jafari-Dolatabadi.",
+                      "blocks": [
+                        {
+                          "id": "d50a555a",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Amma tana matukar bukatar kula da lafiyarta, dalilin da ya tilasta aka ba likitar damar diba ta, a cewar Jafari-Dolatabadi.",
+                            "attributes": []
+                          },
+                          "position": [13, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 2]
+                  },
+                  {
+                    "id": "098897f9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ya kalubalanci dakatar da hukuncin da aka yanke wa matar, yana mai cewa dole sai ta yi kwanakin da aka yanke ma ta a gidan yari.",
+                      "blocks": [
+                        {
+                          "id": "dc3cb314",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ya kalubalanci dakatar da hukuncin da aka yanke wa matar, yana mai cewa dole sai ta yi kwanakin da aka yanke ma ta a gidan yari.",
+                            "attributes": []
+                          },
+                          "position": [13, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 3]
+                  },
+                  {
+                    "id": "a89ed988",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A watan Disemba, irin wannan ya janyo zanga-zanga a Iran bayan da aka kame wata saboda ta cire mayafi tare da rataye shi a icce a bainar jama'a. ",
+                      "blocks": [
+                        {
+                          "id": "682e056d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "A watan Disemba, irin wannan ya janyo zanga-zanga a Iran bayan da aka kame wata saboda ta cire mayafi tare da rataye shi a icce a bainar jama'a. ",
+                            "attributes": []
+                          },
+                          "position": [13, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 4]
+                  },
+                  {
+                    "id": "51c81d3a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "An ta yawo da hotunanta a shafukan sada zumunta na intanet a tsaye a bainar jama'a. An sake ta daga bisani bayan an kama ta.",
+                      "blocks": [
+                        {
+                          "id": "70fb19d0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "An ta yawo da hotunanta a shafukan sada zumunta na intanet a tsaye a bainar jama'a. An sake ta daga bisani bayan an kama ta.",
+                            "attributes": []
+                          },
+                          "position": [13, 5, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 5]
+                  },
+                  {
+                    "id": "d6f24be7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Tun juyin juya halin da aka yi a Iran a 1979, aka tilastawa mata yin shiga ta musulunci.",
+                      "blocks": [
+                        {
+                          "id": "292bd5a0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Tun juyin juya halin da aka yi a Iran a 1979, aka tilastawa mata yin shiga ta musulunci.",
+                            "attributes": []
+                          },
+                          "position": [13, 6, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 6]
                   }
                 ]
               },
-              "position": [13],
-              "blockGroupType": "edOjLinks",
-              "blockGroupIndex": 1
+              "position": [13]
             }
           ]
         }
       },
       "promo": {
         "locators": {
-          "assetUri": "/hausa/23269030",
-          "curieCpsUrn": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-          "assetId": "23269030",
-          "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
-          "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+          "assetUri": "/hausa/labarai-23190660",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:af6b3cd9-3872-e04d-a75c-acbde8e46a3e",
+          "assetId": "23190660",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-23190660",
+          "curie": "http://www.bbc.co.uk/asset/af6b3cd9-3872-e04d-a75c-acbde8e46a3e"
         },
         "headlines": {
-          "seoHeadline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+          "seoHeadline": "An daure mace saboda bude gashinta a Iran, mijinta zai biya tara",
           "promoHeadline": {
             "blocks": [
               {
@@ -781,12 +971,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                        "text": "An daure mace saboda bude gashinta a Iran",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                              "text": "An daure mace saboda bude gashinta a Iran",
                               "attributes": []
                             }
                           }
@@ -794,6 +984,53 @@
                       }
                     }
                   ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Iranian woman with her face covered in Niqab",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Iranian woman with her face covered in Niqab",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 549,
+                  "width": 976,
+                  "locator": "39CB/test/_63659741_ab638d2b-e272-4abc-935a-ea7379a7265b.jpg",
+                  "href": "http://b.files.bbci.co.uk/39CB/test/_63659741_ab638d2b-e272-4abc-935a-ea7379a7265b.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "AFP/Getty",
+                  "suitableForSyndication": false
                 }
               }
             ]
@@ -808,12 +1045,12 @@
                   {
                     "type": "paragraph",
                     "model": {
-                      "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                      "text": "Sau da yawa mata a kasar Iran na nuna damuwa kan tsantsar takurawa da suka ce hukumomi na yi masu.",
                       "blocks": [
                         {
                           "type": "fragment",
                           "model": {
-                            "text": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+                            "text": "Sau da yawa mata a kasar Iran na nuna damuwa kan tsantsar takurawa da suka ce hukumomi na yi masu.",
                             "attributes": []
                           }
                         }
@@ -825,139 +1062,22 @@
             }
           ]
         },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "serviceIdentifier": "Hausa-v6",
         "extrinsicPromo": {
           "headlines": {
-            "shortHeadline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"
+            "shortHeadline": "An daure mace saboda bude gashinta a Iran"
           },
-          "media": {
-            "blocks": [
-              {
-                "type": "video",
-                "model": {
-                  "locator": "urn:bbc:pips:pid:p01k6msm",
-                  "blocks": [
-                    {
-                      "type": "caption",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "They may be tiny, but us humans could learn a thing or two from ants.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "They may be tiny, but us humans could learn a thing or two from ants.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "aresMedia",
-                      "model": {
-                        "blocks": [
-                          {
-                            "blockId": "urn:bbc:ares::clip:p01k6msm",
-                            "type": "aresMediaMetadata",
-                            "model": {
-                              "id": "p01k6msm",
-                              "subType": "clip",
-                              "format": "video",
-                              "title": "Five things ants can teach us about management",
-                              "synopses": {
-                                "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                              },
-                              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                              "imageCopyright": "BBC",
-                              "embedding": true,
-                              "advertising": true,
-                              "versions": [
-                                {
-                                  "versionId": "p01k6msp",
-                                  "types": ["Original"],
-                                  "duration": 191,
-                                  "durationISO8601": "PT3M11S",
-                                  "warnings": {
-                                    "short": "Contains strong language and adult humour.",
-                                    "long": "Contains strong language and adult humour."
-                                  },
-                                  "availableTerritories": {
-                                    "uk": true,
-                                    "nonUk": true
-                                  },
-                                  "availableFrom": 1540218932000
-                                }
-                              ],
-                              "syndication": { "destinations": [] },
-                              "smpKind": "programme"
-                            }
-                          },
-                          {
-                            "type": "image",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "rawImage",
-                                  "model": {
-                                    "width": 1920,
-                                    "height": 1080,
-                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                                    "originCode": "mpv",
-                                    "copyrightHolder": "BBC"
-                                  }
-                                },
-                                {
-                                  "type": "altText",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "text",
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "type": "paragraph",
-                                              "model": {
-                                                "text": "Ants",
-                                                "blocks": [
-                                                  {
-                                                    "type": "fragment",
-                                                    "model": {
-                                                      "text": "Ants",
-                                                      "attributes": []
-                                                    }
-                                                  }
-                                                ]
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
+          "assetType": "STY",
+          "byline": {
+            "name": "Haruna Kakangi",
+            "title": "Journalist",
+            "persons": [{ "name": "Haruna Kakangi", "function": "Journalist" }]
           },
           "type": "cps"
         }
@@ -1421,7 +1541,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2024-04-15T08:23:59.384Z",
+        "generated": "2024-04-17T10:23:58.771Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "items": [
