@@ -20,7 +20,6 @@ import runAppleItunesAppBannerTests from './appleItunesAppBanner';
 import runStoryPromoTests from './storyPromo';
 import runSectionTests from './sections';
 import runMostReadTests from './mostReadTests';
-import runParagraphTests from './paragraph';
 import runAmpAdsTests from './ads.amp';
 import runCanonicalAdsTests from './ads.canonical';
 import runFlourishCanonicalEmbedTests from './flourishEmbed.canonical';
@@ -53,7 +52,6 @@ export {
   runMediaPlayerEmbedTests,
   runMediaPlayerEmbedLegacyTests,
   runMostReadTests,
-  runParagraphTests,
   runRadioScheduleTests,
   runRecentEpisodesTests,
   runCrossPlatformSEOTests,

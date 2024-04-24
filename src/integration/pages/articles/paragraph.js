@@ -1,6 +1,6 @@
 export default () => {
   describe('Paragraph', () => {
-    const paragraphEl = document.querySelector('p');
+    const paragraphEl = document.querySelector('main p:nth-child(1)');
     it('should have a paragraph element', () => {
       expect(paragraphEl).toBeInTheDocument();
     });

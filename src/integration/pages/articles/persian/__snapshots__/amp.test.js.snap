@@ -281,7 +281,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 
 exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
-exports[`AMP Articles Paragraph should match paragraph text 1`] = `"ما تغییرات مهمی در سیاست‌های حفظ حریم خصوصی و کوکی‌هایمان ایجاد کرده‌ایم و می‌خواهیم شما بدانید این تغییرات برای شما و اطلاعات مربوط به شما به چه معنی است"`;
+exports[`AMP Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {

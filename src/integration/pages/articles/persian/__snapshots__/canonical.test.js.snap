@@ -252,7 +252,7 @@ exports[`Canonical Articles Most Read has item with rank 10`] = `
 }
 `;
 
-exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"منبع تصویر، Getty Images"`;
+exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {

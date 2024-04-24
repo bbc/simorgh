@@ -266,8 +266,6 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 
 exports[`AMP Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`AMP Articles Paragraph should match paragraph text 1`] = `"We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data."`;
-
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

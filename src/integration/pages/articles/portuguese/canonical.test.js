@@ -5,11 +5,12 @@
 
 import { runFlourishCanonicalEmbedTests } from '../../../common';
 import runInlineLinkTests from '../inlineLink';
+import runParagraphTests from '../paragraph';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runFlourishCanonicalEmbedTests();
     runInlineLinkTests();
-    // WE NEED A LTR INLINE LINK TEST BUT NEED TO MAKE FIXTURE DATA FOR THIS
+    runParagraphTests();
   });
 });
