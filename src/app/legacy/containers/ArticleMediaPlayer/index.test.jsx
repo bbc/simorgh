@@ -1,5 +1,9 @@
 import React from 'react';
-import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 import {
   render,
   screen,
@@ -41,6 +45,17 @@ describe('MediaPlayer', () => {
     renderMediaPlayer({
       platform: 'canonical',
       pageType: MEDIA_ARTICLE_PAGE,
+    });
+
+    const mediaPlayerIframe = screen.getByTitle(/media player/i);
+
+    expect(mediaPlayerIframe).toBeInTheDocument();
+  });
+
+  it('Should not render a placeholder for canonical MediaAsset pages', () => {
+    renderMediaPlayer({
+      platform: 'canonical',
+      pageType: MEDIA_ASSET_PAGE,
     });
 
     const mediaPlayerIframe = screen.getByTitle(/media player/i);
