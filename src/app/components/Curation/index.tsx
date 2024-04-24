@@ -108,7 +108,7 @@ export default ({
             description={description}
             link={billboardLink}
             image={imageUrl}
-            altText={imageAlt || 'Default Alt Text'}
+            altText={imageAlt}
             eventTrackingData={{
               componentName: `billboard-${nthCurationByStyleAndProminence}`,
               detailedPlacement: `${position + 1}`,

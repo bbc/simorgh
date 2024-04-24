@@ -72,6 +72,7 @@ export interface BillboardSummary extends BaseSummary {
   imageUrl: string;
   link: string;
   description: string;
+  imageAlt: string;
 }
 
 // export interface BillboardCuration extends BaseCuration {
