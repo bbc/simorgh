@@ -6,8 +6,6 @@
 // - Certain types of network error are retried automatically (retryOnNetworkFailure)
 import config from '../config/services';
 
-const getCpsId = path =>
-  path.match(/([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/)?.[1];
 const getOptimoId = path => path.match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1];
 
 export const testResponseCodeAndType = ({
@@ -122,9 +120,9 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
     }
     const ctxServEnv = ctxEnv || env;
 
-    const articleAssetId = getCpsId(Cypress.env('currentPath'))
-      ? `${service}/${getCpsId(Cypress.env('currentPath'))}`
-      : getOptimoId(Cypress.env('currentPath'));
+    const articleAssetId =
+      getOptimoId(Cypress.env('currentPath')) ||
+      `${Cypress.env('currentPath')}`;
 
     const pageTypeId =
       id ||
