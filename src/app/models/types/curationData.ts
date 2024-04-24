@@ -74,9 +74,3 @@ export interface BillboardSummary extends BaseSummary {
   description: string;
   imageAlt: string;
 }
-
-// export interface BillboardCuration extends BaseCuration {
-//   summaries: BillboardSummary[];
-// }
-
-// ^ not used so delete

@@ -80,7 +80,7 @@ export default ({
       // block scope for new billboard summaries type
       const billboardSummaries = summaries as BillboardSummary[];
 
-      if (billboardSummaries.length > 0 && billboardSummaries[0]) {
+      if (billboardSummaries.length > 0) {
         const {
           imageUrl,
           link: billboardLink,
@@ -119,7 +119,6 @@ export default ({
       }
       return null; // return null if no summaries available
     }
-
     case MESSAGE_BANNER:
       return summaries.length > 0 ? (
         <MessageBanner
