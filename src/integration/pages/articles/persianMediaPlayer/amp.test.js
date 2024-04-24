@@ -6,11 +6,13 @@
 import runAmpTests from '../ampTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
 import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
+import runInlineLinkTests from '../inlineLink';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runAmpTests(service);
     runMediaPlayerCaptionTests();
     runMediaPlayerPlaceholderTests();
+    runInlineLinkTests();
   });
 });

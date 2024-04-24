@@ -6,11 +6,13 @@
 import runCanonicalTests from '../canonicalTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
 import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
+import runInlineLinkTests from '../inlineLink';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
     runMediaPlayerCaptionTests();
     runMediaPlayerPlaceholderTests();
+    runInlineLinkTests();
   });
 });
