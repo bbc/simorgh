@@ -11,19 +11,22 @@ const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   <RouterContext.Provider
     value={{ query: { id: '123' } } as unknown as NextRouter}
   >
-    <ServiceContextProvider service="mundo">{children}</ServiceContextProvider>
+    {children}
   </RouterContext.Provider>
 );
 
 const Component = () => (
   <NextRouterWrapper>
-    <PageLayoutWrapper
-      // @ts-expect-error partial data required for storybook
-      pageData={mundoFormFixture}
-      status={200}
-    >
-      <UGCPage pageData={mundoFormFixture as PageProps['pageData']} />
-    </PageLayoutWrapper>
+    {' '}
+    <ServiceContextProvider service="mundo">
+      <PageLayoutWrapper
+        // @ts-expect-error partial data required for storybook
+        pageData={mundoFormFixture}
+        status={200}
+      >
+        <UGCPage pageData={mundoFormFixture as PageProps['pageData']} />
+      </PageLayoutWrapper>
+    </ServiceContextProvider>
   </NextRouterWrapper>
 );
 
