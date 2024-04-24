@@ -361,18 +361,18 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ځانګړې پاڼې',
-        url: '/pashto/in-depth-54540873',
+        url: '/pashto/topics/c6pxyz4e0ryt',
       },
       {
         title: 'کالم',
-        url: '/pashto/columns-54029178',
+        url: '/pashto/topics/cq57nwne9lzt',
       },
       {
         title: 'پر سټلایت خپرونې',
         url: '/pashto/articles/c4n55eygdn0o',
       },
       {
-        title: 'راډیویې خپرونې',
+        title: 'راډیویي خپرونې',
         url: '/pashto/topics/c9xz1ekw79nt',
       },
     ],
