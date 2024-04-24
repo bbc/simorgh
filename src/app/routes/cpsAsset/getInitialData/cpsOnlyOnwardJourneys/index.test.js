@@ -1,9 +1,9 @@
 import path from 'ramda/src/path';
 import pglNoCpsPromos from '#data/arabic/cpsAssets/art-and-culture-38260491.json';
 import { data as styWithNoCpsPromoData } from '#data/igbo/cpsAssets/afirika-23252735.json';
-import { data as pglWithNoRelatedContentData } from '#data/pidgin/cpsAssets/sport-23252855.json';
+import { data as pglWithNoRelatedContentData } from '#data/pidgin/cpsAssets/sport-23252855-LEGACY.json';
 import { data as pglWithAllCpsPromosData } from '#data/pidgin/cpsAssets/tori-49221071.json';
-import { data as mapPageWithCpsPromoData } from '#data/pidgin/cpsAssets/23248703.json';
+import { data as mapPageWithCpsPromoData } from '#data/pidgin/cpsAssets/23248703-LEGACY.json';
 import noSeeAlsoRelatedContent from '#data/sport/cpsAssets/football/55790817.json';
 import cpsOnlyPromos from '.';
 import seeAlsoGroup from './fixtures/pglSomeCpsOnwardJourneys/expectedSeeAlsoGroup.json';

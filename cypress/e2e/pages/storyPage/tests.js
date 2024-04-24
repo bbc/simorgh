@@ -1,11 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import paths from 'ramda/src/paths';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
+import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -19,6 +21,16 @@ const isArticleLessThanTwoYearsOld = () => {
     });
 };
 
+const getContentBlocks = body => {
+  const contentBlock = body.data.article.content;
+
+  const [cpsAssetBlocks, cafBlocks] = paths(
+    [['blocks'], ['model', 'blocks']],
+    contentBlock,
+  );
+  return cpsAssetBlocks || cafBlocks;
+};
+
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({
   service,
@@ -26,11 +38,16 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
+  const pageTypeForFetch = CafEnabledServices.includes(service)
+    ? 'article'
+    : 'cpsAsset';
+
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
-          const descriptionBlock = body.data.article.content.blocks.find(
+          const contentBlocks = getContentBlocks(body);
+          const descriptionBlock = contentBlocks.find(
             block => block.role === 'introduction',
           );
           // Condition added because introduction is non-mandatory
@@ -47,9 +64,10 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
-          const paragraphBlock = body.data.article.content.blocks.find(
+          const contentBlocks = getContentBlocks(body);
+          const paragraphBlock = contentBlocks.find(
             block => block.type === 'paragraph',
           );
           // Conditional because in test assets the data model structure is sometimes variable and unusual

@@ -680,3 +680,27 @@ export const tipoFormattedTopStoriesItem = {
   id: 'urn:bbc:ares::article:c6vdqkm8yyvo',
   type: 'optimo',
 };
+
+export const tipoLivePageTopStoriesItem = {
+  headline:
+    'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
+  destinationUrl: '/hindi/live/c0dewwj3lk1t',
+  isLive: true,
+  summary:
+    '17 अप्रैल को ऑनमनोरमा ने एक रिपोर्ट की थी कि केरल में ईवीएम ने गलती से मॉक टेस्ट में बीजेपी के पक्ष में वोट रजिस्टर किये.',
+  image: {
+    id: '6763c8e4-5f99-4101-acde-d0b91ccf41b0',
+    subType: 'promo',
+    href: 'http://c.files.bbci.co.uk/ec16/live/5a7550d0-fd21-11ee-97f7-e98b193ef1b8.jpg',
+    path: '/cpsprodpb/ec16/live/5a7550d0-fd21-11ee-97f7-e98b193ef1b8.jpg',
+    height: 682,
+    width: 1024,
+    altText: 'बाढ़',
+    copyrightHolder: 'Getty Images',
+    originCode: 'cpsprodpb',
+    type: 'image',
+  },
+  serviceIdentifier: 'hindi',
+  id: 'urn:bbc:tipo:topic:c0dewwj3lk1t',
+  type: 'tipo-live',
+};
