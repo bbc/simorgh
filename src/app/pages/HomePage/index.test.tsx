@@ -127,7 +127,7 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    it('Only the first image and message banner on the homepage are not lazy loaded, but all others are', () => {
+    it('Only the first image, message banner and billboard on the homepage are not lazy loaded, but all others are', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
@@ -137,6 +137,13 @@ describe('Home Page', () => {
         .querySelectorAll(`[data-testid^="message-banner"] img`)
         .forEach(image =>
           messageBannerImages.push(image.getAttribute(`src`) || ''),
+        );
+
+      const billboardImages: string[] = [];
+      document
+        .querySelectorAll(`[data-testid^="billboard"] img`)
+        .forEach(image =>
+          billboardImages.push(image.getAttribute(`src`) || ''),
         );
 
       const imageList = document.querySelectorAll('img');
