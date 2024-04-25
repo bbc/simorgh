@@ -13,6 +13,7 @@ import getAgent from '#server/utilities/getAgent';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
 
 import LivePageLayout from './LivePageLayout';
@@ -90,6 +91,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { headers: reqHeaders } = context.req;
 
   const isApp = isAppPath(context.resolvedUrl);
+  const isLite = isLitePath(context.resolvedUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
@@ -105,6 +107,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         bbcOrigin: reqHeaders['bbc-origin'] || null,
         isApp,
+        isLite,
         isNextJs: true,
         service,
         status: 404,
@@ -142,6 +145,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       error: data?.error || null,
       id,
       isApp,
+      isLite,
       isAmp: false,
       isNextJs: true,
       page: page || null,

@@ -49,7 +49,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
   display: inline-block;
-  width: calc(100% - 7.5rem);
+  width: ${props => (props.theme.isLite ? '100%' : 'calc(100% - 7.5rem)')};
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
   height: 100%;
@@ -103,11 +103,11 @@ const StyledHeadline = styled.div`
 
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
+  const { pageType, isLite } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });
 
-  const { pageType } = useContext(RequestContext);
   const isArticle = pageType === ARTICLE_PAGE;
 
   return (
@@ -126,9 +126,11 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
         data-e2e="story-promo-wrapper"
         isArticlePage={isArticle}
       >
-        <ImageWrapper>
-          <RecommendationsImage indexImage={indexImage} lazyLoad />
-        </ImageWrapper>
+        {!isLite && (
+          <ImageWrapper>
+            <RecommendationsImage indexImage={indexImage} lazyLoad />
+          </ImageWrapper>
+        )}
         <TextWrapper>
           <StyledHeadline script={script} service={service}>
             <Link

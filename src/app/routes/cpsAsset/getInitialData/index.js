@@ -123,6 +123,7 @@ export default async ({
       pageType: isCaf ? 'article' : 'cpsAsset',
       getAgent,
       isAmp,
+      toggles,
     });
 
     if (status !== 200) {
