@@ -121,6 +121,7 @@ export default async ({
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
       isAmp,
+      toggles,
     });
 
     if (status !== 200) {
