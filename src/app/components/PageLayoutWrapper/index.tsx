@@ -164,8 +164,8 @@ const PageLayoutWrapper = ({
                 }
                 let wrappedContentsShortcut = wrappedContents[wrappedYear];
                 let wrappedTopics = ${JSON.stringify(
-                  pageData?.metadata?.topics,
-                )};
+        pageData?.metadata?.topics,
+      )};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName }) => {
                         wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
@@ -188,6 +188,41 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
+
+  if (typeof window !== 'undefined') {
+    const isValidHttpUrl = string => {
+      let url;
+
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;
+      }
+
+      return url.protocol === 'http:' || url.protocol === 'https:';
+    };
+    const { fetch: originalFetch } = window;
+
+    window.fetch = async (...args) => {
+      const [resource, config] = args;
+      console.group('Fetch Interception Debug');
+      console.debug(resource);
+      if (isValidHttpUrl(resource)) {
+        const urlObj = new URL(resource);
+        const queryParams = Array.from(urlObj.searchParams)
+          .map(param => {
+            return `${param[0]}: ${param[1]}`;
+          })
+          .join('\n');
+        console.debug('Query Parameters:');
+        console.debug(queryParams);
+      }
+      const response = await originalFetch(resource, config);
+      console.debug(response);
+      console.groupEnd();
+      return response;
+    };
+  }
 
   return (
     <>
