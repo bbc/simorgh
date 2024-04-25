@@ -133,14 +133,12 @@ describe('constructPageFetchUrl', () => {
   );
 
   it.each`
-    pageType        | service        | pathname                             | expected
-    ${ARTICLE_PAGE} | ${'ukrainian'} | ${'/ukrainian/articles/foo'}         | ${'Article ID is invalid'}
-    ${ARTICLE_PAGE} | ${'ukrainian'} | ${'/ukrainian/articles/c000000000o'} | ${'Article ID is invalid'}
-    ${HOME_PAGE}    | ${'foo'}       | ${'/foo/c0000000000t'}               | ${'Home ID is invalid'}
-    ${LIVE_PAGE}    | ${'ukrainian'} | ${'foo'}                             | ${'Live ID is invalid'}
-    ${TOPIC_PAGE}   | ${'ukrainian'} | ${'/ukrainian/topics/foo'}           | ${'Topic ID is invalid'}
-    ${TOPIC_PAGE}   | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}   | ${'Topic ID is invalid'}
-    ${'foo'}        | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'}  | ${'Foo ID is invalid'}
+    pageType      | service        | pathname                            | expected
+    ${HOME_PAGE}  | ${'foo'}       | ${'/foo/c0000000000t'}              | ${'Home ID is invalid'}
+    ${LIVE_PAGE}  | ${'ukrainian'} | ${'foo'}                            | ${'Live ID is invalid'}
+    ${TOPIC_PAGE} | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
+    ${TOPIC_PAGE} | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
+    ${'foo'}      | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,
     ({ pageType, service, pathname, expected }) => {
