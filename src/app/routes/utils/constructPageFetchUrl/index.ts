@@ -34,7 +34,7 @@ export interface UrlConstructParams {
   isAmp?: boolean;
 }
 
-const removeLeadingSlash = (path: string) => path.replace(/^\/+/g, '');
+const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
@@ -75,7 +75,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
         if (isOptimoId) return getArticleId(path);
         if (isCpsId) return getCpsId(path);
 
-        return path;
+        return removeLeadingSlash(path);
       };
       break;
     case CPS_ASSET:
