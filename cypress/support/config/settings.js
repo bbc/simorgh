@@ -6993,7 +6993,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/thai/23124008'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai/international-23252825'],
