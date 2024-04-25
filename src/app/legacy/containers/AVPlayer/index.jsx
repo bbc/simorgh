@@ -131,8 +131,12 @@ AVPlayer.defaultProps = {
 };
 
 const AVSelector = props => {
-  const { skin } = props;
+  const { isLite } = useContext(RequestContext);
   const [isLoading, setIsLoading] = useState(true);
+
+  if (isLite) return null;
+
+  const { skin } = props;
   return skin === 'audio' ? (
     <AudioLoader isLoading={isLoading}>
       <AudioPlayer {...props} onMediaInitialised={() => setIsLoading(false)} />

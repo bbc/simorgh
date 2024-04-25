@@ -26,9 +26,11 @@ const componentsToRender = {
 };
 
 const IncludeContainer = props => {
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { isAmp, isLite, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
+
+  if (isLite) return null;
 
   const errorMessage = pathOr(
     'Sorry, we can’t display this part of the story on this lightweight mobile page.',
