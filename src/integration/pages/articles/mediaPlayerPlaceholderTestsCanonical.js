@@ -1,5 +1,5 @@
 export default () => {
-  describe('Media Player Placeholder', () => {
+  describe('Media Player Placeholder Canonical', () => {
     const mediaPlaceholderEl = document.querySelector(
       '[data-e2e="media-player"]>:first-child',
     );

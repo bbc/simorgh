@@ -5,7 +5,7 @@
 
 import runAmpTests from '../ampTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
-import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
+import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsAmp';
 import runInlineLinkTests from '../inlineLink';
 
 describe('AMP', () => {

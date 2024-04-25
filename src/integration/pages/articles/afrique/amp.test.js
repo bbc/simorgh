@@ -5,7 +5,7 @@
 
 import runGistTests from '../gistTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
-import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
+import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsAmp';
 import runImageCopyrightBBC from '../imageCopyrightBBC';
 
 describe('AMP', () => {
