@@ -75,7 +75,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
         if (isOptimoId) return getArticleId(path);
         if (isCpsId) return getCpsId(path);
 
-        return null;
+        return path;
       };
       break;
     case CPS_ASSET:
