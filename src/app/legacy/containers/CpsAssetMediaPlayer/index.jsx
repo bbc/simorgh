@@ -20,6 +20,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
 import getAssetUri from './utils/getAssetUri';
@@ -65,7 +66,11 @@ const CpsAssetMediaPlayer = ({
   showCaption,
 }) => {
   const { dir } = useContext(ServiceContext);
+  const { isLite } = useContext(RequestContext);
+
+  if (isLite) return null;
   if (!assetUri) return null;
+
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
   const metadataBlock = filterForBlockType(
     path(['model', 'blocks'], mediaBlock),

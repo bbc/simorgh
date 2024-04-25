@@ -202,9 +202,13 @@ server.get(
         service,
         isAmp,
         isApp,
+        isLite: isLiteRouteSuffix,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
+
+      // Check if using the .lite route
+      const isLite = isLiteRouteSuffix;
 
       const { page, renderer_env } = query;
 
@@ -243,6 +247,7 @@ server.get(
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.isUK = isUK;
       data.isCaf = isCaf;
+      data.isLite = isLite;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -269,6 +274,7 @@ server.get(
           data,
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -296,6 +302,7 @@ server.get(
           data: { error: true, status },
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -332,6 +339,7 @@ server.get(
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
 
         if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
