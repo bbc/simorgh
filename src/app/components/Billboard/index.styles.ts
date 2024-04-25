@@ -5,9 +5,17 @@ export default {
   link: ({ palette }: Theme) =>
     css({
       textDecoration: 'none',
+      color: palette.WHITE,
       '&:hover, &:focus': {
-        color: palette.WHITE,
         textDecoration: 'underline',
+      },
+      '::before': {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        content: '""',
       },
     }),
   headerContainer: ({ mq }: Theme) =>
@@ -21,6 +29,7 @@ export default {
     }),
   backgroundContainer: ({ palette }: Theme) =>
     css({
+      zIndex: -1,
       position: 'absolute',
       top: '0',
       backgroundColor: palette.GREY_10,
@@ -36,20 +45,13 @@ export default {
         position: 'relative',
         width: '100%',
       },
-      '::before': {
-        position: 'absolute',
-        // bottom: 0,
-        // top: 0,
-        // left: 0,
-        // right: 0,
-        content: '""',
-      },
     }),
   heading: ({ palette }: Theme) =>
     css({
       paddingTop: '1.5rem',
       paddingBottom: '0.5rem',
       color: palette.WHITE,
+      textDecoration: 'none',
     }),
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
@@ -76,7 +78,7 @@ export default {
     }),
   textContainer: ({ mq, spacings }: Theme) =>
     css({
-      position: 'relative',
+      zIndex: 1,
       padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
