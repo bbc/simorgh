@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { data as kyrgyzHomePageDataWithBillboards } from '#data/kyrgyz/homePage/indexWithBillboards.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
@@ -16,6 +17,14 @@ const homePageData = {
   ...kyrgyzHomePageData,
   metadata: {
     ...kyrgyzHomePageData.metadata,
+    type: 'home',
+  },
+};
+
+const homePageDataWithBillboards = {
+  ...kyrgyzHomePageDataWithBillboards,
+  metadata: {
+    ...kyrgyzHomePageDataWithBillboards.metadata,
     type: 'home',
   },
 };
@@ -127,36 +136,48 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    it('Only the first image, message banner and billboard on the homepage are not lazy loaded, but all others are', () => {
-      render(<HomePage pageData={homePageData} />, {
-        service: 'kyrgyz',
-      });
+    test.each([[homePageData], [homePageDataWithBillboards]])(
+      'Only the first image, message banner(s) and billboard(s) on the homepage are not lazy loaded, but all others are',
+      data => {
+        render(<HomePage pageData={data} />, {
+          service: 'kyrgyz',
+        });
 
-      const messageBannerImages: string[] = [];
-      document
-        .querySelectorAll(`[data-testid^="message-banner"] img`)
-        .forEach(image =>
-          messageBannerImages.push(image.getAttribute(`src`) || ''),
-        );
+        const messageBannerImages: string[] = [];
+        document
+          .querySelectorAll(`[data-testid^="message-banner"] img`)
+          .forEach(image =>
+            messageBannerImages.push(image.getAttribute(`src`) || ''),
+          );
 
-      const billboardImages: string[] = [];
-      document
-        .querySelectorAll(`[data-testid^="billboard"] img`)
-        .forEach(image =>
-          billboardImages.push(image.getAttribute(`src`) || ''),
-        );
+        const billboardImages: string[] = [];
+        document
+          .querySelectorAll(`[data-testid^="billboard"] img`)
+          .forEach(image =>
+            billboardImages.push(image.getAttribute(`src`) || ''),
+          );
 
-      const imageList = document.querySelectorAll('img');
-      imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
+        const imageList = document.querySelectorAll('img');
 
-        if (index === 0 || messageBannerImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBeNull();
-        } else if (!messageBannerImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBe('lazy');
-        }
-      });
-    });
+        imageList.forEach((image, index) => {
+          const src = image.getAttribute('src') || '';
+
+          if (
+            index === 0 ||
+            messageBannerImages.includes(src) ||
+            billboardImages.includes(src)
+          ) {
+            expect(image.getAttribute('loading')).toBeNull();
+          } else if (
+            !messageBannerImages.includes(src) ||
+            !billboardImages.includes(src)
+          ) {
+            expect(image.getAttribute('loading')).toBe('lazy');
+          }
+        });
+      },
+    );
+
     it('Only the first image on a homepage has Fetch Priority set to high', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
