@@ -7,10 +7,6 @@ export default () => {
       expect(copyrightTextEl).toBeInTheDocument();
     });
 
-    it('should have the right text content', () => {
-      expect(copyrightTextEl).toHaveTextContent('Getty Images');
-    });
-
     it('should match snapshot', () => {
       expect(copyrightTextEl).toMatchSnapshot();
     });

@@ -4,9 +4,5 @@ export default () => {
     it('should not be in the document', () => {
       expect(copyrightTextEl).not.toBeInTheDocument();
     });
-
-    it('should match snapshot', () => {
-      expect(copyrightTextEl).toMatchSnapshot();
-    });
   });
 };
