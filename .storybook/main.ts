@@ -80,7 +80,6 @@ const storybookConfig: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
-      // @ts-expect-error -  webpack plugin not typed
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
