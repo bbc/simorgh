@@ -22,7 +22,7 @@ const isValidHref = (href: string) => {
   );
 };
 
-const transformAnchorTags = (html: string) => {
+export default (html: string) => {
   let modifiedHtml = html;
 
   try {
@@ -44,5 +44,3 @@ const transformAnchorTags = (html: string) => {
 
   return modifiedHtml;
 };
-
-export default transformAnchorTags;
