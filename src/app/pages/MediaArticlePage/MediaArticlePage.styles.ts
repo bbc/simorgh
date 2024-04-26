@@ -45,12 +45,6 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  cafMediaPlayer: ({ mq, spacings }: Theme) =>
-    css({
-      [mq.GROUP_3_ONLY]: {
-        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
-      },
-    }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {

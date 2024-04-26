@@ -121,11 +121,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     metadata: { atiAnalytics, type },
   } = pageData;
 
-  const isMap = type === MEDIA_ASSET_PAGE;
+  const isMediaAssetPage = type === MEDIA_ASSET_PAGE;
 
   const atiData = {
     ...atiAnalytics,
-    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isMediaAssetPage && {
+      pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+    }),
   };
 
   const componentsToRender = {
@@ -136,8 +138,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     audio: (props: ComponentToRenderProps) => (
       <div
         css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          !isMediaAssetPage && `padding-top: ${spacings.TRIPLE}rem`,
         ]}
       >
         <ArticleMediaPlayer {...props} />
@@ -146,8 +147,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     video: (props: ComponentToRenderProps) => (
       <div
         css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          !isMediaAssetPage && `padding-top: ${spacings.TRIPLE}rem`,
         ]}
       >
         <ArticleMediaPlayer {...props} />
@@ -227,7 +227,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
-          isMap
+          isMediaAssetPage
             ? 'Article'
             : categoryName(isTrustProjectParticipant, taggings, formats)
         }
@@ -239,7 +239,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
+        <div
+          css={
+            isMediaAssetPage ? styles.fullWidthContainer : styles.primaryColumn
+          }
+        >
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -253,7 +257,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        {!isMap && <SecondaryColumn pageData={pageData} />}
+        {!isMediaAssetPage && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );
