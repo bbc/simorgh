@@ -90,7 +90,7 @@ const HiearchicalGrid = ({
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
                   lazyLoad={lazyLoadImages}
-                  fetchpriority={fetchpriority}
+                  fetchPriority={fetchpriority}
                   isAmp={isAmp}
                 >
                   {isMedia && (

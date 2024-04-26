@@ -180,7 +180,7 @@ const Image = ({
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
               ]}
-              fetchpriority={fetchpriority}
+              fetchPriority={fetchpriority}
               style={{
                 aspectRatio: hasFixedAspectRatio
                   ? `${aspectRatioX} / ${aspectRatioY}`

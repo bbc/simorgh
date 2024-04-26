@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type JSX } from 'react';
 import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
 import TEXT_VARIANTS from './text-variants';
