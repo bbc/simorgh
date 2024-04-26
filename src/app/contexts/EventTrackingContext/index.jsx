@@ -4,7 +4,7 @@ import { node } from 'prop-types';
 import { pageDataPropType } from '#models/propTypes/data';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
-import useToggle from '#hooks/useToggle';
+import { useToggle, useMemo } from '#hooks/useToggle';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -51,7 +51,7 @@ const getCampaignID = pageType => {
 
 const NO_TRACKING_PROPS = {};
 
-export const EventTrackingContextProvider = ({ children, pageData }) => {
+export function EventTrackingContextProvider ({ children, pageData }) {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -67,13 +67,13 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   const campaignID = getCampaignID(requestContext.pageType);
   const { pageIdentifier, platform, statsDestination } =
     buildATIEventTrackingParams(pageData, requestContext, serviceContext);
-  const trackingProps = {
+  const trackingProps = useMemo(() => {
     campaignID,
-    pageIdentifier,
-    platform,
-    producerId: serviceContext.atiAnalyticsProducerId,
-    statsDestination,
-  };
+      pageIdentifier,
+      platform,
+      producerId: serviceContext.atiAnalyticsProducerId,
+      statsDestination,
+  }); 
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);
 
   return (
