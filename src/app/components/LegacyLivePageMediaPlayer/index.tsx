@@ -5,9 +5,10 @@ import { MediaBlock } from '../MediaLoader/types';
 import { GridItemMediumNoMargin } from '../../legacy/components/Grid';
 
 const LegacyLivePageMediaPlayer = ({ blocks, className }: Props) => {
-  const { id } = useContext(RequestContext);
+  const { id, isLite } = useContext(RequestContext);
 
   if (!id) return null;
+  if (isLite) return null;
 
   return (
     <GridItemMediumNoMargin
