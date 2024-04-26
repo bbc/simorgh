@@ -1,11 +1,11 @@
-import { AMP_REGEX, TLD_REGEX } from '../../../lib/regex.const';
+import { AMP_REGEX, TLD_REGEX, LITE_REGEX } from '../../../lib/regex.const';
 
 const getAmpUrl = (url: string) => `${url}.amp`;
 
 const getCanonicalUrl = (origin: string, pathname: string) => {
   const canonicalUrl = `${origin}${pathname}`;
 
-  return canonicalUrl.replace(AMP_REGEX, '');
+  return canonicalUrl.replace(AMP_REGEX, '').replace(LITE_REGEX, '');
 };
 
 const getUkCanonicalUrl = (url: string) => {

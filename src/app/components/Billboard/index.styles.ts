@@ -52,17 +52,13 @@ export default {
       paddingBottom: `${spacings.FULL}rem`,
       color: palette.WHITE,
       textDecoration: 'none',
-      [mq.GROUP_1_ONLY]: {
+      [mq.GROUP_1_MIN_WIDTH]: {
         paddingTop: `${spacings.DOUBLE}rem`,
         paddingBottom: `${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_2_ONLY]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_3_ONLY]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingTop: `${spacings.FULL}rem`,
+        paddingBottom: `${spacings.FULL}rem`,
       },
     }),
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
@@ -88,14 +84,11 @@ export default {
         color: palette.LIVE_LIGHT,
         paddingBottom: `${spacings.FULL}rem`,
       },
-      [mq.GROUP_1_ONLY]: {
+      [mq.GROUP_1_MIN_WIDTH]: {
         paddingBottom: `${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_2_ONLY]: {
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_3_ONLY]: {
-        paddingBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: `${spacings.FULL}rem`,
       },
     }),
   textContainer: ({ mq, spacings }: Theme) =>
