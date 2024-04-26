@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'BBC Lê',
-      brandDescription: 'Podcast traz áudios com reportagens selecionadas.',
+      title: 'WhatsApp',
+      brandTitle: 'No WhatsApp',
+      brandDescription: 'Agora você pode receber as notícias da BBC News Brasil no seu celular',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
-        alt: 'Logo: BBC Lê',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0htdh6t.png',
+        alt: 'Logo: WhatsApp BBC Brasil',
       },
       linkLabel: {
-        text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
+        text: 'Entre no canal!',
+        href: 'https://bbc.in/zap',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
