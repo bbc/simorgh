@@ -46,12 +46,24 @@ export default {
         width: '100%',
       },
     }),
-  heading: ({ palette }: Theme) =>
+  heading: ({ mq, palette, spacings }: Theme) =>
     css({
-      paddingTop: '1.5rem',
-      paddingBottom: '0.5rem',
+      paddingTop: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.FULL}rem`,
       color: palette.WHITE,
       textDecoration: 'none',
+      [mq.GROUP_1_ONLY]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_2_ONLY]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_3_ONLY]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
     }),
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
@@ -70,10 +82,20 @@ export default {
         color: 'canvasText',
       },
     }),
-  liveLabelText: ({ palette }: Theme) =>
+  liveLabelText: ({ mq, palette, spacings }: Theme) =>
     css({
       'span:first-of-type': {
         color: palette.LIVE_LIGHT,
+        paddingBottom: `${spacings.FULL}rem`,
+      },
+      [mq.GROUP_1_ONLY]: {
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_2_ONLY]: {
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_3_ONLY]: {
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
     }),
   textContainer: ({ mq, spacings }: Theme) =>
@@ -93,10 +115,9 @@ export default {
         maxWidth: '50%', // determines width of text overlay.
       },
     }),
-  description: ({ palette, spacings }: Theme) =>
+  description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
       margin: 0,
-      marginTop: `${spacings.DOUBLE}rem`,
     }),
 };
