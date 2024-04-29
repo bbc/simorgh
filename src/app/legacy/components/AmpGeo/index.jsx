@@ -53,7 +53,6 @@ const configuration = {
       'sj',
       'sk',
       'tf',
-      'uk',
       'va',
       'wf',
       'yt',
