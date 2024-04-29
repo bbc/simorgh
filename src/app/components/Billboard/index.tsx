@@ -40,12 +40,7 @@ const Billboard = forwardRef(
     const id = `billboard-${idSanitiser(heading)}`;
 
     return (
-      <section
-        role="region"
-        aria-labelledby={id}
-        data-testid={id}
-        css={styles.container}
-      >
+      <section role="region" aria-labelledby={id} data-testid={id}>
         <div css={styles.headerContainer} ref={viewRef}>
           <div css={styles.backgroundContainer} />
           <div css={styles.contentContainer}>

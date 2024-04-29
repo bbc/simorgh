@@ -2,11 +2,6 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  container: ({ spacings }: Theme) =>
-    css({
-      paddingTop: `${spacings.QUADRUPLE}rem`,
-      paddingBottom: `${spacings.QUADRUPLE}rem`,
-    }),
   link: ({ palette }: Theme) =>
     css({
       textDecoration: 'none',
@@ -35,7 +30,7 @@ export default {
     }),
   backgroundContainer: ({ palette }: Theme) =>
     css({
-      zIndex: -1,
+      zIndex: 2,
       position: 'absolute',
       top: '0',
       backgroundColor: palette.GREY_10,
@@ -45,6 +40,7 @@ export default {
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
+      zIndex: 3,
       paddingBottom: `${spacings.QUADRUPLE}`,
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
@@ -97,7 +93,6 @@ export default {
     }),
   textContainer: ({ mq, spacings }: Theme) =>
     css({
-      zIndex: 1,
       padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
