@@ -83,12 +83,11 @@ export const testsThatFollowSmokeTestConfig = ({
       });
     }
 
-    // eslint-disable-next-line no-only-tests/no-only-tests
     describe('Social Embeds', () => {
       let articleId;
       before(() => {
         cy.url().then(url => {
-          const [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
+          [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
         });
       });
       // If we can find assets with other social media embed types, we can add more
