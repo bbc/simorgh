@@ -72,7 +72,7 @@ const setPolicyCookie = ({ policy, explicit, expires = null }) => {
       name: POLICY_COOKIE,
       value: policy,
       sameSite: SAME_SITE_VALUE,
-      expires,
+      ...(expires && { expires }),
     });
   }
 };
@@ -84,7 +84,7 @@ const setUserDidSeePrivacyBanner = (expires = null) => {
       name: PRIVACY_COOKIE,
       value: PRIVACY_COOKIE_CURRENT_VALUE,
       sameSite: SAME_SITE_VALUE,
-      expires,
+      ...(expires && { expires }),
     });
   }
 };
@@ -108,7 +108,7 @@ const setUserDidDismissCookieBanner = (isUK, expires = null) =>
       ? COOKIE_BANNER_EXPLICIT_CHOICE_MADE
       : COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK,
     sameSite: SAME_SITE_VALUE,
-    expires,
+    ...(expires && { expires }),
   });
 
 const useConsentBanner = (
