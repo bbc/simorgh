@@ -40,7 +40,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
 
     describe('Media Player: AMP', () => {
-      // eslint-disable-next-line no-only-tests/no-only-tests
       it('should render an iframe with a valid URL', () => {
         if (articleHasPlayer(articleId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
