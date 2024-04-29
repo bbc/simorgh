@@ -60,9 +60,9 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 
 const Image = props => {
   const { children, src, useLargeImages, ...rest } = props;
-  const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
-    src.includes(originCode),
-  );
+  const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode => {
+    return src.includes(originCode);
+  });
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
@@ -77,7 +77,6 @@ const Image = props => {
     : undefined;
   const fallbackMediaType = isWebPSupported ? 'image/jpeg' : undefined;
   const sizes = createSizes(useLargeImages, isProgrammeImage);
-
   return (
     <Wrapper>
       <IMAGE
