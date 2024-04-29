@@ -6,7 +6,13 @@ const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
 const articleHasPlayer = testAssetId =>
-  ['cgwk9w4zlg8o', 'cj7xrxz0e8zo', 'cwl08rd38l6o'].includes(testAssetId);
+  [
+    'cgwk9w4zlg8o', // pidgin/articles/cgwk9w4zlg8o on LIVE
+    'cj7xrxz0e8zo', // news/articles/cj7xrxz0e8zo on LIVE
+    'c25rp5glj5qo', // persian/articles/c25rp5glj5qo on LIVE
+    'cwl08rd38l6o', // pidgin/articles/cwl08rd38l6o on TEST
+    'cej3lzd5e0go', // persian/articles/cej3lzd5e0go on TEST
+  ].includes(testAssetId);
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
@@ -34,6 +40,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
 
     describe('Media Player: AMP', () => {
+      // eslint-disable-next-line no-only-tests/no-only-tests
       it('should render an iframe with a valid URL', () => {
         if (articleHasPlayer(testAssetId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
