@@ -48,8 +48,9 @@ export default (overrideProps?: { defaultService?: Services }) =>
     {
       globals: {
         service: { service: selectedService },
+        isLite,
       },
-    } = { globals: { service: { service: DEFAULT_SERVICE } } },
+    } = { globals: { service: { service: DEFAULT_SERVICE }, isLite: false } },
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
     const serviceToUse = defaultServiceOverride || selectedService;
@@ -81,6 +82,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
       variant: variant || 'default',
       selectedService: serviceToUse,
       timezone,
+      isLite,
     };
 
     return (

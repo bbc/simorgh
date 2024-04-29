@@ -5,7 +5,9 @@ import Canonical from './index.canonical';
 import Amp from './index.amp';
 
 const ConsentBanner = ({ onDismissFocusRef }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
+  if (isLite) return null;
+
   return isAmp ? <Amp /> : <Canonical onDismissFocusRef={onDismissFocusRef} />;
 };
 

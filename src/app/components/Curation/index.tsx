@@ -6,6 +6,8 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import idSanitiser from '#app/lib/utilities/idSanitiser';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -15,6 +17,7 @@ import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
+import Billboard from '../Billboard';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -24,6 +27,7 @@ const {
   MOST_READ,
   RADIO_SCHEDULE,
   EMBED,
+  BILLBOARD,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -62,33 +66,82 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+  const environmentIsLive = isLive();
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
+  // extract the first summary as the basis for the msg banner and the billboard
+  const [firstSummary] = summaries;
+  const {
+    description,
+    link: summaryLink,
+    imageAlt,
+    imageUrl,
+    isLive: summaryIsLive,
+    title: linkText,
+  } = firstSummary || {};
+
+  const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
-    case MESSAGE_BANNER: {
-      const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+    case BILLBOARD: {
+      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
 
-      return summaries.length > 0 ? (
-        <MessageBanner
-          heading={title}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          linkText={summaries[0].title}
-          image={summaries[0].imageUrl}
-          id={messageBannerId}
-          eventTrackingData={{
-            componentName: messageBannerId,
-            detailedPlacement: `${position + 1}`,
-          }}
-        />
-      ) : null;
+      if (firstSummary) {
+        return environmentIsLive ? (
+          <MessageBanner
+            heading={title}
+            description={description}
+            link={summaryLink}
+            linkText={linkText}
+            image={imageUrl}
+            id={messageBannerId}
+            eventTrackingData={{
+              componentName: messageBannerId,
+              detailedPlacement: `${position + 1}`,
+            }}
+          />
+        ) : (
+          <Billboard
+            heading={title}
+            description={description}
+            link={summaryLink}
+            image={imageUrl}
+            id=""
+            eventTrackingData={{
+              componentName: billboardId,
+              detailedPlacement: `${position + 1}`,
+            }}
+            showLiveLabel={summaryIsLive}
+            altText={imageAlt}
+          />
+        );
+      }
+      return null;
     }
+    case MESSAGE_BANNER:
+      if (firstSummary) {
+        return (
+          <MessageBanner
+            heading={title}
+            description={description}
+            link={summaryLink}
+            linkText={linkText}
+            image={imageUrl}
+            id={messageBannerId}
+            eventTrackingData={{
+              componentName: messageBannerId,
+              detailedPlacement: `${position + 1}`,
+            }}
+          />
+        );
+      }
+      return null;
     case MOST_READ:
       return (
         <MostRead
