@@ -2,6 +2,11 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
+  container: ({ spacings }: Theme) =>
+    css({
+      paddingTop: `${spacings.QUADRUPLE}rem`,
+      paddingBottom: `${spacings.QUADRUPLE}rem`,
+    }),
   link: ({ palette }: Theme) =>
     css({
       textDecoration: 'none',
