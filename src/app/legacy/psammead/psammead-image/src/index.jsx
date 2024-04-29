@@ -3,7 +3,7 @@ import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
-import { FRONT_PAGE } from '../../../../routes/utils/pageTypes';
+import { FRONT_PAGE, HOME_PAGE } from '../../../../routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 
@@ -50,7 +50,7 @@ export const Img = props => {
 
   return (
     <>
-      {pageType === FRONT_PAGE && (
+      {(pageType === FRONT_PAGE || pageType === HOME_PAGE)(
         <StyledPicture onLoad={onLoad}>
           {srcset && (
             <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
@@ -63,9 +63,9 @@ export const Img = props => {
             />
           )}
           <StyledImg src={src} {...otherProps} />
-        </StyledPicture>
+        </StyledPicture>,
       )}
-      {pageType !== FRONT_PAGE && (
+      {pageType !== FRONT_PAGE && pageType !== HOME_PAGE && (
         <StyledImg
           sizes={sizes}
           srcSet={fallbackSrcset}

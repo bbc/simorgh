@@ -1,7 +1,8 @@
 import { getEnvConfig } from '../getEnvConfig';
 
 // List of originCodes that support webp on '/ace/ws/' iChef
-const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
+// IS IT ALL ORIGINCODES NOW APART FROM THE IOS PROBLEM ONES?
+// const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
@@ -22,7 +23,7 @@ const buildPlaceholderSrc = (src, resolution) => {
   return `https://${newUrl.join('/')}`;
 };
 
-const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
+const buildIChefURL = ({ originCode, locator, resolution }) => {
   if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }
@@ -38,13 +39,10 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
     .filter(Boolean)
     .join('/');
 
-  const isWebPSupported = isWebP && WEBP_ORIGIN_CODES.includes(originCode);
-
-  if (isWebPSupported) {
-    return `${url}.webp`;
+  if (url.endsWith('.webp')) {
+    return url;
   }
-
-  return url;
+  return `${url}.webp`;
 };
 
 export default buildIChefURL;

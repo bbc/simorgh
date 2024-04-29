@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.1.0';
+const version = 'v0.2.0';
 const cacheName = 'simorghCache_v1';
 
 self.addEventListener('install', event => {
@@ -12,7 +12,7 @@ self.addEventListener('install', event => {
 
 const fetchEventHandler = async event => {
   if (
-    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+(\.jpg|\.png)$/.test(
+    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+\.webp$/.test(
       event.request.url,
     )
   ) {
@@ -23,15 +23,27 @@ const fetchEventHandler = async event => {
     if (req.headers.has('accept')) {
       supportsWebp = req.headers.get('accept').includes('webp');
     }
+    // detect the ios version and remove webp from the request
+    // if supports webp is false in request header then don't use it?
+    // If we support WebP don't remove
+    // if it doesn't support, remove
+    // look at the headers Accept image/webp,*/
+    // downgrade/remove if not there
 
-    // If we support WebP
-    if (supportsWebp && !/\/amz\/worldservice\/.*/.test(event.request.url)) {
+    if (!supportsWebp) {
       event.respondWith(
-        fetch(`${req.url}.webp`, {
+        fetch(`${req.url}`.slice(0, -5), {
           mode: 'no-cors',
         }),
       );
     }
+    // if (supportsWebp && !/\/amz\/worldservice\/.*/.test(event.request.url)) {
+    //   event.respondWith(
+    //     fetch(`${req.url}.webp`, {
+    //       mode: 'no-cors',
+    //     }),
+    //   );
+    // }
   } else if (
     /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
       event.request.url,
