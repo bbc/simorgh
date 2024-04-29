@@ -336,7 +336,7 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments); // does this mean AMP cannot do experiments?
 
         if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
 
