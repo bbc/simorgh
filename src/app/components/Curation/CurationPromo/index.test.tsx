@@ -24,6 +24,7 @@ const Fixture = ({
   <CurationPromo
     lazy={lazy}
     title="Promo title"
+    description="This is a description"
     firstPublished="2022-03-30T07:37:18.253Z"
     imageUrl="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     lastPublished="2023-04-17T07:37:18.253Z"
