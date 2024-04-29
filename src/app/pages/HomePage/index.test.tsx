@@ -147,38 +147,38 @@ describe('Home Page', () => {
         .forEach(image =>
           nonLazyLoadImages.push(image.getAttribute(`src`) || ''),
         );
-      console.log('non lazy load images', nonLazyLoadImages);
 
       const imageList = document.querySelectorAll('img');
-      // console.log(
-      //   'query selector img..',
-      //   Array.from(document.querySelectorAll('img')),
-      // );
+
       imageList.forEach((image, index) => {
         const src = image.getAttribute('src') || '';
 
         if (index === 0 || nonLazyLoadImages.includes(src)) {
           expect(image.getAttribute('loading')).toBeNull();
         } else {
-          console.log('this is img src..', src);
-          console.log(
-            'image atribute loading..',
-            image.getAttribute('loading'),
-          );
           expect(image.getAttribute('loading')).toBe('lazy');
         }
       });
     });
 
-    it('Only the first image on a homepage has Fetch Priority set to high', () => {
+    it('Only the first image on a homepage and all Billboard images have Fetch Priority set to high', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
+      const highFetchPriorityImages: string[] = [];
+      document
+        .querySelectorAll(`[data-testid^="billboard"] img`)
+        .forEach(image =>
+          highFetchPriorityImages.push(image.getAttribute(`src`) || ''),
+        );
+
       const imageList = document.querySelectorAll('img');
+
       imageList.forEach((image, index) => {
-        if (index === 0) {
+        const src = image.getAttribute('src') || '';
+        if (index === 0 || highFetchPriorityImages.includes(src)) {
           expect(image.getAttribute('fetchpriority')).toBe('high');
         } else {
           expect(image.getAttribute('fetchpriority')).toBeNull();
