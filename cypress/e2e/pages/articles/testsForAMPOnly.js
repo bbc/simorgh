@@ -20,11 +20,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
   variant,
 }) => {
+  let articleId;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    let articleId;
     before(() => {
       cy.url().then(url => {
-        const [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
+        [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
       });
     });
     it('should contain an amp-img', () => {
