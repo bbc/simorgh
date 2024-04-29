@@ -58,7 +58,9 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    expect(screen.getByRole('heading', { level: 2, name: title })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 2, name: title }),
+    ).toBeInTheDocument();
   });
 
   it('should display the banner subtext correctly as a Paragraph', () => {
