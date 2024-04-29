@@ -58,7 +58,6 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    console.log('HELLO', screen.getByRole('heading', { level: 2, name: title }))
     expect(screen.getByRole('heading', { level: 2, name: title })).toBeInTheDocument();
   });
 
