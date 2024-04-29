@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import idSanitiser from '#app/lib/utilities/idSanitiser';
 import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
@@ -112,7 +111,7 @@ export default ({
             description={description}
             link={summaryLink}
             image={imageUrl}
-            id=""
+            id={billboardId}
             eventTrackingData={{
               componentName: billboardId,
               detailedPlacement: `${position + 1}`,
