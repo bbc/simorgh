@@ -60,7 +60,6 @@ const Image = ({
   children,
   fetchpriority,
 }: PropsWithChildren<Props>) => {
-
   const { pageType, isLite } = useContext(RequestContext);
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -96,7 +95,6 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-  console.log(`src set in image component ${imgSrcSet}`);
   return (
     <>
       {preload && (
