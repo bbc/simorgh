@@ -33,7 +33,7 @@ export default {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  backgroundContainer: ({ palette, spacings }: Theme) =>
+  backgroundContainer: ({ palette }: Theme) =>
     css({
       zIndex: -1,
       position: 'absolute',
