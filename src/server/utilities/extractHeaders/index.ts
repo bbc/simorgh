@@ -29,7 +29,6 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
     'ie',
     'lv',
     'pl',
-    'us', // to cover california,
     'gb',
   ];
   let isUK = null;

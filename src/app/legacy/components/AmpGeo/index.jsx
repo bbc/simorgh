@@ -45,7 +45,6 @@ const configuration = {
       'pf',
       'pl',
       'pm',
-      'preset-us-ca',
       'pt',
       're',
       'ro',
