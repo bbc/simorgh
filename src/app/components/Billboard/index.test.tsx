@@ -42,8 +42,8 @@ describe('Billboard', () => {
       />,
     );
     const heading = screen.getByText(title);
-    const messageBannerEl = getByRole('region');
-    expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
+    const billboardEl = getByRole('region');
+    expect(billboardEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
     );
   });
