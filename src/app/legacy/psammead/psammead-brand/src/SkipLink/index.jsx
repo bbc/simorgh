@@ -52,7 +52,6 @@ SkipLink.propTypes = {
   className: string,
 };
 
-SkipLink.defaultProps = { dir: 'ltr' };
-SkipLink.defaultProps = { className: 'focusIndicatorRemove' };
+SkipLink.defaultProps = { dir: 'ltr', className: 'focusIndicatorRemove' };
 
 export default SkipLink;
