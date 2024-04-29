@@ -341,9 +341,10 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        const mvtVaryHeaders = !isAmp ? getMvtVaryHeaders(mvtExperiments) : [];
+        const allHeaders = [...mvtVaryHeaders, 'X-country'];
 
-        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+        res.set('vary', allHeaders);
 
         res.status(status).send(result.html);
       } else {
