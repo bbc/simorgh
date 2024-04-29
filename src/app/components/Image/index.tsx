@@ -31,6 +31,7 @@ type Props = {
   src: string;
   width?: number;
   fetchpriority?: 'high';
+  hasCaption?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -59,6 +60,7 @@ const Image = ({
   width,
   children,
   fetchpriority,
+  hasCaption,
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -109,7 +111,7 @@ const Image = ({
       <div
         className={className}
         css={theme => [
-          styles.wrapper,
+          hasCaption ? styles.wrapperWithCaption : styles.wrapper,
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
