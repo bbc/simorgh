@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
@@ -167,8 +168,8 @@ const PageLayoutWrapper = ({
                 }
                 let wrappedContentsShortcut = wrappedContents[wrappedYear];
                 let wrappedTopics = ${JSON.stringify(
-        pageData?.metadata?.topics,
-      )};
+                  pageData?.metadata?.topics,
+                )};
                 if (wrappedTopics) {
                     wrappedTopics.forEach(({ topicName }) => {
                         wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
@@ -191,8 +192,8 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
     `;
-
   if (typeof window !== 'undefined') {
+    // @ts-expect-error blah blah
     const isValidHttpUrl = string => {
       let url;
 
@@ -211,6 +212,7 @@ const PageLayoutWrapper = ({
       console.group('Fetch Interception Debug');
       console.debug(resource);
       if (isValidHttpUrl(resource)) {
+        // @ts-expect-error blah blah
         const urlObj = new URL(resource);
         const queryParams = Array.from(urlObj.searchParams)
           .map(param => {
@@ -226,7 +228,6 @@ const PageLayoutWrapper = ({
       return response;
     };
   }
-
   return (
     <>
       <Helmet
