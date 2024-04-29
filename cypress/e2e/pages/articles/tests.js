@@ -88,8 +88,7 @@ export const testsThatFollowSmokeTestConfig = ({
       let articleId;
       before(() => {
         cy.url().then(url => {
-          // eslint-disable-next-line prefer-destructuring
-          articleId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
+          const [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
         });
       });
       // If we can find assets with other social media embed types, we can add more
