@@ -1,8 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -65,24 +62,13 @@ const ComponentWithContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/news/articles/c0000000001o"
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
+        <Page
+          pageData={{
+            ...data.article,
+            secondaryColumn: data.secondaryData,
+            mostRead: data.secondaryData.mostRead,
+          }}
+        />
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
@@ -106,23 +92,13 @@ const ComponentWithServiceContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
+        <Page
+          pageData={{
+            ...data.article,
+            secondaryColumn: data.secondaryData,
+            mostRead: data.secondaryData.mostRead,
+          }}
+        />
       </ServiceContext.Provider>
     </ToggleContextProvider>
   );

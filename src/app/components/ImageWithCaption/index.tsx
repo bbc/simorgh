@@ -53,11 +53,10 @@ const ImageWithCaption = ({
   shouldPreload,
 }: Props) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
 
-  if (!blocks) {
-    return null;
-  }
+  if (isLite) return null;
+  if (!blocks) return null;
 
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
