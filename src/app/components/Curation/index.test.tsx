@@ -64,7 +64,7 @@ const components = {
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
-  'billboard-': {
+  'billboard-1': {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
