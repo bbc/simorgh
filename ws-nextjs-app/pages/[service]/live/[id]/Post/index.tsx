@@ -16,8 +16,6 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import isLive from '#app/lib/utilities/isLive';
-import LegacyMediaPlayer from '#app/components/LegacyLivePageMediaPlayer';
 import styles from './styles';
 import {
   Post as PostType,
@@ -150,12 +148,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) =>
-      isLive() ? (
-        <LegacyMediaPlayer blocks={props.blocks} css={styles.bodyMedia} />
-      ) : (
-        <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
-      ),
+    video: (props: { blocks: MediaBlock[] }) => (
+      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
+    ),
     social: SocialEmbedContainer,
   };
 

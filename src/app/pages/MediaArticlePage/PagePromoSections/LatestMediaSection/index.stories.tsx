@@ -16,15 +16,21 @@ import metadata from './metadata.json';
 
 interface Props {
   service: Services;
+  isLite?: boolean;
 }
 
 interface ComponentProps extends Props {
   content: LatestMedia[];
 }
-const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
+const Component = ({
+  service,
+  isLite,
+  content,
+}: PropsWithChildren<ComponentProps>) => (
   <RequestContextProvider
     isAmp={false}
     isApp={false}
+    isLite={isLite}
     pageType={MEDIA_ARTICLE_PAGE}
     service={service}
     pathname=""
@@ -79,24 +85,42 @@ export default {
 
 export const MultipleLatestMediaWithCustomAltText = (
   _: StoryArgs,
-  { service }: Props,
+  { service, isLite }: Props,
 ) => {
   const pidginLatestMediaList = pidginArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={pidginLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={pidginLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };
 
 export const MultipleLatestMediawithFallbackAltText = (
   _: StoryArgs,
-  { service }: Props,
+  { service, isLite }: Props,
 ) => {
   const hausaLatestMediaList = hausaArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={hausaLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={hausaLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };
 
-export const SingleLatestMedia = (_: StoryArgs, { service }: Props) => {
+export const SingleLatestMedia = (_: StoryArgs, { service, isLite }: Props) => {
   const tamilLatestMediaList = tamilArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={tamilLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={tamilLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };

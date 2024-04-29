@@ -2,12 +2,15 @@ import { GetServerSideProps } from 'next';
 import nodeLogger from '#lib/logger.node';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
+import isLitePath from '#app/routes/utils/isLitePath';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 import UGCPageLayout from './UGCPageLayout';
 
 const logger = nodeLogger(__filename);
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  const isLite = isLitePath(context.resolvedUrl);
+
   const {
     id,
     service,
@@ -39,6 +42,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       id,
+      isLite,
       isAmp: false,
       isNextJs: true,
       pageData,

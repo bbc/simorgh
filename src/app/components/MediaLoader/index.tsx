@@ -156,8 +156,11 @@ const MediaLoader = ({ blocks, className }: Props) => {
     statsDestination,
     service,
     isAmp,
+    isLite,
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
+
+  if (isLite) return null;
 
   const producer = getProducerFromServiceName(service);
 
