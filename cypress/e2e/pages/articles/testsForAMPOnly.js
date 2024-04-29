@@ -24,8 +24,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     let articleId;
     before(() => {
       cy.url().then(url => {
-        // eslint-disable-next-line prefer-destructuring
-        articleId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
+        const [, articleId] = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/);
       });
     });
     it('should contain an amp-img', () => {
