@@ -3,7 +3,6 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
-import kyrgyzHomePageWithBillboards from '../../../../data/kyrgyz/homePage/indexWithBillboards.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
@@ -31,7 +30,7 @@ const messageBannerCuration = kyrgyzHomePage.data.curations.find(
     summaries.length > 0,
 );
 
-const billboardCuration = kyrgyzHomePageWithBillboards.data.curations.find(
+const billboardCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
     visualStyle === BANNER &&
     visualProminence === MAXIMUM &&
@@ -87,6 +86,7 @@ describe('Curation', () => {
 
   it.each(Object.entries(components))(
     `should render a %s component`,
+    // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
     (
       testId: string, // testId is the key in the components object above
       {
@@ -201,36 +201,7 @@ describe('Curation', () => {
           position={0}
           visualStyle={BANNER}
           visualProminence={MAXIMUM}
-          // @ts-expect-error this test checks for empty summaries hence there being no fields passed into the summary object
-          summaries={[{}]}
-        />,
-      );
-
-      expect(
-        document.querySelector('[data-testid="billboard-"]'),
-      ).not.toBeInTheDocument();
-    });
-
-    it('should not be displayed if any required properties are missing in the summary - link, description, imageUrl, imageAlt', () => {
-      render(
-        <Curation
-          position={0}
-          visualStyle={BANNER}
-          visualProminence={MAXIMUM}
-          summaries={[
-            {
-              type: 'link',
-              isLive: false,
-              title: 'radio_group 0&1&2&3',
-              firstPublished: '',
-              lastPublished: '',
-              imageUrl:
-                'https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/374e/test/33501dc0-40b9-11ee-ab8d-9d4cf3ebd5e5.png',
-              description: 'this is the description property',
-              imageAlt: 'BBC microphone',
-              id: 'https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4',
-            },
-          ]}
+          summaries={[]}
         />,
       );
 

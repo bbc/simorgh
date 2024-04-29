@@ -23,6 +23,13 @@ const CurationGrid = ({
             const isFirstPromo = index === 0;
             const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
+            console.log('curation grid', {
+              isFirstPromo,
+              isFirstCuration,
+              lazyLoadImages,
+              promo,
+            });
+
             return (
               <li css={styles.item} key={promo.id}>
                 <CurationPromo

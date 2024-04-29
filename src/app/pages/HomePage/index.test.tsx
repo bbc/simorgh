@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
-import { data as kyrgyzHomePageDataWithBillboards } from '#data/kyrgyz/homePage/indexWithBillboards.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
@@ -17,14 +16,6 @@ const homePageData = {
   ...kyrgyzHomePageData,
   metadata: {
     ...kyrgyzHomePageData.metadata,
-    type: 'home',
-  },
-};
-
-const homePageDataWithBillboards = {
-  ...kyrgyzHomePageDataWithBillboards,
-  metadata: {
-    ...kyrgyzHomePageDataWithBillboards.metadata,
     type: 'home',
   },
 };
@@ -59,6 +50,7 @@ describe('Home Page', () => {
   });
 
   it('should apply provided margin size to the main element', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     const { getByRole } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
@@ -68,6 +60,7 @@ describe('Home Page', () => {
   });
 
   it('should have visually hidden text with the localised product, service - home as the H1', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     const { container } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
@@ -93,6 +86,7 @@ describe('Home Page', () => {
   });
 
   it('should have a metadata title', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
@@ -102,6 +96,7 @@ describe('Home Page', () => {
   });
 
   it('should have a metadata description', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
@@ -113,6 +108,7 @@ describe('Home Page', () => {
   });
 
   it('should correctly render linked data for home pages', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
@@ -127,6 +123,7 @@ describe('Home Page', () => {
 
   describe('Analytics', () => {
     it('should render a Chartbeat component', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       const { getByText } = render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
@@ -136,49 +133,45 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    test.each([[homePageData], [homePageDataWithBillboards]])(
-      'Only the first image, message banner(s) and billboard(s) on the homepage are not lazy loaded, but all others are',
-      data => {
-        render(<HomePage pageData={data} />, {
-          service: 'kyrgyz',
-        });
+    it('Only the first image, message banner, and billboard on the homepage are not lazy loaded, but all others are', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
 
-        const messageBannerImages: string[] = [];
-        document
-          .querySelectorAll(`[data-testid^="message-banner"] img`)
-          .forEach(image =>
-            messageBannerImages.push(image.getAttribute(`src`) || ''),
+      const nonLazyLoadImages: string[] = [];
+      document
+        .querySelectorAll(
+          `[data-testid^="billboard"] img, [data-testid^="message-banner"] img`,
+        )
+        .forEach(image =>
+          nonLazyLoadImages.push(image.getAttribute(`src`) || ''),
+        );
+      console.log('non lazy load images', nonLazyLoadImages);
+
+      const imageList = document.querySelectorAll('img');
+      // console.log(
+      //   'query selector img..',
+      //   Array.from(document.querySelectorAll('img')),
+      // );
+      imageList.forEach((image, index) => {
+        const src = image.getAttribute('src') || '';
+
+        if (index === 0 || nonLazyLoadImages.includes(src)) {
+          expect(image.getAttribute('loading')).toBeNull();
+        } else {
+          console.log('this is img src..', src);
+          console.log(
+            'image atribute loading..',
+            image.getAttribute('loading'),
           );
-
-        const billboardImages: string[] = [];
-        document
-          .querySelectorAll(`[data-testid^="billboard"] img`)
-          .forEach(image =>
-            billboardImages.push(image.getAttribute(`src`) || ''),
-          );
-
-        const imageList = document.querySelectorAll('img');
-
-        imageList.forEach((image, index) => {
-          const src = image.getAttribute('src') || '';
-
-          if (
-            index === 0 ||
-            messageBannerImages.includes(src) ||
-            billboardImages.includes(src)
-          ) {
-            expect(image.getAttribute('loading')).toBeNull();
-          } else if (
-            !messageBannerImages.includes(src) ||
-            !billboardImages.includes(src)
-          ) {
-            expect(image.getAttribute('loading')).toBe('lazy');
-          }
-        });
-      },
-    );
+          expect(image.getAttribute('loading')).toBe('lazy');
+        }
+      });
+    });
 
     it('Only the first image on a homepage has Fetch Priority set to high', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
@@ -203,6 +196,7 @@ describe('Home Page', () => {
     it('should display ads when ads toggle is enabled and showAdsBased on location is true', () => {
       const { container } = render(
         <BrowserRouter>
+          {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
           <HomePage pageData={homePageData} />
         </BrowserRouter>,
         {
@@ -230,6 +224,7 @@ describe('Home Page', () => {
       ({ adsEnabled, showAdsBasedOnLocation }) => {
         const { container } = render(
           <BrowserRouter>
+            {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
             <HomePage pageData={homePageData} />
           </BrowserRouter>,
           {
@@ -249,6 +244,7 @@ describe('Home Page', () => {
     );
   });
   it('should not have amphtml in the metadata', () => {
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });

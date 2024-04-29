@@ -4,7 +4,6 @@ import {
   Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-  BillboardSummary,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
@@ -73,64 +72,68 @@ export default ({
   const curationSubheading = title || topStoriesTitle;
   const id = idSanitiser(curationSubheading);
 
-  const summaryHasRequiredValues = (summary: BillboardSummary) =>
-    summary.description && summary.link && summary.imageUrl && summary.imageAlt;
+  // extract the first summary as the basis for the msg banner and the billboard
+  const [firstSummary] = summaries;
+  const {
+    description,
+    link: summaryLink,
+    imageAlt,
+    imageUrl,
+    isLive: summaryIsLive,
+    title: linkText,
+  } = firstSummary || {};
 
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      if (summaries.length > 0) {
-        // block scope for new billboard summaries type
-        const billboardSummaries = summaries as BillboardSummary[];
-
-        if (environmentIsLive) {
-          return (
-            <MessageBanner
-              heading={title}
-              description={billboardSummaries[0].description}
-              link={billboardSummaries[0].link}
-              linkText={billboardSummaries[0].title}
-              image={billboardSummaries[0].imageUrl}
-              eventTrackingData={{
-                componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-                detailedPlacement: `${position + 1}`,
-              }}
-            />
-          );
-        }
-
-        return summaryHasRequiredValues(billboardSummaries[0]) ? (
+      if (firstSummary) {
+        return environmentIsLive ? (
+          <MessageBanner
+            heading={title}
+            description={description}
+            link={summaryLink}
+            linkText={linkText}
+            image={imageUrl}
+            eventTrackingData={{
+              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+              detailedPlacement: `${position + 1}`,
+            }}
+          />
+        ) : (
           <Billboard
             heading={title}
-            description={billboardSummaries[0].description}
-            link={billboardSummaries[0].link}
-            image={billboardSummaries[0].imageUrl}
+            description={description}
+            link={summaryLink}
+            image={imageUrl}
             eventTrackingData={{
               componentName: `billboard-${nthCurationByStyleAndProminence}`,
               detailedPlacement: `${position + 1}`,
             }}
-            showLiveLabel={billboardSummaries[0].isLive}
-            altText={billboardSummaries[0].imageAlt}
+            showLiveLabel={summaryIsLive}
+            altText={imageAlt}
           />
-        ) : null;
+        );
       }
       return null;
     }
     case MESSAGE_BANNER:
-      return summaries.length > 0 ? (
-        <MessageBanner
-          heading={title}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          linkText={summaries[0].title}
-          image={summaries[0].imageUrl}
-          eventTrackingData={{
-            componentName: `message-banner-${nthCurationByStyleAndProminence}`,
-            detailedPlacement: `${position + 1}`,
-          }}
-        />
-      ) : null;
+      if (firstSummary) {
+        return (
+          <MessageBanner
+            heading={title}
+            description={description}
+            link={summaryLink}
+            linkText={linkText}
+            image={imageUrl}
+            eventTrackingData={{
+              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+              detailedPlacement: `${position + 1}`,
+            }}
+          />
+        );
+      }
+      return null;
     case MOST_READ:
       return (
         <MostRead

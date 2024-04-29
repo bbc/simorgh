@@ -60,6 +60,12 @@ const HiearchicalGrid = ({
           const isFirstPromo = i === 0;
 
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
+          console.log('hierarchy grid', {
+            isFirstPromo,
+            isFirstCuration,
+            lazyLoadImages,
+            promo,
+          });
 
           const fetchpriority =
             isFirstPromo && isFirstCuration ? 'high' : undefined;
