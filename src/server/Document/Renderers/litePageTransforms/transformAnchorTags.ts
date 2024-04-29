@@ -7,7 +7,7 @@ const VALID_DOMAINS = [
   'bbcrussian.com',
 ];
 
-const RESERVED_EXTENSIONS = ['amp', 'app', 'lite'];
+const RESERVED_ROUTE_EXTENSIONS = ['amp', 'app', 'lite'];
 
 const isValidHref = (href: string) => {
   const url = new URL(href, 'http://localhost');
@@ -17,7 +17,7 @@ const isValidHref = (href: string) => {
 
   return (
     VALID_DOMAINS.includes(url.hostname) &&
-    !RESERVED_EXTENSIONS.includes(extension) &&
+    !RESERVED_ROUTE_EXTENSIONS.includes(extension) &&
     !startsWithHash
   );
 };
