@@ -58,10 +58,12 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    expect(screen.getByRole('heading', { level: 2, name: title })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 2, name: title }),
+    ).toBeInTheDocument();
   });
 
-  it('should display the banner subtext correctly as a Paragraph', () => {
+  it('should display the billboard subtext correctly as a Paragraph', () => {
     render(
       <Billboard
         heading={title}
@@ -74,7 +76,7 @@ describe('Billboard', () => {
     expect(screen.getByText(description).nodeName).toBe('P');
   });
 
-  it('should render an masked image with the correct image src', () => {
+  it('should render a masked image with the correct image src', () => {
     const { getByRole } = render(
       <Billboard
         heading={title}
