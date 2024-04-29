@@ -19,6 +19,10 @@ jest.mock('#app/routes/utils/isAppPath', () =>
   jest.fn().mockImplementation(() => true),
 );
 
+jest.mock('#app/routes/utils/isLitePath', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
 describe('getRouteProps', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -51,6 +55,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
         isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isLite: true,
         match: {
           params: {
             amp: undefined,
@@ -93,6 +98,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
         isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isLite: true,
         match: {
           params: {
             amp: undefined,
@@ -137,6 +143,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true,
         isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isLite: true,
         match: {
           params: {
             amp: '.amp',
@@ -178,6 +185,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true,
         isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isLite: true,
         match: {
           params: {
             amp: undefined,
@@ -221,6 +229,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
         isApp: true,
+        isLite: true,
         match: {
           params: {
             amp: undefined,
@@ -257,6 +266,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true,
         isApp: true,
+        isLite: true,
         match,
         route,
         service: 'fallbackService',
@@ -282,6 +292,7 @@ describe('getRouteProps', () => {
         id: undefined,
         isAmp: true,
         isApp: true,
+        isLite: true,
         match: undefined,
         route: undefined,
         service: 'fallbackService',

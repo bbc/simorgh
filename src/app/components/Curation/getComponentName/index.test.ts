@@ -16,6 +16,7 @@ const {
   NOT_SUPPORTED,
   RADIO_SCHEDULE,
   EMBED,
+  BILLBOARD,
 } = COMPONENT_NAMES;
 
 describe('getComponentName', () => {
@@ -25,7 +26,7 @@ describe('getComponentName', () => {
     ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
     ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
     ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
-    ${BANNER}       | ${MAXIMUM}           | ${MESSAGE_BANNER}
+    ${BANNER}       | ${MAXIMUM}           | ${BILLBOARD}
     ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${COLLECTION}   | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
