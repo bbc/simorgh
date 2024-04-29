@@ -1,5 +1,6 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -16,7 +17,7 @@ const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // @ts-expect-error - passing in partial data
-const ComponentWithContext = ({ data: { data } }) => {
+const ComponentWithContext = ({ data: { data }, isLite }) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -28,6 +29,7 @@ const ComponentWithContext = ({ data: { data } }) => {
         <RequestContextProvider
           isAmp={false}
           isApp={false}
+          isLite={isLite}
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
           pathname="/news/articles/c000000000o"
@@ -55,14 +57,16 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const MediaArticlePage = () => (
-  <ComponentWithContext data={articleData} />
+export const MediaArticlePage = (_: StoryArgs, { isLite }: StoryProps) => (
+  <ComponentWithContext data={articleData} isLite={isLite} />
 );
 
-export const MediaArticlePageWithLatestMediaImages = () => (
-  <ComponentWithContext data={pidginArticle} />
-);
+export const MediaArticlePageWithLatestMediaImages = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={pidginArticle} isLite={isLite} />;
 
-export const MediaArticlePageWithSingleLatestMedia = () => (
-  <ComponentWithContext data={tamilArticle} />
-);
+export const MediaArticlePageWithSingleLatestMedia = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={tamilArticle} isLite={isLite} />;

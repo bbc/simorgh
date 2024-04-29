@@ -21,6 +21,7 @@ interface Props extends AppProps {
     id?: string;
     isAmp: boolean;
     isApp?: boolean;
+    isLite?: boolean;
     isNextJs: boolean;
     mvtExperiments: MvtExperiment[] | null;
     pageData: {
@@ -49,6 +50,7 @@ export default function App({ Component, pageProps }: Props) {
     id,
     isAmp,
     isApp = false,
+    isLite = false,
     isNextJs = true,
     mvtExperiments = null,
     pageData,
@@ -77,6 +79,7 @@ export default function App({ Component, pageProps }: Props) {
           id={id}
           isAmp={isAmp}
           isApp={isApp}
+          isLite={isLite}
           pageType={pageType}
           service={service}
           statusCode={status}

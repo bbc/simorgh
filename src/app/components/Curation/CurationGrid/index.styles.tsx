@@ -1,11 +1,26 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  list: css({
-    listStyleType: 'none',
-    padding: 0,
-    margin: 0,
-  }),
+  list: ({ isLite }: Theme) =>
+    css({
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+
+      ...(isLite && {
+        li: {
+          '.promo-text': {
+            width: '100%',
+            paddingInlineStart: 0,
+          },
+
+          '[class*="ChildWrapper" i]': {
+            position: 'relative',
+          },
+        },
+      }),
+    }),
+
   item: ({ spacings, mq, palette }: Theme) =>
     css({
       '.promo-image': {
