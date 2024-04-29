@@ -48,16 +48,13 @@ export default {
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
     css({
-      paddingTop: `${spacings.FULL}rem`,
       paddingBottom: `${spacings.FULL}rem`,
       color: palette.WHITE,
       textDecoration: 'none',
       [mq.GROUP_1_MIN_WIDTH]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
         paddingBottom: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingTop: `${spacings.FULL}rem`,
         paddingBottom: `${spacings.FULL}rem`,
       },
     }),
@@ -83,12 +80,12 @@ export default {
       'span:first-of-type': {
         color: palette.LIVE_LIGHT,
         paddingBottom: `${spacings.FULL}rem`,
-      },
-      [mq.GROUP_1_MIN_WIDTH]: {
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        paddingBottom: `${spacings.FULL}rem`,
+        [mq.GROUP_1_MIN_WIDTH]: {
+          paddingBottom: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          paddingBottom: `${spacings.FULL}rem`,
+        },
       },
     }),
   textContainer: ({ mq, spacings }: Theme) =>
