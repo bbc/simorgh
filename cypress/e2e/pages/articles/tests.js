@@ -85,17 +85,17 @@ export const testsThatFollowSmokeTestConfig = ({
 
     // eslint-disable-next-line no-only-tests/no-only-tests
     describe('Social Embeds', () => {
-      let testAssetId;
+      let articleId;
       before(() => {
         cy.url().then(url => {
           // eslint-disable-next-line prefer-destructuring
-          testAssetId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
+          articleId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
         });
       });
       // If we can find assets with other social media embed types, we can add more
       // tests for them here
       it('should render a twitter embed', () => {
-        if (testAssetId === 'cw8qv1d11l9o') {
+        if (articleId === 'cw8qv1d11l9o') {
           cy.get(`[data-e2e^="twitter-embed-"]`).first().as('socialMediaEmbed');
           cy.get('@socialMediaEmbed').scrollIntoView();
           cy.get('@socialMediaEmbed').within(() => {

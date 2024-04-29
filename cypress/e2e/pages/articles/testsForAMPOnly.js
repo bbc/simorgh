@@ -5,14 +5,14 @@ import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertion
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
-const articleHasPlayer = testAssetId =>
+const articleHasPlayer = articleId =>
   [
     'cgwk9w4zlg8o', // pidgin/articles/cgwk9w4zlg8o on LIVE
     'cj7xrxz0e8zo', // news/articles/cj7xrxz0e8zo on LIVE
     'c25rp5glj5qo', // persian/articles/c25rp5glj5qo on LIVE
     'cwl08rd38l6o', // pidgin/articles/cwl08rd38l6o on TEST
     'cej3lzd5e0go', // persian/articles/cej3lzd5e0go on TEST
-  ].includes(testAssetId);
+  ].includes(articleId);
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
@@ -21,11 +21,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    let testAssetId;
+    let articleId;
     before(() => {
       cy.url().then(url => {
         // eslint-disable-next-line prefer-destructuring
-        testAssetId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
+        articleId = url.match(/\/([^/]+?)(?:\.[^/.]+)?$/)[1];
       });
     });
     it('should contain an amp-img', () => {
@@ -42,7 +42,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('Media Player: AMP', () => {
       // eslint-disable-next-line no-only-tests/no-only-tests
       it('should render an iframe with a valid URL', () => {
-        if (articleHasPlayer(testAssetId)) {
+        if (articleHasPlayer(articleId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
           cy.get('[data-e2e="media-player"]')
             .invoke('attr', 'src')
