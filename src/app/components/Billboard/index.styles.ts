@@ -6,6 +6,7 @@ export default {
     css({
       textDecoration: 'none',
       color: palette.WHITE,
+      cursor: 'pointer',
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
@@ -27,7 +28,7 @@ export default {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
-  backgroundContainer: ({ palette }: Theme) =>
+  backgroundContainer: ({ palette, spacings }: Theme) =>
     css({
       zIndex: -1,
       position: 'absolute',
@@ -37,8 +38,9 @@ export default {
       width: '100%',
       overflow: 'hidden',
     }),
-  contentContainer: ({ mq, gridWidths }: Theme) =>
+  contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
+      paddingBottom: `${spacings.QUADRUPLE}`,
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
         margin: '0 auto',
