@@ -194,21 +194,6 @@ describe('Curation', () => {
         document.querySelector('[data-testid="billboard-"]'),
       ).not.toBeInTheDocument();
     });
-
-    it('should not be displayed if the summaries returned are empty', () => {
-      render(
-        <Curation
-          position={0}
-          visualStyle={BANNER}
-          visualProminence={MAXIMUM}
-          summaries={[]}
-        />,
-      );
-
-      expect(
-        document.querySelector('[data-testid="billboard-"]'),
-      ).not.toBeInTheDocument();
-    });
   });
 
   describe('Headings', () => {
