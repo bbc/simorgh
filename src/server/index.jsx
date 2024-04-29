@@ -245,7 +245,11 @@ server.get(
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
-      data.showCookieBannerBasedOnCountry = ['pidgin', 'hausa'].includes(service) ? showCookieBannerBasedOnCountry : true;
+      data.showCookieBannerBasedOnCountry = ['pidgin', 'hausa'].includes(
+        service,
+      )
+        ? showCookieBannerBasedOnCountry
+        : true;
       data.isUK = isUK;
       data.isCaf = isCaf;
       data.isLite = isLite;

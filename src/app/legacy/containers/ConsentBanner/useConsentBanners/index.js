@@ -72,12 +72,12 @@ const setPolicyCookie = ({ policy, explicit, expires = null }) => {
       name: POLICY_COOKIE,
       value: policy,
       sameSite: SAME_SITE_VALUE,
-      expires
+      expires,
     });
   }
 };
 
-const setUserDidSeePrivacyBanner = ( expires = null ) => {
+const setUserDidSeePrivacyBanner = (expires = null) => {
   // prevent setting cookies on Chromatic so that snapshots are consistent
   if (!isChromatic()) {
     setCookie({
@@ -108,7 +108,7 @@ const setUserDidDismissCookieBanner = (isUK, expires = null) =>
       ? COOKIE_BANNER_EXPLICIT_CHOICE_MADE
       : COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK,
     sameSite: SAME_SITE_VALUE,
-    expires
+    expires,
   });
 
 const useConsentBanner = (
@@ -143,9 +143,9 @@ const useConsentBanner = (
     } else if (shouldShowCookieBanner) {
       dispatch(SHOW_COOKIE_BANNER);
     } else if (!showCookieBannerBasedOnCountry) {
-        setUserDidDismissCookieBanner(isUK, 1);
-        setUserDidAcceptPolicy();
-        setUserDidSeePrivacyBanner(1);
+      setUserDidDismissCookieBanner(isUK, 1);
+      setUserDidAcceptPolicy();
+      setUserDidSeePrivacyBanner(1);
     }
 
     if (!userHasPolicyCookie) {
