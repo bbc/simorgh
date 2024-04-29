@@ -4,10 +4,10 @@ import { MostReadData } from '../../components/MostRead/types';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {
-  imageUrl?: string;
-  link?: string;
-  imageAlt?: string;
-  description?: string;
+  imageUrl: string;
+  link: string;
+  imageAlt: string;
+  description: string;
   title: string;
   id?: string;
   type: string;

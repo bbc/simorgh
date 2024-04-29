@@ -118,14 +118,14 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
   "text": "ځانګړې پاڼې",
-  "url": "/pashto/in-depth-54540873",
+  "url": "/pashto/topics/c6pxyz4e0ryt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
 {
   "text": "کالم",
-  "url": "/pashto/columns-54029178",
+  "url": "/pashto/topics/cq57nwne9lzt",
 }
 `;
 
@@ -138,7 +138,7 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
 {
-  "text": "راډیویې خپرونې",
+  "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",
 }
 `;
