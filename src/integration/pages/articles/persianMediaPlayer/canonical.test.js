@@ -1,18 +1,18 @@
 /**
- * @service afrique
- * @pathname /afrique/articles/c7yn6nznljdo
+ * @service persian
+ * @pathname /persian/articles/cej3lzd5e0go
  */
 
-import runGistTests from '../gistTests';
+import runCanonicalTests from '../canonicalTests';
 import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
 import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
-import runImageCopyrightBBC from '../imageCopyrightBBC';
+import runInlineLinkTests from '../inlineLink';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runGistTests();
+    runCanonicalTests(service);
     runMediaPlayerCaptionTests();
     runMediaPlayerPlaceholderTests();
-    runImageCopyrightBBC();
+    runInlineLinkTests();
   });
 });

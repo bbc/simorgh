@@ -5,9 +5,11 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
+import runInlineLinkTests from '../inlineLink';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
+    runInlineLinkTests();
   });
 });
