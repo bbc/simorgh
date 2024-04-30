@@ -1464,7 +1464,9 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
-    expect(header.vary).toBe('mvt-simorgh_dark_mode, X-country, Accept-Encoding');
+    expect(header.vary).toBe(
+      'mvt-simorgh_dark_mode, X-country, Accept-Encoding',
+    );
   });
 
   it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
