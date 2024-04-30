@@ -18,6 +18,7 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
+import styles from './index.styles';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -101,18 +102,20 @@ export default ({
             }}
           />
         ) : (
-          <Billboard
-            heading={title}
-            description={description}
-            link={summaryLink}
-            image={imageUrl}
-            eventTrackingData={{
-              componentName: `billboard-${nthCurationByStyleAndProminence}`,
-              detailedPlacement: `${position + 1}`,
-            }}
-            showLiveLabel={summaryIsLive}
-            altText={imageAlt}
-          />
+          <div css={styles.billboardContainer}>
+            <Billboard
+              heading={title}
+              description={description}
+              link={summaryLink}
+              image={imageUrl}
+              eventTrackingData={{
+                componentName: `billboard-${nthCurationByStyleAndProminence}`,
+                detailedPlacement: `${position + 1}`,
+              }}
+              showLiveLabel={summaryIsLive}
+              altText={imageAlt}
+            />
+          </div>
         );
       }
       return null;

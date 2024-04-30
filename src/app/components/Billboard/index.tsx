@@ -51,13 +51,13 @@ const Billboard = forwardRef(
               imageWidth={660}
             />
             <div css={styles.textContainer}>
-              <a
-                href={link}
-                css={styles.link}
-                className="focusIndicatorDisplayBlock"
-                onClick={clickTrackerHandler}
-              >
-                <Heading level={2} size="paragon" css={styles.heading} id={id}>
+              <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                <a
+                  href={link}
+                  css={styles.link}
+                  className="focusIndicatorDisplayBlock"
+                  onClick={clickTrackerHandler}
+                >
                   {showLiveLabel ? (
                     <div data-testid="billboard-live-label">
                       <LiveLabel.Pulse
@@ -66,14 +66,14 @@ const Billboard = forwardRef(
                         css={styles.liveLabelPulse}
                       />
                       <LiveLabel.Text css={styles.liveLabelText}>
-                        {heading}
+                        <div>{heading}</div>
                       </LiveLabel.Text>
                     </div>
                   ) : (
                     heading
                   )}
-                </Heading>
-              </a>
+                </a>
+              </Heading>
               {description && (
                 <Text as="p" css={styles.description}>
                   {description}

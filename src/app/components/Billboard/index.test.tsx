@@ -41,7 +41,7 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    const heading = screen.getByText(title);
+    const heading = screen.getByRole('heading', { level: 2, name: title });
     const billboardEl = getByRole('region');
     expect(billboardEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
@@ -58,7 +58,9 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    expect(screen.getByText(title).nodeName).toBe('H2');
+    expect(
+      screen.getByRole('heading', { level: 2, name: title }),
+    ).toBeInTheDocument();
   });
 
   it('should display the billboard subtext correctly as a Paragraph', () => {
