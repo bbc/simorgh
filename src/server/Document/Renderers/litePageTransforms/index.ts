@@ -5,6 +5,6 @@ type Fn = (html: string) => string;
 const pipe =
   (...fns: Fn[]) =>
   (x: string) =>
-    fns.reduce((v, f) => f(v), x);
+    fns.reduce((result, nextFn) => nextFn(result), x);
 
 export default pipe(transformAnchorTags);
