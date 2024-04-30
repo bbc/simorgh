@@ -53,9 +53,7 @@ export const eea = [
   'yt',
 ];
 
-export const gbOrUnknown = [
-  'gb', 'gg', 'im', 'je', 'uk', 'unknown'
-];
+export const gbOrUnknown = ['gb', 'gg', 'im', 'je', 'uk', 'unknown'];
 
 export const COUNTRIES_WITH_COOKIE_BANNER = [...eea, ...gbOrUnknown];
 
