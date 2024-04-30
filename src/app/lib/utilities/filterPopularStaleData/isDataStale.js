@@ -13,7 +13,7 @@ export const isDataStale = formattedTimestamp => {
 };
 
 const isMoreThan60Days = unixTimestamp =>
-  unixTimestamp < Date.now() - SHOULD_RENDER_LAST_UPDATED_TIME;
+  new Date(unixTimestamp) < Date.now() - SHOULD_RENDER_LAST_UPDATED_TIME;
 
 export const shouldRenderLastUpdated = lastUpdated =>
   lastUpdated && isMoreThan60Days(lastUpdated);

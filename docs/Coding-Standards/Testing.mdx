@@ -1,0 +1,176 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Coding Standards/Testing" />
+
+# Coding standards: Testing
+
+It’s important to have readable and maintainable tests because they help to catch defects and bugs in new features and when changing existing functionality. Tests are also another way of understanding our code.
+
+“Nothing makes a system more flexible than a suite of tests”
+— Robert C. Martin (Uncle Bob)
+
+There are various patterns we can use to help improve the readability and maintainability tests.
+
+## Use [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing components
+
+The React Testing Library is a very light-weight solution for testing React components.
+
+This library encourages applications to be more accessible and allows you to get your tests closer to using your components the way a user will, which allows your tests to give you more confidence that your application will work when a real user uses it.
+
+It also encourages writing more maintainable tests because we are testing the functionality rather than implementation details so that when we do change implementation details of a component, in other words, make a refactor, the tests don’t break and slow us down.
+
+### Resources
+
+* https://testing-library.com/docs/guiding-principles
+* https://testing-library.com/docs/react-testing-library/faq
+* https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+
+## Use the Arrange, Act, Assert pattern
+
+Arrange, Act, Assert is a great way to structure test cases. It prescribes an order of operations:
+
+1. ***Arrange*** \*\*\*\*inputs and targets. \*Arrange\* steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
+2. ***Act*** \*\*\*\*on the target behaviour. \*Act\* steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
+3. ***Assert*** \*\*\*\*expected outcomes. *Act* steps should elicit some sort of response. \*Assert\* steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+
+```js
+it('should render the cookie banner when the privacy banner is dismissed', async () => {
+  // arrange
+  render(<ConsentBanner />);
+
+  // act
+  fireEvent.click(screen.queryByText('OK'));
+
+  // assert
+  expect(screen.queryByText(COOKIE_BANNER_TEXT)).toBeInTheDocument();
+  expect(screen.queryByText(PRIVACY_BANNER_TEXT)).not.toBeInTheDocument();
+});
+```
+
+## One assertion per test
+
+This helps us to have well-focused tests so that if one fails, the cause of its failure should be obvious. It also helps you to test for one specific behaviour at a time.
+
+❌
+
+```js
+it('should render the promo', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo title')).toBeInTheDocument();
+  expect(screen.queryByText('The promo subtitle')).toBeInTheDocument();
+  expect(screen.getByAltText('The promo image alt text')).toBeInTheDocument();
+});
+```
+
+✅
+
+```js
+it('should render the promo title', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo title')).toBeInTheDocument();
+});
+
+it('should render the promo subtitle', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo subtitle')).toBeInTheDocument();
+});
+
+it('should render the promo image', async () => {
+  render(<Promo />);
+
+  expect(screen.getByAltText('The promo image alt text')).toBeInTheDocument();
+});
+```
+
+## Use Jest’s `.each` helper method to simplify repetitive tests
+
+Often when unit testing testing helpers/utility functions, test cases follow a similar sequence of steps. Given certain arguments, check if the actual result is equal to the expected result. Over and over again. As the number of cases grows, the test suite can get bloated.
+
+The `.each` helper encourages you to create the array of cases, where you store arguments and expected results, and then iterate through the entire array to run the tested function and assert the results.
+
+❌
+
+```js
+it('should return 2 when 1 is added to 1', () => {
+  expect(1 + 1).toBe(2);
+});
+
+it('should return 3 when 1 is added to 2', () => {
+  expect(1 + 2).toBe(3);
+});
+
+it('should return 3 when 2 is added to 1', () => {
+  expect(2 + 1).toBe(3);
+});
+```
+
+✅
+
+```js
+it.each`
+  a    | b    | expected
+  ${1} | ${1} | ${2}
+  ${1} | ${2} | ${3}
+  ${2} | ${1} | ${3}
+`('should return $expected when $a is added $b', ({ a, b, expected }) => {
+  expect(a + b).toBe(expected);
+});
+```
+
+## Use good test descriptions for test reports
+
+Test descriptions in test reports should be able to be read as full sentences so that we can tell immediately what went wrong. For example:
+
+`describe` should start with a word that forms a readable sentence in conjunction with the block function name. This makes it clear which component or function we are testing.
+
+`it` should state the behaviour and outcome we expect. It refers to the actual thing we are testing.
+
+In summary:
+
+* `describe` should define the subject under test
+* `it` lays out the test case
+
+❌
+
+```js
+describe('Test', () => {
+  it('max 10', () => {
+    /* do the test */
+  });
+});
+```
+
+✅
+
+```js
+describe('Most Read component', () => {
+  it('should display a maximum of 10 items', () => {
+    /* do the test */
+  });
+});
+```
+
+## Consider the FIRST principle when writing tests
+
+* **Fast** - The tests have to be quick to execute. If they take a long time then we will be too lazy to execute them. We will forget and eventually stop testing or worse, they will start to fail and we will not listen to them.
+* **Independent** - The tests should not have dependencies between them. They must be able to execute in any order, execute only a group of them or only one.
+* **Repeatable** - Must be able to run in any environment. It is no excuse for the test to work locally and then fail on another developer’s computer or development environment.
+* **Self-Validating** - The test can only have two possible values. Either it has failed or it has happened. So it is very easy to know if a test has gone well or not, without having to consult logs, database if you have written a value, etc…
+* **Timely** - The tests have to be created just before the code that will make them pass. If we write the code first, then writing the test can be much more complex.
+
+### Test Driven Development (TDD)
+
+When writing a new component or adding new functionality to an existing component, it can help to take a TDD approach. This approach looks like this:
+
+1. Create a unit tests that fails
+2. Write production code that makes that test pass
+3. Clean up the code you just wrote
+
+TDD is too big a subject to discuss here but we recommend learning about it to help you write better code. There are regular TDD courses in BBC Academy. Here are more resources on TDD \[TODO add resources here]
+
+### Resources
+
+* https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/

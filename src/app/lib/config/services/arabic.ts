@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 558497376,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
       brandTitle: 'يستحق الانتباه',
@@ -80,7 +81,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      relatedTopics: 'مواضيع ذات صلة',
+      relatedTopics: 'كلمات مفتاحية',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',

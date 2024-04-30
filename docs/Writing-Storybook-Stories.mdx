@@ -1,0 +1,200 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="docs/Writing-Storybook-Stories" />
+
+# How to write a Storybook story
+
+## Creating a new story
+
+1. Create a new story file, typically called `index.stories.tsx` within the component folder
+2. Create your component that you want to render in Storybook, for example:
+
+```tsx
+const Component = () => {
+  return <MyFirstStory />;
+};
+```
+
+3. Create a default export that returns a Storybook story, for example:
+
+```tsx
+export default {
+  title: 'MyFirstStory',
+  component: Component,
+};
+```
+
+The `title` property defines where the story will be categorized in the Storybook sidebar.
+
+For example, to place `MyFirstStory` in a folder called `Components`, you would set the title to `'Components/MyFirstStory'`.
+
+## Re-using a story
+
+The example above creates a single story. To create multiple stories for the same component, you can export a `const` with a new name and returning your component, for example:
+
+```tsx
+export const MySecondStory = () => <Component />;
+export const MyThirdStory = () => <Component />;
+```
+
+Storybook will automatically detect these stories and render them in the Storybook sidebar with the names `MySecondStory` and `MyThirdStory`.
+
+## Props in stories
+
+You can pass `props` to your component by adding them to the story function, for example:
+
+```tsx
+export const MyFourthStory = ({ color }, { service }) => (
+  <Component color={color} service={service} />
+);
+```
+
+You can then reference these props as you would in a normal React component, for example:
+
+```tsx
+const MyFirstStory = ({ color, service }) => {
+  return (
+    <div style={color} service={service}>
+      Hello World
+    </div>
+  );
+};
+```
+
+## Args in stories
+
+The first argument in Storybook story components is the `args` object:
+
+```tsx
+export const MyFirstStory = args => <Component {...args} />;
+```
+
+This is does not need to be used, but is always the first argument. `args` are useful if you want to add 'controls' to dynamically change the props in the Storybook UI. To use it, you define the `args` and `argTypes` objects in your default export for the story. For example:
+
+```tsx
+export default {
+  title: 'MyFirstStory',
+  component: Component,
+  args: {
+    backgroundColor: 'red',
+  }
+  argTypes: {
+    backgroundColor: {
+      control: { type: 'select' },
+      options: ['red', 'blue', 'green'],
+    },
+  },
+};
+```
+
+This will render a select dropdown for all the stories for this story and allow you to change it using the Storybook UI.
+
+([Check the Storybook website](https://storybook.js.org/docs/api/arg-types) for a full list of `argTypes` controls.)
+
+To make use of the `args` object in your story, you can destructure it in the **first** argument of the story function:
+
+```tsx
+export const MyFirstStory = ({ backgroundColor }) => (
+  <Component backgroundColor={backgroundColor} />
+);
+```
+
+If you want to only have `args` for a single story out of a group of stories, you can define the `args` object in the story itself. This requires you to structure the story function differently:
+
+```tsx
+export const MyFirstStoryWithCustomArgs = {
+  render: ({ backgroundColor, color }) => (
+    <Component backgroundColor={backgroundColor} color={color} />
+  ),
+  args: {
+    color: 'red',
+  },
+  argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['red', 'blue'],
+    },
+  },
+};
+```
+
+As you can see above, you need to define a `render` function that returns the component with the `args` object destructured and then the `args` and `argTypes` below. This allows you to define `args` and `argTypes` for this specific story.
+
+## Decorated args in stories
+
+Typically, you'll want access to the `service` and `variant` values for use in your story. To access these values from the global context, you can destructure them in the **second** argument of your story function:
+
+```tsx
+export const MyFirstStory = ({ backgroundColor }, { service, variant }) => (
+  <Component
+    backgroundColor={backgroundColor}
+    service={service}
+    variant={variant}
+  />
+);
+```
+
+## Manually defining `service` and `variant` values
+
+You can of course supply the `service` and `variant` values manually in your story, for example:
+
+```tsx
+export const MyFirstStory = ({ backgroundColor }) => (
+  <Component backgroundColor={backgroundColor} service="mundo" />
+);
+```
+
+This 'hard-codes' the `service` value to `mundo` for this story.
+
+**NOTE** if you change the `service` using the global toggle in the toolbar at the top of the Storybook UI, then the story may not display as expected. For example, setting the `service` to `mundo` at the component level and changing the `service` to `arabic` using the toolbar toggle could result in the story rendering in the `mundo` language, but rendered visually right-to-left.
+
+It's very story dependent how you use and set the `service`, so choose which fits best; having it dynamic using the toolbar toggle, or hard-coded.
+
+## Using Contexts / Providers
+
+The `preview.tsx` file for rendering Storybook stories contains most of our React contexts/providers to correctly render components:
+
+```tsx
+<ThemeProvider service={context.globals.service.service}>
+  <ToggleContextProvider toggles={{}}>
+    <ServiceContextProvider
+      service={context.globals.service.service}
+      variant={context.globals.service.variant}
+    >
+      <EventTrackingContextProvider pageData={pageDataFixture}>
+        <UserContextProvider>
+          <Story />
+        </UserContextProvider>
+      </EventTrackingContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+</ThemeProvider>
+```
+
+This is a very basic usage of the contexts, and sets mainly just the `service` and `variant` values from the global context (the service toolbar toggle at the top of the Storybook UI).
+
+If you want to override these per story, you can do so by including the context you want and wrapping it around your component in the story. For example:
+
+```tsx
+const Component = () => (
+  <ServiceContextProvider service="mundo" variant="default">
+    <MyFirstStory />
+  </ServiceContextProvider>
+);
+```
+
+This will ensure that the service being rendered is `mundo`, in this example. This is useful for creating stories to demonstrate layout for left-to-right and right-to-left languages.
+
+## Overriding the default service
+
+You can automatically set the `service` for a story by using the `withServicesDecorator` function. To do this, import the function and add it to the `decorators` array in the default export for the story. For example:
+
+```tsx
+import { withServicesDecorator } from '#storybook/withServicesDecorator';
+
+export default {
+  title: 'MyFirstStory',
+  component: Component,
+  decorators: [withServicesDecorator({ defaultService: 'mundo' })],
+};
+```

@@ -11,6 +11,7 @@ interface FixtureProps {
   type?: string;
   duration?: number;
   link?: string;
+  isLive?: boolean;
 }
 
 const Fixture = ({
@@ -18,10 +19,12 @@ const Fixture = ({
   type = 'article',
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
+  isLive,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
+    description="This is a description"
     firstPublished="2022-03-30T07:37:18.253Z"
     imageUrl="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     lastPublished="2023-04-17T07:37:18.253Z"
@@ -29,6 +32,7 @@ const Fixture = ({
     link={link}
     type={type}
     duration={duration}
+    isLive={isLive}
   />
 );
 
@@ -93,17 +97,33 @@ describe('Curation Promo', () => {
   });
 
   describe('Live Promo', () => {
-    it('should display LiveLabel on a Live Promo', () => {
+    it('should display LiveLabel on a Live Promo when isLive is true', () => {
       const container = render(
-        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        <Fixture
+          link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
+          isLive
+        />,
         { service: 'mundo' },
       );
       expect(container.queryByText('EN VIVO')).toBeInTheDocument();
     });
+    it('should not display LiveLabel on a promo when isLive is false', () => {
+      const container = render(
+        <Fixture
+          link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
+          isLive={false}
+        />,
+        { service: 'mundo' },
+      );
+      expect(container.queryByText('EN VIVO')).not.toBeInTheDocument();
+    });
 
     it('should display a Live Promo without a timestamp present', () => {
       const container = render(
-        <Fixture link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314" />,
+        <Fixture
+          link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
+          isLive
+        />,
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();

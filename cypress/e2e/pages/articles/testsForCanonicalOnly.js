@@ -79,9 +79,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
         cy.window().then(win => {
-          const media = getBlockData('video', {
-            data: { article: win.SIMORGH_DATA.pageData },
-          });
+          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+
           if (media) {
             cy.get('[data-e2e="media-player"]').within(() => {
               cy.get('[data-e2e="media-player__placeholder"] img')
@@ -95,9 +94,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       it('should render a visible guidance message', () => {
         cy.window().then(win => {
-          const media = getBlockData('video', {
-            data: { article: win.SIMORGH_DATA.pageData },
-          });
+          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
 
           if (media) {
             const longGuidanceWarning =
@@ -125,9 +122,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       it('should have a visible play button and valid duration', () => {
         cy.window().then(win => {
-          const media = getBlockData('video', {
-            data: { article: win.SIMORGH_DATA.pageData },
-          });
+          const media = getBlockData('video', win.SIMORGH_DATA.pageData);
           if (media && media.type === 'video') {
             const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
             const { durationISO8601 } = aresMediaBlocks.model.versions[0];
@@ -146,34 +141,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           }
         });
       });
+      if (service === 'pidgin') {
+        it('should render an iframe with a valid URL when a user clicks play', () => {
+          cy.window().then(win => {
+            const body = win.SIMORGH_DATA.pageData;
+            const media = getBlockData('video', body);
+            if (media && media.type === 'video') {
+              const { lang } = appConfig[service][variant];
+              const embedUrl = getVideoEmbedUrl(body, lang);
+              cy.get('[data-e2e="media-player"] button').first().click();
+              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
 
-      it('should render an iframe with a valid URL when a user clicks play', () => {
-        cy.window().then(win => {
-          const body = win.SIMORGH_DATA.pageData;
-
-          const media = getBlockData('video', {
-            data: { article: body },
+              cy.testResponseCodeAndTypeRetry({
+                path: embedUrl,
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
+            }
           });
-
-          if (media && media.type === 'video') {
-            const { lang } = appConfig[service][variant];
-            const embedUrl = getVideoEmbedUrl(
-              {
-                data: { article: body },
-              },
-              lang,
-            );
-            cy.get('[data-e2e="media-player"] button').first().click();
-            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-
-            cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
-              responseCode: 200,
-              type: 'text/html',
-              allowFallback: true,
-            });
-          }
         });
-      });
+      }
     });
   });

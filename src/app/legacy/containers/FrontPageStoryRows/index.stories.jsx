@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Grid from '#components/Grid';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -37,51 +36,56 @@ const RegularRowStory = ({ dir, displayImages }) => (
   />
 );
 
-const selectDir = () => {
-  const isRtl = boolean('Right to Left', false);
-  return isRtl ? 'rtl' : 'ltr';
-};
-
 // eslint-disable-next-line react/prop-types
-const Component = ({ RowType, displayImages = true }) => {
+const Component = ({ RowType, displayImages = true, selectDir }) => {
   return (
-    <ThemeProvider service="news">
-      <ServiceContextProvider service="news">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pathname="/pathname"
-          pageType={ARTICLE_PAGE}
-          service="news"
-        >
-          <ToggleContextProvider
-            toggles={{
-              eventTracking: { enabled: false },
-            }}
-          >
-            <Grid enableGelGutters columns={topStoryColumns}>
-              <RowType dir={selectDir()} displayImages={displayImages} />
-            </Grid>
-          </ToggleContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={false}
+      pathname="/pathname"
+      pageType={ARTICLE_PAGE}
+      service="news"
+    >
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
+      >
+        <Grid enableGelGutters columns={topStoryColumns}>
+          <RowType dir={selectDir ?? 'ltr'} displayImages={displayImages} />
+        </Grid>
+      </ToggleContextProvider>
+    </RequestContextProvider>
   );
 };
 
 export default {
   title: 'Containers/Front Page Story Row',
   Component,
-  decorators: [withKnobs],
   parameters: {
     chromatic: { disable: true },
   },
+  args: {
+    selectDir: 'ltr',
+  },
+  argTypes: {
+    selectDir: {
+      control: { type: 'select' },
+      options: ['ltr', 'rtl'],
+    },
+  },
 };
 
-export const WithTopRow = () => <Component RowType={TopRowStory} />;
-export const WithLeadingRow = () => <Component RowType={LeadingRowStory} />;
-export const WithRegularRow = () => <Component RowType={RegularRowStory} />;
-export const WithNoImageRow = () => (
-  <Component RowType={RegularRowStory} displayImages={false} />
+export const WithTopRow = props => (
+  <Component RowType={TopRowStory} {...props} />
+);
+export const WithLeadingRow = props => (
+  <Component RowType={LeadingRowStory} {...props} />
+);
+export const WithRegularRow = props => (
+  <Component RowType={RegularRowStory} {...props} />
+);
+export const WithNoImageRow = props => (
+  <Component RowType={RegularRowStory} displayImages={false} {...props} />
 );

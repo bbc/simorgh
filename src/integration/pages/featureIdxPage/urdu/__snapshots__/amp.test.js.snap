@@ -203,7 +203,7 @@ exports[`AMP Feature Index page Footer Cookie Settings Button should match text 
 
 exports[`AMP Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`AMP Feature Index page Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
 

@@ -62,7 +62,7 @@ exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`]
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical Media Asset Page Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -147,6 +147,13 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
 }
 `;
 

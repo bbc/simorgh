@@ -62,7 +62,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -75,40 +75,33 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Pemilu 2024",
-  "url": "/indonesia/topics/ck0mgrlgyplt",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
-{
   "text": "Indonesia",
   "url": "/indonesia/topics/cjgn7k8yx4gt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
 {
   "text": "Dunia",
   "url": "/indonesia/topics/cyz8evpl224t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Viral",
   "url": "/indonesia/topics/cn5w7g2nq6dt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Liputan Mendalam",
   "url": "/indonesia/topics/cw9qgeqd18zt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Majalah",
   "url": "/indonesia/topics/cpxrqmrkeg8t",

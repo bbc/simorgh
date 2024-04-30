@@ -2,14 +2,14 @@ import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
-import handleError from '../handleError';
+import { getUrlPath } from '#lib/utilities/urlParser';
 import {
   Services,
   Variants,
   Environments,
   PageTypes,
-} from '../../../models/types/global';
+} from '#models/types/global';
+import handleError from '../handleError';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
   TOPIC_PAGE_CONFIG,
@@ -22,9 +22,10 @@ import {
   LIVE_PAGE,
   MOST_READ_PAGE,
   TOPIC_PAGE,
+  UGC_PAGE,
 } from '../pageTypes';
 
-interface UrlConstructParams {
+export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service: Services;
@@ -32,14 +33,20 @@ interface UrlConstructParams {
   page?: string;
   post?: string;
   isAmp?: boolean;
-  isCaf?: boolean;
 }
 
+const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
-const getCpsId = (path: string) => path;
-const getFrontPageId = (path: string) => `${path}/front_page`;
+const getCpsId = (path: string) => removeLeadingSlash(path);
+const getFrontPageId = (path: string) =>
+  `${removeLeadingSlash(path)}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
+const isOptimoIdCheck = (path: string) =>
+  /\/articles\/(c[a-zA-Z0-9]{10,}o)/.test(path);
+const isCpsIdCheck = (path: string) =>
+  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
 const isFrontPage = ({
   path,
@@ -56,14 +63,22 @@ interface GetIdProps {
   service: Services;
   variant?: Variants;
   env: Environments;
-  isCaf?: boolean;
 }
 
-const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
+const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
+
   switch (pageType) {
     case ARTICLE_PAGE:
-      getIdFunction = isCaf ? getCpsId : getArticleId;
+      getIdFunction = (path: string) => {
+        const isOptimoId = isOptimoIdCheck(path);
+        const isCpsId = isCpsIdCheck(path);
+
+        if (isOptimoId) return getArticleId(path);
+        if (isCpsId) return getCpsId(path);
+
+        return removeLeadingSlash(path);
+      };
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => {
@@ -94,6 +109,9 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
         );
       };
       break;
+    case UGC_PAGE:
+      getIdFunction = getUgcId;
+      break;
     default:
       getIdFunction = () => null;
       break;
@@ -109,12 +127,11 @@ const constructPageFetchUrl = ({
   page,
   post,
   isAmp,
-  isCaf,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId({ pageType, service, env, variant, isCaf })(pathname);
+  const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -146,13 +163,16 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case ARTICLE_PAGE:
+      case ARTICLE_PAGE: {
         fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isCpsIdCheck(id)
+            ? `/${id}`
+            : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
+      }
       case CPS_ASSET:
-        fetchUrl = Url(id);
+        fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE:
         fetchUrl = Url(`/${service}/${id}`);

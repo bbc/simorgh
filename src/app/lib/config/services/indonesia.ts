@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Berita',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'Podcast',
       brandTitle: 'Investigasi: Skandal Adopsi',
@@ -349,10 +350,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Berita',
         url: '/indonesia',
-      },
-      {
-        title: 'Pemilu 2024',
-        url: '/indonesia/topics/ck0mgrlgyplt',
       },
       {
         title: 'Indonesia',

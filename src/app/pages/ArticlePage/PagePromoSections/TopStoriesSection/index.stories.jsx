@@ -1,19 +1,19 @@
 import React from 'react';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import TopStoriesSection from '.';
 import {
   topStoriesList,
   topStoriesSingleItem,
   topStoriesListRtl,
   topStoriesSingleItemRtl,
+  topStoriesItem,
+  tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
+  topStoriesLiveLabelItem,
 } from './fixture';
-import ThemeProvider from '../../../../components/ThemeProvider';
 import metadata from './metadata.json';
-import md from './README.md';
+import readme from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -22,17 +22,12 @@ const BackGround = styled.div`
   padding: 2rem;
 `;
 
-// eslint-disable-next-line react/prop-types
-const RelatedContentComponent = ({ content, service, script }) => (
-  <ThemeProvider service={service}>
-    <ToggleContextProvider>
-      <BackGround>
-        <ServiceContextProvider service={service} script={script}>
-          <TopStoriesSection content={content} />
-        </ServiceContextProvider>
-      </BackGround>
-    </ToggleContextProvider>
-  </ThemeProvider>
+const RelatedContentComponent = ({ content, service }) => (
+  <BackGround>
+    <ServiceContextProvider service={service}>
+      <TopStoriesSection content={content} />
+    </ServiceContextProvider>
+  </BackGround>
 );
 
 export default {
@@ -40,25 +35,34 @@ export default {
   component: TopStoriesSection,
   parameters: {
     metadata,
-    docs: {
-      page: md,
-    },
+    docs: { readme },
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const ListTopStories = props => (
+export const ListTopStories = () => (
   <RelatedContentComponent content={topStoriesList} service="news" />
 );
 
-export const ListTopStoriesRtl = props => (
+export const ListTopStoriesRtl = () => (
   <RelatedContentComponent content={topStoriesListRtl} service="arabic" />
 );
 
-export const SingleTopStories = props => (
+export const SingleTopStories = () => (
   <RelatedContentComponent content={topStoriesSingleItem} service="news" />
 );
 
-export const SingleTopStoriesRtl = props => (
+export const SingleTopStoriesRtl = () => (
   <RelatedContentComponent content={topStoriesSingleItemRtl} service="arabic" />
+);
+
+export const ListTopStoriesMixedDataSources = () => (
+  <RelatedContentComponent
+    content={[
+      topStoriesItem,
+      tipoFormattedTopStoriesItem,
+      tipoLivePageTopStoriesItem,
+      topStoriesLiveLabelItem,
+    ]}
+    service="news"
+  />
 );

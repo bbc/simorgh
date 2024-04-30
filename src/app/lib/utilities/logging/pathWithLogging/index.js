@@ -16,7 +16,7 @@ const getLoggingFunction = level =>
     [LOG_LEVELS.INFO]: logger.info,
     [LOG_LEVELS.WARN]: logger.warn,
     [LOG_LEVELS.ERROR]: logger.error,
-  }[level] || logger.info);
+  })[level] || logger.info;
 
 const pathWithLogging =
   (url, logCategory, pageData) =>

@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
@@ -11,8 +11,7 @@ import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
-interface Props {
-  children: JSX.Element | JSX.Element[];
+interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;

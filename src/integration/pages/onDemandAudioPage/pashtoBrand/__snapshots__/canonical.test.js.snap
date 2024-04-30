@@ -62,7 +62,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -118,14 +118,14 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
   "text": "ځانګړې پاڼې",
-  "url": "/pashto/in-depth-54540873",
+  "url": "/pashto/topics/c6pxyz4e0ryt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
 {
   "text": "کالم",
-  "url": "/pashto/columns-54029178",
+  "url": "/pashto/topics/cq57nwne9lzt",
 }
 `;
 
@@ -133,6 +133,13 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 {
   "text": "پر سټلایت خپرونې",
   "url": "/pashto/articles/c4n55eygdn0o",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "راډیویي خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
 }
 `;
 

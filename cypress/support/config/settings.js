@@ -157,7 +157,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -381,7 +381,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -577,7 +577,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -656,23 +655,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/arabic'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -817,7 +800,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -979,7 +962,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1179,7 +1162,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1411,7 +1394,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1500,7 +1483,7 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -1695,7 +1678,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1879,7 +1862,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2056,7 +2039,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
@@ -2080,18 +2063,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/labarai-54292969'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/hausa/labarai-23190660'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/hausa/labarai-23190660'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -2110,7 +2093,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2340,7 +2323,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2497,7 +2480,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2707,7 +2690,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -2864,7 +2846,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3059,7 +3040,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3303,7 +3283,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3504,7 +3483,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -3669,7 +3648,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -3776,7 +3755,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -3971,7 +3950,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -4076,7 +4055,6 @@ module.exports = () => ({
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -4141,7 +4119,6 @@ module.exports = () => ({
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -4353,7 +4330,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -4641,7 +4617,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -4729,7 +4705,10 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
+            paths: [
+              '/pidgin/articles/cgwk9w4zlg8o',
+              '/pidgin/articles/cw8qv1d11l9o',
+            ],
             enabled: true,
           },
           test: {
@@ -4799,7 +4778,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
@@ -4853,7 +4832,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5040,7 +5019,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5196,7 +5175,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5380,7 +5359,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5469,7 +5448,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -5627,7 +5606,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5814,7 +5793,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5975,7 +5954,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6198,7 +6177,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6270,7 +6249,7 @@ module.exports = () => ({
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -6481,7 +6460,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6705,7 +6684,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6886,7 +6865,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6989,7 +6968,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
@@ -7007,13 +6986,13 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       storyPage: {
         environments: {
           live: {
             paths: ['/thai/international-53381389'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/thai/23124008'],
@@ -7021,10 +7000,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/international-23252825'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -7043,7 +7022,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7257,7 +7236,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7419,7 +7398,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7581,7 +7560,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7743,7 +7722,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7788,23 +7767,6 @@ module.exports = () => ({
     isWorldService: true,
     variant: 'default',
     pageTypes: {
-      idxPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
@@ -8003,10 +7965,6 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
-      },
-      idxPage: {
-        environments: undefined,
         smoke: false,
       },
       featureIndexPage: {
@@ -8232,7 +8190,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8460,7 +8418,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8622,7 +8580,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8779,7 +8737,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8987,7 +8945,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -9195,7 +9153,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {

@@ -13,5 +13,4 @@ export { default as OnDemandAudioPage } from '../OnDemandAudioPage';
 export { default as OnDemandTvPage } from '../OnDemandTvPage';
 export { default as TopicPage } from '../TopicPage';
 export { default as StoryPage } from '../StoryPage';
-export { default as IdxPage } from '../IdxPage';
 export { default as FeatureIdxPage } from '../FeatureIdxPage';
