@@ -103,7 +103,7 @@
     "@optimizely/react-sdk": "2.9.2",
     "aws-embedded-metrics": "4.1.1",
     "compression": "1.7.4",
-    "core-js": "3.36.1",
+    "core-js": "3.37.0",
     "dotenv": "16.4.5",
     "express": "4.19.2",
     "express-static-gzip": "2.1.7",
