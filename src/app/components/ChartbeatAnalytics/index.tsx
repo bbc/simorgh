@@ -4,7 +4,7 @@ import { UserContext } from '../../contexts/UserContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
-import CanonicalChartbeat from './canonical';
+import CanonicalChartbeatBeacon from './canonical';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';
 
@@ -69,7 +69,7 @@ const ChartbeatAnalytics = ({
 
   switch (true) {
     case isLiteAndEnabled:
-      return <CanonicalChartbeat chartbeatConfig={chartbeatConfig} />;
+      return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
     case isAmpAndEnabled:
       return <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
     default:
