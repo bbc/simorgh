@@ -34,3 +34,5 @@ exports[`AMP Articles Flourish Embed Error messages Link should match text and u
   "url": "http://localhost:7080/portuguese/articles/c72mg3j3x7eo",
 }
 `;
+
+exports[`AMP Articles Paragraph should match paragraph text 1`] = `"A cada dez anos, o Brasil tem uma oportunidade inédita de olhar para a sua população com os censos demográficos. "`;
