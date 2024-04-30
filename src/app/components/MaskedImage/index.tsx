@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '#app/components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
@@ -20,6 +21,8 @@ const MaskedImage = ({
   altText?: string;
 }) => {
   const { dir } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+
   const isRtl = dir === 'rtl';
 
   const url = imageUrlTemplate.split('{width}')[1];
@@ -44,6 +47,7 @@ const MaskedImage = ({
       <Image
         alt={altText}
         src={imageUrl}
+        isAmp={isAmp}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

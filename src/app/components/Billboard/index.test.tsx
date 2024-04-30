@@ -42,13 +42,13 @@ describe('Billboard', () => {
       />,
     );
     const heading = screen.getByText(title);
-    const messageBannerEl = getByRole('region');
-    expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
+    const billboardEl = getByRole('region');
+    expect(billboardEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
     );
   });
 
-  it('should display the banner heading correctly as an H2', () => {
+  it('should display the billboard heading correctly as an H2', () => {
     render(
       <Billboard
         heading={title}
@@ -61,7 +61,7 @@ describe('Billboard', () => {
     expect(screen.getByText(title).nodeName).toBe('H2');
   });
 
-  it('should display the banner subtext correctly as a Paragraph', () => {
+  it('should display the billboard subtext correctly as a Paragraph', () => {
     render(
       <Billboard
         heading={title}
@@ -74,7 +74,7 @@ describe('Billboard', () => {
     expect(screen.getByText(description).nodeName).toBe('P');
   });
 
-  it('should render an masked image with the correct image src', () => {
+  it('should render a masked image with the correct image src', () => {
     const { getByRole } = render(
       <Billboard
         heading={title}
