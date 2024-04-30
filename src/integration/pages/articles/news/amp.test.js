@@ -4,9 +4,11 @@
  */
 
 import runAmpTests from '../ampTests';
+import runInlineLinkTests from '../inlineLink';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runAmpTests(service);
+    runInlineLinkTests();
   });
 });
