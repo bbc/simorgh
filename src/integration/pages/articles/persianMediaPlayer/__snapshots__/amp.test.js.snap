@@ -254,34 +254,26 @@ exports[`AMP Articles Header Navigation link should match text and url 13`] = `
 }
 `;
 
-exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
-
-exports[`AMP Articles Image Copyright Non BBC should match snapshot 1`] = `
-<span
-  lang="en-GB"
->
-  Getty Images
-</span>
-`;
+exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
-  alt="قهوه"
-  attribution="Getty Images"
+  alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
   class="bbc-image"
   data-hero="true"
   fallback=""
-  height="360"
+  height="549"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
-  width="640"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 800w"
+  width="976"
 />
 `;
 
-exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+exports[`AMP Articles Main heading should match text 1`] = `"این عنوان این مقاله آزمایشی است"`;
 
-exports[`AMP Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
+exports[`AMP Articles Media Player Caption should have a caption under the media player 1`] = `"توضیح ویدئو، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -353,13 +345,13 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+exports[`AMP Articles SEO Heading level 1 1`] = `"این عنوان این مقاله آزمایشی است"`;
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"fa"`;
 
@@ -380,14 +372,14 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "BBC News فارسی",
         "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
       },
-      "dateModified": "2019-07-23T15:47:11.893Z",
-      "datePublished": "2019-05-28T13:42:44.996Z",
-      "description": "پهپادی که برایتان قهوه می‌آورد",
-      "headline": "پهپادی که برایتان قهوه می‌آورد",
+      "dateModified": "2019-10-04T10:36:45.464Z",
+      "datePublished": "2019-10-04T10:36:45.464Z",
+      "description": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      "headline": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
         "width": 1024,
       },
       "inLanguage": {
@@ -396,9 +388,9 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
+        "@id": "http://localhost:7080/persian/articles/cej3lzd5e0go",
         "@type": "WebPage",
-        "name": "پهپادی که برایتان قهوه می‌آورد",
+        "name": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -411,30 +403,46 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "BBC News فارسی",
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
-      "url": "http://localhost:7080/persian/articles/c4vlle3q337o",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
+      "url": "http://localhost:7080/persian/articles/cej3lzd5e0go",
     },
   ],
 }
 `;
 
-exports[`AMP Articles SEO OG description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+exports[`AMP Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù",
+  "duration": "PT16S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/cej3lzd5e0go/p01kf9q6/fa/amp",
+  "name": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kf9s0.jpg",
+  "uploadDate": "2018-11-12T15:00:22.000Z",
+}
+`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`AMP Articles SEO OG description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
-exports[`AMP Articles SEO OG image alt 1`] = `"BBC News فارسی"`;
+exports[`AMP Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`AMP Articles SEO OG image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
 
 exports[`AMP Articles SEO OG locale 1`] = `"fa"`;
 
 exports[`AMP Articles SEO OG site name 1`] = `"BBC News فارسی"`;
 
-exports[`AMP Articles SEO OG title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+exports[`AMP Articles SEO OG title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
 
-exports[`AMP Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+exports[`AMP Articles SEO Page title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
 
 exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -442,19 +450,22 @@ exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`AMP Articles SEO Twitter creator 1`] = `"@bbcpersian"`;
 
-exports[`AMP Articles SEO Twitter description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+exports[`AMP Articles SEO Twitter description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
-exports[`AMP Articles SEO Twitter image alt 1`] = `"BBC News فارسی"`;
+exports[`AMP Articles SEO Twitter image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
 
-exports[`AMP Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 
-exports[`AMP Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+exports[`AMP Articles SEO Twitter title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
 
 exports[`AMP Articles Timestamp should match text and date 1`] = `
 {
-  "date": "2019-05-28",
-  "text": "۷ خرداد ۱۳۹۸ - ۲۸ مه ۲۰۱۹",
+  "date": "2019-10-04",
+  "text": "۱۲ مهر ۱۳۹۸ - ۴ اکتبر ۲۰۱۹",
 }
 `;
