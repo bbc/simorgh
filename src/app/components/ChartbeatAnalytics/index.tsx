@@ -51,6 +51,11 @@ const ChartbeatAnalytics = ({
 
   const chartbeatConfig = getConfig(configDependencies);
 
+  if (isLiteAndEnabled) {
+    return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (isCanonicalAndEnabled) {
       // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
@@ -67,14 +72,9 @@ const ChartbeatAnalytics = ({
     isCanonicalAndEnabled,
   ]);
 
-  switch (true) {
-    case isLiteAndEnabled:
-      return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
-    case isAmpAndEnabled:
-      return <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
-    default:
-      return null;
-  }
+  return isAmpAndEnabled ? (
+    <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
+  ) : null;
 };
 
 export default ChartbeatAnalytics;
