@@ -25,6 +25,8 @@ const MaskedImage = ({
 
   const isRtl = dir === 'rtl';
 
+  const isBillboard = document.querySelectorAll('[id^="billboard-"]')
+
   const url = imageUrlTemplate.split('{width}')[1];
 
   const originCode = getOriginCode(url);
@@ -39,7 +41,7 @@ const MaskedImage = ({
 
   return (
     <div
-      css={[
+      css={[ isBillboard ? styles.billboardMaskedImageWrapper : 
         styles.maskedImageWrapper,
         isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
       ]}
