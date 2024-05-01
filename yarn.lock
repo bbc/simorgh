@@ -8674,14 +8674,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:2.15.2":
-  version: 2.15.2
-  resolution: "eslint-plugin-cypress@npm:2.15.2"
+"eslint-plugin-cypress@npm:3.0.2":
+  version: 3.0.2
+  resolution: "eslint-plugin-cypress@npm:3.0.2"
   dependencies:
     globals: ^13.20.0
   peerDependencies:
-    eslint: ">= 3.2.1"
-  checksum: 0ffd8b9b39a22543917e2d9ae0cb7545ce5ea0eea171d947b6e015062f462bf66a208b7e711923d5ad1525f3fb03a3f35c7d978ab88352343302ea885ee98c1b
+    eslint: ">=7 <9"
+  checksum: 1a1ddfed495e30e5c53e21084b773459644a6e19c6d65c16c067795c5bdf18354d9ad4475e301946340bb62fd4a498de0be39ca7f41c9cab1ffcddff1953072b
   languageName: node
   linkType: hard
 
@@ -9587,15 +9587,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formidable@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "formidable@npm:2.1.2"
+"formidable@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "formidable@npm:3.5.1"
   dependencies:
     dezalgo: ^1.0.4
     hexoid: ^1.0.0
     once: ^1.4.0
-    qs: ^6.11.0
-  checksum: 81c8e5d89f5eb873e992893468f0de22c01678ca3d315db62be0560f9de1c77d4faefc9b1f4575098eb2263b3c81ba1024833a9fc3206297ddbac88a4f69b7a8
+  checksum: 46b21496f9f985161cf7636163147b6728f9997c7e1d59433680d92619758bf6862330e6d105b5816bafcd1ab32f27ef183455991f93ef836ea731c68db62af9
   languageName: node
   linkType: hard
 
@@ -15396,7 +15395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.2.1, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.3, semver@npm:^7.5.4":
+"semver@npm:^7.2.1, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.3, semver@npm:^7.5.4":
   version: 7.6.0
   resolution: "semver@npm:7.6.0"
   dependencies:
@@ -15690,7 +15689,7 @@ __metadata:
     eslint-config-airbnb: 18.2.1
     eslint-config-prettier: 9.1.0
     eslint-import-resolver-alias: 1.1.2
-    eslint-plugin-cypress: 2.15.2
+    eslint-plugin-cypress: 3.0.2
     eslint-plugin-import: 2.29.1
     eslint-plugin-json: 3.1.0
     eslint-plugin-jsx-a11y: 6.8.0
@@ -15746,7 +15745,7 @@ __metadata:
     storybook: 8.0.9
     stream-browserify: 3.0.0
     strip-ansi: 7.1.0
-    supertest: 6.3.4
+    supertest: 7.0.0
     terser-webpack-plugin: 5.3.10
     timemachine: 0.3.2
     ts-jest: 29.1.2
@@ -16341,31 +16340,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"superagent@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "superagent@npm:8.1.2"
+"superagent@npm:^9.0.1":
+  version: 9.0.2
+  resolution: "superagent@npm:9.0.2"
   dependencies:
     component-emitter: ^1.3.0
     cookiejar: ^2.1.4
     debug: ^4.3.4
     fast-safe-stringify: ^2.1.1
     form-data: ^4.0.0
-    formidable: ^2.1.2
+    formidable: ^3.5.1
     methods: ^1.1.2
     mime: 2.6.0
     qs: ^6.11.0
-    semver: ^7.3.8
-  checksum: f3601c5ccae34d5ba684a03703394b5d25931f4ae2e1e31a1de809f88a9400e997ece037f9accf148a21c408f950dc829db1e4e23576a7f9fe0efa79fd5c9d2f
+  checksum: f471461b21f034d844fd0aca332128d61e3afb75c2ee5950f3339f2a3b5ca8b23e2861224f19ad9b43f21c9184d28b7d9384af5a4fde64fdef479efdb15036db
   languageName: node
   linkType: hard
 
-"supertest@npm:6.3.4":
-  version: 6.3.4
-  resolution: "supertest@npm:6.3.4"
+"supertest@npm:7.0.0":
+  version: 7.0.0
+  resolution: "supertest@npm:7.0.0"
   dependencies:
     methods: ^1.1.2
-    superagent: ^8.1.2
-  checksum: 875c6fa7940f21e5be9bb646579cdb030d4057bf2da643e125e1f0480add1200395d2b17e10b8e54e1009efc63e047422501e9eb30e12828668498c0910f295f
+    superagent: ^9.0.1
+  checksum: 974743aa511ec0f387135dfca05e378f6202366c81f0850dfbcc2c3d6fc690e856dda27e175c70db38510e21d87f331c0f62e1a942afea4c447953c647c26c8b
   languageName: node
   linkType: hard
 
