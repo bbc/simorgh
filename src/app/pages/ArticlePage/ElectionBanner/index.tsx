@@ -42,7 +42,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
-            imageHeight: 1,
+            imageHeight: height,
             src: iframeSrc,
             image: '',
           }}
