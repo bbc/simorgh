@@ -349,7 +349,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/media-54071673',
+        url: '/swahili/topics/ckrdle3133xt',
       },
     ],
   },

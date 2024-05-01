@@ -7,8 +7,10 @@ import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isLite, showAdsBasedOnLocation } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
+
+  if (isLite) return null;
 
   // Ads component will only be displayed if ads toggle is true and if showAdsBasedOnLocation is true
   if ([adsEnabled, showAdsBasedOnLocation].every(Boolean)) {

@@ -171,7 +171,8 @@ const StyledPodcastIconWrapper = styled.div`
 
 const Promo = () => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { pageType, isLite } = useContext(RequestContext);
+
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -190,9 +191,8 @@ const Promo = () => {
   const viewTrackerRef = useViewTracker(eventTrackingData);
   const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
-  if (!showPromo) {
-    return null;
-  }
+  if (isLite) return null;
+  if (!showPromo) return null;
 
   const { text, endTextVisuallyHidden } = pathOr(
     {

@@ -12,7 +12,7 @@ const styles = {
       insetInlineStart: 0,
       margin: 0,
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
-
+      overflow: 'hidden',
       span: {
         fontSize: '0.75rem',
       },

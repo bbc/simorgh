@@ -247,7 +247,22 @@ exports[`AMP Articles Header Navigation link should match text and url 12`] = `
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
+
+exports[`AMP Articles Image Copyright Non BBC should match snapshot 1`] = `
+<span
+  lang="en-GB"
+>
+  Getty Images
+</span>
+`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
@@ -265,6 +280,8 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`AMP Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
