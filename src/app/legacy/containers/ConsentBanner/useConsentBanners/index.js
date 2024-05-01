@@ -151,7 +151,7 @@ const useConsentBanner = (
     if (!userHasPolicyCookie) {
       setDefaultPolicy();
     }
-  }, [showCookieBannerBasedOnCountry]);
+  }, [isUK, showCookieBannerBasedOnCountry]);
 
   const handlePrivacyBannerAccepted = () => {
     dispatch(SHOW_COOKIE_BANNER);

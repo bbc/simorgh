@@ -341,11 +341,11 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const allHeaders = ['X-country'];
+        const allVaryHeaders = ['X-country'];
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
-        if (mvtVaryHeaders) allHeaders.push(mvtVaryHeaders);
+        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
 
-        res.set('vary', allHeaders);
+        res.set('vary', allVaryHeaders);
 
         res.status(status).send(result.html);
       } else {
