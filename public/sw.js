@@ -37,13 +37,6 @@ const fetchEventHandler = async event => {
         }),
       );
     }
-    // if (supportsWebp && !/\/amz\/worldservice\/.*/.test(event.request.url)) {
-    //   event.respondWith(
-    //     fetch(`${req.url}.webp`, {
-    //       mode: 'no-cors',
-    //     }),
-    //   );
-    // }
   } else if (
     /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
       event.request.url,
