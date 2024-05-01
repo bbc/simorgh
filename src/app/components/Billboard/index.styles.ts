@@ -104,7 +104,7 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        maxWidth: '50%', // determines width of text overlay.
+        maxWidth: '40%', // determines width of text overlay.
       },
     }),
   description: ({ palette }: Theme) =>
