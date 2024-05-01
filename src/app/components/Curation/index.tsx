@@ -109,7 +109,7 @@ export default ({
         ) : (
           <div css={styles.billboardContainer}>
             <Billboard
-              heading={title}
+              heading={firstSummary.title}
               description={description}
               link={summaryLink}
               image={imageUrl}
