@@ -39,9 +39,7 @@ const buildIChefURL = ({ originCode, locator, resolution }) => {
     .filter(Boolean)
     .join('/');
 
-  if (url.endsWith('.webp')) {
-    return url;
-  }
+  return url.endsWith('.webp') ? url : `${url}.webp`;
   return `${url}.webp`;
 };
 
