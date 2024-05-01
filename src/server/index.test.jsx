@@ -1465,7 +1465,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo/c0000000001o');
 
     expect(header.vary).toBe(
-      'mvt-simorgh_dark_mode, X-country, Accept-Encoding',
+      'X-country, mvt-simorgh_dark_mode, Accept-Encoding',
     );
   });
 
