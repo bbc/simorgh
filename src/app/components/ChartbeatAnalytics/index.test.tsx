@@ -221,9 +221,6 @@ describe('Charbeats Analytics Container', () => {
 
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test in Lite mode', () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-    // @ts-expect-error requires mocking for testing purposes
-    amp.default = mockAmp;
 
     const expectedConfig = {
       uid: 50924,
@@ -267,9 +264,8 @@ describe('Charbeats Analytics Container', () => {
     const scriptHtml = inlineScript.innerHTML;
 
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
-    expect(scriptHtml).toContain('"path":"/.lite"');
+    expect(scriptHtml).toContain(JSON.stringify(expectedConfig));
 
     expect(sendCanonicalChartbeatBeacon).not.toHaveBeenCalled();
-    expect(mockAmp).not.toHaveBeenCalled();
   });
 });
