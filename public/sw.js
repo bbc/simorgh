@@ -32,7 +32,8 @@ const fetchEventHandler = async event => {
 
     if (!supportsWebp) {
       event.respondWith(
-        fetch(`${req.url}`.slice(0, -5), {
+        let imageUrlWithoutWebp = req.url.replace('.webp', '');
+        fetch(imageUrlWithoutWebp, {
           mode: 'no-cors',
         }),
       );
