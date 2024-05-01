@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`AMP Articles AMP Consent config 1`] = `
+{
+  "consents": {
+    "user-consent": {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": {
+    "default": {
+      "timeout": {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": {
+        "user-consent": [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP Articles AMP Geo config 1`] = `
+{
+  "AmpBind": true,
+  "ISOCountryGroups": {
+    "eea": [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+    "gbOrUnknown": [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
+  },
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "کوکی ها",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
+}
+`;
+
+exports[`AMP Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
+exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
+{
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "Do not share or sell my info",
+}
+`;
+
+exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`AMP Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "صفحه اول",
+  "url": "/persian",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "جنگ اسرائیل-غزه",
+  "url": "/persian/topics/clm0z4jgj3xt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "پخش زنده",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "ویدیو",
+  "url": "/persian/topics/c6z7mnr559gt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "تلویزیون",
+  "url": "/persian/tv-and-radio-37434377",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "ايران",
+  "url": "/persian/topics/ckdxnwvwwjnt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "افغانستان",
+  "url": "/persian/afghanistan",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 9`] = `
+{
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 10`] = `
+{
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 11`] = `
+{
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 12`] = `
+{
+  "text": "دانش",
+  "url": "/persian/topics/ckdxnwr4r1yt",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
+exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`AMP Articles Image should match snapshot 1`] = `
+<amp-img
+  alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+  class="bbc-image"
+  data-hero="true"
+  fallback=""
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg 800w"
+  width="976"
+/>
+`;
+
+exports[`AMP Articles Main heading should match text 1`] = `"این عنوان این مقاله آزمایشی است"`;
+
+exports[`AMP Articles Media Player Caption should have a caption under the media player 1`] = `"توضیح ویدئو، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+
+exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Articles SEO Heading level 1 1`] = `"این عنوان این مقاله آزمایشی است"`;
+
+exports[`AMP Articles SEO Lang attribute 1`] = `"fa"`;
+
+exports[`AMP Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+      },
+      "dateModified": "2019-10-04T10:36:45.464Z",
+      "datePublished": "2019-10-04T10:36:45.464Z",
+      "description": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      "headline": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+        "@type": "WebPage",
+        "name": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
+      "url": "http://localhost:7080/persian/articles/cej3lzd5e0go",
+    },
+  ],
+}
+`;
+
+exports[`AMP Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù",
+  "duration": "PT16S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/cej3lzd5e0go/p01kf9q6/fa/amp",
+  "name": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kf9s0.jpg",
+  "uploadDate": "2018-11-12T15:00:22.000Z",
+}
+`;
+
+exports[`AMP Articles SEO OG description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`AMP Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`AMP Articles SEO OG image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
+
+exports[`AMP Articles SEO OG locale 1`] = `"fa"`;
+
+exports[`AMP Articles SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`AMP Articles SEO OG title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`AMP Articles SEO OG type 1`] = `"article"`;
+
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/cej3lzd5e0go"`;
+
+exports[`AMP Articles SEO Page title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Articles SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`AMP Articles SEO Twitter description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
+
+exports[`AMP Articles SEO Twitter image alt 1`] = `
+"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
+"
+`;
+
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`AMP Articles SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`AMP Articles SEO Twitter title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
+
+exports[`AMP Articles Timestamp should match text and date 1`] = `
+{
+  "date": "2019-10-04",
+  "text": "۱۲ مهر ۱۳۹۸ - ۴ اکتبر ۲۰۱۹",
+}
+`;
