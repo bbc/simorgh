@@ -90,7 +90,11 @@ const Image = ({
     return srcSet;
   };
   const getImgSizes = () => {
-    if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
+    if (
+      (!hasFallback && srcSet) ||
+      (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
+    )
+      return sizes;
     return undefined;
   };
   const imgSrcSet = getImgSrcSet();

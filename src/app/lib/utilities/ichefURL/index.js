@@ -1,9 +1,5 @@
 import { getEnvConfig } from '../getEnvConfig';
 
-// List of originCodes that support webp on '/ace/ws/' iChef
-// IS IT ALL ORIGINCODES NOW APART FROM THE IOS PROBLEM ONES?
-// const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
-
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
     src || 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png';
@@ -40,7 +36,6 @@ const buildIChefURL = ({ originCode, locator, resolution }) => {
     .join('/');
 
   return url.endsWith('.webp') ? url : `${url}.webp`;
-  return `${url}.webp`;
 };
 
 export default buildIChefURL;

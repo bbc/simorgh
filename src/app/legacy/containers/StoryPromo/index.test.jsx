@@ -286,7 +286,6 @@ describe('StoryPromo Container', () => {
 
       expect(container.getElementsByTagName('amp-img').length).toEqual(1);
       expect(container.getElementsByTagName('img').length).toEqual(0);
-      console.log(`in test ${cpsItem.indexImage.path}`);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
       ).toEqual(

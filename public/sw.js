@@ -19,11 +19,10 @@ const fetchEventHandler = async event => {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support
-    let supportsWebp = false;
-    if (req.headers.has('accept')) {
-      supportsWebp = req.headers.get('accept').includes('webp');
-    }
-    // detect the ios version and remove webp from the request
+
+    const supportsWebp =
+      req.headers.has('accept') && req.headers.get('accept').includes('webp');
+
     // if supports webp is false in request header then don't use it?
     // If we support WebP don't remove
     // if it doesn't support, remove
@@ -31,8 +30,8 @@ const fetchEventHandler = async event => {
     // downgrade/remove if not there
 
     if (!supportsWebp) {
+      const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
-        let imageUrlWithoutWebp = req.url.replace('.webp', '');
         fetch(imageUrlWithoutWebp, {
           mode: 'no-cors',
         }),
