@@ -64,3 +64,5 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
   width="700"
 />
 `;
+
+exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"A cada dez anos, o Brasil tem uma oportunidade inédita de olhar para a sua população com os censos demográficos. "`;

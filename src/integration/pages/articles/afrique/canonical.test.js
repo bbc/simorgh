@@ -4,9 +4,15 @@
  */
 
 import runGistTests from '../gistTests';
+import runMediaPlayerCaptionTests from '../mediaPlayerCaption';
+import runMediaPlayerPlaceholderTests from '../mediaPlayerPlaceholderTestsCanonical';
+import runImageCopyrightBBC from '../imageCopyrightBBC';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runGistTests();
+    runMediaPlayerCaptionTests();
+    runMediaPlayerPlaceholderTests();
+    runImageCopyrightBBC();
   });
 });

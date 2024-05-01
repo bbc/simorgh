@@ -12,7 +12,7 @@ export const getBlockByType = (blocks, blockType) => {
 };
 
 export const getBlockData = (blockType, body) => {
-  const { blocks } = body.data.article.content.model;
+  const { blocks } = body.content.model;
 
   return getBlockByType(blocks, blockType);
 };
@@ -29,7 +29,7 @@ export const getAllSocialBlocksByProviderName = (socialType, body) => {
 };
 
 const getArticleId = body => {
-  const { id } = body.data.article.metadata;
+  const { id } = body.metadata;
   return id.split('article:')[1];
 };
 

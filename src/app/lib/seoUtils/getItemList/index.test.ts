@@ -5,6 +5,7 @@ describe('SEO Utils | getItemList', () => {
   it('should convert curations into an ItemList object with ListItems', () => {
     expect(
       getItemList({
+        // @ts-expect-error suppressed due to partial data required for testing purposes
         curations: curationsWithSummaries,
         name: 'BBC News Mundo',
       }),

@@ -4705,7 +4705,10 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
+            paths: [
+              '/pidgin/articles/cgwk9w4zlg8o',
+              '/pidgin/articles/cw8qv1d11l9o',
+            ],
             enabled: true,
           },
           test: {
