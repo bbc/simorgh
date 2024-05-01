@@ -219,7 +219,7 @@ describe('Charbeats Analytics Container', () => {
     expect(mockAmp).not.toHaveBeenCalled();
   });
 
-  it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test in Lite mode', () => {
+  it('should add Chartbeat Helmet script with correct config when platform is canonical, toggle enabled and on test in Lite mode', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     const expectedConfig = {
