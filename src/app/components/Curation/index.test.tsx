@@ -49,7 +49,7 @@ const components = {
     visualProminence: HIGH,
     summaries: mundoFixture.data.curations[0].summaries,
   },
-  'message-banner-': {
+  'message-banner-1': {
     visualStyle: BANNER,
     visualProminence: NORMAL,
     summaries: messageBannerCuration?.summaries,
@@ -64,7 +64,7 @@ const components = {
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
-  'billboard-': {
+  'billboard-1': {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,

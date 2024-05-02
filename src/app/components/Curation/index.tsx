@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import idSanitiser from '#app/lib/utilities/idSanitiser';
 import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
@@ -18,6 +17,7 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
+import styles from './index.styles';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -70,7 +70,8 @@ export default ({
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
-  const id = idSanitiser(curationSubheading);
+  const id =
+    `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
   // extract the first summary as the basis for the msg banner and the billboard
   const [firstSummary] = summaries;
@@ -83,10 +84,14 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
+  const messageBannerId = `message-banner-${nthCurationByStyleAndProminence}`;
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
+      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
+
       if (firstSummary) {
         return environmentIsLive ? (
           <MessageBanner
@@ -95,24 +100,28 @@ export default ({
             link={summaryLink}
             linkText={linkText}
             image={imageUrl}
+            id={messageBannerId}
             eventTrackingData={{
-              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+              componentName: messageBannerId,
               detailedPlacement: `${position + 1}`,
             }}
           />
         ) : (
-          <Billboard
-            heading={title}
-            description={description}
-            link={summaryLink}
-            image={imageUrl}
-            eventTrackingData={{
-              componentName: `billboard-${nthCurationByStyleAndProminence}`,
-              detailedPlacement: `${position + 1}`,
-            }}
-            showLiveLabel={summaryIsLive}
-            altText={imageAlt}
-          />
+          <div css={styles.billboardContainer}>
+            <Billboard
+              heading={firstSummary.title}
+              description={description}
+              link={summaryLink}
+              image={imageUrl}
+              id={billboardId}
+              eventTrackingData={{
+                componentName: billboardId,
+                detailedPlacement: `${position + 1}`,
+              }}
+              showLiveLabel={summaryIsLive}
+              altText={imageAlt}
+            />
+          </div>
         );
       }
       return null;
@@ -126,8 +135,9 @@ export default ({
             link={summaryLink}
             linkText={linkText}
             image={imageUrl}
+            id={messageBannerId}
             eventTrackingData={{
-              componentName: `message-banner-${nthCurationByStyleAndProminence}`,
+              componentName: messageBannerId,
               detailedPlacement: `${position + 1}`,
             }}
           />
