@@ -43,7 +43,7 @@ const getFrontPageId = (path: string) =>
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 const isOptimoIdCheck = (path: string) =>
-  /\/articles\/(c[a-zA-Z0-9]{10,}o)/.test(path);
+  /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
