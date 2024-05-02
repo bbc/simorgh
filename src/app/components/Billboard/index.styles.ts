@@ -22,11 +22,14 @@ export default {
         content: '""',
       },
     }),
-  headerContainer: () =>
+  headerContainer: ({ mq }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
+      [mq.HIGH_CONTRAST]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+      },
     }),
   backgroundContainer: ({ palette }: Theme) =>
     css({
@@ -47,9 +50,6 @@ export default {
         margin: '0 auto',
         position: 'relative',
         width: '100%',
-      },
-      [mq.HIGH_CONTRAST]: {
-        border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
