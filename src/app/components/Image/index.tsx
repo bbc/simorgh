@@ -111,7 +111,7 @@ const Image = ({
       <div
         className={className}
         css={theme => [
-          hasCaption ? styles.wrapperWithCaption : styles.wrapper,
+          styles.wrapper,
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
@@ -126,6 +126,7 @@ const Image = ({
         ]}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
+          overflow: hasCaption ? '' : 'hidden',
         }}
       >
         {isAmp ? (

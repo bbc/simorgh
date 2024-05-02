@@ -4,10 +4,6 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const styles = {
   wrapper: css({
-    overflow: 'hidden',
-    position: 'relative',
-  }),
-  wrapperWithCaption: css({
     position: 'relative',
   }),
   wrapperFixedAspectRatio: css({
