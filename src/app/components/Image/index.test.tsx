@@ -100,7 +100,7 @@ describe('Image - Canonical', () => {
     const sourceEl = screen.getByAltText('Test image alt text');
     expect(sourceEl).toHaveAttribute(
       'srcset',
-      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
     );
     expect(sourceEl).toHaveAttribute(
       'sizes',
@@ -302,7 +302,7 @@ describe('Image - AMP pages', () => {
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[0]).toHaveAttribute(
       'srcset',
-      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
     );
   });
 
