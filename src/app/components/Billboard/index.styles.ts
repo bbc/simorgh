@@ -25,7 +25,7 @@ export default {
       flexDirection: 'column',
       position: 'relative',
       [mq.HIGH_CONTRAST]: {
-        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+        border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
   backgroundContainer: ({ palette }: Theme) =>
