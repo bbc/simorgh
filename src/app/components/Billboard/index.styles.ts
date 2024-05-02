@@ -19,7 +19,7 @@ export default {
         content: '""',
       },
     }),
-  headerContainer: ({ mq }: Theme) =>
+  headerContainer: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
