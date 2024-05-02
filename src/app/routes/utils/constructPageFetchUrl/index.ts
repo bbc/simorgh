@@ -66,7 +66,7 @@ interface GetIdProps {
 
 const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
-console.log();
+
   switch (pageType) {
     case ARTICLE_PAGE:
       getIdFunction = (path: string) => {
