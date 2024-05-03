@@ -50,7 +50,7 @@ describe('Service Worker', () => {
         expect(fetchSpy).toHaveBeenCalledWith(expectedUrl, { mode: 'no-cors' });
       });
     });
-    describe('image requested when webp supported', () => {
+    describe('image not requested when image ends with .webp and webp supported', () => {
       // The service worker doesn't do anything when webp is supported
       it.each`
         image
