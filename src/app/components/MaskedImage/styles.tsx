@@ -5,7 +5,7 @@ const maskColours = {
   white: '255,255,255',
 };
 
-const mobileImageMask = `
+export const mobileImageMask = `
   rgba(${maskColours.black}) 0%,
   rgba(${maskColours.white}, 0.99) 7%,
   rgba(${maskColours.white}, 0.98) 13%,
@@ -33,7 +33,7 @@ const mobileImageMask = `
   rgba(${maskColours.white}, 0) 100%
 `;
 
-const group4Mask = `
+export const group4Mask = `
   rgba(${maskColours.black}) 0%,
   rgba(${maskColours.black}) 50%,
   rgba(${maskColours.black}) 54%,
@@ -61,7 +61,7 @@ const group4Mask = `
   rgba(${maskColours.white}, 0) 98%,
   rgba(${maskColours.white}, 0) 100%`;
 
-const extraWideMask = `
+export const extraWideMask = `
   rgba(${maskColours.white}, 0) 0%,
   rgba(${maskColours.white}, 0.01) 2%,
   rgba(${maskColours.white}, 0.02) 3%,
