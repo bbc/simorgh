@@ -1,4 +1,3 @@
-
 import { GetServerSideProps } from 'next';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -33,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     renderer_env: rendererEnv,
   } = context.query as PageDataParams;
-  
+
   const downloadData = await dataFetch(service);
 
   const { headers: reqHeaders } = context.req;
@@ -47,8 +46,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageData: {
         downloadData,
         metadata: {
-            type: DOWNLOADS_PAGE,
-        }
+          type: DOWNLOADS_PAGE,
+        },
       },
       pageType: DOWNLOADS_PAGE,
       pathname: `${service}/downloads`,

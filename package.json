@@ -62,7 +62,7 @@
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive",
     "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack**",
-    "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack**",
+    "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src ./data ./ws-nextjs-app/pages ./cypress ./.storybook ./webpack**",
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"  || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:unit:scripts": "jest --env=jsdom --coverage --colors --testPathPattern=\"scripts/bundleSize/\"",

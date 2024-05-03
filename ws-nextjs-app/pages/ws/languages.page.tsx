@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = () => {
       page: null,
       pageData: {
         metadata: {
-            type: STATIC_PAGE,
+          type: STATIC_PAGE,
         },
       },
       pageType: STATIC_PAGE,

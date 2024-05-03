@@ -74,8 +74,8 @@ export const service: DefaultServiceConfig = {
         summary: '요약',
       },
       downloads: {
-          instructions: "오늘의 뉴스를 다운받아 보실 수 있습니다",
-          title: "파일 다운로드"
+        instructions: '오늘의 뉴스를 다운받아 보실 수 있습니다',
+        title: '파일 다운로드',
       },
       gist: '요약',
       error: {
