@@ -14,29 +14,36 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
   const { title, description, sections } = pageData;
 
   const { fields } = sections?.[0] ?? {};
+  const sectionTitle = sections?.[0].sectionText?.title ?? '';
 
   return (
     <>
       <Metadata
-        title="Test UGC Form"
+        title={title}
         lang={lang}
         description="Test UGC Form"
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
-            <Heading level={1}>{title}</Heading>
-            <div
-              // TODO: This is a security risk, we should sanitize the HTML
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-            <FormContextProvider fields={fields}>
-              <Form fields={fields} />
-            </FormContextProvider>
-          </main>
+      <div css={styles.background}>
+        <div css={styles.gradient} />
+        <div css={styles.grid}>
+          <div css={styles.primaryColumn}>
+            <main css={styles.mainContent}>
+              <Heading level={1}>{title}</Heading>
+              <div
+                // TODO: This is a security risk, we should sanitize the HTML
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{ __html: description }}
+                css={styles.description}
+              />
+
+              <h2>{sectionTitle}</h2>
+              <FormContextProvider fields={fields}>
+                <Form fields={fields} />
+              </FormContextProvider>
+            </main>
+          </div>
         </div>
       </div>
     </>
