@@ -18,7 +18,8 @@ const MaskedImage = ({
   imageUrl: string;
   imageUrlTemplate: string;
   imageWidth: number;
-  altText?: string;
+    altText?: string;
+    className?: string;
 }) => {
   const { dir } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
