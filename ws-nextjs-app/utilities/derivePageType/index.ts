@@ -1,5 +1,5 @@
 import { PageTypes } from '#app/models/types/global';
-import { LIVE_PAGE, UGC_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE, UGC_PAGE, DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 
 export default function derivePageType(
   pathname: string,
@@ -8,6 +8,7 @@ export default function derivePageType(
 
   if (sanitisedPathname.includes('live')) return LIVE_PAGE;
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
+  if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
 
   return 'Unknown';
 }
