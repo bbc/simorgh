@@ -9,8 +9,6 @@ import getAgent from '../../../utilities/undiciAgent';
 import styles from './styles';
 import { PageProps } from './types';
 
-
-
 const downloadsPageLayout = ({ service, pageData }: PageProps) => {
   const {
     lang,
@@ -20,12 +18,12 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
     script,
     translations: {
       downloads: {
-          instructions = "You can download and view today’s news.",
-          title = "File Download"
-      }
+        instructions = 'You can download and view today’s news.',
+        title = 'File Download',
+      },
     },
   } = useContext(ServiceContext);
-//   const { title } = translations.downloads;
+  //   const { title } = translations.downloads;
   const { description } = pageData;
   console.log('pageData.downloadData', pageData.downloadData[0].files);
   return (
@@ -43,14 +41,15 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
             <ol>
-                {pageData.downloadData.map((item, index) => (
-                    <li>
-                        {item.fileCreated}
-                        <a href="{item.files[0].fileLink}">
-                            {item.files[0].fileName} ({(item.files[0].fileSize / 1000000).toFixed(1)}Mb)
-                        </a>
-                    </li>
-                ))}
+              {pageData.downloadData.map((item, index) => (
+                <li>
+                  {item.fileCreated}
+                  <a href="{item.files[0].fileLink}">
+                    {item.files[0].fileName} (
+                    {(item.files[0].fileSize / 1000000).toFixed(1)}Mb)
+                  </a>
+                </li>
+              ))}
             </ol>
           </main>
         </div>
