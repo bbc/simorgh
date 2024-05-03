@@ -39,7 +39,7 @@ describe('Service Worker', () => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 
         const event = {
-          request: new Request(image, { headers: { accept: 'jpg' } }),
+          request: new Request(image),
         };
 
         event.respondWith = jest.fn();

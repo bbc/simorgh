@@ -29,7 +29,7 @@ const fetchEventHandler = async event => {
     // look at the headers Accept image/webp,*/
     // downgrade/remove if not there
 
-    if (!supportsWebp) {
+    if (!supportsWebp || /\/amz\/worldservice\/.*/.test(event.request.url)) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
         fetch(imageUrlWithoutWebp, {
