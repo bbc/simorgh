@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
+import { mobileImageMask } from '../MaskedImage/styles';
 
 export default {
   link: ({ palette }: Theme) =>
@@ -20,6 +21,20 @@ export default {
         left: 0,
         right: 0,
         content: '""',
+      },
+    }),
+  billboardMaskedImageWrapper: ({ mq }: Theme) =>
+    css({
+      maskSize: '100% 100%',
+      maskImage: `linear-gradient(
+        180deg, ${mobileImageMask})`,
+      aspectRatio: '16 /9',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        height: '100%',
+        maxWidth: '70%',
+        objectFit: 'cover',
+        position: 'absolute',
+        insetInlineEnd: 0,
       },
     }),
   headerContainer: ({ mq }: Theme) =>
@@ -50,6 +65,7 @@ export default {
         margin: '0 auto',
         position: 'relative',
         width: '100%',
+        height: '100%',
       },
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
@@ -107,7 +123,7 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        maxWidth: '50%', // determines width of text overlay.
+        maxWidth: '40%', // determines width of text overlay.
       },
     }),
   description: ({ palette }: Theme) =>
