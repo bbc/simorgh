@@ -5,7 +5,7 @@ export default {
   background: () =>
     css({
       position: 'relative',
-      background: 'rgb(48, 5, 5)',
+      background: 'rgb(100, 5, 5)',
     }),
   gradient: () =>
     css({
