@@ -326,7 +326,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -759,7 +759,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -1252,7 +1252,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
       >
         <div
           class="emotion-18"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -1635,7 +1635,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -2058,7 +2058,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -2476,7 +2476,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -2949,7 +2949,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
       >
         <div
           class="emotion-17"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -3322,7 +3322,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -3677,7 +3677,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -4003,7 +4003,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -4376,7 +4376,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
       >
         <div
           class="emotion-16"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -4665,7 +4665,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -4991,7 +4991,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
       >
         <div
           class="emotion-7"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -5323,7 +5323,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
       >
         <div
           class="emotion-7"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -6941,7 +6941,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -7331,7 +7331,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -7812,7 +7812,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
       >
         <div
           class="emotion-18"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -8153,7 +8153,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -8623,7 +8623,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -10183,7 +10183,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -10509,7 +10509,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -10882,7 +10882,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
       >
         <div
           class="emotion-16"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -11171,7 +11171,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -11491,7 +11491,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -11817,7 +11817,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -12190,7 +12190,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
       >
         <div
           class="emotion-16"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -12479,7 +12479,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="A lone Koala perches in a eucalyptus tree"
@@ -12799,7 +12799,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -13125,7 +13125,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -13498,7 +13498,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
       >
         <div
           class="emotion-16"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -13787,7 +13787,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -14168,7 +14168,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -14608,7 +14608,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <picture>
             <img
@@ -15108,7 +15108,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
       >
         <div
           class="emotion-18"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"
@@ -15498,7 +15498,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
       >
         <div
           class="emotion-6"
-          style="padding-bottom: 56.25%;"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         >
           <amp-img
             alt="Image Alt text"

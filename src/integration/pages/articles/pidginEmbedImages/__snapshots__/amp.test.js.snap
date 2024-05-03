@@ -7,7 +7,7 @@ exports[`AMP Articles Embed Images should match snapshot 1`] = `
 >
   <div
     class="bbc-j1srjl"
-    style="padding-bottom:82.34%"
+    style="padding-bottom:82.34%;overflow:hidden"
   >
     <amp-img
       alt="CPS vs Optimo usage. .  ."

@@ -4490,7 +4490,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8404,7 +8404,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8469,7 +8469,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8534,7 +8534,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8599,7 +8599,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8664,7 +8664,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8729,7 +8729,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8836,7 +8836,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8901,7 +8901,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -8966,7 +8966,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       >
                         <div
                           class="emotion-20"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img

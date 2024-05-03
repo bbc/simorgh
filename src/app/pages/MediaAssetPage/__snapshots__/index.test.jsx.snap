@@ -3690,7 +3690,7 @@ exports[`Media Asset Page should render component 1`] = `
                       >
                         <div
                           class="emotion-104"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
@@ -3845,7 +3845,7 @@ exports[`Media Asset Page should render component 1`] = `
                       >
                         <div
                           class="emotion-104"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <picture>
                             <img
