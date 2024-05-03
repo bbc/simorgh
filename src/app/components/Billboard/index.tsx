@@ -44,6 +44,7 @@ const Billboard = forwardRef(
           <div css={styles.backgroundContainer} />
           <div css={styles.contentContainer}>
             <MaskedImage
+              css={styles.billboardMaskedImageWrapper}
               imageUrl={image}
               imageUrlTemplate={image}
               altText={altText}
