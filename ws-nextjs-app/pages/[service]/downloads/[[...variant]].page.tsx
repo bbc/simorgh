@@ -18,7 +18,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   );
 
   const {
-    id,
     service,
     variant,
     renderer_env: rendererEnv,
