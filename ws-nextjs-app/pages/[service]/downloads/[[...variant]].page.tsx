@@ -20,7 +20,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const {
     service,
     variant,
-    renderer_env: rendererEnv,
   } = context.query as PageDataParams;
 
   const downloadData = await dataFetch(service);
