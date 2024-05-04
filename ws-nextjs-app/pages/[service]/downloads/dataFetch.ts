@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 import { OK } from '#app/lib/statusCodes.const';
 
-const retrieveDownloads = async service => {
+const retrieveDownloads = async service: String => {
   const fetchURl = `https://ws-downloads.files.bbci.co.uk/downloads-data-${service}.json`;
   try {
     const retrieveDownloads = async () => {
