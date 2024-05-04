@@ -31,6 +31,10 @@ export interface Translations {
     postedAt: string;
     summary: string;
   };
+  downloads?: {
+    instructions?: string;
+    title?: string;
+  };
   gist?: string;
   error: {
     home?: string;
