@@ -54,7 +54,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
                     padding={false}
                     isRelative={false}
                   />
-                  <a href="{item.files[0].fileLink}" download>
+                  <a href={item.files[0].fileLink} download>
                     <svg
                       className="ws-o-download-icon"
                       viewBox="0 0 32 32"
