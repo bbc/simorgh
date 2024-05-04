@@ -173,6 +173,10 @@ export const service: SerbianConfig = {
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Sažetak',
       error: {
         404: {
@@ -497,6 +501,10 @@ export const service: SerbianConfig = {
         breaking: 'Ванредне',
         postedAt: 'Објављено у',
         summary: 'Сажетак',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Сажетак',
       error: {

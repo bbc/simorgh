@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Tóm tắt',
       error: {
         404: {

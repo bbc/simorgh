@@ -94,6 +94,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Rangkuman',
       error: {
         404: {

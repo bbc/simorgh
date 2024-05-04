@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Muhtasari',
       error: {
         404: {

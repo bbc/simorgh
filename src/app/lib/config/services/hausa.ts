@@ -86,6 +86,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'An wallafa a',
         summary: 'Takaitacce',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Takaitacce',
       error: {
         404: {

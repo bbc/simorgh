@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Xəbərin vaxtı',
         summary: 'Xülasə',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Xülasə',
       error: {
         404: {

@@ -5,6 +5,9 @@ const retrieveDownloads = async service => {
   try {
     const retrieveDownloads = async () => {
       const response = await fetch(fetchURl);
+
+      if (response.status !== 200) return null;
+
       const downloads = await response.json();
       return downloads;
     };

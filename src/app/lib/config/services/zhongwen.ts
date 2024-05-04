@@ -184,6 +184,10 @@ export const service: ZhongwenConfig = {
         postedAt: '张贴于',
         summary: '概要',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '概要',
       error: {
         404: {
@@ -483,6 +487,10 @@ export const service: ZhongwenConfig = {
         breaking: '最新消息',
         postedAt: '張貼在',
         summary: '概要',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {

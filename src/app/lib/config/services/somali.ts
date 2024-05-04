@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: '',
         summary: 'Kooban',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Kooban',
       error: {
         404: {

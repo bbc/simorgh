@@ -85,6 +85,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Incamake',
       error: {
         404: {

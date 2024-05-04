@@ -62,6 +62,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posted at',
         summary: 'Summary',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       error: {
         404: {
           statusCode: '404',

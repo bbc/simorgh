@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: '...да чоп этилган',
         summary: 'Қисқача',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Хулоса',
       error: {
         404: {

@@ -62,6 +62,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posted at',
         summary: 'Summary',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'At a glance',
       error: {
         404: {

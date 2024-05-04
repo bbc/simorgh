@@ -96,6 +96,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Publicado às',
         summary: 'Pontos-chave',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Pontos-chave',
       error: {
         404: {

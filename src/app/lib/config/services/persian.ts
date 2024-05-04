@@ -95,6 +95,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'به روزشده در',
         summary: 'خلاصه',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'خلاصه',
       error: {
         404: {

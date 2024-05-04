@@ -72,6 +72,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Ebisara na',
         summary: 'Nchịkọta',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Nchịkọta',
       error: {
         home: 'Akụkọ',

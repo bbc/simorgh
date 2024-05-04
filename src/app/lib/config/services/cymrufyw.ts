@@ -65,6 +65,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Cyhoeddwyd am',
         summary: 'Crynodeb',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Cipolwg',
       error: {
         404: {

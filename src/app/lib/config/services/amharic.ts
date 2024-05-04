@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'የታተመዉ',
         summary: 'ጭምቅ ሃሳብ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'ጭምቅ ሃሳብ',
       error: {
         404: {

@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'पोस्ट गरिएको',
         summary: 'सारांश',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'सारांश',
       error: {
         404: {

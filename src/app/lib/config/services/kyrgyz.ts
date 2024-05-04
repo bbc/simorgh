@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Чыгарылган убакыт',
         summary: 'Корутунду',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Корутунду',
       error: {
         404: {

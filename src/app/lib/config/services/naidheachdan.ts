@@ -64,6 +64,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Air a chur suas aig',
         summary: 'Geàrr-chunntas',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Geàrr-shealladh',
       error: {
         404: {

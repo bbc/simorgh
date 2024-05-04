@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Basım saati',
         summary: 'Özet',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Özet',
       error: {
         404: {

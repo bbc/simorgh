@@ -72,6 +72,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       error: {
         404: {
           statusCode: '404',

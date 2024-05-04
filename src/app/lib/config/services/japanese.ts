@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         postedAt: '投稿時間',
         summary: '要点',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '要点',
       error: {
         404: {

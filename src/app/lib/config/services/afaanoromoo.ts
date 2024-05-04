@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Guduunfaa',
       error: {
         404: {

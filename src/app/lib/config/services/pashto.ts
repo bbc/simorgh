@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'لنډیز',
       error: {
         404: {

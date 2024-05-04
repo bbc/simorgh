@@ -92,6 +92,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'پوسٹ کیا گیا',
         summary: 'خلاصہ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'خلاصہ',
       error: {
         404: {
