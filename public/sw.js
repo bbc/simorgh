@@ -12,9 +12,7 @@ self.addEventListener('install', event => {
 
 const fetchEventHandler = async event => {
   if (
-    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+\.webp$/.test(
-      event.request.url,
-    )
+    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/.+\.webp$/.test(event.request.url)
   ) {
     const req = event.request.clone();
 
@@ -29,7 +27,7 @@ const fetchEventHandler = async event => {
     // look at the headers Accept image/webp,*/
     // downgrade/remove if not there
 
-    if (!supportsWebp || /\/amz\/worldservice\/.*/.test(event.request.url)) {
+    if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
         fetch(imageUrlWithoutWebp, {

@@ -35,7 +35,10 @@ const buildIChefURL = ({ originCode, locator, resolution }) => {
     .filter(Boolean)
     .join('/');
 
-  return url.endsWith('.webp') ? url : `${url}.webp`;
+  return url.endsWith('.webp') ||
+    (url.includes('amz/worldservice') && !url.includes('ace/standard'))
+    ? url
+    : `${url}.webp`;
 };
 
 export default buildIChefURL;
