@@ -53,7 +53,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'Agora você pode receber as notícias da BBC News Brasil no seu celular',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0htdh6t.png',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0hvq254.png',
         alt: 'Logo: WhatsApp BBC Brasil',
       },
       linkLabel: {

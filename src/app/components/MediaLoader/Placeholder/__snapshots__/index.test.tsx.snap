@@ -222,7 +222,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
     </button>
     <div
       class="emotion-14"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
@@ -488,7 +488,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
     </button>
     <div
       class="emotion-16"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
@@ -709,7 +709,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
     </button>
     <div
       class="emotion-12"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
@@ -936,7 +936,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
     </button>
     <div
       class="emotion-14"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
@@ -1150,7 +1150,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
     </button>
     <div
       class="emotion-12"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
@@ -1416,7 +1416,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
     </button>
     <div
       class="emotion-16"
-      style="padding-bottom: 0px;"
+      style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
