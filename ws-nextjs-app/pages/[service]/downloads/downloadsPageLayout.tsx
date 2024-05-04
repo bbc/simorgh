@@ -5,7 +5,6 @@ import Heading from '#app/components/Heading';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import onClient from '#app/lib/utilities/onClient';
 import styles from './styles';
 import { PageProps } from './types';
 

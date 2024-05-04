@@ -1,4 +1,5 @@
 import 'isomorphic-fetch';
+import { OK } from '#app/lib/statusCodes.const';
 
 const retrieveDownloads = async service => {
   const fetchURl = `https://ws-downloads.files.bbci.co.uk/downloads-data-${service}.json`;
@@ -6,7 +7,7 @@ const retrieveDownloads = async service => {
     const retrieveDownloads = async () => {
       const response = await fetch(fetchURl);
 
-      if (response.status !== 200) return null;
+      if (response.status !== OK) return null;
 
       const downloads = await response.json();
       return downloads;
