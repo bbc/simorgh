@@ -65,7 +65,7 @@ export const Img = props => {
         </StyledPicture>
       )}
 
-      {[FRONT_PAGE, HOME_PAGE].includes(pageType) && (
+      {![FRONT_PAGE, HOME_PAGE].includes(pageType) && (
         <StyledImg
           sizes={sizes}
           srcSet={fallbackSrcset}

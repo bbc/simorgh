@@ -28,7 +28,8 @@ describe('Service Worker', () => {
     const TEST_IMAGE_URL = 'https://ichef.test.bbci.co.uk';
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
 
-    describe('image requested when webp not supported', () => {
+    // .webp is removed from the url when the url contains .web already and webp is not supported
+    describe('image requested in sw when url ends in webp and webp not supported', () => {
       it.each`
         image                                        | expectedUrl
         ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`} | ${`${TEST_IMAGE_URL}/news/puppies.jpg`}
@@ -39,7 +40,7 @@ describe('Service Worker', () => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 
         const event = {
-          request: new Request(image, { headers: { accept: 'jpg' } }),
+          request: new Request(image),
         };
 
         event.respondWith = jest.fn();
@@ -50,18 +51,19 @@ describe('Service Worker', () => {
         expect(fetchSpy).toHaveBeenCalledWith(expectedUrl, { mode: 'no-cors' });
       });
     });
-    describe('image requested when webp supported', () => {
-      // The service worker doesn't do anything when webp is supported
+
+    describe('image not requested in sw when url ends in webp and webp supported', () => {
       it.each`
-        image
-        ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`}
-      `(`for $image is $expectedUrl`, async ({ image }) => {
+        image                                        | headers
+        ${`${TEST_IMAGE_URL}/news/puppies.jpg.webp`} | ${{ accept: 'webp' }}
+        ${`${BASE_IMAGE_URL}/news/puppies.png.webp`} | ${{ accept: 'webp' }}
+      `(`for $image is $expectedUrl`, async ({ image, headers }) => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 
         const event = {
-          request: new Request(image, { headers: { accept: 'webp' } }),
+          request: new Request(image, { headers }),
         };
-
+        // , { headers: { accept: 'jpg' } })
         event.respondWith = jest.fn();
 
         await fetchEventHandler(event);
@@ -70,19 +72,13 @@ describe('Service Worker', () => {
       });
     });
 
-    describe('image is not requested', () => {
+    describe('image is not requested in sw', () => {
       it.each`
-        image                                                      | headers               | reason
-        ${`${TEST_IMAGE_URL}/sport/puppies.jpg.webp`}              | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/ace/sw/puppies.jpg.webp`}             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${TEST_IMAGE_URL}/news/amz/puppies.jpeg.webp`}          | ${{ accept: 'webp' }} | ${'image url must not include amz'}
-        ${`${TEST_IMAGE_URL}/news/worldservice/puppies.jpeg.webp`} | ${{ accept: 'webp' }} | ${'image url must not include worldservice'}
-        ${`${BASE_IMAGE_URL}/sport/puppies.jpg.webp`}              | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/ace/stndard/puppies.jpg.webp`}        | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/ace/sw/puppies.jpg.webp`}             | ${{ accept: 'webp' }} | ${'image url must include news, ace/standard or ace/ws'}
-        ${`${BASE_IMAGE_URL}/news/amz/puppies.jpeg.webp`}          | ${{ accept: 'webp' }} | ${'image url must not include amz'}
-        ${`${BASE_IMAGE_URL}/news/worldservice/puppies.jpeg.webp`} | ${{ accept: 'webp' }} | ${'image url must not include worldservice'}
+        image                                                | headers               | reason
+        ${`${TEST_IMAGE_URL}/sport/puppies.jpg`}             | ${{}}                 | ${'image url must end with webp'}
+        ${`${TEST_IMAGE_URL}/ace/standard/puppies.jpg.webp`} | ${{ accept: 'webp' }} | ${'webp supported in request headers'}
+        ${`${BASE_IMAGE_URL}/sport/puppies.jpg`}             | ${{}}                 | ${'image url must end with webp'}
+        ${`${BASE_IMAGE_URL}/ace/standard/puppies.jpg.webp`} | ${{ accept: 'webp' }} | ${`webp not supported in request headers`}
       `(`for $image because $reason`, async ({ image, headers }) => {
         ({ fetchEventHandler } = await import('./service-worker-test'));
 

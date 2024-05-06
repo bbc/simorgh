@@ -44,6 +44,31 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
+const extractAltText = blocks => {
+  console.log(`in recursive 0 ${JSON.stringify(blocks)}`);
+  // eslint-disable-next-line no-restricted-syntax
+  for (const block of blocks) {
+    if (block.type === 'paragraph') {
+      console.log(`in recursive 1 ${JSON.stringify(block.model.text)}`);
+      return block.model.text;
+    }
+    if (block.model && block.model.blocks) {
+      console.log(`in recursive 2 ${JSON.stringify(block.model.blocks)}`);
+      return extractAltText(block.model.blocks);
+    }
+    return '';
+  }
+};
+const getBlockByType = (blocks, blockType) => {
+  let blockData;
+  blocks.forEach(block => {
+    if (!blockData && block.type === blockType) {
+      blockData = block;
+    }
+  });
+  return blockData;
+};
+
 const StoryPromoImage = ({
   isAmp,
   useLargeImages,
@@ -55,9 +80,21 @@ const StoryPromoImage = ({
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
-  const { height, width, path, altText, copyrightHolder } = imageValues;
-  const originCode = getOriginCode(path);
-  const locator = getLocator(path);
+
+  let { height, width, path, altText, copyrightHolder } = imageValues;
+  let originCode = getOriginCode(path);
+  let locator = getLocator(path);
+  if (imageValues.defaultPromoImage) {
+    const { blocks } = imageValues.defaultPromoImage;
+    const rawImageBlock = getBlockByType(blocks, 'rawImage').model;
+    const altTextBlocks = getBlockByType(blocks, 'altText').model.blocks;
+    altText = extractAltText(altTextBlocks);
+    height = rawImageBlock.height;
+    width = rawImageBlock.width;
+    locator = rawImageBlock.locator;
+    originCode = rawImageBlock.originCode;
+    copyrightHolder = rawImageBlock.copyrightHolder;
+  }
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -264,8 +301,8 @@ const StoryPromoContainer = ({
       )}
     </>
   );
-
-  const imageValues = pathOr(null, ['indexImage'], item);
+  const imageValues =
+    pathOr(null, ['indexImage'], item) || pathOr(null, ['images'], item);
 
   const MediaIndicator = (
     <MediaIndicatorContainer
@@ -280,7 +317,6 @@ const StoryPromoContainer = ({
   const StoryPromoComponent = isSingleColumnLayout
     ? SingleColumnStoryPromo
     : StoryPromo;
-
   return (
     <StoryPromoComponent
       data-e2e="story-promo"
