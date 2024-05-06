@@ -2,7 +2,7 @@ import { getEnvConfig } from '../getEnvConfig';
 
 const webpSupportedPatterns = [
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+(\.jpg|\.png)$/,
-  /\/ace\/(standard|ws)\/.+\/amz\/worldservice\/.*/,
+  /\/ace\/(standard|ws)\/.+(\/amz\/worldservice\/)?.*/,
 ];
 
 const isSupportedWebpUrl = url =>
@@ -43,9 +43,7 @@ const buildIChefURL = ({ originCode, locator, resolution }) => {
     .filter(Boolean)
     .join('/');
 
-  return url.endsWith('.webp') || !isSupportedWebpUrl(url)
-    ? url
-    : `${url}.webp`;
+  return isSupportedWebpUrl(url) ? `${url}.webp` : url;
 };
 
 export default buildIChefURL;
