@@ -1,8 +1,8 @@
 import { getEnvConfig } from '../getEnvConfig';
 
 const webpSupportedPatterns = [
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|ace\/(standard|ws))\/.+(\.jpg|\.png)$/,
-  /\/ace\/(standard|ws)\/.+(\/amz\/worldservice\/)?.*/,
+  /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
+  /\/ace\/(?:standard|ws)\/.+(?:\/amz\/worldservice\/)?.*/,
 ];
 
 const isSupportedWebpUrl = url =>
