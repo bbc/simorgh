@@ -6,8 +6,8 @@ const NOTO_SERIF_SINHALA_FONTS_DIR =
 const NOTO_SANS_TAMIL_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/';
 
-const MALLANA_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/Mallanna/v1.0.4/';
+const NOTO_SANS_TELUGU_FONTS_DIR =
+  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifTelugu/v1.00/'; // not live yet
 
 const NOTO_SANS_ETHIOPIC_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
@@ -186,13 +186,24 @@ export const NOTO_SANS_TAMIL_BOLD = {
   },
 };
 
-export const MALLANNA_REGULAR = {
+export const NOTO_SANS_TELUGU_REGULAR = {
   '@font-face': {
-    fontFamily: 'Mallanna',
+    fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${MALLANA_FONTS_DIR}normal.woff') format('woff'), url('${MALLANA_FONTS_DIR}normal.eot') format('eot'), url('${MALLANA_FONTS_DIR}normal.ttf') format('ttf')`,
-    fontDisplay: 'swap',
+    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}normal.ttf') format('ttf')`,
+    fontDisplay: 'swap', // check
+  },
+};
+
+// added
+export const NOTO_SANS_TELUGU_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_TELUGU_FONTS_DIR}bold.ttf') format('ttf')`,
+    fontDisplay: 'swap', // check
   },
 };
 

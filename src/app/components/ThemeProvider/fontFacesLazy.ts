@@ -6,8 +6,8 @@ const NOTO_SERIF_SINHALA_FONTS_DIR =
 const NOTO_SANS_TAMIL_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/';
 
-const MALLANA_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/Mallanna/v1.0.4/';
+const NOTO_SANS_TELUGU_FONTS_DIR =
+  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifTelugu/v1.00/'; // not live yet
 
 const NOTO_SANS_ETHIOPIC_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
@@ -97,13 +97,23 @@ const NOTO_SANS_TAMIL_BOLD = {
   baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
 };
 
-const MALLANNA_REGULAR = {
-  fontFamily: 'Mallanna',
+const NOTO_SANS_TELUGU_REGULAR = {
+  fontFamily: 'Noto Sans Telugu',
   fontWeight: 400,
   fontStyle: 'normal',
-  src: `${MALLANA_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap',
-  baseUrl: MALLANA_FONTS_DIR,
+  src: `${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2`,
+  fontDisplay: 'swap', // check
+  baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
+};
+
+// added
+const NOTO_SANS_TELUGU_BOLD = {
+  fontFamily: 'Noto Sans Telugu',
+  fontWeight: 700,
+  fontStyle: 'normal',
+  src: `${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2`,
+  fontDisplay: 'swap', // check
+  baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
 };
 
 const NOTO_SANS_ETHIOPIC_REGULAR = {
@@ -208,7 +218,7 @@ export default (service: string) => {
     case 'tamil':
       return [NOTO_SANS_TAMIL_REGULAR, NOTO_SANS_TAMIL_BOLD];
     case 'telugu':
-      return [MALLANNA_REGULAR];
+      return [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD];
     case 'amharic':
     case 'tigrinya':
       return [NOTO_SANS_ETHIOPIC_REGULAR, NOTO_SANS_ETHIOPIC_BOLD];

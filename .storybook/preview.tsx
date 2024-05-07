@@ -179,13 +179,23 @@ const NOTO_SANS_TAMIL_BOLD = {
   },
 };
 
-const MALLANNA_REGULAR = {
+const NOTO_SANS_TELUGU_REGULAR = {
   '@font-face': {
-    fontFamily: 'Mallanna',
+    fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/Mallanna/normal.woff') format('woff'), url('fonts/Mallanna/normal.eot') format('eot'), url('fonts/Mallanna/normal.ttf') format('ttf')`,
-    fontDisplay: 'swap',
+    src: `url('fonts/NotoSansTelugu/normal.woff') format('woff'), url('fonts/NotoSansTelugu/normal.eot') format('eot'), url('fonts/NotoSansTelugu/normal.ttf') format('ttf')`,
+    fontDisplay: 'swap', // check
+  },
+};
+
+const NOTO_SANS_TELUGU_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansTelugu/bold.woff') format('woff'), url('fonts/NotoSansTelugu/bold.eot') format('eot'), url('fonts/NotoSansTelugu/bold.ttf') format('ttf')`,
+    fontDisplay: 'swap', // check
   },
 };
 
@@ -623,7 +633,8 @@ const preview: Preview = {
               NOTO_SERIF_SINHALA_BOLD,
               NOTO_SANS_TAMIL_REGULAR,
               NOTO_SANS_TAMIL_BOLD,
-              MALLANNA_REGULAR,
+              NOTO_SANS_TELUGU_REGULAR,
+              NOTO_SANS_TELUGU_BOLD,
               NOTO_SANS_ETHIOPIC_REGULAR,
               NOTO_SANS_ETHIOPIC_BOLD,
               PADAUK_REGULAR,
@@ -649,6 +660,7 @@ const preview: Preview = {
             service={context.globals.service.service}
             variant={context.globals.service.variant}
           >
+            {/* @ts-expect-error - missing props */}
             <RequestContextProvider isLite={context.globals.isLite}>
               <EventTrackingContextProvider
                 // @ts-expect-error - mock data for Storybook
