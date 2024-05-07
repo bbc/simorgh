@@ -9,6 +9,9 @@ const NOTO_SANS_TAMIL_FONTS_DIR =
 const NOTO_SANS_TELUGU_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifTelugu/v1.00/'; // not live yet
 
+const NOTO_SANS_GUJARATI_FONTS_DIR =
+  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifGujarati/v1.00/'; // not live yet
+
 const NOTO_SANS_ETHIOPIC_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
 
@@ -102,7 +105,7 @@ const NOTO_SANS_TELUGU_REGULAR = {
   fontWeight: 400,
   fontStyle: 'normal',
   src: `${NOTO_SANS_TELUGU_FONTS_DIR}normal.woff2`,
-  fontDisplay: 'swap', // check
+  fontDisplay: 'swap',
   baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
 };
 
@@ -112,8 +115,27 @@ const NOTO_SANS_TELUGU_BOLD = {
   fontWeight: 700,
   fontStyle: 'normal',
   src: `${NOTO_SANS_TELUGU_FONTS_DIR}bold.woff2`,
-  fontDisplay: 'swap', // check
+  fontDisplay: 'swap',
   baseUrl: NOTO_SANS_TELUGU_FONTS_DIR,
+};
+
+const NOTO_SANS_GUJARATI_REGULAR = {
+  fontFamily: 'Noto Sans Gujarati',
+  fontWeight: 400,
+  fontStyle: 'normal',
+  src: `${NOTO_SANS_GUJARATI_FONTS_DIR}normal.woff2`,
+  fontDisplay: 'swap',
+  baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
+};
+
+// added
+const NOTO_SANS_GUJARATI_BOLD = {
+  fontFamily: 'Noto Sans Gujarati',
+  fontWeight: 700,
+  fontStyle: 'normal',
+  src: `${NOTO_SANS_GUJARATI_FONTS_DIR}bold.woff2`,
+  fontDisplay: 'swap',
+  baseUrl: NOTO_SANS_GUJARATI_FONTS_DIR,
 };
 
 const NOTO_SANS_ETHIOPIC_REGULAR = {
@@ -219,6 +241,8 @@ export default (service: string) => {
       return [NOTO_SANS_TAMIL_REGULAR, NOTO_SANS_TAMIL_BOLD];
     case 'telugu':
       return [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD];
+    case 'gujarati':
+      return [NOTO_SANS_GUJARATI_REGULAR, NOTO_SANS_GUJARATI_BOLD];
     case 'amharic':
     case 'tigrinya':
       return [NOTO_SANS_ETHIOPIC_REGULAR, NOTO_SANS_ETHIOPIC_BOLD];
