@@ -741,7 +741,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-29"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -809,7 +809,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-29"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -874,7 +874,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-29"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -1622,7 +1622,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               >
                 <div
                   class="emotion-27"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img

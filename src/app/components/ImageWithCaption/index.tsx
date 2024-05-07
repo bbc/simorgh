@@ -108,6 +108,7 @@ const ImageWithCaption = ({
         sizes={!isAmp ? sizes : undefined}
         isAmp={isAmp}
         placeholder
+        hasCaption
       >
         {renderCopyright(copyright || '')}
       </Image>
