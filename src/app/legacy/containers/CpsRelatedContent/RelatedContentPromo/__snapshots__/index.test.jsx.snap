@@ -332,7 +332,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
         >
           <div
             class="emotion-8"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.25%; overflow: hidden;"
           >
             <picture>
               <img
