@@ -11,7 +11,7 @@ import Form from './Form';
 
 const UGCPageLayout = ({ pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
-  const { title, description, sections } = pageData;
+  const { title, description, sections, privacyNotice } = pageData;
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
@@ -40,7 +40,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
 
               <h2>{sectionTitle}</h2>
               <FormContextProvider fields={fields}>
-                <Form fields={fields} />
+                <Form fields={fields} privacyNotice={privacyNotice.default} />
               </FormContextProvider>
             </main>
           </div>

@@ -8,7 +8,13 @@ import styles from './styles';
 import Submit from '../SubmitButton';
 import Loader from '../Loader';
 
-export default function Form({ fields }: { fields: Field[] }) {
+export default function Form({
+  fields,
+  privacyNotice,
+}: {
+  fields: Field[];
+  privacyNotice: string;
+}) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
 
   const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
@@ -26,6 +32,11 @@ export default function Form({ fields }: { fields: Field[] }) {
     <>
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
+        <div
+          // TODO: This is a security risk, we should sanitize the HTML
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: privacyNotice }}
+        />
         {!submitted ? <Submit /> : <Loader />}
       </form>
       {submissionError && (
