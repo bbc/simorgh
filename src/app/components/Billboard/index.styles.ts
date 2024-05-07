@@ -36,7 +36,7 @@ export default {
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundColor: palette.GREY_10,
+      backgroundColor: palette.BLACK,
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
