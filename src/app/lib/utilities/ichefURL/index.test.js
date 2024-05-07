@@ -49,6 +49,38 @@ describe('getIchefURL', () => {
         expect(getIChefURL(input)).toEqual(expectedURL);
       },
     );
+
+    it.each`
+      ichefSubdomain    | originCode     | locator                                                                                                   | expectedURL
+      ${undefined}      | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${undefined}      | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${undefined}      | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${undefined}      | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${undefined}      | ${'amz'}       | ${'worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg.webp'} | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg.webp`}
+      ${undefined}      | ${'amz'}       | ${'worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png.webp'}                 | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png.webp`}
+      ${'ace/standard'} | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'ace/standard'} | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'ace/standard'} | ${'amz'}       | ${'worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                           | ${`${BASE_IMAGE_URL}/ace/standard/660/amz/worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'amz'}       | ${'worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                           | ${`${BASE_IMAGE_URL}/ace/standard/660/amz/worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'news'}         | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'news'}         | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'news'}         | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp'}                                              | ${`${BASE_IMAGE_URL}/news/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'news'}         | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp'}                                              | ${`${BASE_IMAGE_URL}/news/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+    `(
+      `the .webp extension is not appended to the URL for $locator`,
+      ({ ichefSubdomain, originCode, locator, expectedURL }) => {
+        const input = {
+          originCode,
+          locator,
+          resolution: '660',
+          ichefSubdomain,
+        };
+
+        expect(getIChefURL(input)).toEqual(expectedURL);
+      },
+    );
   });
 
   it('builds standard ichef img url with originCode mpv', () => {
