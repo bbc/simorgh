@@ -1,17 +1,12 @@
 import { getEnvConfig } from '../getEnvConfig';
 
-// const webpSupportedPatterns = [
-//   /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
-//   /\/ace\/(?:standard|ws)\/.+(?:\/amz\/worldservice\/)?.*/,
-// ];
+const webpSupportedPatterns = [
+  /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
+  /(?:\/ace\/(?:standard|ws)\/.+\/(?:amz\/worldservice\/)?|\/news\/(?!.+\/amz\/worldservice\/)).*/,
+];
 
-const isSupportedWebpUrl = url => {
-  return (
-    /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/.test(
-      url,
-    ) && !/\/news\/.+\/amz\/worldservice\/.*/.test(url)
-  );
-};
+const isSupportedWebpUrl = url =>
+  webpSupportedPatterns.every(pattern => pattern.test(url));
 
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
