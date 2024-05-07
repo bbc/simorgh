@@ -6263,7 +6263,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="Nurses for LUTH isolation Center"
@@ -6317,7 +6317,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="Keyframe #2"
@@ -6371,7 +6371,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="-"
@@ -6425,7 +6425,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="MIGRANTS"
@@ -6479,7 +6479,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="Anthony Scaramucci na former Communications Director for White House"
@@ -6533,7 +6533,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="Uchenna Obunadike"
@@ -6587,7 +6587,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="E dey good for your"
@@ -6641,7 +6641,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others"
@@ -6695,7 +6695,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                         <div
                           class="emotion-244"
-                          style="padding-bottom: 56.25%;"
+                          style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
                             alt="This man leather no be for here"

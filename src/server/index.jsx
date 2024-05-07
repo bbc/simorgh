@@ -239,12 +239,17 @@ server.get(
         isCaf,
       });
 
-      const { isUK } = extractHeaders(headers);
+      const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.showCookieBannerBasedOnCountry = ['pidgin', 'hausa'].includes(
+        service,
+      )
+        ? showCookieBannerBasedOnCountry
+        : true;
       data.isUK = isUK;
       data.isCaf = isCaf;
       data.isLite = isLite;
@@ -336,9 +341,11 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
+        const allVaryHeaders = ['X-country'];
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
 
-        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+        res.set('vary', allVaryHeaders);
 
         res.status(status).send(result.html);
       } else {

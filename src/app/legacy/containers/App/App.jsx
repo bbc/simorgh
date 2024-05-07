@@ -46,6 +46,7 @@ export const App = ({ initialData, bbcOrigin }) => {
   const {
     path: pathname,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry,
     toggles,
     mvtExperiments,
     isUK,
@@ -64,6 +65,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     ...state,
     bbcOrigin,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry,
     mvtExperiments,
     isUK,
   });
