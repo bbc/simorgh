@@ -1,12 +1,17 @@
 import { getEnvConfig } from '../getEnvConfig';
 
-const webpSupportedPatterns = [
-  /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
-  /\/ace\/(?:standard|ws)\/.+(?:\/amz\/worldservice\/)?.*/,
-];
+// const webpSupportedPatterns = [
+//   /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
+//   /\/ace\/(?:standard|ws)\/.+(?:\/amz\/worldservice\/)?.*/,
+// ];
 
-const isSupportedWebpUrl = url =>
-  webpSupportedPatterns.every(pattern => pattern.test(url));
+const isSupportedWebpUrl = url => {
+  return (
+    /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/.test(
+      url,
+    ) && !/\/news\/.+\/amz\/worldservice\/.*/.test(url)
+  );
+};
 
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
@@ -27,15 +32,19 @@ const buildPlaceholderSrc = (src, resolution) => {
   return `https://${newUrl.join('/')}`;
 };
 
-const buildIChefURL = ({ originCode, locator, resolution }) => {
+const buildIChefURL = ({
+  originCode,
+  locator,
+  resolution,
+  ichefSubdomain = 'ace/ws',
+}) => {
   if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }
 
   const url = [
     getEnvConfig().SIMORGH_ICHEF_BASE_URL || 'https://ichef.bbci.co.uk',
-    'ace',
-    'ws',
+    ichefSubdomain,
     resolution,
     originCode,
     locator,

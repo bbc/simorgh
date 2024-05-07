@@ -17,18 +17,33 @@ describe('getIchefURL', () => {
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
 
     it.each`
-      originCode     | locator                                                                                              | expectedURL
-      ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
-      ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
-      ${'amz'}       | ${'worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg'} | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg.webp`}
-      ${'amz'}       | ${'worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png'}                 | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png.webp`}
+      ichefSubdomain    | originCode     | locator                                                                                                    | expectedURL
+      ${undefined}      | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${undefined}      | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${undefined}      | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${undefined}      | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${undefined}      | ${'amz'}       | ${'worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg'}       | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg.webp`}
+      ${undefined}      | ${'amz'}       | ${'worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png'}                       | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png.webp`}
+      ${'ace/standard'} | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'ace/standard'} | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/ace/standard/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'ace/standard'} | ${'amz'}       | ${'worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                 | ${`${BASE_IMAGE_URL}/ace/standard/660/amz/worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'ace/standard'} | ${'amz'}       | ${'worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                 | ${`${BASE_IMAGE_URL}/ace/standard/660/amz/worldservice/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'news'}         | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'news'}         | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'news'}         | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                                    | ${`${BASE_IMAGE_URL}/news/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'news'}         | ${'cpsdevpb'}  | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                                    | ${`${BASE_IMAGE_URL}/news/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'news'}         | ${'amz'}       | ${'worldservice/live/assets/images/2013/09/19/130919124553_srivilliputhur_temple_112x63_bbc_nocredit.jpg'} | ${`${BASE_IMAGE_URL}/news/660/amz/worldservice/live/assets/images/2013/09/19/130919124553_srivilliputhur_temple_112x63_bbc_nocredit.jpg`}
+      ${'news'}         | ${'amz'}       | ${'worldservice/live/assets/images/2013/09/19/130919124553_srivilliputhur_temple_112x63_bbc_nocredit.png'} | ${`${BASE_IMAGE_URL}/news/660/amz/worldservice/live/assets/images/2013/09/19/130919124553_srivilliputhur_temple_112x63_bbc_nocredit.png`}
     `(
-      `for $originCode the expected URL is $expectedURL`,
-      ({ originCode, locator, expectedURL }) => {
+      `for the subdomain $ichefSubdomain and origin code $originCode the expected URL is $expectedURL`,
+      ({ ichefSubdomain, originCode, locator, expectedURL }) => {
         const input = {
           originCode,
           locator,
           resolution: '660',
+          ichefSubdomain,
         };
 
         expect(getIChefURL(input)).toEqual(expectedURL);
