@@ -13,32 +13,27 @@ describe('getIchefURL', () => {
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
 
-  it('builds WebP ichef img url based on originCode, locator, resolution and isWebP passed', () => {
-    const input = {
-      originCode: 'cpsprodpb',
-      locator: 'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg',
-      resolution: '660',
-      isWebP: true,
-    };
-    const expectedOutput =
-      'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp';
+  describe('builds WebP ichef img url based on originCode, locator and resolution passed', () => {
+    const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
 
-    expect(getIChefURL(input)).toEqual(expectedOutput);
-  });
+    it.each`
+      originCode     | locator                                                                                              | expectedURL
+      ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
+      ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png.webp`}
+      ${'amz'}       | ${'worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg'} | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg.webp`}
+      ${'amz'}       | ${'worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png'}                 | ${`${BASE_IMAGE_URL}/ace/ws/660/amz/worldservice/live/assets/images/2015/05/08/150508054332_cameron_624x351_afp.png.webp`}
+    `(
+      `for $originCode the expected URL is $expectedURL`,
+      ({ originCode, locator, expectedURL }) => {
+        const input = {
+          originCode,
+          locator,
+          resolution: '660',
+        };
 
-  it('builds standard ichef img url based on originCode, locator, resolution and isWebP passed', () => {
-    const input = {
-      originCode: 'amz',
-      locator:
-        'worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg',
-      resolution: '660',
-      isWebP: true,
-    };
-
-    const expectedOutput =
-      'https://ichef.bbci.co.uk/ace/ws/660/amz/worldservice/live/assets/images/2013/08/19/130819164754_ardeshir_zahedi_112x63_bbc_nocredit.jpg';
-
-    expect(getIChefURL(input)).toEqual(expectedOutput);
+        expect(getIChefURL(input)).toEqual(expectedURL);
+      },
+    );
   });
 
   it('builds standard ichef img url with originCode mpv', () => {
