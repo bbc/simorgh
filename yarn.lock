@@ -4213,9 +4213,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:15.0.6":
-  version: 15.0.6
-  resolution: "@testing-library/react@npm:15.0.6"
+"@testing-library/react@npm:15.0.7":
+  version: 15.0.7
+  resolution: "@testing-library/react@npm:15.0.7"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^10.0.0
@@ -4227,7 +4227,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: bc9a839b352d748a0d5bcab81621e2e1d09ea58f245c4795cb8e69f97a4f71867a66115c9832f083b62abc357b510be396cd000eb751c85543b974e6a90caf7f
+  checksum: eb33fd82eb811bb8612aa154e430a2c1c251d5ed45a477ef57fe20095db494ea7dcfa6b1e1e2bffb0c7ee10c86e408745d95a879be8ca8fbe301bb91e5f2e5db
   languageName: node
   linkType: hard
 
@@ -15584,7 +15584,7 @@ __metadata:
     "@emotion/babel-plugin": 11.11.0
     "@emotion/jest": ^11.11.0
     "@testing-library/jest-dom": 6.4.5
-    "@testing-library/react": 15.0.6
+    "@testing-library/react": 15.0.7
     babel-plugin-transform-rename-import: 2.3.0
     cypress: 13.8.1
     cypress-terminal-report: 6.0.2
@@ -15649,7 +15649,7 @@ __metadata:
     "@storybook/theming": 8.0.10
     "@testing-library/dom": 10.1.0
     "@testing-library/jest-dom": 6.4.5
-    "@testing-library/react": 15.0.6
+    "@testing-library/react": 15.0.7
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.5.2
     "@types/jest": 29.5.12
