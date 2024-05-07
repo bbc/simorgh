@@ -1,5 +1,20 @@
 import { getEnvConfig } from '../getEnvConfig';
 
+/*
+The pattern below:
+matches
+  https://ichef.test.bbci.co.uk/news/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg
+  https://ichef.bbci.co.uk/news/660/cpsdevpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg
+  https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg
+  https://ichef.bbci.co.uk/ace/standard/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png
+  https://ichef.test.bbci.co.uk/ace/ws/660/amz/worldservice/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg
+  https://ichef.bbci.co.uk/ace/standard/660/amz/worldservice/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png
+
+does not match
+  https://ichef.test.bbci.co.uk/news/660/amz/worldservice/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg
+  https://ichef.bbci.co.uk/news/660/amz/worldservice/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.png
+*/
+
 const webpSupportedPatterns = [
   /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
   /(?:\/ace\/(?:standard|ws)\/.+\/(?:amz\/worldservice\/)?|\/news\/(?!.+\/amz\/worldservice\/)).*/,
