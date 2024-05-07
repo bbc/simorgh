@@ -14,7 +14,7 @@
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
-    "test:integration": "jest --ci --detectOpenHandles --colors --selectProjects='Integration Tests - Canonical'",
+    "test:integration": "jest --ci --runInBand --detectOpenHandles --colors --selectProjects='Integration Tests - Canonical'",
     "test:integration:amp": "jest --ci --colors --selectProjects='Integration Tests - AMP'",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
