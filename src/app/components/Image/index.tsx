@@ -31,6 +31,7 @@ type Props = {
   src: string;
   width?: number;
   fetchpriority?: 'high';
+  hasCaption?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -59,9 +60,13 @@ const Image = ({
   width,
   children,
   fetchpriority,
+  hasCaption,
 }: PropsWithChildren<Props>) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  if (isLite) return null;
+
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
@@ -121,6 +126,7 @@ const Image = ({
         ]}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
+          overflow: hasCaption ? '' : 'hidden',
         }}
       >
         {isAmp ? (

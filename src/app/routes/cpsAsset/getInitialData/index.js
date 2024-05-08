@@ -106,6 +106,7 @@ export default async ({
   pageType,
   toggles,
   isCaf,
+  isAmp,
 }) => {
   try {
     const { service: derivedService, path: derivedPath } =
@@ -119,6 +120,8 @@ export default async ({
       service: derivedService,
       variant,
       pageType: isCaf ? 'article' : 'cpsAsset',
+      isAmp,
+      toggles,
     });
 
     if (status !== 200) {

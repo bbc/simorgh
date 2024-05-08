@@ -9,7 +9,14 @@ import {
 } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import TopStoriesSection from '.';
-import { topStoriesList, topStoriesSingleItem } from './fixture';
+import {
+  topStoriesList,
+  topStoriesSingleItem,
+  topStoriesItem,
+  tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
+  topStoriesLiveLabelItem,
+} from './fixture';
 
 // eslint-disable-next-line react/prop-types
 const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
@@ -36,6 +43,41 @@ describe('Optimo Top Stories Promo', () => {
     const list = container.querySelector('ul');
     expect(listItems.length).toBe(3);
     expect(list).toBeInTheDocument();
+  });
+
+  it('should render a mixture of Top Stories items for CPS, Optimo and Tipo data', () => {
+    const mixtureFixture = [
+      topStoriesItem,
+      tipoFormattedTopStoriesItem,
+      tipoLivePageTopStoriesItem,
+      topStoriesLiveLabelItem,
+    ];
+
+    render(
+      <TopStoriesSectionFixture service="hindi" fixtureData={mixtureFixture} />,
+    );
+
+    const cpsHeading = screen.getByText(
+      'Covid antibodies in 1 in 10 people in December',
+    );
+    const optimoHeading = screen.getByText(
+      'Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды',
+    );
+    const tipoLiveHeading = screen.getByText(
+      'ईवीएम के मॉक टेस्ट में बीजेपी को वोट जाने की रिपोर्ट पर ईसी ने सुप्रीम कोर्ट में दिया जवाब',
+    );
+    const cpsLiveHeading = screen.getByText(
+      "Covid death toll in UK 'now close to 96,000'",
+    );
+
+    const liveLabel = screen.getAllByText('लाइव');
+
+    expect(cpsHeading).toBeInTheDocument();
+    expect(optimoHeading).toBeInTheDocument();
+    expect(tipoLiveHeading).toBeInTheDocument();
+    expect(cpsLiveHeading).toBeInTheDocument();
+
+    expect(liveLabel).toHaveLength(2);
   });
 
   it('should render a default title if translations are not available', () => {

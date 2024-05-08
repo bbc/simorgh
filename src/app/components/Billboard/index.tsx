@@ -5,7 +5,6 @@ import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Heading from '../Heading';
 import LiveLabel from '../LiveLabel';
 import MaskedImage from '../MaskedImage';
@@ -18,6 +17,7 @@ interface BillboardProps {
   link: string;
   image: string;
   altText: string;
+  id?: string;
   eventTrackingData?: EventTrackingMetadata;
   showLiveLabel?: boolean;
 }
@@ -30,14 +30,13 @@ const Billboard = forwardRef(
       link,
       image,
       altText,
+      id = 'billboard-1',
       eventTrackingData,
       showLiveLabel,
     }: BillboardProps,
     viewRef,
   ) => {
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
-    const id = `billboard-${idSanitiser(heading)}`;
 
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
@@ -51,13 +50,13 @@ const Billboard = forwardRef(
               imageWidth={660}
             />
             <div css={styles.textContainer}>
-              <a
-                href={link}
-                css={styles.link}
-                className="focusIndicatorDisplayBlock"
-                onClick={clickTrackerHandler}
-              >
-                <Heading level={2} size="paragon" css={styles.heading} id={id}>
+              <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                <a
+                  href={link}
+                  css={styles.link}
+                  className="focusIndicatorDisplayBlock"
+                  onClick={clickTrackerHandler}
+                >
                   {showLiveLabel ? (
                     <div data-testid="billboard-live-label">
                       <LiveLabel.Pulse
@@ -66,14 +65,14 @@ const Billboard = forwardRef(
                         css={styles.liveLabelPulse}
                       />
                       <LiveLabel.Text css={styles.liveLabelText}>
-                        {heading}
+                        <div>{heading}</div>
                       </LiveLabel.Text>
                     </div>
                   ) : (
                     heading
                   )}
-                </Heading>
-              </a>
+                </a>
+              </Heading>
               {description && (
                 <Text as="p" css={styles.description}>
                   {description}
@@ -93,6 +92,7 @@ export default ({
   link,
   image,
   altText,
+  id,
   eventTrackingData,
   showLiveLabel,
 }: BillboardProps) => {
@@ -105,6 +105,7 @@ export default ({
       link={link}
       image={image}
       altText={altText}
+      id={id}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
       showLiveLabel={showLiveLabel}

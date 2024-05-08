@@ -72,7 +72,9 @@ const expectedOutput = {
   derivedPageType: null,
   isAmp: true,
   isNextJs: false,
+  isApp: false,
   isCaf: false,
+  isLite: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,
@@ -87,6 +89,7 @@ const expectedOutput = {
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
+  showCookieBannerBasedOnCountry: true,
   service: 'service',
   pathname: '/current-path',
   mvtExperiments: input.mvtExperiments,
@@ -188,6 +191,22 @@ describe('RequestContext', () => {
         isAmp: false,
         isApp: true,
         platform: 'app',
+      });
+    });
+
+    it('should be "lite" when isAmp is false and isApp is false and isLite is true', () => {
+      render(
+        <RequestContextProvider {...input} isAmp={false} isApp={false} isLite>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isAmp: false,
+        isApp: false,
+        isLite: true,
+        platform: 'canonical',
       });
     });
 

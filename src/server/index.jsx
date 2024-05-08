@@ -18,6 +18,7 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
+import CafEnabledServices from '#app/lib/cafServices.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -201,15 +202,19 @@ server.get(
         service,
         isAmp,
         isApp,
+        isLite: isLiteRouteSuffix,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
 
+      // Check if using the .lite route
+      const isLite = isLiteRouteSuffix;
+
       const { page, renderer_env } = query;
 
-      const isCaf = !!(
-        renderer_env === 'caftest' || renderer_env === 'caflive'
-      );
+      const isCaf =
+        CafEnabledServices.includes(service) ||
+        Boolean(renderer_env === 'caftest' || renderer_env === 'caflive');
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
@@ -234,14 +239,20 @@ server.get(
         isCaf,
       });
 
-      const { isUK } = extractHeaders(headers);
+      const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.showCookieBannerBasedOnCountry = ['pidgin', 'hausa'].includes(
+        service,
+      )
+        ? showCookieBannerBasedOnCountry
+        : true;
       data.isUK = isUK;
       data.isCaf = isCaf;
+      data.isLite = isLite;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -268,6 +279,7 @@ server.get(
           data,
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -295,6 +307,7 @@ server.get(
           data: { error: true, status },
           isAmp,
           isApp,
+          isLite,
           routes,
           service,
           url,
@@ -328,9 +341,12 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
+        const allVaryHeaders = ['X-country'];
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
 
-        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
+        res.set('vary', allVaryHeaders);
+
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');

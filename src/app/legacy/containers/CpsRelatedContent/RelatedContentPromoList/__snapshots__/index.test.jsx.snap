@@ -408,7 +408,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -476,7 +476,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -541,7 +541,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -987,7 +987,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -1055,7 +1055,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -1120,7 +1120,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
