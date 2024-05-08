@@ -17,7 +17,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
     altCalendar,
     script,
     translations: {
-      downloads?: {
+      downloads: {
         instructions = 'You can download and view today’s news.',
         title = 'File Download',
       },
@@ -39,9 +39,9 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
           <main css={styles.mainContent}>
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
-            <ol>
+            <ol css={styles.orderedList}>
               {pageData.downloadData?.map((item, index) => (
-                <li>
+                <li css={styles.listItem} key={index}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"

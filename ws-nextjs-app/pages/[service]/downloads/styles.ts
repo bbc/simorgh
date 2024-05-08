@@ -23,6 +23,25 @@ export default {
         gridColumn: '1 / span 8',
       },
     }),
+  orderedList : () => 
+    css({
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(50%, 1fr))',
+      listStyleType: 'none',
+    }),
+  listItem : ({ fontSizes }) => 
+    css({
+      borderBottom: '1px solid #000',
+      paddingBottom: '15px',
+      marginBottom: '8px',
+      marginRight: '5px',
+      time: {
+        ...fontSizes.greatPrimer
+      },
+      svg: {
+        marginRight: '8px',
+      },
+    }),
   mainContent: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
