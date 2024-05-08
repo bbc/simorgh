@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { useContext } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
