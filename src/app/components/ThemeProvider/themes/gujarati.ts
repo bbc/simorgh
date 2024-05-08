@@ -19,7 +19,7 @@ const gujaratiTheme = {
   typography: {
     script: devanagariScript,
     fontVariants: gujaratiFontVariants,
-    fontFaces: [NOTO_SANS_GUJARATI_REGULAR, NOTO_SANS_GUJARATI_BOLD], // added
+    fontFaces: [NOTO_SANS_GUJARATI_REGULAR, NOTO_SANS_GUJARATI_BOLD],
   },
   brandSVG,
 };

@@ -682,7 +682,6 @@ const preview: Preview = {
             service={context.globals.service.service}
             variant={context.globals.service.variant}
           >
-            {/* @ts-expect-error - missing props */}
             <RequestContextProvider isLite={context.globals.isLite}>
               <EventTrackingContextProvider
                 // @ts-expect-error - mock data for Storybook

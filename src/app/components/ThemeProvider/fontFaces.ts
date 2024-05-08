@@ -7,10 +7,10 @@ const NOTO_SANS_TAMIL_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/';
 
 const NOTO_SANS_TELUGU_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifTelugu/v1.00/'; // not live yet
+  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTelugu/v1.00/';
 
 const NOTO_SANS_GUJARATI_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifGujarati/v1.00/'; // not live yet
+  'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansGujarati/v1.00/';
 
 const NOTO_SANS_ETHIOPIC_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/';
@@ -199,7 +199,6 @@ export const NOTO_SANS_TELUGU_REGULAR = {
   },
 };
 
-// added
 export const NOTO_SANS_TELUGU_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Sans Telugu',
@@ -210,7 +209,6 @@ export const NOTO_SANS_TELUGU_BOLD = {
   },
 };
 
-// added
 export const NOTO_SANS_GUJARATI_REGULAR = {
   '@font-face': {
     fontFamily: 'Noto Sans Gujarati',
@@ -221,7 +219,6 @@ export const NOTO_SANS_GUJARATI_REGULAR = {
   },
 };
 
-// added
 export const NOTO_SANS_GUJARATI_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Sans Gujarati',
