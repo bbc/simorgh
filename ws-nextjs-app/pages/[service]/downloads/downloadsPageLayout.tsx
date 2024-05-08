@@ -15,7 +15,12 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
     locale,
     altCalendar,
     script,
-    translations: { downloads = {} },
+    translations: {
+      downloads: {
+        instructions,
+        title,
+      },
+    },
   } = useContext(ServiceContext);
 
   const description = `${service} Downloads`;
