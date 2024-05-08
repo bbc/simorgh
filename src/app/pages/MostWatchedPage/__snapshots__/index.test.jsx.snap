@@ -782,7 +782,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26"
-                        style="padding-bottom: 56.25%;"
+                        style="padding-bottom: 56.25%; overflow: hidden;"
                       >
                         <picture>
                           <img
@@ -889,7 +889,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26"
-                        style="padding-bottom: 56.25%;"
+                        style="padding-bottom: 56.25%; overflow: hidden;"
                       >
                         <picture>
                           <img
@@ -996,7 +996,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26"
-                        style="padding-bottom: 56.25%;"
+                        style="padding-bottom: 56.25%; overflow: hidden;"
                       >
                         <picture>
                           <img
