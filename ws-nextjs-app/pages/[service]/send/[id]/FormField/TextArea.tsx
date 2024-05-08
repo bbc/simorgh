@@ -1,5 +1,7 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
+import styles from './styles';
 
 export default ({
   id,
@@ -13,12 +15,14 @@ export default ({
   return (
     <textarea
       id={id}
+      css={[styles.textField, styles.textArea, styles.focusIndicator]}
       name={name}
       value={value as string}
       onChange={e => handleChange(e.target.name, e.target.value)}
       aria-invalid={!isValid}
       aria-required={required}
       aria-describedby={describedBy}
+      rows={4}
     />
   );
 };
