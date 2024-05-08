@@ -30,6 +30,8 @@ const stopApp = () =>
   new Promise(resolve => {
     const child = exec('yarn stop');
 
+    console.log('HIT STOP');
+
     child.on('exit', resolve);
   });
 
@@ -41,7 +43,6 @@ const buildApp = () =>
   });
 
 const startApp = () => {
-  // const portNumber = argv.nextJS ? 7081 : 7080;
   return new Promise(resolve => {
     const child = exec(
       `yarn ${isDev ? 'dev' : 'start'} & ./node_modules/.bin/wait-on -t 20000`,
@@ -70,6 +71,8 @@ const runTests = () =>
     const child = argv.nextJS ? runNextJSTests() : runExpressTests();
 
     child.on('exit', code => {
+      console.log('HIT EXIT CODE - ', code);
+
       if (code === 1) {
         reject();
       } else {
