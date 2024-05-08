@@ -1,5 +1,7 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
+import styles from './styles';
 
 export default ({
   id,
@@ -12,6 +14,7 @@ export default ({
   return (
     <input
       id={id}
+      css={[styles.textField, styles.focusIndicator]}
       name={name}
       type="tel"
       value={value as string}
