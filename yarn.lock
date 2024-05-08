@@ -3049,26 +3049,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:14.2.3, @next/swc-darwin-arm64@npm:@next/swc-darwin-arm64@14.2.3":
+"@next/swc-darwin-arm64@npm:14.2.3":
   version: 14.2.3
   resolution: "@next/swc-darwin-arm64@npm:14.2.3"
-  checksum: 2b1bf50dce3408e3eecfa45545fad843b93143f7c36f77294daf649afb2f14771a7b43736f1c96dd5d8c4b81fab5d1c5fe21e687caaac9e8140d33edb35f27bb
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.2.3, @next/swc-darwin-x64@npm:@next/swc-darwin-x64@14.2.3":
+"@next/swc-darwin-x64@npm:14.2.3":
   version: 14.2.3
   resolution: "@next/swc-darwin-x64@npm:14.2.3"
-  checksum: 9d1b3b0e64e6fd1a044df09ce5b6b67a017be2ea056dc0f1190a591b52a4794bef769578095df730ce3845fd8a1646488d13800cf8cbc80993117ff092e06bb9
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:14.2.3, @next/swc-linux-arm64-gnu@npm:@next/swc-linux-arm64-gnu@14.2.3":
+"@next/swc-linux-arm64-gnu@npm:14.2.3":
   version: 14.2.3
   resolution: "@next/swc-linux-arm64-gnu@npm:14.2.3"
-  checksum: 7f615d3a8191fd860ba477cc3f0d3905c834a739839a74f361a7adf5279029c438a373ae56a638f7a6cf52f2161c48c4081e0d7bf88c535024bd130dae963df2
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -3080,10 +3077,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:14.2.3, @next/swc-linux-x64-gnu@npm:@next/swc-linux-x64-gnu@14.2.3":
+"@next/swc-linux-x64-gnu@npm:14.2.3":
   version: 14.2.3
   resolution: "@next/swc-linux-x64-gnu@npm:14.2.3"
-  checksum: ce1f0121a0a5441026de174dd24c4d8931e892794bdbf2571579c3f6c5c44775b3de508d4e659163c43281d8baec627aeedeed4987e6377916458c688aeb3f15
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -15640,10 +15636,6 @@ __metadata:
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
-    "@next/swc-darwin-arm64": "npm:@next/swc-darwin-arm64@14.2.3"
-    "@next/swc-darwin-x64": "npm:@next/swc-darwin-x64@14.2.3"
-    "@next/swc-linux-arm64-gnu": "npm:@next/swc-linux-arm64-gnu@14.2.3"
-    "@next/swc-linux-x64-gnu": "npm:@next/swc-linux-x64-gnu@14.2.3"
     "@optimizely/react-sdk": 2.9.2
     "@storybook/addon-a11y": 8.0.10
     "@storybook/addon-backgrounds": 8.0.10
