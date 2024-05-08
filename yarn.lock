@@ -2414,18 +2414,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:0.20.2, @esbuild/darwin-arm64@npm:@esbuild/darwin-arm64@npm:0.20.2":
+"@esbuild/darwin-arm64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/darwin-arm64@npm:0.20.2"
-  checksum: 514b6c6c4ccd3f07fa13f1707c119dec70d027e14cb318c6b4f1768f3d9dbede4ff1d2421e720537f80d9d00a499b0bfa48c323db0c02ace048d0dc98b7ecfed
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.20.2, @esbuild/darwin-x64@npm:@esbuild/darwin-x64@npm:0.20.2":
+"@esbuild/darwin-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/darwin-x64@npm:0.20.2"
-  checksum: 9644b7bb7266a033ff16041b8066e6fcdabdf7d897b7f8163c3ff5cf531be3c2d41cee31789aab028af2217b1fb4f77f963136cc4d35a896954c0e1fc4e84204
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -2500,10 +2498,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.20.2, @esbuild/linux-x64@npm:@esbuild/linux-x64@npm:0.20.2":
+"@esbuild/linux-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-x64@npm:0.20.2"
-  checksum: 2f1357bac9a5156f9828a077ef96b36c41b501056de69ad95312dbcfa381d0fd071139b41d258b686c9d228f57e30b6fa216c00f8972dcf887cdfb82d823ab22
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -15629,9 +15626,6 @@ __metadata:
     "@emotion/react": 11.11.4
     "@emotion/server": 11.11.0
     "@emotion/styled": 11.11.5
-    "@esbuild/darwin-arm64": "npm:@esbuild/darwin-arm64@npm:0.20.2"
-    "@esbuild/darwin-x64": "npm:@esbuild/darwin-x64@npm:0.20.2"
-    "@esbuild/linux-x64": "npm:@esbuild/linux-x64@npm:0.20.2"
     "@loadable/babel-plugin": 5.16.1
     "@loadable/component": 5.15.3
     "@loadable/server": 5.15.3
