@@ -16,9 +16,9 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
     altCalendar,
     script,
     translations: {
-      downloads: {
-        instructions,
-        title,
+      downloads?: {
+        instructions = 'You can download and view today’s news.',
+        title = 'File Download',
       },
     },
   } = useContext(ServiceContext);
