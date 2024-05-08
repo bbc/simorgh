@@ -22,7 +22,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
       },
     },
   } = useContext(ServiceContext);
-  //   const { title } = translations.downloads;
+
   const description = `${service} Downloads`;
   return (
     <>
