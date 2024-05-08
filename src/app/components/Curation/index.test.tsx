@@ -30,6 +30,14 @@ const messageBannerCuration = kyrgyzHomePage.data.curations.find(
     summaries.length > 0,
 );
 
+const billboardCuration = kyrgyzHomePage.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === BANNER &&
+    visualProminence === MAXIMUM &&
+    summaries &&
+    summaries.length > 0,
+);
+
 const components = {
   'curation-grid-normal': {
     visualStyle: NONE,
@@ -41,7 +49,7 @@ const components = {
     visualProminence: HIGH,
     summaries: mundoFixture.data.curations[0].summaries,
   },
-  'message-banner-': {
+  'message-banner-1': {
     visualStyle: BANNER,
     visualProminence: NORMAL,
     summaries: messageBannerCuration?.summaries,
@@ -55,6 +63,11 @@ const components = {
     visualStyle: NONE,
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
+  },
+  'billboard-1': {
+    visualStyle: BANNER,
+    visualProminence: MAXIMUM,
+    summaries: billboardCuration?.summaries,
   },
 };
 
@@ -73,6 +86,7 @@ describe('Curation', () => {
 
   it.each(Object.entries(components))(
     `should render a %s component`,
+    // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
     (
       testId: string, // testId is the key in the components object above
       {
@@ -161,6 +175,23 @@ describe('Curation', () => {
 
       expect(
         document.querySelector('[data-testid="message-banner-"]'),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Billboard', () => {
+    it('should not be displayed if there are no promos', () => {
+      render(
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={MAXIMUM}
+          summaries={[]}
+        />,
+      );
+
+      expect(
+        document.querySelector('[data-testid="billboard-"]'),
       ).not.toBeInTheDocument();
     });
   });

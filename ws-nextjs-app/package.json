@@ -22,23 +22,23 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.24.4",
+    "@babel/core": "7.24.5",
     "@babel/plugin-proposal-export-default-from": "7.24.1",
     "@babel/preset-react": "7.24.1",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
-    "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "15.0.4",
+    "@testing-library/jest-dom": "6.4.5",
+    "@testing-library/react": "15.0.7",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "13.8.1",
-    "cypress-terminal-report": "6.0.1",
+    "cypress-terminal-report": "6.0.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "npm-run-all2": "^6.0.0",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.1.4",
+    "next": "14.2.3",
     "undici": "6.11.1"
   }
 }

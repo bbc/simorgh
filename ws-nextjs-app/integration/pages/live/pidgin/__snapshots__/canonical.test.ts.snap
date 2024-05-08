@@ -126,7 +126,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
   </button>
   <div
     class="css-lgx6cw"
-    style="padding-bottom:0"
+    style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
@@ -205,7 +205,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
   </button>
   <div
     class="css-lgx6cw"
-    style="padding-bottom:0"
+    style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
@@ -288,7 +288,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </button>
     <div
       class="css-lgx6cw"
-      style="padding-bottom:0"
+      style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
