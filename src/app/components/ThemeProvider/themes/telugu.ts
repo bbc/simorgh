@@ -16,7 +16,7 @@ const teluguTheme = {
   typography: {
     script: devanagariScript,
     fontVariants: teluguFontVariants,
-    fontFaces: [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD], // check bold is wanted
+    fontFaces: [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD],
   },
   brandSVG,
 };
