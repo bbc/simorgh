@@ -1,4 +1,3 @@
-import { Services } from '#app/models/types/global';
 import { OK } from '#app/lib/statusCodes.const';
 
 const retrieveDownloads = async (service: Service) => {
