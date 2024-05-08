@@ -69,7 +69,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
                       {item.files[0].fileName}
                       <span>
                         {' '}
-                        ({(item.files[0].fileSize / 1000000).toFixed(1)}Mb )
+                        {(item.files[0].fileSize / 1000000).toFixed(1)}Mb
                       </span>
                     </span>
                   </a>

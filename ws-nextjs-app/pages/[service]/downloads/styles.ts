@@ -20,27 +20,41 @@ export default {
       paddingBottom: '2rem',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '1 / span 8',
+        gridColumn: '1 / span 12',
       },
     }),
-  orderedList : () => 
+  orderedList : ({ mq }) => 
     css({
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(50%, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(100%, 1fr))',
       listStyleType: 'none',
+      padding: 0,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(auto-fill, minmax(50%, 1fr))',
+      },
     }),
-  listItem : ({ fontSizes }) => 
+  listItem : ({ fontSizes, palette }) => 
     css({
       borderBottom: '1px solid #000',
       paddingBottom: '15px',
       marginBottom: '8px',
-      marginRight: '5px',
+      marginRight: '0px',
+      paddingRight: '5px',
       time: {
-        ...fontSizes.greatPrimer
+        ...fontSizes.greatPrimer,
+        marginBottom: '8px',
       },
       svg: {
         marginRight: '8px',
       },
+      a: {
+        color: palette.RHINO,
+        textDecoration: 'none',
+        '&:hover': {
+          textDecoration: 'underline',
+          color: palette.POSTBOX,
+        },
+      }
     }),
   mainContent: ({ spacings }: Theme) =>
     css({
