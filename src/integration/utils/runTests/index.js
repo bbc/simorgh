@@ -41,13 +41,9 @@ const buildApp = () =>
   });
 
 const startApp = () => {
-  const portNumber = argv.nextJS ? 7081 : 7080;
+  // const portNumber = argv.nextJS ? 7081 : 7080;
   return new Promise(resolve => {
-    const child = exec(
-      `yarn ${
-        isDev ? 'dev' : 'start'
-      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}/status`,
-    );
+    const child = exec(`yarn ${isDev ? 'dev' : 'start'}`);
 
     child.on('exit', resolve);
   });
