@@ -116,7 +116,11 @@ if (onlyRunTests) {
         }),
     )
     .then(runTests)
-    .then(stopApp)
+    // .then(stopApp)
+    .then(async () => {
+      await stopApp();
+      process.exit(1);
+    })
     .catch(async () => {
       await stopApp();
       process.exit(1);
