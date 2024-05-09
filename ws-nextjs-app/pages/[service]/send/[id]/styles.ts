@@ -14,19 +14,19 @@ export default {
         margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(12, 1fr)',
-        padding: '1rem',
+        padding: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         columnGap: `${spacings.FULL}rem`,
       },
     }),
-  primaryColumn: ({ mq }: Theme) =>
+  primaryColumn: ({ mq, spacings }: Theme) =>
     css({
       gridColumn: '1 / span 12',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
-        paddingBottom: '2rem',
+        paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
   mainContent: ({ spacings, palette, mq }: Theme) =>
@@ -39,7 +39,7 @@ export default {
     }),
   description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
     css({
-      borderBottom: `1px solid ${palette.GREY_5}`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
       marginBottom: `${spacings.DOUBLE}rem`,
 
       ...fontVariants.sansRegular,

@@ -11,7 +11,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
 }
 
 .emotion-0:nth-child(5) {
-  border-bottom: 1px solid #8A8C8E;
+  border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
@@ -81,7 +81,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
 }
 
 .emotion-0:nth-child(5) {
-  border-bottom: 1px solid #8A8C8E;
+  border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
@@ -185,7 +185,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
 }
 
 .emotion-0:nth-child(5) {
-  border-bottom: 1px solid #8A8C8E;
+  border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
@@ -289,7 +289,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 .emotion-0:nth-child(5) {
-  border-bottom: 1px solid #8A8C8E;
+  border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
@@ -393,7 +393,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
 }
 
 .emotion-0:nth-child(5) {
-  border-bottom: 1px solid #8A8C8E;
+  border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }

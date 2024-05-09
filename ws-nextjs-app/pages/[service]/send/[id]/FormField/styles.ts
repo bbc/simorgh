@@ -1,4 +1,5 @@
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 export default {
@@ -11,7 +12,7 @@ export default {
       marginTop: `${spacings.DOUBLE}rem`,
 
       '&:nth-child(5)': {
-        borderBottom: `1px solid ${palette.GREY_5}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
         paddingBottom: `${spacings.DOUBLE}rem`,
         marginBottom: `${spacings.DOUBLE}rem`,
       },
