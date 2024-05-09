@@ -13,6 +13,9 @@ export default {
       padding: `${spacings.FULL + spacings.HALF}rem 0`,
       marginBottom: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
@@ -27,6 +30,7 @@ export default {
         outline: `${focusIndicatorThickness} solid ${palette.WHITE}`,
         boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.BLACK}`,
         outlineOffset: `${focusIndicatorThickness}`,
+        textDecoration: 'underline',
       },
     }),
 };
