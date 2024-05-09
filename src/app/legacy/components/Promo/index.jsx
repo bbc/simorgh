@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -49,10 +48,6 @@ Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
 Promo.Timestamp = withPromoContext(Timestamp);
-
-Promo.propTypes = {
-  children: arrayOf(element).isRequired,
-};
 
 export const MEDIA_TYPES = TYPES;
 export default Promo;

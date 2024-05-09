@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { bool, string, oneOf, shape } from 'prop-types';
+import { oneOf } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -26,12 +26,9 @@ import {
   getSansRegular,
   getSerifMedium,
 } from '#psammead/psammead-styles/src/font-styles';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
-
-const PROMO_TYPES = oneOf(['top', 'regular', 'leading']);
 
 const wrapperTopStoryStyles = `
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
@@ -132,13 +129,6 @@ export const Headline = styled.h3`
     `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
 `;
 
-Headline.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  promoHasImage: bool,
-  promoType: PROMO_TYPES,
-};
-
 Headline.defaultProps = {
   promoHasImage: true,
   promoType: 'regular',
@@ -180,13 +170,6 @@ export const Summary = styled.p`
 
   ${({ promoType }) => summaryStyles[promoType]}
 `;
-
-Summary.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  promoHasImage: bool,
-  promoType: PROMO_TYPES,
-};
 
 Summary.defaultProps = {
   promoHasImage: true,

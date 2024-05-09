@@ -1,6 +1,5 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
-import { bool, node } from 'prop-types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
   GEL_SPACING_HLF,
@@ -61,11 +60,6 @@ export const CanonicalDropdown = ({ isOpen, children }) => {
       {children}
     </StyledDropdown>
   );
-};
-
-CanonicalDropdown.propTypes = {
-  isOpen: bool.isRequired,
-  children: node.isRequired,
 };
 
 export const AmpDropdown = styled.div`

@@ -476,19 +476,6 @@ const ShowMoment = ({ dir, lang, locale, moments, name }) => {
   );
 };
 
-ShowMoment.propTypes = {
-  dir: string.isRequired,
-  lang: string.isRequired,
-  name: string.isRequired,
-  moments: arrayOf(
-    shape({
-      what: string.isRequired,
-      func: func.isRequired,
-    }),
-  ).isRequired,
-  locale: string.isRequired,
-};
-
 const editorialStories = storiesOf('Moment Locales/Editorial view', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);

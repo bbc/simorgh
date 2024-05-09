@@ -11,8 +11,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const getRowCount = (children, columns) =>
   Math.ceil(React.Children.count(children) / columns);
@@ -31,12 +29,6 @@ export const UsefulLink = styled.a`
     color: ${props => props.theme.palette.METAL};
   }
 `;
-
-UsefulLink.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  href: string.isRequired,
-};
 
 export const UsefulLinksUl = styled.ul`
   padding: 0;
@@ -59,10 +51,6 @@ export const UsefulLinksUl = styled.ul`
     }
   }
 `;
-
-UsefulLinksUl.propTypes = {
-  children: node.isRequired,
-};
 
 UsefulLinksUl.defaultProps = {
   role: 'list',
@@ -88,10 +76,6 @@ export const UsefulLinksLi = styled.li`
     }
   }
 `;
-
-UsefulLinksLi.propTypes = {
-  children: node.isRequired,
-};
 
 UsefulLinksLi.defaultProps = {
   role: 'listitem',

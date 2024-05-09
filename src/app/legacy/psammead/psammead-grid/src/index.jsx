@@ -1,5 +1,4 @@
 import React from 'react';
-import { bool, node, number, shape, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -314,42 +313,6 @@ const Grid = React.forwardRef(
     return renderGridComponent();
   },
 );
-
-Grid.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  columns: shape({
-    group1: number.isRequired,
-    group2: number.isRequired,
-    group3: number.isRequired,
-    group4: number.isRequired,
-    group5: number.isRequired,
-  }).isRequired,
-  enableGelGutters: bool,
-  enableNegativeGelMargins: bool,
-  margins: shape({
-    group1: bool,
-    group2: bool,
-    group3: bool,
-    group4: bool,
-    group5: bool,
-  }),
-  startOffset: shape({
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  item: bool,
-  parentColumns: shape({
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-};
 
 Grid.defaultProps = {
   dir: 'ltr',

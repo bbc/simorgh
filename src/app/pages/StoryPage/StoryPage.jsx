@@ -50,7 +50,6 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Disclaimer from '../../components/Disclaimer';
 import ImageWithCaption from '../../components/ImageWithCaption';
 
@@ -367,7 +366,5 @@ const StoryPage = ({ pageData }) => {
     </>
   );
 };
-
-StoryPage.propTypes = cpsAssetPagePropTypes;
 
 export default StoryPage;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { RequestContext } from '#contexts/RequestContext';
 import { UserContext } from '#contexts/UserContext';
@@ -43,10 +42,6 @@ const withRouter = (component, matchPath, path) => {
       <Route path={matchPath}>{children}</Route>
     </MemoryRouter>
   );
-
-  Wrapper.propTypes = {
-    children: node.isRequired,
-  };
 
   return {
     ...render(component, { wrapper: Wrapper }),

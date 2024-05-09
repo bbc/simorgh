@@ -18,7 +18,7 @@ const TimestampContainer = ({
   script,
   locale = 'en-gb',
   service,
-  altCalendar = null,
+  altCalendar,
   className = '',
 }) => {
   let altDateTime;

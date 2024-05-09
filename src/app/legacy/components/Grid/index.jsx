@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string, node, number } from 'prop-types';
+import { string } from 'prop-types';
 import GRID from '#psammead/psammead-grid/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -286,36 +286,16 @@ GridItemLarge.defaultProps = {
   as: undefined,
 };
 
-GridItemLargeNoMargin.propTypes = {
-  as: string,
-};
-
 GridItemLargeNoMargin.defaultProps = {
   as: undefined,
-};
-
-GridWrapper.propTypes = {
-  as: string,
 };
 
 GridWrapper.defaultProps = {
   as: undefined,
 };
 
-GridItemMediumNoMargin.propTypes = {
-  as: string,
-  gridColumnStart: number,
-  gridSpan: number,
-};
-
 GridItemMediumNoMargin.defaultProps = {
   as: undefined,
-};
-
-GridItemMedium.propTypes = {
-  as: string,
-  gridColumnStart: number,
-  gridSpan: number,
 };
 
 GridItemMedium.defaultProps = {
@@ -330,16 +310,6 @@ GridItemMediumNoMargin.defaultProps = {
 GridItemMedium.defaultProps = {
   gridColumnStart: 5,
   gridSpan: 10,
-};
-
-CPSPageGrid.propTypes = {
-  children: node.isRequired,
-};
-
-PopOutGridItemMedium.propTypes = {
-  children: node.isRequired,
-  gridColumnStart: number,
-  gridSpan: number,
 };
 
 PopOutGridItemMedium.defaultProps = {

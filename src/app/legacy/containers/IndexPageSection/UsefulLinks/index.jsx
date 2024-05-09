@@ -1,6 +1,4 @@
 import React from 'react';
-import { shape, arrayOf, string } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -76,12 +74,6 @@ const UsefulLinksComponent = ({ items, script, service }) => {
       </UsefulLink>
     </UsefulLinkWrapper>
   );
-};
-
-UsefulLinksComponent.propTypes = {
-  items: arrayOf(shape(storyItem)).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
 };
 
 export default UsefulLinksComponent;
