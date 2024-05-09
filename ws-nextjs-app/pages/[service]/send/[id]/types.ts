@@ -15,6 +15,7 @@ export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
   | FileList
   | File
+  | File[]
   | boolean;
 
 export type OnChangeHandler = (

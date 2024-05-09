@@ -18,9 +18,14 @@ const UploadSvg = () => (
   </svg>
 );
 
-const FileList = ({ files, name }) => {
+interface FileListProps {
+  files: File[];
+  name: string;
+}
+
+const FileList = ({ files, name }: FileListProps) => {
   const { setFormState } = useFormContext();
-  const handleFileDeletion = fileIndex => {
+  const handleFileDeletion = (fileIndex: number) => {
     setFormState(prevState => {
       const filesClone = [...files];
       filesClone.splice(fileIndex, 1);
@@ -33,7 +38,7 @@ const FileList = ({ files, name }) => {
       return { ...prevState, ...updatedState };
     });
   };
-  const listItems = files.map((file, index) => {
+  const listItems = files.map((file: File, index: number) => {
     const key = `${index}-${file.name}`;
 
     return (
@@ -51,12 +56,13 @@ const FileList = ({ files, name }) => {
 export default ({ id, name, inputState, describedBy }: InputProps) => {
   const { isValid, required } = inputState;
   const { setFormState } = useFormContext();
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const files = inputState.value;
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFormState(prevState => {
-      const value = event?.target.files;
+      const value = event.target.files;
+      if (!value) return { ...prevState };
 
       const fileListLength = value.length;
       const filesArray = [];
@@ -64,7 +70,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
       const isInitialUpload = prevState[name].value === '';
 
       for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
-        const file = value.item(fileIndex);
+        const file = value?.item(fileIndex);
         if (file) filesArray.push(file);
       }
 
@@ -86,7 +92,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
 
   return (
     <div>
-      <button type="button" onClick={() => inputRef.current.click()}>
+      <button type="button" onClick={() => inputRef?.current?.click()}>
         <UploadSvg />
         Choose a file
       </button>
