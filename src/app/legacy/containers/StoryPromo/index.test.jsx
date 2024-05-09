@@ -51,7 +51,6 @@ const fixtures = {
   podcastLink: podcastLinkItem,
 };
 
-// eslint-disable-next-line react/prop-types
 const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>

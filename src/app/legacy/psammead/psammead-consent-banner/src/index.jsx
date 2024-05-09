@@ -66,7 +66,6 @@ const CenterWrapper = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
 const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
   // tabIndex="-1" enables the h2 to be focussed
   return (

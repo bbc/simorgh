@@ -66,7 +66,6 @@ const baseFixturePng = {
   width: 640,
 };
 
-// eslint-disable-next-line react/prop-types
 export const ImageWithPlaceholder = ({ preload = false }) => {
   const props = {
     ...baseFixture,
@@ -93,7 +92,6 @@ export const AmpImageWithPlaceholderPng = () => {
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
-// eslint-disable-next-line react/prop-types
 export const LazyLoadImageWithPlaceholder = ({ fallback, lazyLoad = true }) => {
   const props = {
     ...baseFixture,

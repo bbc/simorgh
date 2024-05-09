@@ -10,15 +10,7 @@ import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-const Header = ({
-  /* eslint-disable react/prop-types */
-  brandRef,
-  borderBottom,
-  skipLink,
-  scriptLink,
-  linkId,
-  /* eslint-enable react/prop-types */
-}) => {
+const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {

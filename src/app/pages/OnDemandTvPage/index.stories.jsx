@@ -21,7 +21,6 @@ const matchFixtures = service => ({
   },
 });
 
-// eslint-disable-next-line react/prop-types
 const Component = (_, { service }) => {
   return (
     <BrowserRouter>

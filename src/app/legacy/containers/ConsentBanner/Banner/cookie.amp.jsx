@@ -229,7 +229,7 @@ const ContentWrapper = styled.div`
  * AmpCookieSettingsButton is a control that can be used externally to display
  * the Manage Cookie Settings banner.
  */
-// eslint-disable-next-line react/prop-types
+
 export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
     // eslint-disable-next-line react/no-unknown-property

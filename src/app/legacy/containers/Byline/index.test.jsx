@@ -6,7 +6,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
 import BylineContainer from './index';
 
-/* eslint-disable react/prop-types */
 const BylineContainerWithContext = ({
   pageType,
   service,

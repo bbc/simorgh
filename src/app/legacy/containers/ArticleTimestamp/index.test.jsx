@@ -19,7 +19,6 @@ const regexUpdatedDatetime =
   /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
-// eslint-disable-next-line react/prop-types
 const WrappedArticleTimestamp = ({ service = 'news', ...props }) => (
   <ServiceContextProvider service={service}>
     <ArticleTimestamp {...props} />

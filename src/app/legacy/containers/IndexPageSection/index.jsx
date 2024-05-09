@@ -67,7 +67,6 @@ const SpacingDiv = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
 const MarginWrapper = ({ firstSection, oneItem, children }) => {
   // Conditionally add a `margin-top` to the `children`.
   if (firstSection) {

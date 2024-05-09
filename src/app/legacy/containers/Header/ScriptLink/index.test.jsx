@@ -64,7 +64,6 @@ const toggleContextMock = {
   toggleDispatch: mockToggleDispatch,
 };
 
-/* eslint-disable react/prop-types */
 const ScriptLinkContainerWithContext = ({
   serviceContext = serbianServiceConfig.lat,
   requestContext = requestContextMock,

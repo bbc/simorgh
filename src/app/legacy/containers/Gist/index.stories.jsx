@@ -3,7 +3,6 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import Gist from '.';
 import blocks from './fixtures';
 
-// eslint-disable-next-line react/prop-types
 const Component = () => {
   return (
     <ToggleContextProvider

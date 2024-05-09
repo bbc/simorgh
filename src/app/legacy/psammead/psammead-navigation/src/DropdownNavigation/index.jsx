@@ -170,7 +170,6 @@ const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
   width: ${calculateButtonSide(lineHeight)}rem;`;
 
-// eslint-disable-next-line react/prop-types
 const Button = ({ script, ...props }) => <button type="button" {...props} />;
 
 const MenuButton = styled(Button)`
