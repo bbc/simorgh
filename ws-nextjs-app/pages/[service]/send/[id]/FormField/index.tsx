@@ -61,8 +61,8 @@ const FormField = ({
 
   return (
     <div css={styles.formField}>
-      <Label id={id}>{label}</Label>
       <Component
+        label={label}
         id={id}
         name={id}
         handleChange={handleChange}
