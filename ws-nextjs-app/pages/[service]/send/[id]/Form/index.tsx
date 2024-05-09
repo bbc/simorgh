@@ -35,19 +35,19 @@ export default function Form({
         {formFields}
 
         {!submitted ? <Submit /> : <Loader />}
-        <div css={styles.privacyNotice}>
-          <Heading // TODO: need translations for this, it doesn't come through from the api
-            level={3}
-            css={styles.privacyHeading}
-          >
-            Our data policy
-          </Heading>
-          <div
-            // TODO: This is a security risk, we should sanitize the HTML
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: privacyNotice }}
-          />
-        </div>
+
+        <Heading // TODO: need translations for this, it doesn't come through from the api
+          level={3}
+          css={styles.privacyHeading}
+        >
+          Our data policy
+        </Heading>
+        <div
+          // TODO: This is a security risk, we should sanitize the HTML
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: privacyNotice }}
+          css={styles.privacyNotice}
+        />
       </form>
       {submissionError && (
         <div css={styles.submissionError}>
