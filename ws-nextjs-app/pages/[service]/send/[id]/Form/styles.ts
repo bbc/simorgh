@@ -15,4 +15,9 @@ export default {
       ...fontVariants.sansRegular,
       ...fontSizes.bodyCopy,
     }),
+  privacyHeading: ({ fontVariants, fontSizes }: Theme) =>
+    css({
+      ...fontVariants.sansBold,
+      ...fontSizes.bodyCopy,
+    }),
 };

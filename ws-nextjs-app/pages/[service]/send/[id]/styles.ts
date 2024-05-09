@@ -37,12 +37,17 @@ export default {
         width: '35rem',
       },
     }),
-  description: ({ palette, spacings, fontVariants, fontSizes }: Theme) =>
+  description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
     css({
       borderBottom: `1px solid ${palette.GREY_5}`,
-      marginBottom: `${spacings.QUADRUPLE}rem`,
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
+
       ...fontVariants.sansRegular,
       ...fontSizes.bodyCopy,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingBottom: `${spacings.FULL}rem`,
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
     }),
 };
