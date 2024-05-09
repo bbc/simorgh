@@ -94,11 +94,11 @@ module.exports = {
             extensions: ['.jsx', '.tsx'],
           },
         ],
-        ...{
-          // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
-          'no-use-before-define': 'off',
-          '@typescript-eslint/no-use-before-define': ['error'],
-        },
+        // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'react/require-default-props': 'off',
+        'react/no-unused-prop-types': 'off',
       },
     },
   ],
