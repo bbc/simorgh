@@ -33,6 +33,7 @@ export default function Form({
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
         <div
+          css={styles.privacyNotice}
           // TODO: This is a security risk, we should sanitize the HTML
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: privacyNotice }}

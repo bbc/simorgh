@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { Theme, css } from '@emotion/react';
 
 export default {
   submissionError: () =>
@@ -8,5 +8,11 @@ export default {
       backgroundColor: 'pink',
       padding: '1rem',
       margin: '1rem 0',
+    }),
+
+  privacyNotice: ({ fontVariants, fontSizes }: Theme) =>
+    css({
+      ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
     }),
 };

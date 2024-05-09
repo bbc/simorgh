@@ -37,10 +37,12 @@ export default {
         width: '35rem',
       },
     }),
-  description: ({ palette, spacings }: Theme) =>
+  description: ({ palette, spacings, fontVariants, fontSizes }: Theme) =>
     css({
       borderBottom: `1px solid ${palette.GREY_5}`,
       marginBottom: `${spacings.QUADRUPLE}rem`,
       paddingBottom: `${spacings.DOUBLE}rem`,
+      ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
     }),
 };
