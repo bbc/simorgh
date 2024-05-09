@@ -1,14 +1,26 @@
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 export default {
-  formField: ({ spacings }: Theme) =>
+  formField: ({ spacings, palette, mq }: Theme) =>
     css({
       'textarea, input': {
         display: 'block',
       },
-      '&:nth-child(n+2)': {
-        marginTop: `${spacings.QUADRUPLE}rem`,
+
+      marginTop: `${spacings.DOUBLE}rem`,
+
+      '&:nth-child(5)': {
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        '&:nth-child(5)': {
+          paddingBottom: `${spacings.TRIPLE}rem`,
+          marginBottom: `${spacings.TRIPLE}rem`,
+        },
       },
     }),
   fieldLabel: ({ spacings }: Theme) =>
