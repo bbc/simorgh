@@ -28,6 +28,7 @@ type SubmissionError = {
 
 type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
+  setFormState: React.Dispatch<React.SetStateAction<Record<string, FieldData>>>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
@@ -102,6 +103,7 @@ export const FormContextProvider = ({
       const fieldValue = item.value;
 
       if (fieldValue === '') return;
+      // TODO Need to Change this
       if (fieldValue instanceof FileList) {
         const fileList = fieldValue;
         const fileListLength = fileList.length;
@@ -162,6 +164,7 @@ export const FormContextProvider = ({
     <FormContext.Provider
       value={{
         formState,
+        setFormState,
         handleChange,
         handleSubmit,
         submissionError,
