@@ -8,6 +8,9 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
     isUK = headers['x-bbc-edge-isuk'] === 'yes';
   } else if (headers['x-country']) {
     isUK = headers['x-country'] === 'gb';
+  }
+
+  if (headers['x-country']) {
     showCookieBannerBasedOnCountry = COUNTRIES_WITH_COOKIE_BANNER.includes(
       headers['x-country'].toString().toLowerCase(),
     );
