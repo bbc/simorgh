@@ -26,7 +26,6 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         hasAmpPage={false}
       />
       <div css={styles.background}>
-        <div css={styles.gradient} />
         <div css={styles.grid}>
           <div css={styles.primaryColumn}>
             <main css={styles.mainContent}>

@@ -4,19 +4,8 @@ import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 export default {
   background: () =>
     css({
-      position: 'relative',
-      background: 'rgb(100, 5, 5)',
-    }),
-  gradient: () =>
-    css({
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      backgroundImage:
-        'url("https://static.files.bbci.co.uk/core/website/assets/static/container-background-masks/billboard-ambient.d267649a6871ef14d172.jpg")',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      mixBlendMode: 'soft-light',
+      background:
+        'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)',
     }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
