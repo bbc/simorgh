@@ -37,7 +37,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
                 css={styles.description}
               />
 
-              <h2>{sectionTitle}</h2>
+              <Heading level={2}>{sectionTitle}</Heading>
               <FormContextProvider fields={fields}>
                 <Form fields={fields} privacyNotice={privacyNotice.default} />
               </FormContextProvider>
