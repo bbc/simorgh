@@ -149,10 +149,10 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              {...(srcSet && { srcSet: imgSrcSet })}
-              {...(imgSizes && { sizes: imgSizes })}
               fallback=""
               attribution={attribution}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               {...(preload && { 'data-hero': true })}
             />
           </>

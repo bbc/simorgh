@@ -121,7 +121,7 @@ export const PlainTitle = ({
   labelId,
   script,
   service,
-  backgroundColor,
+  backgroundColor = GHOST,
 }) => (
   <FlexColumn>
     <FlexRow>
@@ -138,19 +138,6 @@ export const PlainTitle = ({
   </FlexColumn>
 );
 
-PlainTitle.propTypes = {
-  children: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']).isRequired,
-  labelId: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  backgroundColor: string,
-};
-
-PlainTitle.defaultProps = {
-  backgroundColor: GHOST,
-};
-
 export const LinkTitle = ({
   children: title,
   dir,
@@ -159,7 +146,7 @@ export const LinkTitle = ({
   linkText,
   script,
   service,
-  backgroundColor,
+  backgroundColor = GHOST,
 }) => (
   <SectionLabelLink
     href={href}
@@ -190,18 +177,3 @@ export const LinkTitle = ({
     </FlexColumn>
   </SectionLabelLink>
 );
-
-LinkTitle.propTypes = {
-  children: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']).isRequired,
-  href: string.isRequired,
-  labelId: string.isRequired,
-  linkText: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  backgroundColor: string,
-};
-
-LinkTitle.defaultProps = {
-  backgroundColor: GHOST,
-};

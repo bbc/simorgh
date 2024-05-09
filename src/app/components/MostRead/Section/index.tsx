@@ -9,11 +9,11 @@ const MostReadSection = ({
   className = '',
 }: PropsWithChildren<MostReadSectionProps>) => (
   <section
-    className={className}
     role="region"
     aria-labelledby="Most-Read"
     data-e2e="most-read"
     data-testid="most-read"
+    {...(className && { className })}
   >
     {children}
   </section>

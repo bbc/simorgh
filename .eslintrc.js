@@ -33,6 +33,7 @@ module.exports = {
     'no-only-tests',
   ],
   rules: {
+    'react/prop-types': 'off',
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -87,7 +88,6 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'react/prop-types': 'off',
         'react/jsx-filename-extension': [
           2,
           {

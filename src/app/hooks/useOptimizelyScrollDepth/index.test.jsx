@@ -1,5 +1,4 @@
 import React from 'react';
-import { node, string, bool } from 'prop-types';
 import { renderHook, act, cleanup } from '@testing-library/react-hooks';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -14,7 +13,12 @@ const optimizelyMock = {
   track: jest.fn(),
 };
 
-const wrapper = ({ isAmp, pageType, service, children }) => (
+const wrapper = ({
+  isAmp = false,
+  pageType = ARTICLE_PAGE,
+  service = 'news',
+  children,
+}) => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType={pageType}
@@ -26,19 +30,6 @@ const wrapper = ({ isAmp, pageType, service, children }) => (
     </OptimizelyProvider>
   </RequestContextProvider>
 );
-
-wrapper.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  isAmp: bool.isRequired,
-  service: string.isRequired,
-};
-
-wrapper.defaultProps = {
-  isAmp: false,
-  pageType: ARTICLE_PAGE,
-  service: 'news',
-};
 
 describe('useOptimizelyScrollDepth', () => {
   const addEventListenerSpy = jest.spyOn(document, 'addEventListener');

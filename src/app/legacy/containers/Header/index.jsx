@@ -2,7 +2,6 @@ import React, { useContext, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -51,7 +50,10 @@ const Header = ({
   );
 };
 
-const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
+const HeaderContainer = ({
+  scriptSwitchId = '',
+  renderScriptSwitch = true,
+}) => {
   const { pageType, isAmp, isApp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -112,16 +114,6 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
       {showNav && <NavigationContainer />}
     </header>
   );
-};
-
-HeaderContainer.propTypes = {
-  scriptSwitchId: string,
-  renderScriptSwitch: bool,
-};
-
-HeaderContainer.defaultProps = {
-  scriptSwitchId: '',
-  renderScriptSwitch: true,
 };
 
 export default HeaderContainer;

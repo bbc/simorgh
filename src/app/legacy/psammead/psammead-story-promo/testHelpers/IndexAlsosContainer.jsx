@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import { oneOfType, oneOf, arrayOf, shape, number, string } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,
@@ -45,19 +43,11 @@ const buildIndexAlsosMediaIndicator = ({
   ) : null;
 };
 
-buildIndexAlsosMediaIndicator.propTypes = {
-  cpsType: string.isRequired,
-  mediaType: string.isRequired,
-  script: shape({}).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']).isRequired,
-};
-
 /*
  * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
  * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
  */
-const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
+const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
   const IndexAlsosWrapper = alsoItems.length > 1 ? IndexAlsosUl : Fragment;
   const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;
 
@@ -94,33 +84,6 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
       </IndexAlsosWrapper>
     </IndexAlsos>
   );
-};
-
-const alsoItemsPropTypes = shape({
-  headlines: shape({
-    headline: string.isRequired,
-  }).isRequired,
-  locators: shape({
-    assetUri: string.isRequired,
-    cpsUrn: string,
-  }).isRequired,
-  summary: string,
-  timestamp: number,
-  cpsType: string.isRequired,
-  id: string.isRequired,
-  type: string,
-});
-
-IndexAlsosContainer.propTypes = {
-  alsoItems: oneOfType([arrayOf(alsoItemsPropTypes), alsoItemsPropTypes])
-    .isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-IndexAlsosContainer.defaultProps = {
-  dir: 'ltr',
 };
 
 export default IndexAlsosContainer;

@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -72,14 +71,14 @@ const Guidance = ({
   service,
   noJsMessage,
   noJsClassName,
-  className,
+  className = '',
 }) => (
   <GuidanceWrapper
     service={service}
     guidanceMessage={guidanceMessage}
     noJsClassName={noJsClassName}
     data-e2e="media-player__guidance"
-    className={className}
+    {...(className && { className })}
   >
     {guidanceMessage && (
       <GuidanceMessage className="guidance-message" aria-hidden="true">
@@ -91,19 +90,5 @@ const Guidance = ({
     </StyledNoScript>
   </GuidanceWrapper>
 );
-
-Guidance.propTypes = {
-  guidanceMessage: string,
-  service: string.isRequired,
-  noJsMessage: string.isRequired,
-  noJsClassName: string,
-  className: string,
-};
-
-Guidance.defaultProps = {
-  guidanceMessage: null,
-  noJsClassName: null,
-  className: null,
-};
 
 export default Guidance;

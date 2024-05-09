@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, bool, string, oneOf, shape } from 'prop-types';
+import { bool, string, oneOf, shape } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -226,11 +226,11 @@ export const Link = styled.a`
 const StoryPromo = ({
   image,
   info,
-  promoType,
-  dir,
-  displayImage,
-  mediaIndicator,
-  mediaIndicatorIsInline,
+  promoType = 'regular',
+  dir = 'ltr',
+  displayImage = true,
+  mediaIndicator = null,
+  mediaIndicatorIsInline = false,
   ...props
 }) => {
   const renderImage = displayImage && (
@@ -271,24 +271,6 @@ const StoryPromo = ({
       )}
     </StoryPromoWrapper>
   );
-};
-
-StoryPromo.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
-  image: node.isRequired,
-  info: node.isRequired,
-  promoType: PROMO_TYPES,
-  displayImage: bool,
-  mediaIndicator: node,
-  mediaIndicatorIsInline: bool,
-};
-
-StoryPromo.defaultProps = {
-  dir: 'ltr',
-  promoType: 'regular',
-  displayImage: true,
-  mediaIndicator: null,
-  mediaIndicatorIsInline: false,
 };
 
 export default StoryPromo;

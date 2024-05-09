@@ -1,16 +1,6 @@
 import React, { forwardRef } from 'react';
-import {
-  string,
-  element,
-  bool,
-  oneOf,
-  shape,
-  func,
-  oneOfType,
-  any,
-} from 'prop-types';
+
 import styled from '@emotion/styled';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getDoublePica,
   getLongPrimer,
@@ -227,17 +217,17 @@ const ListItem = styled.li`
 `;
 
 export const ConsentBanner = ({
-  dir,
+  dir = 'ltr',
   title,
   text,
   accept,
   reject,
-  hide,
-  id,
-  hidden,
+  hide = null,
+  id = null,
+  hidden = null,
   script,
   service,
-  headingRef,
+  headingRef = null,
 }) => (
   <Wrapper dir={dir} hidden={hidden} id={id} service={service}>
     <CenterWrapper dir={dir}>
@@ -261,26 +251,3 @@ export const ConsentBanner = ({
     </CenterWrapper>
   </Wrapper>
 );
-
-ConsentBanner.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
-  title: string.isRequired,
-  text: element.isRequired,
-  accept: element.isRequired,
-  reject: element.isRequired,
-  hide: element,
-  id: string,
-  hidden: bool,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  headingRef: oneOfType([func, shape({ current: any })]),
-};
-
-ConsentBanner.defaultProps = {
-  dir: 'ltr',
-  id: null,
-  hidden: null,
-  headingRef: null,
-  hide: null,
-};

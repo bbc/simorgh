@@ -11,8 +11,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { shape, string, oneOfType } from 'prop-types';
-import { optimoStoryItem, storyItem } from '#models/propTypes/storyItem';
 
 import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 import { RequestContext } from '../../../../contexts/RequestContext';
@@ -101,7 +99,7 @@ const StyledHeadline = styled.div`
   align-items: center;
 `;
 
-const RecommendationsPromo = ({ promo, eventTrackingData }) => {
+const RecommendationsPromo = ({ promo, eventTrackingData = null }) => {
   const { script, service } = useContext(ServiceContext);
   const { pageType, isLite } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
@@ -144,24 +142,6 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
       </StyledPromoWrapper>
     </Grid>
   );
-};
-
-RecommendationsPromo.propTypes = {
-  promo: oneOfType([shape(storyItem), shape(optimoStoryItem)]).isRequired,
-  eventTrackingData: shape({
-    block: shape({
-      componentName: string,
-    }),
-    link: shape({
-      componentName: string,
-      url: string,
-      format: string,
-    }),
-  }),
-};
-
-RecommendationsPromo.defaultProps = {
-  eventTrackingData: null,
 };
 
 export default RecommendationsPromo;

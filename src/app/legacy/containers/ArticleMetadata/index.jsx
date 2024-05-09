@@ -1,23 +1,22 @@
 import React, { useContext } from 'react';
-import { string, shape, arrayOf } from 'prop-types';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from '../../../components/Metadata';
 
 const ArticleMetadata = ({
-  articleId,
+  articleId = '',
   title,
   author,
-  twitterHandle,
+  twitterHandle = null,
   firstPublished,
   lastPublished,
-  section,
-  aboutTags,
+  section = '',
+  aboutTags = [],
   mentionsTags,
   lang,
   description,
-  imageLocator,
-  imageAltText,
+  imageLocator = '',
+  imageAltText = '',
 }) => {
   const { service } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -43,43 +42,6 @@ const ArticleMetadata = ({
       </Metadata>
     )
   );
-};
-
-const tagPropTypes = shape({
-  thingUri: string,
-  topicId: string,
-  topicName: string,
-  curationType: arrayOf(string),
-  thingId: string,
-  thingLabel: string,
-  thingType: arrayOf(string),
-  thingSameAs: arrayOf(string),
-});
-
-ArticleMetadata.propTypes = {
-  articleId: string,
-  title: string.isRequired,
-  author: string.isRequired,
-  twitterHandle: string,
-  firstPublished: string.isRequired,
-  lastPublished: string.isRequired,
-  section: string,
-  aboutTags: arrayOf(tagPropTypes),
-  mentionsTags: arrayOf(tagPropTypes),
-  lang: string.isRequired,
-  description: string.isRequired,
-  imageLocator: string,
-  imageAltText: string,
-};
-
-ArticleMetadata.defaultProps = {
-  articleId: '',
-  twitterHandle: null,
-  section: '',
-  aboutTags: [],
-  mentionsTags: [],
-  imageLocator: null,
-  imageAltText: null,
 };
 
 export default ArticleMetadata;

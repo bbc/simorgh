@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -58,7 +57,7 @@ const getErrorMessage = (status, translations) => {
   );
 };
 
-const ErrorMessage = ({ episodeAvailability, skin }) => {
+const ErrorMessage = ({ episodeAvailability, skin = 'video' }) => {
   const { service, translations } = useContext(ServiceContext);
   const Wrapper = skin === 'audio' ? AudioErrorWrapper : VideoErrorWrapper;
 
@@ -70,15 +69,6 @@ const ErrorMessage = ({ episodeAvailability, skin }) => {
       />
     </Wrapper>
   );
-};
-
-ErrorMessage.propTypes = {
-  episodeAvailability: oneOf(Object.values(EPISODE_STATUS)).isRequired,
-  skin: oneOf(['audio', 'video']),
-};
-
-ErrorMessage.defaultProps = {
-  skin: 'video',
 };
 
 export default ErrorMessage;

@@ -21,7 +21,7 @@ const withClickHandler = (Component, clickHandler) => props => (
 
 const BulletedListContainer = ({
   blocks,
-  className,
+  className = '',
   blockGroupType,
   blockGroupIndex,
   ...rest
@@ -35,7 +35,7 @@ const BulletedListContainer = ({
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   return (
-    <StyledGridItemMedium className={className}>
+    <StyledGridItemMedium {...(className && { className })}>
       <BulletedList
         {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
         script={script}
@@ -63,9 +63,5 @@ export const ListPropTypes = {
   ).isRequired,
   class: string,
 };
-
-BulletedListContainer.propTypes = { ...ListPropTypes };
-
-BulletedListContainer.defaultProps = { className: null };
 
 export default BulletedListContainer;

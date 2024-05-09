@@ -52,7 +52,7 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service, platform, ...props }) => (
+const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>
       <RequestContextProvider
@@ -77,10 +77,6 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
     </ServiceContextProvider>
   </ThemeProvider>
 );
-
-WrappedStoryPromo.defaultProps = {
-  service: 'igbo',
-};
 
 describe('StoryPromo Container', () => {
   suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
