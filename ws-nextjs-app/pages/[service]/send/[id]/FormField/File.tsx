@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef } from 'react';
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
 import { InputProps } from '../types';
 import { useFormContext } from '../FormContext';
@@ -25,6 +25,8 @@ interface FileListProps {
 
 const FileList = ({ files, name }: FileListProps) => {
   const { setFormState } = useFormContext();
+  const [thumbnailState, setThumbnailState] = useState<Blob[]>([]);
+
   const handleFileDeletion = (fileIndex: number) => {
     setFormState(prevState => {
       const filesClone = [...files];
@@ -37,9 +39,37 @@ const FileList = ({ files, name }: FileListProps) => {
 
       return { ...prevState, ...updatedState };
     });
+
+    setThumbnailState(prevState => {
+      const thumbnailClone = [...prevState];
+      thumbnailClone.splice(fileIndex, 1);
+
+      return thumbnailClone;
+    });
   };
+
+  useEffect(() => {
+    Promise.all(
+      files.map(async file => {
+        return new Promise((resolve, reject) => {
+          const fileReader = new FileReader();
+          fileReader.onloadend = () => {
+            resolve(fileReader.result);
+          };
+
+          fileReader.onerror = () => {
+            reject();
+          };
+
+          fileReader.readAsDataURL(file);
+        });
+      }),
+    ).then((result: Blob[]) => setThumbnailState(result));
+  }, [files]);
+
   const listItems = files.map((file: File, index: number) => {
     const key = `${index}-${file.name}`;
+    const thumbnailSrc = thumbnailState[index];
 
     return (
       <li key={key}>
@@ -47,6 +77,7 @@ const FileList = ({ files, name }: FileListProps) => {
         <button type="button" onClick={() => handleFileDeletion(index)}>
           {navigationIcons.cross}
         </button>
+        <img src={thumbnailSrc} alt="" />
       </li>
     );
   });
@@ -90,9 +121,17 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
     });
   };
 
+  const handleUploadClick = () => {
+    if (inputRef?.current?.value === null) return;
+    inputRef?.current?.click();
+    inputRef.current.value = '';
+  };
+
+  console.log('yo');
+
   return (
     <div>
-      <button type="button" onClick={() => inputRef?.current?.click()}>
+      <button type="button" onClick={() => handleUploadClick()}>
         <UploadSvg />
         Choose a file
       </button>
