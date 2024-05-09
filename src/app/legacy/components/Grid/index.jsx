@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 import GRID from '#psammead/psammead-grid/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -109,9 +108,10 @@ export const CPSPageGrid = ({ children, ...props }) => (
   </StyledCPSPageGrid>
 );
 
-export const GridWrapper = props => (
+export const GridWrapper = ({ as = undefined, ...props }) => (
   <GelPageGrid
     {...props}
+    as={as}
     enableGelGutters
     columns={{
       group0: 6,
@@ -149,9 +149,15 @@ export const GridItemSmall = styled(props => (
   ${layoutGridItemSmall}
 `;
 
-export const GridItemMedium = ({ gridColumnStart, gridSpan, ...props }) => (
+export const GridItemMedium = ({
+  gridColumnStart = 5,
+  gridSpan = 10,
+  as = undefined,
+  ...props
+}) => (
   <Grid
     {...props}
+    as={as}
     item
     margins={{
       group0: true,
@@ -181,12 +187,14 @@ export const GridItemMedium = ({ gridColumnStart, gridSpan, ...props }) => (
 );
 
 export const GridItemMediumNoMargin = ({
-  gridColumnStart,
-  gridSpan,
+  gridColumnStart = 5,
+  gridSpan = 10,
+  as = undefined,
   ...props
 }) => (
   <Grid
     {...props}
+    as={as}
     item
     startOffset={{
       group0: 1,
@@ -207,9 +215,10 @@ export const GridItemMediumNoMargin = ({
   />
 );
 
-export const GridItemLarge = props => (
+export const GridItemLarge = ({ as = undefined, ...props }) => (
   <Grid
     {...props}
+    as={as}
     item
     margins={{
       group0: true,
@@ -238,9 +247,10 @@ export const GridItemLarge = props => (
   />
 );
 
-export const GridItemLargeNoMargin = props => (
+export const GridItemLargeNoMargin = ({ as = undefined, ...props }) => (
   <Grid
     {...props}
+    as={as}
     item
     startOffset={{
       group0: 1,
@@ -274,47 +284,19 @@ const PopOutAtGroup5 = styled(GridItemMedium)`
     }
   }
 `;
-export const PopOutGridItemMedium = ({ children, ...props }) => (
-  <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>
+export const PopOutGridItemMedium = ({
+  children,
+  gridColumnStart = 1,
+  gridSpan = 4,
+  ...props
+}) => (
+  <PopOutAtGroup5
+    gridColumnStart={gridColumnStart}
+    gridSpan={gridSpan}
+    {...props}
+  >
+    {children}
+  </PopOutAtGroup5>
 );
-
-GridItemLarge.propTypes = {
-  as: string,
-};
-
-GridItemLarge.defaultProps = {
-  as: undefined,
-};
-
-GridItemLargeNoMargin.defaultProps = {
-  as: undefined,
-};
-
-GridWrapper.defaultProps = {
-  as: undefined,
-};
-
-GridItemMediumNoMargin.defaultProps = {
-  as: undefined,
-};
-
-GridItemMedium.defaultProps = {
-  as: undefined,
-};
-
-GridItemMediumNoMargin.defaultProps = {
-  gridColumnStart: 5,
-  gridSpan: 10,
-};
-
-GridItemMedium.defaultProps = {
-  gridColumnStart: 5,
-  gridSpan: 10,
-};
-
-PopOutGridItemMedium.defaultProps = {
-  gridColumnStart: 1,
-  gridSpan: 4,
-};
 
 export default Grid;
