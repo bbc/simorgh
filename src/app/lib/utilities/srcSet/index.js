@@ -58,7 +58,7 @@ export const createSrcsets = ({
       )
       .join(', '),
   );
-
+  console.log(`srcset ${primarySrcset} ${fallbackSrcset}`);
   return {
     primarySrcset,
     primaryMimeType: getMimeType(primarySrcset),

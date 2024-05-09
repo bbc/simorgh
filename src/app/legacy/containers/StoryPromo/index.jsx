@@ -45,15 +45,12 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
 `;
 
 const extractAltText = blocks => {
-  console.log(`in recursive 0 ${JSON.stringify(blocks)}`);
   // eslint-disable-next-line no-restricted-syntax
   for (const block of blocks) {
     if (block.type === 'paragraph') {
-      console.log(`in recursive 1 ${JSON.stringify(block.model.text)}`);
       return block.model.text;
     }
     if (block.model && block.model.blocks) {
-      console.log(`in recursive 2 ${JSON.stringify(block.model.blocks)}`);
       return extractAltText(block.model.blocks);
     }
     return '';

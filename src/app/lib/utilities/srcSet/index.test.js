@@ -30,7 +30,7 @@ describe('create srcset', () => {
       width: 640,
       expected: {
         primarySrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/test/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland 640w',
+          'https://ichef.bbci.co.uk/ace/ws/240/test/testland.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland.webp 640w',
         primaryMimeType: null,
         fallbackSrcset:
           'https://ichef.bbci.co.uk/ace/ws/240/test/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland 640w',

@@ -8,7 +8,7 @@ describe('getIchefURL', () => {
       resolution: '660',
     };
     const expectedOutput =
-      'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg';
+      'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp';
 
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });

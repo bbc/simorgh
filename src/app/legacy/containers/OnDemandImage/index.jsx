@@ -22,7 +22,7 @@ const ImageContainer = styled.div`
 `;
 
 const getSrc = ({ imageUrl, size }) =>
-  `https://${imageUrl.replace('$recipe', `${size}x${size}`)}`;
+  `https://${imageUrl.replace('$recipe', `${size}x${size}`)}.webp`;
 
 const getSrcSet = ({ imageUrl, sizes }) =>
   sizes.map(size => `${getSrc({ imageUrl, size })} ${size}w`).join(',');

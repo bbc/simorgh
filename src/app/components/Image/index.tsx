@@ -61,7 +61,6 @@ const Image = ({
   fetchpriority,
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
-
   const [isLoaded, setIsLoaded] = useState(false);
 
   if (isLite) return null;
@@ -69,7 +68,6 @@ const Image = ({
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
-
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
     (hasDimensions && [width, height]) || [null, null];
 
@@ -78,16 +76,17 @@ const Image = ({
     aspectRatioY as number,
   );
 
-  const hasFallback = srcSet && fallbackSrcSet;
+  const hasFallback =
+    srcSet &&
+    fallbackSrcSet &&
+    (pageType === FRONT_PAGE || pageType === HOME_PAGE);
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
-    // I don't know if we need this????
-    // if (!hasFallback) return srcSet;
-    // if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-    //   return fallbackSrcSet;
-    // return undefined;
-    return srcSet;
+    if (!hasFallback) return srcSet;
+    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
+      return fallbackSrcSet;
+    return undefined;
   };
   const getImgSizes = () => {
     if (
