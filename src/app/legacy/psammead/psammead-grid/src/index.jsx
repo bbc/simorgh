@@ -280,7 +280,19 @@ const Grid = React.forwardRef(
   (
     {
       children,
-      startOffset: gridStartOffset, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
+      startOffset: gridStartOffset = {}, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
+      dir = 'ltr',
+      enableGelGutters = false,
+      enableNegativeGelMargins = false,
+      margins = {
+        group1: false,
+        group2: false,
+        group3: false,
+        group4: false,
+        group5: false,
+      },
+      item = false,
+      parentColumns = null,
       ...otherProps
     },
     ref,
@@ -293,7 +305,7 @@ const Grid = React.forwardRef(
           if (isNestedGridComponent) {
             return React.cloneElement(child, {
               parentColumns: otherProps.columns,
-              parentEnableGelGutters: otherProps.enableGelGutters,
+              parentEnableGelGutters: enableGelGutters,
             });
           }
         }
@@ -303,6 +315,12 @@ const Grid = React.forwardRef(
     const renderGridComponent = () => (
       <GridComponent
         {...otherProps}
+        item={item}
+        dir={dir}
+        enableGelGutters={enableGelGutters}
+        enableNegativeGelMargins={enableNegativeGelMargins}
+        margins={margins}
+        parentColumns={parentColumns}
         gridStartOffset={gridStartOffset}
         ref={ref}
       >
@@ -313,21 +331,5 @@ const Grid = React.forwardRef(
     return renderGridComponent();
   },
 );
-
-Grid.defaultProps = {
-  dir: 'ltr',
-  enableGelGutters: false,
-  enableNegativeGelMargins: false,
-  margins: {
-    group1: false,
-    group2: false,
-    group3: false,
-    group4: false,
-    group5: false,
-  },
-  startOffset: {},
-  item: false,
-  parentColumns: null,
-};
 
 export default Grid;
