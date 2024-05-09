@@ -107,7 +107,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 
 <div>
   <h1
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <span
       role="text"
@@ -255,7 +255,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 <div>
   <h1
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <span
       role="text"

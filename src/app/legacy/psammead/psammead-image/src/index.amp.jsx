@@ -9,12 +9,13 @@ const omitInvalidProps = omit([
 ]);
 
 const AmpImg = props => {
-  const { srcset, fallbackSrcset, ...otherProps } = props;
+  const { srcset, fallbackSrcset, attribution = '', ...otherProps } = props;
 
   return (
     <amp-img
       fallback=""
       srcSet={fallbackSrcset}
+      attribution={attribution}
       {...omitInvalidProps(otherProps)}
     />
   );
