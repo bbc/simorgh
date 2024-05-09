@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
-import { string, func, arrayOf, shape } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

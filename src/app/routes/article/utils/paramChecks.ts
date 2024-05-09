@@ -1,8 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
-import { InferProps } from 'prop-types';
-import { articleDataPropTypes } from '../../../models/propTypes/article';
 
-export type ArticleType = InferProps<typeof articleDataPropTypes>;
+// TODO: Replace 'any' with the correct type
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type ArticleType = any;
 
 export const advertisingAllowed = (pageType: string, article: ArticleType) => {
   if (pageType === 'cpsAsset') {

@@ -6132,13 +6132,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-react-remove-prop-types@npm:0.4.24":
-  version: 0.4.24
-  resolution: "babel-plugin-transform-react-remove-prop-types@npm:0.4.24"
-  checksum: 54afe56d67f0d118c9da23996f39948e502a152b3f582eb6e8f163fcb76c2c1ea4e0cdd4f9fac5c0ef050eab4fe0a950b0b74aae6237bcc0d31d8fc4cc808d1a
-  languageName: node
-  linkType: hard
-
 "babel-plugin-transform-rename-import@npm:2.3.0":
   version: 2.3.0
   resolution: "babel-plugin-transform-rename-import@npm:2.3.0"
@@ -14349,7 +14342,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -15684,7 +15677,6 @@ __metadata:
     babel-jest: 29.7.0
     babel-loader: 9.1.3
     babel-plugin-dynamic-import-node: 2.3.3
-    babel-plugin-transform-react-remove-prop-types: 0.4.24
     chalk: 5.3.0
     chromatic: 11.3.2
     cli-table: 0.3.11
@@ -15746,7 +15738,6 @@ __metadata:
     path-to-regexp: 6.2.2
     polyfill-crypto.getrandomvalues: 1.0.0
     prettier: 3.2.5
-    prop-types: 15.8.1
     ramda: "patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch"
     react: 18.2.0
     react-dom: 18.2.0

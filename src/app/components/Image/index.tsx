@@ -126,7 +126,7 @@ const Image = ({
         ]}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
-          overflow: hasCaption ? '' : 'hidden',
+          ...(!hasCaption && { overflow: 'hidden' }),
         }}
       >
         {isAmp ? (

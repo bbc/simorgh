@@ -1,6 +1,4 @@
 import React from 'react';
-import { InferProps } from 'prop-types';
-import { articleDataPropTypes } from '#models/propTypes/article';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
@@ -46,6 +44,8 @@ const OptimizelyRecommendation = ({
   );
 };
 
-export type ArticlePageType = InferProps<typeof articleDataPropTypes>;
+// TODO: Replace 'any' with the correct type
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type ArticlePageType = any;
 
 export default OptimizelyRecommendation;

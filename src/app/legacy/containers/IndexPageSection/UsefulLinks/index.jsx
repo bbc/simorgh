@@ -15,7 +15,6 @@ import {
   UsefulLinksLi,
   UsefulLinksUl,
 } from '#psammead/psammead-useful-links/src';
-import { storyItem } from '#models/propTypes/storyItem';
 
 // Apply the right margin-top between the section label and multiple useful items
 const UsefulLinksWrapper = styled.div`
