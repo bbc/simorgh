@@ -49,6 +49,7 @@ interface Palette extends BrandPalette {
   POSTBOX: string;
   POSTBOX_30: string;
   RHINO: string;
+  SERVICE_NEUTRAL_CORE: string;
   SHADOW: string;
   SPORT_MIST: string;
   SPORT_SILVER: string;
