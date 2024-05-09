@@ -12,7 +12,9 @@ self.addEventListener('install', event => {
 
 const fetchEventHandler = async event => {
   if (
-    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/.+\.webp$/.test(event.request.url)
+    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/.test(
+      event.request.url,
+    )
   ) {
     const req = event.request.clone();
 
