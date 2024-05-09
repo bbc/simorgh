@@ -7,7 +7,7 @@ exports[`Canonical Articles Embed Images should match snapshot 1`] = `
 >
   <div
     class="bbc-j1srjl"
-    style="padding-bottom:76.72%"
+    style="padding-bottom:76.72%;overflow:hidden"
   >
     <img
       alt="CPS vs Optimo usage. .  ."

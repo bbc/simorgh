@@ -965,7 +965,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -1034,7 +1034,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -1104,7 +1104,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -1174,7 +1174,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -1244,7 +1244,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -2266,7 +2266,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -2335,7 +2335,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -2405,7 +2405,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -2475,7 +2475,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -2545,7 +2545,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-26"
-                  style="padding-bottom: 56.25%;"
+                  style="padding-bottom: 56.25%; overflow: hidden;"
                 >
                   <picture>
                     <img
@@ -3559,7 +3559,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <div
                 class="emotion-34"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -3598,7 +3598,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <div
                 class="emotion-34"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -4095,7 +4095,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
           >
             <div
               class="emotion-20"
-              style="padding-bottom: 56.25%;"
+              style="padding-bottom: 56.25%; overflow: hidden;"
             >
               <picture>
                 <img
@@ -5092,7 +5092,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -5162,7 +5162,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -5232,7 +5232,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -5302,7 +5302,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img
@@ -5372,7 +5372,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24"
-                style="padding-bottom: 56.25%;"
+                style="padding-bottom: 56.25%; overflow: hidden;"
               >
                 <picture>
                   <img

@@ -30,6 +30,7 @@ const WithContexts = Component => {
       timeOnServer,
       pageData,
       showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry,
       mvtExperiments,
       isNextJs,
       isUK,
@@ -60,6 +61,7 @@ const WithContexts = Component => {
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
@@ -95,6 +97,7 @@ const WithContexts = Component => {
     variant: variantPropType,
     timeOnServer: number,
     showAdsBasedOnLocation: bool,
+    showCookieBannerBasedOnCountry: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
     mvtExperiments: mvtExperimentPropType,
@@ -112,6 +115,7 @@ const WithContexts = Component => {
     variant: null,
     timeOnServer: null,
     showAdsBasedOnLocation: false,
+    showCookieBannerBasedOnCountry: true,
     mvtExperiments: null,
     isNextJs: false,
     isUK: false,

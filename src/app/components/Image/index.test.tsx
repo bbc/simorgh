@@ -205,15 +205,15 @@ describe('Image - Canonical', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <img
-          alt="Test image alt text"
-          src="/test-image-500.jpg"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <img
+    alt="Test image alt text"
+    src="/test-image-500.jpg"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive image', () => {
@@ -228,7 +228,7 @@ describe('Image - Canonical', () => {
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
       <div
-        style="padding-bottom: 56.25%;"
+        style="padding-bottom: 56.25%; overflow: hidden;"
       >
         <img
           alt="Test image alt text"
@@ -237,6 +237,7 @@ describe('Image - Canonical', () => {
         />
       </div>
     `);
+
   });
   // describe('Fallback for home page', () => {
   //   const pageType = 'HOME_PAGE';
@@ -419,17 +420,17 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          src="/test-image-500.jpg"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    src="/test-image-500.jpg"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive image', () => {
@@ -444,18 +445,18 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          src="/test-image-500.jpg"
-          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    src="/test-image-500.jpg"
+    srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive jpg image', () => {
@@ -474,18 +475,18 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          sizes="(max-width: 600px) 480px, 800px"
-          src="/test-image-500.webp"
-          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    sizes="(max-width: 600px) 480px, 800px"
+    src="/test-image-500.webp"
+    srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+  />
+</div>
+`);
   });
 });
