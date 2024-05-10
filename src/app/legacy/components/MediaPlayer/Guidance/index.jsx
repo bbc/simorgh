@@ -69,8 +69,8 @@ const StyledNoScript = styled.noscript`
 const Guidance = ({
   guidanceMessage,
   service,
-  noJsMessage,
-  noJsClassName,
+  noJsMessage = '',
+  noJsClassName = '',
   className = '',
 }) => (
   <GuidanceWrapper

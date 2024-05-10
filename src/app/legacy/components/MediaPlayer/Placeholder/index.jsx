@@ -60,7 +60,7 @@ const Placeholder = ({
     duration: null,
     durationSpoken: null,
     type: 'video',
-    guidanceMessage: '',
+    guidanceMessage: null,
   },
   noJsClassName,
   noJsMessage,

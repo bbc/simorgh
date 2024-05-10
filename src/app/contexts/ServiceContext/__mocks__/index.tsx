@@ -7,7 +7,7 @@ import { Services, Variants } from '../../../models/types/global';
 interface Props {
   service: Services;
   variant?: Variants | null;
-  pageLang?: string;
+  pageLang?: string | null;
 }
 
 /*
@@ -19,7 +19,7 @@ export const ServiceContext = React.createContext({});
 
 export const ServiceContextProvider = ({
   children,
-  pageLang,
+  pageLang = null,
   service,
   variant = 'default',
 }: PropsWithChildren<Props>) => {

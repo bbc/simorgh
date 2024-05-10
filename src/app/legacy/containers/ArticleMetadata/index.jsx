@@ -12,7 +12,7 @@ const ArticleMetadata = ({
   lastPublished,
   section = '',
   aboutTags = [],
-  mentionsTags,
+  mentionsTags = [],
   lang,
   description,
   imageLocator = '',
