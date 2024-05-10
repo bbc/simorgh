@@ -6,7 +6,7 @@ import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ pageData = null, status, ...props }) => {
-    const { service = 'default', location: { pathname } = {} } = props;
+    const { service = 'news', location: { pathname } = {} } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const { pageType } = useContext(RequestContext);
     const { hasRequestSucceeded, status: statusCode } = shouldRender(

@@ -95,7 +95,7 @@ const RadioFrequencyLink = styled.a`
 `;
 
 const CanonicalRadioSchedule = ({
-  initialData = undefined,
+  initialData,
   endpoint,
   lang = null,
   className = '',

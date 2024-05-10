@@ -165,7 +165,6 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       <SectionLabel
         labelId={LABEL_ID}
         backgroundColor={GREY_2}

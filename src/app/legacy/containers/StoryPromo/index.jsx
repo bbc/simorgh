@@ -49,7 +49,7 @@ const StoryPromoImage = ({
     height: '',
     width: '',
   },
-  lazyLoad,
+  lazyLoad = false,
   pageType = '',
 }) => {
   if (!imageValues) {

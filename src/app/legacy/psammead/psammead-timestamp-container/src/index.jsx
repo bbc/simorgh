@@ -13,7 +13,7 @@ const TimestampContainer = ({
   isRelative = false,
   padding = true,
   prefix = '',
-  suffix = null,
+  suffix = '',
   timezone = 'Europe/London',
   script,
   locale = 'en-gb',
