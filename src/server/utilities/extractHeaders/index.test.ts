@@ -42,4 +42,14 @@ describe('extractHeader', () => {
       showCookieBannerBasedOnCountry: true,
     });
   });
+
+  it(`sets showCookieBannerBasedOnCountry to false when 'x-bbc-edge-country' is set to 'za'`, () => {
+    const actual = extractHeaders({
+      'x-bbc-edge-country': 'za'
+    });
+    expect(actual).toStrictEqual({
+      isUK: true,
+      showCookieBannerBasedOnCountry: false,
+    });
+  });
 });

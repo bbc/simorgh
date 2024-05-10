@@ -15,6 +15,13 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
         headers['x-country'].toString().toLowerCase(),
       );
   }
+  if (headers['x-bbc-edge-country']) {
+    showCookieBannerBasedOnCountry =
+      isUK ||
+      COUNTRIES_WITH_COOKIE_BANNER.includes(
+        headers['x-bbc-edge-country'].toString().toLowerCase(),
+      );
+  }
 
   return {
     isUK,
