@@ -4,54 +4,54 @@ describe('create srcset', () => {
   const srcsetScenarios = [
     {
       originCode: 'cpsdevpb',
-      locator: 'testland',
+      locator: 'testland.jpg',
       width: 1024,
       expected: {
         primarySrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.webp 800w',
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.jpg.webp 800w',
         primaryMimeType: 'image/webp',
         fallbackSrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland 800w',
-        fallbackMimeType: null,
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.jpg 800w',
+        fallbackMimeType: 'image/jpeg',
       },
       summary:
-        'should return a srcset with test in originCode and testland in location',
+        'should return a srcset with test in originCode and testland in location', // why was fallbackMimeType set to null in this test?
     },
     {
       originCode: 'pips',
-      locator: 'testland',
+      locator: 'testland.jpg',
       width: 1024,
       expected: { primarySrcset: null, fallbackSrcset: null },
       summary: 'should return null with pips originCode',
     },
     {
       originCode: 'test',
-      locator: 'testland',
+      locator: 'testland.jpg',
       width: 640,
       expected: {
         primarySrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/test/testland.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland.webp 640w',
-        primaryMimeType: null,
+          'https://ichef.bbci.co.uk/ace/ws/240/test/testland.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland.jpg.webp 640w',
+        primaryMimeType: 'image/webp',
         fallbackSrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/test/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland 640w',
-        fallbackMimeType: null,
+          'https://ichef.bbci.co.uk/ace/ws/240/test/testland.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/test/testland.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/test/testland.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/test/testland.jpg 624w, https://ichef.bbci.co.uk/ace/ws/640/test/testland.jpg 640w',
+        fallbackMimeType: 'image/jpeg',
       },
       summary:
-        'width of 640 should return srcset with maximum allowed size of 640',
+        'width of 640 should return srcset with maximum allowed size of 640', // why were mime types set to null in this test?
     },
     {
       originCode: 'cpsdevpb',
-      locator: 'testland',
+      locator: 'testland.jpg',
       width: 2048,
       expected: {
         primarySrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.webp 800w',
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.jpg.webp 800w',
         primaryMimeType: 'image/webp',
         fallbackSrcset:
-          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland 800w',
-        fallbackMimeType: null,
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.jpg 800w',
+        fallbackMimeType: 'image/jpeg',
       },
-      summary: 'width of 2048 should return all default srcset values',
+      summary: 'width of 2048 should return all default srcset values', // why was fallback mime type set to null in this test?
     },
     {
       originCode: 'cpsdevpb',
@@ -79,6 +79,21 @@ describe('create srcset', () => {
       },
       summary:
         'should return empty srcsets and null for mime types if the srcsets are malformed',
+    },
+    {
+      originCode: 'cpsdevpb',
+      locator: 'testland',
+      width: 2048,
+      expected: {
+        primarySrcset:
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland 800w',
+        primaryMimeType: null,
+        fallbackSrcset:
+          'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland 800w',
+        fallbackMimeType: null,
+      },
+      summary:
+        'should return no file extension when none on locator and no MIME types', // do we need this test to cover null mime types?
     },
   ];
 

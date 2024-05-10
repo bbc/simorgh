@@ -46,6 +46,7 @@ const buildIChefURL = ({
   originCode,
   locator,
   resolution,
+  isFallback,
   ichefSubdomain = 'ace/ws',
 }) => {
   if (originCode === 'mpv' || originCode === 'pips') {
@@ -62,7 +63,12 @@ const buildIChefURL = ({
     .filter(Boolean)
     .join('/');
 
-  return isSupportedWebpUrl(url) ? `${url}.webp` : url;
+  // we want the fallback to not be webp
+  if (!isFallback) {
+    return url;
+  }
+
+  return isSupportedWebpUrl(url) && isFallback ? `${url}.webp` : url;
 };
 
 export default buildIChefURL;
