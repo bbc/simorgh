@@ -6676,9 +6676,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:11.3.1":
-  version: 11.3.1
-  resolution: "chromatic@npm:11.3.1"
+"chromatic@npm:11.3.2":
+  version: 11.3.2
+  resolution: "chromatic@npm:11.3.2"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -6691,7 +6691,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: fe54de672b30953eb8ccb125a9d85de4070901185fae581118fcd3acdbc12a220d58593df13bbe3d6b0fe03a0b4457abff64665201169849e6c66018dc286cb8
+  checksum: 50aa420142b93c338ea3c3c29cedbc34fe8c12388089bc7610110f93eba58469ec9a68f1573a0fc30b97512206e50d07a3ee43e08a1e66e9495c6c92ed6f6a42
   languageName: node
   linkType: hard
 
@@ -7415,9 +7415,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.8.1":
-  version: 13.8.1
-  resolution: "cypress@npm:13.8.1"
+"cypress@npm:13.9.0":
+  version: 13.9.0
+  resolution: "cypress@npm:13.9.0"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
@@ -7463,7 +7463,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 7abaf952d58485b4178bb044a2520ca029521b68dc002dce44d30ce1144df739f15178354e6386096e197ea0868a0b6ffab2f16777b65caf72216df8f4276b95
+  checksum: ec2e0237d2a38d53d4e5c05fe1c37f7fe0bb13de798045ba091b6a5cf0edd7b3a282f4d8f4c063e3988ee048d06dcf4fef91d83d63a56cee9f9ff68685f3946d
   languageName: node
   linkType: hard
 
@@ -9910,18 +9910,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:10.3.12, glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
-  version: 10.3.12
-  resolution: "glob@npm:10.3.12"
+"glob@npm:10.3.14":
+  version: 10.3.14
+  resolution: "glob@npm:10.3.14"
   dependencies:
     foreground-child: ^3.1.0
     jackspeak: ^2.3.6
     minimatch: ^9.0.1
     minipass: ^7.0.4
-    path-scurry: ^1.10.2
+    path-scurry: ^1.11.0
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 2b0949d6363021aaa561b108ac317bf5a97271b8a5d7a5fac1a176e40e8068ecdcccc992f8a7e958593d501103ac06d673de92adc1efcbdab45edefe35f8d7c6
+  checksum: 6fb26013e6ee1cc0fe099c746f5870783612082342eeeca80031446ca8839acc13243015056e4f3158d7c4260d32f37ff1c2aad9c273672ed0911c8262316041
   languageName: node
   linkType: hard
 
@@ -9935,6 +9935,21 @@ __metadata:
     minimatch: ^5.0.1
     once: ^1.3.0
   checksum: 92fbea3221a7d12075f26f0227abac435de868dd0736a17170663783296d0dd8d3d532a5672b4488a439bf5d7fb85cdd07c11185d6cd39184f0385cbdfb86a47
+  languageName: node
+  linkType: hard
+
+"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
+  version: 10.3.12
+  resolution: "glob@npm:10.3.12"
+  dependencies:
+    foreground-child: ^3.1.0
+    jackspeak: ^2.3.6
+    minimatch: ^9.0.1
+    minipass: ^7.0.4
+    path-scurry: ^1.10.2
+  bin:
+    glob: dist/esm/bin.mjs
+  checksum: 2b0949d6363021aaa561b108ac317bf5a97271b8a5d7a5fac1a176e40e8068ecdcccc992f8a7e958593d501103ac06d673de92adc1efcbdab45edefe35f8d7c6
   languageName: node
   linkType: hard
 
@@ -13910,6 +13925,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-scurry@npm:^1.11.0":
+  version: 1.11.0
+  resolution: "path-scurry@npm:1.11.0"
+  dependencies:
+    lru-cache: ^10.2.0
+    minipass: ^5.0.0 || ^6.0.2 || ^7.0.0
+  checksum: 79732c6a4d989846632d3ff8a441fabb8ea197ecdc7f328ea0f1694d611ed9bd3f0c940582d91c7dd108a29898866212a359d1a9b92ca69c4dbb16ebeae86b73
+  languageName: node
+  linkType: hard
+
 "path-to-regexp@npm:0.1.7":
   version: 0.1.7
   resolution: "path-to-regexp@npm:0.1.7"
@@ -15573,7 +15598,7 @@ __metadata:
     "@testing-library/jest-dom": 6.4.5
     "@testing-library/react": 15.0.7
     babel-plugin-transform-rename-import: 2.3.0
-    cypress: 13.8.1
+    cypress: 13.9.0
     cypress-terminal-report: 6.0.2
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
@@ -15661,7 +15686,7 @@ __metadata:
     babel-plugin-dynamic-import-node: 2.3.3
     babel-plugin-transform-react-remove-prop-types: 0.4.24
     chalk: 5.3.0
-    chromatic: 11.3.1
+    chromatic: 11.3.2
     cli-table: 0.3.11
     colors: ^1.4.0
     compression: 1.7.4
@@ -15669,7 +15694,7 @@ __metadata:
     copy-webpack-plugin: 12.0.2
     core-js: 3.37.0
     crypto: 1.0.1
-    cypress: 13.8.1
+    cypress: 13.9.0
     cypress-axe: 1.5.0
     cypress-multi-reporters: 1.6.4
     cypress-terminal-report: 6.0.2
@@ -15690,7 +15715,7 @@ __metadata:
     express: 4.19.2
     express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
-    glob: 10.3.12
+    glob: 10.3.14
     helmet: 7.1.0
     helmet-csp: 3.4.0
     history: 4.10.1
