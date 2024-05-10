@@ -1,5 +1,10 @@
 import React from 'react';
-import { renderHook, act, cleanup } from '@testing-library/react-hooks';
+import {
+  renderHook,
+  act,
+  cleanup,
+} from '#app/components/react-testing-library-with-providers';
+
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -56,21 +61,17 @@ describe('useOptimizelyScrollDepth', () => {
   it('should call remove event listener with scroll', () => {
     renderHook(() => useOptimizelyScrollDepth());
 
-    cleanup().then(() => {
-      expect(removeEventListenerSpy).toHaveBeenCalledWith(
-        'scroll',
-        expect.any(Function),
-        { passive: true },
-      );
-    });
+    cleanup();
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'scroll',
+      expect.any(Function),
+      { passive: true },
+    );
   });
 
   it('should not fire events for pages on AMP', () => {
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
-      wrapper,
-      initialProps: {
-        isAmp: true,
-      },
+      wrapper: props => wrapper({ isAmp: true, ...props }),
     });
 
     act(() => {
