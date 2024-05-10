@@ -241,10 +241,9 @@ export const GridItemLarge = props => (
   />
 );
 
-export const GridItemLargeNoMargin = ({ as = undefined, ...props }) => (
+export const GridItemLargeNoMargin = props => (
   <Grid
     {...props}
-    as={as}
     item
     startOffset={{
       group0: 1,
