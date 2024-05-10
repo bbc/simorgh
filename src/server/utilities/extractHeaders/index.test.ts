@@ -48,7 +48,7 @@ describe('extractHeader', () => {
       'x-bbc-edge-country': 'za',
     });
     expect(actual).toStrictEqual({
-      isUK: true,
+      isUK: null,
       showCookieBannerBasedOnCountry: false,
     });
   });
