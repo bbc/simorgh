@@ -239,7 +239,6 @@
     "node-fetch": "2.6.12",
     "npm-run-all2": "6.1.2",
     "prettier": "3.2.5",
-    "react-test-renderer": "18.2.0",
     "retry": "0.13.1",
     "start-server-nestjs-webpack-plugin": "2.2.5",
     "storybook": "8.0.10",
