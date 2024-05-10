@@ -13,7 +13,6 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
       headers['x-country'].toString().toLowerCase(),
     );
   }
-  }
 
   return {
     isUK,
