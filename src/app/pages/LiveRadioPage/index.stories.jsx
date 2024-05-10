@@ -56,6 +56,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
       delay: 8000,
+      pauseAnimationAtEnd: false
     },
   },
   decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
