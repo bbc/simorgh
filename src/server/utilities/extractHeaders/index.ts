@@ -9,7 +9,7 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
   }
   if (headers['x-country']) {
     isUK = isUK || headers['x-country'] === 'gb';
-    showCookieBannerBasedOnCountry = COUNTRIES_WITH_COOKIE_BANNER.includes(
+    showCookieBannerBasedOnCountry = isUK || COUNTRIES_WITH_COOKIE_BANNER.includes(
       headers['x-country'].toString().toLowerCase(),
     );
   }
