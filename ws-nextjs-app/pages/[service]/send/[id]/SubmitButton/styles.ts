@@ -6,7 +6,7 @@ export default {
     css({
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       color: palette.WHITE,
-      width: '-webkit-fill-available',
+      width: '100%',
       ...fontVariants.sansRegular,
       ...fontSizes.bodyCopy,
       border: 'none',
@@ -15,6 +15,7 @@ export default {
       cursor: 'pointer',
       '&:hover': {
         textDecoration: 'underline',
+        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
@@ -27,10 +28,11 @@ export default {
   focusIndicator: ({ palette }: Theme) =>
     css({
       '&:focus': {
-        outline: `${focusIndicatorThickness} solid ${palette.WHITE}`,
-        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.BLACK}`,
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
         outlineOffset: `${focusIndicatorThickness}`,
         textDecoration: 'underline',
+        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
     }),
 };

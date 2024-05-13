@@ -4,7 +4,7 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
 .emotion-0 {
   background-color: #0071F1;
   color: #FFFFFF;
-  width: -webkit-fill-available;
+  width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -30,6 +30,12 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   }
 }
 
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: #0051AD;
+}
+
 @media (min-width: 15rem) {
   .emotion-0 {
     margin-bottom: 1.5rem;
@@ -37,9 +43,12 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
 }
 
 .emotion-0:focus {
-  outline: 0.1875rem solid #FFFFFF;
-  box-shadow: 0 0 0 0.1875rem #000000;
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
   outline-offset: 0.1875rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: #0051AD;
 }
 
 <button
