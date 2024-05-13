@@ -2983,28 +2983,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadable/component@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@loadable/component@npm:5.15.3"
+"@loadable/component@npm:5.16.4":
+  version: 5.16.4
+  resolution: "@loadable/component@npm:5.16.4"
   dependencies:
-    "@babel/runtime": ^7.7.7
+    "@babel/runtime": ^7.12.18
     hoist-non-react-statics: ^3.3.1
     react-is: ^16.12.0
   peerDependencies:
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 78ac341465f2310db30381bc75e8bf73a33f99af849a6a2d87eb3842da0ba1df265e08045dc4f3fee1d194522a43a030baa91740045b64aad002f159ccce64bf
+  checksum: 4724d7916739548100c5e00247a6a6c1a3427f21a1debc9f1ab78bbce5c239a910cb4be73598633af732acd72878d24e080fb8b9a84ecefecb7d406c368518e3
   languageName: node
   linkType: hard
 
-"@loadable/server@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@loadable/server@npm:5.15.3"
+"@loadable/server@npm:5.16.5":
+  version: 5.16.5
+  resolution: "@loadable/server@npm:5.16.5"
   dependencies:
     lodash: ^4.17.15
   peerDependencies:
     "@loadable/component": ^5.0.1
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 86b239296d6da5101867724418e182360069310b950a6bad5f269ebbbb96d96b60cf72b9c35f28298b2020d8c31b2fde907523de1baf367269dc980b7b6e1d8c
+  checksum: acddfff36c3ed065a6071c40de7e5701081c3a58b21878e5256e1ee9a7cc1abcd5ac375bb4269ebe73c2a444d30459a49b7881e8ce1cbe6c9bd56595f6e3256e
   languageName: node
   linkType: hard
 
@@ -15662,8 +15662,8 @@ __metadata:
     "@esbuild/darwin-x64": "npm:@esbuild/darwin-x64@npm:0.20.2"
     "@esbuild/linux-x64": "npm:@esbuild/linux-x64@npm:0.20.2"
     "@loadable/babel-plugin": 5.16.1
-    "@loadable/component": 5.15.3
-    "@loadable/server": 5.15.3
+    "@loadable/component": 5.16.4
+    "@loadable/server": 5.16.5
     "@loadable/webpack-plugin": 5.15.2
     "@next/swc-darwin-arm64": "npm:@next/swc-darwin-arm64@14.2.3"
     "@next/swc-darwin-x64": "npm:@next/swc-darwin-x64@14.2.3"
