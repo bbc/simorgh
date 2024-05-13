@@ -5,10 +5,6 @@ import { Theme, css } from '@emotion/react';
 export default {
   formField: ({ spacings, palette, mq }: Theme) =>
     css({
-      'textarea, input': {
-        display: 'block',
-      },
-
       marginTop: `${spacings.DOUBLE}rem`,
 
       '&:nth-child(5)': {
@@ -49,4 +45,98 @@ export default {
     css({
       resize: 'none',
     }),
+  fileInput: () =>
+    css({
+      display: 'none',
+    }),
+  fileUploadButton: ({ spacings, palette, fontVariants, fontSizes }: Theme) => {
+    const topBottomPadding = `${spacings.HALF + spacings.FULL}rem`;
+    const leftRightPadding = `${spacings.DOUBLE}rem`;
+
+    return css({
+      padding: `${topBottomPadding} ${leftRightPadding} ${topBottomPadding} ${leftRightPadding}`,
+      border: 'none',
+      backgroundColor: '#0071F1',
+      color: palette.WHITE,
+      cursor: 'pointer',
+      ...fontVariants.sansBold,
+      ...fontSizes.bodyCopy,
+      '&:hover, &:focus': {
+        backgroundColor: '#0e5ec5',
+        textDecoration: 'underline',
+      },
+      svg: {
+        color: palette.WHITE,
+        fill: 'currentcolor',
+      },
+    });
+  },
+  fileUploadIcon: ({ spacings }: Theme) => {
+    const iconPadding = `${spacings.HALF + spacings.FULL}rem`;
+    const iconSize = `${pixelsToRem(14)}rem`;
+
+    return css({
+      marginInlineEnd: `${iconPadding}`,
+      width: iconSize,
+      height: iconSize,
+    });
+  },
+  fileList: () =>
+    css({
+      padding: '0',
+      margin: '0',
+    }),
+  fileListItem: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
+    css({
+      display: 'flex',
+      alignItems: 'center',
+      backgroundColor: palette.GREY_2,
+      marginBlockStart: `${spacings.FULL}rem`,
+      paddingBlock: `${pixelsToRem(13)}rem`,
+      paddingInlineEnd: `${pixelsToRem(17)}rem`,
+      height: `${spacings.QUADRUPLE * 2}rem`,
+      span: {
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        flex: 1,
+        marginInlineEnd: `${spacings.DOUBLE}rem`,
+        ...fontVariants.sansBold,
+        ...fontSizes.bodyCopy,
+      },
+      button: {
+        width: `${spacings.QUADRUPLE}rem`,
+        height: `${spacings.QUADRUPLE}rem`,
+        backgroundColor: '#E11B52',
+        border: 0,
+        cursor: 'pointer',
+        svg: {
+          color: palette.WHITE,
+          fill: 'currentcolor',
+          verticalAlign: 'middle',
+        },
+        '&:hover, &:focus': {
+          svg: {
+            color: palette.BLACK,
+            fill: 'currentcolor',
+          },
+        },
+      },
+    }),
+  fileThumbnailContainer: ({ spacings }: Theme) => {
+    const imgSize = `${spacings.QUADRUPLE * 2}rem`;
+
+    return css({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: imgSize,
+      height: imgSize,
+      marginInlineEnd: `${spacings.DOUBLE}rem`,
+      img: {
+        maxWidth: imgSize,
+        maxHeight: imgSize,
+      },
+    });
+  },
 };
