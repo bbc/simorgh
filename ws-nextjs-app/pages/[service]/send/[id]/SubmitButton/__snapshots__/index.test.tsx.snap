@@ -36,6 +36,12 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   background-color: #0051AD;
 }
 
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: #0051AD;
+}
+
 @media (min-width: 15rem) {
   .emotion-0 {
     margin-bottom: 1.5rem;

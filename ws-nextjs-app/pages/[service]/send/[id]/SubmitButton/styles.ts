@@ -16,6 +16,10 @@ export default {
         textDecoration: 'underline',
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
+      '&:focus': {
+        textDecoration: 'underline',
+        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
+      },
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
