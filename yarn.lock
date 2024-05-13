@@ -15629,7 +15629,7 @@ __metadata:
     next: 14.2.3
     npm-run-all2: ^6.0.0
     ts-node: ^10.9.2
-    undici: 6.11.1
+    undici: 6.16.1
   languageName: unknown
   linkType: soft
 
@@ -17129,10 +17129,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.11.1":
-  version: 6.11.1
-  resolution: "undici@npm:6.11.1"
-  checksum: ad46014e06dac536dc36d538b32e4f4dc36eb591a6a38bf0b1f1369ec51ca9362d823a685025e42b646d897bc991628c6db37040ed1ff7ee8d6b3d7906f9ac60
+"undici@npm:6.16.1":
+  version: 6.16.1
+  resolution: "undici@npm:6.16.1"
+  checksum: c7615003da15b3994da9f530a8df9b7dc7d537241a9dc9a7e6a1cb0bbf4b557abc982c01cefff3717c26f4a80bd9f38dfcf777ced0cb472de5df7f759f8fd86b
   languageName: node
   linkType: hard
 
