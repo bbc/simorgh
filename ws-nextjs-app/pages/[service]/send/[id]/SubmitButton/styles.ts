@@ -1,3 +1,4 @@
+import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import { Theme, css } from '@emotion/react';
 
 export default {
@@ -16,9 +17,12 @@ export default {
         textDecoration: 'underline',
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
-      '&:focus': {
+      '&:focus-visible': {
         textDecoration: 'underline',
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
+        outline: ` ${focusIndicatorThickness} solid ${palette.BLACK}`,
+        boxShadow: ` 0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
+        outlineOffset: ` ${focusIndicatorThickness}`,
       },
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
