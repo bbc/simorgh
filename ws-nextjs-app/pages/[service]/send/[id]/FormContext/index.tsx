@@ -101,24 +101,22 @@ export const FormContextProvider = ({
 
     Object.entries(formState).forEach(([key, item]) => {
       const fieldValue = item.value;
+      const isFileHtmlType = item.htmlType === 'file';
 
       if (fieldValue === '') return;
-      // TODO Need to Change this
-      if (fieldValue instanceof FileList) {
-        const fileList = fieldValue;
-        const fileListLength = fileList.length;
+      if (isFileHtmlType) {
+        const fileList = fieldValue as File[];
 
-        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
-          const file = fileList.item(fileIndex);
-          if (file) formData.append(key, file);
-        }
+        fileList.forEach(file => {
+          formData.append(key, file);
+        });
         return;
       }
       if (typeof fieldValue === 'boolean') {
         if (fieldValue) formData.append(key, 'true');
         return;
       }
-      formData.append(key, fieldValue);
+      formData.append(key, fieldValue as string);
     });
 
     try {
