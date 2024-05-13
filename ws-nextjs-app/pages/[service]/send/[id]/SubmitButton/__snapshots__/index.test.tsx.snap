@@ -40,9 +40,6 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: #0051AD;
-  outline: 0.1875rem solid #000000;
-  box-shadow: 0 0 0 0.1875rem #FFFFFF;
-  outline-offset: 0.1875rem;
 }
 
 @media (min-width: 15rem) {
