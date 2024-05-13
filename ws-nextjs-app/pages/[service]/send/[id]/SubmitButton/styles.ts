@@ -6,7 +6,7 @@ export default {
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       color: palette.WHITE,
       width: '100%',
-      ...fontVariants.sansRegular,
+      ...fontVariants.sansBold,
       ...fontSizes.bodyCopy,
       border: 'none',
       padding: `${spacings.FULL + spacings.HALF}rem 0`,

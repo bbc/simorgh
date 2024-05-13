@@ -7,7 +7,7 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   border: none;
