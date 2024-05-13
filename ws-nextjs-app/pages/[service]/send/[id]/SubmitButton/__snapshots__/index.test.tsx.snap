@@ -30,12 +30,7 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   }
 }
 
-.emotion-0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  background-color: #0051AD;
-}
-
+.emotion-0:hover,
 .emotion-0:focus-visible {
   -webkit-text-decoration: underline;
   text-decoration: underline;
