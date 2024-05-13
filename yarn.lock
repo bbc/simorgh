@@ -9910,9 +9910,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:10.3.14":
-  version: 10.3.14
-  resolution: "glob@npm:10.3.14"
+"glob@npm:10.3.15":
+  version: 10.3.15
+  resolution: "glob@npm:10.3.15"
   dependencies:
     foreground-child: ^3.1.0
     jackspeak: ^2.3.6
@@ -9921,7 +9921,7 @@ __metadata:
     path-scurry: ^1.11.0
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 6fb26013e6ee1cc0fe099c746f5870783612082342eeeca80031446ca8839acc13243015056e4f3158d7c4260d32f37ff1c2aad9c273672ed0911c8262316041
+  checksum: c7aeae0b4eea0dfedc6682b71a8ad4d1ea9dfec0f2440571f916e1918c046824c8d441bbe1965c06fede025a0726c6daab5ae8019afe667364f43776eaaf9044
   languageName: node
   linkType: hard
 
@@ -15740,7 +15740,7 @@ __metadata:
     express: 4.19.2
     express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
-    glob: 10.3.14
+    glob: 10.3.15
     helmet: 7.1.0
     helmet-csp: 3.4.0
     history: 4.10.1
