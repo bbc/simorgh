@@ -1,5 +1,4 @@
 import { Theme, css } from '@emotion/react';
-import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 
 export default {
   submit: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
@@ -23,16 +22,6 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         marginTop: `${spacings.FULL}rem`,
         marginBottom: `${spacings.TRIPLE}rem`,
-      },
-    }),
-  focusIndicator: ({ palette }: Theme) =>
-    css({
-      '&:focus': {
-        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
-        outlineOffset: `${focusIndicatorThickness}`,
-        textDecoration: 'underline',
-        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
     }),
 };
