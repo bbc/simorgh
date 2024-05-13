@@ -34,11 +34,12 @@ const FileList = ({ files, name }: FileListProps) => {
   const [thumbnailState, setThumbnailState] = useState<Blob[]>([]);
 
   const handleFileDeletion = (fileIndex: number) => {
-    setFormState((prevState: SetStateAction<Record<string, FieldData>>) => {
+    setFormState(prevState => {
       const filesClone = [...files];
       filesClone.splice(fileIndex, 1);
       const updatedState = {
         [name]: {
+          ...prevState[name],
           value: [...filesClone],
         },
       };
