@@ -20,9 +20,9 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Billboard--COtYXE~oz~wawNreBs_FO_VBAg-unCCpn2lQrsGeo4p84xpR",
       "label": "Accessibility Swarm Notes"
     }
   }

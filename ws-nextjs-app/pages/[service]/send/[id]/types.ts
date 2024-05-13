@@ -91,6 +91,11 @@ export type PageProps = {
     title: string;
     description: string;
     sections: Section[];
+    privacyNotice: {
+      default: string;
+      url: string;
+      additional: string;
+    };
   };
 };
 

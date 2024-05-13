@@ -2,12 +2,25 @@
 
 exports[`FormField should render a checkbox input with an associated label 1`] = `
 .emotion-0 {
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -17,6 +30,8 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -57,12 +72,25 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
 
 exports[`FormField should render a tel input with an associated label 1`] = `
 .emotion-0 {
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -72,6 +100,8 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -86,6 +116,38 @@ exports[`FormField should render a tel input with an associated label 1`] = `
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-2 {
+  border: solid 0.0625rem #141414;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
 }
 
 <div>
@@ -102,6 +164,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
       aria-describedby="testTelID-error"
       aria-invalid="false"
       aria-required="false"
+      class="emotion-2"
       id="testTelID"
       name="testTelID"
       type="tel"
@@ -113,12 +176,25 @@ exports[`FormField should render a tel input with an associated label 1`] = `
 
 exports[`FormField should render a text input with an associated label 1`] = `
 .emotion-0 {
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -128,6 +204,8 @@ exports[`FormField should render a text input with an associated label 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -142,6 +220,38 @@ exports[`FormField should render a text input with an associated label 1`] = `
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-2 {
+  border: solid 0.0625rem #141414;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
 }
 
 <div>
@@ -158,6 +268,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
       aria-describedby="testTextID-error"
       aria-invalid="false"
       aria-required="false"
+      class="emotion-2"
       id="testTextID"
       name="testTextID"
       type="text"
@@ -169,12 +280,25 @@ exports[`FormField should render a text input with an associated label 1`] = `
 
 exports[`FormField should render a textarea input with an associated label 1`] = `
 .emotion-0 {
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -184,6 +308,8 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -198,6 +324,39 @@ exports[`FormField should render a textarea input with an associated label 1`] =
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-2 {
+  border: solid 0.0625rem #141414;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  resize: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
 }
 
 <div>
@@ -214,8 +373,10 @@ exports[`FormField should render a textarea input with an associated label 1`] =
       aria-describedby="testTextAreaID-error"
       aria-invalid="false"
       aria-required="false"
+      class="emotion-2"
       id="testTextAreaID"
       name="testTextAreaID"
+      rows="4"
     />
   </div>
 </div>
@@ -223,12 +384,25 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 
 exports[`FormField should render an email input with an associated label 1`] = `
 .emotion-0 {
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -238,6 +412,8 @@ exports[`FormField should render an email input with an associated label 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -254,6 +430,38 @@ exports[`FormField should render an email input with an associated label 1`] = `
   }
 }
 
+.emotion-2 {
+  border: solid 0.0625rem #141414;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -268,6 +476,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
       aria-describedby="testEmailID-error"
       aria-invalid="false"
       aria-required="false"
+      class="emotion-2"
       id="testEmailID"
       name="testEmailID"
       type="email"
