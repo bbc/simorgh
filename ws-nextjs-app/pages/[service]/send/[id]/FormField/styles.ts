@@ -60,7 +60,7 @@ export default {
   checkboxLabel: ({ spacings }: Theme) =>
     css({
       flex: 'auto',
-      marginLeft: `${spacings.DOUBLE}rem`,
+      marginInlineStart: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
     }),
   checkbox: ({ palette, spacings }: Theme) =>

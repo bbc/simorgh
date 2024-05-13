@@ -84,7 +84,8 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  margin-left: 1rem;
+  -webkit-margin-start: 1rem;
+  margin-inline-start: 1rem;
   cursor: pointer;
 }
 
