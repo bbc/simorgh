@@ -1,176 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren, ReactElement, useContext } from 'react';
-import Text from '#app/components/Text';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  HtmlType,
-  InputProps,
-  InvalidMessageCodes,
-  InvalidMessageBoxProps,
-} from '../types';
+import { ReactElement } from 'react';
+import { HtmlType, InputProps } from '../types';
 import styles from './styles';
 import { useFormContext } from '../FormContext';
-
-const Label = ({
-  id,
-  children,
-}: PropsWithChildren<{ id: InputProps['id'] }>) => (
-  <Text as="label" htmlFor={id}>
-    {children}
-  </Text>
-);
-
-const InvalidMessageBox = ({ id, messageCode }: InvalidMessageBoxProps) => {
-  const {
-    translations: { ugc = {} },
-  } = useContext(ServiceContext);
-
-  const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
-
-  return (
-    <div>
-      <p id={id}>
-        <span>❗</span>
-        {message}
-      </p>
-    </div>
-  );
-};
-
-const TextInput = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, value = '', required } = inputState;
-  return (
-    <input
-      id={id}
-      name={name}
-      type="text"
-      value={value as string}
-      onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
-
-const TextArea = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, value = '', required } = inputState;
-
-  return (
-    <textarea
-      id={id}
-      name={name}
-      value={value as string}
-      onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
-
-const EmailInput = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, value = '', required } = inputState;
-  return (
-    <input
-      id={id}
-      name={name}
-      type="email"
-      value={value as string}
-      onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
-
-const Checkbox = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, value = false, required } = inputState;
-  return (
-    <input
-      id={id}
-      name={name}
-      type="checkbox"
-      checked={value as boolean}
-      onChange={e => handleChange(e.target.name, e.target.checked)}
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
-
-const Telephone = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, value = '', required } = inputState;
-  return (
-    <input
-      id={id}
-      name={name}
-      type="tel"
-      value={value as string}
-      onChange={e => handleChange(e.target.name, e.target.value)}
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
-
-const File = ({
-  id,
-  name,
-  handleChange,
-  inputState,
-  describedBy,
-}: InputProps) => {
-  const { isValid, required } = inputState;
-  return (
-    <input
-      id={id}
-      name={name}
-      type="file"
-      onChange={e =>
-        e.target.files && handleChange(e.target.name, e.target.files)
-      }
-      multiple
-      aria-invalid={!isValid}
-      aria-required={required}
-      aria-describedby={describedBy}
-    />
-  );
-};
+import TextInput from './TextInput';
+import EmailInput from './EmailInput';
+import Checkbox from './Checkbox';
+import Telephone from './Telephone';
+import TextArea from './TextArea';
+import File from './File';
+import InvalidMessageBox from './InvalidMessageBox';
 
 const FormComponents: Record<
   string,
@@ -220,8 +60,8 @@ const FormField = ({
 
   return (
     <div css={styles.formField}>
-      <Label id={id}>{label}</Label>
       <Component
+        label={label}
         id={id}
         name={id}
         handleChange={handleChange}

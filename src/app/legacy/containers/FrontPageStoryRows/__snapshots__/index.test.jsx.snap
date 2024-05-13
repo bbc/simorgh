@@ -822,7 +822,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.21%;"
+            style="padding-bottom: 56.21%; overflow: hidden;"
           >
             <picture>
               <source
@@ -1547,7 +1547,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <div
             class="emotion-19"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.25%; overflow: hidden;"
           >
             <picture>
               <source
@@ -2359,7 +2359,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.21%;"
+            style="padding-bottom: 56.21%; overflow: hidden;"
           >
             <picture>
               <source
@@ -2437,7 +2437,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-33"
-            style="padding-bottom: 56.21%;"
+            style="padding-bottom: 56.21%; overflow: hidden;"
           >
             <picture>
               <source
@@ -2952,7 +2952,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <div
             class="emotion-9"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.25%; overflow: hidden;"
           >
             <picture>
               <source
@@ -5257,7 +5257,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         >
           <div
             class="emotion-9"
-            style="padding-bottom: 56.25%;"
+            style="padding-bottom: 56.25%; overflow: hidden;"
           >
             <picture>
               <source

@@ -38,6 +38,7 @@ export type RequestContextProps = {
   previousPath: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
+  showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
   statsPageIdentifier: string | null;
   statusCode: number | null;
@@ -63,6 +64,7 @@ type RequestProviderProps = {
   previousPath?: string | null;
   service: Services;
   showAdsBasedOnLocation?: boolean;
+  showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
@@ -87,6 +89,7 @@ export const RequestContextProvider = ({
   previousPath = null,
   service,
   showAdsBasedOnLocation = false,
+  showCookieBannerBasedOnCountry = true,
   statusCode = null,
   timeOnServer = null,
   variant = null,
@@ -140,6 +143,7 @@ export const RequestContextProvider = ({
     variant,
     timeOnServer,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry,
     service,
     pathname,
     counterName,
