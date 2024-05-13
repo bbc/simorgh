@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -66,7 +65,6 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
-  const environmentIsLive = isLive();
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
@@ -91,22 +89,8 @@ export default ({
       return null;
     case BILLBOARD: {
       const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
-
       if (firstSummary) {
-        return environmentIsLive ? (
-          <MessageBanner
-            heading={title}
-            description={description}
-            link={summaryLink}
-            linkText={linkText}
-            image={imageUrl}
-            id={messageBannerId}
-            eventTrackingData={{
-              componentName: messageBannerId,
-              detailedPlacement: `${position + 1}`,
-            }}
-          />
-        ) : (
+        return (
           <div css={styles.billboardContainer}>
             <Billboard
               heading={firstSummary.title}
