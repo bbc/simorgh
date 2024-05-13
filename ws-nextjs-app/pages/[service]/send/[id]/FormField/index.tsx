@@ -53,7 +53,8 @@ const FormField = ({
   }
 
   const Component = FormComponents[derivedHtmlType];
-  const { isValid, messageCode, value, required } = formState[id];
+  const { isValid, messageCode, value, required, wasPreviouslyInvalid } =
+    formState[id];
   const ariaErrorDescribedById = `${id}-error`;
 
   if (!Component) return null;
@@ -66,7 +67,8 @@ const FormField = ({
         name={id}
         handleChange={handleChange}
         value={value}
-        {...(attemptCount > 0 && !isValid && { 'aria-invalid': !isValid })}
+        {...(attemptCount > 0 &&
+          wasPreviouslyInvalid && { 'aria-invalid': !isValid })}
         {...(attemptCount > 0 && required && { 'aria-required': required })}
         aria-describedby={ariaErrorDescribedById}
       />

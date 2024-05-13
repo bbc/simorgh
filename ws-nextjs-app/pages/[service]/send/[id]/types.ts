@@ -84,6 +84,7 @@ export type Field = {
 
 export type FieldData = {
   isValid: boolean;
+  wasPreviouslyInvalid: boolean;
   required: boolean;
   value: OnChangeInputValue;
   htmlType: HtmlType;

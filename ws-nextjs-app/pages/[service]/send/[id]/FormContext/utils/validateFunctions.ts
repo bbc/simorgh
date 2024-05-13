@@ -1,10 +1,17 @@
 import { FieldData, InvalidMessageCodes } from '../../types';
 
+const wasPreviouslyInvalidCheck = (
+  wasPreviouslyInvalid: boolean,
+  isValid: boolean,
+) => {
+  return wasPreviouslyInvalid || !isValid;
+};
+
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;
 
 const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value } = data;
+  const { required, value, wasPreviouslyInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -15,11 +22,21 @@ const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasPreviouslyInvalidUpdate = wasPreviouslyInvalidCheck(
+    wasPreviouslyInvalid,
+    isValid,
+  );
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasPreviouslyInvalid: wasPreviouslyInvalidUpdate,
+  };
 };
 
 const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value } = data;
+  const { required, value, wasPreviouslyInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -38,11 +55,21 @@ const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasPreviouslyInvalidUpdate = wasPreviouslyInvalidCheck(
+    wasPreviouslyInvalid,
+    isValid,
+  );
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasPreviouslyInvalid: wasPreviouslyInvalidUpdate,
+  };
 };
 
 const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value = false } = data;
+  const { required, value = false, wasPreviouslyInvalid } = data;
   let messageCode = null;
 
   let isValid = true;
@@ -51,11 +78,21 @@ const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasPreviouslyInvalidUpdate = wasPreviouslyInvalidCheck(
+    wasPreviouslyInvalid,
+    isValid,
+  );
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasPreviouslyInvalid: wasPreviouslyInvalidUpdate,
+  };
 };
 
 const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value = '' } = data;
+  const { required, value = '', wasPreviouslyInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -73,7 +110,17 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasPreviouslyInvalidUpdate = wasPreviouslyInvalidCheck(
+    wasPreviouslyInvalid,
+    isValid,
+  );
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasPreviouslyInvalid: wasPreviouslyInvalidUpdate,
+  };
 };
 
 const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {

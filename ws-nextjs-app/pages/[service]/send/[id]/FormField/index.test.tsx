@@ -173,12 +173,14 @@ describe('FormField', () => {
       attemptCount: 1,
       required: true,
       isValid: false,
+      wasPreviouslyInvalid: true,
       expectedAria: '[aria-invalid=true][aria-required=true]',
     },
     {
       attemptCount: 1,
       required: true,
       isValid: true,
+      wasPreviouslyInvalid: false,
       expectedAria: '[aria-required=true]',
     },
     {

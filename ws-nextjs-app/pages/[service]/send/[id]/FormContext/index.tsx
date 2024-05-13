@@ -46,6 +46,7 @@ const getInitialFormState = (
       ...acc,
       [field.id]: {
         isValid: true,
+        wasPreviouslyInvalid: false,
         required: field.validation.mandatory ?? false,
         value: '',
         htmlType: field.htmlType,
