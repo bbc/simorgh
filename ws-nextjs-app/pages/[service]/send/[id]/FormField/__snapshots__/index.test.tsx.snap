@@ -1,13 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormField should render a checkbox input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -58,13 +71,26 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
 `;
 
 exports[`FormField should render a tel input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -149,13 +175,26 @@ exports[`FormField should render a tel input with an associated label 1`] = `
 `;
 
 exports[`FormField should render a text input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -240,13 +279,26 @@ exports[`FormField should render a text input with an associated label 1`] = `
 `;
 
 exports[`FormField should render a textarea input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
@@ -331,13 +383,26 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 `;
 
 exports[`FormField should render an email input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
 .emotion-0 textarea,
 .emotion-0 input {
   display: block;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .emotion-1 {
