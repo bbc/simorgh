@@ -27,8 +27,10 @@ export type InputProps = {
   name: string;
   label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
-  inputState: FieldData;
-  describedBy: string;
+  value?: OnChangeInputValue;
+  'aria-invalid'?: boolean;
+  'aria-required'?: boolean;
+  'aria-describedby': string;
 };
 
 export type InvalidMessageBoxProps = {

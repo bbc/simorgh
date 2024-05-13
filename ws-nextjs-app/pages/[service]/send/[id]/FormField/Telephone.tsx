@@ -6,26 +6,21 @@ import styles from './styles';
 
 export default ({
   id,
-  name,
   handleChange,
-  inputState,
-  describedBy,
   label,
+  value = '',
+  ...props
 }: InputProps) => {
-  const { isValid, value = '', required } = inputState;
   return (
     <>
       <Label id={id}>{label}</Label>
       <input
         id={id}
         css={[styles.textField, styles.focusIndicator]}
-        name={name}
         type="tel"
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...props}
       />
     </>
   );

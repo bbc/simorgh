@@ -42,7 +42,7 @@ const FormField = ({
   // TODO: Don't like this but needed atm since 'file' and 'textarea' aren't returned as 'htmlType' from the API
   // should probably do this in back-end
   let derivedHtmlType = htmlType;
-  const { handleChange, formState } = useFormContext();
+  const { handleChange, formState, attemptCount } = useFormContext();
 
   if (textArea) {
     derivedHtmlType = 'textarea';
@@ -53,7 +53,7 @@ const FormField = ({
   }
 
   const Component = FormComponents[derivedHtmlType];
-  const { isValid, messageCode } = formState[id];
+  const { isValid, messageCode, value, required } = formState[id];
   const ariaErrorDescribedById = `${id}-error`;
 
   if (!Component) return null;
@@ -65,8 +65,10 @@ const FormField = ({
         id={id}
         name={id}
         handleChange={handleChange}
-        inputState={formState[id]}
-        describedBy={ariaErrorDescribedById}
+        value={value}
+        {...(attemptCount > 0 && !isValid && { 'aria-invalid': !isValid })}
+        {...(attemptCount > 0 && required && { 'aria-required': required })}
+        aria-describedby={ariaErrorDescribedById}
       />
       {!isValid && (
         <InvalidMessageBox

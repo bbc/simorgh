@@ -6,25 +6,20 @@ import styles from './styles';
 
 export default ({
   id,
-  name,
   handleChange,
-  inputState,
-  describedBy,
   label,
+  value = false,
+  ...props
 }: InputProps) => {
-  const { isValid, value = false, required } = inputState;
   return (
     <div css={[styles.checkboxContainer]}>
       <input
-        css={[styles.checkbox, styles.focusIndicator]}
         id={id}
-        name={name}
+        css={[styles.checkbox, styles.focusIndicator]}
         type="checkbox"
         checked={value as boolean}
         onChange={e => handleChange(e.target.name, e.target.checked)}
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...props}
       />
       <Label id={id} css={[styles.checkboxLabel]}>
         {label}
