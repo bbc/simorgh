@@ -23,7 +23,6 @@ Object.keys(config)
           service,
           pageType,
           variant,
-          currentPath,
         });
       });
     });
