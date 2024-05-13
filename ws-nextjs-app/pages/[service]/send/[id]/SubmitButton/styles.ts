@@ -12,7 +12,7 @@ export default {
       padding: `${spacings.FULL + spacings.HALF}rem 0`,
       marginBottom: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
-      '&:hover,&:focus-visible': {
+      '&:hover,&:focus': {
         textDecoration: 'underline',
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
