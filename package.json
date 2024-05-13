@@ -274,5 +274,5 @@
       "cloud-init"
     ]
   },
-  "packageManager": "yarn@3.8.2"
+  "packageManager": "yarn@4.1.1"
 }
