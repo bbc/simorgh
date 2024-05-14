@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Metadata from '#app/components/Metadata';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import styles from './styles';
@@ -55,7 +56,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
                     padding={false}
                     isRelative={false}
                   />
-                  <a href={item.files[0].fileLink} download>
+                  <CallToActionLink href={item.files[0].fileLink} download={true} eventTrackingData={{ componentName: 'koreanDownloads', index }}>
                     <svg
                       className="ws-o-download-icon"
                       viewBox="0 0 32 32"
@@ -72,7 +73,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
                         {(item.files[0].fileSize / 1000000).toFixed(1)}Mb
                       </span>
                     </span>
-                  </a>
+                  </CallToActionLink>
                 </li>
               ))}
             </ol>

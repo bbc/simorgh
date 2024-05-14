@@ -66,7 +66,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
     [UGC_PAGE]: '',
-    [DOWNLOADS_PAGE]: '',
+    [DOWNLOADS_PAGE]: 'downloads',
   }[pageType];
 
   if (!campaignID) {
