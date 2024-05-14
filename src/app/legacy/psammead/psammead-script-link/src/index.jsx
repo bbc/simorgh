@@ -10,8 +10,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { string, shape, node, func } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}
@@ -50,8 +48,16 @@ const StyledSpan = styled.span`
     line-height: calc(${GEL_SPACING_QUIN} - ${GEL_SPACING});
   }
 `;
+const noopFunction = () => {};
 
-const ScriptLink = ({ children, script, service, href, variant, onClick }) => (
+const ScriptLink = ({
+  children,
+  script,
+  service,
+  href,
+  variant = null,
+  onClick = noopFunction,
+}) => (
   <StyledLink
     script={script}
     service={service}
@@ -63,21 +69,5 @@ const ScriptLink = ({ children, script, service, href, variant, onClick }) => (
     <StyledSpan>{children}</StyledSpan>
   </StyledLink>
 );
-
-const noopFunction = () => {};
-
-ScriptLink.defaultProps = {
-  variant: null,
-  onClick: noopFunction,
-};
-
-ScriptLink.propTypes = {
-  children: node.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  href: string.isRequired,
-  variant: string,
-  onClick: func,
-};
 
 export default ScriptLink;

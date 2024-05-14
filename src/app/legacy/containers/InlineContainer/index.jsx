@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { inlineModelPropTypes } from '#models/propTypes/inline';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
@@ -16,7 +15,5 @@ const InlineContainer = ({ blocks, language }) => {
     </InlineSpan>
   );
 };
-
-InlineContainer.propTypes = inlineModelPropTypes;
 
 export default InlineContainer;

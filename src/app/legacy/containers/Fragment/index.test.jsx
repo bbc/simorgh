@@ -12,7 +12,6 @@ const persianContext = {
   service: 'persian',
 };
 
-/* eslint-disable react/prop-types */
 const CreateFragment = ({
   context = newsContext,
   attributes = [],

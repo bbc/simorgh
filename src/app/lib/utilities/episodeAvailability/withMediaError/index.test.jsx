@@ -5,7 +5,6 @@ import { EPISODE_STATUS } from '..';
 
 jest.mock('../ErrorMessage', () => () => 'Mocked Error Message Component');
 
-// eslint-disable-next-line react/prop-types
 const FixtureComponent = ({ mediaIsAvailable, MediaError }) => (
   <>
     <span>{mediaIsAvailable ? 'Media Available' : 'Media Unavailable'}</span>

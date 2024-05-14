@@ -33,7 +33,6 @@ jest.mock('react-router-dom', () => ({
   useRouteMatch: () => ({ path: '/news', params: {} }),
 }));
 
-/* eslint-disable react/prop-types */
 const HeaderContainerWithContext = ({
   renderScriptSwitch = true,
   renderOptions,

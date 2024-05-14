@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { getCanon } from '#psammead/gel-foundations/src/typography';
@@ -23,10 +22,6 @@ const TopicTitle = ({ children }) => {
       {children}
     </H1>
   );
-};
-
-TopicTitle.propTypes = {
-  children: string.isRequired,
 };
 
 export default TopicTitle;

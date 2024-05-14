@@ -18,7 +18,6 @@ const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
-// eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ data, service, script, dir }) => (
   <ToggleContextProvider>
     <BackGround>

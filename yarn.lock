@@ -6234,13 +6234,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-react-remove-prop-types@npm:0.4.24":
-  version: 0.4.24
-  resolution: "babel-plugin-transform-react-remove-prop-types@npm:0.4.24"
-  checksum: 10/4ce1755af02375f0764683f9703ef47607e33ee57cefd348f054208e06a52b1517e43180c1c448046338a149853f2c9d7f63f27d5b27c74db5df74fba117f040
-  languageName: node
-  linkType: hard
-
 "babel-plugin-transform-rename-import@npm:2.3.0":
   version: 2.3.0
   resolution: "babel-plugin-transform-rename-import@npm:2.3.0"
@@ -14461,7 +14454,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -14763,13 +14756,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "react-is@npm:18.2.0"
-  checksum: 10/200cd65bf2e0be7ba6055f647091b725a45dd2a6abef03bf2380ce701fd5edccee40b49b9d15edab7ac08a762bf83cb4081e31ec2673a5bfb549a36ba21570df
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.12.0, react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -14781,6 +14767,13 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10/73b36281e58eeb27c9cc6031301b6ae19ecdc9f18ae2d518bdb39b0ac564e65c5779405d623f1df9abf378a13858b79442480244bd579968afc1faf9a2ce5e05
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^18.0.0":
+  version: 18.2.0
+  resolution: "react-is@npm:18.2.0"
+  checksum: 10/200cd65bf2e0be7ba6055f647091b725a45dd2a6abef03bf2380ce701fd5edccee40b49b9d15edab7ac08a762bf83cb4081e31ec2673a5bfb549a36ba21570df
   languageName: node
   linkType: hard
 
@@ -14842,37 +14835,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-shallow-renderer@npm:^16.15.0":
-  version: 16.15.0
-  resolution: "react-shallow-renderer@npm:16.15.0"
-  dependencies:
-    object-assign: "npm:^4.1.1"
-    react-is: "npm:^16.12.0 || ^17.0.0 || ^18.0.0"
-  peerDependencies:
-    react: ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/06457fe5bcaa44aeca998905b6849304742ea1cc2d3841e4a0964c745ff392bc4dec07f8c779f317faacce3a0bf6f84e15020ac0fa81adb931067dbb0baf707b
-  languageName: node
-  linkType: hard
-
 "react-side-effect@npm:^2.1.0":
   version: 2.1.2
   resolution: "react-side-effect@npm:2.1.2"
   peerDependencies:
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
   checksum: 10/8c31aaec5b383d942ff1775b12c45022239d1250d1a00a238bac3c07e0fe266c71991e2814ae16a5d9b855bcd96ba95817d48ab3f34738f0bb32036ebb1abb1a
-  languageName: node
-  linkType: hard
-
-"react-test-renderer@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-test-renderer@npm:18.2.0"
-  dependencies:
-    react-is: "npm:^18.2.0"
-    react-shallow-renderer: "npm:^16.15.0"
-    scheduler: "npm:^0.23.0"
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 10/39473e43f64eec92da35db9d4411f3887b368038670787d49dd23172eb3a29953eb13767d1bfa34cbe2665b6e25632cad146e362e8910ce33755d343537763ae
   languageName: node
   linkType: hard
 
@@ -15795,7 +15763,6 @@ __metadata:
     babel-jest: "npm:29.7.0"
     babel-loader: "npm:9.1.3"
     babel-plugin-dynamic-import-node: "npm:2.3.3"
-    babel-plugin-transform-react-remove-prop-types: "npm:0.4.24"
     chalk: "npm:5.3.0"
     chromatic: "npm:11.3.2"
     cli-table: "npm:0.3.11"
@@ -15855,7 +15822,6 @@ __metadata:
     path-to-regexp: "npm:6.2.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
-    prop-types: "npm:15.8.1"
     ramda: "patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -15863,7 +15829,6 @@ __metadata:
     react-lazyload: "npm:3.2.1"
     react-router-config: "npm:5.1.1"
     react-router-dom: "npm:5.3.4"
-    react-test-renderer: "npm:18.2.0"
     retry: "npm:0.13.1"
     start-server-nestjs-webpack-plugin: "npm:2.2.5"
     storybook: "npm:8.0.10"

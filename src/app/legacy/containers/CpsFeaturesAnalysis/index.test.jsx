@@ -15,7 +15,6 @@ import {
 import features from './fixtures.json';
 import FeaturesAnalysis from '.';
 
-// eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',

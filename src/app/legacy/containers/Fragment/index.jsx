@@ -1,7 +1,6 @@
 import React from 'react';
 import { getSansRegularItalic } from '#psammead/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
-import { string, node, arrayOf } from 'prop-types';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const italic = styled.i`
@@ -33,20 +32,6 @@ const Fragment = ({ text, attributes }) => {
       return <Attribute service={service}>{previousAttribute}</Attribute>;
     }, text) || ''
   );
-};
-
-Fragment.propTypes = {
-  text: string.isRequired,
-  attributes: arrayOf(string).isRequired,
-};
-
-bold.propTypes = {
-  children: node.isRequired,
-};
-
-italic.propTypes = {
-  children: node.isRequired,
-  service: string.isRequired,
 };
 
 export default Fragment;

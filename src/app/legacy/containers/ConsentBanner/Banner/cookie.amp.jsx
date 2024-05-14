@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getDoublePica,
   getLongPrimer,
@@ -231,7 +229,7 @@ const ContentWrapper = styled.div`
  * AmpCookieSettingsButton is a control that can be used externally to display
  * the Manage Cookie Settings banner.
  */
-// eslint-disable-next-line react/prop-types
+
 export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
     // eslint-disable-next-line react/no-unknown-property
@@ -246,12 +244,12 @@ export const AmpCookieSettingsButton = ({ children, lang, className }) => (
 );
 
 const AmpCookieBanner = ({
-  id,
+  id = null,
   translations,
   accept,
   reject,
   hide,
-  hidden,
+  hidden = null,
   script,
   service,
 }) => {
@@ -351,28 +349,6 @@ const AmpCookieBanner = ({
       </Wrapper>
     </div>
   );
-};
-
-Link.propTypes = {
-  text: string.isRequired,
-  href: string.isRequired,
-  className: string.isRequired,
-};
-
-AmpCookieBanner.propTypes = {
-  translations: arrayOf(shape({})).isRequired,
-  accept: element.isRequired,
-  reject: element.isRequired,
-  hide: element.isRequired,
-  id: string,
-  hidden: bool,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-};
-
-AmpCookieBanner.defaultProps = {
-  id: null,
-  hidden: null,
 };
 
 export default AmpCookieBanner;

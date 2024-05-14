@@ -165,8 +165,6 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error - TS inferring props it thinks are required  */}
       <SectionLabel
         labelId={LABEL_ID}
         backgroundColor={GREY_2}

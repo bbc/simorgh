@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { string, oneOf, shape } from 'prop-types';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { SHADOW } from '#app/components/ThemeProvider/palette';
 
 const BulletedList = styled.ul`
@@ -32,14 +30,6 @@ const BulletedList = styled.ul`
     ${({ dir }) => (dir === 'rtl' ? 'right: -1rem;' : 'left: -1rem;')}
   }
 `;
-
-BulletedList.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  service: string.isRequired,
-  bulletPointShape: oneOf(['round', 'square']),
-  bulletPointColour: string,
-};
 
 BulletedList.defaultProps = {
   dir: 'ltr',

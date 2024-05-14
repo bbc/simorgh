@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { shape, string } from 'prop-types';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -10,7 +9,6 @@ import {
   getTrafalgar,
 } from '#psammead/gel-foundations/src/typography';
 import { MEDIA_QUERY_TYPOGRAPHY } from '#psammead/gel-foundations/src/breakpoints';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getSansBold,
   getSerifMedium,
@@ -29,11 +27,6 @@ export const Headline = styled.h1`
   }
 `;
 
-Headline.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-};
-
 export const SubHeading = styled.h2`
   ${({ script }) => script && getTrafalgar(script)};
   ${({ service }) => getSansBold(service)}
@@ -45,11 +38,6 @@ export const SubHeading = styled.h2`
     padding-top: ${GEL_SPACING_QUAD};
   }
 `;
-
-SubHeading.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-};
 
 SubHeading.defaultProps = {
   tabIndex: '-1',
