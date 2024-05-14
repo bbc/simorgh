@@ -48,6 +48,7 @@ const Billboard = forwardRef(
               imageUrlTemplate={image}
               altText={altText}
               imageWidth={660}
+              showPlaceholder={false}
             />
             <div css={styles.textContainer}>
               <Heading level={2} size="paragon" css={styles.heading} id={id}>
