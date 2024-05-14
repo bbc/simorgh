@@ -15,7 +15,6 @@ const newsRelatedContentData = newsData.relatedContent?.groups?.[0].promos;
 const pidginRelatedContentData = pidginData.relatedContent?.groups?.[0].promos;
 const arabicRelatedContentData = arabicData.relatedContent?.groups?.[0].promos;
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp, service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}

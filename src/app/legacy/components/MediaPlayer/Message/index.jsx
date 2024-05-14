@@ -1,5 +1,4 @@
 import React from 'react';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -49,7 +48,12 @@ const StyledMessage = styled.strong`
   }
 `;
 
-const Message = ({ service, message, placeholderSrc, placeholderSrcset }) => (
+const Message = ({
+  service,
+  message,
+  placeholderSrc = '',
+  placeholderSrcset = '',
+}) => (
   <StyledWrapper>
     {placeholderSrc && (
       <img
@@ -64,17 +68,5 @@ const Message = ({ service, message, placeholderSrc, placeholderSrcset }) => (
     </MessageWrapper>
   </StyledWrapper>
 );
-
-Message.propTypes = {
-  service: string.isRequired,
-  message: string.isRequired,
-  placeholderSrcset: string,
-  placeholderSrc: string,
-};
-
-Message.defaultProps = {
-  placeholderSrcset: '',
-  placeholderSrc: '',
-};
 
 export default Message;

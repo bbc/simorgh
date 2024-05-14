@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
@@ -16,7 +15,7 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const CanonicalIncludeContainer = ({ html, type, index }) => {
+const CanonicalIncludeContainer = ({ html = null, type, index }) => {
   const supportedTypes = ['idt1', 'vj'];
 
   if (!html || !supportedTypes.includes(type)) return null;
@@ -54,16 +53,6 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
       />
     </GridItemMedium>
   );
-};
-
-CanonicalIncludeContainer.propTypes = {
-  html: string,
-  type: string.isRequired,
-  index: number.isRequired,
-};
-
-CanonicalIncludeContainer.defaultProps = {
-  html: null,
 };
 
 export default CanonicalIncludeContainer;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -25,9 +24,5 @@ const MediaIndicator = ({ size }) => (
     }}
   />
 );
-
-MediaIndicator.propTypes = {
-  size: string.isRequired,
-};
 
 export default MediaIndicator;

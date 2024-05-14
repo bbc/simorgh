@@ -9,7 +9,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Promo from '../Promo';
@@ -104,19 +103,6 @@ const PromoList = ({ blocks, viewTracker, onClick }) => {
       })}
     </ScrollPromo>
   );
-};
-
-PromoList.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-  ).isRequired,
-  viewTracker: func.isRequired,
-  onClick: func.isRequired,
 };
 
 export default PromoList;

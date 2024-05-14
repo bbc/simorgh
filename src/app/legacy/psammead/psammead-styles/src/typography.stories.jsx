@@ -1,9 +1,7 @@
 import React from 'react';
-import { shape, func } from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import * as typographies from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import notes from '../README.md';
 
 const TypographyText = styled.p`
@@ -12,11 +10,6 @@ const TypographyText = styled.p`
       ? props.typographyFunc(props.script)
       : ''}
 `;
-
-TypographyText.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  typographyFunc: func.isRequired,
-};
 
 const typographyStory = (typographyFunc, text, script) => (
   <TypographyText script={script} typographyFunc={typographyFunc}>

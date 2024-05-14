@@ -7,7 +7,6 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import IndexPageSection from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, data, isAmp = false }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"

@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { memo, useContext, useEffect } from 'react';
-import { func, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -156,7 +155,7 @@ export const providers = (provider, isLive) =>
     },
   })[provider];
 
-const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
+const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
   const { script, styles, enrich, onLibraryLoad } = providers(provider, isLive);
@@ -177,18 +176,6 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
       dangerouslySetInnerHTML={{ __html: oEmbed.html }}
     />
   );
-};
-
-CanonicalEmbed.propTypes = {
-  provider: string.isRequired,
-  oEmbed: shape({
-    html: string.isRequired,
-  }).isRequired,
-  onRender: func,
-};
-
-CanonicalEmbed.defaultProps = {
-  onRender: null,
 };
 
 export default memo(CanonicalEmbed);

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { useTheme } from '@emotion/react';
-import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
@@ -28,23 +27,23 @@ const renderImage = (imageToRender, lazyLoad, fallback) =>
 
 const ImageWithPlaceholder = ({
   alt,
-  children,
-  copyright,
-  fade,
-  height,
-  fallback, // only has an effect when lazyLoad == true
-  lazyLoad,
-  preload,
+  children = null,
+  copyright = null,
+  fade = false,
+  height = null,
+  fallback = true, // only has an effect when lazyLoad == true
+  lazyLoad = false,
+  preload = false,
   ratio,
   src,
-  sizes,
-  srcset,
-  fallbackSrcset,
-  primaryMimeType,
-  fallbackMimeType,
+  sizes = null,
+  srcset = null,
+  fallbackSrcset = null,
+  primaryMimeType = undefined,
+  fallbackMimeType = undefined,
   width,
-  darkPlaceholder,
-  imageComponent: ImageComponent,
+  darkPlaceholder = null,
+  imageComponent: ImageComponent = StyledImage,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -109,44 +108,6 @@ const ImageWithPlaceholder = ({
       </ImagePlaceholder>
     </>
   );
-};
-
-ImageWithPlaceholder.propTypes = {
-  alt: string.isRequired,
-  copyright: string,
-  children: node,
-  darkPlaceholder: bool,
-  height: number,
-  fade: bool,
-  fallback: bool,
-  lazyLoad: bool,
-  preload: bool,
-  ratio: number.isRequired,
-  src: string.isRequired,
-  srcset: string,
-  fallbackSrcset: string,
-  primaryMimeType: string,
-  fallbackMimeType: string,
-  sizes: string,
-  width: number.isRequired,
-  imageComponent: elementType,
-};
-
-ImageWithPlaceholder.defaultProps = {
-  copyright: null,
-  children: null,
-  darkPlaceholder: null,
-  height: null,
-  fade: false,
-  fallback: true,
-  lazyLoad: false,
-  preload: false,
-  srcset: null,
-  fallbackSrcset: null,
-  primaryMimeType: undefined,
-  fallbackMimeType: undefined,
-  sizes: null,
-  imageComponent: StyledImage,
 };
 
 export default ImageWithPlaceholder;

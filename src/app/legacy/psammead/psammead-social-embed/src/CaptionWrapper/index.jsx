@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -37,8 +36,8 @@ const CaptionWrapper = ({
   children,
   service,
   text,
-  additionalText,
-  describedById,
+  additionalText = null,
+  describedById = null,
 }) => {
   const { pageType } = useContext(RequestContext);
   const isLive = pageType === LIVE_PAGE;
@@ -61,19 +60,6 @@ const CaptionWrapper = ({
       </WarningText>
     </Container>
   );
-};
-
-CaptionWrapper.defaultProps = {
-  additionalText: null,
-  describedById: null,
-};
-
-CaptionWrapper.propTypes = {
-  children: node.isRequired,
-  service: string.isRequired,
-  text: string.isRequired,
-  additionalText: string,
-  describedById: string,
 };
 
 export default CaptionWrapper;

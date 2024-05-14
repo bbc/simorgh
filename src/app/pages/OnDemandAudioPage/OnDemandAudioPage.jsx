@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
-import { shape, string, number, bool, func, node } from 'prop-types';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -82,10 +81,6 @@ const PageGrid = ({ children }) => (
     </Grid>
   </GelPageGrid>
 );
-
-PageGrid.propTypes = {
-  children: node.isRequired,
-};
 
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -268,22 +263,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       )}
     </>
   );
-};
-
-OnDemandAudioPage.propTypes = {
-  MediaError: func.isRequired,
-  mediaIsAvailable: bool.isRequired,
-  pageData: shape({
-    isPodcast: bool,
-    brandTitle: string,
-    headline: string,
-    summary: string,
-    language: string,
-    releaseDateTimeStamp: number,
-    imageUrl: string,
-    imageAltText: string,
-    episodeTitle: string,
-  }).isRequired,
 };
 
 export default OnDemandAudioPage;

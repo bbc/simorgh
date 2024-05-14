@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
 import {
@@ -7,7 +6,6 @@ import {
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
 
-import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
@@ -19,7 +17,7 @@ const eventTrackingData = {
   },
 };
 
-const PromoComponent = ({ promo, dir }) => {
+const PromoComponent = ({ promo, dir = 'ltr' }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
@@ -38,16 +36,7 @@ const PromoComponent = ({ promo, dir }) => {
   );
 };
 
-PromoComponent.propTypes = {
-  promo: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-PromoComponent.defaultProps = {
-  dir: 'ltr',
-};
-
-const PromoListComponent = ({ promoItems, dir }) => {
+const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
@@ -70,17 +59,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
   );
 };
 
-PromoListComponent.propTypes = {
-  promoItems: arrayOf(oneOfType([shape(storyItem), shape(linkPromo)]))
-    .isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-PromoListComponent.defaultProps = {
-  dir: 'ltr',
-};
-
-const TopStories = ({ content, parentColumns, sectionLabelBackground }) => {
+const TopStories = ({
+  content = [],
+  parentColumns = null,
+  sectionLabelBackground = undefined,
+}) => {
   const { translations } = useContext(ServiceContext);
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
@@ -96,25 +79,6 @@ const TopStories = ({ content, parentColumns, sectionLabelBackground }) => {
       sectionLabelBackground={sectionLabelBackground}
     />
   );
-};
-
-TopStories.propTypes = {
-  content: arrayOf(shape(storyItem)),
-  parentColumns: shape({
-    group0: number,
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  sectionLabelBackground: string,
-};
-
-TopStories.defaultProps = {
-  content: [],
-  parentColumns: null,
-  sectionLabelBackground: undefined,
 };
 
 export default TopStories;

@@ -13,11 +13,11 @@ export default {
   privacyNotice: ({ fontVariants, fontSizes }: Theme) =>
     css({
       ...fontVariants.sansRegular,
-      ...fontSizes.bodyCopy,
+      ...fontSizes.brevier,
     }),
   privacyHeading: ({ fontVariants, fontSizes }: Theme) =>
     css({
       ...fontVariants.sansBold,
-      ...fontSizes.bodyCopy,
+      ...fontSizes.brevier,
     }),
 };

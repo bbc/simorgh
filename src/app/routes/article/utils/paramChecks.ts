@@ -1,16 +1,13 @@
+import { Article } from '#app/models/types/optimo';
 import pathOr from 'ramda/src/pathOr';
-import { InferProps } from 'prop-types';
-import { articleDataPropTypes } from '../../../models/propTypes/article';
 
-export type ArticleType = InferProps<typeof articleDataPropTypes>;
-
-export const advertisingAllowed = (pageType: string, article: ArticleType) => {
+export const advertisingAllowed = (pageType: string, article: Article) => {
   if (pageType === 'cpsAsset') {
     return pathOr(false, ['metadata', 'options', 'allowAdvertising'], article);
   }
   return pathOr(false, ['metadata', 'allowAdvertising'], article);
 };
 
-export const isSfv = (article: ArticleType) => {
+export const isSfv = (article: Article) => {
   return pathOr(false, ['metadata', 'consumableAsSFV'], article);
 };

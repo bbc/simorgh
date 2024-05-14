@@ -12,7 +12,6 @@ import { service as russianServiceConfig } from '../../../lib/config/services/ru
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
-/* eslint-disable react/prop-types */
 const PromoWithContext = ({
   inline = false,
   serviceConfigTransformer = identity,
