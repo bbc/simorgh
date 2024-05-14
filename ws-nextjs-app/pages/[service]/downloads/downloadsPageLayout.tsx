@@ -56,7 +56,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
                     padding={false}
                     isRelative={false}
                   />
-                  <CallToActionLink href={item.files[0].fileLink} download={true} eventTrackingData={{ componentName: 'koreanDownloads', index }}>
+                  <CallToActionLink css={styles.cta} href={item.files[0].fileLink} download={true} eventTrackingData={{ componentName: 'koreanDownloads', index }}>
                     <svg
                       className="ws-o-download-icon"
                       viewBox="0 0 32 32"
