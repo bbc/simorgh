@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { act } from '@testing-library/react';

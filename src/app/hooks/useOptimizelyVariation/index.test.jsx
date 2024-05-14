@@ -1,5 +1,5 @@
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useOptimizelyVariation from '.';
 
 describe('useOptimizelyVariation client side', () => {

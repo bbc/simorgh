@@ -10,7 +10,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { node } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
@@ -23,7 +22,6 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import cpsAssetPagePropTypes from '#models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import filterForBlockType from '#lib/utilities/blockHandlers';
@@ -56,10 +54,6 @@ const PhotoGalleryPageGrid = ({ children, ...props }) => (
     {children}
   </GelPageGrid>
 );
-
-PhotoGalleryPageGrid.propTypes = {
-  children: node.isRequired,
-};
 
 const StyledImageWrapper = styled.div`
   grid-column: 5 / span 12;
@@ -209,7 +203,5 @@ const PhotoGalleryPage = ({ pageData }) => {
     </>
   );
 };
-
-PhotoGalleryPage.propTypes = cpsAssetPagePropTypes;
 
 export default PhotoGalleryPage;

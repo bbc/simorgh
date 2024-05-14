@@ -5,7 +5,6 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecentVideoEpisodes from '.';
 import { afrique } from './fixtures';
 
-/* eslint-disable react/prop-types */
 const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
   <ServiceContextProvider service="afrique">
     <RequestContextProvider

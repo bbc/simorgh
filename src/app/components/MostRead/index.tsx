@@ -72,7 +72,7 @@ const MostRead = ({
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
     mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection className={className}>
+      <MostReadSection {...(className && { className })}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}

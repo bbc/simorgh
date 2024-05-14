@@ -10,7 +10,6 @@ const getToggleState = enabled => ({
   radioSchedule: { enabled },
 });
 
-/* eslint-disable react/prop-types */
 const RadioSchedulesWithContext = ({
   service,
   radioScheduleToggle = false,
@@ -38,6 +37,5 @@ const RadioSchedulesWithContext = ({
     </RequestContextProvider>
   </ToggleContext.Provider>
 );
-/* eslint-enable react/prop-types */
 
 export default RadioSchedulesWithContext;

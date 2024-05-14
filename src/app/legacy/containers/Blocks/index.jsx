@@ -2,16 +2,6 @@ import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 
-import {
-  objectOf,
-  arrayOf,
-  func,
-  shape,
-  string,
-  oneOfType,
-  object,
-} from 'prop-types';
-
 const Clearer = styled.div`
   clear: both;
 `;
@@ -49,17 +39,5 @@ const Blocks = ({ blocks, componentsToRender }) =>
       </Wrapper>
     );
   });
-
-Blocks.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-  ).isRequired,
-  componentsToRender: objectOf(func).isRequired,
-};
 
 export default Blocks;

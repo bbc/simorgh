@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, bool, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '#psammead/psammead-embed-error/src';
@@ -45,7 +44,7 @@ const IncludeContainer = props => {
   );
 
   if (!enabled) return null;
-  const { isAmpSupported, type, index } = props;
+  const { isAmpSupported = false, type, index = null } = props;
 
   if (!isAmpSupported && isAmp) {
     return (
@@ -66,17 +65,6 @@ const IncludeContainer = props => {
   return componentsToRender[platform][type]
     ? componentsToRender[platform][type](props)
     : null;
-};
-
-IncludeContainer.propTypes = {
-  isAmpSupported: bool,
-  type: string.isRequired,
-  index: number,
-};
-
-IncludeContainer.defaultProps = {
-  isAmpSupported: false,
-  index: null,
 };
 
 export default IncludeContainer;

@@ -1,5 +1,4 @@
 import React, { useContext, forwardRef } from 'react';
-import { shape, string } from 'prop-types';
 import path from 'ramda/src/path';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
@@ -9,7 +8,7 @@ import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
 
 const RelatedContentItem = forwardRef(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
+  ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
     const { script } = useContext(ServiceContext);
     if (!item || isEmpty(item)) return null;
 
@@ -127,13 +126,5 @@ const RelatedContentItem = forwardRef(
     );
   },
 );
-
-RelatedContentItem.propTypes = {
-  item: shape({}).isRequired,
-  ariaLabelledBy: string.isRequired,
-  eventTrackingData: shape({ block: shape({ componentName: string }) }),
-};
-
-RelatedContentItem.defaultProps = { eventTrackingData: null };
 
 export default RelatedContentItem;

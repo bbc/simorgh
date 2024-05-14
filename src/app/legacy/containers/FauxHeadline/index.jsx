@@ -12,8 +12,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
-import { textDefaultPropTypes } from '#models/propTypes';
-import { headlineModelPropTypes } from '#models/propTypes/headline';
 import { GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Fragment from '../Fragment';
@@ -32,7 +30,19 @@ const StyledFauxHeadline = styled(FauxHeadline)`
   }
 `;
 
-const FauxHeadlineContainer = ({ blocks }) => {
+const FauxHeadlineContainer = ({
+  blocks = [
+    {
+      model: {
+        blocks: [
+          {
+            model: {},
+          },
+        ],
+      },
+    },
+  ],
+}) => {
   const { script, service } = useContext(ServiceContext);
 
   const arrayOfFragments = path(
@@ -57,11 +67,5 @@ const FauxHeadlineContainer = ({ blocks }) => {
     </GridItemLarge>
   );
 };
-
-FauxHeadlineContainer.propTypes = {
-  ...headlineModelPropTypes,
-};
-
-FauxHeadlineContainer.defaultProps = textDefaultPropTypes;
 
 export default FauxHeadlineContainer;
