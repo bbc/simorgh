@@ -29,7 +29,9 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         <div css={styles.grid}>
           <div css={styles.primaryColumn}>
             <main css={styles.mainContent}>
-              <Heading level={1}>{title}</Heading>
+              <Heading level={1} id="content" tabIndex={-1}>
+                {title}
+              </Heading>
               <div
                 // TODO: This is a security risk, we should sanitize the HTML
                 // eslint-disable-next-line react/no-danger
