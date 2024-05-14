@@ -31,7 +31,6 @@ describe('Document Component', () => {
     </>
   );
 
-  // eslint-disable-next-line react/prop-types
   const TestDocumentComponent = ({ service, isAmp, isApp, isLite }) => (
     <DocumentComponent
       app={{

@@ -6,7 +6,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -39,7 +38,6 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
 import Disclaimer from '../../components/Disclaimer';
 
@@ -69,10 +67,6 @@ const MediaAssetPageGrid = ({ children, ...props }) => (
     {children}
   </GelPageGrid>
 );
-
-MediaAssetPageGrid.propTypes = {
-  children: node.isRequired,
-};
 
 const StyledImageWrapper = styled.div`
   grid-column: 5 / span 12;
@@ -252,7 +246,5 @@ const MediaAssetPage = ({ pageData }) => {
     </>
   );
 };
-
-MediaAssetPage.propTypes = cpsAssetPagePropTypes;
 
 export default MediaAssetPage;

@@ -873,7 +873,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 <div>
   <section
     aria-labelledby="Radio-Schedule"
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
     data-testid="radio-schedule"
     role="region"
   >
@@ -2315,7 +2315,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 <div>
   <section
     aria-labelledby="Radio-Schedule"
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
     data-testid="radio-schedule"
     role="region"
   >

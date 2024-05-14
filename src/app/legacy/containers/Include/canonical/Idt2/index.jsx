@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { string, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 
 import { Img } from '#psammead/psammead-image/src';
@@ -16,7 +15,7 @@ const Include = styled.div`
 const DISALLOWED_SCRIPTS =
   /js\/verticalChart|horizontalChart|lineChart|pieChart|simpleMap|table\./;
 
-const Idt2Canonical = ({ html, imageBlock, index }) => {
+const Idt2Canonical = ({ html = null, imageBlock = null, index }) => {
   if (!html || !imageBlock) return null;
   const { src, alt, srcset } = imageBlock;
   const isDisallowed = DISALLOWED_SCRIPTS.test(html);
@@ -34,21 +33,6 @@ const Idt2Canonical = ({ html, imageBlock, index }) => {
       )}
     </GridItemMedium>
   );
-};
-
-Idt2Canonical.propTypes = {
-  html: string,
-  imageBlock: shape({
-    src: string.isRequired,
-    alt: string.isRequired,
-    srcset: string,
-  }),
-  index: number.isRequired,
-};
-
-Idt2Canonical.defaultProps = {
-  html: null,
-  imageBlock: null,
 };
 
 export default Idt2Canonical;

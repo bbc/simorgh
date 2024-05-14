@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { cpsRecommendation, optimoRecommendation } from './fixture';

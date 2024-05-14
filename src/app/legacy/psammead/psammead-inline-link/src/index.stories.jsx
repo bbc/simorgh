@@ -44,7 +44,6 @@ const textDecorationStyle = {
   textDecoration: `underline ${POSTBOX}`,
 };
 
-/* eslint-disable react/prop-types */
 const renderWrappedInlineLink = ({ longText, text, style }) => (
   <>
     {longText}&nbsp;

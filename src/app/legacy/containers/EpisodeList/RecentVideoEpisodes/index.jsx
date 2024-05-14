@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
@@ -151,22 +150,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
       </EpisodeList>
     </aside>
   );
-};
-
-RecentVideoEpisodes.propTypes = {
-  masterBrand: string.isRequired,
-  episodes: arrayOf(
-    shape({
-      id: string.isRequired,
-      url: string.isRequired,
-      brandTitle: string.isRequired,
-      episodeTitle: string,
-      timestamp: number.isRequired,
-      duration: string.isRequired,
-      image: string.isRequired,
-      altText: string.isRequired,
-    }),
-  ).isRequired,
 };
 
 export default RecentVideoEpisodes;

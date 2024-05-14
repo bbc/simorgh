@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
@@ -37,12 +36,12 @@ const StyledImg = styled.img`
 export const Img = props => {
   const {
     src,
-    srcset,
-    sizes,
-    fallbackSrcset,
-    primaryMimeType,
-    fallbackMimeType,
-    onLoad,
+    srcset = null,
+    sizes = null,
+    fallbackSrcset = null,
+    primaryMimeType = 'image/jpeg',
+    fallbackMimeType = 'image/jpeg',
+    onLoad = () => {},
     ...otherProps
   } = props;
 
@@ -75,32 +74,6 @@ export const Img = props => {
       )}
     </>
   );
-};
-
-Img.propTypes = {
-  alt: string.isRequired,
-  fade: bool,
-  height: oneOfType([string, number]),
-  sizes: string,
-  src: string.isRequired,
-  srcset: string,
-  fallbackSrcset: string,
-  primaryMimeType: string,
-  fallbackMimeType: string,
-  width: oneOfType([string, number]),
-  onLoad: func,
-};
-
-Img.defaultProps = {
-  fade: false,
-  height: null,
-  sizes: null,
-  srcset: null,
-  fallbackSrcset: null,
-  primaryMimeType: 'image/jpeg',
-  fallbackMimeType: 'image/jpeg',
-  width: null,
-  onLoad: () => {},
 };
 
 export default Img;

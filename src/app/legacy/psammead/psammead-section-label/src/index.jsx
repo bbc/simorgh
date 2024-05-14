@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { bool, oneOf, shape, string } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -40,10 +38,6 @@ const SectionLabelWrapper = styled.div`
     `}
 `;
 
-SectionLabelWrapper.propTypes = {
-  visuallyHidden: bool.isRequired,
-};
-
 export const Heading = styled.h2`
   /* reset default margins */
   margin: 0;
@@ -52,15 +46,15 @@ export const Heading = styled.h2`
 
 const SectionLabel = ({
   children: title,
-  dir,
-  href,
+  dir = 'ltr',
+  href = '',
   labelId,
-  linkText,
+  linkText = '',
   script,
   service,
-  visuallyHidden,
-  backgroundColor,
-  overrideHeadingAs,
+  visuallyHidden = false,
+  backgroundColor = GHOST,
+  overrideHeadingAs = '',
   ...props
 }) => (
   <SectionLabelWrapper visuallyHidden={visuallyHidden} {...props}>
@@ -91,27 +85,5 @@ const SectionLabel = ({
     </Heading>
   </SectionLabelWrapper>
 );
-
-SectionLabel.defaultProps = {
-  dir: 'ltr',
-  href: null,
-  linkText: null,
-  visuallyHidden: false,
-  backgroundColor: GHOST,
-  overrideHeadingAs: null,
-};
-
-SectionLabel.propTypes = {
-  children: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  href: string,
-  labelId: string.isRequired,
-  linkText: string,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  visuallyHidden: bool,
-  backgroundColor: string,
-  overrideHeadingAs: oneOf([null, 'strong']),
-};
 
 export default SectionLabel;

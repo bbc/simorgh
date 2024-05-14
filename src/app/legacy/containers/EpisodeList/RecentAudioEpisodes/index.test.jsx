@@ -8,7 +8,6 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import RecentAudioEpisodes from '.';
 
-/* eslint-disable react/prop-types */
 const RecentAudioEpisodesWithContext = ({
   masterBrand,
   brandId,

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, oneOfType, object, number } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -58,7 +57,7 @@ const LabelComponent = styled.strong`
 `}
 `;
 
-const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
+const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
 
   const eventTrackingData = {
@@ -126,22 +125,6 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
       )}
     </GridItemMediumNoMargin>
   );
-};
-
-ScrollablePromo.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-  ).isRequired,
-  blockGroupIndex: number,
-};
-
-ScrollablePromo.defaultProps = {
-  blockGroupIndex: null,
 };
 
 export default ScrollablePromo;

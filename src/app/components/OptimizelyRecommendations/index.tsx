@@ -1,17 +1,16 @@
 import React from 'react';
-import { InferProps } from 'prop-types';
-import { articleDataPropTypes } from '#models/propTypes/article';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import pathOr from 'ramda/src/pathOr';
+import { Article } from '#app/models/types/optimo';
 
 // 005_brasil_recommendations_experiment
 const OptimizelyRecommendation = ({
   pageData,
   ...props
 }: {
-  pageData: ArticlePageType;
+  pageData: Article;
 }) => {
   const recommendationsData = pathOr(
     [] as null[],
@@ -45,7 +44,5 @@ const OptimizelyRecommendation = ({
     </OptimizelyExperiment>
   );
 };
-
-export type ArticlePageType = InferProps<typeof articleDataPropTypes>;
 
 export default OptimizelyRecommendation;
