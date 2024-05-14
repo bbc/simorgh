@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { jsx } from '@emotion/react';
-import { FieldData, InputProps, OnChangeInputValue } from '../types';
+import { FieldData, InputProps } from '../types';
 import { useFormContext } from '../FormContext';
 import styles from './styles';
 
@@ -104,19 +104,17 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
   const { isValid, required } = inputState;
   const { setFormState } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const files = inputState.value as OnChangeInputValue | File[];
+  const files = inputState.value as File[];
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFormState(prevState => {
       const value = event.target.files;
-      if (!value) return { ...prevState };
+      const fileArrayLength = value?.length;
+      if (!fileArrayLength) return { ...prevState };
 
-      const fileListLength = value.length;
       const filesArray = [];
 
-      const isInitialUpload = prevState[name].value === '';
-
-      for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
+      for (let fileIndex = 0; fileIndex < fileArrayLength; fileIndex += 1) {
         const file = value?.item(fileIndex);
         if (file) filesArray.push(file);
       }
@@ -124,12 +122,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
       const updatedState = {
         [name]: {
           ...prevState[name],
-          ...(isInitialUpload && {
-            value: [...filesArray],
-          }),
-          ...(!isInitialUpload && {
-            value: [...(prevState[name].value as File[]), ...filesArray],
-          }),
+          value: [...(prevState[name].value as File[]), ...filesArray],
         },
       };
 
@@ -143,9 +136,13 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
     inputRef.current.value = '';
   };
 
+  const fileArrayLength = files.length;
+  const hasFiles = fileArrayLength !== 0;
+
   return (
     <div>
       <button
+        aria-describedby={name}
         css={styles.fileUploadButton}
         type="button"
         onClick={() => handleUploadClick()}
@@ -165,7 +162,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
         aria-describedby={describedBy}
         css={styles.fileInput}
       />
-      {files && <FileList files={files as File[]} name={name} />}
+      {hasFiles && <FileList files={files as File[]} name={name} />}
     </div>
   );
 };
