@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { jsx } from '@emotion/react';
-import { FieldData, InputProps } from '../types';
+import { InputProps } from '../types';
 import { useFormContext } from '../FormContext';
 import styles from './styles';
 
@@ -37,22 +37,13 @@ interface FileListProps {
 }
 
 const FileList = ({ files, name }: FileListProps) => {
-  const { setFormState } = useFormContext();
+  const { handleChange } = useFormContext();
   const [thumbnailState, setThumbnailState] = useState<Blob[]>([]);
 
   const handleFileDeletion = (fileIndex: number) => {
-    setFormState(prevState => {
-      const filesClone = [...files];
-      filesClone.splice(fileIndex, 1);
-      const updatedState = {
-        [name]: {
-          ...prevState[name],
-          value: [...filesClone],
-        },
-      };
-
-      return { ...prevState, ...updatedState } as Record<string, FieldData>;
-    });
+    const filesClone = [...files];
+    filesClone.splice(fileIndex, 1);
+    handleChange(name, filesClone);
 
     setThumbnailState(prevState => {
       const thumbnailClone = [...prevState];
@@ -94,7 +85,9 @@ const FileList = ({ files, name }: FileListProps) => {
   });
   return (
     <>
-      <div>Here&apos;s what you&apos;re sending:</div>
+      <p css={styles.fileListParagraph}>
+        Here&apos;s what you&apos;re sending:
+      </p>
       <ul css={styles.fileList}>{listItems}</ul>
     </>
   );
@@ -102,32 +95,25 @@ const FileList = ({ files, name }: FileListProps) => {
 
 export default ({ id, name, inputState, describedBy }: InputProps) => {
   const { isValid, required } = inputState;
-  const { setFormState } = useFormContext();
+  const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const files = inputState.value as File[];
+  const filesInState = inputState.value as File[];
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setFormState(prevState => {
-      const value = event.target.files;
-      const fileArrayLength = value?.length;
-      if (!fileArrayLength) return { ...prevState };
+    // Converts FileList to an actual array
+    const chosenFiles = Array.prototype.slice.call(
+      event.target.files,
+    ) as File[];
+    const uploaded = [...filesInState];
 
-      const filesArray = [];
-
-      for (let fileIndex = 0; fileIndex < fileArrayLength; fileIndex += 1) {
-        const file = value?.item(fileIndex);
-        if (file) filesArray.push(file);
+    chosenFiles.some(file => {
+      if (uploaded.findIndex(f => f.name === file.name) === -1) {
+        uploaded.push(file);
       }
-
-      const updatedState = {
-        [name]: {
-          ...prevState[name],
-          value: [...(prevState[name].value as File[]), ...filesArray],
-        },
-      };
-
-      return { ...prevState, ...updatedState };
+      return null;
     });
+
+    handleChange(name, uploaded);
   };
 
   const handleUploadClick = () => {
@@ -136,7 +122,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
     inputRef.current.value = '';
   };
 
-  const fileArrayLength = files.length;
+  const fileArrayLength = filesInState.length;
   const hasFiles = fileArrayLength !== 0;
 
   return (
@@ -162,7 +148,7 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
         aria-describedby={describedBy}
         css={styles.fileInput}
       />
-      {hasFiles && <FileList files={files as File[]} name={name} />}
+      {hasFiles && <FileList files={filesInState} name={name} />}
     </div>
   );
 };
