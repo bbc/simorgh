@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';

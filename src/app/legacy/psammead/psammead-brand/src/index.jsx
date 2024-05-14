@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { string, number, node, shape, bool } from 'prop-types';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -119,7 +118,11 @@ const BrandSvg = styled.svg`
   }
 `;
 
-const LocalisedBrandName = ({ linkId, product, serviceLocalisedName }) => {
+const LocalisedBrandName = ({
+  linkId = null,
+  product,
+  serviceLocalisedName = null,
+}) => {
   const brandId = `BrandLink-${linkId}`;
   return serviceLocalisedName ? (
     // id={`BrandLink-${linkId}` is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -133,17 +136,7 @@ const LocalisedBrandName = ({ linkId, product, serviceLocalisedName }) => {
   );
 };
 
-LocalisedBrandName.propTypes = {
-  linkId: string.isRequired,
-  product: string.isRequired,
-  serviceLocalisedName: string,
-};
-
-LocalisedBrandName.defaultProps = {
-  serviceLocalisedName: null,
-};
-
-const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   <>
     {svg && (
       <>
@@ -172,37 +165,17 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
   </>
 );
 
-const brandProps = {
-  linkId: string.isRequired,
-  product: string.isRequired,
-  serviceLocalisedName: string,
-  svg: shape({
-    group: node.isRequired,
-    ratio: number.isRequired,
-    viewbox: shape({
-      height: number.isRequired,
-      width: number.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
-StyledBrand.propTypes = brandProps;
-
-StyledBrand.defaultProps = {
-  serviceLocalisedName: null,
-};
-
 const Brand = forwardRef((props, ref) => {
   const {
     svgHeight,
     maxWidth,
     minWidth,
-    url,
-    borderTop,
-    borderBottom,
-    scriptLink,
-    skipLink,
-    linkId,
+    url = null,
+    borderTop = false,
+    borderBottom = false,
+    scriptLink = null,
+    skipLink = null,
+    linkId = null,
     ...rest
   } = props;
 
@@ -234,26 +207,5 @@ const Brand = forwardRef((props, ref) => {
     </Banner>
   );
 });
-
-Brand.defaultProps = {
-  url: null,
-  serviceLocalisedName: null,
-  borderTop: false,
-  borderBottom: false,
-  scriptLink: null,
-  skipLink: null,
-  linkId: null,
-};
-
-Brand.propTypes = {
-  ...brandProps,
-  url: string,
-  serviceLocalisedName: string,
-  borderTop: bool,
-  borderBottom: bool,
-  scriptLink: node,
-  skipLink: node,
-  linkId: string,
-};
 
 export default Brand;

@@ -13,7 +13,6 @@ import processRadioSchedule from '../utilities/processRadioSchedule';
 
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
-/* eslint-disable react/prop-types */
 const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}

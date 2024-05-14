@@ -1,14 +1,24 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { textDefaultPropTypes } from '#models/propTypes';
-import { headlineModelPropTypes } from '#models/propTypes/headline';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const VisuallyHiddenHeadline = props => (
   <VisuallyHiddenText as="h1" {...props} />
 );
 
-const VisuallyHiddenHeadlineContainer = ({ blocks }) => {
+const VisuallyHiddenHeadlineContainer = ({
+  blocks = [
+    {
+      model: {
+        blocks: [
+          {
+            model: {},
+          },
+        ],
+      },
+    },
+  ],
+}) => {
   const { text } = path(['0', 'model', 'blocks', '0', 'model'], blocks);
 
   if (!text) {
@@ -23,11 +33,5 @@ const VisuallyHiddenHeadlineContainer = ({ blocks }) => {
     </VisuallyHiddenHeadline>
   );
 };
-
-VisuallyHiddenHeadlineContainer.propTypes = {
-  ...headlineModelPropTypes,
-};
-
-VisuallyHiddenHeadlineContainer.defaultProps = textDefaultPropTypes;
 
 export default VisuallyHiddenHeadlineContainer;

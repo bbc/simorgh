@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -55,8 +53,8 @@ const IndexAlsosLink = ({
   script,
   service,
   url,
-  mediaIndicator,
-  mediaType,
+  mediaIndicator = null,
+  mediaType = null,
 }) => {
   const sanitisedUrl = url.replace(/\W/g, '');
 
@@ -86,24 +84,8 @@ const IndexAlsosLink = ({
   );
 };
 
-IndexAlsosLink.propTypes = {
-  children: node.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  url: string.isRequired,
-  mediaIndicator: node,
-  mediaType: string,
-  className: string,
-};
-
-IndexAlsosLink.defaultProps = {
-  mediaIndicator: null,
-  mediaType: null,
-  className: null,
-};
-
 export const IndexAlsos = props => {
-  const { offScreenText, children } = props;
+  const { offScreenText = null, children } = props;
 
   return (
     <StyledIndexAlsos {...props}>
@@ -113,22 +95,9 @@ export const IndexAlsos = props => {
   );
 };
 
-IndexAlsos.propTypes = {
-  children: node.isRequired,
-  offScreenText: string,
-};
-
-IndexAlsos.defaultProps = {
-  offScreenText: null,
-};
-
 export const IndexAlsosUl = ({ children }) => (
   <StyledIndexAlsosUl role="list">{children}</StyledIndexAlsosUl>
 );
-
-IndexAlsosUl.propTypes = {
-  children: node.isRequired,
-};
 
 export const IndexAlsosLi = ({ ...props }) => (
   <StyledIndexAlso as="li" role="listitem">

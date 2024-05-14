@@ -1,5 +1,4 @@
 import React from 'react';
-import { string } from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
@@ -72,7 +71,7 @@ const StyledImage = styled.img`
 `;
 
 const EpisodeImage = props => {
-  const { duration, alt, dir } = props;
+  const { duration = '', alt = '', dir } = props;
 
   // This component only uses a subset of its props
   // the remaining props are passed down to the underlying <img> element
@@ -96,17 +95,6 @@ const EpisodeImage = props => {
       </PlayWrapper>
     </Wrapper>
   );
-};
-
-EpisodeImage.propTypes = {
-  alt: string,
-  duration: string,
-  dir: string.isRequired,
-};
-
-EpisodeImage.defaultProps = {
-  alt: '',
-  duration: '',
 };
 
 export default withEpisodeContext(EpisodeImage);

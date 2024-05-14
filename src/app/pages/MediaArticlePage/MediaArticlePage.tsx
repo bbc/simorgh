@@ -42,7 +42,7 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { OptimoBlock } from '../../models/types/optimo';
+import { Article, OptimoBlock } from '../../models/types/optimo';
 import {
   MetadataFormats,
   MetadataTaggings,
@@ -67,11 +67,10 @@ import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
   EmbedHtmlProps,
-  MediaArticlePageProps,
   TimestampProps,
 } from './types';
 
-const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
+const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     articleAuthor,
     isTrustProjectParticipant,

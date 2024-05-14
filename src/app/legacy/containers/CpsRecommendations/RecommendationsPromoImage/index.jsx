@@ -1,11 +1,20 @@
 import React from 'react';
-import { shape, bool } from 'prop-types';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import ImageWithPlaceholder from '../../ImageWithPlaceholder';
 
-const RecommendationsImage = ({ indexImage, lazyLoad }) => {
+const RecommendationsImage = ({
+  indexImage = {
+    height: '',
+    width: '',
+    altText: '',
+    copyrightHolder: '',
+    originCode: '',
+    locator: '',
+  },
+  lazyLoad = false,
+}) => {
   if (!indexImage) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
@@ -45,23 +54,6 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
       lazyLoad={lazyLoad}
     />
   );
-};
-
-RecommendationsImage.propTypes = {
-  lazyLoad: bool,
-  indexImage: shape({}),
-};
-
-RecommendationsImage.defaultProps = {
-  lazyLoad: false,
-  indexImage: shape({
-    height: '',
-    width: '',
-    altText: '',
-    copyrightHolder: '',
-    originCode: '',
-    locator: '',
-  }),
 };
 
 export default RecommendationsImage;

@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
-import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
 import MediaIndicator from './MediaIndicator';
 import { withEpisodeContext } from './helpers';
@@ -54,7 +53,13 @@ const StyledAnchor = styled.a`
   }
 `;
 
-const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
+const Link = ({
+  children,
+  showMediaIndicator = false,
+  dir,
+  index,
+  ...props
+}) => {
   return (
     <StyledAnchor
       showMediaIndicator={showMediaIndicator}
@@ -76,17 +81,6 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
       </span>
     </StyledAnchor>
   );
-};
-
-Link.propTypes = {
-  children: node.isRequired,
-  dir: string.isRequired,
-  index: number.isRequired,
-  showMediaIndicator: bool,
-};
-
-Link.defaultProps = {
-  showMediaIndicator: false,
 };
 
 export default withEpisodeContext(Link);

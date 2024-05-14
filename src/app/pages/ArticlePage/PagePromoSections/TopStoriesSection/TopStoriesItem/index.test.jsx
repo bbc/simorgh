@@ -15,7 +15,6 @@ import {
   tipoLivePageTopStoriesItem,
 } from '../fixture';
 
-// eslint-disable-next-line react/prop-types
 const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>

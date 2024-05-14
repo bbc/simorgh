@@ -45,7 +45,7 @@ describe('UGC Page Layout', () => {
   });
 
   it('Renders a submit button within the form', () => {
-    const submitButton = container.querySelector('form input[type=submit]');
+    const submitButton = container.querySelector('button[type=submit]');
     expect(submitButton).toBeInTheDocument();
   });
 });

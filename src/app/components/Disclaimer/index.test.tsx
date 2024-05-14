@@ -26,7 +26,7 @@ const DISCLAIMER_FIXTURE = {
   para7: '.',
 };
 const externalLinkText = ', внешняя';
-// eslint-disable-next-line react/prop-types
+
 const renderComponent = (
   { enabled = true } = {},
   disclaimer = DISCLAIMER_FIXTURE,
