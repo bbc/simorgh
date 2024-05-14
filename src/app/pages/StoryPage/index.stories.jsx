@@ -52,7 +52,6 @@ const toggleState = {
   },
 };
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ pageData, service }) => {
   return (
     <BrowserRouter>

@@ -6,7 +6,7 @@ import ConsentBanner from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../../../components/ThemeProvider';
 import metadata from './metadata.json';
-// eslint-disable-next-line react/prop-types
+
 const Component = ({ platform }) => (
   <ThemeProvider service="news">
     <ServiceContextProvider service="news">

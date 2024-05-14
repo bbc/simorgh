@@ -14,12 +14,22 @@ import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
 const serviceDataSets = {
-  urdu: { default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead } },
-  news: { default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead } },
+  urdu: {
+    default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead },
+  },
+  news: {
+    default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead },
+  },
   serbian: {
-    cyr: { ...serbianCyrData.article, mostRead: serbianCyrData.secondaryData.mostRead },
-    lat: { ...serbianLatData.article, mostRead: serbianLatData.secondaryData.mostRead },
-  }
+    cyr: {
+      ...serbianCyrData.article,
+      mostRead: serbianCyrData.secondaryData.mostRead,
+    },
+    lat: {
+      ...serbianLatData.article,
+      mostRead: serbianLatData.secondaryData.mostRead,
+    },
+  },
 };
 
 const serviceConfigs = {
@@ -28,7 +38,6 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, variant } = {}) => (
   <ThemeProvider service={service}>
     <BrowserRouter>

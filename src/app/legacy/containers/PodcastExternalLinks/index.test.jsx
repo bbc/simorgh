@@ -7,7 +7,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
-/* eslint-disable react/prop-types */
 const Component = ({ links, service = 'russian', variant = null }) => (
   <ToggleContextProvider
     toggles={{

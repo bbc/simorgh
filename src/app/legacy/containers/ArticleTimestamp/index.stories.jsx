@@ -15,7 +15,6 @@ const twentyFourHoursAgo = timestampGenerator({
 const twoDaysAgo = timestampGenerator({ days: 2 });
 const threeDaysAgo = timestampGenerator({ days: 3 });
 
-// eslint-disable-next-line react/prop-types
 const WrappedArticleTimestamp = ({ service, ...rest }) => (
   <ServiceContextProvider service={service || 'news'}>
     <ArticleTimestamp {...rest} />

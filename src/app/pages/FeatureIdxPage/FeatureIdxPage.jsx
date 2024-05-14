@@ -4,7 +4,6 @@ import pathOr from 'ramda/src/pathOr';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
-import featureIdxPageDataPropTypes from '#models/propTypes/featureIdxPage';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '../../components/Ad';
 import MPUContainer from '../../components/Ad/MPU';
@@ -72,10 +71,6 @@ const FeatureIdxPage = ({ pageData }) => {
       </main>
     </>
   );
-};
-
-FeatureIdxPage.propTypes = {
-  pageData: featureIdxPageDataPropTypes.isRequired,
 };
 
 export default FeatureIdxPage;

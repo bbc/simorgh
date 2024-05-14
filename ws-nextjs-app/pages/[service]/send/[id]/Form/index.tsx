@@ -34,8 +34,6 @@ export default function Form({
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
 
-        {!submitted ? <Submit /> : <Loader />}
-
         <Heading // TODO: need translations for this, it doesn't come through from the api
           level={3}
           css={styles.privacyHeading}
@@ -48,6 +46,7 @@ export default function Form({
           dangerouslySetInnerHTML={{ __html: privacyNotice }}
           css={styles.privacyNotice}
         />
+        {!submitted ? <Submit /> : <Loader />}
       </form>
       {submissionError && (
         <div css={styles.submissionError}>

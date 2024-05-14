@@ -1,5 +1,4 @@
 import React from 'react';
-import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { getPica } from '#psammead/gel-foundations/src/typography';
@@ -33,9 +32,5 @@ const CardEpisodesText = ({ children, ...props }) => (
     </EpisodesText>
   </>
 );
-
-CardEpisodesText.propTypes = {
-  children: node.isRequired,
-};
 
 export default CardEpisodesText;

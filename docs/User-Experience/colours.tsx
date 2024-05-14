@@ -52,7 +52,7 @@ export const LEGACY = [
 export const CROSS_PLATFORM = [
   { colorName: 'SERVICE_NEUTRAL_CORE', colorCode: '#0071F1' },
   { colorName: 'SERVICE_NEUTRAL_LIGHT', colorCode: '#3092FF' },
-  { colorName: 'SERVICE_NEUTRAL_DARK', colorCode: '#0064E6' },
+  { colorName: 'SERVICE_NEUTRAL_DARK', colorCode: '#0051AD' },
   { colorName: 'LIVE_CORE', colorCode: '#009E9E' },
   { colorName: 'LIVE_LIGHT', colorCode: '#00CCC7' },
   { colorName: 'LIVE_DARK', colorCode: '#006666' },

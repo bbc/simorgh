@@ -10,7 +10,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 
-// eslint-disable-next-line react/prop-types
 const HeadingsContainerWithContext = ({ data }) => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <HeadingsContainer {...data} />

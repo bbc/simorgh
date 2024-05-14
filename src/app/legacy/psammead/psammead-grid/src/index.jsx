@@ -1,5 +1,4 @@
 import React from 'react';
-import { bool, node, number, shape, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -281,7 +280,19 @@ const Grid = React.forwardRef(
   (
     {
       children,
-      startOffset: gridStartOffset, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
+      startOffset: gridStartOffset = {}, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
+      dir = 'ltr',
+      enableGelGutters = false,
+      enableNegativeGelMargins = false,
+      margins = {
+        group1: false,
+        group2: false,
+        group3: false,
+        group4: false,
+        group5: false,
+      },
+      item = false,
+      parentColumns = null,
       ...otherProps
     },
     ref,
@@ -294,7 +305,7 @@ const Grid = React.forwardRef(
           if (isNestedGridComponent) {
             return React.cloneElement(child, {
               parentColumns: otherProps.columns,
-              parentEnableGelGutters: otherProps.enableGelGutters,
+              parentEnableGelGutters: enableGelGutters,
             });
           }
         }
@@ -304,6 +315,12 @@ const Grid = React.forwardRef(
     const renderGridComponent = () => (
       <GridComponent
         {...otherProps}
+        item={item}
+        dir={dir}
+        enableGelGutters={enableGelGutters}
+        enableNegativeGelMargins={enableNegativeGelMargins}
+        margins={margins}
+        parentColumns={parentColumns}
         gridStartOffset={gridStartOffset}
         ref={ref}
       >
@@ -314,57 +331,5 @@ const Grid = React.forwardRef(
     return renderGridComponent();
   },
 );
-
-Grid.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  columns: shape({
-    group1: number.isRequired,
-    group2: number.isRequired,
-    group3: number.isRequired,
-    group4: number.isRequired,
-    group5: number.isRequired,
-  }).isRequired,
-  enableGelGutters: bool,
-  enableNegativeGelMargins: bool,
-  margins: shape({
-    group1: bool,
-    group2: bool,
-    group3: bool,
-    group4: bool,
-    group5: bool,
-  }),
-  startOffset: shape({
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  item: bool,
-  parentColumns: shape({
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-};
-
-Grid.defaultProps = {
-  dir: 'ltr',
-  enableGelGutters: false,
-  enableNegativeGelMargins: false,
-  margins: {
-    group1: false,
-    group2: false,
-    group3: false,
-    group4: false,
-    group5: false,
-  },
-  startOffset: {},
-  item: false,
-  parentColumns: null,
-};
 
 export default Grid;

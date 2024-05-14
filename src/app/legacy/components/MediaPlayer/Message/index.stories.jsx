@@ -19,7 +19,6 @@ export default {
   },
 };
 
-// eslint-disable-next-line react/prop-types
 export const MediaMessage = (_, { service }) => {
   return (
     <StyledMessageContainer>

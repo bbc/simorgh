@@ -7,7 +7,6 @@ import MostWatchedContainer from '.';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 
-// eslint-disable-next-line react/prop-types
 const Component = () => {
   return (
     <RequestContextProvider

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
-import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -28,7 +27,5 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
     </InlineLink>
   );
 };
-
-InlineLinkContainer.propTypes = inlineLinkModelPropTypes;
 
 export default InlineLinkContainer;

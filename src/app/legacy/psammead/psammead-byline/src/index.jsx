@@ -1,10 +1,8 @@
 import React from 'react';
-import { string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const AVATAR_DIAMETER = '4rem';
 
@@ -46,7 +44,7 @@ const Title = styled.li`
   color: ${props => props.theme.palette.METAL};
 `;
 
-const Byline = ({ service, script, name, title, avatar }) => (
+const Byline = ({ service, script, name, title, avatar = null }) => (
   <Container avatar={avatar}>
     {avatar && <Avatar src={avatar.src} alt={avatar.alt || ''} />}
     <Person role="list" service={service} script={script}>
@@ -57,20 +55,5 @@ const Byline = ({ service, script, name, title, avatar }) => (
     </Person>
   </Container>
 );
-
-Byline.defaultProps = {
-  avatar: null,
-};
-
-Byline.propTypes = {
-  service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  avatar: shape({
-    src: string.isRequired,
-    alt: string,
-  }),
-  name: string.isRequired,
-  title: string.isRequired,
-};
 
 export default Byline;
