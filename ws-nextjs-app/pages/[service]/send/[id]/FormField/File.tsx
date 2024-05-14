@@ -14,6 +14,8 @@ import styles from './styles';
 const UploadSvg = () => (
   <svg
     css={styles.fileUploadIcon}
+    focusable="false"
+    aria-hidden="true"
     viewBox="0 0 14 14"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -22,7 +24,12 @@ const UploadSvg = () => (
 );
 
 const DeleteSvg = () => (
-  <svg viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    viewBox="0 0 17 18"
+    xmlns="http://www.w3.org/2000/svg"
+    focusable="false"
+    aria-hidden="true"
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -30,6 +37,13 @@ const DeleteSvg = () => (
     />
   </svg>
 );
+
+const videoSvgDataURI =
+  "data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' focusable='false' aria-hidden='true'%0A%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cpath d='M.5.6h12v12H.5z' /%3E%3Cpath fill='currentColor' d='M2.144.96v11.28l8.712-5.64z' /%3E%3C/g%3E%3C/svg%3E";
+const audioSvgDataURI =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%0AviewBox='0 0 13 12'%0Afocusable='false'%0Aaria-hidden='true'%0A%3E%3Cpath d='M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z' /%3E%3Cpath d='M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z' /%3E%3C/svg%3E";
+const documentSvgDataURI =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M21.3,3,27,8.7V29H5V3H21.3M22,0H2V32H30V8L22,0Z'/%3E%3Crect x='10' y='13' width='12' height='3'/%3E%3Crect x='10' y='17' width='12' height='3'/%3E%3Crect x='10' y='21' width='12' height='3'/%3E%3C/svg%3E";
 
 interface FileListProps {
   files: File[];
@@ -57,11 +71,27 @@ const FileList = ({ files, name }: FileListProps) => {
     Promise.all(
       files.map(async file => {
         return new Promise(resolve => {
+          const fileType = file.type.substring(0, file.type.indexOf('/'));
+
           const fileReader = new FileReader();
           fileReader.onloadend = () => {
             resolve(fileReader.result);
           };
-          fileReader.readAsDataURL(file);
+
+          switch (fileType) {
+            case 'image':
+              fileReader.readAsDataURL(file);
+              break;
+            case 'video':
+              resolve(videoSvgDataURI);
+              break;
+            case 'audio':
+              resolve(audioSvgDataURI);
+              break;
+            default:
+              resolve(documentSvgDataURI);
+              break;
+          }
         });
       }),
     ).then(result => setThumbnailState(result as SetStateAction<Blob[]>));
@@ -77,7 +107,11 @@ const FileList = ({ files, name }: FileListProps) => {
           <img src={`${thumbnailSrc}`} alt="" />
         </div>
         <span>{file.name}</span>
-        <button type="button" onClick={() => handleFileDeletion(index)}>
+        <button
+          type="button"
+          aria-label={`Remove ${file.name}`}
+          onClick={() => handleFileDeletion(index)}
+        >
           <DeleteSvg />
         </button>
       </li>
@@ -106,11 +140,8 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
     ) as File[];
     const uploaded = [...filesInState];
 
-    chosenFiles.some(file => {
-      if (uploaded.findIndex(f => f.name === file.name) === -1) {
-        uploaded.push(file);
-      }
-      return null;
+    chosenFiles.forEach(file => {
+      uploaded.push(file);
     });
 
     handleChange(name, uploaded);
