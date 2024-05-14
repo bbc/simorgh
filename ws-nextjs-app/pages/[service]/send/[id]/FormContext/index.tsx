@@ -28,7 +28,6 @@ type SubmissionError = {
 
 type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
-  setFormState: React.Dispatch<React.SetStateAction<Record<string, FieldData>>>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
@@ -162,7 +161,6 @@ export const FormContextProvider = ({
     <FormContext.Provider
       value={{
         formState,
-        setFormState,
         handleChange,
         handleSubmit,
         submissionError,
