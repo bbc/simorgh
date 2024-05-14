@@ -3,9 +3,10 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import * as FormContext from '../FormContext';
 import FormField, { FormComponentProps } from '.';
-import { FormContextProvider } from '../FormContext';
 import { Field } from '../types';
+import { ContextProps } from '../FormContext';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
@@ -18,12 +19,16 @@ const ComponentWithContext = ({
   props: FormComponentProps;
   fields: Field[];
 }) => (
-  <FormContextProvider fields={fields}>
+  <FormContext.FormContextProvider fields={fields}>
     <FormField {...props} />
-  </FormContextProvider>
+  </FormContext.FormContextProvider>
 );
 
 describe('FormField', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('should render a text input with an associated label', async () => {
     const { container } = await act(() => {
       return render(
@@ -162,4 +167,76 @@ describe('FormField', () => {
     expect(telephoneInput).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
+
+  it.each([
+    {
+      attemptCount: 1,
+      required: true,
+      isValid: false,
+      wasInvalid: true,
+      expectedAria: '[aria-invalid=true][aria-required=true]',
+    },
+    {
+      attemptCount: 1,
+      required: false,
+      isValid: false,
+      wasInvalid: true,
+      expectedAria: '[aria-invalid=true]',
+    },
+    {
+      attemptCount: 1,
+      required: false,
+      isValid: true,
+      wasInvalid: true,
+      expectedAria: '[aria-invalid=false]',
+    },
+    {
+      attemptCount: 0,
+      required: true,
+      isValid: true,
+      wasInvalid: false,
+      expectedAria: '',
+    },
+  ])(
+    `should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`,
+    async ({ attemptCount, required, isValid, expectedAria, wasInvalid }) => {
+      const mockFormState = {
+        testAllyID: {
+          isValid,
+          required,
+          value: '',
+          htmlType: 'text',
+          messageCode: null,
+          wasInvalid,
+        },
+      };
+
+      jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+        () =>
+          ({
+            formState: mockFormState,
+            handleChange: () => null,
+            attemptCount,
+          }) as unknown as ContextProps,
+      );
+
+      const { container } = await act(() => {
+        return render(
+          <ComponentWithContext
+            props={{
+              id: 'testAllyID',
+              htmlType: 'text',
+              label: 'This is a text field',
+            }}
+            fields={[]}
+          />,
+        );
+      });
+      const text = container.querySelector(
+        `input[id=testAllyID][type=text]${expectedAria}`,
+      );
+
+      expect(text).toBeInTheDocument();
+    },
+  );
 });

@@ -11,8 +11,10 @@ export default ({
   inputState,
   describedBy,
   label,
+  submitAttemptCount,
 }: InputProps) => {
-  const { isValid, value = false, required } = inputState;
+  const { isValid, value = false, required, wasInvalid } = inputState;
+
   return (
     <div css={[styles.checkboxContainer]}>
       <input
@@ -22,9 +24,11 @@ export default ({
         type="checkbox"
         checked={value as boolean}
         onChange={e => handleChange(e.target.name, e.target.checked)}
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...(submitAttemptCount > 0 &&
+          wasInvalid && { 'aria-invalid': !isValid })}
+        {...(required && { 'aria-required': required })}
+        {...(submitAttemptCount > 0 &&
+          !isValid && { 'aria-describedby': describedBy })}
       />
       <Label id={id} css={[styles.checkboxLabel]}>
         {label}

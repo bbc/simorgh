@@ -26,12 +26,13 @@ type SubmissionError = {
   isRecoverable?: boolean;
 } | null;
 
-type ContextProps = {
+export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
+  attemptCount: number;
   progress: string;
 };
 
@@ -49,6 +50,7 @@ const getInitialFormState = (
         value: '',
         htmlType: field.htmlType,
         messageCode: null,
+        wasInvalid: false,
       },
     }),
     {},
@@ -78,10 +80,17 @@ export const FormContextProvider = ({
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
+  const [attemptCount, setAttemptCount] = useState(0);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      const updatedState = { [name]: { ...prevState[name], value } };
+      const currState = { ...prevState[name], value };
+      const validateFunction = validateFunctions[currState.htmlType];
+      const validatedData = validateFunction
+        ? validateFunction(currState)
+        : currState;
+
+      const updatedState = { [name]: { ...validatedData } };
       return { ...prevState, ...updatedState };
     });
   };
@@ -89,6 +98,7 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
+    setAttemptCount(currCount => currCount + 1);
 
     // Reset error state
     setSubmissionError(null);
@@ -167,6 +177,7 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
+        attemptCount,
       }}
     >
       {children}
