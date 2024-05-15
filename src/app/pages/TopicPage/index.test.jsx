@@ -41,6 +41,12 @@ const getOptionParams = ({
     ads: {
       enabled: adsToggledOn,
     },
+    radioSchedule: {
+      enabled: true,
+    },
+    mostRead: {
+      enabled: true,
+    },
   },
 });
 
@@ -299,7 +305,18 @@ describe('Topic Page', () => {
         getOptionParams({ service: 'persian' }),
       );
 
-      expect(getByTestId('radio-schedule').toBeInTheDocument());
+      expect(getByTestId('radio-schedule')).toBeInTheDocument();
+    });
+  });
+
+  describe('Embed', () => {
+    it('should render if there is a curation with embed data', () => {
+      const { getByTestId } = render(
+        <TopicPage pageData={persianAfghanistan} />,
+        getOptionParams({ service: 'persian' }),
+      );
+
+      expect(getByTestId('embed')).toBeInTheDocument();
     });
   });
 });
