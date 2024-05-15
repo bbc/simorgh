@@ -58,6 +58,7 @@ const FormField = ({
 
   if (!Component) return null;
 
+  // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
     <div css={styles.formField}>
       <Component

@@ -85,6 +85,7 @@ export const FormContextProvider = ({
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
       const currState = { ...prevState[name], value };
+      // As part of GEL guidelines, we should validate during user input, following an initial submit.
       const validateFunction = validateFunctions[currState.htmlType];
       const validatedData = validateFunction
         ? validateFunction(currState)
