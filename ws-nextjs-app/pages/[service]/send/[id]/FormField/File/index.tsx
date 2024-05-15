@@ -8,6 +8,7 @@ import {
 } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import Text from '#app/components/Text';
 import { InputProps } from '../../types';
 import { useFormContext } from '../../FormContext';
 import styles from './styles';
@@ -102,9 +103,9 @@ const FileList = ({ files, name }: FileListProps) => {
   });
   return (
     <>
-      <p css={styles.fileListParagraph}>
+      <Text as="p" fontVariant="sansRegular" size="bodyCopy">
         Here&apos;s what you&apos;re sending:
-      </p>
+      </Text>
       <ul css={styles.fileList}>{listItems}</ul>
     </>
   );

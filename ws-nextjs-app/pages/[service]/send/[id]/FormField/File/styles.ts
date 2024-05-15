@@ -13,7 +13,7 @@ export default {
     return css({
       padding: `${topBottomPadding} ${leftRightPadding} ${topBottomPadding} ${leftRightPadding}`,
       border: 'none',
-      backgroundColor: '#0071F1',
+      backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       color: palette.WHITE,
       cursor: 'pointer',
       ...fontVariants.sansBold,
@@ -38,11 +38,6 @@ export default {
       height: iconSize,
     });
   },
-  fileListParagraph: ({ fontVariants, fontSizes }: Theme) =>
-    css({
-      ...fontVariants.sansRegular,
-      ...fontSizes.bodyCopy,
-    }),
   fileList: () =>
     css({
       padding: '0',
