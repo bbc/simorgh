@@ -35,7 +35,7 @@ type ContextProps = {
   progress: string;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
