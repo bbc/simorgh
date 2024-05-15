@@ -1,7 +1,10 @@
 /* eslint-disable no-console */
 
 import React from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import {
+  renderHook,
+  act,
+} from '#app/components/react-testing-library-with-providers';
 
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -154,15 +157,12 @@ describe('Expected use', () => {
 
   it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', async () => {
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        toggles: {
-          eventTracking: {
-            enabled: false,
-          },
-        },
-      },
+      wrapper: props =>
+        wrapper({
+          ...props,
+          pageData: fixtureData,
+          toggles: { eventTracking: { enabled: false } },
+        }),
     });
     const element = document.createElement('div');
 
@@ -205,11 +205,8 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const element = document.createElement('div');
 
@@ -258,11 +255,8 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const elementA = document.createElement('div');
     const elementB = document.createElement('div');
@@ -297,11 +291,8 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const element = document.createElement('div');
 
@@ -329,18 +320,12 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result: resultA } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const { result: resultB } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const elementA = document.createElement('div');
     const elementB = document.createElement('div');
@@ -375,11 +360,8 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
 
     const element = document.createElement('div');
@@ -478,11 +460,8 @@ describe('Expected use', () => {
     } = fixtureData;
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
-      wrapper,
-      initialProps: {
-        pageData: fixtureData,
-        atiData: atiAnalytics,
-      },
+      wrapper: props =>
+        wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
     });
     const element = document.createElement('div');
 
@@ -536,11 +515,8 @@ describe('Expected use', () => {
     const { result } = renderHook(
       () => useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
       {
-        wrapper,
-        initialProps: {
-          pageData: fixtureData,
-          atiData: atiAnalytics,
-        },
+        wrapper: props =>
+          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
       },
     );
     const element = document.createElement('div');
@@ -589,11 +565,8 @@ describe('Expected use', () => {
     const { result } = renderHook(
       () => useViewTracker({ ...trackingData, ...mockOptimizely }),
       {
-        wrapper,
-        initialProps: {
-          pageData: fixtureData,
-          atiData: atiAnalytics,
-        },
+        wrapper: props =>
+          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
       },
     );
     const element = document.createElement('div');

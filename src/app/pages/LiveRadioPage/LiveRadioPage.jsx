@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, shape } from 'prop-types';
 import { Headline } from '#psammead/psammead-headings/src';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
@@ -137,20 +136,6 @@ const LiveRadioPage = ({ pageData }) => {
       )}
     </>
   );
-};
-
-LiveRadioPage.propTypes = {
-  pageData: shape({
-    metadata: shape({
-      type: string,
-    }),
-    language: string,
-    name: string,
-    summary: string,
-    heading: string,
-    bodySummary: string,
-    masterBrand: string,
-  }).isRequired,
 };
 
 export default LiveRadioPage;

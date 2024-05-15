@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -16,7 +15,6 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import mostReadShape from '../../components/MostRead/utilities/mostReadshape';
 import MostRead from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -86,10 +84,6 @@ const MostReadPage = ({ pageData }) => {
     </>
   );
 
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   const {
     metadata: { atiAnalytics },
   } = pageData;
@@ -118,7 +112,5 @@ const MostReadPage = ({ pageData }) => {
     </>
   );
 };
-MostReadPage.propTypes = {
-  pageData: mostReadShape.isRequired,
-};
+
 export default MostReadPage;

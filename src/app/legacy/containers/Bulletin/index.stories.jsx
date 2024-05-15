@@ -18,7 +18,6 @@ const noImageAudioFixture = dissocPath(['indexImage'], radioBulletinItem);
 const liveTvFixture = liveTvBulletinItem;
 const audioLiveFixture = liveRadioBulletinItem;
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, item }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"

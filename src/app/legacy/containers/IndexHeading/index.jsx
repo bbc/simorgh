@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { node } from 'prop-types';
 import IndexHeading from '#psammead/psammead-heading-index/src';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -32,7 +31,7 @@ const StyledIndexHeading = styled(IndexHeading)`
   }
 `;
 
-const IndexHeadingContainer = ({ children, ...props }) => {
+const IndexHeadingContainer = ({ children = null, ...props }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
@@ -40,14 +39,6 @@ const IndexHeadingContainer = ({ children, ...props }) => {
       {children}
     </StyledIndexHeading>
   );
-};
-
-IndexHeadingContainer.propTypes = {
-  children: node,
-};
-
-IndexHeadingContainer.defaultProps = {
-  children: null,
 };
 
 export default IndexHeadingContainer;

@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string, oneOf } from 'prop-types';
 
 import { GEL_BODY_COPY } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { textBlockPropTypes } from '#models/propTypes/text';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -22,7 +20,7 @@ const componentsToRender = {
   tableRow: CpsTableRow,
 };
 
-const CpsTable = ({ blocks, supportedServices }) => {
+const CpsTable = ({ blocks, supportedServices = ['sport'] }) => {
   const { service } = useContext(ServiceContext);
   if (!supportedServices.includes(service)) return null;
 
@@ -39,25 +37,6 @@ const CpsTable = ({ blocks, supportedServices }) => {
       </tbody>
     </StyledTable>
   );
-};
-
-CpsTable.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: oneOf(['tableHeaderRow', 'tableRow']),
-      blocks: arrayOf(
-        shape({
-          type: oneOf(['tableCell', 'tableHeader']),
-          blocks: arrayOf(textBlockPropTypes),
-        }),
-      ),
-    }),
-  ).isRequired,
-  supportedServices: arrayOf(string),
-};
-
-CpsTable.defaultProps = {
-  supportedServices: ['sport'],
 };
 
 export default CpsTable;

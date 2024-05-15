@@ -1,7 +1,5 @@
 import React from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
-import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   AmpDropdown,
@@ -60,14 +58,5 @@ const AmpNavigationContainer = ({
     </StyledAmpScrollableNavigation>
   </Navigation>
 );
-
-AmpNavigationContainer.propTypes = {
-  service: string.isRequired,
-  dir: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  scrollableListItems: node.isRequired,
-  dropdownListItems: node.isRequired,
-  menuAnnouncedText: string.isRequired,
-};
 
 export default AmpNavigationContainer;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Message from '../Message';
@@ -17,7 +16,7 @@ const AmpHead = () => (
 const AmpMediaPlayer = ({
   src,
   placeholderSrc,
-  placeholderSrcset,
+  placeholderSrcset = null,
   title,
   noJsMessage,
   service,
@@ -47,18 +46,6 @@ const AmpMediaPlayer = ({
       </amp-iframe>
     </>
   );
-};
-
-AmpMediaPlayer.propTypes = {
-  src: string.isRequired,
-  placeholderSrc: string.isRequired,
-  placeholderSrcset: string,
-  title: string.isRequired,
-  noJsMessage: string.isRequired,
-  service: string.isRequired,
-};
-AmpMediaPlayer.defaultProps = {
-  placeholderSrcset: null,
 };
 
 export default AmpMediaPlayer;

@@ -5,7 +5,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FooterTimestamp from '.';
 
-// eslint-disable-next-line react/prop-types
 const RenderTimestamp = ({ releaseDateTimeStamp }) => (
   <ServiceContextProvider service="afrique">
     <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />

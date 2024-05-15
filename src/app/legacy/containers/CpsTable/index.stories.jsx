@@ -7,7 +7,6 @@ import CpsTable from '.';
 import fixtures from './fixtures';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ fixture }) => (
   <ThemeProvider service="sport">
     <ServiceContext.Provider

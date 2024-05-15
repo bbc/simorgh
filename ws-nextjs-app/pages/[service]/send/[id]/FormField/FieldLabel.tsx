@@ -8,8 +8,15 @@ import styles from './styles';
 export default ({
   id,
   children,
-}: PropsWithChildren<{ id: InputProps['id'] }>) => (
-  <Text as="label" htmlFor={id} id={id} css={styles.fieldLabel}>
+  className,
+}: PropsWithChildren<{ id: InputProps['id']; className?: string }>) => (
+  <Text
+    as="label"
+    className={className}
+    htmlFor={id}
+    id={id}
+    css={styles.fieldLabel}
+  >
     {children}
   </Text>
 );

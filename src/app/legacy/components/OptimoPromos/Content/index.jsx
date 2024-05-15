@@ -1,12 +1,16 @@
 import React, { useContext } from 'react';
-import { string, bool } from 'prop-types';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoContext from '../PromoContext';
 
-const Content = ({ mediaDuration, headline, isPhotoGallery, isLive }) => {
+const Content = ({
+  mediaDuration = '',
+  headline,
+  isPhotoGallery = false,
+  isLive = false,
+}) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -57,18 +61,6 @@ const Content = ({ mediaDuration, headline, isPhotoGallery, isLive }) => {
       {offScreenDuration}
     </span>
   );
-};
-
-Content.propTypes = {
-  mediaDuration: string,
-  headline: string.isRequired,
-  isPhotoGallery: bool,
-  isLive: bool,
-};
-Content.defaultProps = {
-  mediaDuration: null,
-  isPhotoGallery: false,
-  isLive: false,
 };
 
 export default Content;

@@ -12,7 +12,7 @@ export default ({ service, pageType, variant, currentPath }) => {
   let otherVariant;
 
   describe(`Tests for ${service} ${pageType}`, () => {
-    beforeEach(async () => {
+    beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
       const env = Cypress.env('APP_ENV');
@@ -32,18 +32,19 @@ export default ({ service, pageType, variant, currentPath }) => {
           }
         }
         // Gets the topic page data for all the tests
-        const data = await cy.getPageDataFromWindow();
-        const { pageData } = data;
-        topicTitle = pageData.title;
-        variantTopicId = pageData.scriptSwitchId;
-        pageCount = pageData.pageCount;
-        numberOfItems = pageData.curations?.[0]?.summaries.length;
-        firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
-        messageBanner = pageData.curations?.find(
-          curation =>
-            curation.visualProminence === 'NORMAL' &&
-            curation.visualStyle === 'BANNER',
-        );
+        cy.getPageDataFromWindow().then(data => {
+          const { pageData } = data;
+          topicTitle = pageData.title;
+          variantTopicId = pageData.scriptSwitchId;
+          pageCount = pageData.pageCount;
+          numberOfItems = pageData.curations?.[0]?.summaries.length;
+          firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
+          messageBanner = pageData.curations?.find(
+            curation =>
+              curation.visualProminence === 'NORMAL' &&
+              curation.visualStyle === 'BANNER',
+          );
+        });
 
         cy.log(`topic id ${topicId}`);
       }

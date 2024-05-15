@@ -109,15 +109,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
                 loader: 'babel-loader',
                 options: {
                   presets: [],
-                  plugins: [
-                    [
-                      'transform-react-remove-prop-types',
-                      {
-                        mode: 'remove',
-                        removeImport: true,
-                      },
-                    ],
-                  ],
+                  plugins: [],
                 },
               },
             ],

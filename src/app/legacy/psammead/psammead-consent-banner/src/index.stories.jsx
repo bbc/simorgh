@@ -5,7 +5,6 @@ import {
   withServicesKnob,
   buildRTLSubstories,
 } from '#psammead/psammead-storybook-helpers/src';
-import { oneOf, string } from 'prop-types';
 import { ConsentBanner, ConsentBannerText } from '.';
 import notes from '../README.md';
 
@@ -19,7 +18,7 @@ const Reject = rejectText => (
   <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters">{rejectText}</a>
 );
 
-const Text = ({ dir, script, service, shortText, text }) => (
+const Text = ({ dir = 'ltr', script, service, shortText, text }) => (
   <ConsentBannerText dir={dir} script={script} service={service}>
     {`${text} `}
     <a href="https://www.bbc.com/news">{shortText}</a>
@@ -32,18 +31,6 @@ const NEWS_BODY_TEXT =
   "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.";
 const NEWS_ACCEPT_TEXT = 'OK';
 const NEWS_REJECT_TEXT = 'Find out what has changed';
-
-Text.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
-  script: string.isRequired,
-  service: string.isRequired,
-  shortText: string.isRequired,
-  text: string.isRequired,
-};
-
-Text.defaultProps = {
-  dir: 'ltr',
-};
 
 storiesOf(STORY_KIND, module)
   .addDecorator(withKnobs)

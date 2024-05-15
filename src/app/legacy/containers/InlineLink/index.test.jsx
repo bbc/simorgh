@@ -15,7 +15,6 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-// eslint-disable-next-line react/prop-types
 const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
   <StaticRouter>
     <InlineLinkContainer

@@ -11,7 +11,6 @@ import {
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import TopStories from '.';
 
-// eslint-disable-next-line react/prop-types
 const renderTopStories = ({
   content = topStories,
   bbcOrigin = 'https://www.test.bbc.co.uk',

@@ -12,16 +12,6 @@ if (process.env.NODE_ENV === 'test') {
   plugins.push('@babel/plugin-proposal-throw-expressions'); // allows `throw new Error();`
 }
 
-if (process.env.NODE_ENV === 'production') {
-  plugins.push([
-    'transform-react-remove-prop-types',
-    {
-      mode: 'remove',
-      removeImport: true,
-    },
-  ]);
-}
-
 const overrides = [
   {
     test: /.*logger\..*/,

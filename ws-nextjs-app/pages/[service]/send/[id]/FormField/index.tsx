@@ -10,7 +10,6 @@ import Checkbox from './Checkbox';
 import Telephone from './Telephone';
 import TextArea from './TextArea';
 import File from './File';
-import Label from './FieldLabel';
 import InvalidMessageBox from './InvalidMessageBox';
 
 const FormComponents: Record<
@@ -61,8 +60,8 @@ const FormField = ({
 
   return (
     <div css={styles.formField}>
-      <Label id={id}>{label}</Label>
       <Component
+        label={label}
         id={id}
         name={id}
         handleChange={handleChange}
