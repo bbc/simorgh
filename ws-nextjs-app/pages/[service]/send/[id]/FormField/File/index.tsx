@@ -7,8 +7,9 @@ import {
   useState,
 } from 'react';
 import { jsx } from '@emotion/react';
-import { InputProps } from '../types';
-import { useFormContext } from '../FormContext';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { InputProps } from '../../types';
+import { useFormContext } from '../../FormContext';
 import styles from './styles';
 
 const UploadSvg = () => (
@@ -52,7 +53,7 @@ interface FileListProps {
 
 const FileList = ({ files, name }: FileListProps) => {
   const { handleChange } = useFormContext();
-  const [thumbnailState, setThumbnailState] = useState<Blob[]>([]);
+  const [thumbnailState, setThumbnailState] = useState<string[]>([]);
 
   const handleFileDeletion = (fileIndex: number) => {
     const filesClone = [...files];
@@ -94,25 +95,34 @@ const FileList = ({ files, name }: FileListProps) => {
           }
         });
       }),
-    ).then(result => setThumbnailState(result as SetStateAction<Blob[]>));
+    ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 
   const listItems = files.map((file: File, index: number) => {
     const key = `${index}-${file.name}`;
     const thumbnailSrc = thumbnailState[index];
+    const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');
+    const ariaDescribedById = `file-list-item-${index}`;
 
     return (
       <li css={styles.fileListItem} key={key}>
         <div css={styles.fileThumbnailContainer}>
-          <img src={`${thumbnailSrc}`} alt="" />
+          <img
+            css={
+              isThumbnailSvg ? styles.fileThumbnailSvg : styles.fileThumbnailImg
+            }
+            src={`${thumbnailSrc}`}
+            alt=""
+          />
         </div>
-        <span>{file.name}</span>
+        <span id={ariaDescribedById}>{file.name}</span>
         <button
           type="button"
-          aria-label={`Remove ${file.name}`}
+          aria-describedby={ariaDescribedById}
           onClick={() => handleFileDeletion(index)}
         >
           <DeleteSvg />
+          <VisuallyHiddenText>Remove</VisuallyHiddenText>
         </button>
       </li>
     );
