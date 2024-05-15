@@ -214,6 +214,18 @@
             "duration": "PT29M30S"
           }
         ]
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:b9b4842d-b1a7-4ada-a14d-52b76c43862f",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "VJ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "link": "https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed",
+        "embed": {
+          "html": "<div>hello world</div>"
+        }
       }
     ],
     "activePage": 1,
