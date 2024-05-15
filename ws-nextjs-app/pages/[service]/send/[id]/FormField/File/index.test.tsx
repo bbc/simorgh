@@ -34,6 +34,7 @@ describe('File', () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
+
   it('should visually hide the original input with type=file', async () => {
     const { container } = await act(async () => {
       return render(
@@ -155,6 +156,7 @@ describe('File', () => {
 
     expect(contextValue.handleChange).toHaveBeenCalledWith('bar', []);
   });
+
   it('should remove the file thumbnail from state when the remove button is pressed', async () => {
     const user = userEvent.setup();
     const contextValue = { handleChange: jest.fn() };
@@ -183,6 +185,7 @@ describe('File', () => {
       ),
     );
   });
+
   it('should display an image thumbnail when an image file type is added', async () => {
     await act(async () => {
       render(
