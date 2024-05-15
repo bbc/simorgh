@@ -11,7 +11,7 @@ export default ({
   inputState,
   describedBy,
   label,
-  submitAttemptCount,
+  hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState;
   return (
@@ -24,12 +24,11 @@ export default ({
         type="tel"
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
-        {...(submitAttemptCount > 0 &&
-          wasInvalid && { 'aria-invalid': !isValid })}
-        {...(submitAttemptCount > 0 &&
-          required && { 'aria-required': required })}
-        {...(submitAttemptCount > 0 &&
-          !isValid && { 'aria-describedby': describedBy })}
+        {...(hasAttemptedSubmit && {
+          ...(wasInvalid && { 'aria-invalid': !isValid }),
+          ...(required && { 'aria-required': required }),
+          ...(!isValid && { 'aria-describedby': describedBy }),
+        })}
       />
     </>
   );

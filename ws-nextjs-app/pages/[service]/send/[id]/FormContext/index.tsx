@@ -32,7 +32,7 @@ export type ContextProps = {
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
-  attemptCount: number;
+  hasAttemptedSubmit: boolean;
   progress: string;
 };
 
@@ -80,7 +80,7 @@ export const FormContextProvider = ({
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
-  const [attemptCount, setAttemptCount] = useState(0);
+  const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
@@ -98,7 +98,7 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
-    setAttemptCount(currCount => currCount + 1);
+    setAttemptedSubmit(true);
 
     // Reset error state
     setSubmissionError(null);
@@ -177,7 +177,7 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
-        attemptCount,
+        hasAttemptedSubmit,
       }}
     >
       {children}

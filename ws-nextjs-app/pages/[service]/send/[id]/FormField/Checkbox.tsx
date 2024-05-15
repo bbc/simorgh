@@ -11,7 +11,7 @@ export default ({
   inputState,
   describedBy,
   label,
-  submitAttemptCount,
+  hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = false, required, wasInvalid } = inputState;
 
@@ -24,11 +24,11 @@ export default ({
         type="checkbox"
         checked={value as boolean}
         onChange={e => handleChange(e.target.name, e.target.checked)}
-        {...(submitAttemptCount > 0 &&
-          wasInvalid && { 'aria-invalid': !isValid })}
+        {...(hasAttemptedSubmit && {
+          ...(wasInvalid && { 'aria-invalid': !isValid }),
+          ...(!isValid && { 'aria-describedby': describedBy }),
+        })}
         {...(required && { 'aria-required': required })}
-        {...(submitAttemptCount > 0 &&
-          !isValid && { 'aria-describedby': describedBy })}
       />
       <Label id={id} css={[styles.checkboxLabel]}>
         {label}

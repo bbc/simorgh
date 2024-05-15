@@ -170,28 +170,28 @@ describe('FormField', () => {
 
   it.each([
     {
-      attemptCount: 1,
+      hasAttemptedSubmit: true,
       required: true,
       isValid: false,
       wasInvalid: true,
       expectedAria: '[aria-invalid=true][aria-required=true]',
     },
     {
-      attemptCount: 1,
+      hasAttemptedSubmit: true,
       required: false,
       isValid: false,
       wasInvalid: true,
       expectedAria: '[aria-invalid=true]',
     },
     {
-      attemptCount: 1,
+      hasAttemptedSubmit: true,
       required: false,
       isValid: true,
       wasInvalid: true,
       expectedAria: '[aria-invalid=false]',
     },
     {
-      attemptCount: 0,
+      hasAttemptedSubmit: false,
       required: true,
       isValid: true,
       wasInvalid: false,
@@ -199,7 +199,13 @@ describe('FormField', () => {
     },
   ])(
     `should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`,
-    async ({ attemptCount, required, isValid, expectedAria, wasInvalid }) => {
+    async ({
+      hasAttemptedSubmit,
+      required,
+      isValid,
+      expectedAria,
+      wasInvalid,
+    }) => {
       const mockFormState = {
         testAllyID: {
           isValid,
@@ -216,7 +222,7 @@ describe('FormField', () => {
           ({
             formState: mockFormState,
             handleChange: () => null,
-            attemptCount,
+            hasAttemptedSubmit,
           }) as unknown as ContextProps,
       );
 

@@ -29,7 +29,7 @@ export type InputProps = {
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
   describedBy: string;
-  submitAttemptCount: number;
+  hasAttemptedSubmit: boolean;
 };
 
 export type InvalidMessageBoxProps = {
