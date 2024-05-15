@@ -91,7 +91,7 @@ export default {
       padding: '0',
       margin: '0',
     }),
-  fileListItem: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
+  fileListItem: ({ spacings, palette, fontVariants, fontSizes, mq }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -100,6 +100,9 @@ export default {
       paddingBlock: `${pixelsToRem(13)}rem`,
       paddingInlineEnd: `${pixelsToRem(17)}rem`,
       height: `${spacings.QUADRUPLE * 2}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '85%',
+      },
       span: {
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
@@ -128,20 +131,23 @@ export default {
         },
       },
     }),
-  fileThumbnailContainer: ({ spacings }: Theme) => {
-    const imgSize = `${spacings.QUADRUPLE * 2}rem`;
-
-    return css({
+  fileThumbnailContainer: ({ spacings }: Theme) =>
+    css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      width: imgSize,
-      height: imgSize,
+      width: `${spacings.QUADRUPLE * 2}rem`,
+      height: `${spacings.QUADRUPLE * 2}rem`,
       marginInlineEnd: `${spacings.DOUBLE}rem`,
-      img: {
-        maxWidth: imgSize,
-        maxHeight: imgSize,
-      },
-    });
-  },
+    }),
+  fileThumbnailImg: ({ spacings }: Theme) =>
+    css({
+      maxWidth: `${spacings.QUADRUPLE * 2}rem`,
+      maxHeight: `${spacings.QUADRUPLE * 2}rem`,
+    }),
+  fileThumbnailSvg: ({ spacings }: Theme) =>
+    css({
+      width: `${spacings.QUADRUPLE}rem`,
+      height: `${spacings.QUADRUPLE}rem`,
+    }),
 };
