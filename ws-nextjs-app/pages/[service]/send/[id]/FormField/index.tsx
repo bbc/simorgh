@@ -69,7 +69,7 @@ const FormField = ({
         describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
-      {!isValid && (
+      {hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
           id={ariaErrorDescribedById}
           messageCode={messageCode}
