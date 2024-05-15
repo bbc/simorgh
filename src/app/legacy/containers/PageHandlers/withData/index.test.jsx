@@ -7,7 +7,6 @@ import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import WithData from '.';
 import { render } from '../../../../components/react-testing-library-with-providers';
 
-// eslint-disable-next-line react/prop-types
 jest.mock('#pages/ErrorPage/ErrorPage', () => ({ errorCode }) => (
   <h1>This is a {errorCode} error.</h1>
 ));

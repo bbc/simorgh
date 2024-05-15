@@ -1,5 +1,4 @@
 import React from 'react';
-import { node, string, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -19,7 +18,7 @@ const ContextWrap = ({
   origin,
   children,
   comscoreAnalyticsToggle,
-  personalisation,
+  personalisation = defaultPersonalisation,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -47,19 +46,6 @@ const ContextWrap = ({
     </ServiceContextProvider>
   </RequestContextProvider>
 );
-
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  origin: string.isRequired,
-  platform: string.isRequired,
-  comscoreAnalyticsToggle: bool.isRequired,
-  personalisation: shape({}),
-};
-
-ContextWrap.defaultProps = {
-  personalisation: defaultPersonalisation,
-};
 
 describe('Comscore Analytics Container', () => {
   describe('AMP', () => {

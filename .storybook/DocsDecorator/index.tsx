@@ -29,7 +29,7 @@ const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
       <ThemeProvider service="news" variant="default">
         {isDocsPage && <Title />}
         {hasHealthFactors && <HealthFactors metadata={metadata} />}
-        {hasReadmeFile && <Markdown>{docs.readme!}</Markdown>}
+        {hasReadmeFile && <Markdown>{docs.readme}</Markdown>}
       </ThemeProvider>
       {!isDocsPage && children}
     </DocsContainer>

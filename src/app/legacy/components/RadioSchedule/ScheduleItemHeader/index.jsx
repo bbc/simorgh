@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import { oneOfType, elementType, string, number } from 'prop-types';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import LiveLabel from '#app/components/LiveLabel';
@@ -43,16 +42,21 @@ const NextLabel = styled.span`
       ? `margin-left: ${GEL_SPACING};`
       : `margin-right: ${GEL_SPACING};`}
 `;
+
 const ScheduleItemHeader = ({
   state,
   link,
   brandTitle,
   startTime,
   duration,
-  id,
+  id = '1',
   ...props
 }) => {
-  const { linkComponent, linkComponentAttr, durationLabel } = props;
+  const {
+    linkComponent = 'a',
+    linkComponentAttr = 'href',
+    durationLabel,
+  } = props;
   const { script, locale, service, timezone, dir, translations } =
     useContext(ServiceContext);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
@@ -147,20 +151,5 @@ const ScheduleItemHeader = ({
     </StyledLink>
   );
 };
-ScheduleItemHeader.propTypes = {
-  brandTitle: string.isRequired,
-  link: string.isRequired,
-  state: string.isRequired,
-  startTime: oneOfType([number, string]).isRequired,
-  durationLabel: string.isRequired,
-  duration: string.isRequired,
-  id: string,
-  linkComponent: oneOfType([elementType, string]),
-  linkComponentAttr: string,
-};
-ScheduleItemHeader.defaultProps = {
-  linkComponent: 'a',
-  linkComponentAttr: 'href',
-  id: '1',
-};
+
 export default ScheduleItemHeader;

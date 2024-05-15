@@ -31,7 +31,6 @@ const matchFixtures = service => ({
   },
 });
 
-// eslint-disable-next-line react/prop-types
 const Component = (_, { service }) => {
   return (
     <BrowserRouter>
@@ -57,6 +56,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
       delay: 8000,
+      pauseAnimationAtEnd: false
     },
   },
   decorators: [withServicesDecorator({ defaultService: 'indonesia' })],

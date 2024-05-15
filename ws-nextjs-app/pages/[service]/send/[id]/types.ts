@@ -25,6 +25,7 @@ export type OnChangeHandler = (
 export type InputProps = {
   id: string;
   name: string;
+  label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
   describedBy: string;
@@ -92,6 +93,11 @@ export type PageProps = {
     title: string;
     description: string;
     sections: Section[];
+    privacyNotice: {
+      default: string;
+      url: string;
+      additional: string;
+    };
   };
 };
 

@@ -21,7 +21,6 @@ import ThemeProvider from '../../components/ThemeProvider';
 
 const TopicPage = withPageWrapper(Page);
 
-// eslint-disable-next-line react/prop-types
 const Component = ({
   service,
   variant = 'default',

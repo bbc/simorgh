@@ -10,7 +10,6 @@ import newsMultipleItems from './newsFixture';
 import CpsRecommendations from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ items, service, dir }) => {
   const toggleState = {
     cpsRecommendations: {

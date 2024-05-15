@@ -1,6 +1,4 @@
-/* eslint react/prop-types: 0 */
 import React from 'react';
-import { bool } from 'prop-types';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
@@ -71,7 +69,7 @@ const AmpImgMediaQueries = ({ darkPlaceholder }) => {
   );
 };
 
-const ImagePlaceholderAmp = ({ darkPlaceholder }) => {
+const ImagePlaceholderAmp = ({ darkPlaceholder = false }) => {
   return (
     <>
       <AmpImgPlaceholderContainer
@@ -85,14 +83,6 @@ const ImagePlaceholderAmp = ({ darkPlaceholder }) => {
       </AmpImgPlaceholderContainer>
     </>
   );
-};
-
-ImagePlaceholderAmp.propTypes = {
-  darkPlaceholder: bool,
-};
-
-ImagePlaceholderAmp.defaultProps = {
-  darkPlaceholder: false,
 };
 
 export default ImagePlaceholderAmp;

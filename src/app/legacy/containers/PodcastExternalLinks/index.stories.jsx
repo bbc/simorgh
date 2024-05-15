@@ -2,7 +2,6 @@ import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import PodcastExternalLinkComponent from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = () => (
   <ToggleContextProvider
     toggles={{

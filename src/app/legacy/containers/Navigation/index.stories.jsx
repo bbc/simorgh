@@ -4,7 +4,6 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service }) => (
   <RequestContextProvider
     isAmp={isAmp}

@@ -756,7 +756,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
             De one we dem don look
           </h1>
           <div
-            class=" emotion-10 emotion-11 emotion-12"
+            class="emotion-10 emotion-11 emotion-12"
             data-e2e="most-watched-heading"
           >
             <ol

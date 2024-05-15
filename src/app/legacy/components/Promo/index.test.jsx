@@ -7,7 +7,6 @@ import {
 
 import Promo from '.';
 
-// eslint-disable-next-line react/prop-types
 const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   <Promo>
     <Promo.Image
@@ -23,7 +22,6 @@ const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   </Promo>
 );
 
-// eslint-disable-next-line react/prop-types
 const FixtureProgrammes = ({ useLargeImages = false }) => (
   <Promo>
     <Promo.Image
