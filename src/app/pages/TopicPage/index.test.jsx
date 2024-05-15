@@ -44,9 +44,6 @@ const getOptionParams = ({
     radioSchedule: {
       enabled: true,
     },
-    mostRead: {
-      enabled: true,
-    },
   },
 });
 
