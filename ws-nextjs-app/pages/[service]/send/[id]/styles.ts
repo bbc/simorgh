@@ -37,6 +37,12 @@ export default {
         width: '35rem',
       },
     }),
+  heading: () =>
+    css({
+      '&:focus': {
+        outline: 'none',
+      },
+    }),
   description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,

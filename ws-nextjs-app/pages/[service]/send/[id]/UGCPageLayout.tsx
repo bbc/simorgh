@@ -29,7 +29,12 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         <div css={styles.grid}>
           <div css={styles.primaryColumn}>
             <main css={styles.mainContent}>
-              <Heading level={1} id="content" tabIndex={-1}>
+              <Heading
+                level={1}
+                id="content"
+                tabIndex={-1}
+                css={styles.heading}
+              >
                 {title}
               </Heading>
               <div
