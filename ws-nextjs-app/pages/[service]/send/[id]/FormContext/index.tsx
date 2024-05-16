@@ -26,6 +26,8 @@ type SubmissionError = {
   isRecoverable?: boolean;
 } | null;
 
+type Screen = 'form' | 'uploading' | 'success' | 'error';
+
 export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
@@ -34,9 +36,10 @@ export type ContextProps = {
   submitted: boolean;
   hasAttemptedSubmit: boolean;
   progress: string;
+  screen: Screen;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
@@ -79,6 +82,9 @@ export const FormContextProvider = ({
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
+  // TODO: Remove lint disable once screen state switching is used
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [screen, _setScreen] = useState<Screen>('form');
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
 
@@ -179,6 +185,7 @@ export const FormContextProvider = ({
         submitted,
         progress,
         hasAttemptedSubmit,
+        screen,
       }}
     >
       {children}

@@ -37,23 +37,4 @@ export default {
         width: '35rem',
       },
     }),
-  heading: () =>
-    css({
-      '&:focus': {
-        outline: 'none',
-      },
-    }),
-  description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
-    css({
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
-      marginBottom: `${spacings.DOUBLE}rem`,
-
-      ...fontVariants.sansRegular,
-      ...fontSizes.bodyCopy,
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        paddingBottom: `${spacings.FULL}rem`,
-        marginBottom: `${spacings.TRIPLE}rem`,
-      },
-    }),
 };

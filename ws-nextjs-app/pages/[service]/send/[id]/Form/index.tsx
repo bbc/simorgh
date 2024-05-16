@@ -9,13 +9,21 @@ import styles from './styles';
 import Submit from '../SubmitButton';
 import Loader from '../Loader';
 
-export default function Form({
-  fields,
-  privacyNotice,
-}: {
+type Props = {
+  title: string;
+  sectionTitle: string;
+  description: string;
   fields: Field[];
   privacyNotice: string;
-}) {
+};
+
+export default function Form({
+  title,
+  sectionTitle,
+  description,
+  fields,
+  privacyNotice,
+}: Props) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
 
   const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
@@ -31,6 +39,17 @@ export default function Form({
 
   return (
     <>
+      <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+        {title}
+      </Heading>
+      <div
+        // TODO: This is a security risk, we should sanitize the HTML
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: description }}
+        css={styles.description}
+      />
+      <Heading level={2}>{sectionTitle}</Heading>
+
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
 
