@@ -1,10 +1,14 @@
 import { FieldData, InvalidMessageCodes } from '../../types';
 
+const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
+  return wasInvalid || !isValid;
+};
+
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;
 
 const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value } = data;
+  const { required, value, wasInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -15,11 +19,18 @@ const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasInvalid: wasInvalidUpdate,
+  };
 };
 
 const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value } = data;
+  const { required, value, wasInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -38,11 +49,18 @@ const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasInvalid: wasInvalidUpdate,
+  };
 };
 
 const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value = false } = data;
+  const { required, value = false, wasInvalid } = data;
   let messageCode = null;
 
   let isValid = true;
@@ -51,11 +69,18 @@ const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasInvalid: wasInvalidUpdate,
+  };
 };
 
 const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { required, value = '' } = data;
+  const { required, value = '', wasInvalid } = data;
 
   let messageCode = null;
   let isValid = true;
@@ -73,7 +98,14 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
     isValid = false;
   }
 
-  return { ...data, isValid, messageCode };
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return {
+    ...data,
+    isValid,
+    messageCode,
+    wasInvalid: wasInvalidUpdate,
+  };
 };
 
 const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
