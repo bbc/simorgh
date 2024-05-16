@@ -28,31 +28,12 @@ export type FormComponentProps = {
   id: string;
   htmlType: HtmlType;
   label: string;
-  type?: string;
-  textArea?: boolean;
 };
 
-const FormField = ({
-  id,
-  type,
-  htmlType,
-  label,
-  textArea,
-}: FormComponentProps) => {
-  // TODO: Don't like this but needed atm since 'file' and 'textarea' aren't returned as 'htmlType' from the API
-  // should probably do this in back-end
-  let derivedHtmlType = htmlType;
+const FormField = ({ id, htmlType, label }: FormComponentProps) => {
   const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
 
-  if (textArea) {
-    derivedHtmlType = 'textarea';
-  }
-
-  if (type === 'file') {
-    derivedHtmlType = 'file';
-  }
-
-  const Component = FormComponents[derivedHtmlType];
+  const Component = FormComponents[htmlType];
   const { isValid, messageCode } = formState[id];
   const ariaErrorDescribedById = `${id}-error`;
 

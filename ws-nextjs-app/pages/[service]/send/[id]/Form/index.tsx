@@ -26,15 +26,8 @@ export default function Form({
 }: Props) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
 
-  const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
-    <FormField
-      key={id}
-      id={id}
-      label={label}
-      type={type}
-      htmlType={htmlType}
-      textArea={textArea}
-    />
+  const formFields = fields?.map(({ id, label, htmlType }) => (
+    <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
 
   return (
@@ -43,7 +36,6 @@ export default function Form({
         {title}
       </Heading>
       <div
-        // TODO: This is a security risk, we should sanitize the HTML
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: description }}
         css={styles.description}
@@ -60,7 +52,6 @@ export default function Form({
           Our data policy
         </Heading>
         <div
-          // TODO: This is a security risk, we should sanitize the HTML
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: privacyNotice }}
           css={styles.privacyNotice}
