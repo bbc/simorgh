@@ -11,8 +11,9 @@ export default ({
   inputState,
   describedBy,
   label,
+  hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = '', required } = inputState;
+  const { isValid, value = '', required, wasInvalid } = inputState;
   return (
     <>
       <Label id={id}>{label}</Label>
@@ -23,9 +24,11 @@ export default ({
         type="email"
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...(hasAttemptedSubmit && {
+          ...(wasInvalid && { 'aria-invalid': !isValid }),
+          ...(required && { 'aria-required': required }),
+          ...(!isValid && { 'aria-describedby': describedBy }),
+        })}
       />
     </>
   );

@@ -28,6 +28,7 @@ export type InputProps = {
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
   describedBy: string;
+  hasAttemptedSubmit: boolean;
 };
 
 export type InvalidMessageBoxProps = {
@@ -85,6 +86,7 @@ export type FieldData = {
   value: OnChangeInputValue;
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
+  wasInvalid: boolean;
 };
 
 export type PageProps = {
