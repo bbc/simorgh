@@ -2,10 +2,6 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 export default {
-  fileLabel: () =>
-    css({
-      width: '100%',
-    }),
   fileInput: () =>
     css({
       display: 'none',
@@ -15,6 +11,7 @@ export default {
     const leftRightPadding = `${spacings.DOUBLE}rem`;
 
     return css({
+      display: 'block',
       padding: `${topBottomPadding} ${leftRightPadding} ${topBottomPadding} ${leftRightPadding}`,
       border: 'none',
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
