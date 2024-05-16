@@ -9,7 +9,7 @@ import { FormContext, FormContextProvider } from './FormContext';
 import Form from './Form';
 import Uploading from './Uploading';
 
-const UGCPageLayout = ({ pageData }: PageProps) => {
+const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
@@ -29,7 +29,7 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent}>
-            <FormContextProvider fields={fields}>
+            <FormContextProvider initialScreen={initialScreen} fields={fields}>
               <FormContext.Consumer>
                 {({ screen }) => {
                   switch (screen) {
