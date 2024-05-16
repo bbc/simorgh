@@ -33,11 +33,11 @@ export type FormComponentProps = {
 const FormField = ({ id, htmlType, label }: FormComponentProps) => {
   const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
 
-  const Component = FormComponents[htmlType];
-  const { isValid, messageCode } = formState[id];
-  const ariaErrorDescribedById = `${id}-error`;
-
+  const Component = FormComponents?.[htmlType];
   if (!Component) return null;
+
+  const { isValid, messageCode } = formState?.[id] ?? {};
+  const ariaErrorDescribedById = `${id}-error`;
 
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
@@ -47,7 +47,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         id={id}
         name={id}
         handleChange={handleChange}
-        inputState={formState[id]}
+        inputState={formState?.[id]}
         describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
