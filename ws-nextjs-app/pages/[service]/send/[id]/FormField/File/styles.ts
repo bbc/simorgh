@@ -2,6 +2,10 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 export default {
+  fileLabel: () =>
+    css({
+      width: '100%',
+    }),
   fileInput: () =>
     css({
       display: 'none',

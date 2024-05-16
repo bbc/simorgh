@@ -9,6 +9,7 @@ import {
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Text from '#app/components/Text';
+import Label from '../FieldLabel';
 import { InputProps } from '../../types';
 import { useFormContext } from '../../FormContext';
 import styles from './styles';
@@ -111,7 +112,7 @@ const FileList = ({ files, name }: FileListProps) => {
   );
 };
 
-export default ({ id, name, inputState, describedBy }: InputProps) => {
+export default ({ id, name, inputState, describedBy, label }: InputProps) => {
   const { isValid, required } = inputState;
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -139,11 +140,15 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
 
   const fileArrayLength = filesInState.length;
   const hasFiles = fileArrayLength !== 0;
+  const labelId = `${id}-label`;
 
   return (
-    <div>
+    <>
+      <Label id={labelId} css={styles.fileLabel}>
+        {label}
+      </Label>
       <button
-        aria-describedby={name}
+        aria-describedby={labelId}
         css={styles.fileUploadButton}
         type="button"
         onClick={() => handleUploadClick()}
@@ -164,6 +169,6 @@ export default ({ id, name, inputState, describedBy }: InputProps) => {
         css={styles.fileInput}
       />
       {hasFiles && <FileList files={filesInState} name={name} />}
-    </div>
+    </>
   );
 };
