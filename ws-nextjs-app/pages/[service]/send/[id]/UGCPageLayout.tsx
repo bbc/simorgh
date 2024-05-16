@@ -25,34 +25,33 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.background}>
-        <div css={styles.grid}>
-          <div css={styles.primaryColumn}>
-            <main css={styles.mainContent}>
-              <FormContextProvider fields={fields}>
-                <FormContext.Consumer>
-                  {({ screen }) => {
-                    switch (screen) {
-                      case 'form':
-                        return (
-                          <Form
-                            title={title}
-                            description={description}
-                            sectionTitle={sectionTitle}
-                            privacyNotice={privacyNotice?.default}
-                            fields={fields}
-                          />
-                        );
-                      case 'uploading':
-                        return <Uploading />;
-                      default:
-                        return null;
-                    }
-                  }}
-                </FormContext.Consumer>
-              </FormContextProvider>
-            </main>
-          </div>
+      <div css={styles.background} />
+      <div css={styles.grid}>
+        <div css={styles.primaryColumn}>
+          <main css={styles.mainContent}>
+            <FormContextProvider fields={fields}>
+              <FormContext.Consumer>
+                {({ screen }) => {
+                  switch (screen) {
+                    case 'form':
+                      return (
+                        <Form
+                          title={title}
+                          description={description}
+                          sectionTitle={sectionTitle}
+                          privacyNotice={privacyNotice?.default}
+                          fields={fields}
+                        />
+                      );
+                    case 'uploading':
+                      return <Uploading />;
+                    default:
+                      return null;
+                  }
+                }}
+              </FormContext.Consumer>
+            </FormContextProvider>
+          </main>
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ export default function Uploading() {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         Uploading
       </Heading>
-      <Paragraph>Please wait while we upload your files.</Paragraph>
+      <Paragraph>Please wait until it is finished.</Paragraph>
     </>
   );
 }
