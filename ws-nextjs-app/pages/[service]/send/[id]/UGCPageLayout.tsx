@@ -45,8 +45,11 @@ const UGCPageLayout = ({ pageData }: PageProps) => {
                       );
                     case 'uploading':
                       return <Uploading />;
+                    case 'success':
+                      return <div>Success</div>;
+                    case 'error':
                     default:
-                      return null;
+                      return <div>Error</div>;
                   }
                 }}
               </FormContext.Consumer>
