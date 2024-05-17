@@ -42,7 +42,7 @@ const FormField = ({
   // TODO: Don't like this but needed atm since 'file' and 'textarea' aren't returned as 'htmlType' from the API
   // should probably do this in back-end
   let derivedHtmlType = htmlType;
-  const { handleChange, formState } = useFormContext();
+  const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
 
   if (textArea) {
     derivedHtmlType = 'textarea';
@@ -58,6 +58,7 @@ const FormField = ({
 
   if (!Component) return null;
 
+  // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
     <div css={styles.formField}>
       <Component
@@ -67,8 +68,9 @@ const FormField = ({
         handleChange={handleChange}
         inputState={formState[id]}
         describedBy={ariaErrorDescribedById}
+        hasAttemptedSubmit={hasAttemptedSubmit}
       />
-      {!isValid && (
+      {hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
           id={ariaErrorDescribedById}
           messageCode={messageCode}
