@@ -1,5 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import Paragraph from '#app/components/Paragraph';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
@@ -15,10 +17,19 @@ export default ({
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState;
   const translation = 'Maximum 500 Words';
+
   return (
     <>
-      <Label id={id}>{label}</Label>
-      <p css={styles.textAreaLabel}>{translation}</p>
+      <Label id={id} withPTag>
+        {label}
+      </Label>
+      <Paragraph
+        css={() => `margin: ${pixelsToRem(6)}rem 0`}
+        fontVariant="sansRegular"
+        size="brevier"
+      >
+        {translation}
+      </Paragraph>
       <textarea
         id={id}
         css={[styles.textField, styles.textArea, styles.focusIndicator]}

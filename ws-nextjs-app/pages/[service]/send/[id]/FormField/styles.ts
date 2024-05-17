@@ -19,14 +19,10 @@ export default {
           marginBottom: `${spacings.TRIPLE}rem`,
         },
       },
-      '&:nth-of-type(5) label': {
-        marginBottom: '0',
-      },
     }),
-  fieldLabel: ({ spacings }: Theme) =>
+  fieldLabel: () =>
     css({
       display: 'inline-block',
-      marginBottom: `${spacings.FULL}rem`,
     }),
   focusIndicator: ({ palette }: Theme) =>
     css({
@@ -56,12 +52,6 @@ export default {
     css({
       resize: 'none',
     }),
-  textAreaLabel: ({ fontSizes, fontVariants }: Theme) =>
-    css({
-      ...fontSizes.brevier,
-      ...fontVariants.sansRegular,
-      margin: ` ${pixelsToRem(6)}rem 0`,
-    }),
   checkboxLabel: ({ spacings }: Theme) =>
     css({
       flex: 'auto',
@@ -73,8 +63,8 @@ export default {
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,
-      width: '1.875rem',
-      height: '1.875rem',
+      width: `${pixelsToRem(30)}rem`,
+      height: `${pixelsToRem(30)}rem`,
       cursor: 'pointer',
       boxSizing: 'border-box',
       border: `solid 0.0625rem ${palette.GREY_10}`,
