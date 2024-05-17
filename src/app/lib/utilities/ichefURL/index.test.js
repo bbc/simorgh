@@ -104,7 +104,7 @@ describe('getIchefURL', () => {
     const originCode = 'mpv';
     const resolution = '512';
     const expectedOutput =
-      'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg';
+      'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp';
 
     expect(getIChefURL({ locator, originCode, resolution })).toEqual(
       expectedOutput,
@@ -121,7 +121,7 @@ describe('getIchefURL', () => {
     'returns a placeholder image if no image src provided and origin code is %s',
     originCode => {
       expect(getIChefURL({ resolution: 512, originCode })).toEqual(
-        'https://ichef.bbci.co.uk/images/ic/512xn/p0b36kgx.png',
+        'https://ichef.bbci.co.uk/images/ic/512xn/p0b36kgx.png.webp',
       );
     },
   );

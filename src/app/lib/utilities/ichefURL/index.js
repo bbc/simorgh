@@ -31,14 +31,9 @@ const buildPlaceholderSrc = (src, resolution) => {
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
+  const webpImgUrl = `${remainingUrlPartsWithoutResolution}.webp`;
   const newResolution = `${resolution}xn`;
-  const newUrl = [
-    domain,
-    mediaType,
-    imgService,
-    newResolution,
-    ...remainingUrlPartsWithoutResolution,
-  ];
+  const newUrl = [domain, mediaType, imgService, newResolution, webpImgUrl];
   return `https://${newUrl.join('/')}`;
 };
 
