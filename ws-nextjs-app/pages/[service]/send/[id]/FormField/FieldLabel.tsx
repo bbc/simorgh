@@ -9,32 +9,22 @@ export default ({
   id,
   children,
   className,
-  isCheckbox,
   withPTag,
 }: PropsWithChildren<{
   id: InputProps['id'];
   className?: string;
-  isCheckbox?: boolean;
   withPTag?: boolean;
-}>) => {
-  return isCheckbox ? (
-    <Text as="label" className={className} htmlFor={id} css={styles.fieldLabel}>
-      {children}
-    </Text>
-  ) : (
-    <div>
-      <Text
-        as="label"
-        className={className}
-        htmlFor={id}
-        css={({ spacings }: Theme) =>
-          withPTag
-            ? styles.fieldLabel
-            : [styles.fieldLabel, `marginBottom: ${spacings.FULL}rem`]
-        }
-      >
-        {children}
-      </Text>
-    </div>
-  );
-};
+}>) => (
+  <Text
+    as="label"
+    className={className}
+    htmlFor={id}
+    css={({ spacings }: Theme) =>
+      withPTag
+        ? styles.fieldLabel
+        : [styles.fieldLabel, `marginBottom: ${spacings.FULL}rem`]
+    }
+  >
+    {children}
+  </Text>
+);

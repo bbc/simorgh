@@ -77,6 +77,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   font-style: normal;
   font-weight: 400;
   display: inline-block;
+  marginBottom: 0.5rem;
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
@@ -203,21 +204,21 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
+    <label
+      class="emotion-1"
+      for="testTelID"
+    >
+      This is a text field
+    </label>
     <div>
-      <label
-        class="emotion-1"
-        for="testTelID"
-      >
-        This is a text field
-      </label>
+      <input
+        class="emotion-2"
+        id="testTelID"
+        name="testTelID"
+        type="tel"
+        value=""
+      />
     </div>
-    <input
-      class="emotion-2"
-      id="testTelID"
-      name="testTelID"
-      type="tel"
-      value=""
-    />
   </div>
 </div>
 `;
@@ -302,21 +303,21 @@ exports[`FormField should render a text input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
+    <label
+      class="emotion-1"
+      for="testTextID"
+    >
+      This is a text field
+    </label>
     <div>
-      <label
-        class="emotion-1"
-        for="testTextID"
-      >
-        This is a text field
-      </label>
+      <input
+        class="emotion-2"
+        id="testTextID"
+        name="testTextID"
+        type="text"
+        value=""
+      />
     </div>
-    <input
-      class="emotion-2"
-      id="testTextID"
-      name="testTextID"
-      type="text"
-      value=""
-    />
   </div>
 </div>
 `;
@@ -426,14 +427,12 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   <div
     class="emotion-0"
   >
-    <div>
-      <label
-        class="emotion-1"
-        for="testTextAreaID"
-      >
-        This is a text field
-      </label>
-    </div>
+    <label
+      class="emotion-1"
+      for="testTextAreaID"
+    >
+      This is a text field
+    </label>
     <p
       class="emotion-2"
     >
@@ -529,21 +528,21 @@ exports[`FormField should render an email input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
+    <label
+      class="emotion-1"
+      for="testEmailID"
+    >
+      This is a text field
+    </label>
     <div>
-      <label
-        class="emotion-1"
-        for="testEmailID"
-      >
-        This is a text field
-      </label>
+      <input
+        class="emotion-2"
+        id="testEmailID"
+        name="testEmailID"
+        type="email"
+        value=""
+      />
     </div>
-    <input
-      class="emotion-2"
-      id="testEmailID"
-      name="testEmailID"
-      type="email"
-      value=""
-    />
   </div>
 </div>
 `;
