@@ -54,13 +54,9 @@ describe('File', () => {
 
   it('should click visually hidden input when upload button is clicked', async () => {
     const user = userEvent.setup();
-    const inputRefClick = jest.fn();
-    jest
-      .spyOn(React, 'useRef')
-      .mockReturnValue({ current: { click: inputRefClick, value: '' } });
 
-    await act(async () => {
-      render(
+    const { container } = await act(async () => {
+      return render(
         <FileField
           id="foo"
           name="bar"
@@ -73,9 +69,12 @@ describe('File', () => {
     const uploadButton = screen.getByRole('button', {
       name: /choose a file/i,
     });
+
+    const inputFile = container.querySelector('#foo') as HTMLElement;
+    inputFile.click = jest.fn();
     await user.click(uploadButton);
 
-    expect(inputRefClick).toHaveBeenCalled();
+    expect(inputFile.click).toHaveBeenCalled();
   });
 
   it('should hide the FileList component when the files array is empty', async () => {
