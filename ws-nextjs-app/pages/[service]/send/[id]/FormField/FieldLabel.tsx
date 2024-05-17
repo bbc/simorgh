@@ -9,8 +9,26 @@ export default ({
   id,
   children,
   className,
-}: PropsWithChildren<{ id: InputProps['id']; className?: string }>) => (
-  <Text as="label" className={className} htmlFor={id} css={styles.fieldLabel}>
-    {children}
-  </Text>
-);
+  isCheckbox,
+}: PropsWithChildren<{
+  id: InputProps['id'];
+  className?: string;
+  isCheckbox?: boolean;
+}>) => {
+  return isCheckbox ? (
+    <Text as="label" className={className} htmlFor={id} css={styles.fieldLabel}>
+      {children}
+    </Text>
+  ) : (
+    <div>
+      <Text
+        as="label"
+        className={className}
+        htmlFor={id}
+        css={styles.fieldLabel}
+      >
+        {children}
+      </Text>
+    </div>
+  );
+};

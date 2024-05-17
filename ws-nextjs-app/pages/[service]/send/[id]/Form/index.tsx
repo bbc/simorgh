@@ -17,7 +17,7 @@ export default function Form({
   privacyNotice: string;
 }) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
-
+  const translation = 'Our data policy';
   const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
     <FormField
       key={id}
@@ -34,12 +34,11 @@ export default function Form({
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
 
-        <Heading // TODO: need translations for this, it doesn't come through from the api
-          level={3}
+        <strong // TODO: need translations for this, it doesn't come through from the api
           css={styles.privacyHeading}
         >
-          Our data policy
-        </Heading>
+          {translation}
+        </strong>
         <div
           // TODO: This is a security risk, we should sanitize the HTML
           // eslint-disable-next-line react/no-danger

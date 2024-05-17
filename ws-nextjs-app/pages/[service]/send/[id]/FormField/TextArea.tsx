@@ -14,10 +14,11 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState;
-
+  const translation = 'Maximum 500 Words';
   return (
     <>
       <Label id={id}>{label}</Label>
+      <p css={styles.textAreaLabel}>{translation}</p>
       <textarea
         id={id}
         css={[styles.textField, styles.textArea, styles.focusIndicator]}
