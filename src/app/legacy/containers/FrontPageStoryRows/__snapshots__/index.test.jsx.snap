@@ -832,8 +832,8 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا"
@@ -1557,8 +1557,8 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
               />
               <source
                 sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="test"
@@ -2369,8 +2369,8 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا"
@@ -2447,8 +2447,8 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="trott and kenny"
@@ -2962,8 +2962,8 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
               />
               <source
                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="test"
@@ -5267,8 +5267,8 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
               />
               <source
                 sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp 660w"
-                type="image/webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg 660w"
+                type="image/jpeg"
               />
               <img
                 alt="test"
