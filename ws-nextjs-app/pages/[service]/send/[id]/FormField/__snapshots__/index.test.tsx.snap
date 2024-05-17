@@ -5,10 +5,6 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   margin-top: 1rem;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
-}
-
 .emotion-0:nth-child(5) {
   border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
@@ -22,6 +18,10 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   }
 }
 
+.emotion-0:nth-of-type(5) label {
+  margin-bottom: 0;
+}
+
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -31,6 +31,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  padding-bottom: 1rem;
 }
 
 .emotion-2 {
@@ -41,8 +42,8 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   cursor: pointer;
   box-sizing: border-box;
   border: solid 0.0625rem #141414;
@@ -132,10 +133,6 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   margin-top: 1rem;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
-}
-
 .emotion-0:nth-child(5) {
   border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
@@ -147,6 +144,10 @@ exports[`FormField should render a tel input with an associated label 1`] = `
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+.emotion-0:nth-of-type(5) label {
+  margin-bottom: 0;
 }
 
 .emotion-1 {
@@ -176,6 +177,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
 
 .emotion-2 {
   border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
   width: 100%;
   min-height: 2.75rem;
   padding: 0.5rem;
@@ -210,12 +212,14 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
-    <label
-      class="emotion-1"
-      for="testTelID"
-    >
-      This is a text field
-    </label>
+    <div>
+      <label
+        class="emotion-1"
+        for="testTelID"
+      >
+        This is a text field
+      </label>
+    </div>
     <input
       class="emotion-2"
       id="testTelID"
@@ -232,10 +236,6 @@ exports[`FormField should render a text input with an associated label 1`] = `
   margin-top: 1rem;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
-}
-
 .emotion-0:nth-child(5) {
   border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
@@ -247,6 +247,10 @@ exports[`FormField should render a text input with an associated label 1`] = `
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+.emotion-0:nth-of-type(5) label {
+  margin-bottom: 0;
 }
 
 .emotion-1 {
@@ -276,6 +280,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
 
 .emotion-2 {
   border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
   width: 100%;
   min-height: 2.75rem;
   padding: 0.5rem;
@@ -310,12 +315,14 @@ exports[`FormField should render a text input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
-    <label
-      class="emotion-1"
-      for="testTextID"
-    >
-      This is a text field
-    </label>
+    <div>
+      <label
+        class="emotion-1"
+        for="testTextID"
+      >
+        This is a text field
+      </label>
+    </div>
     <input
       class="emotion-2"
       id="testTextID"
@@ -332,10 +339,6 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   margin-top: 1rem;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
-}
-
 .emotion-0:nth-child(5) {
   border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
@@ -347,6 +350,10 @@ exports[`FormField should render a textarea input with an associated label 1`] =
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+.emotion-0:nth-of-type(5) label {
+  margin-bottom: 0;
 }
 
 .emotion-1 {
@@ -375,7 +382,31 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 .emotion-2 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0.375rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3 {
   border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
   width: 100%;
   min-height: 2.75rem;
   padding: 0.5rem;
@@ -388,20 +419,20 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-2:focus {
+.emotion-3:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
   outline-offset: 0.1875rem;
@@ -411,14 +442,21 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   <div
     class="emotion-0"
   >
-    <label
-      class="emotion-1"
-      for="testTextAreaID"
-    >
-      This is a text field
-    </label>
-    <textarea
+    <div>
+      <label
+        class="emotion-1"
+        for="testTextAreaID"
+      >
+        This is a text field
+      </label>
+    </div>
+    <p
       class="emotion-2"
+    >
+      Maximum 500 Words
+    </p>
+    <textarea
+      class="emotion-3"
       id="testTextAreaID"
       name="testTextAreaID"
       rows="4"
@@ -432,10 +470,6 @@ exports[`FormField should render an email input with an associated label 1`] = `
   margin-top: 1rem;
 }
 
-.emotion-0:nth-child(n+2) {
-  margin-top: 2rem;
-}
-
 .emotion-0:nth-child(5) {
   border-bottom: 0.0625rem solid #8A8C8E;
   padding-bottom: 1rem;
@@ -447,6 +481,10 @@ exports[`FormField should render an email input with an associated label 1`] = `
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+.emotion-0:nth-of-type(5) label {
+  margin-bottom: 0;
 }
 
 .emotion-1 {
@@ -476,6 +514,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
 
 .emotion-2 {
   border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
   width: 100%;
   min-height: 2.75rem;
   padding: 0.5rem;
@@ -510,12 +549,14 @@ exports[`FormField should render an email input with an associated label 1`] = `
   <div
     class="emotion-0"
   >
-    <label
-      class="emotion-1"
-      for="testEmailID"
-    >
-      This is a text field
-    </label>
+    <div>
+      <label
+        class="emotion-1"
+        for="testEmailID"
+      >
+        This is a text field
+      </label>
+    </div>
     <input
       class="emotion-2"
       id="testEmailID"
