@@ -237,28 +237,7 @@ describe('Image - Canonical', () => {
         />
       </div>
     `);
-
   });
-  // describe('Fallback for home page', () => {
-  //   const pageType = 'HOME_PAGE';
-  //   const hasFallback =
-  //     srcSet &&
-  //     fallbackSrcSet &&
-  //     (pageType === FRONT_PAGE || pageType === HOME_PAGE);
-  //   const ImageWrapper = hasFallback ? 'picture' : Fragment;
-  //   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
-  //   const getImgSrcSet = () => {
-  //     if (!hasFallback) return srcSet;
-  //     if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-  //       return fallbackSrcSet;
-  //     return undefined;
-  //   };
-  //   it('should render the fallback image in the src attribute', () => {
-  //     render(<Fixture />);
-  //     const imageEl = screen.getByAltText('Test image alt text');
-  //     expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
-  //   });
-  // });
 });
 
 describe('Image - AMP pages', () => {
@@ -484,7 +463,7 @@ describe('Image - AMP pages', () => {
     layout="fill"
     sizes="(max-width: 600px) 480px, 800px"
     src="/test-image-500.webp"
-    srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+    srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
   />
 </div>
 `);

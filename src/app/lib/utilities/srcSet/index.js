@@ -45,29 +45,19 @@ export const createSrcsets = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  const primarySrcset = requiredResolutions
-    .map(
-      resolution =>
-        `${buildIChefUrl({
-          originCode,
-          locator,
-          resolution,
-          isFallback: true,
-        })} ${resolution}w`,
-    )
-    .join(', ');
-
-  const fallbackSrcset = requiredResolutions
-    .map(
-      resolution =>
-        `${buildIChefUrl({
-          originCode,
-          locator,
-          resolution,
-          isFallback: false,
-        })} ${resolution}w`,
-    )
-    .join(', ');
+  const [primarySrcset, fallbackSrcset] = [true, false].map(isWebP =>
+    requiredResolutions
+      .map(
+        resolution =>
+          `${buildIChefUrl({
+            originCode,
+            locator,
+            resolution,
+            isWebP,
+          })} ${resolution}w`,
+      )
+      .join(', '),
+  );
 
   return {
     primarySrcset,
