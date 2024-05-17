@@ -128,7 +128,7 @@ exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Pais de Ma
 
 exports[`Canonical Podcast Page I can see the episode title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu'"`;
 
-exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p083x9j5.jpg"`;
+exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p083x9j5.jpg.webp"`;
 
 exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
 

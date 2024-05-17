@@ -453,8 +453,8 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   height="549"
   layout="responsive"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 660w"
   width="976"
 />
 `;
