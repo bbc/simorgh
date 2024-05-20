@@ -28,10 +28,10 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  mainContent: ({ spacings, palette, mq }: Theme) =>
+  mainContent: ({ spacings, fontVariants, palette, mq }: Theme) =>
     css({
       a: {
-        fontWeight: 700,
+        ...fontVariants.sansBold,
         color: palette.EBON,
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
         textDecoration: 'none',
