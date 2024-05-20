@@ -7,12 +7,7 @@ const CHECK_IMG = `data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.
 export default {
   formField: ({ spacings, palette, mq }: Theme) =>
     css({
-      '&:nth-child(n+2)': {
-        marginTop: `${spacings.QUADRUPLE}rem`,
-      },
-
       marginTop: `${spacings.DOUBLE}rem`,
-
       '&:nth-child(5)': {
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
         paddingBottom: `${spacings.DOUBLE}rem`,
@@ -25,10 +20,10 @@ export default {
         },
       },
     }),
-  fieldLabel: ({ spacings }: Theme) =>
+  fieldLabel: () =>
     css({
       display: 'inline-block',
-      marginBottom: `${spacings.FULL}rem`,
+      marginBottom: `${pixelsToRem(6)}rem`,
     }),
   focusIndicator: ({ palette }: Theme) =>
     css({
@@ -41,18 +36,19 @@ export default {
   textField: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.GREY_10}`,
+      outline: 'solid 0.0625rem transparent',
       width: '100%',
       minHeight: `2.75rem`,
       padding: `${spacings.FULL}rem`,
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
     }),
-  checkboxContainer: () =>
+  checkboxContainer: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexWrap: 'nowrap',
+      paddingBottom: `${spacings.DOUBLE}rem`,
     }),
-
   textArea: () =>
     css({
       resize: 'none',
@@ -68,8 +64,8 @@ export default {
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,
-      width: '30px',
-      height: '30px',
+      width: `${pixelsToRem(30)}rem`,
+      height: `${pixelsToRem(30)}rem`,
       cursor: 'pointer',
       boxSizing: 'border-box',
       border: `solid 0.0625rem ${palette.GREY_10}`,

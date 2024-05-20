@@ -12,6 +12,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   FieldData,
+  FormScreen,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
@@ -34,9 +35,10 @@ export type ContextProps = {
   submitted: boolean;
   hasAttemptedSubmit: boolean;
   progress: string;
+  screen: FormScreen;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
@@ -69,9 +71,10 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
 };
 
 export const FormContextProvider = ({
+  initialScreen = 'form',
   fields,
   children,
-}: PropsWithChildren<{ fields: Field[] }>) => {
+}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
   } = useRouter();
@@ -79,6 +82,9 @@ export const FormContextProvider = ({
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
+  // TODO: Remove lint disable once screen state switching is used
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [screen, _setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
 
@@ -179,6 +185,7 @@ export const FormContextProvider = ({
         submitted,
         progress,
         hasAttemptedSubmit,
+        screen,
       }}
     >
       {children}
