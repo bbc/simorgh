@@ -17,19 +17,21 @@ export default ({
   return (
     <>
       <Label id={id}>{label}</Label>
-      <input
-        id={id}
-        css={[styles.textField, styles.focusIndicator]}
-        name={name}
-        type="tel"
-        value={value as string}
-        onChange={e => handleChange(e.target.name, e.target.value)}
-        {...(hasAttemptedSubmit && {
-          ...(wasInvalid && { 'aria-invalid': !isValid }),
-          ...(required && { 'aria-required': required }),
-          ...(!isValid && { 'aria-describedby': describedBy }),
-        })}
-      />
+      <div>
+        <input
+          id={id}
+          css={[styles.textField, styles.focusIndicator]}
+          name={name}
+          type="tel"
+          value={value as string}
+          onChange={e => handleChange(e.target.name, e.target.value)}
+          {...(hasAttemptedSubmit && {
+            ...(wasInvalid && { 'aria-invalid': !isValid }),
+            ...(required && { 'aria-required': required }),
+            ...(!isValid && { 'aria-describedby': describedBy }),
+          })}
+        />
+      </div>
     </>
   );
 };
