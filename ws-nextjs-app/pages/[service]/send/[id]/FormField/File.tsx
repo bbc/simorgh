@@ -10,7 +10,7 @@ export default ({
   describedBy,
   label,
 }: InputProps) => {
-  const { isValid, required } = inputState;
+  const { isValid, required } = inputState ?? {};
   return (
     <>
       <Label id={id}>{label}</Label>
