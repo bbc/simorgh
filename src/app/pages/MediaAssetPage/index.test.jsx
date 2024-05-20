@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { render, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -213,6 +213,25 @@ describe('Media Asset Page', () => {
     );
     // Images not rendered properly due to lazyload, therefore can only check caption text
     expect(getByText(escapedText(imageCaption))).toBeInTheDocument();
+  });
+
+  it('should render image with the .webp image extension', () => {
+    const imageAltText = path(
+      ['content', 'blocks', 11, 'altText'],
+      mapPageData.data.article,
+    );
+    const imagePath = path(
+      ['content', 'blocks', 11, 'path'],
+      mapPageData.data.article,
+    );
+    const imageWidth = path(
+      ['content', 'blocks', 11, 'width'],
+      mapPageData.data.article,
+    );
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/${imageWidth}${imagePath}.webp`;
+
+    const { src } = screen.getByAltText(imageAltText);
+    expect(src).toEqual(imageURL);
   });
 
   describe('AV player', () => {
