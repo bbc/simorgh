@@ -11,6 +11,7 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   font-size: 0.9375rem;
   line-height: 1.25rem;
   border: none;
+  outline: solid 0.0625rem transparent;
   padding: 0.75rem 0;
   margin-bottom: 1rem;
   cursor: pointer;
