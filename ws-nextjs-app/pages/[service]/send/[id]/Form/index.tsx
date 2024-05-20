@@ -8,28 +8,39 @@ import styles from './styles';
 import Submit from '../SubmitButton';
 import Loader from '../Loader';
 
-export default function Form({
-  fields,
-  privacyNotice,
-}: {
+type Props = {
+  title: string;
+  sectionTitle: string;
+  description: string;
   fields: Field[];
   privacyNotice: string;
-}) {
+};
+
+export default function Form({
+  title,
+  sectionTitle,
+  description,
+  fields,
+  privacyNotice,
+}: Props) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
   const translation = 'Our data policy';
-  const formFields = fields?.map(({ id, label, type, htmlType, textArea }) => (
-    <FormField
-      key={id}
-      id={id}
-      label={label}
-      type={type}
-      htmlType={htmlType}
-      textArea={textArea}
-    />
+  const formFields = fields?.map(({ id, label, htmlType }) => (
+    <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
 
   return (
     <>
+      <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+        {title}
+      </Heading>
+      <div
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: description }}
+        css={styles.description}
+      />
+      <Heading level={2}>{sectionTitle}</Heading>
+
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
 
@@ -39,7 +50,6 @@ export default function Form({
           {translation}
         </strong>
         <div
-          // TODO: This is a security risk, we should sanitize the HTML
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: privacyNotice }}
           css={styles.privacyNotice}
