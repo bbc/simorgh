@@ -23,7 +23,6 @@ export default {
   primaryColumn: ({ mq, spacings }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
         paddingBottom: `${spacings.QUADRUPLE}rem`,
@@ -31,6 +30,20 @@ export default {
     }),
   mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
+      a: {
+        fontWeight: 700,
+        color: palette.EBON,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+        textDecoration: 'none',
+        '&:visited': {
+          color: palette.METAL,
+          borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
+        },
+        '&:focus, &:hover': {
+          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+          color: palette.POSTBOX,
+        },
+      },
       background: palette.WHITE,
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
