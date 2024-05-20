@@ -1,30 +1,30 @@
 {
-  "extends": ["config:base", ":pinDependencies"],
+  "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
   "packageRules": [
     {
-      "packagePatterns": ["*"],
+      "matchPackagePatterns": ["*"],
       "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
-      "updateTypes": ["patch"],
+      "matchUpdateTypes": ["patch"],
       "groupName": "all 3rd party patch dependencies",
       "groupSlug": "all-patch"
     },
     {
-      "packagePatterns": ["^@loadable"],
-      "updateTypes": ["minor", "patch"],
+      "matchPackagePatterns": ["^@loadable"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupName": "loadable non-major dependencies",
       "groupSlug": "loadable-minor-patch"
     },
     {
-      "packagePatterns": ["^webpack"],
-      "updateTypes": ["minor", "patch"],
+      "matchPackagePatterns": ["^webpack"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupName": "webpack non-major dependencies",
       "groupSlug": "webpack-minor-patch"
     },
     {
-      "packagePatterns": ["^@bbc"],
+      "matchPackagePatterns": ["^@bbc"],
       "groupName": "all BBC non-major dependencies",
-      "updateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupSlug": "psammead-minor-patch"
     },
     {
