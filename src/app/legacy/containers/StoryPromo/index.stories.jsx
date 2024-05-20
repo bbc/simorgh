@@ -39,7 +39,6 @@ const promoTypes = {
   guideLinkItem,
 };
 
-/* eslint-disable react/prop-types */
 const Component = ({
   isAmp = false,
   item = promoTypes.audioFixture,

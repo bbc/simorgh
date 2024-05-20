@@ -33,6 +33,7 @@ module.exports = {
     'no-only-tests',
   ],
   rules: {
+    'react/prop-types': 'off',
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -87,20 +88,17 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'react/prop-types': 'off',
         'react/jsx-filename-extension': [
           2,
           {
             extensions: ['.jsx', '.tsx'],
           },
         ],
-        ...{
-          // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
-          'no-use-before-define': 'off',
-          '@typescript-eslint/no-use-before-define': ['error'],
-          'react/require-default-props': 'off',
-          'react/no-unused-prop-types': 'off',
-        },
+        // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'react/require-default-props': 'off',
+        'react/no-unused-prop-types': 'off',
       },
     },
   ],

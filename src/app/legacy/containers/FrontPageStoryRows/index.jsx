@@ -1,8 +1,6 @@
 import React from 'react';
-import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import { StoryPromoLi } from '#psammead/psammead-story-promo-list/src';
 import Grid from '#components/Grid';
-import { storyItem } from '#models/propTypes/storyItem';
 import {
   topStoryColumns,
   leadingStoryColumns,
@@ -48,21 +46,11 @@ const renderPromo = ({
  * They all take in an array of story items and a dir.
  */
 
-// These propTypes are common to the three Row Types
-const rowPropTypes = {
-  stories: arrayOf(shape(storyItem)).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-const rowDefaultProps = {
-  dir: 'ltr',
-};
-
 export const TopRow = ({
   stories,
-  isFirstSection,
-  sectionHasSingleStory,
-  dir,
+  isFirstSection = false,
+  sectionHasSingleStory = false,
+  dir = 'ltr',
   parentColumns,
   parentEnableGelGutters,
   labelId,
@@ -93,21 +81,9 @@ export const TopRow = ({
   );
 };
 
-TopRow.propTypes = {
-  ...rowPropTypes,
-  isFirstSection: bool,
-  sectionHasSingleStory: bool,
-};
-
-TopRow.defaultProps = {
-  ...rowDefaultProps,
-  isFirstSection: false,
-  sectionHasSingleStory: false,
-};
-
 export const LeadingRow = ({
   stories,
-  dir,
+  dir = 'ltr',
   parentColumns,
   parentEnableGelGutters,
   labelId,
@@ -134,18 +110,10 @@ export const LeadingRow = ({
   </>
 );
 
-LeadingRow.propTypes = {
-  ...rowPropTypes,
-};
-
-LeadingRow.defaultProps = {
-  ...rowDefaultProps,
-};
-
 export const RegularRow = ({
   stories,
-  displayImages,
-  dir,
+  displayImages = false,
+  dir = 'ltr',
   parentColumns,
   parentEnableGelGutters,
   labelId,
@@ -177,13 +145,3 @@ export const RegularRow = ({
     })}
   </>
 );
-
-RegularRow.propTypes = {
-  ...rowPropTypes,
-  displayImages: bool,
-};
-
-RegularRow.defaultProps = {
-  ...rowDefaultProps,
-  displayImages: false,
-};

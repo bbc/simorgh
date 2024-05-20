@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { bool, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import pathOr from 'ramda/src/pathOr';
@@ -17,7 +16,6 @@ import {
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { StoryPromoUl } from '#psammead/psammead-story-promo-list/src';
 import Grid from '#components/Grid';
-import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import UsefulLinksComponent from './UsefulLinks';
@@ -69,7 +67,6 @@ const SpacingDiv = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
 const MarginWrapper = ({ firstSection, oneItem, children }) => {
   // Conditionally add a `margin-top` to the `children`.
   if (firstSection) {
@@ -173,7 +170,12 @@ const sectionBody = ({
   });
 };
 
-const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
+const IndexPageSection = ({
+  bar = true,
+  group,
+  sectionNumber,
+  showAllPromos = false,
+}) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
   const { topStoriesTitle } = translations;
@@ -252,18 +254,6 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
       })}
     </StyledSection>
   );
-};
-
-IndexPageSection.defaultProps = {
-  bar: true,
-  showAllPromos: false,
-};
-
-IndexPageSection.propTypes = {
-  bar: bool,
-  group: shape(groupShape).isRequired,
-  sectionNumber: number.isRequired,
-  showAllPromos: bool,
 };
 
 export default IndexPageSection;

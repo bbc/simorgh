@@ -148,7 +148,6 @@ const renderBlock = ({
     </li>
   );
 };
-/* eslint-enable react/prop-types */
 
 const Pagination = ({
   activePage = 1,

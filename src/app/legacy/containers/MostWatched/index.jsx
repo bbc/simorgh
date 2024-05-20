@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, bool } from 'prop-types';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
@@ -14,7 +12,7 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
   }
 `;
 
-const MostWatched = ({ data, isMostWatchedPage }) => {
+const MostWatched = ({ data = null, isMostWatchedPage = false }) => {
   const { mostWatched } = useContext(ServiceContext);
   const { header } = mostWatched;
 
@@ -44,16 +42,6 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
       columnType="secondary"
     />
   );
-};
-
-MostWatched.propTypes = {
-  data: arrayOf(shape(storyItem)),
-  isMostWatchedPage: bool,
-};
-
-MostWatched.defaultProps = {
-  data: null,
-  isMostWatchedPage: false,
 };
 
 export default MostWatched;

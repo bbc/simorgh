@@ -9,7 +9,6 @@ import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import TopStories from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, dir = 'ltr', data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
 
 import { keyframes } from '@emotion/react';
@@ -44,7 +43,7 @@ const Spinner = styled.svg`
   }
 `;
 
-const AudioLoader = ({ children, isLoading }) => (
+const AudioLoader = ({ children, isLoading = false }) => (
   <Wrapper>
     {isLoading && (
       <Overlay data-testid="audio-loader-overlay" aria-hidden="true">
@@ -66,14 +65,5 @@ const AudioLoader = ({ children, isLoading }) => (
     {children}
   </Wrapper>
 );
-
-AudioLoader.propTypes = {
-  children: element.isRequired,
-  isLoading: bool,
-};
-
-AudioLoader.defaultProps = {
-  isLoading: false,
-};
 
 export default AudioLoader;

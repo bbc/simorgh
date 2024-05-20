@@ -14,7 +14,6 @@ const dataProps = {
   route: { pageType: ARTICLE_PAGE },
 };
 
-// eslint-disable-next-line react/prop-types
 jest.mock('../../../../components/PageLayoutWrapper', () => ({ children }) => (
   <div id="defaultPageWrapper">{children}</div>
 ));

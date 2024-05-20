@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
 
@@ -9,15 +9,8 @@ const wrapper = ({ children, toggles }) => (
 
 const isEnabled = (componentName, enabled, value) => {
   const { result } = renderHook(() => useTrackingToggle(componentName), {
-    wrapper,
-    initialProps: {
-      toggles: {
-        eventTracking: {
-          enabled,
-          value,
-        },
-      },
-    },
+    wrapper: props =>
+      wrapper({ ...props, toggles: { eventTracking: { enabled, value } } }),
   });
 
   return result.current.trackingIsEnabled;
