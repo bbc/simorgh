@@ -13,7 +13,7 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = false, required, wasInvalid } = inputState;
+  const { isValid, value = false, required, wasInvalid } = inputState ?? {};
 
   return (
     <div css={[styles.checkboxContainer]}>

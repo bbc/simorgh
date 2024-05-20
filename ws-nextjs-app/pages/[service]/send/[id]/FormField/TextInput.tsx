@@ -13,7 +13,7 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = '', required, wasInvalid } = inputState;
+  const { isValid, value = '', required, wasInvalid } = inputState ?? {};
 
   return (
     <>
