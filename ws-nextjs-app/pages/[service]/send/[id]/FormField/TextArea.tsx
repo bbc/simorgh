@@ -20,11 +20,9 @@ export default ({
 
   return (
     <>
-      <Label id={id} withPTag>
-        {label}
-      </Label>
+      <Label id={id}>{label}</Label>
       <Paragraph
-        css={() => `margin: ${pixelsToRem(6)}rem 0`}
+        css={{ marginBottom: `${pixelsToRem(6)}rem` }}
         fontVariant="sansRegular"
         size="brevier"
       >

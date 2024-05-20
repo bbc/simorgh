@@ -23,6 +23,7 @@ export default {
   fieldLabel: () =>
     css({
       display: 'inline-block',
+      marginBottom: `${pixelsToRem(6)}rem`,
     }),
   focusIndicator: ({ palette }: Theme) =>
     css({
