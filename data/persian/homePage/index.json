@@ -7,76 +7,136 @@
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "چرا «انقلاب مهسا» باید به دنبال دادخواهی برود نه خونخواهی؟",
-            "firstPublished": "2023-04-03T20:06:13.000Z",
-            "link": "https://www.bbc.com/persian/iran-65158865",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/16536/production/_129264419_gozar-shirin-ebadi.jpg",
-            "description": "امیر پیام، بی‌بی‌سی، که برای پوشش کنفرانس «گذار به مردمسالاری در ایران» به دانشگاه استنفورد کالیفرنیا سفر کرده بود با چند چهره برجسته حاضر در این رویداد گفتگو کرده که بخش‌هایی از آن را در تلویزیون و شبکه‌های اجتماعی بی‌بی‌سی فارسی طی روزهای گذشته مشاهده کردید. او در مجموعه «یک نگاه» بنا دارد به بخش‌های منتشر نشده این گفتگوها بپردازد. یادداشت زیر نسخه کامل گفتگوی او با شیرین عبادی، حقوقدان و برنده جایزه صلح نوبل است که درباره عدالت محوری و دادخواهی در دوران گذار است.",
-            "imageAlt": "شیرین عبادی",
-            "id": "d07bb776-00d6-40d4-8bdb-4185b59980d3"
-          },
-          {
-            "type": "article",
-            "title": "روایت یک «مهماندار هواپیما» از زیر پل سوخته کابل تا مرکز ترک اعتیاد طالبان ",
-            "firstPublished": "2023-04-03T10:53:20.379Z",
-            "link": "https://www.bbc.com/persian/articles/c51e2wpl9jyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/600b/live/c1aeafb0-d1ff-11ed-be2e-754a65c11505.jpg",
-            "description": "در ماه‌های اخیر، صدها مرد در سراسر پایتخت، از زیر پل، از پارک‌ها‌ و از بالای تپه‌ها‌، جمع‌آوری شده‌اند. بیشتر آنها به اردوگاهی که قبلا یک پایگاه نظامی‌ آمریکایی بود، برده شده‌اند که اکنون به یک مرکز موقت ترک اعتیاد تبدیل شده است.\nافغانستان، پایتخت اعتیاد به مواد مخدر در جهان است. به گفته اداره بین المللی مواد مخدر، حدود ۳.۵ میلیون نفر، در کشوری با جمعیت حدود ۴۰ میلیونی معتاد به مواد مخدر هستند.",
-            "imageAlt": "محمد عمر می‌گوید او مهماندار هواپیما بود",
-            "id": "c51e2wpl9jyo"
-          },
-          {
-            "type": "article",
-            "title": "گراهام پاتر اخراج شد؛ سرمربی بعدی چلسی کیست؟",
-            "firstPublished": "2023-04-03T14:05:22.571Z",
-            "link": "https://www.bbc.com/persian/articles/cx85y7j3rl9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c940/live/dc5f24d0-d221-11ed-921a-b9310c388ff8.jpg",
-            "description": "در حالی که لیگ برتر فوتبال انگلیس به اوج خود رسیده است، شماری از بزرگ‌ترین مربیان حال حاضر فوتبال جهان در انتظار پیدا کردن شغل جدیدی نشسته‌اند.",
-            "imageAlt": "یولیان ناگلزمن که از بایرن مونیخ اخراج شده یکی از مربیانی است که گفته می‌شود راهی لیگ برتر فوتبال انگلیس خواهد شد",
-            "id": "cx85y7j3rl9o"
+            "type": "commentary",
+            "isLive": true,
+            "title": "اجساد ابراهیم رئیسی و دیگر کشته‌شدگان به تبریز منتقل شد",
+            "firstPublished": "2024-05-19T22:29:27.000Z",
+            "lastPublished": "2024-05-19T22:29:27.000Z",
+            "link": "https://www.bbc.com/persian/live/69036110",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3298/live/0552f310-16a2-11ef-9b16-15114b27fe47.jpg",
+            "description": "پس از کشته شدن ابراهیم رئیسی و حسین امیرعبداللهیان در سقوط بالگرد، محمد مخبر وظایف رئیس‌جمهور و علی باقری کنی وظایف وزیر خارجه را به عهده گرفتند. طبق قانون اساسی، ظرف پنجاه روز باید انتخابات ریاست جمهوری برگزار شود. در ایران پنج روز عزای عمومی اعلام شده است. اجساد ابراهیم رئیسی و دیگر کشته‌شدگان به تبریز منتقل شده‌اند و فردا در این شهر تشییع می‌شوند. هنوز علت سقوط بالگرد عنوان نشده است. سران کشورهای دنیا کشته شدن رئیس‌جمهور ایران را تسلیت گفته‌اند.",
+            "imageAlt": "رئیسی",
+            "id": "c75cce4f-9e53-48ff-af42-fb5b25f46be5"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:794aa745-4de3-44b3-83aa-031aa12f46f3",
+        "curationId": "urn:bbc:tipo:list:d2a3815a-43b5-47b2-9679-3d8633cee285",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "گزارش و تحلیل",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
+        "title": "پوشش ویژه",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
       },
       {
         "summaries": [
           {
             "type": "article",
-            "title": "طالبان از انتقال نخستین گروه از ده‌ها شهروند گیرمانده افغانستان از سودان به عربستان سعودی خبر داد",
-            "firstPublished": "2023-04-27T11:35:21.042Z",
-            "link": "https://www.bbc.com/persian/articles/crge3mg5r8eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/321d/live/aa4ebe30-e4ee-11ed-8685-fd075442e2f0.jpg",
-            "description": "وزارت خارجه طالبان اعلام کرده که اولین گروه از شهروندان گیرمانده افغانستان در سودان به کمک عربستان سعودی به شهر جده منتقل شده و قرار است به زودی به افغانستان برگردند. در پی آغاز مجدد درگیری‌ها در سودان ده‌ها شهروند افغانستان از جمله دانشجویان و کارمندان سازمان‌های بین‌المللی در شهرهای مختلف سودان گیر مانده‌اند، شماری از آنها از خارطوم پایتخت بیرون شده‌اند و تعداد کمی از آنها موفق به ترک سودان شده‌اند. ",
-            "imageAlt": "خارطوم",
-            "id": "crge3mg5r8eo"
+            "isLive": false,
+            "title": "واکنش رهبران جهان به مرگ رئیس‌جمهور و وزیر خارجه ایران",
+            "firstPublished": "2024-05-20T12:01:31.082Z",
+            "lastPublished": "2024-05-20T12:01:31.082Z",
+            "link": "https://www.bbc.com/persian/articles/c7226l3e2g0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3298/live/0552f310-16a2-11ef-9b16-15114b27fe47.jpg",
+            "description": "مرگ رئیس جمهور و وزیر خارجه ایران در اثر سقوط هلی‌کوپتر با واکنش‌ رهبران جهان همراه است. سران چند کشور این واقعه را تسلیت گفتند، متحدان ایران آنها را ستودند و برخی کشورها و گروه‌های نزدیک به جمهوری اسلامی اعلام کردند که در سوگ ابراهیم رئیسی و حسین امیرعبداللهیان نشسته‌اند.",
+            "imageAlt": "سفارت ایران در مسکو",
+            "id": "c7226l3e2g0o"
           },
           {
             "type": "article",
-            "title": "چطور مجری فاکس‌نیوز بر موج خشم مردم سوار شد",
-            "firstPublished": "2023-04-27T04:55:03.871Z",
-            "link": "https://www.bbc.com/persian/articles/cp35n605n2eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4205/live/40ae74d0-e3ee-11ed-8df1-d74cbf1089d7.png",
-            "description": "تاکر کارلسون، مجری سرشناس فاکس‌نیوز، متهم به برانگیختن نکات نژادپرستانه و ضد مهاجرت و ترویج تئوری‌های توطئه بود. \n",
-            "imageAlt": "تاکر کارلسون",
-            "id": "cp35n605n2eo"
+            "isLive": false,
+            "title": "سرنوشت روسای دولت جمهوری اسلامی ایران: ترور، حذف، سقوط",
+            "firstPublished": "2024-05-20T07:51:32.422Z",
+            "lastPublished": "2024-05-20T07:51:32.422Z",
+            "link": "https://www.bbc.com/persian/articles/c0338l78dexo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8724/live/35f9a020-1663-11ef-9b12-1ba8f95c4917.png",
+            "description": "در عمر ۴۵ ساله جمهوری اسلامی ایران جز علی خامنه‌ای همه روسای دولت در سرنوشتی کم و بیش مشابه، یا حذف فیزیکی شده‌اند یا حذف سیاسی. ابراهیم رئیسی، بعد از محمدعلی رجایی، دومین رئیس‌جمهور ایران است که دوره ریاست‌جمهوری را نیمه‌تمام می‌گذارد؛ اگرچه انتظار نمی‌رود که سرنوشت رئیس‌جمهور تندرو ایران، مسیر سیاست ایران را مختل کند یا تکان عمده‌ای در نظام جمهوری اسلامی ایجاد کند.",
+            "imageAlt": "روسای دولت و جمهور ایران",
+            "id": "c0338l78dexo"
           },
           {
             "type": "article",
-            "title": "صدای آمریکا از امکان آزادی مشروط ۷ میلیارد دلار ایران در کره جنوبی خبر داد",
-            "firstPublished": "2023-04-27T12:04:56.266Z",
-            "link": "https://www.bbc.com/persian/articles/cv2me4jv86eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/01d9/live/d4ccf4d0-e4ec-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "بخش فارسی صدای آمریکا، رسانه رسمی دولت آمریکا، در گزارشی اختصاصی از چراغ سبز کاخ سفید به آزادی مشروط هفت میلیارد دلار از دارایی‌های بلوکه‌شده ایران در کره جنوبی خبر داده است.\n",
-            "imageAlt": "پرچم ایران و آمریکا",
-            "id": "cv2me4jv86eo"
+            "isLive": false,
+            "title": "محمد مخبر، معاون اول و جانشین موقت رئیس جمهوری ایران کیست؟",
+            "firstPublished": "2024-05-20T05:09:08.293Z",
+            "lastPublished": "2024-05-20T05:09:08.293Z",
+            "link": "https://www.bbc.com/persian/articles/cv225zej9m3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/be40/live/b5698120-1606-11ef-a739-0719647bbfc4.jpg",
+            "description": "با تایید خبر درگذشت ابراهیم رئیسی،‌ رئیس جمهوری ایران در سانحه سقوط هلی‌کوپتر و پس از تایید آیت‌الله خامنه‌ای، محمد مخبر دزفولی،‌ معاون اول آقای رئیسی  تا زمان برگزاری انتخابات، مسئولیت‌های ریاست جمهوری را بر عهده گرفت. بنابر قانون اساسی ایران ظرف ۵۰ روز آینده انتخابات ریاست جمهوری ایران مجددا برگزار می‌شود.",
+            "imageAlt": "ابراهیم رئیسی و محمد مخبر",
+            "id": "cv225zej9m3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "حسین امیرعبداللهیان، وزیر خارجه‌ای که به سپاه نزدیک بود و «معتمد نظام»",
+            "firstPublished": "2024-05-20T04:47:43.375Z",
+            "lastPublished": "2024-05-20T04:47:43.375Z",
+            "link": "https://www.bbc.com/persian/articles/cljj8ezn37ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/33f6/live/312f9890-15ed-11ef-83a0-dfef3bf45a85.jpg",
+            "description": "حسین امیرعبداللهیان که سکان وزارت امور خارجه را در دولت ابراهیم رئیسی در دست داشت، از چهره‌های معتمد نظام به شمار می‌رفت.",
+            "imageAlt": "حسین امیرعبداللهیان",
+            "id": "cljj8ezn37ro"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "پایان ناتمام ابراهیم رئیسی؛ مردی که به آخر نرسید",
+            "firstPublished": "2024-05-20T04:30:27.630Z",
+            "lastPublished": "2024-05-20T04:30:27.630Z",
+            "link": "https://www.bbc.com/persian/articles/c1vv7yr41vyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8e8c/live/3c15eaf0-160d-11ef-9e07-b30d0b42ac5a.jpg",
+            "description": "بیش از هزار روز از دوره ریاست جمهوری ابراهیم رئیسی گذشته بود که هلیکوپتر او و همرانشان در حوالی ورزقان، در آذربایجان شرقی دچار سانحه شد.",
+            "imageAlt": "رئیسی",
+            "id": "c1vv7yr41vyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "کشته‌شدن ابراهیم رئیسی؛ چه کسی کفیل رئیس‌جمهور ایران است و انتخابات چه وقت خواهد بود؟",
+            "firstPublished": "2024-05-20T06:25:54.810Z",
+            "lastPublished": "2024-05-20T06:25:54.810Z",
+            "link": "https://www.bbc.com/persian/articles/cjeedvzrydvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fc26/live/8ef49ef0-1622-11ef-9ab0-b7eeef76b869.jpg",
+            "description": "با کشته شدن  ابراهیم رئیسی، رئیس جمهور ایران، اختیارات او باید به طور موقت به فرد دیگری که کفیل ریاست جمهوری محسوب می‌شود، واگذار و سپس انتخابات زودهنگام ریاست جمهوری برای تعیین جانشین‌اش برگزار شود.",
+            "imageAlt": "از راست محمد مخبر معاون اول رئیس جمهور ایران در کنار ابراهیم رئیسی در مراسم بدرقه رسمی او در سفر به عربستان",
+            "id": "cjeedvzrydvo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "زندگی‌نامه ابراهیم رئیسی؛ از قوه قضاییه تا قوه مجریه",
+            "firstPublished": "2021-06-09T14:48:46.000Z",
+            "lastPublished": "2024-05-20T04:55:34.000Z",
+            "link": "https://www.bbc.com/persian/iran-features-57407203",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/64C6/production/_118989752_gettyimages-1233537064.jpg",
+            "description": "ابراهیم رئیسی توانست در غیبت بسیاری از کسانی که خود را برای نامزدی ریاست جمهوری آماده می‌کردند، اما با رای شورای نگهبان کنار گذاشته شدند، به عنوان هشتمین رئیس جمهور ایران شود. اما دوران ریاست جمهوری او کمتر از سه سال به طول کشید.",
+            "imageAlt": "ابراهیم رئیسی",
+            "id": "1d9031db-0104-41f4-bbd2-59dee5d5bc96"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "درخواست دادستان دیوان کیفری بین‌المللی برای صدور قرار بازداشت برای نتانیاهو و رهبران حماس",
+            "firstPublished": "2024-05-20T12:08:41.110Z",
+            "lastPublished": "2024-05-20T12:08:41.110Z",
+            "link": "https://www.bbc.com/persian/articles/c3gglqg9ne7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/987a/live/b26b9cf0-4313-11ed-9ae9-959994b8a64c.png",
+            "description": "دادستان ارشد دیوان کیفری بین‌المللی (آی‌سی‌سی) خواستار صدور قرار بازداشت بنیامین نتانیاهو، نخست وزیر اسرائیل و یحیی سنوار رهبر حماس به اتهام جنایات جنگی شد. دیوان کیفری بین‌المللی در سه سال گذشته درباره اقدامات اسرائیل در سرزمین‌های اشغالی و اخیرا درباره اقدامات حماس مشغول تحقیق بوده است.",
+            "imageAlt": "خبر فوری",
+            "id": "c3gglqg9ne7o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "لیگ برتر؛ منچستر سیتی قهرمان شد، گواردیولا رکورد ۱۳۶ ساله را شکست ",
+            "firstPublished": "2024-05-19T17:00:32.226Z",
+            "lastPublished": "2024-05-19T17:33:51.712Z",
+            "link": "https://www.bbc.com/persian/articles/c5113jyerqdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/db72/live/3fe9e510-1607-11ef-a5f9-c9e97f2e93cf.jpg",
+            "description": "تیم فوتبال منچستر سیتی با پیروزی سه بر یک مقابل وستهم برای چهارمین فصل پیاپی قهرمان لیگ برتر فوتبال انگلیس شد. تا کنون تیمی نتوانسته بود به این رکورد دست یابد و منچستر یونایتد با هدایت الکس فرگوسن آخرین تیمی بود که سه قهرمانی متوالی در لیگ برتر بدست آورده بود.",
+            "imageAlt": "تماشاگران منچستر سیتی",
+            "id": "c5113jyerqdo"
           }
         ],
         "activePage": 1,
@@ -84,20 +144,617 @@
         "curationId": "urn:bbc:tipo:list:362895c7-2b82-43d8-8f76-9c8106734bc9",
         "curationType": "tipo-curation",
         "position": 1,
-        "title": "Top Stories",
+        "title": "مهمترین خبرها",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ایران مذاکره «غیرمستقیم» با آمریکا در عمان را تایید کرد",
+            "firstPublished": "2024-05-19T12:26:53.914Z",
+            "lastPublished": "2024-05-19T12:26:53.914Z",
+            "link": "https://www.bbc.com/persian/articles/ce991k09zezo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e58c/live/cdabd280-15d2-11ef-afc1-d9a09461b964.jpg",
+            "description": "نمایندگی ایران در سازمان ملل مذاکره «غیرمستقیم» با امریکا در عمان را تایید کرد. خبرگزاری تسنیم هم به نقل از نمایندگی ایران در سازمان ملل نوشت این مذاکرات یک «فرآیند مستمر» است و «اولین و آخرین» مذاکرات در نوع خود نیستند. دو روز پیش پایگاه خبری اکسیوس در آمریکا به نقل از دو منبع آگاه  خبر داد که مذاکرات «غیرمستقیمی» هفته گذشته بین دو مقام ارشد دولت بایدن و مقامات ایرانی درباره نحوه جلوگیری از تشدید تنش‌ در خاورمیانه صورت گرفته است.",
+            "imageAlt": "ایران و آمریکا",
+            "id": "ce991k09zezo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "قوه قضائیه ایران احکام بدوی زندان امیر تتلو را تایید کرد",
+            "firstPublished": "2024-05-19T08:08:55.346Z",
+            "lastPublished": "2024-05-19T11:21:30.942Z",
+            "link": "https://www.bbc.com/persian/articles/c288dmwwnggo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1de9/live/5f3ed510-15b2-11ef-9b12-1ba8f95c4917.jpg",
+            "description": "قوه قضائیه می‌گوید امیرحسین مقصودلو، معروف به «امیر تتلو» در پرونده‌‌اش در دادگاه انقلاب به زندان محکوم شده است اما مدت حبس را اعلام نکرد. به گزارش میزان، خبرگزاری قوه قضائیه، او در پرونده دیگری در دادگاه کیفری یک استان تهران هم به «جرم توهین به مقدسات» به سه سال حبس تعزیری محکوم شده است. بنابر این گزارش، این پرونده مربوط به زمانی است که او در ایران نبوده است.",
+            "imageAlt": "تتلو",
+            "id": "c288dmwwnggo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "«خطر مرگ» از سر روبرت فیتسو، نخست وزیر اسلواکی گذشت",
+            "firstPublished": "2024-05-19T14:15:54.832Z",
+            "lastPublished": "2024-05-19T14:15:54.832Z",
+            "link": "https://www.bbc.com/persian/articles/c3ggd15x8zdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fca0/live/6fc5c2e0-15da-11ef-a5f9-c9e97f2e93cf.jpg",
+            "description": "چهار روز پس از سوءقصد به جان روبرت فیتسو، نخست وزیر اسلواکی، معاونش می‌گوید که او دیگر «در خطر مرگ» نیست.\nرابرت کالیناک، معاون آقای فیتسو امروز به خبرنگاران گفت: او همچنان نیاز به مراقبت‌های ویژه دارد،اما « خطر بدترین چیزی که از آن می‌ترسیدیم حداقل در حال حاضر گذشته است».\n",
+            "imageAlt": "فیتسو",
+            "id": "c3ggd15x8zdo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "مشاور امنیت ملی آمریکا پس از دیدار با ولیعهد عربستان وارد اسرائیل شد",
+            "firstPublished": "2024-05-19T00:40:07.914Z",
+            "lastPublished": "2024-05-19T12:30:22.409Z",
+            "link": "https://www.bbc.com/persian/articles/c3ggx5prneko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c802/live/7d332660-15db-11ef-976f-87c9f89e656e.jpg",
+            "description": "جیک سالیوان، مشاور امنیت ملی دولت جو بایدن پس از دیدار با محمد بن‌سلمان، ولیعهد عربستان سعودی وارد اسرائیل شد. او با بنیامین نتانیاهو، نخست‌وزیر و نیز مشاور امنیت ملی اسرائیل، به‌عنوان تلاشی جدید برای تضمین آتش‌بس در غزه، دیدار می‌کند. آقای سالیوان پیش از سفر به اسرائیل در ظهران با ولیعهد عربستان ملاقات کرد. به گزارش رسانه‌های عربستان، جیک سالیوان و محمد بن‌سلمان در مورد نسخه «نیمه‌نهایی» توافق‌ امنیتی جدیدی گفتگو کردند. افزایش راه‌های کمک‌رسانی به غزه، پایان جنگ، و دستیابی به طرح یک کشور مستقل فلسطینی هم از محورهای اصلی گفتگو میان جیک سالیوان و محمد بن‌سلمان بود. در همین حال ارتش اسرائیل به عملیات نظامی خود در شرق رفح و مرکز غزه ادامه می‌دهد.",
+            "imageAlt": "غزه",
+            "id": "c3ggx5prneko"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M4S",
+            "isLive": false,
+            "title": "تگرگ و نشت آب در حرم امام هشتم شیعیان",
+            "firstPublished": "2024-05-19T12:34:39.918Z",
+            "lastPublished": "2024-05-19T12:34:39.918Z",
+            "link": "https://www.bbc.com/persian/articles/cw55xr40z7xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9f16/live/8ddf4180-15d9-11ef-976f-87c9f89e656e.png",
+            "description": "این تصاویر از تاریک شدن هوا در میانه روز و بارش تگرگ شدید در حرم امام هشتم شیعیان و نشت آب از یکی از ساختمان‌های این مجموعه در جریان بارندگی و سیل روز شنبه ۲۹ اردیبهشت مشهد، به طور گسترده در شبکه‌های اجتماعی بازنشر شده است. ",
+            "imageAlt": "بارش تگرگ و نشت آب در حرم امام هشتم شیعیان در مشهد",
+            "id": "cw55xr40z7xo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "بمب‌های جدید روسیه، شهرهای اوکراین را به‌راحتی ویران می‌کند",
+            "firstPublished": "2024-05-19T11:32:47.240Z",
+            "lastPublished": "2024-05-19T11:32:47.240Z",
+            "link": "https://www.bbc.com/persian/articles/c2xxlplxvyeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/80ab/live/aea3ea20-15b0-11ef-9b12-1ba8f95c4917.jpg",
+            "description": "روسیه از «بمب‌های گلاید» که به بمب «سُرِشی» هم معروف است، به طور فزاینده‌ای برای پیشبرد حملات خود در اوکراین استفاده می‌کند. ",
+            "imageAlt": "ووفچانسک بارها در حمله برون مرزی روسیه بمباران شده است",
+            "id": "c2xxlplxvyeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "برگزاری مسابقه خواب در کره‌ جنوبی",
+            "firstPublished": "2024-05-19T11:50:42.010Z",
+            "lastPublished": "2024-05-19T11:50:42.010Z",
+            "link": "https://www.bbc.com/persian/articles/c9775nq9pr3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/eeb7/live/8f0d8520-15d5-11ef-afc1-d9a09461b964.jpg",
+            "description": "در کره‌جنوبی مردم در یک مسابقه خواب جالب در پارک هان‌ریور در سئول شرکت کردند و از نور خورشید و نسیم بهاری در فضای باز لذت بردند.\nمقامات سئول، پایتخت کره جنوبی این رویداد را برنامه‌ریزی کردند تا به شهروندان کمک کنند، استراحت کنند و لذت چرت زدن در فضای باز را تجربه کنند.\n",
+            "imageAlt": "sleep",
+            "id": "c9775nq9pr3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "با میانجیگری جرگه محلی، درگیری در مرز پاکستان و افغانستان «پایان یافت»",
+            "firstPublished": "2024-05-19T10:15:05.824Z",
+            "lastPublished": "2024-05-19T10:15:05.824Z",
+            "link": "https://www.bbc.com/persian/articles/ce99d689l45o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8479/live/78451740-15c1-11ef-9dec-0b62d9933342.jpg",
+            "description": "پس از حدود یک هفته تنش مرزی، جرگه مشترک بزرگان محلی در دو سوی مرز پاکستان و افغانستان بر سر پایان درگیری و گفتگو بر سر اختلاف‌ها «توافق» شده است.\nبنا به گزارش‌ها، تنش در منطقه کرم وزیرستان جنوبی ایالت خیبرپختونخواه از دوشنبه پیش آغاز شد، تبادل آتش میان مرزبانان پاکستانی و حکومت طالبان باعث وحشت و جابجایی گسترده روستاییان محل شد.",
+            "imageAlt": ".",
+            "id": "ce99d689l45o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f1faf664-26a2-45e5-ac33-875b4ad86ebf",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "دور دنیا با تازه‌ترین‌ها",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "یک نور آبی که آسمان جنوب اسپانیا را روشن می‌کند",
+            "firstPublished": "2024-05-19T14:23:44.189Z",
+            "lastPublished": "2024-05-19T14:23:44.189Z",
+            "link": "https://www.bbc.com/persian/articles/ckddwzr8vdqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f2ff/live/c0164860-15e3-11ef-9b12-1ba8f95c4917.jpg",
+            "description": "یک دوربین مداربسته شهرداری شهر کادیز در جنوب غربی اسپانیا یک نور آبی را در آسمان شب این شهر ثبت کرده که احتمال داده می‌شود یک شهاب سنگ باشد.",
+            "imageAlt": "کادیز",
+            "id": "ckddwzr8vdqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ادامه سیل و آبگرفتگی در مشهد",
+            "firstPublished": "2024-05-18T18:19:01.487Z",
+            "lastPublished": "2024-05-18T18:19:01.487Z",
+            "link": "https://www.bbc.com/persian/articles/cnee7x0mkpxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d500/live/e8157580-1542-11ef-976f-87c9f89e656e.png",
+            "description": "بارندگی شدید‌ باعث جاری شدن دوباره سیل و آب‌گرفتگی معابر در مشهد و حومه شده است.\nاداره کل مدیریت بحران استان خراسان رضوی از مردم خواست از تردد غیرضروری در شهر و شهرستان‌های درگیر بارندگی و آب‌گرفتگی اجتناب کنند. \n",
+            "imageAlt": "آب‌گرفتگی در مشهد",
+            "id": "cnee7x0mkpxo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "تجمع «نه به اعدام» در سیدنی با حضور حامد اسماعیلیون",
+            "firstPublished": "2024-05-18T17:08:29.376Z",
+            "lastPublished": "2024-05-18T17:08:29.376Z",
+            "link": "https://www.bbc.com/persian/articles/cqll2qx2zyqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4c44/live/28592f20-1538-11ef-a5f9-c9e97f2e93cf.jpg",
+            "description": "شماری از ایرانی‌ها امروز شنبه، ۲۹ اردیبهشت، به دنبال فراخوانی در سالگرد اعدام سه معترض در ارتباط با پرونده «خانه‌ اصفهان» در بسیاری از شهرها تجمعات اعتراضی برپا کردند.\n\nحامد اسماعیلیون، نویسنده و فعال سیاسی در تجمع «نه به اعدام» در شهر سیدنی شرکت و سخنرانی کرد. مجید هاشمی، پسر خاله مجید کاظمی، از معترضان اعدام‌شده در پرونده «خانه اصفهان» هم از دیگر سخرانان این تجمع بود.\n\nمجید کاظمی، صالح میرهاشمی و سعید یعقوبی متهمان پرونده «خانه اصفهان» در ارتباط با کشته شدن دو بسیجی و یک سرهنگ یگان ویژه در ۲۵ آبان سال گذشته (۱۴۰۱) در جریان اعتراضات سراسری در میدان نگهبانی محله «خانه اصفهان» بازداشت، محاکمه و محکوم به اعدام شدند.",
+            "imageAlt": "تجمع «نه به اعدام» در سیدنی با حضور حامد اسماعیلیون",
+            "id": "cqll2qx2zyqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "آسمان مشهد در نیمه روز تاریک شد",
+            "firstPublished": "2024-05-18T14:13:40.428Z",
+            "lastPublished": "2024-05-18T14:13:40.428Z",
+            "link": "https://www.bbc.com/persian/articles/cv223x95149o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a455/live/8c2b0b70-1521-11ef-9b12-1ba8f95c4917.png",
+            "description": "تصاویری از تاریک شدن آسمان مشهد در نیمه روز  ۲۹ اردیبهشت برای بی‌بی‌سی ارسال شده است. مدیریت بحران خراسان رضوی با اشاره به وضعییت نامساعد هوا از ساکنان نیمه شمالی استان خراسان رضوی بویژه مشهد خواسته که در منزل بمانند و از هرگونه تردد شهری و بین شهری خودداری کنند.",
+            "imageAlt": "آسمان مشهد تاریک شد",
+            "id": "cv223x95149o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/persian/topics/c6z7mnr559gt",
+        "curationId": "urn:bbc:tipo:list:30c1fe6f-7b19-425d-acdf-66946e4ad3ee",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "ببینید",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "فوت‌و‌فن؛ روز آخر لیگ برتر در منچستر و لندن چه گذشت؟",
+            "firstPublished": "2024-05-19T19:23:03.921Z",
+            "lastPublished": "2024-05-19T19:23:03.921Z",
+            "link": "https://www.bbc.com/persian/articles/c5113zp07gyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/65af/live/92d659e0-160a-11ef-9c50-6ff9d9dba46f.jpg",
+            "description": "در هفته پایانی لیگ برتر، در دو ورزشگاه سکوی قهرمانی و شرایط برای برگزاری جشن قهرمانی فراهم شده بود؛ در ورزشگاه اتحاد شهر منچستر و در ورزشگاه امارات شهر لندن.",
+            "imageAlt": "منچستر سیتی برای چهارمین سال پیاپی قهرمان لیگ برتر فوتبال انگلیس شد",
+            "id": "c5113zp07gyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "دیپلماسی کتاب؛ شی، مکرون و پوتین کدام آثار ادبی را به هم هدیه می‌دهند؟",
+            "firstPublished": "2024-05-19T05:20:32.124Z",
+            "lastPublished": "2024-05-19T05:20:32.124Z",
+            "link": "https://www.bbc.com/persian/articles/c72p2g796vqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/30da/live/a7bcee60-136b-11ef-83f9-51268683e1ae.jpg",
+            "description": "شی جین پینگ، رئیس جمهور چین، در سفر اخیر خود به فرانسه چندین کتاب‌ همراه خود داشت تا سنت مبادله آثار ادبی کلاسیک با امانوئل مکرون، رئیس جمهوری فرانسه را زنده نگه دارد و علاقه خود به هنر و ادبیات فرانسه را به نمایش بگذارد.",
+            "imageAlt": "شی کتابی به‌عنوان هدیه به مکرون می‌دهد",
+            "id": "c72p2g796vqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "«انواع مهربانی‌ها» در جشنواره کن؛ سکس، خشونت و دنیای دیوانه‌وار لانتیموس",
+            "firstPublished": "2024-05-19T12:41:20.710Z",
+            "lastPublished": "2024-05-19T12:41:20.710Z",
+            "link": "https://www.bbc.com/persian/articles/c722j9r4pl5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6f53/live/2f951580-15b8-11ef-b63d-add589334579.jpg",
+            "description": "«انواع مهربانی‌ها» به سه بخش مختلف تقسیم شده و سه داستان متفاوت را در سه اپیزود روایت می‌کند، اما همان بازیگران هر بار در نقش‌های متفاوتی ظاهر می‌شوند و درونمایه این داستان‌ها، آنها را به نوعی به هم پیوند می‌زند.",
+            "imageAlt": "فیلم انواع مهربانی‌ها درباره - و در ستایش- اما استون است",
+            "id": "c722j9r4pl5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "حمله گالانت به نتانیاهو؛ آیا شکاف دولت و ارتش اسرائیل عمیق‌تر می‌شود؟",
+            "firstPublished": "2024-05-18T20:08:53.205Z",
+            "lastPublished": "2024-05-18T20:08:53.205Z",
+            "link": "https://www.bbc.com/persian/articles/c299g3yj3ydo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/490c/live/2c79aa80-1551-11ef-a5f9-c9e97f2e93cf.jpg",
+            "description": "یوآو گالانت وزیر دفاع اسرائیل سکوت خود را شکسته و انتقاد از سیاست‌های نخست وزیر و رهبر حزب حاکم لیکود را آغاز کرده است؛ حزبی که خود او هم عضوی از آن است.",
+            "imageAlt": "نتانیاهو و گالانت",
+            "id": "c299g3yj3ydo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "علی خامنه‌ای و حاشیه‌های«نان و شراب» در نمایشگاه کتاب تهران",
+            "firstPublished": "2024-05-17T22:35:58.822Z",
+            "lastPublished": "2024-05-18T17:47:12.522Z",
+            "link": "https://www.bbc.com/persian/articles/czd891vqd93o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cc2f/live/d6fc3930-145e-11ef-b9db-671b2247cd48.jpg",
+            "description": "علی خامنه‌ای براساس یک سنت چندین ساله، در ۲۴ اردیبهشت‌ماه امسال نیز از نمایشگاه کتاب بازدید کرد. در جریان این برنامه ویدئویی از اظهارات رهبر جمهوری اسلامی درباره کتاب «نان و شراب» منتشر شده که واکنش‌های گسترده‌ای در شبکه‌های اجتماعی به همراه داشته است.",
+            "imageAlt": "علی خامنه‌ای",
+            "id": "czd891vqd93o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ملی‌گرایی هندو چگونه بر سیاست هند مسلط شد؟",
+            "firstPublished": "2024-05-19T04:33:02.343Z",
+            "lastPublished": "2024-05-19T04:33:02.343Z",
+            "link": "https://www.bbc.com/persian/articles/c6py1j862r4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/973a/live/b19216f0-095b-11ef-b9d8-4f52aebe147d.jpg",
+            "description": "انتخابات سراسری هند در حال برگزاری است و نارندرا مودی، نخست وزیر این کشور امیدوار است بعد از پایان شش هفته رای‌گیری در روز اول ژوئن، بتواند برای سومین دوره در قدرت باقی بماند.",
+            "imageAlt": "A BJP flag is waved at a rally",
+            "id": "c6py1j862r4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "فیلم «آواز بوقلمون»؛ پیوند ایران و کانادا",
+            "firstPublished": "2024-05-18T12:48:07.698Z",
+            "lastPublished": "2024-05-18T12:48:07.698Z",
+            "link": "https://www.bbc.com/persian/articles/cle0yz8xevyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3f12/live/65b38180-148a-11ef-976f-87c9f89e656e.jpg",
+            "description": "آواز بوقلمون («زبان بین المللی») ساخته متیو رانکین که در بخش دو هفته کارگردانان جشنواره کن به نمایش درآمد، یکی از عجیب‌ترین فیلم‌های امسال است از فیلمسازی کانادایی که عاشق ایران و زبان فارسی است و حالا در فیلم غریبش یک ایران در دل کانادا بنا کرده که سه شهر مختلف را به هم پیوند می‌زند: تهران، مونترال و وینیپگ.",
+            "imageAlt": "صحنه‌ای از فیلم آواز بوقلمون",
+            "id": "cle0yz8xevyo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "همکاری پوتین و شی دیگر از جایگاه برابر نیست",
+            "firstPublished": "2024-05-18T17:07:53.065Z",
+            "lastPublished": "2024-05-18T17:07:53.065Z",
+            "link": "https://www.bbc.com/persian/articles/cd18ddjpe99o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5d6b/live/94d7cde0-1507-11ef-a915-1749a1611cb2.png",
+            "description": "دیدار رسمی هفته پیش ولادمیر پوتین از چین نمایش اقتدار بود. فرصتی بود برای رئیس‌جمهور روسیه که به دنیا نشان دهد که متحدی قدرتمند پشت سر خود دارد.",
+            "imageAlt": "تصویرسازی از چهره‌های رهبران چین و روسیه",
+            "id": "cd18ddjpe99o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:794aa745-4de3-44b3-83aa-031aa12f46f3",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "گزارش و تحلیل",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "نرگس محمدی خواهان محاکمه علنی شد: می‌خواهم با شاهدان تعرض به زنان زندانی در دادگاه حاضر شوم",
+            "firstPublished": "2024-05-18T10:40:38.433Z",
+            "lastPublished": "2024-05-18T10:40:38.433Z",
+            "link": "https://www.bbc.com/persian/articles/c72p77j6086o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/98fe/live/8ba74a60-14fe-11ef-b5c4-dd39f535cd46.jpg",
+            "description": "نرگس محمدی، برنده ایرانی جایزه صلح نوبل که اکنون در زندان اوین تهران محبوس است اعلام کرده است که فردا «به اتهام تبلیغ علیه نظام و به دلیل اعتراض به تعرض جنسی به زنان» محاکمه خواهد شد.",
+            "imageAlt": "نرگس محمدی برنده جایزه صلح نوبل اکنون در زندان اوین تهران محبوس است",
+            "id": "c72p77j6086o"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M2S",
+            "isLive": false,
+            "title": "دفاع وزیر کشور از بازداشت خشن یک زن: خودش را برهنه کرد، کار پلیس درست بود",
+            "firstPublished": "2024-05-15T20:38:29.157Z",
+            "lastPublished": "2024-05-15T20:38:29.157Z",
+            "link": "https://www.bbc.com/persian/articles/c3g5gv071wdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e734/live/721078d0-12fe-11ef-b9d8-4f52aebe147d.jpg",
+            "imageAlt": "وزیر کشور ایران درباره بازداشت خشن یک زن",
+            "id": "c3g5gv071wdo"
+          },
+          {
+            "type": "video",
+            "isLive": false,
+            "title": "کتک زدن زن جوان؛ پلیس ایران می‌گوید «مامور خاطی تعلیق و بازداشت» شده است ",
+            "firstPublished": "2024-05-14T06:26:31.397Z",
+            "lastPublished": "2024-05-14T06:26:31.397Z",
+            "link": "https://www.bbc.com/persian/articles/cv2jjrv0r48o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c64b/live/a55bf0b0-11ba-11ef-82e8-cd354766a224.jpg",
+            "description": "پلیس ایران اصالت ویدئوی منتشرشده از یک مامور را که در حال کتک زدن یک زن جوان دیده می‌شود تایید کرد و از بازداشت او خبر داد.",
+            "imageAlt": "پلیس تهران",
+            "id": "cv2jjrv0r48o"
+          },
+          {
+            "type": "video",
+            "duration": "PT44S",
+            "isLive": false,
+            "title": "حجاب اجباری؛ پرتاب زنی کنار جدول و بازداشت با کشیدن پتو بر سرش",
+            "firstPublished": "2024-05-15T11:10:39.332Z",
+            "lastPublished": "2024-05-15T11:10:39.332Z",
+            "link": "https://www.bbc.com/persian/articles/c4n1n9w4r11o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d8dc/live/05a1c060-12b2-11ef-b9d8-4f52aebe147d.jpg",
+            "description": "این ویدیو از بازداشت خشن یک زن به دلیل نداشتن حجاب اجباری به دست ماموران گشت ارشاد را «آموزشکده توانا» منتشر کرده است. گفته شده این اتفاق روز دوشنبه ۲۴ اردیبهشت در خیابان مطهری تهران افتاده است. \n",
+            "imageAlt": "حجاب",
+            "id": "c4n1n9w4r11o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:79070ad2-a403-4284-8550-4c17298dd08c",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "زنان ایران و حجاب اجباری",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "روز نکبت: در سال ۱۹۴۸ چه اتفاقی افتاد و چرا فلسطینیان آن را «فاجعه» می‌خوانند؟",
+            "firstPublished": "2024-05-15T10:19:05.121Z",
+            "lastPublished": "2024-05-15T10:19:05.121Z",
+            "link": "https://www.bbc.com/persian/articles/clkekv2gnndo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3524/live/36d92790-0e48-11ef-b9d8-4f52aebe147d.jpg",
+            "description": "هر سال در ۱۵ ماه مه، فلسطینیان در سراسر جهان، روز نکبت را به یاد می‌آورند که یادآور زمانی است که خانه‌های خود را از دست دادند و پناهنده شدند.",
+            "imageAlt": "یک فلسطینی با کلیدی روی دوشش",
+            "id": "clkekv2gnndo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "سازوکار انتخابات ریاست جمهوری آمریکا چگونه است؟ ",
+            "firstPublished": "2024-05-15T10:08:07.168Z",
+            "lastPublished": "2024-05-15T10:08:07.168Z",
+            "link": "https://www.bbc.com/persian/articles/crgyly7528ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d2cf/live/9fa415c0-0617-11ef-ae19-4d49398a943b.png",
+            "description": "انتخابات ریاست جمهوری آمریکا چگونه کار می‌کند؟\nیک راهنمای ساده برای انتخابات ریاست جمهوری آمریکا \nانتخابات ریاست جمهوری آمریکا چگونه کار می‌کند و چه کسی در نظرسنجی‌ها پیشتاز است؟\n آمریکایی‌ها نوامبر ۲۰۲۴ (آبان ۱۴۰۳) برای انتخاب رئیس‌جمهور بعدی ایالات متحده پای صندوق‌های رای می‌روند. فردی که در کاخ سفید بر صندلی قدرت تکیه می‌زند، تاثیر قابل توجهی بر زندگی مردم، هم در داخل آمریکا و هم خارج آن، دارد و به همین دلیل نتایج این انتخابات برای همه مهم است.\n",
+            "imageAlt": "گرافیک انتخابات آمریکا",
+            "id": "crgyly7528ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "چرا انتخابات اروپا مهم است و چطور برگزار می‌شود؟",
+            "firstPublished": "2024-05-13T05:48:40.317Z",
+            "lastPublished": "2024-05-13T05:48:40.317Z",
+            "link": "https://www.bbc.com/persian/articles/c0klj1jj080o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8494/live/e980b6f0-095d-11ef-b48b-e1bccd3a85f3.png",
+            "description": "ماه ژوئن امسال شاهد برگزاری انتخابات در ۲۷ کشور اروپایی خواهد بود، انتخاباتی که پیامدهای گسترده‌ای برای اتحادیه اروپا و فراتر از آن خواهد داشت.",
+            "imageAlt": "دستی در حال رای دادن",
+            "id": "c0klj1jj080o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "آیا شبه‌جزیره سینا به منطقه «شبه‌نظامیان محلی» تبدیل می‌شود؟",
+            "firstPublished": "2024-05-12T18:54:47.404Z",
+            "lastPublished": "2024-05-12T18:54:47.404Z",
+            "link": "https://www.bbc.com/persian/articles/crgyre2d792o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d9a7/live/ce62a900-1038-11ef-9730-43a7fa369427.png",
+            "description": "در دهه گذشته، قبایل ساکن شبه‌جزیره سینا در مصر غالبا به خاطر نقشی که در مبارزه با شبه‌نظامیانی شهرت یافته‌اند که در نیمه شمالی شبه‌جزیره و هم‌مرز با غزه و اسرائیل فعالیت داشته‌اند.",
+            "imageAlt": "دولت مصر در حال مبارزه با حملات شبه‌نظامیان در شبه جزیره سینا است که بسیاری از نظامیان و پرسنل امنیتی مصر و همچنین غیرنظامیان را هدف قرار داده است.",
+            "id": "crgyre2d792o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 5,
+        "curationId": "urn:bbc:vivo:curation:62615136-d5ba-4718-852a-9217612b4401",
+        "curationType": "vivo-stream",
+        "position": 6,
+        "title": "کیست،  چیست، کجاست",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 7,
+        "title": "پربیننده‌ترین‌ها",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/persian/popular/read",
+        "mostRead": {
+          "generated": "2024-05-20T12:32:23.672Z",
+          "lastRecordTimeStamp": "2024-05-20T12:29:00Z",
+          "firstRecordTimeStamp": "2024-05-20T12:14:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:c7226l3e2g0o",
+              "rank": 1,
+              "title": "واکنش رهبران جهان به مرگ رئیس‌جمهور و وزیر خارجه ایران",
+              "href": "https://www.bbc.com/persian/articles/c7226l3e2g0o",
+              "timestamp": "2024-05-20T12:01:31.082Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv225zej9m3o",
+              "rank": 2,
+              "title": "محمد مخبر، معاون اول و جانشین موقت رئیس جمهوری ایران کیست؟",
+              "href": "https://www.bbc.com/persian/articles/cv225zej9m3o",
+              "timestamp": "2024-05-20T05:09:08.293Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c0338l78dexo",
+              "rank": 3,
+              "title": "سرنوشت روسای دولت جمهوری اسلامی ایران: ترور، حذف، سقوط",
+              "href": "https://www.bbc.com/persian/articles/c0338l78dexo",
+              "timestamp": "2024-05-20T07:51:32.422Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cljj8ezn37ro",
+              "rank": 4,
+              "title": "حسین امیرعبداللهیان، وزیر خارجه‌ای که به سپاه نزدیک بود و «معتمد نظام»",
+              "href": "https://www.bbc.com/persian/articles/cljj8ezn37ro",
+              "timestamp": "2024-05-20T04:47:43.375Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3gglqg9ne7o",
+              "rank": 5,
+              "title": "درخواست دادستان دیوان کیفری بین‌المللی برای صدور قرار بازداشت برای نتانیاهو و رهبران حماس",
+              "href": "https://www.bbc.com/persian/articles/c3gglqg9ne7o",
+              "timestamp": "2024-05-20T12:08:41.110Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c1vv7yr41vyo",
+              "rank": 6,
+              "title": "پایان ناتمام ابراهیم رئیسی؛ مردی که به آخر نرسید",
+              "href": "https://www.bbc.com/persian/articles/c1vv7yr41vyo",
+              "timestamp": "2024-05-20T04:30:27.630Z"
+            },
+            {
+              "id": "1d9031db-0104-41f4-bbd2-59dee5d5bc96",
+              "rank": 7,
+              "title": "زندگی‌نامه ابراهیم رئیسی؛ از قوه قضاییه تا قوه مجریه",
+              "href": "/persian/iran-features-57407203",
+              "timestamp": "2024-05-20T04:55:34.000Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cjeedvzrydvo",
+              "rank": 8,
+              "title": "کشته‌شدن ابراهیم رئیسی؛ چه کسی کفیل رئیس‌جمهور ایران است و انتخابات چه وقت خواهد بود؟",
+              "href": "https://www.bbc.com/persian/articles/cjeedvzrydvo",
+              "timestamp": "2024-05-20T06:25:54.810Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c5113jyerqdo",
+              "rank": 9,
+              "title": "لیگ برتر؛ منچستر سیتی قهرمان شد، گواردیولا رکورد ۱۳۶ ساله را شکست ",
+              "href": "https://www.bbc.com/persian/articles/c5113jyerqdo",
+              "timestamp": "2024-05-19T17:33:51.712Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c299gzw0prwo",
+              "rank": 10,
+              "title": "دیدار رئیسی و علی‌اف و افتتاح سد مرزی قیزقلعه‌سی ",
+              "href": "https://www.bbc.com/persian/articles/c299gzw0prwo",
+              "timestamp": "2024-05-19T12:30:41.419Z"
+            }
+          ]
+        }
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "فیسبوک",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbcpersian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fd9d/live/858e7570-56fb-11ee-83bb-5f9bffc8f569.png",
+            "imageAlt": "Facebook",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcurdu%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "ایکس",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://twitter.com/bbcpersian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/673b/live/a6477390-56f9-11ee-a938-efbbc9da0451.png",
+            "imageAlt": "Twitter/X",
+            "id": "https%3A%2F%2Ftwitter.com%2FBBCUrdu"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "یوتیوب",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/user/BBCPersian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4046/live/074725a0-56fa-11ee-a938-efbbc9da0451.png",
+            "imageAlt": "YouTube",
+            "id": "https%3A%2F%2Fwww.youtube.com%2F%40bbcnewsurdu"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "اینستاگرام",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcpersian/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9ee1/live/ea7f70d0-56f9-11ee-83bb-5f9bffc8f569.png",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcurdu%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "ساندکلاد",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://soundcloud.com/bbcpersian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ed94/live/9bd70670-92cf-11ee-8df3-1d2983d8814f.png",
+            "imageAlt": "Soundcloud",
+            "id": "https%3A%2F%2Fsoundcloud.com%2Fbbcpersian"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "تلگرام",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.telegram.me/bbcpersian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/24f1/live/4affdd10-92cc-11ee-b9a7-c91b9dfa91e5.png",
+            "imageAlt": "Telegram",
+            "id": "https%3A%2F%2Fwww.telegram.me%2Fbbcpersian"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:586bdc5b-2b7b-45a7-9496-b5e11c895660",
+        "curationType": "tipo-curation",
+        "position": 8,
+        "title": "شبکه های اجتماعی",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:76087f76-661a-4088-997d-637166d6033b",
+        "curationType": "tipo-curation",
+        "position": 9,
+        "title": "Do Not use - Do Not remove - previous analysis curation",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "کلیک کنید",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/ws/languages?xtor=CS1-13-[wspersian~N~A39~MBC]-[Owned]&utm_source=mktg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e802/live/63d1b730-12df-11ef-82e8-cd354766a224.png",
+            "imageAlt": "کلیک کنید",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fws%2Flanguages%3Fxtor%3DCS1-13-%5Bwspersian~N~A39~MBC%5D-%5BOwned%5D%26utm_source%3Dmktg"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/ws/languages",
+        "curationId": "urn:bbc:tipo:list:62072ea2-13b9-4cad-9c9d-bee0a17c1c2f",
+        "curationType": "tipo-curation",
+        "position": 10,
+        "title": "دریافت اخبار به زبان‌های دیگر. اینجا را",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:c3rpqvvzem3t",
+        "contentId": "urn:bbc:tipo:topic:c0rp0kp534xt",
         "contentType": "index-home",
         "pageIdentifier": "persian.page",
         "pageTitle": "BBC News فارسی"
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

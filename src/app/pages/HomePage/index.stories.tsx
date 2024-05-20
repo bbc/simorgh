@@ -76,7 +76,7 @@ const Component = ({ service, variant }: StoryProps) => {
 export default {
   Component,
   title: 'Pages/Home Page',
-  decorators: [withServicesDecorator({ defaultService: 'kyrgyz' })],
+  decorators: [withServicesDecorator({ defaultService: 'persian' })],
 };
 
 export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
