@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable cypress/unsafe-to-chain-command */
 /* eslint-disable import/prefer-default-export */
 import config from '../../support/config/services';
 
@@ -7,6 +9,29 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   pageType,
 }) => {
   describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
+    describe('Image Tests', () => {
+      // live radio pages do not have an image
+      if (pageType !== 'liveRadio') {
+        it('should have webp images on pages', () => {
+          // on amp there are hidden embed images, so we check only ichef ones
+          cy.get('amp-img, img[src*="ichef."').each($img => {
+            // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
+            // you leave the Cypress command queue and are using plain JS. Using .wrap converts
+            // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
+
+            // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
+            cy.wrap($img)
+              .scrollIntoView()
+              .should('be.visible')
+              .then($visibleImg => {
+                const src = $visibleImg.attr('src');
+                cy.log(src);
+                expect(src.endsWith('.webp')).to.be.true;
+              });
+          });
+        });
+      }
+    });
     describe('Header Tests', () => {
       const serviceName = config[service].name;
       // limit number of tests to 2 services for navigation toggling
