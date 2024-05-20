@@ -9,7 +9,10 @@ export default ({
   id,
   children,
   className,
-}: PropsWithChildren<{ id: InputProps['id']; className?: string }>) => (
+}: PropsWithChildren<{
+  id: InputProps['id'];
+  className?: string;
+}>) => (
   <Text as="label" className={className} htmlFor={id} css={styles.fieldLabel}>
     {children}
   </Text>
