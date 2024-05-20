@@ -1,11 +1,11 @@
 import { Theme, css } from '@emotion/react';
+import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
   background: ({ mq }: Theme) =>
     css({
       display: 'none',
-
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'block',
         position: 'absolute',
@@ -17,7 +17,6 @@ export default {
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       position: 'relative',
-
       [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
         margin: '0 auto',
@@ -37,22 +36,9 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  mainContent: ({ spacings, fontVariants, palette, mq }: Theme) =>
+  mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
-      a: {
-        ...fontVariants.sansBold,
-        color: palette.EBON,
-        borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
-        textDecoration: 'none',
-        '&:visited': {
-          color: palette.METAL,
-          borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
-        },
-        '&:focus, &:hover': {
-          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-          color: palette.POSTBOX,
-        },
-      },
+      a: getInlineLinkStyles(palette),
       background: palette.WHITE,
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
