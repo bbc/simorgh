@@ -123,7 +123,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       embed={embed}
                     />
-                    {index === indexOfFirstNonBanner && <MPU />}
+                    {index === 0 && <MPU />}
                   </React.Fragment>
                 );
               },
