@@ -15,7 +15,6 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-
   const { isValid, value = '', required, wasInvalid } = inputState ?? {};
   const translation = 'Maximum 500 Words';
 
