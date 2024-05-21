@@ -36,6 +36,7 @@ export type ContextProps = {
   hasAttemptedSubmit: boolean;
   progress: string;
   screen: FormScreen;
+  submissionID: string | null;
 };
 
 export const FormContext = createContext({} as ContextProps);
@@ -87,6 +88,7 @@ export const FormContextProvider = ({
   const [screen, _setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
@@ -140,6 +142,7 @@ export const FormContextProvider = ({
       const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
+      req.responseType = 'json';
       req.open('POST', url, true);
 
       req.upload.onprogress = e => {
@@ -149,6 +152,9 @@ export const FormContextProvider = ({
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
+          if (req.status === OK) {
+            setSubmissionID(req.response.submissionId);
+          }
           if (req.status !== OK) {
             const { message, code, status, isRecoverable } = new UGCSendError(
               req,
@@ -186,6 +192,7 @@ export const FormContextProvider = ({
         progress,
         hasAttemptedSubmit,
         screen,
+        submissionID,
       }}
     >
       {children}
