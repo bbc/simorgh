@@ -5,6 +5,7 @@ export default {
   background: ({ mq }: Theme) =>
     css({
       display: 'none',
+
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'block',
         position: 'absolute',
@@ -16,6 +17,7 @@ export default {
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       position: 'relative',
+
       [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
         margin: '0 auto',
@@ -30,6 +32,7 @@ export default {
   primaryColumn: ({ mq, spacings }: Theme) =>
     css({
       gridColumn: '1 / span 12',
+
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
         paddingBottom: `${spacings.QUADRUPLE}rem`,
