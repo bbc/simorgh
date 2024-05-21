@@ -13,7 +13,7 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = false, required, wasInvalid } = inputState;
+  const { isValid, value = false, required, wasInvalid } = inputState ?? {};
 
   return (
     <div css={[styles.checkboxContainer]}>
@@ -30,6 +30,7 @@ export default ({
         })}
         {...(required && { 'aria-required': required })}
       />
+
       <Label id={id} css={[styles.checkboxLabel]}>
         {label}
       </Label>
