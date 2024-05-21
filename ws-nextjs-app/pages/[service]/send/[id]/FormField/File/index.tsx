@@ -113,7 +113,7 @@ const FileList = ({ files, name }: FileListProps) => {
 };
 
 export default ({ id, name, inputState, describedBy, label }: InputProps) => {
-  const { isValid, required } = inputState;
+  const { isValid, required } = inputState ?? {};
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
   const filesInState = inputState.value as File[];
