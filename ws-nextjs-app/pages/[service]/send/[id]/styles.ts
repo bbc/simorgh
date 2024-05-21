@@ -1,5 +1,4 @@
 import { Theme, css } from '@emotion/react';
-import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
@@ -38,7 +37,6 @@ export default {
     }),
   mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
-      a: getInlineLinkStyles(palette),
       background: palette.WHITE,
       padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
