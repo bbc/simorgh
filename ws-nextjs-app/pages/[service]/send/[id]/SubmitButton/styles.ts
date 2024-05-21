@@ -9,6 +9,7 @@ export default {
       ...fontVariants.sansBold,
       ...fontSizes.bodyCopy,
       border: 'none',
+      outline: 'solid 0.0625rem transparent',
       padding: `${spacings.FULL + spacings.HALF}rem 0`,
       marginBottom: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',

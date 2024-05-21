@@ -89,7 +89,10 @@ export type FieldData = {
   wasInvalid: boolean;
 };
 
+export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
+
 export type PageProps = {
+  initialScreen?: FormScreen;
   pageData: {
     title: string;
     description: string;

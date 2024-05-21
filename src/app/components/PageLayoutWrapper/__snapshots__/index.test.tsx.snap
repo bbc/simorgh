@@ -491,6 +491,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  position: relative;
 }
 
 .emotion-30 {
