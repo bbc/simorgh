@@ -9,6 +9,8 @@ const Component = () => (
 );
 
 export default {
-  title: 'Components/SucessMessage',
-  Component,
+  title: 'Components/SuccessMessage',
+  component: Component,
 };
+
+export const Default = Component;
