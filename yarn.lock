@@ -3743,7 +3743,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-common@npm:8.1.1, @storybook/core-common@npm:^8.0.5":
+"@storybook/core-common@npm:8.1.1":
   version: 8.1.1
   resolution: "@storybook/core-common@npm:8.1.1"
   dependencies:
@@ -15870,7 +15870,7 @@ __metadata:
     "@storybook/blocks": "npm:8.1.1"
     "@storybook/builder-webpack5": "npm:8.1.1"
     "@storybook/cli": "npm:8.1.1"
-    "@storybook/core-common": "npm:^8.0.5"
+    "@storybook/core-common": "npm:8.1.1"
     "@storybook/react": "npm:8.1.1"
     "@storybook/react-webpack5": "npm:8.1.1"
     "@storybook/theming": "npm:8.1.1"
