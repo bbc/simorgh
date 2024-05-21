@@ -13529,7 +13529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:6.1.2, npm-run-all2@npm:^6.0.0":
+"npm-run-all2@npm:6.1.2":
   version: 6.1.2
   resolution: "npm-run-all2@npm:6.1.2"
   dependencies:
@@ -13546,6 +13546,26 @@ __metadata:
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
   checksum: 10/b031f409a8c7144cd4dc6ef7cbe6007c9c78b1df38e32d2b5049e697f204d13145dcd419656f313a5afce44c9148a77ed87cf050ff98ceff75cc3553d031b896
+  languageName: node
+  linkType: hard
+
+"npm-run-all2@npm:^6.0.0":
+  version: 6.2.0
+  resolution: "npm-run-all2@npm:6.2.0"
+  dependencies:
+    ansi-styles: "npm:^6.2.1"
+    cross-spawn: "npm:^7.0.3"
+    memorystream: "npm:^0.3.1"
+    minimatch: "npm:^9.0.0"
+    pidtree: "npm:^0.6.0"
+    read-package-json-fast: "npm:^3.0.2"
+    shell-quote: "npm:^1.7.3"
+  bin:
+    npm-run-all: bin/npm-run-all/index.js
+    npm-run-all2: bin/npm-run-all/index.js
+    run-p: bin/run-p/index.js
+    run-s: bin/run-s/index.js
+  checksum: 10/917937b6280a4f7af168b784fba10f0c441d58d86ab5595c88e4aa4b9f69f7eaa0af62ddc8a12fed705debcfc5f77bf80bad48936a3384f3a0b527111b7ff4ec
   languageName: node
   linkType: hard
 
