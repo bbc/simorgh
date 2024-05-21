@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
-import { data as hindiHomePage } from '#data/hindi/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
@@ -215,22 +214,35 @@ describe('Home Page', () => {
       expect(getBootstrapScript()).toBeTruthy();
     });
     it('should display the MPU ad in the correct location', () => {
-      const { getAllByRole } = render(
+      const { container } = render(
         <BrowserRouter>
           {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
-          <HomePage pageData={hindiHomePage} />
+          <HomePage pageData={homePageData} />
         </BrowserRouter>,
         {
-          service: 'hindi',
+          service: 'kyrgyz',
           toggles: {
             ads: { enabled: true },
           },
           showAdsBasedOnLocation: true,
         },
       );
-      const sections = getAllByRole('region');
-      sections.forEach(console.log);
-      console.log(sections.length);
+      const sections = container.querySelectorAll(`section`);
+      const sectionIds: (string | null)[] = [];
+      sections.forEach((section: HTMLElement) => {
+        sectionIds.push(
+          section.getAttribute('aria-labelledby') ||
+            section.getAttribute('data-e2e'),
+        );
+      });
+      const mpuIndex = sectionIds.lastIndexOf('advertisement');
+      const firstNonBannerIndex = sectionIds.findIndex(
+        sectionId =>
+          sectionId !== 'advertisement' &&
+          !sectionId?.startsWith('billboard') &&
+          !sectionId?.startsWith('message-banner'),
+      );
+      expect(mpuIndex).toBe(firstNonBannerIndex + 1);
     });
 
     it.each`
