@@ -13529,7 +13529,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:6.1.2, npm-run-all2@npm:^6.0.0":
+"npm-run-all2@npm:6.2.0":
+  version: 6.2.0
+  resolution: "npm-run-all2@npm:6.2.0"
+  dependencies:
+    ansi-styles: "npm:^6.2.1"
+    cross-spawn: "npm:^7.0.3"
+    memorystream: "npm:^0.3.1"
+    minimatch: "npm:^9.0.0"
+    pidtree: "npm:^0.6.0"
+    read-package-json-fast: "npm:^3.0.2"
+    shell-quote: "npm:^1.7.3"
+  bin:
+    npm-run-all: bin/npm-run-all/index.js
+    npm-run-all2: bin/npm-run-all/index.js
+    run-p: bin/run-p/index.js
+    run-s: bin/run-s/index.js
+  checksum: 10/917937b6280a4f7af168b784fba10f0c441d58d86ab5595c88e4aa4b9f69f7eaa0af62ddc8a12fed705debcfc5f77bf80bad48936a3384f3a0b527111b7ff4ec
+  languageName: node
+  linkType: hard
+
+"npm-run-all2@npm:^6.0.0":
   version: 6.1.2
   resolution: "npm-run-all2@npm:6.1.2"
   dependencies:
@@ -15957,7 +15977,7 @@ __metadata:
     moment-timezone: "npm:0.5.45"
     morgan: "npm:1.10.0"
     node-fetch: "npm:2.6.12"
-    npm-run-all2: "npm:6.1.2"
+    npm-run-all2: "npm:6.2.0"
     path-to-regexp: "npm:6.2.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
