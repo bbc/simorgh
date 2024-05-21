@@ -30,7 +30,7 @@ export default {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
       p: { color: palette.BLACK },
-      a: getInlineLinkStyles(palette),
+      a: { ...fontVariants.sansBold, ...getInlineLinkStyles(palette) },
     }),
   privacyNotice: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
