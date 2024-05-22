@@ -401,10 +401,17 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive, service }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src':
-      service === 'mundo'
-        ? "'self' https:"
-        : generateConnectSrc({ isAmp, isLive }),
+    'connect-src': [
+      'afrique',
+      'arabic',
+      'hindi',
+      'japanese',
+      'mundo',
+      'portuguese',
+      'urdu',
+    ].includes(service)
+      ? "'self' https:"
+      : generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
