@@ -147,6 +147,12 @@ describe('Media Asset Page', () => {
       pageData: mapPageData,
     });
 
+    console.log('##################');
+    console.log('I GET HERE');
+    console.log(`Image block - ${JSON.stringify(response.pageData)}`);
+    console.log('##################');
+  
+
     pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
@@ -224,14 +230,18 @@ describe('Media Asset Page', () => {
       ['content', 'blocks', 11, 'path'],
       mapPageData.data.article,
     );
-    const imageWidth = path(
-      ['content', 'blocks', 11, 'width'],
-      mapPageData.data.article,
-    );
-    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/${imageWidth}${imagePath}.webp`;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640${imagePath}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/240${imagePath}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320${imagePath}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/480${imagePath}.webp 480w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/624${imagePath}.webp 624w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/640${imagePath}.webp 640w`,
+    ].join(', ');
 
-    const { src } = screen.getByAltText(imageAltText);
+    const { src, srcset } = screen.getByAltText(imageAltText);
     expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
   });
 
   describe('AV player', () => {

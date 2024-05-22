@@ -29,6 +29,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import {
   render,
+  screen,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -110,10 +111,16 @@ const Context = ({
 };
 
 beforeEach(() => {
+  process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
   fetch.resetMocks();
   ATIAnalytics.mockImplementation(
     jest.requireActual('../../components/ATIAnalytics').default,
   );
+});
+
+afterEach(() => {
+  delete process.env.SIMORGH_ICHEF_BASE_URL;
 });
 
 describe('Article Page', () => {
@@ -432,6 +439,35 @@ describe('Article Page', () => {
 
     expect(getByTestId('top-stories')).toBeInTheDocument();
     expect(getByTestId('features')).toBeInTheDocument();
+  });
+
+  it('should render image with the .webp image extension', () => {
+    const imageBlock = articleDataNews.content.model.blocks[5];
+    const imageAltText =
+      imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;
+    const imageLocator = imageBlock.model.blocks[1].model.locator;
+    const imageOriginCode = imageBlock.model.blocks[1].model.originCode;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640/${imageOriginCode}/${imageLocator}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/240/${imageOriginCode}/${imageLocator}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320/${imageOriginCode}/${imageLocator}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/480/${imageOriginCode}/${imageLocator}.webp 480w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/624/${imageOriginCode}/${imageLocator}.webp 624w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/800/${imageOriginCode}/${imageLocator}.webp 800w`,
+    ].join(', ');
+
+    render(
+      <Context service="news">
+        <ArticlePage
+          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+        />
+      </Context>,
+    );
+
+    const { src, srcset } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
   });
 
   describe('when isApp is true', () => {

@@ -1854,8 +1854,46 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 }
 
+.emotion-13 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.emotion-14 {
+  position: relative;
+  height: 0;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  background-color: #F2F2F2;
+}
+
+@media (min-width: 25rem) {
+  .emotion-14 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-15 {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
 @media (max-width: 24.9375rem) {
-  .emotion-13 {
+  .emotion-16 {
     margin: 0 0.5rem;
     padding-bottom: 1.5rem;
   }
@@ -1863,7 +1901,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 @media (min-width: 25rem) {
   @media (max-width: 62.9375rem) {
-    .emotion-13 {
+    .emotion-16 {
       margin: 0 1rem;
       padding-bottom: 2rem;
     }
@@ -1871,21 +1909,21 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-13 {
+  .emotion-16 {
     margin: 0 1rem;
     padding-bottom: 2.5rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-13 {
+  .emotion-16 {
     margin: 0 auto;
     padding: 0 1rem 1.5rem;
     max-width: 80rem;
   }
 }
 
-.emotion-14 {
+.emotion-17 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -1893,29 +1931,29 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-17 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-17 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-17 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-16 {
+.emotion-19 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-18 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1925,7 +1963,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-20 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1945,7 +1983,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-23 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1953,7 +1991,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-25 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1973,32 +2011,32 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-25 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-25 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-25 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-25 {
     padding-right: 1rem;
   }
 }
 
-.emotion-24 {
+.emotion-27 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2007,7 +2045,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-24 {
+  .emotion-27 {
     display: grid;
     position: initial;
     width: initial;
@@ -2015,7 +2053,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2023,7 +2061,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2031,7 +2069,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2039,7 +2077,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2047,7 +2085,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2055,7 +2093,7 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-24 {
+    .emotion-27 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -2064,24 +2102,24 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-24 {
+  .emotion-27 {
     grid-auto-flow: row;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-27 {
     grid-template-rows: repeat(5, auto);
   }
 }
 
-.emotion-26 {
+.emotion-29 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2089,7 +2127,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2097,7 +2135,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2105,7 +2143,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -2113,7 +2151,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -2121,7 +2159,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-26 {
+  .emotion-29 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -2129,56 +2167,56 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-26 {
+  .emotion-29 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-26 {
+    .emotion-29 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-28 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2191,50 +2229,50 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-29 {
+    .emotion-32 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-29 {
+  .emotion-32 {
     min-width: 2rem;
   }
 }
 
-.emotion-30 {
+.emotion-33 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -2247,32 +2285,32 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-33 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-33 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-31 {
+.emotion-34 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-31 {
+  .emotion-34 {
     padding-right: 0;
   }
 }
 
-.emotion-32 {
+.emotion-35 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2286,26 +2324,26 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-35 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-35 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-32:hover,
-.emotion-32:focus {
+.emotion-35:hover,
+.emotion-35:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-32:before {
+.emotion-35:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2318,31 +2356,31 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-32 {
+  .emotion-35 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-32 {
+    .emotion-35 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-32 {
+    .emotion-35 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
   }
 }
 
-.emotion-33 {
+.emotion-36 {
   padding-top: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-37 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -2353,235 +2391,235 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-34 {
+  .emotion-37 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-37 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-39 {
+    .emotion-42 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-39 {
+  .emotion-42 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-69 {
+    .emotion-72 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-69 {
+  .emotion-72 {
     min-width: 4rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-79 {
+    .emotion-82 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-79 {
+  .emotion-82 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-89 {
+    .emotion-92 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-89 {
+  .emotion-92 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-119 {
+    .emotion-122 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-119 {
+  .emotion-122 {
     min-width: 4rem;
   }
 }
@@ -2652,30 +2690,49 @@ exports[`Article Page should render a news article correctly 1`] = `
               </iframe>
             </div>
           </div>
+          <figure
+            class="emotion-13"
+          >
+            <div
+              class="emotion-14"
+              style="padding-bottom: 56.26%;"
+            >
+              <img
+                alt="Shiroo buddeen waliin"
+                class="emotion-15"
+                height="535"
+                loading="lazy"
+                sizes="(min-width: 1008px) 760px, 100vw"
+                src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp"
+                srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 800w"
+                width="951"
+              />
+            </div>
+          </figure>
         </main>
       </div>
     </div>
     <section
       aria-labelledby="Most-Read"
-      class="emotion-13"
+      class="emotion-16"
       data-e2e="most-read"
       data-testid="most-read"
       role="region"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-17 emotion-18"
       >
         <h2
-          class="emotion-16 emotion-17"
+          class="emotion-19 emotion-20"
         >
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-21 emotion-22"
           >
             <span
-              class="emotion-20 emotion-21"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-22 emotion-23"
+                class="emotion-25 emotion-26"
                 dir="ltr"
                 id="Most-Read"
               >
@@ -2686,43 +2743,43 @@ exports[`Article Page should render a news article correctly 1`] = `
         </h2>
       </div>
       <ol
-        class="emotion-24 emotion-5"
+        class="emotion-27 emotion-5"
         dir="ltr"
         role="list"
       >
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-29"
+              class="emotion-32"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 1
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/world-us-canada-65981277"
               >
                 Why the oxygen timeline on sub may not be so fixed
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2732,38 +2789,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-39"
+              class="emotion-42"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 2
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/uk-wales-65986742"
               >
                 MasterChef contestant jailed for child abuse images
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2773,38 +2830,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-29"
+              class="emotion-32"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 3
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/business-65981876"
               >
                 Musk and Zuckerberg agree to hold cage fight
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2814,38 +2871,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-39"
+              class="emotion-42"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 4
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/entertainment-arts-65986136"
               >
                 Cindy Beale returns to EastEnders after 25 years
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2855,38 +2912,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-69"
+              class="emotion-72"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 5
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/health-65985838"
               >
                 Mosquito-borne diseases risk increasing in Europe
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2896,38 +2953,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-79"
+              class="emotion-82"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 6
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/uk-scotland-65987986"
               >
                 Teenager guilty of murdering boy at train station
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2937,38 +2994,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-89"
+              class="emotion-92"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 7
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/world-65983001"
               >
                 At least 30 migrants feared dead off Canary Islands
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -2978,38 +3035,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-79"
+              class="emotion-82"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 8
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/business-65982981"
               >
                 Bank boss warns interest rate hike hard for many
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -3019,38 +3076,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-89"
+              class="emotion-92"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 9
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/world-europe-65982817"
               >
                 Ukraine strikes bridge to Crimea, says Russia
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
@@ -3060,38 +3117,38 @@ exports[`Article Page should render a news article correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-26 emotion-5"
+          class="emotion-29 emotion-5"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-28"
+            class="emotion-31"
           >
             <div
-              class="emotion-119"
+              class="emotion-122"
               dir="ltr"
             >
               <span
-                class="emotion-30"
+                class="emotion-33"
               >
                 10
               </span>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-34"
               dir="ltr"
             >
               <a
-                class="focusIndicatorDisplayTableCell emotion-32"
+                class="focusIndicatorDisplayTableCell emotion-35"
                 href="/news/world-us-canada-65923956"
               >
                 The woman who wants to end abortion in America
               </a>
               <div
-                class="emotion-33"
+                class="emotion-36"
               >
                 <time
-                  class="emotion-34 emotion-35"
+                  class="emotion-37 emotion-38"
                   datetime="2023-06-22"
                 >
                   Last updated: 22 June 2023
