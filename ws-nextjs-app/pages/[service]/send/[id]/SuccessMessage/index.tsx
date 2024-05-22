@@ -5,6 +5,7 @@ import Paragraph from '#app/components/Paragraph';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
+import TickSvg from './svgs';
 
 const DEFAULT_RETENTION_POLICY_DAY = '270';
 const DEFAULT_EMAIL = 'CannotFindEmail@bbc.co.uk';
@@ -60,13 +61,7 @@ const SucccessMessage = ({ submissionId }: { submissionId: string | null }) => {
   return (
     <div css={styles.outerContainer}>
       <div css={styles.messageContainer}>
-        <img
-          css={styles.tickIcon}
-          height="66px"
-          width="66px"
-          src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg"
-          alt="Orange juice served in a minature glass jug, garnished with a whole orange halved."
-        />
+        <TickSvg css={styles.tickIcon} />
         <div css={styles.messageTextContainer}>
           <div>
             <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
