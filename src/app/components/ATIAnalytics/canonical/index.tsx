@@ -35,9 +35,7 @@ const renderNoScriptTrackingPixel = (
 
 const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   const script = `
-    const isOperaProxy = ${isOperaProxy.toString()}
-
-    if (isOperaProxy()) {
+    if ((${isOperaProxy.toString()})()) {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', '${atiPageViewUrlString}', true);
       xhr.withCredentials = true;
