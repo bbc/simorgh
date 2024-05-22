@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';
+import { useFormContext } from '../FormContext';
 
 const DEFAULT_RETENTION_POLICY_DAY = '270';
 const DEFAULT_EMAIL = 'CannotFindEmail@bbc.co.uk';
@@ -24,18 +25,16 @@ const defaultTranslations = {
     "If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.",
   removalGuidelineText:
     'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
+  privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
+  privacyPolicyLinkText: 'Privacy Policy',
 };
 
-const defaultRetentionPolicy = {
-  href: 'https://www.bbc.com/usingthebbc/privacy/',
-  text: 'Privacy Policy',
-};
-
-const SucccessMessage = ({ submissionId }: { submissionId: string | null }) => {
+const SucccessMessage = () => {
   const {
     translations: { ugc = defaultTranslations },
-    footer: { links },
   } = useContext(ServiceContext);
+
+  const { submissionID } = useFormContext();
 
   const {
     confirmationStepTitle,
@@ -46,9 +45,9 @@ const SucccessMessage = ({ submissionId }: { submissionId: string | null }) => {
     privacyInfoHtml,
     emailToHtml,
     removalGuidelineText,
+    privacyPolicyLinkHref,
+    privacyPolicyLinkText,
   } = ugc;
-
-  const { href, text } = links?.[2] ?? defaultRetentionPolicy;
 
   const retentionPolicy = retentionPeriodDays.replace(
     '{{days}}',
@@ -64,7 +63,7 @@ const SucccessMessage = ({ submissionId }: { submissionId: string | null }) => {
         <TickSvg css={styles.tickIcon} />
         <div css={styles.messageTextContainer}>
           <div>
-            <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+            <Heading level={1} id="content" tabIndex={-1} size="trafalgar">
               {confirmationStepTitle}
             </Heading>
             <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
@@ -75,18 +74,18 @@ const SucccessMessage = ({ submissionId }: { submissionId: string | null }) => {
         <Paragraph>{submissionInfoSignedOutMessage}</Paragraph>
         <div>
           <Paragraph fontVariant="sansBold">{referenceNumber}</Paragraph>
-          <Paragraph>{submissionId}</Paragraph>
+          <Paragraph>{submissionID}</Paragraph>
         </div>
         <Paragraph>{retentionPolicy}</Paragraph>
         <Paragraph>
-          {emailGuidelineClauses[0]}
+          {emailGuidelineClauses?.[0]}
           <a href={`mailto:${DEFAULT_EMAIL}`}>{DEFAULT_EMAIL}</a>
-          {emailGuidelineClauses[1]} {removalGuidelineText}
+          {emailGuidelineClauses?.[1]} {removalGuidelineText}
         </Paragraph>
         <Paragraph>
-          {privacyClauses[0]}
-          <a href={href}>{text}</a>
-          {privacyClauses[1]}
+          {privacyClauses?.[0]}
+          <a href={privacyPolicyLinkHref}>{privacyPolicyLinkText}</a>
+          {privacyClauses?.[1]}
         </Paragraph>
       </div>
     </div>

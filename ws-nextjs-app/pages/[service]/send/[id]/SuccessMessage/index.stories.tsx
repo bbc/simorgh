@@ -1,5 +1,4 @@
 import React from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
 import SuccessMessage from './index';
 
 const sampleSuccessResponse = {
@@ -8,11 +7,7 @@ const sampleSuccessResponse = {
   message: 'Success',
 };
 
-const Component = () => (
-  <ThemeProvider service="pidgin">
-    <SuccessMessage submissionId={sampleSuccessResponse.submissionId} />
-  </ThemeProvider>
-);
+const Component = () => <SuccessMessage />;
 
 export default {
   title: 'Components/SuccessMessage',

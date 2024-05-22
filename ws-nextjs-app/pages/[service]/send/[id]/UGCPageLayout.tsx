@@ -32,7 +32,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
           <main css={styles.mainContent}>
             <FormContextProvider initialScreen={initialScreen} fields={fields}>
               <FormContext.Consumer>
-                {({ screen, submissionID }) => {
+                {({ screen }) => {
                   switch (screen) {
                     case 'form':
                       return (
@@ -47,7 +47,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     case 'uploading':
                       return <Uploading />;
                     case 'success':
-                      return <SucccessMessage submissionId={submissionID} />;
+                      return <SucccessMessage />;
                     case 'error':
                     default:
                       return <div>Error</div>;

@@ -9,10 +9,6 @@ export default {
         ...fontVariants.sansBold,
       },
     }),
-  heading: ({ fontSizes }: Theme) =>
-    css({
-      ...fontSizes.trafalgar,
-    }),
   messageContainer: () =>
     css({
       display: 'flex',
