@@ -375,6 +375,10 @@ export const service: DefaultServiceConfig = {
         title: 'Vídeos',
         url: '/portuguese/topics/c9y2j35dn2zt',
       },
+      {
+        title: 'BBC Lê',
+        url: '/portuguese/topics/cxndrr1qgllt',
+      },
     ],
   },
 };
