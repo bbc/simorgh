@@ -12,6 +12,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   FieldData,
+  FormScreen,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
@@ -26,16 +27,18 @@ type SubmissionError = {
   isRecoverable?: boolean;
 } | null;
 
-type ContextProps = {
+export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
+  hasAttemptedSubmit: boolean;
   progress: string;
+  screen: FormScreen;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
@@ -49,6 +52,7 @@ const getInitialFormState = (
         value: '',
         htmlType: field.htmlType,
         messageCode: null,
+        wasInvalid: false,
       },
     }),
     {},
@@ -67,9 +71,10 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
 };
 
 export const FormContextProvider = ({
+  initialScreen = 'form',
   fields,
   children,
-}: PropsWithChildren<{ fields: Field[] }>) => {
+}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
   } = useRouter();
@@ -77,11 +82,22 @@ export const FormContextProvider = ({
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
+  // TODO: Remove lint disable once screen state switching is used
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [screen, _setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
+  const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      const updatedState = { [name]: { ...prevState[name], value } };
+      const currState = { ...prevState[name], value };
+      // As part of GEL guidelines, we should validate during user input, following an initial submit.
+      const validateFunction = validateFunctions[currState.htmlType];
+      const validatedData = validateFunction
+        ? validateFunction(currState)
+        : currState;
+
+      const updatedState = { [name]: { ...validatedData } };
       return { ...prevState, ...updatedState };
     });
   };
@@ -89,6 +105,7 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
+    setAttemptedSubmit(true);
 
     // Reset error state
     setSubmissionError(null);
@@ -167,6 +184,8 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
+        hasAttemptedSubmit,
+        screen,
       }}
     >
       {children}
