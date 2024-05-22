@@ -50,7 +50,7 @@ const getInitialFormState = (
       [field.id]: {
         isValid: true,
         required: field.validation.mandatory ?? false,
-        value: '',
+        value: field.htmlType === 'file' ? [] : '',
         htmlType: field.htmlType,
         messageCode: null,
         wasInvalid: false,
@@ -119,23 +119,22 @@ export const FormContextProvider = ({
 
     Object.entries(formState).forEach(([key, item]) => {
       const fieldValue = item.value;
+      const isFileHtmlType = item.htmlType === 'file';
 
       if (fieldValue === '') return;
-      if (fieldValue instanceof FileList) {
-        const fileList = fieldValue;
-        const fileListLength = fileList.length;
+      if (isFileHtmlType) {
+        const fileList = fieldValue as File[];
 
-        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
-          const file = fileList.item(fileIndex);
-          if (file) formData.append(key, file);
-        }
+        fileList.forEach(file => {
+          formData.append(key, file);
+        });
         return;
       }
       if (typeof fieldValue === 'boolean') {
         if (fieldValue) formData.append(key, 'true');
         return;
       }
-      formData.append(key, fieldValue);
+      formData.append(key, fieldValue as string);
     });
 
     try {
