@@ -26,8 +26,14 @@ export default function Form({
 }: Props) {
   const { handleSubmit, submissionError, submitted } = useFormContext();
   const translation = 'Our data policy';
-  const formFields = fields?.map(({ id, label, htmlType }) => (
-    <FormField key={id} id={id} label={label} htmlType={htmlType} />
+  const formFields = fields?.map(({ id, label, htmlType, validation }) => (
+    <FormField
+      key={id}
+      id={id}
+      label={label}
+      htmlType={htmlType}
+      validation={validation}
+    />
   ));
 
   return (

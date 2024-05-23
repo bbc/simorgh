@@ -29,6 +29,7 @@ export type InputProps = {
   inputState: FieldData;
   describedBy: string;
   hasAttemptedSubmit: boolean;
+  wordLimit?: number;
 };
 
 export type InvalidMessageBoxProps = {
@@ -73,6 +74,9 @@ export type Field = {
     max?: number;
     fileTypes?: string[];
     mandatory?: boolean;
+    wordLimit?: number;
+    wordLimitMax?: number;
+    wordLimitMin?: number;
   };
   htmlType: HtmlType;
   label: string;

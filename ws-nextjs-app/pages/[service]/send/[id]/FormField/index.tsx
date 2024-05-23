@@ -28,14 +28,18 @@ export type FormComponentProps = {
   id: string;
   htmlType: HtmlType;
   label: string;
+  validation?: {
+    wordLimit?: number;
+  };
 };
 
-const FormField = ({ id, htmlType, label }: FormComponentProps) => {
+const FormField = ({ id, htmlType, label, validation }: FormComponentProps) => {
   const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
 
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;
 
+  const { wordLimit } = validation ?? {};
   const { isValid, messageCode } = formState?.[id] ?? {};
   const ariaErrorDescribedById = `${id}-error`;
 
@@ -50,6 +54,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         inputState={formState?.[id]}
         describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
+        wordLimit={wordLimit}
       />
       {hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
