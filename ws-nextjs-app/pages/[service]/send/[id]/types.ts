@@ -29,7 +29,6 @@ export type InputProps = {
   inputState: FieldData;
   describedBy: string;
   hasAttemptedSubmit: boolean;
-  wordLimit?: number;
 };
 
 export type InvalidMessageBoxProps = {
