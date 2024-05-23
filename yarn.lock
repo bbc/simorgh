@@ -7512,9 +7512,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.9.0":
-  version: 13.9.0
-  resolution: "cypress@npm:13.9.0"
+"cypress@npm:13.10.0":
+  version: 13.10.0
+  resolution: "cypress@npm:13.10.0"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -7560,7 +7560,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/67bf838eee804f33773245491e5298d520ac8da8e990ee12dff812b58ddf05ef2182957f533355ec2bf638d99f533b0e350474d816db4d20c6720a810b5b7885
+  checksum: 10/d3dbce9a00a108d76d0f91ba419106be24a6ad2dfa3c4a3cbb70db7c053b84e9cff2465b31c77ed3a40574bdba6f908b9aa247bdc7e8115f23b622f9ef05d51d
   languageName: node
   linkType: hard
 
@@ -15826,7 +15826,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.4.5"
     "@testing-library/react": "npm:15.0.7"
     babel-plugin-transform-rename-import: "npm:2.3.0"
-    cypress: "npm:13.9.0"
+    cypress: "npm:13.10.0"
     cypress-terminal-report: "npm:6.0.2"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
@@ -15922,7 +15922,7 @@ __metadata:
     copy-webpack-plugin: "npm:12.0.2"
     core-js: "npm:3.37.1"
     crypto: "npm:1.0.1"
-    cypress: "npm:13.9.0"
+    cypress: "npm:13.10.0"
     cypress-axe: "npm:1.5.0"
     cypress-multi-reporters: "npm:1.6.4"
     cypress-terminal-report: "npm:6.0.2"
