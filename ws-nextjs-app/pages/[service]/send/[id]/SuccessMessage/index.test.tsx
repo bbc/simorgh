@@ -3,7 +3,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import SucccessMessage from '.';
+import SuccessMessage from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
 
@@ -18,7 +18,7 @@ describe('SuccessMessage', () => {
 
   it('Should have a h1', async () => {
     const { container } = await act(() => {
-      return render(<SucccessMessage />);
+      return render(<SuccessMessage />);
     });
     const h1 = container.querySelector('h1');
 
@@ -36,7 +36,7 @@ describe('SuccessMessage', () => {
     const { container } = await act(() => {
       return render(
         <FormContext.FormContextProvider fields={[]}>
-          <SucccessMessage />
+          <SuccessMessage />
         </FormContext.FormContextProvider>,
       );
     });
@@ -46,7 +46,7 @@ describe('SuccessMessage', () => {
 
   it('Should have a retention policy', async () => {
     const { container } = await act(() => {
-      return render(<SucccessMessage />);
+      return render(<SuccessMessage />);
     });
 
     expect(container.innerHTML).toContain(
@@ -56,7 +56,7 @@ describe('SuccessMessage', () => {
 
   it('Should provide an email for removal services', async () => {
     const { container } = await act(() => {
-      return render(<SucccessMessage />);
+      return render(<SuccessMessage />);
     });
 
     const emailAnchor = container.querySelector(
@@ -68,7 +68,7 @@ describe('SuccessMessage', () => {
 
   it('Should have a privacy policy link', async () => {
     const { container } = await act(() => {
-      return render(<SucccessMessage />);
+      return render(<SuccessMessage />);
     });
 
     const policyAnchor = container.querySelector(

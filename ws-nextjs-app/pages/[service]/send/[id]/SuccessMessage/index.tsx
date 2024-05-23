@@ -29,7 +29,7 @@ const defaultTranslations = {
   privacyPolicyLinkText: 'Privacy Policy',
 };
 
-const SucccessMessage = () => {
+const SuccessMessage = () => {
   const {
     translations: { ugc = defaultTranslations },
   } = useContext(ServiceContext);
@@ -92,4 +92,4 @@ const SucccessMessage = () => {
   );
 };
 
-export default SucccessMessage;
+export default SuccessMessage;

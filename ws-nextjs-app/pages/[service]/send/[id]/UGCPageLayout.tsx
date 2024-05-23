@@ -8,7 +8,7 @@ import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import Form from './Form';
 import Uploading from './Uploading';
-import SucccessMessage from './SuccessMessage';
+import SuccessMessage from './SuccessMessage';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
@@ -47,7 +47,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     case 'uploading':
                       return <Uploading />;
                     case 'success':
-                      return <SucccessMessage />;
+                      return <SuccessMessage />;
                     case 'error':
                     default:
                       return <div>Error</div>;
