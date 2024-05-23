@@ -35,7 +35,7 @@ const renderNoScriptTrackingPixel = (
 
 const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   const script = `
-    if ((${isOperaProxy.toString()})()) {
+    if (${isOperaProxy.toString()}()) {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', '${atiPageViewUrlString}', true);
       xhr.withCredentials = true;
@@ -43,6 +43,7 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
       console.log('Technically the line above me has popped off');
     }
   `;
+
   return (
     <Helmet>
       <script type="text/javascript">{script}</script>
@@ -59,7 +60,7 @@ const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   const [atiPageViewUrl] = useState(atiPageViewUrlString);
 
   useEffect(() => {
-    if (!isOperaProxy) sendBeacon(atiPageViewUrl);
+    if (!isOperaProxy()) sendBeacon(atiPageViewUrl);
   }, [atiPageViewUrl]);
 
   return (
