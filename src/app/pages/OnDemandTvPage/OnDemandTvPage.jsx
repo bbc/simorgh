@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -231,26 +230,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       )}
     </Wrapper>
   );
-};
-
-OnDemandTvPage.propTypes = {
-  MediaError: func.isRequired,
-  mediaIsAvailable: bool.isRequired,
-  pageData: shape({
-    language: string,
-    headline: string,
-    shortSynopsis: string,
-    mediumSynopsis: string,
-    brandTitle: string,
-    releaseDateTimeStamp: number,
-    masterBrand: string,
-    episodeId: string,
-    imageUrl: string,
-    promoBrandTitle: string,
-    thumbnailImageUrl: string,
-    durationISO8601: string,
-    episodeTitle: string,
-  }).isRequired,
 };
 
 export default OnDemandTvPage;

@@ -1,6 +1,5 @@
-/* eslint react/prop-types: 0 */
 import React from 'react';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import useOptimizelyMvtVariation from '.';
 import * as activateExperiment from './activateExperiment';

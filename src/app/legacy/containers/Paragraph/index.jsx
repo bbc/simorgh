@@ -3,7 +3,6 @@ import Paragraph from '#psammead/psammead-paragraph/src';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
-import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
 import { GridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -38,7 +37,5 @@ const ParagraphContainer = ({ blocks, className }) => {
     </GridItemMedium>
   );
 };
-
-ParagraphContainer.propTypes = paragraphModelPropTypes;
 
 export default ParagraphContainer;

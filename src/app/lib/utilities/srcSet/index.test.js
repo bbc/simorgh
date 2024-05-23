@@ -21,7 +21,7 @@ describe('create srcset', () => {
       originCode: 'pips',
       locator: 'testland.jpg',
       width: 1024,
-      expected: { primarySrcset: null, fallbackSrcset: null },
+      expected: { primarySrcset: undefined, fallbackSrcset: undefined },
       summary: 'should return null with pips originCode',
     },
     {

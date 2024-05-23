@@ -4,7 +4,6 @@ import { PromoSingleBlock, oneLinkWithTimestamp } from '../helpers/fixtureData';
 import Promo from '.';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 
-// eslint-disable-next-line react/prop-types
 const ScrollablePromo = ({ block }) => (
   <ServiceContextProvider service="pidgin">
     <Promo block={block} onClick={() => {}} />

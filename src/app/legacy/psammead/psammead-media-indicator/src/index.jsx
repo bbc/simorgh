@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, bool, string, oneOf, shape } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 const StyledMediaIndicator = styled.div`
@@ -31,7 +29,14 @@ const FlexWrapper = styled.div`
   height: 100%;
 `;
 
-const MediaIndicator = ({ type, script, service, dir, isInline, children }) => (
+const MediaIndicator = ({
+  type = 'video',
+  script,
+  service,
+  dir = 'ltr',
+  isInline = false,
+  children = null,
+}) => (
   <StyledMediaIndicator
     data-e2e="media-indicator"
     aria-hidden="true"
@@ -46,21 +51,5 @@ const MediaIndicator = ({ type, script, service, dir, isInline, children }) => (
     </FlexWrapper>
   </StyledMediaIndicator>
 );
-
-MediaIndicator.propTypes = {
-  type: oneOf(['video', 'audio', 'photogallery']),
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  isInline: bool,
-  children: node,
-};
-
-MediaIndicator.defaultProps = {
-  type: 'video',
-  dir: 'ltr',
-  isInline: false,
-  children: null,
-};
 
 export default MediaIndicator;

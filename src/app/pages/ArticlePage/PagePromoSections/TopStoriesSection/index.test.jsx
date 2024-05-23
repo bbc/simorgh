@@ -18,7 +18,6 @@ import {
   topStoriesLiveLabelItem,
 } from './fixture';
 
-// eslint-disable-next-line react/prop-types
 const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>

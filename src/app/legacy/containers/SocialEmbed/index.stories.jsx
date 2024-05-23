@@ -17,7 +17,6 @@ import {
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
-// eslint-disable-next-line react/prop-types
 const BackgroundColorWrapper = ({ children }) => (
   <div css={css({ backgroundColor: GREY_2, padding: 20 })}>{children}</div>
 );

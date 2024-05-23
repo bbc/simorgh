@@ -5,7 +5,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandImage from '.';
 
-// eslint-disable-next-line react/prop-types
 const component = ({ url, isAmp, service, alt }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider

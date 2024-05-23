@@ -1,5 +1,4 @@
 import React from 'react';
-import { node, string, bool } from 'prop-types';
 import { render, waitFor } from '@testing-library/react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 
@@ -28,13 +27,6 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
     </OptimizelyProvider>
   </RequestContextProvider>
 );
-
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  isAmp: bool.isRequired,
-  service: string.isRequired,
-};
 
 describe('Optimizely Page View tracking', () => {
   beforeEach(() => {

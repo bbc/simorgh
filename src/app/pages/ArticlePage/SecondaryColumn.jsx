@@ -3,8 +3,6 @@
 import path from 'ramda/src/path';
 import { jsx, useTheme } from '@emotion/react';
 
-import { articleDataPropTypes } from '#models/propTypes/article';
-
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
@@ -41,10 +39,6 @@ const SecondaryColumn = ({ pageData }) => {
       )}
     </div>
   );
-};
-
-SecondaryColumn.propTypes = {
-  pageData: articleDataPropTypes.isRequired,
 };
 
 export default SecondaryColumn;

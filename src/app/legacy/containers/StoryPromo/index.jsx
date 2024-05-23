@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, {
   Headline,
@@ -10,7 +9,6 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/brea
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '#app/components/LiveLabel';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
@@ -35,8 +33,6 @@ import Image from '../../../components/Image';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
-
-const PROMO_TYPES = ['top', 'regular', 'leading'];
 
 const SingleColumnStoryPromo = styled(StoryPromo)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -67,11 +63,16 @@ const getBlockByType = (blocks, blockType) => {
 };
 
 const StoryPromoImage = ({
-  isAmp,
+  isAmp = false,
   useLargeImages,
-  imageValues,
-  lazyLoad,
-  pageType,
+  imageValues = {
+    path: '',
+    altText: '',
+    height: '',
+    width: '',
+  },
+  lazyLoad = false,
+  pageType = '',
 }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
@@ -131,39 +132,19 @@ const StoryPromoImage = ({
   );
 };
 
-StoryPromoImage.propTypes = {
-  isAmp: bool,
-  useLargeImages: bool.isRequired,
-  lazyLoad: bool,
-  imageValues: storyItem.indexImage,
-  pageType: string,
-};
-
-StoryPromoImage.defaultProps = {
-  isAmp: false,
-  lazyLoad: false,
-  imageValues: shape({
-    path: '',
-    altText: '',
-    height: '',
-    width: '',
-  }),
-  pageType: '',
-};
-
 const StoryPromoContainer = ({
   item,
-  index,
-  promoType,
-  lazyLoadImage,
-  dir,
-  displayImage,
-  displaySummary,
-  isSingleColumnLayout,
-  serviceDatetimeLocale,
-  eventTrackingData,
-  labelId,
-  sectionType,
+  index = 0,
+  promoType = 'regular',
+  lazyLoadImage = true,
+  dir = 'ltr',
+  displayImage = true,
+  displaySummary = true,
+  isSingleColumnLayout = false,
+  serviceDatetimeLocale = null,
+  eventTrackingData = null,
+  labelId = '',
+  sectionType = '',
 }) => {
   const { script, service } = useContext(ServiceContext);
   const { isAmp, isLite, pageType } = useContext(RequestContext);
@@ -333,44 +314,6 @@ const StoryPromoContainer = ({
       displayImage={displayImage && !isLite}
     />
   );
-};
-
-StoryPromoContainer.propTypes = {
-  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  promoType: oneOf(PROMO_TYPES),
-  lazyLoadImage: bool,
-  dir: oneOf(['ltr', 'rtl']),
-  displayImage: bool,
-  displaySummary: bool,
-  isSingleColumnLayout: bool,
-  serviceDatetimeLocale: string,
-  eventTrackingData: shape({
-    block: shape({
-      componentName: string,
-    }),
-    link: shape({
-      componentName: string,
-      url: string,
-      format: string,
-    }),
-  }),
-  labelId: string,
-  index: number,
-  sectionType: string,
-};
-
-StoryPromoContainer.defaultProps = {
-  promoType: 'regular',
-  lazyLoadImage: true,
-  dir: 'ltr',
-  displayImage: true,
-  displaySummary: true,
-  isSingleColumnLayout: false,
-  serviceDatetimeLocale: null,
-  eventTrackingData: null,
-  labelId: '',
-  index: 0,
-  sectionType: '',
 };
 
 export default StoryPromoContainer;

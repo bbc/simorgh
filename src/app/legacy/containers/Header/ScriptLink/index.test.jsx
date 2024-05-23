@@ -1,5 +1,4 @@
 import React from 'react';
-import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { RequestContext } from '#contexts/RequestContext';
 import { UserContext } from '#contexts/UserContext';
@@ -44,10 +43,6 @@ const withRouter = (component, matchPath, path) => {
     </MemoryRouter>
   );
 
-  Wrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return {
     ...render(component, { wrapper: Wrapper }),
   };
@@ -69,7 +64,6 @@ const toggleContextMock = {
   toggleDispatch: mockToggleDispatch,
 };
 
-/* eslint-disable react/prop-types */
 const ScriptLinkContainerWithContext = ({
   serviceContext = serbianServiceConfig.lat,
   requestContext = requestContextMock,

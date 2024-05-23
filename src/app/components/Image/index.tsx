@@ -131,7 +131,7 @@ const Image = ({
         ]}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
-          overflow: hasCaption ? '' : 'hidden',
+          ...(!hasCaption && { overflow: 'hidden' }),
         }}
       >
         {isAmp ? (
@@ -154,10 +154,10 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              {...(srcSet && { srcSet: imgSrcSet })}
-              {...(imgSizes && { sizes: imgSizes })}
               fallback=""
               attribution={attribution}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               {...(preload && { 'data-hero': true })}
             />
           </>

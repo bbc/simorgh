@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { number, bool, objectOf, string } from 'prop-types';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
@@ -19,7 +18,7 @@ const StyledImagePlaceholder = styled.div`
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: ${({ darkPlaceholder }) =>
+  background-color: ${({ darkPlaceholder = false }) =>
     props =>
       darkPlaceholder ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
   background-position: center center;
@@ -32,12 +31,12 @@ const StyledImagePlaceholder = styled.div`
     background-size: 93px 27px;
   }
   width: 100%;
-  background-image: ${({ darkPlaceholder }) =>
+  background-image: ${({ darkPlaceholder = false }) =>
     darkPlaceholder ? bgImageDark : bgImageRegular};
 `;
 
 const ImagePlaceholder = props => {
-  const { forwardStyle, ratio } = props;
+  const { forwardStyle = null, ratio } = props;
 
   return (
     <StyledImagePlaceholder
@@ -46,17 +45,6 @@ const ImagePlaceholder = props => {
       {...props}
     />
   );
-};
-
-ImagePlaceholder.propTypes = {
-  ratio: number.isRequired,
-  darkPlaceholder: bool,
-  forwardStyle: objectOf(string),
-};
-
-ImagePlaceholder.defaultProps = {
-  darkPlaceholder: false,
-  forwardStyle: null,
 };
 
 export default ImagePlaceholder;

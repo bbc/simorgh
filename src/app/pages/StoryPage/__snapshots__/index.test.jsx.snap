@@ -6065,7 +6065,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               >
                 <section
                   aria-labelledby="top-stories-heading"
-                  class=" emotion-172 emotion-173"
+                  class="emotion-172 emotion-173"
                   data-e2e="top-stories-heading"
                   role="region"
                 >
@@ -6209,7 +6209,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               >
                 <section
                   aria-labelledby="features-analysis-heading"
-                  class=" emotion-172 emotion-173"
+                  class="emotion-172 emotion-173"
                   data-e2e="features-analysis-heading"
                   role="region"
                 >

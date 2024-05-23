@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
-import { arrayOf, shape, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -14,7 +13,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_SEXT,
 } from '#psammead/gel-foundations/src/spacings';
-import { storyItem } from '#models/propTypes/storyItem';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
@@ -44,7 +42,7 @@ const StyledIndexPageContainer = styled(IndexPageContainer)`
   padding-bottom: ${GEL_SPACING_SEXT};
 `;
 
-const MostWatchedPage = ({ pageData }) => {
+const MostWatchedPage = ({ pageData = null }) => {
   const {
     brandName,
     lang,
@@ -89,10 +87,6 @@ const MostWatchedPage = ({ pageData }) => {
     </GelPageGrid>
   );
 
-  MostWatchedWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <>
       <MetadataContainer
@@ -114,16 +108,6 @@ const MostWatchedPage = ({ pageData }) => {
       </main>
     </>
   );
-};
-
-MostWatchedPage.propTypes = {
-  pageData: shape({
-    mostWatched: arrayOf(shape(storyItem)),
-  }),
-};
-
-MostWatchedPage.defaultProps = {
-  pageData: null,
 };
 
 export default MostWatchedPage;

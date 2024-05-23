@@ -368,7 +368,6 @@ const startsWithRadioBulletins = {
   },
 };
 
-// eslint-disable-next-line react/prop-types
 const Wrapper = ({ service = 'igbo', children }) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>

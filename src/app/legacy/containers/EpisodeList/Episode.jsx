@@ -1,6 +1,5 @@
 import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { node, string } from 'prop-types';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import tail from 'ramda/src/tail';
 import {
@@ -51,10 +50,5 @@ const Episode = forwardRef(({ children, dir }, ref) => {
     </Wrapper>
   );
 });
-
-Episode.propTypes = {
-  children: node.isRequired,
-  dir: string.isRequired,
-};
 
 export default withEpisodeContext(Episode);
