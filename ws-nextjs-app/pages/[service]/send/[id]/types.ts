@@ -75,8 +75,6 @@ export type Field = {
     fileTypes?: string[];
     mandatory?: boolean;
     wordLimit?: number;
-    wordLimitMax?: number;
-    wordLimitMin?: number;
   };
   htmlType: HtmlType;
   label: string;
@@ -91,6 +89,7 @@ export type FieldData = {
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
   wasInvalid: boolean;
+  wordLimit: number | undefined;
 };
 
 export type FormScreen = 'form' | 'uploading' | 'success' | 'error';

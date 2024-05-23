@@ -49,6 +49,7 @@ const getInitialFormState = (
       [field.id]: {
         isValid: true,
         required: field.validation.mandatory ?? false,
+        wordLimit: field.validation.wordLimit ?? undefined,
         value: field.htmlType === 'file' ? [] : '',
         htmlType: field.htmlType,
         messageCode: null,

@@ -14,9 +14,14 @@ export default ({
   describedBy,
   label,
   hasAttemptedSubmit,
-  wordLimit,
 }: InputProps) => {
-  const { isValid, value = '', required, wasInvalid } = inputState ?? {};
+  const {
+    isValid,
+    value = '',
+    required,
+    wasInvalid,
+    wordLimit,
+  } = inputState ?? {};
   const hasWordCount = !!wordLimit;
   const translation = `Maximum ${wordLimit} Words`;
   const describedByWordCount = `${id}-wordLimit`;
