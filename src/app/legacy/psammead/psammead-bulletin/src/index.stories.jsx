@@ -6,7 +6,6 @@ import Image from '#psammead/psammead-image/src';
 import notes from '../README.md';
 import Bulletin from '.';
 
-/* eslint-disable react/prop-types */
 const BulletinComponent = ({
   script,
   service,

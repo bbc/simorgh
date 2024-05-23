@@ -6,7 +6,6 @@ import {
 } from '#psammead/psammead-social-embed/src';
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
-import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import createTranslations from '../common/translations';
 import Wrapper from '../common/styles';
@@ -76,7 +75,5 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
     </GridItemMedium>
   );
 };
-
-CpsSocialEmbedContainer.propTypes = cpsSocialEmbedBlockPropTypes;
 
 export default CpsSocialEmbedContainer;

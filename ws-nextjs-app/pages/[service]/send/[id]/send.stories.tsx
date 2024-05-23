@@ -4,7 +4,7 @@ import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPage from './UGCPageLayout';
-import { PageProps } from './types';
+import { FormScreen, PageProps } from './types';
 
 const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   <RouterContext.Provider
@@ -14,14 +14,21 @@ const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   </RouterContext.Provider>
 );
 
-const Component = () => (
+const Component = ({
+  initialScreen = 'form',
+}: {
+  initialScreen: FormScreen;
+}) => (
   <NextRouterWrapper>
     <PageLayoutWrapper
       // @ts-expect-error partial data required for storybook
       pageData={mundoFormFixture}
       status={200}
     >
-      <UGCPage pageData={mundoFormFixture as PageProps['pageData']} />
+      <UGCPage
+        initialScreen={initialScreen}
+        pageData={mundoFormFixture as PageProps['pageData']}
+      />
     </PageLayoutWrapper>
   </NextRouterWrapper>
 );
@@ -31,4 +38,5 @@ export default {
   Component,
 };
 
-export const Example = Component;
+export const Form = () => <Component initialScreen="form" />;
+export const Uploading = () => <Component initialScreen="uploading" />;

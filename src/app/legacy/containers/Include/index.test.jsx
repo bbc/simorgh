@@ -49,7 +49,6 @@ const includeProps = {
   index: 1,
 };
 
-// eslint-disable-next-line react/prop-types
 const MockContext = ({ toggleState, isAmp, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
@@ -65,14 +64,11 @@ const MockContext = ({ toggleState, isAmp, children }) => (
   </RequestContextProvider>
 );
 
-/* eslint-disable react/prop-types */
 const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
   <MockContext toggleState={toggleState} isAmp={isAmp}>
     <IncludeContainer {...props} />
   </MockContext>
 );
-
-/* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {
   afterEach(() => {

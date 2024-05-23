@@ -12,7 +12,7 @@ describe('SubmitButton', () => {
       return render(<SubmitButton />, { service: 'news' });
     });
 
-    const button = container.querySelector('input[type=submit][value=Submit]');
+    const button = container.querySelector('button[type=submit]');
 
     expect(button).toBeInTheDocument();
     expect(button).toMatchSnapshot();

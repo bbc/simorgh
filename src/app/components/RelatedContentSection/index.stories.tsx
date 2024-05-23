@@ -25,7 +25,6 @@ type Props = {
   service?: Services;
 };
 
-// eslint-disable-next-line react/prop-types
 const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
   <BackGround>
     <ServiceContextProvider service={service}>

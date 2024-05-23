@@ -4,7 +4,6 @@ import StartTime from '.';
 
 const storiesUnixTimestamp = 1566914061212;
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, locale, script, dir, timezone }) => (
   <ServiceContextProvider
     service={service}

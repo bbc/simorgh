@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { oneOf, string } from 'prop-types';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -46,11 +45,6 @@ const SkipLink = styled.a`
     padding: ${GEL_SPACING};
   }
 `;
-
-SkipLink.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
-  className: string,
-};
 
 SkipLink.defaultProps = { dir: 'ltr', className: 'focusIndicatorRemove' };
 

@@ -7,7 +7,6 @@ import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, isAmp = false }) => {
   return (
     <RequestContextProvider

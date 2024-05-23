@@ -578,7 +578,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-19 emotion-20 emotion-21"
+          class="emotion-19 emotion-20 emotion-21"
         >
           <span
             class="emotion-22 emotion-23"
@@ -1171,7 +1171,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-16 emotion-17 emotion-18"
+          class="emotion-16 emotion-17 emotion-18"
         >
           <span
             class="emotion-19 emotion-20"
@@ -1764,7 +1764,7 @@ exports[`should show the future content message if episode is not yet available 
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-16 emotion-17 emotion-18"
+          class="emotion-16 emotion-17 emotion-18"
         >
           <span
             class="emotion-19 emotion-20"
@@ -2357,7 +2357,7 @@ exports[`should show the future content message if episode is pending 1`] = `
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-16 emotion-17 emotion-18"
+          class="emotion-16 emotion-17 emotion-18"
         >
           <span
             class="emotion-19 emotion-20"

@@ -2,7 +2,6 @@ import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import WithError from '.';
 
-// eslint-disable-next-line react/prop-types
 jest.mock('#pages/ErrorPage/ErrorPage', () => () => <h1>This is an error.</h1>);
 
 describe('withError HOC', () => {

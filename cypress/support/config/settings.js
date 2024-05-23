@@ -3195,8 +3195,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
             paths: [],

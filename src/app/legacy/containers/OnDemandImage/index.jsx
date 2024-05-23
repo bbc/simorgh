@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import is from 'ramda/src/is';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_QUAD,
@@ -31,7 +30,7 @@ const smallImageSize = 128;
 const mediumImageSize = 256;
 const largeImageSize = 480;
 
-const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
+const OnDemandImage = ({ imageUrl, alt: altFromProps, dir = 'ltr' }) => {
   const { defaultImageAltText } = useContext(ServiceContext);
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
@@ -57,17 +56,6 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
       />
     </ImageContainer>
   );
-};
-
-OnDemandImage.propTypes = {
-  imageUrl: string.isRequired,
-  alt: string,
-  dir: string,
-};
-
-OnDemandImage.defaultProps = {
-  alt: null,
-  dir: 'ltr',
 };
 
 export default OnDemandImage;
