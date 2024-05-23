@@ -13,8 +13,7 @@ export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
-  | FileList
-  | File
+  | File[]
   | boolean;
 
 export type OnChangeHandler = (

@@ -40,8 +40,9 @@ export default {
       a: getInlineLinkStyles(palette),
     }),
 
-  privacyHeading: ({ fontVariants, fontSizes }: Theme) =>
+  privacyHeading: ({ fontVariants, fontSizes, palette }: Theme) =>
     css({
+      color: palette.BLACK,
       ...fontVariants.sansBold,
       ...fontSizes.brevier,
     }),
