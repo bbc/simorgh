@@ -770,7 +770,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                     <img
                       alt=""
                       class="emotion-28 emotion-29"
-                      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg"
+                      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
                     />
                   </div>
                 </div>
