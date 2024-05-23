@@ -82,7 +82,7 @@ exports[`should render SansBold correctly for gahuza 1`] = `
 
 exports[`should render SansBold correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -314,7 +314,7 @@ exports[`should render SansBold correctly for tamil 1`] = `
 
 exports[`should render SansBold correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -490,7 +490,7 @@ exports[`should render SansBoldItalic correctly for gahuza 1`] = `
 
 exports[`should render SansBoldItalic correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -722,7 +722,7 @@ exports[`should render SansBoldItalic correctly for tamil 1`] = `
 
 exports[`should render SansBoldItalic correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -898,7 +898,7 @@ exports[`should render SansLight correctly for gahuza 1`] = `
 
 exports[`should render SansLight correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -1130,7 +1130,7 @@ exports[`should render SansLight correctly for tamil 1`] = `
 
 exports[`should render SansLight correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -1306,7 +1306,7 @@ exports[`should render SansRegular correctly for gahuza 1`] = `
 
 exports[`should render SansRegular correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -1538,7 +1538,7 @@ exports[`should render SansRegular correctly for tamil 1`] = `
 
 exports[`should render SansRegular correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -1714,7 +1714,7 @@ exports[`should render SansRegularItalic correctly for gahuza 1`] = `
 
 exports[`should render SansRegularItalic correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -1946,7 +1946,7 @@ exports[`should render SansRegularItalic correctly for tamil 1`] = `
 
 exports[`should render SansRegularItalic correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -2122,7 +2122,7 @@ exports[`should render SerifBold correctly for gahuza 1`] = `
 
 exports[`should render SerifBold correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -2354,7 +2354,7 @@ exports[`should render SerifBold correctly for tamil 1`] = `
 
 exports[`should render SerifBold correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -2530,7 +2530,7 @@ exports[`should render SerifLight correctly for gahuza 1`] = `
 
 exports[`should render SerifLight correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -2762,7 +2762,7 @@ exports[`should render SerifLight correctly for tamil 1`] = `
 
 exports[`should render SerifLight correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -2938,7 +2938,7 @@ exports[`should render SerifMedium correctly for gahuza 1`] = `
 
 exports[`should render SerifMedium correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -3170,7 +3170,7 @@ exports[`should render SerifMedium correctly for tamil 1`] = `
 
 exports[`should render SerifMedium correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -3346,7 +3346,7 @@ exports[`should render SerifMediumItalic correctly for gahuza 1`] = `
 
 exports[`should render SerifMediumItalic correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -3578,7 +3578,7 @@ exports[`should render SerifMediumItalic correctly for tamil 1`] = `
 
 exports[`should render SerifMediumItalic correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   "
@@ -3754,7 +3754,7 @@ exports[`should render SerifRegular correctly for gahuza 1`] = `
 
 exports[`should render SerifRegular correctly for gujarati 1`] = `
 "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
@@ -3986,7 +3986,7 @@ exports[`should render SerifRegular correctly for tamil 1`] = `
 
 exports[`should render SerifRegular correctly for telugu 1`] = `
 "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   "
