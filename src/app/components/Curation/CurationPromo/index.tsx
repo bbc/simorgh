@@ -44,9 +44,17 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
+  const promoImage = imageUrl || '';
+  const promoImageAltText = imageUrl && (imageAlt || 'image');
+
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
+      <Promo.Image
+        src={promoImage}
+        alt={promoImageAltText}
+        lazyLoad={lazy}
+        isAmp={isAmp}
+      >
         {isMedia && (
           <Promo.MediaIcon type={type}>
             {showDuration ? mediaDuration : ''}
