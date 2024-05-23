@@ -11984,13 +11984,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-silent-reporter@npm:0.5.0":
-  version: 0.5.0
-  resolution: "jest-silent-reporter@npm:0.5.0"
+"jest-silent-reporter@npm:0.6.0":
+  version: 0.6.0
+  resolution: "jest-silent-reporter@npm:0.6.0"
   dependencies:
     chalk: "npm:^4.0.0"
     jest-util: "npm:^26.0.0"
-  checksum: 10/54853eb1fd342eb074ff97bbd2f177c3425e635deb008ce1a5feede398930b6472549797342e3ea536f8e2e538d8718d6f281f3d44dec2ae4d32f61da0eb547e
+  checksum: 10/443e0abaf5a6dc8c17da1e8495b7a55f813224adc39b6d1954bf49ff7fe70533b1020571453180dbb8388ace87f8e1dfc79610a4554bb93334f6c4154231c292
   languageName: node
   linkType: hard
 
@@ -15958,7 +15958,7 @@ __metadata:
     jest-fetch-mock: "npm:3.0.3"
     jest-junit: "npm:16.0.0"
     jest-serializer-html: "npm:7.1.0"
-    jest-silent-reporter: "npm:0.5.0"
+    jest-silent-reporter: "npm:0.6.0"
     js-cookie: "npm:3.0.5"
     jsdom: "npm:24.0.0"
     lru-cache: "npm:7.7.1"
