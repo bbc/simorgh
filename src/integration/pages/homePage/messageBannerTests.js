@@ -14,7 +14,7 @@ export default () => {
         expect(messageBanner.querySelector('a').href).toMatchSnapshot();
       });
 
-      it('has a webp image', () => {
+      it('has an image', () => {
         expect(messageBanner.querySelector('img')).toMatchSnapshot();
       });
     }
