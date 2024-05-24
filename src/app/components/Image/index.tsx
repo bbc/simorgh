@@ -86,8 +86,9 @@ const Image = ({
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
+    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
       return fallbackSrcSet;
+    }
     return undefined;
   };
   const getImgSizes = () => {
