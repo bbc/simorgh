@@ -147,12 +147,6 @@ describe('Media Asset Page', () => {
       pageData: mapPageData,
     });
 
-    console.log('##################');
-    console.log('I GET HERE');
-    console.log(`Image block - ${JSON.stringify(response.pageData)}`);
-    console.log('##################');
-  
-
     pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
