@@ -23,7 +23,7 @@ const fetchEventHandler = async event => {
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
 
-    // if supports webp is false in request header then don't use it?
+    // if supports webp is false in request header then don't use it
     // If we support WebP don't remove
     // if it doesn't support, remove
     // look at the headers Accept image/webp,*/
