@@ -16000,7 +16000,7 @@ __metadata:
     ts-loader: "npm:9.5.1"
     typescript: "npm:5.4.5"
     url-parse: "npm:1.5.10"
-    uuid: "npm:8.3.2"
+    uuid: "npm:9.0.1"
     wait-on: "npm:7.2.0"
     webpack: "npm:5.91.0"
     webpack-bundle-analyzer: "npm:4.10.2"
@@ -17597,12 +17597,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:3.4.0":
-  version: 3.4.0
-  resolution: "uuid@npm:3.4.0"
+"uuid@npm:9.0.1":
+  version: 9.0.1
+  resolution: "uuid@npm:9.0.1"
   bin:
-    uuid: ./bin/uuid
-  checksum: 10/4f2b86432b04cc7c73a0dd1bcf11f1fc18349d65d2e4e32dd0fc658909329a1e0cc9244aa93f34c0cccfdd5ae1af60a149251a5f420ec3ac4223a3dab198fb2e
+    uuid: dist/bin/uuid
+  checksum: 10/9d0b6adb72b736e36f2b1b53da0d559125ba3e39d913b6072f6f033e0c87835b414f0836b45bcfaf2bdf698f92297fea1c3cc19b0b258bc182c9c43cc0fab9f2
   languageName: node
   linkType: hard
 
