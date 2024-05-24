@@ -95,8 +95,9 @@ const Image = ({
     if (
       (!hasFallback && srcSet) ||
       (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-    )
+    ) {
       return sizes;
+    }
     return undefined;
   };
   const imgSrcSet = getImgSrcSet();
