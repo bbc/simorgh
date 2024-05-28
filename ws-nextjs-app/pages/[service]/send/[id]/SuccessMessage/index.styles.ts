@@ -21,7 +21,6 @@ export default {
     }),
   tickIcon: ({ spacings, mq }: Theme) =>
     css({
-      height: '4rem',
       marginRight: `${spacings.FULL}rem`,
       [mq.HIGH_CONTRAST]: {
         path: {
