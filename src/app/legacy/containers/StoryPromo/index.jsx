@@ -79,6 +79,7 @@ const StoryPromoImage = ({
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
+  // eslint-disable-next-line prefer-const
   let { height, width, path, altText, copyrightHolder } = imageValues;
   let originCode = getOriginCode(path);
   let locator = getLocator(path);
