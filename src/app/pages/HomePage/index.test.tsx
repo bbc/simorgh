@@ -228,13 +228,11 @@ describe('Home Page', () => {
         },
       );
       const sections = container.querySelectorAll(`section`);
-      const sectionIds: (string | null)[] = [];
-      sections.forEach((section: HTMLElement) => {
-        sectionIds.push(
+      const sectionIds: (string | null)[] = Array.from(sections).map(
+        section =>
           section.getAttribute('aria-labelledby') ||
-            section.getAttribute('data-e2e'),
-        );
-      });
+          section.getAttribute('data-e2e'),
+      );
       const mpuIndex = sectionIds.lastIndexOf('advertisement');
       const firstNonBannerIndex = sectionIds.findIndex(
         sectionId =>
