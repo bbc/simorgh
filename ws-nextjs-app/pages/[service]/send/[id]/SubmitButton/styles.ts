@@ -11,18 +11,18 @@ export default {
       border: 'none',
       outline: 'solid 0.0625rem transparent',
       padding: `${spacings.FULL + spacings.HALF}rem 0`,
-      marginBottom: `${spacings.DOUBLE}rem`,
+      // marginBottom: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
       '&:hover,&:focus': {
         textDecoration: 'underline',
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
       },
       [mq.GROUP_1_MIN_WIDTH]: {
-        marginBottom: `${spacings.TRIPLE}rem`,
+        // marginBottom: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         marginTop: `${spacings.FULL}rem`,
-        marginBottom: `${spacings.TRIPLE}rem`,
+        // marginBottom: `${spacings.TRIPLE}rem`,
       },
     }),
 };

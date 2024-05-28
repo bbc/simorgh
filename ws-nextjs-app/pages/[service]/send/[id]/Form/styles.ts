@@ -32,10 +32,11 @@ export default {
       p: { color: palette.BLACK },
       a: { ...getInlineLinkStyles(palette), ...fontVariants.sansBold },
     }),
-  privacyNotice: ({ palette, fontVariants, fontSizes }: Theme) =>
+  privacyNotice: ({ palette, fontVariants, fontSizes, spacings }: Theme) =>
     css({
       ...fontVariants.sansRegular,
       ...fontSizes.brevier,
+      marginBottom: `${spacings.DOUBLE}rem`,
       p: { color: palette.BLACK },
       a: getInlineLinkStyles(palette),
     }),
