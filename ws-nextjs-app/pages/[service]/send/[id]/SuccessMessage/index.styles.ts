@@ -21,8 +21,7 @@ export default {
     }),
   tickIcon: ({ spacings }: Theme) =>
     css({
-      width: '66px',
-      height: '66px',
+      height: '4rem',
       marginRight: `${spacings.FULL}rem`,
     }),
   descriptionContainer: ({ spacings }: Theme) =>
