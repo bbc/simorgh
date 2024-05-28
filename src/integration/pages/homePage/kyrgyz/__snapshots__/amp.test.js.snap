@@ -803,15 +803,6 @@ exports[`AMP Home Page Timestamp should match text and date 1`] = `
 
 exports[`AMP Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
 
-exports[`AMP Home Page messageBanner has a webp image 1`] = `
-<img
-  alt=""
-  class="bbc-139onq"
-  src="https://ichef.test.bbci.co.uk/ace/standard/raw/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp"
-  style="aspect-ratio:16 / 9"
-/>
-`;
-
 exports[`AMP Home Page messageBanner has an image 1`] = `
 <img
   alt=""
