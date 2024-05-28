@@ -74,8 +74,6 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-          const imageAlt = promo.imageUrl && (promo.imageAlt || 'image');
-
           const { isLive } = promo;
 
           return (
@@ -90,7 +88,7 @@ const HiearchicalGrid = ({
                 <Promo.Image
                   useLargeImages={useLargeImages}
                   src={promo.imageUrl || ''}
-                  alt={imageAlt}
+                  alt={promo.imageAlt}
                   lazyLoad={lazyLoadImages}
                   fetchpriority={fetchpriority}
                   isAmp={isAmp}
