@@ -11,7 +11,7 @@ export default {
       border: 'none',
       outline: 'solid 0.0625rem transparent',
       padding: `${spacings.FULL + spacings.HALF}rem 0`,
-      marginTop: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.FULL}rem`,
       cursor: 'pointer',
       '&:hover,&:focus': {
         textDecoration: 'underline',
