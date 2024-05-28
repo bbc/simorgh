@@ -19,10 +19,11 @@ export default {
       display: 'flex',
       alignItems: 'center',
     }),
-  tickIcon: ({ spacings, mq }: Theme) =>
+  tickIcon: ({ spacings, mq, palette }: Theme) =>
     css({
       height: '4rem',
       marginRight: `${spacings.FULL}rem`,
+      fill: palette.SUCCESS_DARK,
       [mq.HIGH_CONTRAST]: {
         path: {
           fill: 'currentColor',
