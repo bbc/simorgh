@@ -121,6 +121,50 @@ describe('Home Page', () => {
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });
 
+  it('should render images with the .webp image extension', () => {
+    const path =
+      homePageData.curations[0].summaries?.[0].imageUrl?.split('{width}')[1];
+
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/standard/240${path}`;
+    const expectedWebpSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/standard/85${path}.webp 85w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/120${path}.webp 120w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/170${path}.webp 170w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/232${path}.webp 232w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/325${path}.webp 325w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/450${path}.webp 450w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/660${path}.webp 660w`,
+    ].join(', ');
+
+    const expectedJPGSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/standard/85${path} 85w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/120${path} 120w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/170${path} 170w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/232${path} 232w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/325${path} 325w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/450${path} 450w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/660${path} 660w`,
+    ].join(', ');
+
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+    const { container } = render(<HomePage pageData={homePageData} />, {
+      service: 'kyrgyz',
+      pageType: 'home',
+    });
+
+    const promoImage = container.querySelectorAll('div.promo-image picture')[0];
+
+    const [webpSource, jpgSource, img] = promoImage.childNodes as unknown as [
+      HTMLSourceElement,
+      HTMLSourceElement,
+      HTMLImageElement,
+    ];
+
+    expect(webpSource.srcset).toEqual(expectedWebpSrcSetURLs);
+    expect(jpgSource.srcset).toEqual(expectedJPGSrcSetURLs);
+    expect(img.src).toEqual(imageURL);
+  });
+
   describe('Analytics', () => {
     it('should render a Chartbeat component', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
