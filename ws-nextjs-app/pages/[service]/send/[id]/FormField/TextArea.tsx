@@ -23,13 +23,13 @@ export default ({
     wordLimit,
   } = inputState ?? {};
   const hasWordCount = !!wordLimit;
-  const translation = `Maximum ${wordLimit} Words`;
+  const translation = `Maximum ${wordLimit} Words`; // hardcoded
   const describedByWordCount = `${id}-wordLimit`;
 
   return (
     <>
       <Label id={id}>{label}</Label>
-      {wordLimit && (
+      {hasWordCount && (
         <Paragraph
           css={{ marginBottom: `${pixelsToRem(6)}rem` }}
           fontVariant="sansRegular"
