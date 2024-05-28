@@ -263,6 +263,19 @@ export const service: DefaultServiceConfig = {
         validationInvalidEmail:
           'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',
         validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+        confirmationStepTitle: 'Mensaje enviado',
+        confirmationStepDescriptionHtml: 'Gracias por contactarnos.',
+        referenceNumber: 'Número de referencia',
+        submissionInfoSignedOutMessage:
+          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+        retentionPeriodDays:
+          "We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.",
+        privacyInfoHtml:
+          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+        emailToHtml:
+          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+        removalGuidelineText:
+          'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
       },
     },
     mostRead: {
