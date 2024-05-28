@@ -7,6 +7,30 @@
       {
         "summaries": [
           {
+            "type": "link",
+            "isLive": false,
+            "title": "100 women_group 0&1&2&3",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "description": "this is the description property",
+            "imageAlt": "bbc",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "100 women_group 0&1&2&3",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
             "type": "commentary",
             "isLive": true,
             "title": "Overtyped Headline - Tipo Live Page (was photography)",
@@ -51,7 +75,6 @@
             "lastPublished": "2023-03-02T12:37:35.109Z",
             "link": "https://www.bbc.com/sport/videos/c1ldm3kjnwyo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "c1ldm3kjnwyo"
           },
           {
@@ -98,8 +121,7 @@
             "lastPublished": "2023-07-06T15:18:21.686Z",
             "link": "https://www.bbc.com/sport/articles/c5w90rmn69yo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "id": "c5w90rmn69yo",
-            "imageAlt": "image alt manually added to test data"
+            "id": "c5w90rmn69yo"
           },
           {
             "type": "article",
@@ -109,8 +131,7 @@
             "lastPublished": "2023-07-07T11:41:27.330Z",
             "link": "https://www.bbc.com/sport/articles/cvl5vjypeveo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "id": "cvl5vjypeveo",
-            "imageAlt": "image alt manually added to test data"
+            "id": "cvl5vjypeveo"
           },
           {
             "type": "article",
@@ -141,7 +162,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:991081c1-6b45-4631-9b3e-cb6767319192",
         "curationType": "tipo-curation",
-        "position": 0,
+        "position": 1,
         "title": "Testing Something",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION",
@@ -180,7 +201,6 @@
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fresources%2Fidt-02d9060e-15dc-426c-bfe0-86a6437e5234"
           },
           {
@@ -299,7 +319,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202",
         "curationType": "tipo-curation",
-        "position": 2,
+        "position": 3,
         "title": "Редактордун тандоосу",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -408,7 +428,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/cz74kjpyk07t",
         "curationId": "urn:bbc:tipo:list:4991ab89-0967-4653-9760-f3e133896a46",
         "curationType": "tipo-curation",
-        "position": 3,
+        "position": 4,
         "title": "Кыргызстан",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -517,7 +537,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
         "curationId": "urn:bbc:tipo:list:d4ec3c0c-1aa7-445e-9ef2-59d341b41038",
         "curationType": "tipo-curation",
-        "position": 4,
+        "position": 5,
         "title": "Дүйнө",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -542,7 +562,7 @@
         "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
         "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
         "curationType": "tipo-curation",
-        "position": 5,
+        "position": 6,
         "title": "Би-Би-Си ТВ жаңылыктары",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -566,7 +586,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:20425623-94ec-4a37-9401-630da2dba9de",
         "curationType": "tipo-curation",
-        "position": 6,
+        "position": 7,
         "title": "Minimum curation test",
         "visualProminence": "NORMAL",
         "visualStyle": "NONE"
@@ -603,7 +623,7 @@
         "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
         "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
         "curationType": "tipo-curation",
-        "position": 7,
+        "position": 8,
         "title": "Журнал",
         "visualProminence": "HIGH",
         "visualStyle": "NONE"
@@ -659,7 +679,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
-        "position": 8,
+        "position": 9,
         "title": "Useful links",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
@@ -683,7 +703,7 @@
         "link": "https://www.bbc.com/punjabi/articles/cn37pkelzrpo",
         "curationId": "urn:bbc:tipo:list:95aa88fb-eb83-42bc-b3de-6c51e52b4d62",
         "curationType": "tipo-curation",
-        "position": 9,
+        "position": 10,
         "title": "Message banner 2 - hay festival_group 4.png",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -719,7 +739,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e547697b-26f9-45d4-9146-477dd8a6ee9e",
         "curationType": "tipo-curation",
-        "position": 10,
+        "position": 11,
         "title": "hay festival_group 0&1&2&3",
         "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
@@ -743,7 +763,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f8ab8a50-0c24-411b-ba91-ac31a60e583d",
         "curationType": "tipo-curation",
-        "position": 11,
+        "position": 12,
         "title": "radio_group 0&1&2&3",
         "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
@@ -766,33 +786,9 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b42365ef-1ee6-49ff-af7e-7eff7472e315",
         "curationType": "tipo-curation",
-        "position": 12,
+        "position": 13,
         "title": "radio_group 4",
         "visualProminence": "NORMAL",
-        "visualStyle": "BANNER"
-      },
-      {
-        "summaries": [
-          {
-            "type": "link",
-            "isLive": false,
-            "title": "100 women_group 0&1&2&3",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
-            "description": "this is the description property",
-            "imageAlt": "bbc",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:83477d70-3b69-4187-b187-1f0febb250d8",
-        "curationType": "tipo-curation",
-        "position": 13,
-        "title": "100 women_group 0&1&2&3",
-        "visualProminence": "MAXIMUM",
         "visualStyle": "BANNER"
       },
       {
@@ -828,7 +824,6 @@
             "lastPublished": "",
             "link": "https://flo.uri.sh/story/2070814/embed",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
           }
         ],
@@ -863,7 +858,6 @@
             "lastPublished": "",
             "link": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F403-india_election_results_day%2Fhindi%2Ftally-include%2Fembed"
           }
         ],
@@ -885,7 +879,7 @@
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/kyrgyz/popular/read",
         "mostRead": {
-          "generated": "2024-04-26T10:42:59.623Z",
+          "generated": "2024-05-21T10:12:57.452Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
           "items": [
@@ -973,7 +967,6 @@
             "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
-            "imageAlt": "image alt manually added to test data",
             "id": "c7p765ynk9qt"
           },
           {
@@ -984,7 +977,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cgl2vz8d587t"
           },
           {
@@ -995,7 +987,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cy0mg3kvxnlt"
           },
           {
@@ -1006,7 +997,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cly58zvmwygt"
           }
         ],
@@ -1029,7 +1019,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cemy52djeq5t"
           },
           {
@@ -1040,7 +1029,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "c65nm48pr8et"
           },
           {
@@ -1051,7 +1039,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cpvg17j60m7t"
           },
           {
@@ -1062,7 +1049,6 @@
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "imageAlt": "image alt manually added to test data",
             "id": "cg2pr8l7j3nt"
           }
         ],
