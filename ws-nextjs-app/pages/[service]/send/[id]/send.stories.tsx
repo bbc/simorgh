@@ -40,3 +40,4 @@ export default {
 
 export const Form = () => <Component initialScreen="form" />;
 export const Uploading = () => <Component initialScreen="uploading" />;
+export const Success = () => <Component initialScreen="success" />;
