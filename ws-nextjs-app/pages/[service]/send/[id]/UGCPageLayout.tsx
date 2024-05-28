@@ -28,7 +28,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
       <div css={styles.background} />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
+          <main role="main" css={styles.mainContent}>
             <FormContextProvider initialScreen={initialScreen} fields={fields}>
               <FormContext.Consumer>
                 {({ screen }) => {
