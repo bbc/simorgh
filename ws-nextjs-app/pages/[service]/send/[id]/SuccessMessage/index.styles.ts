@@ -19,10 +19,15 @@ export default {
       display: 'flex',
       alignItems: 'center',
     }),
-  tickIcon: ({ spacings }: Theme) =>
+  tickIcon: ({ spacings, mq }: Theme) =>
     css({
       height: '4rem',
       marginRight: `${spacings.FULL}rem`,
+      [mq.HIGH_CONTRAST]: {
+        path: {
+          fill: 'currentColor',
+        },
+      },
     }),
   descriptionContainer: ({ spacings }: Theme) =>
     css({
