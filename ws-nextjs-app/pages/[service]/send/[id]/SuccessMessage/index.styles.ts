@@ -23,7 +23,7 @@ export default {
     css({
       height: '4rem',
       marginRight: `${spacings.FULL}rem`,
-      fill: palette.SUCCESS_DARK,
+      fill: palette.SUCCESS_CORE,
       [mq.HIGH_CONTRAST]: {
         path: {
           fill: 'currentColor',
