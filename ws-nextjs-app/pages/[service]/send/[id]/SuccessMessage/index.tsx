@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
+import Text from '#app/components/Text';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
@@ -73,7 +74,9 @@ const SuccessMessage = () => {
       <div css={styles.descriptionContainer}>
         <Paragraph>{submissionInfoSignedOutMessage}</Paragraph>
         <div>
-          <Paragraph fontVariant="sansBold">{referenceNumber}</Paragraph>
+          <Text as="strong" fontVariant="sansBold">
+            {referenceNumber}
+          </Text>
           <Paragraph>{submissionID}</Paragraph>
         </div>
         <Paragraph>{retentionPolicy}</Paragraph>
