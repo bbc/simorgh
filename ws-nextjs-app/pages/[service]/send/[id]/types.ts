@@ -13,8 +13,7 @@ export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
-  | FileList
-  | File
+  | File[]
   | boolean;
 
 export type OnChangeHandler = (
@@ -25,9 +24,11 @@ export type OnChangeHandler = (
 export type InputProps = {
   id: string;
   name: string;
+  label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
   describedBy: string;
+  hasAttemptedSubmit: boolean;
 };
 
 export type InvalidMessageBoxProps = {
@@ -85,9 +86,13 @@ export type FieldData = {
   value: OnChangeInputValue;
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
+  wasInvalid: boolean;
 };
 
+export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
+
 export type PageProps = {
+  initialScreen?: FormScreen;
   pageData: {
     title: string;
     description: string;

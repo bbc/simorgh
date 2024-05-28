@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import ParagraphComponent from '#psammead/psammead-paragraph/src';
@@ -14,7 +13,7 @@ const StyledParagraphComponent = styled(ParagraphComponent)`
   }
 `;
 
-const OnDemandParagraphContainer = ({ idAttr, text }) => {
+const OnDemandParagraphContainer = ({ idAttr = null, text }) => {
   const { script, service } = useContext(ServiceContext);
 
   if (!text) return null;
@@ -24,15 +23,6 @@ const OnDemandParagraphContainer = ({ idAttr, text }) => {
       {text}
     </StyledParagraphComponent>
   );
-};
-
-OnDemandParagraphContainer.propTypes = {
-  idAttr: string,
-  text: string.isRequired,
-};
-
-OnDemandParagraphContainer.defaultProps = {
-  idAttr: null,
 };
 
 export default OnDemandParagraphContainer;

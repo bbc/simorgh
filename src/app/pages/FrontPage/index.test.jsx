@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
@@ -33,7 +32,6 @@ const requestContextData = ({ service = 'pidgin' }) => ({
   showAdsBasedOnLocation: true,
 });
 
-// eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
   isAmp = false,
   service = 'pidgin',

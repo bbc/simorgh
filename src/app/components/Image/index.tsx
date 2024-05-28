@@ -86,16 +86,18 @@ const Image = ({
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
+    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
       return fallbackSrcSet;
+    }
     return undefined;
   };
   const getImgSizes = () => {
     if (
       (!hasFallback && srcSet) ||
       (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
-    )
+    ) {
       return sizes;
+    }
     return undefined;
   };
   const imgSrcSet = getImgSrcSet();
@@ -131,7 +133,7 @@ const Image = ({
         ]}
         style={{
           paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
-          overflow: hasCaption ? '' : 'hidden',
+          ...(!hasCaption && { overflow: 'hidden' }),
         }}
       >
         {isAmp ? (
@@ -154,10 +156,10 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              {...(srcSet && { srcSet: imgSrcSet })}
-              {...(imgSizes && { sizes: imgSizes })}
               fallback=""
               attribution={attribution}
+              {...(srcSet && { srcSet: imgSrcSet })}
+              {...(imgSizes && { sizes: imgSizes })}
               {...(preload && { 'data-hero': true })}
             />
           </>

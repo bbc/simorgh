@@ -1,15 +1,12 @@
 import React from 'react';
 import Grid from '#components/Grid';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';
-import ThemeProvider from '../../../components/ThemeProvider';
 
-// eslint-disable-next-line react/prop-types
 const TopRowStory = ({ dir, displayImages }) => (
   <TopRow
     stories={getNumberPromoFixtures(dir, 1)}
@@ -18,7 +15,6 @@ const TopRowStory = ({ dir, displayImages }) => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const LeadingRowStory = ({ dir, displayImages }) => (
   <LeadingRow
     stories={getNumberPromoFixtures(dir, 2)}
@@ -27,7 +23,6 @@ const LeadingRowStory = ({ dir, displayImages }) => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const RegularRowStory = ({ dir, displayImages }) => (
   <RegularRow
     stories={getNumberPromoFixtures(dir, 4)}
@@ -36,7 +31,6 @@ const RegularRowStory = ({ dir, displayImages }) => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ RowType, displayImages = true, selectDir }) => {
   return (
     <RequestContextProvider

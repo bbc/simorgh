@@ -1,10 +1,8 @@
 import React from 'react';
-import { arrayOf, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { storyItem } from '#models/propTypes/storyItem';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -14,7 +12,7 @@ import MostWatched from '.';
 jest.mock('../../../components/ThemeProvider');
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
-const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
+const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage = false }) => (
   <ThemeProvider service="pidgin" variant="default">
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
@@ -36,16 +34,6 @@ const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
     </ServiceContextProvider>
   </ThemeProvider>
 );
-
-MostWatchedComponent.propTypes = {
-  data: arrayOf(shape(storyItem)).isRequired,
-  isAmp: bool.isRequired,
-  isMostWatchedPage: bool,
-};
-
-MostWatchedComponent.defaultProps = {
-  isMostWatchedPage: false,
-};
 
 describe('MostWatched', () => {
   it('should render the component on Canonical', async () => {

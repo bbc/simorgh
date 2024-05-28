@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, screen, waitFor } from '@testing-library/react';

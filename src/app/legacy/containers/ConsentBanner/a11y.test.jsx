@@ -18,7 +18,6 @@ const defaultToggleState = {
 };
 const mockToggleDispatch = jest.fn();
 
-// eslint-disable-next-line react/prop-types
 const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   return (
     <RequestContextProvider
@@ -44,7 +43,6 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
 };
 
 const CanonicalBannerWithContext = React.forwardRef(
-  // eslint-disable-next-line react/prop-types
   ({ serviceConfig, variant }, ref) => {
     return (
       <>

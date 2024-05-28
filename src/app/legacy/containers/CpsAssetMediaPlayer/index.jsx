@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import { string, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -15,10 +14,6 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { GridItemLargeNoMargin } from '#components/Grid';
-import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -58,12 +53,16 @@ const Wrapper = styled(GridItemLargeNoMargin)`
 `;
 
 const CpsAssetMediaPlayer = ({
-  blocks,
+  blocks = [
+    {
+      model: {},
+    },
+  ],
   assetUri,
-  isLegacyMedia,
-  showLoadingImage,
-  hasBottomPadding,
-  showCaption,
+  isLegacyMedia = false,
+  showLoadingImage = false,
+  hasBottomPadding = true,
+  showCaption = true,
 }) => {
   const { dir } = useContext(ServiceContext);
   const { isLite } = useContext(RequestContext);
@@ -92,22 +91,6 @@ const CpsAssetMediaPlayer = ({
       />
     </Wrapper>
   );
-};
-
-CpsAssetMediaPlayer.propTypes = {
-  ...mediaPlayerPropTypes,
-  assetUri: string.isRequired,
-  isLegacyMedia: bool,
-  showLoadingImage: bool,
-  hasBottomPadding: bool,
-  showCaption: bool,
-};
-CpsAssetMediaPlayer.defaultProps = {
-  ...emptyBlockArrayDefaultProps,
-  isLegacyMedia: false,
-  showLoadingImage: false,
-  hasBottomPadding: true,
-  showCaption: true,
 };
 
 export default CpsAssetMediaPlayer;

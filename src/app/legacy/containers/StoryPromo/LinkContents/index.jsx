@@ -1,16 +1,13 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
-import { shape, bool, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-import pick from 'ramda/src/pick';
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
-import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
-const LinkContents = ({ item, isInline, id }) => {
+const LinkContents = ({ item, isInline = false, id }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -65,16 +62,6 @@ const LinkContents = ({ item, isInline, id }) => {
       {offScreenDuration}
     </span>
   );
-};
-
-LinkContents.propTypes = {
-  item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
-  isInline: bool,
-  id: string.isRequired,
-};
-
-LinkContents.defaultProps = {
-  isInline: false,
 };
 
 export default LinkContents;

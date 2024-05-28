@@ -31,7 +31,7 @@ export const createSrcsets = ({
   imageResolutions = DEFAULT_RESOLUTIONS,
 }) => {
   if (originCode === 'pips') {
-    return { primarySrcset: null, fallbackSrcset: null };
+    return { primarySrcset: undefined, fallbackSrcset: undefined };
   }
 
   const requiredResolutions = imageResolutions.filter(

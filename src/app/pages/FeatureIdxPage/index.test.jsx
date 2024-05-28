@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act, screen } from '@testing-library/react';
@@ -31,7 +30,6 @@ const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
   showAdsBasedOnLocation,
 });
 
-// eslint-disable-next-line react/prop-types
 const FeatureIdxPageWithContext = ({
   isAmp = false,
   service = 'urdu',

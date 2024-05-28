@@ -30,6 +30,7 @@ const LastUpdated = ({
     locale={locale}
     timezone={timezone}
     padding={false}
+    altCalendar={null}
   />
 );
 

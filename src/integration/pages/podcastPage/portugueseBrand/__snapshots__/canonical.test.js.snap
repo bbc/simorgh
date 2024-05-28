@@ -122,6 +122,13 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 }
 `;
 
+exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "BBC Lê",
+  "url": "/portuguese/topics/cxndrr1qgllt",
+}
+`;
+
 exports[`Canonical Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
 exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Andrea Fleck fez descoberta surpreendente após resolver pesquisar passado de seu pai, que tinha sido adotado quando bebê."`;

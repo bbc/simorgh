@@ -28,13 +28,19 @@ const buildPlaceholderSrc = (src, resolution) => {
     src || 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png';
   if (imageSrc.includes('urn:') || imageSrc.includes('localhost:'))
     return imageSrc;
+
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
-  const webpImgUrl = `${remainingUrlPartsWithoutResolution}.webp`;
   const newResolution = `${resolution}xn`;
-  const newUrl = [domain, mediaType, imgService, newResolution, webpImgUrl];
-  return `https://${newUrl.join('/')}`;
+  const newUrl = [
+    domain,
+    mediaType,
+    imgService,
+    newResolution,
+    ...remainingUrlPartsWithoutResolution,
+  ];
+  return `https://${newUrl.join('/')}.webp`;
 };
 
 const buildIChefURL = ({
