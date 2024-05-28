@@ -7,7 +7,13 @@ import styles from './styles';
 export default function Uploading() {
   return (
     <>
-      <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+      <Heading
+        level={1}
+        id="content"
+        tabIndex={-1}
+        css={styles.heading}
+        size="trafalgar"
+      >
         Uploading
       </Heading>
       <Paragraph>Please wait until it is finished.</Paragraph>
