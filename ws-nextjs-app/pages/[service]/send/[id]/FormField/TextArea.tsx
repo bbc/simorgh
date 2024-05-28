@@ -22,19 +22,19 @@ export default ({
     wasInvalid,
     wordLimit,
   } = inputState ?? {};
-  const hasWordCount = !!wordLimit;
+  const hasWordLimit = !!wordLimit;
   const translation = `Maximum ${wordLimit} Words`; // hardcoded
-  const describedByWordCount = `${id}-wordLimit`;
+  const describedByWordLimit = `${id}-wordLimit`;
 
   return (
     <>
       <Label id={id}>{label}</Label>
-      {hasWordCount && (
+      {hasWordLimit && (
         <Paragraph
           css={{ marginBottom: `${pixelsToRem(6)}rem` }}
           fontVariant="sansRegular"
           size="brevier"
-          id={describedByWordCount}
+          id={describedByWordLimit}
         >
           {translation}
         </Paragraph>
@@ -45,13 +45,13 @@ export default ({
         name={name}
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
-        {...(hasWordCount && { 'aria-describedby': describedByWordCount })}
+        {...(hasWordLimit && { 'aria-describedby': describedByWordLimit })}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(required && { 'aria-required': required }),
           ...(!isValid && {
             'aria-describedby':
-              describedBy + (hasWordCount ? `, ${describedByWordCount}` : ''),
+              describedBy + (hasWordLimit ? `, ${describedByWordLimit}` : ''),
           }),
         })}
         rows={4}

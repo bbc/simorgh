@@ -88,7 +88,7 @@ export type FieldData = {
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
   wasInvalid: boolean;
-  wordLimit: number | undefined;
+  wordLimit?: number;
 };
 
 export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
