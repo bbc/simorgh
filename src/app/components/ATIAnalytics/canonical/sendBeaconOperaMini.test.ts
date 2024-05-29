@@ -8,7 +8,7 @@ interface WindowOperaMini extends Window {
 let windowSpy: jest.SpyInstance<Window | undefined, []>;
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 
-describe('sendBeaconOperaMini', () => {
+describe('sendBeaconOperaMiniScript', () => {
   class OperaMiniMock {
     // eslint-disable-next-line class-methods-use-this
     get [Symbol.toStringTag]() {

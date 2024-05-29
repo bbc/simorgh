@@ -6,7 +6,6 @@ if ((${isOperaProxy.toString()})()) {
   xhr.open('GET', '${atiPageViewUrlString}', true);
   xhr.withCredentials = true;
   xhr.send();
-  console.log('Technically the line above me has popped off');
 }
 `;
 
