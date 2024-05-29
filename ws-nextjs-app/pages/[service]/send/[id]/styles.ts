@@ -41,8 +41,12 @@ export default {
   mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
       background: palette.WHITE,
-      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem ${spacings.FULL}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
         width: '35rem',
       },
     }),

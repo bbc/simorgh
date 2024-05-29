@@ -59,6 +59,7 @@ import {
   SPORT_YELLOW_30,
   STONE,
   STORM,
+  SUCCESS_CORE,
   WEATHER_BLUE,
   WHITE,
 } from './palette';
@@ -265,6 +266,7 @@ const withThemeProvider = ({
       SPORT_YELLOW_30,
       STONE,
       STORM,
+      SUCCESS_CORE,
       WEATHER_BLUE,
       WHITE,
       BRAND_BACKGROUND,

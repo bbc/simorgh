@@ -3,6 +3,7 @@ import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
+import somaliFormFixture from '#data/somali/send/u130092370.json';
 import UGCPage from './UGCPageLayout';
 import { FormScreen, PageProps } from './types';
 
@@ -16,18 +17,17 @@ const NextRouterWrapper = ({ children }: PropsWithChildren) => (
 
 const Component = ({
   initialScreen = 'form',
+  fixtureData,
 }: {
   initialScreen: FormScreen;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fixtureData: any;
 }) => (
   <NextRouterWrapper>
-    <PageLayoutWrapper
-      // @ts-expect-error partial data required for storybook
-      pageData={mundoFormFixture}
-      status={200}
-    >
+    <PageLayoutWrapper pageData={fixtureData} status={200}>
       <UGCPage
         initialScreen={initialScreen}
-        pageData={mundoFormFixture as PageProps['pageData']}
+        pageData={fixtureData as PageProps['pageData']}
       />
     </PageLayoutWrapper>
   </NextRouterWrapper>
@@ -38,6 +38,16 @@ export default {
   Component,
 };
 
-export const Form = () => <Component initialScreen="form" />;
-export const Uploading = () => <Component initialScreen="uploading" />;
-export const Success = () => <Component initialScreen="success" />;
+export const Form = () => (
+  <Component initialScreen="form" fixtureData={mundoFormFixture} />
+);
+export const UploaderForm = () => (
+  <Component initialScreen="form" fixtureData={somaliFormFixture} />
+);
+export const Uploading = () => (
+  <Component initialScreen="uploading" fixtureData={mundoFormFixture} />
+);
+  
+export const Success = () => (
+  <Component initialScreen="success" fixtureData={mundoFormFixture} />
+);
