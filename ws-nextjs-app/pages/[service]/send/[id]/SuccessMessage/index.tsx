@@ -82,12 +82,22 @@ const SuccessMessage = () => {
         <Paragraph>{retentionPolicy}</Paragraph>
         <Paragraph>
           {emailGuidelineClauses?.[0]}
-          <a href={`mailto:${DEFAULT_EMAIL}`}>{DEFAULT_EMAIL}</a>
+          <a
+            href={`mailto:${DEFAULT_EMAIL}`}
+            className="focusIndicatorReducedWidth"
+          >
+            {DEFAULT_EMAIL}
+          </a>
           {emailGuidelineClauses?.[1]} {removalGuidelineText}
         </Paragraph>
         <Paragraph>
           {privacyClauses?.[0]}
-          <a href={privacyPolicyLinkHref}>{privacyPolicyLinkText}</a>
+          <a
+            href={privacyPolicyLinkHref}
+            className="focusIndicatorReducedWidth"
+          >
+            {privacyPolicyLinkText}
+          </a>
           {privacyClauses?.[1]}
         </Paragraph>
       </div>
