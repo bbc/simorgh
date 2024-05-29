@@ -7,6 +7,8 @@ const TickSvg = ({ className }: { className?: string }) => (
     xmlns="http://www.w3.org/2000/svg"
     focusable="false"
     aria-hidden="true"
+    width="4rem"
+    height="4rem"
   >
     <path d="M151.74 74.17l-43.93 52.36-24.76-20.77-15.33 18.27 24.75 20.76 18.27 15.33 15.33-18.27L170 89.5l-18.26-15.33z" />
     <path
