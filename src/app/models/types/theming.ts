@@ -58,6 +58,7 @@ interface Palette extends BrandPalette {
   SPORT_YELLOW_30: string;
   STONE: string;
   STORM: string;
+  SUCCESS_CORE: string;
   WEATHER_BLUE: string;
   WHITE: string;
 }
