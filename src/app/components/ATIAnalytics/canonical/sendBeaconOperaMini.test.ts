@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/* eslint-disable no-eval */
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 interface WindowOperaMini extends Window {
@@ -44,7 +44,6 @@ describe('sendBeaconOperaMiniScript', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    // eslint-disable-next-line no-eval
     eval(sendBeaconOperaMiniScript('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
@@ -59,7 +58,6 @@ describe('sendBeaconOperaMiniScript', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    // eslint-disable-next-line no-eval
     eval(sendBeaconOperaMiniScript('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).not.toHaveBeenCalled();
