@@ -348,9 +348,15 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "position": 3,
           "url": "https://www.bbc.com/hindi/international-23069805",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/hindi/articles/c558wpnqq4qo",
+        },
       ],
       "name": "BBC News हिंदी",
-      "numberOfItems": 3,
+      "numberOfItems": 4,
     },
   ],
 }

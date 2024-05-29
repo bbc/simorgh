@@ -20,6 +20,7 @@ import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -101,6 +102,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     visualStyle,
                     visualProminence,
                   });
+                const indexOfFirstNonBanner =
+                  getIndexOfFirstNonBanner(curations);
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
@@ -120,7 +123,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       embed={embed}
                     />
-                    {index === 0 && <MPU />}
+                    {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
                 );
               },

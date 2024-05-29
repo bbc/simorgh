@@ -369,31 +369,6 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 .emotion-2 {
-  color: #141414;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  margin: 0;
-  margin-bottom: 0.375rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-3 {
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -408,20 +383,20 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-3:focus {
+.emotion-2:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
   outline-offset: 0.1875rem;
@@ -437,13 +412,8 @@ exports[`FormField should render a textarea input with an associated label 1`] =
     >
       This is a text field
     </label>
-    <p
-      class="emotion-2"
-    >
-      Maximum 500 Words
-    </p>
     <textarea
-      class="emotion-3"
+      class="emotion-2"
       id="testTextAreaID"
       name="testTextAreaID"
       rows="4"
