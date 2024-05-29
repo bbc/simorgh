@@ -8,6 +8,7 @@ import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import Form from './Form';
 import Uploading from './Uploading';
+import SuccessMessage from './SuccessMessage';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
@@ -28,7 +29,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
       <div css={styles.background} />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
+          <main role="main" css={styles.mainContent}>
             <FormContextProvider initialScreen={initialScreen} fields={fields}>
               <FormContext.Consumer>
                 {({ screen }) => {
@@ -46,7 +47,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     case 'uploading':
                       return <Uploading />;
                     case 'success':
-                      return <div>Success</div>;
+                      return <SuccessMessage />;
                     case 'error':
                     default:
                       return <div>Error</div>;
