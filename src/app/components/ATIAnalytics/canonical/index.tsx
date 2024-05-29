@@ -5,7 +5,7 @@ import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
-import { sendBeaconOperaMiniAsString } from './sendBeaconOperaMini';
+import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -35,7 +35,7 @@ const renderNoScriptTrackingPixel = (
 };
 
 const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconOperaMiniAsString(atiPageViewUrlString);
+  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
 
   return (
     <Helmet>

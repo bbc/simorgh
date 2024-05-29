@@ -1,8 +1,5 @@
 /* eslint-disable global-require */
-import {
-  sendBeaconOperaMini,
-  sendBeaconOperaMiniAsString,
-} from './sendBeaconOperaMini';
+import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 interface WindowOperaMini extends Window {
   operamini?: object;
@@ -47,7 +44,8 @@ describe('sendBeaconOperaMini', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    sendBeaconOperaMini('https://foobar.com');
+    // eslint-disable-next-line no-eval
+    eval(sendBeaconOperaMiniScript('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
       'GET',
@@ -61,27 +59,9 @@ describe('sendBeaconOperaMini', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    sendBeaconOperaMini('https://foobar.com');
+    // eslint-disable-next-line no-eval
+    eval(sendBeaconOperaMiniScript('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).not.toHaveBeenCalled();
-  });
-});
-
-describe('sendBeaconOperaMiniAsString', () => {
-  it('should return the sendBeaconOperaMini function as a string that calls itself', () => {
-    expect(sendBeaconOperaMiniAsString('https://foobar.com'))
-      .toMatchInlineSnapshot(`
-      "function sendBeaconOperaMini() {
-        if (function isOperaProxy() {
-        return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
-      }()) {
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', 'https://foobar.com', true);
-          xhr.withCredentials = true;
-          xhr.send();
-        }
-      } 
-       sendBeaconOperaMini();"
-    `);
   });
 });
