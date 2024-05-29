@@ -35,7 +35,7 @@ export default {
   privacyNotice: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       ...fontVariants.sansRegular,
-      ...fontSizes.brevier,
+      ...fontSizes.longPrimer,
       p: { color: palette.BLACK },
       a: getInlineLinkStyles(palette),
     }),
@@ -44,6 +44,6 @@ export default {
     css({
       color: palette.BLACK,
       ...fontVariants.sansBold,
-      ...fontSizes.brevier,
+      ...fontSizes.longPrimer,
     }),
 };

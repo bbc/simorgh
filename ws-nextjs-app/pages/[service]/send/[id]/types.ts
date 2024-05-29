@@ -73,6 +73,7 @@ export type Field = {
     max?: number;
     fileTypes?: string[];
     mandatory?: boolean;
+    wordLimit?: number;
   };
   htmlType: HtmlType;
   label: string;
@@ -87,6 +88,7 @@ export type FieldData = {
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
   wasInvalid: boolean;
+  wordLimit?: number;
 };
 
 export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
