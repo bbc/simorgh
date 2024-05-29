@@ -15,29 +15,44 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = '', required, wasInvalid } = inputState ?? {};
-  const translation = 'Maximum 500 Words';
+  const {
+    isValid,
+    value = '',
+    required,
+    wasInvalid,
+    wordLimit,
+  } = inputState ?? {};
+  const hasWordLimit = !!wordLimit;
+  const translation = `Maximum ${wordLimit} Words`; // hardcoded
+  const describedByWordLimit = `${id}-wordLimit`;
 
   return (
     <>
       <Label id={id}>{label}</Label>
-      <Paragraph
-        css={{ marginBottom: `${pixelsToRem(6)}rem` }}
-        fontVariant="sansRegular"
-        size="brevier"
-      >
-        {translation}
-      </Paragraph>
+      {hasWordLimit && (
+        <Paragraph
+          css={{ marginBottom: `${pixelsToRem(6)}rem` }}
+          fontVariant="sansRegular"
+          size="brevier"
+          id={describedByWordLimit}
+        >
+          {translation}
+        </Paragraph>
+      )}
       <textarea
         id={id}
         css={[styles.textField, styles.textArea, styles.focusIndicator]}
         name={name}
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
+        {...(hasWordLimit && { 'aria-describedby': describedByWordLimit })}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(required && { 'aria-required': required }),
-          ...(!isValid && { 'aria-describedby': describedBy }),
+          ...(!isValid && {
+            'aria-describedby':
+              describedBy + (hasWordLimit ? `, ${describedByWordLimit}` : ''),
+          }),
         })}
         rows={4}
       />
