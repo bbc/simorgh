@@ -30,6 +30,7 @@ import {
   render,
   screen,
   waitFor,
+  act,
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
@@ -467,6 +468,72 @@ describe('Article Page', () => {
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  it('should render secondary column images with the .webp image extension', async () => {
+    const pageDataWithSecondaryColumn = {
+      ...articleDataNews,
+      secondaryColumn: {
+        topStories: [],
+        features: [
+          {
+            headlines: {
+              headline:
+                'Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 42',
+            },
+            locators: {
+              assetUri: '/kyrgyz/kyrgyzstan-23087521',
+              cpsUrn: 'urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087521',
+              curie:
+                'http://www.bbc.co.uk/asset/eda3de40-cfd2-7449-87b4-2a26392fa543',
+              assetId: '23087521',
+            },
+            summary:
+              'Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.',
+            timestamp: 1477898711000,
+            language: 'ky',
+            cpsType: 'STY',
+            indexImage: {
+              id: '63486487',
+              subType: 'index',
+              href: 'http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg',
+              path: '/cpsdevpb/13284/test/_63486487_63486486.jpg',
+              height: 549,
+              width: 976,
+              altText: 'Өзбекстандын',
+              caption: 'Өзбекстандын',
+              copyrightHolder: 'Getty Images',
+              originCode: 'cpsdevpb',
+              type: 'image',
+            },
+            options: {
+              isBreakingNews: false,
+              isFactCheck: false,
+            },
+            id: 'urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521',
+            type: 'cps',
+          },
+        ],
+      },
+    };
+
+    const imageBlock =
+      pageDataWithSecondaryColumn.secondaryColumn.features[0].indexImage;
+    const imageAltText = imageBlock.altText;
+    const imagePath = imageBlock.path;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/400${imagePath}.webp`;
+
+    await act(async () => {
+      render(
+        <Context service="news">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+    });
+
+    const { src } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
   });
 
   describe('when isApp is true', () => {
