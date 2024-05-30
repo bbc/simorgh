@@ -12,7 +12,6 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-/* eslint-disable react/prop-types */
 const Component = ({
   isExternal = false,
   locator = 'https://www.bbc.com/news',

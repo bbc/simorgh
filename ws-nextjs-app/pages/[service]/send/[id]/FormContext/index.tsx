@@ -12,6 +12,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   FieldData,
+  FormScreen,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
@@ -26,16 +27,19 @@ type SubmissionError = {
   isRecoverable?: boolean;
 } | null;
 
-type ContextProps = {
+export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
+  hasAttemptedSubmit: boolean;
   progress: string;
+  screen: FormScreen;
+  submissionID: string | null;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
@@ -46,9 +50,11 @@ const getInitialFormState = (
       [field.id]: {
         isValid: true,
         required: field.validation.mandatory ?? false,
-        value: '',
+        wordLimit: field.validation.wordLimit ?? undefined,
+        value: field.htmlType === 'file' ? [] : '',
         htmlType: field.htmlType,
         messageCode: null,
+        wasInvalid: false,
       },
     }),
     {},
@@ -67,9 +73,10 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
 };
 
 export const FormContextProvider = ({
+  initialScreen = 'form',
   fields,
   children,
-}: PropsWithChildren<{ fields: Field[] }>) => {
+}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
   } = useRouter();
@@ -77,11 +84,23 @@ export const FormContextProvider = ({
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
+  // TODO: Remove lint disable once screen state switching is used
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [screen, _setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
+  const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
-      const updatedState = { [name]: { ...prevState[name], value } };
+      const currState = { ...prevState[name], value };
+      // As part of GEL guidelines, we should validate during user input, following an initial submit.
+      const validateFunction = validateFunctions[currState.htmlType];
+      const validatedData = validateFunction
+        ? validateFunction(currState)
+        : currState;
+
+      const updatedState = { [name]: { ...validatedData } };
       return { ...prevState, ...updatedState };
     });
   };
@@ -89,6 +108,7 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
+    setAttemptedSubmit(true);
 
     // Reset error state
     setSubmissionError(null);
@@ -100,29 +120,29 @@ export const FormContextProvider = ({
 
     Object.entries(formState).forEach(([key, item]) => {
       const fieldValue = item.value;
+      const isFileHtmlType = item.htmlType === 'file';
 
       if (fieldValue === '') return;
-      if (fieldValue instanceof FileList) {
-        const fileList = fieldValue;
-        const fileListLength = fileList.length;
+      if (isFileHtmlType) {
+        const fileList = fieldValue as File[];
 
-        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
-          const file = fileList.item(fileIndex);
-          if (file) formData.append(key, file);
-        }
+        fileList.forEach(file => {
+          formData.append(key, file);
+        });
         return;
       }
       if (typeof fieldValue === 'boolean') {
         if (fieldValue) formData.append(key, 'true');
         return;
       }
-      formData.append(key, fieldValue);
+      formData.append(key, fieldValue as string);
     });
 
     try {
       const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
+      req.responseType = 'json';
       req.open('POST', url, true);
 
       req.upload.onprogress = e => {
@@ -132,6 +152,9 @@ export const FormContextProvider = ({
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
+          if (req.status === OK) {
+            setSubmissionID(req.response.submissionId);
+          }
           if (req.status !== OK) {
             const { message, code, status, isRecoverable } = new UGCSendError(
               req,
@@ -167,6 +190,9 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
+        hasAttemptedSubmit,
+        screen,
+        submissionID,
       }}
     >
       {children}

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import { arrayOf, shape, oneOfType } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -16,7 +15,6 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-import { storyItem, optimoStoryItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 
@@ -52,7 +50,7 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({ items }) => {
+const CpsRecommendations = ({ items = [] }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
@@ -130,11 +128,3 @@ const CpsRecommendations = ({ items }) => {
 };
 
 export default CpsRecommendations;
-
-CpsRecommendations.propTypes = {
-  items: arrayOf(oneOfType([shape(storyItem), shape(optimoStoryItem)])),
-};
-
-CpsRecommendations.defaultProps = {
-  items: [],
-};

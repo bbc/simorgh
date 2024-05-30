@@ -30,7 +30,6 @@ const serviceContextMock = {
   },
 };
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ inline = false }) => (
   <ToggleContextProvider
     toggles={{

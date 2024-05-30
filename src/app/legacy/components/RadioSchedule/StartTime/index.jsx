@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number, string, shape, oneOf, oneOfType } from 'prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
@@ -31,16 +29,8 @@ const StyledClock = styled.span`
   }
 `;
 
-const ClockIcon = ({ dir }) => {
+const ClockIcon = ({ dir = 'ltr' }) => {
   return <StyledClock dir={dir}>{coreIcons.clock}</StyledClock>;
-};
-
-ClockIcon.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-ClockIcon.defaultProps = {
-  dir: 'ltr',
 };
 
 const StyledTimestamp = styled.span`
@@ -67,11 +57,11 @@ const StyledTimestamp = styled.span`
 
 export const StartTimestamp = ({
   timestamp,
-  timezone,
-  locale,
+  timezone = 'Europe/London',
+  locale = 'en-gb',
   script,
   service,
-  dir,
+  dir = 'ltr',
 }) => {
   return (
     <StyledTimestamp
@@ -95,21 +85,6 @@ export const StartTimestamp = ({
   );
 };
 
-StartTimestamp.propTypes = {
-  timestamp: oneOfType([number, string]).isRequired,
-  timezone: string,
-  locale: string,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-StartTimestamp.defaultProps = {
-  timezone: 'Europe/London',
-  locale: 'en-gb',
-  dir: 'ltr',
-};
-
 const StartTime = ({ timestamp }) => {
   const { script, locale, service, timezone, dir } = useContext(ServiceContext);
   return (
@@ -125,10 +100,6 @@ const StartTime = ({ timestamp }) => {
       />
     </Wrapper>
   );
-};
-
-StartTime.propTypes = {
-  timestamp: oneOfType([number, string]).isRequired,
 };
 
 export default StartTime;

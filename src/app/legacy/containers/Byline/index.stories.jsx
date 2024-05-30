@@ -3,7 +3,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import BylineContainer from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = (_, { service }) => {
   const blocks = [{ name: 'John Smith', title: 'Art Editor' }];
   return (

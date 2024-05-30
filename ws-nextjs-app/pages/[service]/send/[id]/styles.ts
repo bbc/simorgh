@@ -2,13 +2,22 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  background: () =>
+  background: ({ mq }: Theme) =>
     css({
-      background:
-        'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)',
+      display: 'none',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'block',
+        position: 'absolute',
+        inset: 0,
+        background:
+          'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)',
+      },
     }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
+      position: 'relative',
+
       [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
         margin: '0 auto',
@@ -32,22 +41,13 @@ export default {
   mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
       background: palette.WHITE,
-      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: '35rem',
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem ${spacings.FULL}rem`,
       },
-    }),
-  description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
-    css({
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
-      marginBottom: `${spacings.DOUBLE}rem`,
-
-      ...fontVariants.sansRegular,
-      ...fontSizes.bodyCopy,
-
       [mq.GROUP_2_MIN_WIDTH]: {
-        paddingBottom: `${spacings.FULL}rem`,
-        marginBottom: `${spacings.TRIPLE}rem`,
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
+        width: '35rem',
       },
     }),
 };

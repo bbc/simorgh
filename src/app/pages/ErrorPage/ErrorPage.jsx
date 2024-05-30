@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { number, oneOf, string, shape } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
@@ -55,18 +54,6 @@ const ErrorPage = ({ errorCode }) => {
       <ErrorMain {...messaging} dir={dir} script={script} service={service} />
     </>
   );
-};
-
-ErrorPage.propTypes = {
-  errorCode: number.isRequired,
-};
-
-ErrorMetadata.propTypes = {
-  dir: oneOf(['rtl', 'ltr']).isRequired,
-  lang: string.isRequired,
-  messaging: shape({ title: string.isRequired }).isRequired,
-  brandName: string.isRequired,
-  themeColor: string.isRequired,
 };
 
 export default ErrorPage;

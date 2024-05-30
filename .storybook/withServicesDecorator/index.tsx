@@ -71,6 +71,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
       timezone = 'GMT',
     } = TEXT_VARIANTS[serviceToUse];
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
       text,
       articlePath,

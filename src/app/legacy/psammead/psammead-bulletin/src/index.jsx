@@ -8,12 +8,10 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { string, oneOf, node, bool, shape } from 'prop-types';
 import {
   getSansRegular,
   getSerifMedium,
 } from '#psammead/psammead-styles/src/font-styles';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getPica,
   getGreatPrimer,
@@ -173,17 +171,17 @@ PlayCTA.defaultProps = {
 const Bulletin = ({
   script,
   service,
-  dir,
-  image,
+  dir = 'ltr',
+  image = null,
   mediaType,
   headlineText,
-  summaryText,
+  summaryText = null,
   ctaLink,
   ctaText,
-  isLive,
-  liveText,
+  isLive = false,
+  liveText = 'LIVE',
   offScreenText,
-  lang,
+  lang = null,
   ariaId,
 }) => {
   const sanitisedAriaId = ariaId ? ariaId.replace(/\W/g, '') : null;
@@ -253,32 +251,6 @@ const Bulletin = ({
       </TextGridItem>
     </BulletinWrapper>
   );
-};
-
-Bulletin.propTypes = {
-  mediaType: oneOf(['video', 'audio']).isRequired,
-  service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  ctaText: string.isRequired,
-  ctaLink: string.isRequired,
-  image: node,
-  summaryText: string,
-  headlineText: string.isRequired,
-  isLive: bool,
-  liveText: string,
-  offScreenText: string.isRequired,
-  lang: string,
-  ariaId: string.isRequired,
-};
-
-Bulletin.defaultProps = {
-  dir: 'ltr',
-  image: null,
-  summaryText: null,
-  isLive: false,
-  liveText: 'LIVE',
-  lang: null,
 };
 
 export default Bulletin;

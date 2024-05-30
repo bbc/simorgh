@@ -6,7 +6,6 @@ const headline = blocksSingleFragment('This is a headline.', []);
 
 const subheadline = blocksSingleFragment('This is a subheadline.', []);
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ type, blocks }) => (
   <HeadingsContainer type={type} blocks={blocks} />
 );

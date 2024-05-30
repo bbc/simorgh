@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, bool } from 'prop-types';
 import Figure from '#psammead/psammead-figure/src';
 import useLocation from '#hooks/useLocation';
 import {
@@ -18,10 +17,6 @@ import getEmbedUrl, {
   makeAbsolute,
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import { RequestContext } from '#contexts/RequestContext';
-import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from './Metadata';
 import Caption from '../Caption';
@@ -29,14 +24,18 @@ import logMissingMediaId from './helpers/logMissingMediaId';
 import getPlayerProps from './helpers/propsInference';
 
 const MediaPlayerContainer = ({
-  blocks,
+  blocks = [
+    {
+      model: {},
+    },
+  ],
   assetId,
   assetType,
   showPlaceholder,
-  available,
-  isLegacyMedia,
-  showLoadingImage,
-  showCaption,
+  available = true,
+  isLegacyMedia = false,
+  showLoadingImage = false,
+  showCaption = true,
 }) => {
   const { isAmp, pageType } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
@@ -160,24 +159,6 @@ const MediaPlayerContainer = ({
       )}
     </>
   );
-};
-
-MediaPlayerContainer.propTypes = {
-  ...mediaPlayerPropTypes,
-  assetId: string.isRequired,
-  assetType: string.isRequired,
-  showPlaceholder: bool.isRequired,
-  available: bool,
-  isLegacyMedia: bool,
-  showLoadingImage: bool,
-  showCaption: bool,
-};
-MediaPlayerContainer.defaultProps = {
-  ...emptyBlockArrayDefaultProps,
-  available: true,
-  isLegacyMedia: false,
-  showLoadingImage: false,
-  showCaption: true,
 };
 
 export default MediaPlayerContainer;

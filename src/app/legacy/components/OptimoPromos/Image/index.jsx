@@ -1,9 +1,15 @@
 import React, { useContext } from 'react';
-import { string, number } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import IMAGE from '../../../../components/Image';
 
-const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {
+const Image = ({
+  src,
+  altText,
+  srcset = '',
+  fallbackSrcset = '',
+  width,
+  height,
+}) => {
   const { isAmp } = useContext(RequestContext);
   const ASPECT_RATIO = [16, 9];
 
@@ -21,16 +27,5 @@ const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {
     />
   );
 };
-
-Image.propTypes = {
-  src: string.isRequired,
-  altText: string.isRequired,
-  width: number.isRequired,
-  height: number.isRequired,
-  srcset: string,
-  fallbackSrcset: string,
-};
-
-Image.defaultProps = { srcset: '', fallbackSrcset: '' };
 
 export default Image;

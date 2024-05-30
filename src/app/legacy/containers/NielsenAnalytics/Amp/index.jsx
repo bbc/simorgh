@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes
@@ -39,10 +38,5 @@ const AmpNielsenAnalytics = ({ apid, section }) => (
     </amp-analytics>
   </DisplayWrapper>
 );
-
-AmpNielsenAnalytics.propTypes = {
-  apid: string.isRequired,
-  section: string.isRequired,
-};
 
 export default AmpNielsenAnalytics;
