@@ -1,9 +1,5 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo
-} from 'react';
+import React, { createContext, PropsWithChildren, useContext, useMemo } from 'react';
+
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
