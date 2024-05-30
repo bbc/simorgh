@@ -8,6 +8,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
+import useViewTracker from '#app/hooks/useViewTracker';
 
 const renderListItems = (
   Li,
@@ -22,6 +23,12 @@ const renderListItems = (
     const { title, url } = item;
     const active = index === activeIndex;
 
+    const eventTrackingData = {
+      componentName: 'navigation',
+    };
+
+    const viewRef = useViewTracker(eventTrackingData);
+
     return (
       <Li
         key={title}
@@ -31,6 +38,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
+        ref={viewRef}
       >
         {title}
       </Li>
