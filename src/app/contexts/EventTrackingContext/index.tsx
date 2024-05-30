@@ -1,5 +1,9 @@
-import React, { createContext, PropsWithChildren, useContext } from 'react';
-
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useMemo
+} from 'react';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -113,13 +117,13 @@ export const EventTrackingContextProvider = ({
       data,
       atiData,
     }) as ATIEventTrackingProps;
-  const trackingProps = {
-    campaignID,
-    pageIdentifier,
-    platform,
-    producerId: atiAnalyticsProducerId,
-    statsDestination,
-  };
+  const trackingProps = useMemo(() => ({
+      campaignID,
+      pageIdentifier,
+      platform,
+      producerId: atiAnalyticsProducerId,
+      statsDestination,
+  }));
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);
 
   return (
