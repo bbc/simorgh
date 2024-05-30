@@ -119,7 +119,7 @@ export const EventTrackingContextProvider = ({
       platform,
       producerId: atiAnalyticsProducerId,
       statsDestination,
-  }));
+  }), []);
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);
 
   return (
