@@ -5,7 +5,6 @@ import withServicesDecorator from '#storybook/withServicesDecorator';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
 
-/* eslint-disable react/prop-types */
 const Component = ({ masterBrand, episodes, service }) => (
   <RequestContextProvider
     service={service}

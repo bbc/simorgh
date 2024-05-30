@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number } from 'prop-types';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
@@ -52,10 +51,6 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
       {formattedTimestamp}
     </Wrapper>
   );
-};
-
-OnDemandFooterTimestamp.propTypes = {
-  releaseDateTimeStamp: number.isRequired,
 };
 
 export default OnDemandFooterTimestamp;

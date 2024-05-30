@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node } from 'prop-types';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
@@ -38,9 +37,5 @@ const Title = ({ children, ...props }) => (
     </Heading>
   </Wrapper>
 );
-
-Title.propTypes = {
-  children: node.isRequired,
-};
 
 export default Title;

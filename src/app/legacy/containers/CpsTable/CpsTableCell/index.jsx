@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, string } from 'prop-types';
 
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
 import Text from '../../Text';
@@ -29,22 +27,13 @@ const componentsToRender = {
   text: Text,
 };
 
-const CpsTableCell = ({ blocks, type }) => {
+const CpsTableCell = ({ blocks, type = 'tableCell' }) => {
   const isHeaderCell = type === 'tableHeader';
   return (
     <StyledTd as={isHeaderCell ? 'th' : 'td'} isHeaderCell={isHeaderCell}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </StyledTd>
   );
-};
-
-CpsTableCell.propTypes = {
-  blocks: arrayOf(textBlockPropTypes).isRequired,
-  type: string,
-};
-
-CpsTableCell.defaultProps = {
-  type: 'tableCell',
 };
 
 export default CpsTableCell;

@@ -1,8 +1,6 @@
 import React, { useContext, forwardRef } from 'react';
-import { shape, string, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
-import { storyItem, tipoLiveStoryItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
@@ -70,7 +68,7 @@ const getLiveTopStoryItem = item => {
 };
 
 const TopStoriesItem = forwardRef(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
+  ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
     const { script } = useContext(ServiceContext);
 
     if (!item || isEmpty(item)) return null;
@@ -137,13 +135,5 @@ const TopStoriesItem = forwardRef(
     );
   },
 );
-
-TopStoriesItem.propTypes = {
-  item: oneOfType([shape(storyItem), shape(tipoLiveStoryItem)]).isRequired,
-  ariaLabelledBy: string.isRequired,
-  eventTrackingData: shape({ block: shape({ componentName: string }) }),
-};
-
-TopStoriesItem.defaultProps = { eventTrackingData: null };
 
 export default TopStoriesItem;

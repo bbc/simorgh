@@ -1697,7 +1697,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   </main>
   <section
     aria-labelledby="Radio-Schedule"
-    class=" emotion-22 emotion-23"
+    class="emotion-22 emotion-23"
     data-testid="radio-schedule"
     role="region"
   >

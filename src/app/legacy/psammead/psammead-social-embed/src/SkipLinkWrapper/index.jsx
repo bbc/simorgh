@@ -1,5 +1,4 @@
 import React from 'react';
-import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -61,7 +60,7 @@ const SkipLinkWrapper = ({
   text,
   children,
   endTextVisuallyHidden,
-  describedById,
+  describedById = null,
 }) => {
   const dictionary = dictionaryFactory({ provider });
   return (
@@ -80,20 +79,6 @@ const SkipLinkWrapper = ({
       </EndText>
     </Wrapper>
   );
-};
-
-SkipLinkWrapper.defaultProps = {
-  describedById: null,
-};
-
-SkipLinkWrapper.propTypes = {
-  provider: string.isRequired,
-  service: string.isRequired,
-  endTextId: string.isRequired,
-  children: node.isRequired,
-  text: string.isRequired,
-  endTextVisuallyHidden: string.isRequired,
-  describedById: string,
 };
 
 export default SkipLinkWrapper;

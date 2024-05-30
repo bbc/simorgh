@@ -6,7 +6,6 @@ import {
 import PromoContext from '../PromoContext';
 import PromoLink from '.';
 
-// eslint-disable-next-line react/prop-types
 const LinkFixture = ({ to }) => (
   <PromoContext.Provider value={{ to }}>
     <PromoLink>Test Link</PromoLink>

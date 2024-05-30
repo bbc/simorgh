@@ -31,6 +31,23 @@ export default ({ service, pageType, variant }) => {
             otherVariant = variant === 'simp' ? 'trad' : 'simp';
           }
         }
+<<<<<<< HEAD
+=======
+        // Gets the topic page data for all the tests
+        cy.getPageDataFromWindow().then(data => {
+          const { pageData } = data;
+          topicTitle = pageData.title;
+          variantTopicId = pageData.scriptSwitchId;
+          pageCount = pageData.pageCount;
+          numberOfItems = pageData.curations?.[0]?.summaries.length;
+          firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
+          messageBanner = pageData.curations?.find(
+            curation =>
+              curation.visualProminence === 'NORMAL' &&
+              curation.visualStyle === 'BANNER',
+          );
+        });
+>>>>>>> da4dfcf1a4cfd102bce99fc21e42d0f83205dfe5
 
         // Gets the topic page data for all the tests
         cy.getPageData({

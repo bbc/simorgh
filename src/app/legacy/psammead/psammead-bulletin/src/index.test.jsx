@@ -6,7 +6,6 @@ import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Bulletin from '.';
 
-/* eslint-disable react/prop-types */
 const BulletinComponent = ({
   script,
   service,

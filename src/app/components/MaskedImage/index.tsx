@@ -14,11 +14,13 @@ const MaskedImage = ({
   imageUrlTemplate,
   imageWidth,
   altText = '',
+  showPlaceholder = true,
 }: {
   imageUrl: string;
   imageUrlTemplate: string;
   imageWidth: number;
   altText?: string;
+  showPlaceholder?: boolean;
 }) => {
   const { dir } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
@@ -57,6 +59,7 @@ const MaskedImage = ({
         height={533}
         fetchpriority="high"
         preload
+        placeholder={showPlaceholder}
       />
     </div>
   );

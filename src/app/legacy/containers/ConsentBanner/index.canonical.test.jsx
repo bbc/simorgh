@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-foreign-prop-types */
 /* eslint-disable global-require */
 import React from 'react';
 

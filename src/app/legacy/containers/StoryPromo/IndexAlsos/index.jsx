@@ -1,6 +1,4 @@
 import React, { useContext, Fragment } from 'react';
-import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
@@ -34,7 +32,7 @@ const buildIndexAlsosMediaIndicator = ({
   mediaType,
   script,
   service,
-  dir,
+  dir = 'ltr',
 }) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
@@ -49,18 +47,6 @@ const buildIndexAlsosMediaIndicator = ({
       />
     )
   );
-};
-
-buildIndexAlsosMediaIndicator.propTypes = {
-  cpsType: string.isRequired,
-  mediaType: string.isRequired,
-  script: string.isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-buildIndexAlsosMediaIndicator.defaultProps = {
-  dir: 'ltr',
 };
 
 const extractLinkPromoData = item => {
@@ -87,7 +73,7 @@ const extractAssetPromoData = item => {
  * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
  * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
  */
-const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
+const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
   const {
     translations: { media: mediaTranslations, relatedContent },
   } = useContext(ServiceContext);
@@ -136,40 +122,6 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
       </IndexAlsosWrapper>
     </IndexAlsos>
   );
-};
-
-const assetPromoAlsoItemsPropTypes = shape({
-  headlines: shape({
-    headline: string.isRequired,
-  }).isRequired,
-  locators: shape({
-    assetUri: string.isRequired,
-    cpsUrn: string,
-  }).isRequired,
-  summary: string,
-  timestamp: number,
-  cpsType: string.isRequired,
-  id: string.isRequired,
-  type: string,
-});
-
-const linkPromoAlsoItemsPropTypes = shape({
-  name: string.isRequired,
-  url: string.isRequired,
-  id: string.isRequired,
-});
-
-IndexAlsosContainer.propTypes = {
-  alsoItems: arrayOf(
-    oneOfType([assetPromoAlsoItemsPropTypes, linkPromoAlsoItemsPropTypes]),
-  ).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-IndexAlsosContainer.defaultProps = {
-  dir: 'ltr',
 };
 
 export default IndexAlsosContainer;

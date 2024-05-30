@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, node, bool } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -59,7 +58,7 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 };
 
 const Image = props => {
-  const { children, src, useLargeImages, ...rest } = props;
+  const { children = null, src, useLargeImages = false, ...rest } = props;
   const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
     src.includes(originCode),
   );
@@ -93,18 +92,6 @@ const Image = props => {
       {children && <ChildWrapper>{children}</ChildWrapper>}
     </Wrapper>
   );
-};
-
-Image.propTypes = {
-  alt: string.isRequired,
-  src: string.isRequired,
-  useLargeImages: bool,
-  children: node,
-};
-
-Image.defaultProps = {
-  useLargeImages: false,
-  children: null,
 };
 
 export default Image;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { string, bool, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_TRPL,
@@ -65,7 +64,12 @@ const StyledErrorMessage = styled.div`
   }
 `;
 
-const EmbedError = ({ service, message, fillViewport, link }) => (
+const EmbedError = ({
+  service = 'news',
+  message,
+  fillViewport = false,
+  link = null,
+}) => (
   <StyledEmbedError service={service} fillViewport={fillViewport}>
     <StyledErrorMessage service={service}>
       <div>
@@ -75,21 +79,5 @@ const EmbedError = ({ service, message, fillViewport, link }) => (
     </StyledErrorMessage>
   </StyledEmbedError>
 );
-
-EmbedError.defaultProps = {
-  service: 'news',
-  fillViewport: false,
-  link: null,
-};
-
-EmbedError.propTypes = {
-  service: string,
-  fillViewport: bool,
-  message: string.isRequired,
-  link: shape({
-    text: string.isRequired,
-    href: string.isRequired,
-  }),
-};
 
 export default EmbedError;

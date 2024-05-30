@@ -806,7 +806,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           dir="rtl"
         >
           <h1
-            class=" emotion-11 emotion-12 emotion-13"
+            class="emotion-11 emotion-12 emotion-13"
             id="content"
             tabindex="-1"
           >
@@ -1737,7 +1737,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           dir="rtl"
         >
           <h1
-            class=" emotion-11 emotion-12 emotion-13"
+            class="emotion-11 emotion-12 emotion-13"
             id="content"
             tabindex="-1"
           >
@@ -2630,7 +2630,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
           dir="ltr"
         >
           <h1
-            class=" emotion-11 emotion-12 emotion-13"
+            class="emotion-11 emotion-12 emotion-13"
             id="content"
             tabindex="-1"
           >
@@ -3484,7 +3484,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
           dir="ltr"
         >
           <h1
-            class=" emotion-11 emotion-12 emotion-13"
+            class="emotion-11 emotion-12 emotion-13"
             id="content"
             tabindex="-1"
           >

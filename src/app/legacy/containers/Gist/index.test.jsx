@@ -11,7 +11,6 @@ const defaultToggles = {
   },
 };
 
-// eslint-disable-next-line react/prop-types
 const GistWithContext = ({ blocks = fixtureData }) => (
   <ToggleContextProvider toggles={defaultToggles}>
     <ServiceContextProvider dir="ltr" service="news" lang="en-GB">

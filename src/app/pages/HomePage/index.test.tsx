@@ -213,6 +213,35 @@ describe('Home Page', () => {
 
       expect(getBootstrapScript()).toBeTruthy();
     });
+    it('should display the MPU ad in the correct location', () => {
+      const { container } = render(
+        <BrowserRouter>
+          {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
+          <HomePage pageData={homePageData} />
+        </BrowserRouter>,
+        {
+          service: 'kyrgyz',
+          toggles: {
+            ads: { enabled: true },
+          },
+          showAdsBasedOnLocation: true,
+        },
+      );
+      const sections = container.querySelectorAll(`section`);
+      const sectionIds: (string | null)[] = Array.from(sections).map(
+        section =>
+          section.getAttribute('aria-labelledby') ||
+          section.getAttribute('data-e2e'),
+      );
+      const mpuIndex = sectionIds.lastIndexOf('advertisement');
+      const firstNonBannerIndex = sectionIds.findIndex(
+        sectionId =>
+          sectionId !== 'advertisement' &&
+          !sectionId?.startsWith('billboard') &&
+          !sectionId?.startsWith('message-banner'),
+      );
+      expect(mpuIndex).toBe(firstNonBannerIndex + 1);
+    });
 
     it.each`
       adsEnabled | showAdsBasedOnLocation | scenario

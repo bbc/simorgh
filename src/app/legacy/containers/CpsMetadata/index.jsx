@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, arrayOf, shape, bool } from 'prop-types';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from '../../../components/Metadata';
@@ -11,11 +10,11 @@ const CpsMetadata = ({
   description,
   firstPublished,
   lastPublished,
-  imageLocator,
-  imageAltText,
-  aboutTags,
-  hasAppleItunesAppBanner,
-  hasAmpPage,
+  imageLocator = null,
+  imageAltText = null,
+  aboutTags = [],
+  hasAppleItunesAppBanner = false,
+  hasAmpPage = true,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -39,38 +38,6 @@ const CpsMetadata = ({
       <meta name="article:modified_time" content={lastPublished} />
     </Metadata>
   );
-};
-const tagPropTypes = shape({
-  thingUri: string,
-  topicId: string,
-  topicName: string,
-  curationType: arrayOf(string),
-  thingId: string,
-  thingLabel: string,
-  thingType: arrayOf(string),
-  thingSameAs: arrayOf(string),
-});
-
-CpsMetadata.propTypes = {
-  title: string.isRequired,
-  shortHeadline: string.isRequired,
-  language: string.isRequired,
-  description: string.isRequired,
-  firstPublished: string.isRequired,
-  lastPublished: string.isRequired,
-  imageLocator: string,
-  imageAltText: string,
-  aboutTags: arrayOf(tagPropTypes),
-  hasAppleItunesAppBanner: bool,
-  hasAmpPage: bool,
-};
-
-CpsMetadata.defaultProps = {
-  imageLocator: null,
-  imageAltText: null,
-  aboutTags: [],
-  hasAppleItunesAppBanner: false,
-  hasAmpPage: true,
 };
 
 export default CpsMetadata;

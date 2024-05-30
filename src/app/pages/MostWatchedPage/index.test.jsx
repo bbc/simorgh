@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { bool } from 'prop-types';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
@@ -21,7 +20,7 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 
 jest.mock('../../components/ThemeProvider');
 
-const MostWatchedPageWithContext = ({ isAmp }) => (
+const MostWatchedPageWithContext = ({ isAmp = false }) => (
   <ThemeProvider service="pidgin" variant="default">
     <ToggleContextProvider>
       <ServiceContextProvider service="pidgin">
@@ -41,14 +40,6 @@ const MostWatchedPageWithContext = ({ isAmp }) => (
     </ToggleContextProvider>
   </ThemeProvider>
 );
-
-MostWatchedPageWithContext.propTypes = {
-  isAmp: bool,
-};
-
-MostWatchedPageWithContext.defaultProps = {
-  isAmp: false,
-};
 
 describe('Most Watched Page Main', () => {
   it('should match snapshot for the Most Watched page', async () => {
