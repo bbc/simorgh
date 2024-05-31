@@ -9,6 +9,11 @@ import UGCPageLayout from './UGCPageLayout';
 const logger = nodeLogger(__filename);
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+  );
+
   const isLite = isLitePath(context.resolvedUrl);
 
   const {
