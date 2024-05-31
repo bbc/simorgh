@@ -119,6 +119,7 @@ export const EventTrackingContextProvider = ({
       atiData,
     }) as ATIEventTrackingProps;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const trackingProps = useMemo(
     () => ({
       campaignID,
@@ -127,13 +128,7 @@ export const EventTrackingContextProvider = ({
       producerId: atiAnalyticsProducerId,
       statsDestination,
     }),
-    [
-      atiAnalyticsProducerId,
-      campaignID,
-      pageIdentifier,
-      platform,
-      statsDestination,
-    ],
+    [],
   );
 
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);
