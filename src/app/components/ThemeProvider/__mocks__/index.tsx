@@ -48,7 +48,8 @@ import ukchinaSimp from '../themes/ukchina/simp';
 import ukchinaTrad from '../themes/ukchina/trad';
 import ukrainian from '../themes/ukrainian';
 import urdu from '../themes/urdu';
-import uzbek from '../themes/uzbek';
+import uzbekCyr from '../themes/uzbek/cyr';
+import uzbekLat from '../themes/uzbek/lat';
 import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
@@ -109,7 +110,10 @@ const themeProviders: ThemeProvider = {
   },
   ukrainian,
   urdu,
-  uzbek,
+  uzbek: {
+    cyr: uzbekCyr,
+    lat: uzbekLat,
+  },
   vietnamese,
   yoruba,
   zhongwen: {
