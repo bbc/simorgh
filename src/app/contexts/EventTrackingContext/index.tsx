@@ -102,14 +102,6 @@ export const EventTrackingContextProvider = ({
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  if (!eventTrackingIsEnabled || (!data && !atiData)) {
-    return (
-      <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
-        {children}
-      </EventTrackingContext.Provider>
-    );
-  }
-
   const campaignID = getCampaignID(pageType as CampaignPageTypes);
   const { pageIdentifier, platform, statsDestination } =
     buildATIEventTrackingParams({
@@ -129,6 +121,14 @@ export const EventTrackingContextProvider = ({
     }),
     [],
   );
+
+  if (!eventTrackingIsEnabled || (!data && !atiData)) {
+    return (
+      <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
+        {children}
+      </EventTrackingContext.Provider>
+    );
+  }
 
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);
 
