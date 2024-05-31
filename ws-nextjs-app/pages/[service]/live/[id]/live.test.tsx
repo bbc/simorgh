@@ -8,7 +8,9 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
+import { GetServerSidePropsContext } from 'next';
 import Live from './LivePageLayout';
+import { getServerSideProps } from './[[...variant]].page';
 
 const mockPageData = {
   ...liveFixture.data,
@@ -99,6 +101,26 @@ const mockPageDataWithMetadata = ({
 };
 
 describe('Live Page', () => {
+  it('Should set Cache-Control header to correct values', async () => {
+    const context = {
+      query: {
+        service: 'pidgin',
+        id: 'c7p765ynk9qt',
+      },
+      req: { headers: {} },
+      res: {
+        setHeader: jest.fn(),
+        on: jest.fn(),
+      },
+    } as unknown as GetServerSidePropsContext;
+
+    await getServerSideProps(context);
+    expect(context.res.setHeader).toHaveBeenCalledWith(
+      'Cache-Control',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+    );
+  });
+
   it.each`
     title             | seoTitle             | info                      | expected
     ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle - BBC News Pidgin'}
