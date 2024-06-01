@@ -3,8 +3,6 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import paths from 'ramda/src/paths';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import topicTagsTest from '../../../support/helpers/topicTagsTest';
-import envConfig from '../../../support/config/envs';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
