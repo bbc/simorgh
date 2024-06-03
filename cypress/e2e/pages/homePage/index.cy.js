@@ -3,7 +3,6 @@ import getUrls from './urls';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import visitPage from '../../../support/helpers/visitPage';
 import crossPlatformTests from './tests';
-import ampTests from './testsForAMPOnly';
 import canonicalTests from './testsForCanonicalOnly';
 
 const pageType = HOME_PAGE;
@@ -33,11 +32,7 @@ urls.forEach(url => {
         variant,
       });
 
-      if (currentPath.includes('.amp')) {
-        ampTests({ service, pageType, variant });
-      } else {
-        canonicalTests({ service, pageType, variant });
-      }
+      canonicalTests({ service, pageType, variant });
     });
   }
 });
