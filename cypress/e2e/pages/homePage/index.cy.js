@@ -8,12 +8,7 @@ import canonicalTests from './testsForCanonicalOnly';
 const pageType = HOME_PAGE;
 
 const environment = getAppEnv();
-const canonicalUrls = getUrls();
-const ampUrls = canonicalUrls.map(url => {
-  return { ...url, [environment]: `${url[environment]}.amp` };
-});
-
-const urls = [...canonicalUrls, ...ampUrls];
+const urls = getUrls();
 
 urls.forEach(url => {
   const { service, variant = 'default' } = url;
