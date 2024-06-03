@@ -47,6 +47,12 @@ const NavigationContainer = () => {
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, navMenuText } = translations;
 
+  const eventTrackingData = {
+    componentName: `navigation`,
+  };
+
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
   if (!navigation || navigation.length === 0) {
     return null;
   }
@@ -82,12 +88,6 @@ const NavigationContainer = () => {
       )}
     </DropdownUl>
   );
-
-  const eventTrackingData = {
-    componentName: `navigation-${state}`,
-  };
-
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const Navigation = isAmp ? Amp : Canonical;
 
