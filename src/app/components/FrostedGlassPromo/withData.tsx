@@ -56,7 +56,6 @@ const buildImageProperties = (imageProps?: ImageProps) => {
     originCode,
     locator,
     resolution: 400,
-    isWebP: true,
   });
 
   return {

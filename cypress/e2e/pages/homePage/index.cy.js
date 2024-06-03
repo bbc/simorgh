@@ -3,18 +3,12 @@ import getUrls from './urls';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import visitPage from '../../../support/helpers/visitPage';
 import crossPlatformTests from './tests';
-import ampTests from './testsForAMPOnly';
 import canonicalTests from './testsForCanonicalOnly';
 
 const pageType = HOME_PAGE;
 
 const environment = getAppEnv();
-const canonicalUrls = getUrls();
-const ampUrls = canonicalUrls.map(url => {
-  return { ...url, [environment]: `${url[environment]}.amp` };
-});
-
-const urls = [...canonicalUrls, ...ampUrls];
+const urls = getUrls();
 
 urls.forEach(url => {
   const { service, variant = 'default' } = url;
@@ -33,11 +27,7 @@ urls.forEach(url => {
         variant,
       });
 
-      if (currentPath.includes('.amp')) {
-        ampTests({ service, pageType, variant });
-      } else {
-        canonicalTests({ service, pageType, variant });
-      }
+      canonicalTests({ service, pageType, variant });
     });
   }
 });
