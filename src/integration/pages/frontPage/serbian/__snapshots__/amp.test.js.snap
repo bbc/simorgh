@@ -442,7 +442,7 @@ exports[`Story Promo Image should match image 1`] = `
   fallback=""
   height="1152"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
   width="2048"
 />
 `;
