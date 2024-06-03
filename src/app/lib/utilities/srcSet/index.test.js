@@ -15,7 +15,7 @@ describe('create srcset', () => {
         fallbackMimeType: 'image/jpeg',
       },
       summary:
-        'should return a srcset with test in originCode and testland in location', // why was fallbackMimeType set to null in this test?
+        'should return a srcset with test in originCode and testland in location',
     },
     {
       originCode: 'pips',
@@ -37,7 +37,7 @@ describe('create srcset', () => {
         fallbackMimeType: 'image/jpeg',
       },
       summary:
-        'width of 640 should return srcset with maximum allowed size of 640', // why were mime types set to null in this test?
+        'width of 640 should return srcset with maximum allowed size of 640',
     },
     {
       originCode: 'cpsdevpb',
@@ -51,7 +51,7 @@ describe('create srcset', () => {
           'https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/testland.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/testland.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/testland.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/testland.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/testland.jpg 800w',
         fallbackMimeType: 'image/jpeg',
       },
-      summary: 'width of 2048 should return all default srcset values', // why was fallback mime type set to null in this test?
+      summary: 'width of 2048 should return all default srcset values',
     },
     {
       originCode: 'cpsdevpb',
@@ -93,7 +93,7 @@ describe('create srcset', () => {
         fallbackMimeType: null,
       },
       summary:
-        'should return no file extension when none on locator and no MIME types', // do we need this test to cover null mime types?
+        'should return no file extension when none on locator and no MIME types',
     },
   ];
 
