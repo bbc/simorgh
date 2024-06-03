@@ -4,11 +4,11 @@ import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 
 const renderListItems = (
   Li,
@@ -87,7 +87,7 @@ const NavigationContainer = () => {
     componentName: `navigation-${state}`,
   };
 
-  const useClickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const Navigation = isAmp ? Amp : Canonical;
 
