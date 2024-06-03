@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -22,15 +22,16 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import ShareButton from '../ShareButton';
 
-const PostBreakingNewsLabel = ({
-  isBreakingNews,
-  breakingNewsLabelText,
+const PostLabel = ({
+  hasLabel,
+  labelText,
 }: {
-  isBreakingNews: boolean;
-  breakingNewsLabelText?: string;
+  hasLabel: boolean;
+  labelText?: string;
 }) => {
-  return isBreakingNews ? (
+  return hasLabel ? (
     <>
       <Text
         css={styles.breakingNewsLabel}
@@ -38,7 +39,7 @@ const PostBreakingNewsLabel = ({
         fontVariant="sansBold"
         data-testid="breaking-news-label"
       >
-        {breakingNewsLabelText}
+        {labelText}
       </Text>
       <VisuallyHiddenText>, </VisuallyHiddenText>
     </>
@@ -46,9 +47,11 @@ const PostBreakingNewsLabel = ({
 };
 
 const PostHeaderBanner = ({
+  isSharedPost,
   isBreakingNews,
   timestamp: curated,
 }: {
+  isSharedPost: boolean;
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
@@ -64,7 +67,6 @@ const PostHeaderBanner = ({
     },
   } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
-
   return (
     <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
@@ -80,10 +82,8 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
-      <PostBreakingNewsLabel
-        isBreakingNews={isBreakingNews}
-        breakingNewsLabelText={breaking}
-      />
+      <PostLabel hasLabel={isBreakingNews} labelText={breaking} />
+      <PostLabel hasLabel={isSharedPost} labelText="SHARED" />
     </span>
   );
 };
@@ -170,28 +170,53 @@ const Post = ({ post }: { post: PostType }) => {
     ['content', 'model', 'blocks'],
     post,
   );
+  const { urn } = post;
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
+  const [canShare, setCanShare] = useState(false);
+  const [hashValue, setHashValue] = useState('');
+  useEffect(() => {
+    setHashValue(window.location.hash.substring(1));
+    if (
+      typeof window !== 'undefined' &&
+      typeof navigator !== 'undefined' &&
+      'share' in navigator
+    ) {
+      setCanShare(true);
+    }
+  }, []);
 
   return (
-    <article css={styles.postContainer}>
-      <Heading level={3} css={styles.heading}>
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text">
-          <PostHeaderBanner
-            isBreakingNews={isBreakingNews}
-            timestamp={timestamp}
-          />
-          {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-          ))}
-        </span>
-      </Heading>
-      <div css={styles.postContent}>
-        <PostContent contentBlocks={contentBlocks} />
-      </div>
-    </article>
+    <>
+      <article id={urn} css={styles.postContainer}>
+        <Heading level={3} css={styles.heading}>
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text">
+            <PostHeaderBanner
+              isSharedPost={hashValue === urn}
+              isBreakingNews={isBreakingNews}
+              timestamp={timestamp}
+            />
+
+            {headerBlocks.map(headerBlock => (
+              <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+            ))}
+          </span>
+        </Heading>
+        <div css={styles.postContent}>
+          <PostContent contentBlocks={contentBlocks} />
+        </div>
+      </article>
+      {canShare && (
+        <ShareButton
+          eventTrackingData={{
+            componentName: urn,
+          }}
+          contentId={urn}
+        />
+      )}
+    </>
   );
 };
 
