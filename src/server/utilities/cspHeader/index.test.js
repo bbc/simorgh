@@ -1,4 +1,6 @@
-import injectCspHeader, {
+import injectCspHeader from '.';
+
+import {
   generateChildSrc,
   generateConnectSrc,
   generateDefaultSrc,
@@ -9,7 +11,7 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-} from '.';
+} from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
