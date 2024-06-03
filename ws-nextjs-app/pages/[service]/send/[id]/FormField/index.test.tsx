@@ -83,6 +83,49 @@ describe('FormField', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render a textarea with a maxiumum word limit if provided', async () => {
+    const mockFormState = {
+      testAllyID: {
+        value: '',
+        htmlType: 'textarea',
+        messageCode: null,
+        required: true,
+        isValid: true,
+        wasInvalid: false,
+        wordLimit: 500,
+      },
+    };
+
+    jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+      () =>
+        ({
+          formState: mockFormState,
+          handleChange: () => null,
+          hasAttemptedSubmit: false,
+        }) as unknown as ContextProps,
+    );
+
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testAllyID',
+            htmlType: 'textarea',
+            label: 'This is a text area field',
+          }}
+          fields={[]}
+        />,
+      );
+    });
+    const textareaWithCorrectAria = container.querySelector(
+      `textarea[id=testAllyID][aria-describedby=testAllyID-wordLimit]`,
+    );
+    const maxWordLimit = container.querySelector('p[id=testAllyID-wordLimit]');
+
+    expect(textareaWithCorrectAria).toBeInTheDocument();
+    expect(maxWordLimit).toBeInTheDocument();
+  });
+
   it('should render an email input with an associated label', async () => {
     const { container } = await act(() => {
       return render(

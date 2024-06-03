@@ -32,7 +32,13 @@ export default function Form({
 
   return (
     <>
-      <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+      <Heading
+        level={1}
+        id="content"
+        tabIndex={-1}
+        css={styles.heading}
+        size="trafalgar"
+      >
         {title}
       </Heading>
       <div
@@ -40,7 +46,9 @@ export default function Form({
         dangerouslySetInnerHTML={{ __html: description }}
         css={styles.description}
       />
-      <Heading level={2}>{sectionTitle}</Heading>
+      <Heading level={2} size="doublePica">
+        {sectionTitle}
+      </Heading>
 
       <form onSubmit={handleSubmit} noValidate>
         {formFields}
