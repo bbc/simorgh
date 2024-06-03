@@ -51,10 +51,11 @@ const NavigationContainer = () => {
 
   const eventTrackingData = {
     componentName: `navigation`,
-    campaignID: 'nav',
   };
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+  });
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -102,7 +103,7 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
-      eventTrackingData={eventTrackingData}
+      onClick={clickTrackerHandler}
     />
   );
 };
