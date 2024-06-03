@@ -12,8 +12,6 @@ const ShareButton = ({ contentId, eventTrackingData }) => {
     try {
       const shareUrl = `${window.location.href}&sharedPost=${contentId}#${contentId}`;
       await navigator.share({
-        title: 'look at this post!',
-        text: 'check this out',
         url: shareUrl,
       });
       console.log('Successful share');
