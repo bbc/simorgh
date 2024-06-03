@@ -50,4 +50,10 @@ export default {
         width: '35rem',
       },
     }),
+  screenContainer: () =>
+    css({
+      '.no-js &': {
+        display: 'none',
+      },
+    }),
 };
