@@ -10,7 +10,7 @@ const ShareButton = ({ contentId, eventTrackingData }) => {
   const handleShare = async event => {
     clickTrackerHandler(event);
     try {
-      const shareUrl = `${window.location.href}&sharedPost=${contentId}#${contentId}`;
+      const shareUrl = `${window.location.href}#${contentId}`;
       await navigator.share({
         url: shareUrl,
       });
