@@ -178,7 +178,7 @@ const Post = ({ post }: { post: PostType }) => {
   const [hashValue, setHashValue] = useState('');
   useEffect(() => {
     setHashValue(window.location.hash.substring(1));
-    if (typeof navigator !== 'undefined' && 'share' in navigator) {
+    if ('share' in navigator) {
       setCanShare(true);
     }
   }, []);
