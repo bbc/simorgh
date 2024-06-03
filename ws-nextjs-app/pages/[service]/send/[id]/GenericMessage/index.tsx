@@ -4,7 +4,12 @@ import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import styles from './styles';
 
-export default function Uploading() {
+interface Props {
+  heading: string;
+  children: string;
+}
+
+const GenericMessage = ({ heading, children }: Props) => {
   return (
     <>
       <Heading
@@ -14,9 +19,11 @@ export default function Uploading() {
         css={styles.heading}
         size="trafalgar"
       >
-        Uploading
+        {heading}
       </Heading>
-      <Paragraph>Please wait until it is finished.</Paragraph>
+      <Paragraph>{children}</Paragraph>
     </>
   );
-}
+};
+
+export default GenericMessage;
