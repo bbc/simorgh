@@ -1,7 +1,6 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
-  "skipInstalls": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
