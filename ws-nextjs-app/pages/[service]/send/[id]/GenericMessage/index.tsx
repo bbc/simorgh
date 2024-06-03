@@ -26,4 +26,4 @@ const GenericMessage = ({ heading, children }: Props) => {
   );
 };
 
-export default Uploading;
+export default GenericMessage;
