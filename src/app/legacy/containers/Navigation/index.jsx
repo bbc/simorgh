@@ -99,6 +99,7 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      onClick={clickTrackerHandler}
     />
   );
 };
