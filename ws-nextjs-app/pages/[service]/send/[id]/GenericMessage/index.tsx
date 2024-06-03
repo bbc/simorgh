@@ -9,7 +9,7 @@ interface Props {
   children: string;
 }
 
-const Uploading = ({ heading, children }: Props) => {
+const GenericMessage = ({ heading, children }: Props) => {
   return (
     <>
       <Heading
