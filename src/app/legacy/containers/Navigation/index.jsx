@@ -18,6 +18,7 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
+  eventTrackingData,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -32,6 +33,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
+        eventTrackingData={eventTrackingData}
       >
         {title}
       </Li>
@@ -49,6 +51,7 @@ const NavigationContainer = () => {
 
   const eventTrackingData = {
     componentName: `navigation`,
+    campaignID: 'nav',
   };
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -99,7 +102,7 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
-      onClick={clickTrackerHandler}
+      eventTrackingData={eventTrackingData}
     />
   );
 };
