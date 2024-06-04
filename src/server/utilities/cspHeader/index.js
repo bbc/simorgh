@@ -25,7 +25,6 @@ const injectCspHeader = (req, res, next) => {
     cspDirectives({
       isAmp,
       isLive: isLiveEnv(),
-      reportOnlyOnLive: service === 'japanese',
       service,
     }),
   );

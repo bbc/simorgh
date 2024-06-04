@@ -21,14 +21,12 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
   const isAmp = isAmpPath(request.url);
   const service = fallbackServiceParam(request.url);
   const isLive = isLiveEnv();
-  const reportOnlyOnLive = service === 'japanese';
 
   const requestHeaders = new Headers(request.headers);
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    reportOnlyOnLive,
     service,
   });
 

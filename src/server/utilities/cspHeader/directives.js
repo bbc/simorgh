@@ -393,12 +393,7 @@ export const generateWorkerSrc = ({ isAmp }) =>
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
-export const cspDirectives = ({
-  isAmp,
-  isLive,
-  reportOnlyOnLive,
-  service,
-}) => ({
+export const cspDirectives = ({ isAmp, isLive, service }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
@@ -426,5 +421,5 @@ export const cspDirectives = ({
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
-  reportOnly: reportOnlyOnLive,
+  reportOnly: service === 'japanese',
 });
