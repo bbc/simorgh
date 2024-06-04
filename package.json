@@ -231,7 +231,7 @@
     "jest-junit": "16.0.0",
     "jest-serializer-html": "7.1.0",
     "jest-silent-reporter": "0.6.0",
-    "jsdom": "24.0.0",
+    "jsdom": "24.1.0",
     "minimist": "1.2.8",
     "mkdirp": "3.0.1",
     "mocha": "10.4.0",
