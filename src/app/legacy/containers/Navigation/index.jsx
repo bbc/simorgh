@@ -52,16 +52,27 @@ const NavigationContainer = () => {
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, navMenuText } = translations;
 
-  const eventTrackingData = {
-    componentName: `navigation`,
+  const scrollableNavEventTrackingData = {
+    componentName: `scrollable-navigation`,
   };
 
-  const clickTrackerHandler = useClickTrackerHandler({
-    ...eventTrackingData,
+  const dropdownNavEventTrackingData = {
+    componentName: `dropdown-navigation`,
+  };
+
+  const scrollableNavClickTrackerHandler = useClickTrackerHandler({
+    ...scrollableNavEventTrackingData,
     preventNavigation: true,
   });
 
-  const viewRef = useViewTracker(eventTrackingData);
+  const dropdownNavClickTrackerHandler = useClickTrackerHandler({
+    ...dropdownNavEventTrackingData,
+    preventNavigation: true,
+  });
+
+  const scrollableNavViewRef = useViewTracker(scrollableNavEventTrackingData);
+
+  const dropdownNavViewRef = useViewTracker(dropdownNavEventTrackingData);
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -81,8 +92,8 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
-        clickTrackerHandler,
-        viewRef,
+        scrollableNavClickTrackerHandler,
+        scrollableNavViewRef,
       )}
     </NavigationUl>
   );
@@ -97,6 +108,8 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
+        dropdownNavClickTrackerHandler,
+        dropdownNavViewRef,
       )}
     </DropdownUl>
   );
