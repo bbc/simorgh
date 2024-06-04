@@ -1,7 +1,7 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
-import { helmetCsp } from './directives';
+import { cspDirectives } from './directives';
 
 const injectCspHeader = (req, res, next) => {
   const { isAmp, service } = getRouteProps(req.url);
@@ -22,7 +22,7 @@ const injectCspHeader = (req, res, next) => {
   );
 
   const middleware = csp(
-    helmetCsp({
+    cspDirectives({
       isAmp,
       isLive: isLiveEnv(),
       reportOnlyOnLive: service === 'japanese',

@@ -393,7 +393,12 @@ export const generateWorkerSrc = ({ isAmp }) =>
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
-export const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive, service }) => ({
+export const cspDirectives = ({
+  isAmp,
+  isLive,
+  reportOnlyOnLive,
+  service,
+}) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),

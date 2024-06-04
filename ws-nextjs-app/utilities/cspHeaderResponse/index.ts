@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { helmetCsp } from '#server/utilities/cspHeader/directives';
+import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import { Services } from '#app/models/types/global';
 
 const directiveToString = (directives: Record<string, string | string[]>) => {
@@ -30,24 +30,14 @@ const cspHeaderResponse = ({
 }) => {
   const requestHeaders = new Headers(request.headers);
 
-  const helmetCSP = helmetCsp({
+  const { directives } = cspDirectives({
     isAmp,
     isLive,
     reportOnlyOnLive,
     service,
   });
 
-  const nextJSSpecificHeaders = {
-    'base-uri': 'self',
-    'form-action': 'self',
-    'frame-ancestors': 'none',
-    'object-src': 'none',
-  };
-
-  const contentSecurityPolicyHeaderValue = directiveToString({
-    ...nextJSSpecificHeaders,
-    ...helmetCSP.directives,
-  });
+  const contentSecurityPolicyHeaderValue = directiveToString(directives);
 
   requestHeaders.set(
     'Content-Security-Policy',
