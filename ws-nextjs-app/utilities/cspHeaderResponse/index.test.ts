@@ -5,10 +5,6 @@ import { NextRequest } from 'next/server';
 import cspHeaderResponse from '.';
 
 const policies = [
-  'base-uri',
-  'form-action',
-  'frame-ancestors',
-  'object-src',
   'default-src',
   'child-src',
   'connect-src',
