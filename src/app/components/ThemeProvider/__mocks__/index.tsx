@@ -49,7 +49,6 @@ import ukchinaTrad from '../themes/ukchina/trad';
 import ukrainian from '../themes/ukrainian';
 import urdu from '../themes/urdu';
 import uzbekCyr from '../themes/uzbek/cyr';
-import uzbek from '../themes/uzbek/default';
 import uzbekLat from '../themes/uzbek/lat';
 import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
@@ -111,9 +110,9 @@ const themeProviders: ThemeProvider = {
   },
   ukrainian,
   urdu,
-  // could refcator this to be all one
+  // refcatored to be all one
   uzbek: {
-    default: uzbek,
+    default: uzbekCyr,
     cyr: uzbekCyr,
     lat: uzbekLat,
   },

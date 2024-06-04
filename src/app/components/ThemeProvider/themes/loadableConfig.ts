@@ -141,12 +141,9 @@ export const themes = {
   ),
   urdu: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './urdu')),
   uzbek: {
-    // could refcator this to be all one?
+    // half refactored - not sure if it's a good idea to have multiple chunks with the same name
     default: loadable(
-      () =>
-        import(
-          /* webpackChunkName: "themes-uzbek-default" */ './uzbek/default'
-        ),
+      () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
     ),
     cyr: loadable(
       () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
