@@ -5,6 +5,7 @@ import {
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -19,6 +20,7 @@ const renderListItems = (
   dir,
   activeIndex,
   clickTrackerHandler,
+  viewRef,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -33,7 +35,8 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        onClick={clickTrackerHandler}
+        clickTrackerHandler={clickTrackerHandler}
+        viewRef={viewRef}
       >
         {title}
       </Li>
@@ -58,6 +61,8 @@ const NavigationContainer = () => {
     preventNavigation: true,
   });
 
+  const viewRef = useViewTracker(eventTrackingData);
+
   if (!navigation || navigation.length === 0) {
     return null;
   }
@@ -77,6 +82,7 @@ const NavigationContainer = () => {
         dir,
         activeIndex,
         clickTrackerHandler,
+        viewRef,
       )}
     </NavigationUl>
   );
