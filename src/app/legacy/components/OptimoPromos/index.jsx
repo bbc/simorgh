@@ -30,7 +30,7 @@ const Promo = ({
       eventTrackingData,
       mediaType,
     }),
-    [],
+    [service, to, ariaLabelledBy, eventTrackingData, mediaType],
   );
 
   return (
