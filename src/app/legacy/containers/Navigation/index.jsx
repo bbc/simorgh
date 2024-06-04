@@ -18,7 +18,7 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
-  eventTrackingData,
+  clickTrackerHandler,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -33,7 +33,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        eventTrackingData={eventTrackingData}
+        onClick={clickTrackerHandler}
       >
         {title}
       </Li>
@@ -55,6 +55,7 @@ const NavigationContainer = () => {
 
   const clickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
+    preventNavigation: true,
   });
 
   if (!navigation || navigation.length === 0) {
@@ -75,6 +76,7 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
+        clickTrackerHandler,
       )}
     </NavigationUl>
   );
@@ -103,7 +105,6 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
-      onClick={clickTrackerHandler}
     />
   );
 };
