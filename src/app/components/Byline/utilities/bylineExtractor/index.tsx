@@ -57,7 +57,7 @@ const bylineExtractor = (blocks: object[]) => {
     resolution: 160,
   });
 
-  if (!authorImage.endsWith('.png')) authorImage = '';
+  if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
   const contributorBlock = pathOr([], [0], blocks);
   const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);

@@ -21,7 +21,7 @@ describe('RecommendationsImage', () => {
     expect(
       container.getElementsByTagName('img')[0].getAttribute('src'),
     ).toEqual(
-      `https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/98dd/live/59717db0-1f53-11ed-aa9d-57accb179502.jpg`,
+      `https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/98dd/live/59717db0-1f53-11ed-aa9d-57accb179502.jpg.webp`,
     );
     expect(
       container.getElementsByTagName('img')[0].getAttribute('alt'),
