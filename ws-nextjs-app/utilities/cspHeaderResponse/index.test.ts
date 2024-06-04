@@ -22,11 +22,9 @@ const policies = [
 describe('cspHeaderResponse', () => {
   it.each(policies)('should set %s in the request CSP', policy => {
     const response = cspHeaderResponse({
-      isAmp: false,
-      isLive: false,
-      reportOnlyOnLive: false,
-      service: 'mundo',
-      request: {} as NextRequest,
+      request: {
+        url: 'https://www.test.bbc.com/pidgin/live/c7p765ynk9qt',
+      } as NextRequest,
     });
 
     const requestCsp = response.headers.get(
@@ -38,11 +36,9 @@ describe('cspHeaderResponse', () => {
 
   it.each(policies)('should set %s in the response CSP', policy => {
     const response = cspHeaderResponse({
-      isAmp: false,
-      isLive: false,
-      reportOnlyOnLive: false,
-      service: 'mundo',
-      request: {} as NextRequest,
+      request: {
+        url: 'https://www.test.bbc.com/pidgin/live/c7p765ynk9qt',
+      } as NextRequest,
     });
 
     const requestCsp = response.headers.get('content-security-policy');

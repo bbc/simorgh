@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
-import { Services } from '#app/models/types/global';
+import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
+import isAmpPath from '#app/routes/utils/isAmpPath';
+import isLiveEnv from '#lib/utilities/isLive';
 
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
@@ -15,19 +17,12 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const cspHeaderResponse = ({
-  request,
-  isAmp = false,
-  isLive = false,
-  reportOnlyOnLive = false,
-  service,
-}: {
-  request: NextRequest;
-  isAmp?: boolean;
-  isLive?: boolean;
-  reportOnlyOnLive?: boolean;
-  service: Services;
-}) => {
+const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
+  const isAmp = isAmpPath(request.url);
+  const service = fallbackServiceParam(request.url);
+  const isLive = isLiveEnv();
+  const reportOnlyOnLive = service === 'japanese';
+
   const requestHeaders = new Headers(request.headers);
 
   const { directives } = cspDirectives({
