@@ -3953,28 +3953,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadable/component@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@loadable/component@npm:5.15.3"
+"@loadable/component@npm:5.16.4":
+  version: 5.16.4
+  resolution: "@loadable/component@npm:5.16.4"
   dependencies:
-    "@babel/runtime": "npm:^7.7.7"
+    "@babel/runtime": "npm:^7.12.18"
     hoist-non-react-statics: "npm:^3.3.1"
     react-is: "npm:^16.12.0"
   peerDependencies:
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/f2310764417d9ff890e458dcc3a29343591a20b0f7f217f8acb05d839337d5b53c09eaf234bb1bc1c680eb51aa5a8e5bd2a80150559049e3729696b5a8c9a1dc
+  checksum: 10/ff434e13df559184f6bc85155a72edfbd1d6b814dfd06cb066908e8fc27f6265fa905bb72bf2fb139074d7777491c22c4d44ce077a4f4852157928ff7118de46
   languageName: node
   linkType: hard
 
-"@loadable/server@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@loadable/server@npm:5.15.3"
+"@loadable/server@npm:5.16.5":
+  version: 5.16.5
+  resolution: "@loadable/server@npm:5.16.5"
   dependencies:
     lodash: "npm:^4.17.15"
   peerDependencies:
     "@loadable/component": ^5.0.1
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/43f55e1b9c5a6a926bcee4ec812c0b8450ba11bf040c3044acedf037aa68ec3eca57cb0fd18b7e3d4bc986cb84ce791611a7395d8936fd83b90672fbc207621f
+  checksum: 10/6b1b65d403deff4e7882a0a1df2b1da5e31aa8c4956ef0292a5ff2e6eee9177b545b40a5974eccf8613491c49632324c2bd9aec959c8bc4b83a702dbf2f09472
   languageName: node
   linkType: hard
 
@@ -17249,8 +17249,8 @@ __metadata:
     "@esbuild/darwin-x64": "npm:@esbuild/darwin-x64@npm:0.20.2"
     "@esbuild/linux-x64": "npm:@esbuild/linux-x64@npm:0.20.2"
     "@loadable/babel-plugin": "npm:5.16.1"
-    "@loadable/component": "npm:5.15.3"
-    "@loadable/server": "npm:5.15.3"
+    "@loadable/component": "npm:5.16.4"
+    "@loadable/server": "npm:5.16.5"
     "@loadable/webpack-plugin": "npm:5.15.2"
     "@next/swc-darwin-arm64": "npm:@next/swc-darwin-arm64@14.2.3"
     "@next/swc-darwin-x64": "npm:@next/swc-darwin-x64@14.2.3"
