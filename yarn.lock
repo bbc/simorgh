@@ -14083,10 +14083,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:7.7.1":
-  version: 7.7.1
-  resolution: "lru-cache@npm:7.7.1"
-  checksum: 10/4b9961764bb5b7ae06f5857a20f645fb0f05bc3c4d66c67d35f6aacad98b3b14a48c2b879517d97d47e41cfa4c2d64fec627b118deccd661d3961716de75abe1
+"lru-cache@npm:7.18.3":
+  version: 7.18.3
+  resolution: "lru-cache@npm:7.18.3"
+  checksum: 10/6029ca5aba3aacb554e919d7ef804fffd4adfc4c83db00fac8248c7c78811fb6d4b6f70f7fd9d55032b3823446546a007edaa66ad1f2377ae833bd983fac5d98
   languageName: node
   linkType: hard
 
@@ -17344,7 +17344,7 @@ __metadata:
     jest-silent-reporter: "npm:0.6.0"
     js-cookie: "npm:3.0.5"
     jsdom: "npm:24.0.0"
-    lru-cache: "npm:7.7.1"
+    lru-cache: "npm:7.18.3"
     minimist: "npm:1.2.8"
     mkdirp: "npm:3.0.1"
     mocha: "npm:10.4.0"
