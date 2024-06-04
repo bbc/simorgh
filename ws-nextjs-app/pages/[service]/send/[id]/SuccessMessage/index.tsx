@@ -64,7 +64,13 @@ const SuccessMessage = () => {
         <TickSvg css={styles.tickIcon} />
         <div css={styles.messageTextContainer}>
           <div>
-            <Heading level={1} id="content" tabIndex={-1} size="trafalgar">
+            <Heading
+              level={1}
+              id="content"
+              tabIndex={-1}
+              size="trafalgar"
+              css={styles.heading}
+            >
               {confirmationStepTitle}
             </Heading>
             <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
