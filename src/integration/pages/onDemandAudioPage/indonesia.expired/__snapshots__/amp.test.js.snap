@@ -144,6 +144,6 @@ exports[`AMP On Demand Audio Page Expired Episode I can see the episode summary 
 
 exports[`AMP On Demand Audio Page Expired Episode I can see the episode title 1`] = `"5 Maret 2020"`;
 
-exports[`AMP On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png"`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png.webp"`;
 
 exports[`AMP On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;

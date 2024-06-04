@@ -10,6 +10,6 @@ exports[`Canonical On Demand Audio Page Expired Episode I can see the episode su
 
 exports[`Canonical On Demand Audio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
 
-exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b8lg4.png"`;
+exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b8lg4.png.webp"`;
 
 exports[`Canonical On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;

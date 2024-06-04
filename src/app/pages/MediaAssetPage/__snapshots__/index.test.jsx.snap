@@ -1303,18 +1303,16 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="emotion-111"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="test"
-                      class="emotion-112"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/9F08/test/_63721704_testimage.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/9F08/test/_63721704_testimage.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/9F08/test/_63721704_testimage.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/9F08/test/_63721704_testimage.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/9F08/test/_63721704_testimage.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/9F08/test/_63721704_testimage.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="test"
+                    class="emotion-112"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/9F08/test/_63721704_testimage.jpg.webp 640w"
+                    width="640"
+                  />
                   <p
                     class="emotion-113"
                     role="text"
@@ -3473,18 +3471,16 @@ exports[`Media Asset Page should render component 1`] = `
                   class="emotion-104"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="butterfly"
-                      class="emotion-105"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="butterfly"
+                    class="emotion-105"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg.webp 640w"
+                    width="640"
+                  />
                   <p
                     class="emotion-106"
                     role="text"
@@ -3532,18 +3528,16 @@ exports[`Media Asset Page should render component 1`] = `
                   class="emotion-104"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="psammead"
-                      class="emotion-105"
-                      height="576"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 800w"
-                      width="1024"
-                    />
-                  </picture>
+                  <img
+                    alt="psammead"
+                    class="emotion-105"
+                    height="576"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg.webp 800w"
+                    width="1024"
+                  />
                   <p
                     class="emotion-106"
                     role="text"
@@ -3692,18 +3686,16 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-104"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others"
-                              class="emotion-105"
-                              height="351"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 624w"
-                              width="624"
-                            />
-                          </picture>
+                          <img
+                            alt="One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others"
+                            class="emotion-105"
+                            height="351"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 624w"
+                            width="624"
+                          />
                         </div>
                         <div
                           class="emotion-172 emotion-173"
@@ -3847,18 +3839,16 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-104"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="BBC MInute"
-                              class="emotion-105"
-                              height="576"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 660w"
-                              width="1024"
-                            />
-                          </picture>
+                          <img
+                            alt="BBC MInute"
+                            class="emotion-105"
+                            height="576"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png.webp 660w"
+                            width="1024"
+                          />
                         </div>
                         <div
                           class="emotion-172 emotion-173"
