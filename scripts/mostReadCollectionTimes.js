@@ -13,7 +13,8 @@ const badServices = [
   'ukrainianRu',
 ];
 
-const servicesWithVariants = ['zhongwen', 'serbian'];
+// who knows?
+const servicesWithVariants = ['zhongwen', 'serbian', 'uzbek'];
 
 const services = Object.keys(allServices);
 
@@ -81,23 +82,22 @@ const collectResults = async (link, service, type) => {
           if (timeTable.length === (services.length - badServices.length) * 2) {
             csvContents =
               'service, type, link, generated, timeSinceGenerated, lastRecordTimeStamp, firstRecordTimeStamp, sequence, totalRecords, rank1, rank2, rank3, rank4, rank5, rank6, rank7, rank8, rank9, rank10';
-            timeTable.sort((a, b) => {
-              if (a.service > b.service) {
-                return 1;
-              }
-              else if (a.service < b.service) {
-                return -1;
-              }
-              else if (a.type < b.type) {
-                return -1;
-              }
-              else if (a.type > b.type) {
-                return 1;
-              }
-              return 0;
-            }).forEach(result => {
-              csvContents += `\n${result.service},${result.type},${result.link},${result.generated},${result.minutesSinceGenerated},${result.lastRecordTimestamp},${result.firstRecordTimestamp},${result.sequence},${result.totalRecords},${result.counts}`;
-            });
+            timeTable
+              .sort((a, b) => {
+                if (a.service > b.service) {
+                  return 1;
+                } else if (a.service < b.service) {
+                  return -1;
+                } else if (a.type < b.type) {
+                  return -1;
+                } else if (a.type > b.type) {
+                  return 1;
+                }
+                return 0;
+              })
+              .forEach(result => {
+                csvContents += `\n${result.service},${result.type},${result.link},${result.generated},${result.minutesSinceGenerated},${result.lastRecordTimestamp},${result.firstRecordTimestamp},${result.sequence},${result.totalRecords},${result.counts}`;
+              });
             fs.writeFileSync('./mostReadCollectionTimes.csv', csvContents);
           }
         }

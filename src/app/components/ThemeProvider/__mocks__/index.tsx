@@ -49,6 +49,7 @@ import ukchinaTrad from '../themes/ukchina/trad';
 import ukrainian from '../themes/ukrainian';
 import urdu from '../themes/urdu';
 import uzbekCyr from '../themes/uzbek/cyr';
+import uzbek from '../themes/uzbek/default';
 import uzbekLat from '../themes/uzbek/lat';
 import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
@@ -110,7 +111,9 @@ const themeProviders: ThemeProvider = {
   },
   ukrainian,
   urdu,
+  // could refcator this to be all one
   uzbek: {
+    default: uzbek,
     cyr: uzbekCyr,
     lat: uzbekLat,
   },
@@ -129,7 +132,8 @@ interface Props extends StoryProps {
 const ThemeProvider = ({ children, service, ...rest }: Props) => {
   const variant = rest.variant || defaultServiceVariants[service];
   const ThemeProviderSynchronous =
-    variant === 'default' || !variant
+    (variant === 'default' && service !== 'uzbek') ||
+    (!variant && service !== 'uzbek')
       ? themeProviders[service]
       : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore - TODO: come back to this

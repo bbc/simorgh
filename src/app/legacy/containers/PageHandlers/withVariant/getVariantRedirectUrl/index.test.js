@@ -18,8 +18,10 @@ describe('getVariantRedirectUrl', () => {
     describe('empty cookie, and no variant in url', () => {
       serviceNames.forEach(service => {
         const defaultVariant = getVariant({ service });
+        const expected =
+          defaultVariant === 'default' ? null : `/${service}/${defaultVariant}`;
         describe(`visit /${service}`, () => {
-          it(`should redirect to /${service}/${defaultVariant}`, () => {
+          it(`should redirect to ${expected}`, () => {
             const params = {
               service,
               variant: null,
@@ -34,7 +36,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
+            expect(redirectUrl).toEqual(expected);
           });
         });
       });
@@ -131,8 +133,10 @@ describe('getVariantRedirectUrl', () => {
       serviceNames.forEach(service => {
         const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
+        const expected =
+          defaultVariant === 'default' ? null : `/${service}/${defaultVariant}`;
         describe(`visit /${service}`, () => {
-          it(`should redirect to /${service}/${defaultVariant}`, () => {
+          it(`should redirect to ${expected}`, () => {
             Cookie.set(
               `ckps_${getVariantCookieName(service)}`,
               invalidSecondaryVariant,
@@ -151,7 +155,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
+            expect(redirectUrl).toEqual(expected);
           });
         });
       });
@@ -164,8 +168,12 @@ describe('getVariantRedirectUrl', () => {
     describe('empty cookie, and no variant in url', () => {
       serviceNames.forEach(service => {
         const defaultVariant = getVariant({ service });
+        const expected =
+          defaultVariant === 'default'
+            ? null
+            : `/${service}/${local}/${id}/${defaultVariant}`;
         describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
+          it(`should redirect to ${expected}`, () => {
             const params = {
               id,
               local,
@@ -182,9 +190,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${defaultVariant}`,
-            );
+            expect(redirectUrl).toEqual(expected);
           });
         });
       });
@@ -287,12 +293,20 @@ describe('getVariantRedirectUrl', () => {
       });
     });
 
+    // should rewrite tests to match this format IF this logic is correct
     describe('invalid variant in cookie', () => {
       serviceNames.forEach(service => {
         const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
+        const expected =
+          defaultVariant === 'default'
+            ? { outcome: null, behaviour: 'return' }
+            : {
+                outcome: `/${service}/${local}/${id}/${defaultVariant}`,
+                behaviour: 'redirect to',
+              };
         describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
+          it(`should ${expected.behaviour} ${expected.outcome}`, () => {
             Cookie.set(
               `ckps_${getVariantCookieName(service)}`,
               invalidSecondaryVariant,
@@ -313,9 +327,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${defaultVariant}`,
-            );
+            expect(redirectUrl).toEqual(expected.outcome);
           });
         });
       });

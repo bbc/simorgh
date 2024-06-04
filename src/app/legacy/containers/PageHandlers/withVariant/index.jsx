@@ -9,6 +9,7 @@ const WithVariant = Component => {
 
     const { path, params } = pathOr({}, ['match'], props);
 
+    // Still need to do something about this
     const redirectPath = getVariantRedirectUrl({
       path,
       params,

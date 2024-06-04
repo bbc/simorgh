@@ -109,6 +109,7 @@ describe('frontPagePath', () => {
     '/ukchina/trad',
     '/serbian/lat.amp',
     '/serbian/cyr.amp',
+    '/uzbek',
   ];
   shouldMatchValidRoutes(validRoutes, frontPagePath);
 
@@ -125,7 +126,11 @@ describe('frontPagePath', () => {
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = ['/serbian/cyr.json', '/ukchina/trad.json'];
+  const validRoutes = [
+    '/serbian/cyr.json',
+    '/ukchina/trad.json',
+    '/uzbek.json',
+  ];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
@@ -544,7 +549,7 @@ describe('frontPage -> homePage migration', () => {
 
   const serviceToRoute = service => `/${service}`;
 
-  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+  const servicesWithVariants = ['serbian', 'ukchina', 'uzbek', 'zhongwen'];
   const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
 
   const servicesWithoutVariantsRoutes = worldServices
