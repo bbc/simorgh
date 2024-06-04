@@ -50,9 +50,9 @@ describe('propsInference', () => {
         type: 'video',
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
@@ -101,9 +101,9 @@ describe('propsInference', () => {
         type: 'audio',
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01mr7dp.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01mr7dp.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mr7dp.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mr7dp.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mr7dp.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mr7dp.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mr7dp.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mr7dp.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mr7dp.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mr7dp.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mr7dp.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mr7dp.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
@@ -152,9 +152,9 @@ describe('propsInference', () => {
         rawDuration: 54,
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
