@@ -267,7 +267,7 @@ describe('StoryPromo Container', () => {
       expect(
         container.getElementsByTagName('img')[0].getAttribute('src'),
       ).toEqual(
-        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}`,
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}.webp`,
       );
       expect(
         container.getElementsByTagName('img')[0].getAttribute('alt'),
@@ -284,7 +284,7 @@ describe('StoryPromo Container', () => {
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
       ).toEqual(
-        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}`,
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}.webp`,
       );
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('alt'),

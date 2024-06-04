@@ -71,7 +71,7 @@ export const service: DefaultServiceConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'লাইভ',
-        liveCoverage: 'সরাসির কভারেজ',
+        liveCoverage: 'সরাসরি কভারেজ',
         breaking: 'ব্রেকিং',
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',

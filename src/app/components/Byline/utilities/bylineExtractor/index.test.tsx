@@ -32,7 +32,7 @@ describe('bylineExtractor', () => {
 
     expect(bylineValues).toEqual({
       authorImage:
-        'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+        'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
       authorName: 'Mayeni Jones',
       authorTopicUrl: '/news/topics/c8qx38nq177t',
       jobRole: 'Journalist',
