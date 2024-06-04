@@ -4,6 +4,23 @@ import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRoute
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import isLiveEnv from '#lib/utilities/isLive';
 
+const setReportTo = (header: Headers) => {
+  header.set(
+    'report-to',
+    JSON.stringify({
+      group: 'worldsvc',
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
+};
+
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
   let cspValue = '';
@@ -36,6 +53,7 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     'Content-Security-Policy',
     contentSecurityPolicyHeaderValue,
   );
+  setReportTo(requestHeaders);
 
   const responseInit = {
     request: {
@@ -48,6 +66,7 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     'Content-Security-Policy',
     contentSecurityPolicyHeaderValue,
   );
+  setReportTo(cspAlteredResponse.headers);
 
   return cspAlteredResponse;
 };
