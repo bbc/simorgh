@@ -60,15 +60,13 @@ const NavigationContainer = () => {
     componentName: `dropdown-navigation`,
   };
 
-  const scrollableNavClickTrackerHandler = useClickTrackerHandler({
-    ...scrollableNavEventTrackingData,
-    preventNavigation: true,
-  });
+  const scrollableNavClickTrackerHandler = useClickTrackerHandler(
+    scrollableNavEventTrackingData,
+  );
 
-  const dropdownNavClickTrackerHandler = useClickTrackerHandler({
-    ...dropdownNavEventTrackingData,
-    preventNavigation: true,
-  });
+  const dropdownNavClickTrackerHandler = useClickTrackerHandler(
+    dropdownNavEventTrackingData,
+  );
 
   const scrollableNavViewRef = useViewTracker(scrollableNavEventTrackingData);
 
