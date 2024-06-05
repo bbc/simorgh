@@ -2,7 +2,10 @@ import React, { useMemo } from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { RequestContext } from '../../../contexts/RequestContext';
+import {
+  RequestContext,
+  RequestContextProps,
+} from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
 import {
@@ -26,16 +29,17 @@ const Component = ({
   service?: Services;
 }) => {
   const OEmbedValue = useMemo(
-    () => ({
-      id: 'c0000000000o',
-      isAmp,
-      isApp: false,
-      pageType: ARTICLE_PAGE,
-      pathname: '/pathname',
-      service,
-      statusCode: 200,
-      canonicalLink: 'canonical_link',
-    }),
+    () =>
+      ({
+        id: 'c0000000000o',
+        isAmp,
+        isApp: false,
+        pageType: ARTICLE_PAGE,
+        pathname: '/pathname',
+        service,
+        statusCode: 200,
+        canonicalLink: 'canonical_link',
+      }) as unknown as RequestContextProps,
     [isAmp, service],
   );
   return (
