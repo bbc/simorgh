@@ -13,6 +13,7 @@ describe('WithVariant', () => {
     params: {
       service,
     },
+    pageType: 'home',
   });
 
   describe('service with no default variant', () => {

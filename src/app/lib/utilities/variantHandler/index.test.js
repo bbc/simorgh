@@ -1,4 +1,4 @@
-import { variantSanitiser, getVariant } from '.';
+import { variantSanitiser, articleVariantOverride, getVariant } from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {
@@ -7,6 +7,38 @@ describe('variantSanitiser', () => {
 
   it('should not change output if no leading slash provided', () => {
     expect(variantSanitiser('foobar')).toEqual('foobar');
+  });
+});
+
+describe('articleVariantOverride', () => {
+  it('should return default variant if variant is null and page type is article', () => {
+    expect(
+      articleVariantOverride({
+        service: 'uzbek',
+        variant: null,
+        pageType: 'article',
+      }),
+    ).toEqual('cyr');
+  });
+
+  it('should return variant if variant is null and page type is not article', () => {
+    expect(
+      articleVariantOverride({
+        service: 'uzbek',
+        variant: null,
+        pageType: 'home',
+      }),
+    ).toEqual(null);
+  });
+
+  it('should return variant if variant is provided and page type is article', () => {
+    expect(
+      articleVariantOverride({
+        service: 'serbian',
+        variant: 'lat',
+        pageType: 'article',
+      }),
+    ).toEqual('lat');
   });
 });
 

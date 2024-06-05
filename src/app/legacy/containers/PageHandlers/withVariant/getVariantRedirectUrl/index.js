@@ -3,16 +3,29 @@ import {
   getVariant,
   variantSanitiser,
   variants,
+  articleVariantOverride,
 } from '#lib/utilities/variantHandler';
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
 
-const getVariantRedirectUrl = ({ path, params, service, variant }) => {
+const getVariantRedirectUrl = ({
+  path,
+  params,
+  service,
+  variant,
+  pageType,
+}) => {
   if (!path) return null;
+
+  const variantOverride = articleVariantOverride({
+    service,
+    variant,
+    pageType,
+  });
 
   const cookieVariant = getPreferredVariant(service);
   const defaultVariant = getVariant({
     service,
-    variant: variantSanitiser(variant),
+    variant: variantSanitiser(variantOverride),
   });
 
   const pathTo = compile(path);
