@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { textBlock } from '#models/blocks';
 import {
   isNull,
@@ -10,20 +10,11 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const FauxHeadlineContainerWithContext = data => {
-  const fauxHeadlineValue = useMemo(
-    () => ({
-      script: latin,
-      service: 'news',
-    }),
-    [],
-  );
-  return (
-    <ServiceContext.Provider value={fauxHeadlineValue}>
-      <FauxHeadlineContainer {...data} />
-    </ServiceContext.Provider>
-  );
-};
+const FauxHeadlineContainerWithContext = data => (
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+    <FauxHeadlineContainer {...data} />
+  </ServiceContext.Provider>
+);
 
 describe('FauxHeadline', () => {
   describe('with no data', () => {
