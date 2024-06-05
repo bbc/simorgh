@@ -34,11 +34,21 @@ describe('articleVariantOverride', () => {
   it('should return variant if variant is provided and page type is article', () => {
     expect(
       articleVariantOverride({
-        service: 'serbian',
+        service: 'uzbek',
         variant: 'lat',
         pageType: 'article',
       }),
     ).toEqual('lat');
+  });
+
+  it('should return variant if service is not uzbek', () => {
+    expect(
+      articleVariantOverride({
+        service: 'serbian',
+        variant: 'null',
+        pageType: 'article',
+      }),
+    ).toEqual('null');
   });
 });
 
