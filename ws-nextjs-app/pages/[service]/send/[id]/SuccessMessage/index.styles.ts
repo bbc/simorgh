@@ -29,6 +29,12 @@ export default {
         },
       },
     }),
+  heading: () =>
+    css({
+      '&:focus': {
+        outline: 'none',
+      },
+    }),
   descriptionContainer: ({ spacings }: Theme) =>
     css({
       '& > p, & > div': {
