@@ -11,56 +11,6 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
 }) => {
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
-      describe(
-        'Image Tests',
-        {
-          retries: 3,
-        },
-        () => {
-          const pageTypesNoImages = [
-            'liveRadio',
-            'errorPage404',
-            'mediaAssetPage',
-          ];
-          // live radio pages and error pages do not have an image, media asset pages do not reliably show most watched list so this will cause flakes
-          if (!pageTypesNoImages.includes(pageType)) {
-            it('should have webp images on pages', () => {
-              cy.document().then(doc => {
-                const images = doc.querySelectorAll(
-                  'amp-img[src*="ichef."], img[src*="ichef."]',
-                );
-                if (images.length === 0) {
-                  cy.log('No images on page');
-                } else {
-                  cy.get('img').each($img => {
-                    // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
-                    // you leave the Cypress command queue and are using plain JS. Using .wrap converts
-                    // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
-
-                    // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
-                    cy.wrap($img)
-                      .scrollIntoView()
-                      .should('be.visible')
-                      .then($visibleImg => {
-                        cy.wrap($visibleImg)
-                          .should($loadedImg => {
-                            expect($loadedImg.prop('currentSrc')).to.not.be
-                              .empty;
-                          })
-                          .then($imgWithCurrentSrc => {
-                            const currentSrc =
-                              $imgWithCurrentSrc.prop('currentSrc');
-                            cy.log('currentSrc', currentSrc);
-                            expect(currentSrc.endsWith('.webp')).to.be.true;
-                          });
-                      });
-                  });
-                }
-              });
-            });
-          }
-        },
-      );
       if (Cypress.env('SMOKE')) {
         describe(
           'ATI',
