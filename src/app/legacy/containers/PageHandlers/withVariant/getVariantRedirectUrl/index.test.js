@@ -1,13 +1,7 @@
 import Cookie from 'js-cookie';
-import {
-  getVariant,
-  servicesWithVariants,
-  getVariantCookieName,
-} from '#lib/utilities/variantHandler';
+import { getVariantCookieName } from '#lib/utilities/variantHandler';
 import { articlePath, frontPagePath } from '#app/routes/utils/regex';
 import getVariantRedirectUrl from './index';
-
-const serviceNames = Object.keys(servicesWithVariants);
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
@@ -16,149 +10,159 @@ describe('getVariantRedirectUrl', () => {
 
   describe('frontPage', () => {
     describe('empty cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
-        const defaultVariant = getVariant({ service });
-        const expected =
-          defaultVariant === 'default' ? null : `/${service}/${defaultVariant}`;
-        describe(`visit /${service}`, () => {
-          it(`should redirect to ${expected}`, () => {
-            const params = {
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: frontPagePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(expected);
+      it.each`
+        service       | behaviour        | expected
+        ${'serbian'}  | ${'redirect to'} | ${'/serbian/lat'}
+        ${'ukchina'}  | ${'redirect to'} | ${'/ukchina/simp'}
+        ${'uzbek'}    | ${'return'}      | ${null}
+        ${'zhongwen'} | ${'redirect to'} | ${'/zhongwen/simp'}
+      `(
+        'visit /$service should $behaviour $expected',
+        ({ service, expected }) => {
+          const params = {
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: frontPagePath,
+              params,
+              pageType: 'home',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('empty cookie, and with variant specified in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        describe(`visit /${service}/${secondaryVariant}`, () => {
-          it(`should return null`, () => {
-            const params = {
-              service,
-              variant: secondaryVariant,
-            };
-            const props = {
-              match: {
-                path: frontPagePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(null);
+      it.each`
+        service       | secondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'cyr'}         | ${'return'}      | ${null}
+        ${'ukchina'}  | ${'trad'}        | ${'return'}      | ${null}
+        ${'uzbek'}    | ${'lat'}         | ${'redirect to'} | ${'/uzbek'}
+        ${'zhongwen'} | ${'trad'}        | ${'return'}      | ${null}
+      `(
+        'visit $service/$secondaryVariant should return $expected',
+        ({ service, secondaryVariant, expected }) => {
+          const params = {
+            service,
+            variant: secondaryVariant,
+          };
+          const props = {
+            match: {
+              path: frontPagePath,
+              params,
+              pageType: 'home',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('variant in cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        describe(`visit /${service}`, () => {
-          it(`should redirect to /${service}/${secondaryVariant}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              secondaryVariant,
-            );
-            const params = {
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: frontPagePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(`/${service}/${secondaryVariant}`);
+      it.each`
+        service       | secondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'cyr'}         | ${'redirect to'} | ${'/serbian/cyr'}
+        ${'ukchina'}  | ${'trad'}        | ${'redirect to'} | ${'/ukchina/trad'}
+        ${'uzbek'}    | ${'lat'}         | ${'return'}      | ${null}
+        ${'zhongwen'} | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/trad'}
+      `(
+        'visit $service should $behaviour $expected',
+        ({ service, secondaryVariant, expected }) => {
+          Cookie.set(`ckps_${getVariantCookieName(service)}`, secondaryVariant);
+          const params = {
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: frontPagePath,
+              params,
+              pageType: 'home',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('variant in cookie, and variant in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        const defaultVariant = getVariant({ service });
-        describe(`visit /${service}/${defaultVariant}`, () => {
-          it(`should redirect to /${service}/${secondaryVariant}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              secondaryVariant,
-            );
-            const params = {
-              service,
-              variant: defaultVariant,
-            };
-            const props = {
-              match: {
-                path: frontPagePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(`/${service}/${secondaryVariant}`);
+      it.each`
+        service       | defaultVariant | secondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'lat'}       | ${'cyr'}         | ${'redirect to'} | ${'/serbian/cyr'}
+        ${'ukchina'}  | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/ukchina/trad'}
+        ${'uzbek'}    | ${'cyr'}       | ${'lat'}         | ${'redirect to'} | ${'/uzbek'}
+        ${'zhongwen'} | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/trad'}
+      `(
+        'visit $service/$defaultVariant should $behaviour $expected',
+        ({ service, defaultVariant, secondaryVariant, expected }) => {
+          Cookie.set(`ckps_${getVariantCookieName(service)}`, secondaryVariant);
+          const params = {
+            service,
+            variant: defaultVariant,
+          };
+          const props = {
+            match: {
+              path: frontPagePath,
+              params,
+              pageType: 'home',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('invalid variant in cookie', () => {
-      serviceNames.forEach(service => {
-        const invalidSecondaryVariant = 'xyz';
-        const defaultVariant = getVariant({ service });
-        const expected =
-          defaultVariant === 'default' ? null : `/${service}/${defaultVariant}`;
-        describe(`visit /${service}`, () => {
-          it(`should redirect to ${expected}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              invalidSecondaryVariant,
-            );
-            const params = {
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: frontPagePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(expected);
+      it.each`
+        service       | invalidSecondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'xyz'}                | ${'redirect to'} | ${'/serbian/lat'}
+        ${'ukchina'}  | ${'xyz'}                | ${'redirect to'} | ${'/ukchina/simp'}
+        ${'uzbek'}    | ${'xyz'}                | ${'return'}      | ${null}
+        ${'zhongwen'} | ${'xyz'}                | ${'redirect to'} | ${'/zhongwen/simp'}
+      `(
+        'visit $service should $behaviour $expected',
+        ({ service, invalidSecondaryVariant, expected }) => {
+          Cookie.set(
+            `ckps_${getVariantCookieName(service)}`,
+            invalidSecondaryVariant,
+          );
+          const params = {
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: frontPagePath,
+              params,
+              pageType: 'home',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
   });
 
@@ -166,171 +170,169 @@ describe('getVariantRedirectUrl', () => {
     const id = 'c3xd4x9prgyo';
     const local = 'articles';
     describe('empty cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
-        const defaultVariant = getVariant({ service });
-        const expected =
-          defaultVariant === 'default'
-            ? null
-            : `/${service}/${local}/${id}/${defaultVariant}`;
-        describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should redirect to ${expected}`, () => {
-            const params = {
-              id,
-              local,
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: articlePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(expected);
+      it.each`
+        service       | path                       | behaviour        | expected
+        ${'serbian'}  | ${'articles/c3xd4x9prgyo'} | ${'redirect to'} | ${'/serbian/articles/c3xd4x9prgyo/lat'}
+        ${'ukchina'}  | ${'articles/c3xd4x9prgyo'} | ${'redirect to'} | ${'/ukchina/articles/c3xd4x9prgyo/simp'}
+        ${'uzbek'}    | ${'articles/c3xd4x9prgyo'} | ${'redirect to'} | ${'/uzbek/articles/c3xd4x9prgyo/cyr'}
+        ${'zhongwen'} | ${'articles/c3xd4x9prgyo'} | ${'redirect to'} | ${'/zhongwen/articles/c3xd4x9prgyo/simp'}
+      `(
+        'visit /$service/$path should $behaviour $expected',
+        ({ service, expected }) => {
+          const params = {
+            id,
+            local,
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: articlePath,
+              params,
+              pageType: 'article',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('empty cookie, and with variant specified in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        describe(`visit /${service}/${local}/${id}/${secondaryVariant}`, () => {
-          it(`should return null`, () => {
-            const params = {
-              id,
-              local,
-              service,
-              variant: secondaryVariant,
-            };
-            const props = {
-              match: {
-                path: articlePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(null);
+      it.each`
+        service       | path                       | secondaryVariant | behaviour   | expected
+        ${'serbian'}  | ${'articles/c3xd4x9prgyo'} | ${'cyr'}         | ${'return'} | ${null}
+        ${'ukchina'}  | ${'articles/c3xd4x9prgyo'} | ${'trad'}        | ${'return'} | ${null}
+        ${'uzbek'}    | ${'articles/c3xd4x9prgyo'} | ${'lat'}         | ${'return'} | ${null}
+        ${'zhongwen'} | ${'articles/c3xd4x9prgyo'} | ${'trad'}        | ${'return'} | ${null}
+      `(
+        'visit /$service/$path/$secondaryVariant should $behaviour $expected',
+        ({ service, expected, secondaryVariant }) => {
+          const params = {
+            id,
+            local,
+            service,
+            variant: secondaryVariant,
+          };
+          const props = {
+            match: {
+              path: articlePath,
+              params,
+              pageType: 'article',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('variant in cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              secondaryVariant,
-            );
-            const params = {
-              id,
-              local,
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: articlePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${secondaryVariant}`,
-            );
+      it.each`
+        service       | path                       | secondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'articles/c3xd4x9prgyo'} | ${'cyr'}         | ${'redirect to'} | ${'/serbian/articles/c3xd4x9prgyo/cyr'}
+        ${'ukchina'}  | ${'articles/c3xd4x9prgyo'} | ${'trad'}        | ${'redirect to'} | ${'/ukchina/articles/c3xd4x9prgyo/trad'}
+        ${'uzbek'}    | ${'articles/c3xd4x9prgyo'} | ${'lat'}         | ${'redirect to'} | ${'/uzbek/articles/c3xd4x9prgyo/lat'}
+        ${'zhongwen'} | ${'articles/c3xd4x9prgyo'} | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/articles/c3xd4x9prgyo/trad'}
+      `(
+        'visit /$service/$path should $behaviour $expected',
+        ({ service, expected, secondaryVariant }) => {
+          Cookie.set(`ckps_${getVariantCookieName(service)}`, secondaryVariant);
+          const params = {
+            id,
+            local,
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: articlePath,
+              params,
+              pageType: 'article',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
     describe('variant in cookie, and variant in url', () => {
-      serviceNames.forEach(service => {
-        const variants = servicesWithVariants[service];
-        const [, secondaryVariant] = variants;
-        const defaultVariant = getVariant({ service });
-        describe(`visit /${service}/${local}/${id}/${defaultVariant}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              secondaryVariant,
-            );
-            const params = {
-              id,
-              local,
-              service,
-              variant: defaultVariant,
-            };
-            const props = {
-              match: {
-                path: articlePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${secondaryVariant}`,
-            );
+      it.each`
+        service       | path                       | defaultVariant | secondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'articles/c3xd4x9prgyo'} | ${'lat'}       | ${'cyr'}         | ${'redirect to'} | ${'/serbian/articles/c3xd4x9prgyo/cyr'}
+        ${'ukchina'}  | ${'articles/c3xd4x9prgyo'} | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/ukchina/articles/c3xd4x9prgyo/trad'}
+        ${'uzbek'}    | ${'articles/c3xd4x9prgyo'} | ${'cyr'}       | ${'lat'}         | ${'redirect to'} | ${'/uzbek/articles/c3xd4x9prgyo/lat'}
+        ${'zhongwen'} | ${'articles/c3xd4x9prgyo'} | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/articles/c3xd4x9prgyo/trad'}
+      `(
+        'visit /$service/$path/$defaultVariant should $behaviour $expected',
+        ({ service, expected, defaultVariant, secondaryVariant }) => {
+          Cookie.set(`ckps_${getVariantCookieName(service)}`, secondaryVariant);
+          const params = {
+            id,
+            local,
+            service,
+            variant: defaultVariant,
+          };
+          const props = {
+            match: {
+              path: articlePath,
+              params,
+              pageType: 'article',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
 
-    // should rewrite tests to match this format IF this logic is correct
     describe('invalid variant in cookie', () => {
-      serviceNames.forEach(service => {
-        const invalidSecondaryVariant = 'xyz';
-        const defaultVariant = getVariant({ service });
-        const expected =
-          defaultVariant === 'default'
-            ? { outcome: null, behaviour: 'return' }
-            : {
-                outcome: `/${service}/${local}/${id}/${defaultVariant}`,
-                behaviour: 'redirect to',
-              };
-        describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should ${expected.behaviour} ${expected.outcome}`, () => {
-            Cookie.set(
-              `ckps_${getVariantCookieName(service)}`,
-              invalidSecondaryVariant,
-            );
-            const params = {
-              id,
-              local,
-              service,
-              variant: null,
-            };
-            const props = {
-              match: {
-                path: articlePath,
-                params,
-              },
-            };
-            const redirectUrl = getVariantRedirectUrl({
-              ...props.match,
-              ...params,
-            });
-            expect(redirectUrl).toEqual(expected.outcome);
+      it.each`
+        service       | path                       | invalidSecondaryVariant | behaviour        | expected
+        ${'serbian'}  | ${'articles/c3xd4x9prgyo'} | ${'xyz'}                | ${'redirect to'} | ${'/serbian/articles/c3xd4x9prgyo/lat'}
+        ${'ukchina'}  | ${'articles/c3xd4x9prgyo'} | ${'xyz'}                | ${'redirect to'} | ${'/ukchina/articles/c3xd4x9prgyo/simp'}
+        ${'uzbek'}    | ${'articles/c3xd4x9prgyo'} | ${'xyz'}                | ${'redirect to'} | ${'/uzbek/articles/c3xd4x9prgyo/cyr'}
+        ${'zhongwen'} | ${'articles/c3xd4x9prgyo'} | ${'xyz'}                | ${'redirect to'} | ${'/zhongwen/articles/c3xd4x9prgyo/simp'}
+      `(
+        'visit /$service/$path should $behaviour $expected',
+        ({ service, expected, invalidSecondaryVariant }) => {
+          Cookie.set(
+            `ckps_${getVariantCookieName(service)}`,
+            invalidSecondaryVariant,
+          );
+          const params = {
+            id,
+            local,
+            service,
+            variant: null,
+          };
+          const props = {
+            match: {
+              path: articlePath,
+              params,
+              pageType: 'article',
+            },
+          };
+          const redirectUrl = getVariantRedirectUrl({
+            ...props.match,
+            ...params,
           });
-        });
-      });
+          expect(redirectUrl).toEqual(expected);
+        },
+      );
     });
   });
 });
