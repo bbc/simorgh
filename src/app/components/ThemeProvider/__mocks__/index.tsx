@@ -110,7 +110,6 @@ const themeProviders: ThemeProvider = {
   },
   ukrainian,
   urdu,
-  // refcatored to be all one
   uzbek: {
     default: uzbekCyr,
     cyr: uzbekCyr,

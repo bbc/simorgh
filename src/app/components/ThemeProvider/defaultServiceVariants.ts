@@ -7,7 +7,7 @@ import { Variants } from '#app/models/types/global';
 const defaultServiceVariants: { [index: string]: Variants } = {
   serbian: 'cyr',
   ukchina: 'simp',
-  uzbek: 'default', // default theme is Cyrillic for articles but no var for other thhings
+  uzbek: 'default',
   zhongwen: 'simp',
 };
 

@@ -141,7 +141,6 @@ export const themes = {
   ),
   urdu: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './urdu')),
   uzbek: {
-    // half refactored - not sure if it's a good idea to have multiple chunks with the same name
     default: loadable(
       () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
     ),
