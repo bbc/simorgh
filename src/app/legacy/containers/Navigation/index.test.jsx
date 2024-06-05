@@ -5,6 +5,8 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
+import * as viewTracking from '../../../hooks/useViewTracker';
+import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {
@@ -111,6 +113,40 @@ describe('Navigation Container', () => {
       const link = listItems[index].querySelector('a');
       const href = link.getAttribute('href');
       expect(href).toEqual(navItem.url);
+    });
+  });
+
+  describe('Event Tracking', () => {
+    const eventTrackingData = {
+      componentName: 'scrollable-navigation',
+    };
+
+    it('should call the view tracking hook with the correct params', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(<Navigation />, {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: true,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      });
+      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    });
+
+    it('should call the click tracking hook with the correct params', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      render(<Navigation />, {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: true,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      });
+      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
     });
   });
 });
