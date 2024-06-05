@@ -49,7 +49,7 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
 
   const BUMP4SpecificConditions = {
     'media-src': ['https:'],
-    'connection-src': ['https:'],
+    'connect-src': ['https:'],
   };
 
   const contentSecurityPolicyHeaderValue = directiveToString({
