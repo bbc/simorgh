@@ -12,14 +12,17 @@ import blocksSingleFragment from '../Headings/testHelpers';
 
 const FauxHeadlineContainerWithContext = data => {
   const fauxHeadlineValue = useMemo(
-    () => (
-      <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-        <FauxHeadlineContainer {...data} />
-      </ServiceContext.Provider>
-    ),
-    [data],
+    () => ({
+      script: latin,
+      service: 'news',
+    }),
+    [],
   );
-  return fauxHeadlineValue;
+  return (
+    <ServiceContext.Provider value={fauxHeadlineValue}>
+      <FauxHeadlineContainer {...data} />
+    </ServiceContext.Provider>
+  );
 };
 
 describe('FauxHeadline', () => {
