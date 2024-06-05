@@ -9,6 +9,7 @@ import {
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Text from '#app/components/Text';
+import LiveRegion from '#app/components/LiveRegion';
 import Label from '../FieldLabel';
 import { InputProps } from '../../types';
 import { useFormContext } from '../../FormContext';
@@ -26,11 +27,11 @@ interface FileListProps {
   name: string;
 }
 
-const FileList = ({ files, name }: FileListProps) => {
+const FileList = ({ files, name, setLiveRegionText }: FileListProps) => {
   const { handleChange } = useFormContext();
   const [thumbnailState, setThumbnailState] = useState<string[]>([]);
 
-  const handleFileDeletion = (fileIndex: number) => {
+  const handleFileDeletion = (fileIndex: number, fileName) => {
     const filesClone = [...files];
     filesClone.splice(fileIndex, 1);
     handleChange(name, filesClone);
@@ -41,6 +42,8 @@ const FileList = ({ files, name }: FileListProps) => {
 
       return thumbnailClone;
     });
+
+    setLiveRegionText(`Removed ${fileName}`);
   };
 
   useEffect(() => {
@@ -94,7 +97,7 @@ const FileList = ({ files, name }: FileListProps) => {
         <button
           type="button"
           aria-describedby={ariaDescribedById}
-          onClick={() => handleFileDeletion(index)}
+          onClick={() => handleFileDeletion(index, file.name)}
         >
           <DeleteSvg />
           <VisuallyHiddenText>Remove</VisuallyHiddenText>
@@ -117,6 +120,7 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
   const filesInState = inputState.value as File[];
+  const [liveRegionText, setLiveRegionText] = useState<string>('');
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
@@ -125,11 +129,14 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
     ) as File[];
     const uploaded = [...filesInState];
 
+    let liveRegionTextTemp = `Update, Here's what you're sending: `;
     chosenFiles.forEach(file => {
       uploaded.push(file);
+      liveRegionTextTemp = `${liveRegionTextTemp}${file.name}, `;
     });
 
     handleChange(name, uploaded);
+    setTimeout(() => setLiveRegionText(liveRegionTextTemp), 1500);
   };
 
   const handleUploadClick = () => {
@@ -166,7 +173,14 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
         aria-describedby={describedBy}
         css={styles.fileInput}
       />
-      {hasFiles && <FileList files={filesInState} name={name} />}
+      {hasFiles && (
+        <FileList
+          files={filesInState}
+          name={name}
+          setLiveRegionText={setLiveRegionText}
+        />
+      )}
+      <LiveRegion>{liveRegionText}</LiveRegion>
     </>
   );
 };
