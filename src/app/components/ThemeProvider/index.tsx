@@ -19,10 +19,7 @@ export const ThemeProvider = ({
 
   const serviceVariant: Variants = variant || defaultServiceVariants[service];
 
-  if (
-    (serviceVariant === 'default' && service !== 'uzbek') ||
-    (!serviceVariant && service !== 'uzbek')
-  ) {
+  if (serviceVariant === 'default' || !serviceVariant) {
     LoadableContextProvider = themes[service];
   } else {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

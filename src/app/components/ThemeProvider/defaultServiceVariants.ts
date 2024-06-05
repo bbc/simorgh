@@ -7,7 +7,7 @@ import { Variants } from '#app/models/types/global';
 const defaultServiceVariants: { [index: string]: Variants } = {
   serbian: 'cyr',
   ukchina: 'simp',
-  uzbek: 'default',
+  uzbek: 'cyr',
   zhongwen: 'simp',
 };
 
