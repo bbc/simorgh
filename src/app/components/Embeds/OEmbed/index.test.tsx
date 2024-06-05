@@ -29,16 +29,17 @@ const Component = ({
   service?: Services;
 }) => {
   const OEmbedValue = useMemo(
-    () => ({
-      id: 'c0000000000o',
-      isAmp,
-      isApp: false,
-      pageType: ARTICLE_PAGE,
-      pathname: '/pathname',
-      service,
-      statusCode: 200,
-      canonicalLink: 'canonical_link',
-    }),
+    () =>
+      ({
+        id: 'c0000000000o',
+        isAmp,
+        isApp: false,
+        pageType: ARTICLE_PAGE,
+        pathname: '/pathname',
+        service,
+        statusCode: 200,
+        canonicalLink: 'canonical_link',
+      }) as unknown as RequestContextProps,
     [isAmp, service],
   );
   return (
