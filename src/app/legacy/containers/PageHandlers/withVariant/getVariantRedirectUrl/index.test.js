@@ -41,13 +41,13 @@ describe('getVariantRedirectUrl', () => {
 
     describe('empty cookie, and with variant specified in url', () => {
       it.each`
-        service       | secondaryVariant | behaviour        | expected
-        ${'serbian'}  | ${'cyr'}         | ${'return'}      | ${null}
-        ${'ukchina'}  | ${'trad'}        | ${'return'}      | ${null}
-        ${'uzbek'}    | ${'lat'}         | ${'redirect to'} | ${'/uzbek'}
-        ${'zhongwen'} | ${'trad'}        | ${'return'}      | ${null}
+        service       | secondaryVariant | behaviour                             | expected
+        ${'serbian'}  | ${'cyr'}         | ${'return'}                           | ${null}
+        ${'ukchina'}  | ${'trad'}        | ${'return'}                           | ${null}
+        ${'uzbek'}    | ${'lat'}         | ${'not be handled so it will return'} | ${null}
+        ${'zhongwen'} | ${'trad'}        | ${'return'}                           | ${null}
       `(
-        'visit $service/$secondaryVariant should return $expected',
+        'visit $service/$secondaryVariant should $behaviour $expected',
         ({ service, secondaryVariant, expected }) => {
           const params = {
             service,
@@ -71,11 +71,11 @@ describe('getVariantRedirectUrl', () => {
 
     describe('variant in cookie, and no variant in url', () => {
       it.each`
-        service       | secondaryVariant | behaviour        | expected
-        ${'serbian'}  | ${'cyr'}         | ${'redirect to'} | ${'/serbian/cyr'}
-        ${'ukchina'}  | ${'trad'}        | ${'redirect to'} | ${'/ukchina/trad'}
-        ${'uzbek'}    | ${'lat'}         | ${'return'}      | ${null}
-        ${'zhongwen'} | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/trad'}
+        service       | secondaryVariant | behaviour                                  | expected
+        ${'serbian'}  | ${'cyr'}         | ${'redirect to'}                           | ${'/serbian/cyr'}
+        ${'ukchina'}  | ${'trad'}        | ${'redirect to'}                           | ${'/ukchina/trad'}
+        ${'uzbek'}    | ${'lat'}         | ${'not be handled so it will redirect to'} | ${'/uzbek/lat'}
+        ${'zhongwen'} | ${'trad'}        | ${'redirect to'}                           | ${'/zhongwen/trad'}
       `(
         'visit $service should $behaviour $expected',
         ({ service, secondaryVariant, expected }) => {
@@ -102,11 +102,11 @@ describe('getVariantRedirectUrl', () => {
 
     describe('variant in cookie, and variant in url', () => {
       it.each`
-        service       | defaultVariant | secondaryVariant | behaviour        | expected
-        ${'serbian'}  | ${'lat'}       | ${'cyr'}         | ${'redirect to'} | ${'/serbian/cyr'}
-        ${'ukchina'}  | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/ukchina/trad'}
-        ${'uzbek'}    | ${'cyr'}       | ${'lat'}         | ${'redirect to'} | ${'/uzbek'}
-        ${'zhongwen'} | ${'simp'}      | ${'trad'}        | ${'redirect to'} | ${'/zhongwen/trad'}
+        service       | defaultVariant | secondaryVariant | behaviour                                  | expected
+        ${'serbian'}  | ${'lat'}       | ${'cyr'}         | ${'redirect to'}                           | ${'/serbian/cyr'}
+        ${'ukchina'}  | ${'simp'}      | ${'trad'}        | ${'redirect to'}                           | ${'/ukchina/trad'}
+        ${'uzbek'}    | ${'cyr'}       | ${'lat'}         | ${'not be handled so it will redirect to'} | ${'/uzbek/lat'}
+        ${'zhongwen'} | ${'simp'}      | ${'trad'}        | ${'redirect to'}                           | ${'/zhongwen/trad'}
       `(
         'visit $service/$defaultVariant should $behaviour $expected',
         ({ service, defaultVariant, secondaryVariant, expected }) => {
