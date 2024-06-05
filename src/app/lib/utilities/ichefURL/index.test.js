@@ -15,7 +15,7 @@ describe('getIchefURL', () => {
 
   describe('builds WebP ichef img url based on originCode, locator and resolution passed', () => {
     const BASE_IMAGE_URL = 'https://ichef.bbci.co.uk';
-    // https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif.webp
+
     it.each`
       ichefSubdomain    | originCode     | locator                                                                                              | expectedURL
       ${undefined}      | ${'cpsprodpb'} | ${'cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg'}                                              | ${`${BASE_IMAGE_URL}/ace/ws/660/cpsprodpb/cc66/live/5b34d420-b382-11e9-b6fd-e3056fffd1f1.jpg.webp`}
