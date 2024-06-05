@@ -47,7 +47,15 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     service,
   });
 
-  const contentSecurityPolicyHeaderValue = directiveToString(directives);
+  const BUMP4SpecificConditions = {
+    'media-src': ['https:'],
+    'connection-src': ['https:'],
+  };
+
+  const contentSecurityPolicyHeaderValue = directiveToString({
+    ...directives,
+    ...BUMP4SpecificConditions,
+  });
 
   requestHeaders.set(
     'Content-Security-Policy',
