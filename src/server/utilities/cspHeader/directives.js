@@ -1,13 +1,5 @@
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
-const cloudwatchRumDirectives = {
-  connectSrc: [
-    'https://cognito-identity.eu-west-1.amazonaws.com',
-    'https://sts.eu-west-1.amazonaws.com',
-    'https://dataplane.rum.eu-west-1.amazonaws.com',
-  ],
-};
-
 const advertisingDirectives = {
   connectSrc: [
     'https://*.doubleclick.net',
@@ -76,7 +68,6 @@ const directives = {
       'https://*.akamaihd.net',
       'https://*.optimizely.com',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
-      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -99,7 +90,6 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI
       'https://*.optimizely.com',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
-      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
