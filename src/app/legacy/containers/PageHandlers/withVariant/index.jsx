@@ -5,7 +5,7 @@ import getVariantRedirectUrl from './getVariantRedirectUrl';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
-    const { service, variant = null, pageType } = props;
+    const { service, variant = null } = props;
 
     const { path, params } = pathOr({}, ['match'], props);
 
@@ -14,7 +14,6 @@ const WithVariant = Component => {
       params,
       service,
       variant,
-      pageType,
     });
 
     if (!redirectPath) {

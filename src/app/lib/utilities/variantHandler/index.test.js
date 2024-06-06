@@ -1,4 +1,4 @@
-import { variantSanitiser, articleVariantOverride, getVariant } from '.';
+import { variantSanitiser, getVariant } from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {
@@ -7,48 +7,6 @@ describe('variantSanitiser', () => {
 
   it('should not change output if no leading slash provided', () => {
     expect(variantSanitiser('foobar')).toEqual('foobar');
-  });
-});
-
-describe('articleVariantOverride', () => {
-  it('should return default variant if variant is null and page type is article', () => {
-    expect(
-      articleVariantOverride({
-        service: 'uzbek',
-        variant: null,
-        pageType: 'article',
-      }),
-    ).toEqual('cyr');
-  });
-
-  it('should return variant if variant is null and page type is not article', () => {
-    expect(
-      articleVariantOverride({
-        service: 'uzbek',
-        variant: null,
-        pageType: 'home',
-      }),
-    ).toEqual(null);
-  });
-
-  it('should return variant if variant is provided and page type is article', () => {
-    expect(
-      articleVariantOverride({
-        service: 'uzbek',
-        variant: 'lat',
-        pageType: 'article',
-      }),
-    ).toEqual('lat');
-  });
-
-  it('should return variant if service is not uzbek', () => {
-    expect(
-      articleVariantOverride({
-        service: 'serbian',
-        variant: 'null',
-        pageType: 'article',
-      }),
-    ).toEqual('null');
   });
 });
 
@@ -67,8 +25,8 @@ describe('getVariant', () => {
     expect(getVariant({ service: 'serbian', variant: 'simp' })).toEqual('lat');
   });
 
-  it('should return "default" for service with optional variants if no variant is passed', () => {
-    expect(getVariant({ service: 'uzbek', variant: '' })).toEqual('default');
+  it('should return service default for service with optional variants if no variant is passed', () => {
+    expect(getVariant({ service: 'uzbek', variant: null })).toEqual('default');
   });
 
   it('should return "default" when service without variants is passed', () => {
