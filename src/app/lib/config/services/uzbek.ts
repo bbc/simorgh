@@ -32,6 +32,7 @@ const baseServiceConfig = {
   timezone: 'GMT',
 };
 
+// used by default and cyr configs
 const defaultCyrillicConfig = {
   articleTimestampPrefix: 'Янгиланди',
   articleTimestampSuffix: '',
