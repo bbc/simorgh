@@ -7,7 +7,7 @@ const LiveRegion = () => {
 
   if (!liveRegionItem) {
     throw new Error(
-      'You cannot render the LiveRegion component without having the LiveRegioContextProvider higher up in the component hierarchy, due to it relying on state declared in the provider',
+      'You cannot render the LiveRegion component without having the LiveRegionContextProvider higher up in the component hierarchy, due to it relying on state declared in the provider',
     );
   }
 
