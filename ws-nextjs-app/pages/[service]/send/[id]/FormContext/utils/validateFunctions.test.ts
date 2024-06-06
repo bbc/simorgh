@@ -132,4 +132,42 @@ describe('validateFunctions', () => {
       expect(result.isValid).toBe(expectedInvalid);
     });
   });
+
+  describe.each([
+    {
+      inputRequired: false,
+      inputValue: [],
+      expectedValid: true,
+    },
+    {
+      inputRequired: true,
+      inputValue: [],
+      expectedValid: false,
+    },
+    {
+      inputRequired: true,
+      inputValue: ['foo'],
+      expectedValid: true,
+    },
+    {
+      inputRequired: false,
+      inputValue: ['foo'],
+      expectedValid: true,
+    },
+  ])(
+    'file',
+    ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
+      it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
+        const textData = {
+          isValid: false,
+          required: inputRequired,
+          value: inputValue,
+          type: 'phone',
+        } as unknown as FieldData;
+
+        const result = validateFunctions.file(textData);
+        expect(result.isValid).toBe(expectedInvalid);
+      });
+    },
+  );
 });
