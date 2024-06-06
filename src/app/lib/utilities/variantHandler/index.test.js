@@ -1,4 +1,4 @@
-import { variantSanitiser, articleVariantOverride, getVariant } from '.';
+import { variantSanitiser, uzbekVariantOverride, getVariant } from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {
@@ -10,10 +10,10 @@ describe('variantSanitiser', () => {
   });
 });
 
-describe('articleVariantOverride', () => {
+describe('uzbekVariantOverride', () => {
   it('should return default variant if variant is null and page type is article', () => {
     expect(
-      articleVariantOverride({
+      uzbekVariantOverride({
         service: 'uzbek',
         variant: null,
         pageType: 'article',
@@ -23,7 +23,7 @@ describe('articleVariantOverride', () => {
 
   it('should return variant if variant is null and page type is not article', () => {
     expect(
-      articleVariantOverride({
+      uzbekVariantOverride({
         service: 'uzbek',
         variant: null,
         pageType: 'home',
@@ -33,7 +33,7 @@ describe('articleVariantOverride', () => {
 
   it('should return variant if variant is provided and page type is article', () => {
     expect(
-      articleVariantOverride({
+      uzbekVariantOverride({
         service: 'uzbek',
         variant: 'lat',
         pageType: 'article',
@@ -43,7 +43,7 @@ describe('articleVariantOverride', () => {
 
   it('should return variant if service is not uzbek', () => {
     expect(
-      articleVariantOverride({
+      uzbekVariantOverride({
         service: 'serbian',
         variant: 'null',
         pageType: 'article',

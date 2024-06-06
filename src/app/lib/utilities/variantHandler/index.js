@@ -15,7 +15,8 @@ const variantCookieConfig = {
   zhongwen: 'chinese',
 };
 
-export const articleVariantOverride = ({ service, variant, pageType }) => {
+  // working logic
+export const uzbekVariantOverride = ({ service, variant, pageType }) => {
   if (service !== 'uzbek') {
     return variant;
   }

@@ -3,7 +3,7 @@ import {
   getVariant,
   variantSanitiser,
   variants,
-  articleVariantOverride,
+  uzbekVariantOverride,
 } from '#lib/utilities/variantHandler';
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
 
@@ -16,7 +16,8 @@ const getVariantRedirectUrl = ({
 }) => {
   if (!path) return null;
 
-  const variantOverride = articleVariantOverride({
+  // working logic
+  const variantOverride = uzbekVariantOverride({
     service,
     variant,
     pageType,
