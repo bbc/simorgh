@@ -52,6 +52,7 @@ const FileList = ({ files, name }: FileListProps) => {
       return thumbnailClone;
     });
 
+    // Needs translation
     replaceLiveRegionWith(`Removed ${fileName}`);
   };
 
@@ -111,6 +112,7 @@ const FileList = ({ files, name }: FileListProps) => {
           }
         >
           <DeleteSvg />
+          {/* Needs translation */}
           <VisuallyHiddenText>Remove</VisuallyHiddenText>
         </button>
       </li>
@@ -118,6 +120,7 @@ const FileList = ({ files, name }: FileListProps) => {
   });
   return (
     <>
+      {/* Needs translation */}
       <Text as="p" fontVariant="sansRegular" size="bodyCopy">
         Here&apos;s what you&apos;re sending:
       </Text>
@@ -140,6 +143,7 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
     ) as File[];
     const uploaded = [...filesInState];
 
+    // Needs translation
     let liveRegionText = `Update, Here's what you're sending: `;
     chosenFiles.forEach(file => {
       uploaded.push(file);
