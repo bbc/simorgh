@@ -129,8 +129,15 @@ const FileList = ({ files, name }: FileListProps) => {
   );
 };
 
-export default ({ id, name, inputState, describedBy, label }: InputProps) => {
-  const { isValid, required } = inputState ?? {};
+export default ({
+  id,
+  name,
+  inputState,
+  describedBy,
+  label,
+  hasAttemptedSubmit,
+}: InputProps) => {
+  const { isValid, required, wasInvalid } = inputState ?? {};
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
   const filesInState = inputState.value as File[];
@@ -184,9 +191,11 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
         onChange={event => event.target.files && handleFileChange(event)}
         ref={inputRef}
         multiple
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...(hasAttemptedSubmit && {
+          ...(wasInvalid && { 'aria-invalid': !isValid }),
+          ...(required && { 'aria-required': required }),
+          ...(!isValid && { 'aria-describedby': describedBy }),
+        })}
         css={styles.fileInput}
       />
       {hasFiles && <FileList files={filesInState} name={name} />}

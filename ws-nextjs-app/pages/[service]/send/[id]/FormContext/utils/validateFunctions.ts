@@ -109,10 +109,14 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
 };
 
 const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { value, required } = data;
+  const { value, required, wasInvalid } = data;
+
   let isValid = true;
   if ((value as File[])?.length === 0 && required) isValid = false;
-  return { ...data, isValid };
+
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return { ...data, isValid, wasInvalid: wasInvalidUpdate };
 };
 
 const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
