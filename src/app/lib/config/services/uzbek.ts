@@ -33,7 +33,6 @@ const baseServiceConfig = {
 };
 
 const defaultCyrillicConfig = {
-  ...baseServiceConfig,
   articleTimestampPrefix: 'Янгиланди',
   articleTimestampSuffix: '',
   brandName: "BBC News O'zbek",
@@ -368,7 +367,7 @@ export const service: UzbekConfig = {
       variant: 'lat',
     }, // check translation - lifted from Serbian
   },
-  // DUPLICATES CYR - NEED TO FIND TRANSLATIONS
+  // TODO: Add Lat Translations and remove ...defaultCyrillicConfig
   lat: {
     ...baseServiceConfig,
     ...defaultCyrillicConfig,
