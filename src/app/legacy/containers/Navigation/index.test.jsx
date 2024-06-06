@@ -116,12 +116,16 @@ describe('Navigation Container', () => {
     });
   });
 
-  describe('Event Tracking', () => {
-    const eventTrackingData = {
+  describe('Navigation Event Tracking', () => {
+    const scrollEventTrackingData = {
       componentName: 'scrollable-navigation',
     };
 
-    it('should call the view tracking hook with the correct params', () => {
+    const dropdownEventTrackingData = {
+      componentName: 'dropdown-navigation',
+    };
+
+    it('should call the view tracking hook with the correct params when on scrollable navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -132,10 +136,10 @@ describe('Navigation Container', () => {
         statusCode: 200,
         pathname: '/news',
       });
-      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(viewTrackerSpy).toHaveBeenCalledWith(scrollEventTrackingData);
     });
 
-    it('should call the click tracking hook with the correct params', () => {
+    it('should call the click tracking hook with the correct params when on scrollable navigation', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
       render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -146,7 +150,35 @@ describe('Navigation Container', () => {
         statusCode: 200,
         pathname: '/news',
       });
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(clickTrackerSpy).toHaveBeenCalledWith(scrollEventTrackingData);
+    });
+
+    it('should call the view tracking hook with the correct params when on dropdown navigation', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(<Navigation />, {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: true,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      });
+      expect(viewTrackerSpy).toHaveBeenCalledWith(dropdownEventTrackingData);
+    });
+
+    it('should call the click tracking hook with the correct params when on dropdown navigation', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      render(<Navigation />, {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: true,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      });
+      expect(clickTrackerSpy).toHaveBeenCalledWith(dropdownEventTrackingData);
     });
   });
 });
