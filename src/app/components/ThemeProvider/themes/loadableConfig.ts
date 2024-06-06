@@ -141,9 +141,6 @@ export const themes = {
   ),
   urdu: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './urdu')),
   uzbek: {
-    default: loadable(
-      () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
-    ),
     cyr: loadable(
       () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
     ),
