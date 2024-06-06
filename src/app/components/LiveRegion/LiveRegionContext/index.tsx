@@ -8,7 +8,7 @@ import React, {
 interface ContextProps {
   liveRegionItem: string;
   replaceLiveRegionWith: (item: string) => void;
-};
+}
 
 export const LiveRegionContext = createContext({} as ContextProps);
 
