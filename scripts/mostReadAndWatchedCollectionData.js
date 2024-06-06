@@ -13,7 +13,7 @@ const badServices = [
   'ukrainianRu',
 ];
 
-const servicesWithVariants = ['zhongwen', 'serbian', 'uzbek'];
+const servicesWithVariants = ['zhongwen', 'serbian'];
 
 const services = Object.keys(allServices);
 
