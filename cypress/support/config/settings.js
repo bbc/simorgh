@@ -8364,7 +8364,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
