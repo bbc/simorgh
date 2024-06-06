@@ -111,7 +111,6 @@ const themeProviders: ThemeProvider = {
   ukrainian,
   urdu,
   uzbek: {
-    default: uzbekCyr,
     cyr: uzbekCyr,
     lat: uzbekLat,
   },
@@ -128,10 +127,14 @@ interface Props extends StoryProps {
 }
 
 const ThemeProvider = ({ children, service, ...rest }: Props) => {
-  const variant = rest.variant || defaultServiceVariants[service];
+  let variant = rest.variant || defaultServiceVariants[service];
+
+  // replaces 'default' with the primary variant if no variant is supplied
+  if (defaultServiceVariants[service] && variant === 'default') {
+    variant = defaultServiceVariants[service];
+  }
   const ThemeProviderSynchronous =
-    (variant === 'default' && service !== 'uzbek') ||
-    (!variant && service !== 'uzbek')
+    variant === 'default' || !variant
       ? themeProviders[service]
       : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore - TODO: come back to this
