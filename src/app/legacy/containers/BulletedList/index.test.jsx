@@ -15,7 +15,7 @@ import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 const BulletsWithContext = ({ blocks, blockGroupIndex }) => (
   <ToggleContextProvider>
     <ServiceContext.Provider
-      value={{ script: arabic, service: 'arabic', dir: 'rtl' }}
+      value={{ script: arabic, service: 'ARABIC', dir: 'rtl' }}
     >
       <BulletedListContainer
         blocks={blocks}
