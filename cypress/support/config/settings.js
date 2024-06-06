@@ -8457,6 +8457,56 @@ module.exports = () => ({
       },
     },
   },
+  uzbekCyr: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'cyr',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/cyr'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+  },
+  uzbekLat: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'lat',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/lat'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+  },
   vietnamese: {
     name: 'vietnamese',
     font: undefined,

@@ -1,27 +1,65 @@
 {
   "data": {
     "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
+          "contentType": "article",
+          "language": "uz-cyrl",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?",
+          "timePublished": "2019-07-12T14:34:24.846Z",
+          "timeUpdated": "2019-07-12T14:34:24.846Z"
+        },
+        "id": "urn:bbc:ares::article:cxj3rjxm6r0o",
+        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cxj3rjxm6r0o" },
+        "type": "article",
+        "createdBy": "Uzbek",
+        "language": "uz-cyrl",
+        "firstPublished": 1562942064846,
+        "lastPublished": 1562942064846,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
+          "producer": "Uzbek",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "uz-cyrl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
       "content": {
         "model": {
           "blocks": [
             {
-              "id": "55db4130",
+              "id": "f21457fa",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "49dabb37",
+                    "id": "9d6aed19",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ebaaeea3",
+                          "id": "8fdb1194",
                           "type": "paragraph",
                           "model": {
                             "text": "I'm the title of a latin article",
                             "blocks": [
                               {
-                                "id": "9ec8401b",
+                                "id": "4581b035",
                                 "type": "fragment",
                                 "model": {
                                   "text": "I'm the title of a latin article",
@@ -42,7 +80,7 @@
               "position": [1]
             },
             {
-              "id": "ec62521b",
+              "id": "9c1c4f39",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942064846,
@@ -51,18 +89,18 @@
               "position": [2]
             },
             {
-              "id": "50b2d4be",
+              "id": "2b61e418",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8aa3618c",
+                    "id": "8d8b8ca5",
                     "type": "paragraph",
                     "model": {
                       "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
                       "blocks": [
                         {
-                          "id": "60b19ced",
+                          "id": "e8229a2d",
                           "type": "fragment",
                           "model": {
                             "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
@@ -75,13 +113,13 @@
                     "position": [3, 1]
                   },
                   {
-                    "id": "e57d8ac3",
+                    "id": "5f002291",
                     "type": "paragraph",
                     "model": {
                       "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
                       "blocks": [
                         {
-                          "id": "3f367ecb",
+                          "id": "5e4b50a0",
                           "type": "fragment",
                           "model": {
                             "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
@@ -94,13 +132,13 @@
                     "position": [3, 2]
                   },
                   {
-                    "id": "55a3f70b",
+                    "id": "588309d5",
                     "type": "paragraph",
                     "model": {
                       "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
                       "blocks": [
                         {
-                          "id": "2e8a5e61",
+                          "id": "781bcf0f",
                           "type": "fragment",
                           "model": {
                             "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
@@ -113,13 +151,13 @@
                     "position": [3, 3]
                   },
                   {
-                    "id": "70bfafe1",
+                    "id": "3657b00c",
                     "type": "paragraph",
                     "model": {
                       "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
                       "blocks": [
                         {
-                          "id": "350dcfc7",
+                          "id": "97275718",
                           "type": "fragment",
                           "model": {
                             "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
@@ -135,1028 +173,28 @@
               },
               "position": [3]
             },
+            { "id": "da08dce4", "type": "mpu", "model": {}, "position": [4] },
             {
-              "id": "a6824e63",
-              "type": "mpu",
-              "model": {},
-              "position": [4]
-            },
-            {
-              "id": "78fc5a67",
+              "id": "adf85c79",
               "type": "wsoj",
-              "model": {
-                "type": "recommendations"
-              },
+              "model": { "type": "recommendations" },
               "position": [5]
             }
           ]
         }
       },
-      "metadata": {
-        "id": "urn:bbc:ares::article:cxj3rjxm6r0o",
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cxj3rjxm6r0o"
-        },
-        "type": "article",
-        "createdBy": "Uzbek",
-        "language": "uz-cyrl",
-        "firstPublished": 1562942064846,
-        "lastPublished": 1562942064846,
-        "analyticsLabels": {
-          "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
-          "producer": "Uzbek"
-        },
-        "passport": {
-          "language": "uz-cyrl",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
-          "taggings": []
-        },
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "consumableAsSFV": false,
-        "allowAdvertising": true,
-        "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
-      },
       "promo": {
         "headlines": {
-          "seoHeadline": "I'm the title of a latin article"
-        }
+          "seoHeadline": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?"
+        },
+        "consumableAsSFV": false
       }
     },
     "secondaryData": {
-      "topStories": [
-        {
-          "headlines": {
-            "headline": "Thousands of Turkish police suspended"
-          },
-          "locators": {
-            "assetUri": "/uzbek/23061067",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/23061067",
-            "assetId": "23061067"
-          },
-          "summary": "Turkish officials say that nearly 8,000 police officers have been suspended, reportedly on suspicion of having links to the failed coup attempt at the weekend.",
-          "timestamp": 1468835886000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63496387",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/13221/test/_63496387_8abd0d18-59f4-4d30-af9b-9b9700aed963.jpg",
-            "path": "/cpsdevpb/13221/test/_63496387_8abd0d18-59f4-4d30-af9b-9b9700aed963.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Arrest of Turkish police",
-            "caption": "Turkish police detained",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63496389",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/18041/test/_63496389_8abd0d18-59f4-4d30-af9b-9b9700aed963.jpg",
-            "path": "/cpsdevpb/18041/test/_63496389_8abd0d18-59f4-4d30-af9b-9b9700aed963.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Arrest of Turkish police",
-            "caption": "Turkish police detained",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "prominence": "standard",
-          "section": {
-            "subType": "IDX",
-            "name": "Бош саҳифа",
-            "uri": "/uzbek/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:uzbek/23061067",
-          "type": "cps"
-        }
-      ],
-      "features": [
-        {
-          "headlines": {
-            "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 3"
-          },
-          "locators": {
-            "assetUri": "/uzbek/uzbekistan-23053075",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23053075",
-            "assetId": "23053075"
-          },
-          "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "timestamp": 1466158139000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63490394",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-            "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "маҳсулот",
-            "caption": "маҳсулот",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053075",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 4"
-          },
-          "locators": {
-            "assetUri": "/uzbek/uzbekistan-23053076",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23053076",
-            "assetId": "23053076"
-          },
-          "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "timestamp": 1466158150000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63490394",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-            "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "маҳсулот",
-            "caption": "маҳсулот",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053076",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 30"
-          },
-          "locators": {
-            "assetUri": "/uzbek/sport-23053300",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053300",
-            "assetId": "23053300"
-          },
-          "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "timestamp": 1466160805000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63490394",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-            "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "маҳсулот",
-            "caption": "маҳсулот",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "id": "urn:bbc:ares::asset:uzbek/sport-23053300",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 7"
-          },
-          "locators": {
-            "assetUri": "/uzbek/world-23053082",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053082",
-            "assetId": "23053082"
-          },
-          "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "timestamp": 1466158442000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63490394",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-            "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "маҳсулот",
-            "caption": "маҳсулот",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "id": "urn:bbc:ares::asset:uzbek/world-23053082",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 2"
-          },
-          "locators": {
-            "assetUri": "/uzbek/uzbekistan-23053074",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23053074",
-            "assetId": "23053074"
-          },
-          "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "timestamp": 1466158124000,
-          "language": "uz-Cyrl",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63490394",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-            "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "маҳсулот",
-            "caption": "маҳсулот",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
-          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053074",
-          "type": "cps"
-        }
-      ],
-      "mostRead": {
-        "generated": "2023-02-17T16:27:57.937Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
-        "totalRecords": 20,
-        "records": [
-          {
-            "id": "087421df-f1ab-e043-b78a-f6a4e99f8a1e",
-            "rank": 1,
-            "count": 9871,
-            "urn": "urn:bbc:curie:asset:087421df-f1ab-e043-b78a-f6a4e99f8a1e",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 12",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 12"
-              },
-              "locators": {
-                "assetUri": "/uzbek/world-23053174",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053174",
-                "curie": "http://www.bbc.co.uk/asset/087421df-f1ab-e043-b78a-f6a4e99f8a1e",
-                "assetId": "23053174"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466158456000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/world-23053174",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "e05d0e0a-ae6a-0348-b82f-22e0dc5acc72",
-            "rank": 2,
-            "count": 9860,
-            "urn": "urn:bbc:curie:asset:e05d0e0a-ae6a-0348-b82f-22e0dc5acc72",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Euro 2016: Ovro‘po chempioni kim bo‘ladi?",
-                "headline": "Euro 2016: Ovro‘po chempioni kim bo‘ladi?- Fransami yo Portugalia"
-              },
-              "locators": {
-                "assetUri": "/uzbek/lotin-23059107",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23059107",
-                "curie": "http://www.bbc.co.uk/asset/e05d0e0a-ae6a-0348-b82f-22e0dc5acc72",
-                "assetId": "23059107"
-              },
-              "summary": "EURO 2016 ninhg nihoiy oyini kutilar ekan hammaning nazari ikki kuchli jamoaga qaratilagan",
-              "timestamp": 1468233226000,
-              "language": "uz-Latn",
-              "indexImage": {
-                "id": "63495258",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/14D0B/test/_63495258_6b3a2e6d-ce02-426f-b032-d25d9befeddc.jpg",
-                "path": "/cpsdevpb/14D0B/test/_63495258_6b3a2e6d-ce02-426f-b032-d25d9befeddc.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Ronaldo maydonda yoq edi, lekin ghalabani hish qarshiladi",
-                "copyrightHolder": "AP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/lotin-23059107",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "b9bbf092-7ca6-174b-8b9f-55e6f28b64a3",
-            "rank": 3,
-            "count": 9538,
-            "urn": "urn:bbc:curie:asset:b9bbf092-7ca6-174b-8b9f-55e6f28b64a3",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? uzbekistan",
-                "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? uzbekistan"
-              },
-              "locators": {
-                "assetUri": "/uzbek/uzbekistan-23052561",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23052561",
-                "curie": "http://www.bbc.co.uk/asset/b9bbf092-7ca6-174b-8b9f-55e6f28b64a3",
-                "assetId": "23052561"
-              },
-              "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди uzbekistan.",
-              "timestamp": 1466071935000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63489543",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "path": "/cpsdevpb/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "copyrightHolder": "Alamy",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23052561",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "e1ab840f-185f-dc40-9e69-484ee435d55b",
-            "rank": 4,
-            "count": 9243,
-            "urn": "urn:bbc:curie:asset:e1ab840f-185f-dc40-9e69-484ee435d55b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Низоларнинг касри машҳур афғон бозорига ҳам урди",
-                "headline": "Низоларнинг касри машҳур афғон бозорига ҳам урди"
-              },
-              "locators": {
-                "assetUri": "/uzbek/uzbekistan-23054704",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23054704",
-                "curie": "http://www.bbc.co.uk/asset/e1ab840f-185f-dc40-9e69-484ee435d55b",
-                "assetId": "23054704"
-              },
-              "summary": "Ҳа, Афғонистон пойтахти Кобулнинг энг машҳур бозорларидан биридаги тужжорлар бугун хафа: Номи четда ҳам яхши таниш Кўча-и Мурғфурушдаги бозордан бугун аксарият хорижликларнинг қадами узилган. Зўравонликлар ортган. Тирикчилик ўтказиш ҳам оғирлашган:",
-              "timestamp": 1466530810000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63491948",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/14BB7/test/_63491948_150915093536_kabul_chicken_street_976x549_bbc.jpg",
-                "path": "/cpsdevpb/14BB7/test/_63491948_150915093536_kabul_chicken_street_976x549_bbc.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Дейлик, ложувард тошига ишлов беришга ихтисослашган мана бу корхоначада яқин-яқингача ўн киши ишлаган. Ҳозир эса, ишчиларнинг фақат ярми қолган, холос.",
-                "caption": "Дейлик, ложувард тошига ишлов беришга ихтисослашган мана бу корхоначада яқин-яқингача ўн киши ишлаган. Ҳозир эса, ишчиларнинг фақат ярми қолган, холос.",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23054704",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "e766aee4-c813-0a4a-9bcf-58985717d982",
-            "rank": 5,
-            "count": 8873,
-            "urn": "urn:bbc:curie:asset:e766aee4-c813-0a4a-9bcf-58985717d982",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 7",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 7"
-              },
-              "locators": {
-                "assetUri": "/uzbek/world-23053082",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053082",
-                "curie": "http://www.bbc.co.uk/asset/e766aee4-c813-0a4a-9bcf-58985717d982",
-                "assetId": "23053082"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466158442000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/world-23053082",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "12b399e4-908b-424f-be13-2466f7668e70",
-            "rank": 6,
-            "count": 8745,
-            "urn": "urn:bbc:curie:asset:12b399e4-908b-424f-be13-2466f7668e70",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "\"Pulning cho‘g‘i kamaygandan kamaymoqda\"",
-                "headline": "\"Pulning cho‘g‘i kamaygandan kamaymoqda\""
-              },
-              "locators": {
-                "assetUri": "/uzbek/lotin-23052239",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23052239",
-                "curie": "http://www.bbc.co.uk/asset/12b399e4-908b-424f-be13-2466f7668e70",
-                "assetId": "23052239"
-              },
-              "summary": "Bunga Rossiya Markaziy Banki tomonidan e‘lon qilingan so‘nggi ma‘lumotlar dalolat qilgan.",
-              "timestamp": 1466008117000,
-              "language": "uz-Latn",
-              "indexImage": {
-                "id": "63489652",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6462/test/_63489652_160428221945_dollar_notes_640x360_reuters_nocredit.jpg",
-                "path": "/cpsdevpb/6462/test/_63489652_160428221945_dollar_notes_640x360_reuters_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Bunga Rossiya Markaziy Banki tomonidan e'lon qilingan so'nggi ma'lumotlar dalolat qilgan.",
-                "caption": "Bunga Rossiya Markaziy Banki tomonidan e'lon qilingan so'nggi ma'lumotlar dalolat qilgan.",
-                "copyrightHolder": "Empics",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/lotin-23052239",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "a3e27319-c5e1-c24d-b5ca-fab6b49e0580",
-            "rank": 7,
-            "count": 8371,
-            "urn": "urn:bbc:curie:asset:a3e27319-c5e1-c24d-b5ca-fab6b49e0580",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? world фвфв",
-                "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? world фвфв"
-              },
-              "locators": {
-                "assetUri": "/uzbek/world-23052566",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23052566",
-                "curie": "http://www.bbc.co.uk/asset/a3e27319-c5e1-c24d-b5ca-fab6b49e0580",
-                "assetId": "23052566"
-              },
-              "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди world қфвқ.",
-              "timestamp": 1466590701000,
-              "language": "uz-Cyrl",
-              "byline": {
-                "name": "Фейсглория деб & Сева Новгородцев",
-                "title": "BBC кузўкеук ",
-                "persons": [
-                  {
-                    "name": "Фейсглория деб",
-                    "function": "BBC кузўкеук",
-                    "thumbnail": "http://b.files.bbci.co.uk/8D7B/test/_63491263_tv000088736.jpg",
-                    "twitterName": "Фейсглория"
-                  },
-                  {
-                    "name": "Сева Новгородцев",
-                    "function": "BBC Russian репортер",
-                    "thumbnail": "http://b.files.bbci.co.uk/C8F8/test/_63484415_tv000145332.jpg",
-                    "twitterName": "СеваНовгородцев"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63491267",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/129BB/test/_63491267_061496d6-59e9-4f7d-921e-8dafd2b027a5.jpg",
-                "path": "/cpsdevpb/129BB/test/_63491267_061496d6-59e9-4f7d-921e-8dafd2b027a5.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар укц.",
-                "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар укцк.",
-                "copyrightHolder": "Alamy",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/world-23052566",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "12d2b1d5-25f5-c946-9a99-4fae92cc9239",
-            "rank": 8,
-            "count": 8328,
-            "urn": "urn:bbc:curie:asset:12d2b1d5-25f5-c946-9a99-4fae92cc9239",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 30",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 30"
-              },
-              "locators": {
-                "assetUri": "/uzbek/sport-23053300",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053300",
-                "curie": "http://www.bbc.co.uk/asset/12d2b1d5-25f5-c946-9a99-4fae92cc9239",
-                "assetId": "23053300"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466160805000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/sport-23053300",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "1b74d4e1-a847-0c44-90b3-1a65b0901505",
-            "rank": 9,
-            "count": 8073,
-            "urn": "urn:bbc:curie:asset:1b74d4e1-a847-0c44-90b3-1a65b0901505",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 18",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 18"
-              },
-              "locators": {
-                "assetUri": "/uzbek/sport-23053179",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053179",
-                "curie": "http://www.bbc.co.uk/asset/1b74d4e1-a847-0c44-90b3-1a65b0901505",
-                "assetId": "23053179"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466158559000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/sport-23053179",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "c220ecc9-00b2-2b48-8d97-11f4740676bd",
-            "rank": 10,
-            "count": 8051,
-            "urn": "urn:bbc:curie:asset:c220ecc9-00b2-2b48-8d97-11f4740676bd",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди?",
-                "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди?"
-              },
-              "locators": {
-                "assetUri": "/uzbek/23052238",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/23052238",
-                "curie": "http://www.bbc.co.uk/asset/c220ecc9-00b2-2b48-8d97-11f4740676bd",
-                "assetId": "23052238"
-              },
-              "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди.",
-              "timestamp": 1466002631000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63489543",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "path": "/cpsdevpb/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "copyrightHolder": "Alamy",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/23052238",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "5effda84-f204-5e46-a0ad-a3758d40767c",
-            "rank": 11,
-            "count": 8039,
-            "urn": "urn:bbc:curie:asset:5effda84-f204-5e46-a0ad-a3758d40767c",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Thousands attend pro migrant march",
-                "headline": "Thousands of Londoners join march for unity with migrants"
-              },
-              "locators": {
-                "assetUri": "/uzbek/23061087",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/23061087",
-                "curie": "http://www.bbc.co.uk/asset/5effda84-f204-5e46-a0ad-a3758d40767c",
-                "assetId": "23061087"
-              },
-              "summary": "Thousands of Londoners took part in events to show support for those who may have felt threatened or unwelcome since June's Brexit vote.",
-              "timestamp": 1468835942000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63496397",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13609/test/_63496397_034091848-1.jpg",
-                "path": "/cpsdevpb/13609/test/_63496397_034091848-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Crowds on the march in central London",
-                "caption": "Large crowds marched through central London expressing solidarity with migrants",
-                "copyrightHolder": "Reuters",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/23061087",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "ef09b12b-7736-264a-aaa3-873e66ab9b6f",
-            "rank": 12,
-            "count": 7874,
-            "urn": "urn:bbc:curie:asset:ef09b12b-7736-264a-aaa3-873e66ab9b6f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 26",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 26"
-              },
-              "locators": {
-                "assetUri": "/uzbek/sport-23053296",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053296",
-                "curie": "http://www.bbc.co.uk/asset/ef09b12b-7736-264a-aaa3-873e66ab9b6f",
-                "assetId": "23053296"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466160768000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/sport-23053296",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "4f702c5e-842a-294e-8c3f-2069de5258af",
-            "rank": 13,
-            "count": 7245,
-            "urn": "urn:bbc:curie:asset:4f702c5e-842a-294e-8c3f-2069de5258af",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 27",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 27"
-              },
-              "locators": {
-                "assetUri": "/uzbek/sport-23053297",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053297",
-                "curie": "http://www.bbc.co.uk/asset/4f702c5e-842a-294e-8c3f-2069de5258af",
-                "assetId": "23053297"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466160776000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/sport-23053297",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "a860f3f8-cd04-5f43-b2c2-d734b204f889",
-            "rank": 14,
-            "count": 6734,
-            "urn": "urn:bbc:curie:asset:a860f3f8-cd04-5f43-b2c2-d734b204f889",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди?",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди?"
-              },
-              "locators": {
-                "assetUri": "/uzbek/uzbekistan-23053073",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23053073",
-                "curie": "http://www.bbc.co.uk/asset/a860f3f8-cd04-5f43-b2c2-d734b204f889",
-                "assetId": "23053073"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466595077000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053073",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "4e17f50f-1ec5-b745-ad49-638732e72550",
-            "rank": 15,
-            "count": 6626,
-            "urn": "urn:bbc:curie:asset:4e17f50f-1ec5-b745-ad49-638732e72550",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Каримов нега ифторлик бермайди?",
-                "headline": "Сўз сизга: Президент Каримов нега ифторлик бермайди?"
-              },
-              "locators": {
-                "assetUri": "/uzbek/23057412",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/23057412",
-                "curie": "http://www.bbc.co.uk/asset/4e17f50f-1ec5-b745-ad49-638732e72550",
-                "assetId": "23057412"
-              },
-              "summary": "Давлат раҳбарининг муқаддас Рамазон ойида ўз номидан рўзадорларга ифторлик бериши Қозоғистон ва Қирғизистонда ҳам аллақачон анъанага айланиб улгурган.",
-              "timestamp": 1467630523000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63493787",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13393/test/_63493787_637dd72d-0363-46af-a249-a3e437745345.jpg",
-                "path": "/cpsdevpb/13393/test/_63493787_637dd72d-0363-46af-a249-a3e437745345.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Islom Karimov va Putin",
-                "caption": "Karimov Rossiya presidenti bilan",
-                "copyrightHolder": "AP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/23057412",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "32c12b5c-7326-ce4e-91cf-b75a75ec748a",
-            "rank": 16,
-            "count": 6558,
-            "urn": "urn:bbc:curie:asset:32c12b5c-7326-ce4e-91cf-b75a75ec748a",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? central asia",
-                "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? central asia"
-              },
-              "locators": {
-                "assetUri": "/uzbek/central-asia-23052562",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-23052562",
-                "curie": "http://www.bbc.co.uk/asset/32c12b5c-7326-ce4e-91cf-b75a75ec748a",
-                "assetId": "23052562"
-              },
-              "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди central asia.",
-              "timestamp": 1466073698000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63489543",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "path": "/cpsdevpb/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "copyrightHolder": "Alamy",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/central-asia-23052562",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "b8736db1-6991-ef49-9621-ff08dbba62be",
-            "rank": 17,
-            "count": 6320,
-            "urn": "urn:bbc:curie:asset:b8736db1-6991-ef49-9621-ff08dbba62be",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 2",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 2"
-              },
-              "locators": {
-                "assetUri": "/uzbek/uzbekistan-23053074",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23053074",
-                "curie": "http://www.bbc.co.uk/asset/b8736db1-6991-ef49-9621-ff08dbba62be",
-                "assetId": "23053074"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466158124000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053074",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "442cb118-81ed-2e4c-b798-ce14fa0d090d",
-            "rank": 18,
-            "count": 6254,
-            "urn": "urn:bbc:curie:asset:442cb118-81ed-2e4c-b798-ce14fa0d090d",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ўзбек деҳқонининг косаси нега оқармайди? 16",
-                "headline": "Ўзбек деҳқонининг косаси нега оқармайди? 16"
-              },
-              "locators": {
-                "assetUri": "/uzbek/sport-23053177",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23053177",
-                "curie": "http://www.bbc.co.uk/asset/442cb118-81ed-2e4c-b798-ce14fa0d090d",
-                "assetId": "23053177"
-              },
-              "summary": "Шу йил апрел ойида Ўзбекистон Президенти Ислом Каримов ўзининг Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-              "timestamp": 1466158535000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63490394",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/C09D/test/_63490394_balloons.jpg",
-                "path": "/cpsdevpb/C09D/test/_63490394_balloons.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "маҳсулот",
-                "caption": "маҳсулот",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/sport-23053177",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "860ddbe6-932a-c447-8638-e1b9a0ed743a",
-            "rank": 19,
-            "count": 6164,
-            "urn": "urn:bbc:curie:asset:860ddbe6-932a-c447-8638-e1b9a0ed743a",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? media",
-                "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? media"
-              },
-              "locators": {
-                "assetUri": "/uzbek/media-23052923",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/media-23052923",
-                "curie": "http://www.bbc.co.uk/asset/860ddbe6-932a-c447-8638-e1b9a0ed743a",
-                "assetId": "23052923"
-              },
-              "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди media.",
-              "timestamp": 1466090279000,
-              "language": "uz-Cyrl",
-              "indexImage": {
-                "id": "63489543",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "path": "/cpsdevpb/8726/test/_63489543_160612030825_euro2016_fans_clash_marseille_640x360_epa_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар.",
-                "copyrightHolder": "Alamy",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/media-23052923",
-              "type": "cps"
-            }
-          },
-          {
-            "id": "8be493f3-78c0-7a42-9b37-5f7f85259ca3",
-            "rank": 20,
-            "count": 6073,
-            "urn": "urn:bbc:curie:asset:8be493f3-78c0-7a42-9b37-5f7f85259ca3",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "\"Pulning cho‘g‘i kamaygandan kamaymoqda\" blog latin",
-                "headline": "\"Pulning cho‘g‘i kamaygandan kamaymoqda\" blog latin"
-              },
-              "locators": {
-                "assetUri": "/uzbek/blog-lotin-23052709",
-                "cpsUrn": "urn:bbc:content:assetUri:uzbek/blog-lotin-23052709",
-                "curie": "http://www.bbc.co.uk/asset/8be493f3-78c0-7a42-9b37-5f7f85259ca3",
-                "assetId": "23052709"
-              },
-              "summary": "Bunga Rossiya Markaziy Banki tomonidan e‘lon qilingan so‘nggi ma‘lumotlar dalolat qilgan.",
-              "timestamp": 1466088824000,
-              "language": "uz-Latn",
-              "indexImage": {
-                "id": "63489652",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/6462/test/_63489652_160428221945_dollar_notes_640x360_reuters_nocredit.jpg",
-                "path": "/cpsdevpb/6462/test/_63489652_160428221945_dollar_notes_640x360_reuters_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Bunga Rossiya Markaziy Banki tomonidan e'lon qilingan so'nggi ma'lumotlar dalolat qilgan.",
-                "caption": "Bunga Rossiya Markaziy Banki tomonidan e'lon qilingan so'nggi ma'lumotlar dalolat qilgan.",
-                "copyrightHolder": "Empics",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:uzbek/blog-lotin-23052709",
-              "type": "cps"
-            }
-          }
-        ]
-      }
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"
