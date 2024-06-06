@@ -142,6 +142,13 @@ export default ({
   const inputRef = useRef<HTMLInputElement>(null);
   const filesInState = inputState.value as File[];
   const { replaceLiveRegionWith } = useLiveRegionContext();
+  const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current as number);
+    };
+  }, []);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
@@ -159,7 +166,10 @@ export default ({
 
     handleChange(name, uploaded);
     // Adds 1s delay for MacOS file explorer to bring focus back to browser, so VoiceOver can pickup the DOM change in time
-    setTimeout(() => replaceLiveRegionWith(liveRegionText), 1000);
+    timeoutRef.current = setTimeout(
+      () => replaceLiveRegionWith(liveRegionText),
+      1000,
+    );
   };
 
   const handleUploadClick = () => {
