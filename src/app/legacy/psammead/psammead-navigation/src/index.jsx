@@ -197,6 +197,7 @@ export const NavigationLi = ({
           script={script}
           service={service}
           className="focusIndicatorRemove"
+          onClick={clickTrackerHandler}
           {...props}
         >
           {link}
