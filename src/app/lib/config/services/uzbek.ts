@@ -363,20 +363,22 @@ export const service: UzbekConfig = {
     ...baseServiceConfig,
     ...defaultCyrillicConfig,
     script: cyrillic,
-    scriptLink: {
-      text: 'Lat',
-      variant: 'lat',
-    }, // check translation - lifted from Serbian
+    // scriptLink needs translation
+    // scriptLink: {
+    //   text: '',
+    //   variant: 'lat',
+    // },
   },
   // TODO: Add Lat Translations and remove ...defaultCyrillicConfig
   lat: {
     ...baseServiceConfig,
     ...defaultCyrillicConfig,
     script: latinWithDiacritics,
-    scriptLink: {
-      text: 'Ћир',
-      variant: 'cyr',
-    }, // check translation - lifted from Serbian
+    // scriptLink needs translation
+    // scriptLink: {
+    //   text: '',
+    //   variant: 'cyr',
+    // },
   },
 };
 
