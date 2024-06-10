@@ -52,7 +52,7 @@ export type UkrainianService = {
 
 export type UzbekService = {
   service: 'uzbek';
-  variant: 'default' | 'cyr' | 'lat';
+  variant: 'cyr' | 'lat';
 };
 
 export type ServicesWithVariants =

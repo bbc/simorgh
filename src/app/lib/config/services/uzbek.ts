@@ -32,8 +32,8 @@ const baseServiceConfig = {
   timezone: 'GMT',
 };
 
-// used by default and cyr configs
-const defaultCyrillicConfig = {
+// TODO: Move into cyr config once lat translations are provided
+const cyrillicConfig = {
   articleTimestampPrefix: 'Янгиланди',
   articleTimestampSuffix: '',
   brandName: "BBC News O'zbek",
@@ -354,24 +354,19 @@ const defaultCyrillicConfig = {
 };
 
 export const service: UzbekConfig = {
-  default: {
-    ...baseServiceConfig,
-    ...defaultCyrillicConfig,
-    script: cyrillic,
-  },
   cyr: {
     ...baseServiceConfig,
-    ...defaultCyrillicConfig,
+    ...cyrillicConfig,
     script: cyrillic,
     scriptLink: {
       text: 'Lat',
       variant: 'lat',
     }, // check translation - lifted from Serbian
   },
-  // TODO: Add Lat Translations and remove ...defaultCyrillicConfig
+  // TODO: Add lat Translations and remove ...cyrillicConfig
   lat: {
     ...baseServiceConfig,
-    ...defaultCyrillicConfig,
+    ...cyrillicConfig,
     script: latinWithDiacritics,
     scriptLink: {
       text: 'Ћир',
