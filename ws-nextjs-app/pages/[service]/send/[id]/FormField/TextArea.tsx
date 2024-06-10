@@ -46,9 +46,10 @@ export default ({
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
         {...(hasWordLimit && { 'aria-describedby': describedByWordLimit })}
+        {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
-          ...(required && { 'aria-required': required }),
+          ...(required && !isValid && { 'aria-required': required }),
           ...(!isValid && {
             'aria-describedby':
               describedBy + (hasWordLimit ? `, ${describedByWordLimit}` : ''),
