@@ -158,6 +158,30 @@ describe('getVariantRedirectUrl', () => {
     });
   });
 
+  // tests temporary service check until Uzbek Homepage defaults to /cyr
+  describe('frontPage, Uzbek only', () => {
+    const defaultVariant = getVariant('uzbek');
+    describe(`visit /uzbek`, () => {
+      it(`should not redirect to /uzbek/${defaultVariant}`, () => {
+        const params = {
+          service: 'uzbek',
+          variant: null,
+        };
+        const props = {
+          match: {
+            path: frontPagePath,
+            params,
+          },
+        };
+        const redirectUrl = getVariantRedirectUrl({
+          ...props.match,
+          ...params,
+        });
+        expect(redirectUrl).toEqual(null);
+      });
+    });
+  });
+
   describe('article', () => {
     const id = 'c3xd4x9prgyo';
     const local = 'articles';
