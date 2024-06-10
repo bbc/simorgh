@@ -26,7 +26,7 @@ describe('getVariant', () => {
   });
 
   it('should return service default when no variant is passed for service with variants', () => {
-    expect(getVariant({ service: 'uzbek', variant: null })).toEqual('default');
+    expect(getVariant({ service: 'uzbek', variant: null })).toEqual('cyr');
   });
 
   it('should return "default" when service without variants is passed', () => {
