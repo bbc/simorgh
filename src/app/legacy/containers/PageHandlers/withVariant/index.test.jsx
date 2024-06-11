@@ -102,4 +102,26 @@ describe('WithVariant', () => {
       expect(history.location.pathname).toEqual('/serbian/lat');
     });
   });
+
+  describe('service (uzbek) with default variant', () => {
+    it('should not redirect', () => {
+      const service = 'uzbek';
+      const match = getMatchProps(service);
+      const history = createMemoryHistory({
+        initialEntries: [`/${service}`],
+      });
+
+      expect(history.location.pathname).toEqual(`/${service}`);
+
+      render(
+        <Router history={history}>
+          <Route path="/:service">
+            <ComponentWithVariantRedirect match={match} service={service} />
+          </Route>
+        </Router>,
+      );
+
+      expect(history.location.pathname).toEqual('/uzbek');
+    });
+  });
 });
