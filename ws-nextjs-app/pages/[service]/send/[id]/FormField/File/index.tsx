@@ -188,7 +188,7 @@ export default ({
         {label}
       </Label>
       <button
-        aria-labelledby={labelId}
+        aria-describedby={labelId}
         css={styles.fileUploadButton}
         type="button"
         onClick={() => handleUploadClick()}
