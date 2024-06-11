@@ -17,8 +17,6 @@ const ChildWrapper = styled.div`
   bottom: 0;
 `;
 
-const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
-
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
 const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
@@ -59,33 +57,23 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 
 const Image = props => {
   const { children = null, src, useLargeImages = false, ...rest } = props;
-  const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
-    src.includes(originCode),
-  );
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
-  const primarySrcSet = createSrcSet(
-    src,
-    isWebPSupported ? '.webp' : '',
-    isProgrammeImage,
-  );
-  const primaryMediaType = `image/${isWebPSupported ? 'webp' : 'jpeg'}`;
-  const fallbackSrcSet = isWebPSupported
-    ? createSrcSet(src, '', isProgrammeImage)
-    : undefined;
-  const fallbackMediaType = isWebPSupported ? 'image/jpeg' : undefined;
-  const sizes = createSizes(useLargeImages, isProgrammeImage);
+  const primarySrcSet = createSrcSet(src, '.webp', isProgrammeImage);
 
+  const fallbackSrcSet = createSrcSet(src, '', isProgrammeImage);
+
+  const sizes = createSizes(useLargeImages, isProgrammeImage);
   return (
     <Wrapper>
       <IMAGE
         {...rest}
         src={src.replace('{width}', 240)}
         srcSet={primarySrcSet}
-        mediaType={primaryMediaType}
+        mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
-        fallbackMediaType={fallbackMediaType}
+        fallbackMediaType="image/jpeg"
         sizes={sizes}
         aspectRatio={[16, 9]}
       />

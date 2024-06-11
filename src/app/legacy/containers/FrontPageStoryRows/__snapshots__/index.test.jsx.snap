@@ -840,7 +840,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
                 class="emotion-34"
                 height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp"
                 width="660"
               />
             </picture>
@@ -1565,7 +1565,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
                 class="emotion-20"
                 height="1152"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
                 width="2048"
               />
             </picture>
@@ -2377,7 +2377,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
                 class="emotion-34"
                 height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/11B2A/test/_63509427_160223134753_impunzi_mahama_640x360_bbc_nocredit.jpg.webp"
                 width="660"
               />
             </picture>
@@ -2455,7 +2455,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
                 class="emotion-34"
                 height="371"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg.webp"
                 width="660"
               />
             </picture>
@@ -2970,7 +2970,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
                 class="emotion-10"
                 height="1152"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
                 width="2048"
               />
             </picture>
@@ -5275,7 +5275,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
                 class="emotion-10"
                 height="1152"
                 loading="lazy"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+                src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
                 width="2048"
               />
             </picture>

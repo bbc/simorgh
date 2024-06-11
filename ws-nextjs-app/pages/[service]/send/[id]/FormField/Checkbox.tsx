@@ -24,11 +24,12 @@ export default ({
         type="checkbox"
         checked={value as boolean}
         onChange={e => handleChange(e.target.name, e.target.checked)}
+        {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(!isValid && { 'aria-describedby': describedBy }),
         })}
-        {...(required && { 'aria-required': required })}
+        {...(required && !isValid && { 'aria-required': required })}
       />
 
       <Label id={id} css={[styles.checkboxLabel]}>
