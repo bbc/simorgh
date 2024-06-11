@@ -110,7 +110,6 @@
     "helmet": "7.1.0",
     "helmet-csp": "3.4.0",
     "intersection-observer": "0.12.2",
-    "isarray": "2.0.5",
     "jalaali-js": "1.2.6",
     "js-cookie": "3.0.5",
     "lru-cache": "7.7.1",

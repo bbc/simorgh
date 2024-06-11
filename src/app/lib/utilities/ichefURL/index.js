@@ -16,19 +16,17 @@ does not match
 */
 
 const webpSupportedPatterns = [
-  /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png)$/,
+  /^https:\/\/ichef(?:\.test)?\.bbci\.co\.uk\/(?:news|ace\/(?:standard|ws))\/.+(?:\.jpg|\.png|\.gif)$/,
   /(?:\/ace\/(?:standard|ws)\/.+\/(?:amz\/worldservice\/)?|\/news\/(?!.+\/amz\/worldservice\/)).*/,
 ];
 
 const isSupportedWebpUrl = url =>
   webpSupportedPatterns.every(pattern => pattern.test(url));
-
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
     src || 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png';
   if (imageSrc.includes('urn:') || imageSrc.includes('localhost:'))
     return imageSrc;
-
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
