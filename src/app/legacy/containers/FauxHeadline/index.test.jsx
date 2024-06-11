@@ -10,7 +10,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const FauxHeadlineContainerWithContext = ({ data } = {}) => {
+const FauxHeadlineContainerWithContext = ({ data }) => {
   const fauxHeadlineValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
