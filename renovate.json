@@ -1,6 +1,7 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
+  "updateLockFiles": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
