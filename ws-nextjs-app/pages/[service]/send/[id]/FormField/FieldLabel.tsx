@@ -5,7 +5,7 @@ import Text from '#app/components/Text';
 import { InputProps } from '../types';
 import styles from './styles';
 
-const translation = '(optional)';
+const optionalTranslation = '(optional)';
 export default ({
   id,
   children,
@@ -17,6 +17,6 @@ export default ({
   required: boolean;
 }>) => (
   <Text as="label" className={className} htmlFor={id} css={styles.fieldLabel}>
-    {required ? children : `${children} ${translation}`}
+    {required ? children : `${children} ${optionalTranslation}`}
   </Text>
 );

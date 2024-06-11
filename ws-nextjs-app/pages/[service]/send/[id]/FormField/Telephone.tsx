@@ -14,7 +14,6 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState ?? {};
-  // console.log('re', required);
 
   return (
     <>
