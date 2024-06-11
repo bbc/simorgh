@@ -10106,35 +10106,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb-base@npm:^15.0.0":
-  version: 15.0.0
-  resolution: "eslint-config-airbnb-base@npm:15.0.0"
+"eslint-config-airbnb-base@npm:^14.2.1":
+  version: 14.2.1
+  resolution: "eslint-config-airbnb-base@npm:14.2.1"
   dependencies:
     confusing-browser-globals: "npm:^1.0.10"
     object.assign: "npm:^4.1.2"
-    object.entries: "npm:^1.1.5"
-    semver: "npm:^6.3.0"
+    object.entries: "npm:^1.1.2"
   peerDependencies:
-    eslint: ^7.32.0 || ^8.2.0
-    eslint-plugin-import: ^2.25.2
-  checksum: 10/daa68a1dcb7bff338747a952723b5fa9d159980ec3554c395a4b52a7f7d4f00a45e7b465420eb6d4d87a82cef6361e4cfd6dbb38c2f3f52f2140b6cf13654803
+    eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
+    eslint-plugin-import: ^2.22.1
+  checksum: 10/0d679b6fe8030e18be9d5876bdf4d112988f9a1bc23fbb87a835447d448877041191caae6f9f656238bf5b883da8ea80199d6769075fe3493018c5e74d5fa0dd
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb@npm:19.0.4":
-  version: 19.0.4
-  resolution: "eslint-config-airbnb@npm:19.0.4"
+"eslint-config-airbnb@npm:18.2.1":
+  version: 18.2.1
+  resolution: "eslint-config-airbnb@npm:18.2.1"
   dependencies:
-    eslint-config-airbnb-base: "npm:^15.0.0"
+    eslint-config-airbnb-base: "npm:^14.2.1"
     object.assign: "npm:^4.1.2"
-    object.entries: "npm:^1.1.5"
+    object.entries: "npm:^1.1.2"
   peerDependencies:
-    eslint: ^7.32.0 || ^8.2.0
-    eslint-plugin-import: ^2.25.3
-    eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-react: ^7.28.0
-    eslint-plugin-react-hooks: ^4.3.0
-  checksum: 10/f2086523cfd20c42fd620c757281bd028aa8ce9dadc7293c5c23ea60947a2d3ca04404ede77b40f5a65250fe3c04502acafc4f2f6946819fe6c257d76d9644e5
+    eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-jsx-a11y: ^6.4.1
+    eslint-plugin-react: ^7.21.5
+    eslint-plugin-react-hooks: ^4 || ^3 || ^2.3.0 || ^1.7.0
+  checksum: 10/0f251b051222dc67371baba4ec6f25ac5f613425dd0c27d505456e617bec5f54f47756b8add71951e5494c24dda866b8cbd205d3adc8b12b5fa90d620e251880
   languageName: node
   linkType: hard
 
@@ -15045,7 +15044,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.entries@npm:^1.1.5, object.entries@npm:^1.1.7, object.entries@npm:^1.1.8":
+"object.entries@npm:^1.1.2, object.entries@npm:^1.1.7, object.entries@npm:^1.1.8":
   version: 1.1.8
   resolution: "object.entries@npm:1.1.8"
   dependencies:
@@ -17313,7 +17312,7 @@ __metadata:
     depcheck: "npm:1.4.7"
     dotenv: "npm:16.4.5"
     eslint: "npm:7.32.0"
-    eslint-config-airbnb: "npm:19.0.4"
+    eslint-config-airbnb: "npm:18.2.1"
     eslint-config-prettier: "npm:9.1.0"
     eslint-import-resolver-alias: "npm:1.1.2"
     eslint-plugin-cypress: "npm:3.2.0"
