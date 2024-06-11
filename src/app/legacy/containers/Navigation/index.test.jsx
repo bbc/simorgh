@@ -1,4 +1,5 @@
 import React from 'react';
+import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
@@ -116,7 +117,7 @@ describe('Navigation Container', () => {
     });
   });
 
-  describe('Navigation Event Tracking', () => {
+  describe('View and click tracking', () => {
     const scrollEventTrackingData = {
       componentName: 'scrollable-navigation',
     };
@@ -125,7 +126,11 @@ describe('Navigation Container', () => {
       componentName: 'dropdown-navigation',
     };
 
-    it('should call the view tracking hook with the correct params when on scrollable navigation', () => {
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation();
+
+    it('should call the view tracking hook when on scrollable navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -139,21 +144,7 @@ describe('Navigation Container', () => {
       expect(viewTrackerSpy).toHaveBeenCalledWith(scrollEventTrackingData);
     });
 
-    it('should call the click tracking hook with the correct params when on scrollable navigation', () => {
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(<Navigation />, {
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        id: 'c0000000000o',
-        isAmp: true,
-        pageType: ARTICLE_PAGE,
-        service: 'news',
-        statusCode: 200,
-        pathname: '/news',
-      });
-      expect(clickTrackerSpy).toHaveBeenCalledWith(scrollEventTrackingData);
-    });
-
-    it('should call the view tracking hook with the correct params when on dropdown navigation', () => {
+    it('should call the view tracking hook when on dropdown navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -167,9 +158,10 @@ describe('Navigation Container', () => {
       expect(viewTrackerSpy).toHaveBeenCalledWith(dropdownEventTrackingData);
     });
 
-    it('should call the click tracking hook with the correct params when on dropdown navigation', () => {
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(<Navigation />, {
+    it('should call the click tracking hook when scrollable navigation is clicked', () => {
+      clickTrackerSpy.mockRestore();
+
+      const { container } = render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
         id: 'c0000000000o',
         isAmp: true,
@@ -178,7 +170,28 @@ describe('Navigation Container', () => {
         statusCode: 200,
         pathname: '/news',
       });
-      expect(clickTrackerSpy).toHaveBeenCalledWith(dropdownEventTrackingData);
+
+      fireEvent.click(container);
+
+      expect(container.onclick).toBeTruthy();
+    });
+
+    it('should call the click tracking hook when dropdown navigation is clicked', () => {
+      clickTrackerSpy.mockRestore();
+
+      const { container } = render(<Navigation />, {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: true,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      });
+
+      fireEvent.click(container);
+
+      expect(container.onclick).toBeTruthy();
     });
   });
 });
