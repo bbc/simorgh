@@ -286,9 +286,7 @@ describe('Topic Page', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
       const getLinkedDataOutput = () => {
-        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
-          JSON.parse(innerHTML),
-        );
+        return JSON.parse(Helmet.peek().scriptTags[1].innerHTML);
       };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();

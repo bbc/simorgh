@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable cypress/unsafe-to-chain-command */
 /* eslint-disable import/prefer-default-export */
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';

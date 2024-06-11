@@ -149,7 +149,7 @@ exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"د
 
 exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"۱۸ می ۲۰۲۰"`;
 
-exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"`;
+exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png.webp"`;
 
 exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"وروستي خبرونه, ۱۸ می ۲۰۲۰"`;
 

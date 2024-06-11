@@ -47,7 +47,12 @@ export default {
       },
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
-        width: '35rem',
+      },
+    }),
+  screenContainer: () =>
+    css({
+      '.no-js &': {
+        display: 'none',
       },
     }),
 };
