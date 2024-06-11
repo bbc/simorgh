@@ -16,7 +16,9 @@ export default ({
   const { isValid, value = '', required, wasInvalid } = inputState ?? {};
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label required={required} id={id}>
+        {label}
+      </Label>
       <div>
         <input
           css={[styles.textField, styles.focusIndicator]}

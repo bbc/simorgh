@@ -144,7 +144,9 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
 
   return (
     <>
-      <Label id={labelId}>{label}</Label>
+      <Label id={labelId} required={required}>
+        {label}
+      </Label>
       <button
         aria-describedby={labelId}
         css={styles.fileUploadButton}
