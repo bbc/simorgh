@@ -1,4 +1,6 @@
-import injectCspHeader, {
+import injectCspHeader from '.';
+
+import {
   generateChildSrc,
   generateConnectSrc,
   generateDefaultSrc,
@@ -9,7 +11,7 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-} from '.';
+} from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
@@ -130,9 +132,6 @@ describe('cspHeader', () => {
       connectSrcExpectation: [
         ...bbcDomains,
         'https://*.akamaihd.net',
-        'https://cognito-identity.eu-west-1.amazonaws.com',
-        'https://dataplane.rum.eu-west-1.amazonaws.com',
-        'https://sts.eu-west-1.amazonaws.com',
         'https://ws.bbc-reporting-api.app',
         'https://*.doubleclick.net',
         'https://*.effectivemeasure.net',
@@ -334,9 +333,6 @@ describe('cspHeader', () => {
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
         'https://ws.bbc-reporting-api.app',
-        'https://cognito-identity.eu-west-1.amazonaws.com',
-        'https://dataplane.rum.eu-west-1.amazonaws.com',
-        'https://sts.eu-west-1.amazonaws.com',
         'https://*.doubleclick.net',
         'https://*.effectivemeasure.net',
         'https://*.google.com',

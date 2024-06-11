@@ -26,9 +26,10 @@ export default ({
           type="text"
           value={value as string}
           onChange={e => handleChange(e.target.name, e.target.value)}
+          {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),
-            ...(required && { 'aria-required': required }),
+            ...(required && !isValid && { 'aria-required': required }),
             ...(!isValid && { 'aria-describedby': describedBy }),
           })}
         />
