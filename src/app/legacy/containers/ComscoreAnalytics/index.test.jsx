@@ -20,7 +20,7 @@ const ContextWrap = ({
   comscoreAnalyticsToggle,
   personalisation = defaultPersonalisation,
 }) => {
-  const RequestContextValue = useMemo(
+  const requestContextValue = useMemo(
     () => ({
       toggleState: {
         comscoreAnalytics: {
@@ -41,7 +41,7 @@ const ContextWrap = ({
       pathname="/pathname"
     >
       <ServiceContextProvider service="pidgin">
-        <ToggleContext.Provider value={RequestContextValue}>
+        <ToggleContext.Provider value={requestContextValue}>
           <UserContext.Provider value={personalisation}>
             {children}
           </UserContext.Provider>
