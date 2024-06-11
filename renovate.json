@@ -1,10 +1,6 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
-  "skipInstalls": true,
-  "postUpgradeTasks": {
-    "commands": ["yarn install"]
-  },
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
