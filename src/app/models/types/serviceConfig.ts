@@ -5,6 +5,7 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
+  UzbekService,
   Direction,
 } from './global';
 import { Translations } from './translations';
@@ -27,6 +28,10 @@ export type ZhongwenConfig = {
 
 export type UkrainianConfig = {
   [key in UkrainianService['variant']]: ServiceConfig;
+};
+
+export type UzbekConfig = {
+  [key in UzbekService['variant']]: ServiceConfig;
 };
 
 export type ServiceConfig = {
