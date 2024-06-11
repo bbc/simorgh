@@ -88,11 +88,17 @@ const PostHeaderBanner = ({
   );
 };
 
-const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
+const PostHeadings = ({
+  headerBlock,
+  setHeadline,
+}: {
+  headerBlock: PostHeadingBlock;
+}) => {
   const isHeadline = headerBlock.type === 'headline';
   const headingText =
     headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
+  if (isHeadline) setHeadline(headingText);
   return (
     <>
       {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
@@ -176,6 +182,8 @@ const Post = ({ post }: { post: PostType }) => {
   const timestamp = post?.dates?.curated ?? '';
   const [canShare, setCanShare] = useState(false);
   const [hashValue, setHashValue] = useState('');
+  const [headline, setHeadline] = useState('');
+
   useEffect(() => {
     setHashValue(window.location.hash.substring(1));
     if ('share' in navigator) {
@@ -185,8 +193,8 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <>
-      <article id={urn} css={styles.postContainer}>
-        <Heading level={3} css={styles.heading}>
+      <article css={styles.postContainer}>
+        <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
             <PostHeaderBanner
@@ -196,7 +204,11 @@ const Post = ({ post }: { post: PostType }) => {
             />
 
             {headerBlocks.map(headerBlock => (
-              <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+              <PostHeadings
+                key={headerBlock.id}
+                headerBlock={headerBlock}
+                setHeadline={setHeadline}
+              />
             ))}
           </span>
         </Heading>
@@ -210,6 +222,7 @@ const Post = ({ post }: { post: PostType }) => {
             componentName: urn,
           }}
           contentId={urn}
+          headline={headline}
         />
       )}
     </>

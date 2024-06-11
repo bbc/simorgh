@@ -3,7 +3,7 @@ import React from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 
-const ShareButton = ({ contentId, eventTrackingData }) => {
+const ShareButton = ({ contentId, eventTrackingData, headline }) => {
   const viewRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -22,7 +22,7 @@ const ShareButton = ({ contentId, eventTrackingData }) => {
 
   return (
     <button ref={viewRef} onClick={handleShare}>
-      Click to share
+      Click to share {headline}
     </button>
   );
 };
