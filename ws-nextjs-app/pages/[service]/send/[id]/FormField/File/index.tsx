@@ -180,12 +180,15 @@ export default ({
 
   const fileArrayLength = filesInState.length;
   const hasFiles = fileArrayLength !== 0;
+  const labelId = `${id}-label`;
 
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label id={id} elementId={labelId}>
+        {label}
+      </Label>
       <button
-        id={id}
+        aria-labelledby={labelId}
         css={styles.fileUploadButton}
         type="button"
         onClick={() => handleUploadClick()}
@@ -194,6 +197,7 @@ export default ({
         Choose a file
       </button>
       <input
+        id={id}
         name={name}
         type="file"
         onChange={event => event.target.files && handleFileChange(event)}
