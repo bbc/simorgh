@@ -8396,10 +8396,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/uzbekistan-53263099'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -8454,6 +8454,86 @@ module.exports = () => ({
           },
         },
         smoke: false,
+      },
+    },
+  },
+  uzbekCyr: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'cyr',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/cyr'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
+      },
+    },
+  },
+  uzbekLat: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'lat',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/lat'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
       },
     },
   },
