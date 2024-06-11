@@ -461,6 +461,22 @@
       "five hours ago": "5 соатлар аввал",
       "exact date": "10 октябр 2018",
       "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
+    },
+    "cyr": {
+      "one minute ago": "1 дақиқа аввал",
+      "five minutes ago": "5 дақиқалар аввал",
+      "one hour ago": "1 cоат аввал",
+      "five hours ago": "5 соатлар аввал",
+      "exact date": "10 октябр 2018",
+      "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
+    },
+    "lat": {
+      "one minute ago": "1 дақиқа аввал",
+      "five minutes ago": "5 дақиқалар аввал",
+      "one hour ago": "1 cоат аввал",
+      "five hours ago": "5 соатлар аввал",
+      "exact date": "10 октябр 2018",
+      "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
     }
   },
   "vietnamese": {
