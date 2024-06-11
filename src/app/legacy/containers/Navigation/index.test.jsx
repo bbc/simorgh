@@ -130,6 +130,10 @@ describe('Navigation Container', () => {
       .spyOn(clickTracking, 'default')
       .mockImplementation();
 
+    beforeEach(() => {
+      clickTrackerSpy.mockRestore();
+    });
+
     it('should call the view tracking hook when on scrollable navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation />, {
@@ -159,26 +163,6 @@ describe('Navigation Container', () => {
     });
 
     it('should call the click tracking hook when scrollable navigation is clicked', () => {
-      clickTrackerSpy.mockRestore();
-
-      const { container } = render(<Navigation />, {
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        id: 'c0000000000o',
-        isAmp: true,
-        pageType: ARTICLE_PAGE,
-        service: 'news',
-        statusCode: 200,
-        pathname: '/news',
-      });
-
-      fireEvent.click(container);
-
-      expect(container.onclick).toBeTruthy();
-    });
-
-    it('should call the click tracking hook when dropdown navigation is clicked', () => {
-      clickTrackerSpy.mockRestore();
-
       const { container } = render(<Navigation />, {
         bbcOrigin: 'https://www.test.bbc.co.uk',
         id: 'c0000000000o',
