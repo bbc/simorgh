@@ -53,7 +53,7 @@ const FileList = ({ files, name }: FileListProps) => {
     });
 
     // Needs translation
-    replaceLiveRegionWith(`Removed ${fileName}`);
+    replaceLiveRegionWith(`Update, removed ${fileName}`);
   };
 
   useEffect(() => {
