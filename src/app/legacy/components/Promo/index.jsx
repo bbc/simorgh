@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
 
@@ -31,9 +31,16 @@ const Promo = ({ children }) => {
     child => child.type === Promo.Image,
     children.filter(Boolean),
   );
+  const promoValue = useMemo(
+    () => ({
+      script,
+      service,
+    }),
+    [script, service],
+  );
   return (
     <Wrapper>
-      <PromoContext.Provider value={{ script, service }}>
+      <PromoContext.Provider value={promoValue}>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>

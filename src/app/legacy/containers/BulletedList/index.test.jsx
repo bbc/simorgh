@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -12,18 +12,22 @@ import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 
-const BulletsWithContext = ({ blocks, blockGroupIndex }) => (
-  <ToggleContextProvider>
-    <ServiceContext.Provider
-      value={{ script: arabic, service: 'arabic', dir: 'rtl' }}
-    >
-      <BulletedListContainer
-        blocks={blocks}
-        blockGroupIndex={blockGroupIndex}
-      />
-    </ServiceContext.Provider>
-  </ToggleContextProvider>
-);
+const BulletsWithContext = ({ blocks, blockGroupIndex }) => {
+  const memoizedToggleContextValue = useMemo(
+    () => ({ script: arabic, service: 'arabic', dir: 'rtl' }),
+    [],
+  );
+  return (
+    <ToggleContextProvider>
+      <ServiceContext.Provider value={memoizedToggleContextValue}>
+        <BulletedListContainer
+          blocks={blocks}
+          blockGroupIndex={blockGroupIndex}
+        />
+      </ServiceContext.Provider>
+    </ToggleContextProvider>
+  );
+};
 
 describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);
