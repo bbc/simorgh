@@ -119,23 +119,26 @@ StyledCurrentLink.defaultProps = {
 export const DropdownLi = ({
   children,
   script,
+  clickTrackerHandler = null,
   currentPageText = null,
   active = false,
   service,
   url,
   dir = 'ltr',
+  viewRef = null,
 }) => {
   const ariaId = `dropdownNavigation-${children
     .replace(/\s+/g, '-')
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem">
+    <StyledDropdownLi role="listitem" ref={viewRef}>
       <StyledDropdownLink
         script={script}
         service={service}
         href={url}
         aria-labelledby={ariaId}
+        onClick={clickTrackerHandler}
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
