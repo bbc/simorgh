@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -15,27 +15,31 @@ const RadioSchedulesWithContext = ({
   radioScheduleToggle = false,
   isAmp = false,
   initialData,
-}) => (
-  <ToggleContext.Provider
-    value={{
+}) => {
+  const toggleContextValue = useMemo(
+    () => ({
       toggleState: getToggleState(radioScheduleToggle),
       toggleDispatch: jest.fn(),
-    }}
-  >
-    <RequestContextProvider
-      isAmp={isAmp}
-      pageType={FRONT_PAGE}
-      service={service}
-      pathname={`/${service}`}
-      timeOnServer={Date.now()}
-    >
-      <ServiceContextProvider service={service}>
-        <BrowserRouter>
-          <RadioScheduleContainer initialData={initialData} />
-        </BrowserRouter>
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContext.Provider>
-);
+    }),
+    [radioScheduleToggle],
+  );
+  return (
+    <ToggleContext.Provider value={toggleContextValue}>
+      <RequestContextProvider
+        isAmp={isAmp}
+        pageType={FRONT_PAGE}
+        service={service}
+        pathname={`/${service}`}
+        timeOnServer={Date.now()}
+      >
+        <ServiceContextProvider service={service}>
+          <BrowserRouter>
+            <RadioScheduleContainer initialData={initialData} />
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContext.Provider>
+  );
+};
 
 export default RadioSchedulesWithContext;

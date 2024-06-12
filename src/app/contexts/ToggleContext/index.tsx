@@ -4,6 +4,7 @@ import React, {
   Dispatch,
   ReducerAction,
   PropsWithChildren,
+  useMemo,
 } from 'react';
 import defaultToggles from '#lib/config/toggles';
 import { Environments, Toggles } from '#app/models/types/global';
@@ -31,8 +32,15 @@ const ToggleContextProvider = ({
 }: PropsWithChildren<ToggleContextProviderProps>) => {
   const [toggleState, toggleDispatch] = useReducer(toggleReducer, toggles);
 
+  const toggleContextValue = useMemo(
+    () => ({
+      toggleState,
+      toggleDispatch,
+    }),
+    [toggleState, toggleDispatch],
+  );
   return (
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
+    <ToggleContext.Provider value={toggleContextValue}>
       {children}
     </ToggleContext.Provider>
   );

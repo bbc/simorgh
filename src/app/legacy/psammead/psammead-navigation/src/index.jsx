@@ -161,14 +161,16 @@ export const NavigationLi = ({
   children: link,
   url,
   script,
+  clickTrackerHandler = null,
   currentPageText = null,
   active = false,
   service,
   dir = 'ltr',
+  viewRef = null,
   ...props
 }) => {
   return (
-    <StyledListItem dir={dir} role="listitem">
+    <StyledListItem dir={dir} role="listitem" ref={viewRef}>
       {active && currentPageText ? (
         <StyledLink
           href={url}
@@ -178,6 +180,7 @@ export const NavigationLi = ({
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           className="focusIndicatorRemove"
+          onClick={clickTrackerHandler}
           {...props}
         >
           <CurrentLink
@@ -194,6 +197,7 @@ export const NavigationLi = ({
           script={script}
           service={service}
           className="focusIndicatorRemove"
+          onClick={clickTrackerHandler}
           {...props}
         >
           {link}

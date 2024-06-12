@@ -37,6 +37,12 @@
       "matchPackagePatterns": ["^@types/ramda"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["^@storybook"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": "storybook minor dependencies",
+      "groupSlug": "storybook-minor"
     }
   ]
 }

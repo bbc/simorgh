@@ -2,6 +2,8 @@
 import React from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
+import LiveRegion from '#app/components/LiveRegion';
 import { useFormContext } from '../FormContext';
 import { Field } from '../types';
 import FormField from '../FormField';
@@ -51,19 +53,22 @@ export default function Form({
       </Heading>
 
       <form onSubmit={handleSubmit} noValidate>
-        {formFields}
+        <LiveRegionContextProvider>
+          {formFields}
 
-        <strong // TODO: need translations for this, it doesn't come through from the api
-          css={styles.privacyHeading}
-        >
-          {translation}
-        </strong>
-        <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: privacyNotice }}
-          css={styles.privacyNotice}
-        />
-        {!submitted ? <Submit /> : <Loader />}
+          <strong // TODO: need translations for this, it doesn't come through from the api
+            css={styles.privacyHeading}
+          >
+            {translation}
+          </strong>
+          <div
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: privacyNotice }}
+            css={styles.privacyNotice}
+          />
+          {!submitted ? <Submit /> : <Loader />}
+          <LiveRegion />
+        </LiveRegionContextProvider>
       </form>
       {submissionError && (
         <div css={styles.submissionError}>

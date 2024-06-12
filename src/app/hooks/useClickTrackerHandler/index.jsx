@@ -40,7 +40,6 @@ const useClickTrackerHandler = (props = {}) => {
         !clicked,
         isValidClick(event),
       ].every(Boolean);
-
       if (shouldRegisterClick) {
         setClicked(true);
 
@@ -53,7 +52,6 @@ const useClickTrackerHandler = (props = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
-
         if (shouldSendEvent) {
           const nextPageUrl = path(['currentTarget', 'href'], event);
 

@@ -3,6 +3,7 @@ import React, {
   useState,
   Dispatch,
   SetStateAction,
+  useMemo,
 } from 'react';
 import { Services, Variants } from '#app/models/types/global';
 import {
@@ -28,13 +29,16 @@ export const UserContextProvider = ({ children }: PropsWithChildren) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());
   const [chartbeatConfig, sendCanonicalChartbeatBeacon] = useState(null);
 
-  const value = {
-    cookiePolicy,
-    sendCanonicalChartbeatBeacon,
-    updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
-    personalisationEnabled: personalisationEnabled(cookiePolicy),
-    setPreferredVariantCookie,
-  };
+  const value = useMemo(
+    () => ({
+      cookiePolicy,
+      sendCanonicalChartbeatBeacon,
+      updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
+      personalisationEnabled: personalisationEnabled(cookiePolicy),
+      setPreferredVariantCookie,
+    }),
+    [cookiePolicy],
+  );
 
   return (
     <UserContext.Provider value={value}>
