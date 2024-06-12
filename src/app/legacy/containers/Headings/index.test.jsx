@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { textBlock } from '#models/blocks';
 import {
   isNull,
@@ -10,11 +10,17 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 
-const HeadingsContainerWithContext = ({ data }) => (
-  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-    <HeadingsContainer {...data} />
-  </ServiceContext.Provider>
-);
+const HeadingsContainerWithContext = ({ data }) => {
+  const memoizedServiceContextValue = useMemo(
+    () => ({ script: latin, service: 'news' }),
+    [],
+  );
+  return (
+    <ServiceContext.Provider value={memoizedServiceContextValue}>
+      <HeadingsContainer {...data} />
+    </ServiceContext.Provider>
+  );
+};
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
