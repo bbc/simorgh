@@ -184,7 +184,7 @@ export default ({
 
   return (
     <>
-      <Label id={id} elementId={labelId}>
+      <Label forId={id} id={labelId}>
         {label}
       </Label>
       <button

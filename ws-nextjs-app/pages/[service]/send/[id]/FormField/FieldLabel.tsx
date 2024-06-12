@@ -7,19 +7,19 @@ import styles from './styles';
 
 export default ({
   id,
-  elementId,
+  forId,
   children,
   className,
 }: PropsWithChildren<{
-  id: InputProps['id'];
-  elementId?: string;
+  id?: InputProps['id'];
+  forId: string;
   className?: string;
 }>) => (
   <Text
     as="label"
-    {...(elementId && { id: elementId })}
+    {...(id && { id })}
     className={className}
-    htmlFor={id}
+    htmlFor={forId}
     css={styles.fieldLabel}
   >
     {children}
