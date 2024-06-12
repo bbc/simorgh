@@ -1,6 +1,5 @@
 import pipe from 'ramda/src/pipe';
 import withContexts from '#containers/PageHandlers/withContexts';
-import withRUM from '#containers/PageHandlers/withRUM';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withError from '#containers/PageHandlers/withError';
 import withData from '#containers/PageHandlers/withData';
@@ -15,7 +14,6 @@ export default ({ addVariantHandling } = defaultValue) =>
     withError,
     withPageWrapper,
     withContexts,
-    withRUM,
     component => {
       if (addVariantHandling) {
         return withVariant(component);

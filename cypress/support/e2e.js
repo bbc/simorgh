@@ -30,6 +30,8 @@ const KNOWN_ERRORS = [
   // Catches an error that is elevated when tests click on some of our Topic Tags that results
   // in a redirect to a page outside of our control throwing this error.
   `Cannot read properties of undefined (reading 'digest')`,
+  `Cannot read properties of undefined (reading 'notUkIp')`,
+  `NGAS load timeout`,
 ];
 
 // eslint-disable-next-line consistent-return
