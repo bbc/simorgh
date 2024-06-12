@@ -80,7 +80,7 @@ export default {
           svg: {
             color: palette.BLACK,
             fill: 'currentcolor',
-            [mq.HIGH_CONTRAST]: { stroke: 'white' }, // test
+            [mq.HIGH_CONTRAST]: { stroke: palette.WHITE },
           },
         },
       },
