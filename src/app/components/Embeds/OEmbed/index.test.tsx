@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -27,10 +27,10 @@ const Component = ({
   props: OEmbedProps;
   isAmp: boolean;
   service?: Services;
-}) => (
-  <RequestContext.Provider
-    value={
-      {
+}) => {
+  const OEmbedValue = useMemo(
+    () =>
+      ({
         id: 'c0000000000o',
         isAmp,
         isApp: false,
@@ -39,14 +39,17 @@ const Component = ({
         service,
         statusCode: 200,
         canonicalLink: 'canonical_link',
-      } as unknown as RequestContextProps
-    }
-  >
-    <ServiceContextProvider service={service}>
-      <OEmbedLoader {...props} />
-    </ServiceContextProvider>
-  </RequestContext.Provider>
-);
+      }) as unknown as RequestContextProps,
+    [isAmp, service],
+  );
+  return (
+    <RequestContext.Provider value={OEmbedValue}>
+      <ServiceContextProvider service={service}>
+        <OEmbedLoader {...props} />
+      </ServiceContextProvider>
+    </RequestContext.Provider>
+  );
+};
 
 describe('OEmbed', () => {
   describe('Canonical', () => {

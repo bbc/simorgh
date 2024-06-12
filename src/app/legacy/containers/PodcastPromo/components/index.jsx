@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
@@ -23,11 +23,17 @@ const Wrapper = styled.section`
   padding: ${GEL_SPACING_DBL};
 `;
 
-const PodcastPromo = ({ script, service, children, ...props }) => (
-  <PodcastContext.Provider value={{ script, service }}>
-    <Wrapper {...props}>{children}</Wrapper>
-  </PodcastContext.Provider>
-);
+const PodcastPromo = ({ script, service, children, ...props }) => {
+  const podcastPromoValue = useMemo(
+    () => ({ script, service }),
+    [script, service],
+  );
+  return (
+    <PodcastContext.Provider value={podcastPromoValue}>
+      <Wrapper {...props}>{children}</Wrapper>
+    </PodcastContext.Provider>
+  );
+};
 
 PodcastPromo.Title = withPodcastContext(Title);
 PodcastPromo.Card = Card;
