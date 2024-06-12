@@ -12,7 +12,6 @@ describe('CanonicalChartbeatAnalytics', () => {
 
   afterEach(jest.clearAllMocks);
 
-  // @ts-expect-error partial data for testing purposes
   const pageAConfig: CanonicalChartbeatConfig = {
     domain: 'test-domain',
     sections: 'section1 section2',

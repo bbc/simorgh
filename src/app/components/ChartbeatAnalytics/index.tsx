@@ -4,6 +4,7 @@ import { UserContext } from '../../contexts/UserContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
+import CanonicalChartbeatBeacon from './canonical';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';
 
@@ -19,11 +20,14 @@ const ChartbeatAnalytics = ({
 }: ChartbeatProps) => {
   const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
-  const { enabled } = useToggle('chartbeatAnalytics');
-  const { env, isAmp, platform, pageType, previousPath, origin } =
+  const { env, isAmp, isLite, platform, pageType, previousPath, origin } =
     useContext(RequestContext);
+
+  const { enabled } = useToggle('chartbeatAnalytics');
+
   const isAmpAndEnabled = isAmp && enabled;
   const isCanonicalAndEnabled = !isAmp && enabled;
+  const isLiteAndEnabled = isLite && enabled;
 
   const configDependencies: GetConfigProps = {
     isAmp,
@@ -47,9 +51,13 @@ const ChartbeatAnalytics = ({
 
   const chartbeatConfig = getConfig(configDependencies);
 
+  if (isLiteAndEnabled) {
+    return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (isCanonicalAndEnabled) {
-      // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
