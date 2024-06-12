@@ -7,6 +7,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import userEvent from '@testing-library/user-event';
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 
 import FileField from '.';
 import {
@@ -138,12 +139,14 @@ describe('File', () => {
     await act(async () => {
       render(
         <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              describedBy="foo"
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
@@ -162,12 +165,14 @@ describe('File', () => {
     await act(async () => {
       render(
         <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              describedBy="foo"
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
