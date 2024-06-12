@@ -4,6 +4,8 @@ import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -17,6 +19,8 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
+  clickTrackerHandler,
+  viewRef,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -31,6 +35,8 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
+        clickTrackerHandler={clickTrackerHandler}
+        viewRef={viewRef}
       >
         {title}
       </Li>
@@ -45,6 +51,26 @@ const NavigationContainer = () => {
 
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, navMenuText } = translations;
+
+  const scrollableNavEventTrackingData = {
+    componentName: `scrollable-navigation`,
+  };
+
+  const dropdownNavEventTrackingData = {
+    componentName: `dropdown-navigation`,
+  };
+
+  const scrollableNavClickTrackerHandler = useClickTrackerHandler(
+    scrollableNavEventTrackingData,
+  );
+
+  const dropdownNavClickTrackerHandler = useClickTrackerHandler(
+    dropdownNavEventTrackingData,
+  );
+
+  const scrollableNavViewRef = useViewTracker(scrollableNavEventTrackingData);
+
+  const dropdownNavViewRef = useViewTracker(dropdownNavEventTrackingData);
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -64,6 +90,8 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
+        scrollableNavClickTrackerHandler,
+        scrollableNavViewRef,
       )}
     </NavigationUl>
   );
@@ -78,6 +106,8 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
+        dropdownNavClickTrackerHandler,
+        dropdownNavViewRef,
       )}
     </DropdownUl>
   );
