@@ -116,8 +116,8 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
   class="bbc-139onq"
   height="351"
   sizes="(min-width: 1008px) 645px, 100vw"
-  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 624w"
   style="aspect-ratio:624 / 351"
   width="624"
 />
