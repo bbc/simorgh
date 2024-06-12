@@ -8,8 +8,8 @@
       "excludePackagePatterns": [
         "^@bbc",
         "^@loadable",
-        "webpack",
-        "^@storybook"
+        "^@storybook",
+        "webpack"
       ],
       "matchUpdateTypes": ["patch"],
       "groupName": "all 3rd party patch dependencies",
