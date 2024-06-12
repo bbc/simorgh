@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
@@ -39,12 +39,16 @@ const EpisodeList = ({
   ulProps = {},
   liProps = {},
 }) => {
+  const episodeListContextValue = useMemo(
+    () => ({ script, service, dir }),
+    [script, service, dir],
+  );
   if (!children.length) return null;
 
   const hasMultipleChildren = children.length > 1;
 
   return (
-    <EpisodeContext.Provider value={{ script, service, dir }}>
+    <EpisodeContext.Provider value={episodeListContextValue}>
       {hasMultipleChildren ? (
         <StyledEpisodeList role="list" {...ulProps}>
           {children.map(child => (
