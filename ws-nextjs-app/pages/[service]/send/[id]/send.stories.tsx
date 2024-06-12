@@ -36,6 +36,9 @@ const Component = ({
 export default {
   title: 'Pages/UGC Page',
   Component,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export const Form = () => (
@@ -47,7 +50,7 @@ export const UploaderForm = () => (
 export const Uploading = () => (
   <Component initialScreen="uploading" fixtureData={mundoFormFixture} />
 );
-  
+
 export const Success = () => (
   <Component initialScreen="success" fixtureData={mundoFormFixture} />
 );
