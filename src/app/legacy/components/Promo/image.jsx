@@ -47,7 +47,7 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 
   // 1 column of 100% screen width - images are 33% of the column
   // const MOBILE_SIZE = `33vw`;
-  const MOBILE_SIZE = useLargeImages ? `90vw` : `33vw`;
+  const MOBILE_SIZE = useLargeImages ? `100vw` : `33vw`;
 
   return [
     isProgrammeImage ? DESKTOP_SIZE_PROGRAMMES : DESKTOP_SIZE,
