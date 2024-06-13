@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { v4 as uuid } from 'uuid';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -63,21 +63,30 @@ const blocksWithInline = [
   inlinePersianBlock,
 ];
 
-const ParagraphContainerWithContext = blocks => (
-  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-    <ParagraphContainer blocks={blocks} />
-  </ServiceContext.Provider>
-);
+const ParagraphContainerWithContext = ({ blocks }) => {
+  const memoizedServiceContextValue = useMemo(
+    () => ({ script: latin, service: 'news' }),
+    [],
+  );
+
+  return (
+    <ServiceContext.Provider value={memoizedServiceContextValue}>
+      <ParagraphContainer blocks={blocks} />
+    </ServiceContext.Provider>
+  );
+};
 
 describe('ParagraphContainer', () => {
   it('should render correctly', () => {
-    const { container } = render(ParagraphContainerWithContext(blocksMock));
+    const { container } = render(
+      <ParagraphContainerWithContext blocks={blocksMock} />,
+    );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with inline block', () => {
     const { container } = render(
-      ParagraphContainerWithContext(blocksWithInline),
+      <ParagraphContainerWithContext blocks={blocksWithInline} />,
     );
     expect(container).toMatchSnapshot();
   });

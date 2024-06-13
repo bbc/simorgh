@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   render,
   screen,
@@ -6,11 +6,19 @@ import {
 import PromoContext from '../PromoContext';
 import PromoLink from '.';
 
-const LinkFixture = ({ to }) => (
-  <PromoContext.Provider value={{ to }}>
-    <PromoLink>Test Link</PromoLink>
-  </PromoContext.Provider>
-);
+const LinkFixture = ({ to }) => {
+  const PromoContextValue = useMemo(
+    () => ({
+      to,
+    }),
+    [to],
+  );
+  return (
+    <PromoContext.Provider value={PromoContextValue}>
+      <PromoLink>Test Link</PromoLink>
+    </PromoContext.Provider>
+  );
+};
 
 describe('Promo - Link', () => {
   it('should render the link element with a relative href URL when given an absolute URL', () => {

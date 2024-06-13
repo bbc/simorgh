@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -20,33 +20,37 @@ const ContextWrap = ({
   personalisation = defaultPersonalisation,
   service,
   pathname,
-}) => (
-  <RequestContextProvider
-    isAmp={platform === 'amp'}
-    pageType={pageType}
-    service={service}
-    statusCode={200}
-    bbcOrigin={origin}
-    pathname={pathname}
-  >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContext.Provider
-        value={{
-          toggleState: {
-            nielsenAnalytics: {
-              enabled: nielsenAnalyticsToggle,
-            },
-          },
-          toggleDispatch: mockToggleDispatch,
-        }}
-      >
-        <UserContext.Provider value={personalisation}>
-          {children}
-        </UserContext.Provider>
-      </ToggleContext.Provider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+}) => {
+  const memoizedRequestContextValue = useMemo(
+    () => ({
+      toggleState: {
+        nielsenAnalytics: {
+          enabled: nielsenAnalyticsToggle,
+        },
+      },
+      toggleDispatch: mockToggleDispatch,
+    }),
+    [nielsenAnalyticsToggle],
+  );
+  return (
+    <RequestContextProvider
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      service={service}
+      statusCode={200}
+      bbcOrigin={origin}
+      pathname={pathname}
+    >
+      <ServiceContextProvider service="pidgin">
+        <ToggleContext.Provider value={memoizedRequestContextValue}>
+          <UserContext.Provider value={personalisation}>
+            {children}
+          </UserContext.Provider>
+        </ToggleContext.Provider>
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  );
+};
 
 describe('Nielsen Analytics Container', () => {
   describe('AMP', () => {

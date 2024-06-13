@@ -17,9 +17,7 @@ export default ({
 
   return (
     <>
-      <Label required={required} id={id}>
-        {label}
-      </Label>
+      <Label required={required} forId={id}>{label}</Label>
       <div>
         <input
           id={id}
