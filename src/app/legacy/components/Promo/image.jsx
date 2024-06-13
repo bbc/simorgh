@@ -20,7 +20,7 @@ const ChildWrapper = styled.div`
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
 const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450, 660];
+  const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
   const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672];
 
   const resolutions = isProgrammeImage
@@ -35,18 +35,19 @@ const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
 const createSizes = (useLargeImages, isProgrammeImage) => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages
-    ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 660px`
+    ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
     : `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 232px`;
 
   const DESKTOP_SIZE_PROGRAMMES = useLargeImages
-    ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 672px`
+    ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
     : `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 240px`;
 
   // 2 columns of 50% screen width - images are 100% of the column
   const TABLET_SIZE = `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
 
   // 1 column of 100% screen width - images are 33% of the column
-  const MOBILE_SIZE = `33vw`;
+  // const MOBILE_SIZE = `33vw`;
+  const MOBILE_SIZE = useLargeImages ? `90vw` : `33vw`;
 
   return [
     isProgrammeImage ? DESKTOP_SIZE_PROGRAMMES : DESKTOP_SIZE,
