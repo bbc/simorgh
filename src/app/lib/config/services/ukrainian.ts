@@ -345,7 +345,7 @@ const baseServiceConfig = {
     },
     {
       title: 'Книга року BBC',
-      url: '/ukrainian/features-50320117',
+      url: '/ukrainian/topics/cqwrq3rkdrnt',
     },
     {
       title: 'Подкасти',
