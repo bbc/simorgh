@@ -211,6 +211,43 @@ describe('FormField', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render a required input with an associated label', async () => {
+    const mockFormState = {
+      testAllyID: {
+        isValid: true,
+        required: true,
+        value: '',
+        htmlType: 'text',
+        messageCode: null,
+        wasInvalid: false,
+      },
+    };
+
+    jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+      () =>
+        ({
+          formState: mockFormState,
+          handleChange: () => null,
+          hasAttemptedSubmit: true,
+        }) as unknown as ContextProps,
+    );
+
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testAllyID',
+            htmlType: 'text',
+            label: 'This is a required text field',
+          }}
+          fields={[]}
+        />,
+      );
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
   it.each([
     {
       hasAttemptedSubmit: true,

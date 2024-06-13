@@ -52,15 +52,12 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
 
 .emotion-2:checked::after {
   content: "";
-  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.65 98.87'%3E%3Cpath d='M96.64 0L46.11 60.23 17.63 36.34 0 57.35l28.47 23.89 21.01 17.63 17.63-21.01 50.54-60.22L96.64 0z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.65 98.87'%3E%3Cpath d='M96.64 0L46.11 60.23 17.63 36.34 0 57.35l28.47 23.89 21.01 17.63 17.63-21.01 50.54-60.22L96.64 0z'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: 50%;
-  mask-position: 50%;
-  -webkit-mask-size: 0.889rem;
-  mask-size: 0.889rem;
-  background-color: currentcolor;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.65 98.87'%3E%3Cpath d='M96.64 0L46.11 60.23 17.63 36.34 0 57.35l28.47 23.89 21.01 17.63 17.63-21.01 50.54-60.22L96.64 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  -webkit-background-position: 50%;
+  background-position: 50%;
+  -webkit-background-size: 0.889rem;
+  background-size: 0.889rem;
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -121,8 +118,107 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
         class="emotion-3"
         for="testCheckboxID"
       >
-        This is a text field
+        This is a text field (optional)
       </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormField should render a required input with an associated label 1`] = `
+.emotion-0 {
+  margin-top: 1rem;
+}
+
+.emotion-0:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.375rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2 {
+  border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      for="testAllyID"
+    >
+      This is a required text field
+    </label>
+    <div>
+      <input
+        class="emotion-2"
+        id="testAllyID"
+        name="testAllyID"
+        type="text"
+        value=""
+      />
     </div>
   </div>
 </div>
@@ -212,7 +308,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
       class="emotion-1"
       for="testTelID"
     >
-      This is a text field
+      This is a text field (optional)
     </label>
     <div>
       <input
@@ -312,7 +408,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
       class="emotion-1"
       for="testTextID"
     >
-      This is a text field
+      This is a text field (optional)
     </label>
     <div>
       <input
@@ -413,7 +509,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
       class="emotion-1"
       for="testTextAreaID"
     >
-      This is a text field
+      This is a text field (optional)
     </label>
     <textarea
       aria-invalid="false"
@@ -510,7 +606,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
       class="emotion-1"
       for="testEmailID"
     >
-      This is a text field
+      This is a text field (optional)
     </label>
     <div>
       <input
