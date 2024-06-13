@@ -17,7 +17,7 @@ export default ({
 
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label forId={id}>{label}</Label>
       <div>
         <input
           css={[styles.textField, styles.focusIndicator]}

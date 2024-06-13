@@ -28,7 +28,7 @@ export default ({
 
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label forId={id}>{label}</Label>
       {hasWordLimit && (
         <Paragraph
           css={{ marginBottom: `${pixelsToRem(6)}rem` }}

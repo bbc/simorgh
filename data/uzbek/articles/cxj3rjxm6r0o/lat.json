@@ -1,0 +1,201 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
+          "contentType": "article",
+          "language": "uz-cyrl",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?",
+          "timePublished": "2019-07-12T14:34:24.846Z",
+          "timeUpdated": "2019-07-12T14:34:24.846Z"
+        },
+        "id": "urn:bbc:ares::article:cxj3rjxm6r0o",
+        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cxj3rjxm6r0o" },
+        "type": "article",
+        "createdBy": "Uzbek",
+        "language": "uz-cyrl",
+        "firstPublished": 1562942064846,
+        "lastPublished": 1562942064846,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
+          "producer": "Uzbek",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "uz-cyrl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "f21457fa",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9d6aed19",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8fdb1194",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "I'm the title of a latin article",
+                            "blocks": [
+                              {
+                                "id": "4581b035",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "I'm the title of a latin article",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "9c1c4f39",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562942064846,
+                "lastPublished": 1562942064846
+              },
+              "position": [2]
+            },
+            {
+              "id": "2b61e418",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8d8b8ca5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
+                      "blocks": [
+                        {
+                          "id": "e8229a2d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "5f002291",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
+                      "blocks": [
+                        {
+                          "id": "5e4b50a0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
+                            "attributes": []
+                          },
+                          "position": [3, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  },
+                  {
+                    "id": "588309d5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
+                      "blocks": [
+                        {
+                          "id": "781bcf0f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
+                            "attributes": []
+                          },
+                          "position": [3, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 3]
+                  },
+                  {
+                    "id": "3657b00c",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
+                      "blocks": [
+                        {
+                          "id": "97275718",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
+                            "attributes": []
+                          },
+                          "position": [3, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 4]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            { "id": "da08dce4", "type": "mpu", "model": {}, "position": [4] },
+            {
+              "id": "adf85c79",
+              "type": "wsoj",
+              "model": { "type": "recommendations" },
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?"
+        },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

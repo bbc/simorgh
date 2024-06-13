@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#app/components/LiveLabel';
@@ -22,11 +22,20 @@ const Promo = ({
 }) => {
   const { service } = useContext(ServiceContext);
 
+  const promoContextValue = useMemo(
+    () => ({
+      service,
+      to,
+      ariaLabelledBy,
+      eventTrackingData,
+      mediaType,
+    }),
+    [service, to, ariaLabelledBy, eventTrackingData, mediaType],
+  );
+
   return (
     <PromoWrapper {...(className && { className })}>
-      <PromoContext.Provider
-        value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
-      >
+      <PromoContext.Provider value={promoContextValue}>
         {children}
       </PromoContext.Provider>
     </PromoWrapper>
