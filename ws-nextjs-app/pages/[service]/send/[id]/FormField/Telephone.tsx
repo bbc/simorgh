@@ -14,9 +14,10 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState ?? {};
+
   return (
     <>
-      <Label forId={id}>{label}</Label>
+      <Label required={required} forId={id}>{label}</Label>
       <div>
         <input
           id={id}
