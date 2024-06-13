@@ -1,12 +1,16 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
-  "executionTimeout": 30,
+  "skipInstalls": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
+      "excludePackagePatterns": [
+        "^@bbc",
+        "^@loadable",
+        "^@storybook",
+        "webpack"
+      ],
       "matchUpdateTypes": ["patch"],
       "groupName": "all 3rd party patch dependencies",
       "groupSlug": "all-patch"
@@ -38,6 +42,12 @@
       "matchPackagePatterns": ["^@types/ramda"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["^@storybook"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": "storybook minor dependencies",
+      "groupSlug": "storybook-minor"
     }
   ]
 }
