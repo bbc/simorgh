@@ -50,7 +50,7 @@ describe('Promo component - Image', () => {
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(
       'sizes',
-      `(min-width: 63rem) 800px, (min-width: 37.5rem) 50vw, 33vw`,
+      `(min-width: 63rem) 800px, (min-width: 37.5rem) 50vw, 100vw`,
     );
   });
 
