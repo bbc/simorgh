@@ -21,7 +21,7 @@ const ChildWrapper = styled.div`
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
 const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
   const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
-  const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672];
+  const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672, 800];
 
   const resolutions = isProgrammeImage
     ? imageResolutionsProgrammes
