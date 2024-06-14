@@ -52,6 +52,7 @@ export default {
   textArea: () =>
     css({
       resize: 'none',
+      display: 'block',
     }),
   checkboxLabel: ({ spacings }: Theme) =>
     css({
@@ -82,7 +83,7 @@ export default {
         height: '100%',
       },
     }),
-  errorText: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
+  errorText: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
     }),

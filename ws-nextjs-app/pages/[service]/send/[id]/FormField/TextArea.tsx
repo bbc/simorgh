@@ -41,7 +41,6 @@ export default ({
           {translation}
         </Paragraph>
       )}
-
       <textarea
         id={id}
         css={[styles.textField, styles.textArea, styles.focusIndicator]}
