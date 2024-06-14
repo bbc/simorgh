@@ -112,5 +112,6 @@ export default {
       width: `${spacings.DOUBLE}rem`,
       height: '0.75rem',
       marginInlineStart: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.FULL}rem`,
     }),
 };

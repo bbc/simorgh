@@ -479,6 +479,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   resize: none;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
