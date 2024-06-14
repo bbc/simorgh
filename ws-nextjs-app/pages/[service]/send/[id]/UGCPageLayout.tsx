@@ -10,19 +10,22 @@ import Form from './Form';
 import SuccessMessage from './SuccessMessage';
 import GenericMessage from './GenericMessage';
 
+const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
+const NO_JS_MESSAGE =
+  'To load this page, please enable JavaScript, or try a different browser';
+
+const UPLOADING_HEADING = 'Uploading';
+const UPLOADING_MESSAGE = 'Please wait until it is finished.';
+
+const ERROR_HEADING = 'Sorry, your message could not be sent.';
+const ERROR_MESSAGE = 'Please try again later.';
+
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
-
-  const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
-  const NO_JS_MESSAGE =
-    'To load this page, please enable JavaScript, or try a different browser';
-
-  const UPLOADING_HEADING = 'Uploading';
-  const UPLOADING_MESSAGE = 'Please wait until it is finished.';
 
   return (
     <>
@@ -70,7 +73,11 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                         return <SuccessMessage />;
                       case 'error':
                       default:
-                        return <div>Error</div>;
+                        return (
+                          <GenericMessage heading={ERROR_HEADING}>
+                            {ERROR_MESSAGE}
+                          </GenericMessage>
+                        );
                     }
                   }}
                 </FormContext.Consumer>
