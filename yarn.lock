@@ -5888,16 +5888,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.6.11":
-  version: 2.6.11
-  resolution: "@types/node-fetch@npm:2.6.11"
-  dependencies:
-    "@types/node": "npm:*"
-    form-data: "npm:^4.0.0"
-  checksum: 10/c416df8f182ec3826278ea42557fda08f169a48a05e60722d9c8edd4e5b2076ae281c6b6601ad406035b7201f885b0257983b61c26b3f9eb0f41192a807b5de5
-  languageName: node
-  linkType: hard
-
 "@types/node-forge@npm:^1.3.0":
   version: 1.3.11
   resolution: "@types/node-forge@npm:1.3.11"
@@ -17031,7 +17021,6 @@ __metadata:
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:^21.0.0"
     "@types/loadable__component": "npm:5.13.9"
-    "@types/node-fetch": "npm:^2.6.11"
     "@types/ramda": "npm:0.28.15"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -17124,7 +17113,7 @@ __metadata:
     ts-jest: "npm:29.1.4"
     ts-loader: "npm:9.5.1"
     typescript: "npm:5.4.5"
-    undici: "npm:6.18.2"
+    undici: "npm:6.19.0"
     url-parse: "npm:1.5.10"
     uuid: "npm:8.3.2"
     wait-on: "npm:7.2.0"
@@ -18465,10 +18454,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.18.2":
-  version: 6.18.2
-  resolution: "undici@npm:6.18.2"
-  checksum: 10/27c66d84d02c2e4375ad30fae081fa1f4c4158e0880f51bb5ea7b4a6fc0a6582fa68084d45c6cae3cb56a754607191a973621a15d271111cee790bf0925db00b
+"undici@npm:6.19.0":
+  version: 6.19.0
+  resolution: "undici@npm:6.19.0"
+  checksum: 10/d5dd89a67b38a89bd9779e46f4ccd0722d074ba0f369e35b01c4a789d91933da4cb7deb3e0a06aeabea4a5c2c46de947dc8fda579742c92245d789a6a7667145
   languageName: node
   linkType: hard
 
