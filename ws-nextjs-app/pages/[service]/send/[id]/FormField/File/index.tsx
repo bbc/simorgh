@@ -184,7 +184,7 @@ export default ({
 
   return (
     <>
-      <Label required={required} forId={id} id={labelId}>
+      <Label required={required} forId={id} id={labelId} useErrorTheme={false}>
         {label}
       </Label>
       <button
