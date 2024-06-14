@@ -14,14 +14,17 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = '', required, wasInvalid } = inputState ?? {};
+  const useErrorTheme = hasAttemptedSubmit && !isValid;
 
   return (
     <>
-      <Label required={required} forId={id}>{label}</Label>
+      <Label required={required} forId={id} useErrorTheme={useErrorTheme}>
+        {label}
+      </Label>
       <div>
         <input
           id={id}
-          css={[styles.textField, styles.focusIndicator]}
+          css={[styles.textField(useErrorTheme), styles.focusIndicator]}
           name={name}
           type="tel"
           value={value as string}

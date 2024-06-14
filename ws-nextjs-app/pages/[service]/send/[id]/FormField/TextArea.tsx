@@ -25,10 +25,11 @@ export default ({
   const hasWordLimit = !!wordLimit;
   const translation = `Maximum ${wordLimit} Words`; // hardcoded
   const describedByWordLimit = `${id}-wordLimit`;
+  const useErrorTheme = hasAttemptedSubmit && !isValid;
 
   return (
     <>
-      <Label forId={id} required={required}>
+      <Label forId={id} required={required} useErrorTheme={useErrorTheme}>
         {label}
       </Label>
       {hasWordLimit && (
@@ -43,7 +44,11 @@ export default ({
       )}
       <textarea
         id={id}
-        css={[styles.textField, styles.textArea, styles.focusIndicator]}
+        css={[
+          styles.textField(useErrorTheme),
+          styles.textArea,
+          styles.focusIndicator,
+        ]}
         name={name}
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}

@@ -14,11 +14,12 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const { isValid, value = false, required, wasInvalid } = inputState ?? {};
+  const useErrorTheme = hasAttemptedSubmit && !isValid;
 
   return (
     <div css={[styles.checkboxContainer]}>
       <input
-        css={[styles.checkbox, styles.focusIndicator]}
+        css={[styles.checkbox(useErrorTheme), styles.focusIndicator]}
         id={id}
         name={name}
         type="checkbox"
@@ -31,7 +32,12 @@ export default ({
         })}
         {...(required && !isValid && { 'aria-required': required })}
       />
-      <Label required={required} forId={id} css={[styles.checkboxLabel]}>
+      <Label
+        required={required}
+        forId={id}
+        css={[styles.checkboxLabel]}
+        useErrorTheme={useErrorTheme}
+      >
         {label}
       </Label>
     </div>
