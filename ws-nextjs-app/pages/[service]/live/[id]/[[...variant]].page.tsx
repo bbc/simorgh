@@ -1,15 +1,10 @@
 import { GetServerSideProps } from 'next';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isAppPath from '#app/routes/utils/isAppPath';
 
-import { ROUTING_INFORMATION, BFF_FETCH_ERROR } from '#app/lib/logger.const';
-import { FetchError } from '#models/types/fetch';
-
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import getAgent from '#server/utilities/getAgent';
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
@@ -19,57 +14,9 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
+import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
-
-const getPageData = async ({
-  id,
-  page,
-  service,
-  variant,
-  rendererEnv,
-  resolvedUrl,
-}: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  let message;
-  let status;
-  let json;
-
-  try {
-    ({ status, json } = await fetchDataFromBFF({
-      pathname,
-      pageType: LIVE_PAGE,
-      service,
-      variant,
-      page,
-      getAgent,
-    }));
-  } catch (error: unknown) {
-    ({ message, status } = error as FetchError);
-
-    sendCustomMetric({
-      metricName: NON_200_RESPONSE,
-      statusCode: status,
-      pageType: LIVE_PAGE,
-      requestUrl: resolvedUrl,
-    });
-
-    logger.error(BFF_FETCH_ERROR, {
-      service,
-      status,
-      pathname,
-      message,
-    });
-  }
-
-  const data = json
-    ? { pageData: json.data, status }
-    : { error: message, status };
-
-  const toggles = await getToggles(service);
-
-  return { data, toggles };
-};
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -130,6 +77,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     rendererEnv,
     resolvedUrl: context.resolvedUrl,
+    pageType: LIVE_PAGE,
   });
 
   let routingInfoLogger = logger.debug;
@@ -144,6 +92,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   });
 
   context.res.statusCode = data.status;
+
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
