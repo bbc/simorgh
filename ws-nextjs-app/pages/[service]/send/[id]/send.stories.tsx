@@ -44,7 +44,7 @@ export default {
 export const Form = () => (
   <Component initialScreen="form" fixtureData={mundoFormFixture} />
 );
-export const UploaderForm = () => (
+export const WithFileUpload = () => (
   <Component initialScreen="form" fixtureData={somaliFormFixture} />
 );
 export const Uploading = () => (
