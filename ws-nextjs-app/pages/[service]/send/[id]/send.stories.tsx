@@ -50,7 +50,9 @@ export const UploaderForm = () => (
 export const Uploading = () => (
   <Component initialScreen="uploading" fixtureData={mundoFormFixture} />
 );
-
 export const Success = () => (
   <Component initialScreen="success" fixtureData={mundoFormFixture} />
+);
+export const Error = () => (
+  <Component initialScreen="error" fixtureData={mundoFormFixture} />
 );
