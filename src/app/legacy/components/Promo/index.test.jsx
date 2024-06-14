@@ -50,7 +50,7 @@ describe('Promo component - Image', () => {
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(
       'sizes',
-      `(min-width: 63rem) 800px, (min-width: 37.5rem) 50vw, 100vw`,
+      `(min-width: 63rem) 800px, (min-width: 37.5rem) 66vw, 100vw`,
     );
   });
 
@@ -60,7 +60,7 @@ describe('Promo component - Image', () => {
     const image = screen.getByAltText('Test image alt text');
     const srcSet = image.getAttribute('srcSet');
 
-    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672];
+    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672, 800];
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
     });

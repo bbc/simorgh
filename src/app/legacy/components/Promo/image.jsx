@@ -46,7 +46,7 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
   // const TABLET_SIZE = `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
   const TABLET_SIZE = useLargeImages
     ? `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 66vw`
-    : `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 33vw`;
+    : `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
 
   // 1 column of 100% screen width - images are 33% of the column
   // const MOBILE_SIZE = `33vw`;
