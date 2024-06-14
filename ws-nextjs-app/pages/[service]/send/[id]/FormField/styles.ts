@@ -82,4 +82,34 @@ export default {
         height: '100%',
       },
     }),
+  errorText: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
+    css({
+      color: palette.WHITE,
+    }),
+  errorSvg: ({ mq, palette }: Theme) =>
+    css({
+      fill: palette.WHITE,
+      verticalAlign: 'middle',
+      marginInlineEnd: '0.75rem',
+      [mq.HIGH_CONTRAST]: {
+        path: {
+          fill: 'currentColor',
+        },
+      },
+    }),
+  errorMessageBox: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.ERROR_CORE,
+      padding: '0.75rem',
+      display: 'flex',
+      alignItems: 'center',
+    }),
+  errorArrow: ({ palette, spacings }: Theme) =>
+    css({
+      backgroundColor: palette.ERROR_CORE,
+      clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
+      width: `${spacings.DOUBLE}rem`,
+      height: '0.75rem',
+      marginInlineStart: `${spacings.DOUBLE}rem`,
+    }),
 };

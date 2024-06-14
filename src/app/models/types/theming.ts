@@ -21,6 +21,7 @@ interface Palette extends BrandPalette {
   DARK_SALTIRE: string;
   DIM_GREY: string;
   EBON: string;
+  ERROR_CORE: string;
   GHOST: string;
   GREY_10: string;
   GREY_11: string;

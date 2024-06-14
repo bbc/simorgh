@@ -28,7 +28,9 @@ export default ({
 
   return (
     <>
-      <Label forId={id} required={required}>{label}</Label>
+      <Label forId={id} required={required}>
+        {label}
+      </Label>
       {hasWordLimit && (
         <Paragraph
           css={{ marginBottom: `${pixelsToRem(6)}rem` }}
@@ -39,6 +41,7 @@ export default ({
           {translation}
         </Paragraph>
       )}
+
       <textarea
         id={id}
         css={[styles.textField, styles.textArea, styles.focusIndicator]}
