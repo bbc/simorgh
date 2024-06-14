@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import { Helmet } from 'react-helmet';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
@@ -62,12 +63,24 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                         );
                       case 'uploading':
                         return (
-                          <GenericMessage heading={UPLOADING_HEADING}>
-                            {UPLOADING_MESSAGE}
-                          </GenericMessage>
+                          <>
+                            <Helmet>
+                              <title>Uploading - {title}</title>
+                            </Helmet>
+                            <GenericMessage heading={UPLOADING_HEADING}>
+                              {UPLOADING_MESSAGE}
+                            </GenericMessage>
+                          </>
                         );
                       case 'success':
-                        return <SuccessMessage />;
+                        return (
+                          <>
+                            <Helmet>
+                              <title>Success - {title}</title>
+                            </Helmet>
+                            <SuccessMessage />
+                          </>
+                        );
                       case 'error':
                       default:
                         return <div>Error</div>;

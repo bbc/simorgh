@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { Helmet } from 'react-helmet';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import styles from './styles';
+import Loader from '../Loader';
 
 interface Props {
   heading: string;
@@ -13,9 +13,6 @@ interface Props {
 const GenericMessage = ({ heading, children }: Props) => {
   return (
     <>
-      <Helmet>
-        <title>{heading}</title>
-      </Helmet>
       <Heading
         level={1}
         id="content"
@@ -26,6 +23,8 @@ const GenericMessage = ({ heading, children }: Props) => {
         {heading}
       </Heading>
       <Paragraph>{children}</Paragraph>
+      {/* Temporary import of Loader */}
+      <Loader />
     </>
   );
 };

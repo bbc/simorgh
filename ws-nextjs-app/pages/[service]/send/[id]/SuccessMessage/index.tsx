@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { Helmet } from 'react-helmet';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
@@ -60,60 +59,55 @@ const SuccessMessage = () => {
   const emailGuidelineClauses = emailToHtml.split('{{emailLink}}');
 
   return (
-    <>
-      <Helmet>
-        <title>Success</title>
-      </Helmet>
-      <div css={styles.outerContainer}>
-        <div css={styles.messageContainer}>
-          <TickSvg css={styles.tickIcon} />
-          <div css={styles.messageTextContainer}>
-            <div>
-              <Heading
-                level={1}
-                id="content"
-                tabIndex={-1}
-                size="trafalgar"
-                css={styles.heading}
-              >
-                {confirmationStepTitle}
-              </Heading>
-              <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
-            </div>
-          </div>
-        </div>
-        <div css={styles.descriptionContainer}>
-          <Paragraph>{submissionInfoSignedOutMessage}</Paragraph>
+    <div css={styles.outerContainer}>
+      <div css={styles.messageContainer}>
+        <TickSvg css={styles.tickIcon} />
+        <div css={styles.messageTextContainer}>
           <div>
-            <Text as="strong" fontVariant="sansBold">
-              {referenceNumber}
-            </Text>
-            <Paragraph>{submissionID}</Paragraph>
+            <Heading
+              level={1}
+              id="content"
+              tabIndex={-1}
+              size="trafalgar"
+              css={styles.heading}
+            >
+              {confirmationStepTitle}
+            </Heading>
+            <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
           </div>
-          <Paragraph>{retentionPolicy}</Paragraph>
-          <Paragraph>
-            {emailGuidelineClauses?.[0]}
-            <a
-              href={`mailto:${DEFAULT_EMAIL}`}
-              className="focusIndicatorReducedWidth"
-            >
-              {DEFAULT_EMAIL}
-            </a>
-            {emailGuidelineClauses?.[1]} {removalGuidelineText}
-          </Paragraph>
-          <Paragraph>
-            {privacyClauses?.[0]}
-            <a
-              href={privacyPolicyLinkHref}
-              className="focusIndicatorReducedWidth"
-            >
-              {privacyPolicyLinkText}
-            </a>
-            {privacyClauses?.[1]}
-          </Paragraph>
         </div>
       </div>
-    </>
+      <div css={styles.descriptionContainer}>
+        <Paragraph>{submissionInfoSignedOutMessage}</Paragraph>
+        <div>
+          <Text as="strong" fontVariant="sansBold">
+            {referenceNumber}
+          </Text>
+          <Paragraph>{submissionID}</Paragraph>
+        </div>
+        <Paragraph>{retentionPolicy}</Paragraph>
+        <Paragraph>
+          {emailGuidelineClauses?.[0]}
+          <a
+            href={`mailto:${DEFAULT_EMAIL}`}
+            className="focusIndicatorReducedWidth"
+          >
+            {DEFAULT_EMAIL}
+          </a>
+          {emailGuidelineClauses?.[1]} {removalGuidelineText}
+        </Paragraph>
+        <Paragraph>
+          {privacyClauses?.[0]}
+          <a
+            href={privacyPolicyLinkHref}
+            className="focusIndicatorReducedWidth"
+          >
+            {privacyPolicyLinkText}
+          </a>
+          {privacyClauses?.[1]}
+        </Paragraph>
+      </div>
+    </div>
   );
 };
 
