@@ -276,6 +276,10 @@ export const service: DefaultServiceConfig = {
           'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
         removalGuidelineText:
           'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
+        validationFilesNotEnough:
+          "There aren't enough files. Please add at least {{minFiles}}.",
+        validationFilesTooMany:
+          'There are too many files. You can add {{maxFiles}}.',
       },
     },
     mostRead: {

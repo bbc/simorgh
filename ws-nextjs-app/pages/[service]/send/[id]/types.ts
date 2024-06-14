@@ -7,6 +7,8 @@ export enum InvalidMessageCodes {
   FieldRequired = 'validationRequired',
   WrongEmailFormat = 'validationInvalidEmail',
   WrongTelFormat = 'validationInvalidTelephone',
+  NotEnoughFiles = 'validationFilesNotEnough',
+  TooManyFiles = 'validationFilesTooMany',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
@@ -65,30 +67,31 @@ export type HtmlType =
   | 'file'
   | '';
 
+export type ValidationConditions = {
+  min?: number;
+  max?: number;
+  fileTypes?: string[];
+  mandatory?: boolean;
+  wordLimit?: number;
+};
+
 export type Field = {
   id: string;
   type: string;
-  validation: {
-    min?: number;
-    max?: number;
-    fileTypes?: string[];
-    mandatory?: boolean;
-    wordLimit?: number;
-  };
+  validation: ValidationConditions;
   htmlType: HtmlType;
   label: string;
   description: string;
   textArea?: boolean;
 };
 
-export type FieldData = {
+export type FieldData = ValidationConditions & {
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
   wasInvalid: boolean;
-  wordLimit?: number;
 };
 
 export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
