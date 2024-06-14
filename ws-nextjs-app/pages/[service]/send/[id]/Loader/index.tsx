@@ -8,7 +8,7 @@ const Loader = () => {
   return (
     <>
       <p>{progress}</p>
-      <div css={styles.loader}>
+      {/* <div css={styles.loader}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
           <path
             d="M218.52,37.5,196.6,59.42A97,97,0,1,1,128,31l2,0,.63-31c-.87,0-1.74,0-2.61,0a128,128,0,1,0,90.52,37.5Z"
@@ -19,7 +19,7 @@ const Loader = () => {
             fill="#fff"
           />
         </svg>
-      </div>
+      </div> */}
     </>
   );
 };

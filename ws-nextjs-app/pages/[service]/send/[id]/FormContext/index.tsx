@@ -145,15 +145,21 @@ export const FormContextProvider = ({
       req.responseType = 'json';
       req.open('POST', url, true);
 
+      req.upload.onloadstart = e => {
+        _setScreen('uploading');
+      };
+
       req.upload.onprogress = e => {
         setProgress(((e.loaded / e.total) * 100).toFixed(0));
       };
-
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status === OK) {
             setSubmissionID(req.response.submissionId);
+            setTimeout(() => {
+              _setScreen('success');
+            }, 3000); // what about if it errors/ timeouts?
           }
           if (req.status !== OK) {
             const { message, code, status, isRecoverable } = new UGCSendError(
@@ -173,7 +179,6 @@ export const FormContextProvider = ({
           }
         }
       };
-
       req.send(formData);
     } catch (error) {
       const { message, status } = error as UGCSendError;
