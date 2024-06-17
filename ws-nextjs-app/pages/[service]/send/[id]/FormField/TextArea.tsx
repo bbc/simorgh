@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
@@ -34,7 +33,7 @@ export default ({
       </Label>
       {hasWordLimit && (
         <Paragraph
-          css={{ marginBottom: `${pixelsToRem(6)}rem` }}
+          css={styles.maxWordLabel(useErrorTheme)}
           fontVariant="sansRegular"
           size="brevier"
           id={describedByWordLimit}
