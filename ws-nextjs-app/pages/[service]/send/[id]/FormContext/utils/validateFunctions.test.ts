@@ -151,21 +151,25 @@ describe('validateFunctions', () => {
     },
     {
       inputRequired: true,
-      inputValue: ['foo'],
+      inputValue: [{ name: 'hello', type: 'image/jpeg' }],
       expectedValid: true,
       expectedMessageCode: null,
       testMessage: 'File uploaded and at least 1 file is required.',
     },
     {
       inputRequired: false,
-      inputValue: ['foo'],
+      inputValue: [{ name: 'hello', type: 'image/jpeg' }],
       expectedValid: true,
       expectedMessageCode: null,
       testMessage: 'File uploaded, but not required.',
     },
     {
       inputRequired: true,
-      inputValue: ['hello', 'goodbye', 'foo'],
+      inputValue: [
+        { name: 'hello', type: 'image/jpeg' },
+        { name: 'hello', type: 'image/jpeg' },
+        { name: 'hello', type: 'image/jpeg' },
+      ],
       expectedValid: false,
       maxFileCount: 2,
       expectedMessageCode: InvalidMessageCodes.TooManyFiles,
@@ -188,15 +192,69 @@ describe('validateFunctions', () => {
           max: maxFileCount,
           isValid: false,
           required: inputRequired,
-          value: inputValue.map(val => ({
-            file: val,
+          value: inputValue.map(fileData => ({
+            file: fileData,
           })),
-          type: 'phone',
+          fileTypes: ['image/jpeg'],
+          type: 'file',
         } as unknown as FieldData;
 
         const result = validateFunctions.file(textData);
         expect(result.isValid).toBe(expectedInvalid);
         expect(result.messageCode).toBe(expectedMessageCode);
+      });
+    },
+  );
+
+  describe.each([
+    {
+      inputRequired: true,
+      inputValue: [{ file: { name: 'hello', type: 'application/pdf' } }],
+      expectedValid: false,
+      maxFileCount: 2,
+      expectedValue: [
+        {
+          file: { name: 'hello', type: 'application/pdf' },
+          messageCode: InvalidMessageCodes.WrongFileType,
+        },
+      ],
+      testMessage: 'Wrong File Type.',
+    },
+    {
+      inputRequired: true,
+      inputValue: [{ file: { name: 'hello', type: 'image/jpeg' } }],
+      expectedValid: true,
+      expectedValue: [
+        {
+          file: { name: 'hello', type: 'image/jpeg' },
+          messageCode: null,
+        },
+      ],
+      testMessage: 'Correct File Type.',
+    },
+  ])(
+    'individual files',
+    ({
+      inputRequired,
+      inputValue,
+      expectedValid: expectedInvalid,
+      expectedValue,
+      testMessage,
+    }) => {
+      it(`${testMessage}`, () => {
+        const textData = {
+          min: 0,
+          max: 3,
+          isValid: false,
+          required: inputRequired,
+          value: inputValue,
+          fileTypes: ['image/jpeg'],
+          type: 'file',
+        } as unknown as FieldData;
+
+        const result = validateFunctions.file(textData);
+        expect(result.isValid).toBe(expectedInvalid);
+        expect(result.value).toStrictEqual(expectedValue);
       });
     },
   );

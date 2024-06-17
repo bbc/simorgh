@@ -9,6 +9,7 @@ export enum InvalidMessageCodes {
   WrongTelFormat = 'validationInvalidTelephone',
   NotEnoughFiles = 'validationFilesNotEnough',
   TooManyFiles = 'validationFilesTooMany',
+  WrongFileType = 'validationFilesInvalidType',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
@@ -91,6 +92,7 @@ export type Field = {
 };
 
 export type FieldData = ValidationConditions & {
+  hasNestedErrorLabel: boolean;
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;

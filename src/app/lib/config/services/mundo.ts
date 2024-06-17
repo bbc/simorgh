@@ -280,6 +280,8 @@ export const service: DefaultServiceConfig = {
           "There aren't enough files. Please add at least {{minFiles}}.",
         validationFilesTooMany:
           'There are too many files. You can add {{maxFiles}}.',
+        validationFilesInvalidType:
+          "Sorry, we can't use this type of file. Please add {{fileTypes}}.",
       },
     },
     mostRead: {

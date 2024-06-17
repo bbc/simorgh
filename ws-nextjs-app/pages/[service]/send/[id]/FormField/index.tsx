@@ -36,7 +36,11 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;
 
-  const { isValid, messageCode } = formState?.[id] ?? {};
+  const {
+    isValid,
+    messageCode,
+    hasNestedErrorLabel = false,
+  } = formState?.[id] ?? {};
   const ariaErrorDescribedById = `${id}-error`;
 
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
@@ -51,7 +55,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
-      {hasAttemptedSubmit && !isValid && (
+      {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
           id={ariaErrorDescribedById}
           messageCode={messageCode}

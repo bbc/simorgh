@@ -108,24 +108,52 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
   };
 };
 
-const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { value, required, wasInvalid, min, max } = data;
+const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
+  const { value, required, wasInvalid, min, max, fileTypes } = data;
 
   let isValid = true;
   let messageCode = null;
+  let hasNestedErrorLabel = false;
+
+  // CHECK INDIVIDUAL FILES
+  const validatedFiles = (value as FileData[]).map((fileData: FileData) => {
+    const { file } = fileData;
+    let fileMessageCode = null;
+
+    // Chrome interprets a wma file as video so the following checks whether this has happened and switches the video back to audio
+    const fileType =
+      file.type === 'video/x-ms-wma' ? 'audio/x-ms-wma' : file.type;
+
+    if (!fileTypes?.includes(fileType)) {
+      fileMessageCode = InvalidMessageCodes.WrongFileType;
+      hasNestedErrorLabel = true;
+      isValid = false;
+    }
+
+    return { ...fileData, messageCode: fileMessageCode };
+  });
 
   if (min && (value as FileData[])?.length < min && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.NotEnoughFiles;
+    hasNestedErrorLabel = false;
   }
   if (max && (value as FileData[])?.length > max && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.TooManyFiles;
+    hasNestedErrorLabel = false;
   }
 
   const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
 
-  return { ...data, isValid, wasInvalid: wasInvalidUpdate, messageCode };
+  return {
+    ...data,
+    value: validatedFiles,
+    isValid,
+    hasNestedErrorLabel,
+    wasInvalid: wasInvalidUpdate,
+    messageCode,
+  };
 };
 
 const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
@@ -134,7 +162,7 @@ const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
   checkbox: isValidCheck,
   phone: isValidTel,
   textarea: isValidText,
-  file: isValidFile,
+  file: isValidFiles,
 };
 
 export default validateFunctions;
