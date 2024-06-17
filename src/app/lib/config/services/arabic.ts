@@ -374,11 +374,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'بودكاست',
-        url: '/arabic/tv-and-radio-52067221',
+        url: '/arabic/topics/cljddp5lw0dt',
       },
       {
         title: 'برامجنا',
-        url: '/arabic/tv-and-radio-37728883',
+        url: '/arabic/topics/crgyknwdlwnt',
       },
     ],
   },
