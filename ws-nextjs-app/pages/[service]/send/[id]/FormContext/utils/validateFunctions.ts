@@ -1,4 +1,4 @@
-import { FieldData, InvalidMessageCodes } from '../../types';
+import { FieldData, FileData, InvalidMessageCodes } from '../../types';
 
 const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
   return wasInvalid || !isValid;
@@ -113,14 +113,16 @@ const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
 
   let isValid = true;
   let messageCode = null;
-  if (min && (value as File[])?.length < min && required) {
+
+  if (min && (value as FileData[])?.length < min && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.NotEnoughFiles;
   }
-  if (max && (value as File[])?.length > max && required) {
+  if (max && (value as FileData[])?.length > max && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.TooManyFiles;
   }
+
   const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
 
   return { ...data, isValid, wasInvalid: wasInvalidUpdate, messageCode };

@@ -188,7 +188,9 @@ describe('validateFunctions', () => {
           max: maxFileCount,
           isValid: false,
           required: inputRequired,
-          value: inputValue,
+          value: inputValue.map(val => ({
+            file: val,
+          })),
           type: 'phone',
         } as unknown as FieldData;
 

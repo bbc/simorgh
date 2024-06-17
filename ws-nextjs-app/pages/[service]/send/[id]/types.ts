@@ -13,9 +13,14 @@ export enum InvalidMessageCodes {
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
+export type FileData = {
+  file: File;
+  messageCode?: InvalidMessageCodes | null;
+};
+
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
-  | File[]
+  | FileData[]
   | boolean;
 
 export type OnChangeHandler = (

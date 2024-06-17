@@ -11,7 +11,7 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Text from '#app/components/Text';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Label from '../FieldLabel';
-import { InputProps } from '../../types';
+import { InputProps, FileData } from '../../types';
 import { useFormContext } from '../../FormContext';
 import styles from './styles';
 import {
@@ -23,7 +23,7 @@ import {
 } from './svgs';
 
 interface FileListProps {
-  files: File[];
+  files: FileData[];
   name: string;
 }
 
@@ -58,8 +58,9 @@ const FileList = ({ files, name }: FileListProps) => {
 
   useEffect(() => {
     Promise.all(
-      files.map(async file => {
+      files.map(async fileData => {
         return new Promise(resolve => {
+          const { file } = fileData;
           const fileType = file.type.substring(0, file.type.indexOf('/'));
 
           const fileReader = new FileReader();
@@ -86,7 +87,8 @@ const FileList = ({ files, name }: FileListProps) => {
     ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 
-  const listItems = files.map((file: File, index: number) => {
+  const listItems = files.map((fileData: FileData, index: number) => {
+    const { file } = fileData;
     const key = `${index}-${file.name}`;
     const thumbnailSrc = thumbnailState[index];
     const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');
@@ -140,7 +142,7 @@ export default ({
   const { isValid, required, wasInvalid } = inputState ?? {};
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const filesInState = inputState.value as File[];
+  const filesInState = inputState.value as FileData[];
   const { replaceLiveRegionWith } = useLiveRegionContext();
   const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
 
@@ -160,7 +162,7 @@ export default ({
     // Needs translation
     let liveRegionText = `Update, Here's what you're sending: `;
     chosenFiles.forEach(file => {
-      uploaded.push(file);
+      uploaded.push({ file });
       liveRegionText = `${liveRegionText}${file.name}, `;
     });
 
