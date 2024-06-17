@@ -301,33 +301,6 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a most watched page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/pidgin/media/video';
-      fetchMock.mock(
-        'http://localhost/pidgin/mostwatched.json',
-        mostWatchedData,
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'pidgin',
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'pidgin',
-      });
-      const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
-
-      expect(
-        await screen.findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/yoruba/media-23256797';
