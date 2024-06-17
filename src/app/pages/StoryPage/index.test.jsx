@@ -566,7 +566,7 @@ describe('Story Page', () => {
     expect(srcset).toEqual(expectedSrcSetURLs);
   });
 
-  it('should render related content images with the .webp image extension', async () => {
+  it('should render features analysis promo images with the .webp image extension', async () => {
     const imageBlock =
       russianPageDataWithInlinePromo.data.secondaryData.features[1].indexImage;
     const { path: imagePath, altText: imageAltText } = imageBlock;
@@ -594,5 +594,46 @@ describe('Story Page', () => {
     const { src } = screen.getByAltText(imageAltText);
 
     expect(src).toEqual(imageURL);
+  });
+
+  it('should render related content promo images with the .webp image extension', async () => {
+    const imageBlock =
+      russianPageDataWithInlinePromo.data.article.relatedContent.groups[0]
+        .promos[0].indexImage;
+    const { path: imagePath, altText: imageAltText } = imageBlock;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/70${imagePath}.webp 70w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/95${imagePath}.webp 95w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/144${imagePath}.webp 144w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/183${imagePath}.webp 183w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/240${imagePath}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320${imagePath}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp 660w`,
+    ].join(', ');
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithInlinePromo,
+      }),
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles,
+      });
+    });
+
+    const { src, srcset } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
   });
 });
