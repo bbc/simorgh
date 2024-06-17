@@ -5,6 +5,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
+import InvalidMessageBox from './InvalidMessageBox';
 
 export default ({
   id,
@@ -21,6 +22,7 @@ export default ({
     required,
     wasInvalid,
     wordLimit,
+    messageCode,
   } = inputState ?? {};
   const hasWordLimit = !!wordLimit;
   const translation = `Maximum ${wordLimit} Words`; // hardcoded
@@ -64,6 +66,9 @@ export default ({
         })}
         rows={4}
       />
+      {hasAttemptedSubmit && !isValid && (
+        <InvalidMessageBox id={describedBy} messageCode={messageCode} />
+      )}
     </>
   );
 };

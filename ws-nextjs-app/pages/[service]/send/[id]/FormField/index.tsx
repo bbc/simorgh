@@ -42,7 +42,16 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
     hasNestedErrorLabel = false,
   } = formState?.[id] ?? {};
   const ariaErrorDescribedById = `${id}-error`;
-
+  console.log(
+    'nested ',
+    hasNestedErrorLabel,
+    'attempted ',
+    hasAttemptedSubmit,
+    'is valid ',
+    isValid,
+    'message ',
+    messageCode,
+  );
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
     <div css={styles.formField}>
@@ -55,12 +64,6 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
-      {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
-        <InvalidMessageBox
-          id={ariaErrorDescribedById}
-          messageCode={messageCode}
-        />
-      )}
     </div>
   );
 };

@@ -109,7 +109,7 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
 };
 
 const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { value, required, wasInvalid, min, max, fileTypes } = data;
+  const { value, required, wasInvalid, min, fileTypes, max } = data;
 
   const MAX_PAYLOAD_SIZE = 1288490189;
   const RESERVED_FORM_DATA_SIZE = 10000;
@@ -143,13 +143,13 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
 
     return { ...fileData, messageCode: fileMessageCode };
   });
-
-  if (min && (value as FileData[])?.length < min && required) {
+  if (min != null && (value as FileData[])?.length < min && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.NotEnoughFiles;
     hasNestedErrorLabel = false;
   }
-  if (max && (value as FileData[])?.length > max && required) {
+
+  if (max != null && (value as FileData[])?.length > max) {
     isValid = false;
     messageCode = InvalidMessageCodes.TooManyFiles;
     hasNestedErrorLabel = false;

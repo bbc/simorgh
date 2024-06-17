@@ -3,6 +3,7 @@ import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
+import InvalidMessageBox from './InvalidMessageBox';
 
 export default ({
   id,
@@ -13,7 +14,13 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = '', required, wasInvalid } = inputState ?? {};
+  const {
+    isValid,
+    value = '',
+    required,
+    wasInvalid,
+    messageCode,
+  } = inputState ?? {};
   const useErrorTheme = hasAttemptedSubmit && !isValid;
 
   return (
@@ -37,6 +44,9 @@ export default ({
           })}
         />
       </div>
+      {hasAttemptedSubmit && !isValid && (
+        <InvalidMessageBox id={describedBy} messageCode={messageCode} />
+      )}
     </>
   );
 };
