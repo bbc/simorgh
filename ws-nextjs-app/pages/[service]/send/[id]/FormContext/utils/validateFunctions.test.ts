@@ -175,6 +175,16 @@ describe('validateFunctions', () => {
       expectedMessageCode: InvalidMessageCodes.TooManyFiles,
       testMessage: 'Files uploaded exceed the expected limit of two files.',
     },
+    {
+      inputRequired: true,
+      inputValue: [
+        { name: 'hello', type: 'image/jpeg', size: '1300000000' },
+        { name: 'hello', type: 'image/jpeg', size: '100' },
+      ],
+      expectedValid: false,
+      expectedMessageCode: InvalidMessageCodes.FileTooBig,
+      testMessage: 'File size total too big.',
+    },
   ])(
     'file',
     ({

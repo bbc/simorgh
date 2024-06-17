@@ -111,6 +111,12 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
 const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   const { value, required, wasInvalid, min, max, fileTypes } = data;
 
+  const MAX_PAYLOAD_SIZE = 1288490189;
+  const RESERVED_FORM_DATA_SIZE = 10000;
+  // we're making the assumption that each file chooser field is only allowed the max payload size less some for data (estimated maximum size ever needed)
+  // This will break if you have 2 file choosers in the form as each will have a separate allowance which could result in the total payload being exceeded (fails on Backend) - quite an edge case though
+  const TOTAL_FILES_MAX_SIZE = MAX_PAYLOAD_SIZE - RESERVED_FORM_DATA_SIZE;
+
   let isValid = true;
   let messageCode = null;
   let hasNestedErrorLabel = false;
@@ -146,6 +152,17 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   if (max && (value as FileData[])?.length > max && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.TooManyFiles;
+    hasNestedErrorLabel = false;
+  }
+
+  const totalUploadedSize = (value as FileData[]).reduce(
+    (accumulated, currentValue) => accumulated + currentValue.file.size,
+    0,
+  );
+
+  if (totalUploadedSize >= TOTAL_FILES_MAX_SIZE) {
+    isValid = false;
+    messageCode = InvalidMessageCodes.FileTooBig;
     hasNestedErrorLabel = false;
   }
 

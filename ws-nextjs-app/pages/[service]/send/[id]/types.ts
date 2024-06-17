@@ -11,6 +11,7 @@ export enum InvalidMessageCodes {
   TooManyFiles = 'validationFilesTooMany',
   WrongFileType = 'validationFilesInvalidType',
   FileTooSmall = 'validationFileTooSmall',
+  FileTooBig = 'validationFilesSizeExceeded',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
