@@ -209,12 +209,14 @@ describe('validateFunctions', () => {
   describe.each([
     {
       inputRequired: true,
-      inputValue: [{ file: { name: 'hello', type: 'application/pdf' } }],
+      inputValue: [
+        { file: { name: 'hello', type: 'application/pdf', size: '100' } },
+      ],
       expectedValid: false,
       maxFileCount: 2,
       expectedValue: [
         {
-          file: { name: 'hello', type: 'application/pdf' },
+          file: { name: 'hello', type: 'application/pdf', size: '100' },
           messageCode: InvalidMessageCodes.WrongFileType,
         },
       ],
@@ -222,15 +224,29 @@ describe('validateFunctions', () => {
     },
     {
       inputRequired: true,
-      inputValue: [{ file: { name: 'hello', type: 'image/jpeg' } }],
+      inputValue: [
+        { file: { name: 'hello', type: 'image/jpeg', size: '100' } },
+      ],
       expectedValid: true,
       expectedValue: [
         {
-          file: { name: 'hello', type: 'image/jpeg' },
+          file: { name: 'hello', type: 'image/jpeg', size: '100' },
           messageCode: null,
         },
       ],
       testMessage: 'Correct File Type.',
+    },
+    {
+      inputRequired: true,
+      inputValue: [{ file: { name: 'hello', type: 'image/jpeg', size: '0' } }],
+      expectedValid: false,
+      expectedValue: [
+        {
+          file: { name: 'hello', type: 'image/jpeg', size: '0' },
+          messageCode: InvalidMessageCodes.FileTooSmall,
+        },
+      ],
+      testMessage: 'File too small.',
     },
   ])(
     'individual files',

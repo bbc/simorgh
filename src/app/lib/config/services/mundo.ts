@@ -282,6 +282,7 @@ export const service: DefaultServiceConfig = {
           'There are too many files. You can add {{maxFiles}}.',
         validationFilesInvalidType:
           "Sorry, we can't use this type of file. Please add {{fileTypes}}.",
+        validationFilesTooSmall: 'This file is broken. Try picking another.',
       },
     },
     mostRead: {

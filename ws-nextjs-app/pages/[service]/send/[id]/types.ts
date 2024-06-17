@@ -10,6 +10,7 @@ export enum InvalidMessageCodes {
   NotEnoughFiles = 'validationFilesNotEnough',
   TooManyFiles = 'validationFilesTooMany',
   WrongFileType = 'validationFilesInvalidType',
+  FileTooSmall = 'validationFileTooSmall',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
@@ -92,7 +93,7 @@ export type Field = {
 };
 
 export type FieldData = ValidationConditions & {
-  hasNestedErrorLabel: boolean;
+  hasNestedErrorLabel?: boolean;
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;

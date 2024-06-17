@@ -12,6 +12,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   FieldData,
+  FileData,
   FormScreen,
   OnChangeHandler,
   OnChangeInputName,
@@ -125,10 +126,10 @@ export const FormContextProvider = ({
 
       if (fieldValue === '') return;
       if (isFileHtmlType) {
-        const fileList = fieldValue as File[];
+        const fileList = fieldValue as FileData[];
 
         fileList.forEach(file => {
-          formData.append(key, file);
+          formData.append(key, file.file);
         });
         return;
       }

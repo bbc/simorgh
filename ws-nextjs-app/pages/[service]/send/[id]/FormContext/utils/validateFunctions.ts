@@ -129,6 +129,11 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
       hasNestedErrorLabel = true;
       isValid = false;
     }
+    if (file.size <= 0) {
+      fileMessageCode = InvalidMessageCodes.FileTooSmall;
+      hasNestedErrorLabel = true;
+      isValid = false;
+    }
 
     return { ...fileData, messageCode: fileMessageCode };
   });

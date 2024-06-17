@@ -162,7 +162,7 @@ export default ({
     // Needs translation
     let liveRegionText = `Update, Here's what you're sending: `;
     chosenFiles.forEach(file => {
-      uploaded.push({ file });
+      uploaded.push({ file } as FileData);
       liveRegionText = `${liveRegionText}${file.name}, `;
     });
 
