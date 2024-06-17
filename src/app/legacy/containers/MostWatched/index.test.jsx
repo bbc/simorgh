@@ -12,7 +12,7 @@ import MostWatched from '.';
 jest.mock('../../../components/ThemeProvider');
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
-const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage = false }) => (
+const MostWatchedComponent = ({ data, isAmp }) => (
   <ThemeProvider service="pidgin" variant="default">
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
@@ -28,7 +28,7 @@ const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage = false }) => (
             eventTracking: { enabled: true },
           }}
         >
-          <MostWatched data={data} isMostWatchedPage={isMostWatchedPage} />
+          <MostWatched data={data} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>

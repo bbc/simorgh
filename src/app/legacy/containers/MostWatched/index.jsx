@@ -12,7 +12,7 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
   }
 `;
 
-const MostWatched = ({ data = null, isMostWatchedPage = false }) => {
+const MostWatched = ({ data = null }) => {
   const { mostWatched } = useContext(ServiceContext);
   const { header } = mostWatched;
 
@@ -20,21 +20,12 @@ const MostWatched = ({ data = null, isMostWatchedPage = false }) => {
     return null;
   }
 
-  const parentColumns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 6,
-    group4: 8,
-    group5: 20,
-  };
-
   return (
     <StyledCpsOnwardJourney
-      parentColumns={isMostWatchedPage ? parentColumns : undefined}
+      parentColumns={undefined}
       labelId="most-watched-heading"
       data-e2e="most-watched"
-      title={isMostWatchedPage ? '' : header}
+      title={header}
       isMediaContent
       content={data}
       promoComponent={RelatedContentPromo}
