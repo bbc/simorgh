@@ -48,7 +48,6 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
     : `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
 
   // 1 column of 100% screen width - images are 33% of the column
-  // const MOBILE_SIZE = `33vw`;
   const MOBILE_SIZE = useLargeImages ? `100vw` : `33vw`;
 
   return [
