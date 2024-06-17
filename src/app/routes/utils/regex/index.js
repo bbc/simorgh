@@ -76,7 +76,6 @@ export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 
 export const mostWatchedDataPath = getMostWatchedDataRegex(allServices);
-export const mostWatchedPagePath = getMostWatchedPageRegex(allServices);
 
 export const secondaryColumnDataRegexPath =
   getSecondaryColumnDataRegex(allServices);
