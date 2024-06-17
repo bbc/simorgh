@@ -20,7 +20,6 @@ import {
   getMostReadPageRegex,
   getMostReadDataRegex,
   getMostWatchedDataRegex,
-  getMostWatchedPageRegex,
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
   getAfricaEyeTVPageRegex,
