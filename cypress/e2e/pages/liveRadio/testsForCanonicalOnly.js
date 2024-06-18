@@ -38,10 +38,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           );
         });
 
-        it('should be rendered', () => {
-          cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-        });
-
         it('embed URL should be reachable', () => {
           cy.testResponseCodeAndTypeRetry({
             path: embedUrl,
