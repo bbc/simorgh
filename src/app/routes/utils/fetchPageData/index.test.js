@@ -13,8 +13,8 @@ import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
-const fullTestPath = 'https://test.bbc.com/hausa/mostwatched.json';
-const fullLivePath = 'https://www.bbc.com/hausa/mostwatched.json';
+const fullTestPath = 'https://test.bbc.com/hausa/mostread.json';
+const fullLivePath = 'https://www.bbc.com/hausa/mostread.json';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
