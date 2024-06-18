@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { InvalidMessageCodes, InvalidMessageBoxProps } from '../types';
 import styles from './styles';
 
@@ -46,7 +47,7 @@ export default ({
   id,
   messageCode,
   hasArrowStyle = true,
-  describedBy,
+  suffix,
 }: InvalidMessageBoxProps) => {
   const {
     translations: { ugc = defaultUGC },
@@ -61,12 +62,12 @@ export default ({
         <ErrorSymbol />
         <Paragraph
           id={id}
-          {...(describedBy && { 'aria-describedby': describedBy })}
           css={styles.errorText}
           fontVariant="sansBold"
           size="minion"
         >
           {message}
+          <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
         </Paragraph>
       </div>
     </>

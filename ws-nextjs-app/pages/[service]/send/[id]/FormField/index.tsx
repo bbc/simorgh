@@ -35,8 +35,6 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;
 
-  const ariaErrorDescribedById = `${id}-error`;
-
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
     <div css={styles.formField}>
@@ -46,7 +44,6 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         name={id}
         handleChange={handleChange}
         inputState={formState?.[id]}
-        describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
     </div>

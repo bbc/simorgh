@@ -37,7 +37,6 @@ export type InputProps = {
   label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
   inputState: FieldData;
-  describedBy: string;
   hasAttemptedSubmit: boolean;
 };
 
@@ -45,7 +44,7 @@ export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
   hasArrowStyle?: boolean;
-  describedBy?: string;
+  suffix?: string;
 };
 
 export type FetchParameters = {

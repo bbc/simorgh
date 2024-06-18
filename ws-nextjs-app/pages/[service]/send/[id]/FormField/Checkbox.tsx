@@ -55,7 +55,7 @@ export default ({
         <InvalidMessageBox
           id={errorBoxId}
           messageCode={messageCode}
-          describedBy={labelId}
+          suffix={label}
         />
       )}
     </>

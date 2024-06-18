@@ -116,6 +116,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
       <label
         class="emotion-3"
         for="testCheckboxID"
+        id="label-testCheckboxID"
       >
         This is a text field (optional)
       </label>
@@ -208,6 +209,7 @@ exports[`FormField should render a required input with an associated label 1`] =
     <label
       class="emotion-1"
       for="testAllyID"
+      id="label-testAllyID"
     >
       This is a required text field
     </label>
@@ -308,6 +310,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testTelID"
+      id="label-testTelID"
     >
       This is a text field (optional)
     </label>
@@ -409,6 +412,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testTextID"
+      id="label-testTextID"
     >
       This is a text field (optional)
     </label>
@@ -512,6 +516,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
     <label
       class="emotion-1"
       for="testTextAreaID"
+      id="label-testTextAreaID"
     >
       This is a text field (optional)
     </label>
@@ -610,6 +615,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testEmailID"
+      id="label-testEmailID"
     >
       This is a text field (optional)
     </label>

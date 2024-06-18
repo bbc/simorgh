@@ -88,7 +88,7 @@ export default ({
       {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
           id={errorBoxId}
-          describedBy={labelId}
+          suffix={label}
           messageCode={messageCode}
           hasArrowStyle={false}
         />
