@@ -16,20 +16,30 @@ import {
   VIDEO_SVG_DATA_URI,
 } from './svgs';
 import { FormContext } from '../../FormContext';
+import { FileData, HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,
   required: false,
   value: [],
-  htmlType: 'file',
+  htmlType: 'file' as HtmlType,
   messageCode: null,
+  wasInvalid: false,
 };
 
 const blob = new Blob(['data:image/png;base64,']);
 const mockImgFile = new File([blob], 'img.png', {
   type: 'image/png',
 });
-const imageFileInputState = { ...defaultInputState, value: [mockImgFile] };
+const imageFileInputState = {
+  ...defaultInputState,
+  value: [
+    {
+      file: mockImgFile,
+      messageCode: null,
+    },
+  ],
+};
 
 describe('File', () => {
   afterEach(() => {
@@ -129,7 +139,9 @@ describe('File', () => {
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });
 
     expect(contextValue.handleChange).toHaveBeenCalledWith('bar', [
-      mockImgFile,
+      {
+        file: mockImgFile,
+      },
     ]);
   });
 
@@ -214,7 +226,15 @@ describe('File', () => {
     const mockVideoFile = new File([blob], 'video.mp4', {
       type: 'video/mp4',
     });
-    const inputState = { ...defaultInputState, value: [mockVideoFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockVideoFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -239,7 +259,15 @@ describe('File', () => {
     const mockAudioFile = new File([blob], 'audio.mp3', {
       type: 'audio/mpeg',
     });
-    const inputState = { ...defaultInputState, value: [mockAudioFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockAudioFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -264,7 +292,15 @@ describe('File', () => {
     const mockFile = new File([blob], 'pdf.pdf', {
       type: 'application/pdf',
     });
-    const inputState = { ...defaultInputState, value: [mockFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(

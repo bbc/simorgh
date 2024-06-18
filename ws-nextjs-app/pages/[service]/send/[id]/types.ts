@@ -7,13 +7,23 @@ export enum InvalidMessageCodes {
   FieldRequired = 'validationRequired',
   WrongEmailFormat = 'validationInvalidEmail',
   WrongTelFormat = 'validationInvalidTelephone',
+  NotEnoughFiles = 'validationFilesNotEnough',
+  TooManyFiles = 'validationFilesTooMany',
+  WrongFileType = 'validationFilesInvalidType',
+  FileTooSmall = 'validationFileTooSmall',
+  FileTooBig = 'validationFilesSizeExceeded',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
+export type FileData = {
+  file: File;
+  messageCode?: InvalidMessageCodes | null;
+};
+
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
-  | File[]
+  | FileData[]
   | boolean;
 
 export type OnChangeHandler = (
@@ -34,6 +44,7 @@ export type InputProps = {
 export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
+  hasArrowStyle?: boolean;
 };
 
 export type FetchParameters = {
@@ -65,30 +76,32 @@ export type HtmlType =
   | 'file'
   | '';
 
+export type ValidationConditions = {
+  min?: number;
+  max?: number;
+  fileTypes?: string[];
+  mandatory?: boolean;
+  wordLimit?: number;
+};
+
 export type Field = {
   id: string;
   type: string;
-  validation: {
-    min?: number;
-    max?: number;
-    fileTypes?: string[];
-    mandatory?: boolean;
-    wordLimit?: number;
-  };
+  validation: ValidationConditions;
   htmlType: HtmlType;
   label: string;
   description: string;
   textArea?: boolean;
 };
 
-export type FieldData = {
+export type FieldData = ValidationConditions & {
+  hasNestedErrorLabel?: boolean;
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
   wasInvalid: boolean;
-  wordLimit?: number;
 };
 
 export type FormScreen = 'form' | 'uploading' | 'success' | 'error';

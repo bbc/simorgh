@@ -12,6 +12,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import {
   Field,
   FieldData,
+  FileData,
   FormScreen,
   OnChangeHandler,
   OnChangeInputName,
@@ -48,6 +49,7 @@ const getInitialFormState = (
     (acc, field) => ({
       ...acc,
       [field.id]: {
+        ...field.validation,
         isValid: true,
         required: field.validation.mandatory ?? false,
         wordLimit: field.validation.wordLimit ?? undefined,
@@ -124,10 +126,10 @@ export const FormContextProvider = ({
 
       if (fieldValue === '') return;
       if (isFileHtmlType) {
-        const fileList = fieldValue as File[];
+        const fileList = fieldValue as FileData[];
 
         fileList.forEach(file => {
-          formData.append(key, file);
+          formData.append(key, file.file);
         });
         return;
       }
