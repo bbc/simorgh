@@ -84,9 +84,9 @@ export const service: DefaultServiceConfig = {
         liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
-        summary: 'Takaitacce',
+        summary: 'Taƙaitattu',
       },
-      gist: 'Takaitacce',
+      gist: 'Taƙaitattu',
       error: {
         404: {
           statusCode: '404',
