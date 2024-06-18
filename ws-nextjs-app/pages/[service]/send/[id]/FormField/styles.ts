@@ -112,14 +112,18 @@ export default {
     }),
   errorMessageBox: ({ palette }: Theme) =>
     css({
+      outline: 'solid 0.0625rem transparent',
       backgroundColor: palette.ERROR_CORE,
       padding: '0.75rem',
       display: 'flex',
       alignItems: 'center',
     }),
-  errorArrow: ({ palette, spacings }: Theme) =>
+  errorArrow: ({ palette, spacings, mq }: Theme) =>
     css({
       backgroundColor: palette.ERROR_CORE,
+      [mq.HIGH_CONTRAST]: {
+        backgroundColor: `currentcolor`,
+      },
       clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
       width: `${spacings.DOUBLE}rem`,
       height: '0.75rem',
