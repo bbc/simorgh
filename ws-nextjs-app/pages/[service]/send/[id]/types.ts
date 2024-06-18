@@ -45,6 +45,7 @@ export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
   hasArrowStyle?: boolean;
+  describedBy?: string;
 };
 
 export type FetchParameters = {

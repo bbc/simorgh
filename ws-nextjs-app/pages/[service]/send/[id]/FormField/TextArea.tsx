@@ -11,7 +11,7 @@ export default ({
   name,
   handleChange,
   inputState,
-  describedBy,
+  describedBy: errorBoxId,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
@@ -27,10 +27,16 @@ export default ({
   const translation = `Maximum ${wordLimit} Words`; // hardcoded
   const describedByWordLimit = `${id}-wordLimit`;
   const useErrorTheme = hasAttemptedSubmit && !isValid;
+  const labelId = `label-${id}`;
 
   return (
     <>
-      <Label forId={id} required={required} useErrorTheme={useErrorTheme}>
+      <Label
+        forId={id}
+        id={labelId}
+        required={required}
+        useErrorTheme={useErrorTheme}
+      >
         {label}
       </Label>
       {hasWordLimit && (
@@ -60,13 +66,17 @@ export default ({
           ...(required && !isValid && { 'aria-required': required }),
           ...(!isValid && {
             'aria-describedby':
-              describedBy + (hasWordLimit ? `, ${describedByWordLimit}` : ''),
+              errorBoxId + (hasWordLimit ? ` ${describedByWordLimit}` : ''),
           }),
         })}
         rows={4}
       />
       {hasAttemptedSubmit && !isValid && (
-        <InvalidMessageBox id={describedBy} messageCode={messageCode} />
+        <InvalidMessageBox
+          id={errorBoxId}
+          messageCode={messageCode}
+          describedBy={labelId}
+        />
       )}
     </>
   );

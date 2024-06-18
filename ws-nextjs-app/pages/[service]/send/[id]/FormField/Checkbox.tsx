@@ -10,7 +10,7 @@ export default ({
   name,
   handleChange,
   inputState,
-  describedBy,
+  describedBy: errorBoxId,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
@@ -22,6 +22,7 @@ export default ({
     messageCode,
   } = inputState ?? {};
   const useErrorTheme = hasAttemptedSubmit && !isValid;
+  const labelId = `label-${id}`;
 
   return (
     <>
@@ -36,13 +37,14 @@ export default ({
           {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),
-            ...(!isValid && { 'aria-describedby': describedBy }),
+            ...(!isValid && { 'aria-describedby': errorBoxId }),
           })}
           {...(required && !isValid && { 'aria-required': required })}
         />
         <Label
           required={required}
           forId={id}
+          id={labelId}
           css={[styles.checkboxLabel]}
           useErrorTheme={useErrorTheme}
         >
@@ -50,7 +52,11 @@ export default ({
         </Label>
       </div>
       {hasAttemptedSubmit && !isValid && (
-        <InvalidMessageBox id={describedBy} messageCode={messageCode} />
+        <InvalidMessageBox
+          id={errorBoxId}
+          messageCode={messageCode}
+          describedBy={labelId}
+        />
       )}
     </>
   );

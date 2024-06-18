@@ -46,6 +46,7 @@ export default ({
   id,
   messageCode,
   hasArrowStyle = true,
+  describedBy,
 }: InvalidMessageBoxProps) => {
   const {
     translations: { ugc = defaultUGC },
@@ -60,6 +61,7 @@ export default ({
         <ErrorSymbol />
         <Paragraph
           id={id}
+          {...(describedBy && { 'aria-describedby': describedBy })}
           css={styles.errorText}
           fontVariant="sansBold"
           size="minion"
