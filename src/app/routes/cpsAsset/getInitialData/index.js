@@ -25,7 +25,6 @@ import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import processMostWatched from '../../utils/processMostWatched';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
@@ -128,14 +127,6 @@ export default async ({
       throw handleError('CPS asset data fetch error', status);
     }
 
-    const { mostWatched } = processMostWatched({
-      data: article,
-      service: derivedService,
-      path: derivedPath,
-      toggles,
-      page: pageType,
-    });
-
     const { topStories, features } = secondaryColumn;
     const { mostRead } = article;
 
@@ -154,7 +145,6 @@ export default async ({
           features,
         },
         mostRead,
-        mostWatched,
         recommendations,
       },
     };
