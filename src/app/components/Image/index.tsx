@@ -101,7 +101,6 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-  console.log('src in Image before helmet', src);
   return (
     <>
       {preload && (
@@ -109,7 +108,7 @@ const Image = ({
           <link
             rel="preload"
             as="image"
-            href={src.replace('{width}', '240')}
+            href={src}
             imagesrcset={srcSet}
             imagesizes={sizes}
           />
