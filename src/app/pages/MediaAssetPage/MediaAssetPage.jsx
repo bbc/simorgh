@@ -22,7 +22,6 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import MostWatchedContainer from '#containers/MostWatched';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
@@ -114,7 +113,6 @@ const MediaAssetPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const mostWatchedData = path(['mostWatched'], pageData);
 
   // ATI
   const { atiAnalytics } = metadata;
@@ -187,10 +185,6 @@ const MediaAssetPage = ({ pageData }) => {
     }
   `;
 
-  const MostWatchedWrapper = styled.div`
-    padding-bottom: ${GEL_SPACING_QUAD};
-  `;
-
   return (
     <>
       <ChartbeatAnalytics
@@ -238,11 +232,6 @@ const MediaAssetPage = ({ pageData }) => {
       )}
 
       <CpsRelatedContent content={relatedContent} isMediaContent />
-      {!isAmp && (
-        <MostWatchedWrapper>
-          <MostWatchedContainer data={mostWatchedData} />
-        </MostWatchedWrapper>
-      )}
     </>
   );
 };
