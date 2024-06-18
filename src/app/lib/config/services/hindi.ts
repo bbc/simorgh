@@ -364,10 +364,6 @@ export const service: DefaultServiceConfig = {
         url: '/hindi',
       },
       {
-        title: 'लोकसभा चुनाव 2024',
-        url: '/hindi/topics/cm5m26q8qxpt',
-      },
-      {
         title: 'भारत',
         url: '/hindi/topics/ckdxnkz7607t',
       },
