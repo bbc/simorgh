@@ -110,14 +110,19 @@ export default {
         },
       },
     }),
-  errorMessageBox: ({ palette }: Theme) =>
-    css({
-      outline: 'solid 0.0625rem transparent',
-      backgroundColor: palette.ERROR_CORE,
-      padding: '0.75rem',
-      display: 'flex',
-      alignItems: 'center',
-    }),
+  errorMessageBox:
+    (hasArrowStyle: boolean) =>
+    ({ palette, spacings }: Theme) =>
+      css({
+        backgroundColor: palette.ERROR_CORE,
+        padding: '0.75rem',
+        display: 'flex',
+        alignItems: 'center',
+        ...(!hasArrowStyle && {
+          marginTop: `${spacings.FULL}rem`,
+          marginBottom: `${spacings.FULL}rem`,
+        }),
+      }),
   errorArrow: ({ palette, spacings, mq }: Theme) =>
     css({
       backgroundColor: palette.ERROR_CORE,
