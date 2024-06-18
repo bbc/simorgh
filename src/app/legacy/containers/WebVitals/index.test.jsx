@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import useWebVitals from '@bbc/web-vitals';
 
@@ -18,23 +18,29 @@ const WebVitalsWithContext = ({
   personalisationEnabled,
   pageType,
   sampleRate,
-}) => (
-  <ToggleContext.Provider
-    value={{
+}) => {
+  const memoizedToggleContextValue = useMemo(
+    () => ({
       toggleState: {
         webVitalsMonitoring: { enabled: featureToggle, value: sampleRate },
       },
-    }}
-  >
-    <UserContext.Provider
-      value={{
-        personalisationEnabled,
-      }}
-    >
-      <WebVitals pageType={pageType} />
-    </UserContext.Provider>
-  </ToggleContext.Provider>
-);
+    }),
+    [featureToggle, sampleRate],
+  );
+
+  const memoizedUserContextValue = useMemo(
+    () => ({ personalisationEnabled }),
+    [personalisationEnabled],
+  );
+
+  return (
+    <ToggleContext.Provider value={memoizedToggleContextValue}>
+      <UserContext.Provider value={memoizedUserContextValue}>
+        <WebVitals pageType={pageType} />
+      </UserContext.Provider>
+    </ToggleContext.Provider>
+  );
+};
 
 describe('WebVitals', () => {
   describe('calls the useWebVitals hook', () => {

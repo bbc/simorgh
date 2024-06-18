@@ -1,4 +1,9 @@
-import React, { createContext, PropsWithChildren, useContext } from 'react';
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useMemo,
+} from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -97,6 +102,37 @@ export const EventTrackingContextProvider = ({
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
+  const trackingProps = useMemo(() => {
+    if (eventTrackingIsEnabled || (data && atiData)) {
+      const campaignID = getCampaignID(pageType as CampaignPageTypes);
+
+      const { pageIdentifier, platform, statsDestination } =
+        buildATIEventTrackingParams({
+          requestContext,
+          serviceContext,
+          data,
+          atiData,
+        }) as ATIEventTrackingProps;
+
+      return {
+        campaignID,
+        pageIdentifier,
+        platform,
+        producerId: atiAnalyticsProducerId,
+        statsDestination,
+      };
+    }
+    return null;
+  }, [
+    atiAnalyticsProducerId,
+    atiData,
+    data,
+    eventTrackingIsEnabled,
+    pageType,
+    requestContext,
+    serviceContext,
+  ]);
+
   if (!eventTrackingIsEnabled || (!data && !atiData)) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
@@ -105,26 +141,17 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const campaignID = getCampaignID(pageType as CampaignPageTypes);
-  const { pageIdentifier, platform, statsDestination } =
-    buildATIEventTrackingParams({
-      requestContext,
-      serviceContext,
-      data,
-      atiData,
-    }) as ATIEventTrackingProps;
-  const trackingProps = {
-    campaignID,
-    pageIdentifier,
-    platform,
-    producerId: atiAnalyticsProducerId,
-    statsDestination,
-  };
-  const hasRequiredProps = Object.values(trackingProps).every(Boolean);
+  const hasRequiredProps = Object.values(
+    trackingProps as EventTrackingContextProps,
+  ).every(Boolean);
 
   return (
     <EventTrackingContext.Provider
-      value={hasRequiredProps ? trackingProps : NO_TRACKING_PROPS}
+      value={
+        hasRequiredProps
+          ? (trackingProps as EventTrackingContextProps)
+          : NO_TRACKING_PROPS
+      }
     >
       {children}
     </EventTrackingContext.Provider>
