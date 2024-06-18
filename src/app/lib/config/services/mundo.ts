@@ -268,8 +268,7 @@ export const service: DefaultServiceConfig = {
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
-        retentionPeriodDays:
-          "We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.",
+        retentionPeriodDays: `We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.`,
         privacyInfoHtml:
           'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
