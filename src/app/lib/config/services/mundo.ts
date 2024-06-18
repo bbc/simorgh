@@ -276,14 +276,15 @@ export const service: DefaultServiceConfig = {
         removalGuidelineText:
           'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
         validationFilesNotEnough:
-          "There aren't enough files. Please add at least {{minFiles}}.",
+          'No hay suficientes archivos. Por favor añade al menos {{minFiles}}.',
         validationFilesTooMany:
-          'There are too many files. You can add {{maxFiles}}.',
+          'Hay demasiados archivos. Puedes añadir {{maxFiles}}. ',
         validationFilesInvalidType:
-          "Sorry, we can't use this type of file. Please add {{fileTypes}}.",
-        validationFilesTooSmall: 'This file is broken. Try picking another.',
+          'Disculpa, no podemos utilizar este tipo de archivo. Por favor, utiliza {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Este archivo no es correcto. Intenta seleccionar otro.',
         validationFilesSizeExceeded:
-          'Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
+          'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
       },
     },
     mostRead: {

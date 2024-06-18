@@ -11,6 +11,12 @@ const defaultUGC = {
   validationRequired: `There's something missing.`,
   validationInvalidEmail: `That doesn't look right. Please enter a proper email address.`,
   validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+  validationFilesNotEnough: `There aren't enough files. Please add at least {{minFiles}}`,
+  validationFilesTooMany: `There are too many files. You can add {{maxFiles}}.`,
+  validationFilesInvalidType: `Sorry, we can't use this type of file. Please add {{fileTypes}}.`,
+  validationFileTooSmall: 'This file is broken. Try picking another.',
+  validationFilesSizeExceeded:
+    'Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
   confirmationStepTitle: 'Message sent',
   confirmationStepDescriptionHtml: 'Thanks for getting in touch.',
   referenceNumber: 'Reference number',
