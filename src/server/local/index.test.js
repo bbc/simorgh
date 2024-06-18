@@ -24,9 +24,6 @@ describe('Local Server', () => {
     ${'Migrated Home Page'}            | ${'/pidgin.json'}                                                | ${'/pidgin/homePage/index.json'}
     ${'Home Page'}                     | ${'/kyrgyz/tipohome.json'}                                       | ${'/kyrgyz/homePage/index.json'}
     ${'Most Read'}                     | ${'/pidgin/mostread.json'}                                       | ${'/pidgin/mostRead/index.json'}
-    ${'Most Read with variant'}        | ${'/zhongwen/mostread/trad.json'}                                | ${'/zhongwen/mostRead/trad.json'}
-    ${'Most Watched'}                  | ${'/pidgin/mostwatched.json'}                                    | ${'/pidgin/mostWatched/index.json'}
-    ${'Most Watched with variant'}     | ${'/zhongwen/mostwatched/trad.json'}                             | ${'/zhongwen/mostWatched/trad.json'}
     ${'On Demand Radio Brand'}         | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}                      | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}
     ${'On Demand Radio Episode'}       | ${'/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw.json'} | ${'/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json'}
     ${'On Demand TV Brand'}            | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}               | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}
