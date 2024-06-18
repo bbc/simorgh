@@ -128,8 +128,8 @@ export const FormContextProvider = ({
       if (isFileHtmlType) {
         const fileList = fieldValue as FileData[];
 
-        fileList.forEach(file => {
-          formData.append(key, file.file);
+        fileList.forEach(({ file }: FileData) => {
+          formData.append(key, file);
         });
         return;
       }
