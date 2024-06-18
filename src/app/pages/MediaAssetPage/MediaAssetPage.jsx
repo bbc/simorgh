@@ -80,7 +80,7 @@ const StyledImageWrapper = styled.div`
 
 const MediaAssetPage = ({ pageData }) => {
   const { brandName, showRelatedTopics } = useContext(ServiceContext);
-  const { canonicalLink, isAmp } = useContext(RequestContext);
+  const { canonicalLink } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);

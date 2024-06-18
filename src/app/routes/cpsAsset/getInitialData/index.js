@@ -102,7 +102,6 @@ export default async ({
   path: pathname,
   service,
   variant,
-  pageType,
   toggles,
   isCaf,
   isAmp,
