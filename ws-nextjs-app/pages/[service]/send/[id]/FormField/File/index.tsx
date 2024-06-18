@@ -15,7 +15,6 @@ export default ({
   id,
   name,
   inputState,
-  describedBy,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
@@ -26,6 +25,8 @@ export default ({
   const filesInState = inputState.value as FileData[];
   const { replaceLiveRegionWith } = useLiveRegionContext();
   const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
+  const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
 
   useEffect(() => {
     return () => {
@@ -63,7 +64,6 @@ export default ({
 
   const fileArrayLength = filesInState.length;
   const hasFiles = fileArrayLength !== 0;
-  const labelId = `${id}-label`;
 
   return (
     <>
@@ -87,7 +87,8 @@ export default ({
       )}
       {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
-          id={labelId}
+          id={errorBoxId}
+          describedBy={labelId}
           messageCode={messageCode}
           hasArrowStyle={false}
         />
@@ -102,7 +103,7 @@ export default ({
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(required && { 'aria-required': required }),
-          ...(!isValid && { 'aria-describedby': describedBy }),
+          ...(!isValid && { 'aria-describedby': errorBoxId }),
         })}
         css={styles.fileInput}
       />

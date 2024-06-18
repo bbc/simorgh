@@ -11,7 +11,6 @@ export default ({
   name,
   handleChange,
   inputState,
-  describedBy: errorBoxId,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
@@ -28,6 +27,7 @@ export default ({
   const describedByWordLimit = `${id}-wordLimit`;
   const useErrorTheme = hasAttemptedSubmit && !isValid;
   const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
 
   return (
     <>

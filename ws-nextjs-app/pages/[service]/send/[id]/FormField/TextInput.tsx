@@ -10,7 +10,6 @@ export default ({
   name,
   handleChange,
   inputState,
-  describedBy: errorBoxId,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
@@ -23,6 +22,7 @@ export default ({
   } = inputState ?? {};
   const useErrorTheme = hasAttemptedSubmit && !isValid;
   const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
 
   return (
     <>
