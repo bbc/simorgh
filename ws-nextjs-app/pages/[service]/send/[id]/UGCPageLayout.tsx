@@ -25,6 +25,9 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const UPLOADING_HEADING = 'Uploading';
   const UPLOADING_MESSAGE = 'Please wait until it is finished.';
 
+  const SUCCESS_HEADING = 'Success';
+  const ERROR_HEADING = 'Error';
+
   return (
     <>
       <Metadata
@@ -53,19 +56,26 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     switch (screen) {
                       case 'form':
                         return (
-                          <Form
-                            title={title}
-                            description={description}
-                            sectionTitle={sectionTitle}
-                            privacyNotice={privacyNotice?.default}
-                            fields={fields}
-                          />
+                          <>
+                            <Helmet>
+                              <title>{title}</title>
+                            </Helmet>
+                            <Form
+                              title={title}
+                              description={description}
+                              sectionTitle={sectionTitle}
+                              privacyNotice={privacyNotice?.default}
+                              fields={fields}
+                            />
+                          </>
                         );
                       case 'uploading':
                         return (
                           <>
                             <Helmet>
-                              <title>Uploading - {title}</title>
+                              <title>
+                                {UPLOADING_HEADING} - {title}
+                              </title>
                             </Helmet>
                             <GenericMessage heading={UPLOADING_HEADING}>
                               {UPLOADING_MESSAGE}
@@ -76,14 +86,25 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                         return (
                           <>
                             <Helmet>
-                              <title>Success - {title}</title>
+                              <title>
+                                {SUCCESS_HEADING} - {title}
+                              </title>
                             </Helmet>
                             <SuccessMessage />
                           </>
                         );
                       case 'error':
                       default:
-                        return <div>Error</div>;
+                        return (
+                          <>
+                            <Helmet>
+                              <title>
+                                {ERROR_HEADING} - {title}
+                              </title>
+                            </Helmet>
+                            <div>Error</div>
+                          </>
+                        );
                     }
                   }}
                 </FormContext.Consumer>
