@@ -30,7 +30,7 @@ const defaultTranslations = {
   privacyPolicyLinkText: 'Privacy Policy',
 };
 
-const SuccessMessage = () => {
+const SuccessScreen = () => {
   const {
     translations: { ugc = defaultTranslations },
   } = useContext(ServiceContext);
@@ -111,4 +111,4 @@ const SuccessMessage = () => {
   );
 };
 
-export default SuccessMessage;
+export default SuccessScreen;

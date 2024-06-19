@@ -7,8 +7,9 @@ import styles from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import Form from './Form';
-import SuccessMessage from './SuccessMessage';
+import SuccessScreen from './SuccessScreen';
 import GenericMessage from './GenericMessage';
+import ErrorScreen from './ErrorScreen';
 
 const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
 const NO_JS_MESSAGE =
@@ -17,10 +18,7 @@ const NO_JS_MESSAGE =
 const UPLOADING_HEADING = 'Uploading';
 const UPLOADING_MESSAGE = 'Please wait until it is finished.';
 
-const ERROR_HEADING = 'Sorry, your message could not be sent.';
-const ERROR_MESSAGE = 'Please try again later.';
-
-const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
+const UGCPageLayout = ({ initialScreen = 'error', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
@@ -70,14 +68,10 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                           </GenericMessage>
                         );
                       case 'success':
-                        return <SuccessMessage />;
+                        return <SuccessScreen />;
                       case 'error':
                       default:
-                        return (
-                          <GenericMessage heading={ERROR_HEADING}>
-                            {ERROR_MESSAGE}
-                          </GenericMessage>
-                        );
+                        return <ErrorScreen title={title} />;
                     }
                   }}
                 </FormContext.Consumer>
