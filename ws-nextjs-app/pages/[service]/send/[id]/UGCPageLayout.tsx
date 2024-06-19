@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { Helmet } from 'react-helmet';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
@@ -9,6 +8,7 @@ import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import Form from './Form';
 import SuccessMessage from './SuccessMessage';
+import UploadingScreen from './UploadingScreen';
 import GenericMessage from './GenericMessage';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
@@ -21,12 +21,6 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
   const NO_JS_MESSAGE =
     'To load this page, please enable JavaScript, or try a different browser';
-
-  const UPLOADING_HEADING = 'Uploading';
-  const UPLOADING_MESSAGE = 'Please wait until it is finished.';
-
-  const SUCCESS_HEADING = 'Success';
-  const ERROR_HEADING = 'Error';
 
   return (
     <>
@@ -56,55 +50,21 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     switch (screen) {
                       case 'form':
                         return (
-                          <>
-                            <Helmet>
-                              <title>{title}</title>
-                            </Helmet>
-                            <Form
-                              title={title}
-                              description={description}
-                              sectionTitle={sectionTitle}
-                              privacyNotice={privacyNotice?.default}
-                              fields={fields}
-                            />
-                          </>
+                          <Form
+                            title={title}
+                            description={description}
+                            sectionTitle={sectionTitle}
+                            privacyNotice={privacyNotice?.default}
+                            fields={fields}
+                          />
                         );
                       case 'uploading':
-                        return (
-                          <>
-                            <Helmet>
-                              <title>
-                                {UPLOADING_HEADING} - {title}
-                              </title>
-                            </Helmet>
-                            <GenericMessage heading={UPLOADING_HEADING}>
-                              {UPLOADING_MESSAGE}
-                            </GenericMessage>
-                          </>
-                        );
+                        return <UploadingScreen title={title} />;
                       case 'success':
-                        return (
-                          <>
-                            <Helmet>
-                              <title>
-                                {SUCCESS_HEADING} - {title}
-                              </title>
-                            </Helmet>
-                            <SuccessMessage />
-                          </>
-                        );
+                        return <SuccessMessage />;
                       case 'error':
                       default:
-                        return (
-                          <>
-                            <Helmet>
-                              <title>
-                                {ERROR_HEADING} - {title}
-                              </title>
-                            </Helmet>
-                            <div>Error</div>
-                          </>
-                        );
+                        return <div>Error</div>;
                     }
                   }}
                 </FormContext.Consumer>

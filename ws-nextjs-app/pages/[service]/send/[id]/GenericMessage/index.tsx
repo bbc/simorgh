@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import styles from './styles';
-import Loader from '../Loader';
 
 interface Props {
   heading: string;
@@ -23,8 +22,6 @@ const GenericMessage = ({ heading, children }: Props) => {
         {heading}
       </Heading>
       <Paragraph>{children}</Paragraph>
-      {/* Temporary import of Loader */}
-      <Loader />
     </>
   );
 };
