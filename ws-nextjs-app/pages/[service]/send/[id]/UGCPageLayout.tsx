@@ -18,7 +18,7 @@ const NO_JS_MESSAGE =
 const UPLOADING_HEADING = 'Uploading';
 const UPLOADING_MESSAGE = 'Please wait until it is finished.';
 
-const UGCPageLayout = ({ initialScreen = 'error', pageData }: PageProps) => {
+const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
