@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import GenericMessage from '../GenericMessage';
 
 const ERROR_HEADING = 'Sorry, your message could not be sent.';
@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function ErrorScreen({ title }: Props) {
-  useLayoutEffect(() => {
+  useEffect(() => {
     document.title = `Error: ${title}`;
   }, [title]);
 
