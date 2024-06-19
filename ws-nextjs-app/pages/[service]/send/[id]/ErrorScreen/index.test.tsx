@@ -5,13 +5,9 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import ErrorScreen from '.';
 
-jest.mock('next/router', () => ({
-  useRouter: () => ({ query: { id: 'u1234' } }),
-}));
-
 const MOCK_TITLE = 'Submit your suggestions';
 
-describe('SuccessScreen', () => {
+describe('ErrorScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
