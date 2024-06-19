@@ -1,7 +1,7 @@
 import React from 'react';
 import ErrorScreen from '.';
 
-const Component = () => <ErrorScreen />;
+const Component = () => <ErrorScreen title="Submit your suggestions" />;
 
 export default {
   title: 'Components/FormScreens/ErrorScreen',
