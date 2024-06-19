@@ -124,7 +124,7 @@ export default {
           marginBottom: `${spacings.FULL}rem`,
         }),
       }),
-  errorArrow: ({ palette, spacings, mq }: Theme) =>
+  errorArrow: ({ palette, spacings }: Theme) =>
     css({
       backgroundColor: palette.ERROR_CORE,
       clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
