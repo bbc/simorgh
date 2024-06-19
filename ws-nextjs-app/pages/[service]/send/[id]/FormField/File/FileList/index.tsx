@@ -128,6 +128,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
           <InvalidMessageBox
             id={errorBoxAriaDescribedById}
             messageCode={fileData.messageCode as InvalidMessageCodes}
+            suffix={file.name}
           />
         )}
       </li>
