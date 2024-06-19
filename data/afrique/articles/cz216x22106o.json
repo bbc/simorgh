@@ -18,13 +18,13 @@
                           "id": "e60b948a",
                           "type": "paragraph",
                           "model": {
-                            "text": "C'est le titre de cet article de test",
+                            "text": "http://localhost:7081/somali/send/u130092370?renderer_env=test",
                             "blocks": [
                               {
                                 "id": "4146aa2f",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "C'est le titre de cet article de test",
+                                  "text": "http://localhost:7081/somali/send/u130092370?renderer_env=test",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -154,7 +154,7 @@
                     "id": "5ca29bad",
                     "type": "paragraph",
                     "model": {
-                      "text": "Ceci est un bloc de texte contenant un lien URL vers la page d'accueil BBC Weather.",
+                      "text": "Ceci est un bloc de texte contenant un lien URL vers http://localhost.bbc.com:7081/somali/send/u130092370?renderer_env=test.",
                       "blocks": [
                         {
                           "id": "4b403b76",
@@ -169,19 +169,19 @@
                           "id": "b063ced9",
                           "type": "urlLink",
                           "model": {
-                            "text": "la page d'accueil BBC Weather",
+                            "text": "http://localhost.bbc.com:7081/somali/send/u130092370?renderer_env=test",
                             "blocks": [
                               {
                                 "id": "de27b443",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "la page d'accueil BBC Weather",
+                                  "text": "http://localhost.bbc.com:7081/somali/send/u130092370?renderer_env=test",
                                   "attributes": []
                                 },
                                 "position": [4, 1, 2, 1]
                               }
                             ],
-                            "locator": "https://www.bbc.co.uk/weather",
+                            "locator": "http://localhost.bbc.com:7081/somali/send/u130092370?renderer_env=test",
                             "isExternal": false
                           },
                           "position": [4, 1, 2]
