@@ -7,7 +7,7 @@ import {
 import { articlePath, frontPagePath } from '#app/routes/utils/regex';
 import getVariantRedirectUrl from './index';
 
-const serviceNames = Object.keys(servicesWithVariants);
+const serviceNames = ['serbian', 'ukchina', 'zhongwen']; // omits uzbek
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
@@ -154,6 +154,30 @@ describe('getVariantRedirectUrl', () => {
             expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
           });
         });
+      });
+    });
+  });
+
+  // tests temporary service check until Uzbek Homepage defaults to /cyr
+  describe('frontPage, Uzbek only', () => {
+    const defaultVariant = getVariant('uzbek');
+    describe(`visit /uzbek`, () => {
+      it(`should not redirect to /uzbek/${defaultVariant}`, () => {
+        const params = {
+          service: 'uzbek',
+          variant: null,
+        };
+        const props = {
+          match: {
+            path: frontPagePath,
+            params,
+          },
+        };
+        const redirectUrl = getVariantRedirectUrl({
+          ...props.match,
+          ...params,
+        });
+        expect(redirectUrl).toEqual(null);
       });
     });
   });

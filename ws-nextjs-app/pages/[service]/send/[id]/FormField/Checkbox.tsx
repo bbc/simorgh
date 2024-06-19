@@ -31,8 +31,7 @@ export default ({
         })}
         {...(required && !isValid && { 'aria-required': required })}
       />
-
-      <Label id={id} css={[styles.checkboxLabel]}>
+      <Label required={required} forId={id} css={[styles.checkboxLabel]}>
         {label}
       </Label>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
@@ -30,8 +30,13 @@ const TestComponent = () => {
 
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
+  const memoizedServiceContextValue = useMemo(
+    () => ({ script: latin, service: 'news' }),
+    [],
+  );
+
   return (
-    <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+    <ServiceContext.Provider value={memoizedServiceContextValue}>
       <OptimizelyComponent {...props} />
     </ServiceContext.Provider>
   );

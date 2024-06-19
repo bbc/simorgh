@@ -122,7 +122,7 @@ describe('Home Page', () => {
 
   it('should render images with the .webp image extension', () => {
     const path =
-      homePageData.curations[0].summaries?.[0].imageUrl?.split('{width}')[1];
+      homePageData.curations[1].summaries?.[0].imageUrl?.split('{width}')[1];
 
     const imageURL = `https://ichef.test.bbci.co.uk/ace/standard/240${path}`;
     const expectedWebpSrcSetURLs = [
@@ -133,6 +133,7 @@ describe('Home Page', () => {
       `https://ichef.test.bbci.co.uk/ace/standard/325${path}.webp 325w`,
       `https://ichef.test.bbci.co.uk/ace/standard/450${path}.webp 450w`,
       `https://ichef.test.bbci.co.uk/ace/standard/660${path}.webp 660w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/800${path}.webp 800w`,
     ].join(', ');
 
     const expectedJPGSrcSetURLs = [
@@ -143,6 +144,7 @@ describe('Home Page', () => {
       `https://ichef.test.bbci.co.uk/ace/standard/325${path} 325w`,
       `https://ichef.test.bbci.co.uk/ace/standard/450${path} 450w`,
       `https://ichef.test.bbci.co.uk/ace/standard/660${path} 660w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/800${path} 800w`,
     ].join(', ');
 
     // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations

@@ -22,7 +22,9 @@ const getVariantRedirectUrl = ({ path, params, service, variant }) => {
     cookieVariant !== defaultVariant &&
     variants.includes(cookieVariant);
 
-  const isUrlVariantRedirect = !variant && defaultVariant !== 'default';
+  // temporary service check until Uzbek Homepage defaults to /cyr
+  const isUrlVariantRedirect =
+    !variant && defaultVariant !== 'default' && service !== 'uzbek';
 
   const redirectVariant = isCookieVariantRedirect
     ? cookieVariant
