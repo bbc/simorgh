@@ -4,7 +4,6 @@ import React, {
   PropsWithChildren,
   useContext,
   useState,
-  useCallback,
 } from 'react';
 import { v4 as uuid } from 'uuid';
 
@@ -91,7 +90,6 @@ export const FormContextProvider = ({
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
   const [submissionID, setSubmissionID] = useState(null);
-  // const [errorsOnPage, setErrorsOnPage] = useState(false); // to finish
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     setFormState(prevState => {
@@ -111,7 +109,7 @@ export const FormContextProvider = ({
     event.preventDefault();
     setAttemptedSubmit(true);
 
-    const validatedFormData = await validateFormState(formState);
+    const validatedFormData = validateFormState(formState);
     setFormState(validatedFormData);
 
     const formInvalidErrors = Object.values(validatedFormData).filter(
@@ -185,7 +183,7 @@ export const FormContextProvider = ({
             });
             setTimeout(() => {
               _setScreen('error');
-            }, 3000); // to check
+            }, 3000);
           }
         }
       };
@@ -193,6 +191,9 @@ export const FormContextProvider = ({
     } catch (error) {
       const { message, status } = error as UGCSendError;
       setSubmissionError({ message, status });
+      setTimeout(() => {
+        _setScreen('error');
+      }, 3000);
     }
   };
 
