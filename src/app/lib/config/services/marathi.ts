@@ -338,10 +338,6 @@ export const service: DefaultServiceConfig = {
         url: '/marathi',
       },
       {
-        title: 'लोकसभा निवडणूक 2024',
-        url: '/marathi/topics/c1wmk63rjkvt',
-      },
-      {
         title: 'महाराष्ट्र',
         url: '/marathi/topics/c5qvpxvv7y3t',
       },
