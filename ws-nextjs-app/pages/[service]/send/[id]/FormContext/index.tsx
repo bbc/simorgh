@@ -4,6 +4,7 @@ import React, {
   PropsWithChildren,
   useContext,
   useState,
+  useCallback,
 } from 'react';
 import { v4 as uuid } from 'uuid';
 
@@ -106,94 +107,98 @@ export const FormContextProvider = ({
     });
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    setAttemptedSubmit(true);
+  const handleSubmit = useCallback(
+    async (event: FormEvent) => {
+      event.preventDefault();
+      setAttemptedSubmit(true);
 
-    const validatedFormData = await validateFormState(formState);
-    setFormState(validatedFormData);
+      const validatedFormData = await validateFormState(formState);
+      setFormState(validatedFormData);
 
-    const formInvalidErrors = Object.values(validatedFormData).filter(
-      item => item.isValid === false,
-    ).length;
+      const formInvalidErrors = Object.values(validatedFormData).filter(
+        item => item.isValid === false,
+      ).length;
 
-    if (formInvalidErrors > 0) return;
+      if (formInvalidErrors > 0) return;
 
-    setSubmitted(true); // check placement
-    // Reset error state
-    setSubmissionError(null); // check placement
+      setSubmitted(true); // check placement
+      // Reset error state
+      setSubmissionError(null); // check placement
 
-    const formData = new FormData();
+      const formData = new FormData();
 
-    Object.entries(formState).forEach(([key, item]) => {
-      const fieldValue = item.value;
-      const isFileHtmlType = item.htmlType === 'file';
+      Object.entries(formState).forEach(([key, item]) => {
+        const fieldValue = item.value;
+        const isFileHtmlType = item.htmlType === 'file';
 
-      if (fieldValue === '') return;
-      if (isFileHtmlType) {
-        const fileList = fieldValue as File[];
+        if (fieldValue === '') return;
+        if (isFileHtmlType) {
+          const fileList = fieldValue as File[];
 
-        fileList.forEach(file => {
-          formData.append(key, file);
-        });
-        return;
-      }
-      if (typeof fieldValue === 'boolean') {
-        if (fieldValue) formData.append(key, 'true');
-        return;
-      }
-      formData.append(key, fieldValue as string);
-    });
-    try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
-
-      const req = new XMLHttpRequest();
-      req.responseType = 'json';
-      req.open('POST', url, true);
-
-      req.upload.onloadstart = () => {
-        _setScreen('uploading');
-      };
-
-      req.upload.onprogress = e => {
-        setProgress(((e.loaded / e.total) * 100).toFixed(0));
-      };
-      req.onreadystatechange = () => {
-        if (req.readyState === XMLHttpRequest.DONE) {
-          setSubmitted(false);
-          if (req.status === OK) {
-            setSubmissionID(req.response.submissionId);
-            setTimeout(() => {
-              _setScreen('success');
-            }, 3000);
-          }
-          if (req.status !== OK) {
-            const { message, code, status, isRecoverable } = new UGCSendError(
-              req,
-            );
-
-            // Future logging invokation if feasible client-side
-            // sendCustomMetric();
-            // logger.error();
-
-            setSubmissionError({
-              message,
-              code,
-              status,
-              isRecoverable,
-            });
-            setTimeout(() => {
-              _setScreen('error');
-            }, 3000); // to check
-          }
+          fileList.forEach(file => {
+            formData.append(key, file);
+          });
+          return;
         }
-      };
-      req.send(formData);
-    } catch (error) {
-      const { message, status } = error as UGCSendError;
-      setSubmissionError({ message, status });
-    }
-  };
+        if (typeof fieldValue === 'boolean') {
+          if (fieldValue) formData.append(key, 'true');
+          return;
+        }
+        formData.append(key, fieldValue as string);
+      });
+      try {
+        const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+
+        const req = new XMLHttpRequest();
+        req.responseType = 'json';
+        req.open('POST', url, true);
+
+        req.upload.onloadstart = () => {
+          _setScreen('uploading');
+        };
+
+        req.upload.onprogress = e => {
+          setProgress(((e.loaded / e.total) * 100).toFixed(0));
+        };
+        req.onreadystatechange = () => {
+          if (req.readyState === XMLHttpRequest.DONE) {
+            setSubmitted(false);
+            if (req.status === OK) {
+              setSubmissionID(req.response.submissionId);
+              setTimeout(() => {
+                _setScreen('success');
+              }, 3000);
+            }
+            if (req.status !== OK) {
+              const { message, code, status, isRecoverable } = new UGCSendError(
+                req,
+              );
+
+              // Future logging invokation if feasible client-side
+              // sendCustomMetric();
+              // logger.error();
+
+              setSubmissionError({
+                message,
+                code,
+                status,
+                isRecoverable,
+              });
+              console.log("I'm actually erroring");
+              setTimeout(() => {
+                _setScreen('error');
+              }, 3000); // to check
+            }
+          }
+        };
+        req.send(formData);
+      } catch (error) {
+        const { message, status } = error as UGCSendError;
+        setSubmissionError({ message, status });
+      }
+    },
+    [formState],
+  );
 
   return (
     <FormContext.Provider
