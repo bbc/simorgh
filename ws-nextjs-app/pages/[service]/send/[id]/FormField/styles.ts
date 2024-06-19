@@ -115,6 +115,7 @@ export default {
     ({ palette, spacings }: Theme) =>
       css({
         backgroundColor: palette.ERROR_CORE,
+        outline: 'solid 0.0625rem transparent',
         padding: '0.75rem',
         display: 'flex',
         alignItems: 'center',
@@ -126,13 +127,14 @@ export default {
   errorArrow: ({ palette, spacings, mq }: Theme) =>
     css({
       backgroundColor: palette.ERROR_CORE,
-      [mq.HIGH_CONTRAST]: {
-        backgroundColor: `currentcolor`,
-      },
       clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
       width: `${spacings.DOUBLE}rem`,
       height: '0.75rem',
       marginInlineStart: `${spacings.DOUBLE}rem`,
       marginTop: `${spacings.FULL}rem`,
+      '&::after': {
+        content: '""',
+        border: '0.5rem solid transparent',
+      },
     }),
 };
