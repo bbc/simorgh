@@ -6,10 +6,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
-import Form from './Form';
+import FormScreen from './FormScreen';
 import SuccessScreen from './SuccessScreen';
-import GenericMessage from './GenericMessage';
 import ErrorScreen from './ErrorScreen';
+import GenericMessage from './GenericMessage';
 
 const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
 const NO_JS_MESSAGE =
@@ -53,7 +53,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     switch (screen) {
                       case 'form':
                         return (
-                          <Form
+                          <FormScreen
                             title={title}
                             description={description}
                             sectionTitle={sectionTitle}
