@@ -329,10 +329,6 @@ export const service: DefaultServiceConfig = {
         url: '/telugu',
       },
       {
-        title: 'ఆంధ్ర ప్రదేశ్ అసెంబ్లీ ఎన్నికలు 2024',
-        url: '/telugu/topics/c442kv3851yt',
-      },
-      {
         title: 'వీడియో',
         url: '/telugu/topics/cl29j0e3e2dt',
       },
