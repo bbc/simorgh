@@ -320,8 +320,7 @@
     "secondaryData": {
       "topStories": null,
       "features": null,
-      "mostRead": null,
-      "mostWatched": null
+      "mostRead": null
     }
   },
   "contentType": "application/json; charset=utf-8"

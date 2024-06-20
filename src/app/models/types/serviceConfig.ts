@@ -89,7 +89,6 @@ export type ServiceConfig = {
   };
   translations: Translations;
   mostRead: MostRead;
-  mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
@@ -134,12 +133,6 @@ export interface MostRead {
   lastUpdated: string;
   numberOfItems: number;
   hasMostRead: boolean;
-}
-
-export interface MostWatched {
-  header: string;
-  numberOfItems?: number;
-  hasMostWatched: boolean;
 }
 
 export interface RadioSchedule {
