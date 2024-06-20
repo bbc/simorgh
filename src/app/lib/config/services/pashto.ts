@@ -275,11 +275,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'تر ټولو ډېر لیدل شوی',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
