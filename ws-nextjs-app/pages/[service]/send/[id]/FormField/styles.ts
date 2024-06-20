@@ -57,13 +57,15 @@ export default {
       display: 'flex',
       flexWrap: 'nowrap',
     }),
-  maxWordLabel:
-    (useErrorTheme: boolean) =>
-    ({ palette }: Theme) =>
-      css({
-        marginBottom: `${pixelsToRem(6)}rem`,
-        color: useErrorTheme ? palette.ERROR_CORE : palette.GREY_10,
-      }),
+  maxWordLabel: ({ palette }: Theme) =>
+    css({
+      marginBottom: `${pixelsToRem(6)}rem`,
+      color: palette.GREY_10,
+    }),
+  erroredMaxWordLabel: ({ palette }: Theme) =>
+    css({
+      color: palette.ERROR_CORE,
+    }),
   textArea: () =>
     css({
       resize: 'none',

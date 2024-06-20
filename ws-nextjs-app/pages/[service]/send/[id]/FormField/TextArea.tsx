@@ -42,7 +42,10 @@ export default ({
       </Label>
       {hasWordLimit && (
         <Paragraph
-          css={styles.maxWordLabel(useErrorTheme)}
+          css={[
+            styles.maxWordLabel,
+            useErrorTheme && styles.erroredMaxWordLabel,
+          ]}
           fontVariant="sansRegular"
           size="brevier"
           id={describedByWordLimit}
