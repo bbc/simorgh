@@ -23,8 +23,8 @@ describe('Local Server', () => {
     ${'Front Page with variant'}       | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/frontpage/trad.json'}
     ${'Migrated Home Page'}            | ${'/pidgin.json'}                                                | ${'/pidgin/homePage/index.json'}
     ${'Home Page'}                     | ${'/kyrgyz/tipohome.json'}                                       | ${'/kyrgyz/homePage/index.json'}
-    ${'Most Read'}                     | ${'/pidgin/mostread.json'}
-    ${'Most Read with variant'}        | ${'/zhongwen/mostread/trad.json'}                                | ${'/pidgin/mostRead/index.json'}
+    ${'Most Read'}                     | ${'/pidgin/mostread.json'}                                       | ${'/pidgin/mostRead/index.json'}
+    ${'Most Read with variant'}        | ${'/zhongwen/mostread/trad.json'}                                | ${'/zhongwen/mostRead/trad.json'}
     ${'On Demand Radio Brand'}         | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}                      | ${'/korean/bbc_korean_radio/w3ct0kn5.json'}
     ${'On Demand Radio Episode'}       | ${'/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw.json'} | ${'/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json'}
     ${'On Demand TV Brand'}            | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}               | ${'/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json'}
