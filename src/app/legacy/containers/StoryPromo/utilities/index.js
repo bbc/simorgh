@@ -1,8 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import {
-  MOST_WATCHED_PAGE,
-  MEDIA_ASSET_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 // MAP is now either a Media Asset Page or a Media Article Page
 export const isMap = item => {
@@ -14,11 +11,7 @@ export const isMap = item => {
   return isCpsTypeMap || Boolean(hasMedia) || isOptimoMediaPromo;
 };
 
-export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
-  if (pageType === MOST_WATCHED_PAGE) {
-    return 'h2';
-  }
-
+export const getHeadingTagOverride = ({ isContentTypeGuide }) => {
   if (isContentTypeGuide) {
     return 'div';
   }

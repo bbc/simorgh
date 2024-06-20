@@ -309,6 +309,5 @@ describe('Articles - BFF Fetching', () => {
     expect(pageData.secondaryColumn).toHaveProperty('features');
     expect(pageData.secondaryColumn).toHaveProperty('latestMedia');
     expect(pageData).toHaveProperty('mostRead');
-    expect(pageData).toHaveProperty('mostWatched');
   });
 });

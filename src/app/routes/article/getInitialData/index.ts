@@ -73,8 +73,7 @@ export default async ({
       }
     }
 
-    const { topStories, features, latestMedia, mostRead, mostWatched } =
-      secondaryData;
+    const { topStories, features, latestMedia, mostRead } = secondaryData;
 
     const response = {
       status,
@@ -86,7 +85,6 @@ export default async ({
           latestMedia,
         },
         mostRead,
-        mostWatched,
         ...(wsojData && wsojData),
       },
     };

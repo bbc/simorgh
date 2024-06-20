@@ -13,8 +13,9 @@ import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
-const fullTestPath = 'https://test.bbc.com/hausa/mostwatched.json';
-const fullLivePath = 'https://www.bbc.com/hausa/mostwatched.json';
+const fullTestPath =
+  'https://test.mock-bff.api.bbc.com/simorgh-bff?pageType=bob';
+const fullLivePath = 'https://mock-bff.api.bbc.com/simorgh-bff?pageType=bob';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';

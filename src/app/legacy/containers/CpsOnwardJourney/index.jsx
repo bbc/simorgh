@@ -14,9 +14,7 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
-import { RequestContext } from '#contexts/RequestContext';
 import { GridWrapper, GridItemLarge } from '#components/Grid';
-import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GHOST } from '../../../components/ThemeProvider/palette';
@@ -110,14 +108,12 @@ const CpsOnwardJourney = ({
   eventTrackingData = null,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
 
-  const isMostWatched = pageType === MOST_WATCHED_PAGE;
-  const a11yAttributes = isMostWatched
-    ? {
-        as: 'div',
-      }
-    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': labelId,
+  };
 
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (

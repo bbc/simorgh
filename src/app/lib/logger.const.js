@@ -74,10 +74,6 @@ const logCodes = {
   MOST_READ_DATA_INCOMPLETE: 'most_read_data_incomplete',
   MOST_READ_STALE_DATA: 'most_read_stale_data',
 
-  // Most Watched
-  MOST_WATCHED_PROCESS_ERROR: 'most_watched_process_error',
-  MOST_WATCHED_STALE_DATA: 'most_watched_stale_data',
-
   // Include
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
