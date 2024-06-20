@@ -108,7 +108,8 @@ export const FormContextProvider = ({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setAttemptedSubmit(true);
-
+    // Reset error state
+    setSubmissionError(null);
     const validatedFormData = validateFormState(formState);
     setFormState(validatedFormData);
 
@@ -118,9 +119,7 @@ export const FormContextProvider = ({
 
     if (formInvalidErrors > 0) return;
 
-    setSubmitted(true); // check placement
-    // Reset error state
-    setSubmissionError(null); // check placement
+    setSubmitted(true);
 
     const formData = new FormData();
 
