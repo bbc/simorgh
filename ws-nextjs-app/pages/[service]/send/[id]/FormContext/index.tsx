@@ -51,7 +51,7 @@ const getInitialFormState = (
     (acc, field) => ({
       ...acc,
       [field.id]: {
-        ...field.validation,
+        ...(field.validation && field.validation),
         isValid: true,
         required: field.validation.mandatory ?? false,
         wordLimit: field.validation.wordLimit ?? undefined,

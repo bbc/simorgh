@@ -28,7 +28,11 @@ export default ({
     <>
       <div css={[styles.checkboxContainer]}>
         <input
-          css={[styles.checkbox(useErrorTheme), styles.focusIndicator]}
+          css={[
+            styles.checkbox,
+            styles.focusIndicator,
+            useErrorTheme && styles.checkboxError,
+          ]}
           id={id}
           name={name}
           type="checkbox"

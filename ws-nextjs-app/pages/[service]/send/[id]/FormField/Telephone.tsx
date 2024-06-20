@@ -38,13 +38,16 @@ export default ({
       <div>
         <input
           id={id}
-          css={[styles.textField(useErrorTheme), styles.focusIndicator]}
+          css={[
+            styles.textField,
+            styles.focusIndicator,
+            useErrorTheme && styles.textFieldError,
+          ]}
           name={name}
           type="tel"
           value={value as string}
           onChange={e => handleChange(e.target.name, e.target.value)}
           onBlur={e => handleFocusOut(e.target.name)}
-
           {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),

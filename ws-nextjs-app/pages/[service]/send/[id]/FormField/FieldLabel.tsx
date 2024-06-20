@@ -25,7 +25,7 @@ export default ({
     {...(id && { id })}
     className={className}
     htmlFor={forId}
-    css={styles.fieldLabel(useErrorTheme)}
+    css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
   >
     {required ? children : `${children} ${optionalTranslation}`}
   </Text>

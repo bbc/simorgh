@@ -53,9 +53,10 @@ export default ({
       <textarea
         id={id}
         css={[
-          styles.textField(useErrorTheme),
+          styles.textField,
           styles.textArea,
           styles.focusIndicator,
+          useErrorTheme && styles.textFieldError,
         ]}
         name={name}
         value={value as string}

@@ -37,7 +37,11 @@ export default ({
       </Label>
       <div>
         <input
-          css={[styles.textField(useErrorTheme), styles.focusIndicator]}
+          css={[
+            styles.textField,
+            styles.focusIndicator,
+            useErrorTheme && styles.textFieldError,
+          ]}
           id={id}
           name={name}
           type="email"
