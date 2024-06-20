@@ -385,9 +385,8 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 <div>
-  <ol
+  <ul
     class="emotion-0 emotion-1 emotion-2"
-    data-e2e="most-watched-ol"
     dir="ltr"
     role="list"
   >
@@ -583,7 +582,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
         </div>
       </div>
     </li>
-  </ol>
+  </ul>
 </div>
 `;
 

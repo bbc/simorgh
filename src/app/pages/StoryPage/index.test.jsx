@@ -207,7 +207,6 @@ describe('Story Page', () => {
             topStories: null,
             features: null,
             mostRead: pidginMostReadData,
-            mostWatched: null,
           },
         },
       }),

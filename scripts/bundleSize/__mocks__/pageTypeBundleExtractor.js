@@ -70,17 +70,6 @@ export default {
         'modern.shared-3333.js',
       ];
     }
-    if (pageType === 'MostWatchedPage') {
-      return [
-        'modern.MostWatchedPage-31ecd969.7484ff05.js',
-        'modern.commons-1111.js',
-        'modern.commons-2222.js',
-        'modern.1111-lib-1111.js',
-        'modern.shared-1111.js',
-        'modern.shared-2222.js',
-        'modern.shared-3333.js',
-      ];
-    }
     if (pageType === 'OnDemandAudioPage') {
       return [
         'modern.OnDemandAudioPage-31ecd969.ec6af2d0.js',
@@ -134,4 +123,4 @@ export default {
 
     throw Error(`page type ${pageType} not mocked`);
   },
-}
+};

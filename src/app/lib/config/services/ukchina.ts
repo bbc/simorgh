@@ -92,11 +92,6 @@ export const service: ChineseConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: '热播',
-      numberOfItems: 5,
-      hasMostWatched: false,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -358,11 +353,6 @@ export const service: ChineseConfig = {
       lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: '熱播',
-      numberOfItems: 5,
-      hasMostWatched: false,
     },
     recommendations: {
       hasStoryRecommendations: false,
