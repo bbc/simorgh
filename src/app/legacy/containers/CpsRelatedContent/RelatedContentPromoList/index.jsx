@@ -18,17 +18,6 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
-const MostWatchedOl = styled.ol`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`;
-
-MostWatchedOl.defaultProps = {
-  role: 'list',
-  'data-e2e': 'most-watched-ol',
-};
-
 const RelatedContentPromoList = ({
   promoItems,
   dir,
@@ -48,7 +37,7 @@ const RelatedContentPromoList = ({
         group4: 8,
         group5: 8,
       }}
-      as={isMediaContent ? MostWatchedOl : StoryPromoUl}
+      as={StoryPromoUl}
       enableGelGutters
     >
       {promoItems.map((item, index) => (

@@ -5,7 +5,6 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -91,11 +90,6 @@ describe('Chartbeat utilities', () => {
         pageType: MOST_READ_PAGE,
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
-      },
-      {
-        pageType: MOST_WATCHED_PAGE,
-        expectedDefaultType: 'Most Watched',
-        expectedShortType: 'Most Watched',
       },
       {
         pageType: STORY_PAGE,
@@ -294,7 +288,6 @@ describe('Chartbeat utilities', () => {
       ${FRONT_PAGE}         | ${'Front Page Title'}         | ${'BBC News Pidgin'} | ${'Front Page Title - BBC News Pidgin'}
       ${FEATURE_INDEX_PAGE} | ${'Feature Index Page Title'} | ${'BBC News Pidgin'} | ${'Feature Index Page Title - BBC News Pidgin'}
       ${MOST_READ_PAGE}     | ${'Most Read Page Title'}     | ${'BBC News Pidgin'} | ${'Most Read Page Title - BBC News Pidgin'}
-      ${MOST_WATCHED_PAGE}  | ${'Most Watched Page Title'}  | ${'BBC News Pidgin'} | ${'Most Watched Page Title - BBC News Pidgin'}
       ${TOPIC_PAGE}         | ${'Topic Page Title'}         | ${'BBC News Pidgin'} | ${'Topic Page Title - BBC News Pidgin'}
       ${LIVE_PAGE}          | ${'Live Page Title'}          | ${'BBC News Pidgin'} | ${'Live Page Title - BBC News Pidgin'}
       ${MEDIA_PAGE}         | ${'Media Page Title'}         | ${'BBC News Pidgin'} | ${'Media Page Title - BBC News Pidgin'}
@@ -897,37 +890,6 @@ describe('Chartbeat utilities', () => {
         sections: 'Korean, Korean - Most Read',
         type: 'Most Read',
         title: 'TOP 뉴스 - BBC News 코리아',
-        uid: 50924,
-        useCanonical: true,
-        virtualReferrer: 'test.bbc.com/previous-path',
-      };
-
-      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
-    });
-
-    it('should return config for canonical pages when page type is mostWatched and env is not live', () => {
-      const fixtureData: GetConfigProps = {
-        isAmp: false,
-        platform: 'canonical',
-        pageType: MOST_WATCHED_PAGE,
-        brandName: 'BBC News Afaan Oromoo',
-        title: 'Hedduu kan ilaalaman',
-        chartbeatDomain: 'afaanoromoo.bbc.co.uk',
-        env: 'test',
-        service: 'afaanoromoo',
-        origin: 'test.bbc.com',
-        previousPath: '/previous-path',
-      };
-
-      const expectedConfig = {
-        domain: 'test.bbc.co.uk',
-        idSync: {
-          bbc_hid: 'foobar',
-        },
-        path: '/',
-        sections: 'Afaanoromoo, Afaanoromoo - Most Watched',
-        type: 'Most Watched',
-        title: 'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',

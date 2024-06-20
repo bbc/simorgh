@@ -49,24 +49,6 @@ describe('constructDataFilePath', () => {
     });
   });
 
-  describe('Most Watched', () => {
-    it('should construct correct data file path', () => {
-      expect(
-        constructDataFilePath({ pageType: 'mostWatched', service: 'igbo' }),
-      ).toEqual(`${DATA_PATH}/data/igbo/mostWatched/index.json`);
-    });
-
-    it('should construct correct data file path with variant', () => {
-      expect(
-        constructDataFilePath({
-          pageType: 'mostWatched',
-          service: 'ukchina',
-          variant: '/simp',
-        }),
-      ).toEqual(`${DATA_PATH}/data/ukchina/mostWatched/simp.json`);
-    });
-  });
-
   describe('Secondary Column', () => {
     it('should construct correct data file path', () => {
       expect(

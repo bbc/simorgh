@@ -279,11 +279,6 @@ const baseServiceConfig = {
     numberOfItems: 10,
     hasMostRead: true,
   },
-  mostWatched: {
-    header: 'Найпопулярніше',
-    numberOfItems: 5,
-    hasMostWatched: false,
-  },
   radioSchedule: {
     hasRadioSchedule: false,
   },
