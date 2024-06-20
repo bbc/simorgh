@@ -17,6 +17,7 @@ import {
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
+  OnFocusOutHandler,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
@@ -31,6 +32,7 @@ type SubmissionError = {
 export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
+  handleFocusOut: OnFocusOutHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
@@ -94,16 +96,25 @@ export const FormContextProvider = ({
   const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
-    setFormState(prevState => {
-      const currState = { ...prevState[name], value };
-      // As part of GEL guidelines, we should validate during user input, following an initial submit.
-      const validateFunction = validateFunctions[currState.htmlType];
-      const validatedData = validateFunction
-        ? validateFunction(currState)
-        : currState;
+    const prevState = formState[name];
+    const currState = { ...prevState, value };
 
+    setFormState(prevFormState => {
+      const updatedState = { [name]: { ...currState } };
+      return { ...prevFormState, ...updatedState };
+    });
+  };
+
+  const handleFocusOut = (name: OnChangeInputName) => {
+    const currState = formState[name];
+    const validateFunction = validateFunctions[currState.htmlType];
+    const validatedData = validateFunction
+      ? validateFunction(currState)
+      : currState;
+
+    setFormState(prevFormState => {
       const updatedState = { [name]: { ...validatedData } };
-      return { ...prevState, ...updatedState };
+      return { ...prevFormState, ...updatedState };
     });
   };
 
@@ -188,6 +199,7 @@ export const FormContextProvider = ({
       value={{
         formState,
         handleChange,
+        handleFocusOut,
         handleSubmit,
         submissionError,
         submitted,

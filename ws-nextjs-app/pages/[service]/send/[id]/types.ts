@@ -30,12 +30,14 @@ export type OnChangeHandler = (
   name: OnChangeInputName,
   value: OnChangeInputValue,
 ) => void;
+export type OnFocusOutHandler = (name: OnChangeInputName) => void;
 
 export type InputProps = {
   id: string;
   name: string;
   label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
+  handleFocusOut: (name: OnChangeInputName) => void;
   inputState: FieldData;
   hasAttemptedSubmit: boolean;
 };

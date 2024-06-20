@@ -10,6 +10,7 @@ export default ({
   id,
   name,
   handleChange,
+  handleFocusOut,
   inputState,
   label,
   hasAttemptedSubmit,
@@ -59,6 +60,7 @@ export default ({
         name={name}
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
+        onBlur={e => handleFocusOut(e.target.name)}
         {...(hasWordLimit && { 'aria-describedby': describedByWordLimit })}
         {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
         {...(hasAttemptedSubmit && {

@@ -30,7 +30,8 @@ export type FormComponentProps = {
 };
 
 const FormField = ({ id, htmlType, label }: FormComponentProps) => {
-  const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
+  const { handleChange, handleFocusOut, formState, hasAttemptedSubmit } =
+    useFormContext();
 
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;
@@ -43,6 +44,7 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         id={id}
         name={id}
         handleChange={handleChange}
+        handleFocusOut={handleFocusOut}
         inputState={formState?.[id]}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
