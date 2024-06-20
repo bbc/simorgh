@@ -282,11 +282,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Ivyarabwe cane',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Ibiganiro bishya',

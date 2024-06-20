@@ -264,11 +264,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'সবচেয়ে বেশি দেখা হয়েছে',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'রেডিও অনুষ্ঠান',
