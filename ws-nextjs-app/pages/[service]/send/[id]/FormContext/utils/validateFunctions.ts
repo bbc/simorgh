@@ -109,7 +109,7 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
 };
 
 const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { value, required, wasInvalid, min, fileTypes, max } = data;
+  const { value: files, required, wasInvalid, min, fileTypes, max } = data;
 
   const MAX_PAYLOAD_SIZE = 1288490189;
   const RESERVED_FORM_DATA_SIZE = 10000;
@@ -122,7 +122,7 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   let hasNestedErrorLabel = false;
 
   // CHECK INDIVIDUAL FILES
-  const validatedFiles = (value as FileData[]).map((fileData: FileData) => {
+  const validatedFiles = (files as FileData[]).map((fileData: FileData) => {
     const { file } = fileData;
     let fileMessageCode = null;
 
@@ -143,19 +143,19 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
 
     return { ...fileData, messageCode: fileMessageCode };
   });
-  if (min != null && (value as FileData[])?.length < min && required) {
+  if (min != null && (files as FileData[])?.length < min && required) {
     isValid = false;
     messageCode = InvalidMessageCodes.NotEnoughFiles;
     hasNestedErrorLabel = false;
   }
 
-  if (max != null && (value as FileData[])?.length > max) {
+  if (max != null && (files as FileData[])?.length > max) {
     isValid = false;
     messageCode = InvalidMessageCodes.TooManyFiles;
     hasNestedErrorLabel = false;
   }
 
-  const totalUploadedSize = (value as FileData[]).reduce(
+  const totalUploadedSize = (files as FileData[]).reduce(
     (accumulated, currentValue) => accumulated + currentValue.file.size,
     0,
   );
