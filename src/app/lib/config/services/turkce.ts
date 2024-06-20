@@ -325,8 +325,8 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: '31 Mart 2024 Yerel Seçimleri',
-        url: '/turkce/topics/cv2lyll8e02t',
+        title: 'Euro 2024',
+        url: '/turkce/topics/cd11gkz9yvxt',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',

@@ -45,12 +45,12 @@ describe('Promo component - Image', () => {
       `(min-width: 63rem) 232px, (min-width: 37.5rem) 50vw, 33vw`,
     );
   });
-  it('should use large image resolution and width when large image is true', () => {
+  it('should use large image resolution and width when large image is true on desktop', () => {
     render(<Fixture useLargeImages />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(
       'sizes',
-      `(min-width: 63rem) 660px, (min-width: 37.5rem) 50vw, 33vw`,
+      `(min-width: 63rem) 800px, (min-width: 37.5rem) 66vw, 100vw`,
     );
   });
 
@@ -60,7 +60,7 @@ describe('Promo component - Image', () => {
     const image = screen.getByAltText('Test image alt text');
     const srcSet = image.getAttribute('srcSet');
 
-    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672];
+    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672, 800];
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
     });
@@ -72,7 +72,7 @@ describe('Promo component - Image', () => {
     const image = screen.getByAltText('Test image alt text');
     const srcSet = image.getAttribute('srcSet');
 
-    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660];
+    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
     });

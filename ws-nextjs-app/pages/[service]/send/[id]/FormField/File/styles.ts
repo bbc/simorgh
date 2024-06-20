@@ -13,7 +13,7 @@ export default {
     return css({
       display: 'block',
       padding: `${topBottomPadding} ${leftRightPadding} ${topBottomPadding} ${leftRightPadding}`,
-      border: 'none',
+      border: `${pixelsToRem(1)}rem solid transparent`,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       color: palette.WHITE,
       cursor: 'pointer',
@@ -69,7 +69,7 @@ export default {
         width: `${spacings.QUADRUPLE}rem`,
         height: `${spacings.QUADRUPLE}rem`,
         backgroundColor: '#E11B52',
-        border: 0,
+        border: `${pixelsToRem(1)}rem solid transparent`,
         cursor: 'pointer',
         svg: {
           color: palette.WHITE,
@@ -80,6 +80,7 @@ export default {
           svg: {
             color: palette.BLACK,
             fill: 'currentcolor',
+            [mq.HIGH_CONTRAST]: { stroke: palette.WHITE },
           },
         },
       },

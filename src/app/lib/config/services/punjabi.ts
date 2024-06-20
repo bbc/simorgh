@@ -279,10 +279,6 @@ export const service: DefaultServiceConfig = {
         url: '/punjabi',
       },
       {
-        title: 'ਲੋਕ ਸਭਾ ਚੋਣਾਂ 2024',
-        url: '/punjabi/topics/cz4xp0dw200t',
-      },
-      {
         title: 'ਵੀਡੀਓ',
         url: '/punjabi/topics/cx12qmz6jm4t',
       },
