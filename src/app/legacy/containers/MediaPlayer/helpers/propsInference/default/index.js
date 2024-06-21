@@ -29,6 +29,8 @@ export default ({
     path(['model', 'blocks'], aresMediaBlock),
     'caption',
   );
+  const transcriptBlock = filterForBlockType(blocks, 'transcript');
+
   const { webcastVersions = [] } =
     aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
 
@@ -133,5 +135,6 @@ export default ({
     placeholderSrcset,
     translatedExpiredContentMessage,
     translatedNoJSMessage,
+    transcriptBlock,
   };
 };

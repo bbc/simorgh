@@ -26,28 +26,39 @@ export default {
       color: isDarkUi ? palette.WHITE : palette.GREY_10,
     }),
 
-  ul: ({ spacings, palette, isDarkUi }: Theme) =>
+  ul: ({ spacings, mq }: Theme) =>
     css({
-      paddingTop: `${spacings.DOUBLE}rem`,
-      paddingInlineStart: '0',
+      padding: `0 ${spacings.FULL}rem`,
       listStyle: 'none',
-      li: {
-        paddingBottom: `${spacings.HALF}rem`,
-        // check on hack prototype what these style do
-        // '::before': {
-        //   listStyle: 'none',
-        //   top: '0',
-        //   position: 'absolute',
-        //   borderWidth: '0',
-        //   border: 'none',
-        //   borderRadius: '0',
-        //   left: '0',
-        // },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        padding: `0 ${spacings.DOUBLE}rem`,
       },
     }),
 
-  itemText: ({ spacings }: Theme) =>
+  itemText: ({ spacings, mq }: Theme) =>
     css({
-      paddingInlineStart: `${spacings.FULL}rem`,
+      float: 'left',
+      width: `100%`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.FULL}rem`,
+        width: `calc(75% - ${spacings.FULL}rem)`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        width: `calc(85% - ${spacings.FULL}rem)`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+        width: `calc(90% - ${spacings.DOUBLE}rem)`,
+      },
+    }),
+
+  listItem: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      '::after': {
+        content: '""',
+        display: 'table',
+        clear: 'both',
+      },
     }),
 };

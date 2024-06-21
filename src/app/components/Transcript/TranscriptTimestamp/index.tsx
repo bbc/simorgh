@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import styles from './index.styles';
 
 type myProps = {
@@ -6,14 +7,7 @@ type myProps = {
 };
 
 const TranscriptTimestamp = ({ timestamp }: myProps) => {
-  return (
-    <>
-      {/* @ts-expect-error Property 'css' does not exist on type 'DetailedHTMLProps<TimeHTMLAttributes<HTMLTimeElement>, HTMLTimeElement>' */}
-      <time css={styles.time} className="any">
-        {timestamp}
-      </time>
-    </>
-  );
+  return <time css={styles.time}>{timestamp}</time>;
 };
 
 export default TranscriptTimestamp;

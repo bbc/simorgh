@@ -22,6 +22,7 @@ import Metadata from './Metadata';
 import Caption from '../Caption';
 import logMissingMediaId from './helpers/logMissingMediaId';
 import getPlayerProps from './helpers/propsInference';
+import Transcript from '../../../components/Transcript';
 
 const MediaPlayerContainer = ({
   blocks = [
@@ -56,6 +57,7 @@ const MediaPlayerContainer = ({
     placeholderSrcset,
     translatedExpiredContentMessage,
     translatedNoJSMessage,
+    transcriptBlock,
   } = getPlayerProps({
     assetId,
     assetType,
@@ -119,6 +121,8 @@ const MediaPlayerContainer = ({
     <Caption block={captionBlock} type={mediaInfo.type} service={service} />
   ) : null;
 
+  const mediaTitle = mediaInfo.title;
+
   const mediaPlayer = isAmp ? (
     <AmpMediaPlayer
       src={embedSource}
@@ -156,6 +160,9 @@ const MediaPlayerContainer = ({
         </Figure>
       ) : (
         <MediaPlayerWrapper>{mediaPlayer}</MediaPlayerWrapper>
+      )}
+      {transcriptBlock && (
+        <Transcript block={transcriptBlock} title={mediaTitle} />
       )}
     </>
   );

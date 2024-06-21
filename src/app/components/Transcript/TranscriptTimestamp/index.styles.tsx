@@ -1,11 +1,22 @@
 import { css, Theme } from '@emotion/react';
 
-export default {
-  time: ({ spacings }: Theme) => {
+const styles = {
+  time: ({ spacings, mq }: Theme) =>
     css({
-      paddingInlineEnd: `${spacings.DOUBLE}rem`,
-      float: 'left',
-      marginBottom: 'inherit',
-    });
-  },
+      // paddingInlineEnd: `${spacings.DOUBLE}rem`,
+      float: 'inline-start',
+      // marginBottom: 'inherit',
+      width: '100%',
+      [mq.GROUP_1_MIN_WIDTH]: {
+        width: '25%',
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        width: '15%',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '10%',
+      },
+    }),
 };
+
+export default styles;
