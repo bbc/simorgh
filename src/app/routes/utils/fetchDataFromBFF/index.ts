@@ -9,9 +9,7 @@ import nodeLogger from '../../../lib/logger.node';
 import certsRequired from '../certsRequired';
 
 const logger = nodeLogger(__filename);
-const BFF_IS_LOCAL =
-  process.env.JEST_WORKER_ID === undefined &&
-  process?.env?.BFF_PATH?.includes('localhost:3210');
+const BFF_IS_LOCAL = process?.env?.BFF_PATH?.includes('localhost:3210');
 
 interface FetchDataFromBffParams {
   pathname: string;
