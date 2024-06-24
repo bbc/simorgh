@@ -86,7 +86,7 @@ export const FormContextProvider = ({
   const [progress, setProgress] = useState('0');
   // TODO: Remove lint disable once screen state switching is used
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [screen, _setScreen] = useState<FormScreen>(initialScreen);
+  const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
   const [submissionID, setSubmissionID] = useState(null);
@@ -150,7 +150,7 @@ export const FormContextProvider = ({
       req.open('POST', url, true);
 
       req.upload.onloadstart = () => {
-        _setScreen('uploading');
+        setScreen('uploading');
       };
 
       req.upload.onprogress = e => {
@@ -162,7 +162,7 @@ export const FormContextProvider = ({
           if (req.status === OK) {
             setSubmissionID(req.response.submissionId);
             setTimeout(() => {
-              _setScreen('success');
+              setScreen('success');
             }, 3000);
           }
           if (req.status !== OK) {
@@ -181,7 +181,7 @@ export const FormContextProvider = ({
               isRecoverable,
             });
             setTimeout(() => {
-              _setScreen('error');
+              setScreen('error');
             }, 3000);
           }
         }
@@ -191,7 +191,7 @@ export const FormContextProvider = ({
       const { message, status } = error as UGCSendError;
       setSubmissionError({ message, status });
       setTimeout(() => {
-        _setScreen('error');
+        setScreen('error');
       }, 3000);
     }
   };
