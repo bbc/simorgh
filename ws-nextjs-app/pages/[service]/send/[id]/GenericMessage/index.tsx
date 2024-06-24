@@ -17,9 +17,10 @@ const GenericMessage = forwardRef<HTMLElement, Props>(
         <Heading
           level={1}
           id="content"
-          {...(ref && { ref })}
           tabIndex={-1}
           css={styles.heading}
+          size="trafalgar"
+          {...(ref && { ref })}
         >
           {heading}
         </Heading>
