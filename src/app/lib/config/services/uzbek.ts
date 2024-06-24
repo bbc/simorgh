@@ -277,11 +277,6 @@ const defaultCyrillicConfig = {
     numberOfItems: 5,
     hasMostRead: true,
   },
-  mostWatched: {
-    header: 'Энг кўп кўрилган',
-    numberOfItems: 5,
-    hasMostWatched: true,
-  },
   footer: {
     trustProjectLink: {
       href: 'https://www.bbc.com/uzbek/institutional-50220995',

@@ -27,7 +27,6 @@ const bffFrontPageJson = {
       topStories: null,
       features: null,
       mostRead: null,
-      mostWatched: null,
     },
   },
 };

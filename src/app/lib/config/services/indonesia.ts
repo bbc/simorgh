@@ -289,11 +289,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Terpopuler',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Siaran radio',

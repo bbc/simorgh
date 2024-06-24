@@ -964,10 +964,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   font-size: 0.75rem;
 }
 
-.emotion-123 {
-  padding-bottom: 2rem;
-}
-
 <div
     id="ContextsContainer"
   >
@@ -1354,9 +1350,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               </p>
             </div>
           </main>
-          <div
-            class="emotion-123 emotion-124"
-          />
         </div>
       </div>
     </div>
@@ -3144,10 +3137,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0 0.25rem;
 }
 
-.emotion-243 {
-  padding-bottom: 2rem;
-}
-
 <div
     id="ContextsContainer"
   >
@@ -3661,9 +3650,8 @@ exports[`Media Asset Page should render component 1`] = `
                   </span>
                 </h2>
               </div>
-              <ol
+              <ul
                 class="emotion-3 emotion-158 emotion-159"
-                data-e2e="most-watched-ol"
                 dir="ltr"
                 role="list"
               >
@@ -3929,12 +3917,9 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </div>
                 </li>
-              </ol>
+              </ul>
             </div>
           </section>
-          <div
-            class="emotion-243 emotion-244"
-          />
         </div>
       </div>
     </div>
