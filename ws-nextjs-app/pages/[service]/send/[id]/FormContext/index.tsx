@@ -84,8 +84,6 @@ export const FormContextProvider = ({
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
-  // TODO: Remove lint disable once screen state switching is used
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
@@ -170,10 +168,6 @@ export const FormContextProvider = ({
               req,
             );
 
-            // Future logging invokation if feasible client-side
-            // sendCustomMetric();
-            // logger.error();
-
             setSubmissionError({
               message,
               code,
@@ -189,6 +183,7 @@ export const FormContextProvider = ({
       req.send(formData);
     } catch (error) {
       const { message, status } = error as UGCSendError;
+
       setSubmissionError({ message, status });
       setTimeout(() => {
         setScreen('error');

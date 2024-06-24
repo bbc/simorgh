@@ -6,10 +6,17 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
-import Form from './Form';
-import SuccessMessage from './SuccessMessage';
-import UploadingScreen from './UploadingScreen';
+import FormScreen from './FormScreen';
+import SuccessScreen from './SuccessScreen';
+import ErrorScreen from './ErrorScreen';
 import GenericMessage from './GenericMessage';
+
+const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
+const NO_JS_MESSAGE =
+  'To load this page, please enable JavaScript, or try a different browser';
+
+const UPLOADING_HEADING = 'Uploading';
+const UPLOADING_MESSAGE = 'Please wait until it is finished.';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
@@ -17,11 +24,6 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
-
-  const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
-  const NO_JS_MESSAGE =
-    'To load this page, please enable JavaScript, or try a different browser';
-
   return (
     <>
       <Metadata
@@ -50,7 +52,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     switch (screen) {
                       case 'form':
                         return (
-                          <Form
+                          <FormScreen
                             title={title}
                             description={description}
                             sectionTitle={sectionTitle}
@@ -61,10 +63,10 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                       case 'uploading':
                         return <UploadingScreen title={title} />;
                       case 'success':
-                        return <SuccessMessage />;
+                        return <SuccessScreen />;
                       case 'error':
                       default:
-                        return <div>Error</div>;
+                        return <ErrorScreen title={title} />;
                     }
                   }}
                 </FormContext.Consumer>
