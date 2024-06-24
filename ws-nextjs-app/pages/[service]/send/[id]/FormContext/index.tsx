@@ -96,9 +96,15 @@ export const FormContextProvider = ({
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     const prevState = formState[name];
     const currState = { ...prevState, value };
-
+    let validatedData = currState;
+    if (currState.htmlType === 'file') {
+      const validateFunction = validateFunctions.file;
+      validatedData = validateFunction
+        ? validateFunction(currState)
+        : currState;
+    }
     setFormState(prevFormState => {
-      const updatedState = { [name]: { ...currState } };
+      const updatedState = { [name]: { ...validatedData } };
       return { ...prevFormState, ...updatedState };
     });
   };
