@@ -44,11 +44,7 @@ const TopicPage = ({ pageData }) => {
   const pageTitle = `${title}, ${translatedPage}`;
 
   const itemList = getItemList({ curations, name: brandName });
-  console.log(JSON.stringify(curations));
-  console.log('* curation title in topic page', title);
-  curations.forEach((curation, index) => {
-    console.log(`* info in each curation ${index}`, curation);
-  });
+
   return (
     <>
       <AdContainer slotType="leaderboard" />
@@ -96,7 +92,6 @@ const TopicPage = ({ pageData }) => {
                   visualStyle,
                   visualProminence,
                 });
-              console.log('* curation title before render', curationTitle);
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
