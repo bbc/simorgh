@@ -3,7 +3,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import SuccessMessage from '.';
+import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
 
@@ -11,14 +11,14 @@ jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
 
-describe('SuccessMessage', () => {
+describe('SuccessScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
 
   it('Should have a h1', async () => {
     const { container } = await act(() => {
-      return render(<SuccessMessage />);
+      return render(<SuccessScreen />);
     });
     const h1 = container.querySelector('h1');
 
@@ -36,7 +36,7 @@ describe('SuccessMessage', () => {
     const { container } = await act(() => {
       return render(
         <FormContext.FormContextProvider fields={[]}>
-          <SuccessMessage />
+          <SuccessScreen />
         </FormContext.FormContextProvider>,
       );
     });
@@ -46,7 +46,7 @@ describe('SuccessMessage', () => {
 
   it('Should have a retention policy', async () => {
     const { container } = await act(() => {
-      return render(<SuccessMessage />);
+      return render(<SuccessScreen />);
     });
 
     expect(container.innerHTML).toContain(
@@ -56,7 +56,7 @@ describe('SuccessMessage', () => {
 
   it('Should provide an email for removal services', async () => {
     const { container } = await act(() => {
-      return render(<SuccessMessage />);
+      return render(<SuccessScreen />);
     });
 
     const emailAnchor = container.querySelector(
@@ -68,7 +68,7 @@ describe('SuccessMessage', () => {
 
   it('Should have a privacy policy link', async () => {
     const { container } = await act(() => {
-      return render(<SuccessMessage />);
+      return render(<SuccessScreen />);
     });
 
     const policyAnchor = container.querySelector(

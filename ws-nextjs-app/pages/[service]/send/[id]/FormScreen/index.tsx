@@ -19,7 +19,7 @@ type Props = {
   privacyNotice: string;
 };
 
-export default function Form({
+export default function FormScreen({
   title,
   sectionTitle,
   description,
