@@ -1,7 +1,7 @@
 import React from 'react';
 import SuccessScreen from '.';
 
-const Component = () => <SuccessScreen />;
+const Component = () => <SuccessScreen title="Form title" />;
 
 export default {
   title: 'Components/FormScreens/SuccessScreen',
