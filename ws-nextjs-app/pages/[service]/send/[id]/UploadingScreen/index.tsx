@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import GenericMessage from '../GenericMessage';
 
 const UPLOADING_HEADING = 'Uploading';
@@ -13,8 +13,13 @@ export default function UploadingScreen({ title }: Props) {
     document.title = `Uploading: ${title}`;
   }, [title]);
 
+  const ref = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
   return (
-    <GenericMessage heading={UPLOADING_HEADING}>
+    <GenericMessage heading={UPLOADING_HEADING} ref={ref}>
       {UPLOADING_MESSAGE}
     </GenericMessage>
   );

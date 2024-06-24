@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';
@@ -30,10 +30,24 @@ const defaultTranslations = {
   privacyPolicyLinkText: 'Privacy Policy',
 };
 
-const SuccessScreen = () => {
+type Props = {
+  title: string;
+};
+
+const SuccessScreen = ({ title }: Props) => {
   const {
     translations: { ugc = defaultTranslations },
   } = useContext(ServiceContext);
+
+  const ref = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
+  // resets document title after uploading screen
+  useEffect(() => {
+    document.title = `${title}`;
+  }, [title]);
 
   const { submissionID } = useFormContext();
 
@@ -70,6 +84,7 @@ const SuccessScreen = () => {
               tabIndex={-1}
               size="trafalgar"
               css={styles.heading}
+              {...(ref && { ref })}
             >
               {confirmationStepTitle}
             </Heading>
