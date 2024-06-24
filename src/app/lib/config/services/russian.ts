@@ -289,11 +289,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Самое популярное видео',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     podcastPromo: {
       title: 'Подкаст',
       brandTitle: 'Что это было?',

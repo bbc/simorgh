@@ -9,7 +9,6 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -61,8 +60,6 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
       return 'Radio';
     case MOST_READ_PAGE:
       return 'Most Read';
-    case MOST_WATCHED_PAGE:
-      return 'Most Watched';
     case STORY_PAGE:
       return STORY_PAGE;
     case PHOTO_GALLERY_PAGE:
@@ -180,7 +177,6 @@ export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
     case FRONT_PAGE:
     case FEATURE_INDEX_PAGE:
     case MOST_READ_PAGE:
-    case MOST_WATCHED_PAGE:
     case TOPIC_PAGE:
     case LIVE_PAGE:
     case MEDIA_PAGE:

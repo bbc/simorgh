@@ -270,11 +270,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'ఎక్కువగా చూసినవి',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -327,10 +322,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'వార్తలు',
         url: '/telugu',
-      },
-      {
-        title: 'ఆంధ్ర ప్రదేశ్ అసెంబ్లీ ఎన్నికలు 2024',
-        url: '/telugu/topics/c442kv3851yt',
       },
       {
         title: 'వీడియో',
