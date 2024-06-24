@@ -519,8 +519,7 @@ describe('Article Page', () => {
 
     const imageBlock =
       pageDataWithSecondaryColumn.secondaryColumn.features[0].indexImage;
-    const imageAltText = imageBlock.altText;
-    const imagePath = imageBlock.path;
+    const { altText: imageAltText, path: imagePath } = imageBlock;
     const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/400${imagePath}.webp`;
 
     await act(async () => {

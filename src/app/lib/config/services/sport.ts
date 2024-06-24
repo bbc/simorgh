@@ -206,11 +206,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: false,
     },
-    mostWatched: {
-      header: 'Most watched',
-      numberOfItems: 10,
-      hasMostWatched: false,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

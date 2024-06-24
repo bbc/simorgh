@@ -178,8 +178,7 @@ describe('Feature Idx Page', () => {
       render(<FeatureIdxPageWithContext pageData={pageData} />);
 
       const imageBlock = pageData.content.groups[3].items[0].indexImage;
-      const imageAltText = imageBlock.altText;
-      const imagePath = imageBlock.path;
+      const { altText: imageAltText, path: imagePath } = imageBlock;
       const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp`;
       const expectedSrcSetURLs = [
         `https://ichef.test.bbci.co.uk/ace/ws/70${imagePath}.webp 70w`,

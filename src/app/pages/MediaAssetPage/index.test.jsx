@@ -9,7 +9,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mapPageData from '#data/pidgin/cpsAssets/23248703-LEGACY.json';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721.json';
-import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -115,13 +114,10 @@ const pageType = 'cpsAsset';
 
 fetchMock.config.overwriteRoutes = true;
 
-const mockInitialData = ({ service, assetId, pageData, mostWatched }) => {
+const mockInitialData = ({ service, assetId, pageData }) => {
   fetch.mockResponse(
     JSON.stringify({
       ...pageData,
-      secondaryData: {
-        mostWatched: mostWatched || mostWatchedData,
-      },
     }),
   );
 
