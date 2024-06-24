@@ -112,6 +112,7 @@ export default {
       fill: palette.WHITE,
       verticalAlign: 'middle',
       marginInlineEnd: '0.75rem',
+      minWidth: '1.5rem',
       [mq.HIGH_CONTRAST]: {
         path: {
           fill: 'currentColor',
