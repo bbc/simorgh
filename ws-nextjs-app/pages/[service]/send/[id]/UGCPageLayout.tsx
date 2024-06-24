@@ -71,7 +71,16 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                         return <SuccessScreen />;
                       case 'error':
                       default:
-                        return <ErrorScreen title={title} />;
+                        // return <ErrorScreen title={title} />;
+                        return (
+                          <FormScreen
+                            title={title}
+                            description={description}
+                            sectionTitle={sectionTitle}
+                            privacyNotice={privacyNotice?.default}
+                            fields={fields}
+                          />
+                        );
                     }
                   }}
                 </FormContext.Consumer>
