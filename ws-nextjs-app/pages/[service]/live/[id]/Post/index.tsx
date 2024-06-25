@@ -93,6 +93,7 @@ const PostHeadings = ({
   setHeadline,
 }: {
   headerBlock: PostHeadingBlock;
+  setHeadline: typeof useState<string>;
 }) => {
   const isHeadline = headerBlock.type === 'headline';
   const headingText =
