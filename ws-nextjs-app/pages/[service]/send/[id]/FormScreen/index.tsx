@@ -55,17 +55,20 @@ export default function FormScreen({
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {formFields}
-
-          <strong // TODO: need translations for this, it doesn't come through from the api
-            css={styles.privacyHeading}
-          >
-            {translation}
-          </strong>
-          <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: privacyNotice }}
-            css={styles.privacyNotice}
-          />
+          {privacyNotice && (
+            <>
+              <strong // TODO: need translations for this, it doesn't come through from the api
+                css={styles.privacyHeading}
+              >
+                {translation}
+              </strong>
+              <div
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{ __html: privacyNotice }}
+                css={styles.privacyNotice}
+              />
+            </>
+          )}
           {!submitted ? <Submit /> : <Loader />}
           <LiveRegion />
         </LiveRegionContextProvider>

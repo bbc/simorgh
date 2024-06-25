@@ -1,30 +1,28 @@
 /** @jsx jsx */
-import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { InputProps } from '../types';
 import styles from './styles';
 
 const optionalTranslation = '(optional)';
-export default ({
-  id,
-  forId,
-  children,
-  className,
-  required,
-}: PropsWithChildren<{
+
+type Props = {
   id?: InputProps['id'];
   forId: string;
   className?: string;
+  labelText: string;
   required: boolean;
-}>) => (
+};
+
+export default ({ id, forId, labelText, className, required }: Props) => (
   <Text
     as="label"
-    {...(id && { id })}
     className={className}
     htmlFor={forId}
     css={styles.fieldLabel}
-  >
-    {required ? children : `${children} ${optionalTranslation}`}
-  </Text>
+    dangerouslySetInnerHTML={{
+      __html: required ? labelText : `${labelText} ${optionalTranslation}`,
+    }}
+    {...(id && { id })}
+  />
 );

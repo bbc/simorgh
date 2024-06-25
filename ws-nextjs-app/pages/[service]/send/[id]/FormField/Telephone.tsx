@@ -17,7 +17,7 @@ export default ({
 
   return (
     <>
-      <Label required={required} forId={id}>{label}</Label>
+      <Label required={required} forId={id} labelText={label} />
       <div>
         <input
           id={id}
