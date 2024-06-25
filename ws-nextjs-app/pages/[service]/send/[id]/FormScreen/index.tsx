@@ -9,7 +9,6 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import Loader from '../Loader';
 
 type Props = {
   title: string;
@@ -66,7 +65,7 @@ export default function FormScreen({
             dangerouslySetInnerHTML={{ __html: privacyNotice }}
             css={styles.privacyNotice}
           />
-          {!submitted ? <Submit /> : <Loader />}
+          {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
