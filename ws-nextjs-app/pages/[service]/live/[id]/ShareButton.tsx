@@ -3,7 +3,17 @@ import React from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 
-const ShareButton = ({ contentId, eventTrackingData, headline }) => {
+const ShareButton = ({
+  contentId,
+  eventTrackingData,
+  headline,
+}: {
+  contentId: string;
+  eventTrackingData: {
+    componentName: string;
+  };
+  headline: string;
+}) => {
   const viewRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
