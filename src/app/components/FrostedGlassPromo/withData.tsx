@@ -60,7 +60,7 @@ const buildImageProperties = (imageProps?: ImageProps) => {
 
   return {
     ratio: 52,
-    srcset: primarySrcset,
+    srcSet: primarySrcset,
     fallbackSrcset,
     sizes: '(min-width: 1008px) 400px',
     src,
