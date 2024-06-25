@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -17,7 +18,7 @@ const ShareButton = ({
   const viewRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const handleShare = async event => {
+  const handleShare = async (event: any) => {
     clickTrackerHandler(event);
     try {
       const shareUrl = `${window.location.href}#${contentId}`;
@@ -31,6 +32,7 @@ const ShareButton = ({
   };
 
   return (
+    /* @ts-ignore*/
     <button ref={viewRef} onClick={handleShare}>
       Click to share {headline}
     </button>
