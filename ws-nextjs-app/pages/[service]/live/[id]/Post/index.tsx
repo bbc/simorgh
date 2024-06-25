@@ -1,5 +1,11 @@
 /** @jsx jsx */
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -93,7 +99,7 @@ const PostHeadings = ({
   setHeadline,
 }: {
   headerBlock: PostHeadingBlock;
-  setHeadline: typeof useState<string>;
+  setHeadline: Dispatch<SetStateAction<string>>;
 }) => {
   const isHeadline = headerBlock.type === 'headline';
   const headingText =
