@@ -37,8 +37,16 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isLite,
       isAmp: false,
       isNextJs: true,
-      pageData,
-      pageType: 'ugc',
+      pageData: pageData
+        ? {
+            ...pageData,
+            metadata: {
+              ...pageData.metadata,
+              type: UGC_PAGE,
+            },
+          }
+        : null,
+      pageType: UGC_PAGE,
       pathname: null,
       service,
       status: status ?? 500,
