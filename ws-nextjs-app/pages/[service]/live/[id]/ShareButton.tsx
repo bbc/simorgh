@@ -32,8 +32,10 @@ const ShareButton = ({
       console.log('Error sharing', error);
     }
 
-    focusRef.current?.focus();
-    console.log('FOCUS IS NOW ON ', focusRef.current);
+    setTimeout(() => {
+      focusRef.current?.focus();
+      console.log('FOCUS IS NOW ON ', focusRef.current);
+    }, 0);
   };
 
   return (
