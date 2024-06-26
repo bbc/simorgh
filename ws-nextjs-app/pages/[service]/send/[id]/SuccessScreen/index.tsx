@@ -40,13 +40,13 @@ const SuccessScreen = ({ title }: Props) => {
   } = useContext(ServiceContext);
 
   const ref = useRef<HTMLHeadingElement>(null);
+
   useEffect(() => {
     ref.current?.focus();
   }, []);
 
-  // resets document title after uploading screen
   useEffect(() => {
-    document.title = `${title}`;
+    document.title = `Message sent: ${title}`;
   }, [title]);
 
   const { submissionID } = useFormContext();
