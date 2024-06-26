@@ -26,17 +26,18 @@ const ShareButton = ({
       await navigator.share({
         url: shareUrl,
       });
-      if (focusRef.current) {
-        focusRef.current.focus();
-      }
+
       console.log('Successful share');
     } catch (error) {
       console.log('Error sharing', error);
     }
+
+    focusRef.current?.focus();
+    console.log('FOCUS IS NOW ON ', focusRef.current);
   };
 
   return (
-    /* @ts-ignore*/
+    /* @ts-ignore */
     <div ref={viewRef}>
       <button ref={focusRef} onClick={handleShare}>
         Click to share {headline}
