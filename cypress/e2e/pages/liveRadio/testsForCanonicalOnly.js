@@ -4,10 +4,6 @@ import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
-import {
-  isScheduleDataComplete,
-  getIsProgramValid,
-} from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -71,24 +67,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           );
 
           if (scheduleIsEnabled) {
-            const schedulePath = Cypress.env('currentPath')
-              .replace('liveradio', 'schedule.json')
-              // the schedule call for afaanoromoo is made to bbc_oromo_radio
-              .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
+            cy.getPageDataFromWindow().then(data => {
+              const { pageData } = data;
+              const schedules = pageData.radioScheduleData;
 
-            cy.request(schedulePath).then(({ body: scheduleJson }) => {
-              const { schedules } = scheduleJson;
-              const isProgramValid = getIsProgramValid(() => {});
-              const validSchedules = schedules.filter(isProgramValid);
-
-              const isRadioScheduleDataComplete = isScheduleDataComplete({
-                schedules: validSchedules,
-              });
-
-              cy.log(
-                `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
-              );
-              if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+              if (schedules) {
                 cy.log('Schedule has enough data');
                 cy.get('[data-e2e=radio-schedule]').should('exist');
               } else {
