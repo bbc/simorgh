@@ -3,7 +3,6 @@ export const MEDIA_ARTICLE_PAGE = 'mediaArticle' as const;
 export const FRONT_PAGE = 'frontPage' as const;
 export const MEDIA_PAGE = 'media' as const;
 export const MOST_READ_PAGE = 'mostRead' as const;
-export const MOST_WATCHED_PAGE = 'mostWatched' as const;
 export const ERROR_PAGE = 'error' as const;
 export const FEATURE_INDEX_PAGE = 'FIX' as const;
 export const MEDIA_ASSET_PAGE = 'MAP' as const;

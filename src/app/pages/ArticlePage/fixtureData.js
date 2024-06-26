@@ -170,6 +170,65 @@ export const articleDataNews = articleDataBuilder(
       },
       position: [5],
     },
+    {
+      id: 'ec2cc789',
+      type: 'image',
+      model: {
+        blocks: [
+          {
+            id: '2b420fde',
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  id: '845446c2',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        id: '65e99201',
+                        type: 'paragraph',
+                        model: {
+                          text: 'Shiroo buddeen waliin',
+                          blocks: [
+                            {
+                              id: 'b58767fc',
+                              type: 'fragment',
+                              model: {
+                                text: 'Shiroo buddeen waliin',
+                                attributes: [],
+                              },
+                              position: [11, 1, 1, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [11, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [11, 1, 1],
+                },
+              ],
+            },
+            position: [11, 1],
+          },
+          {
+            id: '8d3a8c2c',
+            type: 'rawImage',
+            model: {
+              width: 951,
+              height: 535,
+              locator: '157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'BBC',
+              suitableForSyndication: true,
+            },
+            position: [11, 2],
+          },
+        ],
+      },
+      position: [11],
+    },
   ],
   'Article Headline for SEO',
   'Article Headline for Promo',
