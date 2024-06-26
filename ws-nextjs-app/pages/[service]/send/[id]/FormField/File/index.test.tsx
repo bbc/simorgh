@@ -192,10 +192,11 @@ describe('File', () => {
     const removeButton = screen.getByRole('button', {
       name: /remove/i,
     });
+
     await user.click(removeButton);
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'undefined',
       ),
@@ -215,7 +216,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'data:image/png;base64,ZGF0YTppbWFnZS9wbmc7YmFzZTY0LA==',
       ),
@@ -248,7 +249,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         VIDEO_SVG_DATA_URI,
       ),
@@ -281,7 +282,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         AUDIO_SVG_DATA_URI,
       ),
@@ -314,7 +315,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         DOCUMENT_SVG_DATA_URI,
       ),

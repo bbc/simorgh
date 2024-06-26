@@ -94,6 +94,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
         <div css={styles.fileDetails}>
           <div css={styles.fileThumbnailContainer}>
             <img
+              data-testid="thumbnail"
               css={
                 isThumbnailSvg
                   ? styles.fileThumbnailSvg
