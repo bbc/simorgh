@@ -39,16 +39,6 @@ const SuccessScreen = ({ title }: Props) => {
     translations: { ugc = defaultTranslations },
   } = useContext(ServiceContext);
 
-  const ref = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    ref.current?.focus();
-  }, []);
-
-  useEffect(() => {
-    document.title = `Message sent: ${title}`;
-  }, [title]);
-
   const { submissionID } = useFormContext();
 
   const {
@@ -63,6 +53,16 @@ const SuccessScreen = ({ title }: Props) => {
     privacyPolicyLinkHref,
     privacyPolicyLinkText,
   } = ugc;
+
+  const ref = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    document.title = `${confirmationStepTitle}: ${title}`;
+  }, [confirmationStepTitle, title]);
 
   const retentionPolicy = retentionPeriodDays.replace(
     '{{days}}',
