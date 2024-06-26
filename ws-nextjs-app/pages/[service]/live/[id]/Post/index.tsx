@@ -193,6 +193,9 @@ const Post = ({ post }: { post: PostType }) => {
 
   useEffect(() => {
     setHashValue(window.location.hash.substring(1));
+    if (hashValue) {
+      window.location.href = `#${hashValue}`;
+    }
     if ('share' in navigator) {
       setCanShare(true);
     }
